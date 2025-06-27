@@ -16,9 +16,10 @@
     "manager_base_path": "./software",
     "sync_base_path": "D:\\\\Program Files",
     "git_mirrors": [
-      "https://gh-proxy.com/https://github.com/shellsec/softgitup",
-      "https://github.com/shellsec/softgitup",
-      "https://gitclone.com/shellsec/softgitup"
+      "https://raw.githubusercontent.com/shellsec/softgitup",
+      "https://gh-proxy.com/https://raw.githubusercontent.com/shellsec/softgitup",
+      "https://raw.fastgit.org/shellsec/softgitup",
+      "https://hub.fastgit.xyz/shellsec/softgitup"
     ],
     "download_timeout": 30,
     "retry_times": 3,

@@ -86,7 +86,7 @@ class SoftSync:
             
     def get_remote_list(self):
         """获取远程列表文件"""
-        list_url = f"{self.github_repo}/raw/main/{self.list_file}"
+        list_url = f"{self.github_repo}/raw/refs/heads/master/{self.list_file}"
         try:
             response = requests.get(list_url, timeout=30)
             response.raise_for_status()
@@ -121,7 +121,9 @@ class SoftSync:
             
     def download_software_file(self, software_name, file_info):
         """下载软件文件"""
-        file_url = f"{self.github_repo}/raw/main/software/{software_name}/{file_info['path']}"
+        # 处理Windows路径分隔符
+        file_path = file_info['path'].replace('\\', '/')
+        file_url = f"{self.github_repo}/raw/refs/heads/master/software/{software_name}/{file_path}"
         local_file_path = self.local_path / software_name / file_info['path']
         
         # 创建目录

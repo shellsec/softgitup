@@ -19,7 +19,7 @@ class SimpleSyncTest:
         self.config = self.load_config(config_file)
         self.setup_logging()
         self.local_path = Path(self.config.get("sync_base_path", "D:/Program Files"))
-        self.list_file = self.config["list_file"]
+        self.list_file = "software/" + self.config["list_file"]
         self.github_repo = self.config["github_repo"]
         
         # 创建本地目录
@@ -67,10 +67,10 @@ class SimpleSyncTest:
         """获取远程列表文件"""
         # 尝试多个镜像源
         mirrors = [
-            "https://raw.githubusercontent.com/shellsec/softgitup/master",
-            "https://ghproxy.com/https://raw.githubusercontent.com/shellsec/softgitup/master",
-            "https://raw.fastgit.org/shellsec/softgitup/master",
-            "https://hub.fastgit.xyz/shellsec/softgitup/raw/master"
+            "https://raw.githubusercontent.com/shellsec/softgitup/refs/heads/master",
+            "https://ghproxy.com/https://raw.githubusercontent.com/shellsec/softgitup/refs/heads/master",
+            "https://raw.fastgit.org/shellsec/softgitup/refs/heads/master",
+            "https://hub.fastgit.xyz/shellsec/softgitup/raw/refs/heads/master"
         ]
         
         for mirror in mirrors:
@@ -103,14 +103,16 @@ class SimpleSyncTest:
         """下载软件文件"""
         # 尝试多个镜像源
         mirrors = [
-            "https://raw.githubusercontent.com/shellsec/softgitup/master",
-            "https://ghproxy.com/https://raw.githubusercontent.com/shellsec/softgitup/master",
-            "https://raw.fastgit.org/shellsec/softgitup/master",
-            "https://hub.fastgit.xyz/shellsec/softgitup/raw/master"
+            "https://raw.githubusercontent.com/shellsec/softgitup/refs/heads/master",
+            "https://ghproxy.com/https://raw.githubusercontent.com/shellsec/softgitup/refs/heads/master",
+            "https://raw.fastgit.org/shellsec/softgitup/refs/heads/master",
+            "https://hub.fastgit.xyz/shellsec/softgitup/raw/refs/heads/master"
         ]
         
         for mirror in mirrors:
-            file_url = f"{mirror}/software/{software_name}/{file_info['path']}"
+            # 处理Windows路径分隔符
+            file_path = file_info['path'].replace('\\', '/')
+            file_url = f"{mirror}/software/{software_name}/{file_path}"
             local_file_path = self.local_path / software_name / file_info['path']
             
             # 创建目录

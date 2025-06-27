@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-SoftGitUp - 同步工具测试版本
-简化版本，用于测试同步功能
+SoftGitUp - 完整同步测试
+测试所有软件的同步功能
 """
 
 import os
@@ -14,7 +14,7 @@ import time
 from pathlib import Path
 import logging
 
-class TestSoftSync:
+class CompleteSyncTest:
     def __init__(self, config_file="config.json"):
         self.config = self.load_config(config_file)
         self.setup_logging()
@@ -43,7 +43,7 @@ class TestSoftSync:
             level=getattr(logging, self.config.get("log_level", "INFO")),
             format='%(asctime)s - %(levelname)s - %(message)s',
             handlers=[
-                logging.FileHandler(log_dir / "test_sync.log", encoding='utf-8'),
+                logging.FileHandler(log_dir / "complete_sync.log", encoding='utf-8'),
                 logging.StreamHandler()
             ]
         )
@@ -164,6 +164,8 @@ class TestSoftSync:
                     return True
                 else:
                     self.logger.error(f"文件哈希验证失败: {file_info['path']}")
+                    self.logger.error(f"期望哈希: {file_info['hash']}")
+                    self.logger.error(f"实际哈希: {local_hash}")
                     local_file_path.unlink()  # 删除损坏的文件
                     continue
             else:
@@ -182,6 +184,7 @@ class TestSoftSync:
         
         updated_files = 0
         new_files = 0
+        failed_files = 0
         
         for file_info in remote_files:
             file_path = file_info['path']
@@ -200,13 +203,15 @@ class TestSoftSync:
                         new_files += 1
                     else:
                         updated_files += 1
+                else:
+                    failed_files += 1
                         
-        self.logger.info(f"软件 {software_name} 同步完成: 新增 {new_files} 个文件, 更新 {updated_files} 个文件")
-        return new_files + updated_files
+        self.logger.info(f"软件 {software_name} 同步完成: 新增 {new_files} 个文件, 更新 {updated_files} 个文件, 失败 {failed_files} 个文件")
+        return new_files + updated_files, failed_files
         
-    def perform_sync(self):
-        """执行同步操作"""
-        self.logger.info("开始执行同步操作")
+    def perform_complete_sync(self):
+        """执行完整同步操作"""
+        self.logger.info("开始执行完整同步操作")
         
         # 获取远程列表
         remote_list = self.get_remote_list()
@@ -218,36 +223,71 @@ class TestSoftSync:
         local_list = self.get_local_list()
         
         total_updated = 0
+        total_failed = 0
+        sync_results = {}
         
         for software_name, software_info in remote_list['software'].items():
             local_files = []
             if local_list and software_name in local_list['software']:
                 local_files = local_list['software'][software_name]['files']
                 
-            updated_count = self.sync_software(
+            updated_count, failed_count = self.sync_software(
                 software_name, 
                 software_info['files'], 
                 local_files
             )
             total_updated += updated_count
+            total_failed += failed_count
+            sync_results[software_name] = {
+                'updated': updated_count,
+                'failed': failed_count,
+                'total_files': len(software_info['files'])
+            }
             
         # 更新本地列表文件
         local_list_path = Path("software") / self.config["list_file"]
         with open(local_list_path, 'w', encoding='utf-8') as f:
             json.dump(remote_list, f, ensure_ascii=False, indent=2)
             
-        self.logger.info(f"同步完成，共更新 {total_updated} 个文件")
+        # 输出同步结果摘要
+        self.logger.info("=" * 50)
+        self.logger.info("同步结果摘要:")
+        self.logger.info(f"总软件数量: {len(remote_list['software'])}")
+        self.logger.info(f"总文件数量: {remote_list['total_files']}")
+        self.logger.info(f"成功更新: {total_updated} 个文件")
+        self.logger.info(f"失败文件: {total_failed} 个文件")
+        self.logger.info("=" * 50)
+        
+        for software_name, result in sync_results.items():
+            self.logger.info(f"{software_name}: 更新 {result['updated']}/{result['total_files']} 个文件, 失败 {result['failed']} 个文件")
+            
+        self.logger.info("=" * 50)
+        
+        if total_updated > 0:
+            self.logger.info(f"完整同步完成，更新了 {total_updated} 个文件")
+        else:
+            self.logger.info("完整同步完成，没有新更新")
+            
+        if total_failed > 0:
+            self.logger.warning(f"有 {total_failed} 个文件同步失败")
+            
         return True
         
     def run(self):
-        """运行同步测试"""
-        self.logger.info("开始运行同步测试")
-        success = self.perform_sync()
+        """运行完整同步测试"""
+        self.logger.info("开始运行完整同步测试")
+        start_time = time.time()
+        
+        success = self.perform_complete_sync()
+        
+        end_time = time.time()
+        duration = end_time - start_time
+        
         if success:
-            self.logger.info("同步测试完成")
+            self.logger.info(f"完整同步测试完成，耗时 {duration:.2f} 秒")
         else:
-            self.logger.error("同步测试失败")
+            self.logger.error(f"完整同步测试失败，耗时 {duration:.2f} 秒")
             
 if __name__ == "__main__":
-    sync = TestSoftSync()
+    sync = CompleteSyncTest()
     sync.run() 
