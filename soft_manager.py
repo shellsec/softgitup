@@ -80,22 +80,39 @@ class SoftManager:
                     
         return files_info
         
-    def generate_list_file(self):
+    def generate_list_file(self, software_name=None):
         """生成软件列表文件"""
         software_list = {}
         total_files = 0
         
-        for software_name in self.config["software_dirs"]:
-            self.logger.info(f"扫描软件: {software_name}")
-            files_info = self.scan_software_directory(software_name)
-            if files_info:
-                software_list[software_name] = {
-                    "version": datetime.datetime.now().strftime("%Y%m%d_%H%M%S"),
-                    "files": files_info,
-                    "total_files": len(files_info),
-                    "total_size": sum(f["size"] for f in files_info)
-                }
-                total_files += len(files_info)
+        # 如果指定了软件名称，只扫描该软件
+        if software_name:
+            if software_name in self.config["software_dirs"]:
+                self.logger.info(f"扫描软件: {software_name}")
+                files_info = self.scan_software_directory(software_name)
+                if files_info:
+                    software_list[software_name] = {
+                        "version": datetime.datetime.now().strftime("%Y%m%d_%H%M%S"),
+                        "files": files_info,
+                        "total_files": len(files_info),
+                        "total_size": sum(f["size"] for f in files_info),
+                        "last_updated": datetime.datetime.now().isoformat()
+                    }
+                    total_files += len(files_info)
+        else:
+            # 扫描所有软件
+            for software_name in self.config["software_dirs"]:
+                self.logger.info(f"扫描软件: {software_name}")
+                files_info = self.scan_software_directory(software_name)
+                if files_info:
+                    software_list[software_name] = {
+                        "version": datetime.datetime.now().strftime("%Y%m%d_%H%M%S"),
+                        "files": files_info,
+                        "total_files": len(files_info),
+                        "total_size": sum(f["size"] for f in files_info),
+                        "last_updated": datetime.datetime.now().isoformat()
+                    }
+                    total_files += len(files_info)
                 
         # 生成list.txt内容
         list_content = {

@@ -86,14 +86,22 @@ class SoftSync:
             
     def get_remote_list(self):
         """获取远程列表文件"""
-        list_url = f"{self.github_repo}/raw/refs/heads/master/{self.list_file}"
-        try:
-            response = requests.get(list_url, timeout=30)
-            response.raise_for_status()
-            return json.loads(response.text)
-        except Exception as e:
-            self.logger.error(f"获取远程列表失败: {e}")
-            return None
+        # 使用配置文件中的gh-proxy.com加速源
+        mirrors = self.config.get("git_mirrors", [self.github_repo])
+        
+        for mirror in mirrors:
+            list_url = f"{mirror}/refs/heads/master/{self.list_file}"
+            try:
+                self.logger.info(f"尝试从镜像源获取: {list_url}")
+                response = requests.get(list_url, timeout=30)
+                response.raise_for_status()
+                return json.loads(response.text)
+            except Exception as e:
+                self.logger.warning(f"镜像源 {mirror} 失败: {e}")
+                continue
+                
+        self.logger.error("所有镜像源都失败了")
+        return None
             
     def get_local_list(self):
         """获取本地列表文件"""
@@ -121,25 +129,27 @@ class SoftSync:
             
     def download_software_file(self, software_name, file_info):
         """下载软件文件"""
-        # 处理Windows路径分隔符
-        file_path = file_info['path'].replace('\\', '/')
-        file_url = f"{self.github_repo}/raw/refs/heads/master/software/{software_name}/{file_path}"
-        local_file_path = self.local_path / software_name / file_info['path']
+        # 使用配置文件中的gh-proxy.com加速源
+        mirrors = self.config.get("git_mirrors", [self.github_repo])
         
-        # 创建目录
-        local_file_path.parent.mkdir(parents=True, exist_ok=True)
-        
-        # 下载文件
-        if self.download_file(file_url, local_file_path):
-            # 验证哈希
-            local_hash = self.calculate_file_hash(local_file_path)
-            if local_hash == file_info['hash']:
+        for mirror in mirrors:
+            # 处理Windows路径分隔符
+            file_path = file_info['path'].replace('\\', '/')
+            file_url = f"{mirror}/refs/heads/master/software/{software_name}/{file_path}"
+            local_file_path = self.local_path / software_name / file_info['path']
+            
+            # 创建目录
+            local_file_path.parent.mkdir(parents=True, exist_ok=True)
+            
+            # 下载文件
+            if self.download_file(file_url, local_file_path):
                 self.logger.info(f"文件下载成功: {file_info['path']}")
                 return True
             else:
-                self.logger.error(f"文件哈希验证失败: {file_info['path']}")
-                local_file_path.unlink()  # 删除损坏的文件
-                return False
+                self.logger.warning(f"从镜像源 {mirror} 下载失败: {file_info['path']}")
+                continue
+                
+        self.logger.error(f"所有镜像源都失败了: {file_info['path']}")
         return False
         
     def sync_software(self, software_name, remote_files, local_files):
@@ -154,16 +164,18 @@ class SoftSync:
         
         for file_info in remote_files:
             file_path = file_info['path']
-            remote_hash = file_info['hash']
+            remote_modified = file_info['modified']
             
             local_file_path = software_path / file_path
-            local_hash = None
+            local_modified = None
             
             if local_file_path.exists():
-                local_hash = self.calculate_file_hash(local_file_path)
+                local_modified = datetime.datetime.fromtimestamp(
+                    local_file_path.stat().st_mtime
+                ).isoformat()
                 
-            # 检查是否需要更新
-            if not local_file_path.exists() or local_hash != remote_hash:
+            # 检查是否需要更新（使用修改时间）
+            if not local_file_path.exists() or local_modified != remote_modified:
                 if self.download_software_file(software_name, file_info):
                     if not local_file_path.exists():
                         new_files += 1
