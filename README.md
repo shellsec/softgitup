@@ -94,6 +94,48 @@ python simple_sync.py
 python soft_sync.py
 ```
 
+## 打包和编译
+
+### 编译为可执行文件
+使用 `build_exe.py` 脚本将Python程序打包成可执行文件：
+
+```bash
+python build_exe.py
+```
+
+打包脚本提供多种选项：
+1. **构建所有程序** (推荐) - 包含GUI和控制台版本
+2. **只构建控制台版本** - 无GUI依赖，避免PyQt5 DLL问题
+3. **只构建GUI版本** - 包含完整的GUI功能
+4. **清理构建文件** - 清理临时文件
+
+### 解决PyQt5 DLL问题
+如果遇到 `ImportError: DLL load failed while importing QtWidgets` 错误：
+
+**方案1: 使用控制台版本**
+```bash
+# 选择选项2，构建控制台版本
+python build_exe.py
+# 使用生成的 SoftGitUp_Sync_Simple.exe
+```
+
+**方案2: 使用Python脚本**
+```bash
+# 直接运行Python脚本，避免打包问题
+python simple_sync.py
+python workflow.py
+```
+
+**方案3: 安装Visual C++ Redistributable**
+- 下载并安装Microsoft Visual C++ Redistributable
+- 重新编译GUI版本
+
+### 生成的可执行文件
+- `SoftGitUp_Workflow.exe` - 工作流程工具（控制台）
+- `SoftGitUp_Manager.exe` - 管理工具（GUI）
+- `SoftGitUp_Sync.exe` - 同步工具（GUI，系统托盘）
+- `SoftGitUp_Sync_Simple.exe` - 简化同步工具（控制台）
+
 ## 工作流程
 
 ### 更新软件流程
@@ -177,6 +219,12 @@ python -c "from soft_manager import SoftManager; SoftManager().generate_list_fil
 
 ### 常见问题
 
+**Q: 编译后运行报错 "DLL load failed while importing QtWidgets"？**
+A: 这是PyQt5 DLL依赖问题，建议：
+1. 使用控制台版本：`python build_exe.py` 选择选项2
+2. 直接运行Python脚本：`python simple_sync.py`
+3. 安装Visual C++ Redistributable后重新编译
+
 **Q: 同步失败怎么办？**
 A: 检查网络连接和GitHub仓库权限，确保使用正确的Git加速源。
 
@@ -197,6 +245,14 @@ tail -f logs/sync.log
 # 查看简单同步日志
 tail -f logs/simple_sync.log
 ```
+
+## 技术支持
+
+如果遇到问题，请：
+1. 查看日志文件获取详细错误信息
+2. 检查网络连接和GitHub仓库权限
+3. 尝试使用控制台版本避免GUI依赖问题
+4. 提交Issue到GitHub仓库
 
 ## 开发计划
 

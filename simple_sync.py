@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-SoftGitUp - 简单同步工具
-使用文件修改时间作为标识，不验证哈希值
+SoftGitUp - 简化同步工具
+不依赖GUI，提供基本的同步功能
 """
 
+import sys
 import os
 import json
-import datetime
 import requests
+import datetime
 import time
 from pathlib import Path
 import logging
@@ -64,10 +65,8 @@ class SimpleSync:
             
     def get_remote_list(self):
         """获取远程列表文件"""
-        # 使用gh-proxy.com作为有效的Git加速下载源
-        mirrors = [
-            "https://gh-proxy.com/https://raw.githubusercontent.com/shellsec/softgitup"
-        ]
+        # 使用配置文件中的gh-proxy.com加速源
+        mirrors = self.config.get("git_mirrors", [self.github_repo])
         
         for mirror in mirrors:
             list_url = f"{mirror}/refs/heads/master/{self.list_file}"
@@ -77,10 +76,10 @@ class SimpleSync:
                 response.raise_for_status()
                 return json.loads(response.text)
             except Exception as e:
-                self.logger.warning(f"镜像源失败: {e}")
+                self.logger.warning(f"镜像源 {mirror} 失败: {e}")
                 continue
                 
-        self.logger.error("镜像源失败了")
+        self.logger.error("所有镜像源都失败了")
         return None
             
     def get_local_list(self):
@@ -97,16 +96,14 @@ class SimpleSync:
         
     def download_software_file(self, software_name, file_info):
         """下载软件文件"""
-        # 使用gh-proxy.com作为有效的Git加速下载源
-        mirrors = [
-            "https://gh-proxy.com/https://raw.githubusercontent.com/shellsec/softgitup"
-        ]
+        # 使用配置文件中的gh-proxy.com加速源
+        mirrors = self.config.get("git_mirrors", [self.github_repo])
         
         for mirror in mirrors:
             # 处理Windows路径分隔符
             file_path = file_info['path'].replace('\\', '/')
             file_url = f"{mirror}/refs/heads/master/software/{software_name}/{file_path}"
-            local_file_path = self.local_path / software_name / file_path
+            local_file_path = self.local_path / software_name / file_info['path']
             
             # 创建目录
             local_file_path.parent.mkdir(parents=True, exist_ok=True)
@@ -116,13 +113,13 @@ class SimpleSync:
                 self.logger.info(f"文件下载成功: {file_info['path']}")
                 return True
             else:
-                self.logger.warning(f"从镜像源下载失败: {file_info['path']}")
+                self.logger.warning(f"从镜像源 {mirror} 下载失败: {file_info['path']}")
                 continue
                 
-        self.logger.error(f"镜像源失败了: {file_info['path']}")
+        self.logger.error(f"所有镜像源都失败了: {file_info['path']}")
         return False
         
-    def sync_software(self, software_name, remote_files, local_files):
+    def sync_software(self, software_name, remote_files):
         """同步单个软件"""
         self.logger.info(f"开始同步软件: {software_name}")
         
@@ -131,7 +128,6 @@ class SimpleSync:
         
         updated_files = 0
         new_files = 0
-        failed_files = 0
         
         for file_info in remote_files:
             file_path = file_info['path']
@@ -152,11 +148,9 @@ class SimpleSync:
                         new_files += 1
                     else:
                         updated_files += 1
-                else:
-                    failed_files += 1
                         
-        self.logger.info(f"软件 {software_name} 同步完成: 新增 {new_files} 个文件, 更新 {updated_files} 个文件, 失败 {failed_files} 个文件")
-        return new_files + updated_files, failed_files
+        self.logger.info(f"软件 {software_name} 同步完成: 新增 {new_files} 个文件, 更新 {updated_files} 个文件")
+        return new_files + updated_files
         
     def perform_sync(self, software_name=None):
         """执行同步操作"""
@@ -172,100 +166,50 @@ class SimpleSync:
         local_list = self.get_local_list()
         
         total_updated = 0
-        total_failed = 0
-        sync_results = {}
         
-        # 如果指定了软件名称，只同步该软件
         if software_name:
-            if software_name in remote_list['software']:
-                software_info = remote_list['software'][software_name]
-                local_files = []
-                if local_list and software_name in local_list['software']:
-                    local_files = local_list['software'][software_name]['files']
-                    
-                updated_count, failed_count = self.sync_software(
-                    software_name, 
-                    software_info['files'], 
-                    local_files
-                )
-                total_updated += updated_count
-                total_failed += failed_count
-                sync_results[software_name] = {
-                    'updated': updated_count,
-                    'failed': failed_count,
-                    'total_files': len(software_info['files'])
-                }
+            # 同步指定软件
+            if software_name in remote_list:
+                updated = self.sync_software(software_name, remote_list[software_name])
+                total_updated += updated
+                self.logger.info(f"软件 {software_name} 同步完成，更新了 {updated} 个文件")
             else:
-                self.logger.error(f"远程列表中没有软件: {software_name}")
+                self.logger.error(f"软件 {software_name} 在远程列表中不存在")
                 return False
         else:
             # 同步所有软件
-            for software_name, software_info in remote_list['software'].items():
-                local_files = []
-                if local_list and software_name in local_list['software']:
-                    local_files = local_list['software'][software_name]['files']
-                    
-                updated_count, failed_count = self.sync_software(
-                    software_name, 
-                    software_info['files'], 
-                    local_files
-                )
-                total_updated += updated_count
-                total_failed += failed_count
-                sync_results[software_name] = {
-                    'updated': updated_count,
-                    'failed': failed_count,
-                    'total_files': len(software_info['files'])
-                }
-            
-        # 更新本地列表文件
-        local_list_path = Path("software") / self.config["list_file"]
-        with open(local_list_path, 'w', encoding='utf-8') as f:
-            json.dump(remote_list, f, ensure_ascii=False, indent=2)
-            
-        # 输出同步结果摘要
-        self.logger.info("=" * 50)
-        self.logger.info("同步结果摘要:")
-        self.logger.info(f"总软件数量: {len(sync_results)}")
-        self.logger.info(f"成功更新: {total_updated} 个文件")
-        self.logger.info(f"失败文件: {total_failed} 个文件")
-        self.logger.info("=" * 50)
-        
-        for software_name, result in sync_results.items():
-            self.logger.info(f"{software_name}: 更新 {result['updated']}/{result['total_files']} 个文件, 失败 {result['failed']} 个文件")
-            
-        self.logger.info("=" * 50)
-        
-        if total_updated > 0:
-            self.logger.info(f"同步完成，更新了 {total_updated} 个文件")
-        else:
-            self.logger.info("同步完成，没有新更新")
-            
-        if total_failed > 0:
-            self.logger.warning(f"有 {total_failed} 个文件同步失败")
-            
+            for software_name, remote_files in remote_list.items():
+                updated = self.sync_software(software_name, remote_files)
+                total_updated += updated
+                
+        self.logger.info(f"同步操作完成，总共更新了 {total_updated} 个文件")
         return True
-        
-    def run(self, software_name=None):
-        """运行同步工具"""
-        self.logger.info("启动简单同步工具")
-        start_time = time.time()
-        
-        success = self.perform_sync(software_name)
-        
-        end_time = time.time()
-        duration = end_time - start_time
-        
-        if success:
-            self.logger.info(f"同步完成，耗时 {duration:.2f} 秒")
-        else:
-            self.logger.error(f"同步失败，耗时 {duration:.2f} 秒")
-            
-if __name__ == "__main__":
-    import sys
+
+def main():
+    """主函数"""
+    print("=" * 60)
+    print("SoftGitUp 简化同步工具")
+    print("=" * 60)
     
-    # 可以指定要同步的软件名称
-    software_name = sys.argv[1] if len(sys.argv) > 1 else None
+    # 检查命令行参数
+    software_name = None
+    if len(sys.argv) > 1:
+        software_name = sys.argv[1]
+        print(f"将同步软件: {software_name}")
+    else:
+        print("将同步所有软件")
     
+    print("=" * 60)
+    
+    # 创建同步器并执行同步
     sync = SimpleSync()
-    sync.run(software_name) 
+    success = sync.perform_sync(software_name)
+    
+    if success:
+        print("同步操作完成！")
+    else:
+        print("同步操作失败！")
+        sys.exit(1)
+
+if __name__ == "__main__":
+    main() 
