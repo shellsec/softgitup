@@ -1,10 +1,407 @@
 {
-  "generated_at": "2025-06-27T12:06:50.584853",
-  "total_software": 7,
-  "total_files": 2806,
+  "generated_at": "2025-06-27T12:29:46.664904",
+  "total_software": 9,
+  "total_files": 2730,
   "software": {
+    "CCleaner": {
+      "version": "20250627_122945",
+      "files": [
+        {
+          "path": "branding.dll",
+          "size": 51624,
+          "hash": "e5f8138cc87bc199a98bb484db9b4076",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "CCleaner.dat",
+          "size": 96,
+          "hash": "9cacd86bd1a9730676de2fdf73680f7d",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "ccleaner.ini",
+          "size": 2732,
+          "hash": "b1c50ea2092b73865298b92704595504",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "CCleaner64.exe",
+          "size": 45713992,
+          "hash": "18217b453912e7b50ba7af59f5176c84",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "portable.dat",
+          "size": 10,
+          "hash": "15b9de0b65f03afe4235b261fe4e28dc",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "README.md",
+          "size": 477,
+          "hash": "5eb733224b39b3b9a5464e0a6c8edfb6",
+          "modified": "2025-06-27T11:38:30.841214"
+        },
+        {
+          "path": "Lang\\lang-1025.dll",
+          "size": 260872,
+          "hash": "67f3ea44160e49980a81b1e0aa7a7c58",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1026.dll",
+          "size": 310536,
+          "hash": "aca864be803ad9d8706eb186873b5c68",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1027.dll",
+          "size": 313096,
+          "hash": "f9eb1e7ba7ea3eaa39f2b2252ab12f38",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1028.dll",
+          "size": 121608,
+          "hash": "c8aa8977576ad5871a34f2b714ed643e",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1029.dll",
+          "size": 277112,
+          "hash": "b593d65325c20155c8cedeb10ca681a9",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1030.dll",
+          "size": 273016,
+          "hash": "80ca87abdfc8e373412c172d0bb4059d",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1031.dll",
+          "size": 308856,
+          "hash": "d8c6e8a893a2aee1c9f1e1b4a0612bf9",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1032.dll",
+          "size": 323192,
+          "hash": "718d88fc5b1664fd8872b0f0d025937c",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1034.dll",
+          "size": 308344,
+          "hash": "006e21151b8edd59eea021719491314a",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1035.dll",
+          "size": 284792,
+          "hash": "7b2f9f3221e802ea23ad31cef29c9dc4",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1036.dll",
+          "size": 318216,
+          "hash": "37b36257e54d4b547921625781c158b5",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1037.dll",
+          "size": 224376,
+          "hash": "334391dcf5f0d4f59a90fc7e7ebde708",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1038.dll",
+          "size": 303880,
+          "hash": "75f779cf64b43b92c5ef0b08cc0cbef7",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1040.dll",
+          "size": 300296,
+          "hash": "eb12f9eed1dddd1d09234f98c1cb904b",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1041.dll",
+          "size": 163080,
+          "hash": "93a7ea652b1aee75cf452b1c678a9677",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1042.dll",
+          "size": 157960,
+          "hash": "276a3e1a1deb0d837ef6ca7de728b9af",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1043.dll",
+          "size": 302712,
+          "hash": "604f59c6aec3dce332d78aa8917b8f2d",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1044.dll",
+          "size": 274040,
+          "hash": "213f6af4b19623a11e1c67252ce2bcd0",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1045.dll",
+          "size": 309368,
+          "hash": "8eaaa60f466f3802ca492e4ba58736ef",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1046.dll",
+          "size": 298104,
+          "hash": "a243342a45302b6bff588b186fe33554",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1048.dll",
+          "size": 318216,
+          "hash": "0459eec2283ae6f51e1ca5427f3dc4a6",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1049.dll",
+          "size": 287352,
+          "hash": "9afa7f3caf297559ebc9b492aea1fba7",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1050.dll",
+          "size": 296712,
+          "hash": "d47706ead0b383535fb8b210f7388c04",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1051.dll",
+          "size": 283768,
+          "hash": "d925b0b40f7a63f6994310835283cbf3",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1052.dll",
+          "size": 99080,
+          "hash": "27483682c7fc89f4fe31ae2434f160dd",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1053.dll",
+          "size": 279160,
+          "hash": "2c756881f6165fe7078bcc2afe7c448b",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1054.dll",
+          "size": 265480,
+          "hash": "8e9ba6e547ff55852039977fbecba81d",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1055.dll",
+          "size": 297736,
+          "hash": "b6667a6f78f81772e066001a5ff0a9ad",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1056.dll",
+          "size": 284424,
+          "hash": "ac4cd37161d291a97864f193830c107e",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1057.dll",
+          "size": 288376,
+          "hash": "0946c384aeb81fa850613e2dc1c15aa9",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1058.dll",
+          "size": 290936,
+          "hash": "e1782784ac361341201463f64314be09",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1059.dll",
+          "size": 284792,
+          "hash": "0065a2fd6714eb932a100553a3649eaf",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1060.dll",
+          "size": 302712,
+          "hash": "ea097f57676c49ac1b32c2f8e3c58447",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1061.dll",
+          "size": 273160,
+          "hash": "fc405b465af4cee9ea9a607f54519594",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1062.dll",
+          "size": 281864,
+          "hash": "3f36eb09a079f87d11c108bbd839c9df",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1063.dll",
+          "size": 289544,
+          "hash": "8e101e4ef30a5779eaf2b2fa492da7fa",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1065.dll",
+          "size": 284792,
+          "hash": "19c04fa02991819c848ee7304ac5e62d",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1066.dll",
+          "size": 295544,
+          "hash": "db6de0777fd069bab104aff536519634",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1067.dll",
+          "size": 97544,
+          "hash": "39c6230ae6d001cf297428e2321fa0ec",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1068.dll",
+          "size": 98424,
+          "hash": "42f3336b97ab40d0f28ac6fa53ba7e7d",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1071.dll",
+          "size": 107640,
+          "hash": "46a47bdea814301104f34dcc223d108e",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1079.dll",
+          "size": 98568,
+          "hash": "496dbbd5a0bce8a5703bd18bcbd2399a",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1081.dll",
+          "size": 285960,
+          "hash": "3ea398422e45e15f8d60d45e2ca919ec",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1086.dll",
+          "size": 297736,
+          "hash": "5cec9dabca2cd3c5d5d2f2206c06300e",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1087.dll",
+          "size": 96888,
+          "hash": "dfa8b2d2b885f5f2b416cad9b2c6fd14",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1090.dll",
+          "size": 108664,
+          "hash": "eaf0cc2d080f96677455b750b618e605",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1092.dll",
+          "size": 96376,
+          "hash": "bd6c0d7c3339c763e03d3520c6fdbd5e",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1093.dll",
+          "size": 290056,
+          "hash": "3122dc93b335dd76701eed52bb9d82b0",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1102.dll",
+          "size": 99592,
+          "hash": "080bb3dee73e390a5ba4d4d5183a2b8d",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1104.dll",
+          "size": 97544,
+          "hash": "fd0e6b305156305940600a614a70fb3e",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1109.dll",
+          "size": 103544,
+          "hash": "f10900f13bfa7298c9f3b686e9261a15",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1110.dll",
+          "size": 97032,
+          "hash": "f30cdfd4431a0d36a1c0bde69f284bd8",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-1155.dll",
+          "size": 115320,
+          "hash": "20d27871d79ee24dcfda6c46539f09fe",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-2052.dll",
+          "size": 119416,
+          "hash": "e95fff1894f32e4d2e50225cb2459c17",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-2070.dll",
+          "size": 301688,
+          "hash": "5eabbcb15d83e8ab3f7e2790b218f7d5",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-2074.dll",
+          "size": 296568,
+          "hash": "c810a2576d3199edc7aa09d141d085d3",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-3098.dll",
+          "size": 99592,
+          "hash": "c8489282e0eda3a12c6be651eb8273d7",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-5146.dll",
+          "size": 102664,
+          "hash": "8fbb4e2dcc151a32075cac8550fab704",
+          "modified": "2025-06-25T18:00:00"
+        },
+        {
+          "path": "Lang\\lang-9999.dll",
+          "size": 101128,
+          "hash": "4bf5bc27188b917105fb9b4f35b15736",
+          "modified": "2025-06-25T18:00:00"
+        }
+      ],
+      "total_files": 65,
+      "total_size": 59317979
+    },
     "EditPlus": {
-      "version": "20250627_120648",
+      "version": "20250627_122945",
       "files": [
         {
           "path": "!)激活添删右键.bat",
@@ -580,8 +977,27 @@
       "total_files": 95,
       "total_size": 11284529
     },
+    "everything": {
+      "version": "20250627_122945",
+      "files": [
+        {
+          "path": "Everything64.exe",
+          "size": 5723760,
+          "hash": "e24fe92e65e019dab64c77277b0a6cf2",
+          "modified": "2025-05-26T14:34:52"
+        },
+        {
+          "path": "README.md",
+          "size": 435,
+          "hash": "c62a5f2bb855217253a0b623f09c132d",
+          "modified": "2025-06-27T10:48:24.731668"
+        }
+      ],
+      "total_files": 2,
+      "total_size": 5724195
+    },
     "HiBit Startup Manager": {
-      "version": "20250627_120648",
+      "version": "20250627_122945",
       "files": [
         {
           "path": "HiBitStartupManager.exe",
@@ -624,7 +1040,7 @@
       "total_size": 19208529
     },
     "notepad++": {
-      "version": "20250627_120649",
+      "version": "20250627_122945",
       "files": [
         {
           "path": "change.log",
@@ -634,9 +1050,9 @@
         },
         {
           "path": "config.xml",
-          "size": 10615,
-          "hash": "bf84051aef2f0f9d89fc87627da1c02e",
-          "modified": "2025-06-27T11:20:57.490493"
+          "size": 5124,
+          "hash": "252b905db01afd018a29952bc80b1322",
+          "modified": "2025-04-04T00:48:53.501240"
         },
         {
           "path": "contextMenu.xml",
@@ -657,22 +1073,10 @@
           "modified": "2025-05-03T02:37:15.250490"
         },
         {
-          "path": "langs.xml",
-          "size": 535363,
-          "hash": "6576f92bd9d4a76acb2641cda1c6c24c",
-          "modified": "2025-05-03T02:37:15.250490"
-        },
-        {
           "path": "license.txt",
           "size": 35500,
           "hash": "62fe07bed404dfd0975891bb6cfb0c90",
           "modified": "2024-02-17T18:00:08.586295"
-        },
-        {
-          "path": "nativeLang.xml",
-          "size": 97923,
-          "hash": "1e113d391b167b54bdb3b8f4ccc0c498",
-          "modified": "2025-04-29T23:13:14.491199"
         },
         {
           "path": "notepad++.exe",
@@ -681,40 +1085,22 @@
           "modified": "2025-05-04T00:44:26.274402"
         },
         {
-          "path": "nppLogNulContentCorruptionIssue.log",
-          "size": 4330,
-          "hash": "8194e20e8673fdb13e73a762f409b8d2",
-          "modified": "2025-06-24T21:25:53.330643"
-        },
-        {
           "path": "nppLogNulContentCorruptionIssue.xml",
           "size": 0,
           "hash": "d41d8cd98f00b204e9800998ecf8427e",
           "modified": "2024-02-17T18:00:08.633440"
         },
         {
-          "path": "npp_script_references.html",
-          "size": 1941,
-          "hash": "ab87429b4346198abbc7ac2886b4c406",
-          "modified": "2025-06-07T21:59:06.681495"
+          "path": "README.md",
+          "size": 416,
+          "hash": "f11001974707b35b81e270c713949cf5",
+          "modified": "2025-06-27T10:47:07.950449"
         },
         {
           "path": "readme.txt",
           "size": 1526,
           "hash": "11b0a85dcd7045352f71e46d83de6d7e",
           "modified": "2024-02-17T18:00:08.633440"
-        },
-        {
-          "path": "session.xml",
-          "size": 40589,
-          "hash": "e613375886e228a66c7554056307527a",
-          "modified": "2025-06-27T11:46:39.390627"
-        },
-        {
-          "path": "session.xml.inCaseOfCorruption.bak",
-          "size": 40588,
-          "hash": "7fcd17ec0b7719629a15beb999f27e53",
-          "modified": "2025-06-27T11:35:54.500859"
         },
         {
           "path": "shortcuts.xml",
@@ -724,12 +1110,6 @@
         },
         {
           "path": "stylers.model.xml",
-          "size": 228803,
-          "hash": "4a00110e6af5a34ec46884122e9cc5c6",
-          "modified": "2025-05-03T02:37:15.251512"
-        },
-        {
-          "path": "stylers.xml",
           "size": 228803,
           "hash": "4a00110e6af5a34ec46884122e9cc5c6",
           "modified": "2025-05-03T02:37:15.251512"
@@ -937,726 +1317,6 @@
           "size": 12017,
           "hash": "6972b2c64653b9fb254ef65871140b29",
           "modified": "2024-02-17T18:00:08.665210"
-        },
-        {
-          "path": "backup\\AIDEV.txt@2025-06-09_101232",
-          "size": 39805,
-          "hash": "4db8efc6ec396072dea4709222c0a6dc",
-          "modified": "2025-06-09T10:12:32.411424"
-        },
-        {
-          "path": "backup\\AI工作.txt@2025-06-27_103933",
-          "size": 140470,
-          "hash": "4d691f692a86eed18c64cff33b34c587",
-          "modified": "2025-06-27T10:39:33.793413"
-        },
-        {
-          "path": "backup\\arl_url.txt@2021-08-12_100912",
-          "size": 73,
-          "hash": "822bec1a8f7917e50d5de28c6c735155",
-          "modified": "2021-08-12T10:09:12.045217"
-        },
-        {
-          "path": "backup\\config.json@2020-10-29_173039",
-          "size": 131,
-          "hash": "dd049e674a74994fde70d307e0c2c5bd",
-          "modified": "2020-10-29T17:30:39.994788"
-        },
-        {
-          "path": "backup\\new 10@2020-07-15_141610",
-          "size": 2433,
-          "hash": "e1a080a192fcdc7e2e758d274a6c985f",
-          "modified": "2020-07-15T14:16:10.969480"
-        },
-        {
-          "path": "backup\\new 10@2022-11-10_094954",
-          "size": 3037,
-          "hash": "269008a3c46c3e0461e124dcbb9558e3",
-          "modified": "2022-11-10T09:49:54.090158"
-        },
-        {
-          "path": "backup\\new 11@2020-07-14_162712",
-          "size": 0,
-          "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2020-07-14T16:32:49.905513"
-        },
-        {
-          "path": "backup\\new 11@2020-07-16_111857",
-          "size": 118,
-          "hash": "830faef065a65131a53b3a0eea037b54",
-          "modified": "2020-07-16T13:43:24.673987"
-        },
-        {
-          "path": "backup\\new 11@2022-11-10_172623",
-          "size": 0,
-          "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2022-11-10T17:50:20.087054"
-        },
-        {
-          "path": "backup\\new 11@2022-11-24_164119",
-          "size": 0,
-          "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2022-11-24T16:41:26.116634"
-        },
-        {
-          "path": "backup\\new 11@2022-12-15_190057",
-          "size": 2857,
-          "hash": "90e6e769067d8a8c4b4bd44c22bc8a2a",
-          "modified": "2022-12-15T19:01:18.403733"
-        },
-        {
-          "path": "backup\\new 12@2021-07-09_162411",
-          "size": 438,
-          "hash": "6821759e61ba384caf06c20be0e393fa",
-          "modified": "2021-07-09T16:43:15.155704"
-        },
-        {
-          "path": "backup\\new 12@2023-02-10_144822",
-          "size": 0,
-          "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2023-02-10T14:52:19.769524"
-        },
-        {
-          "path": "backup\\new 12@2023-03-16_113016",
-          "size": 7399,
-          "hash": "5ba00b6086e896a5ba2f7b11e8f1d5ce",
-          "modified": "2023-03-16T11:30:44.655195"
-        },
-        {
-          "path": "backup\\new 13@2020-07-20_112155",
-          "size": 127,
-          "hash": "26e8e26f1de44900903215ab453def31",
-          "modified": "2020-07-20T11:21:55.777115"
-        },
-        {
-          "path": "backup\\new 13@2022-11-17_101110",
-          "size": 0,
-          "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2022-11-17T11:12:36.442723"
-        },
-        {
-          "path": "backup\\new 13@2023-05-31_103307",
-          "size": 0,
-          "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2023-05-31T10:33:08.667875"
-        },
-        {
-          "path": "backup\\new 14@2023-05-17_214247",
-          "size": 3181,
-          "hash": "1af18fd5c14d0bcf1a1c6ed7bd095946",
-          "modified": "2023-05-17T21:42:54.131448"
-        },
-        {
-          "path": "backup\\new 15@2020-07-21_160117",
-          "size": 2682,
-          "hash": "747896e02752d36212463df74fb14e6a",
-          "modified": "2020-07-21T16:01:17.225895"
-        },
-        {
-          "path": "backup\\new 16@2020-07-22_101156",
-          "size": 1130,
-          "hash": "d488acfb8d03962bcda2634cdaea0ce1",
-          "modified": "2020-07-22T10:15:54.329578"
-        },
-        {
-          "path": "backup\\new 17@2020-07-24_153950",
-          "size": 5616,
-          "hash": "5d5fad102fa4526799bdc9221635a275",
-          "modified": "2020-08-03T16:23:07.643389"
-        },
-        {
-          "path": "backup\\new 18@2020-07-23_203633",
-          "size": 9,
-          "hash": "977bc7f02200d98ad3ba9b1c94acc8df",
-          "modified": "2020-07-23T20:37:44.007614"
-        },
-        {
-          "path": "backup\\new 19@2021-08-18_182324",
-          "size": 12,
-          "hash": "bf9a436f049830e99b7c9a0b1964423d",
-          "modified": "2021-08-18T18:23:52.074844"
-        },
-        {
-          "path": "backup\\new 1@2020-06-30_155615",
-          "size": 222,
-          "hash": "c86080742d50b319951858a340442d28",
-          "modified": "2020-06-30T15:56:22.377558"
-        },
-        {
-          "path": "backup\\new 1@2022-04-15_095045",
-          "size": 2120,
-          "hash": "831fa7a71edb7e6114b6567362c3c4bc",
-          "modified": "2022-04-15T14:21:46.785220"
-        },
-        {
-          "path": "backup\\new 20@2020-07-30_100003",
-          "size": 548,
-          "hash": "c5f1750cb3b96d5dc5b2ca1bb2e18b0d",
-          "modified": "2020-07-30T10:00:10.622530"
-        },
-        {
-          "path": "backup\\new 21@2020-07-31_103509",
-          "size": 355,
-          "hash": "f6607aeac7ffe4e3b03a9692988a4166",
-          "modified": "2020-07-31T10:36:33.390098"
-        },
-        {
-          "path": "backup\\new 22@2020-08-07_161028",
-          "size": 9186,
-          "hash": "65c9f3653bead9149a486d229509445b",
-          "modified": "2020-08-07T16:10:28.486408"
-        },
-        {
-          "path": "backup\\new 23@2020-08-03_165438",
-          "size": 2653,
-          "hash": "92cb485aa00eea0a0b992bd3c60bf09f",
-          "modified": "2020-08-03T16:54:38.836623"
-        },
-        {
-          "path": "backup\\new 24@2020-08-06_143308",
-          "size": 33313,
-          "hash": "0c28f3814bc89591d74b7e46705b4468",
-          "modified": "2020-08-06T14:33:08.346545"
-        },
-        {
-          "path": "backup\\new 25@2020-08-06_231951",
-          "size": 349,
-          "hash": "132c2469e51ccc42cbe1cbee95530ea9",
-          "modified": "2020-08-06T23:40:58.843728"
-        },
-        {
-          "path": "backup\\new 26@2020-08-07_164238",
-          "size": 4383,
-          "hash": "9f5ed9f4f0d43caed20f126f5ae31b09",
-          "modified": "2020-08-07T16:42:38.650431"
-        },
-        {
-          "path": "backup\\new 27@2020-09-29_141006",
-          "size": 997,
-          "hash": "d18760570a28a64ff9cc879823713de5",
-          "modified": "2020-09-29T14:10:06.063360"
-        },
-        {
-          "path": "backup\\new 28@2020-08-07_220946",
-          "size": 20652,
-          "hash": "2e1232510ee78f272e6a85c9975dd005",
-          "modified": "2020-08-07T22:09:46.300998"
-        },
-        {
-          "path": "backup\\new 29@2020-09-05_155125",
-          "size": 3003,
-          "hash": "51dc15f23a3d2eb5044e919b2e6b0dbe",
-          "modified": "2020-09-07T09:41:55.412331"
-        },
-        {
-          "path": "backup\\new 2@2020-07-01_100143",
-          "size": 5515,
-          "hash": "2b8ba12bf0f33ceaae649e6ec7d7840f",
-          "modified": "2020-07-01T10:01:43.161096"
-        },
-        {
-          "path": "backup\\new 2@2022-05-18_172447",
-          "size": 38,
-          "hash": "632c4d415eb7f8592649969184b73767",
-          "modified": "2022-06-08T11:59:45.354651"
-        },
-        {
-          "path": "backup\\new 30@2020-08-27_150936",
-          "size": 6756,
-          "hash": "33d456abee355253c4c489b8de40d319",
-          "modified": "2020-08-27T15:09:36.424624"
-        },
-        {
-          "path": "backup\\new 31@2020-08-28_110700",
-          "size": 767,
-          "hash": "f705bb86d5a01a2f185ea1f5c0d88cf1",
-          "modified": "2020-08-28T11:07:00.495952"
-        },
-        {
-          "path": "backup\\new 32@2020-08-28_134150",
-          "size": 0,
-          "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2020-08-28T13:41:50.868994"
-        },
-        {
-          "path": "backup\\new 32@2020-09-06_093212",
-          "size": 869,
-          "hash": "4b032a84d24d726b74478a1a99cc4365",
-          "modified": "2020-09-06T16:07:15.377808"
-        },
-        {
-          "path": "backup\\new 33@2020-09-06_160853",
-          "size": 1797,
-          "hash": "2c94263fb51c8f93c2b3c907f6925fd9",
-          "modified": "2020-09-07T12:33:40.073167"
-        },
-        {
-          "path": "backup\\new 34@2020-09-07_163906",
-          "size": 1256,
-          "hash": "bd54fe7c7ef45dcde0e932db5e2f713c",
-          "modified": "2020-09-07T16:39:06.601192"
-        },
-        {
-          "path": "backup\\new 35@2020-09-23_173619",
-          "size": 242,
-          "hash": "f4d64c2eceb03479292a66b2ab682f89",
-          "modified": "2020-09-23T17:36:54.730806"
-        },
-        {
-          "path": "backup\\new 36@2020-09-08_181740",
-          "size": 698,
-          "hash": "f31c9c57f720c90852e5ce52510ee64f",
-          "modified": "2020-09-08T18:17:40.875505"
-        },
-        {
-          "path": "backup\\new 37@2020-09-23_195654",
-          "size": 2057,
-          "hash": "efbfdafa783c653ea94ad95c18da4745",
-          "modified": "2020-09-23T20:13:02.618191"
-        },
-        {
-          "path": "backup\\new 38@2020-09-30_184146",
-          "size": 86,
-          "hash": "62df76e34c5c9289b76deaada1b88bbc",
-          "modified": "2020-09-30T18:45:58.656255"
-        },
-        {
-          "path": "backup\\new 39@2020-10-10_144348",
-          "size": 56,
-          "hash": "7eecfe58343df5c0d9ad4ad1014d4502",
-          "modified": "2020-10-10T14:43:47.999732"
-        },
-        {
-          "path": "backup\\new 3@2020-07-02_182629",
-          "size": 620,
-          "hash": "7c389dbcea55352d4ac82126122ca159",
-          "modified": "2020-07-03T10:19:05.738314"
-        },
-        {
-          "path": "backup\\new 3@2022-04-29_152244",
-          "size": 0,
-          "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2022-04-29T15:30:20.322793"
-        },
-        {
-          "path": "backup\\new 3@2022-05-11_175924",
-          "size": 4340,
-          "hash": "c9949fdac78bcb722ad6986d18552b80",
-          "modified": "2022-05-11T17:59:24.058788"
-        },
-        {
-          "path": "backup\\new 40@2020-10-30_190526",
-          "size": 649,
-          "hash": "53ba7a7ad1e2ddbb515cc36d1be1941a",
-          "modified": "2020-10-30T19:05:33.262419"
-        },
-        {
-          "path": "backup\\new 41@2020-10-28_102144",
-          "size": 0,
-          "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2020-10-28T16:31:45.188309"
-        },
-        {
-          "path": "backup\\new 41@2020-12-22_165105",
-          "size": 857,
-          "hash": "74d6f09613df88dd49e59ae06e28eff0",
-          "modified": "2020-12-22T16:51:19.222983"
-        },
-        {
-          "path": "backup\\new 42@2020-10-23_154644",
-          "size": 901,
-          "hash": "166bd103a5cf182b2b797845bb07f18d",
-          "modified": "2020-10-23T15:46:44.321965"
-        },
-        {
-          "path": "backup\\new 43@2020-12-22_165901",
-          "size": 140,
-          "hash": "adf090633902e904f2001ebf4b39963c",
-          "modified": "2020-12-22T17:00:53.263193"
-        },
-        {
-          "path": "backup\\new 44@2021-10-21_145611",
-          "size": 2474,
-          "hash": "62aba5b087d821045e5f84858a11c7c4",
-          "modified": "2021-10-21T14:56:11.348823"
-        },
-        {
-          "path": "backup\\new 45@2020-12-30_153308",
-          "size": 30560,
-          "hash": "514dff5a69271b78ce5cd5a8b9792180",
-          "modified": "2020-12-30T16:00:05.726453"
-        },
-        {
-          "path": "backup\\new 46@2020-12-31_105737",
-          "size": 104,
-          "hash": "2abaa2ff7d3fb9a40d64ee1e206ff8e3",
-          "modified": "2020-12-31T10:58:05.971464"
-        },
-        {
-          "path": "backup\\new 47@2021-07-09_115223",
-          "size": 157,
-          "hash": "c4cf65965d80908989a6d525e346a382",
-          "modified": "2021-07-09T11:53:19.562746"
-        },
-        {
-          "path": "backup\\new 48@2021-01-19_141320",
-          "size": 67,
-          "hash": "d0840b0005e03ec3253e59afc0fc77e4",
-          "modified": "2021-01-19T14:18:35.324490"
-        },
-        {
-          "path": "backup\\new 49@2021-07-09_170600",
-          "size": 13603,
-          "hash": "3079de1234ed75231d8eb5e51bb27e69",
-          "modified": "2021-07-09T17:06:00.335463"
-        },
-        {
-          "path": "backup\\new 4@2020-07-03_114451",
-          "size": 378,
-          "hash": "5b365248c67450840567ca3ac1269997",
-          "modified": "2020-07-03T12:30:21.844976"
-        },
-        {
-          "path": "backup\\new 4@2022-04-21_170721",
-          "size": 797,
-          "hash": "8a263eaa9334b3c77b215e2b26579672",
-          "modified": "2022-04-21T17:11:19.399694"
-        },
-        {
-          "path": "backup\\new 50@2021-02-06_173108",
-          "size": 1281,
-          "hash": "fe153d5100846ceac3220af6d1ec42b1",
-          "modified": "2021-02-06T17:31:08.894643"
-        },
-        {
-          "path": "backup\\new 51@2021-07-28_184740",
-          "size": 727,
-          "hash": "74bb593a6bd09f78f5c1951ca7017bf8",
-          "modified": "2021-07-28T19:48:17.683915"
-        },
-        {
-          "path": "backup\\new 52@2021-08-16_153004",
-          "size": 1173,
-          "hash": "bb5756be8f4494c9a94fa1b8f3d384ca",
-          "modified": "2021-08-16T15:30:04.572274"
-        },
-        {
-          "path": "backup\\new 53@2021-12-13_202747",
-          "size": 256,
-          "hash": "53a7d7e32a014e8b8e9d8202e4299316",
-          "modified": "2021-12-13T20:31:46.233653"
-        },
-        {
-          "path": "backup\\new 54@2021-08-05_114356",
-          "size": 681,
-          "hash": "6df10461446db169fd0e493b006ed799",
-          "modified": "2021-08-05T11:45:56.119718"
-        },
-        {
-          "path": "backup\\new 55@2021-08-09_155036",
-          "size": 229,
-          "hash": "4a15d0bf517ff08f02cc4a4d9825c56e",
-          "modified": "2021-08-09T17:06:31.894965"
-        },
-        {
-          "path": "backup\\new 56@2021-12-17_101108",
-          "size": 4,
-          "hash": "cb492b7df9b5c170d7c87527940eff3b",
-          "modified": "2021-12-17T10:11:15.174435"
-        },
-        {
-          "path": "backup\\new 57@2021-08-11_114958",
-          "size": 0,
-          "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2021-08-11T11:50:19.665714"
-        },
-        {
-          "path": "backup\\new 57@2021-12-27_142622",
-          "size": 199,
-          "hash": "feea48da21c1862cd2a33e096e1ff278",
-          "modified": "2021-12-27T14:27:04.477128"
-        },
-        {
-          "path": "backup\\new 58@2021-12-27_142643",
-          "size": 199,
-          "hash": "4350e4e36ca5e78a27ded970ee25e3ab",
-          "modified": "2021-12-27T14:26:43.461907"
-        },
-        {
-          "path": "backup\\new 59@2022-01-18_141701",
-          "size": 0,
-          "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2022-01-18T14:21:13.966329"
-        },
-        {
-          "path": "backup\\new 5@2020-07-03_173835",
-          "size": 2474,
-          "hash": "d9d3281a221a5d3ad24e675bb90ed407",
-          "modified": "2020-07-03T18:32:52.951074"
-        },
-        {
-          "path": "backup\\new 5@2022-05-13_170114",
-          "size": 0,
-          "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2022-05-13T17:07:11.584163"
-        },
-        {
-          "path": "backup\\new 5@2022-05-18_150045",
-          "size": 0,
-          "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2022-05-18T15:01:41.510612"
-        },
-        {
-          "path": "backup\\new 5@2022-06-10_163842",
-          "size": 0,
-          "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2022-06-10T16:39:31.814173"
-        },
-        {
-          "path": "backup\\new 5@2022-06-29_121210",
-          "size": 2,
-          "hash": "81051bcc2cf1bedf378224b0a93e2877",
-          "modified": "2022-06-29T12:12:17.948408"
-        },
-        {
-          "path": "backup\\new 6@2020-07-06_091446",
-          "size": 1525,
-          "hash": "c04ad84bf20ead784c04021dc31f4aac",
-          "modified": "2020-07-06T14:03:13.054692"
-        },
-        {
-          "path": "backup\\new 6@2022-05-18_115628",
-          "size": 0,
-          "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2022-05-18T11:57:17.459912"
-        },
-        {
-          "path": "backup\\new 6@2022-08-11_115356",
-          "size": 0,
-          "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2022-08-11T11:54:13.801466"
-        },
-        {
-          "path": "backup\\new 6@2022-08-17_092504",
-          "size": 299,
-          "hash": "8c9ab3e54457ee25747dc53c6c1796a2",
-          "modified": "2022-08-17T09:30:05.963146"
-        },
-        {
-          "path": "backup\\new 7@2020-07-09_102432",
-          "size": 120,
-          "hash": "a47d95f28b6663333733c258c739b413",
-          "modified": "2020-07-09T10:28:16.201120"
-        },
-        {
-          "path": "backup\\new 7@2022-07-28_175930",
-          "size": 0,
-          "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2022-07-28T18:10:36.381034"
-        },
-        {
-          "path": "backup\\new 7@2022-10-09_162752",
-          "size": 0,
-          "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2022-10-09T16:29:38.125849"
-        },
-        {
-          "path": "backup\\new 7@2022-11-16_165748",
-          "size": 0,
-          "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2022-11-16T17:53:24.548166"
-        },
-        {
-          "path": "backup\\new 7@2023-04-23_115859",
-          "size": 0,
-          "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2023-04-23T11:59:06.544261"
-        },
-        {
-          "path": "backup\\new 7@2023-05-04_155549",
-          "size": 230,
-          "hash": "6862ef85c2e978b441cc39b58fc38d79",
-          "modified": "2023-05-04T15:56:03.900680"
-        },
-        {
-          "path": "backup\\new 8@2020-07-10_133702",
-          "size": 27985,
-          "hash": "77d056c6154606fa557d16ca83666e52",
-          "modified": "2020-07-10T13:37:02.350563"
-        },
-        {
-          "path": "backup\\new 8@2022-08-08_174924",
-          "size": 0,
-          "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2022-08-08T17:49:49.305845"
-        },
-        {
-          "path": "backup\\new 8@2022-08-23_115809",
-          "size": 15179,
-          "hash": "a9abd0adda735057e6d3fa6b26ffd468",
-          "modified": "2022-08-23T11:58:16.221000"
-        },
-        {
-          "path": "backup\\new 9@2020-07-14_112551",
-          "size": 507,
-          "hash": "f513700125338193af1acfa3674a6e27",
-          "modified": "2020-08-04T17:20:39.202408"
-        },
-        {
-          "path": "backup\\new 9@2022-08-09_163814",
-          "size": 1595,
-          "hash": "4b879539ea6413e86e04dbf09820531e",
-          "modified": "2023-08-11T17:27:16.104079"
-        },
-        {
-          "path": "backup\\nginx.conf.txt@2021-01-14_204030",
-          "size": 887,
-          "hash": "c39904b42fd1c7d6c137fab9b0d13573",
-          "modified": "2021-01-14T20:40:30.278263"
-        },
-        {
-          "path": "backup\\tmp.txt@2021-12-13_195615",
-          "size": 3766,
-          "hash": "155406ccadf787e2f9ef1fd43206df25",
-          "modified": "2021-12-13T19:56:36.719958"
-        },
-        {
-          "path": "backup\\up.txt@2021-07-30_114113",
-          "size": 419,
-          "hash": "59dce8909b57fe31c39c5e4b5bc6df96",
-          "modified": "2021-07-30T11:41:13.170854"
-        },
-        {
-          "path": "backup\\一人公司.txt@2025-06-25_113729",
-          "size": 4020,
-          "hash": "c629a66e5d4d05e14767b030528b211a",
-          "modified": "2025-06-25T11:38:32.357668"
-        },
-        {
-          "path": "backup\\今天必做事.txt@2021-11-12_103225",
-          "size": 62753,
-          "hash": "4adf2962377dbee0ec117566682b20d2",
-          "modified": "2021-12-14T14:41:26.215929"
-        },
-        {
-          "path": "backup\\排期进度池.txt@2022-10-09_151010",
-          "size": 344,
-          "hash": "38061d5fa4b1fcb59d848d04eda48a7c",
-          "modified": "2022-10-09T15:10:10.286301"
-        },
-        {
-          "path": "backup\\新文件 13@2023-09-06_181547",
-          "size": 3577,
-          "hash": "9156ae5fce7fa92b4f764314856e6384",
-          "modified": "2023-09-06T18:20:55.483445"
-        },
-        {
-          "path": "backup\\新文件 15@2023-11-17_164823",
-          "size": 1941,
-          "hash": "c0c28ba333e795d8b9dbec12f21058b4",
-          "modified": "2023-11-17T16:55:02.545171"
-        },
-        {
-          "path": "backup\\新文件 16@2023-12-13_144916",
-          "size": 1672,
-          "hash": "006ada046842117bdfa8fb925880703f",
-          "modified": "2023-12-13T14:55:42.450147"
-        },
-        {
-          "path": "backup\\新文件 17@2025-05-28_010241",
-          "size": 4700,
-          "hash": "754a06b444f7fa6e10b9d45e21c0778c",
-          "modified": "2025-05-28T01:02:41.978199"
-        },
-        {
-          "path": "backup\\新文件 1@2024-04-28_094252",
-          "size": 0,
-          "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2024-04-28T09:43:13.393815"
-        },
-        {
-          "path": "backup\\新文件 2@2024-05-30_144048",
-          "size": 0,
-          "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2024-05-30T16:45:01.269387"
-        },
-        {
-          "path": "backup\\新文件 2@2025-06-19_182808",
-          "size": 2,
-          "hash": "81051bcc2cf1bedf378224b0a93e2877",
-          "modified": "2025-06-20T15:45:52.769586"
-        },
-        {
-          "path": "backup\\新文件 4@2024-08-07_170551",
-          "size": 0,
-          "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2024-08-07T17:07:29.997091"
-        },
-        {
-          "path": "backup\\新文件 4@2024-09-23_155413",
-          "size": 0,
-          "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2024-09-23T15:54:28.998910"
-        },
-        {
-          "path": "backup\\新文件 4@2024-11-28_160118",
-          "size": 0,
-          "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2024-11-28T16:01:18.554096"
-        },
-        {
-          "path": "backup\\新文件 5@2024-12-05_155214",
-          "size": 511730,
-          "hash": "67001642df14f373e8eeb0ff6ea4bb8f",
-          "modified": "2024-12-05T15:52:14.359770"
-        },
-        {
-          "path": "backup\\新文件 5@2024-12-19_095402",
-          "size": 0,
-          "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2024-12-19T09:54:02.118218"
-        },
-        {
-          "path": "backup\\新文件 6@2025-01-03_163241",
-          "size": 243,
-          "hash": "d3fb4458d03ec0668c8af8a28a791ee7",
-          "modified": "2025-01-03T16:32:41.513712"
-        },
-        {
-          "path": "backup\\新文件 7@2025-02-25_180929",
-          "size": 109,
-          "hash": "60d0a1afa4e4f448c637058eb12a0188",
-          "modified": "2025-02-25T18:09:29.583023"
-        },
-        {
-          "path": "backup\\日常事务.txt@2021-11-17_104734",
-          "size": 6651,
-          "hash": "dda0b100f1852d9362ef87f028e5dc09",
-          "modified": "2021-12-06T09:54:53.396414"
-        },
-        {
-          "path": "backup\\极光工作日志2020.txt@2022-01-05_144302",
-          "size": 187884,
-          "hash": "30214c66de4890266bf7ecc5efb18598",
-          "modified": "2022-01-05T14:43:02.329690"
-        },
-        {
-          "path": "backup\\极光工作日志2021.txt@2023-11-23_100847",
-          "size": 116604,
-          "hash": "6ad76fde14d7f377a39ff7b0c1612da1",
-          "modified": "2023-11-23T10:08:54.366338"
-        },
-        {
-          "path": "backup\\极光工作日志2025.txt@2025-02-26_104152",
-          "size": 64756,
-          "hash": "615d7151922c8dddf189f1853815d489",
-          "modified": "2025-02-26T10:41:52.683755"
-        },
-        {
-          "path": "backup\\账号密码.txt@2024-03-28_104636",
-          "size": 69052,
-          "hash": "a51fdfd38173d6bd7378a2e0a1d1b7ff",
-          "modified": "2024-03-28T10:46:43.698400"
         },
         {
           "path": "functionList\\ada.xml",
@@ -2485,12 +2145,6 @@
           "size": 62569,
           "hash": "430af4fd3a9f4d266d0e7e42c30ad646",
           "modified": "2025-04-29T23:13:14.605736"
-        },
-        {
-          "path": "plugins\\PythonScript_Full_3.0.22.0_x64.zip",
-          "size": 12895295,
-          "hash": "cbbb8ef468100879afc4ffb2c7b4d51e",
-          "modified": "2025-06-07T22:06:02.214814"
         },
         {
           "path": "plugins\\Config\\converter.ini",
@@ -8217,11 +7871,11 @@
           "modified": "2024-02-17T18:00:08.649080"
         }
       ],
-      "total_files": 1265,
-      "total_size": 78333784
+      "total_files": 1138,
+      "total_size": 63025019
     },
     "notepad-": {
-      "version": "20250627_120649",
+      "version": "20250627_122946",
       "files": [
         {
           "path": "D3Dcompiler_47.dll",
@@ -8426,12 +8080,6 @@
           "size": 490496,
           "hash": "1a48d60d74a61725047ac8457b40bce1",
           "modified": "2025-05-12T17:15:57.297905"
-        },
-        {
-          "path": "plugin\\nddftp.dll",
-          "size": 3844608,
-          "hash": "5eca3616a270040b4dabc7be36154caa",
-          "modified": "2025-02-24T13:34:10.693464"
         },
         {
           "path": "plugin\\pinlang.dll",
@@ -8744,12 +8392,6 @@
           "size": 497,
           "hash": "da5851b6092205f6061b2e044d07440a",
           "modified": "2024-07-25T10:42:35.313079"
-        },
-        {
-          "path": "themes\\bean green\\typescript.ini",
-          "size": 8684,
-          "hash": "a771d0ab1750160e8184ea9e6c188865",
-          "modified": "2024-06-05T09:24:49.122784"
         },
         {
           "path": "themes\\bean green\\vb.ini",
@@ -9232,12 +8874,6 @@
           "modified": "2024-07-25T10:40:48.808756"
         },
         {
-          "path": "themes\\Black board\\typescript.ini",
-          "size": 8266,
-          "hash": "edec72d60c2d09ff6a3acc94f7d1b0d0",
-          "modified": "2023-01-25T20:36:20"
-        },
-        {
           "path": "themes\\Black board\\vb.ini",
           "size": 1149,
           "hash": "97c8cef92e208224a474ecdac43c4fcc",
@@ -9505,12 +9141,6 @@
           "path": "themes\\Blue light\\txt.ini",
           "size": 377,
           "hash": "ea44e838050c96f0291d56e61e708acc",
-          "modified": "2023-02-06T20:17:04"
-        },
-        {
-          "path": "themes\\Blue light\\typescript.ini",
-          "size": 8684,
-          "hash": "9b95df630da8d5cdafa160cee5da2778",
           "modified": "2023-02-06T20:17:04"
         },
         {
@@ -10240,12 +9870,6 @@
           "modified": "2024-07-25T10:43:36.921005"
         },
         {
-          "path": "themes\\Deep Black\\typescript.ini",
-          "size": 8266,
-          "hash": "346e3a378e1ef0e12f93835ed5d73f15",
-          "modified": "2023-01-25T20:36:20"
-        },
-        {
           "path": "themes\\Deep Black\\vb.ini",
           "size": 1149,
           "hash": "e10672fc4c4f3cae16da768183126297",
@@ -10972,12 +10596,6 @@
           "modified": "2024-07-25T10:44:17.449121"
         },
         {
-          "path": "themes\\Plastic Code Wrap\\typescript.ini",
-          "size": 8266,
-          "hash": "0681da45f9e269b9fb85464d5e50e055",
-          "modified": "2023-01-25T20:36:20"
-        },
-        {
           "path": "themes\\Plastic Code Wrap\\vb.ini",
           "size": 1149,
           "hash": "0bcce72d8c826197cadec3520063a053",
@@ -11488,12 +11106,6 @@
           "modified": "2024-07-25T10:44:50.561045"
         },
         {
-          "path": "themes\\yellow rice\\typescript.ini",
-          "size": 8684,
-          "hash": "564528a5679e0859332d65c926b8f0fe",
-          "modified": "2023-02-06T20:17:04"
-        },
-        {
           "path": "themes\\yellow rice\\vb.ini",
           "size": 3012,
           "hash": "4a4299fd0d57a5efeabd2e213b41e199",
@@ -11528,19 +11140,13 @@
           "size": 33,
           "hash": "aaea7ba475c961f941d0a23488457beb",
           "modified": "2024-11-14T11:17:45.889878"
-        },
-        {
-          "path": "translations\\qt_zh_TW.qm",
-          "size": 127849,
-          "hash": "9c6a3721d01ecaf3f952ce96f46ce046",
-          "modified": "2024-11-14T11:17:46.092878"
         }
       ],
-      "total_files": 552,
-      "total_size": 70272942
+      "total_files": 544,
+      "total_size": 66249635
     },
     "SublimeText": {
-      "version": "20250627_120650",
+      "version": "20250627_122946",
       "files": [
         {
           "path": "!)添删右键菜单.bat",
@@ -11603,6 +11209,12 @@
           "modified": "2024-06-20T04:16:12"
         },
         {
+          "path": "README.md",
+          "size": 452,
+          "hash": "62e6147e8960865c42d783eaa914e54a",
+          "modified": "2025-06-27T10:47:40.924395"
+        },
+        {
           "path": "sqlite3.dll",
           "size": 1299456,
           "hash": "049ab2a3b153e1828225fbad33ecf3e1",
@@ -11642,1297 +11254,1243 @@
           "path": "Data\\Cache\\ActionScript\\ActionScript.sublime-syntax.cache",
           "size": 15793,
           "hash": "61cde63ba49228b0cca750e196e0dc70",
-          "modified": "2025-05-26T10:21:20.872128"
+          "modified": "2025-05-26T14:07:33.273686"
         },
         {
           "path": "Data\\Cache\\AppleScript\\AppleScript.sublime-syntax.cache",
           "size": 13627,
           "hash": "069d1651634a6cb6c20a8a6f693bd5a1",
-          "modified": "2025-05-26T10:21:20.882128"
+          "modified": "2025-05-26T14:07:33.280207"
         },
         {
           "path": "Data\\Cache\\ASP\\ASP.sublime-syntax.cache",
           "size": 12091,
           "hash": "6a7a8fff765633ed8913029c928c8bb3",
-          "modified": "2025-05-26T10:21:20.890129"
+          "modified": "2025-05-26T14:07:33.285208"
         },
         {
           "path": "Data\\Cache\\ASP\\HTML (ASP).sublime-syntax.cache",
           "size": 14921,
           "hash": "698f9e621b0537d261b4ab36457ddcc4",
-          "modified": "2025-05-26T10:21:21.081801"
+          "modified": "2025-05-26T14:07:33.331987"
         },
         {
           "path": "Data\\Cache\\ASP\\Embeddings\\CSS (for ASP).sublime-syntax.cache",
           "size": 36570,
           "hash": "d07887311120a290242026be97f08e59",
-          "modified": "2025-05-26T10:21:20.921303"
+          "modified": "2025-05-26T14:07:33.303742"
         },
         {
           "path": "Data\\Cache\\ASP\\Embeddings\\JavaScript (for ASP).sublime-syntax.cache",
           "size": 32405,
           "hash": "bc4911be57993e09ea41fefb3b74b742",
-          "modified": "2025-05-26T10:21:21.024301"
+          "modified": "2025-05-26T14:07:33.319160"
         },
         {
           "path": "Data\\Cache\\ASP\\Embeddings\\JSON (for ASP).sublime-syntax.cache",
           "size": 3062,
           "hash": "facf4fa07fcb333ab9bb61e374b5fb2e",
-          "modified": "2025-05-26T10:21:21.029304"
+          "modified": "2025-05-26T14:07:33.322160"
         },
         {
           "path": "Data\\Cache\\Batch File\\Batch File (Compound).sublime-syntax.cache",
           "size": 19861,
           "hash": "7442173afbb38a35dc3f82f81ea9fee3",
-          "modified": "2025-05-26T10:21:21.239942"
+          "modified": "2025-05-26T14:07:33.353285"
         },
         {
           "path": "Data\\Cache\\Batch File\\Batch File.sublime-syntax.cache",
           "size": 20026,
           "hash": "ead20213b4d64562c80a015cd43bc93f",
-          "modified": "2025-05-26T10:21:21.117941"
+          "modified": "2025-05-26T14:07:33.341916"
         },
         {
           "path": "Data\\Cache\\Binary\\Binary.sublime-syntax.cache",
           "size": 174,
           "hash": "d068f9a5f314b6ad31de607bd9d65b1d",
-          "modified": "2025-05-26T10:21:21.241943"
+          "modified": "2025-05-26T14:07:33.354285"
         },
         {
           "path": "Data\\Cache\\C#\\C#.sublime-syntax.cache",
           "size": 33033,
           "hash": "79048e5f592a3c7417e9c82db61061a6",
-          "modified": "2025-05-26T10:21:21.306923"
+          "modified": "2025-05-26T14:07:33.368806"
         },
         {
           "path": "Data\\Cache\\C++\\C++.sublime-syntax.cache",
           "size": 30217,
           "hash": "fd9601354e24aae2bf71f1fbe5812afb",
-          "modified": "2025-05-26T10:21:21.434923"
+          "modified": "2025-05-26T14:07:33.391139"
         },
         {
           "path": "Data\\Cache\\C++\\C.sublime-syntax.cache",
           "size": 22206,
           "hash": "ac6f8798c35de3616cb74cf1704d2b9a",
-          "modified": "2025-05-26T10:21:21.321923"
+          "modified": "2025-05-26T14:07:33.377725"
         },
         {
           "path": "Data\\Cache\\Clojure\\Clojure.sublime-syntax.cache",
           "size": 4871,
           "hash": "438f2f3ce42c2c1a698bd778ee6a3492",
-          "modified": "2025-05-26T10:21:21.439924"
+          "modified": "2025-05-26T14:07:33.394140"
         },
         {
           "path": "Data\\Cache\\Clojure\\ClojureScript.sublime-syntax.cache",
           "size": 228,
           "hash": "605ab4224aa2fe1edbb27bbccd072136",
-          "modified": "2025-05-26T10:21:21.441925"
+          "modified": "2025-05-26T14:07:33.395198"
         },
         {
           "path": "Data\\Cache\\CSS\\CSS.sublime-syntax.cache",
           "size": 36161,
           "hash": "64752bdd7f6cbed96ad03999ddf4dd87",
-          "modified": "2025-05-26T10:21:21.495582"
-        },
-        {
-          "path": "Data\\Cache\\CSS\\CSS.sublime-syntax.rcache",
-          "size": 282548,
-          "hash": "9d03edcc572bd953c9dd309dcc0198ea",
-          "modified": "2025-05-27T14:12:25.873096"
+          "modified": "2025-05-26T14:07:33.412822"
         },
         {
           "path": "Data\\Cache\\D\\D.sublime-syntax.cache",
           "size": 34337,
           "hash": "6012a3d503fd9c3e9b0a0a257cb66992",
-          "modified": "2025-05-26T10:21:21.518753"
+          "modified": "2025-05-26T14:07:33.427405"
         },
         {
           "path": "Data\\Cache\\D\\DMD Output.sublime-syntax.cache",
           "size": 429,
           "hash": "76839152bb829b3e044c44b0c4246719",
-          "modified": "2025-05-26T10:21:21.521751"
-        },
-        {
-          "path": "Data\\Cache\\Default\\Ignored Packages.cache",
-          "size": 30,
-          "hash": "9f1d036a2da39eca297bd700a9e9df01",
-          "modified": "2025-05-26T10:21:37.610045"
+          "modified": "2025-05-26T14:07:33.427405"
         },
         {
           "path": "Data\\Cache\\Default\\Meta Info Summary.cache",
           "size": 22391,
           "hash": "fa887b4efd7bc27c039c9953693ded93",
-          "modified": "2025-05-26T10:21:26.290815"
+          "modified": "2025-05-26T14:07:35.062224"
         },
         {
           "path": "Data\\Cache\\Default\\Startup.cache",
-          "size": 511056,
-          "hash": "3796d6bb35530627ddc4ac9e6d68247f",
-          "modified": "2025-05-26T10:21:41.963762"
+          "size": 518180,
+          "hash": "9b23868c991b021a035316524e025752",
+          "modified": "2025-05-26T14:07:38.984349"
         },
         {
           "path": "Data\\Cache\\Default\\Syntax Summary.cache",
           "size": 13291,
           "hash": "3010466082427ea80e6900673f83adb3",
-          "modified": "2025-05-26T10:21:26.224815"
+          "modified": "2025-05-26T14:07:35.045220"
         },
         {
           "path": "Data\\Cache\\Default\\Syntax Test Results.sublime-syntax.cache",
           "size": 1173,
           "hash": "05048c5c187002f35402bc620a64c2bd",
-          "modified": "2025-05-26T10:21:21.523752"
+          "modified": "2025-05-26T14:07:33.428550"
         },
         {
           "path": "Data\\Cache\\Diff\\Diff (Basic).sublime-syntax.cache",
           "size": 2542,
           "hash": "3b0de1f643f46b3378f484f287c04116",
-          "modified": "2025-05-26T10:21:21.553753"
+          "modified": "2025-05-26T14:07:33.434262"
         },
         {
           "path": "Data\\Cache\\Diff\\Diff.sublime-syntax.cache",
           "size": 5705,
           "hash": "d5e5f50680e7f9330e318f03e9ce514c",
-          "modified": "2025-05-26T10:21:21.550751"
+          "modified": "2025-05-26T14:07:33.431961"
         },
         {
           "path": "Data\\Cache\\Erlang\\Erlang.sublime-syntax.cache",
           "size": 25663,
           "hash": "5cc5f982453d9faabfa24f6ae1aabde2",
-          "modified": "2025-05-26T10:21:21.573752"
+          "modified": "2025-05-26T14:07:33.445411"
         },
         {
           "path": "Data\\Cache\\Erlang\\HTML (Erlang).sublime-syntax.cache",
           "size": 13605,
           "hash": "c157d735317fc0bd49887a357d62888c",
-          "modified": "2025-05-26T10:21:21.601547"
+          "modified": "2025-05-26T14:07:33.453917"
         },
         {
           "path": "Data\\Cache\\Git\\syntax\\Git Blame.tmLanguage.cache",
           "size": 434,
           "hash": "7e7fe3d54a11453244ce77ce94e2775d",
-          "modified": "2025-05-26T10:21:21.668547"
+          "modified": "2025-05-26T14:07:33.477139"
         },
         {
           "path": "Data\\Cache\\Git\\syntax\\Git Commit Message.tmLanguage.cache",
           "size": 471,
           "hash": "68f121e11506ba398a8b4b054f982f92",
-          "modified": "2025-05-26T10:21:21.671547"
+          "modified": "2025-05-26T14:07:33.478652"
         },
         {
           "path": "Data\\Cache\\Git\\syntax\\Git Commit View.tmLanguage.cache",
           "size": 855,
           "hash": "b21a9de5dc0773d1942c8d25b7d4681f",
-          "modified": "2025-05-26T10:21:21.673547"
+          "modified": "2025-05-26T14:07:33.480525"
         },
         {
           "path": "Data\\Cache\\Git\\syntax\\Git Graph.tmLanguage.cache",
           "size": 590,
           "hash": "f45a9028df18a846997194bf98895120",
-          "modified": "2025-05-26T10:21:21.678547"
+          "modified": "2025-05-26T14:07:33.481027"
         },
         {
           "path": "Data\\Cache\\Git Formats\\Git Attributes.sublime-syntax.cache",
           "size": 3578,
           "hash": "e60688424857c121f0b19814c81880f3",
-          "modified": "2025-05-26T10:21:21.607548"
+          "modified": "2025-05-26T14:07:33.455917"
         },
         {
           "path": "Data\\Cache\\Git Formats\\Git Blame Ignore Revisions.sublime-syntax.cache",
           "size": 733,
           "hash": "d18cfdd96ae178897d9f695ff6528373",
-          "modified": "2025-05-26T10:21:21.608547"
+          "modified": "2025-05-26T14:07:33.456918"
         },
         {
           "path": "Data\\Cache\\Git Formats\\Git Code Owners.sublime-syntax.cache",
           "size": 758,
           "hash": "e2aae6b92a0e5f0571a9eafdf1e9c0ed",
-          "modified": "2025-05-26T10:21:21.610549"
+          "modified": "2025-05-26T14:07:33.457981"
         },
         {
           "path": "Data\\Cache\\Git Formats\\Git Commit Message.sublime-syntax.cache",
           "size": 1144,
           "hash": "b2d4fb1c189d2eaa9c6a704eb04b6e41",
-          "modified": "2025-05-26T10:21:21.617548"
+          "modified": "2025-05-26T14:07:33.461068"
         },
         {
           "path": "Data\\Cache\\Git Formats\\Git Commit.sublime-syntax.cache",
           "size": 4609,
           "hash": "462c434e2510133f764ede0f69080a39",
-          "modified": "2025-05-26T10:21:21.615546"
+          "modified": "2025-05-26T14:07:33.459750"
         },
         {
           "path": "Data\\Cache\\Git Formats\\Git Common.sublime-syntax.cache",
           "size": 5519,
           "hash": "6599159154c3817c3b6d0418eba2e454",
-          "modified": "2025-05-26T10:21:21.622547"
+          "modified": "2025-05-26T14:07:33.463511"
         },
         {
           "path": "Data\\Cache\\Git Formats\\Git Config.sublime-syntax.cache",
           "size": 3287,
           "hash": "c572ae81c51b438a58dd0ea2096e7a56",
-          "modified": "2025-05-26T10:21:21.625547"
+          "modified": "2025-05-26T14:07:33.465528"
         },
         {
           "path": "Data\\Cache\\Git Formats\\Git Diff.sublime-syntax.cache",
           "size": 9110,
           "hash": "db746c7141c6777dd403f7a9dda1f938",
-          "modified": "2025-05-26T10:21:21.652548"
+          "modified": "2025-05-26T14:07:33.469553"
         },
         {
           "path": "Data\\Cache\\Git Formats\\Git Ignore.sublime-syntax.cache",
           "size": 529,
           "hash": "55ef226d767e051db318ab37fb28f35c",
-          "modified": "2025-05-26T10:21:21.653548"
+          "modified": "2025-05-26T14:07:33.471067"
         },
         {
           "path": "Data\\Cache\\Git Formats\\Git Link.sublime-syntax.cache",
           "size": 1245,
           "hash": "3af5b302e56468b4bb1b075c5bbe6be0",
-          "modified": "2025-05-26T10:21:21.655549"
+          "modified": "2025-05-26T14:07:33.472069"
         },
         {
           "path": "Data\\Cache\\Git Formats\\Git Log.sublime-syntax.cache",
           "size": 1275,
           "hash": "ed09f312646eab158895cc619e5add0c",
-          "modified": "2025-05-26T10:21:21.657548"
+          "modified": "2025-05-26T14:07:33.473119"
         },
         {
           "path": "Data\\Cache\\Git Formats\\Git Mailmap.sublime-syntax.cache",
           "size": 445,
           "hash": "f7fc53b08903dee29f2e844531eb4484",
-          "modified": "2025-05-26T10:21:21.659546"
+          "modified": "2025-05-26T14:07:33.473622"
         },
         {
           "path": "Data\\Cache\\Git Formats\\Git Rebase.sublime-syntax.cache",
           "size": 3690,
           "hash": "0ac68b4c07427c0748423ccf790b5c8f",
-          "modified": "2025-05-26T10:21:21.665546"
+          "modified": "2025-05-26T14:07:33.476137"
         },
         {
           "path": "Data\\Cache\\Go\\CSS (Go).sublime-syntax.cache",
           "size": 36598,
           "hash": "13f78c57e178b46bf4ec07e80f886194",
-          "modified": "2025-05-26T10:21:21.728295"
+          "modified": "2025-05-26T14:07:33.501118"
         },
         {
           "path": "Data\\Cache\\Go\\Go.sublime-syntax.cache",
           "size": 18279,
           "hash": "8268e8590f2edcc71e783933001bbf20",
-          "modified": "2025-05-26T10:21:22.154746"
+          "modified": "2025-05-26T14:07:33.678848"
         },
         {
           "path": "Data\\Cache\\Go\\HTML (Go).sublime-syntax.cache",
           "size": 13259,
           "hash": "d04727ffdecf3d2a1cbbf2fabbff3fea",
-          "modified": "2025-05-26T10:21:22.169746"
+          "modified": "2025-05-26T14:07:33.687354"
         },
         {
           "path": "Data\\Cache\\Go\\JavaScript (Go).sublime-syntax.cache",
           "size": 32500,
           "hash": "4bad6e8b5ffcb9ed296554fe7223e94f",
-          "modified": "2025-05-26T10:21:22.196746"
+          "modified": "2025-05-26T14:07:33.701688"
         },
         {
           "path": "Data\\Cache\\Go\\JSON (Go).sublime-syntax.cache",
           "size": 3055,
           "hash": "cf60e186347d54e14aab10aad99437c8",
-          "modified": "2025-05-26T10:21:22.200746"
+          "modified": "2025-05-26T14:07:33.704065"
         },
         {
           "path": "Data\\Cache\\Go\\Markdown (Go).sublime-syntax.cache",
           "size": 34691,
           "hash": "161f424bbb6fd582d46c0172093b12d0",
-          "modified": "2025-05-26T10:21:22.245749"
+          "modified": "2025-05-26T14:07:33.723001"
         },
         {
           "path": "Data\\Cache\\Go\\YAML (Go).sublime-syntax.cache",
           "size": 8743,
           "hash": "3e636cd46abd4100559e06e852adaa17",
-          "modified": "2025-05-26T10:21:22.253745"
+          "modified": "2025-05-26T14:07:33.728649"
         },
         {
           "path": "Data\\Cache\\Go\\Embeddings\\CSS (for Go Embedded Backtick Strings).sublime-syntax.cache",
           "size": 36530,
           "hash": "acd3e3b8be978e2500ffce98fc15e55f",
-          "modified": "2025-05-26T10:21:21.772295"
+          "modified": "2025-05-26T14:07:33.519941"
         },
         {
           "path": "Data\\Cache\\Go\\Embeddings\\Go (Embedded Backtick String).sublime-syntax.cache",
           "size": 18510,
           "hash": "de7d9efc908448afa07e375ea1fd8628",
-          "modified": "2025-05-26T10:21:21.793294"
+          "modified": "2025-05-26T14:07:33.528944"
         },
         {
           "path": "Data\\Cache\\Go\\Embeddings\\Go (Embedded CSS).sublime-syntax.cache",
           "size": 18813,
           "hash": "089077caa7f4ecedef5dcc3571277ed3",
-          "modified": "2025-05-26T10:21:21.808982"
+          "modified": "2025-05-26T14:07:33.538663"
         },
         {
           "path": "Data\\Cache\\Go\\Embeddings\\Go (Embedded HTML).sublime-syntax.cache",
           "size": 18825,
           "hash": "7d403ead5db78b4f4e435b8468cf4e09",
-          "modified": "2025-05-26T10:21:21.825021"
+          "modified": "2025-05-26T14:07:33.547181"
         },
         {
           "path": "Data\\Cache\\Go\\Embeddings\\Go (Embedded JS).sublime-syntax.cache",
           "size": 18823,
           "hash": "552058831b2f8bbb974dc6d948aa3913",
-          "modified": "2025-05-26T10:21:21.877019"
+          "modified": "2025-05-26T14:07:33.556398"
         },
         {
           "path": "Data\\Cache\\Go\\Embeddings\\Go (Embedded JSON).sublime-syntax.cache",
           "size": 18812,
           "hash": "55d82e799358ad3670cd08b2e7708f6f",
-          "modified": "2025-05-26T10:21:21.902505"
+          "modified": "2025-05-26T14:07:33.565492"
         },
         {
           "path": "Data\\Cache\\Go\\Embeddings\\Go (Embedded Regex).sublime-syntax.cache",
           "size": 18816,
           "hash": "b5490e79caa1e4872856ab6c164e74e7",
-          "modified": "2025-05-26T10:21:21.933157"
+          "modified": "2025-05-26T14:07:33.574404"
         },
         {
           "path": "Data\\Cache\\Go\\Embeddings\\Go (Embedded SQL).sublime-syntax.cache",
           "size": 18817,
           "hash": "48c277a91050d9a381ff1fe5b22ea5a5",
-          "modified": "2025-05-26T10:21:21.959158"
+          "modified": "2025-05-26T14:07:33.584182"
         },
         {
           "path": "Data\\Cache\\Go\\Embeddings\\Go (Embedded TSQL).sublime-syntax.cache",
           "size": 18830,
           "hash": "d0d94de47567d660d37187f049d9a7db",
-          "modified": "2025-05-26T10:21:21.982681"
+          "modified": "2025-05-26T14:07:33.593184"
         },
         {
           "path": "Data\\Cache\\Go\\Embeddings\\Go (Embedded XML).sublime-syntax.cache",
           "size": 18833,
           "hash": "4ec6e558508cc710051967afc6683592",
-          "modified": "2025-05-26T10:21:22.002999"
+          "modified": "2025-05-26T14:07:33.602747"
         },
         {
           "path": "Data\\Cache\\Go\\Embeddings\\HTML (for Go Embedded Backtick Strings).sublime-syntax.cache",
           "size": 13164,
           "hash": "7b82d4b5e4fde6e8a8aa649503eeb599",
-          "modified": "2025-05-26T10:21:22.017028"
+          "modified": "2025-05-26T14:07:33.610613"
         },
         {
           "path": "Data\\Cache\\Go\\Embeddings\\JavaScript (for Go Embedded Backtick Strings).sublime-syntax.cache",
           "size": 32489,
           "hash": "0ae41fdcc26ca194981be2c09d27856e",
-          "modified": "2025-05-26T10:21:22.046363"
+          "modified": "2025-05-26T14:07:33.626057"
         },
         {
           "path": "Data\\Cache\\Go\\Embeddings\\JSON (for Go Embedded Backtick Strings).sublime-syntax.cache",
           "size": 3130,
           "hash": "95db9fc46d91c538b3867df6741cf0b7",
-          "modified": "2025-05-26T10:21:22.051358"
+          "modified": "2025-05-26T14:07:33.627561"
         },
         {
           "path": "Data\\Cache\\Go\\Embeddings\\RegExp (for Go Embedded Backtick Strings).sublime-syntax.cache",
           "size": 5054,
           "hash": "6724cf571aba7a9ffc0c0df4f302b6e7",
-          "modified": "2025-05-26T10:21:22.059358"
+          "modified": "2025-05-26T14:07:33.631459"
         },
         {
           "path": "Data\\Cache\\Go\\Embeddings\\SQL (for Go Embedded Backtick Strings).sublime-syntax.cache",
           "size": 36730,
           "hash": "483864221db4c23a11f699251f488355",
-          "modified": "2025-05-26T10:21:22.097742"
+          "modified": "2025-05-26T14:07:33.650258"
         },
         {
           "path": "Data\\Cache\\Go\\Embeddings\\TSQL (for Go Embedded Backtick Strings).sublime-syntax.cache",
           "size": 29809,
           "hash": "c7608e22b1131406373a127bbda12e99",
-          "modified": "2025-05-26T10:21:22.124592"
+          "modified": "2025-05-26T14:07:33.665261"
         },
         {
           "path": "Data\\Cache\\Go\\Embeddings\\XML (for Go Embedded Backtick Strings).sublime-syntax.cache",
           "size": 7061,
           "hash": "0606d69c1fdf3c0888dee04ba2965015",
-          "modified": "2025-05-26T10:21:22.133593"
+          "modified": "2025-05-26T14:07:33.668834"
         },
         {
           "path": "Data\\Cache\\Graphviz\\DOT.sublime-syntax.cache",
           "size": 10005,
           "hash": "499038996d1c963f870fec82eb958390",
-          "modified": "2025-05-26T10:21:22.259746"
+          "modified": "2025-05-26T14:07:33.732649"
         },
         {
           "path": "Data\\Cache\\Groovy\\Groovy.sublime-syntax.cache",
           "size": 10120,
           "hash": "6251ab43f6edb4f09330e05d9ada66f5",
-          "modified": "2025-05-26T10:21:22.267748"
+          "modified": "2025-05-26T14:07:33.736650"
         },
         {
           "path": "Data\\Cache\\Haskell\\Cabal.sublime-syntax.cache",
           "size": 5614,
           "hash": "539e403af762b5a0f23435c2e847fef5",
-          "modified": "2025-05-26T10:21:22.273746"
+          "modified": "2025-05-26T14:07:33.739780"
         },
         {
           "path": "Data\\Cache\\Haskell\\Haskell.sublime-syntax.cache",
           "size": 20249,
           "hash": "0ec12fc949ded0538ad873e632bf113d",
-          "modified": "2025-05-26T10:21:22.300746"
+          "modified": "2025-05-26T14:07:33.755801"
         },
         {
           "path": "Data\\Cache\\Haskell\\Literate Haskell.sublime-syntax.cache",
           "size": 29773,
           "hash": "44e00d2f4348007bbaed451cbae1cdc8",
-          "modified": "2025-05-26T10:21:22.337746"
+          "modified": "2025-05-26T14:07:33.773973"
         },
         {
           "path": "Data\\Cache\\Haskell\\Embeddings\\HTML (for HSX).sublime-syntax.cache",
           "size": 13724,
           "hash": "f417677b5037e3ce76a9989736c35672",
-          "modified": "2025-05-26T10:21:22.287746"
+          "modified": "2025-05-26T14:07:33.747800"
         },
         {
           "path": "Data\\Cache\\HTML\\HTML (Plain).sublime-syntax.cache",
           "size": 4327,
           "hash": "cc3f0ec3f166bf5068251d40ca8f10d2",
-          "modified": "2025-05-26T10:21:22.368744"
+          "modified": "2025-05-26T14:07:33.784493"
         },
         {
           "path": "Data\\Cache\\HTML\\HTML.sublime-syntax.cache",
           "size": 13352,
           "hash": "47436287e0d46a770568931a44a2021d",
-          "modified": "2025-05-26T10:21:22.363746"
-        },
-        {
-          "path": "Data\\Cache\\HTML\\HTML.sublime-syntax.rcache",
-          "size": 34180,
-          "hash": "31f2afefe1d5ba174bd15e03d22ed135",
-          "modified": "2025-05-27T14:12:25.567586"
+          "modified": "2025-05-26T14:07:33.781493"
         },
         {
           "path": "Data\\Cache\\Java\\HTML (JSP).sublime-syntax.cache",
           "size": 19922,
           "hash": "3909526ced6ee3e5059a0038ce0f3317",
-          "modified": "2025-05-26T10:21:22.673763"
+          "modified": "2025-05-26T14:07:33.871566"
         },
         {
           "path": "Data\\Cache\\Java\\Java.sublime-syntax.cache",
           "size": 35214,
           "hash": "b3491a6a03ffb67f772d4e458212c3e1",
-          "modified": "2025-05-26T10:21:22.700763"
+          "modified": "2025-05-26T14:07:33.887854"
         },
         {
           "path": "Data\\Cache\\Java\\JavaProperties.sublime-syntax.cache",
           "size": 1044,
           "hash": "22ebf0a0a00f5b8f49576df39b862871",
-          "modified": "2025-05-26T10:21:22.701762"
+          "modified": "2025-05-26T14:07:33.889030"
         },
         {
           "path": "Data\\Cache\\Java\\Embeddings\\CSS (for JSP).sublime-syntax.cache",
           "size": 36591,
           "hash": "9f9d6489286d6fc80d02603b317567af",
-          "modified": "2025-05-26T10:21:22.512769"
+          "modified": "2025-05-26T14:07:33.804025"
         },
         {
           "path": "Data\\Cache\\Java\\Embeddings\\Java (for HTML).sublime-syntax.cache",
           "size": 35281,
           "hash": "8a1ff9904614ae6b9aee4e6cd83126f0",
-          "modified": "2025-05-26T10:21:22.565762"
+          "modified": "2025-05-26T14:07:33.821150"
         },
         {
           "path": "Data\\Cache\\Java\\Embeddings\\Java (for JSP).sublime-syntax.cache",
           "size": 35258,
           "hash": "cf0c7e7ee251ca8a01bff6e5422fddd5",
-          "modified": "2025-05-26T10:21:22.592762"
+          "modified": "2025-05-26T14:07:33.839376"
         },
         {
           "path": "Data\\Cache\\Java\\Embeddings\\JavaDoc.sublime-syntax.cache",
           "size": 7161,
           "hash": "678751a09047f0dd64b03dcdde2038c5",
-          "modified": "2025-05-26T10:21:22.600763"
+          "modified": "2025-05-26T14:07:33.843405"
         },
         {
           "path": "Data\\Cache\\Java\\Embeddings\\JavaScript (for JSP).sublime-syntax.cache",
           "size": 32399,
           "hash": "4de2241a54531bc386a58f19c984d493",
-          "modified": "2025-05-26T10:21:22.645766"
+          "modified": "2025-05-26T14:07:33.857562"
         },
         {
           "path": "Data\\Cache\\Java\\Embeddings\\JSON (for JSP).sublime-syntax.cache",
           "size": 3069,
           "hash": "fbb50b2551a3a34fba207d4dac02bf53",
-          "modified": "2025-05-26T10:21:22.654762"
+          "modified": "2025-05-26T14:07:33.860562"
         },
         {
           "path": "Data\\Cache\\JavaScript\\JavaScript.sublime-syntax.cache",
           "size": 32219,
           "hash": "2c6ab47feb9af85139edbfdc698c125d",
-          "modified": "2025-05-26T10:21:23.022447"
+          "modified": "2025-05-26T14:07:34.027466"
         },
         {
           "path": "Data\\Cache\\JavaScript\\JSX.sublime-syntax.cache",
           "size": 34680,
           "hash": "8adea7f2b24ad288698d3c1ee47a685d",
-          "modified": "2025-05-26T10:21:23.066413"
+          "modified": "2025-05-26T14:07:34.042979"
         },
         {
           "path": "Data\\Cache\\JavaScript\\Regular Expressions (JavaScript).sublime-syntax.cache",
           "size": 2014,
           "hash": "643ece4a503adf90033f5b4a8a9b92ad",
-          "modified": "2025-05-26T10:21:23.071413"
+          "modified": "2025-05-26T14:07:34.044980"
         },
         {
           "path": "Data\\Cache\\JavaScript\\TSX.sublime-syntax.cache",
           "size": 48355,
           "hash": "9d93f1308ff80cca1c35a86353e47118",
-          "modified": "2025-05-26T10:21:23.149612"
+          "modified": "2025-05-26T14:07:34.067677"
         },
         {
           "path": "Data\\Cache\\JavaScript\\TypeScript.sublime-syntax.cache",
           "size": 46170,
           "hash": "b9b5a916c9f666be0080e66f38d9aeff",
-          "modified": "2025-05-26T10:21:23.193287"
+          "modified": "2025-05-26T14:07:34.089240"
         },
         {
           "path": "Data\\Cache\\JavaScript\\Embeddings\\CSS (for JS template).sublime-syntax.cache",
           "size": 36585,
           "hash": "796565355c2ea5d8fee0394b442a9dc8",
-          "modified": "2025-05-26T10:21:22.734763"
+          "modified": "2025-05-26T14:07:33.908079"
         },
         {
           "path": "Data\\Cache\\JavaScript\\Embeddings\\CSS (for TS template).sublime-syntax.cache",
           "size": 36585,
           "hash": "48db84c9dcc93fd3fcb9acb31ab8800e",
-          "modified": "2025-05-26T10:21:22.766763"
+          "modified": "2025-05-26T14:07:33.927068"
         },
         {
           "path": "Data\\Cache\\JavaScript\\Embeddings\\HTML (for JS template).sublime-syntax.cache",
           "size": 13295,
           "hash": "d9c050613522f7d18cc3d89ee2f19e55",
-          "modified": "2025-05-26T10:21:22.781766"
+          "modified": "2025-05-26T14:07:33.935112"
         },
         {
           "path": "Data\\Cache\\JavaScript\\Embeddings\\HTML (for TS template).sublime-syntax.cache",
           "size": 13194,
           "hash": "9e830db647ac0ffc200c4c7701cd705c",
-          "modified": "2025-05-26T10:21:22.793762"
+          "modified": "2025-05-26T14:07:33.943255"
         },
         {
           "path": "Data\\Cache\\JavaScript\\Embeddings\\JavaScript (for JS template).sublime-syntax.cache",
           "size": 32092,
           "hash": "f5273f107f5168e1db7b85288f06016d",
-          "modified": "2025-05-26T10:21:22.847764"
+          "modified": "2025-05-26T14:07:33.957962"
         },
         {
           "path": "Data\\Cache\\JavaScript\\Embeddings\\JavaScript (for TS template).sublime-syntax.cache",
           "size": 32104,
           "hash": "6d5b395f3a6ca4abdc9a959e230a97ec",
-          "modified": "2025-05-26T10:21:22.879770"
+          "modified": "2025-05-26T14:07:33.973552"
         },
         {
           "path": "Data\\Cache\\JavaScript\\Embeddings\\JSON (for JS template).sublime-syntax.cache",
           "size": 3078,
           "hash": "b9c79f8092c2e8878fb4b15c08b7649a",
-          "modified": "2025-05-26T10:21:22.883763"
+          "modified": "2025-05-26T14:07:33.975064"
         },
         {
           "path": "Data\\Cache\\JavaScript\\Embeddings\\JSON (for TS template).sublime-syntax.cache",
           "size": 3079,
           "hash": "0c410ba3984d12f16187ba1da35d3330",
-          "modified": "2025-05-26T10:21:22.886762"
+          "modified": "2025-05-26T14:07:33.977066"
         },
         {
           "path": "Data\\Cache\\JavaScript\\Embeddings\\SQL (for JS template).sublime-syntax.cache",
           "size": 36857,
           "hash": "506bd2cbdb32feba7026de3278a2f893",
-          "modified": "2025-05-26T10:21:22.965800"
+          "modified": "2025-05-26T14:07:33.994689"
         },
         {
           "path": "Data\\Cache\\JavaScript\\Embeddings\\SQL (for TS template).sublime-syntax.cache",
           "size": 36857,
           "hash": "604026f08a4950098eab643fe13fec65",
-          "modified": "2025-05-26T10:21:22.995804"
+          "modified": "2025-05-26T14:07:34.013268"
         },
         {
           "path": "Data\\Cache\\JSON\\JSON.sublime-syntax.cache",
           "size": 3306,
           "hash": "16709461b10ee3e36424d4fc92828bcd",
-          "modified": "2025-05-26T10:21:23.213144"
-        },
-        {
-          "path": "Data\\Cache\\JSON\\JSON.sublime-syntax.rcache",
-          "size": 6434,
-          "hash": "21d345a52f59a031b9445d604277b081",
-          "modified": "2025-06-11T17:40:53.437661"
+          "modified": "2025-05-26T14:07:34.091618"
         },
         {
           "path": "Data\\Cache\\LaTeX\\Bibtex.sublime-syntax.cache",
           "size": 3505,
           "hash": "1cfbb02c8a382e80cc603fb65f0196c6",
-          "modified": "2025-05-26T10:21:23.220141"
+          "modified": "2025-05-26T14:07:34.093122"
         },
         {
           "path": "Data\\Cache\\LaTeX\\DocStrip.sublime-syntax.cache",
           "size": 10417,
           "hash": "0791744e6b932ba537725a845bb09198",
-          "modified": "2025-05-26T10:21:23.230146"
+          "modified": "2025-05-26T14:07:34.098795"
         },
         {
           "path": "Data\\Cache\\LaTeX\\LaTeX Log.sublime-syntax.cache",
           "size": 2217,
           "hash": "69ff4d2e59ae401da1f265966d0b1ab2",
-          "modified": "2025-05-26T10:21:23.274755"
+          "modified": "2025-05-26T14:07:34.118115"
         },
         {
           "path": "Data\\Cache\\LaTeX\\LaTeX.sublime-syntax.cache",
           "size": 29835,
           "hash": "d65fc023260b568ba865e88f21f9f924",
-          "modified": "2025-05-26T10:21:23.270754"
+          "modified": "2025-05-26T14:07:34.116193"
         },
         {
           "path": "Data\\Cache\\LaTeX\\TeX.sublime-syntax.cache",
           "size": 9405,
           "hash": "c9a0ad3ff2fe30abd62556054f05fc0f",
-          "modified": "2025-05-26T10:21:23.282960"
+          "modified": "2025-05-26T14:07:34.121620"
         },
         {
           "path": "Data\\Cache\\Lisp\\Lisp.sublime-syntax.cache",
           "size": 18746,
           "hash": "df861a36c6d2d1cb611196865ac8aa14",
-          "modified": "2025-05-26T10:21:23.296631"
+          "modified": "2025-05-26T14:07:34.129622"
         },
         {
           "path": "Data\\Cache\\Lua\\Lua.sublime-syntax.cache",
           "size": 12008,
           "hash": "5b978ff19af19532c53223319a6f36fe",
-          "modified": "2025-05-26T10:21:23.316629"
+          "modified": "2025-05-26T14:07:34.134623"
         },
         {
           "path": "Data\\Cache\\Makefile\\Make Output.sublime-syntax.cache",
           "size": 356,
           "hash": "1e1ff8b0cd7f374573fa7d02cac936fe",
-          "modified": "2025-05-26T10:21:23.356589"
+          "modified": "2025-05-26T14:07:34.152191"
         },
         {
           "path": "Data\\Cache\\Makefile\\Makefile.sublime-syntax.cache",
           "size": 8631,
           "hash": "4a7c7336a6273164113a001d21f44865",
-          "modified": "2025-05-26T10:21:23.366589"
+          "modified": "2025-05-26T14:07:34.157606"
         },
         {
           "path": "Data\\Cache\\Makefile\\Embeddings\\Shell (for Makefile).sublime-syntax.cache",
           "size": 32314,
           "hash": "6d3a3206e6ffc8a86e2052dac70a9ab1",
-          "modified": "2025-05-26T10:21:23.349589"
+          "modified": "2025-05-26T14:07:34.152191"
         },
         {
           "path": "Data\\Cache\\Markdown\\Markdown.sublime-syntax.cache",
           "size": 34394,
           "hash": "0c92302d4dffb07dec26ce71ee7cedb3",
-          "modified": "2025-05-26T10:21:23.530589"
-        },
-        {
-          "path": "Data\\Cache\\Markdown\\Markdown.sublime-syntax.rcache",
-          "size": 1133378,
-          "hash": "b3d8f515bd5660d79858a75e1ad13db3",
-          "modified": "2025-05-27T15:34:42.165986"
+          "modified": "2025-05-26T14:07:34.228439"
         },
         {
           "path": "Data\\Cache\\Markdown\\MultiMarkdown.sublime-syntax.cache",
           "size": 34460,
           "hash": "4f31f9ba9570cb41389508f48c932a62",
-          "modified": "2025-05-26T10:21:23.583588"
+          "modified": "2025-05-26T14:07:34.248045"
         },
         {
           "path": "Data\\Cache\\Markdown\\Embeddings\\Bash (for Markdown).sublime-syntax.cache",
           "size": 32927,
           "hash": "6abc4a1bf3bb6a791318927f940ff86e",
-          "modified": "2025-05-26T10:21:23.417589"
-        },
-        {
-          "path": "Data\\Cache\\Markdown\\Embeddings\\Bash (for Markdown).sublime-syntax.rcache",
-          "size": 97356,
-          "hash": "704fbe7875f93566b3ec5614e4e02855",
-          "modified": "2025-05-27T15:34:42.228036"
+          "modified": "2025-05-26T14:07:34.183367"
         },
         {
           "path": "Data\\Cache\\Markdown\\Embeddings\\Diff (for Markdown).sublime-syntax.cache",
           "size": 5633,
           "hash": "cbb27727fa02d95baa12a063e635641a",
-          "modified": "2025-05-26T10:21:23.422588"
+          "modified": "2025-05-26T14:07:34.187409"
         },
         {
           "path": "Data\\Cache\\Markdown\\Embeddings\\Zsh (for Markdown).sublime-syntax.cache",
           "size": 42906,
           "hash": "e43799d795dcb7e2abd3e09d0f7208f2",
-          "modified": "2025-05-26T10:21:23.473588"
+          "modified": "2025-05-26T14:07:34.210737"
         },
         {
           "path": "Data\\Cache\\Matlab\\Matlab.sublime-syntax.cache",
           "size": 33525,
           "hash": "950ceffe1e1228bd9be9a5a1bcccb44a",
-          "modified": "2025-05-26T10:21:23.603102"
+          "modified": "2025-05-26T14:07:34.258527"
         },
         {
           "path": "Data\\Cache\\Objective-C\\Objective-C++.sublime-syntax.cache",
           "size": 29132,
           "hash": "ad29d2dbcc652de15bd41a50bf9a41aa",
-          "modified": "2025-05-26T10:21:23.652102"
+          "modified": "2025-05-26T14:07:34.284533"
         },
         {
           "path": "Data\\Cache\\Objective-C\\Objective-C.sublime-syntax.cache",
           "size": 37873,
           "hash": "18978d3681e0268a5214b733ee067b12",
-          "modified": "2025-05-26T10:21:23.626101"
+          "modified": "2025-05-26T14:07:34.271530"
         },
         {
           "path": "Data\\Cache\\OCaml\\camlp4.sublime-syntax.cache",
           "size": 683,
           "hash": "8394d444c9a7b0b518dace76c205af4a",
-          "modified": "2025-05-26T10:21:23.654101"
+          "modified": "2025-05-26T14:07:34.285533"
         },
         {
           "path": "Data\\Cache\\OCaml\\OCaml.sublime-syntax.cache",
           "size": 10843,
           "hash": "63efcd7fa45b5c136f98c549d6d63441",
-          "modified": "2025-05-26T10:21:23.674102"
+          "modified": "2025-05-26T14:07:34.290534"
         },
         {
           "path": "Data\\Cache\\OCaml\\OCamllex.sublime-syntax.cache",
           "size": 3011,
           "hash": "1796d9fb33847c2aacddc456ef8702e9",
-          "modified": "2025-05-26T10:21:23.677101"
+          "modified": "2025-05-26T14:07:34.292535"
         },
         {
           "path": "Data\\Cache\\OCaml\\OCamlyacc.sublime-syntax.cache",
           "size": 2934,
           "hash": "c63cda2c6516c49ba19286db296a6a52",
-          "modified": "2025-05-26T10:21:23.682101"
-        },
-        {
-          "path": "Data\\Cache\\Package Control\\backup.json",
-          "size": 21,
-          "hash": "5000cd2e73f76d5ccf4a4fc0cb49c194",
-          "modified": "2025-05-26T10:21:37.605413"
-        },
-        {
-          "path": "Data\\Cache\\Package Control\\http_cache\\01524fae79697630d0454ba3fabd9414",
-          "size": 4270518,
-          "hash": "4d34f7228fd70066fe4e220b2946929b",
-          "modified": "2025-05-26T10:21:36.980159"
-        },
-        {
-          "path": "Data\\Cache\\Package Control\\http_cache\\01524fae79697630d0454ba3fabd9414.info",
-          "size": 90,
-          "hash": "39a7d7a7afa04a9359ab5c406caf727d",
-          "modified": "2025-05-26T10:21:36.977159"
+          "modified": "2025-05-26T14:07:34.293949"
         },
         {
           "path": "Data\\Cache\\Package Control\\http_cache\\af3c96c0f3419e576449bf3a3fe3a8ac",
-          "size": 106740,
-          "hash": "19424fd9ae74abf4a7234a47995d6d9d",
-          "modified": "2025-05-26T10:21:34.264106"
+          "size": 109800,
+          "hash": "427f035db273efc00a3c62e292390734",
+          "modified": "2025-06-27T11:10:20.717103"
         },
         {
           "path": "Data\\Cache\\Package Control\\http_cache\\af3c96c0f3419e576449bf3a3fe3a8ac.info",
           "size": 92,
-          "hash": "8fd7105c310a2eef46c1f9e3f8ee7572",
-          "modified": "2025-05-26T10:21:34.263106"
+          "hash": "3ffb2007700a71b1cc5210926efcf58f",
+          "modified": "2025-06-27T11:10:20.716587"
         },
         {
           "path": "Data\\Cache\\Pascal\\Pascal.sublime-syntax.cache",
           "size": 2203,
           "hash": "3e273174aa0a52081cbc4c35afd6e2e3",
-          "modified": "2025-05-26T10:21:23.685102"
+          "modified": "2025-05-26T14:07:34.295966"
         },
         {
           "path": "Data\\Cache\\Perl\\Perl.sublime-syntax.cache",
           "size": 23352,
           "hash": "8c6855f671e7f941c6d56f534e99ec2c",
-          "modified": "2025-05-26T10:21:23.754101"
+          "modified": "2025-05-26T14:07:34.321956"
         },
         {
           "path": "Data\\Cache\\Perl\\Embeddings\\RegExp (for Perl angles).sublime-syntax.cache",
           "size": 5369,
           "hash": "8e0cd90a93ecd11bd81c74491f759133",
-          "modified": "2025-05-26T10:21:23.691103"
+          "modified": "2025-05-26T14:07:34.299030"
         },
         {
           "path": "Data\\Cache\\Perl\\Embeddings\\RegExp (for Perl braces).sublime-syntax.cache",
           "size": 5361,
           "hash": "72413cb1a2158cc98646b2636aac6d94",
-          "modified": "2025-05-26T10:21:23.699102"
+          "modified": "2025-05-26T14:07:34.302232"
         },
         {
           "path": "Data\\Cache\\Perl\\Embeddings\\RegExp (for Perl brackets).sublime-syntax.cache",
           "size": 5368,
           "hash": "aea5c9f0cd8021fd9e188111e74dd0e7",
-          "modified": "2025-05-26T10:21:23.704101"
+          "modified": "2025-05-26T14:07:34.305261"
         },
         {
           "path": "Data\\Cache\\Perl\\Embeddings\\RegExp (for Perl parens).sublime-syntax.cache",
           "size": 5356,
           "hash": "804842c063c1e90436f368ccd34b0773",
-          "modified": "2025-05-26T10:21:23.730106"
+          "modified": "2025-05-26T14:07:34.308297"
         },
         {
           "path": "Data\\Cache\\Perl\\Embeddings\\RegExp (for Perl).sublime-syntax.cache",
           "size": 5265,
           "hash": "0297d1876f3c63278a15f83c88f8ab7b",
-          "modified": "2025-05-26T10:21:23.735101"
+          "modified": "2025-05-26T14:07:34.311805"
         },
         {
           "path": "Data\\Cache\\PHP\\CSS (PHP).sublime-syntax.cache",
           "size": 37056,
           "hash": "4f04250bb183367d7621da0d85b34a9d",
-          "modified": "2025-05-26T10:21:23.810101"
+          "modified": "2025-05-26T14:07:34.340400"
         },
         {
           "path": "Data\\Cache\\PHP\\JavaScript (PHP).sublime-syntax.cache",
           "size": 32564,
           "hash": "2a91fbf4275f1da39514e927c63b5582",
-          "modified": "2025-05-26T10:21:24.467057"
+          "modified": "2025-05-26T14:07:34.538909"
         },
         {
           "path": "Data\\Cache\\PHP\\JSON (PHP).sublime-syntax.cache",
           "size": 3373,
           "hash": "8cc37cbdd6d1f1c97eed71a2765be973",
-          "modified": "2025-05-26T10:21:24.472056"
+          "modified": "2025-05-26T14:07:34.541160"
         },
         {
           "path": "Data\\Cache\\PHP\\PHP Source.sublime-syntax.cache",
           "size": 64462,
           "hash": "6f8c0d762747c7b6c0a8fd1af5118b3e",
-          "modified": "2025-05-26T10:21:24.580150"
+          "modified": "2025-05-26T14:07:34.568663"
         },
         {
           "path": "Data\\Cache\\PHP\\PHP.sublime-syntax.cache",
           "size": 14935,
           "hash": "f5a80e02a6dca2c87d89bb5a8918b131",
-          "modified": "2025-05-26T10:21:24.548145"
+          "modified": "2025-05-26T14:07:34.549868"
         },
         {
           "path": "Data\\Cache\\PHP\\Embeddings\\CSS (for PHP double-quoted).sublime-syntax.cache",
           "size": 36935,
           "hash": "fc208d3ea38187c4272227c80595dbea",
-          "modified": "2025-05-26T10:21:23.876101"
+          "modified": "2025-05-26T14:07:34.358604"
         },
         {
           "path": "Data\\Cache\\PHP\\Embeddings\\CSS (for PHP Interpolated).sublime-syntax.cache",
           "size": 36478,
           "hash": "04769ce2b87acdb06bd5b5e31d8e3f02",
-          "modified": "2025-05-26T10:21:23.920100"
+          "modified": "2025-05-26T14:07:34.376814"
         },
         {
           "path": "Data\\Cache\\PHP\\Embeddings\\CSS (for PHP single-quoted).sublime-syntax.cache",
           "size": 36923,
           "hash": "48d2bf204a8d256833b2ff2853d854ab",
-          "modified": "2025-05-26T10:21:23.976103"
+          "modified": "2025-05-26T14:07:34.396303"
         },
         {
           "path": "Data\\Cache\\PHP\\Embeddings\\Diff (for PHP Interpolated).sublime-syntax.cache",
           "size": 5674,
           "hash": "69f6f7f2d017a2d137d0d161ee67c2b0",
-          "modified": "2025-05-26T10:21:23.983102"
+          "modified": "2025-05-26T14:07:34.399303"
         },
         {
           "path": "Data\\Cache\\PHP\\Embeddings\\HTML (for PHP Interpolated).sublime-syntax.cache",
           "size": 13454,
           "hash": "e504546ef3258b446ede48b35c1ba777",
-          "modified": "2025-05-26T10:21:23.998103"
+          "modified": "2025-05-26T14:07:34.407305"
         },
         {
           "path": "Data\\Cache\\PHP\\Embeddings\\JavaScript (for PHP double-quoted).sublime-syntax.cache",
           "size": 33028,
           "hash": "11623459db9175c534dff44427a6bf75",
-          "modified": "2025-05-26T10:21:24.039102"
+          "modified": "2025-05-26T14:07:34.422385"
         },
         {
           "path": "Data\\Cache\\PHP\\Embeddings\\JavaScript (for PHP Interpolated).sublime-syntax.cache",
           "size": 32403,
           "hash": "c0fde04aeea3f681895c1996626257b2",
-          "modified": "2025-05-26T10:21:24.088103"
+          "modified": "2025-05-26T14:07:34.437500"
         },
         {
           "path": "Data\\Cache\\PHP\\Embeddings\\JavaScript (for PHP single-quoted).sublime-syntax.cache",
           "size": 33027,
           "hash": "cec121f34e2f3cfebd5f83adf80fecc2",
-          "modified": "2025-05-26T10:21:24.140102"
+          "modified": "2025-05-26T14:07:34.452624"
         },
         {
           "path": "Data\\Cache\\PHP\\Embeddings\\JSON (for PHP Interpolated).sublime-syntax.cache",
           "size": 3045,
           "hash": "92f4bd1aca8d8d2099693117e936c6e8",
-          "modified": "2025-05-26T10:21:24.155101"
+          "modified": "2025-05-26T14:07:34.455143"
         },
         {
           "path": "Data\\Cache\\PHP\\Embeddings\\PHP Source (for PHP).sublime-syntax.cache",
           "size": 62668,
           "hash": "0b6473fb9a706b68281cb189e3c6ea4d",
-          "modified": "2025-05-26T10:21:24.230105"
+          "modified": "2025-05-26T14:07:34.475643"
         },
         {
           "path": "Data\\Cache\\PHP\\Embeddings\\RegExp (for PHP).sublime-syntax.cache",
           "size": 1941,
           "hash": "3a690d50025468b886a09aa4fd7f26b5",
-          "modified": "2025-05-26T10:21:24.233103"
+          "modified": "2025-05-26T14:07:34.477223"
         },
         {
           "path": "Data\\Cache\\PHP\\Embeddings\\SQL (for PHP Interpolated).sublime-syntax.cache",
           "size": 36899,
           "hash": "11eacfba2249ca3a25f73c5cfec5113d",
-          "modified": "2025-05-26T10:21:24.303102"
+          "modified": "2025-05-26T14:07:34.496057"
         },
         {
           "path": "Data\\Cache\\PHP\\Embeddings\\SQL (for PHP).sublime-syntax.cache",
           "size": 36927,
           "hash": "7c73ab943206a00c88a35da141543a5f",
-          "modified": "2025-05-26T10:21:24.402101"
+          "modified": "2025-05-26T14:07:34.515083"
         },
         {
           "path": "Data\\Cache\\PHP\\Embeddings\\XML (for PHP Interpolated).sublime-syntax.cache",
           "size": 6977,
           "hash": "cc5d5ee52d5a203c09b5cb0e2177ae61",
-          "modified": "2025-05-26T10:21:24.408101"
+          "modified": "2025-05-26T14:07:34.519084"
         },
         {
           "path": "Data\\Cache\\PHP\\Embeddings\\YAML (for PHP Interpolated).sublime-syntax.cache",
           "size": 8470,
           "hash": "dd0c6a4141a1b962c3162c49dfa24c1e",
-          "modified": "2025-05-26T10:21:24.439056"
+          "modified": "2025-05-26T14:07:34.523244"
         },
         {
           "path": "Data\\Cache\\Python\\Python.sublime-syntax.cache",
           "size": 47525,
           "hash": "434affcae78b80769229557059d6eebe",
-          "modified": "2025-05-26T10:21:24.652672"
-        },
-        {
-          "path": "Data\\Cache\\Python\\Python.sublime-syntax.rcache",
-          "size": 1619370,
-          "hash": "b9f81ae4bb37b5004aacc60b228a9955",
-          "modified": "2025-05-26T16:57:43.906487"
+          "modified": "2025-05-26T14:07:34.592924"
         },
         {
           "path": "Data\\Cache\\Python\\Embeddings\\RegExp (for Python).sublime-syntax.cache",
           "size": 4464,
           "hash": "e7facd7860ecf5192c8470cc7233ba12",
-          "modified": "2025-05-26T10:21:24.613676"
+          "modified": "2025-05-26T14:07:34.570809"
         },
         {
           "path": "Data\\Cache\\R\\R Console.sublime-syntax.cache",
           "size": 356,
           "hash": "f221a0eb5be44a418bb68f5ef74591c9",
-          "modified": "2025-05-26T10:21:24.697087"
+          "modified": "2025-05-26T14:07:34.601759"
         },
         {
           "path": "Data\\Cache\\R\\R.sublime-syntax.cache",
           "size": 25174,
           "hash": "06e70e3b5844c0b3d7931b79e3523ceb",
-          "modified": "2025-05-26T10:21:24.693565"
+          "modified": "2025-05-26T14:07:34.600758"
         },
         {
           "path": "Data\\Cache\\R\\Rd (R Documentation).sublime-syntax.cache",
           "size": 1907,
           "hash": "3d32ee4e4f2b64429e92e6dbdfca3619",
-          "modified": "2025-05-26T10:21:24.700078"
+          "modified": "2025-05-26T14:07:34.603193"
         },
         {
           "path": "Data\\Cache\\Rails\\CSS (Rails).sublime-syntax.cache",
           "size": 36769,
           "hash": "59bb6997e98863b2ae0138fd9cb86f0c",
-          "modified": "2025-05-26T10:21:24.751719"
+          "modified": "2025-05-26T14:07:34.621556"
         },
         {
           "path": "Data\\Cache\\Rails\\HAML.sublime-syntax.cache",
           "size": 3849,
           "hash": "d1c1a90c292b9a43952731106db411af",
-          "modified": "2025-05-26T10:21:25.008346"
+          "modified": "2025-05-26T14:07:34.700000"
         },
         {
           "path": "Data\\Cache\\Rails\\HTML (Rails).sublime-syntax.cache",
           "size": 13563,
           "hash": "08fb23b67e5c53936e48e103dc58d13e",
-          "modified": "2025-05-26T10:21:25.023346"
+          "modified": "2025-05-26T14:07:34.708295"
         },
         {
           "path": "Data\\Cache\\Rails\\JavaScript (Rails).sublime-syntax.cache",
           "size": 32333,
           "hash": "c5e042cacd0155b82c556e50d4f98e73",
-          "modified": "2025-05-26T10:21:25.065854"
+          "modified": "2025-05-26T14:07:34.722694"
         },
         {
           "path": "Data\\Cache\\Rails\\JSON (Rails).sublime-syntax.cache",
           "size": 3010,
           "hash": "9fd4615898ee0344cc1d4c83d9da3b73",
-          "modified": "2025-05-26T10:21:25.071855"
+          "modified": "2025-05-26T14:07:34.725592"
         },
         {
           "path": "Data\\Cache\\Rails\\Ruby (Rails).sublime-syntax.cache",
           "size": 25990,
           "hash": "2ae62adffa0751d7d0f1f9eeb41e76cf",
-          "modified": "2025-05-26T10:21:25.104468"
+          "modified": "2025-05-26T14:07:34.738434"
         },
         {
           "path": "Data\\Cache\\Rails\\SQL (Rails).sublime-syntax.cache",
           "size": 36681,
           "hash": "716d7992b95041722c45f1c08684f94c",
-          "modified": "2025-05-26T10:21:25.135984"
+          "modified": "2025-05-26T14:07:34.756250"
         },
         {
           "path": "Data\\Cache\\Rails\\Embeddings\\CSS (for HAML).sublime-syntax.cache",
           "size": 36585,
           "hash": "f34be57ab71db4ca242ae308c4478d8a",
-          "modified": "2025-05-26T10:21:24.808719"
+          "modified": "2025-05-26T14:07:34.639473"
         },
         {
           "path": "Data\\Cache\\Rails\\Embeddings\\HTML (for HAML).sublime-syntax.cache",
           "size": 13454,
           "hash": "3358454d013fb46b836a3a5229f0b543",
-          "modified": "2025-05-26T10:21:24.824720"
+          "modified": "2025-05-26T14:07:34.647573"
         },
         {
           "path": "Data\\Cache\\Rails\\Embeddings\\JavaScript (for HAML).sublime-syntax.cache",
           "size": 32407,
           "hash": "3463f71c280444c2de73cf75738726ea",
-          "modified": "2025-05-26T10:21:24.883612"
+          "modified": "2025-05-26T14:07:34.663215"
         },
         {
           "path": "Data\\Cache\\Rails\\Embeddings\\JSON (for HAML).sublime-syntax.cache",
           "size": 3062,
           "hash": "9984ecba4bd35082d3d69ce77d798acc",
-          "modified": "2025-05-26T10:21:24.887609"
+          "modified": "2025-05-26T14:07:34.664967"
         },
         {
           "path": "Data\\Cache\\Rails\\Embeddings\\Markdown (for HAML).sublime-syntax.cache",
           "size": 34617,
           "hash": "3250eaa3621cfad6cb6c139da19584e3",
-          "modified": "2025-05-26T10:21:24.962671"
+          "modified": "2025-05-26T14:07:34.683750"
         },
         {
           "path": "Data\\Cache\\Rails\\Embeddings\\Ruby (for HAML).sublime-syntax.cache",
           "size": 26462,
           "hash": "7b3b1188169435ca48630ed89b03e138",
-          "modified": "2025-05-26T10:21:25.004346"
+          "modified": "2025-05-26T14:07:34.697999"
         },
         {
           "path": "Data\\Cache\\Regular Expressions\\File Pattern.sublime-syntax.cache",
           "size": 1286,
           "hash": "80eb2aaef068cf0abb2511745fc9c730",
-          "modified": "2025-05-26T10:21:25.173985"
+          "modified": "2025-05-26T14:07:34.757250"
         },
         {
           "path": "Data\\Cache\\Regular Expressions\\Regex Replace.sublime-syntax.cache",
           "size": 710,
           "hash": "58ac3536658b9b8f523272d5683d09ea",
-          "modified": "2025-05-26T10:21:25.174985"
+          "modified": "2025-05-26T14:07:34.759018"
         },
         {
           "path": "Data\\Cache\\Regular Expressions\\RegExp (Basic).sublime-syntax.cache",
           "size": 3937,
           "hash": "3a59420e17caa73964f6e7d6921bb51e",
-          "modified": "2025-05-26T10:21:25.214985"
+          "modified": "2025-05-26T14:07:34.764682"
         },
         {
           "path": "Data\\Cache\\Regular Expressions\\RegExp.sublime-syntax.cache",
           "size": 4910,
           "hash": "7f24abc2f615d900bbe8251cb3a6bd78",
-          "modified": "2025-05-26T10:21:25.207986"
+          "modified": "2025-05-26T14:07:34.761533"
         },
         {
           "path": "Data\\Cache\\RestructuredText\\reStructuredText.sublime-syntax.cache",
           "size": 2639,
           "hash": "866b225faa6b9962abd81cb3e5892ec6",
-          "modified": "2025-05-26T10:21:25.217984"
+          "modified": "2025-05-26T14:07:34.766699"
         },
         {
           "path": "Data\\Cache\\Ruby\\Ruby.sublime-syntax.cache",
           "size": 24444,
           "hash": "ed44615a133ec5686a39c1acdd71d019",
-          "modified": "2025-05-26T10:21:25.533160"
+          "modified": "2025-05-26T14:07:34.855449"
         },
         {
           "path": "Data\\Cache\\Ruby\\Embeddings\\CSS (for Ruby).sublime-syntax.cache",
           "size": 36575,
           "hash": "2363177429bdbd189e66afbe36762bc0",
-          "modified": "2025-05-26T10:21:25.287984"
+          "modified": "2025-05-26T14:07:34.784741"
         },
         {
           "path": "Data\\Cache\\Ruby\\Embeddings\\HTML (for Ruby).sublime-syntax.cache",
           "size": 13389,
           "hash": "2e66d57c60bf82818cb38834736f86f8",
-          "modified": "2025-05-26T10:21:25.301984"
+          "modified": "2025-05-26T14:07:34.792893"
         },
         {
           "path": "Data\\Cache\\Ruby\\Embeddings\\JavaScript (for Ruby).sublime-syntax.cache",
           "size": 32373,
           "hash": "0c88cdc5c28248fa092ec1bf08471a22",
-          "modified": "2025-05-26T10:21:25.356249"
+          "modified": "2025-05-26T14:07:34.807426"
         },
         {
           "path": "Data\\Cache\\Ruby\\Embeddings\\ShellScript (for Ruby).sublime-syntax.cache",
           "size": 33030,
           "hash": "7917911426e68a029435af8768ff778e",
-          "modified": "2025-05-26T10:21:25.439249"
+          "modified": "2025-05-26T14:07:34.825442"
         },
         {
           "path": "Data\\Cache\\Ruby\\Embeddings\\SQL (for Ruby).sublime-syntax.cache",
           "size": 36820,
           "hash": "5ada68f1d71dac5145c8ff63ef5d929d",
-          "modified": "2025-05-26T10:21:25.471249"
+          "modified": "2025-05-26T14:07:34.843446"
         },
         {
           "path": "Data\\Cache\\Rust\\Cargo.sublime-syntax.cache",
           "size": 353,
           "hash": "3a10cf30abf2837ec42fe19ee02f7f0a",
-          "modified": "2025-05-26T10:21:25.535159"
+          "modified": "2025-05-26T14:07:34.856449"
         },
         {
           "path": "Data\\Cache\\Rust\\Rust.sublime-syntax.cache",
           "size": 22463,
           "hash": "0fef446bb02e5d28a0340728131391d7",
-          "modified": "2025-05-26T10:21:25.551160"
+          "modified": "2025-05-26T14:07:34.866451"
         },
         {
           "path": "Data\\Cache\\Scala\\Scala.sublime-syntax.cache",
           "size": 30528,
           "hash": "c8dc97d5170f6db3c033169ab18466b8",
-          "modified": "2025-05-26T10:21:25.614028"
+          "modified": "2025-05-26T14:07:34.879454"
         },
         {
           "path": "Data\\Cache\\ShellScript\\Bash.sublime-syntax.cache",
           "size": 32957,
           "hash": "f122e6874a0bacbc0647912d322bfcdf",
-          "modified": "2025-05-26T10:21:25.694027"
+          "modified": "2025-05-26T14:07:34.896002"
         },
         {
           "path": "Data\\Cache\\ShellScript\\Shell-Unix-Generic.sublime-syntax.cache",
           "size": 32540,
           "hash": "d18ee2300226f903751aee8211326af9",
-          "modified": "2025-05-26T10:21:25.771027"
+          "modified": "2025-05-26T14:07:34.913006"
         },
         {
           "path": "Data\\Cache\\ShellScript\\Zsh.sublime-syntax.cache",
           "size": 42507,
           "hash": "4e1d7f44315d4bec26d345d47783d53b",
-          "modified": "2025-05-26T10:21:25.853963"
+          "modified": "2025-05-26T14:07:34.936011"
         },
         {
           "path": "Data\\Cache\\SQL\\Cassandra.sublime-syntax.cache",
           "size": 19661,
           "hash": "d4c2f88b0b6c40a5eafe0247cbd1446a",
-          "modified": "2025-05-26T10:21:25.881477"
+          "modified": "2025-05-26T14:07:34.946764"
         },
         {
           "path": "Data\\Cache\\SQL\\MySQL.sublime-syntax.cache",
           "size": 36709,
           "hash": "a7cdd8ae17f97080acd73334ea3f0536",
-          "modified": "2025-05-26T10:21:25.931476"
+          "modified": "2025-05-26T14:07:34.965038"
         },
         {
           "path": "Data\\Cache\\SQL\\PostgreSQL.sublime-syntax.cache",
           "size": 39975,
           "hash": "74d1cc2f931b4a711824898bd41d39d5",
-          "modified": "2025-05-26T10:21:26.038476"
+          "modified": "2025-05-26T14:07:34.984904"
         },
         {
           "path": "Data\\Cache\\SQL\\SQL (basic).sublime-syntax.cache",
           "size": 17398,
           "hash": "b8aa1bdf7002d4f44290741149876cdb",
-          "modified": "2025-05-26T10:21:26.152583"
+          "modified": "2025-05-26T14:07:35.010773"
         },
         {
           "path": "Data\\Cache\\SQL\\SQL.sublime-syntax.cache",
           "size": 36606,
           "hash": "f9fd19394a1474ec5ba55f85f74ef629",
-          "modified": "2025-05-26T10:21:26.115582"
+          "modified": "2025-05-26T14:07:35.003596"
         },
         {
           "path": "Data\\Cache\\SQL\\TSQL.sublime-syntax.cache",
           "size": 29773,
           "hash": "8555d83236108eb8bec60b603676f19d",
-          "modified": "2025-05-26T10:21:26.176580"
+          "modified": "2025-05-26T14:07:35.025804"
         },
         {
           "path": "Data\\Cache\\TCL\\HTML (Tcl).sublime-syntax.cache",
           "size": 1603,
           "hash": "57418c601bf9294efcfa81a9feb2a884",
-          "modified": "2025-05-26T10:21:26.180583"
+          "modified": "2025-05-26T14:07:35.026804"
         },
         {
           "path": "Data\\Cache\\TCL\\Tcl.sublime-syntax.cache",
           "size": 7255,
           "hash": "9b470bb44204b69b7e51803b3b1dc1aa",
-          "modified": "2025-05-26T10:21:26.185581"
+          "modified": "2025-05-26T14:07:35.029804"
         },
         {
           "path": "Data\\Cache\\Text\\Plain text.tmLanguage.cache",
           "size": 172,
           "hash": "ed7729ddcd0a07ea8f93014b9e69bb32",
-          "modified": "2025-05-26T10:21:26.356007"
+          "modified": "2025-05-26T14:07:35.090306"
         },
         {
           "path": "Data\\Cache\\Text\\Plain text.tmLanguage.rcache",
           "size": 193,
           "hash": "d303349788e0ba0c027fef42f0de0656",
-          "modified": "2025-05-26T10:21:26.357011"
+          "modified": "2025-05-26T14:07:35.090306"
         },
         {
           "path": "Data\\Cache\\Textile\\Textile.sublime-syntax.cache",
           "size": 2568,
           "hash": "73a921aeb5c776263f7aec1de758d40d",
-          "modified": "2025-05-26T10:21:26.202817"
+          "modified": "2025-05-26T14:07:35.032950"
         },
         {
           "path": "Data\\Cache\\TOML\\TOML.sublime-syntax.cache",
           "size": 4947,
           "hash": "ffde6cbbf82ec6ca60dacdaaa2e04015",
-          "modified": "2025-05-26T10:21:26.206816"
+          "modified": "2025-05-26T14:07:35.035466"
         },
         {
           "path": "Data\\Cache\\XML\\DTD.sublime-syntax.cache",
           "size": 221,
           "hash": "3f33d6fe34da9ef8aa43b68d3a2d402e",
-          "modified": "2025-05-26T10:21:26.208816"
+          "modified": "2025-05-26T14:07:35.036483"
         },
         {
           "path": "Data\\Cache\\XML\\XML.sublime-syntax.cache",
           "size": 7263,
           "hash": "d8292603b0c2b4c8927498df311aeac1",
-          "modified": "2025-05-26T10:21:26.216816"
+          "modified": "2025-05-26T14:07:35.040219"
         },
         {
           "path": "Data\\Cache\\YAML\\YAML.sublime-syntax.cache",
           "size": 8371,
           "hash": "f4c05bdfbaf7d42ba54d1ebfaa5120e9",
-          "modified": "2025-05-26T10:21:26.223815"
+          "modified": "2025-05-26T14:07:35.044220"
+        },
+        {
+          "path": "Data\\Cache\\__pycache__\\install\\Data\\Lib\\python38\\package_control.cpython-38.opt-1.pyc",
+          "size": 1775,
+          "hash": "10b4404f7914c60d7cbc8f20a6aad2e6",
+          "modified": "2025-05-26T14:07:39.516738"
         },
         {
           "path": "Data\\Cache\\__pycache__\\install\\Lib\\python3\\certifi\\core.cpython-38.opt-1.pyc",
           "size": 1642,
           "hash": "33ad7ff15e1dc8b829ffa515c046964f",
-          "modified": "2025-05-26T10:21:29.374466"
+          "modified": "2025-05-26T14:07:35.675637"
         },
         {
           "path": "Data\\Cache\\__pycache__\\install\\Lib\\python3\\certifi\\__init__.cpython-38.opt-1.pyc",
           "size": 264,
           "hash": "32760798bcd94cbb4eb127cc90c3de5e",
-          "modified": "2025-05-26T10:21:29.324465"
+          "modified": "2025-05-26T14:07:35.674500"
         },
         {
           "path": "Data\\Cache\\__pycache__\\install\\Lib\\python38\\sublime.cpython-38.opt-1.pyc",
           "size": 149287,
-          "hash": "351922f616c1793db4266b5b5c3f830f",
-          "modified": "2025-05-26T10:21:29.148011"
+          "hash": "7d5893aebb9e1c44e5ee6a2ee226d767",
+          "modified": "2025-05-26T14:07:35.631201"
         },
         {
           "path": "Data\\Cache\\__pycache__\\install\\Lib\\python38\\sublime_plugin.cpython-38.opt-1.pyc",
           "size": 73318,
           "hash": "059d3aad481037ad2c6543a448a856aa",
-          "modified": "2025-05-26T10:21:29.265097"
+          "modified": "2025-05-26T14:07:35.658025"
         },
         {
           "path": "Data\\Crash Reports\\settings.dat",
           "size": 40,
-          "hash": "83fb8044a2c9ca39a6bbb28f364fefa0",
-          "modified": "2025-06-27T09:31:32.075977"
+          "hash": "b970f2c6f267171f264754027e073eb8",
+          "modified": "2025-06-27T11:10:16.187428"
         },
         {
           "path": "Data\\Installed Packages\\Package Control.sublime-package",
@@ -12944,25 +12502,19 @@
           "path": "Data\\Lib\\python33\\package_control.py",
           "size": 2910,
           "hash": "479fcf667d96830d3c1831d4b29a11e7",
-          "modified": "2025-05-26T10:21:31.552361"
+          "modified": "2025-05-26T14:07:36.080423"
         },
         {
           "path": "Data\\Lib\\python38\\package_control.py",
           "size": 2910,
           "hash": "479fcf667d96830d3c1831d4b29a11e7",
-          "modified": "2025-05-26T10:21:31.552361"
-        },
-        {
-          "path": "Data\\Local\\Auto Save Session.sublime_session",
-          "size": 365767,
-          "hash": "47839a081f71a0ac5fabf189467d35e3",
-          "modified": "2025-06-27T09:32:02.227054"
+          "modified": "2025-05-26T14:07:36.080423"
         },
         {
           "path": "Data\\Local\\Session.sublime_session",
-          "size": 341414,
-          "hash": "1c2ddf38e8b262d391c26a9381717f0e",
-          "modified": "2025-06-25T22:58:24.834221"
+          "size": 4892,
+          "hash": "8a3177eeb511d23e956752402ebb9076",
+          "modified": "2025-06-27T11:10:20.793013"
         },
         {
           "path": "Data\\Packages\\ConvertToUTF8\\.gitignore",
@@ -13363,80 +12915,80 @@
         {
           "path": "Data\\Packages\\Default\\Console Input Widget Context.sublime-menu",
           "size": 649,
-          "hash": "099c4cab93b314605953fc5a18392c0f",
-          "modified": "2025-05-26T10:21:31.873567"
+          "hash": "9a8088eca02cfbdc1b3e1cee574516c5",
+          "modified": "2025-05-26T14:07:36.313992"
         },
         {
           "path": "Data\\Packages\\Default\\Context.sublime-menu",
           "size": 1904,
-          "hash": "0bb12e55bf20c8db0ad6bb448d90a2c7",
-          "modified": "2025-05-26T10:21:31.842836"
+          "hash": "7d1a9c916bbd47ea0856410ade3b1b73",
+          "modified": "2025-05-26T14:07:36.329004"
         },
         {
           "path": "Data\\Packages\\Default\\Encoding.sublime-menu",
           "size": 15233,
-          "hash": "72a8479e5e381e057ecbf4fd823f396f",
-          "modified": "2025-05-26T10:21:31.836830"
+          "hash": "9d0fefce5e433e876973d8e828117dc8",
+          "modified": "2025-05-26T14:07:36.311897"
         },
         {
           "path": "Data\\Packages\\Default\\Find in Files.sublime-menu",
           "size": 1208,
-          "hash": "b70f9cc1fbb50f3c6b82901df7380491",
-          "modified": "2025-05-26T10:21:31.825513"
+          "hash": "090f7db8f7fed01fb176b2044c46065b",
+          "modified": "2025-05-26T14:07:36.330153"
         },
         {
           "path": "Data\\Packages\\Default\\Indentation.sublime-menu",
           "size": 2377,
-          "hash": "c293e5f4e282d3eb1cc4e2812a5515ca",
-          "modified": "2025-05-26T10:21:31.848830"
+          "hash": "c90efb8a5fcdabc4d66a9f39cf3e509e",
+          "modified": "2025-05-26T14:07:36.309896"
         },
         {
           "path": "Data\\Packages\\Default\\Line Endings.sublime-menu",
           "size": 515,
-          "hash": "416db30cd36d95e7086c3d5e7b1af772",
-          "modified": "2025-05-26T10:21:31.846831"
+          "hash": "ddb725abba5b5f123ceb177183e66977",
+          "modified": "2025-05-26T14:07:36.328004"
         },
         {
           "path": "Data\\Packages\\Default\\Main.sublime-menu",
           "size": 117042,
-          "hash": "8bd07edcbac1805c1eee2faa7a6a4439",
-          "modified": "2025-05-26T10:21:31.871567"
+          "hash": "498c8281f1ea2e6ae86d65af19c85fe2",
+          "modified": "2025-05-26T14:07:36.327004"
         },
         {
           "path": "Data\\Packages\\Default\\Side Bar Mount Point.sublime-menu",
           "size": 225,
-          "hash": "6c5db027dcce3ae48abd4dee2de9553c",
-          "modified": "2025-05-26T10:21:31.837829"
+          "hash": "7af84b9f0a2783bec43881241e91bbd0",
+          "modified": "2025-05-26T14:07:36.308897"
         },
         {
           "path": "Data\\Packages\\Default\\Side Bar.sublime-menu",
           "size": 2173,
-          "hash": "930b24b0bbad7c07d666d74fb5f2a490",
-          "modified": "2025-05-26T10:21:31.831672"
+          "hash": "815d4545e94820cb6cc4e0a411bb23b7",
+          "modified": "2025-05-26T14:07:36.308897"
         },
         {
           "path": "Data\\Packages\\Default\\Syntax.sublime-menu",
           "size": 146,
-          "hash": "7d2a4954aa82b36f601ac05cb5e36006",
-          "modified": "2025-05-26T10:21:31.841830"
+          "hash": "a4256d54ded78e7549e2f3525fc0aee0",
+          "modified": "2025-05-26T14:07:36.312897"
         },
         {
           "path": "Data\\Packages\\Default\\Tab Context.sublime-menu",
           "size": 1475,
-          "hash": "d3d6eb452f5f130a37d37974ffb5af90",
-          "modified": "2025-05-26T10:21:31.840829"
+          "hash": "74446516347b9d03da72a7ec62cae355",
+          "modified": "2025-05-26T14:07:36.307895"
         },
         {
           "path": "Data\\Packages\\Default\\Tab Sidebar Context.sublime-menu",
           "size": 1193,
-          "hash": "84c76f965e6e2c7713b53141d2ed48ac",
-          "modified": "2025-05-26T10:21:31.845832"
+          "hash": "685c58c14d9609ecb29b79c53aa050a6",
+          "modified": "2025-05-26T14:07:36.312897"
         },
         {
           "path": "Data\\Packages\\Default\\Widget Context.sublime-menu",
           "size": 452,
           "hash": "25cc8c6dec48341fd737d34443eb8eae",
-          "modified": "2025-05-26T10:21:31.829674"
+          "modified": "2025-05-26T14:07:36.329004"
         },
         {
           "path": "Data\\Packages\\Git\\.gitignore",
@@ -13622,7 +13174,7 @@
           "path": "Data\\Packages\\LocalizedMenu\\.firstRun",
           "size": 0,
           "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2025-05-26T10:21:31.776737"
+          "modified": "2025-05-26T14:07:36.288936"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\.gitignore",
@@ -13657,8 +13209,8 @@
         {
           "path": "Data\\Packages\\LocalizedMenu\\LocalizedMenu.sublime-commands",
           "size": 1099,
-          "hash": "5db2dc4cc0a5a17a30178a9177f0de81",
-          "modified": "2025-05-26T10:21:31.820513"
+          "hash": "3a4b4f3a4b17fd7e5f16dfea177c4f8e",
+          "modified": "2025-05-26T14:07:36.306391"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\LocalizedMenu.sublime-settings",
@@ -13669,8 +13221,8 @@
         {
           "path": "Data\\Packages\\LocalizedMenu\\Main.sublime-menu",
           "size": 3508,
-          "hash": "9d696cd57e6ab350f1199fba829ed338",
-          "modified": "2025-05-26T10:21:31.811992"
+          "hash": "7b0154d3d5c72d4ac70153d57afce4f4",
+          "modified": "2025-05-26T14:07:36.305391"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\README.md",
@@ -14654,163 +14206,163 @@
           "path": "Data\\Packages\\LocalizedMenu\\menu\\4200\\backup\\Console Input Widget Context.sublime-menu.json",
           "size": 649,
           "hash": "f84f6a738ab2a47afd5c93cd99b295b8",
-          "modified": "2025-05-26T10:21:31.766220"
+          "modified": "2025-05-26T14:07:36.278279"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\menu\\4200\\backup\\Context.sublime-menu.json",
           "size": 1904,
           "hash": "44ae9d35ad6abed308170bf9189397b9",
-          "modified": "2025-05-26T10:21:31.766748"
+          "modified": "2025-05-26T14:07:36.278279"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\menu\\4200\\backup\\Encoding.sublime-menu.json",
           "size": 15233,
           "hash": "1f0881d923fba189d0b37117a70b6e6a",
-          "modified": "2025-05-26T10:21:31.767738"
+          "modified": "2025-05-26T14:07:36.283892"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\menu\\4200\\backup\\Find in Files.sublime-menu.json",
           "size": 1208,
           "hash": "1d6bbbe71273147d2e19c69e86546e3b",
-          "modified": "2025-05-26T10:21:31.768736"
+          "modified": "2025-05-26T14:07:36.284901"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\menu\\4200\\backup\\Indentation.sublime-menu.json",
           "size": 2377,
           "hash": "d853b5e1ee0deb679e80042a96d88fc4",
-          "modified": "2025-05-26T10:21:31.769737"
+          "modified": "2025-05-26T14:07:36.284901"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\menu\\4200\\backup\\Line Endings.sublime-menu.json",
           "size": 515,
           "hash": "63384a8720ff4ab37f1b8aa377c35470",
-          "modified": "2025-05-26T10:21:31.770737"
+          "modified": "2025-05-26T14:07:36.284901"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\menu\\4200\\backup\\Main.sublime-menu.json",
           "size": 117042,
           "hash": "2750058bb56839f4dbff8df3eebabd6a",
-          "modified": "2025-05-26T10:21:31.770737"
+          "modified": "2025-05-26T14:07:36.285919"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\menu\\4200\\backup\\Side Bar Mount Point.sublime-menu.json",
           "size": 225,
           "hash": "2afa707c1eefe34d84d856ef48adb7cd",
-          "modified": "2025-05-26T10:21:31.771735"
+          "modified": "2025-05-26T14:07:36.285919"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\menu\\4200\\backup\\Side Bar.sublime-menu.json",
           "size": 2173,
           "hash": "38660dc20b69c50fba7b719c3bd56594",
-          "modified": "2025-05-26T10:21:31.772736"
+          "modified": "2025-05-26T14:07:36.286924"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\menu\\4200\\backup\\Syntax.sublime-menu.json",
           "size": 146,
           "hash": "7d2a4954aa82b36f601ac05cb5e36006",
-          "modified": "2025-05-26T10:21:31.773737"
+          "modified": "2025-05-26T14:07:36.286924"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\menu\\4200\\backup\\Tab Context.sublime-menu.json",
           "size": 1475,
           "hash": "b021a5565c570b13abdc3e90a65ecceb",
-          "modified": "2025-05-26T10:21:31.773737"
+          "modified": "2025-05-26T14:07:36.287930"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\menu\\4200\\backup\\Tab Sidebar Context.sublime-menu.json",
           "size": 1193,
           "hash": "428c5389827536eed5b45512ea5a63a5",
-          "modified": "2025-05-26T10:21:31.774737"
+          "modified": "2025-05-26T14:07:36.287930"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\menu\\4200\\backup\\Widget Context.sublime-menu.json",
           "size": 452,
           "hash": "25cc8c6dec48341fd737d34443eb8eae",
-          "modified": "2025-05-26T10:21:31.776737"
+          "modified": "2025-05-26T14:07:36.287930"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\menu\\4200\\en\\Console Input Widget Context.sublime-menu.json",
           "size": 324,
           "hash": "15218e3f9ffb7b57d729b3de783f1e7a",
-          "modified": "2025-05-26T10:21:31.782904"
+          "modified": "2025-05-26T14:07:36.292266"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\menu\\4200\\en\\Context.sublime-menu.json",
           "size": 1250,
           "hash": "a415b47a270f89d7e8f1d1ce06286e44",
-          "modified": "2025-05-26T10:21:31.784882"
+          "modified": "2025-05-26T14:07:36.293270"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\menu\\4200\\en\\Encoding.sublime-menu.json",
           "size": 8367,
           "hash": "36fdc0e75fbe31027173fecff81cfef1",
-          "modified": "2025-05-26T10:21:31.785883"
+          "modified": "2025-05-26T14:07:36.294276"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\menu\\4200\\en\\Find in Files.sublime-menu.json",
           "size": 757,
           "hash": "9cf053a985e351b9e6fea702702001ca",
-          "modified": "2025-05-26T10:21:31.787884"
+          "modified": "2025-05-26T14:07:36.295283"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\menu\\4200\\en\\Image Context.sublime-menu.json",
           "size": 644,
           "hash": "f063deb4f7f80fa0b6da2c66126b995a",
-          "modified": "2025-05-26T10:21:31.789881"
+          "modified": "2025-05-26T14:07:36.295283"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\menu\\4200\\en\\Indentation.sublime-menu.json",
           "size": 1475,
           "hash": "84abd5f0992431a2c7c0911407622d90",
-          "modified": "2025-05-26T10:21:31.790881"
+          "modified": "2025-05-26T14:07:36.296285"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\menu\\4200\\en\\Line Endings.sublime-menu.json",
           "size": 361,
           "hash": "a6120bd026652600e632d354e688d206",
-          "modified": "2025-05-26T10:21:31.793880"
+          "modified": "2025-05-26T14:07:36.297290"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\menu\\4200\\en\\Main.sublime-menu.json",
           "size": 47470,
           "hash": "372263b7777388c071911f448b3071a4",
-          "modified": "2025-05-26T10:21:31.796881"
+          "modified": "2025-05-26T14:07:36.298356"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\menu\\4200\\en\\Side Bar Mount Point.sublime-menu.json",
           "size": 146,
           "hash": "4c5e12058aaa944bbf2b540f9259f9b8",
-          "modified": "2025-05-26T10:21:31.797891"
+          "modified": "2025-05-26T14:07:36.299361"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\menu\\4200\\en\\Side Bar.sublime-menu.json",
           "size": 1405,
           "hash": "b4e6405a7e08e86a5c8baa75c06bdf38",
-          "modified": "2025-05-26T10:21:31.799881"
+          "modified": "2025-05-26T14:07:36.299361"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\menu\\4200\\en\\Syntax.sublime-menu.json",
           "size": 80,
           "hash": "9252f69d0a85d771fd03d6b3072ca1b0",
-          "modified": "2025-05-26T10:21:31.801883"
+          "modified": "2025-05-26T14:07:36.300364"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\menu\\4200\\en\\Tab Context.sublime-menu.json",
           "size": 1225,
           "hash": "ea322969fd404e2ff7ead92d1c6505c4",
-          "modified": "2025-05-26T10:21:31.803117"
+          "modified": "2025-05-26T14:07:36.301378"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\menu\\4200\\en\\Tab Sidebar Context.sublime-menu.json",
           "size": 1037,
           "hash": "121b9267d70bcf63f3fff9a45c3e5b4d",
-          "modified": "2025-05-26T10:21:31.804612"
+          "modified": "2025-05-26T14:07:36.302381"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\menu\\4200\\en\\Widget Context.sublime-menu.json",
           "size": 183,
           "hash": "5e1bd6c588daba6936f9eee6ba977bbd",
-          "modified": "2025-05-26T10:21:31.806990"
+          "modified": "2025-05-26T14:07:36.302381"
         },
         {
           "path": "Data\\Packages\\LocalizedMenu\\readme\\README.zh_CN.md",
@@ -16247,12 +15799,6 @@
           "modified": "2021-10-26T16:13:37.154591"
         },
         {
-          "path": "Data\\Packages\\User\\encoding_cache.json",
-          "size": 768,
-          "hash": "4c6c3419116918c2c6c2729051045c55",
-          "modified": "2025-06-17T17:53:29.812529"
-        },
-        {
           "path": "Data\\Packages\\User\\LocalizedMenu.sublime-settings",
           "size": 27,
           "hash": "5a1937eb74ac0f188011a6d4567dd83d",
@@ -16260,21 +15806,21 @@
         },
         {
           "path": "Data\\Packages\\User\\Package Control.sublime-settings",
-          "size": 139,
-          "hash": "f4d4a33c45d095fdcb2bf3d0b9299fbb",
-          "modified": "2025-05-26T10:21:37.610045"
+          "size": 84,
+          "hash": "f1a9b895dd2bd490a1560a6167a4da7b",
+          "modified": "2021-12-21T13:48:10.055886"
         },
         {
           "path": "Data\\Packages\\User\\Preferences.sublime-settings",
-          "size": 89,
-          "hash": "b55aafe648f3d3222b739f8cc1849ed3",
-          "modified": "2025-05-26T10:21:37.631044"
+          "size": 45,
+          "hash": "24186cf819f6dad834c551e4247fb373",
+          "modified": "2021-02-04T18:44:48.870555"
         },
         {
           "path": "Data\\Packages\\ZZZZZZZZ-LocalizedMenu\\Main.sublime-menu",
           "size": 957,
-          "hash": "ba38dece4f1e7ee2d01f79d923f27dc8",
-          "modified": "2025-05-26T10:21:31.930087"
+          "hash": "c39deb97986df00c6f2d1dc7ba44df49",
+          "modified": "2025-05-26T14:07:36.354178"
         },
         {
           "path": "Lib\\python3.3.zip",
@@ -16679,11 +16225,11 @@
           "modified": "2025-05-21T05:39:12"
         }
       ],
-      "total_files": 856,
-      "total_size": 77634164
+      "total_files": 846,
+      "total_size": 69499494
     },
     "WinMemoryCleaner": {
-      "version": "20250627_120650",
+      "version": "20250627_122946",
       "files": [
         {
           "path": "WinMemoryCleaner.exe",
@@ -16696,7 +16242,7 @@
       "total_size": 254312
     },
     "WinRAR": {
-      "version": "20250627_120650",
+      "version": "20250627_122946",
       "files": [
         {
           "path": "7zxa.dll",
@@ -16753,6 +16299,12 @@
           "modified": "2025-06-25T23:41:26.490891"
         },
         {
+          "path": "RarExt.dll.0.tmp",
+          "size": 637440,
+          "hash": "ddcc5656b8d52f163043e9520100e894",
+          "modified": "2025-06-11T12:16:40.852727"
+        },
+        {
           "path": "RarExt32.dll",
           "size": 537744,
           "hash": "d4ad345a819751197202ae45a340b4f3",
@@ -16805,6 +16357,12 @@
           "size": 498,
           "hash": "7bc93f5ae05a39d77a38b228cddcd3c1",
           "modified": "2017-04-18T18:58:32"
+        },
+        {
+          "path": "README.md",
+          "size": 411,
+          "hash": "12d5ba6a0668c871ce155d5281d073c7",
+          "modified": "2025-06-27T10:48:15.833176"
         },
         {
           "path": "ReadMe.txt",
@@ -16885,8 +16443,8 @@
           "modified": "2025-06-27T11:19:29.971958"
         }
       ],
-      "total_files": 31,
-      "total_size": 9521150
+      "total_files": 33,
+      "total_size": 10159001
     }
   }
 }
