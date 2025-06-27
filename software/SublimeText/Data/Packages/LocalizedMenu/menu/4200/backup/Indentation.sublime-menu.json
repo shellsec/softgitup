@@ -1,0 +1,109 @@
+[
+    {
+        "args": {
+            "setting": "translate_tabs_to_spaces"
+        }, 
+        "checkbox": true, 
+        "command": "toggle_setting", 
+        "caption": "使用空格缩进"
+    }, 
+    {
+        "caption": "-"
+    }, 
+    {
+        "args": {
+            "setting": "tab_size", 
+            "value": 1
+        }, 
+        "checkbox": true, 
+        "command": "set_setting", 
+        "caption": "制表符宽度: 1"
+    }, 
+    {
+        "args": {
+            "setting": "tab_size", 
+            "value": 2
+        }, 
+        "checkbox": true, 
+        "command": "set_setting", 
+        "caption": "制表符宽度: 2"
+    }, 
+    {
+        "args": {
+            "setting": "tab_size", 
+            "value": 3
+        }, 
+        "checkbox": true, 
+        "command": "set_setting", 
+        "caption": "制表符宽度: 3"
+    }, 
+    {
+        "args": {
+            "setting": "tab_size", 
+            "value": 4
+        }, 
+        "checkbox": true, 
+        "command": "set_setting", 
+        "caption": "制表符宽度: 4"
+    }, 
+    {
+        "args": {
+            "setting": "tab_size", 
+            "value": 5
+        }, 
+        "checkbox": true, 
+        "command": "set_setting", 
+        "caption": "制表符宽度: 5"
+    }, 
+    {
+        "args": {
+            "setting": "tab_size", 
+            "value": 6
+        }, 
+        "checkbox": true, 
+        "command": "set_setting", 
+        "caption": "制表符宽度: 6"
+    }, 
+    {
+        "args": {
+            "setting": "tab_size", 
+            "value": 7
+        }, 
+        "checkbox": true, 
+        "command": "set_setting", 
+        "caption": "制表符宽度: 7"
+    }, 
+    {
+        "args": {
+            "setting": "tab_size", 
+            "value": 8
+        }, 
+        "checkbox": true, 
+        "command": "set_setting", 
+        "caption": "制表符宽度: 8"
+    }, 
+    {
+        "caption": "-"
+    }, 
+    {
+        "command": "detect_indentation", 
+        "caption": "使用缓冲区缩进方式"
+    }, 
+    {
+        "caption": "-"
+    }, 
+    {
+        "args": {
+            "set_translate_tabs": true
+        }, 
+        "command": "expand_tabs", 
+        "caption": "转为空格缩进"
+    }, 
+    {
+        "args": {
+            "set_translate_tabs": true
+        }, 
+        "command": "unexpand_tabs", 
+        "caption": "转为制表符缩进"
+    }
+]

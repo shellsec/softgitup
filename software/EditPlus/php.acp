@@ -1,0 +1,49 @@
+#TITLE=PHP
+; EditPlus Auto-completion file v1.0 written by ES-Computing.
+; This file is provided as a default auto-completion file for PHP.
+
+#CASE=n
+#BRACKET1={}
+#BRACKET2=""
+#BRACKET3=''
+
+#T=if
+if (^!) {
+}
+#T=else
+else {
+	^!
+}
+#T=elseif
+elseif (^!) {
+}
+#T=while
+while (^!) {
+}
+#T=for
+for (^!; ; ) {
+}
+#T=foreach
+foreach (^! as ) {
+}
+#T=switch
+switch (^!) {
+	case :
+}
+#T=do
+do {
+} while (^!);
+#T=class
+class ^!
+{
+}
+#T=function
+function ^!
+{
+}
+#T=try
+try {
+	^!
+} catch () {
+}
+#

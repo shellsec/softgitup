@@ -1,0 +1,94 @@
+[
+    {
+        "command": "open_context_url", 
+        "caption": "打开URL链接"
+    }, 
+    {
+        "command": "goto_definition", 
+        "caption": "转到定义处"
+    }, 
+    {
+        "id": "diff", 
+        "caption": "-"
+    }, 
+    {
+        "command": "toggle_inline_diff", 
+        "caption": "切换显示行内差异"
+    }, 
+    {
+        "command": "revert_hunk", 
+        "caption": "还原差异块"
+    }, 
+    {
+        "id": "clipboard", 
+        "caption": "-"
+    }, 
+    {
+        "command": "cut", 
+        "caption": "剪切"
+    }, 
+    {
+        "command": "copy", 
+        "caption": "复制"
+    }, 
+    {
+        "command": "paste", 
+        "caption": "粘贴"
+    }, 
+    {
+        "id": "selection", 
+        "caption": "-"
+    }, 
+    {
+        "command": "select_all", 
+        "caption": "全选"
+    }, 
+    {
+        "id": "repo_commands", 
+        "caption": "-"
+    }, 
+    {
+        "command": "sublime_merge_open_repo", 
+        "caption": "打开Git仓库…"
+    }, 
+    {
+        "command": "sublime_merge_file_history", 
+        "caption": "文件历史…"
+    }, 
+    {
+        "command": "sublime_merge_line_history", 
+        "caption": "行历史…"
+    }, 
+    {
+        "command": "sublime_merge_blame_file", 
+        "caption": "审查文件…"
+    }, 
+    {
+        "id": "file", 
+        "caption": "-"
+    }, 
+    {
+        "command": "open_in_browser", 
+        "caption": "在浏览器中打开"
+    }, 
+    {
+        "args": {
+            "dir": "$file_path", 
+            "file": "$file_name"
+        }, 
+        "command": "open_dir", 
+        "caption": "打开所在文件夹…"
+    }, 
+    {
+        "command": "copy_path", 
+        "caption": "复制文件路径"
+    }, 
+    {
+        "command": "reveal_in_side_bar", 
+        "caption": "在侧边栏中显示"
+    }, 
+    {
+        "id": "end", 
+        "caption": "-"
+    }
+]

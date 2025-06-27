@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Notepad++ Object &#8212; PythonScript 3.0.22.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="_static/documentation_options.js?v=f540e16f"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Editor Object" href="scintilla.html" />
+    <link rel="prev" title="Python Primer" href="pythonprimer.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="scintilla.html" title="Editor Object"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pythonprimer.html" title="Python Primer"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">PythonScript 3.0.22.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Notepad++ Object</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="notepad-object">
+<h1>Notepad++ Object<a class="headerlink" href="#notepad-object" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="Notepad">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Notepad</span></span><a class="headerlink" href="#Notepad" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hwnd">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hwnd</span></span><a class="headerlink" href="#hwnd" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the handle of the Notepad++ window.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.activateBufferID">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">activateBufferID</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bufferID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.activateBufferID" title="Link to this definition">¶</a></dt>
+<dd><p>Activates the given <em>bufferID</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bufferID</span> <span class="o">=</span> <span class="n">notepad</span><span class="o">.</span><span class="n">getCurrentBufferID</span><span class="p">()</span>
+<span class="o">...</span>
+<span class="n">notepad</span><span class="o">.</span><span class="n">activateBufferID</span><span class="p">(</span><span class="n">bufferID</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.activateFile">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">activateFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.activateFile" title="Link to this definition">¶</a></dt>
+<dd><p>Activates the document with the given filename</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.activateIndex">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">activateIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">view</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.activateIndex" title="Link to this definition">¶</a></dt>
+<dd><p>Activates the document with the given view and index.
+<em>view</em> is 0 or 1.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.addModificationFlags">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">addModificationFlags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flags</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.addModificationFlags" title="Link to this definition">¶</a></dt>
+<dd><p>A bitwise OR combination of values from the <a class="reference internal" href="enums.html#MODIFICATIONFLAGS" title="MODIFICATIONFLAGS"><code class="xref py py-class docutils literal notranslate"><span class="pre">MODIFICATIONFLAGS</span></code></a> enum.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.allocateCmdID">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">allocateCmdID</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">numberRequested</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#notepad.allocateCmdID" title="Link to this definition">¶</a></dt>
+<dd><p>Allocates a range of Command ID for use in WM_COMMAND. Mainly used internally by plugins.</p>
+<p>Returns the start number of the requested range</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.allocateMarker">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">allocateMarker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">numberRequested</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#notepad.allocateMarker" title="Link to this definition">¶</a></dt>
+<dd><p>Allocates a range of marker numbers for Scintilla.
+Use this to stop marker number collisions with other plugins / scripts.</p>
+<p>Returns the start number of the requested range</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.allocateIndicator">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">allocateIndicator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">numberRequested</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#notepad.allocateIndicator" title="Link to this definition">¶</a></dt>
+<dd><p>Allocates a range of indicator numbers for Scintilla.
+Use this to stop indicator number collisions with other plugins / scripts.</p>
+<p>Returns the start number of the requested range</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.allocateSupported">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">allocateSupported</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#notepad.allocateSupported" title="Link to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the Command ID allocation API is supported in this version of Notepad++</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.callback">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">notifications</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.callback" title="Link to this definition">¶</a></dt>
+<dd><p>Registers a callback function for a notification.
+<em>notifications</em> is a list of messages to call the function for.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">my_callback</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+        <span class="n">console</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Buffer Activated </span><span class="si">%d</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">args</span><span class="p">[</span><span class="s2">&quot;bufferID&quot;</span><span class="p">]</span>
+
+<span class="n">notepad</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span><span class="n">my_callback</span><span class="p">,</span> <span class="p">[</span><span class="n">NOTIFICATION</span><span class="o">.</span><span class="n">BUFFERACTIVATED</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>The <a class="reference internal" href="enums.html#NOTIFICATION" title="NOTIFICATION"><code class="xref py py-class docutils literal notranslate"><span class="pre">NOTIFICATION</span></code></a> enum corresponds to the NPPN_* plugin notifications.
+The function arguments is a map, and the contents vary dependant on the notification.</p>
+<p>Note that the callback will live on past the life of the script, so you can use this
+to perform operations whenever a document is opened, saved, changed etc.</p>
+<p>Also note that it is good practice to put the function in another module (file), and
+then import that module in the script that calls <code class="docutils literal notranslate"><span class="pre">notepad.callback()</span></code>.  This way
+you can unregister the callback easily.</p>
+<p>For Scintilla notifications, see <code class="docutils literal notranslate"><span class="pre">editor.callback()</span></code> -&gt; bool</p>
+<p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the registration was successful</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.clearCallbacks">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">clearCallbacks</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#notepad.clearCallbacks" title="Link to this definition">¶</a></dt>
+<dd><p>Unregisters all callbacks</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">clearCallbacks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="Link to this definition">¶</a></dt>
+<dd><p>Unregisters all callbacks for the given function.  Note that this uses the actual function object, so if the function has
+been redefined since it was registered, this will fail.  If this has happened, use one of the other <code class="docutils literal notranslate"><span class="pre">clearCallbacks()</span></code>
+functions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id1">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">clearCallbacks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eventsList</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id1" title="Link to this definition">¶</a></dt>
+<dd><p>Unregisters all callbacks for the given list of events.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">notepad</span><span class="o">.</span><span class="n">clearCallbacks</span><span class="p">([</span><span class="n">NOTIFICATION</span><span class="o">.</span><span class="n">BUFFERACTIVATED</span><span class="p">,</span> <span class="n">NOTIFICATION</span><span class="o">.</span><span class="n">FILESAVED</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>See <a class="reference internal" href="enums.html#NOTIFICATION" title="NOTIFICATION"><code class="xref py py-class docutils literal notranslate"><span class="pre">NOTIFICATION</span></code></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id2">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">clearCallbacks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eventsList</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id2" title="Link to this definition">¶</a></dt>
+<dd><p>Unregisters the callback for the given callback function for the list of events.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.close">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#notepad.close" title="Link to this definition">¶</a></dt>
+<dd><p>Closes the currently active document</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.closeAll">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">closeAll</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#notepad.closeAll" title="Link to this definition">¶</a></dt>
+<dd><p>Closes all open documents</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.closeAllButCurrent">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">closeAllButCurrent</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#notepad.closeAllButCurrent" title="Link to this definition">¶</a></dt>
+<dd><p>Closes all but the currently active document</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.createScintilla">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">createScintilla</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">editor</span></span></span><a class="headerlink" href="#notepad.createScintilla" title="Link to this definition">¶</a></dt>
+<dd><p>Create a new Scintilla handle.</p>
+<p>Returns an <a class="reference internal" href="scintilla.html#editor"><span class="std std-ref">Editor Object</span></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.decodeSci">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">decodeSci</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">view</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#notepad.decodeSci" title="Link to this definition">¶</a></dt>
+<dd><p>View is either 0 or 1</p>
+<p>Returns the old unicode mode</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.destroyScintilla">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">destroyScintilla</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">editor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.destroyScintilla" title="Link to this definition">¶</a></dt>
+<dd><p>Destroy a Scintilla handle created with createScintilla</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.disableAutoUpdate">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">disableAutoUpdate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#notepad.disableAutoUpdate" title="Link to this definition">¶</a></dt>
+<dd><p>Disables notepad++ auto update functionality</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.docSwitcherDisableColumn">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">docSwitcherDisableColumn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">boolean</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.docSwitcherDisableColumn" title="Link to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if it should be hidden, <code class="docutils literal notranslate"><span class="pre">False</span></code> if it should be shown</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.encodeSci">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">encodeSci</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">view</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#notepad.encodeSci" title="Link to this definition">¶</a></dt>
+<dd><p>View is either 0 or 1</p>
+<p>Returns the new unicode mode</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.flashWindow">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">flashWindow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">milliseconds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.flashWindow" title="Link to this definition">¶</a></dt>
+<dd><p>Flashes notepad++ for the given count and milliseconds</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getAppdataPluginsAllowed">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getAppdataPluginsAllowed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#notepad.getAppdataPluginsAllowed" title="Link to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if loading plugins from %APPDATA%\Notepad++\plugins is allowed, <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getBookMarkID">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getBookMarkID</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#notepad.getBookMarkID" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the bookmark marker ID</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getBufferFilename">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getBufferFilename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bufferID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.getBufferFilename" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the filename of the given buffer ID</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getCommandLine">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getCommandLine</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#notepad.getCommandLine" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the command line used to start Notepad++</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getCurrentBufferID">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getCurrentBufferID</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#notepad.getCurrentBufferID" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the bufferID of the currently active buffer</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getCurrentDocIndex">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getCurrentDocIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">view</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.getCurrentDocIndex" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the current active index for the given <em>view</em> (0 or 1)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getCurrentFilename">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getCurrentFilename</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#notepad.getCurrentFilename" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the filename of the active document</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getCurrentLang">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getCurrentLang</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="enums.html#LANGTYPE" title="LANGTYPE"><span class="pre">LANGTYPE</span></a></span></span><a class="headerlink" href="#notepad.getCurrentLang" title="Link to this definition">¶</a></dt>
+<dd><p>Get the current language type</p>
+<p>Returns <a class="reference internal" href="enums.html#LANGTYPE" title="LANGTYPE"><code class="xref py py-class docutils literal notranslate"><span class="pre">LANGTYPE</span></code></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getCurrentNativeLangEncoding">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getCurrentNativeLangEncoding</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#notepad.getCurrentNativeLangEncoding" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the current native language encoding</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getCurrentView">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getCurrentView</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#notepad.getCurrentView" title="Link to this definition">¶</a></dt>
+<dd><p>Get the currently active view (0 or 1)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getEditorDefaultBackgroundColor">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getEditorDefaultBackgroundColor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#notepad.getEditorDefaultBackgroundColor" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the default background color as tuple</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getEditorDefaultForegroundColor">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getEditorDefaultForegroundColor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#notepad.getEditorDefaultForegroundColor" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the default foreground color as tuple</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getEnableThemeTextureFunc">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getEnableThemeTextureFunc</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#notepad.getEnableThemeTextureFunc" title="Link to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if a dialog window supports background texturing, <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getEncoding">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getEncoding</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">bufferID</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="enums.html#BUFFERENCODING" title="BUFFERENCODING"><span class="pre">BUFFERENCODING</span></a></span></span><a class="headerlink" href="#notepad.getEncoding" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the encoding of the given <em>bufferID</em>.  If no bufferID is given, then the encoding of the
+currently active buffer is returned.</p>
+<p>Returns <a class="reference internal" href="enums.html#BUFFERENCODING" title="BUFFERENCODING"><code class="xref py py-class docutils literal notranslate"><span class="pre">BUFFERENCODING</span></code></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getExternalLexerAutoIndentMode">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getExternalLexerAutoIndentMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="enums.html#AUTOINDENTMODE" title="AUTOINDENTMODE"><span class="pre">AUTOINDENTMODE</span></a></span></span><a class="headerlink" href="#notepad.getExternalLexerAutoIndentMode" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the auto indent mode for an installed external programming language</p>
+<p>Returns <a class="reference internal" href="enums.html#AUTOINDENTMODE" title="AUTOINDENTMODE"><code class="xref py py-class docutils literal notranslate"><span class="pre">AUTOINDENTMODE</span></code></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getFiles">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getFiles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#notepad.getFiles" title="Link to this definition">¶</a></dt>
+<dd><p>Gets a list of the open filenames.</p>
+<p>Returns A list of tuples containing <code class="docutils literal notranslate"><span class="pre">(filename,</span> <span class="pre">bufferID,</span> <span class="pre">index,</span> <span class="pre">view)</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getFormatType">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getFormatType</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">bufferID</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="enums.html#FORMATTYPE" title="FORMATTYPE"><span class="pre">FORMATTYPE</span></a></span></span><a class="headerlink" href="#notepad.getFormatType" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the format type (i.e. Windows, Unix or Mac) of the given <em>bufferID</em>.
+If no bufferID is given, then the format of the currently active buffer is returned.</p>
+<p>Returns <a class="reference internal" href="enums.html#FORMATTYPE" title="FORMATTYPE"><code class="xref py py-class docutils literal notranslate"><span class="pre">FORMATTYPE</span></code></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getLanguageDesc">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getLanguageDesc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">langType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="enums.html#LANGTYPE" title="LANGTYPE"><span class="pre">LANGTYPE</span></a></span></span><a class="headerlink" href="#notepad.getLanguageDesc" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the programming language short description from the given <a class="reference internal" href="enums.html#LANGTYPE" title="LANGTYPE"><code class="xref py py-class docutils literal notranslate"><span class="pre">LANGTYPE</span></code></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getLanguageName">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getLanguageName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">langType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="enums.html#LANGTYPE" title="LANGTYPE"><span class="pre">LANGTYPE</span></a></span></span><a class="headerlink" href="#notepad.getLanguageName" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the programming language name from the given <a class="reference internal" href="enums.html#LANGTYPE" title="LANGTYPE"><code class="xref py py-class docutils literal notranslate"><span class="pre">LANGTYPE</span></code></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getLangType">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getLangType</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">bufferID</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="enums.html#LANGTYPE" title="LANGTYPE"><span class="pre">LANGTYPE</span></a></span></span><a class="headerlink" href="#notepad.getLangType" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the language type of the given <em>bufferID</em>.
+If no bufferID is given, then the language of the currently active buffer is returned.</p>
+<p>Returns <a class="reference internal" href="enums.html#LANGTYPE" title="LANGTYPE"><code class="xref py py-class docutils literal notranslate"><span class="pre">LANGTYPE</span></code></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getLineNumberWidthMode">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getLineNumberWidthMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="enums.html#LINENUMWIDTHMODE" title="LINENUMWIDTHMODE"><span class="pre">LINENUMWIDTHMODE</span></a></span></span><a class="headerlink" href="#notepad.getLineNumberWidthMode" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the line number margin width mode</p>
+<p>Returns <a class="reference internal" href="enums.html#LINENUMWIDTHMODE" title="LINENUMWIDTHMODE"><code class="xref py py-class docutils literal notranslate"><span class="pre">LINENUMWIDTHMODE</span></code></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getNativeLangFileName">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getNativeLangFileName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#notepad.getNativeLangFileName" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the current native language file name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getTabColorID">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getTabColorID</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">view</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">tabIndex</span></span></em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#notepad.getTabColorID" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the tab color id for the given view and tab index
+If no view or tabIndex is given, then the currently active buffer is used.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getNppDir">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getNppDir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#notepad.getNppDir" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the directory Notepad++ is running in (i.e. the location of notepad++.exe)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getMenuHandle">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getMenuHandle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">menu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.getMenuHandle" title="Link to this definition">¶</a></dt>
+<dd><p>Menu is either 0(main) or 1(plugin) -&gt; int</p>
+<p>Returns the handle for the main or plugins menu.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getNbUserLang">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getNbUserLang</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#notepad.getNbUserLang" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the number of user defined languages</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getPluginConfigDir">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getPluginConfigDir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#notepad.getPluginConfigDir" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the plugin config directory.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getPluginMenuHandle">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getPluginMenuHandle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#notepad.getPluginMenuHandle" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the handle for the Plugins menu.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getPluginVersion">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getPluginVersion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#notepad.getPluginVersion" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the PythonScript plugin version as a string. There is always four parts to it. e.g. ‘0.9.2.0’</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getSessionFiles">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getSessionFiles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sessionFileName</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#notepad.getSessionFiles" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a list of files from given session file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getVersion">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getVersion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#notepad.getVersion" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the Notepad++ version as a tuple - e.g. 5.6.8 becomes <code class="docutils literal notranslate"><span class="pre">(5,6,8)</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.getWindowsVersion">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">getWindowsVersion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="enums.html#WINVER" title="WINVER"><span class="pre">WINVER</span></a></span></span><a class="headerlink" href="#notepad.getWindowsVersion" title="Link to this definition">¶</a></dt>
+<dd><p>Returns current windows version <a class="reference internal" href="enums.html#WINVER" title="WINVER"><code class="xref py py-class docutils literal notranslate"><span class="pre">WINVER</span></code></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.hideMenu">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">hideMenu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">boolean</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.hideMenu" title="Link to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if it should be hidden, <code class="docutils literal notranslate"><span class="pre">False</span></code> if it should be shown</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.hideStatusBar">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">hideStatusBar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">boolean</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.hideStatusBar" title="Link to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if it should be hidden, <code class="docutils literal notranslate"><span class="pre">False</span></code> if it should be shown</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.hideTabBar">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">hideTabBar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#notepad.hideTabBar" title="Link to this definition">¶</a></dt>
+<dd><p>Hides the Tab bar</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.hideToolBar">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">hideToolBar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">boolean</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.hideToolBar" title="Link to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if it should be hidden, <code class="docutils literal notranslate"><span class="pre">False</span></code> if it should be shown</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.isAutoIndention">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">isAutoIndention</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#notepad.isAutoIndention" title="Link to this definition">¶</a></dt>
+<dd><p>Returns: <code class="docutils literal notranslate"><span class="pre">True</span></code> if auto indent mode is set, <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.isDarkModeEnabled">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">isDarkModeEnabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#notepad.isDarkModeEnabled" title="Link to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if Dark Mode is enabled else <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.isDocSwitcherShown">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">isDocSwitcherShown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#notepad.isDocSwitcherShown" title="Link to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if document switcher is shown else <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.isMenuHidden">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">isMenuHidden</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#notepad.isMenuHidden" title="Link to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if menu is hidden else <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.isSingleView">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">isSingleView</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#notepad.isSingleView" title="Link to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if only one view is used, <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.isStatusBarHidden">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">isStatusBarHidden</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#notepad.isStatusBarHidden" title="Link to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if statusbar is hidden else <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.isTabBarHidden">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">isTabBarHidden</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#notepad.isTabBarHidden" title="Link to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if tabbar is hidden else <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.isToolBarHidden">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">isToolBarHidden</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#notepad.isToolBarHidden" title="Link to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if toolbar is hidden else <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.launchFindInFilesDlg">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">launchFindInFilesDlg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dir2Search</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.launchFindInFilesDlg" title="Link to this definition">¶</a></dt>
+<dd><p>Launches the find in files dialog for given directory and filter arguments</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.loadSession">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">loadSession</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sessionFileName</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.loadSession" title="Link to this definition">¶</a></dt>
+<dd><p>Loads a session from a session file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.makeCurrentBufferDirty">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">makeCurrentBufferDirty</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#notepad.makeCurrentBufferDirty" title="Link to this definition">¶</a></dt>
+<dd><p>Makes current document dirty</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.menuCommand">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">menuCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">menuCommand</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.menuCommand" title="Link to this definition">¶</a></dt>
+<dd><p>Runs a Notepad++ menu command.  Use the <a class="reference internal" href="enums.html#MENUCOMMAND" title="MENUCOMMAND"><code class="xref py py-class docutils literal notranslate"><span class="pre">MENUCOMMAND</span></code></a> enum, or integers directly from the nativeLang.xml file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.messageBox">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">messageBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span></em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">MessageBoxFlags</span></span></span><a class="headerlink" href="#notepad.messageBox" title="Link to this definition">¶</a></dt>
+<dd><p>Displays a message box with the given <em>message</em> and <em>title</em>.</p>
+<p>Flags can be 0 for a standard ‘OK’ message box, or a combination of <a class="reference internal" href="enums.html#MESSAGEBOXFLAGS" title="MESSAGEBOXFLAGS"><code class="xref py py-class docutils literal notranslate"><span class="pre">MESSAGEBOXFLAGS</span></code></a>.
+<code class="docutils literal notranslate"><span class="pre">title</span></code> is “Python Script for Notepad++” by default, and flags is 0 by default.</p>
+<p>Returns a RESULTxxxx member of <a class="reference internal" href="enums.html#MESSAGEBOXFLAGS" title="MESSAGEBOXFLAGS"><code class="xref py py-class docutils literal notranslate"><span class="pre">MESSAGEBOXFLAGS</span></code></a> as to which button was pressed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.new">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">new</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#notepad.new" title="Link to this definition">¶</a></dt>
+<dd><p>Create a new document.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.open">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">open</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.open" title="Link to this definition">¶</a></dt>
+<dd><p>Opens the given file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.prompt">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">prompt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prompt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">defaultText</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#notepad.prompt" title="Link to this definition">¶</a></dt>
+<dd><p>Prompts the user for some text.  Optionally provide the default text to initialise the entry field.</p>
+<p>Returns the string entered.</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">None</span></code> if cancel was pressed
+(note that is different to an empty string, which means that no input was given)</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.reloadBuffer">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">reloadBuffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bufferID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.reloadBuffer" title="Link to this definition">¶</a></dt>
+<dd><p>Reloads the given bufferID</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.reloadCurrentDocument">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">reloadCurrentDocument</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#notepad.reloadCurrentDocument" title="Link to this definition">¶</a></dt>
+<dd><p>Reloads the current document</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.reloadFile">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">reloadFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.reloadFile" title="Link to this definition">¶</a></dt>
+<dd><p>Reloads a filename.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.runMenuCommand">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">runMenuCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">menuName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">menuOption</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">refreshCache</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#notepad.runMenuCommand" title="Link to this definition">¶</a></dt>
+<dd><p>Runs a command from the menus.
+For most built-in menus use notepad.menuCommand(), but for menus that are created dynamically (e.g. the macro menu),
+use <code class="docutils literal notranslate"><span class="pre">notepad.runMenuCommand(menuName,</span> <span class="pre">menuOption)</span></code>.  For other plugin commands (in the plugin menu),
+use <code class="docutils literal notranslate"><span class="pre">notepad.runPluginCommand(pluginName,</span> <span class="pre">menuOption)_</span></code></p>
+<p>Menus are searched for the text, and when found, the internal ID of the menu command is cached.
+When <code class="docutils literal notranslate"><span class="pre">runMenuCommand</span></code> is called, the cache is first checked if it holds the internal ID for the given
+<code class="docutils literal notranslate"><span class="pre">menuName</span></code> and <code class="docutils literal notranslate"><span class="pre">menuOption</span></code>.  If it does, it simply uses the value from the cache.  If the ID could have
+been updated (for example, you’re calling the name of macro that has been removed and added again), set refreshCache
+to <code class="docutils literal notranslate"><span class="pre">True</span></code>.  This is <code class="docutils literal notranslate"><span class="pre">False</span></code> by default.</p>
+<p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the menu command was found, otherwise <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+<p>e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">notepad</span><span class="o">.</span><span class="n">runMenuCommand</span><span class="p">(</span><span class="s2">&quot;MIME Tools&quot;</span><span class="p">,</span> <span class="s2">&quot;About&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.runPluginCommand">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">runPluginCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pluginName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">menuOption</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">refreshCache</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#notepad.runPluginCommand" title="Link to this definition">¶</a></dt>
+<dd><p>Runs a command from the plugin menu.
+Use to run direct commands from the Plugins menu.
+To call other menu functions, either use <code class="docutils literal notranslate"><span class="pre">notepad.menuCommand(menuCommand)_</span></code>,
+or <code class="docutils literal notranslate"><span class="pre">notepad.runMenuCommand(menuName,</span> <span class="pre">menuOption)_</span></code> for menus that are created dynamically (e.g. the macro menu).</p>
+<p>Note that menuOption can be a submenu in a plugin’s menu.  So:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">notepad</span><span class="o">.</span><span class="n">runPluginCommand</span><span class="p">(</span><span class="s1">&#39;Python Script&#39;</span><span class="p">,</span> <span class="s1">&#39;demo script&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Could run a script called “demo script” from the Scripts submenu of Python Script.</p>
+<p>Menus are searched for the text, and when found, the internal ID of the menu command is cached.
+When <code class="docutils literal notranslate"><span class="pre">runPluginCommand</span></code> is called, the cache is first checked if it holds the internal ID for the given
+<code class="docutils literal notranslate"><span class="pre">menuName</span></code> and <code class="docutils literal notranslate"><span class="pre">menuOption</span></code>.  If it does, it simply uses the value from the cache.  If the ID could have
+been updated (for example, you’re calling the name of macro that has been removed and added again), set refreshCache
+to <code class="docutils literal notranslate"><span class="pre">True</span></code>.  This is <code class="docutils literal notranslate"><span class="pre">False</span></code> by default.</p>
+<dl class="simple">
+<dt>e.g.::</dt><dd><p>notepad.runPluginCommand(‘XML Tools’, ‘Pretty Print (XML only)’)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.save">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#notepad.save" title="Link to this definition">¶</a></dt>
+<dd><p>Save the current file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.saveAllFiles">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">saveAllFiles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#notepad.saveAllFiles" title="Link to this definition">¶</a></dt>
+<dd><p>Saves all currently unsaved files</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.saveAs">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">saveAs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.saveAs" title="Link to this definition">¶</a></dt>
+<dd><p>Save the current file as the specified filename</p>
+<p><em>Only works in Notepad++ 5.7 onwards</em></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.saveAsCopy">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">saveAsCopy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.saveAsCopy" title="Link to this definition">¶</a></dt>
+<dd><p>Save the current file as the specified filename, but don’t change the filename for the buffer in Notepad++</p>
+<p><em>Only works in Notepad++ 5.7 onwards</em></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.saveFile">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">saveFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.saveFile" title="Link to this definition">¶</a></dt>
+<dd><p>Saves the provided file - must not be the active one</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.saveCurrentSession">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">saveCurrentSession</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.saveCurrentSession" title="Link to this definition">¶</a></dt>
+<dd><p>Save the current session (list of open files) to a file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.saveSession">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">saveSession</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filesList</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.saveSession" title="Link to this definition">¶</a></dt>
+<dd><p>Saves a session file with the list of filenames.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.setCurrentLang">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">setCurrentLang</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">langType</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.setCurrentLang" title="Link to this definition">¶</a></dt>
+<dd><p>Set the language type of the currently active buffer (see <a class="reference internal" href="enums.html#LANGTYPE" title="LANGTYPE"><code class="xref py py-class docutils literal notranslate"><span class="pre">LANGTYPE</span></code></a>)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.setEditorBorderEdge">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">setEditorBorderEdge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">boolean</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.setEditorBorderEdge" title="Link to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if editor should use border edge, <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.setEncoding">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">setEncoding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoding</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.setEncoding" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the encoding of the current buffer.  Use the <a class="reference internal" href="enums.html#BUFFERENCODING" title="BUFFERENCODING"><code class="xref py py-class docutils literal notranslate"><span class="pre">BUFFERENCODING</span></code></a> constants</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id3">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">setEncoding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoding</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bufferID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id3" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the encoding of the given bufferID.  Use the <a class="reference internal" href="enums.html#BUFFERENCODING" title="BUFFERENCODING"><code class="xref py py-class docutils literal notranslate"><span class="pre">BUFFERENCODING</span></code></a> constants</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.setExternalLexerAutoIndentMode">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">setExternalLexerAutoIndentMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">externalLexerName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indentMode</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#notepad.setExternalLexerAutoIndentMode" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the auto indent mode for an external programming language</p>
+<p>Returns: <code class="docutils literal notranslate"><span class="pre">True</span></code> if indentMode was set successful, <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.setFormatType">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">setFormatType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">formatType</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">bufferID</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#notepad.setFormatType" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the format type (i.e. Windows, Unix or Mac) of the specified buffer ID.
+If not bufferID is passed, then the format type of the currently active buffer is set.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.setLangType">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">setLangType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">langType</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">bufferID</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#notepad.setLangType" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the language type of the given <em>bufferID</em>. If not bufferID is given, sets the language for the currently active buffer.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.setSmoothFont">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">setSmoothFont</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">boolean</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.setSmoothFont" title="Link to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if smooth font should be set, <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.setLineNumberWidthMode">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">setLineNumberWidthMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widthMode</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#notepad.setLineNumberWidthMode" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the line number margin width mode</p>
+<p>Returns: <code class="docutils literal notranslate"><span class="pre">True</span></code> if widthMode was set successful, <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.setStatusBar">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">setStatusBar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">statusBarSection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.setStatusBar" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the status bar text. For statusBarSection, use one of the <a class="reference internal" href="enums.html#STATUSBARSECTION" title="STATUSBARSECTION"><code class="xref py py-class docutils literal notranslate"><span class="pre">STATUSBARSECTION</span></code></a> constants.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.setUntitledName">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">setUntitledName</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">bufferID</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#notepad.setUntitledName" title="Link to this definition">¶</a></dt>
+<dd><p>Sets a new name for an unnamed tab. If no bufferID is specified, the current tab is assumed</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.showDocSwitcher">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">showDocSwitcher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">boolean</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.showDocSwitcher" title="Link to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if it should be hidden, <code class="docutils literal notranslate"><span class="pre">False</span></code> if it should be shown</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.showTabBar">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">showTabBar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#notepad.showTabBar" title="Link to this definition">¶</a></dt>
+<dd><p>Shows the Tab bar</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="notepad.triggerTabbarContextMenu">
+<span class="sig-prename descclassname"><span class="pre">notepad.</span></span><span class="sig-name descname"><span class="pre">triggerTabbarContextMenu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">view</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index2Activate</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#notepad.triggerTabbarContextMenu" title="Link to this definition">¶</a></dt>
+<dd><p>Activates the context menu for given view and tab index</p>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Notepad++ Object</a><ul>
+<li><a class="reference internal" href="#Notepad"><code class="docutils literal notranslate"><span class="pre">Notepad</span></code></a></li>
+<li><a class="reference internal" href="#hwnd"><code class="docutils literal notranslate"><span class="pre">hwnd</span></code></a></li>
+<li><a class="reference internal" href="#notepad.activateBufferID"><code class="docutils literal notranslate"><span class="pre">notepad.activateBufferID()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.activateFile"><code class="docutils literal notranslate"><span class="pre">notepad.activateFile()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.activateIndex"><code class="docutils literal notranslate"><span class="pre">notepad.activateIndex()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.addModificationFlags"><code class="docutils literal notranslate"><span class="pre">notepad.addModificationFlags()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.allocateCmdID"><code class="docutils literal notranslate"><span class="pre">notepad.allocateCmdID()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.allocateMarker"><code class="docutils literal notranslate"><span class="pre">notepad.allocateMarker()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.allocateIndicator"><code class="docutils literal notranslate"><span class="pre">notepad.allocateIndicator()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.allocateSupported"><code class="docutils literal notranslate"><span class="pre">notepad.allocateSupported()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.callback"><code class="docutils literal notranslate"><span class="pre">notepad.callback()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.clearCallbacks"><code class="docutils literal notranslate"><span class="pre">notepad.clearCallbacks()</span></code></a></li>
+<li><a class="reference internal" href="#id0"><code class="docutils literal notranslate"><span class="pre">notepad.clearCallbacks()</span></code></a></li>
+<li><a class="reference internal" href="#id1"><code class="docutils literal notranslate"><span class="pre">notepad.clearCallbacks()</span></code></a></li>
+<li><a class="reference internal" href="#id2"><code class="docutils literal notranslate"><span class="pre">notepad.clearCallbacks()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.close"><code class="docutils literal notranslate"><span class="pre">notepad.close()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.closeAll"><code class="docutils literal notranslate"><span class="pre">notepad.closeAll()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.closeAllButCurrent"><code class="docutils literal notranslate"><span class="pre">notepad.closeAllButCurrent()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.createScintilla"><code class="docutils literal notranslate"><span class="pre">notepad.createScintilla()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.decodeSci"><code class="docutils literal notranslate"><span class="pre">notepad.decodeSci()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.destroyScintilla"><code class="docutils literal notranslate"><span class="pre">notepad.destroyScintilla()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.disableAutoUpdate"><code class="docutils literal notranslate"><span class="pre">notepad.disableAutoUpdate()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.docSwitcherDisableColumn"><code class="docutils literal notranslate"><span class="pre">notepad.docSwitcherDisableColumn()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.encodeSci"><code class="docutils literal notranslate"><span class="pre">notepad.encodeSci()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.flashWindow"><code class="docutils literal notranslate"><span class="pre">notepad.flashWindow()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getAppdataPluginsAllowed"><code class="docutils literal notranslate"><span class="pre">notepad.getAppdataPluginsAllowed()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getBookMarkID"><code class="docutils literal notranslate"><span class="pre">notepad.getBookMarkID()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getBufferFilename"><code class="docutils literal notranslate"><span class="pre">notepad.getBufferFilename()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getCommandLine"><code class="docutils literal notranslate"><span class="pre">notepad.getCommandLine()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getCurrentBufferID"><code class="docutils literal notranslate"><span class="pre">notepad.getCurrentBufferID()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getCurrentDocIndex"><code class="docutils literal notranslate"><span class="pre">notepad.getCurrentDocIndex()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getCurrentFilename"><code class="docutils literal notranslate"><span class="pre">notepad.getCurrentFilename()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getCurrentLang"><code class="docutils literal notranslate"><span class="pre">notepad.getCurrentLang()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getCurrentNativeLangEncoding"><code class="docutils literal notranslate"><span class="pre">notepad.getCurrentNativeLangEncoding()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getCurrentView"><code class="docutils literal notranslate"><span class="pre">notepad.getCurrentView()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getEditorDefaultBackgroundColor"><code class="docutils literal notranslate"><span class="pre">notepad.getEditorDefaultBackgroundColor()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getEditorDefaultForegroundColor"><code class="docutils literal notranslate"><span class="pre">notepad.getEditorDefaultForegroundColor()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getEnableThemeTextureFunc"><code class="docutils literal notranslate"><span class="pre">notepad.getEnableThemeTextureFunc()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getEncoding"><code class="docutils literal notranslate"><span class="pre">notepad.getEncoding()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getExternalLexerAutoIndentMode"><code class="docutils literal notranslate"><span class="pre">notepad.getExternalLexerAutoIndentMode()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getFiles"><code class="docutils literal notranslate"><span class="pre">notepad.getFiles()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getFormatType"><code class="docutils literal notranslate"><span class="pre">notepad.getFormatType()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getLanguageDesc"><code class="docutils literal notranslate"><span class="pre">notepad.getLanguageDesc()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getLanguageName"><code class="docutils literal notranslate"><span class="pre">notepad.getLanguageName()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getLangType"><code class="docutils literal notranslate"><span class="pre">notepad.getLangType()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getLineNumberWidthMode"><code class="docutils literal notranslate"><span class="pre">notepad.getLineNumberWidthMode()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getNativeLangFileName"><code class="docutils literal notranslate"><span class="pre">notepad.getNativeLangFileName()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getTabColorID"><code class="docutils literal notranslate"><span class="pre">notepad.getTabColorID()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getNppDir"><code class="docutils literal notranslate"><span class="pre">notepad.getNppDir()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getMenuHandle"><code class="docutils literal notranslate"><span class="pre">notepad.getMenuHandle()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getNbUserLang"><code class="docutils literal notranslate"><span class="pre">notepad.getNbUserLang()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getPluginConfigDir"><code class="docutils literal notranslate"><span class="pre">notepad.getPluginConfigDir()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getPluginMenuHandle"><code class="docutils literal notranslate"><span class="pre">notepad.getPluginMenuHandle()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getPluginVersion"><code class="docutils literal notranslate"><span class="pre">notepad.getPluginVersion()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getSessionFiles"><code class="docutils literal notranslate"><span class="pre">notepad.getSessionFiles()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getVersion"><code class="docutils literal notranslate"><span class="pre">notepad.getVersion()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.getWindowsVersion"><code class="docutils literal notranslate"><span class="pre">notepad.getWindowsVersion()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.hideMenu"><code class="docutils literal notranslate"><span class="pre">notepad.hideMenu()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.hideStatusBar"><code class="docutils literal notranslate"><span class="pre">notepad.hideStatusBar()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.hideTabBar"><code class="docutils literal notranslate"><span class="pre">notepad.hideTabBar()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.hideToolBar"><code class="docutils literal notranslate"><span class="pre">notepad.hideToolBar()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.isAutoIndention"><code class="docutils literal notranslate"><span class="pre">notepad.isAutoIndention()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.isDarkModeEnabled"><code class="docutils literal notranslate"><span class="pre">notepad.isDarkModeEnabled()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.isDocSwitcherShown"><code class="docutils literal notranslate"><span class="pre">notepad.isDocSwitcherShown()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.isMenuHidden"><code class="docutils literal notranslate"><span class="pre">notepad.isMenuHidden()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.isSingleView"><code class="docutils literal notranslate"><span class="pre">notepad.isSingleView()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.isStatusBarHidden"><code class="docutils literal notranslate"><span class="pre">notepad.isStatusBarHidden()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.isTabBarHidden"><code class="docutils literal notranslate"><span class="pre">notepad.isTabBarHidden()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.isToolBarHidden"><code class="docutils literal notranslate"><span class="pre">notepad.isToolBarHidden()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.launchFindInFilesDlg"><code class="docutils literal notranslate"><span class="pre">notepad.launchFindInFilesDlg()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.loadSession"><code class="docutils literal notranslate"><span class="pre">notepad.loadSession()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.makeCurrentBufferDirty"><code class="docutils literal notranslate"><span class="pre">notepad.makeCurrentBufferDirty()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.menuCommand"><code class="docutils literal notranslate"><span class="pre">notepad.menuCommand()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.messageBox"><code class="docutils literal notranslate"><span class="pre">notepad.messageBox()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.new"><code class="docutils literal notranslate"><span class="pre">notepad.new()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.open"><code class="docutils literal notranslate"><span class="pre">notepad.open()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.prompt"><code class="docutils literal notranslate"><span class="pre">notepad.prompt()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.reloadBuffer"><code class="docutils literal notranslate"><span class="pre">notepad.reloadBuffer()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.reloadCurrentDocument"><code class="docutils literal notranslate"><span class="pre">notepad.reloadCurrentDocument()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.reloadFile"><code class="docutils literal notranslate"><span class="pre">notepad.reloadFile()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.runMenuCommand"><code class="docutils literal notranslate"><span class="pre">notepad.runMenuCommand()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.runPluginCommand"><code class="docutils literal notranslate"><span class="pre">notepad.runPluginCommand()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.save"><code class="docutils literal notranslate"><span class="pre">notepad.save()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.saveAllFiles"><code class="docutils literal notranslate"><span class="pre">notepad.saveAllFiles()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.saveAs"><code class="docutils literal notranslate"><span class="pre">notepad.saveAs()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.saveAsCopy"><code class="docutils literal notranslate"><span class="pre">notepad.saveAsCopy()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.saveFile"><code class="docutils literal notranslate"><span class="pre">notepad.saveFile()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.saveCurrentSession"><code class="docutils literal notranslate"><span class="pre">notepad.saveCurrentSession()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.saveSession"><code class="docutils literal notranslate"><span class="pre">notepad.saveSession()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.setCurrentLang"><code class="docutils literal notranslate"><span class="pre">notepad.setCurrentLang()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.setEditorBorderEdge"><code class="docutils literal notranslate"><span class="pre">notepad.setEditorBorderEdge()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.setEncoding"><code class="docutils literal notranslate"><span class="pre">notepad.setEncoding()</span></code></a></li>
+<li><a class="reference internal" href="#id3"><code class="docutils literal notranslate"><span class="pre">notepad.setEncoding()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.setExternalLexerAutoIndentMode"><code class="docutils literal notranslate"><span class="pre">notepad.setExternalLexerAutoIndentMode()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.setFormatType"><code class="docutils literal notranslate"><span class="pre">notepad.setFormatType()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.setLangType"><code class="docutils literal notranslate"><span class="pre">notepad.setLangType()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.setSmoothFont"><code class="docutils literal notranslate"><span class="pre">notepad.setSmoothFont()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.setLineNumberWidthMode"><code class="docutils literal notranslate"><span class="pre">notepad.setLineNumberWidthMode()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.setStatusBar"><code class="docutils literal notranslate"><span class="pre">notepad.setStatusBar()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.setUntitledName"><code class="docutils literal notranslate"><span class="pre">notepad.setUntitledName()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.showDocSwitcher"><code class="docutils literal notranslate"><span class="pre">notepad.showDocSwitcher()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.showTabBar"><code class="docutils literal notranslate"><span class="pre">notepad.showTabBar()</span></code></a></li>
+<li><a class="reference internal" href="#notepad.triggerTabbarContextMenu"><code class="docutils literal notranslate"><span class="pre">notepad.triggerTabbarContextMenu()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="pythonprimer.html"
+                          title="previous chapter">Python Primer</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="scintilla.html"
+                          title="next chapter">Editor Object</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/notepad.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="scintilla.html" title="Editor Object"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pythonprimer.html" title="Python Primer"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">PythonScript 3.0.22.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Notepad++ Object</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2010-2025 Dave Brotherstone.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

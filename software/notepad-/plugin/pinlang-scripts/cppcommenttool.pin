@@ -1,0 +1,258 @@
+/*
+headinfo-begin
+[info]
+ScriptName=CppCommentTool
+Desc=高亮或删除cpp注释
+Author=psh
+Version=1.0
+Comment=该脚本可以高亮或删除当前编辑框中的cpp代码注释。
+//123
+[para]
+need=1
+inputFilePath=
+outputFilePath=
+stringPara1=
+stringPara2=
+stringPara3= 
+comboxPara1=使用颜色1高亮注释,使用颜色2高亮注释,使用颜色3高亮注释,清除高亮,删除注释,删除不含中文的注释
+
+headinfo-end
+*/
+global
+{
+	string editText;
+	PEdit edit;
+
+	struct Range{
+		zs start;
+		zs end;
+	};
+
+	lb Ranges = [];
+	lb Ranges1 = [];
+}
+
+func clearHigh()
+{
+	edit.clearAllHighLight();
+}
+
+
+//当前r是否已经在多行的范围中，如果是，则不能重复包含
+func isAlreadyInRange(Range r)(bl)
+{
+	for(zs i=0,c = Ranges.size(); i<c; i++)
+	{
+		Range tempr = Ranges[i];
+
+		if(r.start >= tempr.start && r.end <= tempr.end)
+		{
+			return zhen;
+		}
+		//提前结束，不可能重叠了。
+		if(r.end < tempr.start)
+		{
+			return jia;
+		}
+	}
+	return jia;
+}
+
+//单行注释是否合法。如果注释出现在""中，则表示是把做一个单词的字符串处理。则忽略该字段
+func isSignalCommentVaild(zs pos, zs lineEndPos)(bl)
+{
+	zs start = pos;
+	zs times = 0;
+	while(start > 0)
+	{
+		start--;
+		if(editText[start] == '\n')
+		{
+			break;
+		}
+		elif(editText[start] == '"')
+		{
+			times++;
+		}
+	}
+	
+
+	//如果注释开始之前有奇数个引号，而且之后也有奇数个引号，说明注释//是引号中间，则不是注释。
+	if(times >0 && times % 2 == 1)
+	{
+		times = 0;
+		zs end = pos;
+		while(end < lineEndPos)
+		{
+			end++;
+			if(editText[end] == '"')
+			{
+				times++;
+			}
+		}
+
+		if(times >0 && times % 2 == 1)
+		{
+		
+			return jia;
+		}
+	}
+
+	return zhen;
+}
+
+//检查字符串是否包含中文，如果没有，说明是纯代码或英文，则需要删除
+func containsChinese(string str)(bl) {
+    RegExp regex = R"([\x{4e00}-\x{9fa5}])";
+    isOk := regex.match(str).hasMatch();
+	
+	dyh << "--1" << str << isOk;
+	return isOk;
+}
+
+func highLight(zs colorId)
+{
+	//使用正则规则，对文本进行查找注释。
+	zs times = 0;
+	zs times1 = 0;
+
+	
+	//RegExp re = "/\\*.*?\\*/\\r?\\n?";
+	RegExp re = r"/\*.*?\*/\r?\n?";
+	
+	re.setPatternOptions(Reg::DotMatchesEverything);
+
+	RegMatchIter resultList = re.globalMatch(editText);
+	while(resultList.hasNext())
+	{
+		RegMatch result = resultList.next();
+		zs pos = result.capturedStart(0);
+		zs end = result.capturedEnd(0);
+
+		string preText = editText.mid(0,pos);
+		zs utf8StartPos = preText.toZfc().size();
+		string tempStr = editText.mid(pos,end-pos);
+		zs utf8Len = tempStr.toZfc().size();
+
+		edit.highLight(utf8StartPos,utf8Len,colorId);
+		
+		if colorId != 5 
+		{
+			Ranges.append(Range{utf8StartPos,utf8StartPos+utf8Len});
+			times++;
+		}
+		elif colorId == 5 && not containsChinese(result.captured(0))
+		{
+			Ranges.append(Range{utf8StartPos,utf8StartPos+utf8Len});
+			times++;
+		}
+	}
+
+	//RegExp re1 ="(//.*?(?=(\\r?\\n)))";
+	RegExp re1 ="[\t ]*//.*?\\r?\\n";
+	resultList = re1.globalMatch(editText);
+	while(resultList.hasNext())
+	{
+		RegMatch result = resultList.next();
+		zs pos = result.capturedStart(0);
+		zs end = result.capturedEnd(0);
+
+		if(isSignalCommentVaild(pos,end))
+		{
+			string preText = editText.mid(0,pos);
+			zs utf8StartPos = preText.toZfc().size();
+			string tempStr = editText.mid(pos,end-pos);
+			zs utf8Len = tempStr.toZfc().size();
+
+			edit.highLight(utf8StartPos,utf8Len,colorId);
+
+			
+			if(!isAlreadyInRange(Range{utf8StartPos,utf8StartPos+utf8Len}))
+			{		
+				if colorId != 5 
+				{
+					Ranges1.append(Range{utf8StartPos,utf8StartPos+utf8Len});
+					times1++;
+				}
+				elif colorId == 5 && not containsChinese(result.captured(0))
+				{
+					Ranges1.append(Range{utf8StartPos,utf8StartPos+utf8Len});
+					times1++;
+				}
+			}
+		}
+	}
+
+	dyh << "发现单行注释 %1 处" %(times1) << "发现多行注释 %1 处" %(times); 
+	
+	if Ranges.size() >0
+		Ranges1.append(Ranges,1);
+	
+	dyh << "排序前" << Ranges1;
+	
+	Ranges1.sortStruct(0,1);
+	//dyh << "排序后" << Ranges1;
+	
+	//执行删除高亮
+	if colorId == 4 || colorId == 5{
+		edit.beginUndo();
+		for _,v in Ranges1{
+			dyh << "删除注释" << v;
+			//dyh << edit.getTextRange(v.start,v.end-v.start);
+			edit.deleteRange(v.start,v.end-v.start);
+		}
+		edit.endUndo();
+	}
+	
+}
+
+
+func main(lb argv)
+{
+	
+	zd opts = pin.getopt(argv,'c:', []);
+	zs mode = 0;
+
+	dyh << argv;
+	for opt, arg in opts
+	{
+		if opt in ['-c']
+		{
+			lb options = ["使用颜色1高亮注释","使用颜色2高亮注释","使用颜色3高亮注释","清除高亮","删除注释","删除不含中文的注释"];
+			
+			zs index = options.indexOf(arg);
+			
+			if index == -1
+			{
+				dyh << "未知的功能选项" << arg;
+				pin.exit();
+			}
+			mode = index;
+			
+		
+		}
+	
+	}
+
+	//获取编辑框
+	PNddMain winMain = ndd.getMainWin();
+	edit = winMain.getCurEdit();
+
+	editText = edit.getText();
+
+	if(mode == 0 || mode == 1 || mode == 2)
+	{
+		clearHigh();
+		highLight(mode);
+	}
+	elif (mode == 3)
+	{
+		clearHigh();
+	}
+	elif (mode == 4 || mode == 5)
+	{
+		clearHigh();
+		highLight(mode);
+	}
+	//dyh << editText;
+}

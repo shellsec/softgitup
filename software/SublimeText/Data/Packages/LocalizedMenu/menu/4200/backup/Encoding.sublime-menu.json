@@ -1,0 +1,488 @@
+[
+    {
+        "id": "set_encoding", 
+        "children": [
+            {
+                "args": {
+                    "encoding": "utf-8"
+                }, 
+                "command": "set_encoding", 
+                "caption": "UTF-8"
+            }, 
+            {
+                "args": {
+                    "encoding": "utf-16 le"
+                }, 
+                "command": "set_encoding", 
+                "caption": "UTF-16 LE"
+            }, 
+            {
+                "args": {
+                    "encoding": "utf-16 be"
+                }, 
+                "command": "set_encoding", 
+                "caption": "UTF-16 BE"
+            }, 
+            {
+                "caption": "-"
+            }, 
+            {
+                "args": {
+                    "encoding": "Western (Windows 1252)"
+                }, 
+                "command": "set_encoding", 
+                "caption": "西方语 (Windows 1252)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Western (ISO 8859-1)"
+                }, 
+                "command": "set_encoding", 
+                "caption": "西方语 (ISO 8859-1)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Western (ISO 8859-3)"
+                }, 
+                "command": "set_encoding", 
+                "caption": "西方语 (ISO 8859-3)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Western (ISO 8859-15)"
+                }, 
+                "command": "set_encoding", 
+                "caption": "西方语 (ISO 8859-15)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Western (Mac Roman)"
+                }, 
+                "command": "set_encoding", 
+                "caption": "西方语 (Mac Roman)"
+            }, 
+            {
+                "args": {
+                    "encoding": "DOS (CP 437)"
+                }, 
+                "command": "set_encoding", 
+                "caption": "DOS (CP 437)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Arabic (Windows 1256)"
+                }, 
+                "command": "set_encoding", 
+                "caption": "阿拉伯语 (Windows 1256)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Arabic (ISO 8859-6)"
+                }, 
+                "command": "set_encoding", 
+                "caption": "阿拉伯语 (ISO 8859-6)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Baltic (Windows 1257)"
+                }, 
+                "command": "set_encoding", 
+                "caption": "波罗海语 (Windows 1257)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Baltic (ISO 8859-4)"
+                }, 
+                "command": "set_encoding", 
+                "caption": "波罗海语 (ISO 8859-4)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Celtic (ISO 8859-14)"
+                }, 
+                "command": "set_encoding", 
+                "caption": "凯尔特语 (ISO 8859-14)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Central European (Windows 1250)"
+                }, 
+                "command": "set_encoding", 
+                "caption": "中欧语 (Windows 1250)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Central European (ISO 8859-2)"
+                }, 
+                "command": "set_encoding", 
+                "caption": "中欧语 (ISO 8859-2)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Central European (Mac)"
+                }, 
+                "command": "set_encoding", 
+                "caption": "中欧语 (Mac)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Cyrillic (Windows 1251)"
+                }, 
+                "command": "set_encoding", 
+                "caption": "西里尔语 (Windows 1251)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Cyrillic (Windows 866)"
+                }, 
+                "command": "set_encoding", 
+                "caption": "西里尔语 (Windows 866)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Cyrillic (ISO 8859-5)"
+                }, 
+                "command": "set_encoding", 
+                "caption": "西里尔语 (ISO 8859-5)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Cyrillic (KOI8-R)"
+                }, 
+                "command": "set_encoding", 
+                "caption": "西里尔语 (KOI8-R)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Cyrillic (KOI8-U)"
+                }, 
+                "command": "set_encoding", 
+                "caption": "西里尔语 (KOI8-U)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Estonian (ISO 8859-13)"
+                }, 
+                "command": "set_encoding", 
+                "caption": "爱沙尼亚语 (ISO 8859-13)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Greek (Windows 1253)"
+                }, 
+                "command": "set_encoding", 
+                "caption": "希腊语 (Windows 1253)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Greek (ISO 8859-7)"
+                }, 
+                "command": "set_encoding", 
+                "caption": "希腊语 (ISO 8859-7)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Hebrew (Windows 1255)"
+                }, 
+                "command": "set_encoding", 
+                "caption": "希伯来语 (Windows 1255)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Hebrew (ISO 8859-8)"
+                }, 
+                "command": "set_encoding", 
+                "caption": "希伯来语 (ISO 8859-8)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Nordic (ISO 8859-10)"
+                }, 
+                "command": "set_encoding", 
+                "caption": "北欧语 (ISO 8859-10)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Romanian (ISO 8859-16)"
+                }, 
+                "command": "set_encoding", 
+                "caption": "罗马尼亚语 (ISO 8859-16)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Turkish (Windows 1254)"
+                }, 
+                "command": "set_encoding", 
+                "caption": "土耳其语 (Windows 1254)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Turkish (ISO 8859-9)"
+                }, 
+                "command": "set_encoding", 
+                "caption": "土耳其语 (ISO 8859-9)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Vietnamese (Windows 1258)"
+                }, 
+                "command": "set_encoding", 
+                "caption": "越南语 (Windows 1258)"
+            }, 
+            {
+                "caption": "-"
+            }, 
+            {
+                "args": {
+                    "encoding": "Hexadecimal"
+                }, 
+                "command": "set_encoding", 
+                "caption": "十六进制"
+            }
+        ], 
+        "caption": "用此编码保存"
+    }, 
+    {
+        "id": "reopen_with_encoding", 
+        "children": [
+            {
+                "args": {
+                    "encoding": "utf-8"
+                }, 
+                "command": "reopen", 
+                "caption": "UTF-8"
+            }, 
+            {
+                "args": {
+                    "encoding": "utf-16 le"
+                }, 
+                "command": "reopen", 
+                "caption": "UTF-16 LE"
+            }, 
+            {
+                "args": {
+                    "encoding": "utf-16 be"
+                }, 
+                "command": "reopen", 
+                "caption": "UTF-16 BE"
+            }, 
+            {
+                "caption": "-"
+            }, 
+            {
+                "args": {
+                    "encoding": "Western (Windows 1252)"
+                }, 
+                "command": "reopen", 
+                "caption": "西方语 (Windows 1252)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Western (ISO 8859-1)"
+                }, 
+                "command": "reopen", 
+                "caption": "西方语 (ISO 8859-1)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Western (ISO 8859-3)"
+                }, 
+                "command": "reopen", 
+                "caption": "西方语 (ISO 8859-3)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Western (ISO 8859-15)"
+                }, 
+                "command": "reopen", 
+                "caption": "西方语 (ISO 8859-15)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Western (Mac Roman)"
+                }, 
+                "command": "reopen", 
+                "caption": "西方语 (Mac Roman)"
+            }, 
+            {
+                "args": {
+                    "encoding": "DOS (CP 437)"
+                }, 
+                "command": "reopen", 
+                "caption": "DOS (CP 437)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Arabic (Windows 1256)"
+                }, 
+                "command": "reopen", 
+                "caption": "阿拉伯语 (Windows 1256)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Arabic (ISO 8859-6)"
+                }, 
+                "command": "reopen", 
+                "caption": "阿拉伯语 (ISO 8859-6)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Baltic (Windows 1257)"
+                }, 
+                "command": "reopen", 
+                "caption": "波罗海语 (Windows 1257)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Baltic (ISO 8859-4)"
+                }, 
+                "command": "reopen", 
+                "caption": "波罗海语 (ISO 8859-4)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Celtic (ISO 8859-14)"
+                }, 
+                "command": "reopen", 
+                "caption": "凯尔特语 (ISO 8859-14)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Central European (Windows 1250)"
+                }, 
+                "command": "reopen", 
+                "caption": "中欧语 (Windows 1250)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Central European (ISO 8859-2)"
+                }, 
+                "command": "reopen", 
+                "caption": "中欧语 (ISO 8859-2)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Central European (Mac)"
+                }, 
+                "command": "reopen", 
+                "caption": "中欧语 (Mac)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Cyrillic (Windows 1251)"
+                }, 
+                "command": "reopen", 
+                "caption": "西里尔语 (Windows 1251)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Cyrillic (Windows 866)"
+                }, 
+                "command": "reopen", 
+                "caption": "西里尔语 (Windows 866)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Cyrillic (ISO 8859-5)"
+                }, 
+                "command": "reopen", 
+                "caption": "西里尔语 (ISO 8859-5)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Cyrillic (KOI8-R)"
+                }, 
+                "command": "reopen", 
+                "caption": "西里尔语 (KOI8-R)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Cyrillic (KOI8-U)"
+                }, 
+                "command": "reopen", 
+                "caption": "西里尔语 (KOI8-U)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Estonian (ISO 8859-13)"
+                }, 
+                "command": "reopen", 
+                "caption": "爱沙尼亚语 (ISO 8859-13)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Greek (Windows 1253)"
+                }, 
+                "command": "reopen", 
+                "caption": "希腊语 (Windows 1253)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Greek (ISO 8859-7)"
+                }, 
+                "command": "reopen", 
+                "caption": "希腊语 (ISO 8859-7)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Hebrew (Windows 1255)"
+                }, 
+                "command": "reopen", 
+                "caption": "希伯来语 (Windows 1255)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Hebrew (ISO 8859-8)"
+                }, 
+                "command": "reopen", 
+                "caption": "希伯来语 (ISO 8859-8)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Nordic (ISO 8859-10)"
+                }, 
+                "command": "reopen", 
+                "caption": "北欧语 (ISO 8859-10)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Romanian (ISO 8859-16)"
+                }, 
+                "command": "reopen", 
+                "caption": "罗马尼亚语 (ISO 8859-16)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Turkish (Windows 1254)"
+                }, 
+                "command": "reopen", 
+                "caption": "土耳其语 (Windows 1254)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Turkish (ISO 8859-9)"
+                }, 
+                "command": "reopen", 
+                "caption": "土耳其语 (ISO 8859-9)"
+            }, 
+            {
+                "args": {
+                    "encoding": "Vietnamese (Windows 1258)"
+                }, 
+                "command": "reopen", 
+                "caption": "越南语 (Windows 1258)"
+            }, 
+            {
+                "caption": "-"
+            }, 
+            {
+                "args": {
+                    "encoding": "Hexadecimal"
+                }, 
+                "command": "reopen", 
+                "caption": "十六进制"
+            }
+        ], 
+        "caption": "用此编码重新打开"
+    }
+]

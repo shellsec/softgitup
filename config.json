@@ -1,0 +1,20 @@
+{
+    "github_repo": "https://github.com/shellsec/softgitup",
+    "list_file": "list.txt",
+    "sync_time": "07:00",
+    "software_dirs": {
+        "CCleaner": "CCleaner",
+        "EditPlus": "EditPlus",
+        "everything": "everything",
+        "HiBit Startup Manager": "HiBit Startup Manager",
+        "notepad++": "notepad++",
+        "notepad-": "notepad-",
+        "SublimeText": "SublimeText",
+        "WinMemoryCleaner": "WinMemoryCleaner",
+        "WinRAR": "WinRAR"
+    },
+    "local_base_path": "./software",
+    "log_level": "INFO",
+    "auto_start": true,
+    "check_interval": 3600
+} 
