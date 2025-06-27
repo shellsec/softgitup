@@ -30,8 +30,8 @@ class SoftSync:
     def __init__(self, config_file="config.json"):
         self.config = self.load_config(config_file)
         self.setup_logging()
-        self.local_path = Path(self.config["local_base_path"])
-        self.list_file = self.config["list_file"]
+        self.local_path = Path(self.config.get("sync_base_path", "D:/Program Files"))
+        self.list_file = "software/" + self.config["list_file"]
         self.github_repo = self.config["github_repo"]
         self.sync_time = self.config["sync_time"]
         
@@ -97,7 +97,8 @@ class SoftSync:
             
     def get_local_list(self):
         """获取本地列表文件"""
-        local_list_path = self.local_path / self.list_file
+        # 从项目根目录的software文件夹读取list.txt
+        local_list_path = Path("software") / self.config["list_file"]
         if local_list_path.exists():
             try:
                 with open(local_list_path, 'r', encoding='utf-8') as f:
@@ -198,7 +199,7 @@ class SoftSync:
             total_updated += updated_count
             
         # 更新本地列表文件
-        local_list_path = self.local_path / self.list_file
+        local_list_path = Path("software") / self.config["list_file"]
         with open(local_list_path, 'w', encoding='utf-8') as f:
             json.dump(remote_list, f, ensure_ascii=False, indent=2)
             

@@ -3,18 +3,27 @@
     "list_file": "list.txt",
     "sync_time": "07:00",
     "software_dirs": {
-        "CCleaner": "CCleaner",
-        "EditPlus": "EditPlus",
-        "everything": "everything",
-        "HiBit Startup Manager": "HiBit Startup Manager",
-        "notepad++": "notepad++",
-        "notepad-": "notepad-",
-        "SublimeText": "SublimeText",
-        "WinMemoryCleaner": "WinMemoryCleaner",
-        "WinRAR": "WinRAR"
+      "CCleaner": "CCleaner",
+      "EditPlus": "EditPlus",
+      "everything": "everything",
+      "HiBit Startup Manager": "HiBit Startup Manager",
+      "notepad++": "notepad++",
+      "notepad-": "notepad-",
+      "SublimeText": "SublimeText",
+      "WinMemoryCleaner": "WinMemoryCleaner",
+      "WinRAR": "WinRAR"
     },
-    "local_base_path": "./software",
+    "manager_base_path": "./software",
+    "sync_base_path": "D:\\\\Program Files",
+    "git_mirrors": [
+      "https://gh-proxy.com/https://github.com/shellsec/softgitup",
+      "https://github.com/shellsec/softgitup",
+      "https://gitclone.com/shellsec/softgitup"
+    ],
+    "download_timeout": 30,
+    "retry_times": 3,
+    "retry_delay": 5,
     "log_level": "INFO",
     "auto_start": true,
     "check_interval": 3600
-} 
+  }

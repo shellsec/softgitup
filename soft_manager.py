@@ -17,8 +17,8 @@ class SoftManager:
     def __init__(self, config_file="config.json"):
         self.config = self.load_config(config_file)
         self.setup_logging()
-        self.local_path = Path(self.config["local_base_path"])
-        self.list_file = self.config["list_file"]
+        self.local_path = Path(self.config.get("manager_base_path", "./software"))
+        self.list_file = self.local_path / self.config["list_file"]
         
     def load_config(self, config_file):
         """加载配置文件"""
@@ -45,7 +45,7 @@ class SoftManager:
         self.logger = logging.getLogger(__name__)
         
     def calculate_file_hash(self, file_path):
-        """计算文件MD5哈希值"""
+        """计算文件MD5哈希"""
         hash_md5 = hashlib.md5()
         try:
             with open(file_path, "rb") as f:
@@ -60,7 +60,7 @@ class SoftManager:
         """扫描软件目录，生成文件列表"""
         software_path = self.local_path / software_name
         if not software_path.exists():
-            self.logger.warning(f"软件目录不存在: {software_path}")
+            self.logger.warning(f"软件目录不存在 {software_path}")
             return []
             
         files_info = []
