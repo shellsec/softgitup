@@ -1,0 +1,1901 @@
+<?xml version="1.0"?>
+<!--EmEditor Snippets file-->
+<Snippets>
+<SnippetTree>
+	<Folder Name="ASP" Flags="3" ConfigEdit="HTML" ConfigMacro="" ConfigsAssociate="\HTML\">
+		<Item Name="&lt;%= %&gt;" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;%= $0 %&gt;" Trigger="=" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Application(&quot;…&quot;)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="Application(&quot;$1&quot;)" Trigger="app" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="For … in … Next" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="For ${1:var} in ${2:array}
+	${3:' body}
+Next" Trigger="forin" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="If … End if" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="If ${1:condition} Then
+	${2:' true}
+Else
+	${3:' false}
+End if" Trigger="ifelse" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Request.Form(&quot;…&quot;)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="Request.Form(&quot;${1:field}&quot;)" Trigger="r.f" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Request.QueryString" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="Request.QueryString(&quot;${1:name}&quot;)" Trigger="r.q" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Response.Redirect" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="Response.Redirect(${1:to})" Trigger="r.r" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Response.Write" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="Response.Write" Trigger="r.w" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Session(&quot;…&quot;)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="Session(&quot;${1:whatever}&quot;)" Trigger="sess" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="While … Wend" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="While ${1:NOT ${2:condition}}
+	${3:' body}
+Wend" Trigger="while" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+	</Folder>
+	<Folder Name="ASP_vb_NET" Flags="3" ConfigEdit="HTML" ConfigMacro="" ConfigsAssociate="\HTML\">
+		<Item Name="' = &quot;&amp;Chr(39)&amp;&quot;" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&quot;&amp; Chr(39) &amp;&quot;" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="&quot;&amp;  &amp;&quot;" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&quot;&amp; ${2:${SelText}} &amp;&quot;" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="# Container.DataItem" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;%# DataBinder.Eval(Container.DataItem, &quot;${1:${TM_SELECTED_TEXT:ColumnName}}&quot;${2:, &quot;{0:C\}&quot;}) %&gt;$0" Trigger="#" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="&lt;%= %&gt;" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;%= $0 %&gt;" Trigger="=" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="&lt;%&gt;" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;%${2:=} ${1:${TM_SELECTED_TEXT:Content}}$0 %&gt;" Trigger="%" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="asp:BoundColumn" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;asp:BoundColumn HeaderText=&quot;${1:${TM_SELECTED_TEXT:ColumnName}}&quot; DataField=&quot;${1:${TM_SELECTED_TEXT:ColumnName}}&quot; SortExpression=&quot;${1:${TM_SELECTED_TEXT:ColumnName}}&quot; ${2:ReadOnly=&quot;True&quot; ${3:DataFormatString=&quot;{0:C\}&quot; FooterText=&quot;${1:${TM_SELECTED_TEXT:ColumnName}}&quot; }}/&gt;" Trigger="asp:" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="asp:TemplateColumn" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;asp:TemplateColumn HeaderText=&quot;${1:${TM_SELECTED_TEXT:ColumnName}}&quot; ${2:ReadOnly=&quot;True&quot; ${3:FooterText=&quot;${1:${TM_SELECTED_TEXT:ColumnName}}&quot; }}&gt;
+	&lt;ItemTemplate&gt;${9:
+		&lt;%# DataBinder.Eval(Container.DataItem, &quot;${1:${TM_SELECTED_TEXT:ColumnName}}&quot;${8:, &quot;{0:C\}&quot;}) %&gt;$0
+	}&lt;/ItemTemplate&gt;${10:
+	&lt;EditItemTemplate&gt;${11:
+		&lt;input name=&quot;${1:${TM_SELECTED_TEXT:ColumnName}}&quot; type=&quot;text&quot; value=&quot;&lt;%# DataBinder.Eval(Container.DataItem, &quot;${1:${TM_SELECTED_TEXT:ColumnName}}&quot;${8:, &quot;{0:C\}&quot;}) %&gt;&quot; size=&quot;&quot; maxlength=&quot;&quot; /&gt;
+	}&lt;/EditItemTemplate&gt;}
+&lt;/asp:TemplateColumn&gt;" Trigger="asp:" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="asp:TemplateColumn Checkbox" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;asp:TemplateColumn HeaderText=&quot;${1:${SelText}}&quot; Visible=&quot;True&quot;&gt;
+	&lt;itemtemplate&gt;&lt;asp:CheckBox ID=&quot;${1:${SelText}}&quot; runat=&quot;server&quot; Checked='&lt;%# Users.FieldValue(&quot;${1:${SelText}}&quot;, Container) %&gt;' enabled=&quot;false&quot; /&gt;&lt;/itemtemplate&gt;
+	&lt;edititemtemplate&gt;
+		&lt;asp:CheckBox ID=&quot;${1:${SelText}}&quot; runat=&quot;server&quot; Checked='&lt;%# Users.FieldValue(&quot;${1:${SelText}}&quot;, Container) %&gt;' /&gt;
+	&lt;/edititemtemplate&gt;
+&lt;/asp:TemplateColumn&gt;" Trigger="asp:" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Function" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="Function ${1:Process}(${2:This_Item} As ${3:String}) As ${4:Boolean}
+	Return ${5:True}$0
+End Function" Trigger="function" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Hilight Search Terms(TEXT)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${3:IIf(Request.Querystring(&quot;s&quot;)&lt;&gt;&quot;&quot;,Regex.Replace(${1:${TM_SELECTED_TEXT:&quot;Hello World!!!1!&quot;}}, &quot;(&quot;&amp; Request.Querystring(&quot;s&quot;) &amp;&quot;)&quot;, &quot;&lt;${2:span} class='ss'&gt;\$1&lt;/${2:span}&gt;&quot;),$1)}" Trigger="format" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="If then HTML" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;% if ${2:Is_This_True?} %&gt;${1:${TM_SELECTED_TEXT:True}}${4:&lt;% else %&gt;$3}&lt;% end if %&gt;$0" Trigger="IIf" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="IIf()" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="IIf(${1:${TM_SELECTED_TEXT:Is_This_True?}},${2:true},${3:false})$0" Trigger="IIf" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="IIf() &quot;&quot;" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&quot;&amp; IIf(${2:Is_This_True?},&quot;${1:${TM_SELECTED_TEXT:True}}&quot;,${4:&quot;$3&quot;})$0 &amp;&quot;" Trigger="IIf" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="IIf() &quot;&quot; html" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;%= IIf(${2:Is_This_True?},&quot;${1:${TM_SELECTED_TEXT:True}}&quot;,${4:&quot;$3&quot;})$0 %&gt;" Trigger="IIf" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="MM:DataGrid Sort Page Edit" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${9:&lt;div id=&quot;search_${1:Orders}&quot;&gt;
+  &lt;form action=&quot;&quot; method=&quot;get&quot;&gt;
+    Search &lt;input name=&quot;s&quot; value=&quot;&lt;%= Request.Querystring(&quot;s&quot;) %&gt;&quot; /&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Search ${1:Orders}&quot; /&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+}&lt;div id=&quot;${1:Orders}&quot;&gt;
+${7:	&lt;%@ Register TagPrefix=&quot;MM&quot; Namespace=&quot;DreamweaverCtrls&quot; Assembly=&quot;DreamweaverCtrls,version=1.0.0.0,publicKeyToken=836f606ede05d46a,culture=neutral&quot; %&gt;
+	&lt;mm:pagebind runat=&quot;server&quot; PostBackBind=&quot;true&quot; /&gt;
+}	&lt;mm:dataset ID=&quot;${1:Orders}&quot;
+	 runat=&quot;Server&quot;
+	 IsStoredProcedure=&quot;false&quot;
+	 ConnectionString='&lt;%# System.Configuration.ConfigurationSettings.AppSettings(&quot;MM_CONNECTION_STRING_${3:Common_LIVE}&quot;) %&gt;'
+	 DatabaseType='&lt;%# System.Configuration.ConfigurationSettings.AppSettings(&quot;MM_CONNECTION_DATABASETYPE_${3:Common_LIVE}&quot;) %&gt;'
+	 CommandText='&lt;%# &quot;${2:select * from users where clue is not null}    ORDER BY &quot;+ IIf((Not Request.Querystring(&quot;sortOn&quot;) Is Nothing), Request.Querystring(&quot;sortOn&quot;), &quot;${4:username}&quot;) +&quot; &quot;+ Request.Querystring(&quot;sortDir&quot;) %&gt;'
+	 Debug=&quot;true&quot; PageSize=&quot;25&quot;
+	 &gt;
+		&lt;parameters&gt;${5:
+			&lt;parameter  name=&quot;@s&quot;  value='&lt;%# &quot;%&quot; + IIf((Not Request.Querystring(&quot;s&quot;) Is Nothing), Request.Querystring(&quot;s&quot;), &quot;&quot;) + &quot;%&quot; %&gt;'  type=&quot;VarChar&quot;   /&gt;
+		}&lt;/parameters&gt;${6:
+		&lt;editops&gt;
+			&lt;editopstable name=&quot;dbo.tblFedExSecurity&quot; /&gt;
+			&lt;parameter name=&quot;password&quot;          type=&quot;NVarChar&quot; /&gt;
+			&lt;parameter name=&quot;customerid&quot;        type=&quot;NVarChar&quot; /&gt;
+			&lt;parameter name=&quot;locationid&quot;        type=&quot;Int&quot;      /&gt;
+			&lt;parameter name=&quot;style&quot;             type=&quot;NVarChar&quot; /&gt;
+			&lt;parameter name=&quot;sub_style&quot;         type=&quot;SmallInt&quot; /&gt;
+			&lt;parameter name=&quot;make_style&quot;        type=&quot;SmallInt&quot; /&gt;
+			&lt;parameter name=&quot;shipping_method&quot;   type=&quot;SmallInt&quot; /&gt;
+			&lt;parameter name=&quot;type&quot;              type=&quot;NVarChar&quot; /&gt;
+			&lt;parameter name=&quot;role&quot;              type=&quot;NVarChar&quot; /&gt;
+			&lt;parameter name=&quot;phone&quot;             type=&quot;NVarChar&quot; /&gt;
+			&lt;parameter name=&quot;email&quot;             type=&quot;VarChar&quot;  /&gt;
+			&lt;parameter name=&quot;viewreport&quot;        type=&quot;Bit&quot;      /&gt;
+			&lt;parameter name=&quot;viewreportnumbers&quot; type=&quot;Bit&quot;      /&gt;
+			&lt;parameter name=&quot;viewreportmoney&quot;   type=&quot;Bit&quot;      /&gt;
+			&lt;parameter name=&quot;viewtracking&quot;      type=&quot;Bit&quot;      /&gt;
+			&lt;parameter name=&quot;addlocations&quot;      type=&quot;Bit&quot;      /&gt;
+			&lt;parameter name=&quot;viewlocations&quot;     type=&quot;Bit&quot;      /&gt;
+			&lt;parameter name=&quot;sendemail&quot;         type=&quot;Bit&quot;      /&gt;
+			&lt;parameter name=&quot;fundsallocation&quot;   type=&quot;Bit&quot;      /&gt;
+			&lt;parameter name=&quot;supplyordering&quot;    type=&quot;Bit&quot;      /&gt;
+			&lt;parameter name=&quot;generatecalltag&quot;   type=&quot;Bit&quot;      /&gt;
+			&lt;parameter name=&quot;generateprp&quot;       type=&quot;Bit&quot;      /&gt;
+			&lt;parameter name=&quot;viewlogins&quot;        type=&quot;Bit&quot;      /&gt;
+			&lt;parameter name=&quot;createlogins&quot;      type=&quot;Bit&quot;      /&gt;
+			&lt;parameter name=&quot;${4:username}&quot; type=&quot;NVarChar&quot; isprimary=&quot;true&quot; /&gt;
+		&lt;/editops&gt;}
+	&lt;/mm:dataset&gt;
+	&lt;script runat=&quot;server&quot;&gt;
+	Sub ${1:Orders}_sortCommand(sender as Object, e as DataGridSortCommandEventArgs)
+		dim sortDir as string = &quot;&quot;
+		if Request.QueryString(&quot;sortOn&quot;) = e.SortExpression then
+			if (Request.QueryString(&quot;sortDir&quot;) = &quot;&quot;)
+				sortDir = &quot;ASC&quot;
+			else if (Request.QueryString(&quot;sortDir&quot;) = &quot;ASC&quot;)
+				sortDir = &quot;DESC&quot;
+			else if (Request.QueryString(&quot;sortDir&quot;) = &quot;DESC&quot;)
+				sortDir = &quot;ASC&quot;
+			end if
+		else
+			sortDir = &quot;ASC&quot;
+		end if
+		Response.Redirect(Request.ServerVariables(&quot;SCRIPT_NAME&quot;) + &quot;?sortOn=&quot; + e.SortExpression + &quot;&amp;sortDir=&quot; + sortDir + &quot;&amp;s=&quot; + Request.Querystring(&quot;s&quot;))
+	end sub
+	&lt;/script&gt;
+	&lt;asp:DataGrid ID=&quot;${1:Orders}_DG&quot;
+				DataKeyField=&quot;${4:username}&quot;
+				AutoGenerateColumns=&quot;true&quot;
+			
+				runat=&quot;server&quot;
+				AllowSorting=&quot;true&quot;
+				OnSortCommand=&quot;${1:Orders}_sortCommand&quot;
+			
+				DataSource=&quot;&lt;%# ${1:Orders}.DefaultView %&gt;&quot;
+				OnItemDataBound=&quot;${1:Orders}.OnDataGridItemDataBound&quot;
+				OnEditCommand=&quot;${1:Orders}.OnDataGridEdit&quot;
+				OnUpdateCommand=&quot;${1:Orders}.OnDataGridUpdate&quot;
+				OnDeleteCommand=&quot;${1:Orders}.OnDataGridDelete&quot;
+				OnCancelCommand=&quot;${1:Orders}.OnDataGridCancel&quot;
+			
+				AllowPaging=&quot;true&quot;
+				AllowCustomPaging=&quot;true&quot;
+				PageSize=&quot;&lt;%# ${1:Orders}.PageSize %&gt;&quot;
+				OnPageIndexChanged=&quot;${1:Orders}.OnDataGridPageIndexChanged&quot;
+				virtualitemcount=&quot;&lt;%# ${1:Orders}.RecordCount %&gt;&quot;
+				PagerStyle-Mode=&quot;NumericPages&quot;
+			
+				ShowHeader=&quot;true&quot;
+				ShowFooter=&quot;false&quot;
+		&gt;
+		&lt;headerstyle           CssClass=&quot;headerstyle&quot;          /&gt;
+		&lt;itemstyle             CssClass=&quot;itemstyle&quot;            /&gt;
+		&lt;alternatingitemstyle  CssClass=&quot;alternatingitemstyle&quot; /&gt;
+		&lt;footerstyle           CssClass=&quot;footerstyle&quot;          /&gt;
+		&lt;pagerstyle            CssClass=&quot;pagerstyle&quot;           /&gt;
+		&lt;columns&gt;
+			&lt;asp:EditCommandColumn  ButtonType=&quot;LinkButton&quot;  CancelText=&quot;Cancel&quot;  EditText=&quot;Edit&quot;  HeaderText=&quot;Edit&quot;  UpdateText=&quot;Update&quot;  visible=&quot;True&quot;/&gt;
+			$0
+		&lt;/columns&gt;
+	&lt;/asp:DataGrid&gt;
+&lt;/div&gt;" Trigger="datagrid" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="MM:DataGrid Sort Page Search" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${9:&lt;div id=&quot;search_${1:Orders}&quot;&gt;
+  &lt;form action=&quot;&quot; method=&quot;get&quot;&gt;
+    Search &lt;input name=&quot;s&quot; value=&quot;&lt;%= Request.Querystring(&quot;s&quot;) %&gt;&quot; /&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Search ${1:Orders}&quot; /&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+}&lt;div id=&quot;${1:Orders}&quot;&gt;
+${7:	&lt;%@ Register TagPrefix=&quot;MM&quot; Namespace=&quot;DreamweaverCtrls&quot; Assembly=&quot;DreamweaverCtrls,version=1.0.0.0,publicKeyToken=836f606ede05d46a,culture=neutral&quot; %&gt;
+	&lt;mm:pagebind runat=&quot;server&quot; PostBackBind=&quot;true&quot; /&gt;
+}	&lt;mm:dataset ID=&quot;${1:Orders}&quot;
+	 runat=&quot;Server&quot;
+	 IsStoredProcedure=&quot;false&quot;
+	 ConnectionString='&lt;%# System.Configuration.ConfigurationSettings.AppSettings(&quot;MM_CONNECTION_STRING_${3:Common_LIVE}&quot;) %&gt;'
+	 DatabaseType='&lt;%# System.Configuration.ConfigurationSettings.AppSettings(&quot;MM_CONNECTION_DATABASETYPE_${3:Common_LIVE}&quot;) %&gt;'
+	 CommandText='&lt;%# &quot;${2:select * from users where clue is not null}    ORDER BY &quot;+ IIf((Not Request.Querystring(&quot;sortOn&quot;) Is Nothing), Request.Querystring(&quot;sortOn&quot;), &quot;${4:username}&quot;) +&quot; &quot;+ Request.Querystring(&quot;sortDir&quot;) %&gt;'
+	 Debug=&quot;true&quot; PageSize=&quot;25&quot;
+	 &gt;
+		&lt;parameters&gt;${5:
+			&lt;parameter  name=&quot;@s&quot;  value='&lt;%# &quot;%&quot; + IIf((Not Request.Querystring(&quot;s&quot;) Is Nothing), Request.Querystring(&quot;s&quot;), &quot;&quot;) + &quot;%&quot; %&gt;'  type=&quot;VarChar&quot;   /&gt;
+		}&lt;/parameters&gt;
+	&lt;/mm:dataset&gt;
+	&lt;script runat=&quot;server&quot;&gt;
+	Sub ${1:Orders}_sortCommand(sender as Object, e as DataGridSortCommandEventArgs)
+		dim sortDir as string = &quot;&quot;
+		if Request.QueryString(&quot;sortOn&quot;) = e.SortExpression then
+			if (Request.QueryString(&quot;sortDir&quot;) = &quot;&quot;)
+				sortDir = &quot;ASC&quot;
+			else if (Request.QueryString(&quot;sortDir&quot;) = &quot;ASC&quot;)
+				sortDir = &quot;DESC&quot;
+			else if (Request.QueryString(&quot;sortDir&quot;) = &quot;DESC&quot;)
+				sortDir = &quot;ASC&quot;
+			end if
+		else
+			sortDir = &quot;ASC&quot;
+		end if
+		Response.Redirect(Request.ServerVariables(&quot;SCRIPT_NAME&quot;) + &quot;?sortOn=&quot; + e.SortExpression + &quot;&amp;sortDir=&quot; + sortDir + &quot;&amp;s=&quot; + Request.Querystring(&quot;s&quot;))
+	end sub
+	&lt;/script&gt;
+	&lt;asp:DataGrid ID=&quot;${1:Orders}_DG&quot;
+				DataKeyField=&quot;${4:username}&quot;
+				AutoGenerateColumns=&quot;true&quot;
+				
+				runat=&quot;server&quot;
+				AllowSorting=&quot;true&quot;
+				OnSortCommand=&quot;${1:Orders}_sortCommand&quot;
+				
+				DataSource=&quot;&lt;%# ${1:Orders}.DefaultView %&gt;&quot;
+				OnItemDataBound=&quot;${1:Orders}.OnDataGridItemDataBound&quot;
+				
+				AllowPaging=&quot;true&quot;
+				AllowCustomPaging=&quot;true&quot;
+				PageSize=&quot;&lt;%# ${1:Orders}.PageSize %&gt;&quot;
+				OnPageIndexChanged=&quot;${1:Orders}.OnDataGridPageIndexChanged&quot;
+				virtualitemcount=&quot;&lt;%# ${1:Orders}.RecordCount %&gt;&quot;
+				PagerStyle-Mode=&quot;NumericPages&quot;
+				PagerStyle-Position=&quot;${10:Bottom|Top|TopAndBottom}&quot;
+				
+				ShowHeader=&quot;true&quot;
+				ShowFooter=&quot;false&quot;
+				EnableViewstate=&quot;false&quot;
+		&gt;
+		&lt;headerstyle           CssClass=&quot;headerstyle&quot;          /&gt;
+		&lt;itemstyle             CssClass=&quot;itemstyle&quot;            /&gt;
+		&lt;alternatingitemstyle  CssClass=&quot;alternatingitemstyle&quot; /&gt;
+		&lt;footerstyle           CssClass=&quot;footerstyle&quot;          /&gt;
+		&lt;pagerstyle            CssClass=&quot;pagerstyle&quot;           /&gt;
+		&lt;columns&gt;
+			$0
+		&lt;/columns&gt;
+	&lt;/asp:DataGrid&gt;
+&lt;/div&gt;" Trigger="datagrid" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Regex.Replace()" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${10:Regex.Replace(${1:${TM_SELECTED_TEXT:&quot;Hello World!!!!1!&quot;}}$0,&quot;${3:[^_\w\d\s]}&quot;,&quot;$4&quot;)}" Trigger="write" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Request.Cookies (ASP)" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${2:Request.Cookies}(&quot;${1:${TM_SELECTED_TEXT:VariableName}}&quot;)$0" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Request.Form (ASP)" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${2:Request.Form}(&quot;${1:${TM_SELECTED_TEXT:VariableName}}&quot;)$0" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Request.QueryString (ASP)" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${2:Request.QueryString}(&quot;${1:${TM_SELECTED_TEXT:VariableName}}&quot;)$0" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Response.Write()" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${3:Response.Write(${1:${TM_SELECTED_TEXT:&quot;Hello World!!!!1!&quot;}})}" Trigger="write" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="ServerVariables" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;TABLE&gt;
+  &lt;TR&gt;
+    &lt;TD&gt;
+      &lt;B&gt;Server Varriable&lt;/B&gt;
+    &lt;/TD&gt;
+    &lt;TD&gt;
+      &lt;B&gt;Value&lt;/B&gt;
+    &lt;/TD&gt;
+  &lt;/TR&gt;
+  &lt;% dim name as string %&gt;
+  &lt;% For Each name In Request.ServerVariables %&gt;
+  &lt;TR&gt;
+    &lt;TD&gt;
+      &lt;%= name %&gt;
+    &lt;/TD&gt;
+    &lt;TD&gt;
+      &lt;%= Request.ServerVariables(name) %&gt;
+    &lt;/TD&gt;
+  &lt;/TR&gt;
+  &lt;% Next %&gt;
+&lt;/TABLE&gt;" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Session (ASP)" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${2:Session}(&quot;${1:${TM_SELECTED_TEXT:VariableName}}&quot;)$0" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="SqlCommand" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="Dim $4_CON As New System.Data.SQLClient.SQLConnection(System.Configuration.ConfigurationSettings.AppSettings(&quot;MM_CONNECTION_STRING_${2:CFC_LIVE}&quot;))
+Dim $4_COM As New System.Data.SQLClient.SqlCommand( &quot;${1:${TM_SELECTED_TEXT:UPDATE Users SET Clue = 1 WHERE username = 'taylott'}}&quot;, $4_CON)
+$4_COM.Connection.Open()
+$4_COM.ExecuteNonQuery()
+$4_COM.Connection.Close()" Trigger="sql" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="SQLDataReader Bound" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="Dim conn$1 as New SqlConnection(ConfigurationSettings.AppSettings(&quot;${4:MM_CONNECTION_STRING_TIW_LIVE}&quot;))'1. Create a connection
+Const strSQL$1 as String = &quot;${2:SELECT * FROM Users WHERE Clue &gt; 0}&quot;'2. Create the command object, passing in the SQL string
+Dim comm$1 as New SqlCommand(strSQL$1, conn$1)
+conn$1.Open()
+  ${1:${TM_SELECTED_TEXT:IdOfThinggy}}.DataSource = comm$1.ExecuteReader(CommandBehavior.CloseConnection)
+  ${1:${TM_SELECTED_TEXT:IdOfThinggy}}.DataBind()'Set the datagrid's datasource to the datareader and databind 
+conn$1.Close()$0" Trigger="sql" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="SQLDataReader Loop" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="Dim con$4 as new System.Data.SQLClient.SQLConnection(System.Configuration.ConfigurationSettings.AppSettings(&quot;${3:MM_CONNECTION_STRING_TIW_LIVE}&quot;)) 
+con$4.Open()
+	Dim strSQL$4 as String = &quot;${1:${TM_SELECTED_TEXT:SELECT * FROM Users WHERE Clue &gt; 0}}&quot;
+	Dim    com$4 as new System.Data.SQLClient.SQLCommand(strSQL$4, Con$4)
+	Dim      r$4 as System.Data.SQLClient.SQLDataReader = Com$4.ExecuteReader()
+	While    r$4.Read()
+		${5:r$4(0)}$0
+	End While
+	r$4.Close()
+con$4.close()" Trigger="sql" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="String.Format()" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${3:String.Format(&quot;${2:{0:c\}}&quot;, ${1:${TM_SELECTED_TEXT:price}})}" Trigger="format" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Sub" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="sub ${2:Process}(${2:sender as Object, e as EventArgs})
+	${1:${TM_SELECTED_TEXT:'Do that thing you do}}$0
+end sub" Trigger="sub" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Sub (group selection)" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${1:Process}($2)
+${3:sub ${1:Process}($2)
+${TM_SELECTED_TEXT:'Do that thing you do
+}$0end sub
+}" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="vbCrLf" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&quot;&amp; vbCr${2:Lf} _
+&amp; &quot;$1$0" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="vbProperCase" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="StrConv(${1:${TM_SELECTED_TEXT:&quot;String&quot;}}, vbProperCase)" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="vbUpperCase" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="StrConv(${1:${TM_SELECTED_TEXT:&quot;String&quot;}}, vbUpperCase)" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+	</Folder>
+	<Folder Name="C/C++" Flags="3" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\C#\C++\">
+		<Item Name="#endif" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="#endif" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="#ifndef … #define … #endif" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="#ifndef ${1/([A-Za-z0-9_]+).*/$1/}
+#define ${1:SYMBOL} ${2:value}
+#endif" Trigger="def" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="#include &quot;…&quot;" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="#include &quot;${1:${TM_FILENAME/\..+$/.h/}}&quot;" Trigger="inc" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="#pragma mark" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="#if 0
+${1:#pragma mark -
+}#pragma mark $2
+#endif
+
+$0" Trigger="mark" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="$1.begin(), $1.end()" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${1:v}.begin(), ${1:v}.end()" Trigger="beginend" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Block Comment" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="/*
+ * $0
+ */" Trigger="/*" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="class" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="class ${1:${TM_FILENAME/(.+)\..+|.*/(?1:\L$1_t:name)/}}
+{
+public:
+	${1/(\w+).*/$1/} (${2:arguments});
+	virtual ~${1/(\w+).*/$1/} ();
+
+private:
+	${0:/* data */}
+};" Trigger="cl" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="connect" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="connect( ${1:sender}, SIGNAL(${2:signal}(${3})), ${4:reciever}, ${5:SLOT}(${6:slot}($3)) );$0" Trigger="con" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="disconnect" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="disconnect( ${1:sender}, SIGNAL(${2:signal}(${3})), ${4:reciever}, ${5:SLOT}(${6:slot}($3)) );$0" Trigger="dis" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="do" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="do {
+	${0:/* code */}
+} while(${1:/* condition */});" Trigger="do" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="for" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="for(size_t ${2:i} = 0; $2 &lt; ${1:count}; ${3:++$2})
+{
+	${0:/* code */}
+}" Trigger="for" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="foreach" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="foreach( ${1:variable}, ${2:container} )
+{
+	${3:doSomething();} 
+}$0" Trigger="fe" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="fprintf …" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="fprintf(${1:stderr}, &quot;${2:%s}\\n&quot;${2/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$3${2/([^%]|%%)*(%.)?.*/(?2:\);)/}" Trigger="fprintf" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="if" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="if(${1:/* condition */})
+{
+	${0:/* code */}
+}" Trigger="if" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="main()" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="int main (int argc, char *argv[])
+{
+	${0:/* code */}
+	return 0;
+}" Trigger="main" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="namespace" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="namespace${1/.+/ /m}${1:${TM_FILENAME/^((.*?)\..*)?$/(?1:\L$2:my)/}}
+{
+	$0
+}${1/.+/ \/* /m}$1${1/.+/ *\/ /m}" Trigger="ns" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="printf …" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="printf(&quot;${1:%s}\\n&quot;${1/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$2${1/([^%]|%%)*(%.)?.*/(?2:\);)/}" Trigger="printf" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Read File Into Vector" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="std::vector&lt;char&gt; v;
+if(FILE *fp = fopen(${1:&quot;filename&quot;}, &quot;r&quot;))
+{
+	char buf[1024];
+	while(size_t len = fread(buf, 1, sizeof(buf), fp))
+		v.insert(v.end(), buf, buf + len);
+	fclose(fp);
+}" Trigger="readfile" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="std::map" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="std::map&lt;${1:key}, ${2:value}&gt; map$0;" Trigger="map" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="std::vector" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="std::vector&lt;${1:char}&gt; v$0;" Trigger="vector" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="struct" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="struct ${1:${TM_FILENAME/(.+)\..+|.*/(?1:\L$1_t:name)/}}
+{
+	${0:/* data */}
+};" Trigger="st" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="switch" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="switch( ${1:n} ){
+case ${2:1}:
+\t${0}
+\tbreak;
+case ${3:2}:
+\t
+\tbreak;
+default:
+\t
+}
+" Trigger="switch" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="template &lt;typename …&gt;" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="template &lt;typename ${1:_InputIter}&gt;" Trigger="tp" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="try" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="try
+{
+\t${0}
+}
+catch (  )
+{
+
+}
+" Trigger="try" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="typedef" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="typedef ${1:int} ${2:MyCustomType};" Trigger="td" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="while" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="while ( ${0} )
+{
+
+}
+" Trigger="while" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+	</Folder>
+	<Folder Name="CSS" Flags="3" ConfigEdit="CSS" ConfigMacro="" ConfigsAssociate="\CSS\">
+		<Item Name="background: color image repeat attachment position" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="background:${6: #${1:DDD}} url($2) ${3:repeat/repeat-x/repeat-y/no-repeat} ${4:scroll/fixed} ${5:top left/top center/top right/center left/center center/center right/bottom left/bottom center/bottom right/x-% y-%/x-pos y-pos};$0" Trigger="background" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="background-attachment: scroll/fixed" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="background-attachment: ${1:scroll/fixed};$0" Trigger="background" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="background-color: hex" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="background-color: #${1:DDD};$0" Trigger="background" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="background-color: name" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="background-color: ${1:red};$0" Trigger="background" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="background-color: rgb" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="background-color: rgb(${1:255},${2:255},${3:255});$0" Trigger="background" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="background-color: transparent" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="background-color: transparent;$0" Trigger="background" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="background-image: none" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="background-image: none;$0" Trigger="background" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="background-image: url" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="background-image: url($1);$0" Trigger="background" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="background-position: position" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="background-position: ${1:top left/top center/top right/center left/center center/center right/bottom left/bottom center/bottom right/x-% y-%/x-pos y-pos};$0" Trigger="background" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="background-repeat: r/r-x/r-y/n-r" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="background-repeat: ${1:repeat/repeat-x/repeat-y/no-repeat};$0" Trigger="background" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="border: size style color" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="border: ${1:1px} ${2:solid} #${3:999};$0" Trigger="border" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="border-bottom: size style color" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="border-bottom: ${1:1}px ${2:solid} #${3:999};$0" Trigger="border" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="border-bottom-color: color" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="border-bottom-color: #${1:999};$0" Trigger="border" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="border-bottom-style: style" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="border-bottom-style: ${1:none/hidden/dotted/dashed/solid/double/groove/ridge/inset/outset};$0" Trigger="border" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="border-bottom-width: size" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="border-bottom-width: ${1:1}px ${2:solid} #${3:999};$0" Trigger="border" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="border-color: color" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="border-color: ${1:999};$0" Trigger="border" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="border-left: size style color" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="border-left: ${1:1}px ${2:solid} #${3:999};$0" Trigger="border" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="border-left-color: color" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="border-right-color: #${1:999};$0" Trigger="border" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="border-left-style: style" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="border-left-style: ${1:none/hidden/dotted/dashed/solid/double/groove/ridge/inset/outset};$0" Trigger="border" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="border-left-width: size" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="border-left-width: ${1:1}px" Trigger="border" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="border-right: size style color" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="border-right: ${1:1}px ${2:solid} #${3:999};$0" Trigger="border" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="border-right-color: color" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="border-right-color: #${1:999};$0" Trigger="border" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="border-right-style: style" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="border-right-style: ${1:none/hidden/dotted/dashed/solid/double/groove/ridge/inset/outset};$0" Trigger="border" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="border-right-width: size" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="border-right-width: ${1:1}px" Trigger="border" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="border-style: style" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="border-style: ${1:none/hidden/dotted/dashed/solid/double/groove/ridge/inset/outset};$0" Trigger="border" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="border-top: size style color" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="border-top: ${1:1}px ${2:solid} #${3:999};$0" Trigger="border" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="border-top-color: color" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="border-top-color: #${1:999};$0" Trigger="border" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="border-top-style: style" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="border-top-style: ${1:none/hidden/dotted/dashed/solid/double/groove/ridge/inset/outset};$0" Trigger="border" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="border-top-width: size" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="border-top-width: ${1:1}px" Trigger="border" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="border-width: size" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="border-width: ${1:1px};$0" Trigger="border" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="clear: value" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="clear: ${1:left/right/both/none};$0" Trigger="clear" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="color: hex" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="color: #${1:DDD};$0" Trigger="color" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="color: name" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="color: ${1:red};$0" Trigger="color" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="color: rgb" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="color: rgb(${1:255},${2:255},${3:255});$0" Trigger="color" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="cursor: type" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="cursor: ${1:default/auto/crosshair/pointer/move/*-resize/text/wait/help};$0" Trigger="cursor" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="cursor: url" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="cursor: url($1);$0" Trigger="cursor" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="direction: ltr/rtl" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="direction: ${1:ltr|rtl};$0" Trigger="direction" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="display: block" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="display: block;$0" Trigger="display" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="display: common-types" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="display: ${1:none/inline/block/list-item/run-in/compact/marker};$0" Trigger="display" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="display: inline" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="display: inline;$0" Trigger="display" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="display: table-types" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="display: ${1:table/inline-table/table-row-group/table-header-group/table-footer-group/table-row/table-column-group/table-column/table-cell/table-caption};$0" Trigger="display" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="filter: AlphaImageLoader [for IE PNGs]" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${3:background-image: none;
+}filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='${1:${TM_SELECTED_TEXT:/images/transparent.png}}', sizingMethod='${2:image/scale/crop}');" Trigger="background" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Fixed Position Bottom 100% wide IE6" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${2:bottom: auto;}top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-${1:THE HEIGHT OF THIS THING IN PIXELS}));
+${3:left: expression(eval(document.documentElement.scrollLeft));
+}${4:width: expression(eval(document.documentElement.clientWidth));}$0" Trigger="fixed" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="float: left/right/none" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="float: ${1:left/right/none};$0" Trigger="float" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="font: size font" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="font: ${1:75%} ${2:&quot;Lucida Grande&quot;, &quot;Trebuchet MS&quot;, Verdana,} ${3:sans-}serif;$0" Trigger="font" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="font: style variant weight size/line-height font-family" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="font: ${1:normal/italic/oblique} ${2:normal/small-caps} ${3:normal/bold} ${4:1em/1.5em} ${5:Arial}, ${6:sans-}serif;$0" Trigger="font" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="font-family: family" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="font-family: ${1:Arial, &quot;MS Trebuchet&quot;}, ${2:sans-}serif;$0" Trigger="font" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="font-size: size" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="font-size: ${1:100%};$0" Trigger="font" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="font-style: normal/italic/oblique" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="font-style: ${1:normal/italic/oblique};$0" Trigger="font" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="font-variant: normal/small-caps" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="font-variant: ${1:normal/small-caps};$0" Trigger="font" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="font-weight: weight" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="font-weight: ${1:normal/bold};$0" Trigger="font" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="letter-spacing: em" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="letter-spacing: $1em;$0" Trigger="letter" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="letter-spacing: px" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="letter-spacing: $1px;$0" Trigger="letter" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="list-style: type position image" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="list-style: ${1:none/disc/circle/square/decimal/zero} ${2:inside/outside} url($3);$0" Trigger="list" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="list-style-image: url" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="list-style-image: url($1);$0" Trigger="list" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="list-style-position: pos" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="list-style-position: ${1:inside/outside};$0" Trigger="list" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="list-style-type: asian" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="list-style-type: ${1:cjk-ideographic/hiragana/katakana/hiragana-iroha/katakana-iroha};$0" Trigger="list" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="list-style-type: marker" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="list-style-type: ${1:none/disc/circle/square};$0" Trigger="list" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="list-style-type: numeric" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="list-style-type: ${1:decimal/decimal-leading-zero/zero};$0" Trigger="list" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="list-style-type: other" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="list-style-type: ${1:hebrew/armenian/georgian};$0" Trigger="list" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="list-style-type: roman-alpha-greek" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="list-style-type: ${1:lower-roman/upper-roman/lower-alpha/upper-alpha/lower-greek/lower-latin/upper-latin};$0" Trigger="list" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="margin: all" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="margin: ${1:20px};$0" Trigger="margin" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="margin: T R B L" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="margin: ${1:20px} ${2:0px} ${3:40px} ${4:0px};$0" Trigger="margin" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="margin: V H" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="margin: ${1:20px} ${2:0px};$0" Trigger="margin" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="margin-bottom: length" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="margin-bottom: ${1:20px};$0" Trigger="margin" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="margin-left: length" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="margin-left: ${1:20px};$0" Trigger="margin" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="margin-right: length" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="margin-right: ${1:20px};$0" Trigger="margin" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="margin-top: length" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="margin-top: ${1:20px};$0" Trigger="margin" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="marker-offset: auto" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="marker-offset: auto;$0" Trigger="marker" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="marker-offset: length" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="marker-offset: ${1:10px};$0" Trigger="marker" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="opacity: [for Safari, FF &amp; IE]" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="opacity: ${1:0.5};${100:
+}-moz-opacity: ${1:0.5};${100:
+}filter:alpha(opacity=${2:${1/(1?)0?\.(.*)/$1$2/}${1/^\d*\.\d\d+$|^\d*$|(^\d\.\d$)/(?1:0)/}});$0" Trigger="opacity" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="overflow: type" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="overflow: ${1:visible/hidden/scroll/auto};$0" Trigger="overflow" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="padding: all" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="padding: ${1:20px};$0" Trigger="padding" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="padding: T R B L" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="padding: ${1:20px} ${2:0px} ${3:40px} ${4:0px};$0" Trigger="padding" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="padding: V H" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="padding: ${1:20px} ${2:0px};$0" Trigger="padding" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="padding-bottom: length" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="padding-bottom: ${1:20px};$0" Trigger="padding" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="padding-left: length" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="padding-left: ${1:20px};$0" Trigger="padding" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="padding-right: length" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="padding-right: ${1:20px};$0" Trigger="padding" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="padding-top: length" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="padding-top: ${1:20px};$0" Trigger="padding" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="position: type" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="position: ${1:static/relative/absolute/fixed};$0" Trigger="position" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="properties { } ( } )" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="{
+	/* $1 */
+	$0" Trigger="{" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="scrollbar" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="scrollbar-base-color:       ${1:#CCCCCC};${2:
+scrollbar-arrow-color:      ${3:#000000};
+scrollbar-track-color:      ${4:#999999};
+scrollbar-3dlight-color:    ${5:#EEEEEE};
+scrollbar-highlight-color:  ${6:#FFFFFF};
+scrollbar-face-color:       ${7:#CCCCCC};
+scrollbar-shadow-color:     ${9:#999999};
+scrollbar-darkshadow-color: ${8:#666666};}" Trigger="scrollbar" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="selection" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="$1::-moz-selection,
+$1::selection {
+	color: ${2:inherit};
+	background: ${3:inherit};
+}" Trigger="selection" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="text-align: left/center/right" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="text-align: ${1:left/right/center/justify};$0" Trigger="text" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="text-decoration: none/underline/overline/line-through/blink" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="text-decoration: ${1:none/underline/overline/line-through/blink};$0" Trigger="text" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="text-indent: length" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="text-indent: ${1:10}px;$0" Trigger="text" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="text-shadow: color-hex x y blur" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="text-shadow: #${1:DDD} ${2:10px} ${3:10px} ${4:2px};$0" Trigger="text" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="text-shadow: color-rgb x y blur" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="text-shadow: rgb(${1:255},${2:255},${3:255}) ${4:10px} ${5:10px} ${6:2px};$0" Trigger="text" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="text-shadow: none" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="text-shadow: none;$0" Trigger="text" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="text-transform: capitalize/upper/lower" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="text-transform: ${1:capitalize/uppercase/lowercase};$0" Trigger="text" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="text-transform: none" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="text-transform: none;$0" Trigger="text" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="vertical-align: type" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="vertical-align: ${1:baseline/sub/super/top/text-top/middle/bottom/text-bottom/length/%};$0" Trigger="vertical" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="visibility: type" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="visibility: ${1:visible/hidden/collapse};$0" Trigger="visibility" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="white-space: normal/pre/nowrap" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="white-space: ${1:normal/pre/nowrap};$0" Trigger="white" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="word-spacing: length" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="word-spacing: ${1:10px};$0" Trigger="word" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="word-spacing: normal" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="word-spacing: normal;$0" Trigger="word" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="z-index: index" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="z-index: $1;$0" Trigger="z" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+	</Folder>
+	<Folder Name="EmEditor Macros" Flags="3" ConfigEdit="JavaScript for EmEditor" ConfigMacro="" ConfigsAssociate="\JavaScript for EmEditor\VBScript for EmEditor\">
+		<Item Name="#icon = &quot;...&quot;" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="#icon = &quot;${1:${SelText}}&quot;${2:, ${3:0}}
+${0}" Trigger="icon" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="#include &quot;...&quot;" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="#include &quot;${1:${SelText}}&quot;
+${0}" Trigger="inc" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="#language = &quot;...&quot;" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="#language = &quot;${1:VBScript}&quot;
+${0}" Trigger="lang" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="#title" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="#title = &quot;${1:${SelText}}&quot;
+${0}" Trigger="title" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="#tooltip = &quot;...&quot;" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="#tooltip = &quot;${1:${SelText}}&quot;
+${0}" Trigger="tooltip" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="document" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="document." Trigger="doc" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="selection" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="selection." Trigger="sel" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+	</Folder>
+	<Folder Name="General" Flags="1" ConfigEdit="Text" ConfigMacro="JavaScript for EmEditor" ConfigsAssociate="\">
+		<Item Name="Calculator" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="`#cmd Start Calc.exe`" Trigger="calc" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Clipboard History" Flags="8" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="menu = CreatePopupMenu();
+i = 0;
+do {
+    str = clipboardData.getData(&quot;text&quot;, i);
+    if( str.length == 0 )  break;
+    str = str.substr( 0, 40 );
+    menu.Add( str, i + 100 );
+    i++;
+} while( 1 );
+
+result = menu.Track( 0 );
+if( result != 0 ) {
+    s = clipboardData.getData(&quot;text&quot;, result - 100);
+    document.write( s );
+}
+" Trigger="" Tip="" ShortcutKey="119" ShortcutVirt="7"/>
+		<Item Name="Copyright Notice" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="(c) Copyright `# d=new Date(); Interface.write(d.getFullYear());` ${MyName}. All Rights Reserved." Trigger="c)" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Date" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${Date}" Trigger="date" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Date (YYYY-MM-DD)" Flags="12" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="d=new Date(); document.write(&quot;&quot; + d.getFullYear() + &quot;-&quot; + (d.getMonth()+1) + &quot;-&quot; + d.getDate());" Trigger="isoD" Tip="Current Date (YYYY-MM-DD)" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Delete blank lines" Flags="8" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="Redraw = false;
+nLines = document.GetLines();
+for( i = 1; i &lt; nLines; i++ ){
+    if( document.GetLine( i ) == &quot;&quot; ){
+        document.selection.SetActivePoint( eePosLogical, 1, i );
+        document.selection.Delete();
+        i--;
+        nLines--;
+    }
+}
+Redraw = true;
+" Trigger="Delete blank lines" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Dir" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="`#cmd Dir`" Trigger="dir" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Educate Quotes" Flags="8" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="document.selection.Replace(&quot;\x27(.*?)\x27&quot;,&quot;‘\\1’&quot;,eeFindNext | eeFindReplaceCase | eeReplaceAll | eeFindReplaceRegExp);
+document.selection.Replace(&quot;\x22(.*?)\x22&quot;,&quot;“\\1”&quot;,eeFindNext | eeFindReplaceCase | eeReplaceAll | eeFindReplaceRegExp);
+" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Escape Sequences" Flags="12" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="menu = CreatePopupMenu();
+menu.Add( &quot;\\b\tBackspace&quot;, 1 );
+menu.Add( &quot;\\f\tForm Feed&quot;, 2 );
+menu.Add( &quot;\\n\tNew Line&quot;, 3 );
+menu.Add( &quot;\\r\tCarriage Return&quot;, 4 );
+menu.Add( &quot;\\t\tHorizontal Tab&quot;, 5 );
+menu.Add( &quot;\\v\tVertical Tab&quot;, 6 );
+
+result = menu.Track( 0 );
+if( result != 0 ) {
+    s = menu.GetText( result );
+    n = s.indexOf( '\t' );
+    document.write( s.slice( 0, n ) );
+}
+" Trigger="\" Tip="Press Tab to insert escape sequences" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Extract Lines Containing ..." Flags="8" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="if( !editor.EnableTab ){ 
+   editor.EnableTab = true; 
+   alert( &quot;Please run this macro again.&quot; ); 
+   Quit(); 
+}
+
+sFind = prompt( &quot;This macro extracts lines that do contain the specified string:&quot;, &quot;&quot; );
+if( sFind == &quot;&quot; ){
+	Quit();
+}
+
+Redraw = false; 
+
+docSearch = editor.ActiveDocument; 
+editor.NewFile(); 
+docResult = editor.ActiveDocument; 
+docSearch.Activate(); 
+
+docSearch.selection.StartOfDocument(); 
+y = 1; 
+do { 
+   docSearch.selection.SetActivePoint( eePosLogical, 1, y ); 
+   if( y != docSearch.selection.GetActivePointY( eePosLogical ) )  break; 
+   docSearch.selection.SelectLine(); 
+   sLine = docSearch.selection.Text; 
+   re = new RegExp( &quot;.*&quot; + sFind + &quot;.*&quot; ); 
+   result = re.test( sLine ); 
+   if( result ){ 
+      docResult.Activate(); 
+      docResult.selection.Text = sLine; 
+   } 
+   docSearch.Activate(); 
+   y++; 
+} while( true );
+" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="File Directory" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${Dir}" Trigger="filedir" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="File Extension" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${Ext}" Trigger="ext" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="File Name" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${Filename}" Trigger="filename" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="File Path" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${Path}" Trigger="path" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Hello" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="Hello ${1:name},
+My name is ${MyName}. How are you, ${1:name}?
+${0}
+" Trigger="hello" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Indent/Tab Length" Flags="8" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="cfg = document.Config;
+do {
+    n = prompt( &quot;Enter new indent/tab length in characters:&quot;, cfg.Indent.TabColumns );
+} while( n &lt;= 0 || n &gt; 16 );
+cfg.Indent.IndentColumns = cfg.Indent.TabColumns = n;
+cfg.Save();
+" Trigger="" Tip="Press Tab to change the tab/indent length." ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Pick Color" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${PickColor}" Trigger="pickcolor" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Pick Full Path" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${PickFullPath}" Trigger="pickfullpath" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Pick Relative Path" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${PickRelativePath}" Trigger="pickrelativepath" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Send e-mail with Outlook" Flags="8" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="#language = &quot;VBScript&quot;
+document.selection.SelectAll 
+document.selection.Format eeFormatInsertNL 
+Set objOutlook = CreateObject(&quot;Outlook.Application&quot;) 
+Set objOutlookMsg = objOutlook.CreateItem(olMailItem) 
+With objOutlookMsg 
+    .Subject = &quot;Email message from EmEditor&quot; 
+    .Body = document.selection.Text 
+    .Display 
+End With 
+Set objOutlook = Nothing 
+document.Undo
+" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Snippets Macros" Flags="12" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="sArgs = [
+[&quot;$1&quot;, &quot;Placeholder 1&quot;],
+[&quot;$2&quot;, &quot;Placeholder 2&quot;],
+[&quot;$3&quot;, &quot;Placeholder 3&quot;],
+[&quot;$4&quot;, &quot;Placeholder 4&quot;],
+[&quot;$5&quot;, &quot;Placeholder 5&quot;],
+[&quot;$0&quot;, &quot;Last Placeholder&quot;],
+[&quot;${0:default}&quot;, &quot;Last Placeholder with Default Text&quot;],
+[&quot;${0:${SelText}}&quot;, &quot;Last Placeholder and Selected Text&quot;],
+[&quot;${0:${SelText:default}}&quot;, &quot;Last Placeholder and Selected Text with Default&quot;],
+[&quot;&quot;,&quot;&quot;],
+[&quot;${Path}&quot;,&quot;File Path&quot;],
+[&quot;${Dir}&quot;,&quot;File Directory&quot;],
+[&quot;${Filename}&quot;,&quot;File Name&quot;],
+[&quot;${Ext}&quot;,&quot;File Extension&quot;],
+[&quot;&quot;,&quot;&quot;],
+[&quot;${CurLine}&quot;,&quot;Current Line&quot;],
+[&quot;${SelText}&quot;,&quot;Selected Text&quot;],
+[&quot;&quot;,&quot;&quot;],
+[&quot;${Date}&quot;,&quot;Date&quot;],
+[&quot;${Time}&quot;,&quot;Time&quot;],
+[&quot;${Charset}&quot;,&quot;Charset&quot;],
+[&quot;&quot;,&quot;&quot;],
+[&quot;${PickFullPath}&quot;,&quot;Pick Full Path&quot;],
+[&quot;${PickRelativePath}&quot;,&quot;Pick Relative Path&quot;],
+[&quot;${PickColor}&quot;,&quot;Pick Color&quot;],
+[&quot;${DefColor}&quot;,&quot;Default Color&quot;]
+];
+
+
+menu = CreatePopupMenu();
+for( i = 0; i != sArgs.length; i++ ) {
+	if( sArgs[i][0] != &quot;&quot; ){
+        menu.Add( sArgs[i][0] + &quot;\t&quot; + sArgs[i][1], i + 1 );
+    }
+    else {
+		menu.Add( &quot;&quot;, 0, eeMenuSeparator );
+    }
+}
+
+result = menu.Track( 0 );
+if( result != 0 ) {
+    s = menu.GetText( result );
+    n = s.indexOf( '\t' );
+    document.write( s.slice( 0, n ) );
+}
+" Trigger="$" Tip="Press Tab to insert snippets macros" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Sort Selection" Flags="8" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="document.selection.text = ((document.selection.text.split(&quot;\n&quot;)).sort()).join('\n');
+" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Stupefy Quotes" Flags="8" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="document.selection.Replace(&quot;‘(.*?)’&quot;,&quot;\x27\\1\x27&quot;,eeFindNext | eeFindReplaceCase | eeReplaceAll | eeFindReplaceRegExp);
+document.selection.Replace(&quot;“(.*?)”&quot;,&quot;\x22\\1\x22&quot;,eeFindNext | eeFindReplaceCase | eeReplaceAll | eeFindReplaceRegExp);
+" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Thank you" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="Thank you,
+${MyName}
+${0}" Trigger="thank" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Time" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${Time}" Trigger="time" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Today" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="Today is `# d = new Date(); Interface.write(d.toLocaleDateString());`.
+" Trigger="today" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Toggle Line Numbers" Flags="8" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="cfg = document.Config;
+cfg.General.ShowLineNumbers = !cfg.General.ShowLineNumbers;
+cfg.Save();
+" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Toggle Ruler" Flags="8" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="cfg = document.Config;
+cfg.General.ShowRuler = !cfg.General.ShowRuler;
+cfg.Save();
+" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Sum" Flags="8" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="var a = document.selection.Text.split(&quot;\n&quot;);
+var sum = 0;
+for( var i = 0; i &lt; a.length; i++ ){
+	sum += Number(a[i]);
+}
+alert( sum );
+" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+	</Folder>
+	<Folder Name="HTML" Flags="3" ConfigEdit="HTML" ConfigMacro="" ConfigsAssociate="\HTML\JSP\PHP\RHTML\">
+		<Item Name="&lt;!-- ... --&gt;" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;!-- ${0:${SelText}} --&gt;" Trigger="!" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="&lt;?= … ?&gt;" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;?= $TM_SELECTED_TEXT ?&gt;" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="⌃" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&amp;#x2303;" Trigger="control" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="⌅" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&amp;#x2305;" Trigger="enter" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="⌘" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&amp;#x2318;" Trigger="command" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="⌥" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&amp;#x2325;" Trigger="option" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="⌦" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&amp;#x2326;" Trigger="delete" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="⌫" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&amp;#x232B;" Trigger="backspace" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="⎋" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&amp;#x238B;" Trigger="escape" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="↑" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&amp;#x2191;" Trigger="up" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="⇧" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&amp;#x21E7;" Trigger="shift" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="→" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&amp;#x2192;" Trigger="arrow" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="→" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&amp;#x2192;" Trigger="right" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="⇥" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&amp;#x21E5;" Trigger="tab" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="↓" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&amp;#x2193;" Trigger="down" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="←" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&amp;#x2190;" Trigger="left" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="↩" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&amp;#x21A9;" Trigger="return" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="⇤" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&amp;#x21E4;" Trigger="backtab" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Anchor" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;a name=&quot;${0:name}&quot;&gt;" Trigger="a name" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="applet" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;applet&gt;${0:${SelText}}&lt;/applet&gt;" Trigger="applet" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="base" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;base href=&quot;$1&quot;${2: target=&quot;$3&quot;}${TM_XHTML}&gt;" Trigger="base" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="blockquote" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;blockquote&gt;${0:${SelText}}&lt;/blockquote&gt;" Trigger="block" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="body" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;body id=&quot;${1:${TM_FILENAME/(.*)\..*/\L$1/}}&quot;${2: onload=&quot;$3&quot;}&gt;
+	$0
+&lt;/body&gt;" Trigger="body" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="br" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;br /&gt;" Trigger="br" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Bullets" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;ul&gt;
+\t&lt;li&gt;${0:${SelText}}&lt;/li&gt;
+&lt;/ul&gt;
+" Trigger="ul" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Convert Entities in Selection to Text" Flags="8" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="sSrc = document.selection.Text;
+sDest = &quot;&quot;;
+i = 0;
+s = sSrc;
+while( (result = s.match(/&amp;[a-zA-Z0-9]+?;/)) != null ){
+	sToken = result[0];
+	sDest += s.substr( 0, result.index );
+	s = s.substr( result.index + sToken.length );
+	nCode = 0;
+	switch( sToken ){
+	case &quot;&amp;quot;&quot;    : nCode = 34;  break;
+	case &quot;&amp;apos;&quot;    : nCode = 39;  break;
+	case &quot;&amp;amp;&quot;     : nCode = 38;  break;
+	case &quot;&amp;lt;&quot;      : nCode = 60;  break;
+	case &quot;&amp;gt;&quot;      : nCode = 62;  break;
+	case &quot;&amp;nbsp;&quot;    : nCode = 160; break;
+	case &quot;&amp;iexcl;&quot;   : nCode = 161; break;
+	case &quot;&amp;cent;&quot;    : nCode = 162; break;
+	case &quot;&amp;pound;&quot;   : nCode = 163; break;
+	case &quot;&amp;curren;&quot;  : nCode = 164; break;
+	case &quot;&amp;yen;&quot;     : nCode = 165; break;
+	case &quot;&amp;brvbar;&quot;  : nCode = 166; break;
+	case &quot;&amp;sect;&quot;    : nCode = 167; break;
+	case &quot;&amp;uml;&quot;     : nCode = 168; break;
+	case &quot;&amp;copy;&quot;    : nCode = 169; break;
+	case &quot;&amp;ordf;&quot;    : nCode = 170; break;
+	case &quot;&amp;laquo;&quot;   : nCode = 171; break;
+	case &quot;&amp;not;&quot;     : nCode = 172; break;
+	case &quot;&amp;shy;&quot;     : nCode = 173; break;
+	case &quot;&amp;reg;&quot;     : nCode = 174; break;
+	case &quot;&amp;macr;&quot;    : nCode = 175; break;
+	case &quot;&amp;deg;&quot;     : nCode = 176; break;
+	case &quot;&amp;plusmn;&quot;  : nCode = 177; break;
+	case &quot;&amp;sup2;&quot;    : nCode = 178; break;
+	case &quot;&amp;sup3;&quot;    : nCode = 179; break;
+	case &quot;&amp;acute;&quot;   : nCode = 180; break;
+	case &quot;&amp;micro;&quot;   : nCode = 181; break;
+	case &quot;&amp;para;&quot;    : nCode = 182; break;
+	case &quot;&amp;middot;&quot;  : nCode = 183; break;
+	case &quot;&amp;cedil;&quot;   : nCode = 184; break;
+	case &quot;&amp;sup1;&quot;    : nCode = 185; break;
+	case &quot;&amp;ordm;&quot;    : nCode = 186; break;
+	case &quot;&amp;raquo;&quot;   : nCode = 187; break;
+	case &quot;&amp;frac14;&quot;  : nCode = 188; break;
+	case &quot;&amp;frac12;&quot;  : nCode = 189; break;
+	case &quot;&amp;frac34;&quot;  : nCode = 190; break;
+	case &quot;&amp;iquest;&quot;  : nCode = 191; break;
+	case &quot;&amp;Agrave;&quot;  : nCode = 192; break;
+	case &quot;&amp;Aacute;&quot;  : nCode = 193; break;
+	case &quot;&amp;Acirc;&quot;   : nCode = 194; break;
+	case &quot;&amp;Atilde;&quot;  : nCode = 195; break;
+	case &quot;&amp;Auml;&quot;    : nCode = 196; break;
+	case &quot;&amp;Aring;&quot;   : nCode = 197; break;
+	case &quot;&amp;AElig;&quot;   : nCode = 198; break;
+	case &quot;&amp;Ccedil;&quot;  : nCode = 199; break;
+	case &quot;&amp;Egrave;&quot;  : nCode = 200; break;
+	case &quot;&amp;Eacute;&quot;  : nCode = 201; break;
+	case &quot;&amp;Ecirc;&quot;   : nCode = 202; break;
+	case &quot;&amp;Euml;&quot;    : nCode = 203; break;
+	case &quot;&amp;Igrave;&quot;  : nCode = 204; break;
+	case &quot;&amp;Iacute;&quot;  : nCode = 205; break;
+	case &quot;&amp;Icirc;&quot;   : nCode = 206; break;
+	case &quot;&amp;Iuml;&quot;    : nCode = 207; break;
+	case &quot;&amp;ETH;&quot;     : nCode = 208; break;
+	case &quot;&amp;Ntilde;&quot;  : nCode = 209; break;
+	case &quot;&amp;Ograve;&quot;  : nCode = 210; break;
+	case &quot;&amp;Oacute;&quot;  : nCode = 211; break;
+	case &quot;&amp;Ocirc;&quot;   : nCode = 212; break;
+	case &quot;&amp;Otilde;&quot;  : nCode = 213; break;
+	case &quot;&amp;Ouml;&quot;    : nCode = 214; break;
+	case &quot;&amp;times;&quot;   : nCode = 215; break;
+	case &quot;&amp;Oslash;&quot;  : nCode = 216; break;
+	case &quot;&amp;Ugrave;&quot;  : nCode = 217; break;
+	case &quot;&amp;Uacute;&quot;  : nCode = 218; break;
+	case &quot;&amp;Ucirc;&quot;   : nCode = 219; break;
+	case &quot;&amp;Uuml;&quot;    : nCode = 220; break;
+	case &quot;&amp;Yacute;&quot;  : nCode = 221; break;
+	case &quot;&amp;THORN;&quot;   : nCode = 222; break;
+	case &quot;&amp;szlig;&quot;   : nCode = 223; break;
+	case &quot;&amp;agrave;&quot;  : nCode = 224; break;
+	case &quot;&amp;aacute;&quot;  : nCode = 225; break;
+	case &quot;&amp;acirc;&quot;   : nCode = 226; break;
+	case &quot;&amp;atilde;&quot;  : nCode = 227; break;
+	case &quot;&amp;auml;&quot;    : nCode = 228; break;
+	case &quot;&amp;aring;&quot;   : nCode = 229; break;
+	case &quot;&amp;aelig;&quot;   : nCode = 230; break;
+	case &quot;&amp;ccedil;&quot;  : nCode = 231; break;
+	case &quot;&amp;egrave;&quot;  : nCode = 232; break;
+	case &quot;&amp;eacute;&quot;  : nCode = 233; break;
+	case &quot;&amp;ecirc;&quot;   : nCode = 234; break;
+	case &quot;&amp;euml;&quot;    : nCode = 235; break;
+	case &quot;&amp;igrave;&quot;  : nCode = 236; break;
+	case &quot;&amp;iacute;&quot;  : nCode = 237; break;
+	case &quot;&amp;icirc;&quot;   : nCode = 238; break;
+	case &quot;&amp;iuml;&quot;    : nCode = 239; break;
+	case &quot;&amp;eth;&quot;     : nCode = 240; break;
+	case &quot;&amp;ntilde;&quot;  : nCode = 241; break;
+	case &quot;&amp;ograve;&quot;  : nCode = 242; break;
+	case &quot;&amp;oacute;&quot;  : nCode = 243; break;
+	case &quot;&amp;ocirc;&quot;   : nCode = 244; break;
+	case &quot;&amp;otilde;&quot;  : nCode = 245; break;
+	case &quot;&amp;ouml;&quot;    : nCode = 246; break;
+	case &quot;&amp;divide;&quot;  : nCode = 247; break;
+	case &quot;&amp;oslash;&quot;  : nCode = 248; break;
+	case &quot;&amp;ugrave;&quot;  : nCode = 249; break;
+	case &quot;&amp;uacute;&quot;  : nCode = 250; break;
+	case &quot;&amp;ucirc;&quot;   : nCode = 251; break;
+	case &quot;&amp;uuml;&quot;    : nCode = 252; break;
+	case &quot;&amp;yacute;&quot;  : nCode = 253; break;
+	case &quot;&amp;thorn;&quot;   : nCode = 254; break;
+	case &quot;&amp;yuml;&quot;    : nCode = 255; break;
+	}
+	if( nCode ){
+		sDest += String.fromCharCode(nCode);
+	}
+	else {
+		sDest += sToken;
+	}
+}
+
+sDest += s;
+document.selection.Text = sDest;
+
+" Trigger="" Tip="" ShortcutKey="53" ShortcutVirt="15"/>
+		<Item Name="Convert Selection to Entities" Flags="8" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="sSrc = document.selection.Text;
+sDest = &quot;&quot;;
+for ( i=0; i &lt; sSrc.length; i++ ) {
+	nCode = sSrc.charCodeAt(i);
+	switch( nCode ){
+	case 34:  sDest += &quot;&amp;quot;&quot;; break;
+	case 39:  sDest += &quot;&amp;apos;&quot;; break;
+	case 38:  sDest += &quot;&amp;amp;&quot;; break;
+	case 60:  sDest += &quot;&amp;lt;&quot;; break;
+	case 62:  sDest += &quot;&amp;gt;&quot;; break;
+	case 160: sDest += &quot;&amp;nbsp;&quot;; break;
+	case 161: sDest += &quot;&amp;iexcl;&quot;; break;
+	case 162: sDest += &quot;&amp;cent;&quot;; break;
+	case 163: sDest += &quot;&amp;pound;&quot;; break;
+	case 164: sDest += &quot;&amp;curren;&quot;; break;
+	case 165: sDest += &quot;&amp;yen;&quot;; break;
+	case 166: sDest += &quot;&amp;brvbar;&quot;; break;
+	case 167: sDest += &quot;&amp;sect;&quot;; break;
+	case 168: sDest += &quot;&amp;uml;&quot;; break;
+	case 169: sDest += &quot;&amp;copy;&quot;; break;
+	case 170: sDest += &quot;&amp;ordf;&quot;; break;
+	case 171: sDest += &quot;&amp;laquo;&quot;; break;
+	case 172: sDest += &quot;&amp;not;&quot;; break;
+	case 173: sDest += &quot;&amp;shy;&quot;; break;
+	case 174: sDest += &quot;&amp;reg;&quot;; break;
+	case 175: sDest += &quot;&amp;macr;&quot;; break;
+	case 176: sDest += &quot;&amp;deg;&quot;; break;
+	case 177: sDest += &quot;&amp;plusmn;&quot;; break;
+	case 178: sDest += &quot;&amp;sup2;&quot;; break;
+	case 179: sDest += &quot;&amp;sup3;&quot;; break;
+	case 180: sDest += &quot;&amp;acute;&quot;; break;
+	case 181: sDest += &quot;&amp;micro;&quot;; break;
+	case 182: sDest += &quot;&amp;para;&quot;; break;
+	case 183: sDest += &quot;&amp;middot;&quot;; break;
+	case 184: sDest += &quot;&amp;cedil;&quot;; break;
+	case 185: sDest += &quot;&amp;sup1;&quot;; break;
+	case 186: sDest += &quot;&amp;ordm;&quot;; break;
+	case 187: sDest += &quot;&amp;raquo;&quot;; break;
+	case 188: sDest += &quot;&amp;frac14;&quot;; break;
+	case 189: sDest += &quot;&amp;frac12;&quot;; break;
+	case 190: sDest += &quot;&amp;frac34;&quot;; break;
+	case 191: sDest += &quot;&amp;iquest;&quot;; break;
+	case 192: sDest += &quot;&amp;Agrave;&quot;; break;
+	case 193: sDest += &quot;&amp;Aacute;&quot;; break;
+	case 194: sDest += &quot;&amp;Acirc;&quot;; break;
+	case 195: sDest += &quot;&amp;Atilde;&quot;; break;
+	case 196: sDest += &quot;&amp;Auml;&quot;; break;
+	case 197: sDest += &quot;&amp;Aring;&quot;; break;
+	case 198: sDest += &quot;&amp;AElig;&quot;; break;
+	case 199: sDest += &quot;&amp;Ccedil;&quot;; break;
+	case 200: sDest += &quot;&amp;Egrave;&quot;; break;
+	case 201: sDest += &quot;&amp;Eacute;&quot;; break;
+	case 202: sDest += &quot;&amp;Ecirc;&quot;; break;
+	case 203: sDest += &quot;&amp;Euml;&quot;; break;
+	case 204: sDest += &quot;&amp;Igrave;&quot;; break;
+	case 205: sDest += &quot;&amp;Iacute;&quot;; break;
+	case 206: sDest += &quot;&amp;Icirc;&quot;; break;
+	case 207: sDest += &quot;&amp;Iuml;&quot;; break;
+	case 208: sDest += &quot;&amp;ETH;&quot;; break;
+	case 209: sDest += &quot;&amp;Ntilde;&quot;; break;
+	case 210: sDest += &quot;&amp;Ograve;&quot;; break;
+	case 211: sDest += &quot;&amp;Oacute;&quot;; break;
+	case 212: sDest += &quot;&amp;Ocirc;&quot;; break;
+	case 213: sDest += &quot;&amp;Otilde;&quot;; break;
+	case 214: sDest += &quot;&amp;Ouml;&quot;; break;
+	case 215: sDest += &quot;&amp;times;&quot;; break;
+	case 216: sDest += &quot;&amp;Oslash;&quot;; break;
+	case 217: sDest += &quot;&amp;Ugrave;&quot;; break;
+	case 218: sDest += &quot;&amp;Uacute;&quot;; break;
+	case 219: sDest += &quot;&amp;Ucirc;&quot;; break;
+	case 220: sDest += &quot;&amp;Uuml;&quot;; break;
+	case 221: sDest += &quot;&amp;Yacute;&quot;; break;
+	case 222: sDest += &quot;&amp;THORN;&quot;; break;
+	case 223: sDest += &quot;&amp;szlig;&quot;; break;
+	case 224: sDest += &quot;&amp;agrave;&quot;; break;
+	case 225: sDest += &quot;&amp;aacute;&quot;; break;
+	case 226: sDest += &quot;&amp;acirc;&quot;; break;
+	case 227: sDest += &quot;&amp;atilde;&quot;; break;
+	case 228: sDest += &quot;&amp;auml;&quot;; break;
+	case 229: sDest += &quot;&amp;aring;&quot;; break;
+	case 230: sDest += &quot;&amp;aelig;&quot;; break;
+	case 231: sDest += &quot;&amp;ccedil;&quot;; break;
+	case 232: sDest += &quot;&amp;egrave;&quot;; break;
+	case 233: sDest += &quot;&amp;eacute;&quot;; break;
+	case 234: sDest += &quot;&amp;ecirc;&quot;; break;
+	case 235: sDest += &quot;&amp;euml;&quot;; break;
+	case 236: sDest += &quot;&amp;igrave;&quot;; break;
+	case 237: sDest += &quot;&amp;iacute;&quot;; break;
+	case 238: sDest += &quot;&amp;icirc;&quot;; break;
+	case 239: sDest += &quot;&amp;iuml;&quot;; break;
+	case 240: sDest += &quot;&amp;eth;&quot;; break;
+	case 241: sDest += &quot;&amp;ntilde;&quot;; break;
+	case 242: sDest += &quot;&amp;ograve;&quot;; break;
+	case 243: sDest += &quot;&amp;oacute;&quot;; break;
+	case 244: sDest += &quot;&amp;ocirc;&quot;; break;
+	case 245: sDest += &quot;&amp;otilde;&quot;; break;
+	case 246: sDest += &quot;&amp;ouml;&quot;; break;
+	case 247: sDest += &quot;&amp;divide;&quot;; break;
+	case 248: sDest += &quot;&amp;oslash;&quot;; break;
+	case 249: sDest += &quot;&amp;ugrave;&quot;; break;
+	case 250: sDest += &quot;&amp;uacute;&quot;; break;
+	case 251: sDest += &quot;&amp;ucirc;&quot;; break;
+	case 252: sDest += &quot;&amp;uuml;&quot;; break;
+	case 253: sDest += &quot;&amp;yacute;&quot;; break;
+	case 254: sDest += &quot;&amp;thorn;&quot;; break;
+	case 255: sDest += &quot;&amp;yuml;&quot;; break;
+ 	default:  sDest += String.fromCharCode( nCode );
+	}
+}
+document.selection.Text = sDest;
+" Trigger="" Tip="" ShortcutKey="53" ShortcutVirt="15"/>
+		<Item Name="div" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;div${1: id=&quot;${2:name}&quot;}&gt;
+	${0:${SelText}}
+&lt;/div&gt;" Trigger="div" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Doctype Declaration" Flags="12" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="sArgs = [
+[&quot;HTML 4.01 Strict\t&amp;1&quot;, &quot;&lt;!DOCTYPE html PUBLIC \&quot;-//W3C//DTD HTML 4.01//EN\&quot;\r\n   \&quot;http://www.w3.org/TR/html4/strict.dtd\&quot;&gt;&quot;],
+[&quot;HTML 4.01 Transitional\t&amp;2&quot;, &quot;&lt;!DOCTYPE html PUBLIC \&quot;-//W3C//DTD HTML 4.01 Transitional//EN\&quot;\r\n   \&quot;http://www.w3.org/TR/html4/loose.dtd\&quot;&gt;&quot;],
+[&quot;HTML 4.01 Frameset\t&amp;3&quot;, &quot;&lt;!DOCTYPE html PUBLIC \&quot;-//W3C//DTD HTML 4.01 Frameset//EN\&quot;\r\n   \&quot;http://www.w3.org/TR/html4/frameset.dtd\&quot;&gt;&quot;],
+[&quot;&quot;,&quot;&quot;],
+[&quot;XHTML 1.0 Strict\t&amp;4&quot;, &quot;&lt;!DOCTYPE html PUBLIC \&quot;-//W3C//DTD XHTML 1.0 Strict//EN\&quot;\r\n   \&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\&quot;&gt;&quot;],
+[&quot;XHTML 1.0 Transitional\t&amp;5&quot;, &quot;&lt;!DOCTYPE html PUBLIC \&quot;-//W3C//DTD XHTML 1.0 Transitional//EN\&quot;\r\n   \&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\&quot;&gt;&quot;],
+[&quot;XHTML 1.0 Frameset\t&amp;6&quot;, &quot;&lt;!DOCTYPE html PUBLIC \&quot;-//W3C//DTD XHTML 1.0 Frameset//EN\&quot;\r\n   \&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd\&quot;&gt;&quot;],
+[&quot;&quot;,&quot;&quot;],
+[&quot;XHTML 1.1\t&amp;7&quot;, &quot;&lt;!DOCTYPE html PUBLIC \&quot;-//W3C//DTD XHTML 1.1//EN\&quot; \r\n   \&quot;http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\&quot;&gt;&quot;],
+[&quot;&quot;,&quot;&quot;],
+[&quot;XHTML Basic 1.0\t&amp;8&quot;,&quot;&lt;!DOCTYPE html PUBLIC \&quot;-//W3C//DTD XHTML Basic 1.0//EN\&quot;\r\n    \&quot;http://www.w3.org/TR/xhtml-basic/xhtml-basic10.dtd\&quot;&gt;&quot;],
+[&quot;XHTML Basic 1.1\t&amp;9&quot;,&quot;&lt;!DOCTYPE html PUBLIC \&quot;-//W3C//DTD XHTML Basic 1.1//EN\&quot;\r\n    \&quot;http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd\&quot;&gt;&quot;]
+];
+
+menu = CreatePopupMenu();
+for( i = 0; i != sArgs.length; i++ ) {
+	if( sArgs[i][0] != &quot;&quot; ){
+        menu.Add( sArgs[i][0], i + 1 );
+    }
+    else {
+		menu.Add( &quot;&quot;, 0, eeMenuSeparator );
+    }
+}
+result = menu.Track( 0 );
+if( result != 0 ) {
+    document.writeln( sArgs[ result - 1 ][1] );
+    
+    // remove indent
+    document.selection.WordLeft( true );
+    document.selection.Delete();
+}
+
+" Trigger="doctype" Tip="Press Tab to insert a Doctype declaration." ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="em" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;em&gt;${0:${SelText}}&lt;/em&gt;" Trigger="" Tip="" ShortcutKey="73" ShortcutVirt="11"/>
+		<Item Name="Escape selection" Flags="8" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="document.selection.Text = escape( document.selection.Text );
+" Trigger="" Tip="" ShortcutKey="53" ShortcutVirt="15"/>
+		<Item Name="fieldset" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;fieldset id=&quot;${1/[[:alpha:]]+|( )/(?1:_:\L$0)/g}&quot; ${2:class=&quot;${3:}&quot;}&gt;
+	&lt;legend&gt;${1:$TM_SELECTED_TEXT}&lt;/legend&gt;
+	
+	$0
+&lt;/fieldset&gt;" Trigger="fieldset" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Flash movie" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;object width=&quot;${1:640}&quot; height=&quot;${2:480}&quot;&gt;
+	&lt;param name=&quot;movie&quot; value=&quot;${3:sample.swf}&quot; /&gt;
+	&lt;embed src=&quot;${3}&quot; width=&quot;${1}&quot; height=&quot;${2}&quot; /&gt;
+&lt;/object&gt;
+" Trigger="flash" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="form" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;form name=&quot;${1:name}&quot; action=&quot;${2:html_form_submit.asp}&quot; method=&quot;${3:get}&quot;&gt;\t${0:${SelText}}
+&lt;input type=&quot;submit&quot;&gt;&lt;input type=&quot;reset&quot;&gt;
+&lt;/form&gt;
+" Trigger="form" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="h1" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;h1&gt;${0:${SelText}}&lt;/h1&gt;
+" Trigger="h1" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="h2" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;h2&gt;${0:${SelText}}&lt;/h2&gt;" Trigger="h2" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="h3" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;h3&gt;${0:${SelText}}&lt;/h3&gt;" Trigger="h3" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="h4" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;h4&gt;${0:${SelText}}&lt;/h4&gt;" Trigger="h4" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="h5" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;h5&gt;${0:${SelText}}&lt;/h5&gt;" Trigger="h5" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="h6" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;h6&gt;${0:${SelText}}&lt;/h6&gt;" Trigger="h6" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="head" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;head&gt;
+\t&lt;meta http-equiv=&quot;Content-type&quot; content=&quot;text/html; charset=${Charset}&quot; /&gt;
+\t&lt;title&gt;${2:title}&lt;/title&gt;
+\t${0}
+&lt;/head&gt;
+" Trigger="head" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="hr" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;hr /&gt;" Trigger="hr" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="html" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;html${1: xmlns=&quot;http://www.w3.org/1999/xhtml&quot;}&gt;
+${0:${SelText}}
+&lt;/html&gt;
+" Trigger="html" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Hyperlink" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;a href=&quot;${1:`# s = clipboardData.getData(&quot;&quot;,0); Interface.write( s );`}&quot;${2: target=&quot;${3:_blank}&quot;}&gt;${4:${SelText:default}}&lt;/a&gt;$0" Trigger="a" Tip="" ShortcutKey="66" ShortcutVirt="11"/>
+		<Item Name="IE Conditional Comment: Internet Explorer" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;!--[if IE]&gt;${1:${TM_SELECTED_TEXT:       IE Conditional Comment: Internet Explorer          }}&lt;![endif]--&gt;$0" Trigger="!" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="IE Conditional Comment: Internet Explorer 5.0 only" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;!--[if IE 5.0]&gt;${1:${TM_SELECTED_TEXT:   IE Conditional Comment: Internet Explorer 5.0 only }}&lt;![endif]--&gt;$0" Trigger="!" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="IE Conditional Comment: Internet Explorer 5.5 only" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;!--[if IE 5.5000]&gt;${1:${TM_SELECTED_TEXT:   IE Conditional Comment: Internet Explorer 5.5 only }}&lt;![endif]--&gt;$0" Trigger="!" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="IE Conditional Comment: Internet Explorer 5.x" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;!--[if lt IE 6]&gt;${1:${TM_SELECTED_TEXT:  IE Conditional Comment: Internet Explorer 5.x      }}&lt;![endif]--&gt;$0" Trigger="!" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="IE Conditional Comment: Internet Explorer 6 and below" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;!--[if lte IE 6]&gt;${1:${TM_SELECTED_TEXT: IE Conditional Comment: Internet Explorer 6 and below }}&lt;![endif]--&gt;$0" Trigger="!" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="IE Conditional Comment: Internet Explorer 6 only" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;!--[if IE 6]&gt;${1:${TM_SELECTED_TEXT:     IE Conditional Comment: Internet Explorer 6 only   }}&lt;![endif]--&gt;$0" Trigger="!" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="IE Conditional Comment: Internet Explorer 7 and above" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;!--[if gte IE 7]&gt;${1:${TM_SELECTED_TEXT: IE Conditional Comment: Internet Explorer 7 and above }}&lt;![endif]--&gt;$0" Trigger="!" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="IE Conditional Comment: NOT Internet Explorer" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;!--[if !IE]&gt;&lt;!--&gt;${1:${TM_SELECTED_TEXT:  IE Conditional Comment: NOT Internet Explorer      }}&lt;!-- &lt;![endif]--&gt;$0" Trigger="!" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="img" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;img border=&quot;0&quot; src=&quot;${1:image.gif}&quot; width=&quot;${2:16}&quot; height=&quot;${3:16}&quot; /&gt;${0}" Trigger="img" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="input" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;label for=&quot;${2:${1/[[:alpha:]]+|( )/(?1:_:\L$0)/g}}&quot;&gt;$1&lt;/label&gt;&lt;input type=&quot;${3:text/submit/hidden/button}&quot; name=&quot;${4:$2}&quot; value=&quot;$5&quot;${6: id=&quot;${7:$2}&quot;}${TM_XHTML}&gt;" Trigger="input" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="link" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;link rel=&quot;${1:stylesheet}&quot; href=&quot;${2:/css/master.css}&quot; type=&quot;text/css&quot; media=&quot;${3:screen}&quot; title=&quot;${4:no title}&quot; charset=&quot;${5:utf-8}&quot;${TM_XHTML}&gt;" Trigger="link" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="meta" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;meta name=&quot;${1:name}&quot; content=&quot;${2:content}&quot;${TM_XHTML}&gt;" Trigger="meta" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Non-Breaking Space" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&amp;nbsp;" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Numbering" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;ol&gt;
+\t&lt;li&gt;${0:${SelText}}&lt;/li&gt;
+&lt;/ol&gt;
+" Trigger="ol" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="option" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;option${1: value=&quot;${2:option}&quot;}&gt;${3:$2}&lt;/option&gt;" Trigger="opt" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="p" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;p&gt;${0:${SelText}}&lt;/p&gt;" Trigger="p" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Paste HTML" Flags="8" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="str = clipboardData.getData(&quot;html&quot;);
+document.selection.Text = str;
+" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="QuickTime movie" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;object width=&quot;${1:640}&quot; height=&quot;${2:480}&quot;
+	classid=&quot;clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B&quot;
+	codebase=&quot;http://www.apple.com/qtactivex/qtplugin.cab&quot;&gt;
+	&lt;param name=&quot;src&quot; value=&quot;${3:sample.mov}&quot; /&gt;
+	&lt;param name=&quot;autoplay&quot; value=&quot;${4:true}&quot; /&gt;
+	&lt;param name=&quot;controller&quot; value=&quot;${5:false}&quot; /&gt;&lt;embed src=&quot;${3}&quot; width=&quot;${1}&quot; height=&quot;${2}&quot;
+	autoplay=&quot;${4}&quot; controller=&quot;${5}&quot;
+	pluginspage=&quot;http://www.apple.com/quicktime/download/&quot; /&gt;
+&lt;/object&gt;
+${0}" Trigger="movie" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Script" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;
+	$0
+&lt;/script&gt;" Trigger="script" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Script With External Source" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;script src=&quot;$1&quot; type=&quot;text/javascript&quot; charset=&quot;${3:utf-8}&quot;&gt;&lt;/script&gt;
+$0
+" Trigger="scriptsrc" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="select" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;select name=&quot;${1:some_name}&quot; id=&quot;${2:$1}&quot;${3:${4: multiple}${5: onchange=&quot;${6:}&quot;}${7: size=&quot;${8:1}&quot;}}&gt;
+	&lt;option${9: value=&quot;${10:option1}&quot;}&gt;${11:$10}&lt;/option&gt;
+	&lt;option${12: value=&quot;${13:option2}&quot;}&gt;${14:$13}&lt;/option&gt;${15:}
+	$0
+&lt;/select&gt;" Trigger="select" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="strong" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;strong&gt;${0:${SelText}}&lt;/strong&gt;" Trigger="" Tip="" ShortcutKey="66" ShortcutVirt="11"/>
+		<Item Name="style" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;style type=&quot;text/css&quot; media=&quot;screen&quot;&gt;
+	$0
+&lt;/style&gt;" Trigger="style" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="table" Flags="12" ConfigEdit="JavaScript for EmEditor" ConfigMacro="" ConfigsAssociate="\" Text="nRows = prompt( &quot;Rows&quot;, &quot;3&quot; );
+if( nRows &gt; 0 ){
+	nColumns = prompt( &quot;Columns&quot;, &quot;2&quot; );
+	if( nColumns &gt; 0 ){
+		document.writeln( &quot;&lt;table&gt;&quot; );
+		for( r = 0; r != nRows; r++ ){
+			document.writeln( &quot;&lt;tr&gt;&quot; );
+			for( c = 0; c != nColumns; c++ ){
+				document.writeln( &quot;&lt;td&gt;&lt;/td&gt;&quot; );
+			}
+			document.writeln( &quot;&lt;/tr&gt;&quot; );
+		}
+		document.writeln( &quot;&lt;/table&gt;&quot; );
+		
+	}
+}
+" Trigger="table" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="TagComplete" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;${1:p}&gt;${2:${SelText}}&lt;/$1&gt;$0" Trigger="" Tip="" ShortcutKey="188" ShortcutVirt="15"/>
+		<Item Name="textarea" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;textarea name=&quot;${1:Name}&quot; rows=&quot;${2:8}&quot; cols=&quot;${3:40}&quot;&gt;$0&lt;/textarea&gt;" Trigger="textarea" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="title" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;title&gt;${1:${TM_FILENAME/((.+)\..*)?/(?2:$2:Page Title)/}}&lt;/title&gt;" Trigger="title" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="u" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;u&gt;${0:${SelText}}&lt;/u&gt;" Trigger="u" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Unescape selection" Flags="8" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="document.selection.Text = unescape( document.selection.Text );
+" Trigger="" Tip="" ShortcutKey="53" ShortcutVirt="15"/>
+		<Item Name="Wrap Selection in Open/Close Tag" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;${1:p}&gt;${SelText}&lt;/${1/\s.*//}&gt;" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+	</Folder>
+	<Folder Name="Java" Flags="3" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\Java\">
+		<Item Name="abstract" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="abstract" Trigger="ab" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="assert" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="assert ${1:test}${2/(.+)/(?1: \: &quot;)/}${2:Failure message}${2/(.+)/(?1:&quot;)/};$0" Trigger="as" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="break" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="break;" Trigger="br" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="case" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="case $1:
+	$2
+$0" Trigger="cs" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="catch" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="catch (${1:Exception} ${2:e}) $0" Trigger="ca" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="class" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="class ${1:${TM_FILENAME/(.*?)(\..+)?/(?2:$1:untitled)/}} ${2:extends ${3:Parent} }${4:implements ${5:Interface} }$0" Trigger="cl" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="constant" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="static public final ${1:String} ${2:var} = $3;$0" Trigger="co" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="constant string" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="static public final String ${1:var} = &quot;$2&quot;;$0" Trigger="cos" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="default" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="default:
+	$0" Trigger="de" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="else" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="else $0" Trigger="el" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="else if" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="else if ($1) $0" Trigger="elif" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="final" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="final" Trigger="fi" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="for" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="for ($1; $2; $3) $0" Trigger="for" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="for (each)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="for ($1 : $2) $0" Trigger="fore" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="if" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="if ($1) $0" Trigger="if" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="import" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="import" Trigger="im" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="import junit.framework.TestCase;" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="import junit.framework.TestCase;
+$0" Trigger="imt" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="interface" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="interface ${1:${TM_FILENAME/(.*?)(\..+)/$1/}} ${2:extends ${3:Parent} }$0" Trigger="in" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="java.beans." Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="java.beans." Trigger="j.b" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="java.io." Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="java.io." Trigger="j.i" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="java.math." Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="java.math." Trigger="j.m" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="java.net." Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="java.net." Trigger="j.n" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="java.util." Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="java.util." Trigger="j.u" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="method" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${1:void} ${2:method}($3) ${4:throws $5}" Trigger="m" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="method (main)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="public static void main (String [] args)
+{
+	${0:/* code */}
+}" Trigger="main" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="next line {" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="{
+	$0
+}" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="print" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="System.out.print($1);$0" Trigger="p" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="println" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="System.out.println($1);$0" Trigger="pl" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="private" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="private" Trigger="pr" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="protected" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="protected" Trigger="po" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="public" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="public" Trigger="pu" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="return" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="return" Trigger="re" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="same line {" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="{
+	$0
+}" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="static" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="static" Trigger="st" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="switch" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="switch ($1) $0" Trigger="sw" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="synchronized" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="synchronized" Trigger="sy" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="test" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="public void test${1:Name}() throws Exception $0" Trigger="t" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="test case" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="public class ${1:${TM_FILENAME/(.*?)(\..+)/$1/}} extends ${2:TestCase} $0" Trigger="tc" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="throw" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="throw $0" Trigger="th" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="variable" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${1:String} ${2:var}${3: = ${0:null}};" Trigger="v" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="while" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="while ($1) $0" Trigger="wh" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+	</Folder>
+	<Folder Name="JavaScript" Flags="3" ConfigEdit="JavaScript" ConfigMacro="" ConfigsAssociate="\JavaScript\JavaScript for EmEditor\">
+		<Item Name="Anonymous Function" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="function($1) {${0:${SelText}}};" Trigger="f" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="for (…) {…}" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="for (var ${20:i}=0; ${20:i} &lt; ${1:Things}.length; ${20:i}++) {
+	${100:${1:Things}[${20:i}]}$0
+};" Trigger="for" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="for (…) {…} (Improved Native For-Loop)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="for (var ${20:i} = ${1:Things}.length - 1; ${20:i} &gt;= 0; ${20:i}--){
+	${100:${1:Things}[${20:i}]}$0
+};" Trigger="for" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Function" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="function ${1:function_name} (${2:argument}) {
+	${0:// body...}
+}" Trigger="fun" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Get Elements" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="getElement${1/(T)|.*/(?1:s)/}By${1:T}${1/(T)|(I)|.*/(?1:agName)(?2:d)/}('$2')" Trigger="get" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="if" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="if (${1:true}) {${0:${SelText}}};" Trigger="if" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="if … else" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="if (${1:true}) {${0:${SelText}}} else{};" Trigger="ife" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Object key — key: &quot;value&quot;" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${1:key}: ${2:&quot;${3:value}&quot;}${4:, }" Trigger=":" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Object Method" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${1:method_name}: function(${3:attribute}){
+	$0
+}${10:,}" Trigger=":f" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Object Method String" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="'${1:${2:#thing}:${3:click}}': function(element){
+	$0
+}${10:,}" Trigger="'':f" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Object Value JS" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${1:value_name}:${0:value}," Trigger=":," Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Prototype" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${1:class_name}.prototype.${2:method_name} = function(${3:first_argument}) {
+	${0:// body...}
+};" Trigger="proto" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="setTimeout function" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="setTimeout(function() {$0}${2:}, ${1:10});" Trigger="timeout" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="with" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="with( ${1:object} ){
+	${0}
+}
+" Trigger="with" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+	</Folder>
+	<Folder Name="JavaScript for EmEditor" Flags="3" ConfigEdit="JavaScript for EmEditor" ConfigMacro="" ConfigsAssociate="\JavaScript for EmEditor\">
+		<Item Name="Create Object" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${1:WshShell} = new ActiveXObject( &quot;${2:WScript.Shell}&quot; );
+${0}
+" Trigger="obj" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="MsgBox" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="WshShell = new ActiveXObject( &quot;WScript.Shell&quot; );
+n = WshShell.Popup( &quot;${1:Continue?}&quot;, ${2:SecondsToWait}, ${3:&quot;title&quot;}, ${4:type} );
+${0}
+" Trigger="msgbox" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Run External Application" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="WshShell = new ActiveXObject( &quot;WScript.Shell&quot; );
+WshShell.Run( &quot;${1:calc.exe}&quot; );
+${0}
+" Trigger="run" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+	</Folder>
+	<Folder Name="Pascal" Flags="3" ConfigEdit="Pascal" ConfigMacro="" ConfigsAssociate="\Pascal\">
+		<Item Name="begin … end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="begin
+	$0
+end;" Trigger="begin" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="class … end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="T${1:ClassName} = class
+	$0
+end;" Trigger="class" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="constructor, destructor" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="constructor Create${1:()};
+destructor Destroy; override;$0" Trigger="constructor" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="for … end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="for ${1:i} := ${2:0} to ${3:max} do begin
+	$0
+end;" Trigger="for" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="if … end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="if ${1} then begin
+	$0
+end;" Trigger="if" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Newline" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="#13#10" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="property" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="property ${1:PropertyName}: ${2:WideString} read ${3:F}${1} write ${4:F}${1};$0" Trigger="prop" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="try … finally" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="try
+	$0
+finally
+	$1
+end;" Trigger="try" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="unit … implementation … end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="unit ${1:unit_name};
+
+interface
+
+uses
+	SysUtils${2:, Classes};
+
+implementation
+
+$0
+
+end." Trigger="unit" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+	</Folder>
+	<Folder Name="Perl" Flags="3" ConfigEdit="Perl" ConfigMacro="" ConfigsAssociate="\Perl\PerlScript\">
+		<Item Name="Conditional" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="if ($1) {
+	${2:# body...}
+}" Trigger="if" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Conditional" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="unless ($1) {
+	${2:# body...}
+}" Trigger="unless" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Conditional if..else" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="if ($1) {
+	${2:# body...}
+} else {
+	${3:# else...}
+}" Trigger="ife" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Conditional if..elsif..else" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="if ($1) {
+	${2:# body...}
+} elsif ($3) {
+	${4:# elsif...}
+} else {
+	${5:# else...}
+}" Trigger="ifee" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Conditional One-line" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${1:expression} unless ${2:condition};" Trigger="xunless" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Conditional One-line" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${1:expression} if ${2:condition};" Trigger="xif" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="do" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="do ( ${0} ) {
+} until ;
+" Trigger="do" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="else" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="else {
+	${0}
+}
+" Trigger="else" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="elsif" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="elsif( ${0} ) {
+}
+" Trigger="elsif" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Function" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="sub ${1:function_name} {
+	${2:# body...}
+}" Trigger="sub" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Hash Pointer" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="=&gt;" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Loop" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="for (my \$${1:var} = 0; \$$1 &lt; ${2:expression}; \$$1++) {
+	${3:# body...}
+}" Trigger="for" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Loop" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="foreach ${1:my \$${2:x}} (@${3:array}) {
+	${4:# body...}
+}" Trigger="fore" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Loop" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="while ($1) {
+	${2:# body...}
+}" Trigger="while" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Loop One-line" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${1:expression} foreach @${2:array};" Trigger="xfore" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Loop One-line" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${1:expression} while ${2:condition};" Trigger="xwhile" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="map" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="map { ${0} };
+" Trigger="map" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Package" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="package ${1:ClassName};
+
+${2:use base qw(${3:ParentClass});
+
+}sub new {
+	my \$class = shift;
+	\$class = ref \$class if ref \$class;
+	my \$self = bless {}, \$class;
+	\$self;
+}
+
+1;" Trigger="class" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Read File" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="my \$${1:var};
+{ local \$/ = undef; local *FILE; open FILE, &quot;&lt;${2:file}&quot;; \$$1 = &lt;FILE&gt;; close FILE }" Trigger="slurp" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Test" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="#!/usr/bin/perl -w
+
+use strict;
+use Test::More tests =&gt; ${1:1};
+use ${2:ModuleName};
+
+ok(${3:assertion});" Trigger="test" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Try/Except" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="eval {
+	${1:# do something risky...}
+};
+if (\$@) {
+	${2:# handle failure...}
+}" Trigger="eval" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="until" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="until ( ${0} ) {
+}
+" Trigger="until" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+	</Folder>
+	<Folder Name="PHP" Flags="3" ConfigEdit="PHP" ConfigMacro="" ConfigsAssociate="\PHP\">
+		<Item Name="$… = array (…)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\$${1:arrayName} = array('$2' =&gt; $3${4:,} $0);" Trigger="array" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="$GLOBALS['…']" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\$GLOBALS['${1:variable}']${2: = }${3:something}${4:;}$0" Trigger="globals" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="case …" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="case '${1:variable}':
+	${0:# code...}
+	break;" Trigger="case" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Class" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="/**
+ * ${3:undocumented class}
+ *
+ * @package ${4:default}
+ * @author ${PHPDOC_AUTHOR:$TM_FULLNAME}
+ **/
+$1class $2
+{$0
+} // END $1class $2" Trigger="doc_c" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="class …" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="/**
+* $1
+*/
+class ${2:ClassName}${3: extends ${4:AnotherClass}}
+{
+	$5
+	function ${6:__construct}(${7:argument})
+	{
+		${0:# code...}
+	}
+}" Trigger="class" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Class Variable" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="/**
+ * ${3:undocumented class variable}
+ *
+ * @var ${4:string}
+ **/
+${1:var} \$$2;$0" Trigger="doc_v" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Constant Definition" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="/**
+ * ${3:undocumented constant}
+ **/
+define($1, $2);$0" Trigger="doc_d" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Continue Block Comment" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${TM_CURRENT_LINE/(.*\*\/$)|.*?(\/\*(?!.*\*\/)).*|.*/(?1:
+:
+(?2: )* )/}" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="COOKIE['…']" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\$_COOKIE['${1:variable}']" Trigger="$_" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="define(…, …)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="define('$1', ${2:'$3'});
+$0" Trigger="def" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="defined(…)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="$1defined('$2')$0" Trigger="def?" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="do … while …" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="do {
+	${0:# code...}
+} while (${1:$a &lt;= 10});" Trigger="do" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="echo &quot;…&quot;" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="echo &quot;${1:string}&quot;${0};" Trigger="echo" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="else …" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="else {
+	${0:# code...}
+}" Trigger="else" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="elseif …" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="elseif (${1:condition}) {
+	${0:# code...}
+}" Trigger="elseif" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="ENV['…']" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\$_ENV['${1:variable}']" Trigger="$_" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="FILES['…']" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\$_FILES['${1:variable}']" Trigger="$_" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="for …" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="for (\$${1:i}=${2:0}; \$${1:i} &lt; $3; \$${1:i}++) { 
+	${0:# code...}
+}" Trigger="for" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="foreach …" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="foreach (\$${1:variable} as \$${2:key}${3: =&gt; \$${4:value}}) {
+	${0:# code...}
+}" Trigger="foreach" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Function" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="/**
+ * ${4:undocumented function}
+ *
+ * @return ${5:void}
+ * @author ${PHPDOC_AUTHOR:$TM_FULLNAME}$6
+ **/
+$1function $2($3)
+{$0
+}" Trigger="doc_f" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="function __construct" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="function __construct(${1:\$${2:foo}${3: = ${4:null}}}) {
+	${2/.+/$this-&gt;$0 = \$$0;/}$0
+}" Trigger="con" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="function …" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${1:public }function ${2:FunctionName}(${3:\$${4:value}${5:=''}})
+{
+	${0:# code...}
+}" Trigger="fun" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Function Signature" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="/**
+ * ${4:undocumented function}
+ *
+ * @return ${5:void}
+ * @author ${PHPDOC_AUTHOR:$TM_FULLNAME}$6
+ **/
+$1function $2($3);$0" Trigger="doc_s" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="GET['…']" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\$_GET['${1:variable}']" Trigger="$_" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Header" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="/**
+ * $1
+ *
+ * @author ${PHPDOC_AUTHOR:$TM_FULLNAME}
+ * @version \$Id\$
+ * @copyright `echo $TM_ORGANIZATION_NAME`, `date +&quot;%e %B, %Y&quot; | sed 's/^ //'`
+ * @package ${3:default}
+ **/
+
+/**
+ * Define DocBlock
+ **/" Trigger="doc_h" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="if …" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="if (${1:condition}) {
+	${0:# code...}
+}" Trigger="if" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="if … else …" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="if (${1:condition}) {
+	${2:# code...}
+} else {
+	${3:# code...}
+}
+$0" Trigger="ifelse" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="include …" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="include '${1:file}';$0" Trigger="incl" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Include TextMate Support Script" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="// === TextMate error handling ===
+`if [[ &quot;$TM_BUNDLE_SUPPORT&quot; == &quot;$HOME&quot;* ]]; then
+  echo &quot;// NOTE: Your PHP bundle is checked out to your home directory.&quot;
+  echo &quot;// If the webserver process does not have permission to access&quot;
+  echo &quot;// the included file, you can replace&quot;
+  echo &quot;// ‘${TM_BUNDLE_SUPPORT%Bundles*}’ with&quot;
+  echo &quot;// ‘$(find_app TextMate.app)/Contents/SharedSupport/’.&quot;
+fi`
+@include_once '$TM_BUNDLE_SUPPORT/textmate.php';" Trigger="tmphp" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="include_once …" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="include_once '${1:file}';$0" Trigger="incl1" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Interface" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="/**
+ * ${2:undocumented class}
+ *
+ * @package ${3:default}
+ * @author ${PHPDOC_AUTHOR:$TM_FULLNAME}
+ **/
+interface $1
+{$0
+} // END interface $1" Trigger="doc_i" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="PHP Error Catching JavaScript" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="`cat &quot;$TM_BUNDLE_SUPPORT/textmate_error_handler.html&quot; | grep -E -v '^[ \t\s]*\/\/' | sed 's/\(.*\)[ \t]*--.*/\1/' | tr -s ' \n\t' ' ' | sed 's/.\{80\}[{};]/&amp;\
+/g'`" Trigger="phperr" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="POST['…']" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\$_POST['${1:variable}']" Trigger="$_" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="REQUEST['…']" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\$_REQUEST['${1:variable}']" Trigger="$_" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="require …" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="require '${1:file}';$0" Trigger="req" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="require_once …" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="require_once '${1:file}';$0" Trigger="req1" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="return" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="return$1;$0" Trigger="ret" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="return false" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="return false;$0" Trigger="ret0" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="return true" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="return true;$0" Trigger="ret1" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="SERVER['…']" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\$_SERVER['${1:variable}']" Trigger="$_" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="SESSION['…']" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\$_SESSION['${1:variable}']" Trigger="$_" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Special: Return Between PHP Tags" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="$0" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Start Docblock" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="/**
+ * $0
+ */" Trigger="/**" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="switch …" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="switch (${1:variable}) {
+	case '${2:value}':
+		${3:# code...}
+		break;
+	$0
+	default:
+		${4:# code...}
+		break;
+}" Trigger="switch" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Throw Exception" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="throw new $1Exception(${2:&quot;${3:Error Processing Request}&quot;}${4:, ${5:1}});
+$0" Trigger="throw" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="while …" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="while (${1:$a &lt;= 10}) {
+	${0:# code...}
+}" Trigger="while" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Wrap in try { … } catch (…) { … }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${TM_SELECTED_TEXT/([\t ]*).*/$1/m}try {
+	${3:${TM_SELECTED_TEXT/(\A.*)|(.+)|\n\z/(?1:$0:(?2:\t$0))/g}}
+${TM_SELECTED_TEXT/([\t ]*).*/$1/m}} catch (${1:Exception} ${2:\$e}) {
+${TM_SELECTED_TEXT/([\t ]*).*/$1/m}	$0
+${TM_SELECTED_TEXT/([\t ]*).*/$1/m}}" Trigger="try" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+	</Folder>
+	<Folder Name="Python" Flags="3" ConfigEdit="Python" ConfigMacro="" ConfigsAssociate="\Python\">
+		<Item Name="__magic__" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="__${1:init}__" Trigger="__" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="if __name__ == '__main__'" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="if __name__ == '__main__':
+	${1:main()}$0" Trigger="ifmain" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Inside Class Def: Insert (..):" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="(${0:object}):" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Inside Function Def: Insert (..):" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="($0):" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Inside String: Insert &quot;…&quot;" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&quot;$0&quot;" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Inside String: Insert '…'" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="'$0'" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="New Class" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="class ${1:ClassName}(${2:object}):
+	${3/.+/&quot;&quot;&quot;/}${3:docstring for $1}${3/.+/&quot;&quot;&quot;\n/}${3/.+/\t/}def __init__(self${4/([^,])?(.*)/(?1:, )/}${4:arg}):
+		${5:super($1, self).__init__()}
+${4/(\A\s*,\s*\Z)|,?\s*([A-Za-z_][a-zA-Z0-9_]*)\s*(=[^,]*)?(,\s*|$)/(?2:\t\tself.$2 = $2\n)/g}		$0" Trigger="class" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="New Function" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="def ${1:fname}($2):
+	${0:pass}" Trigger="def" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="New Method" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="def ${1:mname}(self${2/([^,])?.*/(?1:, )/}${2:arg}):
+	${3:pass}" Trigger="defs" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="New Property" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="def ${1:foo}():
+    doc = &quot;${2:The $1 property.}&quot;
+    def fget(self):
+        ${3:return self._$1}
+    def fset(self, value):
+        ${4:self._$1 = value}
+    def fdel(self):
+        ${5:del self._$1}
+    return locals()
+$1 = property(**$1())$0" Trigger="property" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="self" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="self." Trigger="." Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Try/Except" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="try:
+	${1:pass}
+except ${2:Exception}, ${3:e}:
+	${4:raise $3}" Trigger="try" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Try/Except/Else" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="try:
+	${1:pass}
+except ${2:Exception}, ${3:e}:
+	${4:raise $3}
+else:
+	${5:pass}" Trigger="try" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Try/Except/Else/Finally" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="try:
+	${1:pass}
+except${2: ${3:Exception}, ${4:e}}:
+	${5:raise}
+else:
+	${6:pass}
+finally:
+	${7:pass}" Trigger="try" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Try/Except/Finally" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="try:
+	${1:pass}
+except ${2:Exception}, ${3:e}:
+	${4:raise $3}
+finally:
+	${5:pass}" Trigger="try" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+	</Folder>
+	<Folder Name="Ruby" Flags="3" ConfigEdit="Ruby" ConfigMacro="" ConfigsAssociate="\Ruby\">
+		<Item Name="#!/usr/bin/env ruby -wKU" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="#!/usr/bin/env ruby -wKU" Trigger="rb" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name=":yields:" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text=":yields: ${0:arguments}" Trigger="y" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="__END__" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="__END__" Trigger="end" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Add ‘# =&gt;’ Marker" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="# =&gt;" Trigger="#" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="alias_method .." Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="alias_method :${1:new_name}, :${0:old_name}" Trigger="am" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="application { .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="if __FILE__ == \$PROGRAM_NAME
+	$0
+end" Trigger="app" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="assert(..)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="assert`snippet_paren.rb`${1:test}, &quot;${0:Failure message.}&quot;`snippet_paren.rb end`" Trigger="as" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="assert_equal(..)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="assert_equal`snippet_paren.rb`${1:expected}, ${0:actual}`snippet_paren.rb end`" Trigger="ase" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="assert_in_delta(..)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="assert_in_delta`snippet_paren.rb`${1:expected_float}, ${2:actual_float}, ${0:2 ** -20}`snippet_paren.rb end`" Trigger="asid" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="assert_instance_of(..)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="assert_instance_of`snippet_paren.rb`${1:ExpectedClass}, ${0:actual_instance}`snippet_paren.rb end`" Trigger="asio" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="assert_kind_of(..)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="assert_kind_of`snippet_paren.rb`${1:ExpectedKind}, ${0:actual_instance}`snippet_paren.rb end`" Trigger="asko" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="assert_match(..)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="assert_match`snippet_paren.rb`/${1:expected_pattern}/, ${0:actual_string}`snippet_paren.rb end`" Trigger="asm" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="assert_nil(..)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="assert_nil`snippet_paren.rb`${0:instance}`snippet_paren.rb end`" Trigger="asn" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="assert_no_match(..)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="assert_no_match`snippet_paren.rb`/${1:unexpected_pattern}/, ${0:actual_string}`snippet_paren.rb end`" Trigger="asnm" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="assert_not_equal(..)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="assert_not_equal`snippet_paren.rb`${1:unexpected}, ${0:actual}`snippet_paren.rb end`" Trigger="asne" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="assert_not_nil(..)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="assert_not_nil`snippet_paren.rb`${0:instance}`snippet_paren.rb end`" Trigger="asnn" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="assert_not_same(..)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="assert_not_same`snippet_paren.rb`${1:unexpected}, ${0:actual}`snippet_paren.rb end`" Trigger="asns" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="assert_nothing_raised(..) { .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="assert_nothing_raised(${1:Exception}) { $0 }" Trigger="asnr" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="assert_nothing_thrown { .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="assert_nothing_thrown { $0 }" Trigger="asnt" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="assert_operator(..)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="assert_operator`snippet_paren.rb`${1:left}, :${2:operator}, ${0:right}`snippet_paren.rb end`" Trigger="aso" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="assert_raise(..) { .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="assert_raise(${1:Exception}) { $0 }" Trigger="asr" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="assert_respond_to(..)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="assert_respond_to`snippet_paren.rb`${1:object}, :${0:method}`snippet_paren.rb end`" Trigger="asrt" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="assert_same(..)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="assert_same`snippet_paren.rb`${1:expected}, ${0:actual}`snippet_paren.rb end`" Trigger="ass" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="assert_send(..)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="assert_send`snippet_paren.rb`[${1:object}, :${2:message}, ${0:args}]`snippet_paren.rb end`" Trigger="ass" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="assert_throws(..) { .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="assert_throws(:${1:expected}) { $0 }" Trigger="ast" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="attr_accessor .." Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="attr_accessor :${0:attr_names}" Trigger="rw" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="attr_reader .." Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="attr_reader :${0:attr_names}" Trigger="r" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="attr_writer .." Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="attr_writer :${0:attr_names}" Trigger="w" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="begin … rescue … end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${TM_SELECTED_TEXT/([\t ]*).*/$1/m}begin
+	${3:${TM_SELECTED_TEXT/(\A.*)|(.+)|\n\z/(?1:$0:(?2:\t$0))/g}}
+${TM_SELECTED_TEXT/([\t ]*).*/$1/m}rescue ${1:Exception}${2/.+/ =&gt; /}${2:e}
+${TM_SELECTED_TEXT/([\t ]*).*/$1/m}	$0
+${TM_SELECTED_TEXT/([\t ]*).*/$1/m}end" Trigger="begin" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Benchmark.bmbm do .. end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="TESTS = ${1:10_000}
+Benchmark.bmbm do |results|
+  $0
+end" Trigger="bm-" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="case … end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="case ${1:object}
+when ${2:condition}
+	$0
+end" Trigger="case" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="class .. &lt; DelegateClass .. initialize .. end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="class ${1:${TM_FILENAME/(?:\A|_)([A-Za-z0-9]+)(?:\.rb)?/(?2::\u$1)/g}} &lt; DelegateClass(${2:ParentClass})
+	def initialize${3/(^.*?\S.*)|.*/(?1:\()/}${3:args}${3/(^.*?\S.*)|.*/(?1:\))/}
+		super(${4:del_obj})
+		
+		$0
+	end
+	
+	
+end" Trigger="cla-" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="class .. &lt; ParentClass .. initialize .. end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="class ${1:${TM_FILENAME/(?:\A|_)([A-Za-z0-9]+)(?:\.rb)?/(?2::\u$1)/g}} &lt; ${2:ParentClass}
+	def initialize${3/(^.*?\S.*)|.*/(?1:\()/}${3:args}${3/(^.*?\S.*)|.*/(?1:\))/}
+		$0
+	end
+	
+	
+end" Trigger="cla" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="class .. &lt; Test::Unit::TestCase .. end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="require &quot;test/unit&quot;
+
+require &quot;${1:library_file_name}&quot;
+
+class Test${2:${1/([\w&amp;&amp;[^_]]+)|./\u$1/g}} &lt; Test::Unit::TestCase
+	def test_${3:case_name}
+		$0
+	end
+end" Trigger="tc" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="class .. end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="class ${1:${TM_FILENAME/(?:\A|_)([A-Za-z0-9]+)(?:\.rb)?/(?2::\u$1)/g}}
+	$0
+end" Trigger="cla" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="class .. initialize .. end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="class ${1:${TM_FILENAME/(?:\A|_)([A-Za-z0-9]+)(?:\.rb)?/(?2::\u$1)/g}}
+	def initialize${2/(^.*?\S.*)|.*/(?1:\()/}${2:args}${2/(^.*?\S.*)|.*/(?1:\))/}
+		$0
+	end
+	
+	
+end" Trigger="cla" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="class &lt;&lt; self .. end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="class &lt;&lt; ${1:self}
+	$0
+end" Trigger="cla" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="class BlankSlate .. initialize .. end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="class ${1:BlankSlate}
+	instance_methods.each { |meth| undef_method(meth) unless meth =~ /\A__/ }
+	
+	def initialize${2/(^.*?\S.*)|.*/(?1:\()/}${2:args}${2/(^.*?\S.*)|.*/(?1:\))/}
+		@${3:delegate} = ${4:delegate_object}
+		
+		$0
+	end
+	
+	def method_missing(meth, *args, &amp;block)
+		@${3:delegate}.send(meth, *args, &amp;block)
+	end
+	
+	
+end" Trigger="cla" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="class_from_name()" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="split(&quot;::&quot;).inject(Object) { |par, const| par.const_get(const) }" Trigger="clafn" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="classify { |e| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="classify { |${1:e}| $0 }" Trigger="cl" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="ClassName = Struct .. do .. end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${1:${TM_FILENAME/(?:\A|_)([A-Za-z0-9]+)(?:\.rb)?/(?2::\u$1)/g}} = Struct.new(:${2:attr_names}) do
+	def ${3:method_name}
+		$0
+	end
+	
+	
+end" Trigger="cla" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="collect { |e| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="collect { |${1:e}| $0 }" Trigger="col" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="deep_copy(..)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="Marshal.load(Marshal.dump(${0:obj_to_copy}))" Trigger="deec" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="def … end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="def ${1:method_name}
+	$0
+end" Trigger="def" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="def method_missing .. end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="def method_missing(meth, *args, &amp;blk)
+	$0
+end" Trigger="defmm" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="def self .. end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="def self.${1:class_method_name}
+	$0
+end" Trigger="defs" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="def test_ .. end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="def test_${1:case_name}
+	$0
+end" Trigger="deft" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="def_delegator .." Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="def_delegator :${1:@del_obj}, :${2:del_meth}, :${3:new_name}" Trigger="defd" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="def_delegators .." Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="def_delegators :${1:@del_obj}, :${0:del_methods}" Trigger="defds" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="delete_if { |e| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="delete_if { |${1:e}| $0 }" Trigger="deli" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="detect { |e| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="detect { |${1:e}| $0 }" Trigger="det" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Dir.glob(&quot;..&quot;) { |file| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="Dir.glob(${1:&quot;${2:dir/glob/*}&quot;}) { |${3:file}| $0 }" Trigger="Dir" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Dir[&quot;..&quot;]" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="Dir[${1:&quot;${2:glob/**/*.rb}&quot;}]" Trigger="Dir" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="directory()" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="File.dirname(__FILE__)" Trigger="dir" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="each { |e| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="each { |${1:e}| $0 }" Trigger="ea" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="each_byte { |byte| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="each_byte { |${1:byte}| $0 }" Trigger="eab" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="each_char { |chr| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="each_char { |${1:chr}| $0 }" Trigger="eac-" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="each_cons(..) { |group| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="each_cons(${1:2}) { |${2:group}| $0 }" Trigger="eac-" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="each_index { |i| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="each_index { |${1:i}| $0 }" Trigger="eai" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="each_key { |key| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="each_key { |${1:key}| $0 }" Trigger="eak" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="each_line { |line| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="each_line$1 { |${2:line}| $0 }" Trigger="eal" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="each_pair { |name, val| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="each_pair { |${1:name}, ${2:val}| $0 }" Trigger="eap" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="each_slice(..) { |group| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="each_slice(${1:2}) { |${2:group}| $0 }" Trigger="eas-" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="each_value { |val| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="each_value { |${1:val}| $0 }" Trigger="eav" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="each_with_index { |e, i| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="each_with_index { |${1:e}, ${2:i}| $0 }" Trigger="eawi" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="elsif ..." Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="elsif ${1:condition}
+	$0" Trigger="elsif" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Embedded Code — #{…}" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="#{${1:${SelText}}}" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="extend Forwardable" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="extend Forwardable" Trigger="Forw-" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="File.foreach (&quot;..&quot;) { |line| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="File.foreach(${1:&quot;${2:path/to/file}&quot;}) { |${3:line}| $0 }" Trigger="File" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="File.open(&quot;..&quot;) { |file| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="File.open(${1:&quot;${2:path/to/file}&quot;}${3/(^[rwab+]+$)|.*/(?1:, &quot;)/}${3:w}${3/(^[rwab+]+$)|.*/(?1:&quot;)/}) { |${4:file}| $0 }" Trigger="File" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="File.read(&quot;..&quot;)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="File.read(${1:&quot;${2:path/to/file}&quot;})" Trigger="File" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="find { |e| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="find { |${1:e}| $0 }" Trigger="fin" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="find_all { |e| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="find_all { |${1:e}| $0 }" Trigger="fina" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="flatten_once()" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="inject(Array.new) { |${1:arr}, ${2:a}| ${1:arr}.push(*${2:a}) }" Trigger="flao" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="flunk(..)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="flunk`snippet_paren.rb`&quot;${0:Failure message.}&quot;`snippet_paren.rb end`" Trigger="fl" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="grep(/pattern/) { |match| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="grep(${1:/${2:pattern}/}) { |${3:match}| $0 }" Trigger="gre" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Hash Pair — :key =&gt; &quot;value&quot;" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text=":${1:key} =&gt; ${2:&quot;${3:value}&quot;}${4:, }" Trigger=":" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Hash Pointer — =&gt;" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="=&gt;" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Hash.new { |hash, key| hash[key] = .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="Hash.new { |${1:hash}, ${2:key}| ${1:hash}[${2:key}] = $0 }" Trigger="Hash" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="if … else … end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="if ${1:condition}
+	$2
+else
+	$3
+end" Trigger="ife" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="if … end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="if ${1:condition}
+	$0
+end" Trigger="if" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="include Comparable .." Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="include Comparable
+
+def &lt;=&gt;(other)
+	$0
+end" Trigger="Comp" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="include Enumerable .." Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="include Enumerable
+
+def each(&amp;block)
+	$0
+end" Trigger="Enum" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="inject(init) { |mem, var| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="inject${1/.+/(/}${1:init}${1/.+/)/} { |${2:mem}, ${3:var}| $0 }" Trigger="inj" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Insert ERb’s &lt;% .. %&gt; or &lt;%= .. %&gt;" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;%= ${0:${SelText}} %&gt;" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="loop { .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="loop { $0 }" Trigger="loo" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="map { |e| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="map { |${1:e}| $0 }" Trigger="map" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="map_with_index { |e, i| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="enum_with_index.map { |${1:e}, ${2:i}| $0 }" Trigger="mapwi-" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Marshal.dump(.., file)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="File.open(${1:&quot;${2:path/to/file}.dump&quot;}, &quot;wb&quot;) { |${3:file}| Marshal.dump(${4:obj}, ${3:file}) }" Trigger="Md" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Marshal.load(obj)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="File.open(${1:&quot;${2:path/to/file}.dump&quot;}, &quot;rb&quot;) { |${3:file}| Marshal.load(${3:file}) }" Trigger="Ml" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="max { |a, b| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="max { |a, b| $0 }" Trigger="max" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="min { |a, b| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="min { |a, b| $0 }" Trigger="min" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="module .. ClassMethods .. end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="module ${1:${TM_FILENAME/(?:\A|_)([A-Za-z0-9]+)(?:\.rb)?/(?2::\u$1)/g}}
+	module ClassMethods
+		$0
+	end
+	
+	module InstanceMethods
+		
+	end
+	
+	def self.included(receiver)
+		receiver.extend         ClassMethods
+		receiver.send :include, InstanceMethods
+	end
+end" Trigger="mod" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="module .. end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="module ${1:${TM_FILENAME/(?:\A|_)([A-Za-z0-9]+)(?:\.rb)?/(?2::\u$1)/g}}
+	$0
+end" Trigger="mod" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="module .. module_function .. end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="module ${1:${TM_FILENAME/(?:\A|_)([A-Za-z0-9]+)(?:\.rb)?/(?2::\u$1)/g}}
+	module_function
+	
+	$0
+end" Trigger="mod" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="namespace :.. do .. end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="namespace :${1:${TM_FILENAME/\.\w+//}} do
+	$0
+end" Trigger="nam" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="New Block" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="`[[ $TM_LINE_INDEX != 0 ]] &amp;&amp; echo; echo`=begin rdoc
+	$0
+=end" Trigger="=b" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="open(&quot;path/or/url&quot;, &quot;w&quot;) { |io| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="open(${1:&quot;${2:path/or/url/or/pipe}&quot;}${3/(^[rwab+]+$)|.*/(?1:, &quot;)/}${3:w}${3/(^[rwab+]+$)|.*/(?1:&quot;)/}) { |${4:io}| $0 }" Trigger="ope" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="option(..)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="opts.on( &quot;-${1:o}&quot;, &quot;--${2:long-option-name}&quot;${3/^\s*$|(.*\S.*)/(?1:, )/}${3:String},
+         &quot;${4:Option description.}&quot; ) do |${6:opt}|
+	$0
+end" Trigger="opt" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="option_parse { .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="require &quot;optparse&quot;
+
+options = {${1::default =&gt; &quot;args&quot;}}
+
+ARGV.options do |opts|
+	opts.banner = &quot;Usage:  #{File.basename(\$PROGRAM_NAME)} [OPTIONS]${2/^\s*$|(.*\S.*)/(?1: )/}${2:OTHER_ARGS}&quot;
+	
+	opts.separator &quot;&quot;
+	opts.separator &quot;Specific Options:&quot;
+	
+	$0
+	
+	opts.separator &quot;Common Options:&quot;
+	
+	opts.on( &quot;-h&quot;, &quot;--help&quot;,
+	         &quot;Show this message.&quot; ) do
+		puts opts
+		exit
+	end
+	
+	begin
+		opts.parse!
+	rescue
+		puts opts
+		exit
+	end
+end" Trigger="optp" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="partition { |e| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="partition { |${1:e}| $0 }" Trigger="par" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="path_from_here( .. )" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="File.join(File.dirname(__FILE__), *%w[${1:rel path here}])" Trigger="patfh" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="PStore.new( .. )" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="PStore.new(${1:&quot;${2:file_name.pstore}&quot;})" Trigger="Pn-" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="randomize()" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="sort_by { rand }" Trigger="ran" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="reject { |e| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="reject { |${1:e}| $0 }" Trigger="rej" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="require &quot;..&quot;" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="require &quot;$0&quot;" Trigger="req" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="require &quot;tc_..&quot; .." Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="require &quot;test/unit&quot;
+
+require &quot;tc_${1:test_case_file}&quot;
+require &quot;tc_${2:test_case_file}&quot;" Trigger="ts" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="require_gem &quot;..&quot;" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="require &quot;$0&quot;" Trigger="reqg-" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="results.report(..) { .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="results.report(&quot;${1:name}:&quot;) { TESTS.times { $0 } }" Trigger="rep" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="reverse_each { |e| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="reverse_each { |${1:e}| $0 }" Trigger="reve" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="scan(/../) { |match| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="scan(/${1:pattern}/) { |${2:match}| $0 }" Trigger="sca" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="select { |e| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="select { |${1:e}| $0 }" Trigger="sel" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="singleton_class()" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="class &lt;&lt; self; self end" Trigger="sinc" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="sort { |a, b| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="sort { |a, b| $0 }" Trigger="sor" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="sort_by { |e| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="sort_by { |${1:e}| $0 }" Trigger="sorb" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="task :task_name =&gt; [:dependent, :tasks] do .. end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="desc &quot;${1:Task description}&quot;
+task :${2:${3:task_name} =&gt; ${4:[:${5:dependent, :tasks}]}} do
+	$0
+end" Trigger="tas" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="transaction( .. ) { .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="transaction${1/(^.*?\S.*)|.*/(?1:\()/}${1:true}${1/(^.*?\S.*)|.*/(?1:\))/} { $0 }" Trigger="tra" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="unix_filter { .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="ARGF.each_line$1 do |${2:line}|
+	$0
+end" Trigger="unif" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="unless … end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="unless ${1:condition}
+	$0
+end" Trigger="unless" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="until ... end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="until ${1:condition}
+	$0
+end" Trigger="until" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="usage_unless()" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="unless ARGV.$1
+	abort &quot;Usage:  #{\$PROGRAM_NAME} ${2:ARGS_GO_HERE}&quot;
+end" Trigger="usau" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="when …" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="when ${1:condition}
+	$0" Trigger="when" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="while ... end" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="while ${1:condition}
+	$0
+end" Trigger="while" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="xmlread(..)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="REXML::Document.new(File.read(${1:&quot;${2:path/to/file}&quot;}))" Trigger="xml-" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="xpath(..) { .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="elements.each(${1:&quot;${2://XPath}&quot;}) do |${3:node}|
+	$0
+end" Trigger="xpa" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="YAML.dump(.., file)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="File.open(${1:&quot;${2:path/to/file}.yaml&quot;}, &quot;w&quot;) { |${3:file}| YAML.dump(${4:obj}, ${3:file}) }" Trigger="Yd-" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="YAML.load(file)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="File.open(${1:&quot;${2:path/to/file}.yaml&quot;}) { |${3:file}| YAML.load(${3:file}) }" Trigger="Yl-" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="zip(enums) { |row| .. }" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="zip(${1:enums}) { |${2:row}| $0 }" Trigger="zip" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+	</Folder>
+	<Folder Name="TeX" Flags="3" ConfigEdit="TeX" ConfigMacro="" ConfigsAssociate="\TeX\">
+		<Item Name="\item[description]" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\\item[${1:description}] ${0:item}" Trigger="itd" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Add Row" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\\\\
+$0${TM_CURRENT_LINE/^[^&amp;]+|[^&amp;]+$|([^&amp;]+)/ (?1: )/g}" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Beamer Overlay Specification" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;${1:+-}&gt;" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Cases" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\\begin{cases}
+	${1:equation}, &amp;\text{ if }${2:case}\\\\
+	$0
+\\end{cases}" Trigger="cas" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Chapter" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\\chapter{${1:chapter name}} % (fold)
+\label{cha:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3)/g}}}
+${0:${SelText}}
+% chapter $2 (end)" Trigger="cha" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Command — \command{…}" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\\${1:text${2:bf}}{${SelText}}" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Description" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\\begin{description}
+	\item[$1] $0
+\\end{description}" Trigger="desc" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Display Math — \[ … \]" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\\[
+	${SelText}$1
+\\]" Trigger="$$" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Double Quotes" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\`\`${SelText}''" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Enumerate" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\\begin{enumerate}
+	\item $0
+\\end{enumerate}" Trigger="enum" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Equation" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\\begin{equation}
+	$0
+\\end{equation}" Trigger="eq" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Figure" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${1:Figure}~\\ref{${2:fig:}}$0" Trigger="figure" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Itemize" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\\begin{itemize}
+	\item $0
+\\end{itemize}" Trigger="item" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Listing" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${1:Listing}~\\ref{${2:lst:}}$0" Trigger="listing" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Matrix" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\\begin{${1:p/b/v/V/B/small}matrix}
+	$0
+\\end{${1:p/b/v/V/B/small}matrix}" Trigger="mat" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Page" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${1:page}~\\pageref{$2}$0" Trigger="page" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Paragraph" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\\paragraph{${1:paragraph name}} % (fold)
+\\label{par:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3)/g}}}
+${0:${SelText}}
+% paragraph $2 (end)" Trigger="par" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Part" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\\part{${1:part name}} % (fold)
+\\label{prt:${2:${1/(\w+)|\W+/(?1:\L$0:_)/g}}}
+${0:${SelText}}
+% part $2 (end)" Trigger="part" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Section" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${1:Section}~\\ref{${2:sec:}}$0" Trigger="section" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Split" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\\begin{split}
+	$0
+\\end{split}" Trigger="spl" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Sub Paragraph" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\\subparagraph{${1:subparagraph name}} % (fold)
+\\label{subp:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3)/g}}}
+${0:${SelText}}
+% subparagraph $2 (end)" Trigger="subp" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Table" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="${1:Table}~\\ref{${2:tab:}}$0" Trigger="table" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Tabular" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\\begin{${1:t}${1/(t)$|(a)$|(.*)/(?1:abular)(?2:rray)/}}{${2:c}}
+$0${2/((?&lt;=.)c|l|r)|./(?1: &amp; )/g}
+\\end{${1:t}${1/(t)$|(a)$|(.*)/(?1:abular)(?2:rray)/}}" Trigger="tab" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Unnumbered Equation" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\\[
+	$0
+\\]" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+	</Folder>
+	<Folder Name="XML" Flags="3" ConfigEdit="XML" ConfigMacro="" ConfigsAssociate="\XML\">
+		<Item Name="CDATA" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;![CDATA[$0]]&gt;" Trigger="cdata" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Long Attribute Tag" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;${1:name} ${2:attr=&quot;value&quot;}&gt;$0
+&lt;/${1:name}&gt;" Trigger="&lt;a" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Long Tag" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;${1:name}&gt;$0&lt;/${1/([^ ]+).*/$1/}&gt;" Trigger="&lt;" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Short Tag" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;${1:name} /&gt;" Trigger="&gt;" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="XML Processing Instruction" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;" Trigger="xml" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+	</Folder>
+</SnippetTree>
+</Snippets>
