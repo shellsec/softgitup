@@ -1,10 +1,10 @@
 {
-  "generated_at": "2025-06-28T16:28:31.851247",
+  "generated_at": "2025-06-28T21:51:52.629313",
   "total_software": 11,
-  "total_files": 3142,
+  "total_files": 2902,
   "software": {
     "CCleaner": {
-      "version": "20250628_162830",
+      "version": "20250628_215150",
       "files": [
         {
           "path": "branding.dll",
@@ -399,10 +399,10 @@
       ],
       "total_files": 65,
       "total_size": 59317979,
-      "last_updated": "2025-06-28T16:28:30.026295"
+      "last_updated": "2025-06-28T21:51:50.272212"
     },
     "EditPlus": {
-      "version": "20250628_162830",
+      "version": "20250628_215150",
       "files": [
         {
           "path": "!)激活添删右键.bat",
@@ -977,2406 +977,966 @@
       ],
       "total_files": 95,
       "total_size": 11284529,
-      "last_updated": "2025-06-28T16:28:30.075263"
+      "last_updated": "2025-06-28T21:51:50.367381"
     },
     "EmEditor": {
-      "version": "20250628_162830",
+      "version": "20250628_215150",
       "files": [
         {
           "path": "ee128.dll",
-          "size": 551768,
-          "hash": "f30b062746624a9ce1c709c0e7f5a286",
-          "modified": "2025-06-24T16:29:50"
+          "size": 335352,
+          "hash": "31d0f72a3832770b2f0f04e6542a6d0c",
+          "modified": "2022-02-22T11:03:34"
         },
         {
           "path": "ee256.dll",
-          "size": 551256,
-          "hash": "5428eaa7d62f0136dbc4a196a3ae67d1",
-          "modified": "2025-06-24T16:29:50"
+          "size": 338936,
+          "hash": "39e82bb3dd2a41d4f1f21c9e211c6739",
+          "modified": "2022-02-22T11:03:34"
         },
         {
           "path": "ee512.dll",
-          "size": 549208,
-          "hash": "159b7c258703e3a0337d1e5620632abc",
-          "modified": "2025-06-24T16:29:50"
+          "size": 335352,
+          "hash": "e83e7967bb79bbb9165282c3117ee347",
+          "modified": "2022-02-22T11:03:34"
         },
         {
           "path": "EEAdmin.exe",
-          "size": 967000,
-          "hash": "7cae3f6d10a250113038a28da1636090",
-          "modified": "2025-06-24T16:29:50"
+          "size": 254456,
+          "hash": "18ac31cbd9c7b96331642396e11c9b79",
+          "modified": "2022-02-22T11:03:34"
         },
         {
           "path": "EECommon.dll",
-          "size": 2281304,
-          "hash": "8de89c290adb695b35919bd3289b5b43",
-          "modified": "2025-06-24T16:29:50"
-        },
-        {
-          "path": "eeCommon.ini",
-          "size": 4810,
-          "hash": "4caade73ddf0df720544a09e7c001004",
-          "modified": "2025-06-28T15:49:16.112115"
-        },
-        {
-          "path": "eeConfig.ini",
-          "size": 801300,
-          "hash": "dd24d0d9f81b0332fc22351a09ec9075",
-          "modified": "2025-06-28T15:49:12.000850"
-        },
-        {
-          "path": "eeLM.ini",
-          "size": 2,
-          "hash": "f3b25701fe362ec84616a93a45ce9998",
-          "modified": "2025-05-22T14:44:51.580735"
+          "size": 1769464,
+          "hash": "6d38bb25aba91bdd13cc56056e107dec",
+          "modified": "2022-02-22T11:03:34"
         },
         {
           "path": "EEMacro.dll",
-          "size": 2953048,
-          "hash": "5953c507746f6009e783403b9c7105eb",
-          "modified": "2025-06-24T16:29:50"
+          "size": 1506296,
+          "hash": "27b9dbad367cee5f63c9db16596f97c1",
+          "modified": "2022-02-22T11:03:34"
         },
         {
           "path": "EEMacro.tlb",
-          "size": 95452,
-          "hash": "8466b8f265198a18e9b7491149c9c63d",
-          "modified": "2025-06-24T16:16:38"
-        },
-        {
-          "path": "eePlugins.ini",
-          "size": 2,
-          "hash": "f3b25701fe362ec84616a93a45ce9998",
-          "modified": "2025-06-28T15:49:12.144860"
+          "size": 90384,
+          "hash": "4519090edc545f4c6218427d0ac8d3ee",
+          "modified": "2022-02-22T10:39:36"
         },
         {
           "path": "eeUseIni.ini",
           "size": 0,
           "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2025-06-24T16:29:48"
+          "modified": "2022-02-22T11:03:34"
         },
         {
           "path": "emedcfd.dll",
-          "size": 1027416,
-          "hash": "ff8b42dc9793fa5a47f5ad54b906ff1a",
-          "modified": "2025-06-24T16:29:50"
+          "size": 898040,
+          "hash": "fd1cbffcfc1c722bbf837950f417ef9f",
+          "modified": "2022-02-22T11:03:34"
         },
         {
           "path": "emedcfg.dll",
-          "size": 1642840,
-          "hash": "469e0083ef278b3a2efa4c6496a70cee",
-          "modified": "2025-06-24T16:29:50"
+          "size": 1079800,
+          "hash": "0e3fa78719a73d734c24c089701b279a",
+          "modified": "2022-02-22T11:03:34"
         },
         {
           "path": "emeddlgs.dll",
-          "size": 7463768,
-          "hash": "1ca7918087caafe3f165e00f04cb63de",
-          "modified": "2025-06-24T16:29:50"
+          "size": 2122744,
+          "hash": "5239855bb2904fb2398044714ce85980",
+          "modified": "2022-02-22T11:03:34"
         },
         {
           "path": "emeddlgt.dll",
-          "size": 1568088,
-          "hash": "07aef8ad04a34c6fc808551f38e2c980",
-          "modified": "2025-06-24T16:29:50"
+          "size": 943096,
+          "hash": "2b349d5a1c1dc6fba4e94e43050a7dcc",
+          "modified": "2022-02-22T11:03:34"
         },
         {
           "path": "emedhtml.exe",
-          "size": 147800,
-          "hash": "4b4a719f0030c8d4a732bfe40a37b2f3",
-          "modified": "2025-06-24T16:29:50"
+          "size": 145400,
+          "hash": "734eff5bff15975b0d2aafc3180c6547",
+          "modified": "2022-02-22T11:03:34"
         },
         {
           "path": "EmEditor.exe",
-          "size": 28128600,
-          "hash": "65b1e69b406c4da6a46ddc8db9d0e06e",
-          "modified": "2025-06-25T10:14:11.443349"
-        },
-        {
-          "path": "emeditor.tlb",
-          "size": 1856,
-          "hash": "4ab0974fe014f248cfb3e9247f329808",
-          "modified": "2025-06-24T16:19:06"
+          "size": 27166200,
+          "hash": "6785249b66b771ee09f5050330cbd590",
+          "modified": "2022-02-22T11:03:34"
         },
         {
           "path": "emedres.dll",
-          "size": 2494296,
-          "hash": "ef7267bf5f276dc3242627a92bbc3e50",
-          "modified": "2025-06-24T16:29:50"
+          "size": 2324472,
+          "hash": "68f17610d77987adb0a8f99e59d26021",
+          "modified": "2022-02-22T11:03:34"
         },
         {
           "path": "emedtray.exe",
-          "size": 696664,
-          "hash": "4d76b1fadae7890a67cab64255615ba0",
-          "modified": "2025-06-24T16:29:50"
+          "size": 435192,
+          "hash": "0db897f1af5ec1d7145cf16bba5e2b45",
+          "modified": "2022-02-22T11:03:34"
         },
         {
           "path": "emeduwp.dll",
-          "size": 273240,
-          "hash": "558f531499edc4b85d95430185cfd10c",
-          "modified": "2025-06-24T16:29:50"
+          "size": 253432,
+          "hash": "91f9d955bdb2af7f3b692c751b8cc797",
+          "modified": "2022-02-22T11:03:42"
         },
         {
           "path": "emedws.exe",
-          "size": 349528,
-          "hash": "264a0b4cddf582b5a077a3f0c393eca1",
-          "modified": "2025-06-24T16:29:50"
+          "size": 247800,
+          "hash": "c9e8a6486f113728e48d7c0387853b66",
+          "modified": "2022-02-22T11:03:34"
         },
         {
           "path": "emonig.dll",
-          "size": 733528,
-          "hash": "4441619ecee2768c6af06ec32d3e3ef2",
-          "modified": "2025-06-24T16:29:50"
+          "size": 664056,
+          "hash": "c39de6eab7fc22ce62f040d5b3e7f91a",
+          "modified": "2022-02-22T11:03:36"
         },
         {
           "path": "emregexp.dll",
-          "size": 386392,
-          "hash": "42b3241c6404a7e4acf46145af5db1f4",
-          "modified": "2025-06-24T16:29:50"
+          "size": 307704,
+          "hash": "571560a0dd73b1b98e164588aafa6563",
+          "modified": "2022-02-22T11:03:36"
         },
         {
           "path": "emuchardet.dll",
-          "size": 234840,
-          "hash": "a57a77f1362acbb5e337f681760c1920",
-          "modified": "2025-06-24T16:29:50"
+          "size": 219128,
+          "hash": "9257bc6d5be2f3eaa990f62dda351566",
+          "modified": "2022-02-22T11:03:42"
         },
         {
           "path": "eula_e.rtf",
-          "size": 48012,
-          "hash": "15e433aa4563e5caaa0222a10f28577c",
-          "modified": "2025-06-24T16:16:04"
+          "size": 47069,
+          "hash": "7a56b72d7d23a92bc206ede49157bc28",
+          "modified": "2022-02-22T10:26:42"
         },
         {
           "path": "eula_j.rtf",
-          "size": 19965,
-          "hash": "967f6e44d6e41bc27ba0cfe85920b19e",
-          "modified": "2025-06-24T16:16:04"
+          "size": 82668,
+          "hash": "5def5c799f553df4c346faf794f18040",
+          "modified": "2022-02-22T10:26:42"
         },
         {
-          "path": "git2.dll",
-          "size": 1445720,
-          "hash": "c09426388b8461e20262a7cc15acabe8",
-          "modified": "2025-06-24T16:29:50"
+          "path": "key.txt",
+          "size": 29,
+          "hash": "d45e3b00d9e485aa6c4349f2f20a7182",
+          "modified": "2025-06-28T21:51:15.864521"
         },
         {
           "path": "libhunspell.dll",
-          "size": 765784,
-          "hash": "879e3e787f87828229ffa591f00db87f",
-          "modified": "2025-06-24T16:29:50"
+          "size": 734712,
+          "hash": "9d680f6fd2c69933576ee5b542b764c5",
+          "modified": "2022-02-22T11:03:36"
         },
         {
           "path": "msvcp140.dll",
-          "size": 557136,
-          "hash": "b08063e2d0bb587538575af2babac0b2",
-          "modified": "2025-06-24T16:16:00"
-        },
-        {
-          "path": "pcre.dll",
-          "size": 417624,
-          "hash": "879dc6f4f42b24260d11651981462014",
-          "modified": "2025-06-24T16:29:50"
+          "size": 567688,
+          "hash": "c7a693fcffcb6c245282d1132e38ac5b",
+          "modified": "2022-02-22T10:26:36"
         },
         {
           "path": "template.cpp",
           "size": 109,
           "hash": "233dd3445edad53c1823f04df55fbc82",
-          "modified": "2025-06-24T16:16:04"
+          "modified": "2022-02-22T10:26:42"
         },
         {
           "path": "template.css",
           "size": 237,
           "hash": "d75db91a0122d621aec33ad4715e2faa",
-          "modified": "2025-06-24T16:16:04"
+          "modified": "2022-02-22T10:26:42"
         },
         {
           "path": "template.htm",
           "size": 163,
           "hash": "94ab84de40780f4c9d7c4369616d985e",
-          "modified": "2025-06-24T16:16:04"
+          "modified": "2022-02-22T10:26:42"
         },
         {
           "path": "template.java",
           "size": 226,
           "hash": "cba22b57a67c5a9ea0c6f62f3ee19ab9",
-          "modified": "2025-06-24T16:16:04"
+          "modified": "2022-02-22T10:26:42"
         },
         {
           "path": "template.js",
           "size": 140,
           "hash": "36eab40717cac3a9a05a6a364dbf92b6",
-          "modified": "2025-06-24T16:16:04"
+          "modified": "2022-02-22T10:26:42"
         },
         {
           "path": "template.json",
           "size": 36,
           "hash": "ce3165d332aed4fc71729e2dd45781ab",
-          "modified": "2025-06-24T16:16:04"
+          "modified": "2022-02-22T10:26:42"
         },
         {
           "path": "template.jsp",
           "size": 185,
           "hash": "40eb221e4eb0461bfbb798402fa8a9b8",
-          "modified": "2025-06-24T16:16:04"
+          "modified": "2022-02-22T10:26:42"
         },
         {
           "path": "template.php",
           "size": 186,
           "hash": "c548be254c5c91af5530c4a21cf85084",
-          "modified": "2025-06-24T16:16:04"
+          "modified": "2022-02-22T10:26:42"
         },
         {
           "path": "template.pl",
           "size": 46,
           "hash": "bc213db832860e0ebfd17961a2b765b9",
-          "modified": "2025-06-24T16:16:04"
+          "modified": "2022-02-22T10:26:42"
         },
         {
           "path": "template.py",
           "size": 63,
           "hash": "0f1f45d0d48f22de0ebddb772d1b6607",
-          "modified": "2025-06-24T16:16:04"
+          "modified": "2022-02-22T10:26:42"
         },
         {
           "path": "template.rb",
           "size": 23,
           "hash": "4260f636082f8cbb38532ed72cb013af",
-          "modified": "2025-06-24T16:16:04"
+          "modified": "2022-02-22T10:26:42"
         },
         {
           "path": "template.tex",
           "size": 140,
           "hash": "a1d82f37152e3351d6670a0ea1850e09",
-          "modified": "2025-06-24T16:16:04"
+          "modified": "2022-02-22T10:26:42"
         },
         {
           "path": "template.vbs",
           "size": 133,
           "hash": "ddab8406cf1d4f5cd5ae4dd61b4ad006",
-          "modified": "2025-06-24T16:16:04"
+          "modified": "2022-02-22T10:26:42"
         },
         {
           "path": "template.wsf",
           "size": 205,
           "hash": "a16904f1b21571ba5740a513acdc1d2f",
-          "modified": "2025-06-24T16:16:04"
+          "modified": "2022-02-22T10:26:42"
         },
         {
           "path": "template.xml",
           "size": 445,
           "hash": "b36752c68aac5ffb756fbf46b52de226",
-          "modified": "2025-06-24T16:16:04"
+          "modified": "2022-02-22T10:26:42"
+        },
+        {
+          "path": "thirdPartyLicenses",
+          "size": 110592,
+          "hash": "cfd1aa7a0defe661b4e681d7678bf424",
+          "modified": "2022-02-22T10:26:42"
         },
         {
           "path": "vccorlib140.dll",
-          "size": 351848,
-          "hash": "fa85d2b055707a2bc20b10d7bd11b284",
-          "modified": "2025-06-24T16:16:00"
+          "size": 335240,
+          "hash": "06167b46ff993f09d93d876cd343082c",
+          "modified": "2022-02-22T10:26:36"
         },
         {
           "path": "vcruntime140.dll",
-          "size": 124520,
-          "hash": "ec0117040bd1e880088753d9b8467234",
-          "modified": "2025-06-24T16:16:00"
+          "size": 97168,
+          "hash": "6e34fc4a713c3fbd88e47ac188d2540d",
+          "modified": "2022-02-22T10:26:36"
         },
         {
           "path": "vcruntime140_1.dll",
-          "size": 49792,
-          "hash": "851760a3cc87354e057985e42e69f425",
-          "modified": "2025-06-24T16:16:00"
-        },
-        {
-          "path": "zlib1.dll",
-          "size": 102744,
-          "hash": "c3ba53b458320916777dc9f634dee054",
-          "modified": "2025-06-24T16:29:50"
-        },
-        {
-          "path": "AppData\\Common\\FileAttr.bin",
-          "size": 217,
-          "hash": "54f06a2d7b689be025cb706fb1f20b4a",
-          "modified": "2025-06-28T15:49:16.200647"
-        },
-        {
-          "path": "AppData\\Common\\Macros.bin",
-          "size": 1236,
-          "hash": "3d565715f1f235d08f9cfabde8ee91e4",
-          "modified": "2025-06-28T15:49:12.027828"
-        },
-        {
-          "path": "AppData\\Common\\RecentFilterList.bin",
-          "size": 8,
-          "hash": "f3f89f05dbde096696d48154794aaf79",
-          "modified": "2025-06-28T15:49:16.202670"
-        },
-        {
-          "path": "AppData\\Config\\Bat\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:11.893911"
-        },
-        {
-          "path": "AppData\\Config\\Bat\\PropEx.bin",
-          "size": 131,
-          "hash": "f7657fa7666df068c3c005904f39aba4",
-          "modified": "2025-06-28T15:49:11.894898"
-        },
-        {
-          "path": "AppData\\Config\\C#\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:11.901905"
-        },
-        {
-          "path": "AppData\\Config\\C#\\PropEx.bin",
-          "size": 257,
-          "hash": "1cc4540a96177d86b0bc8cea73809dc7",
-          "modified": "2025-06-28T15:49:11.902905"
-        },
-        {
-          "path": "AppData\\Config\\C++\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:11.897896"
-        },
-        {
-          "path": "AppData\\Config\\C++\\PropEx.bin",
-          "size": 283,
-          "hash": "2e25461a195f38af7aeb27bc7330c1de",
-          "modified": "2025-06-28T15:49:11.898895"
-        },
-        {
-          "path": "AppData\\Config\\CSS\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:11.904904"
-        },
-        {
-          "path": "AppData\\Config\\CSS\\PropEx.bin",
-          "size": 155,
-          "hash": "5d3a15c28226962481344c7c70c5bd34",
-          "modified": "2025-06-28T15:49:11.905904"
-        },
-        {
-          "path": "AppData\\Config\\eeCompare\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:11.997850"
-        },
-        {
-          "path": "AppData\\Config\\eeCompare\\PropEx.bin",
-          "size": 143,
-          "hash": "7a4ed9c3abccd6a6f6256ce07db573f0",
-          "modified": "2025-06-28T15:49:11.997850"
-        },
-        {
-          "path": "AppData\\Config\\EmEditor Syntax\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:11.908901"
-        },
-        {
-          "path": "AppData\\Config\\EmEditor Syntax\\PropEx.bin",
-          "size": 157,
-          "hash": "d5313b6640f21922c3008ff0154040e7",
-          "modified": "2025-06-28T15:49:11.908901"
-        },
-        {
-          "path": "AppData\\Config\\HTML\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:11.911900"
-        },
-        {
-          "path": "AppData\\Config\\HTML\\PropEx.bin",
-          "size": 157,
-          "hash": "5424288a4a5380316e2076ad12727ccf",
-          "modified": "2025-06-28T15:49:11.911900"
-        },
-        {
-          "path": "AppData\\Config\\Ini\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:11.914899"
-        },
-        {
-          "path": "AppData\\Config\\Ini\\PropEx.bin",
-          "size": 133,
-          "hash": "8c2afed426957ca9017a915720bde83e",
-          "modified": "2025-06-28T15:49:11.914899"
-        },
-        {
-          "path": "AppData\\Config\\Java\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:11.920894"
-        },
-        {
-          "path": "AppData\\Config\\Java\\PropEx.bin",
-          "size": 287,
-          "hash": "b88a66cf0ddf389683ea455ddf3d4b4c",
-          "modified": "2025-06-28T15:49:11.921895"
-        },
-        {
-          "path": "AppData\\Config\\JavaScript\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:11.924886"
-        },
-        {
-          "path": "AppData\\Config\\JavaScript\\PropEx.bin",
-          "size": 295,
-          "hash": "f58720ef71f41d22352c9939f715d262",
-          "modified": "2025-06-28T15:49:11.924886"
-        },
-        {
-          "path": "AppData\\Config\\JavaScript for EmEditor\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:11.927891"
-        },
-        {
-          "path": "AppData\\Config\\JavaScript for EmEditor\\PropEx.bin",
-          "size": 299,
-          "hash": "97cc8af4547af3b88a32b7cbbefc574a",
-          "modified": "2025-06-28T15:49:11.928891"
-        },
-        {
-          "path": "AppData\\Config\\JSON\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:12.001848"
-        },
-        {
-          "path": "AppData\\Config\\JSON\\PropEx.bin",
-          "size": 159,
-          "hash": "7581e31d92a523df9fe39634c9dc6672",
-          "modified": "2025-06-28T15:49:12.002848"
-        },
-        {
-          "path": "AppData\\Config\\JSP\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:11.970854"
-        },
-        {
-          "path": "AppData\\Config\\JSP\\PropEx.bin",
-          "size": 283,
-          "hash": "3ff0291a9fc8355e3d1bd5394f14360a",
-          "modified": "2025-06-28T15:49:11.970854"
-        },
-        {
-          "path": "AppData\\Config\\Markdown\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:11.992842"
-        },
-        {
-          "path": "AppData\\Config\\Markdown\\PropEx.bin",
-          "size": 141,
-          "hash": "24ce8a6b51f7b28b8b94bb81e39bae38",
-          "modified": "2025-06-28T15:49:11.992842"
-        },
-        {
-          "path": "AppData\\Config\\Pascal\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:11.966867"
-        },
-        {
-          "path": "AppData\\Config\\Pascal\\PropEx.bin",
-          "size": 265,
-          "hash": "ddf862d90bcd36ac1f382e6b73174690",
-          "modified": "2025-06-28T15:49:11.966867"
-        },
-        {
-          "path": "AppData\\Config\\Perl\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:11.931881"
-        },
-        {
-          "path": "AppData\\Config\\Perl\\PropEx.bin",
-          "size": 157,
-          "hash": "895ab370f0f0c418d83505b584a3bb32",
-          "modified": "2025-06-28T15:49:11.931881"
-        },
-        {
-          "path": "AppData\\Config\\PerlScript\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:11.974864"
-        },
-        {
-          "path": "AppData\\Config\\PerlScript\\PropEx.bin",
-          "size": 147,
-          "hash": "bad13338a80dcbd8f6802693fce5cb03",
-          "modified": "2025-06-28T15:49:11.975852"
-        },
-        {
-          "path": "AppData\\Config\\PHP\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:11.917897"
-        },
-        {
-          "path": "AppData\\Config\\PHP\\PropEx.bin",
-          "size": 161,
-          "hash": "c3a9d1f43893b592dc3abb31c53c90ff",
-          "modified": "2025-06-28T15:49:11.917897"
-        },
-        {
-          "path": "AppData\\Config\\Python\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:11.934875"
-        },
-        {
-          "path": "AppData\\Config\\Python\\PropEx.bin",
-          "size": 161,
-          "hash": "dbc4fcca7bb2feaf53f8d6a69be19be3",
-          "modified": "2025-06-28T15:49:11.935874"
-        },
-        {
-          "path": "AppData\\Config\\RHTML\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:11.987856"
-        },
-        {
-          "path": "AppData\\Config\\RHTML\\PropEx.bin",
-          "size": 137,
-          "hash": "5ac31acfb0953c5db40dbfc43e454ae6",
-          "modified": "2025-06-28T15:49:11.988868"
-        },
-        {
-          "path": "AppData\\Config\\Ruby\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:11.938884"
-        },
-        {
-          "path": "AppData\\Config\\Ruby\\PropEx.bin",
-          "size": 525,
-          "hash": "d1a518c95ba9db63b2907c64453265a4",
-          "modified": "2025-06-28T15:49:11.938884"
-        },
-        {
-          "path": "AppData\\Config\\Script\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:11.942881"
-        },
-        {
-          "path": "AppData\\Config\\Script\\PropEx.bin",
-          "size": 137,
-          "hash": "1bbf2aca05b2b40dda83f7f654c51fa9",
-          "modified": "2025-06-28T15:49:11.942881"
-        },
-        {
-          "path": "AppData\\Config\\SQL\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:11.945881"
-        },
-        {
-          "path": "AppData\\Config\\SQL\\PropEx.bin",
-          "size": 135,
-          "hash": "9ebf4ad1729d9b3ab7e70a946c2ffce2",
-          "modified": "2025-06-28T15:49:11.946886"
-        },
-        {
-          "path": "AppData\\Config\\TeX\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:11.983860"
-        },
-        {
-          "path": "AppData\\Config\\TeX\\PropEx.bin",
-          "size": 195,
-          "hash": "d8dc5a723ebdb42d7273a99bddc6cfb4",
-          "modified": "2025-06-28T15:49:11.983860"
-        },
-        {
-          "path": "AppData\\Config\\Text\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:11.949878"
-        },
-        {
-          "path": "AppData\\Config\\Text\\PropEx.bin",
-          "size": 133,
-          "hash": "8dc6eab47c7d30825d5c8464e1c56f39",
-          "modified": "2025-06-28T15:49:11.950889"
-        },
-        {
-          "path": "AppData\\Config\\VBScript\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:11.957883"
-        },
-        {
-          "path": "AppData\\Config\\VBScript\\PropEx.bin",
-          "size": 167,
-          "hash": "38a284163dfb86bd1c60b15ac482a51a",
-          "modified": "2025-06-28T15:49:11.958874"
-        },
-        {
-          "path": "AppData\\Config\\VBScript for EmEditor\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:11.962858"
-        },
-        {
-          "path": "AppData\\Config\\VBScript for EmEditor\\PropEx.bin",
-          "size": 169,
-          "hash": "942af2e89454c76ed8d7dfdd1ae0b48f",
-          "modified": "2025-06-28T15:49:11.962858"
-        },
-        {
-          "path": "AppData\\Config\\Windows Script\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:11.978861"
-        },
-        {
-          "path": "AppData\\Config\\Windows Script\\PropEx.bin",
-          "size": 177,
-          "hash": "6303fc5fd0cac03308f7b06a143c434f",
-          "modified": "2025-06-28T15:49:11.979872"
-        },
-        {
-          "path": "AppData\\Config\\x86 Assembler\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:11.877919"
-        },
-        {
-          "path": "AppData\\Config\\x86 Assembler\\PropEx.bin",
-          "size": 153,
-          "hash": "9125d57d5efbf178add0ca43e490e6d9",
-          "modified": "2025-06-28T15:49:11.878920"
-        },
-        {
-          "path": "AppData\\Config\\XML\\ClrVar2.bin",
-          "size": 1688,
-          "hash": "460e2c91f4596a186defbf7af7e43cfa",
-          "modified": "2025-06-28T15:49:11.953877"
-        },
-        {
-          "path": "AppData\\Config\\XML\\PropEx.bin",
-          "size": 221,
-          "hash": "8b7ca6b33a9ce60a39b293234362a15c",
-          "modified": "2025-06-28T15:49:11.954863"
+          "size": 37264,
+          "hash": "d76532f224b6648179b77525326e8754",
+          "modified": "2022-02-22T10:26:36"
         },
         {
           "path": "Dictionaries\\en_US.aff",
           "size": 11352,
           "hash": "c440369e0b75fea17c4e065999dcfadd",
-          "modified": "2025-06-24T16:16:04"
+          "modified": "2022-02-22T10:26:42"
         },
         {
           "path": "Dictionaries\\en_US.dic",
           "size": 696228,
           "hash": "15582ca5c695ee48915d85e0c8578f27",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "Dictionaries\\en_us_ru_ru.aff",
-          "size": 77374,
-          "hash": "f8ae35ca80e4838ead748a66e2788a5a",
-          "modified": "2014-02-06T21:46:32"
-        },
-        {
-          "path": "Dictionaries\\en_us_ru_ru.dic",
-          "size": 4700862,
-          "hash": "4b8211c56588d50381a22852a71b6212",
-          "modified": "2014-02-06T21:46:34"
-        },
-        {
-          "path": "Dictionaries\\ru_RU.aff",
-          "size": 52953,
-          "hash": "98b2bb3698bd4feda52ee74ca3b15852",
-          "modified": "2008-10-13T16:03:34"
-        },
-        {
-          "path": "Dictionaries\\ru_RU.dic",
-          "size": 1968896,
-          "hash": "cc9bbe5edc04f9fe0b41289b73259a80",
-          "modified": "2009-06-03T20:04:20"
-        },
-        {
-          "path": "Dictionaries\\uk_UA.aff",
-          "size": 164013,
-          "hash": "a65b5ecc8604685fd356f3732be1eb82",
-          "modified": "2017-06-05T22:36:40"
-        },
-        {
-          "path": "Dictionaries\\uk_UA.dic",
-          "size": 2679798,
-          "hash": "d089febaae9557f3cff28fdceb37e5c8",
-          "modified": "2017-06-05T22:36:40"
+          "modified": "2022-02-22T10:26:42"
         },
         {
           "path": "HTMLValidator\\css-html-validator-x64.dll",
-          "size": 7800784,
-          "hash": "eec01bd2020836ed8ce85ecc15a72b45",
-          "modified": "2025-06-24T16:29:50"
-        },
-        {
-          "path": "HTMLValidator\\htmlvalV210.cfg",
-          "size": 2251082,
-          "hash": "06c73f9c7bc821e2eeaa980647ae41b0",
-          "modified": "2025-06-24T16:16:00"
-        },
-        {
-          "path": "lsp-servers\\css-language-features-server\\cssServerMain.js",
-          "size": 1002341,
-          "hash": "7c52ab6ee121b656fb803dab601c5277",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\html-language-features-server\\htmlServerMain.js",
-          "size": 4954025,
-          "hash": "719d9827505c0ab309b7cac456f8a86e",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\html-language-features-server\\jquery.d.ts",
-          "size": 390334,
-          "hash": "be2882c395ade91354f8991a0691c05a",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\json-language-features-server\\jsonServerMain.js",
-          "size": 358703,
-          "hash": "6ea85fb6ac8dc6cbd2578e0a4427d962",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\perl-navigator\\dist\\server.js",
-          "size": 170853,
-          "hash": "e8177c5423f1d2a40663ef8501028606",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\perl-navigator\\src\\perl\\criticWrapper.pl",
-          "size": 5162,
-          "hash": "52106d5ac0120a24066cf8b535f7ac36",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\perl-navigator\\src\\perl\\defaultCriticProfile",
-          "size": 1758,
-          "hash": "5d229ad931ae7dbfa353a5fadf7abbf1",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\perl-navigator\\src\\perl\\Inquisitor.pm",
-          "size": 14747,
-          "hash": "9261c4fae8d46aa1a91e87db9a998996",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\perl-navigator\\src\\perl\\perlimportsWrapper.pl",
-          "size": 854,
-          "hash": "7b38a78b1b142fc015d18c08eaedf7aa",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\perl-navigator\\src\\perl\\tidyWrapper.pl",
-          "size": 1121,
-          "hash": "f477c6bb94d95fcec55fef697c176c4b",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\perl-navigator\\src\\perl\\lib_bs22\\Inspectorito.pm",
-          "size": 2751,
-          "hash": "1ae916084a4ad0bfd582c14978134843",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\perl-navigator\\src\\perl\\lib_bs22\\ModHunter.pl",
-          "size": 3957,
-          "hash": "c2b288898617026388acd4d6ce026fbd",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\perl-navigator\\src\\perl\\lib_bs22\\pltags.pm",
-          "size": 14184,
-          "hash": "4500859ee47edfe524f2c209bdf56d8f",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\perl-navigator\\src\\perl\\lib_bs22\\SourceStash.pm",
-          "size": 1107,
-          "hash": "80c7918d5822a742cbc755d148702fc1",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\perl-navigator\\src\\perl\\lib_bs22\\SubUtilPP.pm",
-          "size": 545,
-          "hash": "56e641439333080164ef9fa4a83439f9",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\perl-navigator\\src\\perl\\lib_bs22\\Class\\Inspector.pm",
-          "size": 19341,
-          "hash": "f4afe12366296106d0c68f17cd65a935",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\perl-navigator\\src\\perl\\lib_bs22\\Devel\\Symdump.pm",
-          "size": 13516,
-          "hash": "154b6d29aa91459ff9c58781938773c6",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\perl-navigator\\src\\perl\\lib_bs22\\Devel\\Symdump\\Export.pm",
-          "size": 897,
-          "hash": "5feb82da98cb08d1a540f7ad17234070",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\package.json",
-          "size": 3520,
-          "hash": "04313d8d064595d125944dda38b4699f",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\bin\\tsc",
-          "size": 45,
-          "hash": "77f2382cbdcd057ac7a1b23e43363bca",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\bin\\tsserver",
-          "size": 50,
-          "hash": "a66f62644aee3142f36b1f14b44bd273",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\cancellationToken.js",
-          "size": 3714,
-          "hash": "62b39924882cdfb7a10b73d86e0092bc",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.d.ts",
-          "size": 992,
-          "hash": "f5d0ca48cac5818f85d8a3cf22d6ad60",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.decorators.d.ts",
-          "size": 13192,
-          "hash": "6654ef0ef6b23a68f9841e0448d70eea",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.decorators.legacy.d.ts",
-          "size": 1326,
-          "hash": "d20f09110d112c492f11f388e32dca90",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.dom.asynciterable.d.ts",
-          "size": 1887,
-          "hash": "1fa2cb652ddacf87933346f9c241fff2",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.dom.d.ts",
-          "size": 1346247,
-          "hash": "2939c0fd727175849469163e948e6801",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.dom.iterable.d.ts",
-          "size": 26225,
-          "hash": "ef69d8476020d193d29f1f6c52fb8d95",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2015.collection.d.ts",
-          "size": 5229,
-          "hash": "c417014adc475ab5c2ab2222fe35e70a",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2015.core.d.ts",
-          "size": 22866,
-          "hash": "6e357f762804da201464693a0e20c040",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2015.d.ts",
-          "size": 1241,
-          "hash": "d3a655f73fcec6e4cf0e6a744bad37a1",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2015.generator.d.ts",
-          "size": 2557,
-          "hash": "e892c45f7d83bc3f30d7ce7dc86ec173",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2015.iterable.d.ts",
-          "size": 19733,
-          "hash": "c3ce20efb198c2f9a331631eb751bf32",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2015.promise.d.ts",
-          "size": 3200,
-          "hash": "d77a038846078b5aacb8c36fe19c9049",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2015.proxy.d.ts",
-          "size": 5251,
-          "hash": "0529fd532c6f6511e8da317f2ce3e892",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2015.reflect.d.ts",
-          "size": 6493,
-          "hash": "5c0c109f5e6edde0d3e4fd6bd99d28d4",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2015.symbol.d.ts",
-          "size": 1649,
-          "hash": "325c579bbb8bde481cde90a1b8ddf647",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2015.symbol.wellknown.d.ts",
-          "size": 11003,
-          "hash": "a87709a25d72f16d39a91909817866ad",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2016.array.include.d.ts",
-          "size": 5204,
-          "hash": "6074e602e4057c9c6215dee7c18bed5a",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2016.d.ts",
-          "size": 965,
-          "hash": "120e58ace62b1c78f00d8add8aa4711d",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2016.full.d.ts",
-          "size": 1032,
-          "hash": "bfe14afd87c9ed0b7e5cf3157e26aa13",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2016.intl.d.ts",
-          "size": 1484,
-          "hash": "69a283c287f34e6b4285d0306dee12ae",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2017.arraybuffer.d.ts",
-          "size": 915,
-          "hash": "b057ece20e09c85a829febec1b7403c5",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2017.d.ts",
-          "size": 1162,
-          "hash": "734e396ffbb424d7ad7bfe571951ce3d",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2017.date.d.ts",
-          "size": 1916,
-          "hash": "c35210120fa93ada6b2cea3654f47067",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2017.full.d.ts",
-          "size": 1032,
-          "hash": "f4a47ffbda32cf5093ee0ab19d5aa7fc",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2017.intl.d.ts",
-          "size": 1449,
-          "hash": "760a5c66c5d809f7dcea0f448c1d1a64",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2017.object.d.ts",
-          "size": 2473,
-          "hash": "82758d316522fb2ed2ebe0ea19948488",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2017.sharedmemory.d.ts",
-          "size": 7198,
-          "hash": "54e9988396b47e2ee7c7e6db6866f2d6",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2017.string.d.ts",
-          "size": 2378,
-          "hash": "49c71536378fb7e900af8c55cd001b9e",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2017.typedarrays.d.ts",
-          "size": 1542,
-          "hash": "8b481c05cde7ab43e300a41782ad4883",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2018.asyncgenerator.d.ts",
-          "size": 2692,
-          "hash": "f4e4e7378bc8b9f271fbc2477608b22f",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2018.asynciterable.d.ts",
-          "size": 2257,
-          "hash": "901aa3f4be33d643fb513d0900d61d75",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2018.d.ts",
-          "size": 1088,
-          "hash": "6b4e60e058279581892af5ff259c6e87",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2018.full.d.ts",
-          "size": 1074,
-          "hash": "2a0ddfb15737439d459a7fc20a4decd1",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2018.intl.d.ts",
-          "size": 3021,
-          "hash": "2e1a65486c5f14b9fb381888f3a7fe52",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2018.promise.d.ts",
-          "size": 1353,
-          "hash": "7ca34e4132ac3a1cd67ec03e27dec300",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2018.regexp.d.ts",
-          "size": 1232,
-          "hash": "34ddd0f1351148bdccfb08a252bb2eaa",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2019.array.d.ts",
-          "size": 3163,
-          "hash": "ed580bced1b58b7e7f04b6a7afc0c32d",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2019.d.ts",
-          "size": 1071,
-          "hash": "5795f26508b5e51d094d308020b48e99",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2019.full.d.ts",
-          "size": 1074,
-          "hash": "f87915d175f40d17f434f9cf28aba75e",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2019.intl.d.ts",
-          "size": 958,
-          "hash": "b54c63ca14aaedffd25622d5b3340269",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2019.object.d.ts",
-          "size": 1473,
-          "hash": "e61d6628beede43eb495f73d9df95c25",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2019.string.d.ts",
-          "size": 1528,
-          "hash": "a18c699082c12720259124cc85f39819",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2019.symbol.d.ts",
-          "size": 1006,
-          "hash": "4ba8a64f9046ede10f4c1b09b8c31f05",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2020.bigint.d.ts",
-          "size": 36758,
-          "hash": "dcf46407bbb0634da58ced203e2e2b0f",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2020.d.ts",
-          "size": 1201,
-          "hash": "0f4648ced400d083ffc0539db36e04f3",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2020.date.d.ts",
-          "size": 2956,
-          "hash": "7c7119df9fdd0cbf17555352b3aa8445",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2020.full.d.ts",
-          "size": 1074,
-          "hash": "7be5b6cd2681473ff171e29a14df00dd",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2020.intl.d.ts",
-          "size": 22438,
-          "hash": "6be3581d16fc1b10e027f9ad449df2c9",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2020.number.d.ts",
-          "size": 1587,
-          "hash": "2503a9b0275f4a35136a367c8550378d",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2020.promise.d.ts",
-          "size": 1803,
-          "hash": "6dddbc51900a91da20e0b591d18bc49b",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2020.sharedmemory.d.ts",
-          "size": 5128,
-          "hash": "3981c13826d01ea226e3bb6e30a2f4d7",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2020.string.d.ts",
-          "size": 2556,
-          "hash": "36e98052a1f24a39b9842fbcacf4fbce",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2020.symbol.wellknown.d.ts",
-          "size": 1606,
-          "hash": "bd05ed87202fc3b62206e4d1359a36c7",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2021.d.ts",
-          "size": 1036,
-          "hash": "51da727159b146e0ec2a8ea3f1c55898",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2021.full.d.ts",
-          "size": 1074,
-          "hash": "3d14ce50ed96b12252e7b05cd2a3c6d9",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2021.intl.d.ts",
-          "size": 8245,
-          "hash": "68dca7ef83e17ef61c84c93618b582cb",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2021.promise.d.ts",
-          "size": 2262,
-          "hash": "30f5cdce5cc7fd6a50fe2ef0966cd333",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2021.string.d.ts",
-          "size": 1592,
-          "hash": "63c4759296fa38cf8320e8d64d1786d5",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2021.weakref.d.ts",
-          "size": 3171,
-          "hash": "9ec29e1630958232f97fbe5dfd5d857c",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2022.array.d.ts",
-          "size": 4676,
-          "hash": "9368ed110a15c491c9c69466bcbd85cc",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2022.d.ts",
-          "size": 1108,
-          "hash": "a0d58982e65e7bf50c55ae9e1acca8e4",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2022.error.d.ts",
-          "size": 2379,
-          "hash": "3f8e5ceb8045d977023537ea2b218445",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2022.full.d.ts",
-          "size": 1074,
-          "hash": "883bb095e8a90e4585dcee98d1140c6c",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2022.intl.d.ts",
-          "size": 6163,
-          "hash": "d028c45c685e059ade30b7364643fbde",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2022.object.d.ts",
-          "size": 1085,
-          "hash": "1c59e0c8f186b280173df59ca9874526",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2022.regexp.d.ts",
-          "size": 1331,
-          "hash": "9739161a9c0cdf78aec25f51fa476444",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2022.string.d.ts",
-          "size": 1155,
-          "hash": "80f6b0157d0f3ce4e24419d50fbd8603",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2023.array.d.ts",
-          "size": 40410,
-          "hash": "ddf358ae1bc14e8b515d9b3b24ed9341",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2023.collection.d.ts",
-          "size": 900,
-          "hash": "4329127569c470836542d51032073e1e",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2023.d.ts",
-          "size": 999,
-          "hash": "68899e25d09c1695ebe3177328a693d2",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2023.full.d.ts",
-          "size": 1074,
-          "hash": "1afbc1060fa16560213c9df7404c5fac",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2023.intl.d.ts",
-          "size": 2645,
-          "hash": "02c58eac49395532b64d25759ac1ad5b",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2024.arraybuffer.d.ts",
-          "size": 2637,
-          "hash": "2c2ae8d94d2eac1e03f868c0006d359c",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2024.collection.d.ts",
-          "size": 1224,
-          "hash": "71d4d249d50cac37e2afd7c555f461f7",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2024.d.ts",
-          "size": 1166,
-          "hash": "ebb6a39ffa411027c89f8e847882cdf9",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2024.full.d.ts",
-          "size": 1074,
-          "hash": "ca70b7f2f3d09df0fa9577346ac87edb",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2024.object.d.ts",
-          "size": 1259,
-          "hash": "c9f9f74c5e9cb187fc6483a73c0d6692",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2024.promise.d.ts",
-          "size": 1389,
-          "hash": "cab7d8eb607fc308e7fafa9175e4ebf5",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2024.regexp.d.ts",
-          "size": 1073,
-          "hash": "8010ab3e49b93fa8601ec718ca26ba46",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2024.sharedmemory.d.ts",
-          "size": 3077,
-          "hash": "97850a38beac2645bd202e10f944f1f5",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es2024.string.d.ts",
-          "size": 1194,
-          "hash": "e040e2eaaa004d3a273c44c537893e6e",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es5.d.ts",
-          "size": 217027,
-          "hash": "d20f71666a9558d6634c8069eae5499e",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.es6.d.ts",
-          "size": 1032,
-          "hash": "e4b2732f3d5bc0f0355c8330d881ae3b",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.esnext.array.d.ts",
-          "size": 1791,
-          "hash": "7905b5b4f4e198aed0e229b0ad0aff6a",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.esnext.collection.d.ts",
-          "size": 3878,
-          "hash": "097d24afb6ec528446bce7a6f9041db2",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.esnext.d.ts",
-          "size": 1123,
-          "hash": "cc9f9cf91564bb12f0c226f5c605885e",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.esnext.decorators.d.ts",
-          "size": 1070,
-          "hash": "eadb639691de81bff7c9d9c83457681e",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.esnext.disposable.d.ts",
-          "size": 6806,
-          "hash": "3c8e266fd96bd0a0692c8979f72f252c",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.esnext.full.d.ts",
-          "size": 1074,
-          "hash": "f77b8dc33451a008b31acf5910ec7628",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.esnext.intl.d.ts",
-          "size": 893,
-          "hash": "3d35543eb3f8773aea409e12dd8de573",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.esnext.iterator.d.ts",
-          "size": 8677,
-          "hash": "337e57c4b423a23c3a55f060324249f1",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.scripthost.d.ts",
-          "size": 9451,
-          "hash": "7b0d9dc5ea469daa4f54990015c8362e",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.webworker.asynciterable.d.ts",
-          "size": 1887,
-          "hash": "1c9de70f3ffda4177518eb23e7f5173e",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.webworker.d.ts",
-          "size": 459680,
-          "hash": "2e3100dbe2b9c61b893bd7919691389a",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.webworker.importscripts.d.ts",
-          "size": 1041,
-          "hash": "68c06bd3b8ae7d7f94f2ca26016d14b9",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\lib.webworker.iterable.d.ts",
-          "size": 20517,
-          "hash": "0797100731975c14ac03106a7cd28e42",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\tsc.js",
-          "size": 267,
-          "hash": "967000e37869e3baf50a02b2a81a86b6",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\tsserver.js",
-          "size": 272,
-          "hash": "19138233fa28f77e9396885bd0127cdb",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\tsserverlibrary.d.ts",
-          "size": 865,
-          "hash": "9377788b6f941f024625a062e9a7c2da",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\tsserverlibrary.js",
-          "size": 1012,
-          "hash": "02c80026906b7590d6e08dcdad559046",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\typescript.d.ts",
-          "size": 585628,
-          "hash": "a86a4fa1fd1d0615f64412f0756c8c73",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\typescript.js",
-          "size": 9043048,
-          "hash": "5509dee69e93875f42e7c11f5d7c68e8",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\typesMap.json",
-          "size": 16788,
-          "hash": "4bf0d7a8e4272caebb95345dc19f7aee",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\typingsInstaller.js",
-          "size": 280,
-          "hash": "15bd4914b80d1768566e7f0134ce1ff6",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\watchGuard.js",
-          "size": 2313,
-          "hash": "51e82fd6481892c99f3e8069bb6f7537",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\_tsc.js",
-          "size": 6150854,
-          "hash": "d99c3be1788e4f58281065e2f288ce4f",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\_tsserver.js",
-          "size": 26562,
-          "hash": "d20db4e1cb03ee5b71f48a6d0892b277",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\_typingsInstaller.js",
-          "size": 10363,
-          "hash": "4e294a77c4bebb47341829b77b47ed56",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\cs\\diagnosticMessages.generated.json",
-          "size": 317781,
-          "hash": "bd417909f8a5732fa6d05f1b18478714",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\de\\diagnosticMessages.generated.json",
-          "size": 341106,
-          "hash": "1bfc2fe53b57182971e50361cb06b854",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\es\\diagnosticMessages.generated.json",
-          "size": 337035,
-          "hash": "fceea54d65179e5678e9163a88cec118",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\fr\\diagnosticMessages.generated.json",
-          "size": 342462,
-          "hash": "6bb776b892833471531ceeb67f082a9f",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\it\\diagnosticMessages.generated.json",
-          "size": 336321,
-          "hash": "a5bc775b12296dfb9daf4c292b185a80",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\ja\\diagnosticMessages.generated.json",
-          "size": 377920,
-          "hash": "a35be83eec9e0fc6bdb11adebe8711c2",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\ko\\diagnosticMessages.generated.json",
-          "size": 342884,
-          "hash": "221a45ed24280d442dbaa81819e66422",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\pl\\diagnosticMessages.generated.json",
-          "size": 338879,
-          "hash": "167e97ec2652a7647f55ecf55b70fd0c",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\pt-br\\diagnosticMessages.generated.json",
-          "size": 327060,
-          "hash": "30ae5b1388a116f8e52368227e502bbc",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\ru\\diagnosticMessages.generated.json",
-          "size": 439550,
-          "hash": "6f0af1145a70558941421a9b9948c3cf",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\tr\\diagnosticMessages.generated.json",
-          "size": 327504,
-          "hash": "ba6a29c670aa6022b771395e4b8d8e29",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\zh-cn\\diagnosticMessages.generated.json",
-          "size": 293127,
-          "hash": "a7febcd14dbf0d5e3e69d7d85015481f",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript\\lib\\zh-tw\\diagnosticMessages.generated.json",
-          "size": 289786,
-          "hash": "dc9efaaba7c15b11210c26220568eb88",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript-language-server\\package.json",
-          "size": 2524,
-          "hash": "90bb8bb4cac0bb1d1bad102c95db16c1",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "lsp-servers\\typescript-language-server\\lib\\cli.mjs",
-          "size": 800897,
-          "hash": "427cef2be01fb9db5da2ced6e449e514",
-          "modified": "2025-06-24T16:16:04"
-        },
-        {
-          "path": "Macros\\AI.ico",
-          "size": 1078,
-          "hash": "d6948853fa60a4e8f1f5c40ebb6588ab",
-          "modified": "2025-06-24T16:16:00"
-        },
-        {
-          "path": "Macros\\AI.jsee",
-          "size": 42610,
-          "hash": "977ccc06cc780db13fa5bdb05fc75170",
-          "modified": "2025-06-24T16:16:00"
+          "size": 6957432,
+          "hash": "c6418e336e8314c77bfcd956dae923e5",
+          "modified": "2022-02-22T11:03:42"
+        },
+        {
+          "path": "HTMLValidator\\htmlvalV190.cfg",
+          "size": 2169696,
+          "hash": "6d8894fb3f4b2e93b4274e9633fa0292",
+          "modified": "2022-02-22T10:26:36"
         },
         {
           "path": "Macros\\AutoCopy.ico",
           "size": 11502,
           "hash": "3d52687d168aebe0504f4ab8d4b32994",
-          "modified": "2025-06-24T16:16:00"
+          "modified": "2022-02-22T10:26:36"
         },
         {
           "path": "Macros\\AutoCopy.jsee",
           "size": 1042,
           "hash": "13fd60b3353dd12efde6f6c6f6ea4bfb",
-          "modified": "2025-06-24T16:16:00"
-        },
-        {
-          "path": "Macros\\Bing.jsee",
-          "size": 4150,
-          "hash": "28840b80457873c39a3ab5b7e1e4eead",
-          "modified": "2025-06-24T16:16:00"
-        },
-        {
-          "path": "Macros\\ChatGPT.jsee",
-          "size": 7306,
-          "hash": "e3e445a8e535c6a1c6660737a25aa33c",
-          "modified": "2025-06-24T16:16:00"
+          "modified": "2022-02-22T10:26:36"
         },
         {
           "path": "Macros\\GoToDefinition.ico",
           "size": 2774,
           "hash": "718556ac0e0f4cb5cc675c2e2e1cbfb4",
-          "modified": "2025-06-24T16:16:00"
+          "modified": "2022-02-22T10:26:36"
         },
         {
           "path": "Macros\\GoToDefinition.jsee",
           "size": 1686,
           "hash": "20949a32c2673264e8852bb7ea0ef73b",
-          "modified": "2025-06-24T16:16:00"
+          "modified": "2022-02-22T10:26:36"
         },
         {
           "path": "Macros\\IPTip.jsee",
-          "size": 18264,
-          "hash": "ef38fda7b89623be984d2d1aecac432f",
-          "modified": "2025-06-24T16:16:00"
+          "size": 18746,
+          "hash": "960b13c056d87ac32e1bc83a4830f673",
+          "modified": "2022-02-22T10:26:36"
         },
         {
           "path": "Macros\\ParameterInfo.ico",
           "size": 2774,
           "hash": "812e3b57e8ec10700320305b5b11b1a9",
-          "modified": "2025-06-24T16:16:00"
+          "modified": "2022-02-22T10:26:36"
         },
         {
           "path": "Macros\\ParameterInfo.jsee",
           "size": 1486,
           "hash": "720722722272722af9ac335a27c76b8c",
-          "modified": "2025-06-24T16:16:00"
+          "modified": "2022-02-22T10:26:36"
         },
         {
           "path": "Macros\\PopBrowseContext.ico",
           "size": 2774,
           "hash": "7dc9aea3e1be8619bfadb7f6c6d4101f",
-          "modified": "2025-06-24T16:16:00"
+          "modified": "2022-02-22T10:26:36"
         },
         {
           "path": "Macros\\PopBrowseContext.jsee",
           "size": 1352,
           "hash": "ae217400d6d47fef87baaf0ad4b0c5f0",
-          "modified": "2025-06-24T16:16:00"
+          "modified": "2022-02-22T10:26:36"
         },
         {
           "path": "Macros\\Sum.ico",
           "size": 2774,
           "hash": "da32c391137980a4325571ea0e471d27",
-          "modified": "2025-06-24T16:16:00"
+          "modified": "2022-02-22T10:26:36"
         },
         {
-          "path": "Macros\\sum.jsee",
+          "path": "Macros\\Sum.jsee",
           "size": 2912,
           "hash": "0b503cacc739c4e41a83c74a86c5517a",
-          "modified": "2025-06-24T16:16:00"
+          "modified": "2022-02-22T10:26:36"
         },
         {
           "path": "Macros\\SymbolList.ico",
           "size": 2774,
           "hash": "ce16eb32d577ab7b42f314a59da60f54",
-          "modified": "2025-06-24T16:16:00"
+          "modified": "2022-02-22T10:26:36"
         },
         {
           "path": "Macros\\SymbolList.jsee",
           "size": 1066,
           "hash": "018d887868d1a608de3b7f348216a903",
-          "modified": "2025-06-24T16:16:00"
+          "modified": "2022-02-22T10:26:36"
         },
         {
           "path": "Macros\\validateXML.ico",
           "size": 2774,
           "hash": "a5064294196d798bc2495e0f6e7df52c",
-          "modified": "2025-06-24T16:16:00"
+          "modified": "2022-02-22T10:26:36"
         },
         {
-          "path": "Macros\\validatexml.jsee",
-          "size": 4460,
-          "hash": "48e2acedc65c4a6c1bb9d48ee8a37505",
-          "modified": "2025-06-24T16:16:00"
+          "path": "Macros\\ValidateXml.jsee",
+          "size": 4414,
+          "hash": "dd5ed01b0fdb781f3f6fbbed5b367be1",
+          "modified": "2022-02-22T10:26:36"
         },
         {
           "path": "Macros\\WrapTags.ico",
           "size": 2774,
           "hash": "636c24da0bf12ff6ec177afc18d0b3ed",
-          "modified": "2025-06-24T16:16:00"
+          "modified": "2022-02-22T10:26:36"
         },
         {
-          "path": "Macros\\wraptags.jsee",
+          "path": "Macros\\WrapTags.jsee",
           "size": 1398,
           "hash": "342807e95aaa0cb8f216ede04a4af78e",
-          "modified": "2025-06-24T16:16:00"
+          "modified": "2022-02-22T10:26:36"
         },
         {
           "path": "mui\\1028\\emedloc.dll",
-          "size": 433496,
-          "hash": "6210f377dc8a92d37f3c94c3ba062fc5",
-          "modified": "2025-06-24T16:29:50"
+          "size": 392696,
+          "hash": "4401a8ae516208dac016d5a54e6dc7ac",
+          "modified": "2022-02-22T11:03:36"
         },
         {
           "path": "mui\\1028\\info.ini",
           "size": 486,
-          "hash": "48aba74d01e99470877df54dfc39b582",
-          "modified": "2025-06-24T16:16:34"
+          "hash": "a37d5e2689c84fd396a412f65b9b3abd",
+          "modified": "2022-02-22T11:03:14"
         },
         {
           "path": "mui\\1029\\emedloc.dll",
-          "size": 674136,
-          "hash": "14e5a2cfa59a5a49cb4b398f8467cd9f",
-          "modified": "2025-06-24T16:29:50"
+          "size": 610808,
+          "hash": "62aaea325fbf2602f319b318c4fa5a5f",
+          "modified": "2022-02-22T11:03:36"
         },
         {
           "path": "mui\\1029\\info.ini",
-          "size": 256,
-          "hash": "0d21a4355de0ae973d6feb0270314e92",
-          "modified": "2025-06-24T16:16:34"
+          "size": 258,
+          "hash": "42dc265de1547c828ade9073363c9a25",
+          "modified": "2022-02-22T11:03:14"
         },
         {
           "path": "mui\\1031\\emedloc.dll",
-          "size": 731480,
-          "hash": "4fa063e6c2ef2208da7e07819dbd8052",
-          "modified": "2025-06-24T16:29:50"
+          "size": 660472,
+          "hash": "5e9dc73ace0fdfdd550c6adf98c527ec",
+          "modified": "2022-02-22T11:03:36"
         },
         {
           "path": "mui\\1031\\info.ini",
-          "size": 212,
-          "hash": "14e7dd7cc3a294f8ba0d763ef68af295",
-          "modified": "2025-06-24T16:16:34"
+          "size": 214,
+          "hash": "eb036f766d9ea1349b18bdefbbecf6dd",
+          "modified": "2022-02-22T11:03:14"
         },
         {
           "path": "mui\\1033\\emedloc.dll",
-          "size": 641880,
-          "hash": "6a021346a317e6efd58736f01ed132d4",
-          "modified": "2025-06-24T16:29:50"
+          "size": 580600,
+          "hash": "a78c461474105bd7da7a67db4b02fe06",
+          "modified": "2022-02-22T11:03:36"
         },
         {
           "path": "mui\\1033\\info.ini",
           "size": 484,
-          "hash": "18eaf33a227b4d6bc7c02a98efe1c8a2",
-          "modified": "2025-06-24T16:16:34"
+          "hash": "2e5551b4931d6c23b98cef3448609ff9",
+          "modified": "2022-02-22T11:03:14"
         },
         {
           "path": "mui\\1036\\emedloc.dll",
-          "size": 738648,
-          "hash": "71477eb52e3a3b0a9740c95409c8c022",
-          "modified": "2025-06-24T16:29:50"
+          "size": 668664,
+          "hash": "84df3b42785d81c4c3f0ea88f0deb70c",
+          "modified": "2022-02-22T11:03:36"
         },
         {
           "path": "mui\\1036\\info.ini",
-          "size": 214,
-          "hash": "54f03634eb2bce89db8ca367585b505a",
-          "modified": "2025-06-24T16:16:34"
+          "size": 216,
+          "hash": "5e4a1e31a0b53b111429c213ba2b0892",
+          "modified": "2022-02-22T11:03:14"
         },
         {
           "path": "mui\\1040\\emedloc.dll",
-          "size": 726360,
-          "hash": "a152bdad2dcd073515d9601c7ce00f99",
-          "modified": "2025-06-24T16:29:50"
+          "size": 656888,
+          "hash": "b4572f79d2a0a5de0301e4425f313184",
+          "modified": "2022-02-22T11:03:36"
         },
         {
           "path": "mui\\1040\\info.ini",
-          "size": 214,
-          "hash": "25b642f49eaf11062cd561e56511174e",
-          "modified": "2025-06-24T16:16:34"
+          "size": 216,
+          "hash": "d27db26aa5ed25471f17846a843021ef",
+          "modified": "2022-02-22T11:03:14"
         },
         {
           "path": "mui\\1041\\emedloc.dll",
-          "size": 491864,
-          "hash": "2fa282978305ee07b689492f0c250f2a",
-          "modified": "2025-06-24T16:29:50"
+          "size": 443896,
+          "hash": "4c084243f70e525ead41a898624f53a4",
+          "modified": "2022-02-22T11:03:36"
         },
         {
           "path": "mui\\1041\\info.ini",
           "size": 440,
-          "hash": "f93ae2f6ead635239f3a3e17bca8eb24",
-          "modified": "2025-06-24T16:16:34"
+          "hash": "a32e33acc6ab66efc37959a63ce23a00",
+          "modified": "2022-02-22T11:03:14"
         },
         {
           "path": "mui\\1042\\emedloc.dll",
-          "size": 484184,
-          "hash": "5457c885010fd7680b919ba2622e25b7",
-          "modified": "2025-06-24T16:29:50"
+          "size": 438776,
+          "hash": "345847e05cb36ea3f5bea1935318f5e3",
+          "modified": "2022-02-22T11:03:36"
         },
         {
           "path": "mui\\1042\\info.ini",
           "size": 440,
-          "hash": "30d7142de826cfc8e2b2ddf33049da75",
-          "modified": "2025-06-24T16:16:34"
+          "hash": "1a23d7dab4ec29d1905bfe84df8e6b2d",
+          "modified": "2022-02-22T11:03:14"
         },
         {
           "path": "mui\\1043\\emedloc.dll",
-          "size": 693592,
-          "hash": "3db0603cdb007ff26a9341c2fded6608",
-          "modified": "2025-06-24T16:29:50"
+          "size": 627192,
+          "hash": "9723412b380d31c9e6b2db4316954c0b",
+          "modified": "2022-02-22T11:03:36"
         },
         {
           "path": "mui\\1043\\info.ini",
-          "size": 216,
-          "hash": "88a321904029c70cd41a5c43b866b819",
-          "modified": "2025-06-24T16:16:34"
+          "size": 218,
+          "hash": "d328bf07c13ce983002fe5b9594b0f62",
+          "modified": "2022-02-22T11:03:14"
         },
         {
           "path": "mui\\1049\\emedloc.dll",
-          "size": 703832,
-          "hash": "a503b81fe084e45b414b72b73aac014c",
-          "modified": "2025-06-24T16:29:50"
+          "size": 635384,
+          "hash": "ec9a7b12e4b17cf39596837b1ae997c3",
+          "modified": "2022-02-22T11:03:36"
         },
         {
           "path": "mui\\1049\\info.ini",
-          "size": 564,
-          "hash": "54908d15b491aca23ad5888ab03b96c1",
-          "modified": "2025-06-24T16:16:34"
+          "size": 566,
+          "hash": "c92055d7fdd367cd224a4da5d0be343e",
+          "modified": "2022-02-22T11:03:14"
         },
         {
           "path": "mui\\2052\\emedloc.dll",
-          "size": 430424,
-          "hash": "2d0c9a5b5f62c0346f8096690031c3a8",
-          "modified": "2025-06-24T16:29:50"
+          "size": 389624,
+          "hash": "ec5455add89d24c881e5cf910f5dfe09",
+          "modified": "2022-02-22T11:03:36"
         },
         {
           "path": "mui\\2052\\info.ini",
           "size": 486,
-          "hash": "841acae79019f0ee5d7ef04940413163",
-          "modified": "2025-06-24T16:16:34"
+          "hash": "1b09855ab97dd91197c6d6ded5d02878",
+          "modified": "2022-02-22T11:03:14"
         },
         {
           "path": "mui\\2057\\emedloc.dll",
-          "size": 642392,
-          "hash": "dccdd44e48b93673016465d311fcff10",
-          "modified": "2025-06-24T16:29:50"
+          "size": 581112,
+          "hash": "38ce77ea731cfbd8d63216ae46172206",
+          "modified": "2022-02-22T11:03:36"
         },
         {
           "path": "mui\\2057\\info.ini",
-          "size": 246,
-          "hash": "d9cf78147658e8c3421c03c09adfd5c9",
-          "modified": "2025-06-24T16:16:34"
+          "size": 248,
+          "hash": "5a85989e8becf06542f56267dcc11247",
+          "modified": "2022-02-22T11:03:14"
         },
         {
           "path": "mui\\3082\\emedloc.dll",
-          "size": 731480,
-          "hash": "9d5c890febd816ae7a15bd2ac7dabd5e",
-          "modified": "2025-06-24T16:29:50"
+          "size": 662008,
+          "hash": "b6263e3cc1a35a9ca4d689a39b9b516f",
+          "modified": "2022-02-22T11:03:36"
         },
         {
           "path": "mui\\3082\\info.ini",
-          "size": 212,
-          "hash": "e8ca604cffe006f4f98bbcd4e1d6d86c",
-          "modified": "2025-06-24T16:16:34"
-        },
-        {
-          "path": "node\\node64.exe",
-          "size": 82820952,
-          "hash": "9f915eb58a9e1e59f69e9aa6b343785b",
-          "modified": "2025-06-24T16:29:50"
-        },
-        {
-          "path": "PlugIns\\CommitList.dll",
-          "size": 845656,
-          "hash": "96e259866daf96648fd4d6777caec330",
-          "modified": "2025-06-24T16:29:50"
+          "size": 214,
+          "hash": "17492497c418e395f7829955ac025242",
+          "modified": "2022-02-22T11:03:14"
         },
         {
           "path": "PlugIns\\COPYING_ctags.txt",
           "size": 18347,
           "hash": "eca1de0bb44b5a08fb2a49ea070db87a",
-          "modified": "2025-06-24T16:16:00"
+          "modified": "2022-02-22T10:26:36"
         },
         {
           "path": "PlugIns\\ctags.exe",
-          "size": 328024,
-          "hash": "e7bc52b2fd7215238d575a7afc9a22bb",
-          "modified": "2025-06-24T16:29:50"
+          "size": 322552,
+          "hash": "83deba2ddc2535e4ebd09fa29cca6460",
+          "modified": "2022-02-22T11:03:40"
         },
         {
           "path": "PlugIns\\default.eesnip",
           "size": 162368,
           "hash": "3bcd30a2a638fb81d6e071c515b1ead6",
-          "modified": "2025-06-24T16:16:00"
+          "modified": "2022-02-22T10:26:36"
         },
         {
           "path": "PlugIns\\Explorer.dll",
-          "size": 226648,
-          "hash": "65b17d43e58191eb0be1cde87898f2ae",
-          "modified": "2025-06-24T16:29:50"
+          "size": 212472,
+          "hash": "232d8a1ed4b26914e62dcbd622544e22",
+          "modified": "2022-02-22T11:03:36"
         },
         {
           "path": "PlugIns\\HTMLBar.dll",
-          "size": 436056,
-          "hash": "ad4ac3b755d325f125ea4f615d79753d",
-          "modified": "2025-06-24T16:29:50"
-        },
-        {
-          "path": "PlugIns\\markdown-renderer.html",
-          "size": 39848,
-          "hash": "7eeaef372204be7f3b8c96b9ca20e0a9",
-          "modified": "2025-06-24T16:16:00"
+          "size": 412152,
+          "hash": "635d8ee91f87c9e1ecd54484fa8b6f17",
+          "modified": "2022-02-22T11:03:36"
         },
         {
           "path": "PlugIns\\OpenDocuments.dll",
-          "size": 166744,
-          "hash": "a6c8437385da85a3e1a0c2b505453615",
-          "modified": "2025-06-24T16:29:50"
+          "size": 165880,
+          "hash": "36ad02f468b6f3492c6bb62a1405402d",
+          "modified": "2022-02-22T11:03:40"
         },
         {
           "path": "PlugIns\\Projects.dll",
-          "size": 499032,
-          "hash": "b3781a0b3650bc820174446f01f024ea",
-          "modified": "2025-06-24T16:29:50"
+          "size": 445944,
+          "hash": "80ecff8188145e378595274f56256435",
+          "modified": "2022-02-22T11:03:40"
         },
         {
           "path": "PlugIns\\Search.dll",
-          "size": 189784,
-          "hash": "b37140a6d2312a44cd7c36eb9fe5c066",
-          "modified": "2025-06-24T16:29:50"
+          "size": 156152,
+          "hash": "7a26730c23ddbdddbda8dcc5169b151c",
+          "modified": "2022-02-22T11:03:40"
         },
         {
           "path": "PlugIns\\Snippets.dll",
-          "size": 383320,
-          "hash": "66788e2847dbc3c37313a7d79dd995e8",
-          "modified": "2025-06-24T16:29:50"
+          "size": 332792,
+          "hash": "ebd57e8561ff535bb957881a90f5f3d0",
+          "modified": "2022-02-22T11:03:40"
         },
         {
           "path": "PlugIns\\snippets.ico",
           "size": 2606,
           "hash": "aff5dc40fc1f8d31679933a7b7d6d648",
-          "modified": "2025-06-24T16:16:00"
+          "modified": "2022-02-22T10:26:36"
         },
         {
           "path": "PlugIns\\SRC_ctags.txt",
           "size": 181,
           "hash": "7cca56da0938d90077d11808c015bcf0",
-          "modified": "2025-06-24T16:16:00"
+          "modified": "2022-02-22T10:26:36"
         },
         {
           "path": "PlugIns\\WebPreview.dll",
-          "size": 315736,
-          "hash": "9a98e8ddcf9fa1c3d10a1f8131d8f88a",
-          "modified": "2025-06-24T16:29:50"
+          "size": 169976,
+          "hash": "b15f6a0161327c9e38e3531108b42114",
+          "modified": "2022-02-22T11:03:42"
         },
         {
           "path": "PlugIns\\WordComplete.dll",
-          "size": 299352,
-          "hash": "7782f93672575d4dcce6019e8dcf4f22",
-          "modified": "2025-06-24T16:29:50"
+          "size": 248824,
+          "hash": "0c2f8aba917e7507a93c5da78c796cc8",
+          "modified": "2022-02-22T11:03:42"
         },
         {
           "path": "PlugIns\\WordCount.dll",
-          "size": 210776,
-          "hash": "f9f859eabca7aac61aafa94e03ffdc39",
-          "modified": "2025-06-24T16:29:50"
-        },
-        {
-          "path": "PlugIns\\mui\\1028\\CommitList_loc.dll",
-          "size": 19800,
-          "hash": "eb17f4851e1fa8f8fc8f838f446535e6",
-          "modified": "2025-06-24T16:29:50"
+          "size": 189432,
+          "hash": "f004e17fa4f7b72be94300da2d03b60f",
+          "modified": "2022-02-22T11:03:42"
         },
         {
           "path": "PlugIns\\mui\\1028\\HTMLBar_loc.dll",
-          "size": 20824,
-          "hash": "4cdf32120430cb9322693f60bb0f8955",
-          "modified": "2025-06-24T16:29:50"
+          "size": 15352,
+          "hash": "75113f48837a908ea54d7db2e038f29c",
+          "modified": "2022-02-22T11:03:36"
         },
         {
           "path": "PlugIns\\mui\\1028\\Projects_loc.dll",
-          "size": 25944,
-          "hash": "26c6c3f24bcdc8475d237a11403de261",
-          "modified": "2025-06-24T16:29:50"
+          "size": 20472,
+          "hash": "f801e262d6c613fc9916e0f44c3d9b4b",
+          "modified": "2022-02-22T11:03:36"
         },
         {
           "path": "PlugIns\\mui\\1028\\Snippets_loc.dll",
-          "size": 22360,
-          "hash": "67254d96642842c64124028d6587f144",
-          "modified": "2025-06-24T16:29:50"
+          "size": 16888,
+          "hash": "042ce924a9b25acc546d33c8f8b263d7",
+          "modified": "2022-02-22T11:03:36"
         },
         {
           "path": "PlugIns\\mui\\1028\\WordComplete_loc.dll",
-          "size": 19288,
-          "hash": "4582fa95ea68b119e293f50f3d6068c3",
-          "modified": "2025-06-24T16:29:50"
-        },
-        {
-          "path": "PlugIns\\mui\\1029\\CommitList_loc.dll",
-          "size": 22360,
-          "hash": "bd240437b7e97dd276363194131cc636",
-          "modified": "2025-06-24T16:29:50"
+          "size": 13816,
+          "hash": "490fa08ccc04eb1c1d71b3586fa33f46",
+          "modified": "2022-02-22T11:03:36"
         },
         {
           "path": "PlugIns\\mui\\1029\\HTMLBar_loc.dll",
-          "size": 22360,
-          "hash": "28b83e289d02870784edc7a9cb7e121b",
-          "modified": "2025-06-24T16:29:50"
+          "size": 17400,
+          "hash": "528d46b5a1c1e62f80c58e7afc0ad88d",
+          "modified": "2022-02-22T11:03:36"
         },
         {
           "path": "PlugIns\\mui\\1029\\Projects_loc.dll",
-          "size": 31576,
-          "hash": "f6916933509beac5fc924f161082cf27",
-          "modified": "2025-06-24T16:29:50"
+          "size": 26104,
+          "hash": "cbff5355559839722c02ae989b6c965d",
+          "modified": "2022-02-22T11:03:36"
         },
         {
           "path": "PlugIns\\mui\\1029\\Snippets_loc.dll",
-          "size": 25432,
-          "hash": "daee835c3ce4a702d82271a03ea2aa6d",
-          "modified": "2025-06-24T16:29:50"
+          "size": 19960,
+          "hash": "8e7a8340ce809e6c55836a52d45f1ec0",
+          "modified": "2022-02-22T11:03:38"
         },
         {
           "path": "PlugIns\\mui\\1029\\WordComplete_loc.dll",
-          "size": 21848,
-          "hash": "e9abab7a495af81aadde70043af9a595",
-          "modified": "2025-06-24T16:29:50"
-        },
-        {
-          "path": "PlugIns\\mui\\1031\\CommitList_loc.dll",
-          "size": 22360,
-          "hash": "1281939f7ff1c197693456653a2d0f22",
-          "modified": "2025-06-24T16:29:50"
+          "size": 16376,
+          "hash": "25167d5a05004cc682f1bab2d10d7e65",
+          "modified": "2022-02-22T11:03:38"
         },
         {
           "path": "PlugIns\\mui\\1031\\HTMLBar_loc.dll",
-          "size": 22872,
-          "hash": "494f0fa52cca1c1f09b553dfc07f9127",
-          "modified": "2025-06-24T16:29:50"
+          "size": 17400,
+          "hash": "33d466a9179ab84327d1d24ac02e12d8",
+          "modified": "2022-02-22T11:03:38"
         },
         {
           "path": "PlugIns\\mui\\1031\\Projects_loc.dll",
-          "size": 32600,
-          "hash": "cfc61c59139224373e4f0fb4488eda5b",
-          "modified": "2025-06-24T16:29:50"
+          "size": 27128,
+          "hash": "7839b24fa79ac9fb2ca8e72f9516dd0c",
+          "modified": "2022-02-22T11:03:38"
         },
         {
           "path": "PlugIns\\mui\\1031\\Snippets_loc.dll",
-          "size": 25944,
-          "hash": "2b5ed4f572e98bdc7dcfe4bff5085d0e",
-          "modified": "2025-06-24T16:29:50"
+          "size": 20472,
+          "hash": "7fccd88b51b99274a6b70b4f8cde53fe",
+          "modified": "2022-02-22T11:03:38"
         },
         {
           "path": "PlugIns\\mui\\1031\\WordComplete_loc.dll",
-          "size": 22360,
-          "hash": "1d39d2374af9862dbd2006af19d5ef22",
-          "modified": "2025-06-24T16:29:50"
-        },
-        {
-          "path": "PlugIns\\mui\\1033\\CommitList_loc.dll",
-          "size": 21336,
-          "hash": "b8f30f02c11c0bfd55dd0eed537e5726",
-          "modified": "2025-06-24T16:29:50"
+          "size": 16888,
+          "hash": "5fcff5f20ed7321efad556c8105f95de",
+          "modified": "2022-02-22T11:03:38"
         },
         {
           "path": "PlugIns\\mui\\1033\\HTMLBar_loc.dll",
-          "size": 21848,
-          "hash": "9d68943be66255e247a4b1fe92ddd714",
-          "modified": "2025-06-24T16:29:50"
+          "size": 16888,
+          "hash": "73459db610f7db80e6e2c74bb20d0330",
+          "modified": "2022-02-22T11:03:38"
         },
         {
           "path": "PlugIns\\mui\\1033\\Projects_loc.dll",
-          "size": 30552,
-          "hash": "20d222e1961800f960d393225358e9af",
-          "modified": "2025-06-24T16:29:50"
+          "size": 25080,
+          "hash": "938ab171701d9a3625fccd4801fec0ad",
+          "modified": "2022-02-22T11:03:38"
         },
         {
           "path": "PlugIns\\mui\\1033\\Snippets_loc.dll",
-          "size": 24408,
-          "hash": "a309ad39bdf6b6acba6cfed5356961ce",
-          "modified": "2025-06-24T16:29:50"
+          "size": 19448,
+          "hash": "3806a473767039b3fa6dd59bed1afba6",
+          "modified": "2022-02-22T11:03:38"
         },
         {
           "path": "PlugIns\\mui\\1033\\WordComplete_loc.dll",
-          "size": 21848,
-          "hash": "cb346de38685cc4334eb275549ae71d8",
-          "modified": "2025-06-24T16:29:50"
-        },
-        {
-          "path": "PlugIns\\mui\\1036\\CommitList_loc.dll",
-          "size": 22872,
-          "hash": "18db203c1247f62ace75ee96c59e2885",
-          "modified": "2025-06-24T16:29:50"
+          "size": 16376,
+          "hash": "80dac907761977e29d5822e81ae6a622",
+          "modified": "2022-02-22T11:03:38"
         },
         {
           "path": "PlugIns\\mui\\1036\\HTMLBar_loc.dll",
-          "size": 22872,
-          "hash": "7a2d7339892f522441364ef4a5bc2390",
-          "modified": "2025-06-24T16:29:50"
+          "size": 17400,
+          "hash": "1d705da9ce9f6a72d1708981c67c2af2",
+          "modified": "2022-02-22T11:03:38"
         },
         {
           "path": "PlugIns\\mui\\1036\\Projects_loc.dll",
-          "size": 33112,
-          "hash": "e4bbb2e9509c4938e44ca0b57eab6267",
-          "modified": "2025-06-24T16:29:50"
+          "size": 27640,
+          "hash": "02af65e4cc82eaca7009cd72a0ddffc5",
+          "modified": "2022-02-22T11:03:38"
         },
         {
           "path": "PlugIns\\mui\\1036\\Snippets_loc.dll",
-          "size": 25944,
-          "hash": "e3375f1fc3cd77cbc34bfbde24599059",
-          "modified": "2025-06-24T16:29:50"
+          "size": 20984,
+          "hash": "c315aaffbc59469d41487646530253ed",
+          "modified": "2022-02-22T11:03:38"
         },
         {
           "path": "PlugIns\\mui\\1036\\WordComplete_loc.dll",
-          "size": 22360,
-          "hash": "2141a51b322b6723ecf163e5b6fde114",
-          "modified": "2025-06-24T16:29:50"
-        },
-        {
-          "path": "PlugIns\\mui\\1040\\CommitList_loc.dll",
-          "size": 21848,
-          "hash": "fb7c6952730692fcc0e7c1ebf17dd336",
-          "modified": "2025-06-24T16:29:50"
+          "size": 16888,
+          "hash": "f0bbfb58eefaa0ab341ea252e277dc0c",
+          "modified": "2022-02-22T11:03:38"
         },
         {
           "path": "PlugIns\\mui\\1040\\HTMLBar_loc.dll",
-          "size": 22872,
-          "hash": "63e0905129352ea7b7fa3441811081f9",
-          "modified": "2025-06-24T16:29:50"
+          "size": 17400,
+          "hash": "6eb089cbb109f7ec17a72b19fe075584",
+          "modified": "2022-02-22T11:03:38"
         },
         {
           "path": "PlugIns\\mui\\1040\\Projects_loc.dll",
-          "size": 32600,
-          "hash": "26b9eb8cef00fb7632012d075714b315",
-          "modified": "2025-06-24T16:29:50"
+          "size": 27128,
+          "hash": "1b14fcd8925bc5de55bb3042a1043f46",
+          "modified": "2022-02-22T11:03:38"
         },
         {
           "path": "PlugIns\\mui\\1040\\Snippets_loc.dll",
-          "size": 25944,
-          "hash": "7aea35151341fee4649a6932809b8b97",
-          "modified": "2025-06-24T16:29:50"
+          "size": 20472,
+          "hash": "2f33bf891a370d3638cbaf7a5e2f99e1",
+          "modified": "2022-02-22T11:03:38"
         },
         {
           "path": "PlugIns\\mui\\1040\\WordComplete_loc.dll",
-          "size": 22360,
-          "hash": "47595f821114dd6d6ef244ea1a1b61f8",
-          "modified": "2025-06-24T16:29:50"
-        },
-        {
-          "path": "PlugIns\\mui\\1041\\CommitList_loc.dll",
-          "size": 20312,
-          "hash": "9e64b8e9da11a75ff1e163f71994adcb",
-          "modified": "2025-06-24T16:29:50"
+          "size": 16888,
+          "hash": "3c31bea54daf659e79e7398e49a39202",
+          "modified": "2022-02-22T11:03:38"
         },
         {
           "path": "PlugIns\\mui\\1041\\HTMLBar_loc.dll",
-          "size": 21336,
-          "hash": "08d4e883203a6a020466e3a803f91d09",
-          "modified": "2025-06-24T16:29:50"
+          "size": 15864,
+          "hash": "76566e430a8ef37a7afc8b979536992a",
+          "modified": "2022-02-22T11:03:38"
         },
         {
           "path": "PlugIns\\mui\\1041\\Projects_loc.dll",
-          "size": 27992,
-          "hash": "b1bba49ca9db9caac6247b88dd057ef9",
-          "modified": "2025-06-24T16:29:50"
+          "size": 22520,
+          "hash": "6f37be866c1cf3e1b9b402e4bef633e9",
+          "modified": "2022-02-22T11:03:38"
         },
         {
           "path": "PlugIns\\mui\\1041\\Snippets_loc.dll",
-          "size": 22872,
-          "hash": "3ec779ce083834458c05996bfee53ac2",
-          "modified": "2025-06-24T16:29:50"
+          "size": 17400,
+          "hash": "37ea7b3c885cabf885d2414ed14024be",
+          "modified": "2022-02-22T11:03:38"
         },
         {
           "path": "PlugIns\\mui\\1041\\WordComplete_loc.dll",
-          "size": 19800,
-          "hash": "55fded6fa6eae8e791e21302974e54a5",
-          "modified": "2025-06-24T16:29:50"
-        },
-        {
-          "path": "PlugIns\\mui\\1042\\CommitList_loc.dll",
-          "size": 20312,
-          "hash": "c68bd8cd8a99d4d8d57105416d0fa4f1",
-          "modified": "2025-06-24T16:29:50"
+          "size": 14328,
+          "hash": "77008bb70a79e547c787505ae8aaae30",
+          "modified": "2022-02-22T11:03:38"
         },
         {
           "path": "PlugIns\\mui\\1042\\HTMLBar_loc.dll",
-          "size": 20824,
-          "hash": "e81422ec01c3d863b90dab1648a4e1a1",
-          "modified": "2025-06-24T16:29:50"
+          "size": 15352,
+          "hash": "e73b8dae19953c1a8c27096d826f0a61",
+          "modified": "2022-02-22T11:03:38"
         },
         {
           "path": "PlugIns\\mui\\1042\\Projects_loc.dll",
-          "size": 27480,
-          "hash": "7daa8c07037f46eda188de99900dcd0a",
-          "modified": "2025-06-24T16:29:50"
+          "size": 22008,
+          "hash": "06b4c45b515c7891a2acde87d25215ef",
+          "modified": "2022-02-22T11:03:38"
         },
         {
           "path": "PlugIns\\mui\\1042\\Snippets_loc.dll",
-          "size": 22872,
-          "hash": "2a10744813ce6f1bc47fc1f39daa793b",
-          "modified": "2025-06-24T16:29:50"
+          "size": 17400,
+          "hash": "351ba15e187473b88013ac524d7d1f82",
+          "modified": "2022-02-22T11:03:38"
         },
         {
           "path": "PlugIns\\mui\\1042\\WordComplete_loc.dll",
-          "size": 19800,
-          "hash": "fec8ea3b3b5a3bb31ed6a40e805de73a",
-          "modified": "2025-06-24T16:29:50"
-        },
-        {
-          "path": "PlugIns\\mui\\1043\\CommitList_loc.dll",
-          "size": 22360,
-          "hash": "070a028158eb39f68688dff5445a2ca2",
-          "modified": "2025-06-24T16:29:50"
+          "size": 14328,
+          "hash": "593a1e1f8c202ad86cd3ff1bde976290",
+          "modified": "2022-02-22T11:03:38"
         },
         {
           "path": "PlugIns\\mui\\1043\\HTMLBar_loc.dll",
-          "size": 22360,
-          "hash": "889d238675d2fe1dbf08d885128ab2cb",
-          "modified": "2025-06-24T16:29:50"
+          "size": 16888,
+          "hash": "939b42d3b05e5f14871f57ae9e82b370",
+          "modified": "2022-02-22T11:03:40"
         },
         {
           "path": "PlugIns\\mui\\1043\\Projects_loc.dll",
-          "size": 31576,
-          "hash": "65a3ee987874106db7ee94fce002d0b0",
-          "modified": "2025-06-24T16:29:50"
+          "size": 26104,
+          "hash": "eaae922308e59897162d88290ac2cdba",
+          "modified": "2022-02-22T11:03:40"
         },
         {
           "path": "PlugIns\\mui\\1043\\Snippets_loc.dll",
-          "size": 25432,
-          "hash": "89657a57b6a34c8d84a10f3a0a6839ed",
-          "modified": "2025-06-24T16:29:50"
+          "size": 19960,
+          "hash": "a09af6fcdd23624e49a492d898cf7e7c",
+          "modified": "2022-02-22T11:03:40"
         },
         {
           "path": "PlugIns\\mui\\1043\\WordComplete_loc.dll",
-          "size": 21848,
-          "hash": "7fdb8ddcedebb4495dfd33f773665b92",
-          "modified": "2025-06-24T16:29:50"
-        },
-        {
-          "path": "PlugIns\\mui\\1049\\CommitList_loc.dll",
-          "size": 22360,
-          "hash": "d6210dbce96e53e32814c056e4f9a789",
-          "modified": "2025-06-24T16:29:50"
+          "size": 16376,
+          "hash": "e91fb8a4aac935d1bcf6f29a9309896b",
+          "modified": "2022-02-22T11:03:40"
         },
         {
           "path": "PlugIns\\mui\\1049\\HTMLBar_loc.dll",
-          "size": 22872,
-          "hash": "24fe5d2faee66f6e3b2c55987dcafe3f",
-          "modified": "2025-06-24T16:29:50"
+          "size": 17400,
+          "hash": "8347528367a944c5a7ff101d1da88145",
+          "modified": "2022-02-22T11:03:40"
         },
         {
           "path": "PlugIns\\mui\\1049\\Projects_loc.dll",
-          "size": 31576,
-          "hash": "308c7800b995fa8c8f82ea031a44058f",
-          "modified": "2025-06-24T16:29:50"
+          "size": 26104,
+          "hash": "05f2e43c273c625fe1634477155525ba",
+          "modified": "2022-02-22T11:03:40"
         },
         {
           "path": "PlugIns\\mui\\1049\\Snippets_loc.dll",
-          "size": 25432,
-          "hash": "e9053d1b067ba1853fbd3775760eca33",
-          "modified": "2025-06-24T16:29:50"
+          "size": 19960,
+          "hash": "87c01ba30c7a4f6d2454a69adeaf89e6",
+          "modified": "2022-02-22T11:03:40"
         },
         {
           "path": "PlugIns\\mui\\1049\\WordComplete_loc.dll",
-          "size": 21848,
-          "hash": "b4e7cac8f583fea6002be61901d5538c",
-          "modified": "2025-06-24T16:29:50"
-        },
-        {
-          "path": "PlugIns\\mui\\2052\\CommitList_loc.dll",
-          "size": 19800,
-          "hash": "967d85958ba32550e79b2c40f8b56fec",
-          "modified": "2025-06-24T16:29:50"
+          "size": 16376,
+          "hash": "839ba18b35be7b26a20022c52a101a06",
+          "modified": "2022-02-22T11:03:40"
         },
         {
           "path": "PlugIns\\mui\\2052\\HTMLBar_loc.dll",
-          "size": 20824,
-          "hash": "91232b4af3c0a36c3934b71e0a153555",
-          "modified": "2025-06-24T16:29:50"
+          "size": 15352,
+          "hash": "b602896924cc2526295a1583dc99c041",
+          "modified": "2022-02-22T11:03:40"
         },
         {
           "path": "PlugIns\\mui\\2052\\Projects_loc.dll",
-          "size": 26456,
-          "hash": "673648aefa30b717e1118f8a1080ae2c",
-          "modified": "2025-06-24T16:29:50"
+          "size": 20984,
+          "hash": "f98ce41f36a36491376b93dfcdd52861",
+          "modified": "2022-02-22T11:03:40"
         },
         {
           "path": "PlugIns\\mui\\2052\\Snippets_loc.dll",
-          "size": 22872,
-          "hash": "60e29be49037238a3c928ab6c59034c0",
-          "modified": "2025-06-24T16:29:50"
+          "size": 17400,
+          "hash": "b2f31484ec958a2595dbaed01accfe95",
+          "modified": "2022-02-22T11:03:40"
         },
         {
           "path": "PlugIns\\mui\\2052\\WordComplete_loc.dll",
-          "size": 19800,
-          "hash": "41602f04b96a09aa72ec863f069c505b",
-          "modified": "2025-06-24T16:29:50"
-        },
-        {
-          "path": "PlugIns\\mui\\2057\\CommitList_loc.dll",
-          "size": 21336,
-          "hash": "6d7ee95d2fadbcf0edb22ce8a9bf5a07",
-          "modified": "2025-06-24T16:29:50"
+          "size": 14328,
+          "hash": "a0294c85795d5772f6b5a8878bd63d32",
+          "modified": "2022-02-22T11:03:40"
         },
         {
           "path": "PlugIns\\mui\\2057\\HTMLBar_loc.dll",
-          "size": 21848,
-          "hash": "cf019fe265e6dd9583644a9b1812453e",
-          "modified": "2025-06-24T16:29:50"
+          "size": 16888,
+          "hash": "ba24f7865bb93a1fc9134c6c0a8bf8f2",
+          "modified": "2022-02-22T11:03:40"
         },
         {
           "path": "PlugIns\\mui\\2057\\Projects_loc.dll",
-          "size": 30552,
-          "hash": "f6f3a92906d52af370da01ba3537e4a6",
-          "modified": "2025-06-24T16:29:50"
+          "size": 25080,
+          "hash": "0588cf3722316c453292d6a82ab795c8",
+          "modified": "2022-02-22T11:03:40"
         },
         {
           "path": "PlugIns\\mui\\2057\\Snippets_loc.dll",
-          "size": 24408,
-          "hash": "e91fcc788361fac182a9079cb5b64a20",
-          "modified": "2025-06-24T16:29:50"
+          "size": 19448,
+          "hash": "09009108eae760ff5ffb94b38019b1da",
+          "modified": "2022-02-22T11:03:40"
         },
         {
           "path": "PlugIns\\mui\\2057\\WordComplete_loc.dll",
-          "size": 21336,
-          "hash": "9ac541ecee03023f8763b9189f0b8e37",
-          "modified": "2025-06-24T16:29:50"
-        },
-        {
-          "path": "PlugIns\\mui\\3082\\CommitList_loc.dll",
-          "size": 22360,
-          "hash": "de8f76e5b523aa2210db4ed879398792",
-          "modified": "2025-06-24T16:29:50"
+          "size": 15864,
+          "hash": "49bee1aa965b118f792fbe388a4c1a9b",
+          "modified": "2022-02-22T11:03:40"
         },
         {
           "path": "PlugIns\\mui\\3082\\HTMLBar_loc.dll",
-          "size": 22872,
-          "hash": "457344021112f9fb11898282e6429263",
-          "modified": "2025-06-24T16:29:50"
+          "size": 17400,
+          "hash": "b5fa5f30517cbadb6f81ae046732bbba",
+          "modified": "2022-02-22T11:03:40"
         },
         {
           "path": "PlugIns\\mui\\3082\\Projects_loc.dll",
-          "size": 32600,
-          "hash": "f35ed3a1e0ed00f11aa9d80e81c166c8",
-          "modified": "2025-06-24T16:29:50"
+          "size": 27640,
+          "hash": "73118d7c57138cec1a3195ba2d4c7946",
+          "modified": "2022-02-22T11:03:40"
         },
         {
           "path": "PlugIns\\mui\\3082\\Snippets_loc.dll",
-          "size": 26456,
-          "hash": "0fd332640b0a01c38fb8ef82086baf3c",
-          "modified": "2025-06-24T16:29:50"
+          "size": 20984,
+          "hash": "7ae66684bed62e909819190073a611a6",
+          "modified": "2022-02-22T11:03:40"
         },
         {
           "path": "PlugIns\\mui\\3082\\WordComplete_loc.dll",
-          "size": 22360,
-          "hash": "fc979ce00db49c4d0e1c39361ea77d34",
-          "modified": "2025-06-24T16:29:50"
+          "size": 16888,
+          "hash": "71677b4a18d1dfde11e49efe3758d164",
+          "modified": "2022-02-22T11:03:40"
         }
       ],
-      "total_files": 398,
-      "total_size": 205449067,
-      "last_updated": "2025-06-28T16:28:30.644922"
+      "total_files": 158,
+      "total_size": 64541557,
+      "last_updated": "2025-06-28T21:51:50.560270"
     },
     "NetTime": {
-      "version": "20250628_162830",
+      "version": "20250628_215150",
       "files": [
         {
           "path": "NetTime.exe",
@@ -3393,10 +1953,10 @@
       ],
       "total_files": 2,
       "total_size": 1277952,
-      "last_updated": "2025-06-28T16:28:30.648932"
+      "last_updated": "2025-06-28T21:51:50.564267"
     },
     "everything": {
-      "version": "20250628_162830",
+      "version": "20250628_215150",
       "files": [
         {
           "path": "Everything-1.5a.ini",
@@ -3437,10 +1997,10 @@
       ],
       "total_files": 6,
       "total_size": 6804162,
-      "last_updated": "2025-06-28T16:28:30.664923"
+      "last_updated": "2025-06-28T21:51:50.597120"
     },
     "HiBit Startup Manager": {
-      "version": "20250628_162830",
+      "version": "20250628_215150",
       "files": [
         {
           "path": "HiBitStartupManager.exe",
@@ -3481,10 +2041,10 @@
       ],
       "total_files": 6,
       "total_size": 19208529,
-      "last_updated": "2025-06-28T16:28:30.706902"
+      "last_updated": "2025-06-28T21:51:50.679316"
     },
     "notepad++": {
-      "version": "20250628_162831",
+      "version": "20250628_215151",
       "files": [
         {
           "path": "change.log",
@@ -10317,10 +8877,10 @@
       ],
       "total_files": 1138,
       "total_size": 63025019,
-      "last_updated": "2025-06-28T16:28:31.138642"
+      "last_updated": "2025-06-28T21:51:51.524762"
     },
     "notepad-": {
-      "version": "20250628_162831",
+      "version": "20250628_215151",
       "files": [
         {
           "path": "D3Dcompiler_47.dll",
@@ -13637,10 +12197,10 @@
       ],
       "total_files": 552,
       "total_size": 66300689,
-      "last_updated": "2025-06-28T16:28:31.423490"
+      "last_updated": "2025-06-28T21:51:51.942483"
     },
     "SublimeText": {
-      "version": "20250628_162831",
+      "version": "20250628_215152",
       "files": [
         {
           "path": "!)添删右键菜单.bat",
@@ -18721,10 +17281,10 @@
       ],
       "total_files": 846,
       "total_size": 69499494,
-      "last_updated": "2025-06-28T16:28:31.820253"
+      "last_updated": "2025-06-28T21:51:52.573915"
     },
     "WinMemoryCleaner": {
-      "version": "20250628_162831",
+      "version": "20250628_215152",
       "files": [
         {
           "path": "WinMemoryCleaner.exe",
@@ -18735,10 +17295,10 @@
       ],
       "total_files": 1,
       "total_size": 254312,
-      "last_updated": "2025-06-28T16:28:31.822249"
+      "last_updated": "2025-06-28T21:51:52.576895"
     },
     "WinRAR": {
-      "version": "20250628_162831",
+      "version": "20250628_215152",
       "files": [
         {
           "path": "7zxa.dll",
@@ -18941,7 +17501,7 @@
       ],
       "total_files": 33,
       "total_size": 10159001,
-      "last_updated": "2025-06-28T16:28:31.851247"
+      "last_updated": "2025-06-28T21:51:52.629313"
     }
   }
 }
