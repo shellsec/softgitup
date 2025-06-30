@@ -1,0 +1,30 @@
+{
+    "github_repo": "https://github.com/shellsec/softgitup",
+    "list_file": "list.txt",
+    "sync_time": "07:00",
+    "software_dirs": {
+      "CCleaner": "CCleaner",
+      "EditPlus": "EditPlus",
+      "EmEditor": "EmEditor",
+      "NetTime": "NetTime",            
+      "everything": "everything",
+      "HiBit Startup Manager": "HiBit Startup Manager",
+      "notepad++": "notepad++",
+      "notepad-": "notepad-",
+      "SublimeText": "SublimeText",
+      "WinMemoryCleaner": "WinMemoryCleaner",
+      "WinRAR": "WinRAR",
+      "system_good": "system_good"
+    },
+    "manager_base_path": "./software",
+    "sync_base_path": "D:\\\\Program Files",
+    "git_mirrors": [
+      "https://gh-proxy.com/https://raw.githubusercontent.com/shellsec/softgitup"
+    ],
+    "download_timeout": 30,
+    "retry_times": 3,
+    "retry_delay": 5,
+    "log_level": "INFO",
+    "auto_start": true,
+    "check_interval": 3600
+  }

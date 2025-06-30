@@ -11,13 +11,15 @@
 - **系统托盘**: 后台运行，支持系统托盘图标和静默更新
 - **跨平台**: 支持Windows、Linux、macOS
 - **工作流程**: 提供便捷的工作流程工具，支持单个软件更新和同步
+- **开箱即用**: 所见即所得注册破解版本，日常保持更新版本，已杀毒
 
 ### 📦 支持的软件
-- **文本编辑器**: Notepad++、SublimeText、EditPlus
-- **系统工具**: CCleaner、Everything、WinMemoryCleaner
+- **文本编辑器**: Notepad++、notepad-、SublimeText、EditPlus、EmEditor(大文件16T)
+- **系统工具**: CCleaner、Everything、WinMemoryCleaner、CrystalDiskInfo、NetTime
 - **压缩工具**: WinRAR
 - **启动管理**: HiBit Startup Manager
-- **更多软件**: 可轻松扩展支持
+- **更多软件**: 可轻松扩展支持，有其他需要可以发帖
+- **更多软件**: （默认不下载，看喜好）想要system_good的话在配置文件自行添加，system_good目录更新，驱动人生海外版、StartAllBack任务栏、关闭补丁更新、kms激活、关闭自带杀毒
 
 ## 项目结构
 
