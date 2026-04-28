@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-04-28T11:54:08.569831",
+  "generated_at": "2026-04-28T12:16:10.787379",
   "total_software": 21,
-  "total_files": 4465,
-  "total_size": 1418045127,
+  "total_files": 4467,
+  "total_size": 1418088513,
   "software": {
     "WinMemoryCleaner": {
       "version": "20260310_114739",
@@ -26187,7 +26187,7 @@
       "last_updated": "2026-04-08T16:36:09.589316"
     },
     "gh-release-fetch": {
-      "version": "20260422_184348",
+      "version": "20260428_121610",
       "files": [
         {
           "path": "auto_update.py",
@@ -26245,15 +26245,15 @@
         },
         {
           "path": "apps\\darwin\\01-AI.json",
-          "size": 629,
-          "hash": "7539a40a3e019a3bb3d53acd2b69b6f4",
-          "modified": "2026-04-20T15:43:30.453320"
+          "size": 3532,
+          "hash": "1654597da9442706271f9bcced5bb671",
+          "modified": "2026-04-28T10:51:42.190992"
         },
         {
           "path": "apps\\darwin\\02-下载.json",
-          "size": 1882,
-          "hash": "176d73160a3779f855fc9550ff4682be",
-          "modified": "2026-04-20T15:43:30.454380"
+          "size": 2367,
+          "hash": "970f77c9fa286287e980b873640d16e7",
+          "modified": "2026-04-28T10:49:58.196038"
         },
         {
           "path": "apps\\darwin\\03-写作.json",
@@ -26277,13 +26277,13 @@
           "path": "apps\\darwin\\06-命令行.json",
           "size": 2817,
           "hash": "02383bf2e77afc22faee93c013766b84",
-          "modified": "2026-04-20T15:43:30.458616"
+          "modified": "2026-04-28T10:49:58.258066"
         },
         {
           "path": "apps\\darwin\\07-备份.json",
-          "size": 156,
-          "hash": "86f6d3727fe86235447a59995f7ff8a2",
-          "modified": "2026-04-20T15:43:30.459628"
+          "size": 1950,
+          "hash": "bd455b3a6966a57844f4955c109d414d",
+          "modified": "2026-04-28T10:49:58.181676"
         },
         {
           "path": "apps\\darwin\\08-多媒体.json",
@@ -26301,13 +26301,19 @@
           "path": "apps\\darwin\\10-安全.json",
           "size": 4030,
           "hash": "21f6979f96f49e8081de92655bb49aeb",
-          "modified": "2026-04-20T15:43:30.461658"
+          "modified": "2026-04-28T10:49:58.197090"
+        },
+        {
+          "path": "apps\\darwin\\11-工具.json",
+          "size": 980,
+          "hash": "6609cbbd08baf3162cc2bcdfebc2a1f0",
+          "modified": "2026-04-28T10:49:58.196038"
         },
         {
           "path": "apps\\darwin\\12-开发.json",
           "size": 3777,
           "hash": "80fb96be4578f88d0696d7d64db6146a",
-          "modified": "2026-04-20T15:43:30.462758"
+          "modified": "2026-04-28T10:49:58.269748"
         },
         {
           "path": "apps\\darwin\\13-效率.json",
@@ -26325,7 +26331,7 @@
           "path": "apps\\darwin\\15-笔记.json",
           "size": 1828,
           "hash": "b53bed1d4fa017597422b8a138d32c72",
-          "modified": "2026-04-20T15:43:30.464808"
+          "modified": "2026-04-28T10:49:58.270789"
         },
         {
           "path": "apps\\darwin\\16-系统.json",
@@ -26341,9 +26347,9 @@
         },
         {
           "path": "apps\\darwin\\18-网络.json",
-          "size": 2726,
-          "hash": "931b8b7e58454915b728b294078f437b",
-          "modified": "2026-04-20T15:43:30.467940"
+          "size": 3482,
+          "hash": "9776cd7af834e9e90c164526f93b3db1",
+          "modified": "2026-04-28T10:49:58.243848"
         },
         {
           "path": "apps\\darwin\\20-网络与通讯.json",
@@ -26359,15 +26365,15 @@
         },
         {
           "path": "apps\\darwin\\23-数据库.json",
-          "size": 700,
-          "hash": "4be774a5db0064847e3a2deb9c3e8c97",
-          "modified": "2026-04-20T15:43:30.469961"
+          "size": 1636,
+          "hash": "ab31b2499ab1fb3b84b85604fc3e3cf7",
+          "modified": "2026-04-28T10:49:58.196038"
         },
         {
           "path": "apps\\darwin\\24-云原生.json",
           "size": 1575,
           "hash": "5bfc71171563ce7f81213a3ff8756586",
-          "modified": "2026-04-20T15:43:30.471146"
+          "modified": "2026-04-28T10:49:58.252774"
         },
         {
           "path": "apps\\darwin\\26-编辑器.json",
@@ -26379,37 +26385,37 @@
           "path": "apps\\darwin\\27-金融与股票.json",
           "size": 4626,
           "hash": "32aa33d65a042526cdc8a62cf0a86981",
-          "modified": "2026-04-20T15:43:30.473250"
+          "modified": "2026-04-28T10:49:58.252774"
         },
         {
           "path": "apps\\darwin\\28-加密货币.json",
           "size": 9822,
           "hash": "dc8986c670be4a5e0669d5d47aef5f0c",
-          "modified": "2026-04-20T15:43:30.474287"
+          "modified": "2026-04-28T10:49:58.267673"
         },
         {
           "path": "apps\\darwin\\29-局域网文件共享.json",
           "size": 1058,
           "hash": "f9dec0f5d908ad7b58e1b44b369899c5",
-          "modified": "2026-04-20T15:43:30.475356"
+          "modified": "2026-04-28T10:49:58.195000"
         },
         {
           "path": "apps\\darwin\\99-未匹配-windows分片.json",
           "size": 5688,
           "hash": "af31e218061a20c925b6f058903db540",
-          "modified": "2026-04-20T15:43:30.476383"
+          "modified": "2026-04-28T10:49:58.196038"
         },
         {
           "path": "apps\\linux\\01-AI.json",
-          "size": 629,
-          "hash": "7539a40a3e019a3bb3d53acd2b69b6f4",
-          "modified": "2026-04-20T15:43:30.477415"
+          "size": 4480,
+          "hash": "a8de1c0b73bc817eae86e8cac7ce384f",
+          "modified": "2026-04-28T10:52:00.035281"
         },
         {
           "path": "apps\\linux\\02-下载.json",
-          "size": 1911,
-          "hash": "e5689f3f6d34f7cc2e275db7fd4d4111",
-          "modified": "2026-04-20T15:43:30.478465"
+          "size": 2388,
+          "hash": "5fa5156deacdafd713b7f2165a63cbf9",
+          "modified": "2026-04-28T10:49:58.270789"
         },
         {
           "path": "apps\\linux\\03-写作.json",
@@ -26433,13 +26439,13 @@
           "path": "apps\\linux\\06-命令行.json",
           "size": 2817,
           "hash": "02383bf2e77afc22faee93c013766b84",
-          "modified": "2026-04-20T15:43:30.481558"
+          "modified": "2026-04-28T10:49:58.195000"
         },
         {
           "path": "apps\\linux\\07-备份.json",
-          "size": 156,
-          "hash": "86f6d3727fe86235447a59995f7ff8a2",
-          "modified": "2026-04-20T15:43:30.481558"
+          "size": 1983,
+          "hash": "abff18c7651ce85f156d0f8d7f676ba1",
+          "modified": "2026-04-28T10:49:58.196038"
         },
         {
           "path": "apps\\linux\\08-多媒体.json",
@@ -26457,13 +26463,19 @@
           "path": "apps\\linux\\10-安全.json",
           "size": 4090,
           "hash": "8aa7408b86efcb1e0fadd62354d1a1d6",
-          "modified": "2026-04-20T15:43:30.484594"
+          "modified": "2026-04-28T10:49:58.196038"
+        },
+        {
+          "path": "apps\\linux\\11-工具.json",
+          "size": 519,
+          "hash": "0e7171ecb2740f71e966251e0cbb3f8e",
+          "modified": "2026-04-28T10:49:58.270789"
         },
         {
           "path": "apps\\linux\\12-开发.json",
           "size": 3777,
           "hash": "80fb96be4578f88d0696d7d64db6146a",
-          "modified": "2026-04-20T15:43:30.485607"
+          "modified": "2026-04-28T10:49:58.195000"
         },
         {
           "path": "apps\\linux\\13-效率.json",
@@ -26481,7 +26493,7 @@
           "path": "apps\\linux\\15-笔记.json",
           "size": 1828,
           "hash": "b53bed1d4fa017597422b8a138d32c72",
-          "modified": "2026-04-20T15:43:30.487790"
+          "modified": "2026-04-28T10:49:58.243848"
         },
         {
           "path": "apps\\linux\\16-系统.json",
@@ -26497,9 +26509,9 @@
         },
         {
           "path": "apps\\linux\\18-网络.json",
-          "size": 3592,
-          "hash": "4891adf486c8103ecc0d53f1313ad449",
-          "modified": "2026-04-20T15:43:30.489877"
+          "size": 5321,
+          "hash": "a9c6766fc16ee75d5e6f9fc5b489d001",
+          "modified": "2026-04-28T10:49:58.252774"
         },
         {
           "path": "apps\\linux\\20-网络与通讯.json",
@@ -26515,15 +26527,15 @@
         },
         {
           "path": "apps\\linux\\23-数据库.json",
-          "size": 700,
-          "hash": "4be774a5db0064847e3a2deb9c3e8c97",
-          "modified": "2026-04-20T15:43:30.492981"
+          "size": 1701,
+          "hash": "f5d6cbe5fcc48ac0d60adbddc9f01d3c",
+          "modified": "2026-04-28T10:49:58.267673"
         },
         {
           "path": "apps\\linux\\24-云原生.json",
           "size": 1575,
           "hash": "5bfc71171563ce7f81213a3ff8756586",
-          "modified": "2026-04-20T15:43:30.492981"
+          "modified": "2026-04-28T10:49:58.270789"
         },
         {
           "path": "apps\\linux\\26-编辑器.json",
@@ -26535,139 +26547,139 @@
           "path": "apps\\linux\\27-金融与股票.json",
           "size": 3333,
           "hash": "101ca877f13ff48ce642d4b5eabd4dec",
-          "modified": "2026-04-20T15:43:30.495053"
+          "modified": "2026-04-28T10:49:58.182208"
         },
         {
           "path": "apps\\linux\\28-加密货币.json",
           "size": 8256,
           "hash": "1f1bbadf499603e7215bdca0cf7304d5",
-          "modified": "2026-04-20T15:43:30.496067"
+          "modified": "2026-04-28T10:49:58.270789"
         },
         {
           "path": "apps\\linux\\29-局域网文件共享.json",
           "size": 1058,
           "hash": "f9dec0f5d908ad7b58e1b44b369899c5",
-          "modified": "2026-04-20T15:43:30.497100"
+          "modified": "2026-04-28T10:49:58.269748"
         },
         {
           "path": "apps\\linux\\99-未匹配-windows分片.json",
           "size": 5688,
           "hash": "af31e218061a20c925b6f058903db540",
-          "modified": "2026-04-20T15:43:30.498171"
+          "modified": "2026-04-28T10:49:58.243848"
         },
         {
           "path": "apps\\windows\\01-AI.json",
-          "size": 5372,
-          "hash": "02cb9846f64f481ac5b7a73bbe243a35",
-          "modified": "2026-04-20T15:43:30.412149"
+          "size": 9062,
+          "hash": "be9cd779972f62b6dffa61f91ba95881",
+          "modified": "2026-04-28T10:51:41.468582"
         },
         {
           "path": "apps\\windows\\02-下载.json",
-          "size": 3275,
-          "hash": "2e14ffd79e1fd2a07e6289b12c8ff7fb",
-          "modified": "2026-04-20T15:43:30.413161"
+          "size": 4138,
+          "hash": "942d3d9f08395b5681f8b326896e61ba",
+          "modified": "2026-04-28T10:49:58.269748"
         },
         {
           "path": "apps\\windows\\03-写作.json",
           "size": 3519,
           "hash": "6dcc58ead2b8b27665e000666a523d60",
-          "modified": "2026-04-20T15:43:30.414174"
+          "modified": "2026-04-28T10:49:58.196038"
         },
         {
           "path": "apps\\windows\\04-办公.json",
           "size": 6633,
           "hash": "18446b3d73bee1cbd4c90f579fbe8e06",
-          "modified": "2026-04-20T15:43:30.415246"
+          "modified": "2026-04-28T10:49:58.196038"
         },
         {
           "path": "apps\\windows\\05-办公与设计.json",
           "size": 2446,
           "hash": "6f9090a91343346405d90890275d40ce",
-          "modified": "2026-04-20T15:43:30.416257"
+          "modified": "2026-04-28T10:49:58.269748"
         },
         {
           "path": "apps\\windows\\06-命令行.json",
           "size": 16614,
           "hash": "217c1178725ba658056e3dcb087fe55a",
-          "modified": "2026-04-20T15:43:30.418314"
+          "modified": "2026-04-28T10:49:58.270789"
         },
         {
           "path": "apps\\windows\\07-备份.json",
-          "size": 2498,
-          "hash": "b27f31c767035d9ffb06281ab6259056",
-          "modified": "2026-04-20T15:43:30.419375"
+          "size": 3355,
+          "hash": "0e12a88f646fcbf4ae659e70ee0e37d1",
+          "modified": "2026-04-28T11:46:53.766902"
         },
         {
           "path": "apps\\windows\\08-多媒体.json",
           "size": 14005,
           "hash": "61ffee5cc8f179a00a80c7597cc1bfc3",
-          "modified": "2026-04-20T15:43:30.421429"
+          "modified": "2026-04-28T10:49:58.182208"
         },
         {
           "path": "apps\\windows\\09-多媒体与设计.json",
           "size": 6606,
           "hash": "3e617da3e354c15707a5ad20ea13d3a9",
-          "modified": "2026-04-20T15:43:30.423713"
+          "modified": "2026-04-28T10:49:58.244914"
         },
         {
           "path": "apps\\windows\\10-安全.json",
-          "size": 32239,
-          "hash": "99d64ef7d90336608923811801cabf10",
-          "modified": "2026-04-20T15:43:30.426823"
+          "size": 31562,
+          "hash": "7b9e025ef4d416bf89a7365a86ed39d4",
+          "modified": "2026-04-28T11:46:29.933668"
         },
         {
           "path": "apps\\windows\\11-工具.json",
-          "size": 2434,
-          "hash": "eec4c19f8eb712958b510314dd4ee2ae",
-          "modified": "2026-04-20T15:43:30.427888"
+          "size": 3430,
+          "hash": "9b69dd00ba4c53832ffeeec0e92c1bb6",
+          "modified": "2026-04-28T10:49:58.182208"
         },
         {
           "path": "apps\\windows\\12-开发.json",
           "size": 38500,
           "hash": "1c3f56db4ecfdda4dfd2dd2c94b410db",
-          "modified": "2026-04-20T15:43:30.431027"
+          "modified": "2026-04-28T10:49:58.270789"
         },
         {
           "path": "apps\\windows\\13-效率.json",
           "size": 7432,
           "hash": "0290d7bff2769da20ad68d89db8b8970",
-          "modified": "2026-04-20T15:43:30.432071"
+          "modified": "2026-04-28T10:49:58.192953"
         },
         {
           "path": "apps\\windows\\14-游戏.json",
           "size": 15788,
           "hash": "ccd92f7cd288fd8e12586b93a6e50935",
-          "modified": "2026-04-20T15:43:30.434247"
+          "modified": "2026-04-28T10:49:58.187492"
         },
         {
           "path": "apps\\windows\\15-笔记.json",
           "size": 11603,
           "hash": "e6863fa04f45cc65a9d2a2693014c8ef",
-          "modified": "2026-04-20T15:43:30.435257"
+          "modified": "2026-04-28T10:49:58.270789"
         },
         {
           "path": "apps\\windows\\16-系统.json",
           "size": 10687,
           "hash": "f93df99885ed8a6c1b345ca470d0367b",
-          "modified": "2026-04-20T15:43:30.437346"
+          "modified": "2026-04-28T10:49:58.195000"
         },
         {
           "path": "apps\\windows\\17-终端.json",
           "size": 5207,
           "hash": "aca330540c3f7b31d337c9c0764ba290",
-          "modified": "2026-04-20T15:43:30.438359"
+          "modified": "2026-04-28T10:49:58.270789"
         },
         {
           "path": "apps\\windows\\18-网络.json",
-          "size": 13310,
-          "hash": "6cd122581a10aac67d0ec313a5a15d2a",
-          "modified": "2026-04-20T15:43:30.440646"
+          "size": 13599,
+          "hash": "275a0b92ed4dd6a291e2e81b95fcede4",
+          "modified": "2026-04-28T11:46:50.502924"
         },
         {
           "path": "apps\\windows\\19-网络与协作.json",
           "size": 3228,
           "hash": "a3f6d5d502dfbe493e107a99e5e598f3",
-          "modified": "2026-04-20T15:43:30.440646"
+          "modified": "2026-04-28T10:49:58.195000"
         },
         {
           "path": "apps\\windows\\20-网络与通讯.json",
@@ -26679,55 +26691,55 @@
           "path": "apps\\windows\\21-远程与协作.json",
           "size": 3182,
           "hash": "48fc1d862978c1a55ecef33ea3d37e8c",
-          "modified": "2026-04-20T15:43:30.442715"
+          "modified": "2026-04-28T10:49:58.252774"
         },
         {
           "path": "apps\\windows\\22-音视频.json",
           "size": 2233,
           "hash": "95af77b64243e3ac42d7ab71541d3284",
-          "modified": "2026-04-20T15:43:30.443743"
+          "modified": "2026-04-28T10:49:58.270789"
         },
         {
           "path": "apps\\windows\\23-数据库.json",
-          "size": 7301,
-          "hash": "ae55d40b44ed68849b862949aa28e470",
-          "modified": "2026-04-20T15:43:30.444766"
+          "size": 8318,
+          "hash": "a5bfb70aef3daa2fb3990893414aaa32",
+          "modified": "2026-04-28T10:49:58.196038"
         },
         {
           "path": "apps\\windows\\24-云原生.json",
           "size": 13587,
           "hash": "6aadcecd9a7db02c88d96bb51889fd8b",
-          "modified": "2026-04-20T15:43:30.446862"
+          "modified": "2026-04-28T10:49:58.196038"
         },
         {
           "path": "apps\\windows\\25-可观测.json",
           "size": 5667,
           "hash": "76ae9d45a32ba99b4eea08e2dab480aa",
-          "modified": "2026-04-20T15:43:30.448090"
+          "modified": "2026-04-28T10:49:58.270789"
         },
         {
           "path": "apps\\windows\\26-编辑器.json",
           "size": 11013,
           "hash": "79c3c1aa03f2c88b70a00e76368d8095",
-          "modified": "2026-04-20T15:43:30.449141"
+          "modified": "2026-04-28T10:49:58.196038"
         },
         {
           "path": "apps\\windows\\27-金融与股票.json",
           "size": 4424,
           "hash": "e0d884f390b01daf417a016b0cc475ad",
-          "modified": "2026-04-20T15:43:30.450202"
+          "modified": "2026-04-28T10:49:58.267673"
         },
         {
           "path": "apps\\windows\\28-加密货币.json",
           "size": 6252,
           "hash": "336d334883ad02b6033572e4aa40dfe1",
-          "modified": "2026-04-20T15:43:30.451274"
+          "modified": "2026-04-28T10:49:58.196038"
         },
         {
           "path": "apps\\windows\\29-局域网文件共享.json",
           "size": 4745,
           "hash": "501a801381898207821a5c8466f0fa65",
-          "modified": "2026-04-20T15:43:30.453320"
+          "modified": "2026-04-28T10:49:58.267673"
         },
         {
           "path": "GiteeExploreHot\\README.md",
@@ -26751,37 +26763,37 @@
           "path": "GiteeExploreHot\\catalog\\01-数据库与中间件.json",
           "size": 401,
           "hash": "30c4460f512d0cc939968d69108d631d",
-          "modified": "2026-04-20T14:14:44.604288"
+          "modified": "2026-04-28T10:49:58.196038"
         },
         {
           "path": "GiteeExploreHot\\catalog\\02-AI与深度学习.json",
           "size": 342,
           "hash": "c056c773817155a3faeab8955a8dc360",
-          "modified": "2026-04-20T14:14:44.611849"
+          "modified": "2026-04-28T10:49:58.196038"
         },
         {
           "path": "GiteeExploreHot\\catalog\\03-操作系统与内核.json",
           "size": 666,
           "hash": "41d7bd9d1d7a95ba85edd87a95690102",
-          "modified": "2026-04-20T14:14:44.638939"
+          "modified": "2026-04-28T10:49:58.267673"
         },
         {
           "path": "GiteeExploreHot\\catalog\\04-云原生与中间件.json",
           "size": 1028,
           "hash": "6d7e735ee922f0951753a2826150ee0e",
-          "modified": "2026-04-20T14:14:44.603223"
+          "modified": "2026-04-28T10:49:58.196038"
         },
         {
           "path": "GiteeExploreHot\\catalog\\05-前端与应用模板.json",
           "size": 944,
           "hash": "e58e3649e8612fd4c6c9deb3accdec2e",
-          "modified": "2026-04-20T14:14:44.603223"
+          "modified": "2026-04-28T10:49:58.196038"
         },
         {
           "path": "GiteeExploreHot\\catalog\\06-工具与类库.json",
           "size": 146,
           "hash": "632edbdb03ec3e71eb060b47ee40e1b6",
-          "modified": "2026-04-20T14:14:44.623880"
+          "modified": "2026-04-28T10:49:58.243848"
         },
         {
           "path": "GiteeExploreHot\\catalog\\README.md",
@@ -26917,27 +26929,27 @@
         },
         {
           "path": "VibeCodingToolsDown\\darwin\\01-VibeCodingToolsDown.json",
-          "size": 6220,
-          "hash": "6ab94481ab90fa1bfd16c3d53b05c58d",
-          "modified": "2026-04-20T15:38:06.432511"
+          "size": 8942,
+          "hash": "f0be7fa76bf3ec287190c198015cfdc2",
+          "modified": "2026-04-28T10:52:19.254824"
         },
         {
           "path": "VibeCodingToolsDown\\dist\\vibecoding\\manifest.json",
-          "size": 10695,
-          "hash": "db7aabd5dea1e61d67c272af0dabed44",
-          "modified": "2026-04-20T15:38:33.308753"
+          "size": 15681,
+          "hash": "da2d2eed7041ca26e42c35a0371913ea",
+          "modified": "2026-04-28T10:52:12.701083"
         },
         {
           "path": "VibeCodingToolsDown\\linux\\01-VibeCodingToolsDown.json",
-          "size": 6001,
-          "hash": "76ab586cac495bc67607b8df86a417e9",
-          "modified": "2026-04-20T15:38:08.558032"
+          "size": 8243,
+          "hash": "80f3e638a33a0ebbf612145f961e1d99",
+          "modified": "2026-04-28T10:52:21.234470"
         },
         {
           "path": "VibeCodingToolsDown\\scripts\\build_manifest.py",
-          "size": 32446,
-          "hash": "79999e8c1eda698e3aca0be611ba4fec",
-          "modified": "2026-04-20T15:37:58.000262"
+          "size": 38219,
+          "hash": "d38f457910c40e8a18a6e0fe91a9da64",
+          "modified": "2026-04-28T10:52:01.915115"
         },
         {
           "path": "VibeCodingToolsDown\\tools\\apply_enabled_snapshot.bat",
@@ -26953,14 +26965,14 @@
         },
         {
           "path": "VibeCodingToolsDown\\windows\\01-VibeCodingToolsDown.json",
-          "size": 6844,
-          "hash": "8014c4b13ff25a10a4df116d2d252285",
-          "modified": "2026-04-20T15:38:04.683719"
+          "size": 10214,
+          "hash": "5df1d65d0ab4d4db1791f209d6bfd7ab",
+          "modified": "2026-04-28T10:52:16.244682"
         }
       ],
-      "total_files": 128,
-      "total_size": 681587,
-      "last_updated": "2026-04-22T18:43:48.701454"
+      "total_files": 130,
+      "total_size": 724973,
+      "last_updated": "2026-04-28T12:16:10.787379"
     }
   }
 }

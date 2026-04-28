@@ -4,5 +4,75 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/kopia/kopia/releases",
     "repo_path": "kopia/kopia"
+  },
+  {
+    "id": "restic_linux_amd64",
+    "简介": "restic（Linux x86_64，官方 .bz2 单文件包）",
+    "分类": "备份",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/restic/restic/releases",
+    "repo_path": "restic/restic",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "restic_",
+      "linux_amd64.bz2"
+    ],
+    "href_exclude_substrings": [
+      "linux_arm64",
+      "linux_386",
+      "windows",
+      "darwin",
+      ".zip",
+      ".asc",
+      ".sig"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".bz2"
+    ],
+    "download_names": [
+      "restic_{ver}_linux_amd64.bz2"
+    ],
+    "save_name": "restic_{ver}_linux_amd64.bz2",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "restic_linux_arm64",
+    "简介": "restic（Linux arm64，官方 .bz2 单文件包）",
+    "分类": "备份",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/restic/restic/releases",
+    "repo_path": "restic/restic",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "restic_",
+      "linux_arm64.bz2"
+    ],
+    "href_exclude_substrings": [
+      "linux_amd64",
+      "linux_386",
+      "windows",
+      "darwin",
+      ".zip",
+      ".asc",
+      ".sig"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".bz2"
+    ],
+    "download_names": [
+      "restic_{ver}_linux_arm64.bz2"
+    ],
+    "save_name": "restic_{ver}_linux_arm64.bz2",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

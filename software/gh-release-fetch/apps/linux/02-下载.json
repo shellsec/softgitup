@@ -70,5 +70,17 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "aria2",
+    "简介": "aria2：自 release-1.36 起 GitHub Release 仅提供源码包与 Windows/Android 预编译；Linux 请用发行版包或自编译。本条仅作仓库定位。",
+    "分类": "下载",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/aria2/aria2/releases",
+    "repo_path": "aria2/aria2",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

@@ -22,5 +22,108 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/sigoden/aichat/releases",
     "repo_path": "sigoden/aichat"
+  },
+  {
+    "id": "anything_llm",
+    "简介": "AnythingLLM macOS（默认 Apple Silicon dmg；Intel 用 https://cdn.anythingllm.com/latest/AnythingLLMDesktop.dmg ）",
+    "分类": "AI",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/Mintplex-Labs/anything-llm/releases",
+    "repo_path": "Mintplex-Labs/anything-llm",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "download_url_templates": [
+      "https://cdn.anythingllm.com/latest/AnythingLLMDesktop-Silicon.dmg"
+    ],
+    "installer_markers": [
+      "AnythingLLMDesktop",
+      ".dmg"
+    ],
+    "href_exclude_substrings": [
+      ".exe",
+      "AppImage",
+      "blockmap"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "save_name": "AnythingLLMDesktop-Silicon.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "cherry_studio",
+    "简介": "Cherry Studio macOS（默认 arm64 dmg；Intel 选 Cherry-Studio-*-x64.dmg 资产）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/CherryHQ/cherry-studio/releases",
+    "repo_path": "CherryHQ/cherry-studio",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Cherry-Studio-",
+      "arm64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "x64.dmg",
+      "portable",
+      "exe",
+      "AppImage",
+      "deb",
+      "rpm",
+      "zip",
+      "blockmap",
+      ".yml"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "Cherry-Studio-{ver}-arm64.dmg"
+    ],
+    "save_name": "Cherry-Studio-{ver}-arm64.dmg",
+    "process_name": "Cherry Studio.app",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "cc_switch",
+    "简介": "CC Switch macOS（官方 dmg，通用二进制；仓库 farion1231/cc-switch）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/farion1231/cc-switch/releases",
+    "repo_path": "farion1231/cc-switch",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "CC-Switch-",
+      "-macOS.dmg"
+    ],
+    "href_exclude_substrings": [
+      "Windows",
+      "Linux",
+      "Portable",
+      ".zip",
+      ".tar.gz",
+      ".sig",
+      "latest.json",
+      "blockmap"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "CC-Switch-v{ver}-macOS.dmg"
+    ],
+    "save_name": "CC-Switch-v{ver}-macOS.dmg",
+    "process_name": "CC Switch.app",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

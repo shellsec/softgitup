@@ -7,9 +7,74 @@
   },
   {
     "id": "syncthing",
+    "简介": "Syncthing（Linux x86_64 官方 tar.gz，仅下载）",
+    "分类": "网络",
     "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
     "releases_url": "https://bgithub.xyz/syncthing/syncthing/releases",
-    "repo_path": "syncthing/syncthing"
+    "repo_path": "syncthing/syncthing",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "syncthing-linux-amd64-",
+      ".tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "linux-arm64-",
+      "linux-386-",
+      "linux-arm-",
+      "windows",
+      "darwin",
+      "macos",
+      "freebsd",
+      "source",
+      ".deb",
+      "sha256",
+      "sha1sum"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "syncthing-linux-amd64.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "syncthing_linux_arm64",
+    "简介": "Syncthing（Linux arm64 官方 tar.gz，仅下载）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/syncthing/syncthing/releases",
+    "repo_path": "syncthing/syncthing",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "syncthing-linux-arm64-",
+      ".tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "linux-amd64",
+      "linux-386",
+      "windows",
+      "darwin",
+      "source",
+      ".deb",
+      "sha256",
+      "sha1sum"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "syncthing-linux-arm64.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   },
   {
     "id": "rclone",

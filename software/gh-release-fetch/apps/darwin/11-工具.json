@@ -1,0 +1,37 @@
+[
+  {
+    "id": "caesium",
+    "简介": "Caesium Image Compressor（macOS dmg）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Lymphatus/caesium-image-compressor/releases",
+    "repo_path": "Lymphatus/caesium-image-compressor",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "caesium-image-compressor-",
+      "-macos.dmg"
+    ],
+    "href_exclude_substrings": [
+      "win-setup",
+      "portable",
+      "linux",
+      "AppImage",
+      ".exe",
+      ".blockmap",
+      ".sha256"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "caesium-image-compressor-{ver}-macos.dmg"
+    ],
+    "save_name": "caesium-image-compressor-{ver}-macos.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  }
+]

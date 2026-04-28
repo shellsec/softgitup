@@ -51,33 +51,6 @@
     "run_installer": true
   },
   {
-    "id": "restic",
-    "简介": "备份加密工具（zip）",
-    "分类": "安全",
-    "enabled": false,
-    "releases_url": "https://bgithub.xyz/restic/restic/releases",
-    "repo_path": "restic/restic",
-    "installer_markers": [
-      "restic_",
-      "windows_amd64.zip"
-    ],
-    "href_exclude_substrings": [
-      "386",
-      "arm"
-    ],
-    "windows_installer": false,
-    "installer_extensions": [
-      ".zip"
-    ],
-    "download_names": [
-      "restic_{ver}_windows_amd64.zip"
-    ],
-    "save_name": "restic_{ver}_windows_amd64.zip",
-    "process_name": "",
-    "kill_before_install": false,
-    "run_installer": false
-  },
-  {
     "id": "vault",
     "简介": "密钥与机密管理",
     "分类": "安全",

@@ -189,5 +189,95 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "restic",
+    "简介": "restic（manifest：GitHub darwin arm64 优先否则 amd64，.bz2）",
+    "分类": "VibeCodingToolsDown",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "restic",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "installer_extensions": [
+      ".bz2"
+    ],
+    "save_name": "restic-darwin.bz2",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "syncthing",
+    "简介": "Syncthing（manifest：GitHub macOS universal zip）",
+    "分类": "VibeCodingToolsDown",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "syncthing",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "save_name": "syncthing-macos-universal.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "sqlitebrowser",
+    "简介": "DB Browser for SQLite（manifest：GitHub .dmg）",
+    "分类": "VibeCodingToolsDown",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "sqlitebrowser",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "save_name": "DB.Browser.for.SQLite.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "caesium",
+    "简介": "Caesium（manifest：GitHub macOS dmg）",
+    "分类": "VibeCodingToolsDown",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "caesium",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "save_name": "caesium-image-compressor.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "cc_switch",
+    "简介": "CC Switch（manifest：farion1231/cc-switch；macOS dmg）",
+    "分类": "VibeCodingToolsDown",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "cc_switch",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "save_name": "CC-Switch.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

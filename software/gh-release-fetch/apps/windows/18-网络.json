@@ -46,23 +46,35 @@
   },
   {
     "id": "syncthing",
-    "简介": "文件同步核心（zip，仅下载）",
+    "简介": "Syncthing（P2P 文件同步，官方 zip，仅下载）",
     "分类": "网络",
     "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
     "releases_url": "https://bgithub.xyz/syncthing/syncthing/releases",
     "repo_path": "syncthing/syncthing",
+    "installer_markers_match_all": true,
     "installer_markers": [
-      "syncthing-windows-amd64-v",
+      "syncthing-windows-amd64-",
       ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows-386",
+      "windows-arm64",
+      "freebsd",
+      "linux",
+      "darwin",
+      "illumos",
+      "compat",
+      "sha256",
+      "sha1sum"
     ],
     "windows_installer": false,
     "installer_extensions": [
       ".zip"
     ],
-    "download_names": [
-      "syncthing-windows-amd64-v{ver}.zip"
-    ],
-    "save_name": "syncthing-windows-amd64-v{ver}.zip",
+    "use_download_filename": true,
+    "save_name": "syncthing-windows-amd64.zip",
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false

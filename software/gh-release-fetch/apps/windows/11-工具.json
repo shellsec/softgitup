@@ -85,5 +85,38 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": true
+  },
+  {
+    "id": "caesium",
+    "简介": "Caesium Image Compressor（批量压缩图片，Windows 安装包）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Lymphatus/caesium-image-compressor/releases",
+    "repo_path": "Lymphatus/caesium-image-compressor",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "caesium-image-compressor-",
+      "win-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "portable",
+      "mac",
+      "linux",
+      "AppImage",
+      ".deb",
+      ".rpm",
+      ".blockmap",
+      ".sha256"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "caesium-image-compressor-{ver}-win-setup.exe"
+    ],
+    "save_name": "caesium-image-compressor-{ver}-win-setup.exe",
+    "process_name": "Caesium Image Compressor.exe",
+    "kill_before_install": true,
+    "run_installer": true
   }
 ]

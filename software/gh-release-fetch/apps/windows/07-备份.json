@@ -89,5 +89,38 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "restic",
+    "简介": "restic（加密去重备份 CLI，官方 zip）",
+    "分类": "备份",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/restic/restic/releases",
+    "repo_path": "restic/restic",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "restic_",
+      "windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows_386",
+      "darwin",
+      "linux",
+      ".bz2",
+      ".tar.gz",
+      ".asc",
+      ".sig"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "restic-windows-amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

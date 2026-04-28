@@ -194,5 +194,110 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": true
+  },
+  {
+    "id": "restic",
+    "简介": "restic 备份 CLI（manifest：GitHub Windows amd64 zip）",
+    "分类": "VibeCodingToolsDown",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "restic",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "save_name": "restic-windows-amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "syncthing",
+    "简介": "Syncthing 核心（manifest：GitHub Windows amd64 zip）",
+    "分类": "VibeCodingToolsDown",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "syncthing",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "save_name": "syncthing-windows-amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "sqlitebrowser",
+    "简介": "DB Browser for SQLite（manifest：GitHub win64.msi）",
+    "分类": "VibeCodingToolsDown",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "sqlitebrowser",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "save_name": "DB.Browser.for.SQLite-win64.msi",
+    "process_name": "DB Browser for SQLite.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "caesium",
+    "简介": "Caesium 图片压缩（manifest：GitHub win-setup.exe）",
+    "分类": "VibeCodingToolsDown",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "caesium",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": true,
+    "save_name": "caesium-image-compressor-setup.exe",
+    "process_name": "Caesium Image Compressor.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "aria2",
+    "简介": "aria2 下载 CLI（manifest：GitHub win-64bit zip；mac/Linux 见 manifest notes）",
+    "分类": "VibeCodingToolsDown",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "aria2",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "save_name": "aria2-win-64bit.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "cc_switch",
+    "简介": "CC Switch（manifest：farion1231/cc-switch；Claude Code / Codex / Gemini CLI 等 CLI 配置）",
+    "分类": "VibeCodingToolsDown",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "cc_switch",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "save_name": "CC-Switch-Windows.msi",
+    "process_name": "CC Switch.exe",
+    "kill_before_install": true,
+    "run_installer": true
   }
 ]

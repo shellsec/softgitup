@@ -7,9 +7,38 @@
   },
   {
     "id": "syncthing",
+    "简介": "Syncthing（macOS universal 官方 zip，仅下载）",
+    "分类": "网络",
     "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
     "releases_url": "https://bgithub.xyz/syncthing/syncthing/releases",
-    "repo_path": "syncthing/syncthing"
+    "repo_path": "syncthing/syncthing",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "syncthing-macos-universal-",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux-",
+      "freebsd",
+      "illumos",
+      "openbsd",
+      "source",
+      ".deb",
+      "sha256",
+      "sha1sum"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "syncthing-macos-universal.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   },
   {
     "id": "rclone",

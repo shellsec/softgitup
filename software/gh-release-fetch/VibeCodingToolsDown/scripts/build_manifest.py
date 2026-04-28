@@ -412,6 +412,150 @@ def fetch_antigravity(s: requests.Session) -> dict[str, Any]:
     )
 
 
+def _gh_latest_assets(s: requests.Session, owner: str, repo: str) -> tuple[str, dict[str, str]]:
+    """GitHub releases/latest：返回 tag_name 与 name→browser_download_url 映射。"""
+    r = s.get(
+        f"https://api.github.com/repos/{owner}/{repo}/releases/latest",
+        headers=_github_api_headers(),
+        timeout=40,
+    )
+    r.raise_for_status()
+    j = r.json()
+    tag = (j.get("tag_name") or "").strip() or "unknown"
+    assets = {
+        (a.get("name") or ""): (a.get("browser_download_url") or "")
+        for a in (j.get("assets") or [])
+        if a.get("name")
+    }
+    return tag, assets
+
+
+def fetch_restic(s: requests.Session) -> dict[str, Any]:
+    tag, assets = _gh_latest_assets(s, "restic", "restic")
+    ver = tag.lstrip("v") if tag.startswith("v") else tag
+
+    def pick(pred):
+        for name, u in assets.items():
+            if pred(name):
+                return {"url": u, "filename": name}
+        return None
+
+    win = pick(lambda n: "windows_amd64" in n and n.endswith(".zip"))
+    mac = pick(lambda n: "darwin_arm64" in n and n.endswith(".bz2")) or pick(
+        lambda n: "darwin_amd64" in n and n.endswith(".bz2")
+    )
+    lin = pick(lambda n: "linux_amd64" in n and n.endswith(".bz2"))
+    return _item(
+        "restic",
+        ver,
+        {"windows": win, "darwin": mac, "linux": lin},
+        notes="GitHub restic/restic latest；Windows zip；macOS 优先 arm64 .bz2 否则 amd64；Linux 为 amd64 .bz2（arm64 请用发行版或主仓库 apps 分架构项）。",
+    )
+
+
+def fetch_syncthing(s: requests.Session) -> dict[str, Any]:
+    tag, assets = _gh_latest_assets(s, "syncthing", "syncthing")
+    ver = tag.lstrip("v") if tag.startswith("v") else tag
+
+    def pick(pred):
+        for name, u in assets.items():
+            if pred(name):
+                return {"url": u, "filename": name}
+        return None
+
+    win = pick(lambda n: n.startswith("syncthing-windows-amd64-") and n.endswith(".zip"))
+    mac = pick(lambda n: "syncthing-macos-universal-" in n and n.endswith(".zip"))
+    lin = pick(lambda n: n.startswith("syncthing-linux-amd64-") and n.endswith(".tar.gz"))
+    return _item(
+        "syncthing",
+        ver,
+        {"windows": win, "darwin": mac, "linux": lin},
+        notes="GitHub syncthing/syncthing latest；仅核心压缩包，不含安装器。",
+    )
+
+
+def fetch_sqlitebrowser(s: requests.Session) -> dict[str, Any]:
+    tag, assets = _gh_latest_assets(s, "sqlitebrowser", "sqlitebrowser")
+    ver = tag.lstrip("v") if tag.startswith("v") else tag
+
+    def pick(pred):
+        for name, u in assets.items():
+            if pred(name):
+                return {"url": u, "filename": name}
+        return None
+
+    win = pick(lambda n: "DB.Browser.for.SQLite-" in n and n.endswith("-win64.msi"))
+    mac = pick(lambda n: n.startswith("DB.Browser.for.SQLite-") and n.endswith(".dmg") and "arm64" not in n)
+    lin = pick(lambda n: "x86.64" in n and n.endswith(".AppImage"))
+    return _item(
+        "sqlitebrowser",
+        ver,
+        {"windows": win, "darwin": mac, "linux": lin},
+        notes="GitHub sqlitebrowser/sqlitebrowser latest；Linux 为 x86_64 AppImage（文件名含 x86.64）。",
+    )
+
+
+def fetch_caesium(s: requests.Session) -> dict[str, Any]:
+    tag, assets = _gh_latest_assets(s, "Lymphatus", "caesium-image-compressor")
+    ver = tag.lstrip("v") if tag.startswith("v") else tag
+
+    def pick(pred):
+        for name, u in assets.items():
+            if pred(name):
+                return {"url": u, "filename": name}
+        return None
+
+    win = pick(lambda n: "win-setup.exe" in n and n.endswith(".exe"))
+    mac = pick(lambda n: "-macos.dmg" in n and n.endswith(".dmg"))
+    return _item(
+        "caesium",
+        ver,
+        {"windows": win, "darwin": mac, "linux": None},
+        notes="GitHub Lymphatus/caesium-image-compressor latest；Linux 无 Release 通用包（见主仓库 apps/linux/11-工具 说明）。",
+    )
+
+
+def fetch_cc_switch(s: requests.Session) -> dict[str, Any]:
+    tag, assets = _gh_latest_assets(s, "farion1231", "cc-switch")
+    ver = tag.lstrip("v") if tag.startswith("v") else tag
+
+    def pick(pred):
+        for name, u in assets.items():
+            if pred(name):
+                return {"url": u, "filename": name}
+        return None
+
+    win = pick(lambda n: n.startswith("CC-Switch-") and n.endswith("-Windows.msi"))
+    mac = pick(lambda n: n.startswith("CC-Switch-") and n.endswith("-macOS.dmg"))
+    lin = pick(lambda n: "Linux-x86_64.AppImage" in n and n.endswith(".AppImage"))
+    return _item(
+        "cc_switch",
+        ver,
+        {"windows": win, "darwin": mac, "linux": lin},
+        notes="GitHub farion1231/cc-switch（CC Switch）；Windows MSI、macOS dmg、Linux x86_64 AppImage。",
+    )
+
+
+def fetch_aria2(s: requests.Session) -> dict[str, Any]:
+    tag, assets = _gh_latest_assets(s, "aria2", "aria2")
+    m = re.match(r"(?:release-)?(\d+\.\d+\.\d+)\b", tag)
+    ver = m.group(1) if m else tag.replace("release-", "").lstrip("v")
+
+    def pick(pred):
+        for name, u in assets.items():
+            if pred(name):
+                return {"url": u, "filename": name}
+        return None
+
+    win = pick(lambda n: "win-64bit" in n and n.endswith(".zip"))
+    return _item(
+        "aria2",
+        ver,
+        {"windows": win, "darwin": None, "linux": None},
+        notes="GitHub aria2/aria2 latest；仅 Windows 64 位 zip。macOS/Linux 请用 brew / 发行版包或源码编译。",
+    )
+
+
 def fetch_kiro(s: requests.Session) -> dict[str, Any]:
     r = s.get("https://prod.download.cli.kiro.dev/stable/latest/manifest.json", timeout=40)
     r.raise_for_status()
@@ -820,6 +964,12 @@ def main():
         fetch_workbuddy,
         fetch_antigravity,
         fetch_kiro,
+        fetch_restic,
+        fetch_syncthing,
+        fetch_sqlitebrowser,
+        fetch_caesium,
+        fetch_aria2,
+        fetch_cc_switch,
     ]
     errors: list[str] = []
     for fn in builders:

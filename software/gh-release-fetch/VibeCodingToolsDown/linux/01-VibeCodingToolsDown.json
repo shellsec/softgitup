@@ -183,5 +183,77 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "restic",
+    "简介": "restic（manifest：GitHub Linux amd64 .bz2；arm64 见主仓库 apps）",
+    "分类": "VibeCodingToolsDown",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "restic",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "installer_extensions": [
+      ".bz2"
+    ],
+    "save_name": "restic-linux-amd64.bz2",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "syncthing",
+    "简介": "Syncthing（manifest：GitHub Linux amd64 tar.gz）",
+    "分类": "VibeCodingToolsDown",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "syncthing",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "save_name": "syncthing-linux-amd64.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "sqlitebrowser",
+    "简介": "DB Browser for SQLite（manifest：GitHub x86_64 AppImage）",
+    "分类": "VibeCodingToolsDown",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "sqlitebrowser",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "installer_extensions": [
+      ".appimage"
+    ],
+    "save_name": "DB.Browser.for.SQLite.AppImage",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "cc_switch",
+    "简介": "CC Switch（manifest：farion1231/cc-switch；Linux x86_64 AppImage）",
+    "分类": "VibeCodingToolsDown",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "cc_switch",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "installer_extensions": [
+      ".appimage"
+    ],
+    "save_name": "CC-Switch.AppImage",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

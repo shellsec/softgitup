@@ -193,5 +193,131 @@
     "process_name": "LobeHub.exe",
     "kill_before_install": true,
     "run_installer": true
+  },
+  {
+    "id": "anything_llm",
+    "简介": "AnythingLLM（本地 RAG / 文档聊天桌面端；版本 tag 来自 GitHub API，安装包走官方 CDN latest）",
+    "分类": "AI",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/Mintplex-Labs/anything-llm/releases",
+    "repo_path": "Mintplex-Labs/anything-llm",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "download_url_templates": [
+      "https://cdn.anythingllm.com/latest/AnythingLLMDesktop.exe"
+    ],
+    "installer_markers": [
+      "AnythingLLMDesktop",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "Arm64",
+      "darwin",
+      "dmg",
+      "AppImage",
+      "blockmap"
+    ],
+    "windows_installer": true,
+    "save_name": "AnythingLLMDesktop.exe",
+    "process_name": "Anything LLM.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "anything_llm_arm64",
+    "简介": "AnythingLLM Windows ARM64（同上，CDN latest Arm64 安装包）",
+    "分类": "AI",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/Mintplex-Labs/anything-llm/releases",
+    "repo_path": "Mintplex-Labs/anything-llm",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "download_url_templates": [
+      "https://cdn.anythingllm.com/latest/AnythingLLMDesktop-Arm64.exe"
+    ],
+    "installer_markers": [
+      "AnythingLLMDesktop",
+      "Arm64"
+    ],
+    "href_exclude_substrings": [
+      "darwin",
+      "dmg",
+      "AppImage",
+      "blockmap"
+    ],
+    "windows_installer": true,
+    "save_name": "AnythingLLMDesktop-Arm64.exe",
+    "process_name": "Anything LLM.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "cherry_studio",
+    "简介": "Cherry Studio（多模型 AI 桌面客户端，CherryHQ）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/CherryHQ/cherry-studio/releases",
+    "repo_path": "CherryHQ/cherry-studio",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Cherry-Studio-",
+      "x64-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "portable",
+      "darwin",
+      "linux",
+      "blockmap",
+      ".yml"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Cherry-Studio-{ver}-x64-setup.exe"
+    ],
+    "save_name": "Cherry-Studio-{ver}-x64-setup.exe",
+    "process_name": "Cherry Studio.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "cc_switch",
+    "简介": "CC Switch（Claude Code / Codex / Gemini CLI / OpenCode / OpenClaw 一站式配置与切换，Tauri；官方 MSI）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/farion1231/cc-switch/releases",
+    "repo_path": "farion1231/cc-switch",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "CC-Switch-",
+      "-Windows.msi"
+    ],
+    "href_exclude_substrings": [
+      "Portable",
+      "darwin",
+      "Linux",
+      "AppImage",
+      ".deb",
+      ".rpm",
+      ".zip",
+      ".sig",
+      "latest.json",
+      "blockmap"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "CC-Switch-v{ver}-Windows.msi"
+    ],
+    "save_name": "CC-Switch-v{ver}-Windows.msi",
+    "process_name": "CC Switch.exe",
+    "kill_before_install": true,
+    "run_installer": true
   }
 ]

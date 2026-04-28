@@ -266,5 +266,42 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "sqlitebrowser",
+    "简介": "DB Browser for SQLite（SQLite 图形化管理）",
+    "分类": "数据库",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/sqlitebrowser/sqlitebrowser/releases",
+    "repo_path": "sqlitebrowser/sqlitebrowser",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "DB.Browser.for.SQLite-",
+      "-win64.msi"
+    ],
+    "href_exclude_substrings": [
+      "win32",
+      "arm64",
+      ".zip",
+      "darwin",
+      "linux",
+      "AppImage",
+      ".deb",
+      ".rpm",
+      ".blockmap"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "DB.Browser.for.SQLite-v{ver}-win64.msi"
+    ],
+    "save_name": "DB.Browser.for.SQLite-v{ver}-win64.msi",
+    "process_name": "DB Browser for SQLite.exe",
+    "kill_before_install": true,
+    "run_installer": true
   }
 ]

@@ -237,6 +237,117 @@
         }
       },
       "notes": "Kiro CLI 官方 manifest（含 Windows MSI / macOS dmg / Linux AppImage 等）。"
+    },
+    {
+      "id": "restic",
+      "version": "0.18.1",
+      "version_tag": "v0.18.1",
+      "downloads": {
+        "windows": {
+          "url": "https://github.com/restic/restic/releases/download/v0.18.1/restic_0.18.1_windows_amd64.zip",
+          "filename": "restic_0.18.1_windows_amd64.zip"
+        },
+        "darwin": {
+          "url": "https://github.com/restic/restic/releases/download/v0.18.1/restic_0.18.1_darwin_arm64.bz2",
+          "filename": "restic_0.18.1_darwin_arm64.bz2"
+        },
+        "linux": {
+          "url": "https://github.com/restic/restic/releases/download/v0.18.1/restic_0.18.1_linux_amd64.bz2",
+          "filename": "restic_0.18.1_linux_amd64.bz2"
+        }
+      },
+      "notes": "GitHub restic/restic latest；Windows zip；macOS 优先 arm64 .bz2 否则 amd64；Linux 为 amd64 .bz2（arm64 请用发行版或主仓库 apps 分架构项）。运行 scripts/build_manifest.py 可刷新版本与直链。"
+    },
+    {
+      "id": "syncthing",
+      "version": "2.0.16",
+      "version_tag": "v2.0.16",
+      "downloads": {
+        "windows": {
+          "url": "https://github.com/syncthing/syncthing/releases/download/v2.0.16/syncthing-windows-amd64-v2.0.16.zip",
+          "filename": "syncthing-windows-amd64-v2.0.16.zip"
+        },
+        "darwin": {
+          "url": "https://github.com/syncthing/syncthing/releases/download/v2.0.16/syncthing-macos-universal-v2.0.16.zip",
+          "filename": "syncthing-macos-universal-v2.0.16.zip"
+        },
+        "linux": {
+          "url": "https://github.com/syncthing/syncthing/releases/download/v2.0.16/syncthing-linux-amd64-v2.0.16.tar.gz",
+          "filename": "syncthing-linux-amd64-v2.0.16.tar.gz"
+        }
+      },
+      "notes": "GitHub syncthing/syncthing latest；仅核心压缩包，不含安装器。运行 scripts/build_manifest.py 可刷新。"
+    },
+    {
+      "id": "sqlitebrowser",
+      "version": "3.13.1",
+      "version_tag": "v3.13.1",
+      "downloads": {
+        "windows": {
+          "url": "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v3.13.1/DB.Browser.for.SQLite-v3.13.1-win64.msi",
+          "filename": "DB.Browser.for.SQLite-v3.13.1-win64.msi"
+        },
+        "darwin": {
+          "url": "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v3.13.1/DB.Browser.for.SQLite-v3.13.1.dmg",
+          "filename": "DB.Browser.for.SQLite-v3.13.1.dmg"
+        },
+        "linux": {
+          "url": "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v3.13.1/DB.Browser.for.SQLite-v3.13.1-x86.64-v2.AppImage",
+          "filename": "DB.Browser.for.SQLite-v3.13.1-x86.64-v2.AppImage"
+        }
+      },
+      "notes": "GitHub sqlitebrowser/sqlitebrowser latest；Linux 为 x86_64 AppImage（文件名含 x86.64）。运行 scripts/build_manifest.py 可刷新。"
+    },
+    {
+      "id": "caesium",
+      "version": "2.8.5",
+      "version_tag": "v2.8.5",
+      "downloads": {
+        "windows": {
+          "url": "https://github.com/Lymphatus/caesium-image-compressor/releases/download/v2.8.5/caesium-image-compressor-2.8.5-win-setup.exe",
+          "filename": "caesium-image-compressor-2.8.5-win-setup.exe"
+        },
+        "darwin": {
+          "url": "https://github.com/Lymphatus/caesium-image-compressor/releases/download/v2.8.5/caesium-image-compressor-2.8.5-macos.dmg",
+          "filename": "caesium-image-compressor-2.8.5-macos.dmg"
+        },
+        "linux": null
+      },
+      "notes": "GitHub Lymphatus/caesium-image-compressor latest；Linux 无 Release 通用包（见主仓库 apps/linux/11-工具.json 说明）。运行 scripts/build_manifest.py 可刷新。"
+    },
+    {
+      "id": "aria2",
+      "version": "1.37.0",
+      "version_tag": "v1.37.0",
+      "downloads": {
+        "windows": {
+          "url": "https://github.com/aria2/aria2/releases/download/release-1.37.0/aria2-1.37.0-win-64bit-build1.zip",
+          "filename": "aria2-1.37.0-win-64bit-build1.zip"
+        },
+        "darwin": null,
+        "linux": null
+      },
+      "notes": "GitHub aria2/aria2 latest；仅 Windows 64 位 zip。macOS/Linux 请用 brew / 发行版包或源码编译。运行 scripts/build_manifest.py 可刷新。"
+    },
+    {
+      "id": "cc_switch",
+      "version": "3.14.1",
+      "version_tag": "v3.14.1",
+      "downloads": {
+        "windows": {
+          "url": "https://github.com/farion1231/cc-switch/releases/download/v3.14.1/CC-Switch-v3.14.1-Windows.msi",
+          "filename": "CC-Switch-v3.14.1-Windows.msi"
+        },
+        "darwin": {
+          "url": "https://github.com/farion1231/cc-switch/releases/download/v3.14.1/CC-Switch-v3.14.1-macOS.dmg",
+          "filename": "CC-Switch-v3.14.1-macOS.dmg"
+        },
+        "linux": {
+          "url": "https://github.com/farion1231/cc-switch/releases/download/v3.14.1/CC-Switch-v3.14.1-Linux-x86_64.AppImage",
+          "filename": "CC-Switch-v3.14.1-Linux-x86_64.AppImage"
+        }
+      },
+      "notes": "GitHub farion1231/cc-switch（CC Switch：Claude Code / Codex / Gemini CLI / OpenCode / OpenClaw 配置管理）。Linux 为 x86_64 AppImage；arm64 见主仓库 apps/linux/01-AI.json 的 cc_switch_linux_arm64。运行 scripts/build_manifest.py 可刷新。"
     }
   ],
   "errors": []

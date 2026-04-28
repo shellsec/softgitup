@@ -4,5 +4,73 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/kopia/kopia/releases",
     "repo_path": "kopia/kopia"
+  },
+  {
+    "id": "restic_darwin_arm64",
+    "简介": "restic（Apple Silicon，官方 .bz2 单文件包）",
+    "分类": "备份",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/restic/restic/releases",
+    "repo_path": "restic/restic",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "restic_",
+      "darwin_arm64.bz2"
+    ],
+    "href_exclude_substrings": [
+      "darwin_amd64",
+      "windows",
+      "linux",
+      ".zip",
+      ".asc",
+      ".sig"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".bz2"
+    ],
+    "download_names": [
+      "restic_{ver}_darwin_arm64.bz2"
+    ],
+    "save_name": "restic_{ver}_darwin_arm64.bz2",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "restic_darwin_amd64",
+    "简介": "restic（Intel Mac，官方 .bz2 单文件包）",
+    "分类": "备份",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/restic/restic/releases",
+    "repo_path": "restic/restic",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "restic_",
+      "darwin_amd64.bz2"
+    ],
+    "href_exclude_substrings": [
+      "darwin_arm64",
+      "windows",
+      "linux",
+      ".zip",
+      ".asc",
+      ".sig"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".bz2"
+    ],
+    "download_names": [
+      "restic_{ver}_darwin_amd64.bz2"
+    ],
+    "save_name": "restic_{ver}_darwin_amd64.bz2",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

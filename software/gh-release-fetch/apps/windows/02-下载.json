@@ -120,5 +120,38 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "aria2",
+    "简介": "aria2（多协议下载 CLI，官方 64 位 zip；Release tag 形如 release-1.x）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/aria2/aria2/releases",
+    "repo_path": "aria2/aria2",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "aria2-",
+      "win-64bit",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "32bit",
+      "src",
+      ".tar",
+      ".bz2",
+      ".asc",
+      "sha256"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "aria2-win-64bit.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

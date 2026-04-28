@@ -22,5 +22,40 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/supabase/cli/releases",
     "repo_path": "supabase/cli"
+  },
+  {
+    "id": "sqlitebrowser",
+    "简介": "DB Browser for SQLite（macOS dmg）",
+    "分类": "数据库",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/sqlitebrowser/sqlitebrowser/releases",
+    "repo_path": "sqlitebrowser/sqlitebrowser",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "DB.Browser.for.SQLite-",
+      ".dmg"
+    ],
+    "href_exclude_substrings": [
+      ".msi",
+      ".zip",
+      "AppImage",
+      "win64",
+      "win32",
+      "arm64.msi",
+      ".blockmap"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "DB.Browser.for.SQLite-v{ver}.dmg"
+    ],
+    "save_name": "DB.Browser.for.SQLite-v{ver}.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

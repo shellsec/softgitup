@@ -22,5 +22,146 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/sigoden/aichat/releases",
     "repo_path": "sigoden/aichat"
+  },
+  {
+    "id": "anything_llm",
+    "简介": "AnythingLLM Linux AppImage（官方 CDN latest；版本 tag 来自 GitHub API）",
+    "分类": "AI",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/Mintplex-Labs/anything-llm/releases",
+    "repo_path": "Mintplex-Labs/anything-llm",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "download_url_templates": [
+      "https://cdn.anythingllm.com/latest/AnythingLLMDesktop.AppImage"
+    ],
+    "installer_markers": [
+      "AnythingLLMDesktop",
+      "AppImage"
+    ],
+    "href_exclude_substrings": [
+      ".exe",
+      ".dmg",
+      "blockmap"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "save_name": "AnythingLLMDesktop.AppImage",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "cherry_studio",
+    "简介": "Cherry Studio Linux（x86_64 AppImage，GitHub Release API）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/CherryHQ/cherry-studio/releases",
+    "repo_path": "CherryHQ/cherry-studio",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Cherry-Studio-",
+      "x86_64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "portable",
+      "exe",
+      "dmg",
+      "deb",
+      "rpm",
+      "zip",
+      "blockmap",
+      ".yml"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "download_names": [
+      "Cherry-Studio-{ver}-x86_64.AppImage"
+    ],
+    "save_name": "Cherry-Studio-{ver}-x86_64.AppImage",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "cc_switch",
+    "简介": "CC Switch Linux x86_64（官方 AppImage；deb/rpm 见 Release 同版本）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/farion1231/cc-switch/releases",
+    "repo_path": "farion1231/cc-switch",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "CC-Switch-",
+      "Linux-x86_64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "Windows",
+      "macOS",
+      ".deb",
+      ".rpm",
+      ".zip",
+      ".sig",
+      "latest.json",
+      "blockmap"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".appimage"
+    ],
+    "download_names": [
+      "CC-Switch-v{ver}-Linux-x86_64.AppImage"
+    ],
+    "save_name": "CC-Switch-v{ver}-Linux-x86_64.AppImage",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "cc_switch_linux_arm64",
+    "简介": "CC Switch Linux arm64（官方 AppImage）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/farion1231/cc-switch/releases",
+    "repo_path": "farion1231/cc-switch",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "CC-Switch-",
+      "Linux-arm64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "x86_64",
+      "Windows",
+      "macOS",
+      ".deb",
+      ".rpm",
+      ".zip",
+      ".sig",
+      "latest.json",
+      "blockmap"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".appimage"
+    ],
+    "download_names": [
+      "CC-Switch-v{ver}-Linux-arm64.AppImage"
+    ],
+    "save_name": "CC-Switch-v{ver}-Linux-arm64.AppImage",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]
