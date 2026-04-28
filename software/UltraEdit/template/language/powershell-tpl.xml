@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Templates encode="utf8escenc">
+<Template Name="New script">try {
+^
+exit 0
+} catch {
+"Error in line $($_.InvocationInfo.ScriptLineNumber) | $($Error[0])"
+exit 1
+}</Template>
+</Templates>

@@ -1,0 +1,1195 @@
+[
+  {
+    "id": "keepassxc",
+    "简介": "KeePass 系密码库，离线为主",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/keepassxreboot/keepassxc/releases",
+    "repo_path": "keepassxreboot/keepassxc",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "KeePassXC-",
+      "-Win64.msi"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "KeePassXC-{ver}-Win64.msi"
+    ],
+    "save_name": "KeePassXC-{ver}-Win64.msi",
+    "process_name": "KeePassXC.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "cryptomator",
+    "简介": "网盘目录加密",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/cryptomator/cryptomator/releases",
+    "repo_path": "cryptomator/cryptomator",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "Cryptomator-",
+      "-x64.exe"
+    ],
+    "href_exclude_substrings": [
+      ".msi",
+      ".asc",
+      ".dmg",
+      "AppImage"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Cryptomator-{ver}-x64.exe"
+    ],
+    "save_name": "Cryptomator-{ver}-x64.exe",
+    "process_name": "Cryptomator.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "restic",
+    "简介": "备份加密工具（zip）",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/restic/restic/releases",
+    "repo_path": "restic/restic",
+    "installer_markers": [
+      "restic_",
+      "windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "386",
+      "arm"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "restic_{ver}_windows_amd64.zip"
+    ],
+    "save_name": "restic_{ver}_windows_amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "vault",
+    "简介": "密钥与机密管理",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/hashicorp/vault/releases",
+    "repo_path": "hashicorp/vault",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "vault_",
+      "windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "darwin"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "vault_{ver}_windows_amd64.zip"
+    ],
+    "save_name": "vault_{ver}_windows_amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "duplicati",
+    "简介": "云备份与增量备份",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/duplicati/duplicati/releases",
+    "repo_path": "duplicati/duplicati",
+    "installer_markers": [
+      "duplicati-",
+      "x64.msi"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "deb",
+      "dmg"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "duplicati-{ver}-x64.msi"
+    ],
+    "save_name": "duplicati-{ver}-x64.msi",
+    "process_name": "Duplicati.GUI.TrayIcon.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "veracrypt",
+    "简介": "磁盘加密（VeraCrypt）",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/veracrypt/VeraCrypt/releases",
+    "repo_path": "veracrypt/VeraCrypt",
+    "installer_markers": [
+      "VeraCrypt Setup",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "Portable",
+      "osx",
+      "linux"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "VeraCrypt Setup {ver}.exe"
+    ],
+    "save_name": "VeraCrypt Setup {ver}.exe",
+    "process_name": "VeraCrypt.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "url_hint": "VeraCrypt"
+  },
+  {
+    "id": "keepass",
+    "简介": "KeePass 经典版密码管理",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/KeePass/KeePass/releases",
+    "repo_path": "KeePass/KeePass",
+    "installer_markers": [
+      "KeePass-",
+      "Setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "zip",
+      "Linux"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "KeePass-{ver}-Setup.exe"
+    ],
+    "save_name": "KeePass-{ver}-Setup.exe",
+    "process_name": "KeePass.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "bitwarden_desktop",
+    "简介": "Bitwarden 桌面端（发布资产名含 desktop）",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/bitwarden/clients/releases",
+    "repo_path": "bitwarden/clients",
+    "installer_markers": [
+      "Bitwarden-Portable",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "mac",
+      "linux",
+      "snap"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Bitwarden-Portable-{ver}.exe"
+    ],
+    "save_name": "Bitwarden-Portable-{ver}.exe",
+    "process_name": "Bitwarden.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "url_hint": "Bitwarden"
+  },
+  {
+    "id": "trivy",
+    "简介": "容器与 IaC 漏洞扫描",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/aquasecurity/trivy/releases",
+    "repo_path": "aquasecurity/trivy",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "trivy_",
+      "windows-64bit.zip"
+    ],
+    "href_exclude_substrings": [
+      "Linux",
+      "Darwin",
+      "arm"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "trivy_{ver}_windows-64bit.zip"
+    ],
+    "save_name": "trivy_{ver}_windows-64bit.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "grype",
+    "简介": "容器镜像漏洞扫描",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/anchore/grype/releases",
+    "repo_path": "anchore/grype",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "grype_",
+      "windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "darwin",
+      "arm"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "grype_{ver}_windows_amd64.zip"
+    ],
+    "save_name": "grype_{ver}_windows_amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "syft",
+    "简介": "SBOM 生成工具",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/anchore/syft/releases",
+    "repo_path": "anchore/syft",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "syft_",
+      "windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "darwin",
+      "arm"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "syft_{ver}_windows_amd64.zip"
+    ],
+    "save_name": "syft_{ver}_windows_amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "cosign",
+    "简介": "容器镜像签名",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/sigstore/cosign/releases",
+    "repo_path": "sigstore/cosign",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "cosign-windows-amd64.exe"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "darwin",
+      "arm"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "cosign-windows-amd64.exe"
+    ],
+    "save_name": "cosign-windows-amd64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "age_cli",
+    "简介": "age（现代文件加密/解密工具，FiloSottile）",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/FiloSottile/age/releases",
+    "repo_path": "FiloSottile/age",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "age-v",
+      "windows-amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      ".proof",
+      "darwin",
+      "linux"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "age-v{ver}-windows-amd64.zip"
+    ],
+    "save_name": "age-v{ver}-windows-amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "sops",
+    "简介": "SOPS（YAML/JSON 等配置文件加密，Mozilla）",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/getsops/sops/releases",
+    "repo_path": "getsops/sops",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "sops-v",
+      ".amd64.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "sbom",
+      ".spdx"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "sops-v{ver}.amd64.exe"
+    ],
+    "save_name": "sops-v{ver}.amd64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "trufflehog",
+    "简介": "TruffleHog（仓库/CI 密钥与敏感信息扫描）",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/trufflesecurity/trufflehog/releases",
+    "repo_path": "trufflesecurity/trufflehog",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "trufflehog_",
+      "windows_amd64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "windows_arm64",
+      "checksum",
+      "darwin",
+      "linux",
+      ".pem",
+      ".sig"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "trufflehog_{ver}_windows_amd64.tar.gz"
+    ],
+    "save_name": "trufflehog_{ver}_windows_amd64.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "gitleaks",
+    "简介": "Gitleaks（Git 仓库密钥泄露扫描）",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/gitleaks/gitleaks/releases",
+    "repo_path": "gitleaks/gitleaks",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "gitleaks_",
+      "windows_x64.zip"
+    ],
+    "href_exclude_substrings": [
+      "arm",
+      "x32",
+      "darwin",
+      "linux",
+      ".sbom"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "gitleaks_{ver}_windows_x64.zip"
+    ],
+    "save_name": "gitleaks_{ver}_windows_x64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "clamav",
+    "简介": "ClamAV 杀毒引擎（Windows x64 MSI）",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/Cisco-Talos/clamav/releases",
+    "repo_path": "Cisco-Talos/clamav",
+    "version_tag_as_on_github": true,
+    "prefer_api_assets": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "clamav-",
+      "win.x64.msi"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "win32",
+      ".sig",
+      ".zip"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "{ver}.win.x64.msi"
+    ],
+    "save_name": "{ver}.win.x64.msi",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "osquery",
+    "简介": "osquery（SQL 查本机状态，端点可见性）",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/osquery/osquery/releases",
+    "repo_path": "osquery/osquery",
+    "version_tag_as_on_github": true,
+    "prefer_api_assets": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "osquery-",
+      ".msi"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      ".zip",
+      "nupkg",
+      "linux",
+      "deb",
+      "rpm",
+      "pkg",
+      "dbgsym",
+      "debuginfo",
+      "macos",
+      "bare"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "osquery-{ver}.msi"
+    ],
+    "save_name": "osquery-{ver}.msi",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "crowdsec",
+    "简介": "CrowdSec（协作式入侵检测 / 防火墙）",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/crowdsecurity/crowdsec/releases",
+    "repo_path": "crowdsecurity/crowdsec",
+    "prefer_api_assets": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "crowdsec_",
+      ".msi"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "darwin",
+      "deb",
+      "rpm",
+      "tar.gz"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "crowdsec_{ver}.msi"
+    ],
+    "save_name": "crowdsec_{ver}.msi",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "kubescape",
+    "简介": "Kubescape（K8s 安全合规扫描）",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/kubescape/kubescape/releases",
+    "repo_path": "kubescape/kubescape",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "kubescape_",
+      "windows_amd64.exe"
+    ],
+    "href_exclude_substrings": [
+      "windows_arm64",
+      "linux",
+      "darwin",
+      "sbom",
+      "downloader_",
+      "ksserver_"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "kubescape_{ver}_windows_amd64.exe"
+    ],
+    "save_name": "kubescape_{ver}_windows_amd64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "dive",
+    "简介": "dive（分析 Docker 镜像层体积）",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/wagoodman/dive/releases",
+    "repo_path": "wagoodman/dive",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "dive_",
+      "windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows_arm64",
+      "darwin",
+      "linux",
+      "deb",
+      "rpm"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "dive_{ver}_windows_amd64.zip"
+    ],
+    "save_name": "dive_{ver}_windows_amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "terrascan",
+    "简介": "Terrascan（IaC 静态分析与策略）",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/tenable/terrascan/releases",
+    "repo_path": "tenable/terrascan",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "terrascan_",
+      "Windows_x86_64.zip"
+    ],
+    "href_exclude_substrings": [
+      "i386",
+      "Darwin",
+      "tar.gz"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "terrascan_{ver}_Windows_x86_64.zip"
+    ],
+    "save_name": "terrascan_{ver}_Windows_x86_64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "yubikey_manager",
+    "简介": "YubiKey Manager（Yubico 设备管理）",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/Yubico/yubikey-manager/releases",
+    "repo_path": "Yubico/yubikey-manager",
+    "version_tag_as_on_github": true,
+    "prefer_api_assets": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "yubikey-manager-",
+      "win64.msi"
+    ],
+    "href_exclude_substrings": [
+      ".sig"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "yubikey-manager-{ver}-win64.msi"
+    ],
+    "save_name": "yubikey-manager-{ver}-win64.msi",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "slsa_verifier",
+    "简介": "SLSA provenance 校验工具（slsa-verifier）",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/slsa-framework/slsa-verifier/releases",
+    "repo_path": "slsa-framework/slsa-verifier",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "slsa-verifier",
+      "windows-amd64.exe"
+    ],
+    "href_exclude_substrings": [
+      "darwin",
+      "intoto"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "slsa-verifier-windows-amd64.exe"
+    ],
+    "save_name": "slsa-verifier-windows-amd64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "rekor_cli",
+    "简介": "Rekor CLI（sigstore 透明日志查询）",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/sigstore/rekor/releases",
+    "repo_path": "sigstore/rekor",
+    "prefer_api_assets": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "rekor-cli",
+      "windows-amd64.exe"
+    ],
+    "href_exclude_substrings": [
+      "darwin",
+      "sigstore.json",
+      "sbom"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "rekor-cli-windows-amd64.exe"
+    ],
+    "save_name": "rekor-cli-windows-amd64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "nuclei",
+    "简介": "Nuclei（漏洞扫描模板引擎）",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/projectdiscovery/nuclei/releases",
+    "repo_path": "projectdiscovery/nuclei",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "nuclei_",
+      "windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows_386",
+      "linux",
+      "macOS"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "nuclei_{ver}_windows_amd64.zip"
+    ],
+    "save_name": "nuclei_{ver}_windows_amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "httpx_pd",
+    "简介": "httpx（ProjectDiscovery，HTTP 探测）",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/projectdiscovery/httpx/releases",
+    "repo_path": "projectdiscovery/httpx",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "httpx_",
+      "windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows_386",
+      "linux",
+      "macOS"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "httpx_{ver}_windows_amd64.zip"
+    ],
+    "save_name": "httpx_{ver}_windows_amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "amass",
+    "简介": "OWASP Amass（子域枚举与信息收集）",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/owasp-amass/amass/releases",
+    "repo_path": "owasp-amass/amass",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "amass_windows_amd64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "darwin",
+      "linux",
+      "checksums"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "amass_windows_amd64.tar.gz"
+    ],
+    "save_name": "amass_windows_amd64.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "windows_installer": false
+  },
+  {
+    "id": "fossa_cli",
+    "简介": "FOSSA CLI（依赖与许可证分析）",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/fossas/fossa-cli/releases",
+    "repo_path": "fossas/fossa-cli",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "fossa_",
+      "windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "diagnose_",
+      "millhone_",
+      "rendergraph_",
+      "darwin",
+      "sha256"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "fossa_{ver}_windows_amd64.zip"
+    ],
+    "save_name": "fossa_{ver}_windows_amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "kubeaudit",
+    "简介": "kubeaudit（K8s 资源配置审计）",
+    "分类": "安全",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/Shopify/kubeaudit/releases",
+    "repo_path": "Shopify/kubeaudit",
+    "prefer_api_assets": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "kubeaudit_",
+      "windows_amd64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "windows_386",
+      "windows_arm64",
+      "darwin",
+      "linux",
+      "checksums"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "kubeaudit_{ver}_windows_amd64.tar.gz"
+    ],
+    "save_name": "kubeaudit_{ver}_windows_amd64.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "windows_installer": false
+  },
+  {
+    "id": "vscanplus",
+    "简介": "VscanPlus 网站漏洞扫描（基于 vscan 二次开发，端口/指纹/目录 fuzz/POC）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/youki992/VscanPlus/releases",
+    "repo_path": "youki992/VscanPlus",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "VscanPlus-windows-amd64.exe"
+    ],
+    "href_exclude_substrings": [
+      "darwin",
+      "linux"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "VscanPlus-windows-amd64.exe"
+    ],
+    "save_name": "VscanPlus-windows-amd64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "opensca_cli",
+    "简介": "OpenSCA-cli 软件成分分析 SCA / 供应链漏洞检测",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/XmirrorSecurity/OpenSCA-cli/releases",
+    "repo_path": "XmirrorSecurity/OpenSCA-cli",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "opensca-cli-v",
+      "windows-amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "darwin",
+      "linux",
+      "sha256",
+      "linux-386",
+      "linux-amd64",
+      "linux-arm64",
+      "darwin-amd64",
+      "darwin-arm64"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "opensca-cli-v{ver}-windows-amd64.zip"
+    ],
+    "save_name": "opensca-cli-v{ver}-windows-amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "mitmproxy",
+    "简介": "mitmproxy 交互式 TLS HTTP 代理（安装包在 downloads.mitmproxy.org，非 GitHub 资产）",
+    "分类": "安全",
+    "enabled": false,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/mitmproxy/mitmproxy/releases",
+    "repo_path": "mitmproxy/mitmproxy",
+    "download_url_templates": [
+      "https://downloads.mitmproxy.org/{ver_plain}/mitmproxy-{ver_plain}-windows-x86_64-installer.exe"
+    ],
+    "windows_installer": true,
+    "download_names": [],
+    "save_name": "mitmproxy-{ver}-windows-x86_64-installer.exe",
+    "process_name": "mitmproxy.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "subfinder",
+    "简介": "subfinder（ProjectDiscovery 子域发现）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/projectdiscovery/subfinder/releases",
+    "repo_path": "projectdiscovery/subfinder",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "subfinder_",
+      "windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows_386",
+      "linux",
+      "macOS"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "subfinder_{ver}_windows_amd64.zip"
+    ],
+    "save_name": "subfinder_{ver}_windows_amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "naabu",
+    "简介": "naabu（ProjectDiscovery 快速端口扫描）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/projectdiscovery/naabu/releases",
+    "repo_path": "projectdiscovery/naabu",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "naabu_",
+      "windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows_386",
+      "checksums",
+      "linux",
+      "macOS"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "naabu_{ver}_windows_amd64.zip"
+    ],
+    "save_name": "naabu_{ver}_windows_amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "katana",
+    "简介": "katana（ProjectDiscovery 爬虫/URL 抓取）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/projectdiscovery/katana/releases",
+    "repo_path": "projectdiscovery/katana",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "katana_",
+      "windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows_386",
+      "checksums",
+      "linux",
+      "macOS"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "katana_{ver}_windows_amd64.zip"
+    ],
+    "save_name": "katana_{ver}_windows_amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "dnsx",
+    "简介": "dnsx（ProjectDiscovery DNS 探测与枚举）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/projectdiscovery/dnsx/releases",
+    "repo_path": "projectdiscovery/dnsx",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "dnsx_",
+      "windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows_386",
+      "linux",
+      "macOS"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "dnsx_{ver}_windows_amd64.zip"
+    ],
+    "save_name": "dnsx_{ver}_windows_amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "uncover",
+    "简介": "uncover（ProjectDiscovery 搜索引擎暴露面查询）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/projectdiscovery/uncover/releases",
+    "repo_path": "projectdiscovery/uncover",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "uncover_",
+      "windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows_386",
+      "linux",
+      "macOS"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "uncover_{ver}_windows_amd64.zip"
+    ],
+    "save_name": "uncover_{ver}_windows_amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "zen_desktop",
+    "简介": "Zen 系统级广告拦截与隐私守护（Windows x64 安装包）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/ZenPrivacy/zen-desktop/releases",
+    "repo_path": "ZenPrivacy/zen-desktop",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Zen-amd64-installer",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      ".dmg",
+      "darwin",
+      "linux",
+      ".zip"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "download_names": [
+      "Zen-amd64-installer.exe"
+    ],
+    "save_name": "Zen-amd64-installer.exe",
+    "process_name": "Zen.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "zen_desktop_arm64",
+    "简介": "Zen 系统级广告拦截与隐私守护（Windows ARM64 安装包）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/ZenPrivacy/zen-desktop/releases",
+    "repo_path": "ZenPrivacy/zen-desktop",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Zen-arm64-installer",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "Zen-amd64",
+      ".dmg",
+      "darwin",
+      "linux",
+      ".zip"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "download_names": [
+      "Zen-arm64-installer.exe"
+    ],
+    "save_name": "Zen-arm64-installer.exe",
+    "process_name": "Zen.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  }
+]

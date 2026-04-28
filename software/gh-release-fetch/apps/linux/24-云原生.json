@@ -1,0 +1,56 @@
+[
+  {
+    "id": "podman_desktop",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/containers/podman-desktop/releases",
+    "repo_path": "containers/podman-desktop"
+  },
+  {
+    "id": "rancher_desktop",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/rancher-sandbox/rancher-desktop/releases",
+    "repo_path": "rancher-sandbox/rancher-desktop"
+  },
+  {
+    "id": "kubectl",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/kubernetes/kubernetes/releases",
+    "repo_path": "kubernetes/kubernetes"
+  },
+  {
+    "id": "skaffold",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/GoogleContainerTools/skaffold/releases",
+    "repo_path": "GoogleContainerTools/skaffold"
+  },
+  {
+    "id": "kompose",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/kubernetes/kompose/releases",
+    "repo_path": "kubernetes/kompose"
+  },
+  {
+    "id": "tilt",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/tilt-dev/tilt/releases",
+    "repo_path": "tilt-dev/tilt"
+  },
+  {
+    "id": "lens",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/lensapp/lens/releases",
+    "repo_path": "lensapp/lens"
+  },
+  {
+    "id": "lazydocker",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/jesseduffield/lazydocker/releases",
+    "repo_path": "jesseduffield/lazydocker"
+  },
+  {
+    "id": "caddy",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/caddyserver/caddy/releases",
+    "repo_path": "caddyserver/caddy"
+  }
+]

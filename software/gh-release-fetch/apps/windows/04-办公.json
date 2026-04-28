@@ -1,0 +1,247 @@
+[
+  {
+    "id": "onlyoffice",
+    "简介": "ONLYOFFICE 桌面编辑器",
+    "分类": "办公",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/ONLYOFFICE/DesktopEditors/releases",
+    "repo_path": "ONLYOFFICE/DesktopEditors",
+    "installer_markers": [
+      "DesktopEditors_x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "x86.exe",
+      ".msi",
+      ".zip"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "DesktopEditors_x64.exe"
+    ],
+    "save_name": "DesktopEditors_x64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "texstudio",
+    "简介": "LaTeX 编辑器（需本机 TeX）",
+    "分类": "办公",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/texstudio-org/texstudio/releases",
+    "repo_path": "texstudio-org/texstudio",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "texstudio-",
+      "win-qt6-signed.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm",
+      "portable",
+      "osx",
+      "AppImage"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "texstudio-{ver}-win-qt6-signed.exe"
+    ],
+    "save_name": "texstudio-{ver}-win-qt6-signed.exe",
+    "process_name": "texstudio.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "typst",
+    "简介": "排版系统（LaTeX 替代）",
+    "分类": "办公",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/typst/typst/releases",
+    "repo_path": "typst/typst",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "typst-x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "apple",
+      "linux"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "typst-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "typst-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "sumatra_pdf",
+    "简介": "Sumatra PDF 轻量阅读器",
+    "分类": "办公",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/sumatrapdfreader/sumatrapdf/releases",
+    "repo_path": "sumatrapdfreader/sumatrapdf",
+    "installer_markers": [
+      "SumatraPDF-",
+      "64-install.exe"
+    ],
+    "href_exclude_substrings": [
+      "32-install",
+      "arm"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "SumatraPDF-{ver}-64-install.exe"
+    ],
+    "save_name": "SumatraPDF-{ver}-64-install.exe",
+    "process_name": "SumatraPDF.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "calibre",
+    "简介": "电子书管理与转换",
+    "分类": "办公",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/kovidgoyal/calibre/releases",
+    "repo_path": "kovidgoyal/calibre",
+    "installer_markers": [
+      "calibre-",
+      "64bit.msi"
+    ],
+    "href_exclude_substrings": [
+      "32bit",
+      "osx",
+      "linux"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "calibre-{ver}-64bit.msi"
+    ],
+    "save_name": "calibre-{ver}-64bit.msi",
+    "process_name": "calibre.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "version_tag_as_on_github": true,
+    "url_hint": "calibre"
+  },
+  {
+    "id": "kiwix",
+    "简介": "离线维基与 ZIM 阅读",
+    "分类": "办公",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/kiwix/kiwix-desktop/releases",
+    "repo_path": "kiwix/kiwix-desktop",
+    "installer_markers": [
+      "kiwix-desktop_windows",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "mac",
+      "linux",
+      "flatpak"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "kiwix-desktop_windows_{ver}.exe"
+    ],
+    "save_name": "kiwix-desktop_windows_{ver}.exe",
+    "process_name": "kiwix-desktop.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "naps2",
+    "简介": "NAPS2 扫描与 PDF 工具",
+    "分类": "办公",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/naps2/naps2/releases",
+    "repo_path": "naps2/naps2",
+    "installer_markers": [
+      "naps2-",
+      "setup.x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "osx",
+      "linux"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "naps2-{ver}-setup.x64.exe"
+    ],
+    "save_name": "naps2-{ver}-setup.x64.exe",
+    "process_name": "NAPS2.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "pdfarranger",
+    "简介": "PDF 页面合并 / 拆分 / 旋转",
+    "分类": "办公",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/pdfarranger/pdfarranger/releases",
+    "repo_path": "pdfarranger/pdfarranger",
+    "installer_markers": [
+      "pdfarranger-windows-",
+      ".msi"
+    ],
+    "href_exclude_substrings": [
+      "portable",
+      "fedora"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "pdfarranger-windows-{ver}.msi"
+    ],
+    "save_name": "pdfarranger-windows-{ver}.msi",
+    "process_name": "pdfarranger.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "affine",
+    "简介": "AFFiNE（知识库 / 文档 / 白板一体化，本地与同步）",
+    "分类": "办公",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/toeverything/AFFiNE/releases",
+    "repo_path": "toeverything/AFFiNE",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "affine-",
+      "stable-windows-x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "nsis",
+      ".blockmap",
+      "darwin",
+      "linux"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "affine-{ver}-stable-windows-x64.exe"
+    ],
+    "save_name": "affine-{ver}-stable-windows-x64.exe",
+    "process_name": "AFFiNE.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  }
+]

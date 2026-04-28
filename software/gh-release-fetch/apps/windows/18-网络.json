@@ -1,0 +1,492 @@
+[
+  {
+    "id": "localsend",
+    "简介": "局域网跨设备传文件，需同网段",
+    "分类": "网络",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/localsend/localsend/releases",
+    "repo_path": "localsend/localsend",
+    "installer_markers": [
+      "LocalSend-",
+      "windows-x86-64.exe"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "LocalSend-{ver}-windows-x86-64.exe"
+    ],
+    "save_name": "LocalSend-{ver}-windows-x86-64.exe",
+    "process_name": "localsend_app.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "angryip",
+    "简介": "局域网 IP 扫描",
+    "分类": "网络",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/angryip/ipscan/releases",
+    "repo_path": "angryip/ipscan",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "ipscan-win64-",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "setup.exe",
+      "mac"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "ipscan-win64-{ver}.exe"
+    ],
+    "save_name": "ipscan-win64-{ver}.exe",
+    "process_name": "ipscan.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "syncthing",
+    "简介": "文件同步核心（zip，仅下载）",
+    "分类": "网络",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/syncthing/syncthing/releases",
+    "repo_path": "syncthing/syncthing",
+    "installer_markers": [
+      "syncthing-windows-amd64-v",
+      ".zip"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "syncthing-windows-amd64-v{ver}.zip"
+    ],
+    "save_name": "syncthing-windows-amd64-v{ver}.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "rclone",
+    "简介": "云存储同步命令行（zip）",
+    "分类": "网络",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/rclone/rclone/releases",
+    "repo_path": "rclone/rclone",
+    "installer_markers": [
+      "rclone-v",
+      "windows-amd64.zip"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "rclone-v{ver}-windows-amd64.zip"
+    ],
+    "save_name": "rclone-v{ver}-windows-amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "nextcloud_desktop",
+    "简介": "Nextcloud 桌面同步客户端",
+    "分类": "网络",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/nextcloud/desktop/releases",
+    "repo_path": "nextcloud/desktop",
+    "installer_markers": [
+      "Nextcloud-",
+      "x64.msi"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "macos",
+      "Linux"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Nextcloud-{ver}-x64.msi"
+    ],
+    "save_name": "Nextcloud-{ver}-x64.msi",
+    "process_name": "nextcloud.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "bandwhich",
+    "简介": "终端带宽按进程展示",
+    "分类": "网络",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/imsnif/bandwhich/releases",
+    "repo_path": "imsnif/bandwhich",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "bandwhich-v",
+      "x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "linux",
+      "darwin"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "bandwhich-v{ver}-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "bandwhich-v{ver}-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "xh",
+    "简介": "友好 HTTP 客户端（curl 风格）",
+    "分类": "网络",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/ducaale/xh/releases",
+    "repo_path": "ducaale/xh",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "xh-v",
+      "x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "linux",
+      "darwin"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "xh-v{ver}-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "xh-v{ver}-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "wireshark",
+    "简介": "网络协议分析（Wireshark）",
+    "分类": "网络",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/wireshark/wireshark/releases",
+    "repo_path": "wireshark/wireshark",
+    "installer_markers": [
+      "Wireshark-",
+      "x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "osx",
+      "Portable"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Wireshark-{ver}-x64.exe"
+    ],
+    "save_name": "Wireshark-{ver}-x64.exe",
+    "process_name": "Wireshark.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "nmap",
+    "简介": "Nmap 网络扫描（Zenmap 安装包名因版本而异）",
+    "分类": "网络",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/nmap/nmap/releases",
+    "repo_path": "nmap/nmap",
+    "installer_markers": [
+      "nmap-",
+      "setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "rpm",
+      "osx",
+      "linux"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "nmap-{ver}-setup.exe"
+    ],
+    "save_name": "nmap-{ver}-setup.exe",
+    "process_name": "zenmap.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "url_hint": "nmap"
+  },
+  {
+    "id": "openvpn",
+    "简介": "OpenVPN 社区版安装包",
+    "分类": "网络",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/OpenVPN/openvpn/releases",
+    "repo_path": "OpenVPN/openvpn",
+    "installer_markers": [
+      "OpenVPN-",
+      "I602-amd64.msi"
+    ],
+    "href_exclude_substrings": [
+      "arm",
+      "32",
+      "tap"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "OpenVPN-{ver}-I602-amd64.msi"
+    ],
+    "save_name": "OpenVPN-{ver}-I602-amd64.msi",
+    "process_name": "openvpn.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "tailscale",
+    "简介": "Tailscale 组网客户端（以发布页为准）",
+    "分类": "网络",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/tailscale/tailscale/releases",
+    "repo_path": "tailscale/tailscale",
+    "installer_markers": [
+      "tailscale-setup-",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "mac",
+      "linux",
+      "msi"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "tailscale-setup-{ver}.exe"
+    ],
+    "save_name": "tailscale-setup-{ver}.exe",
+    "process_name": "tailscale-ipn.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "cloudflared",
+    "简介": "Cloudflare Tunnel 客户端",
+    "分类": "网络",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/cloudflare/cloudflared/releases",
+    "repo_path": "cloudflare/cloudflared",
+    "installer_markers": [
+      "cloudflared-windows-amd64.exe"
+    ],
+    "href_exclude_substrings": [
+      "386",
+      "arm64",
+      "deb"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "cloudflared-windows-amd64.msi"
+    ],
+    "save_name": "cloudflared-windows-amd64.msi",
+    "process_name": "cloudflared.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "syncthingtray",
+    "简介": "Syncthing 托盘与集成",
+    "分类": "网络",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/Martchus/syncthingtray/releases",
+    "repo_path": "Martchus/syncthingtray",
+    "installer_markers": [
+      "syncthingtray-",
+      "win64.exe"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "osx"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "syncthingtray-{ver}-x86_64-w64-mingw.exe"
+    ],
+    "save_name": "syncthingtray-{ver}-x86_64-w64-mingw.exe",
+    "process_name": "syncthingtray.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "thorium",
+    "简介": "Thorium 浏览器（Chromium 优化版）",
+    "分类": "网络",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/Alex313031/Thorium/releases",
+    "repo_path": "Alex313031/Thorium",
+    "installer_markers": [
+      "Thorium_",
+      "Installer.exe"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "AppImage",
+      "zip"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Thorium_{ver}_Installer.exe"
+    ],
+    "save_name": "Thorium_{ver}_Installer.exe",
+    "process_name": "thorium.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "url_hint": "Thorium"
+  },
+  {
+    "id": "croc",
+    "简介": "croc（端到端加密传文件，命令行）",
+    "分类": "网络",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/schollz/croc/releases",
+    "repo_path": "schollz/croc",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "croc_v",
+      "Windows-64bit.zip"
+    ],
+    "href_exclude_substrings": [
+      "32bit",
+      "ARM",
+      "darwin",
+      "linux"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "croc_v{ver}_Windows-64bit.zip"
+    ],
+    "save_name": "croc_v{ver}_Windows-64bit.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "zen_browser",
+    "简介": "Zen 浏览器（Firefox 分支，隐私向，Windows x64 安装包）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/zen-browser/desktop/releases",
+    "repo_path": "zen-browser/desktop",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "zen.installer.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      ".mar",
+      "AppImage",
+      "linux",
+      "macos",
+      "source"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "zen.installer.exe"
+    ],
+    "save_name": "zen.installer.exe",
+    "process_name": "zen.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "zen_browser_arm64",
+    "简介": "Zen 浏览器（Firefox 分支，Windows ARM64 安装包）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/zen-browser/desktop/releases",
+    "repo_path": "zen-browser/desktop",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "zen.installer-arm64.exe"
+    ],
+    "href_exclude_substrings": [
+      ".mar",
+      "AppImage",
+      "linux",
+      "macos",
+      "source"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "zen.installer-arm64.exe"
+    ],
+    "save_name": "zen.installer-arm64.exe",
+    "process_name": "zen.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "netbird",
+    "简介": "NetBird（WireGuard 组网与零信任访问，含桌面 UI）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/netbirdio/netbird/releases",
+    "repo_path": "netbirdio/netbird",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "netbird-ui-windows_",
+      "windows_amd64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "windows_arm64",
+      "darwin",
+      "linux",
+      "install.sh",
+      "checksums",
+      "migrate"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "netbird-ui-windows_{ver}_windows_amd64.tar.gz"
+    ],
+    "save_name": "netbird-ui-windows_{ver}_windows_amd64.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  }
+]

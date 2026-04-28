@@ -1,0 +1,270 @@
+[
+  {
+    "id": "dbeaver",
+    "简介": "数据库客户端（DBeaver CE）",
+    "分类": "数据库",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/dbeaver/dbeaver/releases",
+    "repo_path": "dbeaver/dbeaver",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "dbeaver-ce-",
+      "windows-x86_64.exe"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      ".zip",
+      "sha256"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "dbeaver-ce-{ver}-windows-x86_64.exe"
+    ],
+    "save_name": "dbeaver-ce-{ver}-windows-x86_64.exe",
+    "process_name": "dbeaver.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "beekeeper",
+    "简介": "SQL 编辑器与数据库管理",
+    "分类": "数据库",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/beekeeper-studio/beekeeper-studio/releases",
+    "repo_path": "beekeeper-studio/beekeeper-studio",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "Beekeeper-Studio-Setup-",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "portable",
+      "arm64-mac",
+      "blockmap"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Beekeeper-Studio-Setup-{ver}.exe"
+    ],
+    "save_name": "Beekeeper-Studio-Setup-{ver}.exe",
+    "process_name": "Beekeeper Studio.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "duckdb_cli",
+    "简介": "DuckDB 命令行工具（Windows amd64 压缩包，内含 duckdb.exe）",
+    "分类": "数据库",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/duckdb/duckdb/releases",
+    "repo_path": "duckdb/duckdb",
+    "prefer_api_assets": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "duckdb_cli-windows-amd64",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "libduckdb",
+      "static-libs",
+      "mingw"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "duckdb_cli-windows-amd64.zip"
+    ],
+    "save_name": "duckdb_cli-windows-amd64-{ver}.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "cockroach",
+    "简介": "CockroachDB（企业版注意许可）",
+    "分类": "数据库",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/cockroachdb/cockroach/releases",
+    "repo_path": "cockroachdb/cockroach",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "cockroach-v",
+      "windows-6.2-amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "darwin",
+      "src"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "cockroach-v{ver}.windows-6.2-amd64.zip"
+    ],
+    "save_name": "cockroach-v{ver}.windows-6.2-amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "pocketbase",
+    "简介": "PocketBase（单文件后端：嵌入式 SQLite + 实时 API + 管理后台）",
+    "分类": "数据库",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/pocketbase/pocketbase/releases",
+    "repo_path": "pocketbase/pocketbase",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "pocketbase_",
+      "windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows_arm64",
+      "checksums",
+      "darwin",
+      "linux"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "pocketbase_{ver}_windows_amd64.zip"
+    ],
+    "save_name": "pocketbase_{ver}_windows_amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "supabase_cli",
+    "简介": "Supabase CLI（本地开发、迁移与项目管理）",
+    "分类": "数据库",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/supabase/cli/releases",
+    "repo_path": "supabase/cli",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "supabase_windows_amd64",
+      ".tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "darwin",
+      "linux",
+      "checksum"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "supabase_windows_amd64.tar.gz"
+    ],
+    "save_name": "supabase_windows_amd64-{ver}.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "usql",
+    "简介": "usql（通用 SQL 客户端，支持多数据库）",
+    "分类": "数据库",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/xo/usql/releases",
+    "repo_path": "xo/usql",
+    "prefer_api_assets": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "usql-",
+      "windows-amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "darwin",
+      "linux",
+      "static",
+      "arm"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "usql-{ver}-windows-amd64.zip"
+    ],
+    "save_name": "usql-{ver}-windows-amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "dolt",
+    "简介": "Dolt（Git 语义的关系型数据库 / 数据版本控制 CLI）",
+    "分类": "数据库",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/dolthub/dolt/releases",
+    "repo_path": "dolthub/dolt",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "dolt-windows-amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "darwin",
+      "arm64",
+      "musl",
+      "deb",
+      "rpm"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "dolt-windows-amd64.zip"
+    ],
+    "save_name": "dolt-windows-amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "sqlc",
+    "简介": "sqlc（从 SQL 生成类型安全 Go 代码）",
+    "分类": "数据库",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/sqlc-dev/sqlc/releases",
+    "repo_path": "sqlc-dev/sqlc",
+    "prefer_api_assets": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "sqlc_",
+      "windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "tar.gz",
+      "darwin",
+      "linux",
+      "arm"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "sqlc_{ver}_windows_amd64.zip"
+    ],
+    "save_name": "sqlc_{ver}_windows_amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  }
+]

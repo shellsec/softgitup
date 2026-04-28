@@ -1,0 +1,107 @@
+[
+    {
+        "args": {
+            "dirs": []
+        }, 
+        "command": "new_file_at", 
+        "caption": "新建文件"
+    }, 
+    {
+        "args": {
+            "paths": []
+        }, 
+        "command": "rename_path", 
+        "caption": "重命名…"
+    }, 
+    {
+        "args": {
+            "prompt": false, 
+            "files": []
+        }, 
+        "command": "delete_file", 
+        "caption": "删除文件"
+    }, 
+    {
+        "args": {
+            "dirs": []
+        }, 
+        "command": "open_folder", 
+        "caption": "打开文件夹…"
+    }, 
+    {
+        "args": {
+            "files": []
+        }, 
+        "command": "open_containing_folder", 
+        "caption": "打开所在文件夹…"
+    }, 
+    {
+        "args": {
+            "dirs": []
+        }, 
+        "command": "reveal_link_source", 
+        "caption": "打开链接目录"
+    }, 
+    {
+        "id": "repo_commands", 
+        "caption": "-"
+    }, 
+    {
+        "args": {
+            "paths": []
+        }, 
+        "command": "sublime_merge_open_repo", 
+        "caption": "打开Git仓库…"
+    }, 
+    {
+        "args": {
+            "files": []
+        }, 
+        "command": "sublime_merge_file_history", 
+        "caption": "文件历史…"
+    }, 
+    {
+        "args": {
+            "paths": []
+        }, 
+        "command": "sublime_merge_folder_history", 
+        "caption": "目录历史…"
+    }, 
+    {
+        "args": {
+            "files": []
+        }, 
+        "command": "sublime_merge_blame_file", 
+        "caption": "审查文件…"
+    }, 
+    {
+        "id": "folder_commands", 
+        "caption": "-"
+    }, 
+    {
+        "args": {
+            "dirs": []
+        }, 
+        "command": "new_folder", 
+        "caption": "新建文件夹…"
+    }, 
+    {
+        "args": {
+            "dirs": [], 
+            "prompt": true
+        }, 
+        "command": "delete_folder", 
+        "caption": "删除文件夹"
+    }, 
+    {
+        "args": {
+            "dirs": []
+        }, 
+        "command": "find_in_folder", 
+        "caption": "在文件夹中查找…"
+    }, 
+    {
+        "id": "end", 
+        "caption": "-"
+    }
+]

@@ -1,0 +1,14 @@
+/L20"JSON" JSON_LANG Nocase Escape Char = \ String Chars = " File Extensions = JSON
+/Delimiters = 	:{}[],
+/Indent Strings = "{" "["
+/Unindent Strings = "}" "]"
+/Open Brace Strings =  "{" "(" "["
+/Close Brace Strings = "}" ")" "]"
+/Open Fold Strings = "{" "["
+/Close Fold Strings = "}" "]"
+/C1"Key"
+/C2"False/null"
+false 
+null
+/C3"True"
+true

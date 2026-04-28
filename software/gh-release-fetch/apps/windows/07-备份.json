@@ -1,0 +1,93 @@
+[
+  {
+    "id": "kopia",
+    "简介": "Kopia（增量备份快照，含 KopiaUI 安装包）",
+    "分类": "备份",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/kopia/kopia/releases",
+    "repo_path": "kopia/kopia",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "KopiaUI-Setup-",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "blockmap",
+      ".zip",
+      "darwin",
+      "linux"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "KopiaUI-Setup-{ver}.exe"
+    ],
+    "save_name": "KopiaUI-Setup-{ver}.exe",
+    "process_name": "kopia-ui.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "duplicacy",
+    "简介": "Duplicacy（跨云去重备份 CLI，Windows x64）",
+    "分类": "备份",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/gilbertchen/duplicacy/releases",
+    "repo_path": "gilbertchen/duplicacy",
+    "prefer_api_assets": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "duplicacy_win_x64_",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "win_i386",
+      "linux",
+      "osx",
+      "freebsd"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "duplicacy_win_x64_{ver}.exe"
+    ],
+    "save_name": "duplicacy_win_x64_{ver}.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "rustic",
+    "简介": "rustic（Rust 实现的 restic 兼容备份 CLI）",
+    "分类": "备份",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/rustic-rs/rustic/releases",
+    "repo_path": "rustic-rs/rustic",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "rustic-v",
+      "x86_64-pc-windows-msvc.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "windows-gnu",
+      "darwin",
+      "linux",
+      ".asc",
+      ".sha256",
+      ".sig"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "rustic-v{ver}-x86_64-pc-windows-msvc.tar.gz"
+    ],
+    "save_name": "rustic-v{ver}-x86_64-pc-windows-msvc.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  }
+]

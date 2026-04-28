@@ -1,0 +1,315 @@
+<?xml version="1.0"?>
+<UETheme>
+  <Window>
+    <Look>Custom</Look>
+    <Font Category="Dockable Windows" Face="Segoe UI">-12:0:0:0:400:0:0:0:1:0:0:0:0</Font>
+    <Font Category="Output Window" Face="Consolas">-26:0:0:0:400:0:0:0:0:0:0:0:0</Font>
+    <Color ID="ID_DOCKABLE_WINDOW_TEXT" Category="Dockable Window" Description="Text" Value="#41454A"/>
+    <Color ID="ID_DOCKABLE_WINDOW_BACKGROUND" Category="Dockable Window" Description="Background" Value="#BDC3CA"/>
+    <Color ID="ID_DOCKABLE_WINDOW_CAPTION_TEXT" Category="Dockable Window" Description="Caption Text" Value="#4A535F"/>
+    <Color ID="ID_DOCKABLE_WINDOW_CAPTION_TEXT_ACTIVE" Category="Dockable Window" Description="Active Caption Text" Value="#FFFFFF"/>
+    <Color ID="ID_DOCKABLE_WINDOW_CAPTION_BUTTON" Category="Dockable Window" Description="Caption Button" Value="#414141"/>
+    <Color ID="ID_DOCKABLE_WINDOW_CAPTION_BUTTON_HIGHLIGHT" Category="Dockable Window" Description="Caption Button Highlight" Value="#858E98"/>
+    <Color ID="ID_DOCKABLE_WINDOW_CAPTION_BUTTON_MOUSEDOWN" Category="Dockable Window" Description="Caption Button Mouse Down" Value="#6B757E"/>
+    <Color ID="ID_DOCKABLE_WINDOW_CAPTION_BORDER" Category="Dockable Window" Description="Caption Border" Value="#BDC3CA"/>
+    <Color ID="ID_DOCKABLE_WINDOW_CAPTION_BORDER_SHADOW" Category="Dockable Window" Description="Caption Border Shadow" Value="#B7C1CD"/>
+    <Color ID="ID_DOCKABLE_WINDOW_BORDER" Category="Dockable Window" Description="Border" Value="#FF0000"/>
+    <Color ID="ID_DOCKABLE_WINDOW_BORDER_SHADOW" Category="Dockable Window" Description="Border Shadow" Value="#FF0000"/>
+    <Color ID="ID_DOCKABLE_WINDOW_FLOATING_BORDER" Category="Dockable Window" Description="Floating Border" Value="#FFFFFF"/>
+    <Color ID="ID_DOCKABLE_WINDOW_FLOATING_BORDER_SHADOW" Category="Dockable Window" Description="Floating Border Shadow" Value="#FFFFFF"/>
+    <Color ID="ID_DOCKABLE_WINDOW_FLOATING_OUTER_BORDER" Category="Dockable Window" Description="Floating Outer Border" Value="#B7C1CD"/>
+    <Color ID="ID_DOCKABLE_WINDOW_FLOATING_OUTER_BORDER_SHADOW" Category="Dockable Window" Description="Floating Outer Border Shadow" Value="#B7C1CD"/>
+    <Color ID="ID_DOCKABLE_WINDOW_FLOATING_CAPTION_TEXT" Category="Dockable Window" Description="Floating Caption Text" Value="#797B84"/>
+    <Color ID="ID_DOCKABLE_WINDOW_FLOATING_BORDER_ACTIVE" Category="Dockable Window" Description="Floating Border Active" Value="#FF0000"/>
+    <Color ID="ID_DOCKABLE_WINDOW_FLOATING_CAPTION_TEXT_ACTIVE" Category="Dockable Window" Description="Floating Caption Text Active" Value="#FFFFFF"/>
+    <Color ID="ID_MENU_TEXT" Category="Menu" Description="Text" Value="#252131"/>
+    <Color ID="ID_MENU_BACKGROUND" Category="Menu" Description="Background" Value="#FFFFFF"/>
+    <Color ID="ID_MENU_TEXT_DISABLED" Category="Menu" Description="Text Disabled" Value="#959FA8"/>
+    <Color ID="ID_MENU_ITEM_BACKGROUND_HIGHLIGHT" Category="Menu" Description="Highlighted Item Background" Value="#BEC6D3"/>
+    <Color ID="ID_MENU_ITEM_TEXT_HIGHLIGHT" Category="Menu" Description="Highlighted Item Text" Value="#14121B"/>
+    <Color ID="ID_MENU_ITEM_BORDER_HIGHLIGHT" Category="Menu" Description="Highlighted Item Border" Value="#848C9F"/>
+    <Color ID="ID_MENU_ITEM_CHECKED_BACKGROUND" Category="Menu" Description="Checked Item Background" Value="#FFFFFF"/>
+    <Color ID="ID_MENU_ITEM_CHECKED_BORDER" Category="Menu" Description="Checked Item Border" Value="#FF0000"/>
+    <Color ID="ID_MENU_ITEM_CHECKED_BACKGROUND_HIGHLIGHT" Category="Menu" Description="Highlighted Checked Item Background" Value="#FFFFFF"/>
+    <Color ID="ID_MENU_ITEM_CHECKED_BORDER_HIGHLIGHT" Category="Menu" Description="Highlighted Checked Item Border" Value="#BEC6D3"/>
+    <Color ID="ID_MENU_BORDER" Category="Menu" Description="Border" Value="#B2B5BA"/>
+    <Color ID="ID_MENU_BORDER_SHADOW" Category="Menu" Description="Border Shadow" Value="#808080"/>
+    <Color ID="ID_MENU_TOP_LEVEL_BACKGROUND_ACTIVE" Category="Menu" Description="Top Level Background Active" Value="#FFFFFF"/>
+    <Color ID="ID_MENU_TOP_LEVEL_TEXT" Category="Menu" Description="Top Level Text" Value="#25212E"/>
+    <Color ID="ID_MENU_TOP_LEVEL_TEXT_ACTIVE" Category="Menu" Description="Top Level Text Active" Value="#252131"/>
+    <Color ID="ID_MENU_TOP_LEVEL_HIGHLIGHT_BACKGROUND" Category="Menu" Description="Highlighted Top Level Background" Value="#FF0000"/>
+    <Color ID="ID_MENU_TOP_LEVEL_TEXT_HIGHLIGHT" Category="Menu" Description="Highlighted Top Level Text" Value="#FF0000"/>
+    <Color ID="ID_MENU_SEPARATOR" Category="Menu" Description="Separator" Value="#C5C7CB"/>
+    <Color ID="ID_TOOLBAR_SEPARATOR" Category="Toolbar" Description="Separator" Value="#FF0000"/>
+    <Color ID="ID_TOOLBAR_ITEM_BACKGROUND_HIGHLIGHT" Category="Toolbar" Description="Highlighted Item Background" Value="#FF0000"/>
+    <Color ID="ID_TOOLBAR_ITEM_BORDER_HIGHLIGHT" Category="Toolbar" Description="Highlighted item Border" Value="#FF0000"/>
+    <Color ID="ID_TOOLBAR_ITEM_CHECKED_BACKGROUND" Category="Toolbar" Description="Checked Item Background" Value="#FF0000"/>
+    <Color ID="ID_TOOLBAR_ITEM_CHECKED_BORDER" Category="Toolbar" Description="Checked Item Border" Value="#FF0000"/>
+    <Color ID="ID_TOOLBAR_ITEM_CHECKED_BACKGROUND_HIGHLIGHT" Category="Toolbar" Description="Clicked Item Background" Value="#808080"/>
+    <Color ID="ID_TOOLBAR_ITEM_CHECKED_BORDER_HIGHLIGHT" Category="Toolbar" Description="Highlighted Checked Item Border" Value="#FF0000"/>
+    <Color ID="ID_TOOLBAR_CUSTOMIZE_BUTTON" Category="Toolbar" Description="Customize Button" Value="#FF0000"/>
+    <Color ID="ID_TOOLBAR_GRIPPER" Category="Toolbar" Description="Gripper" Value="#979DAE"/>
+    <Color ID="ID_TOOLBAR_GRIPPER_SHADOW" Category="Toolbar" Description="Gripper Shadow" Value="#D3D3D6"/>
+    <Color ID="ID_TOOLBAR_BORDER" Category="Toolbar" Description="Border" Value="#FF0000"/>
+    <Color ID="ID_TOOLBAR_BORDER_SHADOW" Category="Toolbar" Description="Border Shadow" Value="#D3D8E0"/>
+    <Color ID="ID_TOOLBAR_COMBO_BORDER" Category="Toolbar" Description="Combobox border" Value="#FFFFFF"/>
+    <Color ID="ID_FILETAB_BORDER" Category="File Tab" Description="Tab Border" Value="#FF0000"/>
+    <Color ID="ID_FILETAB_BORDER_ACCENT" Category="File Tab" Description="Tab Border Accent" Value="#93A0B3"/>
+    <Color ID="ID_FILETAB_TEXT" Category="File Tab" Description="Tab Text" Value="#41445F"/>
+    <Color ID="ID_FILETAB_BORDER_ACTIVE" Category="File Tab" Description="Tab Border Active" Value="#FF0000"/>
+    <Color ID="ID_FILETAB_BORDER_TOP_ACTIVE" Category="File Tab" Description="Tab Top Border Active" Value="#F2F3F5"/>
+    <Color ID="ID_FILETAB_TEXT_ACTIVE" Category="File Tab" Description="Tab Text Active" Value="#252131"/>
+    <Color ID="ID_OUTPUTTAB_BORDER" Category="Output Tab" Description="Tab Border" Value="#FF0000"/>
+    <Color ID="ID_OUTPUTTAB_TEXT" Category="Output Tab" Description="Tab Text" Value="#44415A"/>
+    <Color ID="ID_OUTPUTTAB_BORDER_ACTIVE" Category="Output Tab" Description="Tab Border Active" Value="#FF0000"/>
+    <Color ID="ID_OUTPUTTAB_TEXT_ACTIVE" Category="Output Tab" Description="Tab Text Active" Value="#252131"/>
+    <Color ID="ID_GROUPTAB_BORDER" Category="Group Tab" Description="Tab Border" Value="#6B7986"/>
+    <Color ID="ID_GROUPTAB_TEXT" Category="Group Tab" Description="Tab Text" Value="#41445F"/>
+    <Color ID="ID_GROUPTAB_BORDER_ACTIVE" Category="Group Tab" Description="Tab Border Active" Value="#6B7986"/>
+    <Color ID="ID_GROUPTAB_TEXT_ACTIVE" Category="Group Tab" Description="Tab Text Active" Value="#252131"/>
+    <Color ID="ID_STATUSBAR_TEXT" Category="Statusbar" Description="Statusbar Text" Value="#000000"/>
+    <Color ID="ID_STATUSBAR_TEXT_DISABLED" Category="Statusbar" Description="Statusbar Text Disabled" Value="#808080"/>
+    <Color ID="ID_STATUSBAR_SEPARATOR" Category="Statusbar" Description="Statusbar Separator" Value="#C5C7CB"/>
+    <Color ID="ID_APPLICATION_BACKGROUND" Category="Application" Description="Dockable Bar Background" Value="#EBEFF3"/>
+    <Color ID="ID_FILETABS_BACKGROUND" Category="File Tabs Control" Description="Control Background" Value="#868E97"/>
+    <Color ID="ID_FILETABS_BORDER" Category="File Tabs Control" Description="Control Border" Value="#858E98"/>
+    <Color ID="ID_FILETABS_BORDER_SHADOW" Category="File Tabs Control" Description="Control Border Shadow" Value="#FF0000"/>
+    <Color ID="ID_FILETABS_TABAREA_BORDER" Category="File Tabs Control" Description="Tab Area Border" Value="#F2F2F2"/>
+    <Color ID="ID_FILETABS_TABAREA_OUTER_BORDER" Category="File Tabs Control" Description="Tab Area Outer Border" Value="#E5E5E5"/>
+    <Color ID="ID_FILETABS_TABAREA_INNER_BORDER" Category="File Tabs Control" Description="Tab Area Inner Border" Value="#F2F2F2"/>
+    <Color ID="ID_FILETABS_BASELINE" Category="File Tabs Control" Description="Tabs Base Line" Value="#C0C0C0"/>
+    <Color ID="ID_OUTPUTTABS_BACKGROUND" Category="Output Tabs Control" Description="Control Background" Value="#858E98"/>
+    <Color ID="ID_OUTPUTTABS_BORDER" Category="Output Tabs Control" Description="Control Border" Value="#858E98"/>
+    <Color ID="ID_OUTPUTTABS_BASELINE" Category="Output Tabs Control" Description="Tabs Base Line" Value="#E6EAEE"/>
+    <Color ID="ID_GROUPTABS_BASELINE" Category="Group Tabs Control" Description="Tabs Base Line" Value="#FF0000"/>
+    <Color ID="ID_GROUPTABS_BACKGROUND" Category="Group Tabs Control" Description="Control Background" Value="#F2F3F5"/>
+    <Color ID="ID_GROUPTABS_BORDER" Category="Group Tabs Control" Description="Control Border" Value="#92969C"/>
+    <Color ID="ID_BUTTON_TEXT_CHECKED" Category="Button" Description="Checked Text" Value="#FFFFFF"/>
+    <Color ID="ID_BUTTON_TEXT" Category="Button" Description="Text" Value="#26272D"/>
+    <Color ID="ID_BUTTON_TEXT_HIGHLIGHT" Category="Button" Description="Highlighted Text" Value="#FFFFFF"/>
+    <Color ID="ID_BUTTON_TEXT_DISABLED" Category="Button" Description="Disabled Text" Value="#8C8C8C"/>
+    <Color ID="ID_BUTTON_TEXT_DISABLED_SHADOW" Category="Button" Description="Disabled Text Shadow" Value="#C0C0C0"/>
+    <Color ID="ID_BUTTON_BORDER" Category="Button" Description="Top/Left Border" Value="#707070"/>
+    <Color ID="ID_BUTTON_BORDER_CLICKED" Category="Button" Description="Clicked Top/Left Border" Value="#707070"/>
+    <Color ID="ID_BUTTON_BORDER_SHADOW" Category="Button" Description="Bottom/Right Border" Value="#707070"/>
+    <Color ID="ID_BUTTON_BORDER_CLICKED_SHADOW" Category="Button" Description="Clicked Bottom/Right Border" Value="#707070"/>
+    <Color ID="ID_AUTOHIDEBUTTON_BORDER" Category="Auto Hide Button" Description="Auto-Hide Button Border" Value="#9CA4AB"/>
+    <Color ID="ID_AUTOHIDEBUTTON_TEXT" Category="Auto Hide Button" Description="Auto-Hide Button Text" Value="#7E869A"/>
+    <Color ID="ID_TEXTCONTROL_BACKGROUND" Category="Text Control" Description="Text Control Background" Value="#FFFFFF"/>
+    <Color ID="ID_TEXTCONTROL_TEXT" Category="Text Control" Description="Text Control Text" Value="#4A535F"/>
+    <Color ID="ID_DIALOG_BACKGROUND2" Category="Dialog" Description="Background" Value="#D4D9E0"/>
+    <Color ID="ID_DIALOG_TEXT2" Category="Dialog" Description="Text" Value="#41454A"/>
+    <Color ID="ID_STATICCONTROL_BACKGROUND" Category="Static Control" Description="Static Control Background" Value="#BDC3CA"/>
+    <Color ID="ID_STATICCONTROL_TEXT" Category="Static Control" Description="Static Control Text" Value="#636B74"/>
+    <Color ID="ID_HEADER_TEXT" Category="List Control" Description="Header Text" Value="#252131"/>
+    <Color ID="ID_HEADER_TEXT_HIGHLIGHT" Category="List Control" Description="Header Highlighted Text" Value="#252131"/>
+    <Color ID="ID_HEADER_TEXT_CLICKED" Category="List Control" Description="Header Clicked Text" Value="#000000"/>
+    <Color ID="ID_HEADER_BORDER" Category="List Control" Description="Header Top/Left Border" Value="#BDC3CA"/>
+    <Color ID="ID_HEADER_BORDER_CLICKED" Category="List Control" Description="Header Clicked Top/Left Border" Value="#BDC3CA"/>
+    <Color ID="ID_HEADER_BORDER_SHADOW" Category="List Control" Description="Header Bottom/Right Border" Value="#B7C1CD"/>
+    <Color ID="ID_HEADER_BORDER_CLICKED_SHADOW" Category="List Control" Description="Header Clicked Bottom/Right Border" Value="#BDC3CA"/>
+    <Color ID="ID_RIBBON_TAB_TEXT" Category="Ribbon" Description="Category Tab Text" Value="#25212E"/>
+    <Color ID="ID_RIBBON_TAB_TEXT_ACTIVE" Category="Ribbon" Description="Category Tab Text (Active)" Value="#252131"/>
+    <Color ID="ID_RIBBON_TAB_TEXT_HIGHLIGHT" Category="Ribbon" Description="Category Tab Text (Highlight)" Value="#252131"/>
+    <Color ID="ID_RIBBON_TAB_TEXT_ACTIVE_HIGHLIGHT" Category="Ribbon" Description="Category Tab Text (Active+Highlight)" Value="#252131"/>
+    <Color ID="ID_RIBBON_TAB_BORDER_ACTIVE" Category="Ribbon" Description="Category Tab Border (Active)" Value="#B2B5BA"/>
+    <Color ID="ID_RIBBON_TAB_BORDER_HIGHLIGHT" Category="Ribbon" Description="Category Tab Border (Highlight)" Value="#848C9F"/>
+    <Color ID="ID_RIBBON_TAB_BORDER_ACTIVE_HIGHLIGHT" Category="Ribbon" Description="Category Tab Border (Active+Highlight)" Value="#848C9F"/>
+    <Color ID="ID_RIBBON_CATEGORY_BACKGROUND" Category="Ribbon" Description="Category Background" Value="#FFFFFF"/>
+    <Color ID="ID_RIBBON_CATEGORY_BACKGROUND_HIGHLIGHT" Category="Ribbon" Description="Category Background (Highlight)" Value="#F5F5F5"/>
+    <Color ID="ID_RIBBON_CATEGORY_TEXT" Category="Ribbon" Description="Category Text" Value="#252131"/>
+    <Color ID="ID_RIBBON_CATEGORY_TEXT_HIGHLIGHT" Category="Ribbon" Description="Category Text (Highlight)" Value="#252131"/>
+    <Color ID="ID_RIBBON_BUTTON_BACKGROUND_HIGHLIGHT" Category="Ribbon" Description="Button Background (Highlight)" Value="#BEC6D3"/>
+    <Color ID="ID_RIBBON_BUTTON_BACKGROUND_HIGHLIGHT_ACTIVE" Category="Ribbon" Description="Button Background (Active+Highlight)" Value="#848C9F"/>
+    <Color ID="ID_RIBBON_BUTTON_BACKGROUND_TOGGLE" Category="Ribbon" Description="Button Background (Toggled)" Value="#EBEBEB"/>
+    <Color ID="ID_RIBBON_BUTTON_BACKGROUND_TOGGLE_HIGHLIGHT" Category="Ribbon" Description="Button Background (Toggled+Highlight)" Value="#BEC6D3"/>
+    <Color ID="ID_RIBBON_BUTTON_BORDER_HIGHLIGHT" Category="Ribbon" Description="Button Border (Highlight)" Value="#848C9F"/>
+    <Color ID="ID_RIBBON_BUTTON_BORDER_HIGHLIGHT_ACTIVE" Category="Ribbon" Description="Button Border (Active+Highlight)" Value="#848C9F"/>
+    <Color ID="ID_RIBBON_BUTTON_BORDER_TOGGLE" Category="Ribbon" Description="Button Border (Toggled)" Value="#E1E1E1"/>
+    <Color ID="ID_RIBBON_BUTTON_BORDER_TOGGLE_HIGHLIGHT" Category="Ribbon" Description="Button Border (Toggled+Highlight)" Value="#848C9F"/>
+    <Color ID="ID_RIBBON_BUTTON_TEXT_HIGHLIGHT" Category="Ribbon" Description="Button Text (Highlight)" Value="#14121B"/>
+    <Color ID="ID_RIBBON_BUTTON_TEXT_HIGHLIGHT_ACTIVE" Category="Ribbon" Description="Button Text (Active+Highlight)" Value="#14121B"/>
+    <Color ID="ID_RIBBON_BUTTON_TEXT_TOGGLE" Category="Ribbon" Description="Button Text (Toggled)" Value="#252131"/>
+    <Color ID="ID_RIBBON_BUTTON_TEXT_TOGGLE_HIGHLIGHT" Category="Ribbon" Description="Button Text (Toggled+Highlight)" Value="#14121B"/>
+    <Color ID="ID_RIBBON_CATEGORY_CAPTION_TEXT" Category="Ribbon" Description="Category Caption Text" Value="#26272D"/>
+    <Color ID="ID_RIBBON_CATEGORY_CAPTION_TEXT_HIGHLIGHT" Category="Ribbon" Description="Category Caption Text (Highlight)" Value="#FFFFFF"/>
+    <Color ID="ID_RIBBON_BUTTON_BACKGROUND_DISABLED" Category="Ribbon" Description="Button Background (Disabled)" Value="#FFFFFF"/>
+    <Color ID="ID_RIBBON_BUTTON_TEXT_DISABLED" Category="Ribbon" Description="Button Text (Disabled)" Value="#8C8C8C"/>
+    <Color ID="ID_RIBBON_CATEGORY_PANEL_BACKGROUND" Category="Ribbon" Description="Category Panel Background" Value="#F5F5F5"/>
+    <Color ID="ID_RIBBON_CATEGORY_PANEL_BORDER" Category="Ribbon" Description="Category Panel Border" Value="#F5F5F5"/>
+    <Color ID="ID_RIBBON_CATEGORY_PANEL_BORDER_SHADOW" Category="Ribbon" Description="Category Panel Border Shadow" Value="#F5F5F5"/>
+    <Color ID="ID_RIBBON_CATEGORY_PANEL_SEPARATOR" Category="Ribbon" Description="Category Panel Separator" Value="#FFFFFF"/>
+    <Color ID="ID_COMMANDPALETTE_BORDER" Category="Command Palette" Description="Window Border" Value="#FFFFFF"/>
+    <Color ID="ID_COMMANDPALETTE_EDIT_TEXT" Category="Command Palette" Description="Command Window Text" Value="#4A535F"/>
+    <Color ID="ID_COMMANDPALETTE_EDIT_BACKGROUND" Category="Command Palette" Description="Command Window Background" Value="#FFFFFF"/>
+    <Color ID="ID_COMMANDPALETTE_EDIT_TEXT_DISABLED" Category="Command Palette" Description="Command Window Text (Disabled)" Value="#C0C0C0"/>
+    <Color ID="ID_COMMANDPALETTE_LIST_TEXT" Category="Command Palette" Description="Command List Text" Value="#41454A"/>
+    <Color ID="ID_COMMANDPALETTE_LIST_BACKGROUND" Category="Command Palette" Description="Command List Background" Value="#BDC3CA"/>
+    <Color ID="ID_COMMANDPALETTE_LIST_TEXT_HIGHLIGHT" Category="Command Palette" Description="Command List Text (Highlight)" Value="#FFFFFF"/>
+    <Color ID="ID_COMMANDPALETTE_LIST_BACKGROUND_HIGHLIGHT" Category="Command Palette" Description="Command List Highlight" Value="#0078D7"/>
+    <Color ID="ID_COMMANDPALETTE_LIST_KEYMAP_TEXT" Category="Command Palette" Description="Key Assignment Text" Value="#26272D"/>
+    <Color ID="ID_COMMANDPALETTE_LIST_KEYMAP_BACKGROUND" Category="Command Palette" Description="Key Assignment Background" Value="#8E8E8E"/>
+    <Color ID="ID_COMMANDPALETTE_LIST_TEXT_SEARCH" Category="Command Palette" Description="Command List Text (Search)" Value="#FFFFFF"/>
+    <Gradient ID="ID_DOCKABLE_WINDOW_CAPTION_BACKGROUND_GRADIENT" Category="Dockable Window" Description="Caption Background" Start="#9DA5B0" Finish="#BDC2CA"/>
+    <Gradient ID="ID_DOCKABLE_WINDOW_CAPTION_BACKGROUND_GRADIENT_ACTIVE" Category="Dockable Window" Description="Active Caption Background" Start="#4A5B88" Finish="#8393BC"/>
+    <Gradient ID="ID_DOCKABLE_WINDOW_FLOATING_CAPTION_BACKGROUND_GRADIENT" Category="Dockable Window" Description="Floating Caption Background" Start="#BDC3CA" Finish="#BDC3CA"/>
+    <Gradient ID="ID_DOCKABLE_WINDOW_FLOATING_CAPTION_BACKGROUND_GRADIENT_ACTIVE" Category="Dockable Window" Description="Floating Caption Background Active" Start="#4A5B88" Finish="#586DA5"/>
+    <Gradient ID="ID_MENU_BAR_BACKGROUND_GRADIENT" Category="Menu" Description="Menu Bar Background Gradient" Start="#EBEFF3" Finish="#FCFDFF"/>
+    <Gradient ID="ID_TOOLBAR_GRADIENT" Category="Toolbar" Description="Background Gradient" Start="#D3D8E0" Finish="#EBEFF3"/>
+    <Gradient ID="ID_TOOLBAR_CUSTOMIZE_BUTTON_GRADIENT" Category="Toolbar" Description="Customize Button Gradient" Start="#E2E3E7" Finish="#FFFFFF"/>
+    <Gradient ID="ID_TOOLBAR_CUSTOMIZE_BUTTON_GRADIENT_HIGHLIGHT" Category="Toolbar" Description="Highlighted Customize Button Gradient" Start="#C0C0C0" Finish="#7E869A"/>
+    <Gradient ID="ID_FILETAB_BACKGROUND" Category="File Tab" Description="Tab Background" Start="#B8C1CD" Finish="#B8C1CD"/>
+    <Gradient ID="ID_FILETAB_BACKGROUND_ACTIVE" Category="File Tab" Description="Tab Background Active" Start="#FFFFFF" Finish="#DEE4E9"/>
+    <Gradient ID="ID_OUTPUTTAB_BACKGROUND" Category="Output Tab" Description="Tab Background" Start="#B7C3CF" Finish="#B7C3CF"/>
+    <Gradient ID="ID_OUTPUTTAB_BACKGROUND_ACTIVE" Category="Output Tab" Description="Tab Background Active" Start="#DAE0E6" Finish="#E6EAEE"/>
+    <Gradient ID="ID_GROUPTAB_BACKGROUND" Category="Group Tab" Description="Tab Background" Start="#B8C1CD" Finish="#D9DFE6"/>
+    <Gradient ID="ID_GROUPTAB_BACKGROUND_ACTIVE" Category="Group Tab" Description="Tab Background Active" Start="#DADFE5" Finish="#F2F3F5"/>
+    <Gradient ID="ID_STATUSBAR_GRADIENT" Category="Statusbar" Description="Statusbar Background Gradient" Start="#FBFCFE" Finish="#D4D9E0"/>
+    <Gradient ID="ID_APPLICATION_PANE_DIVIDER" Category="Application" Description="Pane Divider" Start="#F2F3F5" Finish="#F2F3F5"/>
+    <Gradient ID="ID_BUTTON_BACKGROUND_GRADIENT" Category="Button" Description="Background Gradient" Start="#CFCFCF" Finish="#FCFCFC"/>
+    <Gradient ID="ID_BUTTON_BACKGROUND_GRADIENT_HIGHLIGHT" Category="Button" Description="Highlighted Background Gradient" Start="#8E8E8E" Finish="#8E8E8E"/>
+    <Gradient ID="ID_BUTTON_BACKGROUND_GRADIENT_CHECKED" Category="Button" Description="Checked Background Gradient" Start="#26252E" Finish="#575B64"/>
+    <Gradient ID="ID_AUTOHIDEBUTTON_BACKGROUND_GRADIENT" Category="Auto Hide Button" Description="Auto-Hide Button Background Gradient" Start="#BAC2CD" Finish="#CAD1DB"/>
+    <Gradient ID="ID_HEADER_BACKGROUND_GRADIENT" Category="List Control" Description="Header Background Gradient" Start="#CED1D9" Finish="#F1F2F4"/>
+    <Gradient ID="ID_HEADER_BACKGROUND_GRADIENT_HIGHLIGHT" Category="List Control" Description="Highlighted Header Background Gradient" Start="#BEC1CD" Finish="#D8DCE2"/>
+    <Gradient ID="ID_HEADER_BACKGROUND_GRADIENT_CLICKED" Category="List Control" Description="Clicked Header Background Gradient" Start="#D8DCE2" Finish="#BEC1CD"/>
+    <Gradient ID="ID_RIBBON_TAB_BACKGROUND_GRADIENT" Category="Ribbon" Description="Category Tab Background Gradient" Start="#EBEFF3" Finish="#FCFDFF"/>
+    <Gradient ID="ID_RIBBON_TAB_BACKGROUND_ACTIVE" Category="Ribbon" Description="Category Tab Background (Active)" Start="#FFFFFF" Finish="#FFFFFF"/>
+    <Gradient ID="ID_RIBBON_TAB_BACKGROUND_HIGHLIGHT" Category="Ribbon" Description="Category Tab Background (Highlight)" Start="#FFFFFF" Finish="#FFFFFF"/>
+    <Gradient ID="ID_RIBBON_TAB_BACKGROUND_ACTIVE_HIGHLIGHT" Category="Ribbon" Description="Category Tab Background (Active+Highlight)" Start="#FFFFFF" Finish="#FFFFFF"/>
+    <Gradient ID="ID_RIBBON_CATEGORY_CAPTION_BACKGROUND_GRADIENT" Category="Ribbon" Description="Category Caption Background Gradient" Start="#CFCFCF" Finish="#FCFCFC"/>
+    <Gradient ID="ID_RIBBON_CATEGORY_CAPTION_BACKGROUND_HIGHLIGHT_GRADIENT" Category="Ribbon" Description="Category Caption Background Gradient (Highlight)" Start="#8E8E8E" Finish="#8E8E8E"/>
+  </Window>
+  <Compare>
+    <Font Category="Text Compare Font" Face="Consolas">-12:0:0:0:400:0:0:0:0:3:2:1:0</Font>
+    <Font Category="Table Compare Font" Face="Consolas">-12:0:0:0:400:0:0:0:0:3:2:1:0</Font>
+    <Font Category="Binary Compare Font" Face="Consolas">-13:0:0:0:400:0:0:0:0:3:2:1:0</Font>
+    <Font Category="Folder Compare Font" Face="Segoe UI">-12:0:0:0:400:0:0:0:0:3:2:1:0</Font>
+    <Color ID="ID_TEXT_3WAY_SPLITTER" Category="Text Compare" Description="Active Splitter (3-way)" Value="#BDCBD7"/>
+    <Color ID="ID_TEXT_COMMON12" Category="Text Compare" Description="Common Text 1 - 2" Value="#0E6683"/>
+    <Color ID="ID_TEXT_COMMON23" Category="Text Compare" Description="Common Text 2 - 3" Value="#0E6683"/>
+    <Color ID="ID_TEXT_COMMON123" Category="Text Compare" Description="Common Text 1 - 2 - 3" Value="#0E6683"/>
+    <Color ID="ID_TEXT_DIFFERENCE_INDICATOR" Category="Text Compare" Description="Difference Indicator" Value="#DEE0E2"/>
+    <Color ID="ID_TEXT_MERGED_BLOCK" Category="Text Compare" Description="Merged Block" Value="#CFE7AB"/>
+    <Color ID="ID_TEXT_ALIGNED_BLOCK" Category="Text Compare" Description="Aligned Block" Value="#D3E1ED"/>
+    <Color ID="ID_TEXT_EDITED_BLOCK" Category="Text Compare" Description="Edited Block" Value="#F9FCC2"/>
+    <Color ID="ID_TEXT_BOOKMARKS" Category="Text Compare" Description="Bookmarks" Value="#F2D694"/>
+    <Color ID="ID_TEXT_SPACES_TABS_LT" Category="Text Compare" Description="Spaces, Tabs, Line Terminators" Value="#BDC3CA"/>
+    <Color ID="ID_BINARY_LINE_NUMBER" Category="Binary Compare" Description="Line Number background" Value="#DEE0E2"/>
+    <Color ID="ID_BINARY_ACTIVE_LINE" Category="Binary Compare" Description="Active Line Background" Value="#E1E1FF"/>
+    <Color ID="ID_FOLDER_DIFFERENCE" Category="Folder Compare" Description="Difference Text" Value="#0B0BF4"/>
+    <Color ID="ID_FOLDER_STCD" Category="Folder Compare" Description="S.T.C.D. Text" Value="#E6781E"/>
+    <Color ID="ID_FOLDER_NEWER" Category="Folder Compare" Description="Newer Text" Value="#0AA701"/>
+    <Color ID="ID_FOLDER_OLDER" Category="Folder Compare" Description="Older Text" Value="#6C341C"/>
+    <Color ID="ID_FOLDER_EXISTING" Category="Folder Compare" Description="Existing Text" Value="#FC0342"/>
+    <Color ID="ID_FOLDER_STRIPE" Category="Folder Compare" Description="Stripe Color" Value="#F2F3F4"/>
+    <Color ID="ID_FOLDER_MARKED" Category="Folder Compare" Description="Marked Color" Value="#FDF7CC"/>
+    <Color ID="ID_FOLDER_SPLITTER" Category="Folder Compare" Description="Splitter Color" Value="#DEE0E2"/>
+    <Color ID="ID_FOLDER_ACTIVE_LINE" Category="Folder Compare" Description="Active Line Background" Value="#E1E1FF"/>
+    <Color ID="ID_TEXT_RELATIONAL_LINES" Category="Text Compare" Description="Relational Lines" Value="#8E9193"/>
+    <Color ID="ID_TABLE_COMMON" Category="Table Compare" Description="Common Text" Value="#0E6683"/>
+    <Color ID="ID_TABLE_LINE_NUMBER" Category="Table Compare" Description="Line Number Background" Value="#DEE0E2"/>
+    <Color ID="ID_TABLE_MERGED_BLOCK" Category="Table Compare" Description="Merged Block" Value="#CFE7AB"/>
+    <Color ID="ID_TABLE_ALIGNED_BLOCK" Category="Table Compare" Description="Aligned Block" Value="#D3E1ED"/>
+    <Color ID="ID_TABLE_EDITED_BLOCK" Category="Table Compare" Description="Edited Block" Value="#F9FCC2"/>
+    <Color ID="ID_TABLE_SELECTED_ITEM_BACKGROUND" Category="Table Compare" Description="Selected Row/Column Background" Value="#EFF0F1"/>
+    <Color ID="ID_TABLE_SELECTED_ITEM_HEADER_BORDER" Category="Table Compare" Description="Selected Row/Column Header Border" Value="#BDC3CA"/>
+    <Color ID="ID_TABLE_GHOST_CELLS_BORDER" Category="Table Compare" Description="Table Ghost cells border" Value="#DEDEDE"/>
+    <Color ID="ID_GIT_CONFLICT_BLOCK" Category="Text Compare" Description="Git conflict Block" Value="#EBD3D3"/>
+    <Color ID="ID_GIT_CONFLICT_TEXT" Category="Git" Description="Repository/Conflict Text" Value="#595F66"/>
+    <Color ID="ID_GIT_CONFLICT_TEXT_DISABLED" Category="Git" Description="Repository/Conflict Text (Disabled)" Value="#8F969E"/>
+    <Color ID="ID_GIT_CONFLICT_TEXT_LINK" Category="Git" Description="Repository/Conflict Text Link" Value="#314679"/>
+    <ColorPair ID="ID_TEXT_MATCH_PAIR" Category="Text Compare" Description="Match Text" Foreground="#484758" Background="#FFFFFF"/>
+    <ColorPair ID="ID_TEXT_DIFFERENCE_PAIR" Category="Text Compare" Description="Difference Text" Foreground="#D32C27" Background="#DEE0E2"/>
+    <ColorPair ID="ID_TEXT_ACTIVE_LINE_PAIR" Category="Text Compare" Description="Active Line" Foreground="#000000" Background="#E1E1FF"/>
+    <ColorPair ID="ID_TEXT_NAVIGATION12_PAIR" Category="Text Compare" Description="Navigation Text 1 - 2" Foreground="#D32C27" Background="#FFE0C1"/>
+    <ColorPair ID="ID_TEXT_NAVIGATION23_PAIR" Category="Text Compare" Description="Navigation Text 2 - 3" Foreground="#D32C27" Background="#FFE0C1"/>
+    <ColorPair ID="ID_TEXT_LINE_NUMBER_PAIR" Category="Text Compare" Description="Rule, Line Number Background and Text" Foreground="#858E98" Background="#DEE0E2"/>
+    <ColorPair ID="ID_TEXT_BRACE_HIGHLIGHT_PAIR" Category="Text Compare" Description="Brace Highlight" Foreground="#000000" Background="#C0C0C0"/>
+    <ColorPair ID="ID_TEXT_SELECTED_TEXT_PAIR" Category="Text Compare" Description="Selected Text" Foreground="#000000" Background="#E1B171"/>
+    <ColorPair ID="ID_TEXT_HIGHLIGHT_ALL_PAIR" Category="Text Compare" Description="Highlight all" Foreground="#000000" Background="#FFFF80"/>
+    <ColorPair ID="ID_BINARY_MATCH_PAIR" Category="Binary Compare" Description="Matching Text" Foreground="#696882" Background="#FFFFFF"/>
+    <ColorPair ID="ID_BINARY_DIFFERENCE_PAIR" Category="Binary Compare" Description="Difference Text" Foreground="#D32C27" Background="#DEE0E2"/>
+    <ColorPair ID="ID_BINARY_NAVIGATION_PAIR" Category="Binary Compare" Description="Navigation Text" Foreground="#D32C27" Background="#FFCE8C"/>
+    <ColorPair ID="ID_FOLDER_MATCH_PAIR" Category="Folder Compare" Description="Match Text" Foreground="#6F81A2" Background="#FFFFFF"/>
+    <ColorPair ID="ID_FOLDER_NAVIGATION_PAIR" Category="Binary Compare" Description="Navigation Text" Foreground="#61412C" Background="#C2D2E2"/>
+    <ColorPair ID="ID_TABLE_MATCH_PAIR" Category="Table Compare" Description="Match Text" Foreground="#484758" Background="#FFFFFF"/>
+    <ColorPair ID="ID_TABLE_DIFFERENCE_PAIR" Category="Table Compare" Description="Difference Text" Foreground="#D32C27" Background="#DEE0E2"/>
+    <ColorPair ID="ID_TABLE_NAVIGATION_PAIR" Category="Table Compare" Description="Merge block header" Foreground="#D32C27" Background="#FFE0C1"/>
+    <ColorPair ID="ID_TABLE_SELECTED_ITEM_HEADER_GRADIENT_PAIR" Category="Table Compare" Description="Selected Row/Column Header Gradient" Foreground="#D8DCE2" Background="#BEC1CD"/>
+    <ColorPair ID="ID_ADDRESS_BAR_INPUT_FIELD_PAIR" Category="Miscellaneous" Description="Address Bar Input Field" Foreground="#0E6683" Background="#EFF0F1"/>
+    <ColorPair ID="ID_SCROLLBAR_AND_RULER_PAIR" Category="Miscellaneous" Description="Scroll Bar And Ruler" Foreground="#939BA4" Background="#EBEFF3"/>
+    <ColorPair ID="ID_GIT_CONFLICT_HIGHLIGHT_PAIR" Category="Git" Description="Repository/Conflict (Highlighted)" Foreground="#41454A" Background="#EFF0F1"/>
+  </Compare>
+  <Languages>
+    <Language Name="C#">
+      <ColorPair Category="Color Group 4" Foreground="#0E6683" Background="#FFFFFF" Auto="true"/>
+      <FontStyle Category="Color Group 4">Normal</FontStyle>
+    </Language>
+    <Language Name="C/C++">
+      <ColorPair Category="Color Group 4" Foreground="#0E6683" Background="#FFFFFF" Auto="true"/>
+      <FontStyle Category="Color Group 4">Normal</FontStyle>
+      <ColorPair Category="Color Group 5" Foreground="#8C653E" Background="#FFFFFF" Auto="true"/>
+      <FontStyle Category="Color Group 5">Normal</FontStyle>
+    </Language>
+    <Language Name="Default">
+      <ColorPair Category="Text" Foreground="#252131" Background="#FFFFFF" Auto="true"/>
+      <ColorPair Category="Comments" Foreground="#858E98" Background="#FFFFFF" Auto="true"/>
+      <FontStyle Category="Comments">Normal</FontStyle>
+      <ColorPair Category="Alternate Block Comments" Foreground="#858E98" Background="#FFFFFF" Auto="true"/>
+      <FontStyle Category="Alternate Block Comments">Normal</FontStyle>
+      <ColorPair Category="Strings" Foreground="#6F8D35" Background="#FFFFFF" Auto="true"/>
+      <FontStyle Category="Strings">Normal</FontStyle>
+      <ColorPair Category="Numbers" Foreground="#4A4262" Background="#FFFFFF" Auto="true"/>
+      <FontStyle Category="Numbers">Normal</FontStyle>
+      <ColorPair Category="Color Group 1" Foreground="#2B5766" Background="#FFFFFF" Auto="true"/>
+      <FontStyle Category="Color Group 1">Normal</FontStyle>
+      <ColorPair Category="Color Group 2" Foreground="#634729" Background="#FFFFFF" Auto="true"/>
+      <FontStyle Category="Color Group 2">Normal</FontStyle>
+      <ColorPair Category="Color Group 3" Foreground="#9B734F" Background="#FFFFFF" Auto="true"/>
+      <FontStyle Category="Color Group 3">Normal</FontStyle>
+      <ColorPair Category="Color Group 4" Foreground="#4F6525" Background="#FFFFFF" Auto="true"/>
+      <FontStyle Category="Color Group 4">Normal</FontStyle>
+      <ColorPair Category="Color Group 5" Foreground="#804040" Background="#FFFFFF" Auto="true"/>
+      <FontStyle Category="Color Group 5">Normal</FontStyle>
+      <ColorPair Category="Color Group 6" Foreground="#0E6683" Background="#FFFFFF" Auto="true"/>
+      <FontStyle Category="Color Group 6">Normal</FontStyle>
+      <ColorPair Category="Color Group 7" Foreground="#0E6683" Background="#FFFFFF" Auto="true"/>
+      <FontStyle Category="Color Group 7">Normal</FontStyle>
+      <ColorPair Category="Color Group 8" Foreground="#0E6683" Background="#FFFFFF" Auto="true"/>
+      <FontStyle Category="Color Group 8">Normal</FontStyle>
+      <ColorPair Category="Color Group 9" Foreground="#0E6683" Background="#FFFFFF" Auto="true"/>
+      <FontStyle Category="Color Group 9">Normal</FontStyle>
+      <ColorPair Category="Color Group 10" Foreground="#0E6683" Background="#FFFFFF" Auto="true"/>
+      <FontStyle Category="Color Group 10">Normal</FontStyle>
+      <ColorPair Category="Color Group 11" Foreground="#0E6683" Background="#FFFFFF" Auto="true"/>
+      <FontStyle Category="Color Group 11">Normal</FontStyle>
+      <ColorPair Category="Color Group 12" Foreground="#0E6683" Background="#FFFFFF" Auto="true"/>
+      <FontStyle Category="Color Group 12">Normal</FontStyle>
+      <ColorPair Category="Color Group 13" Foreground="#0E6683" Background="#FFFFFF" Auto="true"/>
+      <FontStyle Category="Color Group 13">Normal</FontStyle>
+      <ColorPair Category="Color Group 14" Foreground="#0E6683" Background="#FFFFFF" Auto="true"/>
+      <FontStyle Category="Color Group 14">Normal</FontStyle>
+      <ColorPair Category="Color Group 15" Foreground="#0E6683" Background="#FFFFFF" Auto="true"/>
+      <FontStyle Category="Color Group 15">Normal</FontStyle>
+      <ColorPair Category="Color Group 16" Foreground="#0E6683" Background="#FFFFFF" Auto="true"/>
+      <FontStyle Category="Color Group 16">Normal</FontStyle>
+      <ColorPair Category="Color Group 17" Foreground="#0E6683" Background="#FFFFFF" Auto="true"/>
+      <FontStyle Category="Color Group 17">Normal</FontStyle>
+      <ColorPair Category="Color Group 18" Foreground="#0E6683" Background="#FFFFFF" Auto="true"/>
+      <FontStyle Category="Color Group 18">Normal</FontStyle>
+      <ColorPair Category="Color Group 19" Foreground="#0E6683" Background="#FFFFFF" Auto="true"/>
+      <FontStyle Category="Color Group 19">Normal</FontStyle>
+      <ColorPair Category="Color Group 20" Foreground="#0E6683" Background="#FFFFFF" Auto="true"/>
+      <FontStyle Category="Color Group 20">Normal</FontStyle>
+    </Language>
+    <Language Name="HTML">
+      <ColorPair Category="Color Group 3" Foreground="#724E60" Background="#FFFFFF" Auto="true"/>
+      <FontStyle Category="Color Group 3">Normal</FontStyle>
+    </Language>
+    <Language Name="Java">
+      <ColorPair Category="Color Group 3" Foreground="#8C653E" Background="#FFFFFF" Auto="true"/>
+      <FontStyle Category="Color Group 3">Normal</FontStyle>
+    </Language>
+  </Languages>
+</UETheme>

@@ -1,0 +1,153 @@
+[
+  {
+    "id": "go-file",
+    "简介": "songquanpeng/go-file：单二进制 Web 共享、上传/下载、图床/视频/二维码（Release 资产名为 go-file.exe，无版本号后缀）",
+    "分类": "局域网文件共享",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/songquanpeng/go-file/releases",
+    "repo_path": "songquanpeng/go-file",
+    "installer_markers": [
+      "go-file.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "checksum",
+      ".txt",
+      "darwin",
+      "macos",
+      "linux"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "download_names": [
+      "go-file.exe"
+    ],
+    "save_name": "go-file.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "gohttpserver",
+    "简介": "codeskyblue/gohttpserver：轻量 HTTP 目录服务（chfs 系常用实现；tag 如 1.3.0 无 v 前缀）",
+    "分类": "局域网文件共享",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/codeskyblue/gohttpserver/releases",
+    "repo_path": "codeskyblue/gohttpserver",
+    "installer_markers": [
+      "gohttpserver_",
+      "windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows_386",
+      "windows_arm64",
+      "linux",
+      "darwin",
+      "checksum",
+      ".txt"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "gohttpserver_{ver}_windows_amd64.zip"
+    ],
+    "save_name": "gohttpserver_{ver}_windows_amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "localfs-go",
+    "简介": "monocodx/localfs-go：局域网文件服务（仓库当前无 GitHub Release 二进制，仅作定位；请自行编译或关注作者分发）",
+    "分类": "局域网文件共享",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/monocodx/localfs-go/releases",
+    "repo_path": "monocodx/localfs-go",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "go-share-cli",
+    "简介": "sudo-init-do/go_share_cli：CLI + Web 共享（仓库当前无 GitHub Release 二进制，仅作定位；请自行编译或关注作者分发）",
+    "分类": "局域网文件共享",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/sudo-init-do/go_share_cli/releases",
+    "repo_path": "sudo-init-do/go_share_cli",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "go-drive",
+    "简介": "devld/go-drive：轻量私有网盘（原 astaxie/GoDrive 仓库已不存在，此处用活跃维护的 devld/go-drive；Windows 为 zip 归档）",
+    "分类": "局域网文件共享",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/devld/go-drive/releases",
+    "repo_path": "devld/go-drive",
+    "installer_markers": [
+      "go-drive_windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "arm",
+      "musl",
+      "checksum",
+      ".txt"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "go-drive_windows_amd64.zip"
+    ],
+    "save_name": "go-drive_windows_amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "fileshare-go",
+    "简介": "fileshare-go/fileshare：gRPC + Web UI 内网传输（Windows 资产名为 fileshare-windows-x86_64.exe，无版本号后缀）",
+    "分类": "局域网文件共享",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/fileshare-go/fileshare/releases",
+    "repo_path": "fileshare-go/fileshare",
+    "installer_markers": [
+      "fileshare-windows-x86_64.exe"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "docker",
+      ".tar.gz",
+      "checksum",
+      ".txt"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "download_names": [
+      "fileshare-windows-x86_64.exe"
+    ],
+    "save_name": "fileshare-windows-x86_64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  }
+]

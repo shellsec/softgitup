@@ -1,0 +1,89 @@
+[
+  {
+    "id": "peazip",
+    "简介": "PeaZip（压缩/解压缩工具）",
+    "分类": "工具",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/peazip/PeaZip/releases",
+    "repo_path": "peazip/PeaZip",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "peazip-",
+      ".WIN64.exe"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      ".sha256",
+      ".sha1"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "peazip-{ver}.WIN64.exe"
+    ],
+    "save_name": "peazip-{ver}.WIN64.exe",
+    "process_name": "peazip.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "imageglass",
+    "简介": "ImageGlass（轻量看图，x64 MSI）",
+    "分类": "工具",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/d2phap/ImageGlass/releases",
+    "repo_path": "d2phap/ImageGlass",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ImageGlass_",
+      "_x64.msi"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      ".zip"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "ImageGlass_{ver}_x64.msi"
+    ],
+    "save_name": "ImageGlass_{ver}_x64.msi",
+    "process_name": "ImageGlass.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "fileconverter",
+    "简介": "File Converter（右键菜单将图片/音视频转为其他格式，依赖 FFmpeg）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Tichau/FileConverter/releases",
+    "repo_path": "Tichau/FileConverter",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "FileConverter-",
+      "-x64-setup.msi"
+    ],
+    "href_exclude_substrings": [
+      "x86-setup",
+      "arm64"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "FileConverter-{ver}-x64-setup.msi"
+    ],
+    "save_name": "FileConverter-{ver}-x64-setup.msi",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  }
+]

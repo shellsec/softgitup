@@ -1,0 +1,411 @@
+[
+  {
+    "id": "vscodium",
+    "简介": "VS Code 开源构建，无微软遥测",
+    "分类": "编辑器",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/VSCodium/vscodium/releases",
+    "repo_path": "VSCodium/vscodium",
+    "version_tag_as_on_github": true,
+    "url_hint": "vscodium",
+    "installer_markers": [
+      "VSCodiumUserSetup-x64-",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      ".sha1",
+      ".sha256",
+      "updates-disabled"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "VSCodiumUserSetup-x64-{ver}.exe"
+    ],
+    "save_name": "VSCodiumUserSetup-x64-{ver}.exe",
+    "process_name": "VSCodium.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "vscode",
+    "简介": "Visual Studio Code（微软构建）",
+    "分类": "编辑器",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/microsoft/vscode/releases",
+    "repo_path": "microsoft/vscode",
+    "installer_markers": [
+      "VSCodeUserSetup-x64-",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "system",
+      "cli"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "VSCodeUserSetup-x64-{ver}.exe"
+    ],
+    "save_name": "VSCodeUserSetup-x64-{ver}.exe",
+    "process_name": "Code.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "url_hint": "VSCodeUser"
+  },
+  {
+    "id": "notepadplusplus",
+    "简介": "轻量文本编辑器，x64 安装包",
+    "分类": "编辑器",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/notepad-plus-plus/notepad-plus-plus/releases",
+    "repo_path": "notepad-plus-plus/notepad-plus-plus",
+    "url_hint": "notepad",
+    "installer_markers": [
+      "npp.",
+      "Installer.x64.exe"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "npp.{ver}.Installer.x64.exe"
+    ],
+    "save_name": "npp.{ver}.Installer.x64.exe",
+    "process_name": "notepad++.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "notepad_minusminus",
+    "简介": "Notepad--（国产轻量跨平台编辑器，GPL，便携 zip）",
+    "分类": "编辑器",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/cxasm/notepad--/releases",
+    "repo_path": "cxasm/notepad--",
+    "prefer_api_assets": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Notepad--",
+      "win10-portable.zip"
+    ],
+    "href_exclude_substrings": [
+      "plugin-Installer",
+      "Installer.exe",
+      "mac",
+      "linux"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "skylark",
+    "简介": "Skylark（C 编写，文本/十六进制、便携 7z，GPL）",
+    "分类": "编辑器",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/adonais/skylark/releases",
+    "repo_path": "adonais/skylark",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "skylark_x64",
+      ".7z"
+    ],
+    "href_exclude_substrings": [
+      "skylark_x86",
+      "aarch64",
+      "darwin",
+      "linux"
+    ],
+    "installer_extensions": [
+      ".7z"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "zed",
+    "简介": "Zed（Rust 高性能编辑器，开源，Windows x64 安装包）",
+    "分类": "编辑器",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/zed-industries/zed/releases",
+    "repo_path": "zed-industries/zed",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Zed-x86_64",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "remote-server",
+      ".zip",
+      "blockmap",
+      ".sig"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Zed-x86_64.exe"
+    ],
+    "save_name": "Zed-x86_64-{ver}.exe",
+    "process_name": "Zed.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "lapce",
+    "简介": "Rust 编写的代码编辑器",
+    "分类": "编辑器",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/lapce/lapce/releases",
+    "repo_path": "lapce/lapce",
+    "installer_markers": [
+      "Lapce-windows",
+      ".msi"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "darwin",
+      "deb"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Lapce-windows-{ver}.msi"
+    ],
+    "save_name": "Lapce-windows-{ver}.msi",
+    "process_name": "lapce.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "helix_editor",
+    "简介": "Helix 终端编辑器（Rust）",
+    "分类": "编辑器",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/helix-editor/helix/releases",
+    "repo_path": "helix-editor/helix",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "helix-",
+      "x86_64-windows.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "linux",
+      "darwin"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "helix-{ver}-x86_64-windows.zip"
+    ],
+    "save_name": "helix-{ver}-x86_64-windows.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "sublime_merge",
+    "简介": "Sublime Merge Git 客户端",
+    "分类": "编辑器",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/sublimehq/sublime_merge/releases",
+    "repo_path": "sublimehq/sublime_merge",
+    "installer_markers": [
+      "sublime_merge_build",
+      "_x64_setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "osx",
+      "deb",
+      "arm"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "sublime_merge_build_{ver}_x64_setup.exe"
+    ],
+    "save_name": "sublime_merge_build_{ver}_x64_setup.exe",
+    "process_name": "sublime_merge.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "url_hint": "sublime_merge"
+  },
+  {
+    "id": "fork",
+    "简介": "Fork Git 图形客户端（Windows）",
+    "分类": "编辑器",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/fork-dev/fork/releases",
+    "repo_path": "fork-dev/fork",
+    "installer_markers": [
+      "ForkSetup",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "mac",
+      "arm"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "ForkSetup-{ver}.exe"
+    ],
+    "save_name": "ForkSetup-{ver}.exe",
+    "process_name": "Fork.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "winmerge",
+    "简介": "目录与文件差异对比、合并",
+    "分类": "编辑器",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/WinMerge/winmerge/releases",
+    "repo_path": "WinMerge/winmerge",
+    "installer_markers": [
+      "-x64-Setup.exe"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "WinMerge-{ver}-x64-Setup.exe"
+    ],
+    "save_name": "WinMerge-{ver}-x64-Setup.exe",
+    "process_name": "WinMergeU.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "neovim",
+    "简介": "Neovim 编辑器（Windows zip）",
+    "分类": "编辑器",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/neovim/neovim/releases",
+    "repo_path": "neovim/neovim",
+    "version_tag_as_on_github": true,
+    "url_hint": "nvim",
+    "installer_markers": [
+      "nvim-win64.zip"
+    ],
+    "href_exclude_substrings": [
+      "macos",
+      "linux",
+      "appimage"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "nvim-win64.zip"
+    ],
+    "save_name": "nvim-win64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "gitextensions",
+    "简介": "Git Extensions — Git 图形界面",
+    "分类": "编辑器",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/gitextensions/gitextensions/releases",
+    "repo_path": "gitextensions/gitextensions",
+    "installer_markers": [
+      "GitExtensions-",
+      "x64.msi"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "AnyCPU"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "GitExtensions-{ver}-x64.msi"
+    ],
+    "save_name": "GitExtensions-{ver}-x64.msi",
+    "process_name": "GitExtensions.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "version_tag_as_on_github": true,
+    "url_hint": "GitExtensions"
+  },
+  {
+    "id": "imhex",
+    "简介": "十六进制编辑器",
+    "分类": "编辑器",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/WerWolv/ImHex/releases",
+    "repo_path": "WerWolv/ImHex",
+    "installer_markers": [
+      "imhex-",
+      "Windows-x86_64.msi"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "Portable",
+      ".zip",
+      "Web.zip"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "imhex-{ver}-Windows-x86_64.msi"
+    ],
+    "save_name": "imhex-{ver}-Windows-x86_64.msi",
+    "process_name": "imhex.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "helix",
+    "简介": "Helix（模态终端文本编辑器，Rust）",
+    "分类": "编辑器",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/helix-editor/helix/releases",
+    "repo_path": "helix-editor/helix",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "helix-",
+      "x86_64-windows.zip"
+    ],
+    "href_exclude_substrings": [
+      "source",
+      "linux",
+      "macos",
+      "aarch64",
+      "AppImage",
+      ".deb",
+      ".zsync"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "helix-{ver}-x86_64-windows.zip"
+    ],
+    "save_name": "helix-{ver}-x86_64-windows.zip",
+    "process_name": "hx.exe",
+    "kill_before_install": false,
+    "run_installer": false
+  }
+]

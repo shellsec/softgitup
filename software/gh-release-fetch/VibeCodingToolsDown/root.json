@@ -1,0 +1,19 @@
+{
+  "_说明": {
+    "用途": "「VibeCodingToolsDown」独立清单：scripts 生成 manifest；下载由 vibe_update.py 转调仓库根 auto_update.py（与主 apps/ 互不合并）。",
+    "本地": "本目录执行：python scripts/build_manifest.py；再 python vibe_update.py。Windows 双击 run_update_VibeCodingToolsDown.bat。vibecoding_manifest_url 相对路径以本目录为根：./dist/vibecoding/manifest.json。",
+    "GitHub 获取地址": "CI 构建后会将 manifest.json 提交回默认分支，可用 raw 直链（无需 gh-pages）：https://raw.githubusercontent.com/<用户>/<仓库>/main/VibeCodingToolsDown/dist/vibecoding/manifest.json 。另：工作流仍会推送到 gh-pages 供 GitHub Pages。启用远程 manifest 时把 vibecoding_manifest_url 改为上述 https URL。",
+    "工作流": "示例见 ci/vibecodingtoolsdown-pages.monorepo.example.yml，复制为仓库根 .github/workflows/vibecodingtoolsdown-pages.yml 后启用（推送 workflow 需 PAT 含 workflow 权限或 SSH）。单独成仓用 ci/gh-pages-standalone-repo.example.yml。",
+    "插件": "VS Code 系扩展在 Marketplace/Open VSX，不走 manifest。",
+    "占位条目": "Qoder、CodeBuddy、Antigravity 等 manifest 中 downloads 为 null 时不要 enabled。",
+    "扩展桌面产品官网": "QoderWork https://qoder.com/zh/qoderwork （manifest：qoderwork，chunks + /download 回退）；TRAE SOLO https://solo.trae.cn/ 、https://www.trae.cn/solo （manifest：trae_solo，api.trae.ai icube data.solo）；WorkBuddy https://copilot.tencent.com/work/ （manifest：workbuddy，copilot.tencent.com/v2/update?platform=workbuddy-*）。见 scripts/build_manifest.py 与各平台 01-*.json。"
+  },
+  "download_dir": "downloads/VibeCodingToolsDown",
+  "download_subdir_by_platform": true,
+  "ssl_verify": false,
+  "vibecoding_manifest_url": "./dist/vibecoding/manifest.json",
+  "release_page_mirrors": [
+    "https://bgithub.xyz",
+    "https://github.com"
+  ]
+}

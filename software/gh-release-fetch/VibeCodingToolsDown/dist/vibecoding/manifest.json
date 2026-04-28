@@ -1,0 +1,243 @@
+{
+  "schema": 1,
+  "generated_at": "2026-04-20T07:38:33Z",
+  "items": [
+    {
+      "id": "cursor",
+      "version": "3.1.17",
+      "version_tag": "v3.1.17",
+      "downloads": {
+        "windows": {
+          "url": "https://downloads.cursor.com/production/fce1e9ab7844f9ea35793da01e634aa7e50bce90/win32/x64/user-setup/CursorUserSetup-x64-3.1.17.exe",
+          "filename": "CursorUserSetup-x64-3.1.17.exe"
+        },
+        "darwin": {
+          "url": "https://downloads.cursor.com/production/fce1e9ab7844f9ea35793da01e634aa7e50bce90/darwin/universal/Cursor-darwin-universal.zip",
+          "filename": "Cursor-darwin-universal.zip"
+        },
+        "linux": null
+      },
+      "notes": "索引自 accesstechnology-mike/cursor-downloads Release 正文中的官方 CDN 链。"
+    },
+    {
+      "id": "vscode",
+      "version": "0.44.1",
+      "version_tag": "v0.44.1",
+      "downloads": {
+        "windows": {
+          "url": "https://vscode.download.prss.microsoft.com/dbazure/download/stable/560a9dba96f961efea7b1612916f89e5d5d4d679/VSCodeSetup-x64-1.116.0.exe",
+          "filename": "VSCodeSetup-x64-1.116.0.exe"
+        },
+        "darwin": {
+          "url": "https://vscode.download.prss.microsoft.com/dbazure/download/stable/560a9dba96f961efea7b1612916f89e5d5d4d679/VSCode-darwin-arm64.zip",
+          "filename": "VSCode-darwin-arm64.zip"
+        },
+        "linux": {
+          "url": "https://vscode.download.prss.microsoft.com/dbazure/download/stable/560a9dba96f961efea7b1612916f89e5d5d4d679/code-stable-x64-1776214075.tar.gz",
+          "filename": "code-stable-x64-1776214075.tar.gz"
+        }
+      },
+      "notes": "版本 tag 来自 GitHub API；安装包 URL 来自 update.code.visualstudio.com GET 重定向链末端（微软官方 CDN）。"
+    },
+    {
+      "id": "vscodium",
+      "version": "1.112.01907",
+      "version_tag": "v1.112.01907",
+      "downloads": {
+        "windows": {
+          "url": "https://github.com/VSCodium/vscodium/releases/download/1.112.01907/VSCodiumUserSetup-x64-1.112.01907.exe",
+          "filename": "VSCodiumUserSetup-x64-1.112.01907.exe"
+        },
+        "darwin": {
+          "url": "https://github.com/VSCodium/vscodium/releases/download/1.112.01907/VSCodium-darwin-arm64-1.112.01907.zip",
+          "filename": "VSCodium-darwin-arm64-1.112.01907.zip"
+        },
+        "linux": {
+          "url": "https://github.com/VSCodium/vscodium/releases/download/1.112.01907/VSCodium-linux-x64-1.112.01907.tar.gz",
+          "filename": "VSCodium-linux-x64-1.112.01907.tar.gz"
+        }
+      },
+      "notes": "GitHub API latest assets。"
+    },
+    {
+      "id": "trae",
+      "version": "2.3.19583",
+      "version_tag": "v2.3.19583",
+      "downloads": {
+        "windows": {
+          "url": "https://lf-cdn.trae.ai/obj/trae-ai-us/pkg/app/releases/stable/2.3.19583/win32/Trae-Setup-x64.exe",
+          "filename": "Trae-Setup-x64.exe"
+        },
+        "darwin": {
+          "url": "https://lf-cdn.trae.ai/obj/trae-ai-us/pkg/app/releases/stable/2.3.19583/darwin/Trae-darwin-arm64.dmg",
+          "filename": "Trae-darwin-arm64.dmg"
+        },
+        "linux": {
+          "url": "https://lf-cdn.trae.ai/obj/trae-ai-us/pkg/app/releases/stable/2.3.19583/linux/Trae-linux-x64.tar.gz",
+          "filename": "Trae-linux-x64.tar.gz"
+        }
+      },
+      "notes": "优先 api.trae.ai/icube/.../trae/latest（manifest）；下载链优先 region=va，失败则 sg/usttp/cn。 version 为接口返回的稳定构建号（与 URL 路径一致）；应用内「关于」若显示 3.x 等为另一口径，以本构建号为准。"
+    },
+    {
+      "id": "trae_cn",
+      "version": "2.3.2839",
+      "version_tag": "v2.3.2839",
+      "downloads": {
+        "windows": {
+          "url": "https://lf-cdn.trae.com.cn/obj/trae-com-cn/pkg/app/releases/stable/2.3.2839/win32/Trae-Setup-x64.exe",
+          "filename": "Trae-Setup-x64.exe"
+        },
+        "darwin": {
+          "url": "https://lf-cdn.trae.com.cn/obj/trae-com-cn/pkg/app/releases/stable/2.3.2839/darwin/Trae-darwin-arm64.dmg",
+          "filename": "Trae-darwin-arm64.dmg"
+        },
+        "linux": null
+      },
+      "notes": "优先 api.trae.cn/icube/.../trae/latest；下载链优先 region=cn。 version 为接口稳定构建号；与海外 manifest 分支可能不同步。"
+    },
+    {
+      "id": "trae_solo",
+      "version": "2.3.19982",
+      "version_tag": "v2.3.19982",
+      "downloads": {
+        "windows": null,
+        "darwin": {
+          "url": "https://lf-cdn.trae.ai/obj/trae-ai-us/pkg/app/releases/stable/2.3.19982/darwin/TRAE_SOLO-darwin-arm64.dmg",
+          "filename": "TRAE_SOLO-darwin-arm64.dmg"
+        },
+        "linux": null
+      },
+      "notes": "api.trae.ai icube latest 的 data.solo（与 TRAE SOLO 安装包一致）。 官网：https://solo.trae.cn/ 、https://www.trae.cn/solo 。 当前接口多为 macOS dmg；windows/linux 常为 null 时请从官网获取。"
+    },
+    {
+      "id": "qoder",
+      "version": "0.0.109",
+      "version_tag": "v0.0.109",
+      "downloads": {
+        "windows": {
+          "url": "https://download.qoder.com/release/latest/QoderSetup-x64.exe",
+          "filename": "QoderSetup-x64.exe"
+        },
+        "darwin": {
+          "url": "https://download.qoder.com/release/latest/Qoder-darwin-arm64.dmg",
+          "filename": "Qoder-darwin-arm64.dmg"
+        },
+        "linux": {
+          "url": "https://download.qoder.com/release/latest/qoder_amd64.deb",
+          "filename": "qoder_amd64.deb"
+        }
+      },
+      "notes": "自 https://qoder.com/zh/download 的 g.alicdn.com Qoder Next chunks 解析。"
+    },
+    {
+      "id": "qoderwork",
+      "version": "0.0.109",
+      "version_tag": "v0.0.109",
+      "downloads": {
+        "windows": {
+          "url": "https://download.qoder.com.cn/qoder-work/releases/latest/QoderWork-Setup-User-x64.exe",
+          "filename": "QoderWork-Setup-User-x64.exe"
+        },
+        "darwin": {
+          "url": "https://download.qoder.com.cn/qoder-work/releases/latest/QoderWork-arm64.dmg",
+          "filename": "QoderWork-arm64.dmg"
+        },
+        "linux": null
+      },
+      "notes": "自 https://qoder.com/zh/qoderwork 的 g.alicdn.com Qoder Next chunks 解析（仅 QoderWork 包名）。 产品页 https://qoder.com/zh/qoderwork ；亦可能出现在 qoder.com/*/download 与 IDE 同源 chunks。"
+    },
+    {
+      "id": "codebuddy",
+      "version": "4.9.5.25622162",
+      "version_tag": "v4.9.5.25622162",
+      "downloads": {
+        "windows": {
+          "url": "https://codebuddy-1328495429.cos.accelerate.myqcloud.com/aiide/win32-x64-user/CodeBuddy-win32-x64-user-4.9.5.25622162-bae7923c.exe",
+          "filename": "CodeBuddy-win32-x64-user-4.9.5.25622162-bae7923c.exe"
+        },
+        "darwin": {
+          "url": "https://codebuddy-1328495429.cos.accelerate.myqcloud.com/aiide/darwin-arm64/CodeBuddy-darwin-arm64-4.9.5.25622162-bae7923c.zip",
+          "filename": "CodeBuddy-darwin-arm64-4.9.5.25622162-bae7923c.zip"
+        },
+        "linux": null
+      },
+      "notes": "官方 https://www.codebuddy.ai/v2/update?platform=ide-win32-x64-user / ide-darwin-arm64 等。"
+    },
+    {
+      "id": "codebuddy_cn",
+      "version": "4.9.5.25622162",
+      "version_tag": "v4.9.5.25622162",
+      "downloads": {
+        "windows": {
+          "url": "https://download.codebuddy.cn/aiide/win32-x64-user/CodeBuddy-win32-x64-user-4.9.5.25622162-bae7923c-cn.exe",
+          "filename": "CodeBuddy-win32-x64-user-4.9.5.25622162-bae7923c-cn.exe"
+        },
+        "darwin": {
+          "url": "https://download.codebuddy.cn/aiide/darwin-arm64/CodeBuddy-darwin-arm64-4.9.5.25622162-bae7923c-cn.zip",
+          "filename": "CodeBuddy-darwin-arm64-4.9.5.25622162-bae7923c-cn.zip"
+        },
+        "linux": null
+      },
+      "notes": "官方 https://copilot.tencent.com/v2/update（国内 IDE 下载接口）。"
+    },
+    {
+      "id": "workbuddy",
+      "version": "4.10.1.25648017",
+      "version_tag": "v4.10.1.25648017",
+      "downloads": {
+        "windows": {
+          "url": "https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.10.1.25648017-3aa8d419.exe",
+          "filename": "WorkBuddy-win32-x64-user-4.10.1.25648017-3aa8d419.exe"
+        },
+        "darwin": {
+          "url": "https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.10.1.25648017-3aa8d419.zip",
+          "filename": "WorkBuddy-darwin-arm64-4.10.1.25648017-3aa8d419.zip"
+        },
+        "linux": null
+      },
+      "notes": "与 https://copilot.tencent.com/work/ 一致：GET copilot.tencent.com/v2/update ?platform=workbuddy-win32-x64-user | workbuddy-darwin-arm64 | workbuddy-darwin-x64 ， CDN 为 download.codebuddy.cn/workbuddy/… ；mac 当前分发 zip；无 Linux 平台 id。"
+    },
+    {
+      "id": "antigravity",
+      "version": "1.23.2",
+      "version_tag": "v1.23.2",
+      "downloads": {
+        "windows": {
+          "url": "https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.23.2-4781536860569600/windows-x64/Antigravity.exe",
+          "filename": "Antigravity.exe"
+        },
+        "darwin": {
+          "url": "https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.23.2-4781536860569600/darwin-arm/Antigravity.dmg",
+          "filename": "Antigravity.dmg"
+        },
+        "linux": {
+          "url": "https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/1.23.2-4781536860569600/linux-x64/Antigravity.tar.gz",
+          "filename": "Antigravity.tar.gz"
+        }
+      },
+      "notes": "自 https://antigravity.google/main-OUJ24QGL.js 解析 Google CDN（edgedl.me.gvt1.com）。"
+    },
+    {
+      "id": "kiro",
+      "version": "2.0.1",
+      "version_tag": "v2.0.1",
+      "downloads": {
+        "windows": {
+          "url": "https://prod.download.cli.kiro.dev/stable/latest/kiro-cli-x86_64-pc-windows-msvc.msi",
+          "filename": "kiro-cli-x86_64-pc-windows-msvc.msi"
+        },
+        "darwin": {
+          "url": "https://prod.download.cli.kiro.dev/stable/latest/Kiro%20CLI.dmg",
+          "filename": "Kiro CLI.dmg"
+        },
+        "linux": {
+          "url": "https://prod.download.cli.kiro.dev/stable/latest/kiro-cli.appimage",
+          "filename": "kiro-cli.appimage"
+        }
+      },
+      "notes": "Kiro CLI 官方 manifest（含 Windows MSI / macOS dmg / Linux AppImage 等）。"
+    }
+  ],
+  "errors": []
+}

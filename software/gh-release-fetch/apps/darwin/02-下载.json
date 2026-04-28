@@ -1,0 +1,74 @@
+[
+  {
+    "id": "lux",
+    "简介": "lux（原 annie，命令行抓取流媒体/站点视频；Apple Silicon 用 arm64 包）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/iawia002/lux/releases",
+    "repo_path": "iawia002/lux",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "lux_",
+      "Darwin_arm64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "Darwin_x86",
+      "Linux",
+      "Windows",
+      "i386",
+      "armv6",
+      "Freebsd",
+      "Netbsd",
+      "Openbsd"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "lux_{ver}_Darwin_arm64.tar.gz"
+    ],
+    "save_name": "lux_{ver}_Darwin_arm64.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "lux_darwin_intel",
+    "简介": "lux（Intel Mac x86_64 tarball）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/iawia002/lux/releases",
+    "repo_path": "iawia002/lux",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "lux_",
+      "Darwin_x86_64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "Darwin_arm64",
+      "Linux",
+      "Windows",
+      "i386",
+      "armv6",
+      "Freebsd",
+      "Netbsd",
+      "Openbsd"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "lux_{ver}_Darwin_x86_64.tar.gz"
+    ],
+    "save_name": "lux_{ver}_Darwin_x86_64.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  }
+]

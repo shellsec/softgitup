@@ -1,0 +1,194 @@
+[
+  {
+    "id": "wezterm",
+    "简介": "GPU 加速终端，Lua 配置",
+    "分类": "终端",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/wezterm/wezterm/releases",
+    "repo_path": "wezterm/wezterm",
+    "version_tag_as_on_github": true,
+    "url_hint": "wezterm",
+    "installer_markers": [
+      "WezTerm-",
+      "-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      ".sha256",
+      ".zip"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "WezTerm-{ver}-setup.exe"
+    ],
+    "save_name": "WezTerm-{ver}-setup.exe",
+    "process_name": "WezTerm.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "tabby",
+    "简介": "跨平台终端，多标签与插件",
+    "分类": "终端",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/Eugeny/tabby/releases",
+    "repo_path": "Eugeny/tabby",
+    "installer_markers": [
+      "tabby-",
+      "setup-x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "portable",
+      ".blockmap"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "tabby-{ver}-setup-x64.exe"
+    ],
+    "save_name": "tabby-{ver}-setup-x64.exe",
+    "process_name": "Tabby.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "alacritty",
+    "简介": "GPU 终端（Windows 安装器 MSI）",
+    "分类": "终端",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/alacritty/alacritty/releases",
+    "repo_path": "alacritty/alacritty",
+    "installer_markers": [
+      "Alacritty-",
+      "-installer.msi"
+    ],
+    "href_exclude_substrings": [
+      "portable",
+      ".exe.zip"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "Alacritty-v{ver}-installer.msi"
+    ],
+    "save_name": "Alacritty-v{ver}-installer.msi",
+    "process_name": "alacritty.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "bottom",
+    "简介": "终端系统资源监视器（文件名无版本号）",
+    "分类": "终端",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/ClementTsang/bottom/releases",
+    "repo_path": "ClementTsang/bottom",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "bottom_x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "gnu",
+      "aarch64",
+      "i686"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "bottom_x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "bottom_x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "windows_terminal",
+    "简介": "Windows 终端（多标签 Shell）",
+    "分类": "终端",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/microsoft/terminal/releases",
+    "repo_path": "microsoft/terminal",
+    "installer_markers": [
+      "Microsoft.WindowsTerminal_",
+      "x64.msi"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "symbols"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Microsoft.WindowsTerminal_{ver}_x64.msi"
+    ],
+    "save_name": "Microsoft.WindowsTerminal_{ver}_x64.msi",
+    "process_name": "WindowsTerminal.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "version_tag_as_on_github": true,
+    "url_hint": "WindowsTerminal"
+  },
+  {
+    "id": "electerm",
+    "简介": "跨平台终端 / SSH / SFTP 客户端",
+    "分类": "终端",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/electerm/electerm/releases",
+    "repo_path": "electerm/electerm",
+    "installer_markers": [
+      "electerm-",
+      "win-x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "mac",
+      "linux",
+      "arm64"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "electerm-{ver}-win-x64-portable.exe"
+    ],
+    "save_name": "electerm-{ver}-win-x64-portable.exe",
+    "process_name": "electerm.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "url_hint": "electerm"
+  },
+  {
+    "id": "rio",
+    "简介": "Rio（Rust 终端模拟器，GPU 渲染）",
+    "分类": "终端",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "releases_url": "https://bgithub.xyz/raphamorim/rio/releases",
+    "repo_path": "raphamorim/rio",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "rio-installer-x86_64.msi"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "portable",
+      "darwin",
+      "linux"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "rio-installer-x86_64.msi"
+    ],
+    "save_name": "rio-installer-x86_64.msi",
+    "process_name": "rio.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  }
+]

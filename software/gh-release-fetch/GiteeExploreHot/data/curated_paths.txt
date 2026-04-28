@@ -1,0 +1,4 @@
+# 已迁移：请优先维护 catalog/*.json（按分类）。
+# 若仍在本文件每行写 owner/repo，同步脚本会把它们追加进条目（分类为「未分类」）。
+#
+# python GiteeExploreHot/scripts/fetch_explore_hot.py

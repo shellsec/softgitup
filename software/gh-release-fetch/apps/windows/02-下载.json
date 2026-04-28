@@ -1,0 +1,124 @@
+[
+  {
+    "id": "motrix",
+    "简介": "Motrix（全能下载工具：HTTP/FTP/BT/磁力链）",
+    "分类": "下载",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/agalwood/Motrix/releases",
+    "repo_path": "agalwood/Motrix",
+    "prefer_api_assets": true,
+    "installer_markers": [
+      "Motrix-Setup-",
+      ".exe"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      "ia32",
+      "arm64",
+      "portable",
+      ".blockmap",
+      ".sha256",
+      ".sha1"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Motrix-Setup-{ver}.exe"
+    ],
+    "save_name": "Motrix-Setup-{ver}.exe",
+    "process_name": "Motrix.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "gopeed",
+    "简介": "Gopeed（HTTP/BT 等，现代下载器）",
+    "分类": "下载",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/GopeedLab/gopeed/releases",
+    "repo_path": "GopeedLab/gopeed",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Gopeed-v",
+      "windows-amd64.exe"
+    ],
+    "href_exclude_substrings": [
+      "portable",
+      ".zip",
+      "linux",
+      "macos",
+      "qnap",
+      "arm64",
+      "ia32",
+      "blockmap"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Gopeed-v{ver}-windows-amd64.exe"
+    ],
+    "save_name": "Gopeed-v{ver}-windows-amd64.exe",
+    "process_name": "Gopeed.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "gallery_dl",
+    "简介": "gallery-dl 图站/相册批量下载（官方单文件 gallery-dl.exe）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/mikf/gallery-dl/releases",
+    "repo_path": "mikf/gallery-dl",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "gallery-dl.exe"
+    ],
+    "href_exclude_substrings": [
+      "gallery-dl_x86",
+      ".sig"
+    ],
+    "windows_installer": false,
+    "download_names": [
+      "gallery-dl.exe"
+    ],
+    "save_name": "gallery-dl.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "lux",
+    "简介": "lux（原 annie，命令行抓取流媒体/站点视频）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/iawia002/lux/releases",
+    "repo_path": "iawia002/lux",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "lux_",
+      "Windows_x86_64.zip"
+    ],
+    "href_exclude_substrings": [
+      "Darwin",
+      "Linux",
+      "arm64",
+      "i386",
+      "armv6"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "lux_{ver}_Windows_x86_64.zip"
+    ],
+    "save_name": "lux_{ver}_Windows_x86_64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  }
+]

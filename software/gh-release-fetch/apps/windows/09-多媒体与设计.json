@@ -1,0 +1,250 @@
+[
+  {
+    "id": "blockbench",
+    "简介": "方块风 3D 建模",
+    "分类": "多媒体与设计",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/JannisX11/blockbench/releases",
+    "repo_path": "JannisX11/blockbench",
+    "installer_markers": [
+      "Blockbench_",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "portable",
+      ".zip",
+      "_portable"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Blockbench_{ver}.exe"
+    ],
+    "save_name": "Blockbench_{ver}.exe",
+    "process_name": "Blockbench.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "blender",
+    "简介": "开源 3D 创作套件（建模 / 渲染 / 动画）",
+    "分类": "多媒体与设计",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/blender/blender/releases",
+    "repo_path": "blender/blender",
+    "installer_markers": [
+      "blender-",
+      "windows-x64.msi"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "darwin",
+      "linux",
+      ".dmg",
+      ".AppImage"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "blender-{ver}-windows-x64.msi"
+    ],
+    "save_name": "blender-{ver}-windows-x64.msi",
+    "process_name": "blender.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "freecad",
+    "简介": "参数化 3D CAD 建模",
+    "分类": "多媒体与设计",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/FreeCAD/FreeCAD/releases",
+    "repo_path": "FreeCAD/FreeCAD",
+    "installer_markers": [
+      "FreeCAD-",
+      "WIN-x64",
+      "installer"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "macOS",
+      "Linux"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "FreeCAD_{ver}-WIN-x64-installer-1.exe"
+    ],
+    "save_name": "FreeCAD_{ver}-WIN-x64-installer-1.exe",
+    "process_name": "FreeCAD.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "url_hint": "FreeCAD"
+  },
+  {
+    "id": "inkscape",
+    "简介": "矢量图形编辑（SVG）",
+    "分类": "多媒体与设计",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/inkscape/inkscape/releases",
+    "repo_path": "inkscape/inkscape",
+    "installer_markers": [
+      "inkscape-",
+      "x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "macos",
+      "msi"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "inkscape-{ver}_2023_x64.exe"
+    ],
+    "save_name": "inkscape-{ver}_2023_x64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "url_hint": "inkscape"
+  },
+  {
+    "id": "krita",
+    "简介": "数字绘画与图像编辑",
+    "分类": "多媒体与设计",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/krita/krita/releases",
+    "repo_path": "krita/krita",
+    "installer_markers": [
+      "krita-",
+      "x64-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "android",
+      "appimage"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "krita-x64-{ver}-setup.exe"
+    ],
+    "save_name": "krita-x64-{ver}-setup.exe",
+    "process_name": "krita.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "darktable",
+    "简介": "RAW 照片后期与工作流",
+    "分类": "多媒体与设计",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/darktable-org/darktable/releases",
+    "repo_path": "darktable-org/darktable",
+    "installer_markers": [
+      "darktable-",
+      "win64.exe"
+    ],
+    "href_exclude_substrings": [
+      "macos",
+      "appimage",
+      "x86_64"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "darktable-{ver}-win64.exe"
+    ],
+    "save_name": "darktable-{ver}-win64.exe",
+    "process_name": "darktable.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "rawtherapee",
+    "简介": "RAW 开发与转档",
+    "分类": "多媒体与设计",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/Beep6581/RawTherapee/releases",
+    "repo_path": "Beep6581/RawTherapee",
+    "installer_markers": [
+      "RawTherapee_",
+      "win64.exe"
+    ],
+    "href_exclude_substrings": [
+      "win32",
+      "osx",
+      "appimage"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "RawTherapee_{ver}_win64.exe"
+    ],
+    "save_name": "RawTherapee_{ver}_win64.exe",
+    "process_name": "rawtherapee.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "url_hint": "RawTherapee"
+  },
+  {
+    "id": "gimp",
+    "简介": "GIMP 图像处理",
+    "分类": "多媒体与设计",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/GNOME/gimp/releases",
+    "repo_path": "GNOME/gimp",
+    "installer_markers": [
+      "gimp-",
+      "setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "macos",
+      "linux",
+      "flatpak"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "gimp-{ver}-setup.exe"
+    ],
+    "save_name": "gimp-{ver}-setup.exe",
+    "process_name": "gimp-2.10.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "url_hint": "gimp"
+  },
+  {
+    "id": "ente_photos",
+    "简介": "Ente Photos（端到端加密相册桌面端）",
+    "分类": "多媒体与设计",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/ente-io/photos-desktop/releases",
+    "repo_path": "ente-io/photos-desktop",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ente-",
+      "-x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "blockmap",
+      "AppImage",
+      "deb",
+      "rpm",
+      "pacman",
+      "dmg",
+      ".zip"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "ente-{ver}-x64.exe"
+    ],
+    "save_name": "ente-{ver}-x64.exe",
+    "process_name": "ente.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  }
+]

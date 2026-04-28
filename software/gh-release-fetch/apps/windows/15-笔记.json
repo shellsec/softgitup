@@ -1,0 +1,429 @@
+[
+  {
+    "id": "joplin",
+    "简介": "Markdown 笔记，默认参与更新",
+    "分类": "笔记",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/laurent22/joplin/releases",
+    "repo_path": "laurent22/joplin",
+    "installer_markers": [
+      "Joplin-Setup-",
+      "JoplinPortable.exe"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Joplin-Setup-{ver}.exe",
+      "JoplinPortable.exe"
+    ],
+    "save_name": "Joplin-Setup-{ver}.exe",
+    "process_name": "Joplin.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "obsidian",
+    "简介": "本地知识库 / Markdown，双链笔记",
+    "分类": "笔记",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/obsidianmd/obsidian-releases/releases",
+    "repo_path": "obsidianmd/obsidian-releases",
+    "installer_markers": [
+      "Obsidian-"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Obsidian-{ver}.exe"
+    ],
+    "save_name": "Obsidian-{ver}.exe",
+    "process_name": "Obsidian.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "logseq",
+    "简介": "大纲/双链笔记",
+    "分类": "笔记",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/logseq/logseq/releases",
+    "repo_path": "logseq/logseq",
+    "version_tag_as_on_github": true,
+    "url_hint": "Logseq-win",
+    "installer_markers": [
+      "Logseq-win-x64-",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      ".nupkg",
+      ".msi",
+      ".zip",
+      "blockmap"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Logseq-win-x64-{ver}.exe"
+    ],
+    "save_name": "Logseq-win-x64-{ver}.exe",
+    "process_name": "Logseq.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "zettlr",
+    "简介": "Markdown 写作环境",
+    "分类": "笔记",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/Zettlr/Zettlr/releases",
+    "repo_path": "Zettlr/Zettlr",
+    "installer_markers": [
+      "Zettlr-",
+      "-x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "ia32",
+      "blockmap"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Zettlr-{ver}-x64.exe"
+    ],
+    "save_name": "Zettlr-{ver}-x64.exe",
+    "process_name": "Zettlr.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "trilium",
+    "简介": "分层笔记（TriliumNext）",
+    "分类": "笔记",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/TriliumNext/Trilium/releases",
+    "repo_path": "TriliumNext/Trilium",
+    "installer_markers": [
+      "TriliumNotes-",
+      "windows-x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "blockmap",
+      ".zip"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "TriliumNotes-v{ver}-windows-x64.exe"
+    ],
+    "save_name": "TriliumNotes-v{ver}-windows-x64.exe",
+    "process_name": "Trilium Notes.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "marktext",
+    "简介": "Markdown 编辑器（安装包名无版本号）",
+    "分类": "笔记",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/marktext/marktext/releases",
+    "repo_path": "marktext/marktext",
+    "installer_markers": [
+      "marktext-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "mac",
+      "ia32",
+      ".zip"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "marktext-setup.exe"
+    ],
+    "save_name": "marktext-setup.exe",
+    "process_name": "Mark Text.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "standardnotes",
+    "简介": "Standard Notes 加密笔记",
+    "分类": "笔记",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/standardnotes/app/releases",
+    "repo_path": "standardnotes/app",
+    "installer_markers": [
+      "standard-notes-",
+      "x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "mac",
+      "linux",
+      "AppImage"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "standard-notes-{ver}-windows-x64.exe"
+    ],
+    "save_name": "standard-notes-{ver}-windows-x64.exe",
+    "process_name": "Standard Notes.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "url_hint": "standard-notes"
+  },
+  {
+    "id": "xournalpp",
+    "简介": "手写笔记与 PDF 标注",
+    "分类": "笔记",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/xournalpp/xournalpp/releases",
+    "repo_path": "xournalpp/xournalpp",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "xournalpp-",
+      "Windows.zip"
+    ],
+    "href_exclude_substrings": [
+      "macos",
+      "AppImage",
+      "debian"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "xournalpp-{ver}-Windows.zip"
+    ],
+    "save_name": "xournalpp-{ver}-Windows.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "qownnotes",
+    "简介": "Markdown 笔记（支持 Nextcloud）",
+    "分类": "笔记",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/pbek/QOwnNotes/releases",
+    "repo_path": "pbek/QOwnNotes",
+    "installer_markers": [
+      "QOwnNotes",
+      "Windows.zip"
+    ],
+    "href_exclude_substrings": [
+      "AppImage",
+      "dmg",
+      "deb"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "QOwnNotes.zip"
+    ],
+    "save_name": "QOwnNotes.zip",
+    "process_name": "QOwnNotes.exe",
+    "kill_before_install": false,
+    "run_installer": false,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "memos",
+    "简介": "Memos（轻量自托管笔记/备忘录服务，单二进制+Web）",
+    "分类": "笔记",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/usememos/memos/releases",
+    "repo_path": "usememos/memos",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "memos_",
+      "windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "darwin",
+      "linux"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "memos_{ver}_windows_amd64.zip"
+    ],
+    "save_name": "memos_{ver}_windows_amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "yanknote",
+    "简介": "Yank Note（yn）Markdown 笔记，本地优先、可运行代码块",
+    "分类": "笔记",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/purocean/yn/releases",
+    "repo_path": "purocean/yn",
+    "url_hint": "Yank-Note-win",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Yank-Note-win-x64-",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "mac",
+      "arm64",
+      "blockmap",
+      ".yml",
+      ".deb",
+      "AppImage",
+      ".zip"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Yank-Note-win-x64-{ver}.exe"
+    ],
+    "save_name": "Yank-Note-win-x64-{ver}.exe",
+    "process_name": "Yank Note.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "siyuan",
+    "简介": "思源笔记（块级大纲 / Markdown）",
+    "分类": "笔记",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "releases_url": "https://bgithub.xyz/siyuan-note/siyuan/releases",
+    "repo_path": "siyuan-note/siyuan",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "siyuan-",
+      "-win.exe"
+    ],
+    "href_exclude_substrings": [
+      "win-arm64",
+      "linux",
+      "mac",
+      "apk",
+      "AppImage",
+      "deb",
+      "tar.gz",
+      "SHA256"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "siyuan-{ver}-win.exe"
+    ],
+    "save_name": "siyuan-{ver}-win.exe",
+    "process_name": "SiYuan.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "appflowy",
+    "简介": "AppFlowy（开源 Notion 类，本地与同步）",
+    "分类": "笔记",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/AppFlowy-IO/AppFlowy/releases",
+    "repo_path": "AppFlowy-IO/AppFlowy",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "AppFlowy-",
+      "windows-x86_64.exe"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "macos",
+      "mac-",
+      "android",
+      "arm64",
+      "universal",
+      ".zip",
+      "appcast",
+      "blockmap"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "AppFlowy-{ver}-windows-x86_64.exe"
+    ],
+    "save_name": "AppFlowy-{ver}-windows-x86_64.exe",
+    "process_name": "AppFlowy.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "rowboat",
+    "简介": "Rowboat 本地优先 AI 协作 / 知识图谱，Obsidian 兼容 Markdown 库",
+    "分类": "笔记",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/rowboatlabs/rowboat/releases",
+    "repo_path": "rowboatlabs/rowboat",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Rowboat-win32-x64-",
+      "-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "darwin",
+      "linux",
+      ".nupkg",
+      ".zip",
+      "arm64",
+      "blockmap"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Rowboat-win32-x64-{ver}-setup.exe"
+    ],
+    "save_name": "Rowboat-win32-x64-{ver}-setup.exe",
+    "process_name": "Rowboat.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "anytype",
+    "简介": "Anytype（开源本地优先 / P2P 对象笔记；Windows 安装包）",
+    "分类": "笔记",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/anyproto/anytype-ts/releases",
+    "repo_path": "anyproto/anytype-ts",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Anytype.Setup.",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      ".dmg",
+      ".zip",
+      "mac-",
+      "mac.",
+      "AppImage",
+      ".deb",
+      ".rpm",
+      ".tar.gz",
+      ".asc",
+      "blockmap"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Anytype.Setup.{ver}.exe"
+    ],
+    "save_name": "Anytype.Setup.{ver}.exe",
+    "process_name": "Anytype.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "tangent",
+    "简介": "Tangent（开源本地 Markdown PKM；官方安装包见 https://www.tangentnotes.com/Download 。GitHub suchnsuch/Tangent 无 Release 资产，启用自动下载前请改规则或用手动安装）",
+    "分类": "笔记",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/suchnsuch/Tangent/releases",
+    "repo_path": "suchnsuch/Tangent"
+  }
+]

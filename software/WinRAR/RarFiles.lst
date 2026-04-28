@@ -1,0 +1,94 @@
+; 固实归档的文件顺序列表
+;
+; 在这里，您可以修改文件列表，该列表告诉RAR将文件添加到固实存档中的顺序。
+;
+; 此文件可能包含文件名、通配符和特殊条目 ($default)。
+; 默认项定义与此文件中的其他项不匹配的文件在顺序列表中的位置。以分号';'开头的行被视为注释，不进行处理。
+;
+; 将该文件与 RAR.EXE 放在同一个目录中。
+;
+; 提供改进压缩和运行速度的提示:
+;
+; - 如有可能, 包含类似信息的文件应该归档在一起;
+; - 经常访问的文件应该放在开头。
+;
+file_id.diz
+descript.ion
+read.*
+readme.*
+*.nfo
+*.doc
+*.txt
+*.htm
+*.html
+*.shtml
+*.css
+*.xsl
+*.xml
+*.js
+*.php
+*.lst
+*.log
+*.ini
+*.bat
+*.cmd
+*.ps1
+*.h
+*.hpp
+*.c
+*.cpp
+*.java
+*.asm
+*.bas
+*.bak
+*.cue
+*.rtf
+*.hlp
+*.inf
+*.com
+*.exe
+*.dll
+*.obj
+*.lib
+*.sys
+*.drv
+*.bin
+*.bmp
+*.wav
+$default
+*.mp3
+*.mp4
+*.m4a
+*.mov
+*.avi
+*.wmv
+*.wma
+*.gif
+*.tif
+*.png
+*.jpg
+*.jxl
+*.chm
+*.pdf
+*.cab
+*.7z
+*.arj
+*.ha
+*.lz
+*.lzh
+*.rar
+*.zip
+*.gz
+*.bz2
+*.xz
+*.zst
+*.zstd
+*.jar
+*.avif
+*.fla
+*.flac
+*.heif
+*.ape
+*.bik
+*.mkv
+*.webp

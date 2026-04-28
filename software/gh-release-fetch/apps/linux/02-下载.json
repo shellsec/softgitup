@@ -1,0 +1,74 @@
+[
+  {
+    "id": "lux",
+    "简介": "lux（原 annie，命令行抓取流媒体/站点视频；Linux x86_64）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/iawia002/lux/releases",
+    "repo_path": "iawia002/lux",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "lux_",
+      "Linux_x86_64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "Linux_arm64",
+      "Linux_armv6",
+      "Linux_i386",
+      "Darwin",
+      "Windows",
+      "Freebsd",
+      "Netbsd",
+      "Openbsd"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "lux_{ver}_Linux_x86_64.tar.gz"
+    ],
+    "save_name": "lux_{ver}_Linux_x86_64.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "lux_linux_arm64",
+    "简介": "lux（Linux arm64 tarball，树莓派/ARM 服务器等）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/iawia002/lux/releases",
+    "repo_path": "iawia002/lux",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "lux_",
+      "Linux_arm64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "Linux_x86_64",
+      "Linux_armv6",
+      "Linux_i386",
+      "Darwin",
+      "Windows",
+      "Freebsd",
+      "Netbsd",
+      "Openbsd"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "lux_{ver}_Linux_arm64.tar.gz"
+    ],
+    "save_name": "lux_{ver}_Linux_arm64.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  }
+]

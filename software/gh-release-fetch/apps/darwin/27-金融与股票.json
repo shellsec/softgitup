@@ -1,0 +1,163 @@
+[
+  {
+    "id": "go_stock",
+    "简介": "go-stock（Wails：A股/港股/美股行情与 AI 分析；macOS 用 universal zip。仅供学习研究，投资有风险）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/ArvinLovegood/go-stock/releases",
+    "repo_path": "ArvinLovegood/go-stock",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "go-stock-darwin-universal",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      ".exe",
+      "go-stock-darwin-arm64",
+      "go-stock-darwin-intel"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "go-stock-darwin-universal.zip"
+    ],
+    "save_name": "go-stock-darwin-universal.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "openbb_desktop",
+    "简介": "OpenBB Open Data Platform（macOS Apple Silicon dmg；Intel 请用 x86_64 条目或官网）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/OpenBB-finance/OpenBB/releases",
+    "repo_path": "OpenBB-finance/OpenBB",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Open-Data-Platform_latest_aarch64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "x86_64.dmg",
+      ".exe",
+      "latest.json",
+      ".json",
+      ".asc"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "Open-Data-Platform_latest_aarch64.dmg"
+    ],
+    "save_name": "Open-Data-Platform_latest_aarch64.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "openbb_desktop_intel",
+    "简介": "OpenBB Open Data Platform（macOS Intel x86_64 dmg）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/OpenBB-finance/OpenBB/releases",
+    "repo_path": "OpenBB-finance/OpenBB",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Open-Data-Platform_latest_x86_64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "aarch64.dmg",
+      ".exe",
+      "latest.json",
+      ".json",
+      ".asc"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "Open-Data-Platform_latest_x86_64.dmg"
+    ],
+    "save_name": "Open-Data-Platform_latest_x86_64.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "actual_budget_arm64",
+    "简介": "Actual Budget（macOS Apple Silicon dmg）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/actualbudget/actual/releases",
+    "repo_path": "actualbudget/actual",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Actual-mac-arm64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "mac-x64",
+      "windows",
+      "linux",
+      "AppImage",
+      "flatpak"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "Actual-mac-arm64.dmg"
+    ],
+    "save_name": "Actual-mac-arm64.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "actual_budget_intel",
+    "简介": "Actual Budget（macOS Intel x64 dmg）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/actualbudget/actual/releases",
+    "repo_path": "actualbudget/actual",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Actual-mac-x64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "mac-arm64",
+      "windows",
+      "linux",
+      "AppImage",
+      "flatpak"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "Actual-mac-x64.dmg"
+    ],
+    "save_name": "Actual-mac-x64.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  }
+]

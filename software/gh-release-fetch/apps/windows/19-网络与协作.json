@@ -1,0 +1,117 @@
+[
+  {
+    "id": "mattermost_desktop",
+    "简介": "Mattermost 桌面客户端",
+    "分类": "网络与协作",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/mattermost/desktop/releases",
+    "repo_path": "mattermost/desktop",
+    "installer_markers": [
+      "mattermost-desktop-",
+      "win.exe"
+    ],
+    "href_exclude_substrings": [
+      "mac",
+      "linux"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "mattermost-desktop-{ver}-win.exe"
+    ],
+    "save_name": "mattermost-desktop-{ver}-win.exe",
+    "process_name": "Mattermost.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "zulip_desktop",
+    "简介": "Zulip 桌面客户端",
+    "分类": "网络与协作",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/zulip/zulip-desktop/releases",
+    "repo_path": "zulip/zulip-desktop",
+    "installer_markers": [
+      "Zulip-",
+      "Setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "mac",
+      "linux"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Zulip-{ver}-x64.exe"
+    ],
+    "save_name": "Zulip-{ver}-x64.exe",
+    "process_name": "Zulip.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "url_hint": "Zulip"
+  },
+  {
+    "id": "rocketchat_desktop",
+    "简介": "Rocket.Chat 桌面客户端（Electron）",
+    "分类": "网络与协作",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/RocketChat/Rocket.Chat.Electron/releases",
+    "repo_path": "RocketChat/Rocket.Chat.Electron",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "rocketchat-",
+      "-win-x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "ia32",
+      ".msi",
+      ".appx",
+      "blockmap",
+      "linux",
+      "mac"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "rocketchat-{ver}-win-x64.exe"
+    ],
+    "save_name": "rocketchat-{ver}-win-x64.exe",
+    "process_name": "Rocket.Chat.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "ferdium",
+    "简介": "Ferdium（聚合 Slack/Discord/Matrix 等服务的桌面端，原 Ferdi 分支）",
+    "分类": "网络与协作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/ferdium/ferdium-app/releases",
+    "repo_path": "ferdium/ferdium-app",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Ferdium-win-AutoSetup-",
+      "-x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "ia32",
+      "arm64",
+      "Portable",
+      ".blockmap",
+      "linux",
+      "mac"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Ferdium-win-AutoSetup-{ver}-x64.exe"
+    ],
+    "save_name": "Ferdium-win-AutoSetup-{ver}-x64.exe",
+    "process_name": "Ferdium.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  }
+]

@@ -1,0 +1,232 @@
+[
+  {
+    "id": "bisq",
+    "简介": "Bisq（去中心化比特币/P2P 交易桌面端；自托管、无中心化账户）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/bisq-network/bisq/releases",
+    "repo_path": "bisq-network/bisq",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Bisq-64bit-",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      ".asc",
+      ".dmg",
+      ".deb",
+      ".rpm",
+      "cli",
+      ".tar.gz",
+      ".tar"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Bisq-64bit-{ver}.exe"
+    ],
+    "save_name": "Bisq-64bit-{ver}.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "octobot",
+    "简介": "OctoBot（开源加密资产交易机器人/策略框架）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Drakkar-Software/OctoBot/releases",
+    "repo_path": "Drakkar-Software/OctoBot",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "OctoBot_windows_x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "macos",
+      ".asc",
+      ".deb",
+      ".rpm",
+      ".zip"
+    ],
+    "windows_installer": false,
+    "download_names": [
+      "OctoBot_windows_x64.exe"
+    ],
+    "save_name": "OctoBot_windows_x64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "sparrow_wallet",
+    "简介": "Sparrow Wallet（比特币桌面钱包，支持硬件钱包与隐私功能）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/sparrowwallet/sparrow/releases",
+    "repo_path": "sparrowwallet/sparrow",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Sparrow-",
+      ".msi"
+    ],
+    "href_exclude_substrings": [
+      ".zip",
+      ".asc",
+      "sparrowserver",
+      "aarch64",
+      "x86_64.dmg",
+      ".deb",
+      ".rpm",
+      ".tar.gz",
+      "manifest"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Sparrow-{ver}.msi"
+    ],
+    "save_name": "Sparrow-{ver}.msi",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "wasabi_wallet",
+    "简介": "Wasabi Wallet（比特币桌面钱包，CoinJoin 隐私向；请自行了解当地合规）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/zkSNACKs/WalletWasabi/releases",
+    "repo_path": "zkSNACKs/WalletWasabi",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Wasabi-",
+      ".msi"
+    ],
+    "href_exclude_substrings": [
+      ".asc",
+      "linux",
+      "macOS",
+      ".dmg",
+      ".deb",
+      "win-x64.zip",
+      "arm64"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Wasabi-{ver}.msi"
+    ],
+    "save_name": "Wasabi-{ver}.msi",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "feather_wallet",
+    "简介": "Feather Wallet（Monero 官方社区系轻钱包，桌面端）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/feather-wallet/feather/releases",
+    "repo_path": "feather-wallet/feather",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "feather-",
+      "-win.zip"
+    ],
+    "href_exclude_substrings": [
+      ".asc",
+      "mac",
+      "linux",
+      "AppImage",
+      "flatpak",
+      "riscv",
+      "tar.gz"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "feather-{ver}-win.zip"
+    ],
+    "save_name": "feather-{ver}-win.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "specter_desktop",
+    "简介": "Specter Desktop（比特币多签/硬件钱包协调与节点管理桌面端）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/cryptoadvance/specter-desktop/releases",
+    "repo_path": "cryptoadvance/specter-desktop",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Specter-Setup-",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "specterd",
+      ".dmg",
+      ".tar.gz",
+      "linux",
+      "osx",
+      ".asc",
+      ".zip"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Specter-Setup-v{ver}.exe"
+    ],
+    "save_name": "Specter-Setup-v{ver}.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "lnd",
+    "简介": "LND（Lightning Network 守护进程，Bitcoin 二层支付；需配套 bitcoind）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/lightningnetwork/lnd/releases",
+    "repo_path": "lightningnetwork/lnd",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "lnd-windows-amd64-",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows-386",
+      "windows-arm",
+      "darwin",
+      "linux",
+      ".sig",
+      ".txt",
+      "manifest"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "lnd-windows-amd64-v{ver}.zip"
+    ],
+    "save_name": "lnd-windows-amd64-v{ver}.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  }
+]

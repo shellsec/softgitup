@@ -1,0 +1,373 @@
+[
+  {
+    "id": "bisq",
+    "简介": "Bisq（去中心化加密货币 P2P 交易，macOS dmg）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/bisq-network/bisq/releases",
+    "repo_path": "bisq-network/bisq",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Bisq-",
+      ".dmg"
+    ],
+    "href_exclude_substrings": [
+      ".asc",
+      ".exe",
+      ".deb",
+      ".rpm",
+      "cli",
+      ".tar.gz",
+      ".tar"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "Bisq-{ver}.dmg"
+    ],
+    "save_name": "Bisq-{ver}.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "octobot",
+    "简介": "OctoBot（加密交易机器人，macOS arm64）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Drakkar-Software/OctoBot/releases",
+    "repo_path": "Drakkar-Software/OctoBot",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "OctoBot_macos_arm64"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      ".exe",
+      ".asc",
+      ".deb",
+      ".rpm",
+      ".zip"
+    ],
+    "windows_installer": false,
+    "download_names": [
+      "OctoBot_macos_arm64"
+    ],
+    "save_name": "OctoBot_macos_arm64",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "sparrow_wallet_arm64",
+    "简介": "Sparrow Wallet（比特币钱包，Apple Silicon dmg）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/sparrowwallet/sparrow/releases",
+    "repo_path": "sparrowwallet/sparrow",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Sparrow-",
+      "aarch64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "x86_64",
+      ".msi",
+      ".zip",
+      "manifest",
+      "sparrowserver",
+      ".asc"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "Sparrow-{ver}-aarch64.dmg"
+    ],
+    "save_name": "Sparrow-{ver}-aarch64.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "sparrow_wallet_intel",
+    "简介": "Sparrow Wallet（比特币钱包，Intel macOS dmg）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/sparrowwallet/sparrow/releases",
+    "repo_path": "sparrowwallet/sparrow",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Sparrow-",
+      "x86_64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      ".msi",
+      ".zip",
+      "manifest",
+      "sparrowserver",
+      ".asc"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "Sparrow-{ver}-x86_64.dmg"
+    ],
+    "save_name": "Sparrow-{ver}-x86_64.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "wasabi_wallet_arm64",
+    "简介": "Wasabi Wallet（Apple Silicon dmg）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/zkSNACKs/WalletWasabi/releases",
+    "repo_path": "zkSNACKs/WalletWasabi",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Wasabi-",
+      "-arm64.dmg"
+    ],
+    "href_exclude_substrings": [
+      ".asc",
+      ".msi",
+      ".zip",
+      "linux",
+      "win"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "Wasabi-{ver}-arm64.dmg"
+    ],
+    "save_name": "Wasabi-{ver}-arm64.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "wasabi_wallet_intel",
+    "简介": "Wasabi Wallet（Intel macOS dmg，无 arm64 后缀）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/zkSNACKs/WalletWasabi/releases",
+    "repo_path": "zkSNACKs/WalletWasabi",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Wasabi-",
+      ".dmg"
+    ],
+    "href_exclude_substrings": [
+      "-arm64",
+      "-arm64.dmg",
+      ".asc",
+      ".msi",
+      ".zip",
+      "linux",
+      "win",
+      "macOS"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "Wasabi-{ver}.dmg"
+    ],
+    "save_name": "Wasabi-{ver}.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "feather_wallet_mac_arm64",
+    "简介": "Feather Wallet（Monero，Apple Silicon zip）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/feather-wallet/feather/releases",
+    "repo_path": "feather-wallet/feather",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "feather-",
+      "mac-arm64.zip"
+    ],
+    "href_exclude_substrings": [
+      ".asc",
+      "win.zip",
+      "linux",
+      "AppImage",
+      "flatpak"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "feather-{ver}-mac-arm64.zip"
+    ],
+    "save_name": "feather-{ver}-mac-arm64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "feather_wallet_mac_intel",
+    "简介": "Feather Wallet（Monero，Intel mac zip）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/feather-wallet/feather/releases",
+    "repo_path": "feather-wallet/feather",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "feather-",
+      "-mac.zip"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      ".asc",
+      "win.zip",
+      "linux",
+      "AppImage",
+      "flatpak"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "feather-{ver}-mac.zip"
+    ],
+    "save_name": "feather-{ver}-mac.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "specter_desktop",
+    "简介": "Specter Desktop（比特币多签/硬件钱包，macOS dmg）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/cryptoadvance/specter-desktop/releases",
+    "repo_path": "cryptoadvance/specter-desktop",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Specter-v",
+      ".dmg"
+    ],
+    "href_exclude_substrings": [
+      "Setup",
+      "specterd",
+      ".exe",
+      "linux",
+      ".asc",
+      ".tar.gz",
+      "osx_arm64"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "Specter-v{ver}.dmg"
+    ],
+    "save_name": "Specter-v{ver}.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "lnd_darwin_arm64",
+    "简介": "LND（Lightning Network，macOS arm64 发行包）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/lightningnetwork/lnd/releases",
+    "repo_path": "lightningnetwork/lnd",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "lnd-darwin-arm64-",
+      ".tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "amd64",
+      "linux",
+      "windows",
+      "manifest",
+      ".sig"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "lnd-darwin-arm64-v{ver}.tar.gz"
+    ],
+    "save_name": "lnd-darwin-arm64-v{ver}.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "lnd_darwin_amd64",
+    "简介": "LND（Lightning Network，macOS amd64 发行包）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/lightningnetwork/lnd/releases",
+    "repo_path": "lightningnetwork/lnd",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "lnd-darwin-amd64-",
+      ".tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "linux",
+      "windows",
+      "manifest",
+      ".sig"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "lnd-darwin-amd64-v{ver}.tar.gz"
+    ],
+    "save_name": "lnd-darwin-amd64-v{ver}.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  }
+]

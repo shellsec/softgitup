@@ -1,0 +1,36 @@
+#TITLE=Perl
+; EditPlus Auto-completion file v1.0 written by ES-Computing.
+; This file is provided as a default auto-completion file for Perl.
+
+#CASE=y
+#BRACKET1={}
+#BRACKET2=""
+#BRACKET3=''
+
+#T=if
+if (^!) {
+}
+#T=elsif
+elsif (^!) {
+}
+#T=unless
+unless (^!) {
+}
+#T=while
+while (^!) {
+}
+#T=until
+until (^!) {
+}
+#T=for
+for (^!; ;) {
+}
+#T=map
+map {^!};
+#T=do
+do (^!) {
+} until ;
+#T=foreach
+foreach ^! () {
+}
+#

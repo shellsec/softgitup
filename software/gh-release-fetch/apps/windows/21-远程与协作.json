@@ -1,0 +1,118 @@
+[
+  {
+    "id": "rustdesk",
+    "简介": "开源远程桌面，可自建中继",
+    "分类": "远程与协作",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/rustdesk/rustdesk/releases",
+    "repo_path": "rustdesk/rustdesk",
+    "version_tag_as_on_github": true,
+    "url_hint": "rustdesk",
+    "installer_markers": [
+      "rustdesk-",
+      "-x86_64.exe"
+    ],
+    "href_exclude_substrings": [
+      ".msi",
+      ".deb",
+      ".dmg",
+      ".AppImage",
+      ".rpm",
+      ".flatpak",
+      ".apk",
+      "sciter"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "rustdesk-{ver}-x86_64.exe"
+    ],
+    "save_name": "rustdesk-{ver}-x86_64.exe",
+    "process_name": "rustdesk.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "mremoteng",
+    "简介": "多协议远程桌面管理",
+    "分类": "远程与协作",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/mRemoteNG/mRemoteNG/releases",
+    "repo_path": "mRemoteNG/mRemoteNG",
+    "installer_markers": [
+      "mRemoteNG-Installer",
+      ".msi"
+    ],
+    "href_exclude_substrings": [
+      "Portable",
+      "zip"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "mRemoteNG-Installer-{ver}.msi"
+    ],
+    "save_name": "mRemoteNG-Installer-{ver}.msi",
+    "process_name": "mRemoteNG.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "barrier",
+    "简介": "Barrier（开源 KVM：一套键鼠控制多台电脑）",
+    "分类": "远程与协作",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/debauchee/barrier/releases",
+    "repo_path": "debauchee/barrier",
+    "prefer_api_assets": true,
+    "installer_markers": [
+      "BarrierSetup-",
+      "-release.exe"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      ".sha256",
+      ".sha1"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "BarrierSetup-{ver}-release.exe"
+    ],
+    "save_name": "BarrierSetup-{ver}-release.exe",
+    "process_name": "barrier.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "deskreen",
+    "简介": "Deskreen（将本机屏幕无线投到浏览器，第二屏/演示）",
+    "分类": "远程与协作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/pavlobu/deskreen/releases",
+    "repo_path": "pavlobu/deskreen",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "deskreen-ce-",
+      "-x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "ia32",
+      ".blockmap",
+      "linux",
+      "darwin"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "deskreen-ce-{ver}-x64.exe"
+    ],
+    "save_name": "deskreen-ce-{ver}-x64.exe",
+    "process_name": "Deskreen.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  }
+]

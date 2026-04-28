@@ -1,0 +1,155 @@
+[
+  {
+    "id": "go_stock",
+    "简介": "go-stock（Wails：A股/港股/美股行情、AI 分析与选股辅助；数据偏本地。仅供学习研究，投资有风险）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/ArvinLovegood/go-stock/releases",
+    "repo_path": "ArvinLovegood/go-stock",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "go-stock-windows-amd64.exe"
+    ],
+    "href_exclude_substrings": [
+      "darwin",
+      "linux",
+      ".zip",
+      ".sha",
+      ".sig"
+    ],
+    "windows_installer": false,
+    "download_names": [
+      "go-stock-windows-amd64.exe"
+    ],
+    "save_name": "go-stock-windows-amd64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "openbb_desktop",
+    "简介": "OpenBB Open Data Platform（桌面端：金融/投研数据与工具链入口）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/OpenBB-finance/OpenBB/releases",
+    "repo_path": "OpenBB-finance/OpenBB",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Open-Data-Platform_latest_x86_64.exe"
+    ],
+    "href_exclude_substrings": [
+      ".dmg",
+      "aarch64",
+      "latest.json",
+      ".json",
+      ".asc"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Open-Data-Platform_latest_x86_64.exe"
+    ],
+    "save_name": "Open-Data-Platform_latest_x86_64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "actual_budget",
+    "简介": "Actual Budget（开源个人/家庭预算与银行同步风格记账，E2E 加密）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/actualbudget/actual/releases",
+    "repo_path": "actualbudget/actual",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Actual-windows-x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "windows-arm64",
+      "windows-ia32",
+      "Actual-windows.exe",
+      ".dmg",
+      "mac-",
+      "linux",
+      "AppImage",
+      "flatpak"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Actual-windows-x64.exe"
+    ],
+    "save_name": "Actual-windows-x64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "ta_lib",
+    "简介": "TA-Lib（技术分析 C 库；Windows x86_64 官方 zip，量化/指标常用）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/ta-lib/ta-lib/releases",
+    "repo_path": "ta-lib/ta-lib",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ta-lib-",
+      "windows-x86_64.zip"
+    ],
+    "href_exclude_substrings": [
+      "x86_32",
+      "i386",
+      ".msi",
+      ".deb",
+      "arm64",
+      "aarch64"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "ta-lib-{ver}-windows-x86_64.zip"
+    ],
+    "save_name": "ta-lib-{ver}-windows-x86_64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "frequi",
+    "简介": "FreqUI（Freqtrade 配套 Web 监控/交易界面发行包 zip）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/freqtrade/frequi/releases",
+    "repo_path": "freqtrade/frequi",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "freqUI.zip"
+    ],
+    "href_exclude_substrings": [
+      ".asc",
+      ".sha"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "freqUI.zip"
+    ],
+    "save_name": "freqUI.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  }
+]

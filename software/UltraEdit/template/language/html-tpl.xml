@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<Templates encode="utf8escenc"><Template Name="div" Comments="0" Strings="0" Description="">div&gt;
+^
+&lt;/div&gt;</Template><Template Name="form" Comments="0" Strings="0" Description="">form action="[+action+]"&gt;
+	&lt;fieldset&gt;
+		&lt;legend&gt;Personal information:&lt;/legend&gt;
+		Name: &lt;input type="text" size="30" /&gt;&lt;br /&gt;
+		E-mail: &lt;input type="text" size="30" /&gt;&lt;br /&gt;
+		Date of birth: &lt;input type="text" size="10" /&gt;
+	&lt;/fieldset&gt;
+&lt;/form&gt;</Template><Template Name="href" Comments="0" Strings="0" Description="">href="[+link+]"&gt;[+link text+]&lt;/a&gt;</Template><Template Name="HTML5" Comments="0" Strings="0" Description="">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+	&lt;title&gt;[+Page Title+]&lt;/title&gt;
+	&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
+	&lt;meta name="description" content="[+Description+]" /&gt;
+	&lt;link rel="stylesheet" href="[+Stylesheet Location+]" type="text/css" /&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+	&lt;header&gt;
+		&lt;nav&gt;
+		&lt;/nav&gt;
+	&lt;/header&gt;
+
+	&lt;h1&gt;[+Page Title+]&lt;/h1&gt;
+
+	&lt;!-- content goes here --&gt;
+
+	&lt;footer&gt;
+	&lt;/footer&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</Template><Template Name="img" Comments="0" Strings="0" Description="">img src="[+path+]" alt="[+alt+]" title="[+title+]" /&gt;</Template><Template Name="link" Comments="0" Strings="0" Description="">link rel="[+stylesheet+]" type="[+text/css+]" href="[+/file.css+]" /&gt;</Template><Template Name="meta" Comments="0" Strings="0" Description="">meta name="[+name+]" content="[+content+]" /&gt;</Template><Template Name="script" Comments="0" Strings="0" Description="">script type="text/javascript"&gt;
+	^
+&lt;/script&gt;</Template><Template Name="table" Comments="0" Strings="0" Description="">table&gt;
+	&lt;tr&gt;
+		&lt;th&gt;&lt;/th&gt;
+		&lt;th&gt;&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</Template></Templates>

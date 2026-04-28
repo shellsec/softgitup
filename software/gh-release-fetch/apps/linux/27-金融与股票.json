@@ -1,0 +1,123 @@
+[
+  {
+    "id": "actual_budget_appimage_amd64",
+    "简介": "Actual Budget（Linux x86_64 AppImage）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/actualbudget/actual/releases",
+    "repo_path": "actualbudget/actual",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Actual-linux-x86_64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "flatpak",
+      "windows",
+      ".dmg",
+      ".exe"
+    ],
+    "windows_installer": false,
+    "download_names": [
+      "Actual-linux-x86_64.AppImage"
+    ],
+    "save_name": "Actual-linux-x86_64.AppImage",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "actual_budget_appimage_arm64",
+    "简介": "Actual Budget（Linux arm64 AppImage）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/actualbudget/actual/releases",
+    "repo_path": "actualbudget/actual",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Actual-linux-arm64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "x86_64",
+      "flatpak",
+      "windows",
+      ".dmg",
+      ".exe"
+    ],
+    "windows_installer": false,
+    "download_names": [
+      "Actual-linux-arm64.AppImage"
+    ],
+    "save_name": "Actual-linux-arm64.AppImage",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "ta_lib_deb_amd64",
+    "简介": "TA-Lib（技术分析 C 库，Debian/Ubuntu amd64 deb）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/ta-lib/ta-lib/releases",
+    "repo_path": "ta-lib/ta-lib",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ta-lib_",
+      "_amd64.deb"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "i386",
+      "windows",
+      ".zip",
+      ".msi",
+      ".rpm"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".deb"
+    ],
+    "download_names": [
+      "ta-lib_{ver}_amd64.deb"
+    ],
+    "save_name": "ta-lib_{ver}_amd64.deb",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "frequi",
+    "简介": "FreqUI（Freqtrade Web 界面 zip，Linux 通用解压使用）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/freqtrade/frequi/releases",
+    "repo_path": "freqtrade/frequi",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "freqUI.zip"
+    ],
+    "href_exclude_substrings": [
+      ".asc",
+      ".sha"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "freqUI.zip"
+    ],
+    "save_name": "freqUI.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  }
+]

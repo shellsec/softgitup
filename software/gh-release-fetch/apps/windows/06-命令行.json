@@ -1,0 +1,627 @@
+[
+  {
+    "id": "fd",
+    "简介": "find 替代（fd，zip）",
+    "分类": "命令行",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/sharkdp/fd/releases",
+    "repo_path": "sharkdp/fd",
+    "installer_markers": [
+      "fd-v",
+      "x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "i686"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "fd-v{ver}-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "fd-v{ver}-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "ripgrep",
+    "简介": "grep 替代（rg，zip）",
+    "分类": "命令行",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/BurntSushi/ripgrep/releases",
+    "repo_path": "BurntSushi/ripgrep",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "ripgrep-",
+      "x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "i686"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "ripgrep-{ver}-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "ripgrep-{ver}-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "lsd",
+    "简介": "ls 增强（zip）",
+    "分类": "命令行",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/lsd-rs/lsd/releases",
+    "repo_path": "lsd-rs/lsd",
+    "installer_markers": [
+      "lsd-v",
+      "x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "i686",
+      "gnu"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "lsd-v{ver}-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "lsd-v{ver}-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "bat",
+    "简介": "cat 替代，带高亮（zip）",
+    "分类": "命令行",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/sharkdp/bat/releases",
+    "repo_path": "sharkdp/bat",
+    "installer_markers": [
+      "bat-v",
+      "x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "i686"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "bat-v{ver}-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "bat-v{ver}-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "micro",
+    "简介": "终端编辑器 micro（zip）",
+    "分类": "命令行",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/zyedidia/micro/releases",
+    "repo_path": "zyedidia/micro",
+    "installer_markers": [
+      "micro-",
+      "-win64.zip"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "micro-{ver}-win64.zip"
+    ],
+    "save_name": "micro-{ver}-win64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "delta",
+    "简介": "git diff 高亮查看器（zip）",
+    "分类": "命令行",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/dandavison/delta/releases",
+    "repo_path": "dandavison/delta",
+    "installer_markers": [
+      "delta-",
+      "x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "i686"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "delta-{ver}-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "delta-{ver}-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "zoxide",
+    "简介": "cd 智能跳转（zip）",
+    "分类": "命令行",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/ajeetdsouza/zoxide/releases",
+    "repo_path": "ajeetdsouza/zoxide",
+    "installer_markers": [
+      "zoxide-",
+      "x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "i686"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "zoxide-{ver}-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "zoxide-{ver}-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "jq",
+    "简介": "JSON 命令行处理（官方发布页）",
+    "分类": "命令行",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/jqlang/jq/releases",
+    "repo_path": "jqlang/jq",
+    "installer_markers": [
+      "jq-windows-amd64.exe"
+    ],
+    "href_exclude_substrings": [
+      "win32"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "jq-windows-amd64.exe"
+    ],
+    "save_name": "jq-windows-amd64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "fzf",
+    "简介": "命令行模糊查找器",
+    "分类": "命令行",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/junegunn/fzf/releases",
+    "repo_path": "junegunn/fzf",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "fzf-",
+      "windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "darwin",
+      "arm64"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "fzf-{ver}-windows_amd64.zip"
+    ],
+    "save_name": "fzf-{ver}-windows_amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "starship",
+    "简介": "跨 Shell 极简提示符",
+    "分类": "命令行",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/starship/starship/releases",
+    "repo_path": "starship/starship",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "starship-x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "apple",
+      "linux"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "starship-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "starship-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "yq",
+    "简介": "YAML/XML/JSON 命令行处理器",
+    "分类": "命令行",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/mikefarah/yq/releases",
+    "repo_path": "mikefarah/yq",
+    "version_tag_as_on_github": true,
+    "url_hint": "yq",
+    "installer_markers": [
+      "yq_windows_amd64.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "darwin",
+      "linux"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "yq_windows_amd64.exe"
+    ],
+    "save_name": "yq_windows_amd64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "eza",
+    "简介": "现代 ls 替代（Rust）",
+    "分类": "命令行",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/eza-community/eza/releases",
+    "repo_path": "eza-community/eza",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "eza.exe_x86_64-pc-windows-gnu.zip"
+    ],
+    "href_exclude_substrings": [
+      "musl",
+      "aarch64",
+      "darwin"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "eza.exe_x86_64-pc-windows-gnu.zip"
+    ],
+    "save_name": "eza.exe_x86_64-pc-windows-gnu.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "dust",
+    "简介": "磁盘使用可视化（du 替代）",
+    "分类": "命令行",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/bootandy/dust/releases",
+    "repo_path": "bootandy/dust",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "dust-v",
+      "x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "apple",
+      "linux"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "dust-v{ver}-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "dust-v{ver}-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "procs",
+    "简介": "进程列表查看器（Rust）",
+    "分类": "命令行",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/dalance/procs/releases",
+    "repo_path": "dalance/procs",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "procs-v",
+      "x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "linux",
+      "darwin"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "procs-v{ver}-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "procs-v{ver}-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "hyperfine",
+    "简介": "命令行基准测试工具",
+    "分类": "命令行",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/sharkdp/hyperfine/releases",
+    "repo_path": "sharkdp/hyperfine",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "hyperfine-v",
+      "x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "linux",
+      "darwin"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "hyperfine-v{ver}-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "hyperfine-v{ver}-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "glow",
+    "简介": "终端 Markdown 阅读器",
+    "分类": "命令行",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/charmbracelet/glow/releases",
+    "repo_path": "charmbracelet/glow",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "glow_",
+      "Windows_x86_64.zip"
+    ],
+    "href_exclude_substrings": [
+      "Linux",
+      "Darwin",
+      "arm"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "glow_{ver}_Windows_x86_64.zip"
+    ],
+    "save_name": "glow_{ver}_Windows_x86_64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "sd",
+    "简介": "sed 式查找替换（更直观）",
+    "分类": "命令行",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/chmln/sd/releases",
+    "repo_path": "chmln/sd",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "sd-v",
+      "x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "linux",
+      "darwin"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "sd-v{ver}-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "sd-v{ver}-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "ripgrep_all",
+    "简介": "在 PDF/压缩包等中全文搜索",
+    "分类": "命令行",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/phiresky/ripgrep-all/releases",
+    "repo_path": "phiresky/ripgrep-all",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "ripgrep_all-v",
+      "x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "linux",
+      "darwin"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "ripgrep_all-v{ver}-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "ripgrep_all-v{ver}-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "nushell",
+    "简介": "Nushell（结构化数据的现代 Shell）",
+    "分类": "命令行",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/nushell/nushell/releases",
+    "repo_path": "nushell/nushell",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "nu-",
+      "x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      ".msi",
+      "darwin",
+      "linux",
+      "full"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "nu-{ver}-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "nu-{ver}-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "atuin",
+    "简介": "Atuin（Shell 历史同步/检索，跨会话搜索极快）",
+    "分类": "命令行",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/atuinsh/atuin/releases",
+    "repo_path": "atuinsh/atuin",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "atuin-x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "atuin-server",
+      "aarch64",
+      ".sha256",
+      "darwin",
+      "linux"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "atuin-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "atuin-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "yazi",
+    "简介": "Yazi（终端文件管理器，异步预览，Rust 实现）",
+    "分类": "命令行",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/sxyazi/yazi/releases",
+    "repo_path": "sxyazi/yazi",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "yazi-x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "darwin",
+      "linux"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "yazi-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "yazi-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "zellij",
+    "简介": "Zellij（终端多窗格/会话与工作区，tmux 的现代替代之一）",
+    "分类": "命令行",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/zellij-org/zellij/releases",
+    "repo_path": "zellij-org/zellij",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "zellij-x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "no-web",
+      "aarch64",
+      ".msi",
+      ".sha256",
+      "darwin",
+      "linux"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "zellij-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "zellij-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  }
+]

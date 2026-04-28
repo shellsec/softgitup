@@ -1,0 +1,38 @@
+Notepad++ v8.9.4 crash fixes, bug-fixes & new improvements:
+
+ 1. Fix crashes in FindInFiles when nativeLang.xml's "find-result-hits" contains "%s".
+ 2. Fix drop-file crash when file path length reaches 259 characters.
+ 3. Fix crash caused by undoing column editor bad input in virtual space.
+ 4. Fix bad column editor input in reverse-direction column selection on virtual space.
+ 5. Update to Scintilla 5.6.1 & Lexilla 5.4.8.
+ 6. Fix EOL conversion to Windows format not working (Scintilla update related).
+ 7. Fix rendering corruption in .bat files (Lexilla update related).
+ 8. Fix quote escaping causing incorrect JSON syntax highlighting (Lexilla update related).
+ 9. Fix MSI installation error due to context menu item registration.
+10. Fix NSIS installation stalling caused by context menu registration issue.
+11. Add NPP_LANG property to install a specific localization file for MSI.
+12. Fix MSI installer display random Hexadecimal number as name on UAC.
+13. Add version info into MSI file property (as value of "Comments").
+14. Fix minimized window not restoring in administrator mode.
+15. Fix Unicode search mismatching ANSI character '?'.
+16. Fix Column Editor regression with empty fields.
+17. Fix floating dialog content not displaying in certain situations.
+18. Fix visual glitch when toggling group view in Document List.
+19. Support improved C++ 11 raw string literal handling.
+20. Fix visual glitch in the Mark dialog.
+
+
+Get more info on
+https://notepad-plus-plus.org/downloads/v8.9.4/
+
+
+Included plugins:
+
+ 1.  NppExport v0.4
+ 2.  Converter v4.7
+ 3.  Mime Tool v3.1
+
+
+Updater (Installer only):
+
+* WinGUp (for Notepad++) v5.4.1

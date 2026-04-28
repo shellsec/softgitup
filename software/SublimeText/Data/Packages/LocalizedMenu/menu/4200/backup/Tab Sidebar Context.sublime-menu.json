@@ -1,0 +1,59 @@
+[
+    {
+        "args": {
+            "group": -1
+        }, 
+        "command": "close_selected", 
+        "caption": "关闭"
+    }, 
+    {
+        "args": {
+            "index": -1, 
+            "group": -1
+        }, 
+        "command": "close_others_by_index", 
+        "caption": "关闭其它"
+    }, 
+    {
+        "args": {
+            "index": -1, 
+            "group": -1
+        }, 
+        "command": "close_unmodified", 
+        "caption": "关闭未改"
+    }, 
+    {
+        "args": {
+            "index": -1, 
+            "group": -1
+        }, 
+        "command": "close_to_right_by_index", 
+        "caption": "关闭右侧"
+    }, 
+    {
+        "args": {
+            "index": -1, 
+            "group": -1
+        }, 
+        "command": "close_unmodified_to_right_by_index", 
+        "caption": "关闭右侧未改"
+    }, 
+    {
+        "args": {
+            "group": -1
+        }, 
+        "command": "close_deleted_files", 
+        "caption": "关闭已删"
+    }, 
+    {
+        "caption": "-"
+    }, 
+    {
+        "command": "new_file", 
+        "caption": "新建文件"
+    }, 
+    {
+        "command": "prompt_open_file", 
+        "caption": "打开文件"
+    }
+]

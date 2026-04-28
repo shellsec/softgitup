@@ -1,0 +1,272 @@
+/L17"PowerShell" Nocase Line Comment = # Block Comment On = <# Block Comment Off = #> Escape Char = ` String Chars = "' EnableMLS File Extensions = PS1 PSM1 PSD1 PS1XML PSSC PSC1
+/TGBegin "Functions"
+/TGFindStr = "^[ \t]*filter|function\s+([a-z0-9\-_]*)\s*(?:\([^\)]*\)\s*)?\{"
+/TGFindBStart = "\{"
+/TGFindBEnd = "\}"
+/TGBegin "Parameters"
+/TGFindStr = "[\t ]*(\$[a-z_\x7f-\xff][0-9a-z_\x7f-\xff]*[\t ]*=[\t ]*(?:array[\t ]*\((?:[^()]*|(?:[\t ]*array[\t ]*\(.*?\))+[\t ]*)\)|".*?"(?<!\\")|'.*?'(?<!\\'))|[^,]+)"
+/TGFindBStart = "\("
+/TGFindBEnd = "\)\s*\{"
+/TGEnd
+/TGEnd
+/Regexp Type = "Perl"
+/Delimiters = ! "	%&'()*,/;<>?@[\]^{|}~
+/Indent Strings = "{" "(" "if" "else" ":"
+/Unindent Strings = "}" ")"
+/Open Brace Strings =  "{" "(" "["
+/Close Brace Strings = "}" ")" "]"
+/Open Fold Strings = "{" "("
+/Close Fold Strings = "}" ")"
+/Open Comment Fold Strings = "#Region"
+/Close Comment Fold Strings = "#EndRegion"
+/C1"Keywords"
+&
+alias array
+begin bool break byte
+case catch cert char class cmdletbinding continue
+data decimal default define do double dynamicparam
+else elseif end env exit
+filter finally for foreach from function
+hashtable hkcu hklm
+if in inlinescript int int32
+long
+outputtype
+parallel param parameter process prompt
+return
+sequence single string switch
+then throw trap try
+until using
+validatecount validatelength validatepattern validaterange validateset var variable void
+while workflow
+xml
+/C2"Cmdlets & Built-in Functions"
+Add-BitsFile Add-Computer Add-Content Add-History Add-JobTrigger Add-LocalGroupMember Add-Member
+Add-PSSnapin Add-Type
+Checkpoint-Computer Clear-Content Clear-EventLog Clear-History Clear-Host Clear-Item Clear-ItemProperty
+Clear-RecycleBin Clear-Variable Compare-Object Complete-BitsTransfer Complete-Transaction Compress-Archive
+Connect-PSSession Connect-WSMan Convert-Path Convert-String ConvertFrom-CSV ConvertFrom-Json
+ConvertFrom-SddlString ConvertFrom-SecureString ConvertFrom-String ConvertFrom-StringData ConvertTo-CSV
+ConvertTo-Html ConvertTo-Json ConvertTo-SecureString ConvertTo-XML Copy-Item Copy-ItemProperty
+Debug-Job Debug-Process Debug-Runspace Disable-ComputerRestore Disable-DscDebug Disable-JobTrigger
+Disable-LocalUser Disable-PSBreakpoint Disable-PSRemoting Disable-PSSessionConfiguration
+Disable-RunspaceDebug Disable-ScheduledJob Disable-WSManCredSSP Disconnect-PSSession Disconnect-WSMan
+Enable-ComputerRestore Enable-DscDebug Enable-JobTrigger Enable-LocalUser Enable-PSBreakpoint
+Enable-PSRemoting Enable-PSSessionConfiguration Enable-RunspaceDebug Enable-ScheduledJob
+Enable-WSManCredSSP Enter-PSHostProcess Enter-PSSession Exit-PSHostProcess Exit-PSSession
+Expand-Archive Export-Alias Export-Clixml Export-Console Export-Counter Export-Csv Export-FormatData
+Export-ModuleMember Export-ODataEndpointProxy Export-PSSession
+Find-DscResource Find-Package Find-PackageProvider ForEach-Object Format-Custom Format-Hex Format-List
+Format-Table Format-Wide
+Get-Acl Get-Alias Get-AppLockerFileInformation Get-AppLockerPolicy Get-AuthenticodeSignature
+Get-BitsTransfer Get-ChildItem Get-Clipboard Get-CmsMessage Get-Command Get-ComputerInfo
+Get-ComputerRestorePoint Get-Content Get-ControlPanelItem Get-Counter Get-Credential Get-Culture Get-Date
+Get-DscConfiguration Get-DscConfigurationStatus Get-DscLocalConfigurationManager Get-DscResource Get-Event
+Get-EventLog Get-EventSubscriber Get-ExecutionPolicy Get-FileHash Get-FormatData Get-Help Get-History
+Get-Host Get-HotFix Get-IseSnippet Get-Item Get-ItemProperty Get-ItemPropertyValue Get-Job Get-JobTrigger
+Get-LocalGroup Get-LocalGroupMember Get-LocalUser Get-Location Get-Member Get-Module Get-Package
+Get-PackageProvider Get-PackageSource Get-PfxCertificate Get-Process Get-PSBreakpoint Get-PSCallStack
+Get-PSDrive Get-PSHostProcessInfo Get-PSProvider Get-PSReadlineKeyHandler Get-PSReadlineOption
+Get-PSSession Get-PSSessionCapability Get-PSSessionConfiguration Get-PSSnapin Get-Random Get-Runspace
+Get-RunspaceDebug Get-ScheduledJob Get-ScheduledJobOption Get-ScriptAnalyzerRule Get-Service Get-TimeZone
+Get-TraceSource Get-Transaction Get-TroubleshootingPack Get-TypeData Get-UICulture Get-Unique Get-Variable
+Get-Verb Get-WinEvent Get-WmiObject Get-WSManCredSSP Get-WSManInstance Group-Object
+Import-Alias Import-Clixml Import-Counter Import-Csv Import-IseSnippet Import-LocalizedData Import-Module
+Import-PackageProvider Import-PowerShellDataFile Import-PSSession Install-Package Install-PackageProvider
+Invoke-AsWorkflow Invoke-Command Invoke-DscResource Invoke-Expression Invoke-History Invoke-Item
+Invoke-RestMethod Invoke-ScriptAnalyzer Invoke-TroubleshootingPack Invoke-WebRequest Invoke-WmiMethod
+Invoke-WSManAction
+Join-Path
+Limit-EventLog
+Measure-Command Measure-Object Move-Item Move-ItemProperty
+New-Alias New-AppLockerPolicy New-DSCCheckSum New-Event New-EventLog New-Guid New-IseSnippet New-Item
+New-ItemProperty New-JobTrigger New-LocalGroup New-LocalUser New-Module New-ModuleManifest New-Object
+New-PSDrive New-PSRoleCapabilityFile New-PSSession New-PSSessionConfigurationFile New-PSSessionOption
+New-PSTransportOption New-PSWorkflowExecutionOption New-PSWorkflowSession New-ScheduledJobOption
+New-Service New-TemporaryFile New-TimeSpan New-Variable New-WebServiceProxy New-WinEvent New-WSManInstance
+New-WSManSessionOption
+Out-Default Out-File Out-GridView Out-Host Out-Null Out-Printer Out-String
+Pop-Location Protect-CmsMessage Publish-DscConfiguration Push-Location
+Read-Host Receive-Job Receive-PSSession Register-ArgumentCompleter Register-EngineEvent
+Register-ObjectEvent Register-PackageSource Register-PSSessionConfiguration Register-ScheduledJob
+Register-WmiEvent Remove-BitsTransfer Remove-Computer Remove-DscConfigurationDocument Remove-Event
+Remove-EventLog Remove-Item Remove-ItemProperty Remove-Job Remove-JobTrigger Remove-LocalGroup
+Remove-LocalGroupMember Remove-LocalUser Remove-Module Remove-PSBreakpoint Remove-PSDrive
+Remove-PSReadlineKeyHandler Remove-PSSession Remove-PSSnapin Remove-TypeData Remove-Variable
+Remove-WmiObject Remove-WSManInstance Rename-Computer Rename-Item Rename-ItemProperty Rename-LocalGroup
+Rename-LocalUser Reset-ComputerMachinePassword Resolve-Path Restart-Computer Restart-Service
+Restore-Computer Restore-DscConfiguration Resume-BitsTransfer Resume-Job Resume-Service
+Save-Help Save-Package Select-Object Select-String Select-Xml Send-MailMessage Set-Acl Set-Alias
+Set-AppLockerPolicy Set-AuthenticodeSignature Set-BitsTransfer Set-Clipboard Set-Content Set-Date
+Set-DscLocalConfigurationManager Set-ExecutionPolicy Set-Item Set-ItemProperty Set-JobTrigger
+Set-LocalGroup Set-LocalUser Set-Location Set-PackageSource Set-PSBreakpoint Set-PSDebug
+Set-PSReadlineKeyHandler Set-PSReadlineOption Set-PSSessionConfiguration Set-ScheduledJob
+Set-ScheduledJobOption Set-Service Set-StrictMode Set-TimeZone Set-TraceSource Set-Variable
+Set-WmiInstance Set-WSManInstance Set-WSManQuickConfig Show-Command Show-ControlPanelItem Show-EventLog
+Sort-Object Split-Path Start-BitsTransfer Start-DscConfiguration Start-Job Start-Process Start-Service
+Start-Sleep Start-Transaction Start-Transcript Stop-Computer Stop-DscConfiguration Stop-Job Stop-Process
+Stop-Service Stop-Transcript Suspend-BitsTransfer Suspend-Job Suspend-Service
+Tee-Object Test-AppLockerPolicy Test-ComputerSecureChannel Test-Connection Test-DscConfiguration
+Test-ModuleManifest Test-Path Test-PSSessionConfigurationFile Test-WSMan Trace-Command
+Unblock-File Undo-Transaction Uninstall-Package Unprotect-CmsMessage Unregister-Event
+Unregister-PackageSource Unregister-PSSessionConfiguration Unregister-ScheduledJob Update-DscConfiguration
+Update-FormatData Update-Help Update-List Update-TypeData Use-Transaction
+Wait-Debugger Wait-Event Wait-Job Wait-Process Where-Object Write-Debug Write-Error Write-EventLog
+Write-Host Write-Information Write-Output Write-Progress Write-Verbose Write-Warning
+/C3"Parameters, etc."
+-AccessMode -AccountExpires -AccountNeverExpires -AclObject -Action -Activity
+-ActivityProcessIdleTimeoutSec -Add -AdditionalArguments -Address -AddToHistoryHandler -Adjust -After
+-Algorithm -Alias -AliasDefinitions -AliasesToExport -All -AllCentralAccessPolicies -AllMatches
+-AllowClobber -AllowedActivity -AllowRedirection -AllowUnsecureConnection -AllVersions -Amended -Any
+-AppDomainName -Append -AppendPath -ApplicationArguments -ApplicationBase -ApplicationName -ArgumentList
+-Arguments -As -AsBaseObject -AsCustomObject -AsHashTable -AsHtml -AsJob -AsPlainText -AsSecureString
+-AssembliesToLoad -Assembly -AssemblyName -Associations -AsString -At -AtLogOn -AtStartup -Attachments
+-Attributes -Audit -Authentication -Author -Authority -AutoRemoveJob -AutoSize -Average -BackgroundColor
+-BaseDirectory -BasePropertiesOnly -Bcc -Before -Begin -BellStyle -BinaryPathName -BindingVariable -Body
+-BodyAsHtml -Bound -BreakAll -Breakpoint -BriefDescription -BufferSize -CancelTimeout -CanonicalName
+-Capability -CaretOffset -CaseSensitive -Category -CategoryActivity -CategoryReason -CategoryResourceFile
+-CategoryTargetName -CategoryTargetType -Cc -CentralAccessPolicy -Certificate -CertificateThumbprint
+-Character -ChildJobState -ChildPath -Chord -CimNamespace -CimResourceUri -CimSession -Circular
+-Class -ClearCentralAccessPolicy -ClearExecutionHistory -ClrVersion -Cmdlet -CmdletAdapter
+-CmdletsToExport -CodeDomProvider -CodeSigningCert -Column -Command -CommandLine -CommandName
+-CommandType -CommandValidationHandler -ComObject -CompanyName -CompilerParameters -Completed
+-CompletionQueryItems -Component -Compress -CompressionLevel -ComputerName -ConfigurationName
+-ConfigurationTypeName -Confirm -ConnectionUri -Container -ContainerId -ContainerName -Content
+-ContentType -Context -ContinuationPrompt -ContinuationPromptBackgroundColor
+-ContinuationPromptForegroundColor -ContinueIfGoingOnBattery -Continuous -Copyright -Count -Counter
+-CreateRequestMethod -Credential -CssUri -Culture -CurrentOperation -CustomData -CustomizedRulePath -Daily
+-Date -Day -Days -DaysInterval -DaysOfWeek -DcomAuthentication -Debug -Debugger -DefaultCommandPrefix
+-DefaultDisplayProperty -DefaultDisplayPropertySet -DefaultKeyPropertySet -Definition -DefinitionName
+-DefinitionPath -Delay -DelegateComputer -DeleteKey -Delimiter -DeliveryNotificationOption
+-DependentServices -DependsOn -Depth -Descending -Description -Destination -DestinationPath -Detailed
+-Dialect -DifferenceObject -DingDuration -DingTone -Directory -DirectRead -Disabled -DisableKeepAlive
+-DisableNameChecking -DisplayError -DisplayHint -DisplayName -DnsName -DomainCredential -DomainName
+-DoNotAllowDemandStart -DotNetFrameworkVersion -Drive -DriveLetter -DscResource -DscResourcesToExport
+-EditMode -EKU -EmphasisBackgroundColor -EmphasisForegroundColor -EnableAllPrivileges -Enabled
+-EnableNetworkAccess -EnableValidation -Encoding -End -EndTime -EnforceInputParameterValidation -EntryType
+-Enumerate -EnvironmentVariables -ErrorAction -ErrorBackgroundColor -ErrorForegroundColor -ErrorId
+-ErrorPopup -ErrorRecord -ErrorVariable -EventArguments -EventId -EventIdentifier -EventLogRecord
+-EventName -Exact -ExactMatch -Example -Examples -Exception -Exclude -ExcludeDifferent -ExcludeProperty
+-ExcludeRule -ExecutionPolicy -Expand -ExpandProperty -ExpiringInDays -Expression -ExtraPromptLineCount
+-File -FileFormat -FileList -Filename -FilePath -FileVersionInfo -Filter -FilterHashtable -FilterScript
+-FilterXml -FilterXPath -First -For -Force -ForceBootstrap -ForegroundColor -Format -FormatsToProcess
+-FormatTypeName -Forward -Fragment -From -FromSession -Full -FullName -FullyQualifiedModule
+-FullyQualifiedName -Function -Functionality -FunctionDefinitions -FunctionsToExport -Global -Group
+-GroupBy -Guid -HashAlgorithm -HasMoreData -Head -Header -Headers -Height -HelpInfoUri -Hidden
+-HideComputerName -HideInTaskScheduler -HideTableHeaders -HistoryNoDuplicates -HistorySavePath
+-HistorySaveStyle -HistorySearchCaseSensitive -HistorySearchCursorMovesToEnd -Hostname -HostProcessInfo
+-Hour -Hours -IconUri -Id -IdleDuration -IdleTimeout -IdleTimeoutSec -IgnoreWarnings -IgnoreWhiteSpace
+-Impersonation -Include -IncludeChain -IncludeChildJob -IncludeContext -IncludeDependencies
+-IncludeEqual -IncludeExtent -IncludeInvocationHeader -IncludePortInSPN -IncludeRule -Includes
+-IncludeScriptBlock -IncludeSystemComponent -IncludeTotalCount -IncludeUserName -IncludeWindowsInstaller
+-Independent -Index -InDisconnectedSession -InFile -InformationAction -InformationVariable
+-InheritPropertySerializationSet -InitializationScript -InputObject -InputStream -InstallUpdate
+-InstanceId -IsAbsolute -Issuer -IsValid -ItemType -Job -JobName -Keep -Key -lang -Language
+-LanguageMode -Last -LastStatus -Leaf -LicenseUri -Line -List -ListAvailable -ListenerOption -ListImported
+-ListLog -ListProvider -ListSet -LiteralName -LiteralPath -LoadUserProfile -LocalCredential -Locale
+-Location -LogName -MaxActivityProcesses -MaxConcurrentCommandsPerSession -MaxConcurrentUsers
+-MaxConnectedSessions -MaxConnectionRetryCount -MaxDisconnectedSessions -MaxEvents -MaxIdleTimeoutSec
+-Maximum -MaximumHistoryCount -MaximumKillRingCount -MaximumReceivedDataSizePerCommand
+-MaximumReceivedDataSizePerCommandMB -MaximumReceivedObjectSize -MaximumReceivedObjectSizeMB
+-MaximumRedirection -MaximumSize -MaximumVersion -MaxMemoryPerSessionMB -MaxPersistenceStoreSizeGB
+-MaxProcessesPerSession -MaxResultCount -MaxRunningWorkflows -MaxSamples -MaxSessions
+-MaxSessionsPerRemoteNode -MaxSessionsPerUser -MaxSessionsPerWorkflow -MaxSize -MaxTriggerCount -Member
+-MemberName -MemberType -Message -MessageData -MessageResourceFile -MetadataUri -Method -Millisecond
+-Milliseconds -Minimum -MinimumVersion -Minute -Minutes -Mode -Module -ModuleInfo -ModuleList -ModuleName
+-ModulesToImport -ModuleVersion -Month -MountUserDrive -MultipleInstancePolicy -Name -Namespace -Native
+-NestedModules -NewerThan -Newest -NewLocation -NewName -NoClobber -NoCommonParameter -NoCompression
+-NoElement -NoEncryption -NoEnumerate -NoMachineProfile -NoNewline -NoNewScope -NoNewWindow -NoPassword
+-NoQualifier -NoRecurse -NoServiceRestart -NotePropertyMembers -NotePropertyName -NotePropertyValue
+-NoTypeInformation -Noun -NoWait -Object -Off -OlderThan -Oldest -Once -Online -OnType -OpenTimeout
+-OperationTimeout -Option -Options -OptionSet -OUPath -OutBuffer -OutFile -OutOfProcessActivity
+-OutputBufferingMode -OutputDirectory -OutputModule -OutputType -OutTarget -OutVariable -OverflowAction
+-PackageManagementProvider -Paging -Parallel -Parameter -ParameterName -ParameterResourceFile
+-ParameterType -ParamName -ParamValue -Parent -ParentId -PassThru -Password -PasswordNeverExpires -Path
+-PathType -Pattern -Payload -PercentComplete -Persist -PersistencePath -PersistWithEncryption
+-PipelineVariable -Plugin -Port -PostContent -PowerShellHostName -PowerShellHostVersion -PowerShellVersion
+-PreContent -Prefix -PrependPath -Priority -PrivateData -Process -ProcessIdleTimeoutSec -ProcessName
+-ProcessorArchitecture -ProjectUri -Prompt -Property -PropertyNames -PropertySerializationSet
+-PropertyType -Protocol -ProviderName -Proxy -ProxyAccessType -ProxyAuthentication -ProxyCredential
+-ProxyUseDefaultCredentials -PSDrive -PSHost -PSProvider -PSSession -PSVersion -PublishLocation -PutType
+-Qualifier -Query -Quiet -RandomDelay -Raw -RawData -ReadCount -ReadOnly -RecommendedAction -Recurse
+-RedirectStandardError -RedirectStandardInput -RedirectStandardOutput -ReferenceConfiguration
+-ReferenceObject -Refresh -Regex -Registered -Relative -ReleaseNotes -RemainingScripts
+-RemoteNodeSessionIdleTimeoutSec -Remove -RemoveFileListener -RemoveListener -Repair -RepeatIndefinitely
+-RepetitionDuration -RepetitionInterval -Repository -RequiredAssemblies -RequiredModules -RequiredServices
+-RequiredVersion -RequireNetwork -ResetTokenColors -Resolve -ResourceNameMapping -ResourceURI -Restart
+-RestartOnIdleResume -RestorePoint -RestorePointType -RetentionDays -ReturnResult -ReturnType -Role
+-RoleDefinitions -RollbackPreference -Root -RootModule -RunAs32 -RunAsAdministrator -RunAsCredential
+-RunAsVirtualAccount -RunAsVirtualAccountGroups -RunElevated -RunNow -Runspace -RunspaceId
+-RunspaceInstanceId -RunspaceName -SampleInterval -ScheduledJobOption -SchemaVersion -Scope -Script
+-ScriptBlock -ScriptPublishLocation -ScriptSourceLocation -ScriptsToProcess -SDDL -SDKVersion -Second
+-Seconds -SecondsRemaining -SecondValue -SecureKey -SecureString -SecurityDescriptorSddl -SelectorSet
+-Sender -Separator -SerializationDepth -SerializationMethod -Server -Session -SessionName -SessionOption
+-SessionThrottleLimit -SessionType -SessionTypeOption -SessionVariable -SetSeed -Severity -Shallow
+-ShowCommandInfo -ShowError -ShowSecurityDescriptorUI -ShowToolTips -ShowWindow -SID -SimpleMatch -Skip
+-SkipCACheck -SkipCNCheck -SkipLast -SkipNetworkProfileCheck -SkipRevocationCheck -SmtpServer -Source
+-SourceId -SourceIdentifier -SourcePath -SPNPort -SSLServerAuthentication -Stack -StackName -Stage -Start
+-StartIfIdle -StartIfOnBattery -StartTime -StartupScript -StartupType -State -Static -Status -Step
+-StopIfGoingOffIdle -Stream -Strict -String -StringData -StringSerializationSource -Subject
+-SubscriptionId -Sum -Summary -SupportedCommand -SupportEvent -SupportsOptions -SyncWindow -Syntax -System
+-Tag -Tags -Tail -TargetObject -TargetTypeForDeserialization -TemplateContent -TemplateFile -Text
+-TextFormatType -ThreadApartmentState -ThreadOptions -ThrottleLimit -Timeout -TimeoutSec -TimestampServer
+-TimeToLive -Title -To -TokenKind -ToSession -TotalCount -Trace -TransactedScript -Transcript
+-TranscriptDirectory -TransferEncoding -Transport -TransportOption -Trigger -Trusted -Type -TypeAdapter
+-TypeConverter -TypeData -TypeDefinition -TypeName -TypesToProcess -UFormat -UICulture -Unbound -Unique
+-UnjoinDomainCredential -Unsecure -Update -UpdateRequestMethod -UpdateTemplate -Uri -URLPrefix
+-UseBasicParsing -UseCulture -UseDefaultCredential -UseDefaultCredentials -UseExisting -UseNewEnvironment
+-User -UserAgent -UserDriveMaximumSize -UserMayChangePassword -UserMayNotChangePassword -Username
+-UseSharedProcess -UseSSL -UseTransaction -UseUTF16 -Value -ValueOnly -ValueSet -Variable
+-VariableDefinitions -VariablesToExport -Verb -Verbose -Version -View -Visibility -VisibleAliases
+-VisibleCmdlets -VisibleExternalCommands -VisibleFunctions -VisibleProviders -VMId -VMName -Wait
+-WakeToRun -WarningAction -WarningVariable -WebSession -Weekly -WeeksInterval -WhatIf -Width -Wildcard
+-WindowStyle -Word -WordDelimiters -WorkflowShutdownTimeoutMSec -WorkgroupName -WorkingDirectory -Wrap
+-WriteEvents -WriteJobInResults -WsmanAuthentication -Xml -xmlns -XMLRenderingType -XPath -Year
+/C4"Aliases"
+%
+?
+ac asnp
+cat cd CFS chdir clc clear clhy cli clp cls clv cnsn compare copy cp cpi cpp curl cvpa
+dbp del diff dir dnsn
+ebp echo epal epcsv epsn erase etsn exsn
+fc fhx fl ft fw
+gal gbp gc gci gcm gcs gdr ghy gi gjb gl gm gmo gp gps gpv group gsn gsnp gsv gu gv gwmi
+h history
+icm iex ihy ii ipal ipcsv ipmo ipsn irm ise iwmi iwr
+kill
+lp ls
+man md measure mi mount move mp mv
+nal ndr ni nmo npssc nsn nv
+ogv oh
+popd ps pushd pwd
+r rbp rcjb rcsn rd rdr ren ri rjb rm rmdir rmo rni rnp rp rsn rsnp rujb rv rvpa rwmi
+sajb sal saps sasv sbp sc select set shcm si sl sleep sls sort sp spjb spps spsv start sujb sv swmi
+tee trcm type
+wget where wjb write
+/C5"Automatic Variables"
+$$ $? $AllNodes $Args $ConfirmPreference $ConsoleFileName $DebugPreference $Error $ErrorActionPreference
+$ErrorView $EventArgs $EventSubscriber $ExecutionContext $False $ForEach $FormatEnumerationLimit $Home
+$Host $InformationPreference $Input $LastExitCode $LogCommandHealthEvent $LogCommandLifecycleEvent
+$LogEngineHealthEvent $LogEngineLifecycleEvent $LogProviderHealthEvent $LogProviderLifecycleEvent $Matches
+$MaximumAliasCount $MaximumDriveCount $MaximumErrorCount $MaximumFunctionCount $MaximumHistoryCount
+$MaximumVariableCount $MyInvocation $NestedPromptLevel $NULL $OFS $OutputEncoding $PID $Profile
+$ProgressPreference $PSBoundParameters $PsCmdlet $PSCommandPath $PsCulture $PSDebugContext
+$PSDefaultParameterValues $PSEmailServer $PsHome $PSItem $PSModuleAutoLoadingPreference $PSScriptRoot
+$PSSenderInfo $PSSessionApplicationName $PSSessionConfigurationName $PSSessionOption $PsUICulture
+$PsVersionTable $Pwd $ReportErrorShowExceptionClass $ReportErrorShowInnerException $ReportErrorShowSource
+$ReportErrorShowStackTrace $Sender $ShellID $StackTrace $This $True $VerbosePreference $WarningPreference
+$WhatIfPreference $^ $_
+/C6"Variables"
+** $
+/C7"Operators"
+!
+%=
+*=
++=
+-= -and -band -bnot -bor -ccontains -ceq -cge -cgt -CIn -cle -clike -clt -cmatch -cne -cnotcontains
+-CNotIn -cnotlike -cnotmatch -contains -creplace -eq -ge -gt -icontains -ieq -ige -igt -ile -ilike -ilt
+-imatch -In -ine -inotcontains -inotlike -inotmatch -ireplace -Is -IsNot -le -like -lt -match -ne -not
+-notcontains -NotIn -notlike -notmatch -or -replace
+// // /=
+=
+/C8"System Objects"
+** LoadWith system.

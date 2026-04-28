@@ -1,0 +1,197 @@
+[
+  {
+    "id": "ollama",
+    "简介": "Ollama（本地运行大模型与 OpenAI 风格 API）",
+    "分类": "AI",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/ollama/ollama/releases",
+    "repo_path": "ollama/ollama",
+    "prefer_api_assets": true,
+    "installer_markers": [
+      "OllamaSetup.exe"
+    ],
+    "windows_installer": true,
+    "save_name": "OllamaSetup.exe",
+    "process_name": "ollama.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "jan",
+    "简介": "Jan（离线优先的本地 AI 聊天客户端）",
+    "分类": "AI",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/janhq/jan/releases",
+    "repo_path": "janhq/jan",
+    "prefer_api_assets": true,
+    "installer_markers": [
+      "Jan_",
+      "_x64-setup.exe"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      "arm64",
+      ".sha256",
+      ".sha1"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Jan_{ver}_x64-setup.exe"
+    ],
+    "save_name": "Jan_{ver}_x64-setup.exe",
+    "process_name": "Jan.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "gpt4all",
+    "简介": "GPT4All（本地运行 LLM 的桌面客户端）",
+    "分类": "AI",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/nomic-ai/gpt4all/releases",
+    "repo_path": "nomic-ai/gpt4all",
+    "prefer_api_assets": true,
+    "installer_markers": [
+      "gpt4all-installer-win64-v",
+      ".exe"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      "arm",
+      ".sha256",
+      ".sha1"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "gpt4all-installer-win64-v{ver}.exe"
+    ],
+    "save_name": "gpt4all-installer-win64-v{ver}.exe",
+    "process_name": "GPT4All.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "opencode",
+    "简介": "OpenCode（开源 AI 编程代理 / 桌面端，SST 团队）",
+    "分类": "AI",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/sst/opencode/releases",
+    "repo_path": "sst/opencode",
+    "prefer_api_assets": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "opencode-desktop-windows-x64",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "electron",
+      ".zip",
+      ".sig",
+      "blockmap",
+      ".yml",
+      ".json"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "opencode-desktop-windows-x64.exe"
+    ],
+    "save_name": "opencode-desktop-windows-x64-{ver}.exe",
+    "process_name": "opencode.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "goose_ai",
+    "简介": "Goose（block 开源 AI 编程助手，Windows CLI 压缩包）",
+    "分类": "AI",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/block/goose/releases",
+    "repo_path": "block/goose",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "goose-x86_64-pc-windows-msvc",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "Goose-win32",
+      "darwin",
+      "linux",
+      "aarch64"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "goose-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "goose-x86_64-pc-windows-msvc-{ver}.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "aichat",
+    "简介": "aichat（终端里用 OpenAI/本地模型等，多提供商 CLI）",
+    "分类": "AI",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/sigoden/aichat/releases",
+    "repo_path": "sigoden/aichat",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "aichat-v",
+      "x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "i686",
+      "darwin",
+      "linux"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "aichat-v{ver}-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "aichat-v{ver}-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "lobe_chat",
+    "简介": "Lobe Chat Hub（多模型 AI 桌面客户端，LobeHub）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/lobehub/lobe-chat/releases",
+    "repo_path": "lobehub/lobe-chat",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "LobeHub-",
+      "-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      ".blockmap",
+      ".dmg",
+      ".zip",
+      "linux",
+      "mac"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "LobeHub-{ver}-setup.exe"
+    ],
+    "save_name": "LobeHub-{ver}-setup.exe",
+    "process_name": "LobeHub.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  }
+]

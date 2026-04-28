@@ -1,0 +1,108 @@
+/L18"Unix shell scripts" Line Comment = # Line Comment Preceding Chars = [~!-~] Escape Char = \ String Chars = "' File Extensions = CSH KSH SH
+/LanguageMarker = "ksh" "sh" "csh" "bash"
+/Function String = "function (.*)\s*\{"
+/Regexp Type = Perl
+/Delimiters = " %	&'+,-/:;=\^`|~
+/Indent Strings = "{" "if" "then" "for" "while" "do" "case" "function"
+/Unindent Strings = "}" "else" "fi" "endif" "done" "esac" "exit" "return"
+/Open Fold Strings = "{" "do" "if" "else" "case"
+/Close Fold Strings = "}" "done" "fi" "else" "esac"
+/Open Brace Strings = "if" "case" "do"
+/Close Brace Strings = "fi" "esac" "done"
+/C1"Control Commands"
+case
+do done
+elif else endif esac
+fi for
+if in
+local
+then
+until
+while
+/C2"Unix Shell Commands"
+None
+admin alias ansi ansi.sys append apropos ar arp as assign assoc at atmadm atq atrm attrib autofail awk
+backup banner basedev basename batch bc bcdedit bdiff bfs bg boot bootcfg bootsect break buffers
+cache cacls cal calendar call cancel cat cb cc cd cdc cflow chcp chdir chgrp chkdsk chkntfs chmod choice
+chown cipher clear cls cmd cmp codepage col color comb comm command comp compact compress continue control
+convert copy country cp cpio crontab crypt cscope csh csplit ctags ctrace ctty cu cut cxref
+date dbx dc dd ddinstal debug defrag del delete delta deltree deroff detach device devicehigh devinfo df
+diff diff3 dir dircmp dirname dis disable diskcoache diskcomp diskcopy diskpart doskey dosshell download
+dpath dpost drivparm du dumpchk dumpprocess
+eautil ed edit edlin edpr egrep emm386 enable endlocal env erase eval exec exit exit_vdm expand export
+exstr extproc extract
+fType face factor false fasthelp fc fcbs fciv fdisk fdiskpm fg fgrep file files find findstr finger
+fixboot fixmbr fmli fmt fmtmsg fold forfiles format fsaccess fsfilter ftp function
+gcore gencat get getopts gettxt goto gprof gpupdate graftabl grep groups
+hash head help himem.sys hostid hostname
+icacls iconv id ifshlp.sys install iopl ipconfig ipcrm ipcs ismpx
+jobs join jsh jterm jwin
+keyb keylogin keylogout keys kill ksh
+label lastdrive layers ld ldd lex lh libpath line lint listsvc ln loadfix loadhigh lock login logname
+logoff logon lorder lp lpq lpr lprm lprof lpstat lptest ls lsm4
+mail mailalias mailx make makeini makekey man map maxwait mcs md mem memman mesg mkdir mklink mkmsgs mode
+more move msav msbackup mscdex msd mv mwbackup
+nawk nbtstat net netsh netstat newform newgrp news nice nl nlsfunc nm nohup notify nroff nslookup
+od openwin
+pack page passwd paste patch path pathping pause pauseonerror pcat pg pic picview ping pmrexx popd power
+pr print printenv printf printmonbufsize priority priority_disk_io prof prompt protectonly protshell prs
+ps pstat ptx pushd pwd
+qbasic
+rcp rd read readonly recover red reg regcmp relogin ren rename repl replace reset restore return rksh
+rlogin rm rmdel rmdir rmsize robocopy route rsh run runas ruptime rwho
+sact scandisk scanreg sccs sccsdiff schtasks sdb sdiff sed select set setboot setlocal setver sfc sh share
+shell shift shl shutdown size sleep smartdrv soelim sort spell split spool srchtxt start stop strings
+strip stty su subst sum suppresspopups suspend swappath switches sys syslevel syslog systeminfo systemroot
+tabs tail talk tar taskkill tasklist tbl tee telnet test threads time timeslice timex title touch tput tr
+trace tracebuf tracefmt tracert trap trapdump tree troff true truss tset tskill tsort tty type typeset
+ulimit umask uname uncompress undelete unformat unget uniq unit unlock unpack unset uptime use users uucp
+uudecode uuencode uuglist uulog uunmae uupick uustat uuto uux
+vacation val vc vedit ver verify vi view vmdisk vol
+w wait wall wc what whatis which who whoami wmic write
+xargs xcopy xcopy32 xdfcopy
+yacc
+zcat
+/C3"Variables"
+** $
+/C4"Echo"
+echo
+/C5"Special Variables"
+CDPATH
+DEBUG DIR DIR_LIST
+EDITOR
+FILENAME FILE_NAME
+HOME
+IFS
+LANG
+MAIL MAILCHECK MAILPATH
+OLDPWD
+PATH PPID PS1 PS2 PS3
+REPLY
+SAVE_LST SAVE_STS SHACCT SHELL SOURCE SOURCE_LIST
+/C6"Signals"
+HUP
+INT
+SIGABRT SIGALRM SIGBUS SIGCHLD SIGCONT SIGFPE SIGHUP SIGILL SIGINT SIGIO SIGKILL SIGPIPE SIGPROF SIGPWR
+SIGQUIT SIGRTMAX SIGRTMIN SIGSEGV SIGSTKFLT SIGSTOP SIGSYS SIGTERM SIGTRAP SIGTSTP SIGTTIN SIGTTOU SIGURG
+SIGUSR1 SIGUSR2 SIGVTALRM SIGWINCH SIGXCPU SIGXFSZ
+TERM
+/C6"Control Operators"
+!
+%
+&
+((
+))
++
+-
+// /
+;
+< <<
+=
+> >>
+[[
+]]
+^
+|
+~
+/C7"Conditional Parameters"
+-S -a -b -c -d -eq -f -g -ge -gt -k -l -le -lt -n -ne -o -p -r -s -t -u -w -x -z

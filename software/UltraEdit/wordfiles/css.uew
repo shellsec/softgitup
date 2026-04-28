@@ -1,0 +1,403 @@
+/L11"CSS" CSS_LANG Nocase Block Comment On = /* Block Comment Off = */ String Chars = "' Escape Char = \ DisableMLS File Extensions = CSS SCSS SASS LESS
+/TGBegin "Imports"
+/TGFindStr = "@import(?:\s+url)?[\s\("']+([a-z/\.\-]*?)[\)"']+"
+/TGEnd
+/TGBegin "Selectors"
+/TGFindStr = "^[ \t]*([\w\.\-_#@][\w\d \t\r\n\.:\[\]\(\)#,\-_\/\*\+>~=\$\^\|"]+){"
+/TGBegin "Properties"
+/TGFindStr = "[ \t]*(.*);"
+/TGFindBStart = "\{"
+/TGFindBEnd = "\}"
+/TGEnd
+/TGEnd
+/Regexp Type = Perl
+/Delimiters = # (	)*+,.:;=>[\]{|}~
+/Indent Strings = "{"
+/Unindent Strings = "}"
+/Open Brace Strings = "{" "(" "["
+/Close Brace Strings = "}" ")" "]"
+/Open Fold Strings = "{"
+/Close Fold Strings = "}"
+/C1"HTML elements"
+a abbr address area article aside audio
+b base bdi bdo blockquote body br button
+canvas caption cite code col colgroup
+data datalist dd del details dfn dialog div dl dt
+em embed
+fieldset figcaption figure footer form
+h1 h2 h3 h4 h5 h6 head header hgroup hr html
+i iframe img input ins
+kbd
+label legend li
+main map mark menu meta meter
+nav noscript
+object ol optgroup option output
+p param picture pre progress
+q
+rp rt ruby
+s samp script section select slot small source span strong style sub summary sup svg
+table tbody td template textarea tfoot th thead time title tr track tt
+u ul
+var video
+wbr
+/C2"Properties"
+-epub-caption-side -epub-text-combine -epub-text-decoration -epub-text-emphasis -epub-text-emphasis-color
+-epub-text-emphasis-style -epub-text-orientation -epub-text-transform -epub-word-break -epub-writing-mode
+-moz-animation -moz-animation-delay -moz-animation-direction -moz-animation-duration
+-moz-animation-fill-mode -moz-animation-iteration-count -moz-animation-name -moz-animation-play-state
+-moz-animation-timing-function -moz-appearance -moz-backface-visibility -moz-background-clip
+-moz-background-inline-policy -moz-background-origin -moz-background-size -moz-binding
+-moz-border-bottom-colors -moz-border-end -moz-border-end-color -moz-border-end-style
+-moz-border-end-width -moz-border-image -moz-border-left-colors -moz-border-right-colors
+-moz-border-start -moz-border-start-color -moz-border-start-style -moz-border-start-width
+-moz-border-top-colors -moz-box-align -moz-box-direction -moz-box-flex -moz-box-ordinal-group
+-moz-box-orient -moz-box-pack -moz-box-sizing -moz-column-count -moz-column-fill -moz-column-gap
+-moz-column-rule -moz-column-rule-color -moz-column-rule-style -moz-column-rule-width -moz-column-width
+-moz-context-properties -moz-float-edge -moz-font-feature-settings -moz-font-language-override
+-moz-force-broken-image-icon -moz-hyphens -moz-image-region -moz-margin-end -moz-margin-start
+-moz-opacity -moz-orient -moz-osx-font-smoothing -moz-outline -moz-outline-color -moz-outline-offset
+-moz-outline-radius -moz-outline-radius-bottomleft -moz-outline-radius-bottomright
+-moz-outline-radius-topleft -moz-outline-radius-topright -moz-outline-style -moz-outline-width
+-moz-padding-end -moz-padding-start -moz-perspective -moz-perspective-origin -moz-stack-sizing
+-moz-system-metric -moz-tab-size -moz-text-align-last -moz-text-decoration-color
+-moz-text-decoration-line -moz-text-decoration-style -moz-text-size-adjust -moz-transform
+-moz-transform-origin -moz-transform-style -moz-transition -moz-transition-delay -moz-transition-duration
+-moz-transition-property -moz-transition-timing-function -moz-user-focus -moz-user-input -moz-user-modify
+-moz-user-select -moz-window-dragging -moz-window-shadow -ms-accelerator -ms-block-progression
+-ms-content-zoom-chaining -ms-content-zoom-limit -ms-content-zoom-limit-max -ms-content-zoom-limit-min
+-ms-content-zoom-snap -ms-content-zoom-snap-points -ms-content-zoom-snap-type -ms-content-zooming
+-ms-filter -ms-flow-from -ms-flow-into -ms-high-contrast -ms-high-contrast-adjust
+-ms-hyphenate-limit-chars -ms-hyphenate-limit-lines -ms-hyphenate-limit-zone -ms-ime-align
+-ms-overflow-style -ms-scroll-chaining -ms-scroll-limit -ms-scroll-limit-x-max -ms-scroll-limit-x-min
+-ms-scroll-limit-y-max -ms-scroll-limit-y-min -ms-scroll-rails -ms-scroll-snap-points-x
+-ms-scroll-snap-points-y -ms-scroll-snap-type -ms-scroll-snap-x -ms-scroll-snap-y -ms-scroll-translation
+-ms-scrollbar-3dlight-color -ms-scrollbar-darkshadow-color -ms-scrollbar-shadow-color -ms-text-autospace
+-ms-text-size-adjust -ms-touch-action -ms-touch-select -ms-transform -ms-user-select -ms-wrap-flow
+-ms-wrap-margin -ms-wrap-through -webkit-align-content -webkit-align-items -webkit-align-self
+-webkit-animation -webkit-animation-delay -webkit-animation-direction -webkit-animation-duration
+-webkit-animation-fill-mode -webkit-animation-iteration-count -webkit-animation-name
+-webkit-animation-play-state -webkit-animation-timing-function -webkit-animation-trigger
+-webkit-app-region -webkit-appearance -webkit-aspect-ratio -webkit-backdrop-filter
+-webkit-backface-visibility -webkit-background-clip -webkit-background-composite
+-webkit-background-origin -webkit-background-size -webkit-border-after -webkit-border-after-color
+-webkit-border-after-style -webkit-border-after-width -webkit-border-before -webkit-border-before-color
+-webkit-border-before-style -webkit-border-before-width -webkit-border-bottom-left-radius
+-webkit-border-bottom-right-radius -webkit-border-end -webkit-border-end-color -webkit-border-end-style
+-webkit-border-end-width -webkit-border-fit -webkit-border-horizontal-spacing -webkit-border-image
+-webkit-border-radius -webkit-border-start -webkit-border-start-color -webkit-border-start-style
+-webkit-border-start-width -webkit-border-top-left-radius -webkit-border-top-right-radius
+-webkit-border-vertical-spacing -webkit-box-align -webkit-box-decoration-break -webkit-box-direction
+-webkit-box-flex -webkit-box-flex-group -webkit-box-lines -webkit-box-ordinal-group -webkit-box-orient
+-webkit-box-pack -webkit-box-reflect -webkit-box-shadow -webkit-box-sizing -webkit-clip-path
+-webkit-column-axis -webkit-column-break-after -webkit-column-break-before -webkit-column-break-inside
+-webkit-column-count -webkit-column-fill -webkit-column-gap -webkit-column-progression
+-webkit-column-rule -webkit-column-rule-color -webkit-column-rule-style -webkit-column-rule-width
+-webkit-column-span -webkit-column-width -webkit-columns -webkit-cursor-visibility
+-webkit-dashboard-region -webkit-device-pixel-ratio -webkit-filter -webkit-flex -webkit-flex-basis
+-webkit-flex-direction -webkit-flex-flow -webkit-flex-grow -webkit-flex-shrink -webkit-flex-wrap
+-webkit-focus-ring-color -webkit-font-feature-settings -webkit-font-kerning -webkit-font-size-delta
+-webkit-font-smoothing -webkit-font-variant-ligatures -webkit-grid -webkit-grid-area
+-webkit-grid-auto-columns -webkit-grid-auto-flow -webkit-grid-auto-rows -webkit-grid-column
+-webkit-grid-column-end -webkit-grid-column-gap -webkit-grid-column-start -webkit-grid-columns
+-webkit-grid-gap -webkit-grid-row -webkit-grid-row-end -webkit-grid-row-gap -webkit-grid-row-start
+-webkit-grid-rows -webkit-grid-template -webkit-grid-template-areas -webkit-grid-template-columns
+-webkit-grid-template-rows -webkit-highlight -webkit-hyphenate-character -webkit-hyphenate-charset
+-webkit-hyphenate-limit-after -webkit-hyphenate-limit-before -webkit-hyphenate-limit-lines -webkit-hyphens
+-webkit-image-set -webkit-initial-letter -webkit-justify-content -webkit-justify-items
+-webkit-justify-self -webkit-line-align -webkit-line-box-contain -webkit-line-break -webkit-line-clamp
+-webkit-line-grid -webkit-line-snap -webkit-linear-gradient -webkit-locale -webkit-logical-height
+-webkit-logical-width -webkit-margin-after -webkit-margin-after-collapse -webkit-margin-before
+-webkit-margin-before-collapse -webkit-margin-bottom-collapse -webkit-margin-collapse -webkit-margin-end
+-webkit-margin-start -webkit-margin-top-collapse -webkit-marquee -webkit-marquee-direction
+-webkit-marquee-increment -webkit-marquee-repetition -webkit-marquee-speed -webkit-marquee-style
+-webkit-mask -webkit-mask-attachment -webkit-mask-box-image -webkit-mask-box-image-outset
+-webkit-mask-box-image-repeat -webkit-mask-box-image-slice -webkit-mask-box-image-source
+-webkit-mask-box-image-width -webkit-mask-clip -webkit-mask-composite -webkit-mask-image
+-webkit-mask-origin -webkit-mask-position -webkit-mask-position-x -webkit-mask-position-y
+-webkit-mask-repeat -webkit-mask-repeat-x -webkit-mask-repeat-y -webkit-mask-size -webkit-mask-source-type
+-webkit-match-nearest-mail-blockquote-color -webkit-max-device-pixel-ratio -webkit-max-logical-height
+-webkit-max-logical-width -webkit-media-text-track-container -webkit-min-device-pixel-ratio
+-webkit-min-logical-height -webkit-min-logical-width -webkit-nbsp-mode -webkit-opacity -webkit-order
+-webkit-overflow-scrolling -webkit-padding-after -webkit-padding-before -webkit-padding-end
+-webkit-padding-start -webkit-perspective -webkit-perspective-origin -webkit-perspective-origin-x
+-webkit-perspective-origin-y -webkit-print-color-adjust -webkit-region-break-after
+-webkit-region-break-before -webkit-region-break-inside -webkit-region-fragment -webkit-rtl-ordering
+-webkit-ruby-position -webkit-scroll-snap-type -webkit-shape-image-threshold -webkit-shape-inside
+-webkit-shape-margin -webkit-shape-outside -webkit-svg-shadow -webkit-tap-highlight-color
+-webkit-text-color-decoration -webkit-text-combine -webkit-text-decoration-line
+-webkit-text-decoration-skip -webkit-text-decoration-style -webkit-text-decorations-in-effect
+-webkit-text-emphasis -webkit-text-emphasis-color -webkit-text-emphasis-position
+-webkit-text-emphasis-style -webkit-text-fill-color -webkit-text-justify -webkit-text-orientation
+-webkit-text-security -webkit-text-size-adjust -webkit-text-stroke -webkit-text-stroke-color
+-webkit-text-stroke-width -webkit-text-underline-position -webkit-text-zoom -webkit-touch-callout
+-webkit-transform -webkit-transform-2d -webkit-transform-3d -webkit-transform-origin
+-webkit-transform-origin-x -webkit-transform-origin-y -webkit-transform-origin-z -webkit-transform-style
+-webkit-transition -webkit-transition-delay -webkit-transition-duration -webkit-transition-property
+-webkit-transition-timing-function -webkit-user-drag -webkit-user-modify -webkit-user-select
+::-webkit-file-upload-button ::-webkit-inner-spin-button ::-webkit-input-placeholder
+::-webkit-media-controls ::-webkit-media-controls-current-time-display ::-webkit-media-controls-enclosure
+::-webkit-media-controls-fullscreen-button ::-webkit-media-controls-mute-button
+::-webkit-media-controls-overlay-enclosure ::-webkit-media-controls-panel
+::-webkit-media-controls-play-button ::-webkit-media-controls-time-remaining-display
+::-webkit-media-controls-timeline ::-webkit-media-controls-toggle-closed-captions-button
+::-webkit-media-controls-volume-control-container ::-webkit-media-controls-volume-control-hover-background
+::-webkit-media-controls-volume-slider ::-webkit-meter-bar ::-webkit-meter-even-less-good-value
+::-webkit-meter-inner-element ::-webkit-meter-optimum-value ::-webkit-meter-suboptimum-value
+::-webkit-outer-spin-button ::-webkit-progress-bar ::-webkit-progress-inner-element
+::-webkit-progress-value ::-webkit-search-cancel-button ::-webkit-search-results-button
+::-webkit-slider-runnable-track ::-webkit-slider-thumb
+@-webkit-keyframes @font-face @keyframes
+align-content align-items align-self all animation animation-delay animation-direction animation-duration
+animation-fill-mode animation-iteration-count animation-name animation-play-state
+animation-timing-function appearance
+backface-visibility background background-attachment background-blend-mode background-clip
+background-color background-image background-origin background-origin-x background-origin-y
+background-position background-repeat background-size bleed border border-bottom border-bottom-color
+border-bottom-left-radius border-bottom-right-radius border-bottom-style border-bottom-width
+border-collapse border-color border-image border-image-outset border-image-repeat border-image-slice
+border-image-source border-image-width border-left border-left-color border-left-style border-left-width
+border-radius border-right border-right-color border-right-style border-right-width border-spacing
+border-style border-top border-top-color border-top-left-radius border-top-right-radius border-top-style
+border-top-width border-width box-align box-decoration-break box-direction box-flex box-flex-group
+box-lines box-ordinal-group box-orient box-pack box-shadow box-sizing break-after break-before
+break-inside
+caption-side class clear clip clip-path color column-count column-fill column-gap column-rule
+column-rule-color column-rule-style column-rule-width column-span column-width columns content
+counter-increment counter-reset cue cue-after cue-before cursor
+direction display
+elevation empty-cells
+filter flex flex-basis flex-direction flex-flow flex-grow flex-shrink flex-wrap float font font-family
+font-feature-settings font-kerning font-language-override font-size font-size-adjust font-stretch
+font-style font-synthesis font-variant font-variant-alternates font-variant-caps font-variant-east-asian
+font-variant-ligatures font-variant-numeric font-variant-position font-weight
+grid grid-area grid-auto-columns grid-auto-flow grid-auto-rows grid-column grid-column-end grid-column-gap
+grid-column-start grid-columns grid-gap grid-row grid-row-end grid-row-gap grid-row-start grid-rows
+grid-template grid-template-areas grid-template-columns grid-template-rows
+hanging-punctuation height hyphens
+id isolation
+justify-content justify-items justify-self
+letter-spacing line-height list-style list-style-image list-style-position list-style-type
+margin margin-bottom margin-left margin-right margin-top mask mask-border mask-border-mode
+mask-border-outset mask-border-repeat mask-border-slice mask-border-source mask-border-width mask-clip
+mask-composite mask-image mask-mode mask-origin mask-position mask-repeat mask-size mask-type max-height
+max-resolution max-width min-height min-resolution min-width mix-blend-mode
+nav-down nav-index nav-left nav-right nav-up
+object-fit object-position opacity order orphans outline outline-color outline-offset outline-style
+outline-width overflow overflow-clip-box overflow-clip-box-block overflow-clip-box-inline overflow-wrap
+overflow-x overflow-y
+padding padding-bottom padding-left padding-right padding-top page-break-after page-break-before
+page-break-inside pause pause-after pause-before perspective-origin pitch pitch-range place-content
+place-items place-self play-during pointer-events position punctuation-trim
+quotes
+resize resolution rest rest-after rest-before richness rotation rotation-point
+shape-image-threshold shape-margin shape-outside speak speak-as speak-header speak-numeral
+speak-punctuation speech-rate
+tab-size table-layout target-name target-new target-position text-align text-align-last text-decoration
+text-decoration-color text-decoration-line text-decoration-skip text-decoration-style text-indent
+text-justify text-orientation text-outline text-overflow text-rendering text-shadow text-transform
+text-underline-position text-wrap touch-action transform transform-origin transform-style transition
+transition-delay transition-duration transition-property transition-timing-function type
+unicode-bidi user-select
+vertical-align visibility voice-balance voice-duration voice-family voice-pitch voice-range voice-rate
+voice-stress voice-volume
+white-space widows width will-change word-break word-spacing word-wrap writing-mode
+z-index zoom
+/C3"Values and functions"
+-moz-activehyperlinktext -moz-all -moz-anchor-decoration -moz-arabic-indic -moz-available -moz-bengali
+-moz-box -moz-button -moz-buttondefault -moz-buttonhoverface -moz-buttonhovertext -moz-calc
+-moz-cellhighlight -moz-cellhighlighttext -moz-center -moz-cjk-earthly-branch -moz-cjk-heavenly-stem
+-moz-crisp-edges -moz-deck -moz-default-background-color -moz-default-color -moz-desktop -moz-devanagari
+-moz-device-pixel-ratio -moz-dialog -moz-dialogtext -moz-document -moz-dragtargetzone -moz-element
+-moz-ethiopic-halehame -moz-ethiopic-halehame-am -moz-ethiopic-halehame-ti-er -moz-ethiopic-halehame-ti-et
+-moz-ethiopic-numeric -moz-field -moz-fieldtext -moz-fit-content -moz-fixed -moz-grid -moz-grid-group
+-moz-grid-line -moz-groupbox -moz-gujarati -moz-gurmukhi -moz-hangul -moz-hangul-consonant
+-moz-hidden-unscrollable -moz-hyperlinktext -moz-image-rect -moz-info -moz-initial -moz-inline-block
+-moz-inline-box -moz-inline-grid -moz-inline-stack -moz-inline-table -moz-japanese-formal
+-moz-japanese-informal -moz-kannada -moz-khmer -moz-lao -moz-left -moz-linear-gradient -moz-list
+-moz-mac-accentdarkestshadow -moz-mac-accentdarkshadow -moz-mac-accentface
+-moz-mac-accentlightesthighlight -moz-mac-accentlightshadow -moz-mac-accentregularhighlight
+-moz-mac-accentregularshadow -moz-mac-chrome-active -moz-mac-chrome-inactive -moz-mac-focusring
+-moz-mac-graphite-theme -moz-mac-menuselect -moz-mac-menushadow -moz-mac-menutextselect
+-moz-mac-unified-toolbar -moz-maemo-classic -moz-malayalam -moz-marker -moz-max-content -moz-menuhover
+-moz-menuhovertext -moz-min-content -moz-myanmar -moz-nativehyperlinktext -moz-none -moz-oriya
+-moz-os-version -moz-persian -moz-popup -moz-pull-down-menu -moz-radial-gradient -moz-right
+-moz-scrollbar-end-backward -moz-scrollbar-end-forward -moz-scrollbar-start-backward
+-moz-scrollbar-start-forward -moz-scrollbar-thumb-proportional -moz-scrollbars-horizontal
+-moz-scrollbars-none -moz-scrollbars-vertical -moz-show-background -moz-simp-chinese-formal
+-moz-simp-chinese-informal -moz-stack -moz-tamil -moz-telugu -moz-thai -moz-touch-enabled
+-moz-trad-chinese-formal -moz-trad-chinese-informal -moz-urdu -moz-visitedhyperlinktext
+-moz-win-borderless-glass -moz-win-browsertabbar-toolbox -moz-win-communications-toolbox
+-moz-win-communicationstext -moz-win-glass -moz-win-media-toolbox -moz-win-mediatext -moz-window
+-moz-window-button-box -moz-window-button-box-maximized -moz-window-button-close
+-moz-window-button-maximize -moz-window-button-minimize -moz-window-button-restore -moz-window-titlebar
+-moz-window-titlebar-maximized -moz-windows-accent-color-in-titlebar -moz-windows-classic
+-moz-windows-compositor -moz-windows-default-theme -moz-windows-glass -moz-windows-theme -moz-workspace
+-ms-autohiding-scrollbar
+above absolute absolute-colorimetric adjacent alias all-scroll allow-end alpha alternate
+alternate-reverse always angle antialiased armenian ascent attr auto avoid
+back balance baseline behind below bidi-override blink block block-axis bold bolder border-box both bottom
+break-word button-arrow-down button-arrow-next button-arrow-previous button-arrow-up button-bevel
+calc cap-height capitalize cell center center-left center-right centerline checkbox-container
+checkbox-label checkmenuitem child circle cjk-ideographic close-quote col-resize collapse column
+column-reverse compact condensed contain content-box context-menu continuous copy counter cover crosshair
+cubic-bezier current cursive
+dashed decimal decimal-leading-zero default definition-src descent digits disc distribute dotted double
+e-resize ease ease-in ease-in-out ease-out ellipse ellipsis end ew-resize expanded extra-condensed
+extra-expanded
+fantasy far-left far-right fast faster female field first fixed flat flex-end flex-start force-end front
+georgian grab grabbing grayscale groove groupbox
+hebrew help hidden hide high higher hiragana hiragana-iroha horizontal hsl hsla
+icon infinite inherit inline inline-axis inline-block inline-table inset inside inter-cluster
+inter-ideograph inter-word invert italic
+justify
+kashida katakana katakana-iroha
+landscape large larger last left left-side leftwards level lighter line-through linear linear-gradient
+list-item listbox local loud low lower lower-alpha lower-greek lower-latin lower-roman lowercase ltr
+male marker marker-offset marks mathline medium menuarrow menucheckbox menuimage menuitem menuitemtext
+menulist menulist-button menulist-text menulist-textfield menupopup menuradio menuseparator message-box
+middle mix modal monospace move multiple
+n-resize narrower ne-resize nesw-resize never new no-close-quote no-content no-display no-drop
+no-open-quote no-repeat none normal not-allowed nowrap ns-resize nw-resize nwse-resize
+oblique old once open-quote outset outside overline
+padding-box panose-1 parent paused pointer polygon portrait pre-line pre-wrap preserve-3d progressbar
+progresschunk
+radial-gradient radio radio-container radio-label radiomenuitem rect relative repeat repeat-x repeat-y
+repeating-linear-gradient repeating-radial-gradient resizer resizerpanel reverse rgb rgba ridge right
+right-side rightwards round row row-resize row-reverse rtl run-in running
+s-resize safe sans-serif scale-horizontal scale-vertical scalethumb-horizontal scalethumb-vertical scroll
+scrollbar-small scrollbarbutton-down scrollbarbutton-left scrollbarbutton-right scrollbarbutton-up
+scrollbarthumb-horizontal scrollbarthumb-vertical scrollbartrack-horizontal scrollbartrack-vertical
+se-resize semi-condensed semi-expanded separate separator serif show silent single size slope slow slower
+small-caps small-caption smaller soft solid space-around space-between space-evenly spell-out spinner
+spinner-downbutton spinner-textfield spinner-upbutton square src start static status-bar statusbar
+statusbarpanel stemh stemv stretch subpixel-antialiased super suppress sw-resize
+tab tab-scroll-arrow-back tab-scroll-arrow-forward table-caption table-cell table-column
+table-column-group table-footer-group table-header-group table-row table-row-group tabpanels text
+text-bottom text-top textfield textfield-multiline thick thin toolbar toolbarbutton-dropdown toolbox
+tooltip top topline touch transparent treeheadercell treeheadersortarrow treeitem treetwisty
+treetwistyopen treeview trim
+ultra-condensed ultra-expanded underline unicode-range units-per-em unrestricted unsafe upper-alpha
+upper-latin upper-roman uppercase url
+vertical vertical-text visible
+w-resize wait wider wrap wrap-reverse
+x-fast x-height x-high x-large x-loud x-low x-slow x-small x-soft xx-large xx-small
+young
+zoom-in zoom-out
+/C4"Pseudo-classes"
+-moz-anonymous-block -moz-anonymous-positioned-block -moz-any -moz-any-link -moz-broken -moz-canvas
+-moz-cell-content -moz-drag-over -moz-first-node -moz-focus-inner -moz-focus-outer -moz-focusring
+-moz-full-screen -moz-full-screen-ancestor -moz-handler-blocked -moz-handler-crashed -moz-handler-disabled
+-moz-last-node -moz-list-bullet -moz-list-number -moz-loading -moz-locale-dir -moz-lwtheme
+-moz-lwtheme-brighttext -moz-lwtheme-darktext -moz-native-anonymous -moz-only-whitespace -moz-page
+-moz-page-sequence -moz-pagebreak -moz-pagecontent -moz-placeholder -moz-progress-bar -moz-range-progress
+-moz-range-thumb -moz-range-track -moz-read-only -moz-read-write -moz-scrolled-canvas
+-moz-scrolled-content -moz-scrolled-page-sequence -moz-selection -moz-submit-invalid -moz-suppressed
+-moz-svg-foreign-content -moz-table -moz-table-cell -moz-table-column -moz-table-column-group
+-moz-table-outer -moz-table-row -moz-table-row-group -moz-tree-cell -moz-tree-cell-text -moz-tree-checkbox
+-moz-tree-column -moz-tree-drop-feedback -moz-tree-image -moz-tree-indentation -moz-tree-line
+-moz-tree-progressmeter -moz-tree-row -moz-tree-separator -moz-ui-invalid -moz-ui-valid -moz-user-disabled
+-moz-viewport -moz-viewport-scroll -moz-window-inactive -moz-xul-anonymous-block -ms-browse -ms-check
+-ms-clear -ms-expand -ms-fill -ms-fill-lower -ms-fill-upper -ms-input-placeholder -ms-reveal -ms-thumb
+-ms-ticks-after -ms-ticks-before -ms-tooltip -ms-track -ms-value -webkit-autofill
+-webkit-file-upload-button -webkit-inner-spin-button -webkit-input-placeholder -webkit-meter-bar
+-webkit-meter-even-less-good-value -webkit-meter-inner-element -webkit-meter-optimum-value
+-webkit-meter-suboptimum-value -webkit-outer-spin-button -webkit-progress-bar
+-webkit-progress-inner-element -webkit-progress-value -webkit-search-cancel-button
+-webkit-search-decoration -webkit-search-results-button -webkit-search-results-decoration
+-webkit-slider-runnable-track -webkit-slider-thumb
+:-webkit-animating-full-screen-transition :-webkit-any() :-webkit-any-link :-webkit-autofill
+:-webkit-autofill-strong-password :-webkit-drag :-webkit-full-page-media :-webkit-full-screen
+:-webkit-full-screen-ancestor :-webkit-full-screen-controls-hidden :-webkit-full-screen-document
+active after
+before
+checked
+disabled
+empty enabled
+first-child first-letter first-line first-of-type focus
+hover
+in-range invalid
+lang last-child last-of-type link
+not nth-child nth-last-child nth-last-of-type nth-of-type
+only-child only-of-type optional out-of-range
+read-only read-write required root
+selection
+target
+valid visited
+/C5"Braces, special chars, @ rules"
+(
+)
+*
++
+,
+.
+:
+;
+=
+>
+@charset @import @page
+from
+to
+[
+\
+]
+{
+|
+}
+~
+/C6"Colors"
+** #0 #1 #2 #3 #4 #5 #6 #7 #8 #9 #A0 #A1 #A2 #A3 #A4 #A5 #A6 #A7 #A8 #A9 #AA #AB #AC #AD #AE #AF #B0 #B1
+** #B2 #B3 #B4 #B5 #B6 #B7 #B8 #B9 #BA #BB #BC #BD #BE #BF #C0 #C1 #C2 #C3 #C4 #C5 #C6 #C7 #C8 #C9 #CA #CB
+** #CC #CD #CE #CF #D0 #D1 #D2 #D3 #D4 #D5 #D6 #D7 #D8 #D9 #DA #DB #DC #DD #DE #DF #E0 #E1 #E2 #E3 #E4 #E5
+** #E6 #E7 #E8 #E9 #EA #EB #EC #ED #EE #EF #F0 #F1 #F2 #F3 #F4 #F5 #F6 #F7 #F8 #F9 #FA #FB #FC #FD #FE #FF
+ActiveBorder ActiveCaption AliceBlue AntiqueWhite AppWorkspace aqua Aquamarine Azure
+Beige Bisque black BlanchedAlmond blue BlueViolet Brown BurlyWood ButtonFace ButtonHighlight ButtonShadow
+ButtonText
+CadetBlue CaptionText Chartreuse Chocolate Coral CornflowerBlue Cornsilk Crimson Cyan
+DarkBlue DarkCyan DarkGoldenrod DarkGray DarkGreen DarkKhaki DarkMagenta DarkOliveGreen DarkOrange
+DarkOrchid DarkRed DarkSalmon DarkSeaGreen DarkSlateBlue DarkSlateGray DarkTurquoise DarkViolet DeepPink
+DeepSkyBlue DimGray DodgerBlue
+Firebrick FloralWhite ForestGreen fuchsia
+Gainsboro GhostWhite Gold Goldenrod gray GrayText green GreenYellow
+Highlight HighlightText Honeydew HotPink
+InactiveBorder InactiveCaption InactiveCaptionText IndianRed Indigo InfoBackground InfoText Ivory
+Khaki
+Lavender LavenderBlush LawnGreen LemonChiffon LightBlue LightCoral LightCyan LightGoldenrodYellow
+LightGray LightGreen LightPink LightSalmon LightSeaGreen LightSkyBlue LightSlateGray LightSteelBlue
+LightYellow Lime LimeGreen Linen
+Magenta Maroon MediumAquamarine MediumBlue MediumOrchid MediumPurple MediumSeaGreen MediumSlateBlue
+MediumSpringGreen MediumTurquoise MediumVioletRed MenuText MidnightBlue MintCream MistyRose Moccasin
+NavajoWhite Navy
+OldLace Olive OliveDrab Orange OrangeRed Orchid
+PaleGoldenrod PaleGreen PaleTurquoise PaleVioletRed PapayaWhip PeachPuff Peru Pink Plum PowderBlue Purple
+Red RosyBrown RoyalBlue
+SaddleBrown Salmon SandyBrown Scrollbar SeaGreen SeaShell Sienna Silver SkyBlue SlateBlue SlateGray Snow
+SpringGreen SteelBlue
+Tan Teal Thistle ThreeDDarkShadow ThreeDFace ThreeDHighlight ThreeDLightShadow ThreeDShadow Tomato
+Turquoise
+Violet
+Wheat White WhiteSmoke Window WindowFrame WindowText
+Yellow YellowGreen
+/C7"Negative numbers"
+** -0 -1 -2 -3 -4 -5 -6 -7 -8 -9
+/C8"Media types"
+@-moz-document @document @media @supports
+aural
+braille
+embossed
+handheld
+print projection
+screen speech
+tty tv
+/C9"Transitions"
+matrix matrix3d
+perspective
+rotate rotate3d rotateX rotateY rotateZ
+scale scale3d scaleX scaleY scaleZ skew skewX skewY
+translate translate3d translateX translateY translateZ
+/C10"Important"
+!important
+/C11"Classes"
+** .- .a .b .c .d .e .f .g .h .i .j .k .l .m .n .o .p .q .r .s .t .u .v .w .x .y .z ._
+href href^
+/C12"Identifiers"
+** #

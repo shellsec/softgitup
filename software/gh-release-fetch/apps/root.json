@@ -1,0 +1,42 @@
+{
+  "_说明": {
+    "简介": "本文件供 auto_update.py 读取；除 platforms 内条目外，以下划线开头的键仅作说明，脚本不使用。",
+    "运行": "默认处理当前系统对应平台列表里 enabled 为 true 的项。命令行：python auto_update.py [应用id ...]；可选 --platform windows|darwin|linux 强制读取某平台块。若镜像 HTTPS 证书过期，可加 --insecure，或根级 ssl_verify 设为 false（有中间人风险，证书修复后建议改回）。",
+    "platforms": "windows / darwin / linux 三套列表互不影响；在对应数组里增删应用即可。每条下的「简介」「分类」为可选中文，仅阅读用，脚本不读取。",
+    "每条应用必填": "id、releases_url、repo_path",
+    "常用字段": {
+      "enabled": "true 才会参与批量更新；false 仅配置保留。",
+      "releases_url": "GitHub Releases 页（可用镜像域名加速）。",
+      "repo_path": "owner/repo，用于拼接直连下载地址。",
+      "installer_markers": "在发布页 HTML 里识别安装包链接用的子串（任一条匹配即可）。",
+      "download_names": "直连备用文件名；{ver} 为去掉 v 的版本号（与 save_name 规则一致）。",
+      "download_url_templates": "自定义备用下载地址模板；支持 {ver}（保留 v）与 {ver_plain}（去掉 v）。",
+      "save_name": "保存到本地的文件名模板。",
+      "windows_installer": "为 true 时通常只接受 .exe；配合 installer_extensions 可支持 .msi 等。",
+      "installer_extensions": "如 [\".msi\"]；与 windows_installer 一起限制链接后缀。",
+      "version_tag_as_on_github": "true 时不强行给版本号加 v（适用于 tag 为 2.7.12 这类仓库）。",
+      "url_hint": "页面里「兜底搜索」链接时用的关键词（默认同 id）。",
+      "href_exclude_substrings": "链接里出现任一字串则跳过（用于排除 arm64、便携版、校验文件等）。",
+      "process_name": "安装前要结束的进程名（Windows）；可留空表示不 taskkill。",
+      "kill_before_install": "是否在启动安装包前结束 process_name。",
+      "run_installer": "false 表示只下载到本地，不启动安装程序。",
+      "save_subdir": "相对「有效下载根目录」的子目录（可选）；有效根目录在开启 download_subdir_by_platform 时会先包含平台名子目录。",
+      "简介": "应用简介，仅给人看，脚本不读取。",
+      "分类": "应用分类标签，仅给人看，脚本不读取。"
+    },
+    "多文件布局": "配置在 apps/ 目录：root.json 放全局项；windows/、darwin/、linux/ 下均可按与 windows 相同的文件名（如 01-AI.json）拆成多个 .json 数组。若某平台目录下无分片，则回退读取该平台单文件 darwin.json / linux.json。auto_update.py 按文件名排序合并各平台分片，且同一平台内 id 不可重复。darwin/linux 分片可由 tools/split_darwin_linux_to_dirs.py 从旧单文件生成。",
+    "分类参考": {
+      "说明": "每条应用的「分类」建议与所在分片文件名一致；新增应用时优先归入下表已有类，必要时新建 apps/windows/27-新分类.json（数组），并为本文件内应用写上相同「分类」字符串。",
+      "当前分片": "AI、下载、写作、办公、办公与设计、命令行、备份、多媒体、多媒体与设计、安全、工具、开发、效率、游戏、笔记、系统、终端、网络、网络与协作、网络与通讯、远程与协作、音视频、数据库、云原生、可观测、编辑器、金融与股票、加密货币、局域网文件共享",
+      "建议扩充（尚无独立分片时可先挂在相近类）": "浏览器；压缩与归档；截图与录屏；科学计算与数据；硬件与外围；教育学习；虚拟机（桌面级）",
+      "整理提示": "「网络与协作」「远程与协作」「网络与通讯」边界较接近，后续若觉得乱可合并为「网络与远程」等更少的大类。",
+      "维护脚本": "tools/rebalance_dev_categories.py 曾用于从 12-开发.json 拆出 23～26 分片；已拆过后勿重复执行（会缺 id）。若需再次批量重划分类，应基于当前 JSON 另写脚本或改该脚本内的 MOVES 列表。"
+    },
+    "备份与恢复": "拆分前的完整单文件为仓库根目录 apps.json.monolith.bak。若需恢复单文件模式：删除整个 apps/ 目录（或至少删除 apps/root.json），将 apps.json.monolith.bak 改名为 apps.json。重新拆分可运行：python tools/split_apps_to_apps_dir.py（需先准备好根目录 apps.json）。",
+    "重置 enabled": "将所有应用 JSON 里的 enabled 写回 false（改磁盘）：在项目根执行 python tools/reset_enabled_json.py；加 --dry-run 可只预览数量不写文件。独立清单包执行 python tools/reset_enabled_json.py --apps-dir VibeCodingToolsDown（快照默认在该包 tools/ 下）；也可用 VibeCodingToolsDown/tools/reset_enabled_json.bat。",
+    "download_subdir_by_platform": "根级若为 true，下载保存路径为 download_dir/<windows|darwin|linux>/...，便于区分系统类型；日志与「开始下载」也会标注平台名。"
+  },
+  "download_dir": ".",
+  "download_subdir_by_platform": true,
+  "ssl_verify": false
+}

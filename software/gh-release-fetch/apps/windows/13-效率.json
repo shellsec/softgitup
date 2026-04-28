@@ -1,0 +1,273 @@
+[
+  {
+    "id": "flowlauncher",
+    "简介": "Alt+Space 类启动器，可搜应用与插件",
+    "分类": "效率",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/Flow-Launcher/Flow.Launcher/releases",
+    "repo_path": "Flow-Launcher/Flow.Launcher",
+    "installer_markers": [
+      "Flow-Launcher-Setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "Portable",
+      ".nupkg",
+      "RELEASES"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Flow-Launcher-Setup.exe"
+    ],
+    "save_name": "Flow-Launcher-Setup.exe",
+    "process_name": "Flow.Launcher.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "sharex",
+    "简介": "截图、录屏、OCR、上传分享",
+    "分类": "效率",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/ShareX/ShareX/releases",
+    "repo_path": "ShareX/ShareX",
+    "installer_markers": [
+      "ShareX-",
+      "-setup.exe"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "ShareX-{ver}-setup.exe"
+    ],
+    "save_name": "ShareX-{ver}-setup.exe",
+    "process_name": "ShareX.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "picgo",
+    "简介": "图床上传工具",
+    "分类": "效率",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/Molunerfinn/PicGo/releases",
+    "repo_path": "Molunerfinn/PicGo",
+    "installer_markers": [
+      "PicGo-",
+      "-x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "ia32",
+      "blockmap"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "PicGo-{ver}-x64.exe"
+    ],
+    "save_name": "PicGo-{ver}-x64.exe",
+    "process_name": "PicGo.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "rambox",
+    "简介": "多网页应用聚合（社区版）",
+    "分类": "效率",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/ramboxapp/community-edition/releases",
+    "repo_path": "ramboxapp/community-edition",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "Rambox-",
+      "win-x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "ia32",
+      "blockmap",
+      ".zip"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Rambox-{ver}-win-x64.exe"
+    ],
+    "save_name": "Rambox-{ver}-win-x64.exe",
+    "process_name": "Rambox.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "stretchly",
+    "简介": "番茄钟与休息提醒",
+    "分类": "效率",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/hovancik/stretchly/releases",
+    "repo_path": "hovancik/stretchly",
+    "installer_markers": [
+      "Stretchly-Setup-",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "Portable",
+      "blockmap"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Stretchly-Setup-{ver}.exe"
+    ],
+    "save_name": "Stretchly-Setup-{ver}.exe",
+    "process_name": "Stretchly.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "greenshot",
+    "简介": "截图与标注",
+    "分类": "效率",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/greenshot/greenshot/releases",
+    "repo_path": "greenshot/greenshot",
+    "installer_markers": [
+      "Greenshot-INSTALLER-",
+      "RELEASE.exe"
+    ],
+    "href_exclude_substrings": [
+      "PORTABLE",
+      "DEBUG"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Greenshot-INSTALLER-{ver}-RELEASE.exe"
+    ],
+    "save_name": "Greenshot-INSTALLER-{ver}-RELEASE.exe",
+    "process_name": "Greenshot.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "wox",
+    "简介": "应用启动器（安装包名无版本号）",
+    "分类": "效率",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/Wox-launcher/Wox/releases",
+    "repo_path": "Wox-launcher/Wox",
+    "installer_markers": [
+      "wox-windows-amd64.exe"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "wox-windows-amd64.exe"
+    ],
+    "save_name": "wox-windows-amd64.exe",
+    "process_name": "Wox.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "espanso",
+    "简介": "文本扩展/片段工具（安装包名无版本号）",
+    "分类": "效率",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/espanso/espanso/releases",
+    "repo_path": "espanso/espanso",
+    "installer_markers": [
+      "Espanso-Win-Installer-x86_64.exe"
+    ],
+    "href_exclude_substrings": [
+      "Portable"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Espanso-Win-Installer-x86_64.exe"
+    ],
+    "save_name": "Espanso-Win-Installer-x86_64.exe",
+    "process_name": "espanso.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "vhs",
+    "简介": "VHS（终端录屏生成 GIF/视频，charmbracelet）",
+    "分类": "效率",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/charmbracelet/vhs/releases",
+    "repo_path": "charmbracelet/vhs",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "vhs_",
+      "Windows_x86_64.zip"
+    ],
+    "href_exclude_substrings": [
+      "i386",
+      "Darwin",
+      "Linux",
+      ".sbom"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "vhs_{ver}_Windows_x86_64.zip"
+    ],
+    "save_name": "vhs_{ver}_Windows_x86_64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "copyq",
+    "简介": "CopyQ（剪贴板历史与管理）",
+    "分类": "效率",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/hluk/CopyQ/releases",
+    "repo_path": "hluk/CopyQ",
+    "prefer_api_assets": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "copyq-",
+      "-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "macos",
+      ".zip",
+      "checksum",
+      "cosign",
+      "tar.gz"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "copyq-{ver}-setup.exe"
+    ],
+    "save_name": "copyq-{ver}-setup.exe",
+    "process_name": "copyq.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "flow_launcher",
+    "简介": "Flow Launcher（Windows 启动器 / 全局搜索与插件）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "releases_url": "https://bgithub.xyz/Flow-Launcher/Flow.Launcher/releases",
+    "repo_path": "Flow-Launcher/Flow.Launcher",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Flow-Launcher-Setup.exe"
+    ],
+    "href_exclude_substrings": [
+      ".blockmap",
+      "portable",
+      "zip",
+      "arm64"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Flow-Launcher-Setup.exe"
+    ],
+    "save_name": "Flow-Launcher-Setup.exe",
+    "process_name": "Flow.Launcher.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  }
+]

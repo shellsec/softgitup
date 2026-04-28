@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="clipboard-write=(self)">
+    <title>Pieces for UltraEdit</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: sans-serif;
+        }
+
+        iframe {
+            border: none;
+            width: 100%;
+            height: 100%;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="status" style="text-align: center; display: none; margin: 20pt;">
+            <img id="logo" style="width: 300px" src="./light-pieces-logo.png"><br><br><br>
+            <h3 id="message">Pieces for Developers is not installed</h3>
+            <a id="linkDownload" target="_blank" href="https://docs.pieces.app/installation-getting-started/windows">Download Pieces</a>
+    </div>
+    <div width="100%" id="update" style="display: none; margin-right: 20px;">
+    	<table width="100%" align="center" style="margin: 10px; border: 1px solid white; border-radius: 10px;">
+    		<tr>
+    		  <td width="40px;" rowspan="2" style="padding: 10px;"><!--<img id="icon" style="width: 40px" src="./pieces_os.png">--></td>
+    		  <td style="text-align: left; padding: 5px;"><b>Pieces OS needs an update!</b></td>
+    	  </tr>
+    	  <tr>
+    	  	<td style="text-align: left; padding: 5px;">Locate and click on the Pieces icon in your system tray to install it.</td>
+    	  </tr>
+    	</table>
+    </div>
+    <div id="error" style="text-align: center; display: none; margin: 5pt" allow="clipboard-write"></div>
+    <iframe id="pieces"></iframe>
+    <script>
+        const PIECES_MIN_PORT = 39300;
+        const PIECES_MAX_PORT = 39333;
+
+        const PIECES_ERROR_NONE = 0;
+        const PIECES_ERROR_INSTALL = 1;
+        const PIECES_ERROR_PORT = 2;
+        const PIECES_ERROR_VERSION = 3;
+        const PIECES_ERROR_CONNECT = 4;
+        const PIECES_ERROR_GETURL = 5;
+        const PIECES_ERROR_UPDATE = 6;
+
+        let debugMode = false;
+
+        var g_ultraedit_last_error_state = PIECES_ERROR_NONE;
+        var g_ultraedit_pieces_connect_port = 39300;
+
+        const errtag = document.getElementById("error");
+        const pcsfrm = document.getElementById("pieces");
+
+        const observer = new MutationObserver((mutationsList) => {
+            mutationsList.forEach((mutation) => {
+                if (mutation.type === "characterData" || mutation.type === "childList") {
+                    if (errtag.innerText.trim() !== "") {
+                        errtag.style.display = "block";
+                        pcsfrm.style.display = "none";
+                    } else {
+                        errtag.style.display = "none";
+                        pcsfrm.style.display = "block";
+                    }
+                }
+            });
+        });
+
+        observer.observe(errtag, {
+            childList: true,
+            subtree: true,
+            characterData: true
+        });
+
+        function setErrorState(state) {
+            g_ultraedit_last_error_state = state;
+        }
+
+        function piecesAskCopilot(query_, selection_, extension_, filepath_) {
+            const message = {
+                type: "askCopilot",
+                destination: "webview",
+                data: {
+                    query: query_,
+                    relevant: {
+                        text: selection_,
+                        extension: extension_,
+                        filePath: filepath_
+                    }
+                }
+            };
+            const iframe = document.getElementById('pieces');
+            iframe ?.contentWindow ?.postMessage(message, "*");
+        }
+
+        function getCopilotState() {
+
+        }
+
+        function argbToRgb(argb) {
+            // Extract the red, green, and blue components from the ARGB value
+            let r = (argb >> 16) & 0xFF;
+            let g = (argb >> 8) & 0xFF;
+            let b = argb & 0xFF;
+
+            // Format the RGB value as a string
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+
+        function getTheme() {
+            return UltraEdit.theme;
+        }
+
+        function handleExtensionMessage(event) {
+            switch (event.data.type) {
+                case "loaded":
+                    event.data.data = UltraEdit.piecesLoaded;
+                    break;
+                case "setTheme":
+                    event.data.data = UltraEdit.piecesLoaded;
+                    break;
+                case "insertAtCursor":
+                    UltraEdit.activeDocument.write(event.data.data.toString());
+                    break;
+                case "copyToClipboard":
+                    navigator.clipboard.writeText(event.data.data.toString());
+                    break;
+                case "pasteFromClipboard":
+                    event.data.data = navigator.clipboard.readText();
+                    break;
+                case "displayNotification":
+                    //document.getElementById("error").innerText = event.data.data;
+                    break;
+            }
+        }
+
+        async function isPiecesInstalled() {
+            let piecesSuitePath = UltraEdit.readRegistryValue("HKEY_LOCAL_MACHINE", "SOFTWARE\\Classes\\Local Settings\\Software\\Microsoft\\Windows\\CurrentVersion\\AppModel\\PackageRepository\\Packages\\com.MeshIntelligentTechnologi.PiecesSuite_1.2.0.0_x64__84gz00a5z79wr", "Path");
+            if (piecesSuitePath === "") {
+                throw "not installed";
+            }
+        }
+
+        async function getPiecesPort() {
+            g_ultraedit_pieces_connect_port = UltraEdit.readTextFile("%USERPROFILE%\\Documents\\com.pieces.os\\production\\Config\\.port.txt");
+            if (g_ultraedit_pieces_connect_port > 39333 || g_ultraedit_pieces_connect_port < 39300) {
+                throw "invalid port";
+            }
+        }
+
+        async function connectToPiecesOS(port) {
+            const endpoint = `http://localhost:${port}/connect`;
+            seededApplication = {
+                application: {
+                    name: 'ULTRA_EDIT',
+                    version: '1.0.0',
+                    platform: 'WINDOWS'
+                },
+            };
+            const platform = navigator.userAgent || navigator.platform || "";
+            if (platform.includes("Mac")) {
+                seededApplication.application.platform = 'MACOS';
+                port = 5323;
+            } else if (platform.includes("Linux")) {
+                seededApplication.application.platform = 'LINUX';
+                port = 5323;
+            }
+            try {
+                const response = await fetch(endpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(seededApplication),
+                });
+
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    throw new Error(`status: ${response.status}: ${errorText}`);
+                }
+                return await response.json();
+            } catch (error) {
+                throw error;
+            }
+        }
+
+        async function getCopilotURLFromPiecesOS(port, application) {
+            const endpoint = `http://localhost:${port}/os/applet/launch`;
+            const data = {
+                type: 'COPILOT',
+                parent: application,
+            };
+
+            try {
+                const response = await fetch(endpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                });
+
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    throw new Error(`status: ${response.status}: ${errorText}`);
+                }
+
+                return await response.json();
+            } catch (error) {
+                throw error;
+            }
+        }
+
+        async function checkForUpdates(port) {
+        	const endpoint = `http://localhost:${port}/os/update/check`;
+            try {
+                const response = await fetch(endpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: "{}"
+                });
+
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    throw new Error(`status: ${response.status}: ${errorText}`);
+                }
+
+                return await response.json();
+            } catch (error) {
+                throw error;
+            }
+        }
+        
+        async function LoadCopilot() {
+            try {
+                setErrorState(PIECES_ERROR_INSTALL);
+                await isPiecesInstalled();
+
+                setErrorState(PIECES_ERROR_PORT);
+                await getPiecesPort();
+                if (g_ultraedit_pieces_connect_port < PIECES_MIN_PORT || g_ultraedit_pieces_connect_port > PIECES_MAX_PORT) {
+                    throw "invalid port";
+                }
+
+                setErrorState(PIECES_ERROR_VERSION);
+                const version = await fetch(`http://localhost:${g_ultraedit_pieces_connect_port}/.well-known/version`)
+                    .then((res) => res.text())
+                    .catch(() => null);
+
+                setErrorState(PIECES_ERROR_CONNECT);
+                const context = await connectToPiecesOS(g_ultraedit_pieces_connect_port);
+
+                setErrorState(PIECES_ERROR_UPDATE);
+                const updateCheck = await checkForUpdates(g_ultraedit_pieces_connect_port);
+                if(updateCheck.status == "AVAILABLE") {
+                	document.getElementById("update").style.display = "block";
+                }
+                        
+                setErrorState(PIECES_ERROR_GETURL);
+                const copilotPort = await getCopilotURLFromPiecesOS(g_ultraedit_pieces_connect_port, context.application);
+
+                const launchedPort = copilotPort.port;
+                const fullCopilotURL = new URL(`http://localhost:${launchedPort}`);
+                //fullCopilotURL.searchParams.append('application', JSON.stringify(context));
+                //fullCopilotURL.searchParams.append('state', getCopilotState());
+                const theme = getTheme();
+                fullCopilotURL.searchParams.append('theme', theme);
+                const coCap = {
+                    insertAtCursor: 0b0000_0001, // 1
+                    askCopilot: 0b0000_0010, // 2
+                    acceptChanges: 0b0000_0100, // 4
+                    displayNotification: 0b0000_1000, // 8
+                    persistState: 0b0001_0000, // 16
+                    previewAsset: 0b0010_0000, // 32
+                    openSettings: 0b0100_0000, // 64
+                    searchAssets: 0b1000_0000, // 128
+                    launchPos: 0b0000_0001 << 8, // 256
+                    installPos: 0b0000_0010 << 8, // 512
+                    corsProxy: 0b0000_0100 << 8, // 1024
+                    setTheme: 0b0000_1000 << 8, // 2048
+                    addToContext: 0b0001_0000 << 8, // 4092
+                    copyToClipboard: 0b0010_0000 << 8, // 8192
+                    loaded: 0b0100_0000 << 8, // 16384
+                    pasteFromClipboard: 0b1000_0000 << 8  // 32768
+                };
+
+                fullCopilotURL.searchParams.append(
+                    'capabilities', (coCap.insertAtCursor | coCap.askCopilot | coCap.setTheme
+                        | coCap.copyToClipboard | coCap.loaded | coCap.pasteFromClipboard
+                        | coCap.displayNotification).toString());
+
+                let iframe = document.getElementById("pieces");
+
+                window.addEventListener("message", (event) => {
+                    if (event.data.destination == "webview")
+                        return;
+                    handleExtensionMessage(event);
+                });
+
+                iframe.addEventListener("load", () => {
+                    UltraEdit.piecesLoaded = true;
+                    document.documentElement.style.overflow = "hidden";
+                    setErrorState(PIECES_ERROR_NONE);
+                });
+
+                iframe.src = fullCopilotURL;
+            } catch (error) {
+                const iframe = document.getElementById("pieces");
+                const iframeDocument = iframe.contentWindow.document;
+                iframeDocument.body.innerHTML = "";
+                document.getElementById("linkDownload").style.display = "none";
+                switch (g_ultraedit_last_error_state) {
+                    case PIECES_ERROR_INSTALL:
+                        document.getElementById("status").style.display = "block";
+                        document.getElementById("error").innerText = "";
+                        document.getElementById("linkDownload").style.display = "block";
+                        break;
+                    case PIECES_ERROR_PORT:
+                        document.getElementById("status").style.display = "block";
+                        document.getElementById("error").innerText = "";
+                        document.getElementById("message").innerHTML = "Pieces isn't running. <br><br>Type \"Pieces OS\" in the Windows Taskbar Search field and press the Enter key.";
+                        document.getElementById("error").innerText = "Error: Unable to determine Pieces connection port"
+                        break;
+                    case PIECES_ERROR_VERSION:
+                        document.getElementById("status").style.display = "block";
+                        document.getElementById("error").innerText = "";
+                        document.getElementById("message").innerHTML = "Pieces isn't running. <br><br>Type \"Pieces OS\" in the Windows Taskbar Search field and press the Enter key.";
+                        document.getElementById("error").innerText = "Error: Unable to determine Pieces version"
+                        break;
+                    case PIECES_ERROR_CONNECT:
+                        document.getElementById("status").style.display = "block";
+                        document.getElementById("error").innerText = "";
+                        document.getElementById("message").innerHTML = "Pieces isn't running. <br><br>Type \"Pieces OS\" in the Windows Taskbar Search field and press the Enter key.";
+                        document.getElementById("error").innerText = "Error: Unable to connect to Pieces"
+                        break;
+                    case PIECES_ERROR_GETURL:
+                        document.getElementById("status").style.display = "block";
+                        document.getElementById("error").innerText = "";
+                        document.getElementById("message").innerHTML = "Pieces isn't running. <br><br>Type \"Pieces OS\" in the Windows Taskbar Search field and press the Enter key.";
+                        document.getElementById("error").innerText = "Error: Unable to determine Pieces copilot port"
+                        break;
+                    case PIECES_ERROR_UPDATE:
+                        document.getElementById("status").style.display = "block";
+                        document.getElementById("error").innerText = "";
+                        document.getElementById("message").innerHTML = "Unable to check for updates";
+                        document.getElementById("error").innerText = error;
+                    default:
+                        document.getElementById("error").innerText = error;
+                        break;
+                }
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const theme = JSON.parse(getTheme());
+            let backgroundColor = argbToRgb(theme.scaffoldBackgroundColor);
+            let foregroundColor = argbToRgb(theme.primary);
+            document.body.style.backgroundColor = backgroundColor;
+            document.body.style.color = foregroundColor;
+
+            let darkMode = theme.darkMode;
+            let logo = document.getElementById("logo");
+            if (darkMode == true) {
+                logo.src = "./light-pieces-logo.png"
+            }
+            else {
+                logo.src = "./dark-pieces-logo.png"
+            }
+
+            let linkDownload = document.getElementById("linkDownload");
+            linkDownload.style.color = foregroundColor;
+
+            let iframe = document.getElementById("pieces");
+            const iframeDocument = iframe.contentWindow.document;
+            iframeDocument.body.style.backgroundColor = backgroundColor;
+            iframeDocument.body.style.color = foregroundColor;
+            iframeDocument.body.style.display = "flex";
+            iframeDocument.body.style.justifyContent = "left";
+            iframeDocument.body.style.alignItems = "left";
+            iframeDocument.body.style.height = "100%";
+            iframeDocument.body.style.margin = "0";
+            iframeDocument.body.innerHTML = "<p style='margin: 5pt'>Loading Pieces...</p>";
+            LoadCopilot();
+        });
+        
+        
+        ///////////////////////////////////////////////////////////
+        // Utility functions
+        ///////////////////////////////////////////////////////////
+        
+        //Convert ARGB from application theme to RGB usable by HTML and JavaScript
+        function uewv_argbToRgb(argb) {
+            let r = (argb >> 16) & 0xFF;
+            let g = (argb >> 8) & 0xFF;
+            let b = argb & 0xFF;
+
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+        
+        //Setup foreground/background colors from current UltraEdit theme
+        function uewv_setTheme() {
+        	  location.reload();
+        }
+        
+        
+        ///////////////////////////////////////////////////////////
+        // Plugin events
+        ///////////////////////////////////////////////////////////
+        
+        //Called when a document is opened in UltraEdit
+        document.addEventListener("uewve_documentAdd", (event) => {
+        });
+
+        //Called when a document is closed in UltraEdit
+        document.addEventListener("uewve_documentRemove", (event) => {
+        });
+        
+        //Called when the active theme is changed in UltraEdit
+        document.addEventListener("uewve_themeChange", (event) => {
+            uewv_setTheme();
+        });
+        
+        //Called when all plugin initialization is complete
+        document.addEventListener("uewve_apiInitialized", (event) => {
+        });
+        
+    </script>
+</body>
+</html>

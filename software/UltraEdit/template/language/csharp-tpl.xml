@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<Templates encode="utf8escenc"><Template Name="bool">bool [+var+] = [+false+];</Template><Template Name="byte">byte [+x+] = [+0+];</Template><Template Name="char">char [+var+] = '[+string+]';</Template><Template Name="checked">checked ([+expression+])</Template><Template Name="class">class [+name+]
+{
+	^
+}</Template><Template Name="decimal">decimal [+var+] = [+int+]m;</Template><Template Name="delegate">delegate [+void+] [+name+]([+params+]);</Template><Template Name="do">do 
+{
+	^ 
+} while ([+evaluation+]) </Template><Template Name="double">double [+var+] = [+int+];</Template><Template Name="else">else
+	^</Template><Template Name="elseif">else 
+	if ([+evaluation+])
+		^</Template><Template Name="enum">enum [+identifier+] {[+list+]};</Template><Template Name="event">event [+delegate+] [+name+]</Template><Template Name="fixed">fixed ([+type+]* [+pointer+] = [+exp+]) {
+	^
+}</Template><Template Name="float">float [+var+] = [+number+];</Template><Template Name="for">for (int [+n+]=[+X+]; [+n+]&lt;=[+Y+]; [+n+]++)
+{
+	^ 
+}</Template><Template Name="foreach">foreach ([+type+] [+var+] in [+col+])
+{
+	^
+} </Template><Template Name="function">[+visibility+] [+return type+] [+name+] ([+parameters+])
+{
+	^ // statements
+}</Template><Template Name="if">if ([+evaluation+]) 
+	^</Template><Template Name="int">int [+var+] = [+int+];</Template><Template Name="interface">interface [+name+]
+{
+	^
+}</Template><Template Name="lock">lock ([+this+])
+{
+	^
+}</Template><Template Name="long">long [+var+] = [+int+];</Template><Template Name="namespace">namespace [+name+]
+{
+	^
+}</Template><Template Name="new">new [+objName+] ([+params+]);</Template><Template Name="object">object [+name+];</Template><Template Name="operator">operator [+oper+]([+opType+] [+operand+])
+{
+	^
+}</Template><Template Name="return">return [+expression+];</Template><Template Name="sbyte">sbyte [+var+] = [+int+];</Template><Template Name="sealed">sealed class [+name+]
+{
+	^
+}</Template><Template Name="short">short [+var+] = [+int+];</Template><Template Name="sizeof">sizeof([+type+])</Template><Template Name="stackalloc">stackalloc [+type+][[+expression+]]</Template><Template Name="static">static [+type+] [+name+]()
+{
+	^
+}</Template><Template Name="string">string [+var+] = "[+string+]";</Template><Template Name="struct">struct [+identifier+]
+{
+	^
+}</Template><Template Name="switch">switch ([+expression+])
+{
+	case [+value+]:
+		^ 
+	break;
+	default:
+		
+}</Template><Template Name="throw">throw [+expression+];</Template><Template Name="try">try
+{
+	^ // code to try
+}
+catch [+err+]
+{
+	// error handling
+}</Template><Template Name="typeof">typeof([+type+])</Template><Template Name="uint">uint [+var+] = [+int+];</Template><Template Name="ulong">ulong [+var+] = [+int+];</Template><Template Name="unchecked">unchecked ([+expression+])</Template><Template Name="unsafe">unsafe [+static+] [+void+] [+name+]([+params+]
+{
+	^
+}</Template><Template Name="ushort">ushort [+var+] = [+int+];</Template><Template Name="void">void [+name+]();</Template><Template Name="while">while ([+evaluation+]) 
+{
+	^
+}</Template></Templates>

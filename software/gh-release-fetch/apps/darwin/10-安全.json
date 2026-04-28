@@ -1,0 +1,144 @@
+[
+  {
+    "id": "cryptomator",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/cryptomator/cryptomator/releases",
+    "repo_path": "cryptomator/cryptomator"
+  },
+  {
+    "id": "bitwarden_desktop",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/bitwarden/clients/releases",
+    "repo_path": "bitwarden/clients"
+  },
+  {
+    "id": "duplicati",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/duplicati/duplicati/releases",
+    "repo_path": "duplicati/duplicati"
+  },
+  {
+    "id": "keepassxc",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/keepassxreboot/keepassxc/releases",
+    "repo_path": "keepassxreboot/keepassxc"
+  },
+  {
+    "id": "age_cli",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/FiloSottile/age/releases",
+    "repo_path": "FiloSottile/age"
+  },
+  {
+    "id": "sops",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/getsops/sops/releases",
+    "repo_path": "getsops/sops"
+  },
+  {
+    "id": "trufflehog",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/trufflesecurity/trufflehog/releases",
+    "repo_path": "trufflesecurity/trufflehog"
+  },
+  {
+    "id": "gitleaks",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/gitleaks/gitleaks/releases",
+    "repo_path": "gitleaks/gitleaks"
+  },
+  {
+    "id": "vscanplus",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/youki992/VscanPlus/releases",
+    "repo_path": "youki992/VscanPlus"
+  },
+  {
+    "id": "opensca_cli",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/XmirrorSecurity/OpenSCA-cli/releases",
+    "repo_path": "XmirrorSecurity/OpenSCA-cli"
+  },
+  {
+    "id": "mitmproxy",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/mitmproxy/mitmproxy/releases",
+    "repo_path": "mitmproxy/mitmproxy"
+  },
+  {
+    "id": "subfinder",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/projectdiscovery/subfinder/releases",
+    "repo_path": "projectdiscovery/subfinder"
+  },
+  {
+    "id": "naabu",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/projectdiscovery/naabu/releases",
+    "repo_path": "projectdiscovery/naabu"
+  },
+  {
+    "id": "katana",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/projectdiscovery/katana/releases",
+    "repo_path": "projectdiscovery/katana"
+  },
+  {
+    "id": "dnsx",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/projectdiscovery/dnsx/releases",
+    "repo_path": "projectdiscovery/dnsx"
+  },
+  {
+    "id": "uncover",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/projectdiscovery/uncover/releases",
+    "repo_path": "projectdiscovery/uncover"
+  },
+  {
+    "id": "zen_desktop",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/ZenPrivacy/zen-desktop/releases",
+    "repo_path": "ZenPrivacy/zen-desktop",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Zen-amd64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "Zen-amd64.dmg"
+    ],
+    "save_name": "Zen-amd64.dmg",
+    "windows_installer": false,
+    "run_installer": false,
+    "kill_before_install": false,
+    "process_name": ""
+  },
+  {
+    "id": "zen_desktop_arm64",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/ZenPrivacy/zen-desktop/releases",
+    "repo_path": "ZenPrivacy/zen-desktop",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Zen-arm64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "Zen-arm64.dmg"
+    ],
+    "save_name": "Zen-arm64.dmg",
+    "windows_installer": false,
+    "run_installer": false,
+    "kill_before_install": false,
+    "process_name": ""
+  }
+]

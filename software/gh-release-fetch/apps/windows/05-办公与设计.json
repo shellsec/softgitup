@@ -1,0 +1,87 @@
+[
+  {
+    "id": "drawio",
+    "简介": "流程图 / 架构图桌面版（draw.io）",
+    "分类": "办公与设计",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/jgraph/drawio-desktop/releases",
+    "repo_path": "jgraph/drawio-desktop",
+    "url_hint": "draw.io",
+    "installer_markers": [
+      "draw.io-",
+      "-windows-installer.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "ia32",
+      "32bit",
+      ".blockmap"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "draw.io-{ver}-windows-installer.exe"
+    ],
+    "save_name": "draw.io-{ver}-windows-installer.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "rnote",
+    "简介": "rnote（手写笔记 / PDF 标注，矢量）",
+    "分类": "办公与设计",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/flxzt/rnote/releases",
+    "repo_path": "flxzt/rnote",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "rnote-win-installer-",
+      "x86_64.exe"
+    ],
+    "href_exclude_substrings": [
+      "tar.xz",
+      "sha256"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "rnote-win-installer-{ver}-x86_64.exe"
+    ],
+    "save_name": "rnote-win-installer-{ver}-x86_64.exe",
+    "process_name": "rnote.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "stirling_pdf",
+    "简介": "Stirling-PDF（本地 PDF 合并/拆分/旋转/压缩等工具箱）",
+    "分类": "办公与设计",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/stirling-tools/Stirling-PDF/releases",
+    "repo_path": "stirling-tools/Stirling-PDF",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Stirling-PDF-windows-x86_64.msi"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "macos",
+      ".jar",
+      "darwin"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "Stirling-PDF-windows-x86_64.msi"
+    ],
+    "save_name": "Stirling-PDF-windows-x86_64.msi",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  }
+]

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?b8156c21d89ad4e424ac1702bf9ab210";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+      </script>
+      
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4H7HGM1RN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-X4H7HGM1RN');
+        </script> 
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI导航 - 发现AI世界的无限可能</title>
+    <script type="module" crossorigin src="/assets/index-8FKxqe_-.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vue-DCpmObLJ.js">
+    <link rel="modulepreload" crossorigin href="/assets/vueuse-abhvlPkl.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-B8tIcEn2.css">
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html> 

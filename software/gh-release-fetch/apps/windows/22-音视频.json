@@ -1,0 +1,79 @@
+[
+  {
+    "id": "losslesscut",
+    "简介": "LosslessCut（无损裁剪/合并视频音频，Windows 便携版）",
+    "分类": "音视频",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/mifi/lossless-cut/releases",
+    "repo_path": "mifi/lossless-cut",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "LosslessCut-win-x64.7z"
+    ],
+    "installer_extensions": [
+      ".7z"
+    ],
+    "save_name": "LosslessCut-win-x64.7z",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "vidcutter",
+    "简介": "VidCutter（基于 mpv 的视频剪切/合并）",
+    "分类": "音视频",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/ozmartian/vidcutter/releases",
+    "repo_path": "ozmartian/vidcutter",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "VidCutter-",
+      "setup-win64.exe"
+    ],
+    "href_exclude_substrings": [
+      "macOS",
+      "AppImage"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "VidCutter-{ver}-setup-win64.exe"
+    ],
+    "save_name": "VidCutter-{ver}-setup-win64.exe",
+    "process_name": "vidcutter.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "syncplay",
+    "简介": "Syncplay（异地同步播放本地视频，连麦追剧）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Syncplay/syncplay/releases",
+    "repo_path": "Syncplay/syncplay",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Syncplay-",
+      "-Setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "Portable",
+      "deb",
+      "dmg",
+      "server",
+      "zip"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Syncplay-{ver}-Setup.exe"
+    ],
+    "save_name": "Syncplay-{ver}-Setup.exe",
+    "process_name": "syncplay.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  }
+]

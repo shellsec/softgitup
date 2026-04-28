@@ -1,0 +1,63 @@
+{
+	"name": "ndd-plugin-list",
+	"version": "1.0.0",
+	"arch": "x64",
+	"ndd-plugins": [
+		{
+			"display-name": "jstoolndd",
+			"version": "1.0.0",
+			"download": "https://gitee.com/ndd-community/ndd-jstool/releases/download/v2.14/jstoolndd.dll",
+			"author": "psh",
+			"homepage": "https://gitee.com/ndd-community/ndd-jstool",
+            "description": "js文件的格式化、最小化功能。移植来自：https://www.sunjw.us/jstool"
+		},
+        {
+			"display-name": "jsonviewer",
+			"version": "1.0.0",
+			"download": "https://gitee.com/ndd-community/ndd-json-viewer/releases/download/v2.14/ndd-json-viewer.dll",
+			"author": "Zh1an",
+			"homepage": "https://gitee.com/LanZhao/ndd-json-viewer",
+            "description": "json文件格式化、最小化、错误检查等。代码完全开源，欢迎大家补充完善! 原始项目作者：https://gitee.com/LanZhao"
+		},
+		{
+			"display-name": "xmltools",
+			"version": "1.0.0",
+			"download": "https://gitee.com/ndd-community/ndd-xmltool/releases/download/v2.14/xmltoolndd.dll",
+			"author": "psh",
+			"homepage": "https://gitee.com/ndd-community/ndd-xmltool",
+             "description": "xml formatting, compression, and other functions"
+		},
+        {
+			"display-name": "108tools",
+			"version": "1.0.0",
+			"download": "https://gitee.com/ndd-community/ndd-108tools/releases/download/v2.14/ndd108tool.dll",
+			"author": "psh",
+			"homepage": "https://gitee.com/ndd-community/ndd-108tools",
+             "description": "提供108种小工具或功能，代码完全开源，欢迎大家补充完善!"
+		},
+         {
+			"display-name": "filesearch",
+			"version": "1.0.0",
+			"download": "https://gitee.com/ndd-community/filesearch/releases/download/v2.14/filesearch.dll",
+			"author": "psh",
+			"homepage": "https://gitee.com/ndd-community/filesearch",
+             "description": "提供灵活的文件查找功能，代码完全开源，欢迎大家补充完善!"
+		},
+         {
+			"display-name": "exporter",
+			"version": "1.0.0",
+			"download": "https://gitee.com/ndd-community/ndd-exporter/releases/download/V1.0/NddExport.dll",
+			"author": "Albrecht",
+			"homepage": "https://gitee.com/ndd-community/ndd-exporter",
+             "description": "页面导出PDF/HTML/RTF等格式，代码完全开源，欢迎大家补充完善! 原始项目作者：https://gitee.com/AlbrechtR"
+		},
+        {
+			"display-name": "ndd-terminal",
+			"version": "1.0.0",
+			"download": "https://gitee.com/ndd-community/ndd-terminal-plugin/releases/tag/v2.14",
+			"author": "CrazyGeeker",
+			"homepage": "https://gitee.com/ndd-community/ndd-terminal-plugin",
+             "description": "在ndd中提供集成终端，代码完全开源，欢迎大家补充完善! 原始项目作者：https://gitee.com/crazy-geeker"
+		}
+	]
+}

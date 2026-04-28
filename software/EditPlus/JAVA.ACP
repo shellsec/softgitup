@@ -1,0 +1,53 @@
+#TITLE=Java
+; EditPlus Auto-completion file v1.0 written by ES-Computing.
+; This file is provided as a default auto-completion file for Java.
+
+#CASE=y
+#BRACKET1={}
+#BRACKET2=""
+#BRACKET3=''
+
+#T=if
+if (^!)
+{
+}
+#T=while
+while (^!)
+{
+}
+#T=for
+for (^!; ; )
+{
+}
+#T=switch
+switch (^!)
+{
+case :
+
+}
+#T=do
+do
+{
+}
+while (^!);
+#T=class
+class ^!
+{
+}
+#T=try
+try
+{
+	^!
+}
+catch ()
+{
+}
+#T=interface
+interface ^!
+{
+}
+#T=namespace
+namespace ^!
+{
+}
+#

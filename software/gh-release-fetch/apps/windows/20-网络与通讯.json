@@ -1,0 +1,134 @@
+[
+  {
+    "id": "telegram",
+    "简介": "Telegram 桌面客户端",
+    "分类": "网络与通讯",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/telegramdesktop/tdesktop/releases",
+    "repo_path": "telegramdesktop/tdesktop",
+    "installer_markers": [
+      "tsetup-x64",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "portable",
+      "osx"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "tsetup-x64.{ver}.exe"
+    ],
+    "save_name": "tsetup-x64.{ver}.exe",
+    "process_name": "Telegram.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "url_hint": "tsetup"
+  },
+  {
+    "id": "signal_desktop",
+    "简介": "Signal 端到端加密通讯",
+    "分类": "网络与通讯",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/signalapp/Signal-Desktop/releases",
+    "repo_path": "signalapp/Signal-Desktop",
+    "installer_markers": [
+      "Signal-win-",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "mac",
+      "linux"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Signal-win-{ver}.exe"
+    ],
+    "save_name": "Signal-win-{ver}.exe",
+    "process_name": "Signal.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "thunderbird",
+    "简介": "Mozilla Thunderbird 邮件客户端",
+    "分类": "网络与通讯",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/thunderbird/thunderbird/releases",
+    "repo_path": "thunderbird/thunderbird",
+    "installer_markers": [
+      "Thunderbird Setup",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "MSIX",
+      "linux",
+      "mac"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Thunderbird Setup {ver}.exe"
+    ],
+    "save_name": "Thunderbird Setup {ver}.exe",
+    "process_name": "thunderbird.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "url_hint": "Thunderbird"
+  },
+  {
+    "id": "chatterino",
+    "简介": "Twitch 聊天客户端 Chatterino",
+    "分类": "网络与通讯",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/Chatterino/chatterino2/releases",
+    "repo_path": "Chatterino/chatterino2",
+    "installer_markers": [
+      "Chatterino-",
+      "installer.exe"
+    ],
+    "href_exclude_substrings": [
+      "portable",
+      "ubuntu",
+      "macos"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Chatterino-{ver}-installer.exe"
+    ],
+    "save_name": "Chatterino-{ver}-installer.exe",
+    "process_name": "chatterino.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "element_desktop",
+    "简介": "Element 去中心化聊天（Matrix）",
+    "分类": "网络与通讯",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/element-hq/element-desktop/releases",
+    "repo_path": "element-hq/element-desktop",
+    "installer_markers": [
+      "Element-Setup-",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "mac",
+      "linux",
+      "arm64"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Element-Setup-{ver}.exe"
+    ],
+    "save_name": "Element-Setup-{ver}.exe",
+    "process_name": "Element.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true
+  }
+]

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<Templates encode="utf8escenc"><Template Name="if" Comments="0" Strings="0">if [+evaluation+]
+	^
+end</Template><Template Name="elsif" Comments="0" Strings="0">elsif [+evaluation+]
+	^
+end</Template><Template Name="else" Comments="0" Strings="0">else 
+	^</Template><Template Name="while" Comments="0" Strings="0">while [+evaluation+]
+	^ # code to be executed
+end</Template><Template Name="until" Comments="0" Strings="0">until [+expression+]
+	^ # code to run
+end</Template><Template Name="def" Comments="0" Strings="0">def [+functionname+]([+parameters+])
+	^ 
+	return
+end</Template></Templates>

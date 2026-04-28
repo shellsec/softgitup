@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+html, body, form, fieldset, h1, input, select, button {
+  font-family: 'Segoe UI', 'Segoe', Helvetica, sans-serif;
+  font-size: .875em;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  text-align: left;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a.underline_me {
+  text-decoration: underline;
+}
+
+.fp_title {
+  height: .875rem;
+  margin: .5rem 0 0 .25rem;
+  padding: .0 .5rem .0 .125rem;
+  line-height: 1.425;
+  text-align: left;
+  font-weight: bold;
+}
+
+.fp_table {
+  margin: .625rem 1rem;
+  padding-bottom: .25rem;
+}
+
+.fp_table_last {
+  padding-bottom: 2rem;
+}
+
+.fp_table th, 
+.fp_table td {
+  height: .875rem;
+  padding: .0 .5rem .0 .125rem;
+  line-height: 1.425;
+  text-align: left;
+}
+
+.fp_table th {
+  padding-bottom: .25rem;
+}
+
+.fp_table td.fp_label {
+  white-space: nowrap;
+}
+
+.fp_table td.fp_value {
+  padding-left: 1rem;
+}
+
+.fp_table td.fp_empty {
+  height: 1rem;
+}
+
+div#fp_refresh {
+  position: fixed;
+  top: 0;
+  right: .75rem;
+  padding: .5rem;
+}
+
+div.svg_icon {
+  height: .875rem;
+  width: .875rem;
+  float: left;
+  margin: .2rem .25rem 0 0;
+}
+
+.fp_toggle div.svg_icon {
+  margin-top: .3rem;
+  transition: all 50ms ease;
+}
+
+.fp_toggle.fp_node_hidden div.svg_icon {
+  margin-top: .2rem;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+}
+
+div.svg_wrap {
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+  position: relative;
+}
+
+a.fp_copy {
+  display: block;
+  text-decoration: none;
+}
+
+a.fp_copy svg,
+a.fp_toggle svg {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+a.fp_toggle svg {
+  visibility: visible;
+}
+
+a.fp_copy:hover svg,
+a.fp_copy:active svg {
+  visibility: visible;
+}
+
+a.no_copy {
+  cursor: default;
+}
+a.no_copy:hover svg,
+a.no_copy:hover svg {
+  visibility: hidden;
+}
+
+#fp_footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: .325rem .5rem .6rem;
+}
+
+/* Do not hide icon in footer */
+
+#fp_footer a.fp_copy svg {
+  visibility: visible;
+}
+
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}

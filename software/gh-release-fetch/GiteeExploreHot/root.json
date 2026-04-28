@@ -1,0 +1,10 @@
+{
+  "_说明": {
+    "用途": "GiteeExploreHot：按 catalog/*.json 维护仓库；脚本拉取 Release 附件并生成可下载索引。",
+    "同步": "Windows 双击 run_sync_gitee.bat；或 python GiteeExploreHot/scripts/fetch_explore_hot.py",
+    "下载": "run_sync_gitee.bat windows（或 python scripts/gitee_download.py --platform windows）",
+    "令牌": "建议设置环境变量 GITEE_ACCESS_TOKEN 以降低 API 403 频控；仅只读公开仓库时权限可最小。"
+  },
+  "download_dir": "downloads/GiteeExploreHot",
+  "ssl_verify": true
+}

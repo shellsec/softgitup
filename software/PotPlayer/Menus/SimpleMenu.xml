@@ -1,0 +1,47 @@
+<?XML version='1.0' ?>
+<Menu Title="{$CP949=간단 팝업 메뉴$}{$CP0=Simple popup menu$}">
+	<MenuItem CmdID='ID_BASE_OPEN' />
+	<MenuItem CmdID='CMD_POPUPMENU_OPEN'/>
+	<MenuItem CmdID='CMD_POPUPMENU_FAVORITE' />
+	<MenuItem CmdID='' />
+	<MenuItem CmdID='ID_PLAY_PAUSE' />
+	<MenuItem CmdID='ID_CLOSE_MEDIA' />
+	<MenuItem CmdID='' />
+	<MenuItem CmdID='ID_FULLSCREEN' />
+	<MenuItem CmdID='ID_FULL_FIT_SCREEN' />
+	<MenuItem CmdID='' />
+	<SubMenu Name='$MENU_VIEW'>
+		<MenuItem CmdID='ID_PLAYLIST_WINDOW' />
+		<MenuItem CmdID='ID_CONTROL_BOX_WINDOW' />
+		<MenuItem CmdID='ID_BROADCAST_LIST_WINDOW' />
+		<MenuItem CmdID='ID_CHAT_WINDOW' />
+		<MenuItem CmdID='ID_BROADCAST_TOOL_WINDOW' />
+		<MenuItem CmdID='' />
+		<MenuItem CmdID='CMD_POPUPMENU_BROADCAST' />
+		<MenuItem CmdID='CMD_POPUPMENU_VISUAL' />
+		<MenuItem CmdID='CMD_POPUPMENU_TV' />
+		<MenuItem CmdID='CMD_POPUPMENU_DVD' />
+		<MenuItem CmdID='CMD_POPUPMENU_FILTER' />
+		<MenuItem CmdID='CMD_POPUPMENU_RATIO' />
+		<MenuItem CmdID='CMD_POPUPMENU_SIZE' />
+		<MenuItem CmdID='CMD_POPUPMENU_PANSCAN' />
+		<MenuItem CmdID='CMD_POPUPMENU_SKIN' />
+		<MenuItem CmdID='CMD_POPUPMENU_ETC' />
+	</SubMenu>
+	<MenuItem CmdID='CMD_POPUPMENU_PLAY' /> 
+	<MenuItem CmdID='CMD_POPUPMENU_CAPTION' /> 
+	<MenuItem CmdID='CMD_POPUPMENU_VIDEO' /> 
+	<MenuItem CmdID='CMD_POPUPMENU_AUDIO' /> 
+	<SubMenu Name='$MENU_HELP' > 
+		<MenuItem CmdID='ID_OPEN_HOME_PAGE' />
+		<MenuItem CmdID='ID_CHECK_FOR_UPDATE' />
+		<MenuItem CmdID='' />
+		<MenuItem CmdID='ID_APP_ABOUT' />
+	</SubMenu>
+	<MenuItem CmdID='' />
+	<MenuItem CmdID='ID_PLAYINFO_WINDOW' />
+	<MenuItem CmdID='ID_OPTION_WINDOW' />
+	<MenuItem CmdID='' />
+	<MenuItem CmdID='ID_LOGIN_MENU' />
+	<MenuItem CmdID='ID_APP_EXIT' />
+</Menu>

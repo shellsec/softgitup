@@ -1,0 +1,215 @@
+[
+  {
+    "id": "grafana",
+    "简介": "Grafana 可观测性仪表盘（Windows zip）",
+    "分类": "可观测",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/grafana/grafana/releases",
+    "repo_path": "grafana/grafana",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "grafana_",
+      "windows-amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "darwin",
+      "arm"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "grafana_{ver}_windows-amd64.zip"
+    ],
+    "save_name": "grafana_{ver}_windows-amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "prometheus",
+    "简介": "Prometheus 监控",
+    "分类": "可观测",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/prometheus/prometheus/releases",
+    "repo_path": "prometheus/prometheus",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "prometheus-",
+      "windows-amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "darwin",
+      "arm"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "prometheus-{ver}.windows-amd64.zip"
+    ],
+    "save_name": "prometheus-{ver}.windows-amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "jaeger",
+    "简介": "分布式链路追踪 Jaeger",
+    "分类": "可观测",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/jaegertracing/jaeger/releases",
+    "repo_path": "jaegertracing/jaeger",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "jaeger-",
+      "windows-amd64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "darwin"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "jaeger-{ver}-windows-amd64.tar.gz"
+    ],
+    "save_name": "jaeger-{ver}-windows-amd64.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "loki",
+    "简介": "Grafana Loki（日志聚合，Windows 二进制 zip）",
+    "分类": "可观测",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/grafana/loki/releases",
+    "repo_path": "grafana/loki",
+    "prefer_api_assets": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "loki-windows-amd64.exe.zip"
+    ],
+    "href_exclude_substrings": [
+      "canary",
+      "logcli",
+      "lokitool",
+      "darwin",
+      "linux"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "loki-windows-amd64.exe.zip"
+    ],
+    "save_name": "loki-windows-amd64.exe.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "tempo",
+    "简介": "Grafana Tempo（分布式追踪后端）",
+    "分类": "可观测",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/grafana/tempo/releases",
+    "repo_path": "grafana/tempo",
+    "prefer_api_assets": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "tempo_",
+      "windows_amd64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "darwin",
+      "linux",
+      "arm"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "tempo_{ver}_windows_amd64.tar.gz"
+    ],
+    "save_name": "tempo_{ver}_windows_amd64.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "windows_installer": false
+  },
+  {
+    "id": "vector",
+    "简介": "Vector（日志/指标采集与路由）",
+    "分类": "可观测",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/vectordotdev/vector/releases",
+    "repo_path": "vectordotdev/vector",
+    "prefer_api_assets": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "vector-",
+      "windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "darwin",
+      "linux",
+      "musl",
+      "arm",
+      "deb",
+      "rpm"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "vector-{ver}-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "vector-{ver}-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "grafana_alloy",
+    "简介": "Grafana Alloy（OpenTelemetry Collector 发行版，可观测数据管道）",
+    "分类": "可观测",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/grafana/alloy/releases",
+    "repo_path": "grafana/alloy",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "alloy-installer-windows-amd64.exe"
+    ],
+    "href_exclude_substrings": [
+      ".zip",
+      "linux",
+      "darwin",
+      "freebsd",
+      "checksums",
+      ".sig",
+      ".pem",
+      ".sbom",
+      "src"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "alloy-installer-windows-amd64.exe"
+    ],
+    "save_name": "alloy-installer-windows-amd64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  }
+]

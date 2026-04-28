@@ -1,0 +1,134 @@
+[
+  {
+    "id": "vale",
+    "简介": "Vale（Markdown/文档风格与语法检查 CLI）",
+    "分类": "写作",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/errata-ai/vale/releases",
+    "repo_path": "errata-ai/vale",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "vale_",
+      "Windows_64-bit.zip"
+    ],
+    "href_exclude_substrings": [
+      "32-bit",
+      "macOS",
+      "Linux",
+      ".sbom"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "vale_{ver}_Windows_64-bit.zip"
+    ],
+    "save_name": "vale_{ver}_Windows_64-bit.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "pandoc",
+    "简介": "Pandoc（文档格式转换，Windows MSI）",
+    "分类": "写作",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/jgm/pandoc/releases",
+    "repo_path": "jgm/pandoc",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "pandoc-",
+      "windows-x86_64.msi"
+    ],
+    "href_exclude_substrings": [
+      "deb",
+      "tar.gz",
+      "linux",
+      "zip",
+      "arm"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "pandoc-{ver}-windows-x86_64.msi"
+    ],
+    "save_name": "pandoc-{ver}-windows-x86_64.msi",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "mdbook",
+    "简介": "mdBook（Rust 官方 Markdown 电子书/文档站点生成器）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/rust-lang/mdBook/releases",
+    "repo_path": "rust-lang/mdBook",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "mdbook-v",
+      "pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "apple-darwin",
+      "unknown-linux",
+      "aarch64",
+      "i686",
+      ".sha256",
+      ".asc"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "mdbook-v{ver}-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "mdbook-v{ver}-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "zola",
+    "简介": "Zola（静态站点生成器，Markdown 内容）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/getzola/zola/releases",
+    "repo_path": "getzola/zola",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "zola-v",
+      "pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "apple-darwin",
+      "unknown-linux",
+      "aarch64",
+      "musl",
+      ".sha256",
+      ".asc"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "zola-v{ver}-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "zola-v{ver}-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  }
+]

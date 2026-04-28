@@ -1,0 +1,201 @@
+/*
+headinfo-begin
+[info]
+ScriptName=Pinlang-text-Tool
+Desc=基于pinlang提供对编辑框文本的操作
+Author=psh
+Version=1.0
+Comment=该脚本可以对编辑框文本提供诸多快捷文本操作，比如删除行前空白，行自动缩进等。
+
+[para]
+need=1
+inputFilePath=
+outputFilePath=
+stringPara1=
+stringPara2=
+stringPara3= 
+comboxPara1=1 行前自动缩进4个空格（操作当前编辑框）,2 行前自动缩进2个制表符,3 行前自动缩进4个全角空白,4 去掉行前空白字符(包含全角空白）
+
+headinfo-end
+*/
+global
+{
+	string editText;
+	PEdit edit;
+
+	struct Range{
+		zs start;
+		zs end;
+	};
+
+	lb Ranges = [];
+	lb Ranges1 = [];
+}
+
+func clearHigh()
+{
+	edit.clearAllHighLight();
+}
+
+
+//当前r是否已经在多行的范围中，如果是，则不能重复包含
+func isAlreadyInRange(Range r)(bl)
+{
+	for(zs i=0,c = Ranges.size(); i<c; i++)
+	{
+		Range tempr = Ranges[i];
+
+		if(r.start >= tempr.start && r.end <= tempr.end)
+		{
+			return zhen;
+		}
+		//提前结束，不可能重叠了。
+		if(r.end < tempr.start)
+		{
+			return jia;
+		}
+	}
+	return jia;
+}
+
+//单行注释是否合法。如果注释出现在""中，则表示是把做一个单词的字符串处理。则忽略该字段
+func isSignalCommentVaild(zs pos, zs lineEndPos)(bl)
+{
+	zs start = pos;
+	zs times = 0;
+	while(start > 0)
+	{
+		start--;
+		if(editText[start] == '\n')
+		{
+			break;
+		}
+		elif(editText[start] == '"')
+		{
+			times++;
+		}
+	}
+
+	//如果注释开始之前有奇数个引号，而且之后也有奇数个引号，说明注释//是引号中间，则不是注释。
+	if(times >0 && times % 2 == 1)
+	{
+		times = 0;
+		zs end = pos;
+		while(end < lineEndPos)
+		{
+			end++;
+			if(editText[end] == '"')
+			{
+				times++;
+			}
+		}
+
+		if(times >0 && times % 2 == 1)
+		{
+			return jia;
+		}
+	}
+
+	return zhen;
+}
+
+func highLight(zs colorId)
+{
+	//使用正则规则，对文本进行查找注释。
+	zs times = 0;
+	zs times1 = 0;
+
+	RegExp re = R"(/\*.*?\*/)";
+
+	re.setPatternOptions(Reg::DotMatchesEverything);
+
+	RegMatchIter resultList = re.globalMatch(editText);
+	while(resultList.hasNext())
+	{
+		RegMatch result = resultList.next();
+		zs pos = result.capturedStart(0);
+		zs end = result.capturedEnd(0);
+
+		if(isSignalCommentVaild(pos,end))
+		{
+			string preText = editText.mid(0,pos);
+			zs utf8StartPos = preText.toZfc().size();
+			string tempStr = editText.mid(pos,end-pos);
+			zs utf8Len = tempStr.toZfc().size();
+
+			edit.highLight(utf8StartPos,utf8Len,colorId);
+			times++;
+		}
+	}
+
+	RegExp re1 ="(//.*)";
+
+	resultList = re1.globalMatch(editText);
+	while(resultList.hasNext())
+	{
+		RegMatch result = resultList.next();
+		zs pos = result.capturedStart(0);
+		zs end = result.capturedEnd(0);
+
+		string preText = editText.mid(0,pos);
+		zs utf8StartPos = preText.toZfc().size();
+		string tempStr = editText.mid(pos,end-pos);
+		zs utf8Len = tempStr.toZfc().size();
+
+		edit.highLight(utf8StartPos,utf8Len,colorId);
+
+		times1++;
+			if(!isAlreadyInRange(Range{utf8StartPos,utf8StartPos+utf8Len}))
+			{
+				Ranges1.append(Range{utf8StartPos,utf8StartPos+utf8Len});
+			}
+	}
+
+	dyh << "发现单行注释 %1 处" %(times) << "发现多行注释 %1 处" %(times1); 
+}
+
+func main(lb argv)
+{
+	zs mode = 0;
+
+	dyh << argv;
+
+	if(argv.size() >= 4)
+	{
+		mode = argv[3].toInt();
+		
+		if(mode >= 0 && mode <= 2)
+		{
+			dyh << "执行" << argv[1];
+		}
+		else
+		{
+			dyh << "未知的功能选项";
+		}
+	}
+
+	//获取编辑框
+	PNddMain winMain = ndd.getMainWin();
+	edit = winMain.getCurEdit();
+
+	//editText = edit.getText();
+
+
+	if(mode == 0)
+	{
+		edit.replace('^[\t \x{3000}]*','    ',2);
+	}
+	elif (mode == 1)
+	{
+		edit.replace('^[\t \x{3000}]*','\t\t',2);
+	}
+	elif (mode == 2)
+	{
+		edit.replace('^[\t \x{3000}]*','\x{3000}\x{3000}\x{3000}\x{3000}',2);
+	}
+	elif (mode == 3)
+	{
+		edit.replace('^[\t \x{3000}]*','',2);
+	}
+	//dyh << editText;
+}

@@ -1,0 +1,1426 @@
+[
+  {
+    "id": "github_cli",
+    "简介": "GitHub 官方命令行 gh（PR/Issue/Release 等）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/cli/cli/releases",
+    "repo_path": "cli/cli",
+    "url_hint": "gh_",
+    "installer_markers": [
+      "gh_",
+      "windows_amd64.msi"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "gh_{ver}_windows_amd64.msi"
+    ],
+    "save_name": "gh_{ver}_windows_amd64.msi",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "gitea",
+    "简介": "轻量 Git 服务（Windows amd64）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/go-gitea/gitea/releases",
+    "repo_path": "go-gitea/gitea",
+    "installer_markers": [
+      "gitea-",
+      "gogit-windows-4.0-amd64.exe"
+    ],
+    "href_exclude_substrings": [
+      "386",
+      "arm64",
+      ".asc"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "gitea-{ver}-gogit-windows-4.0-amd64.exe"
+    ],
+    "save_name": "gitea-{ver}-gogit-windows-4.0-amd64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "netron",
+    "简介": "模型结构可视化",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/lutzroeder/netron/releases",
+    "repo_path": "lutzroeder/netron",
+    "installer_markers": [
+      "Netron-Setup-",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      ".deb",
+      ".rpm",
+      ".dmg",
+      ".zip",
+      "blockmap"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Netron-Setup-{ver}.exe"
+    ],
+    "save_name": "Netron-Setup-{ver}.exe",
+    "process_name": "Netron.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "github_desktop",
+    "简介": "GitHub Desktop（tag 常为 release-x.y.z）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/desktop/desktop/releases",
+    "repo_path": "desktop/desktop",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "GitHubDesktopSetup-x64.exe"
+    ],
+    "href_exclude_substrings": [
+      ".msi",
+      ".zip",
+      "arm64",
+      "checksums"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "GitHubDesktopSetup-x64.exe"
+    ],
+    "save_name": "GitHubDesktopSetup-x64.exe",
+    "process_name": "GitHubDesktop.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "lazygit",
+    "简介": "终端 Git TUI（zip）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/jesseduffield/lazygit/releases",
+    "repo_path": "jesseduffield/lazygit",
+    "installer_markers": [
+      "lazygit_",
+      "windows_x86_64.zip"
+    ],
+    "href_exclude_substrings": [
+      "32-bit",
+      "arm64",
+      "armv6"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "lazygit_{ver}_windows_x86_64.zip"
+    ],
+    "save_name": "lazygit_{ver}_windows_x86_64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "hugo_extended",
+    "简介": "静态站点生成器 Hugo Extended（zip）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/gohugoio/hugo/releases",
+    "repo_path": "gohugoio/hugo",
+    "installer_markers": [
+      "hugo_extended_",
+      "windows-amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "withdeploy"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "hugo_extended_{ver}_windows-amd64.zip"
+    ],
+    "save_name": "hugo_extended_{ver}_windows-amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "scrcpy",
+    "简介": "Android 投屏控制（zip）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/Genymobile/scrcpy/releases",
+    "repo_path": "Genymobile/scrcpy",
+    "installer_markers": [
+      "scrcpy-win64-v",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "win32"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "scrcpy-win64-v{ver}.zip"
+    ],
+    "save_name": "scrcpy-win64-v{ver}.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "glab",
+    "简介": "GitLab CLI（zip）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/gitlab-org/cli/releases",
+    "repo_path": "gitlab-org/cli",
+    "installer_markers": [
+      "glab_",
+      "windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "arm",
+      "386",
+      "installer"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "glab_{ver}_windows_amd64.zip"
+    ],
+    "save_name": "glab_{ver}_windows_amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "git_windows",
+    "简介": "Git for Windows（含 Git Bash）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/git-for-windows/git/releases",
+    "repo_path": "git-for-windows/git",
+    "installer_markers": [
+      "Git-",
+      "64-bit.exe"
+    ],
+    "href_exclude_substrings": [
+      "32-bit",
+      "arm64",
+      "Portable"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Git-{ver}-64-bit.exe"
+    ],
+    "save_name": "Git-{ver}-64-bit.exe",
+    "process_name": "git.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "url_hint": "Git"
+  },
+  {
+    "id": "deno",
+    "简介": "Deno JavaScript/TypeScript 运行时",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/denoland/deno/releases",
+    "repo_path": "denoland/deno",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "deno-x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "apple",
+      "linux"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "deno-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "deno-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "bun",
+    "简介": "Bun JavaScript 运行时与工具链",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/oven-sh/bun/releases",
+    "repo_path": "oven-sh/bun",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "bun-windows-x64.zip"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "darwin",
+      "aarch64"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "bun-windows-x64.zip"
+    ],
+    "save_name": "bun-windows-x64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "chezmoi",
+    "简介": "点文件（dotfiles）管理",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/twpayne/chezmoi/releases",
+    "repo_path": "twpayne/chezmoi",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "chezmoi_",
+      "windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "darwin",
+      "arm"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "chezmoi_{ver}_windows_amd64.zip"
+    ],
+    "save_name": "chezmoi_{ver}_windows_amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "cmake",
+    "简介": "CMake 构建系统（Windows x64 安装包）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/Kitware/CMake/releases",
+    "repo_path": "Kitware/CMake",
+    "installer_markers": [
+      "cmake-",
+      "windows-x86_64.msi"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "Darwin",
+      "Linux"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "cmake-{ver}-windows-x86_64.msi"
+    ],
+    "save_name": "cmake-{ver}-windows-x86_64.msi",
+    "process_name": "cmake-gui.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "version_tag_as_on_github": true,
+    "url_hint": "cmake"
+  },
+  {
+    "id": "ninja",
+    "简介": "Ninja 极速构建工具（release 为 zip）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/ninja-build/ninja/releases",
+    "repo_path": "ninja-build/ninja",
+    "installer_markers": [
+      "ninja-win.zip"
+    ],
+    "href_exclude_substrings": [
+      "mac",
+      "linux"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "ninja-win.zip"
+    ],
+    "save_name": "ninja-win.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "just",
+    "简介": "命令运行器（make 替代）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/casey/just/releases",
+    "repo_path": "casey/just",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "just-",
+      "x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "apple",
+      "linux"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "just-{ver}-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "just-{ver}-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "watchexec",
+    "简介": "文件变更时执行命令",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/watchexec/watchexec/releases",
+    "repo_path": "watchexec/watchexec",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "watchexec-",
+      "x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "apple",
+      "linux"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "watchexec-{ver}-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "watchexec-{ver}-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "ruff",
+    "简介": "极快 Python linter/格式化",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/astral-sh/ruff/releases",
+    "repo_path": "astral-sh/ruff",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "ruff-x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "apple",
+      "linux"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "ruff-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "ruff-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "uv",
+    "简介": "Python 包与项目管理（Rust）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/astral-sh/uv/releases",
+    "repo_path": "astral-sh/uv",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "uv-x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "apple",
+      "linux"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "uv-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "uv-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "opencamera_bridge",
+    "简介": "OpenCV 计算机视觉库（开发用）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/opencv/opencv/releases",
+    "repo_path": "opencv/opencv",
+    "installer_markers": [
+      "opencv-",
+      "windows.exe"
+    ],
+    "href_exclude_substrings": [
+      "android",
+      "ios",
+      "sources"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "opencv-{ver}-windows.exe"
+    ],
+    "save_name": "opencv-{ver}-windows.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "git_lfs",
+    "简介": "Git LFS 大文件扩展",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/git-lfs/git-lfs/releases",
+    "repo_path": "git-lfs/git-lfs",
+    "installer_markers": [
+      "git-lfs-windows-amd64",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "386",
+      "arm64",
+      "darwin"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "git-lfs-windows-amd64-v{ver}.zip"
+    ],
+    "save_name": "git-lfs-windows-amd64-v{ver}.zip",
+    "process_name": "git-lfs.exe",
+    "kill_before_install": false,
+    "run_installer": false,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "zig",
+    "简介": "Zig 语言工具链",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/ziglang/zig/releases",
+    "repo_path": "ziglang/zig",
+    "installer_markers": [
+      "zig-windows-x86_64-",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "macos",
+      "linux"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "zig-windows-x86_64-{ver}.zip"
+    ],
+    "save_name": "zig-windows-x86_64-{ver}.zip",
+    "process_name": "zig.exe",
+    "kill_before_install": false,
+    "run_installer": false,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "go_installer_meta",
+    "简介": "Go 语言（官方以 golang.org 为主，此为占位）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/golang/go/releases",
+    "repo_path": "golang/go",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "go",
+      "windows-amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "darwin",
+      "arm"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "go{ver}.windows-amd64.zip"
+    ],
+    "save_name": "go{ver}.windows-amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "hurl",
+    "简介": "HTTP 请求测试（curl 风格）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/Orange-OpenSource/hurl/releases",
+    "repo_path": "Orange-OpenSource/hurl",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "hurl-",
+      "x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "linux",
+      "darwin"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "hurl-{ver}-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "hurl-{ver}-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "etcd",
+    "简介": "etcd 分布式键值",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/etcd-io/etcd/releases",
+    "repo_path": "etcd-io/etcd",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "etcd-v",
+      "windows-amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "darwin",
+      "arm"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "etcd-v{ver}-windows-amd64.zip"
+    ],
+    "save_name": "etcd-v{ver}-windows-amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "astgrep",
+    "简介": "AST 结构感知的代码搜索",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/ast-grep/ast-grep/releases",
+    "repo_path": "ast-grep/ast-grep",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "ast-grep-x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "apple",
+      "linux"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "ast-grep-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "ast-grep-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "semgrep",
+    "简介": "Semgrep 静态分析",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/returntocorp/semgrep/releases",
+    "repo_path": "returntocorp/semgrep",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "semgrep-v",
+      "windows.zip"
+    ],
+    "href_exclude_substrings": [
+      "osx",
+      "linux",
+      "wheel"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "semgrep-v{ver}-windows.zip"
+    ],
+    "save_name": "semgrep-v{ver}-windows.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "bruno",
+    "简介": "Bruno API 客户端（离线集合）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/usebruno/bruno/releases",
+    "repo_path": "usebruno/bruno",
+    "installer_markers": [
+      "bruno_",
+      "x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "linux",
+      "dmg"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "bruno_{ver}_x64_win.exe"
+    ],
+    "save_name": "bruno_{ver}_x64_win.exe",
+    "process_name": "Bruno.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "url_hint": "bruno"
+  },
+  {
+    "id": "insomnia",
+    "简介": "Insomnia REST/GraphQL 客户端",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/Kong/insomnia/releases",
+    "repo_path": "Kong/insomnia",
+    "installer_markers": [
+      "Insomnia.Core-",
+      "exe"
+    ],
+    "href_exclude_substrings": [
+      "deb",
+      "rpm",
+      "dmg"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Insomnia.Core-{ver}.exe"
+    ],
+    "save_name": "Insomnia.Core-{ver}.exe",
+    "process_name": "Insomnia.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "url_hint": "Insomnia"
+  },
+  {
+    "id": "nodejs",
+    "简介": "Node.js 运行时（MSI 安装包）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/nodejs/node/releases",
+    "repo_path": "nodejs/node",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "node-v",
+      "-x64.msi"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "x86",
+      "headers",
+      "pkg",
+      ".zip",
+      ".7z"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "node-v{ver}-x64.msi"
+    ],
+    "download_url_templates": [
+      "https://nodejs.org/dist/{ver}/node-{ver}-x64.msi"
+    ],
+    "save_name": "node-v{ver}-x64.msi",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "url_hint": "node"
+  },
+  {
+    "id": "nvm_windows",
+    "简介": "nvm-windows（Node 版本管理器）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/coreybutler/nvm-windows/releases",
+    "repo_path": "coreybutler/nvm-windows",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "nvm-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "noinstall",
+      ".zip",
+      ".7z"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "nvm-setup.exe"
+    ],
+    "save_name": "nvm-setup.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "url_hint": "nvm-setup"
+  },
+  {
+    "id": "fnm",
+    "简介": "Fast Node Manager（fnm）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/Schniz/fnm/releases",
+    "repo_path": "Schniz/fnm",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "fnm-windows.zip"
+    ],
+    "href_exclude_substrings": [
+      "arm",
+      "linux",
+      "darwin"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "fnm-windows.zip"
+    ],
+    "save_name": "fnm-windows.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "fnm-windows"
+  },
+  {
+    "id": "git_for_windows",
+    "简介": "Git for Windows（官方安装包）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/git-for-windows/git/releases",
+    "repo_path": "git-for-windows/git",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "Git-",
+      "-64-bit.exe"
+    ],
+    "href_exclude_substrings": [
+      "Portable",
+      "MinGit",
+      "busybox",
+      "arm64",
+      "32-bit",
+      "32-bit.exe",
+      ".zip",
+      ".7z"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Git-{ver}-64-bit.exe"
+    ],
+    "save_name": "Git-{ver}-64-bit.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "url_hint": "Git-"
+  },
+  {
+    "id": "python_standalone_3_10",
+    "简介": "Python Standalone 3.10（x64，stripped）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/astral-sh/python-build-standalone/releases",
+    "repo_path": "astral-sh/python-build-standalone",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "cpython-3.10.",
+      "x86_64-pc-windows-msvc-install_only_stripped.tar.gz"
+    ],
+    "installer_markers_match_all": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "save_subdir": "python_standalone",
+    "save_name": "python-standalone-3.10-x64-install_only_stripped.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "cpython-3.10"
+  },
+  {
+    "id": "python_standalone_3_11",
+    "简介": "Python Standalone 3.11（x64，stripped）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/astral-sh/python-build-standalone/releases",
+    "repo_path": "astral-sh/python-build-standalone",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "cpython-3.11.",
+      "x86_64-pc-windows-msvc-install_only_stripped.tar.gz"
+    ],
+    "installer_markers_match_all": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "save_subdir": "python_standalone",
+    "save_name": "python-standalone-3.11-x64-install_only_stripped.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "cpython-3.11"
+  },
+  {
+    "id": "python_standalone_3_12",
+    "简介": "Python Standalone 3.12（x64，stripped）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/astral-sh/python-build-standalone/releases",
+    "repo_path": "astral-sh/python-build-standalone",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "cpython-3.12.",
+      "x86_64-pc-windows-msvc-install_only_stripped.tar.gz"
+    ],
+    "installer_markers_match_all": true,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "save_subdir": "python_standalone",
+    "save_name": "python-standalone-3.12-x64-install_only_stripped.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "cpython-3.12"
+  },
+  {
+    "id": "python_standalone_3_13",
+    "简介": "Python Standalone 3.13（x64，stripped）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/astral-sh/python-build-standalone/releases",
+    "repo_path": "astral-sh/python-build-standalone",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "cpython-3.13.",
+      "x86_64-pc-windows-msvc-install_only_stripped.tar.gz"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      "freethreaded-"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "save_subdir": "python_standalone",
+    "save_name": "python-standalone-3.13-x64-install_only_stripped.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "cpython-3.13"
+  },
+  {
+    "id": "python_standalone_3_14",
+    "简介": "Python Standalone 3.14（x64，stripped）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/astral-sh/python-build-standalone/releases",
+    "repo_path": "astral-sh/python-build-standalone",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "cpython-3.14.",
+      "x86_64-pc-windows-msvc-install_only_stripped.tar.gz"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      "freethreaded-"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "save_subdir": "python_standalone",
+    "save_name": "python-standalone-3.14-x64-install_only_stripped.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "cpython-3.14"
+  },
+  {
+    "id": "mise",
+    "简介": "mise（asdf 风格的多语言运行时与工具版本管理，jdx）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/jdx/mise/releases",
+    "repo_path": "jdx/mise",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "mise-v",
+      "windows-x64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows-arm64",
+      "linux",
+      "darwin",
+      "install.sh",
+      ".minisig",
+      ".sig"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "mise-v{ver}-windows-x64.zip"
+    ],
+    "save_name": "mise-v{ver}-windows-x64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "ty",
+    "简介": "ty（Astral 出品，Python 类型检查器/语言服务器）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/astral-sh/ty/releases",
+    "repo_path": "astral-sh/ty",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ty-x86_64-pc-windows-msvc",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "i686",
+      ".sha256"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "ty-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "ty-x86_64-pc-windows-msvc-{ver}.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "httpie_desktop",
+    "简介": "HTTPie Desktop（API 调试桌面客户端）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/httpie/desktop/releases",
+    "repo_path": "httpie/desktop",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "HTTPie-Setup-",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "blockmap",
+      ".sig",
+      "portable"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "HTTPie-Setup-{ver}.exe"
+    ],
+    "save_name": "HTTPie-Setup-{ver}.exe",
+    "process_name": "HTTPie.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "shfmt",
+    "简介": "shfmt（Shell 脚本格式化，mvdan/sh）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/mvdan/sh/releases",
+    "repo_path": "mvdan/sh",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "shfmt_v",
+      "windows_amd64.exe"
+    ],
+    "href_exclude_substrings": [
+      "windows_386",
+      "darwin",
+      "linux"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "shfmt_v{ver}_windows_amd64.exe"
+    ],
+    "save_name": "shfmt_v{ver}_windows_amd64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "actionlint",
+    "简介": "actionlint（GitHub Actions 工作流静态检查）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/rhysd/actionlint/releases",
+    "repo_path": "rhysd/actionlint",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "actionlint_",
+      "windows_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows_386",
+      "windows_arm64",
+      "darwin",
+      "linux"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "actionlint_{ver}_windows_amd64.zip"
+    ],
+    "save_name": "actionlint_{ver}_windows_amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "dprint",
+    "简介": "dprint（多语言格式化，带插件生态）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/dprint/dprint/releases",
+    "repo_path": "dprint/dprint",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "dprint-x86_64-pc-windows-msvc",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "installer",
+      "darwin",
+      "linux",
+      "aarch64",
+      "apple"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "dprint-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "dprint-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "biome",
+    "简介": "Biome（Rust：格式化 + Lint，高性能；可替代部分 ESLint/Prettier 工作流）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/biomejs/biome/releases",
+    "repo_path": "biomejs/biome",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "biome-win32-x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "win32-arm64",
+      "darwin",
+      "linux",
+      ".tar",
+      ".gz"
+    ],
+    "windows_installer": false,
+    "download_names": [
+      "biome-win32-x64.exe"
+    ],
+    "save_name": "biome-win32-x64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "taplo",
+    "简介": "Taplo（TOML 格式化 / 校验 / LSP，CLI）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/tamasfe/taplo/releases",
+    "repo_path": "tamasfe/taplo",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "taplo-windows-x86_64.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "windows-x86.zip",
+      "windows-x86_64.gz",
+      "darwin",
+      "linux",
+      ".gz"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "taplo-windows-x86_64.zip"
+    ],
+    "save_name": "taplo-windows-x86_64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "buf",
+    "简介": "Buf（Protobuf 工具链：lint/breaking/format，含 buf 与 protoc 插件）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/bufbuild/buf/releases",
+    "repo_path": "bufbuild/buf",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "buf-Windows-x86_64.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      ".zip",
+      "protoc-gen",
+      "Darwin",
+      "Linux"
+    ],
+    "windows_installer": false,
+    "download_names": [
+      "buf-Windows-x86_64.exe"
+    ],
+    "save_name": "buf-Windows-x86_64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "grpcurl",
+    "简介": "grpcurl（命令行调用 gRPC，调试/脚本友好）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/fullstorydev/grpcurl/releases",
+    "repo_path": "fullstorydev/grpcurl",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "grpcurl_",
+      "windows_x86_64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows_x86_32",
+      "darwin",
+      "linux",
+      ".deb",
+      ".rpm",
+      "checksums"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "grpcurl_{ver}_windows_x86_64.zip"
+    ],
+    "save_name": "grpcurl_{ver}_windows_x86_64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "fastfetch",
+    "简介": "Fastfetch（系统信息展示，neofetch 的现代替代品，速度快）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/fastfetch-cli/fastfetch/releases",
+    "repo_path": "fastfetch-cli/fastfetch",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "fastfetch-windows-amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      ".7z",
+      "darwin",
+      "linux"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "fastfetch-windows-amd64.zip"
+    ],
+    "save_name": "fastfetch-windows-amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "air",
+    "简介": "Air（Go 热重载：保存即编译运行，本地开发常用）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/cosmtrek/air/releases",
+    "repo_path": "cosmtrek/air",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "air_",
+      "windows_amd64.exe"
+    ],
+    "href_exclude_substrings": [
+      "windows_386",
+      "windows_arm64",
+      ".tar.gz",
+      "darwin",
+      "linux",
+      "checksums"
+    ],
+    "windows_installer": false,
+    "download_names": [
+      "air_{ver}_windows_amd64.exe"
+    ],
+    "save_name": "air_{ver}_windows_amd64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "oxlint",
+    "简介": "Oxlint（Oxc 生态：极快 JS/TS Lint，零配置倾向）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/oxc-project/oxc/releases",
+    "repo_path": "oxc-project/oxc",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "oxlint-x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "oxfmt",
+      "aarch64",
+      "i686",
+      "apple-darwin",
+      "linux",
+      "freebsd",
+      "riscv",
+      "armv7",
+      "powerpc",
+      "s390x"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "oxlint-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "oxlint-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  }
+]

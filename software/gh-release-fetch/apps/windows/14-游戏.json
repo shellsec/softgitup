@@ -1,0 +1,577 @@
+[
+  {
+    "id": "heroic",
+    "简介": "游戏启动器（Epic/GOG 等）",
+    "分类": "游戏",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/Heroic-Games-Launcher/HeroicGamesLauncher/releases",
+    "repo_path": "Heroic-Games-Launcher/HeroicGamesLauncher",
+    "installer_markers": [
+      "Heroic-",
+      "Setup-x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "Portable",
+      "blockmap",
+      "macOS"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Heroic-{ver}-Setup-x64.exe"
+    ],
+    "save_name": "Heroic-{ver}-Setup-x64.exe",
+    "process_name": "Heroic.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "prismlauncher",
+    "简介": "Prism Launcher（Minecraft）",
+    "分类": "游戏",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/PrismLauncher/PrismLauncher/releases",
+    "repo_path": "PrismLauncher/PrismLauncher",
+    "installer_markers": [
+      "PrismLauncher-Windows",
+      "MSVC-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "macOS",
+      "Linux",
+      "tar"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "PrismLauncher-Windows-MSVC-setup-{ver}.exe"
+    ],
+    "save_name": "PrismLauncher-Windows-MSVC-setup-{ver}.exe",
+    "process_name": "prismlauncher.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "url_hint": "PrismLauncher"
+  },
+  {
+    "id": "retroarch",
+    "简介": "RetroArch 模拟器前端",
+    "分类": "游戏",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/libretro/RetroArch/releases",
+    "repo_path": "libretro/RetroArch",
+    "installer_markers": [
+      "RetroArch-",
+      "win64",
+      "setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "win32",
+      "android",
+      "linux"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "RetroArch-{ver}-win64-setup.exe"
+    ],
+    "save_name": "RetroArch-{ver}-win64-setup.exe",
+    "process_name": "retroarch.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "cemu",
+    "简介": "Wii U 模拟器 Cemu",
+    "分类": "游戏",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/cemu-project/Cemu/releases",
+    "repo_path": "cemu-project/Cemu",
+    "installer_markers": [
+      "cemu-",
+      "windows-x64.zip"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "experimental"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "cemu_{ver}_windows-x64.zip"
+    ],
+    "save_name": "cemu_{ver}_windows-x64.zip",
+    "process_name": "Cemu.exe",
+    "kill_before_install": false,
+    "run_installer": false,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "duckstation",
+    "简介": "PlayStation 1 模拟器",
+    "分类": "游戏",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/stenzek/duckstation/releases",
+    "repo_path": "stenzek/duckstation",
+    "installer_markers": [
+      "duckstation-windows-x64-release.zip"
+    ],
+    "href_exclude_substrings": [],
+    "windows_installer": true,
+    "download_names": [
+      "duckstation-windows-x64-release.zip"
+    ],
+    "save_name": "duckstation-windows-x64-release.zip",
+    "process_name": "duckstation-qt-x64.exe",
+    "kill_before_install": false,
+    "run_installer": false,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "pcsx2",
+    "简介": "PS2 模拟器 PCSX2",
+    "分类": "游戏",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/PCSX2/pcsx2/releases",
+    "repo_path": "PCSX2/pcsx2",
+    "installer_markers": [
+      "pcsx2-",
+      "windows-x64-Qt.7z"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "appimage",
+      "symbols"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "pcsx2-{ver}-windows-x64-Qt.7z"
+    ],
+    "save_name": "pcsx2-{ver}-windows-x64-Qt.7z",
+    "process_name": "pcsx2-qt.exe",
+    "kill_before_install": false,
+    "run_installer": false,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "rpcs3",
+    "简介": "PS3 模拟器（实验性）",
+    "分类": "游戏",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/RPCS3/rpcs3/releases",
+    "repo_path": "RPCS3/rpcs3",
+    "installer_markers": [
+      "rpcs3-",
+      "win64.7z"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "appimage"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "rpcs3-{ver}_win64.7z"
+    ],
+    "save_name": "rpcs3-{ver}_win64.7z",
+    "process_name": "rpcs3.exe",
+    "kill_before_install": false,
+    "run_installer": false,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "xemu",
+    "简介": "Xbox 模拟器 xemu",
+    "分类": "游戏",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/mborgerson/xemu/releases",
+    "repo_path": "mborgerson/xemu",
+    "installer_markers": [
+      "xemu-win-release.zip"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "darwin"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "xemu-win-release.zip"
+    ],
+    "save_name": "xemu-win-release.zip",
+    "process_name": "xemu.exe",
+    "kill_before_install": false,
+    "run_installer": false,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "scummvm",
+    "简介": "经典点击冒险游戏解释器",
+    "分类": "游戏",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/scummvm/scummvm/releases",
+    "repo_path": "scummvm/scummvm",
+    "installer_markers": [
+      "scummvm-",
+      "win32.exe"
+    ],
+    "href_exclude_substrings": [
+      "win64",
+      "macosx",
+      "linux"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "scummvm-{ver}-win32.exe"
+    ],
+    "save_name": "scummvm-{ver}-win32.exe",
+    "process_name": "scummvm.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "dosbox_staging",
+    "简介": "DOSBox Staging  DOS 环境",
+    "分类": "游戏",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/dosbox-staging/dosbox-staging/releases",
+    "repo_path": "dosbox-staging/dosbox-staging",
+    "installer_markers": [
+      "dosbox-staging-windows-x64-",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "mac"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "dosbox-staging-windows-x64-{ver}.zip"
+    ],
+    "save_name": "dosbox-staging-windows-x64-{ver}.zip",
+    "process_name": "dosbox.exe",
+    "kill_before_install": false,
+    "run_installer": false,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "openmw",
+    "简介": "Morrowind 开源引擎",
+    "分类": "游戏",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/OpenMW/openmw/releases",
+    "repo_path": "OpenMW/openmw",
+    "installer_markers": [
+      "OpenMW-",
+      "win64.exe"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "osx",
+      "android"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "OpenMW-{ver}-win64.exe"
+    ],
+    "save_name": "OpenMW-{ver}-win64.exe",
+    "process_name": "openmw.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "minetest",
+    "简介": "体素沙盒（类 Minecraft）",
+    "分类": "游戏",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/minetest/minetest/releases",
+    "repo_path": "minetest/minetest",
+    "installer_markers": [
+      "minetest-",
+      "win64.zip"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "osx",
+      "android"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "minetest-{ver}-win64.zip"
+    ],
+    "save_name": "minetest-{ver}-win64.zip",
+    "process_name": "minetest.exe",
+    "kill_before_install": false,
+    "run_installer": false,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "warzone2100",
+    "简介": "即时战略 Warzone 2100",
+    "分类": "游戏",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/Warzone2100/warzone2100/releases",
+    "repo_path": "Warzone2100/warzone2100",
+    "installer_markers": [
+      "warzone2100_win",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "mac",
+      "portable"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "warzone2100_win_{ver}.exe"
+    ],
+    "save_name": "warzone2100_win_{ver}.exe",
+    "process_name": "warzone2100.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "url_hint": "warzone"
+  },
+  {
+    "id": "0ad",
+    "简介": "古代战争 RTS 0 A.D.",
+    "分类": "游戏",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/0ad/0ad/releases",
+    "repo_path": "0ad/0ad",
+    "installer_markers": [
+      "0ad-",
+      "win32.exe"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "osx",
+      "data"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "0ad-{ver}-alpha-win32.exe"
+    ],
+    "save_name": "0ad-{ver}-alpha-win32.exe",
+    "process_name": "pyrogenesis.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "supertuxkart",
+    "简介": "SuperTuxKart 赛车",
+    "分类": "游戏",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/supertuxkart/stk-code/releases",
+    "repo_path": "supertuxkart/stk-code",
+    "installer_markers": [
+      "SuperTuxKart-",
+      "installer-64bit.exe"
+    ],
+    "href_exclude_substrings": [
+      "32bit",
+      "osx",
+      "linux"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "SuperTuxKart-{ver}-installer-64bit.exe"
+    ],
+    "save_name": "SuperTuxKart-{ver}-installer-64bit.exe",
+    "process_name": "supertuxkart.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "url_hint": "SuperTuxKart"
+  },
+  {
+    "id": "openttd",
+    "简介": "开源运输大亨",
+    "分类": "游戏",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/OpenTTD/OpenTTD/releases",
+    "repo_path": "OpenTTD/OpenTTD",
+    "installer_markers": [
+      "openttd-",
+      "windows-win64.exe"
+    ],
+    "href_exclude_substrings": [
+      "win32",
+      "osx",
+      "linux"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "openttd-{ver}-windows-win64.exe"
+    ],
+    "save_name": "openttd-{ver}-windows-win64.exe",
+    "process_name": "openttd.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "wesnoth",
+    "简介": "战棋《韦诺之战》",
+    "分类": "游戏",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/wesnoth/wesnoth/releases",
+    "repo_path": "wesnoth/wesnoth",
+    "installer_markers": [
+      "wesnoth-",
+      "win64.exe"
+    ],
+    "href_exclude_substrings": [
+      "osx",
+      "linux",
+      "src"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "wesnoth-{ver}-win64.exe"
+    ],
+    "save_name": "wesnoth-{ver}-win64.exe",
+    "process_name": "wesnoth.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "playnite",
+    "简介": "游戏库管理器 / 启动器（Playnite）",
+    "分类": "游戏",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/JosefNemec/Playnite/releases",
+    "repo_path": "JosefNemec/Playnite",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "Playnite10",
+      ".exe"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      "Portable",
+      "portable",
+      ".blockmap",
+      ".sha256",
+      ".sha1"
+    ],
+    "windows_installer": true,
+    "save_name": "PlayniteSetup.exe",
+    "process_name": "Playnite.DesktopApp.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "openrct2",
+    "简介": "OpenRCT2（过山车大亨2）开源重制",
+    "分类": "游戏",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/OpenRCT2/OpenRCT2/releases",
+    "repo_path": "OpenRCT2/OpenRCT2",
+    "prefer_api_assets": true,
+    "installer_markers": [
+      "OpenRCT2-",
+      "-windows-installer-x64.exe"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      "portable",
+      "symbols",
+      ".sha256",
+      ".sha1"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "OpenRCT2-v{ver}-windows-installer-x64.exe"
+    ],
+    "save_name": "OpenRCT2-v{ver}-windows-installer-x64.exe",
+    "process_name": "openrct2.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "openra",
+    "简介": "OpenRA（C&C 系列开源 RTS 引擎与 MOD）",
+    "分类": "游戏",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/OpenRA/OpenRA/releases",
+    "repo_path": "OpenRA/OpenRA",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "OpenRA-",
+      "-x64.exe"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      "playtest",
+      "-x86.exe",
+      ".sha256",
+      ".sha1"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "OpenRA-{ver}-x64.exe"
+    ],
+    "save_name": "OpenRA-{ver}-x64.exe",
+    "process_name": "OpenRA.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "sunshine",
+    "简介": "Sunshine（Moonlight 的开源 GameStream 主机端）",
+    "分类": "游戏",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/LizardByte/Sunshine/releases",
+    "repo_path": "LizardByte/Sunshine",
+    "prefer_api_assets": true,
+    "installer_markers": [
+      "Sunshine-Windows-AMD64-installer.exe"
+    ],
+    "href_exclude_substrings": [
+      "debuginfo",
+      ".sha256",
+      ".sha1"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Sunshine-Windows-AMD64-installer.exe"
+    ],
+    "save_name": "Sunshine-Windows-AMD64-installer.exe",
+    "process_name": "sunshine.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "moonlight_qt",
+    "简介": "Moonlight（开源 GameStream 客户端，配合 Sunshine / GeForce Experience）",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/moonlight-stream/moonlight-qt/releases",
+    "repo_path": "moonlight-stream/moonlight-qt",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "MoonlightSetup-",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "Portable",
+      "SteamLink",
+      "AppImage",
+      "dmg",
+      "Src",
+      "arm64"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "MoonlightSetup-{ver}.exe"
+    ],
+    "save_name": "MoonlightSetup-{ver}.exe",
+    "process_name": "moonlight.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  }
+]

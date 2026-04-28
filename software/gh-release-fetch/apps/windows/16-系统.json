@@ -1,0 +1,394 @@
+[
+  {
+    "id": "powertoys",
+    "简介": "窗口置顶、重排、快捷键、命令面板等系统增强",
+    "分类": "系统",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/microsoft/PowerToys/releases",
+    "repo_path": "microsoft/PowerToys",
+    "installer_markers": [
+      "PowerToysUserSetup-",
+      "-x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "symbols-",
+      "GroupPolicy"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "PowerToysUserSetup-{ver}-x64.exe",
+      "PowerToysSetup-{ver}-x64.exe"
+    ],
+    "save_name": "PowerToysUserSetup-{ver}-x64.exe",
+    "process_name": "PowerToys.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "rufus",
+    "简介": "制作 USB 启动盘 / 系统安装介质",
+    "分类": "系统",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/pbatard/rufus/releases",
+    "repo_path": "pbatard/rufus",
+    "url_hint": "rufus",
+    "installer_markers": [
+      "rufus-",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "_arm64",
+      "_x86",
+      "p.exe",
+      ".sig"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "rufus-{ver}.exe"
+    ],
+    "save_name": "rufus-{ver}.exe",
+    "process_name": "rufus.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "twinkletray",
+    "简介": "任务栏调节显示器亮度",
+    "分类": "系统",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/xanderfrangos/twinkle-tray/releases",
+    "repo_path": "xanderfrangos/twinkle-tray",
+    "installer_markers": [
+      "Twinkle.Tray.v",
+      ".exe"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Twinkle.Tray.v{ver}.exe"
+    ],
+    "save_name": "Twinkle.Tray.v{ver}.exe",
+    "process_name": "Twinkle Tray.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "quicklook",
+    "简介": "空格快速预览文件",
+    "分类": "系统",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/QL-Win/QuickLook/releases",
+    "repo_path": "QL-Win/QuickLook",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "QuickLook-",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      ".msi",
+      ".zip",
+      ".7z",
+      ".appx"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "QuickLook-{ver}.exe"
+    ],
+    "save_name": "QuickLook-{ver}.exe",
+    "process_name": "QuickLook.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "everythingtoolbar",
+    "简介": "Everything 任务栏集成（x64 安装包）",
+    "分类": "系统",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/stnkl/EverythingToolbar/releases",
+    "repo_path": "stnkl/EverythingToolbar",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "EverythingToolbar-",
+      "-x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "EverythingToolbar-{ver}-x64.exe"
+    ],
+    "save_name": "EverythingToolbar-{ver}-x64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "ventoy",
+    "简介": "多系统 U 盘启动（windows zip）",
+    "分类": "系统",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/ventoy/Ventoy/releases",
+    "repo_path": "ventoy/Ventoy",
+    "installer_markers": [
+      "ventoy-",
+      "-windows.zip"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "ventoy-{ver}-windows.zip"
+    ],
+    "save_name": "ventoy-{ver}-windows.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "everything_cli",
+    "简介": "Everything 极速文件名搜索",
+    "分类": "系统",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/voidtools/Everything/releases",
+    "repo_path": "voidtools/Everything",
+    "installer_markers": [
+      "Everything-",
+      "x64-Setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "x86-",
+      "arm",
+      "sdk"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Everything-{ver}.x64-Setup.exe"
+    ],
+    "save_name": "Everything-{ver}.x64-Setup.exe",
+    "process_name": "Everything.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "url_hint": "Everything"
+  },
+  {
+    "id": "duf",
+    "简介": "磁盘空间概览（df 替代）",
+    "分类": "系统",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/muesli/duf/releases",
+    "repo_path": "muesli/duf",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "duf_",
+      "Windows_x86_64.zip"
+    ],
+    "href_exclude_substrings": [
+      "Linux",
+      "Darwin",
+      "arm"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "duf_{ver}_Windows_x86_64.zip"
+    ],
+    "save_name": "duf_{ver}_Windows_x86_64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "gdu",
+    "简介": "交互式磁盘占用分析",
+    "分类": "系统",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/dundee/gdu/releases",
+    "repo_path": "dundee/gdu",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "gdu-windows-amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "darwin",
+      "arm"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "gdu-windows-amd64.zip"
+    ],
+    "save_name": "gdu-windows-amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "qemu",
+    "简介": "QEMU 模拟器（Windows 安装包名随发布变化）",
+    "分类": "系统",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/qemu/qemu/releases",
+    "repo_path": "qemu/qemu",
+    "installer_markers": [
+      "qemu-w64-setup",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "mac",
+      "sig"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "qemu-w64-setup-{ver}.exe"
+    ],
+    "save_name": "qemu-w64-setup-{ver}.exe",
+    "process_name": "qemu-system-x86_64.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "nssm",
+    "简介": "将任意程序注册为 Windows 服务",
+    "分类": "系统",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/nssm/nssm/releases",
+    "repo_path": "nssm/nssm",
+    "installer_markers": [
+      "nssm-",
+      "win64.zip"
+    ],
+    "href_exclude_substrings": [
+      "win32",
+      "src"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "nssm-{ver}.zip"
+    ],
+    "save_name": "nssm-{ver}.zip",
+    "process_name": "nssm.exe",
+    "kill_before_install": false,
+    "run_installer": false,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "processhacker",
+    "简介": "Process Hacker 进程监视（现 System Informer）",
+    "分类": "系统",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/processhacker/processhacker/releases",
+    "repo_path": "processhacker/processhacker",
+    "installer_markers": [
+      "processhacker-",
+      "setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "symbols",
+      "linux"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "processhacker-{ver}-setup.exe"
+    ],
+    "save_name": "processhacker-{ver}-setup.exe",
+    "process_name": "ProcessHacker.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "url_hint": "processhacker"
+  },
+  {
+    "id": "systeminformer",
+    "简介": "System Informer（原 Process Hacker）",
+    "分类": "系统",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/winsiderss/systeminformer/releases",
+    "repo_path": "winsiderss/systeminformer",
+    "installer_markers": [
+      "systeminformer-",
+      "setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "symbols",
+      "sdk"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "systeminformer-{ver}-setup.exe"
+    ],
+    "save_name": "systeminformer-{ver}-setup.exe",
+    "process_name": "SystemInformer.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "unigetui",
+    "简介": "UniGetUI（Winget / Scoop 等的图形化软件包管理前端，原 WingetUI）",
+    "分类": "系统",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/marticliment/WingetUI/releases",
+    "repo_path": "marticliment/WingetUI",
+    "prefer_api_assets": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "UniGetUI.Installer",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "WingetUI.Installer",
+      ".zip",
+      "blockmap"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "UniGetUI.Installer.exe"
+    ],
+    "save_name": "UniGetUI-Setup-{ver}.exe",
+    "process_name": "UniGetUI.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "trafficmonitor",
+    "简介": "TrafficMonitor（任务栏/悬浮窗网速与硬件监控）",
+    "分类": "系统",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/zhongyang219/TrafficMonitor/releases",
+    "repo_path": "zhongyang219/TrafficMonitor",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "TrafficMonitor_",
+      "_x64.zip"
+    ],
+    "href_exclude_substrings": [
+      "SSE",
+      "Lite",
+      "arm64",
+      "Source",
+      ".7z"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "TrafficMonitor_{ver}_x64.zip"
+    ],
+    "save_name": "TrafficMonitor_{ver}_x64.zip",
+    "process_name": "TrafficMonitor.exe",
+    "kill_before_install": true,
+    "run_installer": false
+  }
+]

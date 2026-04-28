@@ -1,0 +1,138 @@
+[
+  {
+    "id": "localsend",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/localsend/localsend/releases",
+    "repo_path": "localsend/localsend"
+  },
+  {
+    "id": "syncthing",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/syncthing/syncthing/releases",
+    "repo_path": "syncthing/syncthing"
+  },
+  {
+    "id": "rclone",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/rclone/rclone/releases",
+    "repo_path": "rclone/rclone"
+  },
+  {
+    "id": "zen_browser",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/zen-browser/desktop/releases",
+    "repo_path": "zen-browser/desktop",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "zen-x86_64.AppImage"
+    ],
+    "installer_extensions": [
+      ".appimage"
+    ],
+    "href_exclude_substrings": [
+      ".zsync",
+      "aarch64",
+      ".mar",
+      "macos",
+      "windows",
+      "source",
+      ".tar.xz"
+    ],
+    "download_names": [
+      "zen-x86_64.AppImage"
+    ],
+    "save_name": "zen-x86_64.AppImage",
+    "windows_installer": false,
+    "run_installer": false,
+    "kill_before_install": false,
+    "process_name": ""
+  },
+  {
+    "id": "zen_browser_arm64",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/zen-browser/desktop/releases",
+    "repo_path": "zen-browser/desktop",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "zen-aarch64.AppImage"
+    ],
+    "installer_extensions": [
+      ".appimage"
+    ],
+    "href_exclude_substrings": [
+      ".zsync",
+      "x86_64",
+      ".mar",
+      "macos",
+      "windows",
+      "source",
+      ".tar.xz"
+    ],
+    "download_names": [
+      "zen-aarch64.AppImage"
+    ],
+    "save_name": "zen-aarch64.AppImage",
+    "windows_installer": false,
+    "run_installer": false,
+    "kill_before_install": false,
+    "process_name": ""
+  },
+  {
+    "id": "thorium",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/Alex313031/Thorium/releases",
+    "repo_path": "Alex313031/Thorium"
+  },
+  {
+    "id": "bandwhich",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/imsnif/bandwhich/releases",
+    "repo_path": "imsnif/bandwhich"
+  },
+  {
+    "id": "tailscale",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/tailscale/tailscale/releases",
+    "repo_path": "tailscale/tailscale"
+  },
+  {
+    "id": "cloudflared",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/cloudflare/cloudflared/releases",
+    "repo_path": "cloudflare/cloudflared"
+  },
+  {
+    "id": "wireshark",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/wireshark/wireshark/releases",
+    "repo_path": "wireshark/wireshark"
+  },
+  {
+    "id": "nmap",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/nmap/nmap/releases",
+    "repo_path": "nmap/nmap"
+  },
+  {
+    "id": "openvpn",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/OpenVPN/openvpn/releases",
+    "repo_path": "OpenVPN/openvpn"
+  },
+  {
+    "id": "croc",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/schollz/croc/releases",
+    "repo_path": "schollz/croc"
+  },
+  {
+    "id": "syncthingtray",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/Martchus/syncthingtray/releases",
+    "repo_path": "Martchus/syncthingtray"
+  }
+]

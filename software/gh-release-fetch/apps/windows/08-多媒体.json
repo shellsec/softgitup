@@ -1,0 +1,516 @@
+[
+  {
+    "id": "handbrake",
+    "简介": "视频转码与压制（GUI）",
+    "分类": "多媒体",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/HandBrake/HandBrake/releases",
+    "repo_path": "HandBrake/HandBrake",
+    "version_tag_as_on_github": true,
+    "url_hint": "handbrake",
+    "installer_markers": [
+      "HandBrake-",
+      "x86_64-Win_GUI.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      ".sig",
+      ".zip",
+      ".flatpak"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "HandBrake-{ver}-x86_64-Win_GUI.exe"
+    ],
+    "save_name": "HandBrake-{ver}-x86_64-Win_GUI.exe",
+    "process_name": "HandBrake.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "obs",
+    "简介": "直播与录屏（OBS Studio）",
+    "分类": "多媒体",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/obsproject/obs-studio/releases",
+    "repo_path": "obsproject/obs-studio",
+    "version_tag_as_on_github": true,
+    "url_hint": "OBS-Studio",
+    "installer_markers": [
+      "OBS-Studio-",
+      "Windows-x64-Installer.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "zip",
+      "blockmap",
+      "PDBs"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "OBS-Studio-{ver}-Windows-x64-Installer.exe"
+    ],
+    "save_name": "OBS-Studio-{ver}-Windows-x64-Installer.exe",
+    "process_name": "obs64.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "recordly",
+    "简介": "开源录屏与剪辑：自动缩放、光标动效、时间线、摄像头叠加、导出 MP4/GIF",
+    "分类": "多媒体",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/webadderall/Recordly/releases",
+    "repo_path": "webadderall/Recordly",
+    "installer_markers": [
+      "Recordly-windows-x64",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "blockmap",
+      "arm64",
+      "linux",
+      ".dmg",
+      ".AppImage",
+      ".zip",
+      ".yml"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Recordly-windows-x64.exe"
+    ],
+    "save_name": "Recordly-{ver}-windows-x64.exe",
+    "process_name": "Recordly.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "shotcut",
+    "简介": "视频剪辑",
+    "分类": "多媒体",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/mltframework/shotcut/releases",
+    "repo_path": "mltframework/shotcut",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "shotcut-win64-",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "win_ARM",
+      ".zip"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "shotcut-win64-{ver}.exe"
+    ],
+    "save_name": "shotcut-win64-{ver}.exe",
+    "process_name": "shotcut.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "mpchc",
+    "简介": "媒体播放器 MPC-HC",
+    "分类": "多媒体",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/clsid2/mpc-hc/releases",
+    "repo_path": "clsid2/mpc-hc",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "MPC-HC.",
+      ".x64.exe"
+    ],
+    "href_exclude_substrings": [
+      ".x86.exe",
+      ".zip"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "MPC-HC.{ver}.x64.exe"
+    ],
+    "save_name": "MPC-HC.{ver}.x64.exe",
+    "process_name": "mpc-hc64.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "yt_dlp",
+    "简介": "视频下载命令行（单文件 yt-dlp.exe）",
+    "分类": "多媒体",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/yt-dlp/yt-dlp/releases",
+    "repo_path": "yt-dlp/yt-dlp",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "yt-dlp.exe"
+    ],
+    "href_exclude_substrings": [
+      "_win.zip",
+      "_arm64",
+      "_x86"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "yt-dlp.exe"
+    ],
+    "save_name": "yt-dlp.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "ffmpeg_win64",
+    "简介": "FFmpeg 自动构建（BtbN，tag 为 latest）",
+    "分类": "多媒体",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/BtbN/FFmpeg-Builds/releases",
+    "repo_path": "BtbN/FFmpeg-Builds",
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "ffmpeg-master-latest-win64-gpl.zip"
+    ],
+    "href_exclude_substrings": [
+      "winarm",
+      "shared",
+      "lgpl"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "ffmpeg-master-latest-win64-gpl.zip"
+    ],
+    "save_name": "ffmpeg-master-latest-win64-gpl.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "vlc",
+    "简介": "VLC 媒体播放器（跨平台）",
+    "分类": "多媒体",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/videolan/vlc/releases",
+    "repo_path": "videolan/vlc",
+    "installer_markers": [
+      "win64.exe",
+      "vlc-"
+    ],
+    "href_exclude_substrings": [
+      "win32",
+      "winarm",
+      ".7z"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "vlc-{ver}-win64.exe"
+    ],
+    "save_name": "vlc-{ver}-win64.exe",
+    "process_name": "vlc.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "url_hint": "vlc"
+  },
+  {
+    "id": "audacity",
+    "简介": "多轨音频录制与编辑",
+    "分类": "多媒体",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/audacity/audacity/releases",
+    "repo_path": "audacity/audacity",
+    "installer_markers": [
+      "audacity-",
+      "64bit.exe"
+    ],
+    "href_exclude_substrings": [
+      "32bit",
+      "macos",
+      "ubuntu"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "audacity-win-{ver}-64bit.exe"
+    ],
+    "save_name": "audacity-win-{ver}-64bit.exe",
+    "process_name": "Audacity.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "kdenlive",
+    "简介": "非线性视频剪辑（KDE）",
+    "分类": "多媒体",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/KDE/kdenlive/releases",
+    "repo_path": "KDE/kdenlive",
+    "installer_markers": [
+      "kdenlive-",
+      "standalone.exe"
+    ],
+    "href_exclude_substrings": [
+      "appimage",
+      "macos",
+      "aarch64"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "kdenlive-{ver}-standalone.exe"
+    ],
+    "save_name": "kdenlive-{ver}-standalone.exe",
+    "process_name": "kdenlive.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "lmms",
+    "简介": "数字音频工作站（DAW）",
+    "分类": "多媒体",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/LMMS/lmms/releases",
+    "repo_path": "LMMS/lmms",
+    "installer_markers": [
+      "lmms-",
+      "win32.exe"
+    ],
+    "href_exclude_substrings": [
+      "win64",
+      "AppImage",
+      "dmg"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "lmms-{ver}-msvc2017-win32.exe"
+    ],
+    "save_name": "lmms-{ver}-msvc2017-win32.exe",
+    "process_name": "lmms.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "mediainfo",
+    "简介": "音视频元数据与技术信息查看",
+    "分类": "多媒体",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/MediaArea/MediaInfo/releases",
+    "repo_path": "MediaArea/MediaInfo",
+    "installer_markers": [
+      "MediaInfo_GUI_",
+      "Windows.exe"
+    ],
+    "href_exclude_substrings": [
+      "CLI",
+      "Mac",
+      "deb"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "MediaInfo_GUI_{ver}_Windows.exe"
+    ],
+    "save_name": "MediaInfo_GUI_{ver}_Windows.exe",
+    "process_name": "MediaInfo.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "url_hint": "MediaInfo"
+  },
+  {
+    "id": "subtitleedit",
+    "简介": "字幕编辑与调轴",
+    "分类": "多媒体",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/SubtitleEdit/subtitleedit/releases",
+    "repo_path": "SubtitleEdit/subtitleedit",
+    "installer_markers": [
+      "SubtitleEdit-",
+      "Setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "portable",
+      "Linux"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "SubtitleEdit-{ver}-Setup.exe"
+    ],
+    "save_name": "SubtitleEdit-{ver}-Setup.exe",
+    "process_name": "SubtitleEdit.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "mpv",
+    "简介": "极简命令行媒体播放器（Windows 构建）",
+    "分类": "多媒体",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/mpv-player/mpv/releases",
+    "repo_path": "mpv-player/mpv",
+    "installer_markers": [
+      "mpv-",
+      "x86_64",
+      "win.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "linux",
+      "darwin"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "mpv-{ver}-x86_64-w64-mingw.zip"
+    ],
+    "save_name": "mpv-{ver}-x86_64-w64-mingw.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "avidemux",
+    "简介": "Avidemux 简单剪辑与转码",
+    "分类": "多媒体",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/mean00/avidemux2/releases",
+    "repo_path": "mean00/avidemux2",
+    "installer_markers": [
+      "Avidemux_",
+      "VC64.exe"
+    ],
+    "href_exclude_substrings": [
+      "osx",
+      "linux",
+      "qt6"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Avidemux_{ver}_VC64.exe"
+    ],
+    "save_name": "Avidemux_{ver}_VC64.exe",
+    "process_name": "avidemux.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "url_hint": "Avidemux"
+  },
+  {
+    "id": "musescore",
+    "简介": "MuseScore 制谱与播放",
+    "分类": "多媒体",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/musescore/MuseScore/releases",
+    "repo_path": "musescore/MuseScore",
+    "installer_markers": [
+      "MuseScore-",
+      "x86_64.msi"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "7z",
+      "AppImage"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "MuseScore-{ver}-x86_64.msi"
+    ],
+    "save_name": "MuseScore-{ver}-x86_64.msi",
+    "process_name": "MuseScore4.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "version_tag_as_on_github": true,
+    "url_hint": "MuseScore"
+  },
+  {
+    "id": "strawberry",
+    "简介": "Strawberry 音乐播放器（Clementine 分支）",
+    "分类": "多媒体",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/strawberrymusicplayer/strawberry/releases",
+    "repo_path": "strawberrymusicplayer/strawberry",
+    "installer_markers": [
+      "StrawberrySetup-",
+      "x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "x86",
+      "deb",
+      "osx"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "StrawberrySetup-{ver}-x64.exe"
+    ],
+    "save_name": "StrawberrySetup-{ver}-x64.exe",
+    "process_name": "strawberry.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true
+  },
+  {
+    "id": "jellyfin_media_player",
+    "简介": "Jellyfin 桌面客户端",
+    "分类": "多媒体",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/jellyfin/jellyfin-media-player/releases",
+    "repo_path": "jellyfin/jellyfin-media-player",
+    "installer_markers": [
+      "jellyfin-media-player_",
+      "windows-amd64.exe"
+    ],
+    "href_exclude_substrings": [
+      "macos",
+      "linux",
+      "portable"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "jellyfin-media-player_{ver}_windows-amd64.exe"
+    ],
+    "save_name": "jellyfin-media-player_{ver}_windows-amd64.exe",
+    "process_name": "jellyfinmediaplayer.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "url_hint": "jellyfin-media-player"
+  },
+  {
+    "id": "spotube",
+    "简介": "Spotube（开源 Spotify 客户端，无 Premium 也可用）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/KRTirtho/spotube/releases",
+    "repo_path": "KRTirtho/spotube",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Spotube-windows-x86_64-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      ".nupkg",
+      "android",
+      "linux",
+      "macos",
+      "ipa",
+      "AppImage",
+      ".md5",
+      "sha256"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Spotube-windows-x86_64-setup.exe"
+    ],
+    "save_name": "Spotube-windows-x86_64-setup.exe",
+    "process_name": "spotube.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  }
+]

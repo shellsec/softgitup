@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Templates encode="utf8escenc"><Template Name="If" Comments="0" Strings="0">Select Case [+expression+]
+Case [+statement+]
+	^
+Case Else
+	' default
+End Select</Template><Template Name="ElseIf" Comments="0" Strings="0">ElseIf [+evaluation+] Then
+	^
+</Template><Template Name="Else" Comments="0" Strings="0">Else
+	^
+End If</Template><Template Name="Select" Comments="0" Strings="0">Select Case [+expression+]
+Case [+statement+]
+	^
+End Select</Template><Template Name="For" Comments="0" Strings="0">For [+evaluation+]
+	^ ' Code to run
+Next</Template><Template Name="While" Comments="0" Strings="0">While [+evaluation+]
+	^ ' Code to run
+Wend</Template><Template Name="Function" Comments="0" Strings="0">Function [+functionName+]([+parameters+])
+	^
+End Function</Template><Template Name="Dim" Comments="0" Strings="0">Dim [+varName+]</Template></Templates>
