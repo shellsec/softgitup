@@ -319,5 +319,308 @@
     "process_name": "CC Switch.exe",
     "kill_before_install": true,
     "run_installer": true
+  },
+  {
+    "id": "claude_code",
+    "简介": "Claude Code（Anthropic 官方终端 CLI 原生构建，Windows x64 zip）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/anthropics/claude-code/releases",
+    "repo_path": "anthropics/claude-code",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "claude-win32-x64",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "darwin",
+      "linux",
+      "SHASUMS",
+      ".sig"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "claude-win32-x64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "codex_cli",
+    "简介": "OpenAI Codex CLI（Rust 发行包，Windows x64 推荐 exe.zip）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/openai/codex/releases",
+    "repo_path": "openai/codex",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "codex-x86_64-pc-windows-msvc",
+      ".exe.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64-pc-windows",
+      "command-runner",
+      "responses-api-proxy",
+      "sandbox-setup",
+      "npm-",
+      "argument-comment",
+      "install.ps1",
+      "install.sh",
+      "darwin",
+      "linux",
+      ".zst",
+      ".tar.gz"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "codex-windows-x64.exe.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "gemini_cli",
+    "简介": "Gemini CLI（Google 官方；Release 多为 gemini-cli-bundle.zip 通用包）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/google-gemini/gemini-cli/releases",
+    "repo_path": "google-gemini/gemini-cli",
+    "installer_markers": [
+      "gemini-cli-bundle.zip"
+    ],
+    "href_exclude_substrings": [
+      ".sig",
+      "sbom"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "gemini-cli-bundle.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "cline",
+    "简介": "Cline（VS Code / Cursor 系扩展，Release .vsix）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/cline/cline/releases",
+    "repo_path": "cline/cline",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "cline-",
+      ".vsix"
+    ],
+    "href_exclude_substrings": [
+      "Source",
+      ".zip",
+      ".tar.gz",
+      "sbom"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".vsix"
+    ],
+    "download_names": [
+      "cline-{ver}.vsix"
+    ],
+    "save_name": "cline-{ver}.vsix",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "openclaw",
+    "简介": "OpenClaw（个人 AI 助手；Windows 用 Release 中 OpenClaw-*.zip）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/openclaw/openclaw/releases",
+    "repo_path": "openclaw/openclaw",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "OpenClaw-",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "dSYM",
+      ".dmg",
+      ".sig",
+      "blockmap"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "OpenClaw.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "botgem",
+    "简介": "BotGem（AI 桌面客户端；Windows 安装包在 gaodeng/botgem-docs Release）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/gaodeng/botgem-docs/releases",
+    "repo_path": "gaodeng/botgem-docs",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "BotGem.Setup.",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      ".appx",
+      "blockmap",
+      ".yml",
+      "darwin",
+      "linux"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "BotGem.Setup.{ver}.exe"
+    ],
+    "save_name": "BotGem.Setup.{ver}.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "immersive_translate",
+    "简介": "沉浸式翻译（浏览器扩展离线包，Chrome zip；解压后开发者模式加载）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/immersive-translate/immersive-translate/releases",
+    "repo_path": "immersive-translate/immersive-translate",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "chrome-immersive-translate-",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "firefox",
+      "user.js",
+      ".crx",
+      "safari"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "chrome-immersive-translate-{ver}.zip"
+    ],
+    "save_name": "chrome-immersive-translate-{ver}.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "chatbox",
+    "简介": "Chatbox：主仓库 chatboxai/chatbox 的 GitHub Release 多为源码；桌面版请从官网 https://chatboxai.app 或 Microsoft Store 获取。本条仅作定位。",
+    "分类": "AI",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/chatboxai/chatbox/releases",
+    "repo_path": "chatboxai/chatbox",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "nextchat",
+    "简介": "NextChat（原 ChatGPT-Next-Web）：仓库 ChatGPTNextWeb/NextChat 的 Release 多为源码；在线/部署见项目说明。本条仅作定位。",
+    "分类": "AI",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/ChatGPTNextWeb/NextChat/releases",
+    "repo_path": "ChatGPTNextWeb/NextChat",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "opencat",
+    "简介": "OpenCat：分发以 macOS App Store 等渠道为主，无固定 GitHub Release 二进制；repo_path 仅满足配置校验，勿启用。",
+    "分类": "AI",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/octocat/Hello-World/releases",
+    "repo_path": "octocat/Hello-World",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "open_claude_cowork",
+    "简介": "Open Claude Cowork（ComposioHQ/open-claude-cowork）：当前仓库无 GitHub Release 二进制，需 clone 后 setup。本条仅作定位。",
+    "分类": "AI",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/ComposioHQ/open-claude-cowork/releases",
+    "repo_path": "ComposioHQ/open-claude-cowork",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "github_copilot_cli",
+    "简介": "GitHub Copilot：以 VS Code / JetBrains 插件或 gh copilot 为主，无单一 Windows 安装包 Release。本条仅作说明占位。",
+    "分类": "AI",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/microsoft/vscode/releases",
+    "repo_path": "microsoft/vscode",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "langchain_note",
+    "简介": "LangChain：Python/JS 开发框架，通过 PyPI/npm 安装，不适合本项目的 GitHub Release 二进制拉取。",
+    "分类": "AI",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/langchain-ai/langchain/releases",
+    "repo_path": "langchain-ai/langchain",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "llamaindex_note",
+    "简介": "LlamaIndex：Python 开发框架，通过 pip 安装，无本工具链所需的独立安装包 Release。",
+    "分类": "AI",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/run-llama/llama_index/releases",
+    "repo_path": "run-llama/llama_index",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

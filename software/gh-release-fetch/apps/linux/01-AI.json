@@ -163,5 +163,365 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "claude_code",
+    "简介": "Claude Code（Linux x86_64 glibc，claude-linux-x64.tar.gz；musl 见 claude-linux-x64-musl）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/anthropics/claude-code/releases",
+    "repo_path": "anthropics/claude-code",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "claude-linux-x64",
+      ".tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "musl",
+      "arm64",
+      "darwin",
+      "win32",
+      "SHASUMS",
+      ".sig"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "claude-linux-x64.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "claude_code_linux_arm64",
+    "简介": "Claude Code（Linux arm64 glibc，claude-linux-arm64.tar.gz）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/anthropics/claude-code/releases",
+    "repo_path": "anthropics/claude-code",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "claude-linux-arm64",
+      ".tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "musl",
+      "x64",
+      "darwin",
+      "win32",
+      "SHASUMS",
+      ".sig"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "claude-linux-arm64.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "codex_cli",
+    "简介": "OpenAI Codex CLI（Linux x86_64 gnu，codex-x86_64-unknown-linux-gnu.tar.gz）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/openai/codex/releases",
+    "repo_path": "openai/codex",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "codex-x86_64-unknown-linux-gnu",
+      ".tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "musl",
+      "aarch64",
+      "apple-darwin",
+      "pc-windows",
+      "command-runner",
+      "responses-api-proxy",
+      "sandbox-setup",
+      "npm-",
+      "argument-comment",
+      "install.ps1",
+      "install.sh",
+      "sigstore",
+      ".zst"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "codex-x86_64-unknown-linux-gnu.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "codex_cli_linux_arm64",
+    "简介": "OpenAI Codex CLI（Linux aarch64 gnu，codex-aarch64-unknown-linux-gnu.tar.gz）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/openai/codex/releases",
+    "repo_path": "openai/codex",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "codex-aarch64-unknown-linux-gnu",
+      ".tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "musl",
+      "x86_64",
+      "apple-darwin",
+      "pc-windows",
+      "command-runner",
+      "responses-api-proxy",
+      "sandbox-setup",
+      "npm-",
+      "argument-comment",
+      "install.ps1",
+      "install.sh",
+      "sigstore",
+      ".zst"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "codex-aarch64-unknown-linux-gnu.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "gemini_cli",
+    "简介": "Gemini CLI（Release 多为 gemini-cli-bundle.zip 通用包）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/google-gemini/gemini-cli/releases",
+    "repo_path": "google-gemini/gemini-cli",
+    "installer_markers": [
+      "gemini-cli-bundle.zip"
+    ],
+    "href_exclude_substrings": [
+      ".sig",
+      "sbom"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "gemini-cli-bundle.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "cline",
+    "简介": "Cline（VS Code 扩展，Release .vsix）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/cline/cline/releases",
+    "repo_path": "cline/cline",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "cline-",
+      ".vsix"
+    ],
+    "href_exclude_substrings": [
+      "Source",
+      ".zip",
+      ".tar.gz",
+      "sbom"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".vsix"
+    ],
+    "download_names": [
+      "cline-{ver}.vsix"
+    ],
+    "save_name": "cline-{ver}.vsix",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "openclaw",
+    "简介": "OpenClaw（Linux 用 Release 中 OpenClaw-*.zip）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/openclaw/openclaw/releases",
+    "repo_path": "openclaw/openclaw",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "OpenClaw-",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "dSYM",
+      ".dmg",
+      ".sig",
+      "blockmap"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "OpenClaw.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "botgem",
+    "简介": "BotGem：gaodeng/botgem-docs Release 当前仅有 Windows 安装包；Linux 请从官网获取。本条占位勿启用。",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/gaodeng/botgem-docs/releases",
+    "repo_path": "gaodeng/botgem-docs",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "immersive_translate",
+    "简介": "沉浸式翻译（Chrome 扩展 zip）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/immersive-translate/immersive-translate/releases",
+    "repo_path": "immersive-translate/immersive-translate",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "chrome-immersive-translate-",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "firefox",
+      "user.js",
+      ".crx",
+      "safari"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "chrome-immersive-translate-{ver}.zip"
+    ],
+    "save_name": "chrome-immersive-translate-{ver}.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "chatbox",
+    "简介": "Chatbox：主仓库 Release 多为源码；桌面版见 https://chatboxai.app 。",
+    "分类": "AI",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/chatboxai/chatbox/releases",
+    "repo_path": "chatboxai/chatbox",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "nextchat",
+    "简介": "NextChat：Release 多为源码；部署见项目说明。",
+    "分类": "AI",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/ChatGPTNextWeb/NextChat/releases",
+    "repo_path": "ChatGPTNextWeb/NextChat",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "opencat",
+    "简介": "OpenCat：以 App Store 等为主；repo_path 仅满足配置校验，勿启用。",
+    "分类": "AI",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/octocat/Hello-World/releases",
+    "repo_path": "octocat/Hello-World",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "open_claude_cowork",
+    "简介": "Open Claude Cowork：仓库无 Release 二进制。",
+    "分类": "AI",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/ComposioHQ/open-claude-cowork/releases",
+    "repo_path": "ComposioHQ/open-claude-cowork",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "github_copilot_cli",
+    "简介": "GitHub Copilot：IDE 插件或 gh copilot，无单一 Linux 安装包。",
+    "分类": "AI",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/microsoft/vscode/releases",
+    "repo_path": "microsoft/vscode",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "langchain_note",
+    "简介": "LangChain：PyPI/npm 框架，不适合 Release 二进制拉取。",
+    "分类": "AI",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/langchain-ai/langchain/releases",
+    "repo_path": "langchain-ai/langchain",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "llamaindex_note",
+    "简介": "LlamaIndex：pip 框架，无独立安装包 Release。",
+    "分类": "AI",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/run-llama/llama_index/releases",
+    "repo_path": "run-llama/llama_index",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]
