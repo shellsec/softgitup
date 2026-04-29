@@ -10,6 +10,7 @@ API 服务：通过 HTTP 调用主程序的 CLI（优先 exe，无则 main.py）
 使用方式：
   python WindowsBatchScriptManager_api_server.py [--port 8765] [--host 0.0.0.0]
   python WindowsBatchScriptManager_api_server.py --no-auth --port 8765   # 关闭鉴权，无需 X-API-Key
+  python WindowsBatchScriptManager_api_server.py --no-auth --docs        # 关闭鉴权 + 开启 HTML 文档页面
 
 默认监听 0.0.0.0，可被本机及局域网/外网访问；仅本机访问可加 --host 127.0.0.1。
 依赖：pip install fastapi uvicorn
@@ -51,8 +52,10 @@ ROOT = Path(__file__).resolve().parent
 MAIN_EXE = ROOT / "WindowsBatchScriptManager.exe"
 MAIN_SCRIPT = ROOT / "main.py"
 API_KEY = os.environ.get("API_KEY", "change-me-in-production")
-# 是否关闭鉴权（--no-auth 时设为 True，无需 X-API-Key 即可调用）
+# 是否关闭鉴权（--no-auth 时设为 True，默认关闭鉴权方便使用；去掉 --no-auth 即开启鉴权）
 DISABLE_AUTH = True
+# 是否开启根路径 HTML 文档页面（--docs 时设为 True）
+ENABLE_DOCS = False
 
 
 def get_cli_cmd():
@@ -75,8 +78,8 @@ def run_cli(*args, json_out=True):
 
 
 try:
-    from fastapi import FastAPI, Header, HTTPException, Query, Body
-    from fastapi.responses import PlainTextResponse, JSONResponse
+    from fastapi import FastAPI, Header, HTTPException, Query, Body, Request
+    from fastapi.responses import PlainTextResponse, JSONResponse, HTMLResponse
     HAS_FASTAPI = True
 except ImportError:
     HAS_FASTAPI = False
@@ -93,12 +96,89 @@ def create_app():
     app = FastAPI(title="Batch Script Manager API", version="1.0")
 
     @app.get("/")
-    def root():
-        return {
-            "service": "Batch Script Manager API",
-            "endpoints": ["/list", "/status", "/start", "/stop", "/restart", "/start-all", "/stop-all", "/restart-all", "/add", "/update", "/delete", "/export", "/import", "/config-path"],
-            "note": "restart、start-all、stop-all、restart-all 同时支持 GET 和 POST",
-        }
+    def root(request: Request):
+        if not ENABLE_DOCS:
+            return {"status": "ok"}
+        base = str(request.base_url).rstrip("/")
+        auth_note = ""
+        if not DISABLE_AUTH:
+            auth_note = '<p style="color:#e67e22;margin:4px 0">🔐 Auth enabled — add header <code>X-API-Key: YOUR_KEY</code></p>'
+        html = f"""<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Batch Script Manager API</title>
+<style>
+  body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;max-width:900px;margin:0 auto;padding:20px;background:#1a1a2e;color:#e0e0e0}}
+  h1{{color:#00d2ff;border-bottom:2px solid #00d2ff;padding-bottom:8px}}
+  h2{{color:#7fdbca;margin-top:28px;border-left:3px solid #7fdbca;padding-left:10px}}
+  table{{width:100%;border-collapse:collapse;margin:8px 0 16px}}
+  th{{background:#16213e;color:#00d2ff;text-align:left;padding:8px 12px;border:1px solid #2a2a4a}}
+  td{{padding:8px 12px;border:1px solid #2a2a4a}}
+  tr:nth-child(even){{background:#16213e}}
+  code{{background:#16213e;padding:2px 6px;border-radius:3px;color:#f8b400;font-size:13px}}
+  .method{{font-weight:bold;padding:2px 8px;border-radius:3px;font-size:12px;display:inline-block;min-width:50px;text-align:center}}
+  .get{{background:#27ae60;color:#fff}}
+  .post{{background:#2980b9;color:#fff}}
+  .delete{{background:#c0392b;color:#fff}}
+  .example{{background:#0f3460;border:1px solid #2a2a4a;border-radius:6px;padding:12px;margin:6px 0 14px;font-family:monospace;white-space:pre-wrap;font-size:13px;color:#a8e6cf;word-break:break-all}}
+  a{{color:#00d2ff}}
+</style></head><body>
+<h1>🚀 Batch Script Manager API</h1>
+{auth_note}
+
+<h2>⚡ 快捷控制 (Quick Control)</h2>
+<table>
+  <tr><th>Method</th><th>Endpoint</th><th>说明</th></tr>
+  <tr><td><span class="method get">GET</span> <span class="method post">POST</span></td><td><code>/start-all</code></td><td>启动所有脚本</td></tr>
+  <tr><td><span class="method get">GET</span> <span class="method post">POST</span></td><td><code>/stop-all</code></td><td>停止所有脚本</td></tr>
+  <tr><td><span class="method get">GET</span> <span class="method post">POST</span></td><td><code>/restart-all</code></td><td>重启所有脚本</td></tr>
+</table>
+
+<h2>🎯 单脚本控制 (Single Script)</h2>
+<table>
+  <tr><th>Method</th><th>Endpoint</th><th>说明</th></tr>
+  <tr><td><span class="method get">GET</span> <span class="method post">POST</span></td><td><code>/start?id=1</code></td><td>启动脚本 (id 或 name)</td></tr>
+  <tr><td><span class="method get">GET</span> <span class="method post">POST</span></td><td><code>/stop?id=1</code></td><td>停止脚本</td></tr>
+  <tr><td><span class="method get">GET</span> <span class="method post">POST</span></td><td><code>/restart?id=1</code></td><td>重启脚本</td></tr>
+</table>
+
+<h2>📊 查询 & 状态 (Query & Status)</h2>
+<table>
+  <tr><th>Method</th><th>Endpoint</th><th>说明</th></tr>
+  <tr><td><span class="method get">GET</span></td><td><code>/list</code></td><td>列出所有脚本</td></tr>
+  <tr><td><span class="method get">GET</span></td><td><code>/status?id=1</code></td><td>查询脚本状态 (id 或 name)</td></tr>
+  <tr><td><span class="method get">GET</span></td><td><code>/config-path</code></td><td>获取配置文件路径</td></tr>
+</table>
+
+<h2>📝 管理 (Manage)</h2>
+<table>
+  <tr><th>Method</th><th>Endpoint</th><th>说明</th></tr>
+  <tr><td><span class="method post">POST</span></td><td><code>/add?path=C:\\test.bat&name=Test</code></td><td>添加脚本</td></tr>
+  <tr><td></td><td><code>&group=&script_type=&interpreter=&auto_restart=&log_output=</code></td><td>可选参数</td></tr>
+  <tr><td><span class="method post">POST</span> <span class="method get">GET</span></td><td><code>/update?id=1</code></td><td>更新脚本字段</td></tr>
+  <tr><td></td><td><code>&name=&path=&work_dir=&group=&script_type=&interpreter=&auto_restart=&log_output=</code></td><td>可选参数</td></tr>
+  <tr><td><span class="method delete">DELETE</span></td><td><code>/delete?id=1</code></td><td>删除脚本</td></tr>
+</table>
+
+<h2>📥 导入导出 (Import & Export)</h2>
+<table>
+  <tr><th>Method</th><th>Endpoint</th><th>说明</th></tr>
+  <tr><td><span class="method get">GET</span></td><td><code>/export</code></td><td>导出配置为 JSON</td></tr>
+  <tr><td><span class="method post">POST</span></td><td><code>/import</code></td><td>导入配置 Body: {{"items": [...]}}</td></tr>
+  <tr><td></td><td><code>?replace=true</code></td><td>替换所有现有项</td></tr>
+</table>
+
+<h2>💡 快速示例 (Examples)</h2>
+<div class="example">curl "{base}/start-all"
+curl "{base}/stop-all"
+curl "{base}/restart-all"
+curl "{base}/start?id=1"
+curl "{base}/stop?id=my-script"
+curl "{base}/list"
+curl "{base}/status?id=1"
+curl "{base}/add?path=C:\\\\test.bat&amp;name=Test"
+curl -X DELETE "{base}/delete?id=1"</div>
+</body></html>"""
+        return HTMLResponse(content=html)
 
     @app.get("/config-path")
     def api_config_path(x_api_key: str = Header(None, alias="X-API-Key")):
@@ -437,6 +517,7 @@ def main():
     p.add_argument("--port", type=int, default=8765, help="Port")
     p.add_argument("--api-key", default=None, help="API key (override env API_KEY)")
     p.add_argument("--no-auth", action="store_true", help="Disable authentication; all endpoints (list/start/stop/etc.) can be called without X-API-Key")
+    p.add_argument("--docs", action="store_true", help="Enable HTML API docs page at root path /")
     a = p.parse_args()
     if a.api_key:
         global API_KEY
@@ -444,6 +525,9 @@ def main():
     if a.no_auth:
         global DISABLE_AUTH
         DISABLE_AUTH = True
+    if a.docs:
+        global ENABLE_DOCS
+        ENABLE_DOCS = True
     if not HAS_FASTAPI:
         print("Please install: pip install fastapi uvicorn[standard]", file=sys.stderr)
         sys.exit(1)
@@ -451,8 +535,71 @@ def main():
     if DISABLE_AUTH:
         print("Auth: disabled (--no-auth)")
     else:
-        print("API key (X-API-Key):", API_KEY)
+        print("Auth: enabled, API key (X-API-Key):", API_KEY)
+    if ENABLE_DOCS:
+        print("Docs: enabled (--docs), visit / for HTML API docs")
     print("Listen:", a.host, "port", a.port)
+    print()
+    print("=" * 60)
+    print("  启动参数说明 / Launch Options")
+    print("=" * 60)
+    print("""  默认:    鉴权开启，所有接口需带 X-API-Key 请求头
+           根路径 / 只返回 {"status":"ok"}，不暴露接口信息
+
+  --no-auth      关闭鉴权，无需 Key 即可调用（方便本地/内网使用）
+  --docs         开启 HTML 文档页面，浏览器访问 / 查看接口文档
+  --api-key KEY  自定义 API Key
+                 默认从环境变量 API_KEY 读取，fallback 为 change-me-in-production
+
+  组合示例:
+    python WindowsBatchScriptManager_api_server.py --no-auth
+    python WindowsBatchScriptManager_api_server.py --no-auth --docs
+    python WindowsBatchScriptManager_api_server.py --api-key my-secret-key""")
+    print()
+    print("=" * 60)
+    print("  接口示例 / API Endpoints")
+    print("=" * 60)
+    base = f"http://{a.host}:{a.port}"
+    if a.host == "0.0.0.0":
+        base = f"http://localhost:{a.port}"
+    auth_hint = "（需鉴权时加请求头 X-API-Key）" if not DISABLE_AUTH else ""
+    print(f"""  GET  /list          - 列表{auth_hint}
+  GET  /status?id=1   - 状态
+  POST /start?id=1    - 启动
+  POST /stop?id=1     - 停止
+  GET  /start?id=1    - 启动（支持 GET）
+  GET  /stop?id=1     - 停止（支持 GET）
+  GET  /restart?id=1  - 重启（支持 GET）
+  POST /update?id=1   - 更新（可选 name, path, work_dir, group, script_type, interpreter, auto_restart, log_output）
+  GET  /update?id=1   - 同上（支持 GET）
+  GET  /start-all     - 全部启动（支持 GET，便于浏览器/curl 直接访问）
+  GET  /stop-all      - 全部停止（支持 GET）
+  GET  /restart-all   - 全部重启（支持 GET）
+  POST /start-all     - 全部启动
+  POST /stop-all      - 全部停止
+  POST /restart-all   - 全部重启
+  GET  /config-path   - 配置路径
+  POST /add           - 添加脚本
+  DELETE /delete?id=  - 删除
+  GET  /export        - 导出配置
+  POST /import        - 导入配置""")
+    print()
+    print("  curl 示例:")
+    if not DISABLE_AUTH:
+        print(f'    curl -H "X-API-Key: {API_KEY}" "{base}/list"')
+        print(f'    curl -H "X-API-Key: {API_KEY}" "{base}/start?id=1"')
+        print(f'    curl -H "X-API-Key: {API_KEY}" "{base}/stop-all"')
+        print(f'    curl -H "X-API-Key: {API_KEY}" "{base}/restart-all"')
+    else:
+        print(f'    curl "{base}/list"')
+        print(f'    curl "{base}/start?id=1"')
+        print(f'    curl "{base}/stop-all"')
+        print(f'    curl "{base}/restart-all"')
+        print(f'    curl "{base}/start-all"')
+        print(f'    curl "{base}/add?path=C:\\\\test.bat&name=Test"')
+    print()
+    print("=" * 60)
+    print()
     uvicorn.run(create_app(), host=a.host, port=a.port)
 
 
