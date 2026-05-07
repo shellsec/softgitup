@@ -190,5 +190,17 @@
     "process_name": "rio.exe",
     "kill_before_install": true,
     "run_installer": true
+  },
+  {
+    "id": "warp",
+    "简介": "Warp（agentic 终端与开发环境，源码在 GitHub；正式安装包由 warp.dev 分发，Release 页无 exe/dmg 等资产；本条仅作索引，勿启用自动下载）",
+    "分类": "终端",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/warpdotdev/warp/releases",
+    "repo_path": "warpdotdev/warp",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

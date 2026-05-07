@@ -485,5 +485,58 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "deepseek_cli",
+    "简介": "DeepSeek-TUI dispatcher（deepseek 命令；macOS Apple Silicon，裸 binary deepseek-macos-arm64；需配套 deepseek_tui，并 chmod +x 后放入 PATH）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Hmbown/DeepSeek-TUI/releases",
+    "repo_path": "Hmbown/DeepSeek-TUI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "deepseek-macos-arm64"
+    ],
+    "href_exclude_substrings": [
+      "deepseek-tui-",
+      "linux",
+      "windows",
+      "x64",
+      "sha256"
+    ],
+    "windows_installer": false,
+    "use_download_filename": true,
+    "save_name": "deepseek-macos-arm64",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "deepseek_tui",
+    "简介": "DeepSeek-TUI companion runtime（deepseek-tui 命令；macOS Apple Silicon，裸 binary deepseek-tui-macos-arm64；需与 deepseek_cli 同时存在）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Hmbown/DeepSeek-TUI/releases",
+    "repo_path": "Hmbown/DeepSeek-TUI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "deepseek-tui-macos-arm64"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "windows",
+      "x64",
+      "sha256"
+    ],
+    "windows_installer": false,
+    "use_download_filename": true,
+    "save_name": "deepseek-tui-macos-arm64",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

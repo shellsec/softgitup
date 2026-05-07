@@ -1,0 +1,69 @@
+[
+  {
+    "id": "v2rayn",
+    "简介": "v2rayN（Windows x64，官方 zip，仅下载解压使用；VLESS/Reality/Hysteria2 等协议）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/2dust/v2rayN/releases",
+    "repo_path": "2dust/v2rayN",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "v2rayN-windows-64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows-arm64",
+      "desktop",
+      "macos",
+      "linux",
+      ".deb",
+      ".rpm",
+      ".dmg",
+      ".sig",
+      "sha256",
+      "sha512"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "v2rayN-windows-64.zip"
+    ],
+    "save_name": "v2rayN-windows-64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "clash_verge_rev",
+    "简介": "Clash Verge Rev（Windows x64 安装包，Meta 内核；含 WebView2 修复版安装程序）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "releases_url": "https://bgithub.xyz/clash-verge-rev/clash-verge-rev/releases",
+    "repo_path": "clash-verge-rev/clash-verge-rev",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Clash.Verge_",
+      "x64_fixed_webview2-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      ".sig",
+      ".dmg",
+      "app.tar",
+      "linux",
+      ".deb"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Clash.Verge_{ver}_x64_fixed_webview2-setup.exe"
+    ],
+    "save_name": "Clash.Verge_{ver}_x64_fixed_webview2-setup.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  }
+]

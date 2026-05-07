@@ -1,0 +1,109 @@
+[
+  {
+    "id": "v2rayn_linux_amd64",
+    "简介": "v2rayN（Linux x86_64，官方 zip，仅下载）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/2dust/v2rayN/releases",
+    "repo_path": "2dust/v2rayN",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "v2rayN-linux-64.zip"
+    ],
+    "href_exclude_substrings": [
+      "linux-arm64",
+      "riscv",
+      "rhel",
+      ".deb",
+      ".rpm",
+      "windows",
+      "macos",
+      ".dmg",
+      ".sig",
+      "sha256"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "v2rayN-linux-64.zip"
+    ],
+    "save_name": "v2rayN-linux-64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "v2rayn_linux_arm64",
+    "简介": "v2rayN（Linux arm64，官方 zip，仅下载）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/2dust/v2rayN/releases",
+    "repo_path": "2dust/v2rayN",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "v2rayN-linux-arm64.zip"
+    ],
+    "href_exclude_substrings": [
+      "linux-64.zip",
+      "riscv",
+      "rhel",
+      ".deb",
+      ".rpm",
+      "windows",
+      "macos",
+      ".dmg",
+      ".sig",
+      "sha256"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "v2rayN-linux-arm64.zip"
+    ],
+    "save_name": "v2rayN-linux-arm64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "clash_verge_rev_linux_amd64",
+    "简介": "Clash Verge Rev（Linux amd64 deb）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "releases_url": "https://bgithub.xyz/clash-verge-rev/clash-verge-rev/releases",
+    "repo_path": "clash-verge-rev/clash-verge-rev",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Clash.Verge_",
+      "amd64.deb"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "armhf",
+      ".sig",
+      ".exe",
+      ".dmg",
+      "app.tar"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".deb"
+    ],
+    "download_names": [
+      "Clash.Verge_{ver}_amd64.deb"
+    ],
+    "save_name": "Clash.Verge_{ver}_amd64.deb",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  }
+]
