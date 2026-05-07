@@ -897,6 +897,15 @@ Mac 用户  Karabiner-Elements  免费、功能强、设备独立设置
 
 
 ===================
+最终选择指南（针对你外贸/跨境场景）
+场景一：绝大多数用户（90%的情况） → 首选 V2rayN (Windows) / v2rayNG (Android)
+理由：协议支持最全、节点兼容性最好、自带测速和订阅更新、操作简单。对于外贸多节点切换、快速测速选优的需求非常友好。
+无需考虑Clash，因为V2rayN的“智能分流+自定义路由”已满足99%的分流需求。
+场景二：特殊需求 → 选 Clash 衍生版（如Clash Verge Rev, CMFA）
+条件：你已有大量、复杂的Clash配置文件（比如自写了几百行规则，设置了多个代理组做不同策略），迁移到V2rayN格式成本太高。
+注意：务必选择 带Meta内核 的版本（如Clash Verge Rev、CMFA），这样才能支持VLESS等新协议。
+场景三：已经不推荐的情况 → 原版 Clash for Windows
+完全不要选。你资料中的链接 Clash.for.Windows.Setup.latest.exe 是一个过时的、不再维护的版本。用它你会遇到新节点无法连接的问题。
 外贸 / 跨境场景选型建议
 1. 选 V2rayN 7.19.4 的情况（推荐）
 用新机场 / 新节点（VLESS、Reality、Hysteria2 等）
@@ -948,6 +957,10 @@ https://dl.ppbox.xyz/ssr/Clash.for.Windows.Setup.latest.exe
 Android 科学 出国 机票 白猫CMFA v2.11.24
 https://www.down66.com/clashmeta
 https://github.com/MetaCubeX/ClashMetaForAndroid/releases
+https://gh-proxy.com/github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v2.11.27/cmfa-2.11.27-meta-universal-release.apk
+
+https://github.com/MetaCubeX/ClashX.Meta
+
 
 《中华人民共和国计算机信息网络国际联网管理暂行规定》中规定：
 “计算机信息网络直接进行国际联网，必须使用邮电部国家公用电信网提供的国际出入口信道。任何单位和个人不得自行建立或者使用其他信道进行国际联网。”
