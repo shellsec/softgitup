@@ -47,6 +47,14 @@ DEFAULT_RELEASE_PAGE_MIRRORS = [
     "https://github.com",
 ]
 
+DEFAULT_NETWORK_PROBE_URLS = [
+    "https://github.com",
+    "https://api.github.com",
+    "https://gh-proxy.com",
+    "https://ghp.ci",
+    "https://mirror.ghproxy.com",
+]
+
 
 def resolve_tls_verify(cfg, insecure_cli):
     """默认校验证书；--insecure 或 apps.json 根级 ssl_verify=false 时关闭（镜像证书过期等场景）。"""
@@ -156,6 +164,39 @@ def load_config(apps_dir=None):
     raise FileNotFoundError(
         "缺少配置：请放置 apps.json，或创建 apps/root.json 与 apps/windows/*.json"
     )
+
+
+def probe_network(cfg, verify=True, per_url_timeout=6):
+    """
+    多端点网络探测：依次尝试 github.com / api.github.com / cfg.release_page_mirrors
+    与内置镜像，任一可达即认为网络可用。全部失败只返回 False，不直接终止脚本。
+    """
+    candidates = []
+    seen = set()
+
+    def add(url):
+        if not url:
+            return
+        normalized = normalize_release_mirror_base(url)
+        if normalized and normalized not in seen:
+            seen.add(normalized)
+            candidates.append(normalized)
+
+    for base in (cfg or {}).get("release_page_mirrors") or []:
+        add(base)
+    for base in DEFAULT_NETWORK_PROBE_URLS:
+        add(base)
+
+    last_error = None
+    for url in candidates:
+        try:
+            requests.get(url, timeout=per_url_timeout, verify=verify, headers=github_headers())
+            logger.info("网络探测通过：%s", url)
+            return True, None
+        except requests.exceptions.RequestException as e:
+            last_error = (url, e)
+            logger.debug("网络探测失败：%s -> %s", url, e)
+    return False, last_error
 
 
 def github_headers():
@@ -955,11 +996,18 @@ def main():
     if not verify:
         logger.warning("已关闭 TLS 证书校验（--insecure 或 apps.json ssl_verify=false）")
 
-    try:
-        requests.get("https://github.com", timeout=10, verify=verify)
-    except requests.exceptions.RequestException as e:
-        logger.error("网络不可用: %s", e)
-        return 1
+    ok, last_error = probe_network(cfg, verify=verify)
+    if not ok:
+        if last_error:
+            url, err = last_error
+            logger.warning(
+                "网络探测全部失败（最后一次：%s -> %s），仍将继续；"
+                "若有本地 manifest 或可用镜像，单个应用的重试与兜底逻辑会接管。",
+                url,
+                err,
+            )
+        else:
+            logger.warning("网络探测无候选地址，仍将继续。")
 
     exit_code = 0
     for app in apps:
