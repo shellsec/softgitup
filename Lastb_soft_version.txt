@@ -896,6 +896,22 @@ Mac 用户  Karabiner-Elements  免费、功能强、设备独立设置
 进阶需求：若需要长按连续调节，AutoHotkey 脚本可添加定时器逻辑，实现按住不放快速增减音量
 
 
+VirtualDesktopSwitcher 1.1.2
+Windows 10/11 虚拟桌面快速切换和指示工具 / Virtual Desktop Switcher and Indicator for Windows 10/11
+https://github.com/choyy/VirtualDesktopSwitcher
+https://github.com/choyy/VirtualDesktopSwitcher/releases/download/1.1.2/VirtualDesktopSwitcher.exe
+创建新桌面 Win + Ctrl + D  点击任务栏的"任务视图"图标(也可用 Win + Tab 调出) ，再点击"新建桌面"
+🎯 快速切换  Win + Ctrl + ← / →  点击任务栏的"任务视图"图标，再点击特定的桌面缩略图
+关闭桌面  Win + Ctrl + F4 在任务视图中，将鼠标悬停在桌面缩略图上，点击右上角的 "X" 
+把运行中的程序移到另一个虚拟窗口，很轻松就能搞定。
+任务视图拖拽法
+这是最直观的方法，很适合整理少量窗口。
+进入任务视图：按 Win + Tab 打开任务视图。
+拖拽窗口：在当前桌面的区域里，用鼠标左键按住你想要移动的程序窗口（缩略图）。
+释放窗口：把窗口拖拽到屏幕底部或顶部的目标桌面缩略图上，然后松开鼠标。程序就会被完整地移动到那个桌面了。
+
+
+
 ===================
 最终选择指南（针对你外贸/跨境场景）
 场景一：绝大多数用户（90%的情况） → 首选 V2rayN (Windows) / v2rayNG (Android)
