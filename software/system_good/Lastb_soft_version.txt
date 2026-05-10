@@ -15,10 +15,10 @@ $$$$$$$  |$$ |  $$ |\$$$$$$$\ $$ |$$ |$$$$$$$  |\$$$$$$$\ \$$$$$$$\
 Zen 是一款适用于 Windows、macOS 和 Linux 的开源系统级广告拦截器和隐私保护程序。它的工作原理是设置一个代理，拦截来自所有应用程序的 HTTP 请求，并阻止那些投放广告、跟踪监控您的行为、恶意软件和其他不需要的内容的脚本。通过在系统级别运行，Zen 可以防御浏览器扩展无法防御的威胁，例如嵌入桌面应用程序和操作系统组件中的跟踪器。Zen 附带了许多预装的过滤器，而且还可以轻松添加主机文件和 EasyList 样式的过滤器，能够根据特定需求定制保护。
 PS：为啥不用adguard，adguard卡网
 https://github.com/anfragment/zen
-https://gh-proxy.com/github.com/ZenPrivacy/zen-desktop/releases/download/v0.21.0/Zen_windows_amd64_noselfupdate.zip
+https://gh-proxy.com/github.com/irbis-sh/zen-desktop/releases/download/v0.21.1/Zen_windows_amd64.zip
 Zen.zip解压即可用
 
-system_good目录下 使用广告拦截DNS（无需安装软件）
+system_good目录下 使用广告拦截DNS（无需安装软件）局域网谨慎
 Configure_AdGuard_DNS.bat  推荐优先
 Configure_18bit_DNS.bat 国内18bit去广告
 Restore_Default_DNS.bat 恢复状态
@@ -505,8 +505,11 @@ https://www.python.org/ftp/python/3.11.9/python-3.11.9-amd64.exe
 # 极简需求：选 ClipSync 或 clipboard-bridge，资源占用低
 https://crosspaste.com/
 /crosspaste/crosspaste-desktop
-最新版 https://gh-proxy.com/github.com/CrossPaste/crosspaste-desktop/releases/download/1.2.9.2059/crosspaste-1.2.9-2059-windows-amd64.zip
-老机器稳定版本 https://gh-proxy.com/github.com/CrossPaste/crosspaste-desktop/releases/download/1.2.4.1778/crosspaste-1.2.4-1778-windows-amd64.zip
+最新版
+https://gh-proxy.com/github.com/CrossPaste/crosspaste-desktop/releases/download/2.0.0.2192/crosspaste-2.0.0-2192-windows-amd64.zip
+https://gh-proxy.com/github.com/CrossPaste/crosspaste-desktop/releases/download/1.2.9.2059/crosspaste-1.2.9-2059-windows-amd64.zip
+老机器稳定版本（集成显卡，GT740，k6000之类）
+https://gh-proxy.com/github.com/CrossPaste/crosspaste-desktop/releases/download/1.2.4.1778/crosspaste-1.2.4-1778-windows-amd64.zip
 
 
 迅雷 Thunder v12.4.4.3740 去广告绿色精简版
