@@ -1,3 +1,16 @@
+Notepad++ v8.9.5 regression fixes, bug-fixes & new improvements:
+
+ 1. Fix updating issue where using v8.9.4 32-bits installer creates duplicate "Uninstall a program" entries.
+ 2. Fix v8.9.4 64-bits installer error message caused by MSIX on Win10.
+ 3. Fix regression in UDL XML files causing an EOL parsing issue.
+ 4. Update Scintilla to 5.6.2 & Lexilla to 5.4.9.
+ 5. Add option to synchronize zoom level across views.
+ 6. Fix MSI installer writting language info to HKCU instead of HKLM.
+ 7. Fix imported UDLs not appearing in the language menu without restarting Notepad++.
+ 8. Make "(?)" tooltip in preferences & Find in Files dialogs persitant & reduce display delay.
+ 9. Fix visual glitch in Mark dialog when in reduced mode.
+
+
 Notepad++ v8.9.4 crash fixes, bug-fixes & new improvements:
 
  1. Fix crashes in FindInFiles when nativeLang.xml's "find-result-hits" contains "%s".
@@ -23,7 +36,7 @@ Notepad++ v8.9.4 crash fixes, bug-fixes & new improvements:
 
 
 Get more info on
-https://notepad-plus-plus.org/downloads/v8.9.4/
+https://notepad-plus-plus.org/downloads/v8.9.5/
 
 
 Included plugins:

@@ -10,13 +10,26 @@ $$$$$$$  |$$ |  $$ |\$$$$$$$\ $$ |$$ |$$$$$$$  |\$$$$$$$\ \$$$$$$$\
                                                                     
 
 """
-
+个人数字生存指南
 基于信息安全和数据安全的思想减少上报敏感数据和保护自身避免算法收割
 Zen 是一款适用于 Windows、macOS 和 Linux 的开源系统级广告拦截器和隐私保护程序。它的工作原理是设置一个代理，拦截来自所有应用程序的 HTTP 请求，并阻止那些投放广告、跟踪监控您的行为、恶意软件和其他不需要的内容的脚本。通过在系统级别运行，Zen 可以防御浏览器扩展无法防御的威胁，例如嵌入桌面应用程序和操作系统组件中的跟踪器。Zen 附带了许多预装的过滤器，而且还可以轻松添加主机文件和 EasyList 样式的过滤器，能够根据特定需求定制保护。
 PS：为啥不用adguard，adguard卡网
 https://github.com/anfragment/zen
 https://gh-proxy.com/github.com/irbis-sh/zen-desktop/releases/download/v0.21.1/Zen_windows_amd64.zip
 Zen.zip解压即可用
+
+其他增强自行下载
+简易的防火墙前端。当你不希望某个“绿色”或“破解”软件有联网行为时，系统自带的防火墙管理太复杂。
+https://www.binisoft.org/wfc
+文件加密容器 (VeraCrypt)
+理由：你的安全策略主要防御在线跟踪和恶意软件，但缺少对本地文件（如合同、证书、密钥、密码库）的静置数据保护。万一电脑丢失或硬盘被直接读取，这些文件就暴露了。
+推荐工具：VeraCrypt (开源免费)
+https://github.com/veracrypt/VeraCrypt
+为了安全，在不同网站使用不同的强密码确实很麻烦。但如果在自己的服务器上部署Bitwarden密码管理器，整个过程就能变得丝滑: 自动生成并存储强密码，多设备同步，还能一键填充。更爽的是，它甚至支持 MFA(Multi-Factor Authentication) 多因素认证，安全性直接拉满
+Bitwarden 其实就是一个密码管理器，和 Apple 自带的密码管理工具差不多，提供了密码托管、强密码生成功能。不同的是，Apple 自带的密码管理器，只能在它生态内使用，在 Android 和 Windows 上就很尴尬了，但是 Bitwarden 提供跨平台支持。
+就我目前而言，我使用 Bitwarden 的主要原因是:
+跨平台同步: 不止于 macOS 和 iOS，还支持 Android、浏览器插件和  Linux 等平台上同步；尤其是浏览器插件，利用快捷键一键填充密码，非常方便。
+MFA 多因素认证: 以往的 MFA 都是第三方服务，比如 Google Authenticator，切换到 Bitwarden 后，配合多设备同步， MFA 登录终于不同找手机了。
 
 system_good目录下 使用广告拦截DNS（无需安装软件）局域网谨慎
 Configure_AdGuard_DNS.bat  推荐优先
@@ -47,7 +60,9 @@ Chrome必备插件 在底部
 notepad++、notepad--、SublimeText、Obsidian+CLI
 
 编辑器
-notepad++ v8.9.4 npp.portable.x64.7z 增加了实用插件
+notepad++ 增加了实用插件
+https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.5/npp.8.9.5.portable.x64.zip
+https://gh-proxy.com/github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.5/npp.8.9.5.portable.x64.zip
 核心特点：免费开源、语法高亮、多标签编辑，便携免安装，插件扩展能力强，适配远程桌面使用需求
 config.xml shortcuts.xml 去除空行 ctrl+k 设置了DirectWrite 
 Notepad++ 在向日葵远程桌面中显示空白主要是由于渲染引擎冲突导致，具体来说：
@@ -66,8 +81,9 @@ DirectWrite 渲染问题：Notepad++ 使用的 DirectWrite 文本渲染技术在
 https://github.com/bruderstein/PythonScript/releases
 PythonScript_Full_3.0.25.0_x64
 
-notepad-- v3.7.2
+notepad--
 核心特点：体积更小、启动更快，支持语法高亮、代码折叠，低资源占用，操作逻辑贴合中文用户习惯
+https://gitee.com/cxasm/notepad--/releases/download/v3.7.2/Notepad--v3.7.2-win10-portable.zip
 EditPlus v6.1.866 汉化注册版
 核心特点：汉化界面易操作，支持多窗口编辑、语法高亮、代码跳转，自带 FTP 上传，适配基础编程与文本处理
 EmEditor pro Version 21.5.2 注册版
@@ -159,6 +175,7 @@ Everything Version 1.5.0.1404a (x64)
 
 WinMemoryCleaner v3.0.7 内存整理
 核心特点：体积小、启动快，一键整理内存，无后台驻留，有效释放闲置内存资源，适配日常内存优化
+https://github.com/IgorMundstein/WinMemoryCleaner
 
 HiBit Startup Manager v2.6.60 开机启动管理
 核心特点：界面简洁操作直观，支持开机启动项的禁用、延迟、删除，精准管控开机加载程序，显著提升开机效率
@@ -167,6 +184,8 @@ NetTime v3.2.0.233 时间同步
 核心特点：体积小巧、同步速度快，精准校准系统时间，无广告无后台，适配各类网络环境下的时间同步需求
 
 影音播放器 PotPlayer64 260401 官网版
+https://t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/UpdateEng.html
+https://potplayer.tv/
 史上最强大电脑多媒体播放器PotPlayer
 已原生支持简体中文，内置强大解码器，启动速度快，播放过程稳定，对付高清大片无任何问题，对外挂字幕的支持很不错，普通用户无需装第三方解码器即可播放主流格式视频，支持BD和MKV等大视频文件流畅播放。
 以下整合包选择，打包好的滤镜配置
@@ -177,25 +196,33 @@ https://www.ghxi.com/purecodec.html
 安装完成直接打开视频，已经是最强画质配置
 按 Tab 可看到：LAV 解码器 + madVR 渲染器，生效
 路径绝对不能有中文 / 特殊字符，否则 madVR 必崩
+其他选择
+KMPlayer：一款来自韩国的老牌全能播放器，功能非常丰富，界面华丽。它原生支持 360° 视频、VR 内容和蓝光原盘，并且内置了多种音视频滤镜（如环绕声模拟），可玩性很高
+https://www.kmplayer.com/home
+移动端播放器
+IOS
+https://www.kmplayer.com/home#layer-ios
+安卓端
+https://github.com/anilbeesetti/nextplayer 速度可以慢速到0.2,最慢了
+https://gh-proxy.com/github.com/anilbeesetti/nextplayer/releases/download/v0.16.3/nextplayer-v0.16.3-universal.apk
+https://7xiazai.com/xplayer 效果也不错
+https://7xiazai.com/nplayer
+
 
 system_good目录下
 
 测试了各个平台音乐，痛点就是付费和版权音质，你懂得，一步到位！落雪太赞了，必备！
-洛雪音乐win电脑版 全网免VIP无损下载
+1、洛雪音乐win电脑版 全网免VIP无损下载
 落雪音乐 安装包，解压后251M超出大小了，更新安装到，Program Files\lx-music-desktop\ 即可
 https://github.com/lyswhut/lx-music-desktop/releases
 https://gh-proxy.com/github.com/lyswhut/lx-music-desktop/releases/download/v2.12.2/lx-music-desktop-v2.12.2-win_x64-green.7z
-音源
-通过加载不同的 .js 音源脚本，它可以调用网易云音乐、QQ音乐、酷狗音乐、酷我音乐、咪咕音乐、Apple Music 等多个平台的API接口，实现跨平台搜索与播放。
-https://www.go127.com/f/dY2iV/lx-music-v4.0.js
-https://www.go127.com/f/nMBh4/flower-v1.0.0.js
-https://www.go127.com/f/KnEFp/Huibq_lxmusic.js
-https://www.go127.com/f/drdtV/ikun_lxmusic.js
+2、请在GitHub上搜索 lx-music-source 寻找最新的第三方维护的音源
+https://github.com/search?q=lx-music-source&type=repositories
 软件默认无音源，需自行添加：
 基本设置——自定义源——在线导入（任选一个就行），打钩，显示[初始化成功]
-洛雪音乐安卓手机版
+3、洛雪音乐安卓手机版
 https://github.com/lyswhut/lx-music-mobile/releases
-https://gh-proxy.com/github.com/lyswhut/lx-music-mobile/releases/download/v1.8.2/lx-music-mobile-v1.8.2-arm64-v8a.apk
+https://gh-proxy.com/github.com/lyswhut/lx-music-mobile/releases/download/v1.8.4/lx-music-mobile-v1.8.4-arm64-v8a.apk
 文件名 适用设备  特点
 lx-music-mobile-v1.8.1-arm64-v8a.apk  绝大多数现代安卓手机 / 平板（2016 年后的安卓设备，如华为、小米、OPPO、vivo、三星等）  64 位 ARM 架构，性能最好，体积适中（14.1MB），兼容性最优
 lx-music-mobile-v1.8.1-armeabi-v7a.apk  老旧安卓设备（2016 年前的 32 位 ARM 架构手机）  32 位 ARM 架构，兼容老设备，体积最小（13MB）
@@ -301,14 +328,15 @@ MobaXterm 是一款功能强大的终端模拟器和远程管理工具，专为 
 https://github.com/wzsx150/MobaXterm_CN
 https://github.com/zarfadev/MobaXterm-Keygen
 生成 https://moba-xterm-keygen.vercel.app
-WIN服务器管理我用这个MstscManager，保存密码和加密，就没在里面了
+WIN服务器管理我用这个MstscManager，保存密码和加密存储，就上传了，需要装.NET
 https://github.com/GMYXDS/MstscManager
 
 小狼毫 (Weasel)+ 雾凇拼音 (rime-ice)
 ！！搜狗输入法有后台常驻修改首页已经放弃改为开源输入法非常好用，搜狗有挖矿广告
 小狼毫&雾凇拼音安装部署(Windows) https://www.cnblogs.com/zanxj/p/19103238
 基於這一框架，Rime 開發者與其他開源社區的參與者在 Windows、macOS、Linux、Android 等平臺上創造了不同的輸入法前端實現
-1、weasel.exe https://rime.im/ 本地化 小狼毫官网：RIME | 中州韻輸入法引擎
+1、weasel.exe 本地化 小狼毫官网：RIME | 中州韻輸入法引擎
+https://rime.im/
 下載、安裝完成後，切換到 Rime 輸入法，立即擊響中文之韻。
 按組合鍵 Ctrl+` 或 F4 鍵喚出輸入方案選單，由此切換到朙月拼音、注音、倉頡等已啓用的輸入方案。
 亦可調整 Rime 輸入法最常用的選項
@@ -330,6 +358,14 @@ rime-icefull.zip 已经softgitup里同步更新rime-ice.7z 合并
 小鹤双拼
 紫光双拼
 拼音加加双拼
+3、另一个开源输入法-薄荷输入
+https://cnb.cool/Mintimate/rime/oh-my-rime
+https://cnb.cool/Mintimate/rime/oh-my-rime-cli
+4、需要本地语音输入法输入
+VocoType 是一款运行在本地端侧的隐私安全语音输入工具，通过快捷键即可将语音实时转换为文字并自动输入到当前应用。支持语音转文字MCP、AI 优化文本、自定义替换词典、录音视频转文字等功能，让语音输入更高效、更安全。
+https://github.com/233stone/vocotype-cli
+https://vocotype.com/
+https://package.vocotype.com/package/release/VocoType_Windows.exe
 
 
 startback_aio.zip 开始菜单
@@ -931,6 +967,33 @@ https://github.com/choyy/VirtualDesktopSwitcher/releases/download/1.1.2/VirtualD
 
 ===================
 最终选择指南（针对你外贸/跨境场景）
+📊 Clash客户端汇总
+客户端 维护  Windows macOS Android iOS Linux 仓库  教程
+FlClash 🟢 ✅ ✅ ✅ ❌ ✅ 官方  前往
+Clash Verge Rev 🟢 ✅ ✅ ❌ ❌ ✅ 官方  前往
+ClashMi 🟢 ✅ ✅ ✅ ✅ ✅ 官方  前往
+Hiddify Next  🟢 ✅ ✅ ✅ ✅ ✅ 官方  前往
+Clash Meta for Android  🟢 ❌ ❌ ✅ ❌ ❌ 官方  前往
+Clash Verge 🔴 ✅ ✅ ❌ ❌ ✅ 备份  前往
+Clash for Windows 🔴 ✅ ✅ ❌ ❌ ❌ 备份  前往
+ClashX  🔴 ❌ ✅ ❌ ❌ ❌ 备份  前往
+ClashX Pro  🔴 ❌ ✅ ❌ ❌ ❌ 备份  前往
+Clash for Android 🔴 ❌ ❌ ✅ ❌ ❌ 备份  前往
+Karing  🟢 ✅ ✅ ✅ ✅ ✅ 官方  前往
+Clash Nyanpasu  🟢 ✅ ✅ ❌ ❌ ❌ 官方  前往
+Clash-Party 🟢 ✅ ✅ ❌ ❌ ❌ 官方  前往
+Surge for iOS 🟢 ❌ ❌ ❌ ✅ ❌ 商店  前往
+V2rayN  🟢 ✅ ✅ ❌ ❌ ❌ 官方  前往
+Shadowrocket  🟢 ❌ ❌ ❌ ✅ ❌ 商店  前往
+https://github.com/clashbk/clash
+https://www.ermao.net/
+https://www.ermao.net/blog/freeappleid/
+2026最新免费美区Apple ID共享账号 | Shadowrocket/小火箭下载 | iOS美区账号每日更新
+适用场景与受众人群分析
+基于长期的测试评估，免费共享Apple ID提供了便捷的临时跨区体验，但也伴随着稳定性的牺牲：
+适用人群：仅需单次或偶尔下载境外特有应用（如 Shadowrocket、Clash Mi、TikTok、ChatGPT、Potatso Lite），不打算在 App 内进行购汇或长期订阅的用户。通过共享账号，可实现“即下即走”的零成本需求。
+不适宜人群：重度依赖海外 iOS 软件生态、需要频繁更新已下载的 App，或有应用内购买（In-App Purchase）需求的使用者。客观结论上，由于共享账号随时面临风控封堵，我们更建议此类受众直接注册属于自己的专属外区 Apple ID，以获取数据隔离的安全保障与应用的长久使用权。
+
 场景一：绝大多数用户（90%的情况） → 首选 V2rayN (Windows) / v2rayNG (Android)
 理由：协议支持最全、节点兼容性最好、自带测速和订阅更新、操作简单。对于外贸多节点切换、快速测速选优的需求非常友好。
 无需考虑Clash，因为V2rayN的“智能分流+自定义路由”已满足99%的分流需求。
@@ -1085,3 +1148,4 @@ https://github.com/MetaCubeX/ClashX.Meta
 国内备用：https://chrome.zzzmh.cn（无需科学上网，下载 crx 手动安装）
 安装后：在 Chrome 右上角「拼图图标」管理插件，按需启用 / 禁用
 原则：插件越少越好，只装常用的，避免占用内存
+
