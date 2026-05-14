@@ -2,16 +2,20 @@
 PotPlayer 版本更新日誌
 
 ----------------------------------------------------------
-[260401]
+[260511]
 ----------------------------------------------------------
-+ Added the ability to output subtitles using libass
-+ Added the ability to handle HLS/Dash playback using built-in modules
 
-- Improved subtitle output speed
-- Improved speed for some video filters
-- Fixed an issue where external audio could not be connected when multiple audio files were present
-- Fixed an issue where certain Unicode characters were displayed incorrectly
-- Fixed an issue where playback always started from the beginning upon completion in the temporary playback queue
+------------------------------------------------------------------------
+[260401]
+------------------------------------------------------------------------
++ 新增使用 libass 輸出字幕的功能
++ 新增使用內建模組播放 HLS/Dash 的功能
+
+- 改善字幕輸出速度
+- 改善部分視訊濾鏡的處理速度
+- 修正載入多個音訊檔時，無法連結外部音訊的問題
+- 修正某些 Unicode 字元顯示錯誤的問題
+- 改善語音產生字幕 (即時) 的穩定性
 
 ------------------------------------------------------------------------
 [260114]
@@ -26,7 +30,7 @@ PotPlayer 版本更新日誌
 ------------------------------------------------------------------------
 [250909]
 ------------------------------------------------------------------------
-+ 新增即時音訊字幕生成功能
++ 新增即時聲音生成字幕功能
 
 - 修正使用 WMV3/VC1 IDCT DXVA 時可能發生的花屏問題
 - 修正特定情況下使用 DXVA 會出現黑屏的問題

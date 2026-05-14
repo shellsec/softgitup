@@ -269,5 +269,36 @@
     "process_name": "Flow.Launcher.exe",
     "kill_before_install": true,
     "run_installer": true
+  },
+  {
+    "id": "vocotype",
+    "简介": "VocoType（本地端侧语音转文字输入工具，内置 Paraformer 中文 ASR 模型；Windows x64 NSIS 安装包）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "releases_url": "https://bgithub.xyz/233stone/vocotype-cli/releases",
+    "repo_path": "233stone/vocotype-cli",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "VocoType_",
+      "_x64-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      ".dmg",
+      "Universal",
+      "blockmap",
+      ".sig"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "download_names": [
+      "VocoType_{ver}_x64-setup.exe"
+    ],
+    "save_name": "VocoType_{ver}_x64-setup.exe",
+    "process_name": "VocoType.exe",
+    "kill_before_install": false,
+    "run_installer": true
   }
 ]

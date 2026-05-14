@@ -4,16 +4,19 @@ PotPlayer 更新履歴
 ※正確な日付は PotPlayer(64).dll のファイル署名タイムスタンプで確認してください
 
 ----------------------------------------------------------
-[260401]
+[260511]
 ----------------------------------------------------------
-+ Added the ability to output subtitles using libass
-+ Added the ability to handle HLS/Dash playback using built-in modules
 
-- Improved subtitle output speed
-- Improved speed for some video filters
-- Fixed an issue where external audio could not be connected when multiple audio files were present
-- Fixed an issue where certain Unicode characters were displayed incorrectly
-- Fixed an issue where playback always started from the beginning upon completion in the temporary playback queue
+-----------------------------------------------------------------------
+2026/04/01				[260401 / 1.7.22851]
+-----------------------------------------------------------------------
+＋ 字幕設定で（ASS／SSAに限らず）すべての字幕で libass 出力を使用する選択肢を追加
+＋ 内部ソースフィルターの設定で、HLS／DASH用に FFmpeg と内蔵モジュールの切替設定を追加
+・ 字幕の出力速度を改善
+・ 特定の映像フィルターで処理速度を改善
+・ 複数のオーディオデバイスがある場合、外部デバイスへの接続ができなかった問題を修正
+・ 特定のUnicode文字出力の問題を修正
+・ 再生キュー内で、一つのクリップ再生が完了した後、次の再生位置が常に先頭クリップへ戻っていた動作を修正
 
 -----------------------------------------------------------------------
 2026/01/16				[260114 / 1.7.22771]
