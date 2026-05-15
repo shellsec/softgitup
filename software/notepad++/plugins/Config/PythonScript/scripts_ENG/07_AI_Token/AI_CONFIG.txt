@@ -1,0 +1,55 @@
+========================================
+AI Feature Configuration Guide
+========================================
+
+【Configuration File Location】
+ai_config.json (same directory as script files)
+
+【Configuration File Format】
+{
+  "api_type": "openai",
+  "api_key": "your-api-key-here",
+  "api_base": "https://api.openai.com/v1",
+  "model": "gpt-3.5-turbo",
+  "temperature": 0.7,
+  "max_tokens": 2000
+}
+
+【Configuration Description】
+- api_type: API type (openai, claude, custom, etc.)
+- api_key: OpenAI API key (required)
+- api_base: API endpoint URL (default: https://api.openai.com/v1)
+- model: Model to use (default: gpt-3.5-turbo)
+- temperature: Temperature parameter (0-1, default 0.7)
+- max_tokens: Maximum token count (default 2000)
+
+【Usage Methods】
+
+Method 1: Auto Configuration (Recommended)
+1. Run any AI script (e.g., ai_code_review.py)
+2. First time use will prompt for API key
+3. Script will automatically create ai_config.json file
+
+Method 2: Manual Configuration
+1. Copy ai_config.json.example file
+2. Rename to ai_config.json
+3. Edit file and enter your API key
+4. Save file
+
+【Get API Key】
+1. Visit: https://platform.openai.com/api-keys
+2. Register/Login to OpenAI account
+3. Click "Create new secret key"
+4. Copy generated key (shown only once, please save securely)
+
+【Notes】
+- Configuration file contains sensitive information, do not share with others
+- Recommend adding ai_config.json to .gitignore (if using Git)
+- API keys have usage costs, please check OpenAI pricing page
+- If configuration file is corrupted, delete and rerun script
+
+【Example File】
+ai_config.json.example - Configuration file template
+
+========================================
+

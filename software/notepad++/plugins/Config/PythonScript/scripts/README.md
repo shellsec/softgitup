@@ -1,6 +1,8 @@
-# scripts_CHS（中文脚本名）
+# scripts（中文脚本目录）
 
-本目录是 `scripts` 下脚本的**中文文件名副本**，功能与对应英文名脚本完全相同，便于在菜单中按中文名查找、切换使用。
+本目录为 Notepad++ **PythonScript** 的默认脚本树（中文文件夹与中文 `.py` 文件名）。配置根目录说明、**统一更新（清空后覆盖）** 见上级 [../README.md](../README.md)。
+
+若另有 **`scripts_CHS`**，则为**仅改文件名**的中文副本，功能与 `scripts` 对应项相同，便于在菜单中按另一套中文名查找。
 
 ## 如何切换使用
 
@@ -59,13 +61,53 @@
 | Git冲突拆分.py | git_conflict_split.py |
 | 批量TXT转Markdown.py | batch_txt_to_md.py |
 | 大纲转drawio.py | outline_to_drawio.py |
-| folder_dialog_win.py | folder_dialog_win.py |
+| folder_dialog_win.py（在 `_lib`） | folder_dialog_win.py（在 `_lib`） |
 | Base64选区编解码.py | base64_selection.py |
 | 行尾LF与CRLF.py | line_endings_lf_crlf.py |
 | 插入UUID.py | insert_uuid.py |
+| 插入模板_工作.py | insert_template_work.py |
+| 工作日记_三点.py | work_daily_three.py |
+| 工作日记_流水.py | work_daily_log.py |
+| 插入模板_生活.py | insert_template_life.py |
+| 插入模板_学习.py | insert_template_study.py |
+| 插入模板_健康.py | insert_template_health.py |
+| 插入模板_灵感.py | insert_template_ideas.py |
+| 插入模板_家庭.py | insert_template_family.py |
+| 插入模板_财务.py | insert_template_money.py |
+| 插入模板_随记.py | insert_template_scratch.py |
+| 插入模板_社交.py | insert_template_social.py |
+| 插入模板_阅读.py | insert_template_reading.py |
+| 插入模板_项目.py | insert_template_project.py |
+| 插入模板_运动.py | insert_template_workout.py |
+| 插入模板_情绪.py | insert_template_mood.py |
+| 插入模板_副业.py | insert_template_side_gig.py |
 
-（`folder_dialog_win.py` 为辅助模块，供「批量TXT转 Markdown」「大纲转drawio」在 **无 tkinter** 时于 Windows 下用 PowerShell 弹窗；须与上述脚本放在同一目录。）
+## 目录结构（分类子文件夹）
+
+脚本按用途放在 `scripts` 下的子文件夹中；Notepad++ 菜单 **Plugins → Python Script → Scripts** 中会显示**与文件夹同名的子菜单**。
+
+| 子文件夹 | 内容概要 |
+|----------|----------|
+| `_lib` | 公共模块：`folder_dialog_win.py`、`time_stamp_fmt.py`（长串日期）、`npp_eol.py`（Windows CRLF 下多行插入用 `template_block`，避免只写 `\n` 时换行异常）。勿删。 |
+| `01_时间与插入` | 长串日期、UUID；各**插入模板**：首行长串日期，下接各字段行；**每条提示后留一空行**便于填写；换行由 `_lib/npp_eol.template_block` 统一为 CRLF（Windows）。**英文文件名、同字段**对照在 **`scripts_ENG/01_Time_Insert`**。 |
+| `02_行与选区` | 行尾、排序、待办、行号、Git 冲突拆分、Base64、大纲缩进、保存选区等 |
+| `03_编码与字符` | 全角半角、Unicode、路径斜杠 |
+| `04_格式化与转换` | JSON/XML/SQL、CSV→MD、Mermaid、时间戳、ASCII、摩尔斯等 |
+| `05_提取与遮罩` | 电话/IP/网址提取、敏感信息遮罩 |
+| `06_系统与网络` | 本机与网络信息、IP/MAC 等 |
+| `07_AI与Token` | AI 文本脚本、0token 系列、Token 计数 |
+| `08_文档与导图` | 批量 TXT→MD、大纲转 draw.io |
+| `09_快速捕获` | （当前 `scripts` 树未包含此文件夹时可忽略） |
+| `10_打开与杂项` | 打开官网/社区、脚本参考、注册表、随机串等 |
+
+（`folder_dialog_win.py`、`time_stamp_fmt.py`、`npp_eol.py` 位于各侧的 `_lib`：`scripts/_lib` 与 `scripts_ENG/_lib` 内容对齐；依赖脚本会自动向上查找本侧的 `_lib`。）
+
+**`scripts_ENG`**：英文脚本名与 `01_Time_Insert` 等子目录；插入模板与 `scripts/01_时间与插入` **字段一一对应**（提示为英文）。
 
 **`0token` 前缀**：仅用于「文字脑图生成/还原」「准备投喂整理」等与 **Token / 投喂前整理** 强相关的脚本；其余为普通本地工具，文件名不再加此前缀。
 
 脚本内容与 `scripts` 中一致，仅文件名不同，可按需在英文/中文脚本名之间切换使用。
+
+## 维护：清空后统一更新
+
+在 **PythonScript 配置根目录**（`scripts` 的上一级）运行 `清空PythonScript脚本.cmd` 或 `Clear-PythonScriptScripts.ps1`，可清空 `scripts`、`scripts_ENG`、`scripts_CHS`（若存在）内的旧文件，再从仓库整包复制。详见 [../README.md](../README.md)。

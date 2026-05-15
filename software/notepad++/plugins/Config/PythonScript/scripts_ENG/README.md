@@ -1,6 +1,8 @@
-# Notepad++ PythonScript 脚本集合
+# Notepad++ PythonScript 脚本集合（scripts_ENG）
 
-这是一个为 Notepad++ PythonScript 插件编写的实用脚本集合，提供了各种文本处理、信息提取和格式化功能。
+这是为 Notepad++ PythonScript 插件编写的实用脚本集合（**英文文件名**），提供文本处理、信息提取和格式化等功能。
+
+配置根目录总览、**清空后统一更新** 见 [../README.md](../README.md)。
 
 ## 安装说明
 
@@ -13,6 +15,14 @@
 3. 将脚本文件复制到 Notepad++ PythonScript 脚本目录：
    - 通常路径：`C:\Program Files\Notepad++\plugins\Config\PythonScript\scripts`
    - 或通过 Notepad++ 菜单：`Plugins` → `PythonScript` → `Scripts` → `Open Scripts Folder` 打开
+
+本仓库中 **`scripts_ENG`** 已按类别分子文件夹（菜单中为**子菜单**）；公共模块在 **`scripts_ENG/_lib`**：`folder_dialog_win.py`、`time_stamp_fmt.py`、`npp_eol.py`（多行模板插入用 CRLF 拼接，勿删）。
+
+### 与 `scripts`（中文脚本目录）的关系
+
+- **`scripts`**：子文件夹与脚本多为**中文名**（与 `scripts_CHS` 文件名对应表见同仓库 `scripts/README.md`）。
+- **`scripts_ENG`**：本目录为**英文名**脚本；子文件夹与 `scripts` 下中文文件夹一一对应（如 `01_Time_Insert` ↔ `01_时间与插入`，`02_Lines_Selection` ↔ `02_行与选区`）。
+- **`01_Time_Insert`**：插入模板与 `scripts/01_时间与插入` **字段条数与顺序一致**（提示为英文）；多行经 `template_block` 使用 **CRLF**（Windows）；**每条提示后留一空行**便于填写。单文件对应关系见 `scripts/README.md` 表格（如 `插入模板_工作.py` ↔ `insert_template_work.py`）。
 
 ## 使用方法
 
@@ -150,9 +160,9 @@
 - **sort_lines / 行排序去重**：排序或去重保序
 - **todo_toggle / 待办切换**：Markdown `[ ]` ↔ `[x]`
 - **git_conflict_split / Git冲突拆分**：`<<<<<<<` 冲突块拆成 OURS / THEIRS 分段
-- **batch_txt_to_md / 批量TXT转Markdown**：选择输入/输出目录，递归 `.txt` → `.md`（UTF-8，保持相对路径）；**无需 pip**。有 **tkinter** 用自带对话框；**无 tkinter 时（Windows）** 使用同目录 **folder_dialog_win.py** 调 PowerShell + WinForms
+- **batch_txt_to_md / 批量TXT转Markdown**：选择输入/输出目录，递归 `.txt` → `.md`（UTF-8，保持相对路径）；**无需 pip**。有 **tkinter** 用自带对话框；**无 tkinter 时（Windows）** 使用 **scripts_ENG/_lib/folder_dialog_win.py** 调 PowerShell + WinForms
 - **outline_to_drawio / 大纲转drawio**：缩进大纲 → **draw.io** `.drawio` XML；保存路径同上（tkinter 或 **folder_dialog_win.py** 回退）
-- **folder_dialog_win.py**：辅助模块（菜单中单独运行会提示）；勿删，与上两项同目录
+- **folder_dialog_win.py**：位于 **scripts_ENG/_lib**（菜单中单独运行会提示）；勿删；依赖脚本会自动向上查找 `_lib`
 - **base64_selection / Base64选区编解码**：选中或全文 Base64 编码（UTF-8）/ 解码（忽略空白）
 - **line_endings_lf_crlf / 行尾LF与CRLF**：选中或全文统一为 LF 或 CRLF
 - **insert_uuid / 插入UUID**：光标处插入 UUID（可选数量、标准或 32 位 hex）
@@ -181,8 +191,15 @@
 - 检查脚本是否有语法错误（可以用 Notepad++ 语法高亮功能查看）
 - 查看 Notepad++ 控制台输出（`Plugins` → `PythonScript` → `Show Console`）以获取详细错误信息
 
+## 维护：清空后统一更新
+
+在 **PythonScript 配置根目录**（`scripts_ENG` 的上一级）运行 `清空PythonScript脚本.cmd` 或 `Clear-PythonScriptScripts.ps1`，可清空 `scripts`、`scripts_ENG`、`scripts_CHS`（若存在）内的旧文件，再从仓库整包复制。详见 [../README.md](../README.md)。
+
 ## 更新日志
 
+- 2026-05-15：
+  - 配置根目录新增清空工具（`清空PythonScript脚本.cmd` / `Clear-PythonScriptScripts.ps1`）；根 [README.md](../README.md) 说明统一更新流程。
+  - `01_Time_Insert` 插入模板与 `scripts/01_时间与插入` **字段对齐**（英文提示）；每条提示后保留空行；README 补充与 `scripts` 的对应说明。
 - 2026-04-28：
   - 新增：`base64_selection.py`、`line_endings_lf_crlf.py`、`insert_uuid.py`（及中文文件名对应脚本）
 - 2026-03-06：

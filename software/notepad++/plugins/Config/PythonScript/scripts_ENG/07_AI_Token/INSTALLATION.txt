@@ -1,0 +1,37 @@
+Notepad++ PythonScript Script Dependencies Installation Guide
+=============================================================
+
+Most scripts in this directory use Python standard library and require no additional installation.
+The following scripts need optional dependencies for additional features:
+
+【ascii_art_generator.py】
+Optional dependencies:
+- pyfiglet: For more ASCII art font styles
+  Install: pip install pyfiglet
+  
+- Pillow: For generating ASCII Art from images
+  Install: pip install Pillow
+
+Installation methods:
+1. Run in Notepad++ PythonScript console:
+   console.run("pip install pyfiglet")
+   console.run("pip install Pillow")
+
+2. Or run in command line:
+   pip install -r requirements.txt
+
+3. Or install separately:
+   pip install pyfiglet Pillow
+
+Notes:
+- Scripts can use basic features even without these libraries
+- pyfiglet is for more font styles (optional)
+- Pillow is for image to ASCII Art feature (optional)
+
+【AI-related scripts】
+All AI scripts use Python standard library (urllib, json), no additional installation needed.
+But API key configuration is required (see ai_config.json)
+
+【Other scripts】
+All other scripts use Python standard library, no additional installation needed.
+

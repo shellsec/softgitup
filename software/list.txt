@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-15T14:46:57.377411",
+  "generated_at": "2026-05-15T16:41:53.706595",
   "total_software": 21,
-  "total_files": 4471,
-  "total_size": 1485204436,
+  "total_files": 4511,
+  "total_size": 1487839593,
   "software": {
     "WinMemoryCleaner": {
       "version": "20260515_144655",
@@ -85,7 +85,7 @@
       "last_updated": "2026-03-10T11:47:39.734766"
     },
     "system_good": {
-      "version": "20260515_144655",
+      "version": "20260515_164152",
       "files": [
         {
           "path": "AutoHotkey.exe",
@@ -136,10 +136,10 @@
           "modified": "2025-07-09T16:38:55.367594"
         },
         {
-          "path": "DuplicateCleaner.zip",
-          "size": 64156133,
-          "hash": "bbef4628d1a9604a7bbcc406231842a0",
-          "modified": "2025-10-12T12:37:15.213315"
+          "path": "Duplicate.zip",
+          "size": 66723989,
+          "hash": "8b72f4ad3d8a495185fa993266a7cb57",
+          "modified": "2026-05-15T16:38:24.430754"
         },
         {
           "path": "gohttpserver.zip",
@@ -161,9 +161,9 @@
         },
         {
           "path": "Lastb_soft_version.txt",
-          "size": 108615,
-          "hash": "1ea6e91d31636d300388b7a3d977102e",
-          "modified": "2026-05-15T14:42:12.851778"
+          "size": 108676,
+          "hash": "a3aae3aaa0c396d1301e9d34b284e78c",
+          "modified": "2026-05-15T16:38:52.052360"
         },
         {
           "path": "lx-music-desktop.7z",
@@ -317,11 +317,11 @@
         }
       ],
       "total_files": 38,
-      "total_size": 569869919,
-      "last_updated": "2026-05-15T14:46:55.940102"
+      "total_size": 572437836,
+      "last_updated": "2026-05-15T16:41:52.308975"
     },
     "notepad++": {
-      "version": "20260513_173717",
+      "version": "20260515_164152",
       "files": [
         {
           "path": "config.xml",
@@ -1512,640 +1512,880 @@
           "modified": "2025-07-09T16:38:52.828347"
         },
         {
-          "path": "plugins\\Config\\PythonScript\\scripts\\0token准备投喂整理.py",
-          "size": 1917,
-          "hash": "220cca33bc5051811baf803365442869",
-          "modified": "2026-03-26T10:51:41.365902"
+          "path": "plugins\\Config\\PythonScript\\Clear-PythonScriptScripts.ps1",
+          "size": 1628,
+          "hash": "591f67e929885ed362590a04055dd0e6",
+          "modified": "2026-05-15T16:30:32.612025"
         },
         {
-          "path": "plugins\\Config\\PythonScript\\scripts\\0token文字脑图生成.py",
-          "size": 3128,
-          "hash": "41714427bf579b43213f33d8240704a2",
-          "modified": "2026-03-26T10:18:32.150103"
+          "path": "plugins\\Config\\PythonScript\\README.md",
+          "size": 2862,
+          "hash": "92f6cceeb6eb1ad5207f91420bd68067",
+          "modified": "2026-05-15T16:32:31.368400"
         },
         {
-          "path": "plugins\\Config\\PythonScript\\scripts\\0token文字脑图还原.py",
-          "size": 3483,
-          "hash": "c940fff78bdac7adf3790fe0236f9ebe",
-          "modified": "2026-03-26T10:18:39.996385"
+          "path": "plugins\\Config\\PythonScript\\清空PythonScript脚本.cmd",
+          "size": 349,
+          "hash": "d70d1dea630dd7c89a238fa2bfb8aece",
+          "modified": "2026-05-15T16:30:34.951097"
         },
         {
-          "path": "plugins\\Config\\PythonScript\\scripts\\AI代码审查.py",
-          "size": 5733,
-          "hash": "76f3d5d205edd4209bd34c82a2e75111",
-          "modified": "2025-12-16T17:04:42.505128"
+          "path": "plugins\\Config\\PythonScript\\清空PythonScript脚本.ps1",
+          "size": 141,
+          "hash": "aa1241bf9d6a7833a6b73612b9340eee",
+          "modified": "2026-05-15T16:30:32.829475"
         },
         {
-          "path": "plugins\\Config\\PythonScript\\scripts\\AI文本分析.py",
-          "size": 10062,
-          "hash": "af6b226465dffc3231498cba42886619",
-          "modified": "2025-12-16T17:04:42.510356"
+          "path": "plugins\\Config\\PythonScript\\scripts\\README.md",
+          "size": 7003,
+          "hash": "2572d149858a12b7c0945c15f0f30ba0",
+          "modified": "2026-05-15T16:32:35.491524"
         },
         {
-          "path": "plugins\\Config\\PythonScript\\scripts\\AI文本摘要.py",
-          "size": 6324,
-          "hash": "e3236cfde829a069ff36d53ea827ad9d",
-          "modified": "2025-12-16T17:04:42.510356"
+          "path": "plugins\\Config\\PythonScript\\scripts\\01_时间与插入\\工作日记_三点.py",
+          "size": 1396,
+          "hash": "63d4127437e4492b27930e499c7f3578",
+          "modified": "2026-05-15T12:03:06.804048"
         },
         {
-          "path": "plugins\\Config\\PythonScript\\scripts\\AI文本翻译.py",
-          "size": 6211,
-          "hash": "01c7e5d721d607f0be1dcb8a5b44afc7",
-          "modified": "2025-12-16T17:04:42.510356"
+          "path": "plugins\\Config\\PythonScript\\scripts\\01_时间与插入\\工作日记_流水.py",
+          "size": 1324,
+          "hash": "8b03d95511e89f82117eb7d64285c31e",
+          "modified": "2026-05-15T12:03:06.818300"
         },
         {
-          "path": "plugins\\Config\\PythonScript\\scripts\\ASCII艺术字生成.py",
-          "size": 1484,
-          "hash": "191df113f5a0f19a3e1af38c73167ba6",
-          "modified": "2025-12-16T16:55:33.225773"
+          "path": "plugins\\Config\\PythonScript\\scripts\\01_时间与插入\\插入UUID.py",
+          "size": 1425,
+          "hash": "ea273f4aa6aa7bda8f39c0923c0debab",
+          "modified": "2026-05-15T09:51:44.138954"
         },
         {
-          "path": "plugins\\Config\\PythonScript\\scripts\\Base64选区编解码.py",
+          "path": "plugins\\Config\\PythonScript\\scripts\\01_时间与插入\\插入时间.py",
+          "size": 1632,
+          "hash": "c724d302a21a196c9850a2d58dee81ea",
+          "modified": "2025-12-16T17:04:42.511410"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\01_时间与插入\\插入时间中文.py",
+          "size": 771,
+          "hash": "69495e5b8bf06157d7c805a5c4cdc277",
+          "modified": "2026-05-15T11:57:03.145317"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\01_时间与插入\\插入模板_健康.py",
+          "size": 1370,
+          "hash": "efc5219ada8f47e65b83a80b1e18f2e2",
+          "modified": "2026-05-15T12:03:02.663574"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\01_时间与插入\\插入模板_副业.py",
+          "size": 1408,
+          "hash": "c4d4d987f9c0d0583e1fb978eb787034",
+          "modified": "2026-05-15T12:03:04.837329"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\01_时间与插入\\插入模板_学习.py",
+          "size": 1344,
+          "hash": "2e3aefa9e21d1bd837ea549fde43be69",
+          "modified": "2026-05-15T12:03:03.763429"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\01_时间与插入\\插入模板_家庭.py",
+          "size": 1367,
+          "hash": "614375f052f7a1afe169ebbab2e31854",
+          "modified": "2026-05-15T12:03:00.827194"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\01_时间与插入\\插入模板_工作.py",
+          "size": 1335,
+          "hash": "45964a7fd7f273165fcef4e027080985",
+          "modified": "2026-05-15T12:00:36.067309"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\01_时间与插入\\插入模板_情绪.py",
+          "size": 1429,
+          "hash": "5b59b973dff27100b0c2302f9b024e63",
+          "modified": "2026-05-15T12:02:54.261173"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\01_时间与插入\\插入模板_灵感.py",
+          "size": 1318,
+          "hash": "8d03377539c62dc0049932f7a09bfdd8",
+          "modified": "2026-05-15T12:03:01.280418"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\01_时间与插入\\插入模板_生活.py",
+          "size": 1324,
+          "hash": "58b88de104d5bef5d31f4f21f99e3874",
+          "modified": "2026-05-15T12:03:04.321940"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\01_时间与插入\\插入模板_社交.py",
+          "size": 1353,
+          "hash": "9dba37260ccc4e2515418866a0eb4816",
+          "modified": "2026-05-15T12:02:58.677870"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\01_时间与插入\\插入模板_财务.py",
+          "size": 1349,
+          "hash": "e51df7031ee44938139bdab8dc94cec2",
+          "modified": "2026-05-15T12:02:59.579292"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\01_时间与插入\\插入模板_运动.py",
+          "size": 1417,
+          "hash": "d7b9da11ebe45203dd803d51358a7cea",
+          "modified": "2026-05-15T12:02:55.857603"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\01_时间与插入\\插入模板_阅读.py",
+          "size": 1325,
+          "hash": "e63864c55b18f723b9531fc5163862e6",
+          "modified": "2026-05-15T12:02:57.705974"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\01_时间与插入\\插入模板_随记.py",
+          "size": 1246,
+          "hash": "1476fb6309db03ccad36a863d2a8ac82",
+          "modified": "2026-05-15T12:02:59.129125"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\01_时间与插入\\插入模板_项目.py",
+          "size": 1420,
+          "hash": "e60ff41969f1d8e776a33ee0d0fb01f7",
+          "modified": "2026-05-15T12:02:56.564794"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\02_行与选区\\Base64选区编解码.py",
           "size": 1786,
           "hash": "0521056e1defc2fc59c6d3cd532ad998",
-          "modified": "2026-04-28T11:45:28.763314"
+          "modified": "2026-05-15T09:51:44.138954"
         },
         {
-          "path": "plugins\\Config\\PythonScript\\scripts\\CSV转Markdown表.py",
-          "size": 1983,
-          "hash": "2c2c0efba8622fce6103b7361fba72a4",
-          "modified": "2026-03-26T10:54:41.190031"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\folder_dialog_win.py",
-          "size": 4888,
-          "hash": "bb9648f0eaf872cc8149d86d88084d69",
-          "modified": "2026-04-28T11:23:05.667363"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\Git冲突拆分.py",
+          "path": "plugins\\Config\\PythonScript\\scripts\\02_行与选区\\Git冲突拆分.py",
           "size": 2090,
           "hash": "458e87030ad5f8b81b2321cec077df79",
           "modified": "2026-03-26T10:54:43.166661"
         },
         {
-          "path": "plugins\\Config\\PythonScript\\scripts\\Mermaid脑图.py",
-          "size": 2869,
-          "hash": "c1f5738405bfc3d50644a8ad8d3666f3",
-          "modified": "2026-03-26T10:54:41.177238"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\README.md",
-          "size": 3872,
-          "hash": "370287a6f610f4a03c09b64e0f8d34c2",
-          "modified": "2026-04-28T11:45:29.429391"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\Unicode规范化.py",
-          "size": 1300,
-          "hash": "0d36e0e7ef370a75320a52c390b60dbd",
-          "modified": "2026-03-26T10:54:42.498111"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\保存选中文本.py",
+          "path": "plugins\\Config\\PythonScript\\scripts\\02_行与选区\\保存选中文本.py",
           "size": 1364,
           "hash": "a0f12fbdefc353a71feada56a462a6ed",
           "modified": "2025-12-16T17:04:42.494247"
         },
         {
-          "path": "plugins\\Config\\PythonScript\\scripts\\全角半角转换.py",
-          "size": 1738,
-          "hash": "592fbe5be18d6e7e0f56d5f2ecc851d0",
-          "modified": "2026-03-26T10:54:41.926061"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\取消用记事本打开.py",
-          "size": 2129,
-          "hash": "85e1655b7cf644143fe5f6ece35dd509",
-          "modified": "2025-12-16T17:04:42.525384"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\多格式添加行号.py",
+          "path": "plugins\\Config\\PythonScript\\scripts\\02_行与选区\\多格式添加行号.py",
           "size": 4048,
           "hash": "c06c7b7a3222cc0c2237f8d8f419af3b",
           "modified": "2026-03-06T14:30:28.316542"
         },
         {
-          "path": "plugins\\Config\\PythonScript\\scripts\\大纲缩进.py",
+          "path": "plugins\\Config\\PythonScript\\scripts\\02_行与选区\\大纲缩进.py",
           "size": 1730,
           "hash": "b782e9427452f9afc4b0f3889d11f5a2",
           "modified": "2026-03-26T10:54:39.874354"
         },
         {
-          "path": "plugins\\Config\\PythonScript\\scripts\\大纲转drawio.py",
-          "size": 7505,
-          "hash": "8ce2423cad6621679a279f593bd0190f",
-          "modified": "2026-04-28T11:33:34.019182"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\待办切换.py",
+          "path": "plugins\\Config\\PythonScript\\scripts\\02_行与选区\\待办切换.py",
           "size": 1235,
           "hash": "758f4e25e1cb18b85cec8d1793052406",
           "modified": "2026-03-26T10:54:42.924622"
         },
         {
-          "path": "plugins\\Config\\PythonScript\\scripts\\打开Notepad++.py",
-          "size": 183,
-          "hash": "c1935a3e68b497a981fa2038f6d5204b",
-          "modified": "2025-07-09T16:38:52.826322"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\打开Notepad++社区.py",
-          "size": 169,
-          "hash": "07da9301f5f0103eae378613afeca120",
-          "modified": "2025-07-25T09:22:03.107465"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\批量TXT转Markdown.py",
-          "size": 3840,
-          "hash": "3d3cec81aca7215725ac7720e763bc9e",
-          "modified": "2026-04-28T11:18:30.169566"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\提取IP地址.py",
-          "size": 7280,
-          "hash": "0af82e125e98ed14d02823e7be5616fe",
-          "modified": "2025-12-16T17:04:42.503054"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\提取电话号码.py",
-          "size": 7660,
-          "hash": "883aefc2828b86cdd75743ebbebf9046",
-          "modified": "2025-12-16T17:04:42.503054"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\提取网址与邮箱.py",
-          "size": 3075,
-          "hash": "9b96a8c237fa8d1cce9890fdbd93ed01",
-          "modified": "2025-12-16T17:04:42.503054"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\插入UUID.py",
-          "size": 1425,
-          "hash": "ea273f4aa6aa7bda8f39c0923c0debab",
-          "modified": "2026-04-28T11:45:23.939958"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\插入时间.py",
-          "size": 1632,
-          "hash": "c724d302a21a196c9850a2d58dee81ea",
-          "modified": "2025-12-16T17:04:42.511410"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\插入时间中文.py",
-          "size": 1623,
-          "hash": "d5f5a67e42915cb175f087eb0148128d",
-          "modified": "2025-07-09T16:38:52.825309"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\摩尔斯电码.py",
-          "size": 3921,
-          "hash": "67c12891e301003c46014d9ef3fc1222",
-          "modified": "2025-12-16T16:55:25.333887"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\敏感信息遮罩.py",
-          "size": 1815,
-          "hash": "8dcc2f33387a80b8825acac645988037",
-          "modified": "2026-03-26T10:54:39.882993"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\文本格式转换.py",
-          "size": 2840,
-          "hash": "52b426aa496ffd5a1570d600da9ad9c5",
-          "modified": "2025-12-16T16:55:25.333887"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\时间戳转换.py",
-          "size": 4109,
-          "hash": "ae781b0843765f2b5c79e708d767882b",
-          "modified": "2025-12-16T16:55:25.332882"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\显示NPP脚本参考.py",
-          "size": 2085,
-          "hash": "dac4c50535d355eef614449858818eff",
-          "modified": "2025-12-16T17:04:42.531206"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\格式化JSON.py",
-          "size": 1535,
-          "hash": "e4a365e2576219b054ac9498db18f483",
-          "modified": "2025-12-16T17:04:42.494247"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\格式化SQL.py",
-          "size": 3372,
-          "hash": "8107039088fea50da7ba1223b0bef200",
-          "modified": "2025-12-16T17:04:42.496310"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\格式化XML.py",
-          "size": 1712,
-          "hash": "61d7f62ef5f36d82fda77e2cd9892a8c",
-          "modified": "2025-12-16T17:04:42.494247"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\生成随机字符串.py",
-          "size": 3284,
-          "hash": "e8f69d7319e84fa86a00064ff2c6e403",
-          "modified": "2025-12-16T16:55:25.330836"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\获取MAC地址.py",
-          "size": 451,
-          "hash": "cff0df6e7807655ae1915a01a3edf212",
-          "modified": "2026-01-21T12:04:25.266595"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\获取公网IP.py",
-          "size": 1130,
-          "hash": "9ee1dd594084d6d8d56daaf02d0b9eec",
-          "modified": "2026-01-21T12:04:25.266595"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\获取本机IP.py",
-          "size": 459,
-          "hash": "a43affa5affe5f07e3dc12192bf41956",
-          "modified": "2026-01-21T12:04:25.266595"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\获取系统信息.py",
-          "size": 743,
-          "hash": "be8c32d8f1ac285cd16d123c7b491249",
-          "modified": "2026-01-21T12:04:25.267617"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\获取网络信息.py",
-          "size": 1766,
-          "hash": "9509b8b5913a65ba675d97449dae91b3",
-          "modified": "2026-01-21T12:04:25.269715"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts\\行号一二三格式.py",
+          "path": "plugins\\Config\\PythonScript\\scripts\\02_行与选区\\行号一二三格式.py",
           "size": 1531,
           "hash": "72a9098e7c6a8374865d8b91e56b1cf1",
           "modified": "2026-03-06T14:24:41.316065"
         },
         {
-          "path": "plugins\\Config\\PythonScript\\scripts\\行尾LF与CRLF.py",
+          "path": "plugins\\Config\\PythonScript\\scripts\\02_行与选区\\行尾LF与CRLF.py",
           "size": 1491,
           "hash": "38f154178cf0fc678e7f461aec6471ed",
-          "modified": "2026-04-28T11:45:14.129848"
+          "modified": "2026-05-15T09:51:44.130579"
         },
         {
-          "path": "plugins\\Config\\PythonScript\\scripts\\行排序去重.py",
+          "path": "plugins\\Config\\PythonScript\\scripts\\02_行与选区\\行排序去重.py",
           "size": 1893,
           "hash": "5df8a52d1ded8d73f1d83eb32913bcdb",
           "modified": "2026-03-26T10:54:42.564126"
         },
         {
-          "path": "plugins\\Config\\PythonScript\\scripts\\计算Token数_剪贴板.py",
-          "size": 5230,
-          "hash": "6bbf2373be61a1e2412b892c8a7aa3be",
-          "modified": "2026-03-20T10:28:14.257002"
+          "path": "plugins\\Config\\PythonScript\\scripts\\03_编码与字符\\Unicode规范化.py",
+          "size": 1300,
+          "hash": "0d36e0e7ef370a75320a52c390b60dbd",
+          "modified": "2026-03-26T10:54:42.498111"
         },
         {
-          "path": "plugins\\Config\\PythonScript\\scripts\\计算Token数_插入.py",
-          "size": 2908,
-          "hash": "a695ec29b57fe9582a5a2a849b0f8a69",
-          "modified": "2026-03-20T10:28:24.351081"
+          "path": "plugins\\Config\\PythonScript\\scripts\\03_编码与字符\\全角半角转换.py",
+          "size": 1738,
+          "hash": "592fbe5be18d6e7e0f56d5f2ecc851d0",
+          "modified": "2026-03-26T10:54:41.926061"
         },
         {
-          "path": "plugins\\Config\\PythonScript\\scripts\\路径斜杠统一.py",
+          "path": "plugins\\Config\\PythonScript\\scripts\\03_编码与字符\\路径斜杠统一.py",
           "size": 1223,
           "hash": "2e6462ec8ff07e3a14d4686c50308479",
           "modified": "2026-03-26T10:54:41.524809"
         },
         {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\0token_prep_for_llm.py",
-          "size": 1950,
-          "hash": "754de1d3d461ae9f6c775c4266dbaa24",
-          "modified": "2026-03-26T10:47:41.742902"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\0token_text_mindmap.py",
-          "size": 3070,
-          "hash": "8041fe37f2610daf3972a19ef431e3f9",
-          "modified": "2026-03-26T10:18:18.607168"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\0token_text_mindmap_restore.py",
-          "size": 3630,
-          "hash": "61c2dc8d7abf42393b47970c2dc05191",
-          "modified": "2026-03-26T10:18:25.456191"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\add_line_numbers_multi_format.py",
-          "size": 4048,
-          "hash": "c06c7b7a3222cc0c2237f8d8f419af3b",
-          "modified": "2026-03-06T14:30:28.316542"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\add_line_numbers_NH+123.py",
-          "size": 1531,
-          "hash": "72a9098e7c6a8374865d8b91e56b1cf1",
-          "modified": "2026-03-06T14:24:41.316065"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\ai_code_review.py",
-          "size": 5733,
-          "hash": "76f3d5d205edd4209bd34c82a2e75111",
-          "modified": "2025-12-16T17:04:42.505128"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\ai_config.json.example",
-          "size": 186,
-          "hash": "83c88a124527c17c3569e6f39ad33d84",
-          "modified": "2025-12-15T10:01:26.252345"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\AI_CONFIG.txt",
-          "size": 1746,
-          "hash": "87da8aeb71ef1fbd44aa47da330ae434",
-          "modified": "2025-12-16T17:04:42.511410"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\ai_text_analyze.py",
-          "size": 10062,
-          "hash": "af6b226465dffc3231498cba42886619",
-          "modified": "2025-12-16T17:04:42.510356"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\ai_text_summarize.py",
-          "size": 6324,
-          "hash": "e3236cfde829a069ff36d53ea827ad9d",
-          "modified": "2025-12-16T17:04:42.510356"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\ai_text_translate.py",
-          "size": 6211,
-          "hash": "01c7e5d721d607f0be1dcb8a5b44afc7",
-          "modified": "2025-12-16T17:04:42.510356"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\ascii_art_generator.py",
+          "path": "plugins\\Config\\PythonScript\\scripts\\04_格式化与转换\\ASCII艺术字生成.py",
           "size": 1484,
           "hash": "191df113f5a0f19a3e1af38c73167ba6",
           "modified": "2025-12-16T16:55:33.225773"
         },
         {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\base64_selection.py",
-          "size": 1752,
-          "hash": "355b225ba47814f14a8e4d4219b57344",
-          "modified": "2026-04-28T11:45:28.663168"
+          "path": "plugins\\Config\\PythonScript\\scripts\\04_格式化与转换\\CSV转Markdown表.py",
+          "size": 1983,
+          "hash": "2c2c0efba8622fce6103b7361fba72a4",
+          "modified": "2026-03-26T10:54:41.190031"
         },
         {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\batch_txt_to_md.py",
-          "size": 3861,
-          "hash": "bc443ffd4feed1ec1930d753d68951f0",
-          "modified": "2026-04-28T11:18:35.039281"
+          "path": "plugins\\Config\\PythonScript\\scripts\\04_格式化与转换\\Mermaid脑图.py",
+          "size": 2869,
+          "hash": "c1f5738405bfc3d50644a8ad8d3666f3",
+          "modified": "2026-03-26T10:54:41.177238"
         },
         {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\count_tokens_clipboard.py",
-          "size": 5101,
-          "hash": "f22d3da372224aed1d19f5207b36cccc",
-          "modified": "2026-03-20T10:27:54.466121"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\count_tokens_insert.py",
-          "size": 2817,
-          "hash": "557c1e45375fb1e2167da7919e056bc9",
-          "modified": "2026-03-20T10:28:04.102951"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\csv_to_md_table.py",
-          "size": 1958,
-          "hash": "0e6a45308ac2dc8d4bca252d26d51989",
-          "modified": "2026-03-26T10:54:35.244283"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\extract_ip_addresses.py",
-          "size": 7280,
-          "hash": "0af82e125e98ed14d02823e7be5616fe",
-          "modified": "2025-12-16T17:04:42.503054"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\extract_phone_numbers.py",
-          "size": 7660,
-          "hash": "883aefc2828b86cdd75743ebbebf9046",
-          "modified": "2025-12-16T17:04:42.503054"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\extract_urls_emails.py",
-          "size": 3075,
-          "hash": "9b96a8c237fa8d1cce9890fdbd93ed01",
-          "modified": "2025-12-16T17:04:42.503054"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\folder_dialog_win.py",
-          "size": 4879,
-          "hash": "522542ac904d21f3ebac3a4880f15851",
-          "modified": "2026-04-28T11:23:20.733893"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\format_json.py",
-          "size": 1535,
-          "hash": "e4a365e2576219b054ac9498db18f483",
-          "modified": "2025-12-16T17:04:42.494247"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\format_sql.py",
-          "size": 3372,
-          "hash": "8107039088fea50da7ba1223b0bef200",
-          "modified": "2025-12-16T17:04:42.496310"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\format_xml.py",
-          "size": 1712,
-          "hash": "61d7f62ef5f36d82fda77e2cd9892a8c",
-          "modified": "2025-12-16T17:04:42.494247"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\fw_hw_convert.py",
-          "size": 1738,
-          "hash": "f806186607ae8c42d36631ff15383be4",
-          "modified": "2026-03-26T10:54:35.858379"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\generate_random_string.py",
-          "size": 3284,
-          "hash": "e8f69d7319e84fa86a00064ff2c6e403",
-          "modified": "2025-12-16T16:55:25.330836"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\get_local_ip.py",
-          "size": 459,
-          "hash": "a43affa5affe5f07e3dc12192bf41956",
-          "modified": "2026-01-21T12:04:25.266595"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\get_mac_address.py",
-          "size": 451,
-          "hash": "cff0df6e7807655ae1915a01a3edf212",
-          "modified": "2026-01-21T12:04:25.266595"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\get_network_info.py",
-          "size": 1766,
-          "hash": "9509b8b5913a65ba675d97449dae91b3",
-          "modified": "2026-01-21T12:04:25.269715"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\get_public_ip.py",
-          "size": 1130,
-          "hash": "9ee1dd594084d6d8d56daaf02d0b9eec",
-          "modified": "2026-01-21T12:04:25.266595"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\get_system_info.py",
-          "size": 743,
-          "hash": "be8c32d8f1ac285cd16d123c7b491249",
-          "modified": "2026-01-21T12:04:25.267617"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\git_conflict_split.py",
-          "size": 2089,
-          "hash": "ff8d8551a345194b277c892afcc02cf6",
-          "modified": "2026-03-26T10:54:37.241603"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\InsertTime.py",
-          "size": 1632,
-          "hash": "c724d302a21a196c9850a2d58dee81ea",
-          "modified": "2025-12-16T17:04:42.511410"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\InsertTimeCN.py",
-          "size": 1623,
-          "hash": "d5f5a67e42915cb175f087eb0148128d",
-          "modified": "2025-07-09T16:38:52.825309"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\insert_uuid.py",
-          "size": 1390,
-          "hash": "5bf6a9d19653277b18b00b4b8eff3638",
-          "modified": "2026-04-28T11:45:19.003271"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\INSTALLATION.txt",
-          "size": 1258,
-          "hash": "389365b67b842dff0beff5d0880ab269",
-          "modified": "2025-12-16T17:04:42.510356"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\line_endings_lf_crlf.py",
-          "size": 1453,
-          "hash": "cf5abd30b735c8622e5feab108924101",
-          "modified": "2026-04-28T11:45:08.017419"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\manage_context_menu.bat",
-          "size": 1455,
-          "hash": "b1085438ec5b32d57be085d464648dc7",
-          "modified": "2025-12-16T17:04:42.511410"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\mermaid_mindmap.py",
-          "size": 2843,
-          "hash": "ace4dc4555efcbfc4361c60247583d1b",
-          "modified": "2026-03-26T10:54:34.929630"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\morse_code.py",
+          "path": "plugins\\Config\\PythonScript\\scripts\\04_格式化与转换\\摩尔斯电码.py",
           "size": 3921,
           "hash": "67c12891e301003c46014d9ef3fc1222",
           "modified": "2025-12-16T16:55:25.333887"
         },
         {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\opencommunity-notepad-plus-plus.py",
-          "size": 169,
-          "hash": "07da9301f5f0103eae378613afeca120",
-          "modified": "2025-07-25T09:22:03.107465"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\opennotepad-plus-plus.py",
-          "size": 183,
-          "hash": "c1935a3e68b497a981fa2038f6d5204b",
-          "modified": "2025-07-09T16:38:52.826322"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\outline_indent.py",
-          "size": 1652,
-          "hash": "6d5c8754916a5001306839d567ec6368",
-          "modified": "2026-03-26T10:54:34.226256"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\outline_to_drawio.py",
-          "size": 7486,
-          "hash": "2507aa2a134222cf1ba561e2faa3c0df",
-          "modified": "2026-04-28T11:33:37.408808"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\path_normalize.py",
-          "size": 1245,
-          "hash": "2d759a6581258ebf7006a1b7ddfbabd2",
-          "modified": "2026-03-26T10:54:35.509891"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\README.md",
-          "size": 9278,
-          "hash": "741862bb9fa8e19311775dcd6d44dae9",
-          "modified": "2026-04-28T11:45:38.457785"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\reg_del_use_notepad_open.py",
-          "size": 2129,
-          "hash": "85e1655b7cf644143fe5f6ece35dd509",
-          "modified": "2025-12-16T17:04:42.525384"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\save_selected_text.py",
-          "size": 1364,
-          "hash": "a0f12fbdefc353a71feada56a462a6ed",
-          "modified": "2025-12-16T17:04:42.494247"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\sensitive_mask.py",
-          "size": 1721,
-          "hash": "2f16e97da2970179666774efd1f28c11",
-          "modified": "2026-03-26T10:54:34.578101"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\show_npp_scripts.py",
-          "size": 2085,
-          "hash": "dac4c50535d355eef614449858818eff",
-          "modified": "2025-12-16T17:04:42.531206"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\sort_lines.py",
-          "size": 1908,
-          "hash": "bd5dabf2fa82cff7c38bd1f81be6ee5f",
-          "modified": "2026-03-26T10:54:36.536959"
-        },
-        {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\text_format_convert.py",
+          "path": "plugins\\Config\\PythonScript\\scripts\\04_格式化与转换\\文本格式转换.py",
           "size": 2840,
           "hash": "52b426aa496ffd5a1570d600da9ad9c5",
           "modified": "2025-12-16T16:55:25.333887"
         },
         {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\timestamp_convert.py",
+          "path": "plugins\\Config\\PythonScript\\scripts\\04_格式化与转换\\时间戳转换.py",
           "size": 4109,
           "hash": "ae781b0843765f2b5c79e708d767882b",
           "modified": "2025-12-16T16:55:25.332882"
         },
         {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\todo_toggle.py",
+          "path": "plugins\\Config\\PythonScript\\scripts\\04_格式化与转换\\格式化JSON.py",
+          "size": 1535,
+          "hash": "e4a365e2576219b054ac9498db18f483",
+          "modified": "2025-12-16T17:04:42.494247"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\04_格式化与转换\\格式化SQL.py",
+          "size": 3372,
+          "hash": "8107039088fea50da7ba1223b0bef200",
+          "modified": "2025-12-16T17:04:42.496310"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\04_格式化与转换\\格式化XML.py",
+          "size": 1712,
+          "hash": "61d7f62ef5f36d82fda77e2cd9892a8c",
+          "modified": "2025-12-16T17:04:42.494247"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\05_提取与遮罩\\提取IP地址.py",
+          "size": 7280,
+          "hash": "0af82e125e98ed14d02823e7be5616fe",
+          "modified": "2025-12-16T17:04:42.503054"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\05_提取与遮罩\\提取电话号码.py",
+          "size": 7660,
+          "hash": "883aefc2828b86cdd75743ebbebf9046",
+          "modified": "2025-12-16T17:04:42.503054"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\05_提取与遮罩\\提取网址与邮箱.py",
+          "size": 3075,
+          "hash": "9b96a8c237fa8d1cce9890fdbd93ed01",
+          "modified": "2025-12-16T17:04:42.503054"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\05_提取与遮罩\\敏感信息遮罩.py",
+          "size": 1815,
+          "hash": "8dcc2f33387a80b8825acac645988037",
+          "modified": "2026-03-26T10:54:39.882993"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\06_系统与网络\\获取MAC地址.py",
+          "size": 451,
+          "hash": "cff0df6e7807655ae1915a01a3edf212",
+          "modified": "2026-01-21T12:04:25.266595"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\06_系统与网络\\获取公网IP.py",
+          "size": 1130,
+          "hash": "9ee1dd594084d6d8d56daaf02d0b9eec",
+          "modified": "2026-01-21T12:04:25.266595"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\06_系统与网络\\获取本机IP.py",
+          "size": 459,
+          "hash": "a43affa5affe5f07e3dc12192bf41956",
+          "modified": "2026-01-21T12:04:25.266595"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\06_系统与网络\\获取系统信息.py",
+          "size": 743,
+          "hash": "be8c32d8f1ac285cd16d123c7b491249",
+          "modified": "2026-01-21T12:04:25.267617"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\06_系统与网络\\获取网络信息.py",
+          "size": 1766,
+          "hash": "9509b8b5913a65ba675d97449dae91b3",
+          "modified": "2026-01-21T12:04:25.269715"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\07_AI与Token\\0token准备投喂整理.py",
+          "size": 1917,
+          "hash": "220cca33bc5051811baf803365442869",
+          "modified": "2026-03-26T10:51:41.365902"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\07_AI与Token\\0token文字脑图生成.py",
+          "size": 3128,
+          "hash": "41714427bf579b43213f33d8240704a2",
+          "modified": "2026-03-26T10:18:32.150103"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\07_AI与Token\\0token文字脑图还原.py",
+          "size": 3483,
+          "hash": "c940fff78bdac7adf3790fe0236f9ebe",
+          "modified": "2026-03-26T10:18:39.996385"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\07_AI与Token\\AI代码审查.py",
+          "size": 5733,
+          "hash": "76f3d5d205edd4209bd34c82a2e75111",
+          "modified": "2025-12-16T17:04:42.505128"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\07_AI与Token\\AI文本分析.py",
+          "size": 10062,
+          "hash": "af6b226465dffc3231498cba42886619",
+          "modified": "2025-12-16T17:04:42.510356"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\07_AI与Token\\AI文本摘要.py",
+          "size": 6324,
+          "hash": "e3236cfde829a069ff36d53ea827ad9d",
+          "modified": "2025-12-16T17:04:42.510356"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\07_AI与Token\\AI文本翻译.py",
+          "size": 6211,
+          "hash": "01c7e5d721d607f0be1dcb8a5b44afc7",
+          "modified": "2025-12-16T17:04:42.510356"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\07_AI与Token\\计算Token数_剪贴板.py",
+          "size": 5230,
+          "hash": "6bbf2373be61a1e2412b892c8a7aa3be",
+          "modified": "2026-03-20T10:28:14.257002"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\07_AI与Token\\计算Token数_插入.py",
+          "size": 2908,
+          "hash": "a695ec29b57fe9582a5a2a849b0f8a69",
+          "modified": "2026-03-20T10:28:24.351081"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\08_文档与导图\\大纲转drawio.py",
+          "size": 7855,
+          "hash": "4d18627d9f773fbdc4ae86810c60fd01",
+          "modified": "2026-05-15T10:05:09.914060"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\08_文档与导图\\批量TXT转Markdown.py",
+          "size": 4184,
+          "hash": "427b28f56bc4e6fd6a752a555d25be46",
+          "modified": "2026-05-15T10:05:06.766152"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\10_打开与杂项\\取消用记事本打开.py",
+          "size": 2129,
+          "hash": "85e1655b7cf644143fe5f6ece35dd509",
+          "modified": "2025-12-16T17:04:42.525384"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\10_打开与杂项\\打开Notepad++.py",
+          "size": 183,
+          "hash": "c1935a3e68b497a981fa2038f6d5204b",
+          "modified": "2025-07-09T16:38:52.826322"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\10_打开与杂项\\打开Notepad++社区.py",
+          "size": 169,
+          "hash": "07da9301f5f0103eae378613afeca120",
+          "modified": "2025-07-25T09:22:03.107465"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\10_打开与杂项\\显示NPP脚本参考.py",
+          "size": 2085,
+          "hash": "dac4c50535d355eef614449858818eff",
+          "modified": "2025-12-16T17:04:42.531206"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\10_打开与杂项\\生成随机字符串.py",
+          "size": 3284,
+          "hash": "e8f69d7319e84fa86a00064ff2c6e403",
+          "modified": "2025-12-16T16:55:25.330836"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\_lib\\npp_eol.py",
+          "size": 392,
+          "hash": "55d385582a92d82fd9495c898ad4c423",
+          "modified": "2026-05-15T11:54:35.308498"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\_lib\\time_stamp_fmt.py",
+          "size": 2735,
+          "hash": "8a99a8e022eb2a26375497f7bfcdfaa7",
+          "modified": "2026-05-15T10:47:26.708284"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\README.md",
+          "size": 11124,
+          "hash": "59d5cf592d324d535b2943a2ac48e19f",
+          "modified": "2026-05-15T16:32:39.378700"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\01_Time_Insert\\InsertTime.py",
+          "size": 763,
+          "hash": "d719d00701e7a11ef32efb1b0d0d8533",
+          "modified": "2026-05-15T10:49:51.190739"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\01_Time_Insert\\InsertTimeCN.py",
+          "size": 774,
+          "hash": "a023bc7e4b48de39878654c2b48fe882",
+          "modified": "2026-05-15T11:57:04.893026"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\01_Time_Insert\\insert_template_family.py",
+          "size": 1392,
+          "hash": "97cd8f3d59575345bf50886491b8320d",
+          "modified": "2026-05-15T12:05:23.286582"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\01_Time_Insert\\insert_template_health.py",
+          "size": 1408,
+          "hash": "d2a35836e7687e5beee1da368a2491f7",
+          "modified": "2026-05-15T12:04:17.746218"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\01_Time_Insert\\insert_template_ideas.py",
+          "size": 1319,
+          "hash": "9e2336e0b891bdf8f39f78ad8fff5be7",
+          "modified": "2026-05-15T12:04:19.529618"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\01_Time_Insert\\insert_template_life.py",
+          "size": 1342,
+          "hash": "77070d0790a5586f8e340935b6470deb",
+          "modified": "2026-05-15T12:04:15.567142"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\01_Time_Insert\\insert_template_money.py",
+          "size": 1372,
+          "hash": "0a8c453f0e1441401b4414ebed7c41fd",
+          "modified": "2026-05-15T12:04:22.640974"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\01_Time_Insert\\insert_template_mood.py",
+          "size": 1453,
+          "hash": "ce121a03e38621e32141a82285601c4e",
+          "modified": "2026-05-15T12:04:34.784088"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\01_Time_Insert\\insert_template_project.py",
+          "size": 1439,
+          "hash": "219e16673d59b5002b56ffa58b3fcc3e",
+          "modified": "2026-05-15T12:04:32.017376"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\01_Time_Insert\\insert_template_reading.py",
+          "size": 1345,
+          "hash": "20e0b367cc462f02735c87ce8b93e373",
+          "modified": "2026-05-15T12:04:30.027087"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\01_Time_Insert\\insert_template_scratch.py",
+          "size": 1266,
+          "hash": "9a692d724c11ccf8a19ffc2a367bd39e",
+          "modified": "2026-05-15T12:04:24.365588"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\01_Time_Insert\\insert_template_side_gig.py",
+          "size": 1400,
+          "hash": "fa32721316399862d70c24623d6e76d3",
+          "modified": "2026-05-15T12:04:56.808642"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\01_Time_Insert\\insert_template_social.py",
+          "size": 1372,
+          "hash": "2e77f5e49507277e26050fd7bdf23ad4",
+          "modified": "2026-05-15T12:05:20.992928"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\01_Time_Insert\\insert_template_study.py",
+          "size": 1375,
+          "hash": "722b933a5f3be5de861f7f128bf029e6",
+          "modified": "2026-05-15T12:04:16.014930"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\01_Time_Insert\\insert_template_work.py",
+          "size": 1301,
+          "hash": "56d1a9e64f41358cd60472433c98f7ec",
+          "modified": "2026-05-15T12:04:56.320302"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\01_Time_Insert\\insert_template_workout.py",
+          "size": 1441,
+          "hash": "e2ec86d57fcd104f7323fcb14a2e686b",
+          "modified": "2026-05-15T12:04:32.708169"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\01_Time_Insert\\insert_uuid.py",
+          "size": 1390,
+          "hash": "5bf6a9d19653277b18b00b4b8eff3638",
+          "modified": "2026-05-15T09:51:44.143183"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\01_Time_Insert\\work_daily_log.py",
+          "size": 1337,
+          "hash": "3abfc3a22b4b91921fa2511e614b2144",
+          "modified": "2026-05-15T12:04:58.638587"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\01_Time_Insert\\work_daily_three.py",
+          "size": 1414,
+          "hash": "2f4794d5fc2f23b63e1000efce45fe24",
+          "modified": "2026-05-15T12:04:57.900743"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\02_Lines_Selection\\add_line_numbers_multi_format.py",
+          "size": 4048,
+          "hash": "c06c7b7a3222cc0c2237f8d8f419af3b",
+          "modified": "2026-03-06T14:30:28.316542"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\02_Lines_Selection\\add_line_numbers_NH+123.py",
+          "size": 1531,
+          "hash": "72a9098e7c6a8374865d8b91e56b1cf1",
+          "modified": "2026-03-06T14:24:41.316065"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\02_Lines_Selection\\base64_selection.py",
+          "size": 1752,
+          "hash": "355b225ba47814f14a8e4d4219b57344",
+          "modified": "2026-05-15T09:51:44.132697"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\02_Lines_Selection\\git_conflict_split.py",
+          "size": 2089,
+          "hash": "ff8d8551a345194b277c892afcc02cf6",
+          "modified": "2026-03-26T10:54:37.241603"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\02_Lines_Selection\\line_endings_lf_crlf.py",
+          "size": 1453,
+          "hash": "cf5abd30b735c8622e5feab108924101",
+          "modified": "2026-05-15T09:51:44.136860"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\02_Lines_Selection\\outline_indent.py",
+          "size": 1652,
+          "hash": "6d5c8754916a5001306839d567ec6368",
+          "modified": "2026-03-26T10:54:34.226256"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\02_Lines_Selection\\save_selected_text.py",
+          "size": 1364,
+          "hash": "a0f12fbdefc353a71feada56a462a6ed",
+          "modified": "2025-12-16T17:04:42.494247"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\02_Lines_Selection\\sort_lines.py",
+          "size": 1908,
+          "hash": "bd5dabf2fa82cff7c38bd1f81be6ee5f",
+          "modified": "2026-03-26T10:54:36.536959"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\02_Lines_Selection\\todo_toggle.py",
           "size": 1275,
           "hash": "98b511e9b186b1d5f1e083c9071f4646",
           "modified": "2026-03-26T10:54:36.916103"
         },
         {
-          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\unicode_normalize.py",
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\03_Encoding\\fw_hw_convert.py",
+          "size": 1738,
+          "hash": "f806186607ae8c42d36631ff15383be4",
+          "modified": "2026-03-26T10:54:35.858379"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\03_Encoding\\path_normalize.py",
+          "size": 1245,
+          "hash": "2d759a6581258ebf7006a1b7ddfbabd2",
+          "modified": "2026-03-26T10:54:35.509891"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\03_Encoding\\unicode_normalize.py",
           "size": 1309,
           "hash": "effceb392ebe3ab7adb9bd2f4bec7ba3",
           "modified": "2026-03-26T10:54:36.248140"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\04_Format_Convert\\ascii_art_generator.py",
+          "size": 1484,
+          "hash": "191df113f5a0f19a3e1af38c73167ba6",
+          "modified": "2025-12-16T16:55:33.225773"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\04_Format_Convert\\csv_to_md_table.py",
+          "size": 1958,
+          "hash": "0e6a45308ac2dc8d4bca252d26d51989",
+          "modified": "2026-03-26T10:54:35.244283"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\04_Format_Convert\\format_json.py",
+          "size": 1535,
+          "hash": "e4a365e2576219b054ac9498db18f483",
+          "modified": "2025-12-16T17:04:42.494247"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\04_Format_Convert\\format_sql.py",
+          "size": 3372,
+          "hash": "8107039088fea50da7ba1223b0bef200",
+          "modified": "2025-12-16T17:04:42.496310"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\04_Format_Convert\\format_xml.py",
+          "size": 1712,
+          "hash": "61d7f62ef5f36d82fda77e2cd9892a8c",
+          "modified": "2025-12-16T17:04:42.494247"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\04_Format_Convert\\mermaid_mindmap.py",
+          "size": 2843,
+          "hash": "ace4dc4555efcbfc4361c60247583d1b",
+          "modified": "2026-03-26T10:54:34.929630"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\04_Format_Convert\\morse_code.py",
+          "size": 3921,
+          "hash": "67c12891e301003c46014d9ef3fc1222",
+          "modified": "2025-12-16T16:55:25.333887"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\04_Format_Convert\\text_format_convert.py",
+          "size": 2840,
+          "hash": "52b426aa496ffd5a1570d600da9ad9c5",
+          "modified": "2025-12-16T16:55:25.333887"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\04_Format_Convert\\timestamp_convert.py",
+          "size": 4109,
+          "hash": "ae781b0843765f2b5c79e708d767882b",
+          "modified": "2025-12-16T16:55:25.332882"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\05_Extract_Mask\\extract_ip_addresses.py",
+          "size": 7280,
+          "hash": "0af82e125e98ed14d02823e7be5616fe",
+          "modified": "2025-12-16T17:04:42.503054"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\05_Extract_Mask\\extract_phone_numbers.py",
+          "size": 7660,
+          "hash": "883aefc2828b86cdd75743ebbebf9046",
+          "modified": "2025-12-16T17:04:42.503054"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\05_Extract_Mask\\extract_urls_emails.py",
+          "size": 3075,
+          "hash": "9b96a8c237fa8d1cce9890fdbd93ed01",
+          "modified": "2025-12-16T17:04:42.503054"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\05_Extract_Mask\\sensitive_mask.py",
+          "size": 1721,
+          "hash": "2f16e97da2970179666774efd1f28c11",
+          "modified": "2026-03-26T10:54:34.578101"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\06_System_Network\\get_local_ip.py",
+          "size": 459,
+          "hash": "a43affa5affe5f07e3dc12192bf41956",
+          "modified": "2026-01-21T12:04:25.266595"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\06_System_Network\\get_mac_address.py",
+          "size": 451,
+          "hash": "cff0df6e7807655ae1915a01a3edf212",
+          "modified": "2026-01-21T12:04:25.266595"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\06_System_Network\\get_network_info.py",
+          "size": 1766,
+          "hash": "9509b8b5913a65ba675d97449dae91b3",
+          "modified": "2026-01-21T12:04:25.269715"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\06_System_Network\\get_public_ip.py",
+          "size": 1130,
+          "hash": "9ee1dd594084d6d8d56daaf02d0b9eec",
+          "modified": "2026-01-21T12:04:25.266595"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\06_System_Network\\get_system_info.py",
+          "size": 743,
+          "hash": "be8c32d8f1ac285cd16d123c7b491249",
+          "modified": "2026-01-21T12:04:25.267617"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\07_AI_Token\\0token_prep_for_llm.py",
+          "size": 1950,
+          "hash": "754de1d3d461ae9f6c775c4266dbaa24",
+          "modified": "2026-03-26T10:47:41.742902"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\07_AI_Token\\0token_text_mindmap.py",
+          "size": 3070,
+          "hash": "8041fe37f2610daf3972a19ef431e3f9",
+          "modified": "2026-03-26T10:18:18.607168"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\07_AI_Token\\0token_text_mindmap_restore.py",
+          "size": 3630,
+          "hash": "61c2dc8d7abf42393b47970c2dc05191",
+          "modified": "2026-03-26T10:18:25.456191"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\07_AI_Token\\ai_code_review.py",
+          "size": 5733,
+          "hash": "76f3d5d205edd4209bd34c82a2e75111",
+          "modified": "2025-12-16T17:04:42.505128"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\07_AI_Token\\ai_config.json.example",
+          "size": 186,
+          "hash": "83c88a124527c17c3569e6f39ad33d84",
+          "modified": "2025-12-15T10:01:26.252345"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\07_AI_Token\\AI_CONFIG.txt",
+          "size": 1746,
+          "hash": "87da8aeb71ef1fbd44aa47da330ae434",
+          "modified": "2025-12-16T17:04:42.511410"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\07_AI_Token\\ai_text_analyze.py",
+          "size": 10062,
+          "hash": "af6b226465dffc3231498cba42886619",
+          "modified": "2025-12-16T17:04:42.510356"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\07_AI_Token\\ai_text_summarize.py",
+          "size": 6324,
+          "hash": "e3236cfde829a069ff36d53ea827ad9d",
+          "modified": "2025-12-16T17:04:42.510356"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\07_AI_Token\\ai_text_translate.py",
+          "size": 6211,
+          "hash": "01c7e5d721d607f0be1dcb8a5b44afc7",
+          "modified": "2025-12-16T17:04:42.510356"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\07_AI_Token\\count_tokens_clipboard.py",
+          "size": 5101,
+          "hash": "f22d3da372224aed1d19f5207b36cccc",
+          "modified": "2026-03-20T10:27:54.466121"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\07_AI_Token\\count_tokens_insert.py",
+          "size": 2817,
+          "hash": "557c1e45375fb1e2167da7919e056bc9",
+          "modified": "2026-03-20T10:28:04.102951"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\07_AI_Token\\INSTALLATION.txt",
+          "size": 1258,
+          "hash": "389365b67b842dff0beff5d0880ab269",
+          "modified": "2025-12-16T17:04:42.510356"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\08_Docs_Diagram\\batch_txt_to_md.py",
+          "size": 4175,
+          "hash": "5548d2d7df42671f3a982fddbab4a058",
+          "modified": "2026-05-15T10:05:19.104446"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\08_Docs_Diagram\\outline_to_drawio.py",
+          "size": 7837,
+          "hash": "78cac61a418651b811884498c88eea23",
+          "modified": "2026-05-15T10:05:21.730012"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\09_QuickAdd\\quickadd_capture.py",
+          "size": 13817,
+          "hash": "64ae4b810fea30d0418b061436391bf0",
+          "modified": "2026-05-15T11:07:48.172714"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\10_Open_Misc\\generate_random_string.py",
+          "size": 3284,
+          "hash": "e8f69d7319e84fa86a00064ff2c6e403",
+          "modified": "2025-12-16T16:55:25.330836"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\10_Open_Misc\\manage_context_menu.bat",
+          "size": 1455,
+          "hash": "b1085438ec5b32d57be085d464648dc7",
+          "modified": "2025-12-16T17:04:42.511410"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\10_Open_Misc\\opencommunity-notepad-plus-plus.py",
+          "size": 169,
+          "hash": "07da9301f5f0103eae378613afeca120",
+          "modified": "2025-07-25T09:22:03.107465"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\10_Open_Misc\\opennotepad-plus-plus.py",
+          "size": 183,
+          "hash": "c1935a3e68b497a981fa2038f6d5204b",
+          "modified": "2025-07-09T16:38:52.826322"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\10_Open_Misc\\reg_del_use_notepad_open.py",
+          "size": 2129,
+          "hash": "85e1655b7cf644143fe5f6ece35dd509",
+          "modified": "2025-12-16T17:04:42.525384"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\10_Open_Misc\\show_npp_scripts.py",
+          "size": 2085,
+          "hash": "dac4c50535d355eef614449858818eff",
+          "modified": "2025-12-16T17:04:42.531206"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\_lib\\folder_dialog_win.py",
+          "size": 4879,
+          "hash": "522542ac904d21f3ebac3a4880f15851",
+          "modified": "2026-05-15T09:51:44.138954"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\_lib\\npp_eol.py",
+          "size": 240,
+          "hash": "78ee0da150bb682af3514b119e272ac5",
+          "modified": "2026-05-15T11:54:35.953624"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\_lib\\time_stamp_fmt.py",
+          "size": 2497,
+          "hash": "a206954c821d9b7c04d25aa1a442c94c",
+          "modified": "2026-05-15T10:47:34.753624"
         },
         {
           "path": "plugins\\mimeTools\\mimeTools.dll",
@@ -8082,9 +8322,9 @@
           "modified": "2026-01-30T01:34:23.921981"
         }
       ],
-      "total_files": 1293,
-      "total_size": 76306648,
-      "last_updated": "2026-05-13T17:37:17.417505"
+      "total_files": 1333,
+      "total_size": 76373888,
+      "last_updated": "2026-05-15T16:41:52.697453"
     },
     "notepad--": {
       "version": "20260423_081733",
