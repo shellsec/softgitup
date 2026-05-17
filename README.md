@@ -71,6 +71,10 @@
     - `Configure_AdGuard_DNS.bat` - 配置 AdGuard DNS（免费，拦截广告、跟踪器、恶意网站）  
     - `Configure_18bit_DNS.bat` - 配置 18bit 加密DNS（拦截广告、恶意网站）
     - `Restore_Default_DNS.bat` - 还原为默认DNS设置（自动获取）
+  - 任务栏 / 桌面快捷方式（Win10/Win11，无需管理员，路径自适应）
+    - `Pin_system_good_to_taskbar.bat` - 批量固定到任务栏（默认含 system_good + 同级常用软件，清单见 `Pin_taskbar_targets.json`）
+    - `Create_desktop_shortcuts.bat` - 同上列表，在桌面创建 `.lnk`
+    - 部署在 `D:\Program Files\system_good` 时，自动在 `D:\Program Files\` 下解析 `notepad++`、`everything` 等子目录
 
 - **GitHub Releases 按需更新**: `software/GithubWinDownTools/` 提供独立 Python 脚本，按 `apps.json` 从 GitHub Releases 抓取版本并下载安装包（支持 Windows / macOS / Linux 分平台配置）；Windows 可双击 `run_update.bat`。详细用法见 [GithubWinDownTools 说明](software/GithubWinDownTools/README.md)。该目录已列入 `config.json` 的 `software_dirs`，可与主同步工具一并拉取。
 
@@ -730,6 +734,29 @@ A: 如果配置后 DoH 未生效，可以尝试：
    - 将"首选 DNS 加密"和"备用 DNS 加密"设置为"开（手动模板）"
 3. 重启计算机
 4. 某些 Windows 11 版本可能需要通过系统设置手动配置 DoH
+
+**Q: 如何一键固定任务栏或创建桌面快捷方式？**
+A: 脚本位于 `software/system_good/`（或同步后的 `system_good` 目录），共用清单 `Pin_taskbar_targets.json`：
+
+| 脚本 | 作用 |
+|------|------|
+| `Pin_system_good_to_taskbar.bat` | 批量固定到任务栏 |
+| `Create_desktop_shortcuts.bat` | 在桌面（及 OneDrive 桌面）创建快捷方式 |
+
+**路径自适应**：脚本在 `…\system_good\` 内时，软件根目录为其**上一级**（如 `D:\Program Files`），会在该根下按子文件夹名查找 exe；本机不存在的项会跳过，不中断。
+
+**默认处理（双击即可，无需额外参数）**：
+
+- **system_good**：PuTTY、VirtualDesktopSwitcher、WindowsBatchScriptManager、MediaManage、Keyvol  
+- **同级软件**：Notepad++、Notepad--、Everything、Sublime Text、EditPlus、CCleaner、7-Zip、WinRAR、UltraEdit、CrystalDiskInfo、WinMemoryCleaner、NetTime、HiBit Startup Manager、PotPlayer  
+
+**可选参数**（PowerShell 或 bat 后追加）：
+
+- `-IncludeOptional` — Ditto、StartBack（需已解压到 system_good）
+- `-IncludeMaintenance` — SmartDefrag-Pro
+- 任务栏专用：`-RestartExplorer`（Win11 图标未刷新时）、`-PinMode FolderOnly`（兼容性最好）
+
+修改默认列表：编辑 `Pin_taskbar_targets.json` 中 `groups.default.targets`。
 
 ### 日志查看
 ```bash

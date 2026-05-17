@@ -1,0 +1,55 @@
+{
+  "version": 2,
+  "comment": "default 为双击 bat 即处理；folders 为软件根下子目录名",
+  "groups": {
+    "default": {
+      "description": "system_good + 同级常用软件（默认全部固定/建快捷方式）",
+      "targets": [
+        { "label": "PuTTY", "file": "putty.exe", "folders": ["system_good"], "note": "SSH 终端" },
+        { "label": "VirtualDesktopSwitcher", "file": "VirtualDesktopSwitcher.exe", "folders": ["system_good"], "note": "虚拟桌面切换" },
+        { "label": "WindowsBatchScriptManager", "file": "WindowsBatchScriptManager.exe", "folders": ["system_good"], "note": "脚本管理器" },
+        { "label": "MediaManage", "file": "MediaManage.exe", "folders": ["system_good"], "note": "媒体管理" },
+        { "label": "Keyvol", "file": "Keyvol.exe", "folders": ["system_good"], "note": "音量快捷键" },
+        { "label": "Notepad++", "file": "notepad++.exe", "folders": ["notepad++"] },
+        { "label": "Notepad--", "file": "Notepad--.exe", "folders": ["notepad--"] },
+        { "label": "Everything", "file": "Everything.exe", "folders": ["everything"] },
+        { "label": "Sublime Text", "file": "sublime_text.exe", "folders": ["SublimeText"] },
+        { "label": "EditPlus", "file": "EditPlus.exe", "folders": ["EditPlus"] },
+        { "label": "CCleaner", "file": "CCleaner.exe", "folders": ["CCleaner"] },
+        { "label": "7-Zip", "file": "7zFM.exe", "folders": ["7-Zip"] },
+        { "label": "WinRAR", "file": "WinRAR.exe", "folders": ["WinRAR"] },
+        { "label": "UltraEdit", "file": "uedit64.exe", "folders": ["UltraEdit"], "alternates": ["uedit32.exe"] },
+        { "label": "CrystalDiskInfo", "file": "CrystalDiskInfo.exe", "folders": ["CrystalDiskInfo"] },
+        { "label": "WinMemoryCleaner", "file": "WinMemoryCleaner.exe", "folders": ["WinMemoryCleaner"] },
+        { "label": "NetTime", "file": "NetTime.exe", "folders": ["NetTime"] },
+        { "label": "HiBit Startup Manager", "file": "HiBit Startup Manager.exe", "folders": ["HiBit Startup Manager"] },
+        { "label": "PotPlayer", "file": "PotPlayerMini64.exe", "folders": ["PotPlayer"], "alternates": ["PotPlayer64.exe", "PotPlayer.exe"] }
+      ]
+    },
+    "optional": {
+      "description": "system_good 解压后可选",
+      "targets": [
+        { "label": "Ditto", "file": "Ditto.exe", "folders": ["system_good"], "note": "剪贴板历史" },
+        { "label": "StartBack", "file": "StartBack.exe", "folders": ["system_good"], "note": "开始菜单增强" }
+      ]
+    },
+    "maintenance": {
+      "description": "维护类",
+      "targets": [
+        { "label": "SmartDefrag Pro", "file": "SmartDefrag-Pro.exe", "folders": ["system_good"], "note": "磁盘整理" }
+      ]
+    }
+  },
+  "skip": {
+    "AutoHotkey.exe": "通常配合 .ahk 后台运行",
+    "copyparty.exe": "文件服务，非任务栏场景",
+    "NetTimeService.exe": "Windows 服务进程",
+    "DefenderRemover.exe": "一次性系统工具",
+    "RevokeMsgPatcher.exe": "补丁类，非日常使用",
+    "HEU_KMS_Activator.exe": "激活工具",
+    "DriverTalent.exe": "驱动维护，偶尔使用",
+    "DuplicateCleaner.exe": "清理工具，偶尔使用",
+    "StopUpdates10.exe": "系统更新设置，偶尔使用",
+    "ChromeSetup.exe": "安装包/更新器"
+  }
+}

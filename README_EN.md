@@ -72,6 +72,10 @@ The following is a **self-check summary** of choices in that list, useful when c
     - `Configure_AdGuard_DNS.bat` - Configure AdGuard DNS (free, blocks ads, trackers, malicious websites)  
     - `Configure_18bit_DNS.bat` - Configure 18bit encrypted DNS (blocks ads, malicious websites)
     - `Restore_Default_DNS.bat` - Restore default DNS settings (automatic)
+  - Taskbar / desktop shortcuts (Win10/Win11, no admin, adaptive paths)
+    - `Pin_system_good_to_taskbar.bat` - Pin apps to the taskbar (default: system_good + sibling apps; see `Pin_taskbar_targets.json`)
+    - `Create_desktop_shortcuts.bat` - Create desktop `.lnk` files for the same list
+    - When deployed under `D:\Program Files\system_good`, resolves exes under `D:\Program Files\` (e.g. `notepad++`, `everything`)
 
 - **GitHub Releases (on-demand)**: `software/githubwindowntools/` ships a standalone Python workflow driven by `apps.json` to resolve versions from GitHub Releases and download installers (Windows / macOS / Linux blocks in config). On Windows, run `run_update.bat`. Full steps: [githubwindowntools README](software/githubwindowntools/README.md) (Chinese). The folder is listed under `software_dirs` in `config.json` so the main sync tool can pull it with the rest.
 
@@ -723,6 +727,25 @@ A: If DoH is not effective after configuration, try:
    - Set "Preferred DNS encryption" and "Alternate DNS encryption" to "On (manual template)"
 3. Restart computer
 4. Some Windows 11 versions may require manual DoH configuration through system settings
+
+**Q: How to pin apps to the taskbar or create desktop shortcuts in one click?**
+A: Scripts live in `software/system_good/` (or your synced `system_good` folder) and share `Pin_taskbar_targets.json`:
+
+| Script | Purpose |
+|--------|---------|
+| `Pin_system_good_to_taskbar.bat` | Pin to taskbar |
+| `Create_desktop_shortcuts.bat` | Create desktop shortcuts |
+
+**Adaptive paths**: If the script is in `…\system_good\`, the software root is its **parent** (e.g. `D:\Program Files`). Missing exes are skipped without aborting.
+
+**Default set (no extra flags)**:
+
+- **system_good**: PuTTY, VirtualDesktopSwitcher, WindowsBatchScriptManager, MediaManage, Keyvol  
+- **Sibling folders**: Notepad++, Notepad--, Everything, Sublime Text, EditPlus, CCleaner, 7-Zip, WinRAR, UltraEdit, CrystalDiskInfo, WinMemoryCleaner, NetTime, HiBit Startup Manager, PotPlayer  
+
+**Optional flags**: `-IncludeOptional` (Ditto, StartBack), `-IncludeMaintenance` (SmartDefrag-Pro); for taskbar only: `-RestartExplorer`, `-PinMode FolderOnly`.
+
+Edit `Pin_taskbar_targets.json` → `groups.default.targets` to change the default list.
 
 **Q: Where are software downloaded when sync_base_path is empty?**
 A: When `sync_base_path` is configured as empty string `""`, software will be downloaded to project root directory (script location). For example:

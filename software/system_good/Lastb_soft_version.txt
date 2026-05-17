@@ -36,6 +36,20 @@ Configure_AdGuard_DNS.bat  推荐优先
 Configure_18bit_DNS.bat 国内18bit去广告
 Restore_Default_DNS.bat 恢复状态
 
+system_good目录下 任务栏固定 / 桌面快捷方式（Win10/Win11，无需管理员）
+路径自适应：脚本在 D:\Program Files\system_good 时，软件根为 D:\Program Files\，自动解析同级子目录
+Pin_system_good_to_taskbar.bat     批量固定任务栏
+Create_desktop_shortcuts.bat       桌面创建 .lnk（含 OneDrive 桌面）
+Pin_taskbar_targets.json           统一清单（改 default 组即可）
+Pin_shortcut_common.ps1            公共模块（勿单独运行）
+
+默认双击即处理（本机无对应 exe 则跳过）：
+system_good — putty / VirtualDesktopSwitcher / WindowsBatchScriptManager / MediaManage / Keyvol
+同级软件 — notepad++ / notepad-- / everything / SublimeText / EditPlus / CCleaner / 7-Zip / WinRAR / UltraEdit / CrystalDiskInfo / WinMemoryCleaner / NetTime / HiBit Startup Manager / PotPlayer
+可选参数 — -IncludeOptional（Ditto、StartBack） -IncludeMaintenance（SmartDefrag）
+任务栏专用 — -RestartExplorer（Win11 刷新图标） -PinMode FolderOnly（兼容性最好）
+桌面专用 — -DesktopOnly（仅用户桌面，不含 OneDrive 路径）
+
 AI装机必备列表
 基于本地机器构建AI应用环境
 ollama 显卡支持本地大模型
@@ -397,9 +411,9 @@ https://www.423down.com/5573.html
 核心特点：修复 / 增强 Win10/11 开始菜单功能，整合两款经典开始菜单工具，单文件包便捷使用
 Win11StartAllBack.zip
 https://www.423down.com/16859.html
-Win11 开始菜单 StartAllBack 3.9.22.5362 破解注册版
-StartAllBack3.9.22.5362-Stbale.zip
+Win11 开始菜单 StartAllBack v3.9.23.5365 中文特别版 
 https://down66.com/startallback
+https://www.423down.com/12420.html
 技巧设置，样式默认，图标大小 小，图标边距 超小，这样看得到所有和资源占用少（好像是）
 隐藏任务栏位置 底部 ，合并任务栏按钮 从不合并
 

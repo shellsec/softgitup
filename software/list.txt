@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-16T19:31:14.427441",
+  "generated_at": "2026-05-17T10:12:09.301274",
   "total_software": 21,
-  "total_files": 4511,
-  "total_size": 1469437520,
+  "total_files": 4517,
+  "total_size": 1469463285,
   "software": {
     "WinMemoryCleaner": {
       "version": "20260515_144655",
@@ -85,7 +85,7 @@
       "last_updated": "2026-03-10T11:47:39.734766"
     },
     "system_good": {
-      "version": "20260516_193112",
+      "version": "20260517_101207",
       "files": [
         {
           "path": "AutoHotkey.exe",
@@ -116,6 +116,18 @@
           "size": 13207050,
           "hash": "9911c9ba8be66030d702b69597572a63",
           "modified": "2026-04-30T11:24:26.412917"
+        },
+        {
+          "path": "Create_desktop_shortcuts.bat",
+          "size": 817,
+          "hash": "ad6bff91ec6a01eb22fe9d636e4500d3",
+          "modified": "2026-05-17T10:02:11.500329"
+        },
+        {
+          "path": "Create_desktop_shortcuts.ps1",
+          "size": 4735,
+          "hash": "e291df12963d3db296f4b3d1b9a9c58b",
+          "modified": "2026-05-17T10:02:22.367559"
         },
         {
           "path": "DefenderRemover.zip",
@@ -161,9 +173,9 @@
         },
         {
           "path": "Lastb_soft_version.txt",
-          "size": 108668,
-          "hash": "5fcfcc2f502bcfb47e5056d846ab2510",
-          "modified": "2026-05-16T19:31:05.954530"
+          "size": 109812,
+          "hash": "d29bc68338b2ad21292b1232614234d1",
+          "modified": "2026-05-17T10:07:48.749510"
         },
         {
           "path": "lx-music-desktop.7z",
@@ -182,6 +194,30 @@
           "size": 43372935,
           "hash": "3cbfbc7a4f6ccef37bb83aec030d04aa",
           "modified": "2026-05-11T12:22:42.181193"
+        },
+        {
+          "path": "Pin_shortcut_common.ps1",
+          "size": 7980,
+          "hash": "6063ec141f2edd65de5269de2b7fc1f3",
+          "modified": "2026-05-17T10:02:22.363397"
+        },
+        {
+          "path": "Pin_system_good_to_taskbar.bat",
+          "size": 865,
+          "hash": "5d8aa03910ed0a56fd6f57bd54825b80",
+          "modified": "2026-05-17T10:02:14.028785"
+        },
+        {
+          "path": "Pin_system_good_to_taskbar.ps1",
+          "size": 8131,
+          "hash": "582f415a7080b525cd3ebf937c08f588",
+          "modified": "2026-05-17T10:02:22.365467"
+        },
+        {
+          "path": "Pin_taskbar_targets.json",
+          "size": 3362,
+          "hash": "c67fbdb21252abe47186bef80b3c953e",
+          "modified": "2026-05-17T10:01:21.767354"
         },
         {
           "path": "pipinstallrequirements.bat",
@@ -263,9 +299,9 @@
         },
         {
           "path": "Win11StartAllBack.zip",
-          "size": 1751898,
-          "hash": "e5f5ba7f366893ca7ddb703b3d7d3b88",
-          "modified": "2026-03-31T16:48:15.055303"
+          "size": 1750629,
+          "hash": "7be0996acc97731a9970bf9bb4f211c0",
+          "modified": "2026-05-17T09:37:24.965537"
         },
         {
           "path": "WindowsBatchScriptManager.exe",
@@ -316,9 +352,9 @@
           "modified": "2026-03-11T14:56:47.731452"
         }
       ],
-      "total_files": 38,
-      "total_size": 553802908,
-      "last_updated": "2026-05-16T19:31:12.901064"
+      "total_files": 44,
+      "total_size": 553828673,
+      "last_updated": "2026-05-17T10:12:07.938388"
     },
     "notepad++": {
       "version": "20260515_164152",
