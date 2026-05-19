@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-17T10:12:09.301274",
+  "generated_at": "2026-05-19T12:11:50.119988",
   "total_software": 21,
-  "total_files": 4517,
-  "total_size": 1469463285,
+  "total_files": 4518,
+  "total_size": 1477907403,
   "software": {
     "WinMemoryCleaner": {
       "version": "20260515_144655",
@@ -85,7 +85,7 @@
       "last_updated": "2026-03-10T11:47:39.734766"
     },
     "system_good": {
-      "version": "20260517_101207",
+      "version": "20260519_121148",
       "files": [
         {
           "path": "AutoHotkey.exe",
@@ -121,13 +121,13 @@
           "path": "Create_desktop_shortcuts.bat",
           "size": 817,
           "hash": "ad6bff91ec6a01eb22fe9d636e4500d3",
-          "modified": "2026-05-17T10:02:11.500329"
+          "modified": "2026-05-17T10:18:39.438977"
         },
         {
           "path": "Create_desktop_shortcuts.ps1",
           "size": 4735,
           "hash": "e291df12963d3db296f4b3d1b9a9c58b",
-          "modified": "2026-05-17T10:02:22.367559"
+          "modified": "2026-05-17T10:18:39.460304"
         },
         {
           "path": "DefenderRemover.zip",
@@ -173,9 +173,9 @@
         },
         {
           "path": "Lastb_soft_version.txt",
-          "size": 109812,
-          "hash": "d29bc68338b2ad21292b1232614234d1",
-          "modified": "2026-05-17T10:07:48.749510"
+          "size": 112652,
+          "hash": "a481751e7df64e03fc2d12bd552665e6",
+          "modified": "2026-05-19T12:05:11.301883"
         },
         {
           "path": "lx-music-desktop.7z",
@@ -196,28 +196,34 @@
           "modified": "2026-05-11T12:22:42.181193"
         },
         {
+          "path": "PCFresh.7z",
+          "size": 8948970,
+          "hash": "8f678b45f60b31820100e30403b14169",
+          "modified": "2026-05-19T11:47:47.968878"
+        },
+        {
           "path": "Pin_shortcut_common.ps1",
           "size": 7980,
           "hash": "6063ec141f2edd65de5269de2b7fc1f3",
-          "modified": "2026-05-17T10:02:22.363397"
+          "modified": "2026-05-17T10:18:39.460304"
         },
         {
           "path": "Pin_system_good_to_taskbar.bat",
           "size": 865,
           "hash": "5d8aa03910ed0a56fd6f57bd54825b80",
-          "modified": "2026-05-17T10:02:14.028785"
+          "modified": "2026-05-17T10:18:39.440100"
         },
         {
           "path": "Pin_system_good_to_taskbar.ps1",
           "size": 8131,
           "hash": "582f415a7080b525cd3ebf937c08f588",
-          "modified": "2026-05-17T10:02:22.365467"
+          "modified": "2026-05-17T10:18:39.460304"
         },
         {
           "path": "Pin_taskbar_targets.json",
           "size": 3362,
           "hash": "c67fbdb21252abe47186bef80b3c953e",
-          "modified": "2026-05-17T10:01:21.767354"
+          "modified": "2026-05-17T10:18:39.447692"
         },
         {
           "path": "pipinstallrequirements.bat",
@@ -263,9 +269,9 @@
         },
         {
           "path": "SSDFresh.7z",
-          "size": 7243844,
-          "hash": "d5e9b903580d29c3788caee999508b05",
-          "modified": "2026-05-14T11:01:09.993902"
+          "size": 6628966,
+          "hash": "3e8b5890c11c2a84aadd0c52ab237dde",
+          "modified": "2026-05-19T11:41:22.095836"
         },
         {
           "path": "startback_aio.zip",
@@ -293,9 +299,9 @@
         },
         {
           "path": "Win11Debloat.zip",
-          "size": 280875,
-          "hash": "aa19ddd152ce373921fc88a7a08c922a",
-          "modified": "2026-03-31T17:06:30.325791"
+          "size": 338400,
+          "hash": "500209d93e1e25eb22a278b8aa004c6c",
+          "modified": "2026-05-19T12:04:22.132177"
         },
         {
           "path": "Win11StartAllBack.zip",
@@ -341,9 +347,9 @@
         },
         {
           "path": "Zen.zip",
-          "size": 10255707,
-          "hash": "ca4658d371666cf2e2325de077a9a579",
-          "modified": "2026-05-10T23:05:02.956754"
+          "size": 10260824,
+          "hash": "7f6e32f2b8e4ba4bf110fa043854dbbe",
+          "modified": "2026-05-19T11:54:40.006960"
         },
         {
           "path": "微软常用运行库合集.zip",
@@ -352,9 +358,9 @@
           "modified": "2026-03-11T14:56:47.731452"
         }
       ],
-      "total_files": 44,
-      "total_size": 553828673,
-      "last_updated": "2026-05-17T10:12:07.938388"
+      "total_files": 45,
+      "total_size": 562228247,
+      "last_updated": "2026-05-19T12:11:48.689311"
     },
     "notepad++": {
       "version": "20260515_164152",
@@ -8363,7 +8369,7 @@
       "last_updated": "2026-05-15T16:41:52.697453"
     },
     "notepad--": {
-      "version": "20260423_081733",
+      "version": "20260519_121149",
       "files": [
         {
           "path": "D3Dcompiler_47.dll",
@@ -8403,9 +8409,9 @@
         },
         {
           "path": "Notepad--.exe",
-          "size": 4616192,
-          "hash": "941c346fffc00c79035703edae15eb7b",
-          "modified": "2026-04-20T12:30:23.190999"
+          "size": 4661248,
+          "hash": "64cc22d0a331be82ab0470806d3ebd8b",
+          "modified": "2026-05-19T09:58:12.312572"
         },
         {
           "path": "opengl32sw.dll",
@@ -8415,9 +8421,9 @@
         },
         {
           "path": "qmyedit_qt5.dll",
-          "size": 2672640,
-          "hash": "d7ec492ccfd4fcc3f72d09625c4544bb",
-          "modified": "2026-04-20T12:21:01.763304"
+          "size": 2672128,
+          "hash": "d23ecaac8604e567ecbba80511fa5d03",
+          "modified": "2026-05-18T11:04:48.241385"
         },
         {
           "path": "Qt5Core.dll",
@@ -8548,8 +8554,8 @@
         {
           "path": "plugin\\filesearch.dll",
           "size": 141824,
-          "hash": "fad5ee005f5b7ca8b3437a50c5ffd1da",
-          "modified": "2026-04-20T12:28:25.892454"
+          "hash": "163290e2c3f04ebcb0f35e1fbecc2c8d",
+          "modified": "2026-05-18T11:11:58.894626"
         },
         {
           "path": "plugin\\filesearch.exp",
@@ -8566,8 +8572,8 @@
         {
           "path": "plugin\\jstoolndd.dll",
           "size": 121344,
-          "hash": "6dbde937a1481244d717e6b7108d244e",
-          "modified": "2026-04-20T12:28:31.075975"
+          "hash": "c8e0bb0a313fe5f9fe17290f2f337282",
+          "modified": "2026-05-18T11:12:04.354056"
         },
         {
           "path": "plugin\\jstoolndd.exp",
@@ -8584,8 +8590,8 @@
         {
           "path": "plugin\\ndd-json-viewer.dll",
           "size": 459264,
-          "hash": "c455e8391810e88e9dd89940f4621c78",
-          "modified": "2026-04-20T12:28:47.013028"
+          "hash": "bbf2154dea8f008e5eebc27f788dba3c",
+          "modified": "2026-05-18T11:12:20.225681"
         },
         {
           "path": "plugin\\ndd-json-viewer.exp",
@@ -8602,8 +8608,8 @@
         {
           "path": "plugin\\ndd108tool.dll",
           "size": 490496,
-          "hash": "7f0d340316a6587d56890e9b4d6efbf9",
-          "modified": "2026-04-20T12:28:36.577702"
+          "hash": "61d27fd33f1675ed863cc7ece07e4987",
+          "modified": "2026-05-18T11:12:09.873405"
         },
         {
           "path": "plugin\\ndd108tool.exp",
@@ -8620,8 +8626,8 @@
         {
           "path": "plugin\\pinlang.dll",
           "size": 2135040,
-          "hash": "82a4901aafb06bae3e77b1132bdb46e0",
-          "modified": "2026-04-20T12:28:56.160168"
+          "hash": "c74a58820931aa444b405ff72f39ae6a",
+          "modified": "2026-05-18T11:12:30.161861"
         },
         {
           "path": "plugin\\pinlang.exp",
@@ -8680,8 +8686,8 @@
         {
           "path": "plugin\\xmltoolndd.dll",
           "size": 152064,
-          "hash": "a18ef7fdad9bc3da4ed7c81d71bd47c6",
-          "modified": "2026-04-20T12:29:00.406394"
+          "hash": "9187c87dd3891d4f79486722f138c0bd",
+          "modified": "2026-05-18T11:12:33.668555"
         },
         {
           "path": "plugin\\xmltoolndd.exp",
@@ -11763,8 +11769,8 @@
         }
       ],
       "total_files": 566,
-      "total_size": 68089952,
-      "last_updated": "2026-04-23T08:17:33.759209"
+      "total_size": 68134496,
+      "last_updated": "2026-05-19T12:11:49.319685"
     },
     "CCleaner": {
       "version": "20260514_130127",

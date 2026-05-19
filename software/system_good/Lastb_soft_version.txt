@@ -15,7 +15,7 @@ $$$$$$$  |$$ |  $$ |\$$$$$$$\ $$ |$$ |$$$$$$$  |\$$$$$$$\ \$$$$$$$\
 Zen 是一款适用于 Windows、macOS 和 Linux 的开源系统级广告拦截器和隐私保护程序。它的工作原理是设置一个代理，拦截来自所有应用程序的 HTTP 请求，并阻止那些投放广告、跟踪监控您的行为、恶意软件和其他不需要的内容的脚本。通过在系统级别运行，Zen 可以防御浏览器扩展无法防御的威胁，例如嵌入桌面应用程序和操作系统组件中的跟踪器。Zen 附带了许多预装的过滤器，而且还可以轻松添加主机文件和 EasyList 样式的过滤器，能够根据特定需求定制保护。
 PS：为啥不用adguard，adguard卡网
 https://github.com/anfragment/zen
-https://gh-proxy.com/github.com/irbis-sh/zen-desktop/releases/download/v0.21.1/Zen_windows_amd64.zip
+https://gh-proxy.com/github.com/irbis-sh/zen-desktop/releases/download/v0.22.0/Zen_windows_amd64.zip
 Zen.zip解压即可用
 
 其他增强自行下载
@@ -183,6 +183,23 @@ CCleaner-v7.x-Patch.exe
 使用说明：先点击Patch 然后进入软件设置界面
 我的订阅-手动粘贴密钥激活（需保持联网状态)
 
+SSD 固态硬盘优化工具 Abelssoft SSD Fresh 2026 15.04.71721 中文多语免费版
+Abelssoft SSD Fresh Plus最新版是一款专业强大的固态硬盘优化工具。Abelssoft SSD Fresh Plus官方版能够减少每个存储单位的访问次数，帮助用户延长固态硬盘的使用寿命。Abelssoft SSD Fresh Plus软件支持碎片整理、系统恢复、启动文件碎片整理等功能，用户可以轻松地对固态硬盘进行日常维护和清理。
+SSDFresh.7z 提示：该软件需要 .NET Framework 环境才可以正常运行。
+https://www.dayanzai.me/ssd-fresh.html
+https://masuit.org/1924?t=0HNIV93LNR9TK
+场景，目前大部分都是走固态硬盘，这个也有必要性进行优化
+记得关闭自动升级，不然会自动升级，功能失效
+
+Abelssoft旗下的，PCFresh.7z，发现异常很好用，推荐，一键优化，速度明显快了，也不会自动开启其他比如杀毒工具
+Windows 系统优化 Abelssoft PC Fresh 2026 12.02.67017 中文
+https://www.dayanzai.me/pc-fresh.html
+PC Fresh”削减结束不必要的 Windows 服务，优化启动程序，并解决系统缓慢问题。此外，该软件还可以找到隐藏在系统中丢失的应用程序序号，并允许用户自定义 Windows 的各个方面。它还包括一个管理器 有效地分配文件关联（例如，使用写字板打开 .txt 文件）。
+如果您的计算机速度很慢，PC Fresh 就是所需的补救措施。 该软件适用于需要对其操作系统有更多控制权但没有所需时间或意愿研究所有主题的每位 PC 用户。 该工具控制了 Windows，允许用户全面满足系统的需求。
+一键模式会让你的电脑进入超速状态，一键关闭所有不必要的东西以获得最大速度。 我可以在安全和电动工具模块中找到更多选项和调整。 通过这些工具，用户可以对硬盘进行碎片整理、优化内存使用、分析存储空间以及显示系统信息。
+支持的操作系统：Windows 11、Windows 10、Windows 8.1、Windows 7
+
+
 WiseCare365 WiseCare365.7z Wise Care 365 Pro v7.3.2.716 绿色修改版 策略优化比较好
 https://www.423down.com/3471.html
 核心特点：绿色免装无残留，策略优化能力优异，一站式实现系统清理、垃圾删除、系统提速，功能全面且轻量化
@@ -274,12 +291,6 @@ https://www.423down.com/10540.html
 https://www.ghxi.com/iobitsmartdefrag.html
 https://pan.quark.cn/s/5ba02216002d
 
-Abelssoft SSD Fresh Plus最新版是一款专业强大的固态硬盘优化工具。Abelssoft SSD Fresh Plus官方版能够减少每个存储单位的访问次数，帮助用户延长固态硬盘的使用寿命。Abelssoft SSD Fresh Plus软件支持碎片整理、系统恢复、启动文件碎片整理等功能，用户可以轻松地对固态硬盘进行日常维护和清理。
-SSDFresh.7z
-Abelssoft SSD Fresh 2026 v15.03.62686 Multilingual.7z
-https://masuit.org/1924?t=0HNIV93LNR9TK
-场景，目前大部分都是走固态硬盘，这个也有必要性进行优化
-记得关闭自动升级，不然会自动升级，功能失效
 
 场景，对wx，qq，qq管家的截图过于依赖，这其实不对的，因为他们会自动OCR上传内容
 主动 OCR = 必上传
@@ -395,10 +406,31 @@ rime-icefull.zip 已经softgitup里同步更新rime-ice.7z 合并
 小鹤双拼
 紫光双拼
 拼音加加双拼
-3、另一个开源输入法-薄荷输入
+
+3、更新和商业输入法一样的词典
+白霜拼音：蒹葭苍苍，白露为霜。白霜拼音使用高质量语料，进行分词，重新统计字频、词频，归一化，打造纯净、词频准确、智能的词库。白霜词库是目前rime方案下最好的开源词库，经评测准确性已经不输于商业输入法。在墨奇输入法内置，欢迎使用。
+https://github.com/gaboolic/rime-frost
+小狼毫：%APPDATA%\Rime （可以在右下角小狼毫输入法右键打开菜单选用户文件夹）复制完之后，去输入法设定里选择白霜拼音，然后重新部署
+注：%APPDATA% 路径实际为 C:\Users<USER>\AppData\Roaming
+首次安装：
+根据用户使用的系统、安装的软件不同，先 cd 到对应的配置文件的父级目录(例如 Windows 为 %APPDATA%、mac 鼠须管为 ~/Library/)，然后执行以下命令：
+git clone --depth 1 https://github.com/gaboolic/rime-frost Rime
+后续更新：
+在 Rime 文件夹执行 git pull 即可。
+Mac: cd ~/Library/Rime && git pull
+Windows: cd "$env:APPDATA\Rime" && git pull
+其他系统以此类推
+实际我是在 %APPDATA%\Rime 里面执行 git clone --depth 1 https://github.com/gaboolic/rime-frost Rime，然后再复制覆盖过去，再选 白霜拼音
+
+4、其他开源输入法
+墨奇输入法windows版
+https://github.com/gaboolic/moqi-im-windows
+清风输入法
+https://github.com/huanfeng/WindInput
+薄荷输入
 https://cnb.cool/Mintimate/rime/oh-my-rime
 https://cnb.cool/Mintimate/rime/oh-my-rime-cli
-4、需要本地语音输入法输入
+5、需要本地语音输入法输入
 VocoType 是一款运行在本地端侧的隐私安全语音输入工具，通过快捷键即可将语音实时转换为文字并自动输入到当前应用。支持语音转文字MCP、AI 优化文本、自定义替换词典、录音视频转文字等功能，让语音输入更高效、更安全。
 https://github.com/233stone/vocotype-cli
 https://vocotype.com/
@@ -422,7 +454,7 @@ Version: 4.7.2025.0424 (Date: 04/24/2025 - April 24 2025)
 Windows 11 24H2 is supported!
 核心特点：一键禁用 Win10/11 自动更新，避免更新卡顿 / 占用资源，便携版无残留，适配最新 Win11 24H2 版本
 
-Win11Debloat.zip 2026.03.15
+Win11Debloat.zip Win11Debloat-2026.05.11
 # 一键卸载 90+ 款 Windows 11 预装软件
 默认模式-选项去掉-在应用更改前创建系统还原点(推荐)-下一步即可
 原版 https://github.com/Raphire/Win11Debloat
