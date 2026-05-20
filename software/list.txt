@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-19T12:15:58.483018",
+  "generated_at": "2026-05-20T12:50:31.605956",
   "total_software": 21,
-  "total_files": 4518,
-  "total_size": 1477922251,
+  "total_files": 4573,
+  "total_size": 1515770456,
   "software": {
     "WinMemoryCleaner": {
       "version": "20260515_144655",
@@ -85,7 +85,7 @@
       "last_updated": "2026-03-10T11:47:39.734766"
     },
     "system_good": {
-      "version": "20260519_121557",
+      "version": "20260520_125030",
       "files": [
         {
           "path": "AutoHotkey.exe",
@@ -98,6 +98,12 @@
           "size": 1069,
           "hash": "c7d202a0aad2f1154f85071357dd4339",
           "modified": "2026-04-02T10:12:46.561933"
+        },
+        {
+          "path": "CareUEyes_Pro.zip",
+          "size": 5225811,
+          "hash": "478271f1804be1cce58331b6e7fddcfe",
+          "modified": "2026-05-20T12:18:16.688735"
         },
         {
           "path": "Configure_18bit_DNS.bat",
@@ -173,9 +179,9 @@
         },
         {
           "path": "Lastb_soft_version.txt",
-          "size": 112652,
-          "hash": "860815a6a2f54fc2958e4835b2c3edc3",
-          "modified": "2026-05-19T12:15:47.626800"
+          "size": 119749,
+          "hash": "64c00fa8679d8efbee70addd64704513",
+          "modified": "2026-05-20T12:48:56.084625"
         },
         {
           "path": "lx-music-desktop.7z",
@@ -358,9 +364,9 @@
           "modified": "2026-03-11T14:56:47.731452"
         }
       ],
-      "total_files": 45,
-      "total_size": 562243095,
-      "last_updated": "2026-05-19T12:15:57.102512"
+      "total_files": 46,
+      "total_size": 567476003,
+      "last_updated": "2026-05-20T12:50:30.035561"
     },
     "notepad++": {
       "version": "20260515_164152",
@@ -11811,120 +11817,444 @@
       "last_updated": "2026-05-14T13:01:27.506258"
     },
     "WiseCare365": {
-      "version": "20260310_114743",
+      "version": "20260520_125030",
       "files": [
         {
-          "path": "BootPack.wpk",
-          "size": 422529,
-          "hash": "4f001d0e372baef55838f46888e460e4",
-          "modified": "2018-12-06T16:52:30"
+          "path": "WiseCare365Portable.exe",
+          "size": 145446,
+          "hash": "4837f6aef8d39ceaed8358c6167f51e7",
+          "modified": "2021-10-22T11:03:08"
         },
         {
-          "path": "config.ini",
-          "size": 2707,
-          "hash": "caa4b991b0f82d8415e9e8b0fde94f41",
-          "modified": "2025-11-06T17:53:31.715144"
+          "path": "App\\AppInfo\\AppIcon.ico",
+          "size": 10806,
+          "hash": "0d58a7b7af80ad9db2959add54bef6ad",
+          "modified": "2020-01-11T21:02:12"
         },
         {
-          "path": "config_tray.ini",
-          "size": 114,
-          "hash": "fd5fb4cf8615573fefa07f077ebe8e67",
-          "modified": "2025-03-11T19:53:21.714385"
+          "path": "App\\AppInfo\\AppInfo.ini",
+          "size": 211,
+          "hash": "ce5eabbdfc8b2af664098e140ff661c8",
+          "modified": "2026-05-18T16:30:20.242434"
         },
         {
-          "path": "DefragOptions.ini",
+          "path": "App\\AppInfo\\Launcher\\WiseCare365Portable.ini",
+          "size": 1912,
+          "hash": "dd8bd298ddb071f5e18e5db32683d733",
+          "modified": "2023-09-12T17:31:48"
+        },
+        {
+          "path": "App\\DefaultData\\config.ini",
+          "size": 985,
+          "hash": "6f2658aa58a815e42853131997c14f36",
+          "modified": "2026-02-08T11:32:52.698942"
+        },
+        {
+          "path": "App\\DefaultData\\config_tray.ini",
+          "size": 37,
+          "hash": "ad685198822771325ae31b18f650e1f3",
+          "modified": "2025-08-28T09:08:59.543157"
+        },
+        {
+          "path": "App\\DefaultData\\DefragOptions.ini",
           "size": 322,
           "hash": "a0eac4d8f4ee86740825896d8165532f",
           "modified": "2018-12-06T16:52:50"
         },
         {
-          "path": "DManager.dll",
-          "size": 2559472,
-          "hash": "dfec0fd6e6ca2c1341a1aaaa693802b6",
-          "modified": "2024-05-20T10:58:58"
+          "path": "App\\DefaultData\\skin.dat",
+          "size": 364604,
+          "hash": "c6a7e6863627a6988ed3e38b017d2a62",
+          "modified": "2021-10-01T11:59:44"
         },
         {
-          "path": "exclusions.dat",
-          "size": 282,
-          "hash": "b32538088149e2275833b0e45933db41",
-          "modified": "2025-11-06T17:52:50.279641"
+          "path": "App\\DefaultData\\toolsv6.ini",
+          "size": 11,
+          "hash": "1a8cdeadaf20b272c330dc43c4aeb1fb",
+          "modified": "2021-10-08T11:31:48"
         },
         {
-          "path": "fileshredder.ico",
+          "path": "App\\WiseCare365\\7z.dll",
+          "size": 1154200,
+          "hash": "5b1b0909f3748dc06bb666ae1df54d86",
+          "modified": "2026-05-11T14:00:58"
+        },
+        {
+          "path": "App\\WiseCare365\\dc_native.dll",
+          "size": 2545536,
+          "hash": "a3ad07de702b92594e02c45e82c58c6c",
+          "modified": "2026-05-11T14:02:30"
+        },
+        {
+          "path": "App\\WiseCare365\\DManager.dll",
+          "size": 3007128,
+          "hash": "2d5fa23794550448ee391bc2600c1905",
+          "modified": "2026-05-11T14:01:22"
+        },
+        {
+          "path": "App\\WiseCare365\\fileshredder.ico",
           "size": 5430,
           "hash": "d8e48de3e5710fabd066c2bc02445c02",
           "modified": "2018-12-06T16:52:46"
         },
         {
-          "path": "libeay32.dll",
-          "size": 1207216,
-          "hash": "8f5b0181fef955a2e5117e4be6f95a4b",
-          "modified": "2023-07-24T10:47:46"
+          "path": "App\\WiseCare365\\libeay32.dll",
+          "size": 1211032,
+          "hash": "85b92a9587b174a985fea56592d2d0b3",
+          "modified": "2026-05-11T14:02:34"
         },
         {
-          "path": "skin.ico",
-          "size": 140206,
-          "hash": "bd185b875af6e53f699096e2fe95cbbb",
-          "modified": "2018-12-06T16:52:46"
+          "path": "App\\WiseCare365\\protect.db",
+          "size": 77824,
+          "hash": "f115daa6e926b92c4af2e02ae2654896",
+          "modified": "2024-04-18T10:48:50"
         },
         {
-          "path": "sqlite3.dll",
-          "size": 912816,
-          "hash": "6c4cdeeb711d06134b8dff91bc6539f1",
-          "modified": "2023-07-24T10:48:12"
+          "path": "App\\WiseCare365\\Rate.info",
+          "size": 1167251,
+          "hash": "f5a8335daa4f0eb190f8c52885e4993c",
+          "modified": "2026-04-24T14:11:28"
         },
         {
-          "path": "ssleay32.dll",
-          "size": 312240,
-          "hash": "118a53026b4f7d4e19eff27cd0638074",
-          "modified": "2023-07-24T10:48:24"
+          "path": "App\\WiseCare365\\sqlite3.dll",
+          "size": 916632,
+          "hash": "540f4b9195928a1135af2263d3d44197",
+          "modified": "2026-05-11T14:02:42"
         },
         {
-          "path": "Themes_v7.txt",
-          "size": 11601,
-          "hash": "1ed71fbc347804706ba78df113c5d037",
-          "modified": "2024-09-03T15:39:14"
+          "path": "App\\WiseCare365\\ssleay32.dll",
+          "size": 316056,
+          "hash": "4d1f40bcaa352894c079486d39821bab",
+          "modified": "2026-05-11T14:02:46"
         },
         {
-          "path": "WiseCare365.exe",
-          "size": 14639704,
-          "hash": "217ed102dca4b91a0991a6a530ced069",
-          "modified": "2025-11-06T17:52:40.186233"
+          "path": "App\\WiseCare365\\WiseCare365.exe",
+          "size": 16087704,
+          "hash": "f9f5c4f10c82da1748ee9535137eb918",
+          "modified": "2026-05-18T15:23:46.842633"
         },
         {
-          "path": "WiseDefrag.dll",
-          "size": 393648,
-          "hash": "f8e1ed1b455716402a50aa9da2c105b1",
-          "modified": "2023-07-24T10:49:14"
+          "path": "App\\WiseCare365\\WiseDefrag.dll",
+          "size": 397464,
+          "hash": "5e89e8100d5f8ab25cbd81be7f544e32",
+          "modified": "2026-05-11T14:01:58"
         },
         {
-          "path": "WiseEraser.dll",
-          "size": 1456048,
-          "hash": "967ca4a63ccb65c547acd3be7631d0ac",
-          "modified": "2023-07-24T10:49:24"
+          "path": "App\\WiseCare365\\WiseEraser.dll",
+          "size": 1459864,
+          "hash": "da84a690968560ac1b0875e961997f77",
+          "modified": "2026-05-11T14:02:06"
         },
         {
-          "path": "WJSLib.dll",
-          "size": 170416,
-          "hash": "47a72ff4aa7df3bb5b29ada4b6a5eaed",
-          "modified": "2023-07-24T10:49:48"
+          "path": "App\\WiseCare365\\WiseTray.exe",
+          "size": 8411288,
+          "hash": "68e7bfed185e166376129a744e2254d7",
+          "modified": "2026-05-11T14:02:14"
         },
         {
-          "path": "移除残留.bat",
-          "size": 1168,
-          "hash": "9b2bb78863a75dd0c33e5a1297e12eb2",
-          "modified": "2025-11-07T09:09:58.155621"
+          "path": "App\\WiseCare365\\WiseTurbo.exe",
+          "size": 8745624,
+          "hash": "9d9afa813c9260bd0abe7178452830f9",
+          "modified": "2026-05-11T14:02:22"
         },
         {
-          "path": "Languages\\Chinese(Simplified).ini",
-          "size": 143660,
-          "hash": "5f66459c24e0280696ed8dd03348d352",
-          "modified": "2025-11-06T17:45:28.892018"
+          "path": "App\\WiseCare365\\WJSLib.dll",
+          "size": 174232,
+          "hash": "838bc9c96873c7a65a2244e583eaf1b1",
+          "modified": "2026-05-11T14:01:32"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Abkhazian.ini",
+          "size": 207742,
+          "hash": "3061fc05ebd2f88145f6716aacc36e97",
+          "modified": "2025-11-12T09:15:56"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Arabic.ini",
+          "size": 199990,
+          "hash": "c39becc09c27b25c36f6b3268ff593ed",
+          "modified": "2024-12-30T21:22:24"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Azerbaijani(Latin).ini",
+          "size": 179898,
+          "hash": "feacb1fc644f947e69b9286db1f486c3",
+          "modified": "2022-08-18T14:03:06"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Belarusian.ini",
+          "size": 160832,
+          "hash": "2bb8c96c5947bf56961a77301bf8abd7",
+          "modified": "2022-08-18T14:02:24"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Bulgarian.ini",
+          "size": 211242,
+          "hash": "e81ac6a13f85a81986c6b92ddf3d9fb7",
+          "modified": "2025-03-25T15:13:38"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Catalan.ini",
+          "size": 197514,
+          "hash": "6b5456078e9c427e5bdf4d134bef4064",
+          "modified": "2023-02-25T17:56:14"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Chinese(Simplified).ini",
+          "size": 148952,
+          "hash": "a76f87f247293f75860b5efd7bd546ea",
+          "modified": "2026-04-30T15:33:42"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Chinese(Traditional).ini",
+          "size": 140196,
+          "hash": "e9e17efc7b44f8dfdf44cc45e7e0de71",
+          "modified": "2026-04-07T10:07:12"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Croatian.ini",
+          "size": 189128,
+          "hash": "4cbad66305ad232f96b5725350ff4d55",
+          "modified": "2022-08-18T14:09:58"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Czech.ini",
+          "size": 195026,
+          "hash": "1dddf418c323431de506e104a36d740f",
+          "modified": "2024-09-20T10:10:28"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Danish.ini",
+          "size": 143950,
+          "hash": "987278e1926115fb34817fd94857a4cc",
+          "modified": "2022-08-18T14:11:20"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Dutch(Belgium).ini",
+          "size": 168826,
+          "hash": "91aa6f0e76b13cddec7b7e9f30f009cb",
+          "modified": "2022-08-18T14:11:46"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Dutch(Nederlands).ini",
+          "size": 210844,
+          "hash": "4a88d1298a7a8c3395bbe17aae7495cc",
+          "modified": "2026-01-12T16:08:02"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\English.ini",
+          "size": 207912,
+          "hash": "474d872532365a95f9c8e41e8ba51aa2",
+          "modified": "2026-04-30T15:29:10"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Finnish.ini",
+          "size": 227154,
+          "hash": "bf74f939d91329f22ff6b49cfb07230e",
+          "modified": "2025-11-17T09:02:00"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\French.ini",
+          "size": 218928,
+          "hash": "91d256b8d4014217e25bf89875c6d541",
+          "modified": "2026-01-08T11:55:26"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Georgian.ini",
+          "size": 173762,
+          "hash": "aead043775de8d9264bd0c9d0f760a49",
+          "modified": "2022-08-18T14:21:12"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\German.ini",
+          "size": 233990,
+          "hash": "5cc3432488ea9ba9807980cea942205b",
+          "modified": "2026-02-09T09:28:00"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Greek.ini",
+          "size": 230608,
+          "hash": "89514a1f5ed4eaa50ddd9a8f2e6c2a1c",
+          "modified": "2025-10-02T18:39:58"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Hebrew.ini",
+          "size": 177572,
+          "hash": "4bc3e509de9b754900f5a0fd7837baa1",
+          "modified": "2024-11-08T16:31:28"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Hungarian.ini",
+          "size": 212574,
+          "hash": "796380d6ae1b86e85925a6da023e1dc0",
+          "modified": "2025-10-16T11:37:44"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Indonesian.ini",
+          "size": 156598,
+          "hash": "b4c12bbe4de6c3883bbb980236e0b011",
+          "modified": "2022-08-18T14:23:48"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Italian.ini",
+          "size": 229778,
+          "hash": "efbbb833824968f9983c86db53b4e811",
+          "modified": "2026-02-28T17:01:54"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Japanese.ini",
+          "size": 160448,
+          "hash": "7f805e4392b80e6afcc30f8ac7da1b28",
+          "modified": "2026-02-24T09:52:08"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Korean.ini",
+          "size": 149492,
+          "hash": "8dee27a9cbc212ffc2d0b15eb11304d7",
+          "modified": "2025-08-09T15:51:06"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Kurdish.ini",
+          "size": 161920,
+          "hash": "318ce206932c7a37516bf78d00b5bc22",
+          "modified": "2022-08-18T14:27:34"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Lithuanian.ini",
+          "size": 183988,
+          "hash": "d4deacaaace10e243f3c689b2c75190e",
+          "modified": "2022-08-18T14:28:04"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Nepali.ini",
+          "size": 163612,
+          "hash": "f1fddda8f5f8f6fc59692dcd9797a838",
+          "modified": "2022-08-18T14:28:42"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Norwegian(Bokmal).ini",
+          "size": 197018,
+          "hash": "55113898e3e13550fc58938a4e28381b",
+          "modified": "2024-09-27T09:14:08"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Norwegian(Nynorsk).ini",
+          "size": 207192,
+          "hash": "25b9e5fbf16fa0d69bf6af0173b61f65",
+          "modified": "2026-01-27T09:15:52"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Persian.ini",
+          "size": 159016,
+          "hash": "9bc326e267cd4fe166fe07ffd29ee4da",
+          "modified": "2022-08-18T14:31:52"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Polish.ini",
+          "size": 201226,
+          "hash": "11a9b7d26310a8b51e50b48b4f241dfd",
+          "modified": "2025-09-30T16:56:24"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Portuguese(Brazil).ini",
+          "size": 179326,
+          "hash": "10403abf5f76d57cbc42b7cda162ccf3",
+          "modified": "2022-08-18T14:33:22"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Portuguese(Portugal).ini",
+          "size": 215250,
+          "hash": "2f07c4b0cd220a182d80c63310e6655a",
+          "modified": "2025-01-15T07:49:34"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Romanian.ini",
+          "size": 235058,
+          "hash": "6a86f19d865f84eaf8b9dd5dce283d35",
+          "modified": "2026-02-25T09:19:26"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Russian.ini",
+          "size": 186112,
+          "hash": "4d1dac632b021c60096e9861c150287e",
+          "modified": "2022-08-18T14:41:38"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Serbian(Cyrillic).ini",
+          "size": 168590,
+          "hash": "93b189a428afd5673180630e28e414f0",
+          "modified": "2021-06-22T08:50:20"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Slovak.ini",
+          "size": 213154,
+          "hash": "d73d945313bdebca3b099cc626d64db4",
+          "modified": "2026-01-15T23:01:42"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Slovenian.ini",
+          "size": 197324,
+          "hash": "e3c886bf083fbd36c07b67d512c30ba3",
+          "modified": "2022-09-30T17:09:30"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Spanish(Mexico).ini",
+          "size": 217364,
+          "hash": "c27d1866fb3c977dfaf68c9ed9ca3467",
+          "modified": "2025-04-28T14:53:24"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Spanish(Spain).ini",
+          "size": 208318,
+          "hash": "1a2a4d5293d0c0de1ae9ecc5e789ed99",
+          "modified": "2025-04-26T12:15:34"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Swedish(Sweden).ini",
+          "size": 200674,
+          "hash": "622ba2f43f927e6ddd21430c60e84e63",
+          "modified": "2025-09-30T11:15:42"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Thai.ini",
+          "size": 189048,
+          "hash": "50885a07f6894452eaa1c8bd79b83fcf",
+          "modified": "2025-04-29T15:51:40"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Turkish.ini",
+          "size": 198866,
+          "hash": "443a7cb991fd08f771d2b2dbe5c6db59",
+          "modified": "2025-06-26T23:23:56"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Ukrainian.ini",
+          "size": 186732,
+          "hash": "f540fdb67042a5697f6972c487a24d17",
+          "modified": "2024-04-17T16:19:02"
+        },
+        {
+          "path": "App\\WiseCare365\\Languages\\Vietnamese.ini",
+          "size": 187056,
+          "hash": "9909cb62969f4c239a80275d2004401e",
+          "modified": "2022-08-18T14:48:20"
+        },
+        {
+          "path": "App\\WiseCare365\\Tools\\CustomHead.Png",
+          "size": 3466,
+          "hash": "a65c0b518a5e20f3c40d1724605021d1",
+          "modified": "2021-10-22T11:09:36"
+        },
+        {
+          "path": "App\\WiseCare365\\Tools\\toolsv6.ini",
+          "size": 11,
+          "hash": "1a8cdeadaf20b272c330dc43c4aeb1fb",
+          "modified": "2021-10-08T11:31:48"
         }
       ],
-      "total_files": 18,
-      "total_size": 22379579,
-      "last_updated": "2026-03-10T11:47:43.113851"
+      "total_files": 72,
+      "total_size": 54994876,
+      "last_updated": "2026-05-20T12:50:30.817633"
     },
     "EditPlus": {
       "version": "20260514_130127",
