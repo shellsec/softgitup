@@ -79,7 +79,7 @@ notepad++ 增加了实用插件
 https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.5/npp.8.9.5.portable.x64.zip
 https://gh-proxy.com/github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.5/npp.8.9.5.portable.x64.zip
 核心特点：免费开源、语法高亮、多标签编辑，便携免安装，插件扩展能力强，适配远程桌面使用需求
-config.xml shortcuts.xml 去除空行 ctrl+k 设置了DirectWrite 
+config.xml shortcuts.xml 去除空行 ctrl+k 设置了DirectWrite 默认搜索走chatgpt
 Notepad++ 在向日葵远程桌面中显示空白主要是由于渲染引擎冲突导致，具体来说：
 DirectWrite 渲染问题：Notepad++ 使用的 DirectWrite 文本渲染技术在远程连接环境下可能无法正确显示内容
 无显示器 / 笔记本合盖：当远程主机未连接显示器或笔记本电脑合上盖子时，显卡会进入低负载模式，导致依赖 GPU 加速的应用 (如 Notepad++) 显示异常
