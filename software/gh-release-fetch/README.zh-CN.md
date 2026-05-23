@@ -21,6 +21,7 @@
 - `auto_update.py`：按配置抓取版本、下载文件、按需启动安装程序（优先读取 `apps/` 目录合并结果，否则使用单文件 `apps.json`）
 - `apps/`：推荐布局——[`apps/root.json`](apps/root.json)（全局）+ [`apps/windows/*.json`](apps/windows/) + [`apps/darwin/*.json`](apps/darwin/) + [`apps/linux/*.json`](apps/linux/)（均按分类拆成多个数组文件，与 windows 命名风格一致）；若无分片目录则回退单文件 `apps/darwin.json`、`apps/linux.json`。历史单文件备份见 `apps.json.monolith.bak`；darwin/linux 由单文件迁出后的备份见 `apps/darwin.json.bak`、`apps/linux.json.bak`
 - `run_update.bat`：Windows 下一键检查 Python、安装依赖并执行 `python auto_update.py`
+- `lookup_app.py` / `lookup_app.bat`：在 `apps/` 清单中**模糊检索**应用所在分片与分类，并可交互将 `enabled` 设为 `true`（见下文「查找应用并开启」）
 
 ### VibeCodingToolsDown（可选独立清单）
 
@@ -37,7 +38,7 @@
 
 ### 仓库现状与收录范围（约略）
 
-合并配置后规模约为：**Windows 约 345 条**（[`apps/windows/`](apps/windows/) 下 **29** 个分类分片）、**darwin 约 215 条**、**linux 约 213 条**（[`apps/darwin/`](apps/darwin/)、[`apps/linux/`](apps/linux/) 与 Windows 同风格分片）。数量会随你增删 JSON 变化，以运行 `python auto_update.py` 时日志里「已从 apps/ 目录合并配置」为准。
+合并配置后规模约为：**Windows 约 370 条**（[`apps/windows/`](apps/windows/) 下 **30** 个分类分片，含 `30-代理与隧道.json` 等）、**darwin / linux 各约 240+ 条**（分片命名与 Windows 一致）。数量会随你增删 JSON 变化，以运行 `python auto_update.py` 时日志里「已从 apps/ 目录合并配置」为准。
 
 收录以 **GitHub（及镜像）上可解析的 Releases 资产** 为主，涵盖编辑器、笔记、安全、云原生、可观测、下载、办公与设计等常见分类。**不包含**破解、盗版或绕过授权的软件分发；个别条目仅含基础字段时需自行补全规则后才能稳定自动下载。
 
@@ -165,6 +166,36 @@ python auto_update.py
 
 ## 3. 如何启用某个应用
 
+### 方式 A：查找脚本（推荐）
+
+在仓库根目录：
+
+```bat
+lookup_app.bat drawio
+```
+
+或：
+
+```bash
+python lookup_app.py drawio
+```
+
+脚本会列出匹配项的 **平台**、**分片路径**（如 `windows/05-办公与设计.json`）、**分类**、当前 **enabled** 状态，并询问是否将选中项设为 `enabled: true`。
+
+常用选项：
+
+| 选项 | 说明 |
+|------|------|
+| `--no-prompt` | 只查询，不询问是否开启 |
+| `--yes` / `-y` | 对全部匹配项直接 `enabled=true` |
+| `--dry-run` | 预览将修改哪些文件，不写盘 |
+| `--apps-dir VibeCodingToolsDown` | 检索另一套清单（与主 `apps/` 分离） |
+| `--min-score N` | 调低/调高模糊匹配阈值（默认 40） |
+
+交互时：`1` 或 `1,3` 选序号，`a` 开启全部匹配项，**回车** 跳过。
+
+### 方式 B：手改 JSON
+
 在 [`apps/windows/`](apps/windows/)（或对应平台的 JSON）中打开包含该应用的分片文件，将：
 
 ```json
@@ -184,6 +215,19 @@ python auto_update.py
 ```bash
 python auto_update.py
 ```
+
+### 查找范围说明（是否「包含所有」）
+
+| 范围 | 是否检索 |
+|------|----------|
+| [`apps/windows/`](apps/windows/)、[`apps/darwin/`](apps/darwin/)、[`apps/linux/`](apps/linux/) 下所有 `*.json` 分片中的**每条应用** | **是**（与 `auto_update.py` 合并清单的范围一致） |
+| 匹配字段 | `id`、`简介`、`分类`、`repo_path`、`releases_url`、`url_hint`（模糊、不区分大小写） |
+| [`apps/root.json`](apps/root.json) | **否**（仅全局项，无应用条目） |
+| [`GiteeExploreHot/`](GiteeExploreHot/)、[`VibeCodingToolsDown/`](VibeCodingToolsDown/) | **默认否**；后者可用 `--apps-dir VibeCodingToolsDown` |
+| 根目录单文件 `apps.json`、各平台 `*.json.bak` | **否**（仅当某平台无分片目录且存在 `apps/<platform>.json` 单文件时，才会扫该单文件） |
+| `dist/vibecoding/manifest.json` 等构建产物 | **否** |
+
+同一 `id` 在三个平台各有一条时，检索会显示 **3 行**；开启时可只选 Windows 或 `a` 全开。
 
 ---
 
@@ -327,6 +371,13 @@ python auto_update.py --platform windows
 python auto_update.py --insecure
 ```
 
+查找应用（不写盘）：
+
+```bat
+lookup_app.bat drawio
+python lookup_app.py --no-prompt v2ray
+```
+
 ---
 
 ## 12. 日志与排错
@@ -339,6 +390,7 @@ python auto_update.py --insecure
 
 ## 13. 维护工具（可选）
 
+- **模糊查找应用 / 开启 enabled**：`lookup_app.bat <关键词>` 或 `python lookup_app.py <关键词>`（见 §3）
 - 将所有应用 JSON 中的 `enabled` 写回 `false`：在项目根执行 `python tools/reset_enabled_json.py`（可加 `--dry-run` 预览）
 - 将 `apps/darwin.json`、`apps/linux.json` 按 windows 分片名拆到 `apps/darwin/`、`apps/linux/`：`python tools/split_darwin_linux_to_dirs.py`（会备份原单文件为 `*.json.bak`）
 - 单文件与 `apps/` 目录的拆分与恢复说明见 [`apps/root.json`](apps/root.json) 内 `_说明`

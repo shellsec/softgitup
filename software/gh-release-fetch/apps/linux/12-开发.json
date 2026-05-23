@@ -36,6 +36,20 @@
     "repo_path": "nodejs/node"
   },
   {
+    "id": "go",
+    "简介": "Go 语言（Linux amd64 tar.gz，go.dev/dl；非 GoLand）",
+    "分类": "开发",
+    "enabled": false,
+    "resolve_via": "go_dev_json",
+    "go_dev_os": "linux",
+    "go_dev_arch": "amd64",
+    "go_dev_kind": "archive",
+    "releases_url": "https://go.dev/dl/",
+    "repo_path": "golang/go",
+    "save_name": "go{ver}.linux-amd64.tar.gz",
+    "run_installer": false
+  },
+  {
     "id": "deno",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/denoland/deno/releases",

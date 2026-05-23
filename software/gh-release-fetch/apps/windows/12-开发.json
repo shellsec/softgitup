@@ -569,33 +569,32 @@
     "version_tag_as_on_github": true
   },
   {
-    "id": "go_installer_meta",
-    "简介": "Go 语言（官方以 golang.org 为主，此为占位）",
+    "id": "go",
+    "简介": "Go 语言官方发行版（Windows MSI，自 go.dev/dl 解析；非 JetBrains GoLand IDE）",
     "分类": "开发",
     "enabled": false,
-    "releases_url": "https://bgithub.xyz/golang/go/releases",
+    "resolve_via": "go_dev_json",
+    "go_dev_os": "windows",
+    "go_dev_arch": "amd64",
+    "go_dev_kind": "installer",
+    "releases_url": "https://go.dev/dl/",
     "repo_path": "golang/go",
     "version_tag_as_on_github": true,
-    "installer_markers": [
-      "go",
-      "windows-amd64.zip"
-    ],
-    "href_exclude_substrings": [
-      "linux",
-      "darwin",
-      "arm"
-    ],
-    "windows_installer": false,
+    "url_hint": "go",
+    "windows_installer": true,
     "installer_extensions": [
-      ".zip"
+      ".msi"
     ],
     "download_names": [
-      "go{ver}.windows-amd64.zip"
+      "go{ver}.windows-amd64.msi"
     ],
-    "save_name": "go{ver}.windows-amd64.zip",
+    "download_url_templates": [
+      "https://go.dev/dl/go{ver_plain}.windows-amd64.msi"
+    ],
+    "save_name": "go{ver}.windows-amd64.msi",
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false
+    "run_installer": true
   },
   {
     "id": "hurl",

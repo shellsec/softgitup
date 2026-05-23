@@ -22,7 +22,8 @@
       "run_installer": "false 表示只下载到本地，不启动安装程序。",
       "save_subdir": "相对「有效下载根目录」的子目录（可选）；有效根目录在开启 download_subdir_by_platform 时会先包含平台名子目录。",
       "简介": "应用简介，仅给人看，脚本不读取。",
-      "分类": "应用分类标签，仅给人看，脚本不读取。"
+      "分类": "应用分类标签，仅给人看，脚本不读取。",
+      "resolve_via": "特殊解析：github_pages_manifest（VibeCoding manifest）；go_dev_json（Go 官方 https://go.dev/dl/?mode=json，配合 go_dev_os / go_dev_arch / go_dev_kind）"
     },
     "多文件布局": "配置在 apps/ 目录：root.json 放全局项；windows/、darwin/、linux/ 下均可按与 windows 相同的文件名（如 01-AI.json）拆成多个 .json 数组。若某平台目录下无分片，则回退读取该平台单文件 darwin.json / linux.json。auto_update.py 按文件名排序合并各平台分片，且同一平台内 id 不可重复。darwin/linux 分片可由 tools/split_darwin_linux_to_dirs.py 从旧单文件生成。",
     "分类参考": {
@@ -34,6 +35,7 @@
     },
     "备份与恢复": "拆分前的完整单文件为仓库根目录 apps.json.monolith.bak。若需恢复单文件模式：删除整个 apps/ 目录（或至少删除 apps/root.json），将 apps.json.monolith.bak 改名为 apps.json。重新拆分可运行：python tools/split_apps_to_apps_dir.py（需先准备好根目录 apps.json）。",
     "重置 enabled": "将所有应用 JSON 里的 enabled 写回 false（改磁盘）：在项目根执行 python tools/reset_enabled_json.py；加 --dry-run 可只预览数量不写文件。独立清单包执行 python tools/reset_enabled_json.py --apps-dir VibeCodingToolsDown（快照默认在该包 tools/ 下）；也可用 VibeCodingToolsDown/tools/reset_enabled_json.bat。",
+    "查找应用": "项目根 lookup_app.bat <关键词> 或 python lookup_app.py <关键词>：模糊检索 apps 分片中的 id/简介/repo 等，显示平台、分片路径与分类，并交互询问是否 enabled=true。",
     "download_subdir_by_platform": "根级若为 true，下载保存路径为 download_dir/<windows|darwin|linux>/...，便于区分系统类型；日志与「开始下载」也会标注平台名。"
   },
   "download_dir": ".",

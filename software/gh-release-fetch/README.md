@@ -21,6 +21,7 @@ This repository helps you maintain a **version-controlled list** of open-source 
 - [`auto_update.py`](auto_update.py) — loads merged config from [`apps/`](apps/) (or legacy root [`apps.json`](apps.json)), resolves latest release, downloads assets, optionally launches installers.
 - [`apps/`](apps/) — recommended layout: [`apps/root.json`](apps/root.json) + per-platform JSON shards under [`apps/windows/`](apps/windows/), [`apps/darwin/`](apps/darwin/), [`apps/linux/`](apps/linux/). Falls back to `apps/darwin.json` / `apps/linux.json` if shard dirs are empty. Monolith backup: `apps.json.monolith.bak`; optional backups after splitting: `apps/darwin.json.bak`, `apps/linux.json.bak`.
 - [`run_update.bat`](run_update.bat) — Windows shortcut: checks Python, installs deps, runs `python auto_update.py`.
+- [`lookup_app.py`](lookup_app.py) / [`lookup_app.bat`](lookup_app.bat) — fuzzy search in the `apps/` catalog (shard path, category, `enabled`), optional interactive enable (see **§3 Enable an app**).
 
 **Optional second catalog: [`VibeCodingToolsDown/`](VibeCodingToolsDown/)**
 
@@ -30,7 +31,7 @@ Separate from [`apps/`](apps/): AI-coding–oriented entries, `manifest.json` bu
 
 Categorized **Gitee** repos under [`GiteeExploreHot/catalog/`](GiteeExploreHot/catalog/); [`GiteeExploreHot/scripts/fetch_explore_hot.py`](GiteeExploreHot/scripts/fetch_explore_hot.py) writes `hot_repos.json` plus **`gitee_downloads.json`** (Windows/macOS/Linux URLs from `releases/latest` attachments). [`GiteeExploreHot/scripts/gitee_download.py`](GiteeExploreHot/scripts/gitee_download.py) pulls binaries into `GiteeExploreHot/downloads/…`. Windows one-shot: [`GiteeExploreHot/run_sync_gitee.bat`](GiteeExploreHot/run_sync_gitee.bat) (optional first arg `windows`, `darwin`, or `linux` to download after sync). Not wired into `auto_update.py` (GitHub-focused). See [`GiteeExploreHot/README.md`](GiteeExploreHot/README.md).
 
-**Approximate catalog size** (changes when you edit JSON): **~345** Windows entries across **29** shard files; **~215** darwin and **~213** linux. Confirm with the log line *“已从 apps/ 目录合并配置”* when you run the script.
+**Approximate catalog size** (changes when you edit JSON): **~370** Windows entries across **30** shard files (including `30-代理与隧道.json`); **~240+** darwin and linux each. Confirm with the merge log line when you run the script.
 
 **Scope**: entries target assets discoverable from **GitHub (or mirrors)**. **No** cracked software, piracy, or license circumvention. Some rows are stubs until you add full `installer_markers` / `download_names` / `save_name` rules.
 
@@ -126,13 +127,44 @@ Default behavior: detect platform, merge `apps/` into `platforms.*`, process **o
 
 ## 3. Enable an app
 
-In the relevant shard under [`apps/windows/`](apps/windows/) (or darwin/linux), set:
+### Option A: lookup script (recommended)
 
-```json
-"enabled": true
+```bat
+lookup_app.bat drawio
 ```
 
-Global options live in [`apps/root.json`](apps/root.json).
+```bash
+python lookup_app.py drawio
+```
+
+Lists **platform**, **shard path** (e.g. `windows/05-办公与设计.json`), **category**, and **enabled**, then prompts to set `enabled: true` for selected rows.
+
+| Flag | Meaning |
+|------|---------|
+| `--no-prompt` | Search only |
+| `--yes` / `-y` | Enable all matches |
+| `--dry-run` | Preview writes |
+| `--apps-dir VibeCodingToolsDown` | Search the separate catalog |
+| `--min-score N` | Match threshold (default 40) |
+
+At the prompt: index `1` or `1,3`, `a` for all matches, **Enter** to skip.
+
+### Option B: edit JSON
+
+In the relevant shard under [`apps/windows/`](apps/windows/) (or darwin/linux), set `"enabled": true`. Global options live in [`apps/root.json`](apps/root.json).
+
+### What the lookup searches (scope)
+
+| Scope | Included? |
+|--------|-----------|
+| Every app row in `apps/windows/`, `apps/darwin/`, `apps/linux/` `*.json` shards | **Yes** (same merge as `auto_update.py`) |
+| Fields matched | `id`, `简介`, `分类`, `repo_path`, `releases_url`, `url_hint` (case-insensitive fuzzy) |
+| [`apps/root.json`](apps/root.json) | **No** |
+| [`GiteeExploreHot/`](GiteeExploreHot/), [`VibeCodingToolsDown/`](VibeCodingToolsDown/) | **No** by default; use `--apps-dir VibeCodingToolsDown` for the latter |
+| Root `apps.json`, `*.json.bak` | **No** (falls back to `apps/<platform>.json` only if a platform has no shard directory) |
+| Built manifests (e.g. `dist/vibecoding/manifest.json`) | **No** |
+
+The same `id` on three platforms appears as **three lines**; you can enable one platform or all.
 
 ---
 
@@ -211,6 +243,8 @@ python auto_update.py
 python auto_update.py nodejs
 python auto_update.py --platform windows
 python auto_update.py --insecure
+lookup_app.bat drawio
+python lookup_app.py --no-prompt v2ray
 ```
 
 ---
@@ -225,6 +259,7 @@ python auto_update.py --insecure
 
 ## 13. Maintenance scripts
 
+- Fuzzy app lookup / enable: `lookup_app.bat <keyword>` or `python lookup_app.py <keyword>` (see §3)
 - Reset all `enabled` to `false`: `python tools/reset_enabled_json.py` (`--dry-run` to preview)
 - Split legacy `apps/darwin.json` / `apps/linux.json` into shard dirs: `python tools/split_darwin_linux_to_dirs.py` (backs up `*.json.bak`)
 - Monolith vs `apps/` notes: [`apps/root.json`](apps/root.json) → `_说明`

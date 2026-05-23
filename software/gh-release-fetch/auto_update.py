@@ -6,6 +6,7 @@ GH Release Fetch（GitHub 发行版拉取工具）：按 GitHub Releases 解析�
 配置可为单文件 apps.json，或 apps/ 目录（root.json + windows|darwin|linux 分片目录）。
 也可用 --apps-dir 指向另一套同级目录（如 VibeCodingToolsDown/，内含 root.json 与分片），与 apps/ 互不合并。
 resolve_via=github_pages_manifest：从 root.json 的 vibecoding_manifest_url（本地路径或 https raw）读取 manifest.json，可与 CI 提交到 main 的 manifest 或 gh-pages 配套。
+resolve_via=go_dev_json：从 https://go.dev/dl/?mode=json 解析 Go 官方稳定版与安装包（golang/go 仓库无 Release 资产）。
 合并后仍使用 platforms.windows / darwin / linux；可用 --platform 覆盖当前系统。
 条目的「简介」「分类」仅供人阅读，脚本不解析。
 """
@@ -212,6 +213,10 @@ def uses_github_pages_manifest(app):
     return (app.get("resolve_via") or "").strip().lower() == "github_pages_manifest"
 
 
+def uses_go_dev_json(app):
+    return (app.get("resolve_via") or "").strip().lower() == "go_dev_json"
+
+
 def _load_vibecoding_manifest(url_or_path, verify=True, apps_config_root=None):
     """加载 manifest.json（HTTPS URL；本地路径相对 --apps-dir 配置根，见 cfg _apps_config_root）。"""
     raw = (url_or_path or "").strip()
@@ -259,6 +264,63 @@ def resolve_github_pages_manifest(app, verify, cfg, platform_key):
     else:
         version = vplain or "v0"
     return version, url
+
+
+def resolve_go_dev_json(app, verify, platform_key):
+    """从 go.dev/dl/?mode=json 取最新 stable 版本与指定 OS/arch/kind 的官方安装包。"""
+    json_url = (app.get("go_dev_json_url") or "https://go.dev/dl/?mode=json").strip()
+    response = requests.get(json_url, headers=github_headers(), timeout=45, verify=verify)
+    response.raise_for_status()
+    releases = response.json()
+    if not isinstance(releases, list) or not releases:
+        raise RuntimeError("go.dev JSON 为空或格式异常")
+
+    picked = None
+    for rel in releases:
+        if rel.get("stable"):
+            picked = rel
+            break
+    if not picked:
+        picked = releases[0]
+
+    version_full = (picked.get("version") or "").strip()
+    if not version_full.startswith("go"):
+        raise RuntimeError("go.dev 版本字段异常: %r" % version_full)
+    version_num = version_full[2:]
+
+    plat = platform_key or detect_platform_key()
+    target_os = (app.get("go_dev_os") or plat).strip().lower()
+    if target_os in ("mac", "macos", "osx"):
+        target_os = "darwin"
+    target_arch = (app.get("go_dev_arch") or "amd64").strip().lower()
+    target_kind = (app.get("go_dev_kind") or "installer").strip().lower()
+
+    match = None
+    for f in picked.get("files") or []:
+        if (
+            (f.get("os") or "") == target_os
+            and (f.get("arch") or "") == target_arch
+            and (f.get("kind") or "") == target_kind
+        ):
+            match = f
+            break
+    if not match:
+        raise RuntimeError(
+            "go.dev 未找到 os=%s arch=%s kind=%s（版本 %s）"
+            % (target_os, target_arch, target_kind, version_full)
+        )
+
+    filename = (match.get("filename") or "").strip()
+    if not filename:
+        raise RuntimeError("go.dev 匹配文件缺少 filename")
+    download_url = "https://go.dev/dl/%s" % filename
+    logger.info(
+        "[%s] go.dev 解析: %s -> %s",
+        app["id"],
+        version_full,
+        download_url,
+    )
+    return version_num, download_url
 
 
 def canonical_releases_url(repo_path, base_url="https://github.com"):
@@ -521,6 +583,9 @@ def check_latest_version(app, debug_html_path, verify=True, cfg=None, platform_k
     if uses_github_pages_manifest(app):
         plat = platform_key or detect_platform_key()
         return resolve_github_pages_manifest(app, verify, cfg, plat)
+    if uses_go_dev_json(app):
+        plat = platform_key or detect_platform_key()
+        return resolve_go_dev_json(app, verify, plat)
 
     try:
         if app.get("prefer_api_assets"):
@@ -659,7 +724,7 @@ def check_latest_version(app, debug_html_path, verify=True, cfg=None, platform_k
 
 
 def build_fallback_urls(version, app):
-    if uses_github_pages_manifest(app):
+    if uses_github_pages_manifest(app) or uses_go_dev_json(app):
         return []
     version_plain = version.lstrip("v")
     repo = (app.get("repo_path") or "").strip("/")
