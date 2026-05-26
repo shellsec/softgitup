@@ -4,8 +4,12 @@ PotPlayer 更新履歴
 ※正確な日付は PotPlayer(64).dll のファイル署名タイムスタンプで確認してください
 
 ----------------------------------------------------------
-[260511]
+[260521]
 ----------------------------------------------------------
+- Significantly improved internal stability
+- Fixed an issue where colors appeared strange during RGB24 processing
+- Improved playback for some HTTP streams
+- Improved synchronization handling for the built-in audio renderer
 
 -----------------------------------------------------------------------
 2026/04/01				[260401 / 1.7.22851]

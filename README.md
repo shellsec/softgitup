@@ -2,8 +2,15 @@
 
 [English](README_EN.md) | 中文
 
+## ☕ 请我喝可乐
+
+开源不易，欢迎赞助支持：  
+👉 [爱发电](https://ifdian.net/a/shellsec)
+
 一个用于管理本地软件目录并自动同步更新的工具系统，支持GitHub和GitLab云存储，支持Git加速下载。
-具体可查看Lastb_soft_version.txt 最新更新文档
+具体可查看 [`Lastb_soft_version.txt`](Lastb_soft_version.txt) 最新更新文档。
+
+**维护者月度快检**（可选，不更新 `software/` 也完全可用）：见 [`soft_page_check/`](soft_page_check/README.md) — 双击 `monthly_sop.bat` 检查页面标题变化，有变化再手工更新并发布。
 
 本工具集基于**信息安全与数据防泄漏原则**构建，尽可能减少云端上报、行为跟踪与算法数据收割
 
@@ -51,7 +58,7 @@
 - **系统托盘**: 后台运行，支持系统托盘图标和静默更新
 - **跨平台**: 支持Windows、Linux、macOS
 - **工作流程**: 提供便捷的工作流程工具，支持单个软件更新和同步
-- **开箱即用**: 所见即所得注册破解版本，日常保持更新版本，已杀毒
+- **页面快检（维护者）**: [`soft_page_check/`](soft_page_check/README.md) 抓取装机清单页面标题并与历史比对，月度 A 类约 42 页、季度全量约 600+ 页，有变化再决定是否更新 `software/`
 
 ### 📦 支持的软件
 - **文本编辑器**: Notepad++、notepad-、SublimeText、EditPlus、EmEditor(大文件16T)、UltraEdit
@@ -101,7 +108,11 @@ softgitup/
 ├── soft_sync.py            # 同步工具（GUI版本）
 ├── sync_software.py        # 完整同步工具（命令行，推荐）
 ├── build_exe.py            # 打包脚本
-├── generate_and_push.bat   # 一键生成和推送批处理
+├── generate_and_push.bat   # 一键生成 list.txt 并 push
+├── soft_page_check/        # 页面标题快检（月度/季度，见 README）
+│   ├── monthly_sop.bat     # 月度更新 SOP 主入口（推荐）
+│   ├── monthly_check.bat   # 仅 A 类快检（约 42 页）
+│   └── monthly_check_full.bat  # 季度全量（A+装机+423down+7xiazai）
 ├── software/               # 本地软件目录
 │   ├── CCleaner/
 │   ├── EditPlus/
@@ -279,25 +290,37 @@ pyinstaller --onefile --name=sync_software --clean --noconfirm sync_software.py
 
 ## 工作流程
 
-### 更新软件流程
-1. **更新软件文件**: 将新版本的软件放入 `software/` 目录
-2. **生成列表**: 运行 `python soft_manager.py` 或使用批处理
-3. **推送到GitHub**: 自动提交并推送更新
-4. **同步到其他设备**: 在其他设备上运行同步工具
+### 维护者：检查 → 更新 → 发布
 
-### 使用完整同步工具
+**原则**：`software/` 不更新也能正常同步使用；快检只是提醒「可能有新版本」，标题变化不等于必须更新。
+
+| 频率 | 操作 | 说明 |
+|------|------|------|
+| **约每月** | [`soft_page_check/monthly_sop.bat`](soft_page_check/monthly_sop.bat) 选 `[1]` | A 类 ~42 页快检 + 步骤引导；或只跑 `monthly_check.bat` |
+| **约每季度** | [`soft_page_check/monthly_check_full.bat`](soft_page_check/monthly_check_full.bat) **连跑两次** | A + 装机区 + 423down + 7xiazai 全量；报告四分区均有比对 |
+| **有变化时** | 打开 `soft_page_check/reports/index.html` 人工确认 | 423down / 网盘 / 破解版须浏览器手工下载 |
+| **确定更新** | 替换 `software/` 对应子目录 | GitHub 项可跑 `software/gh-release-fetch/run_update.bat` |
+| **发布** | 根目录 `generate_and_push.bat` | 生成 `list.txt` 并 push |
+| **可选** | 编辑 `Lastb_soft_version.txt` | 改装机说明或 digest 摘要 |
+
+首次使用每个监控范围需**连续快检两次**才有「标题变化」；详见 [soft_page_check 说明](soft_page_check/README.md)。
+
+### 客户端：拉取更新
+
 ```bash
-# 使用完整同步工具（推荐）
+# 推荐：完整同步工具
 python sync_software.py
-
-# 或使用批处理（无需Python环境）
+# 或
+sync_software.exe
+# 或
 一键快速同步.bat
 ```
-功能包括：
-- 自动同步所有软件
-- 智能更新检测
-- 自动进程管理
-- 详细日志记录
+
+### 传统发布流程（跳过快检时）
+
+1. **更新软件文件**: 将新版本放入 `software/` 目录
+2. **生成列表并推送**: 运行 `generate_and_push.bat`（或 `python soft_manager.py`）
+3. **同步到其他设备**: 各端运行 `sync_software.bat` / `sync_software.exe`
 
 ## 配置说明
 
@@ -807,6 +830,7 @@ MIT License
 
 ## 📚 相关文档
 
+- [**页面快检与月度 SOP**](soft_page_check/README.md) — 维护者：标题比对、报告页、更新与发布流程
 - [配置说明](配置说明.md) - 详细的配置参数说明
 - [本地服务器使用说明](本地服务器使用说明.md) - 搭建本地文件服务器指南
 - [手机隐私安全配置指南](手机隐私安全配置指南.md) - iOS/Android/国产系统隐私安全配置完整指南（中文）

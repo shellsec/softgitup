@@ -76,8 +76,8 @@ https://www.423down.com/4966.html
 
 编辑器
 notepad++ 增加了实用插件
-https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.5/npp.8.9.5.portable.x64.zip
-https://gh-proxy.com/github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.5/npp.8.9.5.portable.x64.zip
+https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.6/npp.8.9.6.portable.x64.zip
+https://gh-proxy.com/github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.6/npp.8.9.6.portable.x64.zip
 核心特点：免费开源、语法高亮、多标签编辑，便携免安装，插件扩展能力强，适配远程桌面使用需求
 config.xml shortcuts.xml 去除空行 ctrl+k 设置了DirectWrite 默认搜索走chatgpt
 Notepad++ 在向日葵远程桌面中显示空白主要是由于渲染引擎冲突导致，具体来说：
@@ -107,7 +107,8 @@ https://www.423down.com/7569.html
 核心特点：支持超大文件（GB 级）快速打开，多光标编辑、正则表达式功能强大，可自定义界面与快捷键，兼容性强
 SublimeText v4200 注册版
 核心特点：启动秒开、低资源占用，支持多光标编辑、代码补全，插件库丰富可实现全功能拓展，跨平台适配 Windows/Mac/Linux
-UltraEdit 2025.0.0.24 64-bit 注册版
+
+UltraEdit 2025.0.0.24 64-bit 注册版  //目录里目前选这个
 核心特点：支持十六进制编辑、大文件处理、代码高亮与折叠，自带文件对比、FTP/SFTP，兼容各类编程语言，专业级功能全覆盖
 选 UltraEdit 注册版：
 定位：全能文本 / 代码编辑器，主打高效编辑、大文件处理、多格式支持
@@ -115,7 +116,7 @@ UltraEdit 2025.0.0.24 64-bit 注册版
 不需要编译、调试、项目管理
 想要完整系统集成（文件关联、右键菜单）
 选 UEStudio 绿色版：IDM UEStudio v25.2.0.24 x64 中文绿色版
-https://down66.com/uestudio https://pan.quark.cn/s/d464f4f7a044
+https://down66.com/uestudio https://7xiazai.lanzout.com/b0bwddqab
 定位：UltraEdit 的增强 IDE 版，包含 UltraEdit 全部功能 + 完整开发工具链
 你是开发者，需要写代码→编译→调试→版本控制一条龙
 想要中文界面、便携免安装、不修改系统
@@ -199,17 +200,16 @@ PC Fresh”削减结束不必要的 Windows 服务，优化启动程序，并解
 一键模式会让你的电脑进入超速状态，一键关闭所有不必要的东西以获得最大速度。 我可以在安全和电动工具模块中找到更多选项和调整。 通过这些工具，用户可以对硬盘进行碎片整理、优化内存使用、分析存储空间以及显示系统信息。
 支持的操作系统：Windows 11、Windows 10、Windows 8.1、Windows 7
 
-
 WiseCare365 WiseCare365.7z Wise Care 365 Pro v8.0.1.730 免激活版 策略优化比较好
 https://www.423down.com/3471.html
 https://www.hybase.com/pc/windows/3471.html
 核心特点：绿色免装无残留，策略优化能力优异，一站式实现系统清理、垃圾删除、系统提速，功能全面且轻量化
 
-CrystalDiskInfo 硬盘检测工具 CrystalDiskInfo v9.8.0
+CrystalDiskInfo 硬盘检测工具 CrystalDiskInfo v9.9.1
 https://www.423down.com/5432.html
 核心特点：中文界面易操作，绿色免装，实时检测硬盘健康、温度、使用时长等关键数据，及时预警硬盘故障
 
-Everything Version V1.5.0.1412b (x64)
+Everything Version V1.5.0.1413b.x64
 核心特点：检索速度极快，支持模糊搜索、精准匹配，轻量不占资源，适配大数量文件的快速查找
 https://www.voidtools.com/forum/viewtopic.php?f=12&t=9787
 
@@ -225,7 +225,7 @@ NetTime v3.2.0.233 时间同步
 https://www.timesynctool.com/
 核心特点：体积小巧、同步速度快，精准校准系统时间，无广告无后台，适配各类网络环境下的时间同步需求
 
-影音播放器 PotPlayer64 260511 官网版
+影音播放器 PotPlayer64 260521 Beta 官网版
 https://www.423down.com/3050.html
 https://www.videohelp.com/software/PotPlayer
 https://potplayer.tv/
@@ -694,6 +694,386 @@ AI文本总结.py → ai_text_summarize.py
 AI文本翻译.py → ai_text_translate.py
 
 
+下载大小比较
+https://gh-proxy.com/github.com/microsoft/PowerToys/releases/download/v0.96.1/PowerToysUserSetup-0.96.1-x64.exe  300MB
+https://www.autohotkey.com/download/ahk-v2.exe 2.9MB
+整理了Windows、Mac、跨平台的键盘快捷键自定义工具，附核心功能、优缺点和适用场景，方便你直接选型落地。
+一、 Windows 平台工具
+AutoHotkey（免费开源，强推荐）
+核心功能：通过脚本编写实现全局快捷键、文本替换、窗口控制、宏命令等；支持条件判断、循环等复杂逻辑，可自定义几乎所有按键组合。
+适用人群：有编程基础、需要高度定制化的用户（如批量执行工作流、游戏按键映射）。
+优缺点：功能极强，免费无广告；但上手有门槛，需学习脚本语法。
+官网：https://www.autohotkey.com/
+PowerToys（微软官方，免费） 文件300MB
+核心功能：微软推出的系统增强工具，内置 Keyboard Manager 模块，支持按键重映射和快捷键自定义；界面简洁，无需脚本，一键生效。
+适用人群：普通用户、不想折腾的微软生态用户，适合快速替换冲突快捷键。
+优缺点：官方工具，兼容性强、安全无风险；功能相对基础，无复杂宏和条件逻辑。
+官网：https://github.com/microsoft/PowerToys
+SharpKeys（免费开源，极简）
+核心功能：专注于硬件级按键映射（如将 Caps Lock 改为 Ctrl、禁用某个按键），通过修改注册表实现，无需后台运行。
+适用人群：仅需简单按键替换，追求轻量无后台的用户。
+优缺点：体积小、无性能占用；不支持组合快捷键和宏。
+官网：https://github.com/randyrants/sharpkeys
+二、 Mac 平台工具
+Karabiner-Elements（免费开源，Mac 首选）
+核心功能：Mac 平台最强大的按键自定义工具，支持全局快捷键、按键重映射、复杂规则配置；可区分不同设备（如外接键盘单独设置），兼容最新 macOS。
+适用人群：Mac 用户中需要深度定制快捷键、解决键盘布局问题的用户。
+优缺点：功能全面，兼容性强；配置界面稍复杂，需花时间熟悉。
+官网：https://karabiner-elements.pqrs.org/
+BetterTouchTool（付费，全能增强）
+核心功能：不仅支持键盘快捷键自定义，还能绑定触控板、鼠标、触摸屏手势；可实现窗口管理、宏命令、文本替换等。
+适用人群：追求一站式设备控制，愿意付费的 Mac 高级用户。
+优缺点：功能覆盖全，界面友好；需付费（有试用）。
+官网：https://folivora.ai/
+macOS 系统自带（免费，零成本）
+操作路径：系统设置 → 键盘 → 键盘快捷键；支持修改系统自带功能的快捷键（如文件操作、窗口切换），但仅能修改预设项，无法自定义全新组合。
+适用人群：普通用户，无需额外安装工具，快速调整常用系统快捷键。
+三、 跨平台工具（Windows/Mac/Linux）
+Keyboard Maestro（付费，Mac 优先，跨平台兼容）
+核心功能：主打可视化宏编辑，支持快捷键触发宏、窗口操作、文本处理、网络请求等；界面拖拽式配置，无需编程基础。
+适用人群：需要批量执行工作流，且希望可视化操作的用户。
+优缺点：易用性强，宏功能丰富；仅付费版功能完整，Linux 端兼容性略弱。
+官网：https://www.keyboardmaestro.com/
+Xnee（免费开源，Linux 优先）
+核心功能：跨平台的宏录制与播放工具，支持键盘和鼠标动作录制，可自定义快捷键触发宏；Linux 系统原生支持度高。
+适用人群：Linux 用户、需要简单宏功能的跨平台用户。
+优缺点：免费开源，跨平台；界面较简陋，无可视化配置。
+官网：https://xnee.wordpress.com/
+需求场景  推荐工具
+Windows 系统，免费 + 深度定制 + 脚本 AutoHotkey
+Windows 系统，官方工具 + 简单快捷键 / 按键替换  PowerToys
+Mac 系统，免费 + 深度按键 / 快捷键定制  Karabiner-Elements
+跨平台，可视化宏 + 快捷键，愿意付费 Keyboard Maestro
+仅替换单个按键（如禁用 Caps Lock）  SharpKeys（Windows）/ Karabiner-Elements（Mac）
+
+传统键盘支持音量调节
+Keyvol（极简专用工具） 1.1MB，已经在system_good里面
+F10: 静音
+F11: 减少音量
+F12: 增大音量
+特点：双击运行即生效，默认 F10 静音、F11 减、F12 加，任务栏托盘隐藏，退出右键点 EXIT
+适合：不想装大工具、临时使用的场景
+Keyvol 是Windows 平台极简音量控制小工具，这里提供安全获取途径、使用方法与替代方案，确保你快速上手一键音量控制。
+一、 官方 / 可靠下载地址（按安全优先级）
+吾爱破解论坛原帖（开发者发布）（最安全，免费无捆绑）
+链接：https://www.52pojie.cn/thread-965894-1-1.html
+说明：这是 Keyvol 开发者首发的帖子，可下载纯净版，无广告无捆绑
+
+按系统快速选：Windows 用 PowerToys（官方免费、零门槛），Mac 用 Karabiner-Elements（免费开源、功能强），追求极简可选专用小工具（如 Keyvol）。下面是分平台的具体方案与 SOP。
+一、 Windows 平台（首选 PowerToys）
+1. 微软官方 PowerToys（最推荐）
+优势：官方免费、安全无风险、无需脚本、设置即用，还能管理其他快捷键冲突
+一键音量映射方案：
+功能  推荐映射键 对应系统功能
+静音 / 取消静音 F10 Volume Mute
+音量减小  F11 Volume Down
+音量增大  F12 Volume Up
+设置 SOP（3 步到位）：
+安装：官网 https://github.com/microsoft/PowerToys 下载安装并启动
+打开：PowerToys 设置 → 左侧菜单选择 Keyboard Manager → 开启右侧开关
+映射：点击 Remap a shortcut → 按以下步骤配置（以 F10 静音为例）：
+按 Type shortcut → 按下 F10 → 确定
+按 Type shortcut → 点击下拉菜单选 Volume Mute → 确定
+点击 OK 保存，立即生效
+2. 备选方案（按需求选择）
+AutoHotkey（适合需要 OSD 或进阶功能）
+脚本示例（保存为.ahk文件运行）：
+autohotkey
+F10::Send {Volume_Mute}      ; F10静音
+F11::Send {Volume_Down 4}    ; F11音量减4%
+F12::Send {Volume_Up 4}      ; F12音量加4%
+优势：可添加音量条显示（OSD），支持连续按快速调节
+官网：https://www.autohotkey.com/
+Keyvol（极简专用工具）
+特点：双击运行即生效，默认 F10 静音、F11 减、F12 加，任务栏托盘隐藏，退出右键点 EXIT
+适合：不想装大工具、临时使用的场景
+二、 Mac 平台（首选 Karabiner-Elements）
+Karabiner-Elements（免费开源，Mac 首选）
+优势：Mac 平台最强大的按键映射工具，可区分不同键盘设备单独设置，兼容最新 macOS
+一键音量设置 SOP：
+安装：官网 https://karabiner-elements.pqrs.org/ 下载安装并授权
+配置：打开 Karabiner-Elements → 切换到 Complex Modifications 标签
+添加规则：
+点击 Add rule → 搜索框输入 volume
+找到 Change F10/F11/F12 to volume controls → 点击 Enable
+立即生效，无需重启
+备选：系统自带（基础版）
+路径：系统设置 → 键盘 → 键盘快捷键 → 声音 → 可修改默认快捷键，但无法映射单键（只能改组合键）
+三、 跨平台极简方案（适合临时 / 轻量使用）
+Volume Keys（Windows）：运行即用，支持屏幕音量显示，自定义热键，开机自启
+VolumeEasy（Windows）：模拟多媒体键盘，支持一键静音、音量调节和媒体控制
+四、 选型速查表（按优先级）
+使用场景  最佳工具  核心优势
+Windows 用户，追求稳定官方方案 PowerToys 零风险、易设置、功能全
+Windows 用户，需要 OSD 音量条 AutoHotkey  可自定义显示效果，进阶功能强
+Mac 用户  Karabiner-Elements  免费、功能强、设备独立设置
+临时使用，不想装复杂软件  Keyvol（Windows） 极简、双击即用、无后台负担
+五、 避坑与优化建议
+冲突处理：先关闭其他可能占用 F10-F12 的软件（如某些编辑器、游戏）
+反馈优化：建议开启系统音量反馈（Windows：设置→声音→高级→勾选 "播放 Windows 启动声音" 旁的反馈选项）
+进阶需求：若需要长按连续调节，AutoHotkey 脚本可添加定时器逻辑，实现按住不放快速增减音量
+
+
+VirtualDesktopSwitcher 1.2.0
+Windows 10/11 虚拟桌面快速切换和指示工具 / Virtual Desktop Switcher and Indicator for Windows 10/11
+https://github.com/choyy/VirtualDesktopSwitcher
+https://github.com/choyy/VirtualDesktopSwitcher/releases/download/1.2.0/VirtualDesktopSwitcher.exe
+创建新桌面 Win + Ctrl + D  点击任务栏的"任务视图"图标(也可用 Win + Tab 调出) ，再点击"新建桌面"
+🎯 快速切换  Win + Ctrl + ← / →  点击任务栏的"任务视图"图标，再点击特定的桌面缩略图
+关闭桌面  Win + Ctrl + F4 在任务视图中，将鼠标悬停在桌面缩略图上，点击右上角的 "X" 
+把运行中的程序移到另一个虚拟窗口，很轻松就能搞定。
+任务视图拖拽法
+这是最直观的方法，很适合整理少量窗口。
+进入任务视图：按 Win + Tab 打开任务视图。
+拖拽窗口：在当前桌面的区域里，用鼠标左键按住你想要移动的程序窗口（缩略图）。
+释放窗口：把窗口拖拽到屏幕底部或顶部的目标桌面缩略图上，然后松开鼠标。程序就会被完整地移动到那个桌面了。
+
+
+CareUEyes Pro v2.5.1.0 高级便携版 屏幕亮度对比度调节+番茄钟倒计时 5MB
+CareUEyes Pro是一款非常好用的专业电脑护眼工具，软件小巧，界面简单，它可以自动过滤电脑屏幕的蓝光，让屏幕显示更加的不伤眼，更加舒适，有效保护你的眼睛，可以自定义调节屏幕的色调，从温暖到不太温暖，可以自由调节，还可以调节屏幕的亮度，调整亮度适合你的眼睛，观看屏幕更加舒适，支持多种使用场景的选择。包括办公、智能、游戏、电影、夜晚、阅读和编辑等多种应用场景类型，根据你的使用场景选择合适的色温，对眼睛更加友好，对于长期办公的朋友可以选择办公模式进行使用，支持定时器，可以自动提醒用户休息，每隔一段时间提醒你休息，可以设置休息的时间，间隔时间，还可以设置随机的锁屏壁纸，支持热键操作，快捷键操作更加方便。
+CareUEyes是一款非常有用的眼部护理软件，它可以帮助您减轻眼睛疲劳并让您的眼睛休息。PC屏幕亮度设置不当是造成眼睛疲劳的主要原因之一，因为它包含蓝光。但是，使用此软件，您现在可以通过在屏幕上应用蓝光滤镜来摆脱那些蓝光。
+https://care-eyes.com/
+CareUEyes_Pro.zip 
+https://www.hybase.com/pc/windows/468.html
+https://pan.baidu.com/s/1cjM01BMDNxoI-u801enSyg?pwd=HyHy
+购买渠道    授权类型    价格  备注
+数码荔枝    终身授权    98 元    中国特惠价，原价 254 元，一次购买终身使用
+Steam 平台    终身授权    90 元    中文界面，自动更新，支持家庭共享
+第三方优惠   终身授权    88 元    部分合作渠道提供的额外优惠价
+功能介绍：
+1，预防眼睛拉伤
+监视器一直发出蓝光，但蓝光是一种波长短、能量高、易于闪烁的光，容易引起眼睛疲劳。CareUEyes 是 PC 的蓝光滤镜，它通过调整色温来过滤蓝光，颜色温度越低，屏幕发出的蓝光就越少。
+2，减少眼痛
+太亮或太黑的屏幕亮度会导致眼睛刺激。CareUEyes 自动调整屏幕亮度，与您所环绕的亮度大致相同。CareUEyes 在没有 PWM 的情况下调整亮度，避免引起闪烁问题。
+3，减少视力问题
+实验室研究表明，过多接触蓝光会损害视网膜细胞。这可能导致视力问题，如与年龄相关的黄斑变性。使用 CareUEyes 来减少蓝光可以减少视力问题。
+4，改善睡眠
+夜间的蓝光可以抑制褪黑激素的产生，并导致睡眠问题。如果你有睡眠问题的历史，你可以使用CareUEyes来尽量减少夜间的蓝光。
+5，用于 PC 的蓝光过滤器
+8 种眼睛保护模式预设，用于 Windows 自动过滤蓝光并控制亮度。您还可以手动设置屏幕的颜色温度和亮度，以减少眼睛疲劳。
+6，日出/日落模式
+您可以在选项中启用日出/日落功能，为白天和黑夜设置不同的颜色温度和屏幕亮度。CareUEyes 会根据日出和日落时间自动切换设置。
+7，定时器
+使用 20-20-20 规则预防眼睛疲劳：每 20 分钟，查看 20 英尺外的东西 20 秒，CareUEyes 计时器会智能地提醒您休息一下。
+这个软件有一个缺点，不管是什么截图软件，截图的时候都是护眼的颜色，我添加了规则也不顶用，只要失去焦点就不行，解决方案如下：
+选项->显示
+启动高级颜色API（关闭）：
+涉及专业知识，软件默认是低级颜色 API。这里应用官方解读原话：高级颜色 API 主要是为了解决某些用户没有安装显卡驱动或者显卡驱动太旧导致色温调节无效的问题，高级颜色 API 的唯一缺点是会引起截图变黄，但是它能解决游戏全屏色温调节无效的问题（在普通模式下游戏会覆盖 CareUEyes 的颜色设置）。启用高级颜色 API 后 word 上边编辑选项选择时会出现闪烁情况，故，无特殊原因还是建议不勾选。
+启动软件鼠标光标：
+此处是设置鼠标光标是否开启护眼效果，觉得鼠标光标没有随屏幕调节亮度而启用此选项，但是启用此选项可能会造成在某些全屏软件例如游戏中无法看到鼠标光标的问题，故建议按照默认不勾选即可。
+使用更宽的色温范围：
+显示中冷色和暖色的色温更广，个人觉得没有必要，推荐不勾选。
+保持窗口背景色为绿色：
+一般是使编辑器的编辑窗口背景色变为绿色，对减缓眼部疲劳有一定的效果，可按个人需要进行设置。
+
+其他开源 比较大45M,功能实际体验测试过一般
+LightBulb是一款能够帮助缓解因长时间盯着电脑屏幕而产生的眼睛疲劳的应用程序。它会随着一天的时间变化自动调整显示颜色的色调：在下午时让屏幕呈现冷蓝色，而在夜晚则转为暖黄色。其目的就是让屏幕的颜色与周围环境的照明条件相匹配——白天适应阳光光线，夜晚则适应人造光源。LightBulb对系统性能的影响极小，同时还提供了多种自定义设置选项。
+https://gh-proxy.com/github.com/Tyrrrz/LightBulb/releases/download/2.7.1/LightBulb.win-x64.zip
+广泛的自定义选项：LightBulb 提供了丰富的自定义选项，允许用户根据个人喜好和需要调整屏幕亮度和色温，提供了灵活性和个性化的体验。
+基于位置的日出和日落时间：LightBulb 可以根据用户所在位置自动计算日出和日落时间，并相应地调整屏幕亮度和色温，使屏幕适应室内外环境的变化，帮助减少眼睛疲劳。
+手动设置日出和日落时间：除了自动计算，LightBulb 还提供了手动设置日出和日落时间的选项，用户可以根据自己的需要进行精确的调整。
+针对色敏应用程序的白名单：LightBulb 允许用户创建白名单，将某些特定的色敏应用程序排除在亮度和色温调整的范围之外，确保这些应用程序在使用时保持原始的颜色设置。
+全局热键实时调整：LightBulb 提供了全局热键，使用户能够在使用过程中快速、方便地调整屏幕亮度和色温，无需离开正在进行的任务。
+平滑的伽马过渡：LightBulb 实现了平滑的伽马过渡，避免了屏幕亮度和色温的突然变化，提供更加舒适和自然的视觉体验。
+最小化的性能影响：LightBulb 的设计注重性能优化，以确保在运行时对计算机资源的消耗最小化，不会显著影响其他任务的运行。
+
+PasteEx.v1.1.9.1.zip
+Paste As File 把剪贴板的内容直接粘贴为文件
+用 PasteEx（一键搞定）下载 PasteEx（免费、绿色）
+https://github.com/huiyadanli/PasteEx
+安装 / 解压后运行一次，它会自动加到右键菜单。
+先复制一大段文字（Ctrl+C）
+在文件夹空白处 → 右键 → Paste As File
+
+
+===================
+最终选择指南（针对你外贸/跨境场景）
+📊 Clash客户端汇总
+客户端 维护  Windows macOS Android iOS Linux 仓库  教程
+FlClash 🟢 ✅ ✅ ✅ ❌ ✅ 官方  前往
+Clash Verge Rev 🟢 ✅ ✅ ❌ ❌ ✅ 官方  前往
+ClashMi 🟢 ✅ ✅ ✅ ✅ ✅ 官方  前往
+Hiddify Next  🟢 ✅ ✅ ✅ ✅ ✅ 官方  前往
+Clash Meta for Android  🟢 ❌ ❌ ✅ ❌ ❌ 官方  前往
+Clash Verge 🔴 ✅ ✅ ❌ ❌ ✅ 备份  前往
+Clash for Windows 🔴 ✅ ✅ ❌ ❌ ❌ 备份  前往
+ClashX  🔴 ❌ ✅ ❌ ❌ ❌ 备份  前往
+ClashX Pro  🔴 ❌ ✅ ❌ ❌ ❌ 备份  前往
+Clash for Android 🔴 ❌ ❌ ✅ ❌ ❌ 备份  前往
+Karing  🟢 ✅ ✅ ✅ ✅ ✅ 官方  前往
+Clash Nyanpasu  🟢 ✅ ✅ ❌ ❌ ❌ 官方  前往
+Clash-Party 🟢 ✅ ✅ ❌ ❌ ❌ 官方  前往
+Surge for iOS 🟢 ❌ ❌ ❌ ✅ ❌ 商店  前往
+V2rayN  🟢 ✅ ✅ ❌ ❌ ❌ 官方  前往
+Shadowrocket  🟢 ❌ ❌ ❌ ✅ ❌ 商店  前往
+https://github.com/clashbk/clash
+https://www.ermao.net/
+https://www.ermao.net/blog/freeappleid/
+2026最新免费美区Apple ID共享账号 | Shadowrocket/小火箭下载 | iOS美区账号每日更新
+适用场景与受众人群分析
+基于长期的测试评估，免费共享Apple ID提供了便捷的临时跨区体验，但也伴随着稳定性的牺牲：
+适用人群：仅需单次或偶尔下载境外特有应用（如 Shadowrocket、Clash Mi、TikTok、ChatGPT、Potatso Lite），不打算在 App 内进行购汇或长期订阅的用户。通过共享账号，可实现“即下即走”的零成本需求。
+https://www.423down.com/12155.html
+不适宜人群：重度依赖海外 iOS 软件生态、需要频繁更新已下载的 App，或有应用内购买（In-App Purchase）需求的使用者。客观结论上，由于共享账号随时面临风控封堵，我们更建议此类受众直接注册属于自己的专属外区 Apple ID，以获取数据隔离的安全保障与应用的长久使用权。
+
+场景一：绝大多数用户（90%的情况） → 首选 V2rayN (Windows) / v2rayNG (Android)
+理由：协议支持最全、节点兼容性最好、自带测速和订阅更新、操作简单。对于外贸多节点切换、快速测速选优的需求非常友好。
+无需考虑Clash，因为V2rayN的“智能分流+自定义路由”已满足99%的分流需求。
+场景二：特殊需求 → 选 Clash 衍生版（如Clash Verge Rev, CMFA）
+条件：你已有大量、复杂的Clash配置文件（比如自写了几百行规则，设置了多个代理组做不同策略），迁移到V2rayN格式成本太高。
+注意：务必选择 带Meta内核 的版本（如Clash Verge Rev、CMFA），这样才能支持VLESS等新协议。
+场景三：已经不推荐的情况 → 原版 Clash for Windows
+完全不要选。你资料中的链接 Clash.for.Windows.Setup.latest.exe 是一个过时的、不再维护的版本。用它你会遇到新节点无法连接的问题。
+外贸 / 跨境场景选型建议
+1. 选 V2rayN 7.19.4 的情况（推荐）
+用新机场 / 新节点（VLESS、Reality、Hysteria2 等）
+外贸高频切换节点、需要快速测速 / 自动更新
+长期稳定使用、看重安全更新与兼容性
+多设备 / 多平台统一配置（V2rayN 跨 Win/macOS/Linux）
+科学 出国 Windows V2rayN 外贸 跨境 7.19.4
+https://www.down66.com/v2n
+https://github.com/2dust/v2rayN/releases
+https://github.com/2dust/v2rayN/releases/download/7.21.1/v2rayN-windows-64.zip
+https://gh-proxy.com/github.com/2dust/v2rayN/releases/download/7.21.1/v2rayN-windows-64.zip
+
+Android
+https://github.com/2dust/v2rayNg
+https://github.com/2dust/v2rayNG/releases/download/2.1.5/v2rayNG_2.1.5_universal.apk
+https://gh-proxy.com/github.com/2dust/v2rayNG/releases/download/2.1.5/v2rayNG_2.1.5_universal.apk
+
+Iphone/mac-shadowrocket
+https://apps.apple.com/hk/app/shadowrocket/id932747118
+https://github.com/2dust/v2rayN/releases
+https://gh-proxy.com/github.com/2dust/v2rayN/releases/download/7.21.1/v2rayN-macos-64.dmg
+
+2. 选 Clash for Windows 的情况（仅特殊）
+已有大量 Clash 规则 / 配置，不想迁移
+仅用旧协议（Shadowsocks、VMess），无新节点需求
+短期过渡，后续计划换 V2rayN 或 Clash Verge Rev
+核心功能对比
+1. 协议支持（外贸 / 跨境关键）
+Clash for Windows
+支持：Shadowsocks、VMess、Trojan、Snell、Socks5、HTTP (S)Clash for Windows
+不支持：VLESS、Reality、Hysteria2 等新协议
+问题：新机场 / 新节点常不兼容，易连不上
+V2rayN 7.19.4
+全兼容：VMess、VLESS、Trojan、Shadowsocks、Hysteria2、Tuic、Socks5 等
+优势：适配绝大多数现代机场配置，新协议 / 新节点兼容性极强
+2. 规则与分流（外贸多场景必备）
+Clash for Windows
+规则系统成熟：域名 / IP / 进程 / GeoIP 分流、代理组（负载均衡 / 自动 fallback）Clash for Windows
+适合：复杂规则、精细化分流
+局限：规则文件格式与 V2Ray 不互通，迁移麻烦
+V2rayN 7.19.4
+模式：全局 / PAC / 智能分流、自定义路由、TUN 模式
+优势：一键导入订阅、自动更新节点、延迟 / 速度测试
+适合：外贸高频切换节点、快速测速选优
+
+目前主流Clash for Windows 客户端
+https://dl.ppbox.xyz/ssr/Clash.for.Windows.Setup.latest.exe
+
+Android 科学 出国 机票 白猫CMFA v2.11.24
+https://www.down66.com/clashmeta
+https://github.com/MetaCubeX/ClashMetaForAndroid/releases
+https://gh-proxy.com/github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v2.11.27/cmfa-2.11.27-meta-universal-release.apk
+
+https://github.com/MetaCubeX/ClashX.Meta
+
+
+《中华人民共和国计算机信息网络国际联网管理暂行规定》中规定：
+“计算机信息网络直接进行国际联网，必须使用邮电部国家公用电信网提供的国际出入口信道。任何单位和个人不得自行建立或者使用其他信道进行国际联网。”
+如违反上述规定，公安机关会责令停止联网，给予警告，可以并处15000元以下的罚款；有违法所得的，没收违法所得。
+免责声明
+根据《中华人民共和国电信条例》和《中国人民共和国刑法》等相关法律规定，未取得《增值电信业务经营许可证》的情况下，提供代理服务，属于非法行为！此工具本身无任何代理节点服务，仅供个人学习或学术研究，严禁涉嫌违反法律规定的非法用途，否则责任应由软件开发者和违规使用者承担，本站特此说明！
+===================
+
+
+一、Chrome通用必备（所有人必装）
+1. uBlock Origin（广告拦截 + 隐私保护）
+功能：拦截网页广告、弹窗、恶意脚本，比 AdBlock 更轻量、无隐私追踪
+地址：https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm
+优势：开源免费、占用内存低、支持自定义规则
+2. OneTab（标签页管理）
+功能：一键合并所有标签页为列表，释放内存，避免标签页爆炸
+地址：https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall
+优势：免费、无广告、支持导出 / 恢复标签页
+3. 沉浸式翻译（网页翻译）
+功能：双语对照翻译，支持 PDF、视频字幕，适配 99% 网站
+地址：https://chrome.google.com/webstore/detail/immersive-translate/bpoadfkcbjbfhfodiogcnhhhpibjhbnh
+优势：翻译质量高、无广告、支持多翻译源
+4. Bitwarden（密码管理）
+功能：跨设备存储密码、自动填充、生成强密码，免费版足够日常
+地址：https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb
+优势：开源、安全、无订阅陷阱
+二、效率办公（打工人 / 学生党）
+1. Tampermonkey（油猴脚本）
+功能：安装用户脚本，实现网页增强（去广告、自动签到、视频倍速等）
+地址：https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo
+优势：脚本生态丰富、免费、支持自定义
+2. Infinity 新标签页（Pro）
+功能：自定义新标签页，添加常用网站、壁纸、待办，多端同步
+地址：https://chrome.google.com/webstore/detail/infinity-new-tab-pro/nnnkddnnlpamobajfibdffclclhbfnjc
+优势：颜值高、功能全、无广告
+3. Notion Web Clipper（网页剪藏）
+功能：一键保存网页内容到 Notion，支持格式化、去广告
+地址：https://chrome.google.com/webstore/detail/notion-web-clipper/knheggckgoiihginacbkhaalnibhilkk
+优势：同步快、适配 Notion 所有功能
+4. GlobalSpeed（视频倍速）
+功能：所有网页视频（B 站、YouTube、网课）自定义倍速（0.25–16x）
+地址：https://chrome.google.com/webstore/detail/globalspeed-video-speed-c/fpdnjdlbdmifoocedhkighhlbcidfill
+优势：免费、无广告、支持快捷键
+三、开发调试（前端 / 技术人员）
+1. React Developer Tools（React 调试）
+功能：调试 React 组件，查看 props/state、性能分析
+地址：https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
+优势：官方出品、免费、适配 React 18+
+2. Vue.js devtools（Vue 调试）
+功能：Vue 组件调试、状态追踪、性能监控
+地址：https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd
+优势：官方维护、支持 Vue 2/3
+3. Lighthouse（性能审计）
+https://www.423down.com/9379.html
+功能：Google 官方工具，检测网页性能、SEO、可访问性
+地址：https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk
+优势：权威、免费、生成可执行优化报告
+4. Wappalyzer（技术栈识别）
+功能：一键识别网站技术栈（框架、CMS、服务器、数据库）
+地址：https://chrome.google.com/webstore/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg
+优势：免费、数据全、适合技术调研
+5. CSS Peeper（样式查看）
+功能：无需开发者工具，一键查看网页颜色、字体、尺寸
+地址：https://chrome.google.com/webstore/detail/css-peeper/mbnbehikldjhnfehhnaidhjhoofhcehp
+优势：轻量、直观、适合设计还原
+四、隐私安全（保护个人数据）
+1. Privacy Badger（反追踪）
+功能：自动阻止第三方追踪器，保护浏览隐私
+地址：https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp
+优势：EFF 出品、开源、免费
+2. DuckDuckGo Privacy Essentials
+功能：隐私搜索 + 广告拦截 + 追踪防护，一站式隐私保护
+地址：https://chrome.google.com/webstore/detail/duckduckgo-privacy-essent/bkdgflcldnnnapblkhphbgpggdiikppg
+优势：界面简洁、功能全面
+五、内容增强（阅读 / 视频 / 知识）
+1. Dark Reader（夜间模式）
+功能：全局网页暗黑模式，护眼、减少蓝光
+地址：https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh
+优势：免费、无广告、支持自定义亮度 / 对比度
+2. GoFullPage（长截图）
+功能：一键截取完整网页长图，支持标注、导出
+地址：https://chrome.google.com/webstore/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl
+优势：免费版够用、操作简单
+3. 豆包（AI 助手）
+功能：网页翻译、文章总结、问答、生词本，字节官方出品
+地址：https://chrome.google.com/webstore/detail/doubao-ai-assistant/ojllmjkmjkepdijhoojdojkdfohbdgmm
+优势：免费、无广告、适配中文场景
+安装与使用提示
+官方商店：https://chrome.google.com/webstore（需科学上网）
+国内备用：https://chrome.zzzmh.cn（无需科学上网，下载 crx 手动安装）
+安装后：在 Chrome 右上角「拼图图标」管理插件，按需启用 / 禁用
+原则：插件越少越好，只装常用的，避免占用内存
+
+
+
 破解社区
 https://www.52pojie.cn
 https://www.52pojie.cn/forum-2-1.html
@@ -914,331 +1294,6 @@ SoftGitUp是一个跨平台的软件同步工具
 软件卸载
 /Klocman/Bulk-Crap-Uninstaller
 
-
-
-
-
-下载大小比较
-https://gh-proxy.com/github.com/microsoft/PowerToys/releases/download/v0.96.1/PowerToysUserSetup-0.96.1-x64.exe  300MB
-https://www.autohotkey.com/download/ahk-v2.exe 2.9MB
-整理了Windows、Mac、跨平台的键盘快捷键自定义工具，附核心功能、优缺点和适用场景，方便你直接选型落地。
-一、 Windows 平台工具
-AutoHotkey（免费开源，强推荐）
-核心功能：通过脚本编写实现全局快捷键、文本替换、窗口控制、宏命令等；支持条件判断、循环等复杂逻辑，可自定义几乎所有按键组合。
-适用人群：有编程基础、需要高度定制化的用户（如批量执行工作流、游戏按键映射）。
-优缺点：功能极强，免费无广告；但上手有门槛，需学习脚本语法。
-官网：https://www.autohotkey.com/
-PowerToys（微软官方，免费） 文件300MB
-核心功能：微软推出的系统增强工具，内置 Keyboard Manager 模块，支持按键重映射和快捷键自定义；界面简洁，无需脚本，一键生效。
-适用人群：普通用户、不想折腾的微软生态用户，适合快速替换冲突快捷键。
-优缺点：官方工具，兼容性强、安全无风险；功能相对基础，无复杂宏和条件逻辑。
-官网：https://github.com/microsoft/PowerToys
-SharpKeys（免费开源，极简）
-核心功能：专注于硬件级按键映射（如将 Caps Lock 改为 Ctrl、禁用某个按键），通过修改注册表实现，无需后台运行。
-适用人群：仅需简单按键替换，追求轻量无后台的用户。
-优缺点：体积小、无性能占用；不支持组合快捷键和宏。
-官网：https://github.com/randyrants/sharpkeys
-二、 Mac 平台工具
-Karabiner-Elements（免费开源，Mac 首选）
-核心功能：Mac 平台最强大的按键自定义工具，支持全局快捷键、按键重映射、复杂规则配置；可区分不同设备（如外接键盘单独设置），兼容最新 macOS。
-适用人群：Mac 用户中需要深度定制快捷键、解决键盘布局问题的用户。
-优缺点：功能全面，兼容性强；配置界面稍复杂，需花时间熟悉。
-官网：https://karabiner-elements.pqrs.org/
-BetterTouchTool（付费，全能增强）
-核心功能：不仅支持键盘快捷键自定义，还能绑定触控板、鼠标、触摸屏手势；可实现窗口管理、宏命令、文本替换等。
-适用人群：追求一站式设备控制，愿意付费的 Mac 高级用户。
-优缺点：功能覆盖全，界面友好；需付费（有试用）。
-官网：https://folivora.ai/
-macOS 系统自带（免费，零成本）
-操作路径：系统设置 → 键盘 → 键盘快捷键；支持修改系统自带功能的快捷键（如文件操作、窗口切换），但仅能修改预设项，无法自定义全新组合。
-适用人群：普通用户，无需额外安装工具，快速调整常用系统快捷键。
-三、 跨平台工具（Windows/Mac/Linux）
-Keyboard Maestro（付费，Mac 优先，跨平台兼容）
-核心功能：主打可视化宏编辑，支持快捷键触发宏、窗口操作、文本处理、网络请求等；界面拖拽式配置，无需编程基础。
-适用人群：需要批量执行工作流，且希望可视化操作的用户。
-优缺点：易用性强，宏功能丰富；仅付费版功能完整，Linux 端兼容性略弱。
-官网：https://www.keyboardmaestro.com/
-Xnee（免费开源，Linux 优先）
-核心功能：跨平台的宏录制与播放工具，支持键盘和鼠标动作录制，可自定义快捷键触发宏；Linux 系统原生支持度高。
-适用人群：Linux 用户、需要简单宏功能的跨平台用户。
-优缺点：免费开源，跨平台；界面较简陋，无可视化配置。
-官网：https://xnee.wordpress.com/
-需求场景  推荐工具
-Windows 系统，免费 + 深度定制 + 脚本 AutoHotkey
-Windows 系统，官方工具 + 简单快捷键 / 按键替换  PowerToys
-Mac 系统，免费 + 深度按键 / 快捷键定制  Karabiner-Elements
-跨平台，可视化宏 + 快捷键，愿意付费 Keyboard Maestro
-仅替换单个按键（如禁用 Caps Lock）  SharpKeys（Windows）/ Karabiner-Elements（Mac）
-
-传统键盘支持音量调节
-Keyvol（极简专用工具） 1.1MB，已经在system_good里面
-F10: 静音
-F11: 减少音量
-F12: 增大音量
-特点：双击运行即生效，默认 F10 静音、F11 减、F12 加，任务栏托盘隐藏，退出右键点 EXIT
-适合：不想装大工具、临时使用的场景
-Keyvol 是Windows 平台极简音量控制小工具，这里提供安全获取途径、使用方法与替代方案，确保你快速上手一键音量控制。
-一、 官方 / 可靠下载地址（按安全优先级）
-吾爱破解论坛原帖（开发者发布）（最安全，免费无捆绑）
-链接：https://www.52pojie.cn/thread-965894-1-1.html
-说明：这是 Keyvol 开发者首发的帖子，可下载纯净版，无广告无捆绑
-
-按系统快速选：Windows 用 PowerToys（官方免费、零门槛），Mac 用 Karabiner-Elements（免费开源、功能强），追求极简可选专用小工具（如 Keyvol）。下面是分平台的具体方案与 SOP。
-一、 Windows 平台（首选 PowerToys）
-1. 微软官方 PowerToys（最推荐）
-优势：官方免费、安全无风险、无需脚本、设置即用，还能管理其他快捷键冲突
-一键音量映射方案：
-功能  推荐映射键 对应系统功能
-静音 / 取消静音 F10 Volume Mute
-音量减小  F11 Volume Down
-音量增大  F12 Volume Up
-设置 SOP（3 步到位）：
-安装：官网 https://github.com/microsoft/PowerToys 下载安装并启动
-打开：PowerToys 设置 → 左侧菜单选择 Keyboard Manager → 开启右侧开关
-映射：点击 Remap a shortcut → 按以下步骤配置（以 F10 静音为例）：
-按 Type shortcut → 按下 F10 → 确定
-按 Type shortcut → 点击下拉菜单选 Volume Mute → 确定
-点击 OK 保存，立即生效
-2. 备选方案（按需求选择）
-AutoHotkey（适合需要 OSD 或进阶功能）
-脚本示例（保存为.ahk文件运行）：
-autohotkey
-F10::Send {Volume_Mute}      ; F10静音
-F11::Send {Volume_Down 4}    ; F11音量减4%
-F12::Send {Volume_Up 4}      ; F12音量加4%
-优势：可添加音量条显示（OSD），支持连续按快速调节
-官网：https://www.autohotkey.com/
-Keyvol（极简专用工具）
-特点：双击运行即生效，默认 F10 静音、F11 减、F12 加，任务栏托盘隐藏，退出右键点 EXIT
-适合：不想装大工具、临时使用的场景
-二、 Mac 平台（首选 Karabiner-Elements）
-Karabiner-Elements（免费开源，Mac 首选）
-优势：Mac 平台最强大的按键映射工具，可区分不同键盘设备单独设置，兼容最新 macOS
-一键音量设置 SOP：
-安装：官网 https://karabiner-elements.pqrs.org/ 下载安装并授权
-配置：打开 Karabiner-Elements → 切换到 Complex Modifications 标签
-添加规则：
-点击 Add rule → 搜索框输入 volume
-找到 Change F10/F11/F12 to volume controls → 点击 Enable
-立即生效，无需重启
-备选：系统自带（基础版）
-路径：系统设置 → 键盘 → 键盘快捷键 → 声音 → 可修改默认快捷键，但无法映射单键（只能改组合键）
-三、 跨平台极简方案（适合临时 / 轻量使用）
-Volume Keys（Windows）：运行即用，支持屏幕音量显示，自定义热键，开机自启
-VolumeEasy（Windows）：模拟多媒体键盘，支持一键静音、音量调节和媒体控制
-四、 选型速查表（按优先级）
-使用场景  最佳工具  核心优势
-Windows 用户，追求稳定官方方案 PowerToys 零风险、易设置、功能全
-Windows 用户，需要 OSD 音量条 AutoHotkey  可自定义显示效果，进阶功能强
-Mac 用户  Karabiner-Elements  免费、功能强、设备独立设置
-临时使用，不想装复杂软件  Keyvol（Windows） 极简、双击即用、无后台负担
-五、 避坑与优化建议
-冲突处理：先关闭其他可能占用 F10-F12 的软件（如某些编辑器、游戏）
-反馈优化：建议开启系统音量反馈（Windows：设置→声音→高级→勾选 "播放 Windows 启动声音" 旁的反馈选项）
-进阶需求：若需要长按连续调节，AutoHotkey 脚本可添加定时器逻辑，实现按住不放快速增减音量
-
-
-VirtualDesktopSwitcher 1.2.0
-Windows 10/11 虚拟桌面快速切换和指示工具 / Virtual Desktop Switcher and Indicator for Windows 10/11
-https://github.com/choyy/VirtualDesktopSwitcher
-https://github.com/choyy/VirtualDesktopSwitcher/releases/download/1.2.0/VirtualDesktopSwitcher.exe
-创建新桌面 Win + Ctrl + D  点击任务栏的"任务视图"图标(也可用 Win + Tab 调出) ，再点击"新建桌面"
-🎯 快速切换  Win + Ctrl + ← / →  点击任务栏的"任务视图"图标，再点击特定的桌面缩略图
-关闭桌面  Win + Ctrl + F4 在任务视图中，将鼠标悬停在桌面缩略图上，点击右上角的 "X" 
-把运行中的程序移到另一个虚拟窗口，很轻松就能搞定。
-任务视图拖拽法
-这是最直观的方法，很适合整理少量窗口。
-进入任务视图：按 Win + Tab 打开任务视图。
-拖拽窗口：在当前桌面的区域里，用鼠标左键按住你想要移动的程序窗口（缩略图）。
-释放窗口：把窗口拖拽到屏幕底部或顶部的目标桌面缩略图上，然后松开鼠标。程序就会被完整地移动到那个桌面了。
-
-
-
-===================
-最终选择指南（针对你外贸/跨境场景）
-📊 Clash客户端汇总
-客户端 维护  Windows macOS Android iOS Linux 仓库  教程
-FlClash 🟢 ✅ ✅ ✅ ❌ ✅ 官方  前往
-Clash Verge Rev 🟢 ✅ ✅ ❌ ❌ ✅ 官方  前往
-ClashMi 🟢 ✅ ✅ ✅ ✅ ✅ 官方  前往
-Hiddify Next  🟢 ✅ ✅ ✅ ✅ ✅ 官方  前往
-Clash Meta for Android  🟢 ❌ ❌ ✅ ❌ ❌ 官方  前往
-Clash Verge 🔴 ✅ ✅ ❌ ❌ ✅ 备份  前往
-Clash for Windows 🔴 ✅ ✅ ❌ ❌ ❌ 备份  前往
-ClashX  🔴 ❌ ✅ ❌ ❌ ❌ 备份  前往
-ClashX Pro  🔴 ❌ ✅ ❌ ❌ ❌ 备份  前往
-Clash for Android 🔴 ❌ ❌ ✅ ❌ ❌ 备份  前往
-Karing  🟢 ✅ ✅ ✅ ✅ ✅ 官方  前往
-Clash Nyanpasu  🟢 ✅ ✅ ❌ ❌ ❌ 官方  前往
-Clash-Party 🟢 ✅ ✅ ❌ ❌ ❌ 官方  前往
-Surge for iOS 🟢 ❌ ❌ ❌ ✅ ❌ 商店  前往
-V2rayN  🟢 ✅ ✅ ❌ ❌ ❌ 官方  前往
-Shadowrocket  🟢 ❌ ❌ ❌ ✅ ❌ 商店  前往
-https://github.com/clashbk/clash
-https://www.ermao.net/
-https://www.ermao.net/blog/freeappleid/
-2026最新免费美区Apple ID共享账号 | Shadowrocket/小火箭下载 | iOS美区账号每日更新
-适用场景与受众人群分析
-基于长期的测试评估，免费共享Apple ID提供了便捷的临时跨区体验，但也伴随着稳定性的牺牲：
-适用人群：仅需单次或偶尔下载境外特有应用（如 Shadowrocket、Clash Mi、TikTok、ChatGPT、Potatso Lite），不打算在 App 内进行购汇或长期订阅的用户。通过共享账号，可实现“即下即走”的零成本需求。
-https://www.423down.com/12155.html
-不适宜人群：重度依赖海外 iOS 软件生态、需要频繁更新已下载的 App，或有应用内购买（In-App Purchase）需求的使用者。客观结论上，由于共享账号随时面临风控封堵，我们更建议此类受众直接注册属于自己的专属外区 Apple ID，以获取数据隔离的安全保障与应用的长久使用权。
-
-场景一：绝大多数用户（90%的情况） → 首选 V2rayN (Windows) / v2rayNG (Android)
-理由：协议支持最全、节点兼容性最好、自带测速和订阅更新、操作简单。对于外贸多节点切换、快速测速选优的需求非常友好。
-无需考虑Clash，因为V2rayN的“智能分流+自定义路由”已满足99%的分流需求。
-场景二：特殊需求 → 选 Clash 衍生版（如Clash Verge Rev, CMFA）
-条件：你已有大量、复杂的Clash配置文件（比如自写了几百行规则，设置了多个代理组做不同策略），迁移到V2rayN格式成本太高。
-注意：务必选择 带Meta内核 的版本（如Clash Verge Rev、CMFA），这样才能支持VLESS等新协议。
-场景三：已经不推荐的情况 → 原版 Clash for Windows
-完全不要选。你资料中的链接 Clash.for.Windows.Setup.latest.exe 是一个过时的、不再维护的版本。用它你会遇到新节点无法连接的问题。
-外贸 / 跨境场景选型建议
-1. 选 V2rayN 7.19.4 的情况（推荐）
-用新机场 / 新节点（VLESS、Reality、Hysteria2 等）
-外贸高频切换节点、需要快速测速 / 自动更新
-长期稳定使用、看重安全更新与兼容性
-多设备 / 多平台统一配置（V2rayN 跨 Win/macOS/Linux）
-科学 出国 Windows V2rayN 外贸 跨境 7.19.4
-https://www.down66.com/v2n
-https://github.com/2dust/v2rayN/releases
-https://github.com/2dust/v2rayN/releases/download/7.21.1/v2rayN-windows-64.zip
-https://gh-proxy.com/github.com/2dust/v2rayN/releases/download/7.21.1/v2rayN-windows-64.zip
-
-Android
-https://github.com/2dust/v2rayNg
-https://github.com/2dust/v2rayNG/releases/download/2.1.5/v2rayNG_2.1.5_universal.apk
-https://gh-proxy.com/github.com/2dust/v2rayNG/releases/download/2.1.5/v2rayNG_2.1.5_universal.apk
-
-Iphone/mac-shadowrocket
-https://apps.apple.com/hk/app/shadowrocket/id932747118
-https://github.com/2dust/v2rayN/releases
-https://gh-proxy.com/github.com/2dust/v2rayN/releases/download/7.21.1/v2rayN-macos-64.dmg
-
-2. 选 Clash for Windows 的情况（仅特殊）
-已有大量 Clash 规则 / 配置，不想迁移
-仅用旧协议（Shadowsocks、VMess），无新节点需求
-短期过渡，后续计划换 V2rayN 或 Clash Verge Rev
-核心功能对比
-1. 协议支持（外贸 / 跨境关键）
-Clash for Windows
-支持：Shadowsocks、VMess、Trojan、Snell、Socks5、HTTP (S)Clash for Windows
-不支持：VLESS、Reality、Hysteria2 等新协议
-问题：新机场 / 新节点常不兼容，易连不上
-V2rayN 7.19.4
-全兼容：VMess、VLESS、Trojan、Shadowsocks、Hysteria2、Tuic、Socks5 等
-优势：适配绝大多数现代机场配置，新协议 / 新节点兼容性极强
-2. 规则与分流（外贸多场景必备）
-Clash for Windows
-规则系统成熟：域名 / IP / 进程 / GeoIP 分流、代理组（负载均衡 / 自动 fallback）Clash for Windows
-适合：复杂规则、精细化分流
-局限：规则文件格式与 V2Ray 不互通，迁移麻烦
-V2rayN 7.19.4
-模式：全局 / PAC / 智能分流、自定义路由、TUN 模式
-优势：一键导入订阅、自动更新节点、延迟 / 速度测试
-适合：外贸高频切换节点、快速测速选优
-
-目前主流Clash for Windows 客户端
-https://dl.ppbox.xyz/ssr/Clash.for.Windows.Setup.latest.exe
-
-Android 科学 出国 机票 白猫CMFA v2.11.24
-https://www.down66.com/clashmeta
-https://github.com/MetaCubeX/ClashMetaForAndroid/releases
-https://gh-proxy.com/github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v2.11.27/cmfa-2.11.27-meta-universal-release.apk
-
-https://github.com/MetaCubeX/ClashX.Meta
-
-
-《中华人民共和国计算机信息网络国际联网管理暂行规定》中规定：
-“计算机信息网络直接进行国际联网，必须使用邮电部国家公用电信网提供的国际出入口信道。任何单位和个人不得自行建立或者使用其他信道进行国际联网。”
-如违反上述规定，公安机关会责令停止联网，给予警告，可以并处15000元以下的罚款；有违法所得的，没收违法所得。
-免责声明
-根据《中华人民共和国电信条例》和《中国人民共和国刑法》等相关法律规定，未取得《增值电信业务经营许可证》的情况下，提供代理服务，属于非法行为！此工具本身无任何代理节点服务，仅供个人学习或学术研究，严禁涉嫌违反法律规定的非法用途，否则责任应由软件开发者和违规使用者承担，本站特此说明！
-===================
-
-
-一、Chrome通用必备（所有人必装）
-1. uBlock Origin（广告拦截 + 隐私保护）
-功能：拦截网页广告、弹窗、恶意脚本，比 AdBlock 更轻量、无隐私追踪
-地址：https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm
-优势：开源免费、占用内存低、支持自定义规则
-2. OneTab（标签页管理）
-功能：一键合并所有标签页为列表，释放内存，避免标签页爆炸
-地址：https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall
-优势：免费、无广告、支持导出 / 恢复标签页
-3. 沉浸式翻译（网页翻译）
-功能：双语对照翻译，支持 PDF、视频字幕，适配 99% 网站
-地址：https://chrome.google.com/webstore/detail/immersive-translate/bpoadfkcbjbfhfodiogcnhhhpibjhbnh
-优势：翻译质量高、无广告、支持多翻译源
-4. Bitwarden（密码管理）
-功能：跨设备存储密码、自动填充、生成强密码，免费版足够日常
-地址：https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb
-优势：开源、安全、无订阅陷阱
-二、效率办公（打工人 / 学生党）
-1. Tampermonkey（油猴脚本）
-功能：安装用户脚本，实现网页增强（去广告、自动签到、视频倍速等）
-地址：https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo
-优势：脚本生态丰富、免费、支持自定义
-2. Infinity 新标签页（Pro）
-功能：自定义新标签页，添加常用网站、壁纸、待办，多端同步
-地址：https://chrome.google.com/webstore/detail/infinity-new-tab-pro/nnnkddnnlpamobajfibdffclclhbfnjc
-优势：颜值高、功能全、无广告
-3. Notion Web Clipper（网页剪藏）
-功能：一键保存网页内容到 Notion，支持格式化、去广告
-地址：https://chrome.google.com/webstore/detail/notion-web-clipper/knheggckgoiihginacbkhaalnibhilkk
-优势：同步快、适配 Notion 所有功能
-4. GlobalSpeed（视频倍速）
-功能：所有网页视频（B 站、YouTube、网课）自定义倍速（0.25–16x）
-地址：https://chrome.google.com/webstore/detail/globalspeed-video-speed-c/fpdnjdlbdmifoocedhkighhlbcidfill
-优势：免费、无广告、支持快捷键
-三、开发调试（前端 / 技术人员）
-1. React Developer Tools（React 调试）
-功能：调试 React 组件，查看 props/state、性能分析
-地址：https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
-优势：官方出品、免费、适配 React 18+
-2. Vue.js devtools（Vue 调试）
-功能：Vue 组件调试、状态追踪、性能监控
-地址：https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd
-优势：官方维护、支持 Vue 2/3
-3. Lighthouse（性能审计）
-https://www.423down.com/9379.html
-功能：Google 官方工具，检测网页性能、SEO、可访问性
-地址：https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk
-优势：权威、免费、生成可执行优化报告
-4. Wappalyzer（技术栈识别）
-功能：一键识别网站技术栈（框架、CMS、服务器、数据库）
-地址：https://chrome.google.com/webstore/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg
-优势：免费、数据全、适合技术调研
-5. CSS Peeper（样式查看）
-功能：无需开发者工具，一键查看网页颜色、字体、尺寸
-地址：https://chrome.google.com/webstore/detail/css-peeper/mbnbehikldjhnfehhnaidhjhoofhcehp
-优势：轻量、直观、适合设计还原
-四、隐私安全（保护个人数据）
-1. Privacy Badger（反追踪）
-功能：自动阻止第三方追踪器，保护浏览隐私
-地址：https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp
-优势：EFF 出品、开源、免费
-2. DuckDuckGo Privacy Essentials
-功能：隐私搜索 + 广告拦截 + 追踪防护，一站式隐私保护
-地址：https://chrome.google.com/webstore/detail/duckduckgo-privacy-essent/bkdgflcldnnnapblkhphbgpggdiikppg
-优势：界面简洁、功能全面
-五、内容增强（阅读 / 视频 / 知识）
-1. Dark Reader（夜间模式）
-功能：全局网页暗黑模式，护眼、减少蓝光
-地址：https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh
-优势：免费、无广告、支持自定义亮度 / 对比度
-2. GoFullPage（长截图）
-功能：一键截取完整网页长图，支持标注、导出
-地址：https://chrome.google.com/webstore/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl
-优势：免费版够用、操作简单
-3. 豆包（AI 助手）
-功能：网页翻译、文章总结、问答、生词本，字节官方出品
-地址：https://chrome.google.com/webstore/detail/doubao-ai-assistant/ojllmjkmjkepdijhoojdojkdfohbdgmm
-优势：免费、无广告、适配中文场景
-安装与使用提示
-官方商店：https://chrome.google.com/webstore（需科学上网）
-国内备用：https://chrome.zzzmh.cn（无需科学上网，下载 crx 手动安装）
-安装后：在 Chrome 右上角「拼图图标」管理插件，按需启用 / 禁用
-原则：插件越少越好，只装常用的，避免占用内存
 
 
 # [2026-05-14] Microsoft .NET Runtime(.NET8.0) v8.0.26
@@ -1944,60 +1999,3 @@ https://www.423down.com/13996.html
 https://github.com/Genymobile/scrcpy
 使用图形化的 Scrcpy 显示和控制您的 Android 设备，由 Electron 驱动
 https://github.com/Mu-L/escrcpy
-
-
-CareUEyes Pro v2.5.1.0 高级便携版 屏幕亮度对比度调节+番茄钟倒计时 5MB
-CareUEyes Pro是一款非常好用的专业电脑护眼工具，软件小巧，界面简单，它可以自动过滤电脑屏幕的蓝光，让屏幕显示更加的不伤眼，更加舒适，有效保护你的眼睛，可以自定义调节屏幕的色调，从温暖到不太温暖，可以自由调节，还可以调节屏幕的亮度，调整亮度适合你的眼睛，观看屏幕更加舒适，支持多种使用场景的选择。包括办公、智能、游戏、电影、夜晚、阅读和编辑等多种应用场景类型，根据你的使用场景选择合适的色温，对眼睛更加友好，对于长期办公的朋友可以选择办公模式进行使用，支持定时器，可以自动提醒用户休息，每隔一段时间提醒你休息，可以设置休息的时间，间隔时间，还可以设置随机的锁屏壁纸，支持热键操作，快捷键操作更加方便。
-CareUEyes是一款非常有用的眼部护理软件，它可以帮助您减轻眼睛疲劳并让您的眼睛休息。PC屏幕亮度设置不当是造成眼睛疲劳的主要原因之一，因为它包含蓝光。但是，使用此软件，您现在可以通过在屏幕上应用蓝光滤镜来摆脱那些蓝光。
-https://care-eyes.com/
-CareUEyes_Pro.zip 
-https://www.hybase.com/pc/windows/468.html
-https://pan.baidu.com/s/1cjM01BMDNxoI-u801enSyg?pwd=HyHy
-购买渠道    授权类型    价格  备注
-数码荔枝    终身授权    98 元    中国特惠价，原价 254 元，一次购买终身使用
-Steam 平台    终身授权    90 元    中文界面，自动更新，支持家庭共享
-第三方优惠   终身授权    88 元    部分合作渠道提供的额外优惠价
-功能介绍：
-1，预防眼睛拉伤
-监视器一直发出蓝光，但蓝光是一种波长短、能量高、易于闪烁的光，容易引起眼睛疲劳。CareUEyes 是 PC 的蓝光滤镜，它通过调整色温来过滤蓝光，颜色温度越低，屏幕发出的蓝光就越少。
-2，减少眼痛
-太亮或太黑的屏幕亮度会导致眼睛刺激。CareUEyes 自动调整屏幕亮度，与您所环绕的亮度大致相同。CareUEyes 在没有 PWM 的情况下调整亮度，避免引起闪烁问题。
-3，减少视力问题
-实验室研究表明，过多接触蓝光会损害视网膜细胞。这可能导致视力问题，如与年龄相关的黄斑变性。使用 CareUEyes 来减少蓝光可以减少视力问题。
-4，改善睡眠
-夜间的蓝光可以抑制褪黑激素的产生，并导致睡眠问题。如果你有睡眠问题的历史，你可以使用CareUEyes来尽量减少夜间的蓝光。
-5，用于 PC 的蓝光过滤器
-8 种眼睛保护模式预设，用于 Windows 自动过滤蓝光并控制亮度。您还可以手动设置屏幕的颜色温度和亮度，以减少眼睛疲劳。
-6，日出/日落模式
-您可以在选项中启用日出/日落功能，为白天和黑夜设置不同的颜色温度和屏幕亮度。CareUEyes 会根据日出和日落时间自动切换设置。
-7，定时器
-使用 20-20-20 规则预防眼睛疲劳：每 20 分钟，查看 20 英尺外的东西 20 秒，CareUEyes 计时器会智能地提醒您休息一下。
-这个软件有一个缺点，不管是什么截图软件，截图的时候都是护眼的颜色，我添加了规则也不顶用，只要失去焦点就不行，解决方案如下：
-选项->显示
-启动高级颜色API（关闭）：
-涉及专业知识，软件默认是低级颜色 API。这里应用官方解读原话：高级颜色 API 主要是为了解决某些用户没有安装显卡驱动或者显卡驱动太旧导致色温调节无效的问题，高级颜色 API 的唯一缺点是会引起截图变黄，但是它能解决游戏全屏色温调节无效的问题（在普通模式下游戏会覆盖 CareUEyes 的颜色设置）。启用高级颜色 API 后 word 上边编辑选项选择时会出现闪烁情况，故，无特殊原因还是建议不勾选。
-启动软件鼠标光标：
-此处是设置鼠标光标是否开启护眼效果，觉得鼠标光标没有随屏幕调节亮度而启用此选项，但是启用此选项可能会造成在某些全屏软件例如游戏中无法看到鼠标光标的问题，故建议按照默认不勾选即可。
-使用更宽的色温范围：
-显示中冷色和暖色的色温更广，个人觉得没有必要，推荐不勾选。
-保持窗口背景色为绿色：
-一般是使编辑器的编辑窗口背景色变为绿色，对减缓眼部疲劳有一定的效果，可按个人需要进行设置。
-
-其他开源 比较大45M,功能实际体验测试过一般
-LightBulb是一款能够帮助缓解因长时间盯着电脑屏幕而产生的眼睛疲劳的应用程序。它会随着一天的时间变化自动调整显示颜色的色调：在下午时让屏幕呈现冷蓝色，而在夜晚则转为暖黄色。其目的就是让屏幕的颜色与周围环境的照明条件相匹配——白天适应阳光光线，夜晚则适应人造光源。LightBulb对系统性能的影响极小，同时还提供了多种自定义设置选项。
-https://gh-proxy.com/github.com/Tyrrrz/LightBulb/releases/download/2.7.1/LightBulb.win-x64.zip
-广泛的自定义选项：LightBulb 提供了丰富的自定义选项，允许用户根据个人喜好和需要调整屏幕亮度和色温，提供了灵活性和个性化的体验。
-基于位置的日出和日落时间：LightBulb 可以根据用户所在位置自动计算日出和日落时间，并相应地调整屏幕亮度和色温，使屏幕适应室内外环境的变化，帮助减少眼睛疲劳。
-手动设置日出和日落时间：除了自动计算，LightBulb 还提供了手动设置日出和日落时间的选项，用户可以根据自己的需要进行精确的调整。
-针对色敏应用程序的白名单：LightBulb 允许用户创建白名单，将某些特定的色敏应用程序排除在亮度和色温调整的范围之外，确保这些应用程序在使用时保持原始的颜色设置。
-全局热键实时调整：LightBulb 提供了全局热键，使用户能够在使用过程中快速、方便地调整屏幕亮度和色温，无需离开正在进行的任务。
-平滑的伽马过渡：LightBulb 实现了平滑的伽马过渡，避免了屏幕亮度和色温的突然变化，提供更加舒适和自然的视觉体验。
-最小化的性能影响：LightBulb 的设计注重性能优化，以确保在运行时对计算机资源的消耗最小化，不会显著影响其他任务的运行。
-
-PasteEx.v1.1.9.1.zip
-Paste As File 把剪贴板的内容直接粘贴为文件
-用 PasteEx（一键搞定）下载 PasteEx（免费、绿色）
-https://github.com/huiyadanli/PasteEx
-安装 / 解压后运行一次，它会自动加到右键菜单。
-先复制一大段文字（Ctrl+C）
-在文件夹空白处 → 右键 → Paste As File

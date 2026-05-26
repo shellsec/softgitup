@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-24T17:40:46.376211",
+  "generated_at": "2026-05-26T17:40:10.512165",
   "total_software": 21,
-  "total_files": 4576,
-  "total_size": 1515902114,
+  "total_files": 3997,
+  "total_size": 1499905785,
   "software": {
     "WinMemoryCleaner": {
       "version": "20260515_144655",
@@ -45,13 +45,13 @@
       "last_updated": "2026-03-10T11:47:39.636681"
     },
     "everything": {
-      "version": "20260516_193112",
+      "version": "20260526_174008",
       "files": [
         {
           "path": "Everything.exe",
-          "size": 5081256,
-          "hash": "bf41bb0e2c542712f7876b44e904f302",
-          "modified": "2026-05-15T02:41:46.279804"
+          "size": 5086376,
+          "hash": "1f224c88dbce7019b2b7415238db11e9",
+          "modified": "2026-05-19T02:15:02.973683"
         },
         {
           "path": "Everything.ini",
@@ -67,8 +67,8 @@
         }
       ],
       "total_files": 3,
-      "total_size": 6300239,
-      "last_updated": "2026-05-16T19:31:12.887633"
+      "total_size": 6305359,
+      "last_updated": "2026-05-26T17:40:08.661882"
     },
     "Chrome": {
       "version": "20260310_114739",
@@ -85,7 +85,7 @@
       "last_updated": "2026-03-10T11:47:39.734766"
     },
     "system_good": {
-      "version": "20260524_174045",
+      "version": "20260526_174008",
       "files": [
         {
           "path": "AutoHotkey.exe",
@@ -179,9 +179,9 @@
         },
         {
           "path": "Lastb_soft_version.txt",
-          "size": 120128,
-          "hash": "cbd824e0a2d56415e8b226172f99acb9",
-          "modified": "2026-05-24T17:40:20.226580"
+          "size": 120159,
+          "hash": "7bf4e739a3f098b18be19247f4e3981b",
+          "modified": "2026-05-26T12:24:48.888372"
         },
         {
           "path": "lx-music-desktop.7z",
@@ -371,11 +371,11 @@
         }
       ],
       "total_files": 47,
-      "total_size": 567589204,
-      "last_updated": "2026-05-24T17:40:45.020051"
+      "total_size": 567589235,
+      "last_updated": "2026-05-26T17:40:08.676980"
     },
     "notepad++": {
-      "version": "20260520_213814",
+      "version": "20260526_174009",
       "files": [
         {
           "path": "config.xml",
@@ -409,9 +409,9 @@
         },
         {
           "path": "langs.xml",
-          "size": 533781,
-          "hash": "2ec2baddfbdfcde14f75c06b9f798771",
-          "modified": "2026-01-27T10:51:56.188251"
+          "size": 533698,
+          "hash": "4abfacd49d1a9dfa79f201ed492f1ac1",
+          "modified": "2026-05-13T17:30:40.775328"
         },
         {
           "path": "license.txt",
@@ -427,9 +427,9 @@
         },
         {
           "path": "notepad++.exe",
-          "size": 8434688,
-          "hash": "4f85cad2c29106a3fc96337479b6fb05",
-          "modified": "2026-05-11T04:44:01.911830"
+          "size": 8434672,
+          "hash": "acbbd09e03b81c46e23a3e86aa1922f7",
+          "modified": "2026-05-20T01:15:23.457751"
         },
         {
           "path": "nppLogNulContentCorruptionIssue.xml",
@@ -439,15 +439,27 @@
         },
         {
           "path": "npp_script_references.html",
-          "size": 1941,
-          "hash": "ab87429b4346198abbc7ac2886b4c406",
-          "modified": "2025-07-11T11:21:41.233421"
+          "size": 1948,
+          "hash": "dbb13c3a7729715278fe4c2a4e8e306e",
+          "modified": "2026-03-26T11:00:20.275917"
         },
         {
           "path": "readme.txt",
           "size": 1526,
           "hash": "11b0a85dcd7045352f71e46d83de6d7e",
           "modified": "2026-01-30T01:34:23.921981"
+        },
+        {
+          "path": "session.xml",
+          "size": 50030,
+          "hash": "fcf253ad01103926cbae6269455ad503",
+          "modified": "2026-05-26T10:46:41.386608"
+        },
+        {
+          "path": "session.xml.inCaseOfCorruption.bak",
+          "size": 50030,
+          "hash": "753fb10e2509c8d2dcbecf3a1d63136e",
+          "modified": "2026-05-26T10:37:12.110128"
         },
         {
           "path": "shortcuts.xml",
@@ -464,14 +476,14 @@
         {
           "path": "stylers.model.xml",
           "size": 231804,
-          "hash": "48b50e1cfaac784909d7132f4f21a1d5",
-          "modified": "2026-05-08T03:47:49.023223"
+          "hash": "cb8a73943b9f2266173d45901e698a3b",
+          "modified": "2026-05-17T22:37:30.075504"
         },
         {
           "path": "stylers.xml",
-          "size": 232245,
-          "hash": "98a24dbb20ef24f720b3076d06d5764a",
-          "modified": "2026-01-27T10:51:56.254365"
+          "size": 232236,
+          "hash": "f6f5a116a8fe8eeb999b1bc3a28036c6",
+          "modified": "2026-05-13T17:30:40.783105"
         },
         {
           "path": "tabContextMenu_example.xml",
@@ -1051,9 +1063,9 @@
         },
         {
           "path": "localization\\brazilian_portuguese.xml",
-          "size": 113931,
-          "hash": "157e5ca6b83cff9cf8d63974ffaff841",
-          "modified": "2026-05-07T07:49:36.234432"
+          "size": 114267,
+          "hash": "fbc9c497aa615872982798b3da9fdf8e",
+          "modified": "2026-05-19T05:00:37.004858"
         },
         {
           "path": "localization\\breton.xml",
@@ -1063,9 +1075,9 @@
         },
         {
           "path": "localization\\bulgarian.xml",
-          "size": 157227,
-          "hash": "0c5f73252c562bf6d139854c2978392a",
-          "modified": "2026-05-07T07:49:36.237315"
+          "size": 157718,
+          "hash": "e9bdc8dde9a28d01019355c4ea7dc954",
+          "modified": "2026-05-19T05:00:37.006867"
         },
         {
           "path": "localization\\catalan.xml",
@@ -1081,21 +1093,21 @@
         },
         {
           "path": "localization\\corsican.xml",
-          "size": 124764,
-          "hash": "6be90f92335f1533f0957b90620f6c6e",
-          "modified": "2026-03-14T00:25:48.864686"
+          "size": 125504,
+          "hash": "c1e684608080476f90cfc6056455f23f",
+          "modified": "2026-05-19T05:00:37.010885"
         },
         {
           "path": "localization\\croatian.xml",
-          "size": 116403,
-          "hash": "ad69088112a50de333157db5df63a6d6",
-          "modified": "2026-05-07T07:49:36.238829"
+          "size": 116727,
+          "hash": "fe313c893a641d91411deea4bf65f295",
+          "modified": "2026-05-19T21:52:18.642282"
         },
         {
           "path": "localization\\czech.xml",
-          "size": 118198,
-          "hash": "04b4bec2818f109cddc66215a83a5838",
-          "modified": "2026-05-07T07:49:36.240845"
+          "size": 118539,
+          "hash": "0563409062cc39d40c6ba4fa69601e44",
+          "modified": "2026-05-19T05:20:09.858608"
         },
         {
           "path": "localization\\danish.xml",
@@ -1111,15 +1123,15 @@
         },
         {
           "path": "localization\\english.xml",
-          "size": 105997,
-          "hash": "6f45c5e4d0ee96c0095241eb5feabb49",
-          "modified": "2026-04-29T23:42:14.765190"
+          "size": 106275,
+          "hash": "2d9e3f83ef7052c935464756d4806855",
+          "modified": "2026-05-17T22:37:30.072981"
         },
         {
           "path": "localization\\english_customizable.xml",
-          "size": 106011,
-          "hash": "421312f61bc1c592236c577b83377859",
-          "modified": "2026-04-29T23:42:14.769431"
+          "size": 106289,
+          "hash": "ce92d4791133251b4d068ece6ee0d008",
+          "modified": "2026-05-17T22:37:30.072981"
         },
         {
           "path": "localization\\esperanto.xml",
@@ -1153,9 +1165,9 @@
         },
         {
           "path": "localization\\french.xml",
-          "size": 118693,
-          "hash": "42039630db11b72ed96feb4cc1027b89",
-          "modified": "2026-05-07T07:49:36.242860"
+          "size": 119059,
+          "hash": "ae65bade5384d0cae1b67e341b584537",
+          "modified": "2026-05-17T22:37:30.072981"
         },
         {
           "path": "localization\\friulian.xml",
@@ -1177,9 +1189,9 @@
         },
         {
           "path": "localization\\german.xml",
-          "size": 115332,
-          "hash": "1f11d0c2080f3b8befe2afa64f2672ee",
-          "modified": "2026-05-07T07:49:36.246888"
+          "size": 115651,
+          "hash": "ff7d5e3278ea95d7048cf531282dde93",
+          "modified": "2026-05-19T21:52:18.644485"
         },
         {
           "path": "localization\\greek.xml",
@@ -1237,9 +1249,9 @@
         },
         {
           "path": "localization\\japanese.xml",
-          "size": 120738,
-          "hash": "cc2f9c19723eb8307862ed4ea9026c43",
-          "modified": "2026-05-07T07:49:36.250912"
+          "size": 121110,
+          "hash": "56608944c7598cb99b6a968f591cf032",
+          "modified": "2026-05-19T05:00:37.012895"
         },
         {
           "path": "localization\\kabyle.xml",
@@ -1381,9 +1393,9 @@
         },
         {
           "path": "localization\\russian.xml",
-          "size": 142740,
-          "hash": "091caf2cf693d8d1cebd3d100a3006d4",
-          "modified": "2026-05-07T07:49:36.253428"
+          "size": 143245,
+          "hash": "e33b80d4589008ee08683c0af260920c",
+          "modified": "2026-05-19T05:00:37.014180"
         },
         {
           "path": "localization\\samogitian.xml",
@@ -1417,9 +1429,9 @@
         },
         {
           "path": "localization\\slovak.xml",
-          "size": 116371,
-          "hash": "7e3e931150ef1d9e18be9ad1068b2ef7",
-          "modified": "2026-05-07T07:49:36.254945"
+          "size": 116673,
+          "hash": "7eb4768ef2ce9de69b12b94148ea2f82",
+          "modified": "2026-05-19T05:00:37.017586"
         },
         {
           "path": "localization\\slovenian.xml",
@@ -1453,9 +1465,9 @@
         },
         {
           "path": "localization\\taiwaneseMandarin.xml",
-          "size": 91781,
-          "hash": "9556485054db82a6f949461509b4beba",
-          "modified": "2026-04-29T23:42:14.777612"
+          "size": 92062,
+          "hash": "8e0911f93580babd2cdf8ae6bbb6a31d",
+          "modified": "2026-05-17T22:37:30.075504"
         },
         {
           "path": "localization\\tajikCyrillic.xml",
@@ -1555,9 +1567,9 @@
         },
         {
           "path": "plugins\\Config\\nppPluginList.dll",
-          "size": 227840,
-          "hash": "8764edec26718818cf894bc0f07cf7b3",
-          "modified": "2026-05-11T04:44:05.340359"
+          "size": 227824,
+          "hash": "d1c3605799e94a6163ac65fcd670b0a5",
+          "modified": "2026-05-20T01:15:26.738094"
         },
         {
           "path": "plugins\\Config\\PythonScriptStartup.cnf",
@@ -2443,21 +2455,21 @@
         },
         {
           "path": "plugins\\mimeTools\\mimeTools.dll",
-          "size": 150016,
-          "hash": "440c7880a68fc44c50b83df4be340a54",
-          "modified": "2026-05-11T04:44:15.587264"
+          "size": 150000,
+          "hash": "11e8bd4f7a4b4ffeb0174a6890f75015",
+          "modified": "2026-05-20T01:15:37.380605"
         },
         {
           "path": "plugins\\NppConverter\\NppConverter.dll",
-          "size": 208384,
-          "hash": "9aaec87eaa543846a9860fc5811dbf18",
-          "modified": "2026-05-11T04:44:19.042577"
+          "size": 208368,
+          "hash": "81a5dd93a24a47c786bb6c3a9c1c2857",
+          "modified": "2026-05-20T01:15:40.986415"
         },
         {
           "path": "plugins\\NppExport\\NppExport.dll",
-          "size": 159232,
-          "hash": "82f3be22f3e8831c98c43291edf35c59",
-          "modified": "2026-05-11T04:44:12.196505"
+          "size": 159216,
+          "hash": "bb551b2843d7c59914cfa7892bd44efd",
+          "modified": "2026-05-20T01:15:33.655762"
         },
         {
           "path": "plugins\\PythonScript\\python312.dll",
@@ -8329,9 +8341,9 @@
         },
         {
           "path": "updater\\GUP.exe",
-          "size": 1368576,
-          "hash": "818d1bf1d98f3eeba261980bef114836",
-          "modified": "2026-05-11T04:44:08.791797"
+          "size": 1368560,
+          "hash": "bcd738fbf56fe33e617821589c7dc6e6",
+          "modified": "2026-05-20T01:15:30.058090"
         },
         {
           "path": "updater\\gup.xml",
@@ -8365,20 +8377,20 @@
         },
         {
           "path": "userDefineLangs\\markdown._preinstalled.udl.xml",
-          "size": 6406,
-          "hash": "672e6d5f89887666ec94711e442644e0",
-          "modified": "2026-01-30T01:34:23.921981"
+          "size": 6456,
+          "hash": "b425e9323bcb0be39e182ff9fe881bff",
+          "modified": "2026-05-16T09:37:18.743879"
         },
         {
           "path": "userDefineLangs\\markdown._preinstalled_DM.udl.xml",
-          "size": 6439,
-          "hash": "3690cef1865e32fe6be1b2ec7656539a",
-          "modified": "2026-01-30T01:34:23.921981"
+          "size": 6486,
+          "hash": "0e6a6b54ccb2032d94bfc8389e81e0fe",
+          "modified": "2026-05-16T09:37:18.743879"
         }
       ],
-      "total_files": 1333,
-      "total_size": 76373926,
-      "last_updated": "2026-05-20T21:38:14.230170"
+      "total_files": 1335,
+      "total_size": 76478835,
+      "last_updated": "2026-05-26T17:40:09.198199"
     },
     "notepad--": {
       "version": "20260519_121149",
@@ -21367,3504 +21379,18 @@
       "last_updated": "2026-03-10T11:47:45.797012"
     },
     "CrystalDiskInfo": {
-      "version": "20260310_114746",
+      "version": "20260526_174009",
       "files": [
         {
-          "path": "DiskInfo.ini",
-          "size": 523,
-          "hash": "09c92f2ee0d726899e2ba47304af4eb4",
-          "modified": "2026-02-15T18:37:05.379016"
-        },
-        {
-          "path": "DiskInfo32.exe",
-          "size": 2665392,
-          "hash": "da538dd1d09304302282946449ff1ea1",
-          "modified": "2026-02-15T16:26:00"
-        },
-        {
-          "path": "DiskInfo64.exe",
-          "size": 2872752,
-          "hash": "bdc8f939db22888e336eaea00b3e161f",
-          "modified": "2026-02-15T16:26:02"
-        },
-        {
-          "path": "CdiResource\\AlertMail.exe",
-          "size": 83208,
-          "hash": "b8369f93200cddfd93e46437a1b099e3",
-          "modified": "2022-03-26T18:55:22"
-        },
-        {
-          "path": "CdiResource\\AlertMail4.exe",
-          "size": 83208,
-          "hash": "4ca37bcaa4e6d83e7d25be1dae022f41",
-          "modified": "2022-03-26T18:55:24"
-        },
-        {
-          "path": "CdiResource\\AlertMail48.exe",
-          "size": 77848,
-          "hash": "dd8ff21bfa0454fc8a0eae1567ffff5c",
-          "modified": "2023-05-20T10:00:56"
-        },
-        {
-          "path": "CdiResource\\MailKit.dll",
-          "size": 857600,
-          "hash": "c5cd71489d9c78d85d89a895bf463cc4",
-          "modified": "2022-01-31T01:21:04"
-        },
-        {
-          "path": "CdiResource\\MimeKit.dll",
-          "size": 1155584,
-          "hash": "007c665a952587526f08fab9c84b0973",
-          "modified": "2022-01-31T00:46:50"
-        },
-        {
-          "path": "CdiResource\\System.Buffers.dll",
-          "size": 20856,
-          "hash": "ecdfe8ede869d2ccc6bf99981ea96400",
-          "modified": "2020-02-19T19:05:18"
-        },
-        {
-          "path": "CdiResource\\dialog\\Graph.css",
-          "size": 2469,
-          "hash": "92d30e5381370231c4888b57d29d27c6",
-          "modified": "2012-10-07T14:35:56"
-        },
-        {
-          "path": "CdiResource\\dialog\\Graph.html",
-          "size": 8946,
-          "hash": "8f1697ee6ec9064c8f34e987e1492b23",
-          "modified": "2022-02-06T08:39:56"
-        },
-        {
-          "path": "CdiResource\\dialog\\Graph8.html",
-          "size": 8943,
-          "hash": "107a3c70789a69471e35c53f609ae24e",
-          "modified": "2022-02-06T08:40:04"
-        },
-        {
-          "path": "CdiResource\\dialog\\Option.html",
-          "size": 18178,
-          "hash": "e4f31017bb12bbf3f2e3b5a95ec03345",
-          "modified": "2022-02-06T08:59:28"
-        },
-        {
-          "path": "CdiResource\\dialog\\flot\\excanvas.min.js",
-          "size": 10901,
-          "hash": "08182065d2093c978a9bfa16b0829173",
-          "modified": "2009-02-28T10:56:42"
-        },
-        {
-          "path": "CdiResource\\dialog\\flot\\jquery.flot.min.js",
-          "size": 44310,
-          "hash": "f1843acdb53f2c88903f89e4e175cd32",
-          "modified": "2010-09-17T19:02:18"
-        },
-        {
-          "path": "CdiResource\\dialog\\flot\\jquery.min.js",
-          "size": 55774,
-          "hash": "a9331828c517ac5d97f93b3cfdbcc9bc",
-          "modified": "2009-04-13T08:31:30"
-        },
-        {
-          "path": "CdiResource\\dialog\\image\\background.png",
-          "size": 119,
-          "hash": "1cfda5ca069d29fef4ee61f8a119249a",
-          "modified": "2009-11-14T16:28:42"
-        },
-        {
-          "path": "CdiResource\\dialog\\image\\blank.png",
-          "size": 1057,
-          "hash": "0ce7026fc86a80dcbbaaf22382b66d91",
-          "modified": "2008-05-03T15:23:08"
-        },
-        {
-          "path": "CdiResource\\dialog\\image\\buttonDisable.png",
-          "size": 550,
-          "hash": "8ce9f3a5880f1c753f75e814a77eed91",
-          "modified": "2008-10-19T08:11:36"
-        },
-        {
-          "path": "CdiResource\\dialog\\image\\buttonEnable.png",
-          "size": 571,
-          "hash": "fb6bd83144c157f965b020763481b2c0",
-          "modified": "2008-10-18T20:13:26"
-        },
-        {
-          "path": "CdiResource\\dialog\\image\\buttonHover.png",
-          "size": 583,
-          "hash": "05cbbda99d889fb8a6c6595f8b954fc2",
-          "modified": "2008-10-18T20:13:06"
-        },
-        {
-          "path": "CdiResource\\dialog\\image\\file.png",
-          "size": 479,
-          "hash": "4d329376128328c069c43d21aef2c792",
-          "modified": "2008-05-04T10:35:28"
-        },
-        {
-          "path": "CdiResource\\dialog\\image\\GraphAllOff.png",
-          "size": 254,
-          "hash": "2861e08530ac1a86bd1cea0e00ba4934",
-          "modified": "2008-05-06T15:26:08"
-        },
-        {
-          "path": "CdiResource\\dialog\\image\\GraphAllOn.png",
-          "size": 306,
-          "hash": "ad5566b216d5ba4997966a9964d1c64b",
-          "modified": "2008-05-11T21:27:16"
-        },
-        {
-          "path": "CdiResource\\dialog\\image\\graphMenuBar.png",
-          "size": 147,
-          "hash": "102c544b1b790c9786faeae74207bff3",
-          "modified": "2008-05-04T11:11:16"
-        },
-        {
-          "path": "CdiResource\\dialog\\image\\GraphReset.png",
-          "size": 314,
-          "hash": "6a14df27ba1cce174d896b3f0196c653",
-          "modified": "2008-05-13T20:03:54"
-        },
-        {
-          "path": "CdiResource\\dialog\\image\\labelDisable.png",
-          "size": 451,
-          "hash": "142d80b0425a1ced30898dcd4c376645",
-          "modified": "2009-01-19T10:02:52"
-        },
-        {
-          "path": "CdiResource\\dialog\\image\\labelEnable.png",
-          "size": 492,
-          "hash": "5bf6dfa9a281a52b31ce5190b3ce1d9c",
-          "modified": "2009-01-19T10:01:02"
-        },
-        {
-          "path": "CdiResource\\dialog\\image\\labelUnsupported.png",
-          "size": 402,
-          "hash": "54cd3d4c76b8823dd450db6195e52ccb",
-          "modified": "2009-01-19T10:00:12"
-        },
-        {
-          "path": "CdiResource\\dialog\\image\\nofile.png",
-          "size": 490,
-          "hash": "ea82082b9d4c6b98b1c3751e98d21440",
-          "modified": "2008-05-04T11:07:00"
-        },
-        {
-          "path": "CdiResource\\dll\\AMD_RC2t7x64.dll",
-          "size": 199104,
-          "hash": "6b2a0c8f3bbb1a9a330af0425d132b2e",
-          "modified": "2023-07-09T18:20:22"
-        },
-        {
-          "path": "CdiResource\\dll\\JMB39x64.dll",
-          "size": 221720,
-          "hash": "fc238a5d2ca00e01946d8727c870c722",
-          "modified": "2023-03-11T11:07:14"
-        },
-        {
-          "path": "CdiResource\\dll\\JMS56x64.dll",
-          "size": 221720,
-          "hash": "107cd7c06ff1e7aa54b872e110c8b050",
-          "modified": "2023-03-11T11:07:16"
-        },
-        {
-          "path": "CdiResource\\dll\\JMS586x64.dll",
-          "size": 224240,
-          "hash": "66ee6fc9b99de15ca44a5f80a85fb278",
-          "modified": "2024-04-24T22:25:38"
-        },
-        {
-          "path": "CdiResource\\dll\\JMS586_40x64.dll",
-          "size": 220120,
-          "hash": "7273264df3303e5eae0388d4092e839f",
-          "modified": "2025-06-07T21:32:10"
-        },
-        {
-          "path": "CdiResource\\language\\Abkhazian.lang",
-          "size": 95946,
-          "hash": "e0dc38d399aba0abd4ee656669842c30",
-          "modified": "2025-04-06T11:36:18"
-        },
-        {
-          "path": "CdiResource\\language\\Arabic.lang",
-          "size": 84068,
-          "hash": "d5ec2d6fc684641c1731c4edde0e88bd",
-          "modified": "2025-04-06T11:36:18"
-        },
-        {
-          "path": "CdiResource\\language\\Armenian.lang",
-          "size": 87294,
-          "hash": "edf39ccc32b1121240e20f0ca40a73d0",
-          "modified": "2025-12-07T21:02:24"
-        },
-        {
-          "path": "CdiResource\\language\\Azeri.lang",
-          "size": 83632,
-          "hash": "ca20e3fec1257149f07de4ac69d1e8b5",
-          "modified": "2025-04-06T11:36:18"
-        },
-        {
-          "path": "CdiResource\\language\\Bulgarian.lang",
-          "size": 87702,
-          "hash": "9c470605090b5f3028c7e1122ef20b48",
-          "modified": "2025-04-06T11:36:18"
-        },
-        {
-          "path": "CdiResource\\language\\Catalan.lang",
-          "size": 102986,
-          "hash": "5a44354e409a495d10c3f146a3e93510",
-          "modified": "2025-04-06T11:36:18"
-        },
-        {
-          "path": "CdiResource\\language\\Czech.lang",
-          "size": 89982,
-          "hash": "2ed2f7d7fbf2f158895dd94c4a459b4f",
-          "modified": "2025-04-06T11:36:18"
-        },
-        {
-          "path": "CdiResource\\language\\Danish.lang",
-          "size": 86986,
-          "hash": "5395852efbafb394f9b6b4cf004ff941",
-          "modified": "2025-04-06T11:36:18"
-        },
-        {
-          "path": "CdiResource\\language\\Dutch.lang",
-          "size": 85246,
-          "hash": "37f561a264a5c64a26f592e3dce58d72",
-          "modified": "2025-07-02T22:45:48"
-        },
-        {
-          "path": "CdiResource\\language\\English.lang",
-          "size": 87372,
-          "hash": "db0f288cd26205a42c70eca6869a0e2b",
-          "modified": "2025-04-06T11:35:36"
-        },
-        {
-          "path": "CdiResource\\language\\Filipino.lang",
-          "size": 85474,
-          "hash": "ba08b6bb95e5ba3f03302b8c0970ecce",
-          "modified": "2025-04-06T11:36:18"
-        },
-        {
-          "path": "CdiResource\\language\\Finnish.lang",
-          "size": 89930,
-          "hash": "8ac9f65836c8376156c9d06547f6bd98",
-          "modified": "2025-04-06T11:36:18"
-        },
-        {
-          "path": "CdiResource\\language\\French.lang",
-          "size": 100370,
-          "hash": "3654fe7a368d5d43d85e56e494180c6a",
-          "modified": "2025-04-06T11:36:18"
-        },
-        {
-          "path": "CdiResource\\language\\Galician.lang",
-          "size": 98778,
-          "hash": "418a76ca2a27f371f63eb387cfb8daf2",
-          "modified": "2025-04-06T11:36:18"
-        },
-        {
-          "path": "CdiResource\\language\\German.lang",
-          "size": 86988,
-          "hash": "0e89a5ff042cd1cd39c2eea87a6fdfda",
-          "modified": "2025-04-06T11:36:18"
-        },
-        {
-          "path": "CdiResource\\language\\Greek.lang",
-          "size": 85270,
-          "hash": "8d367a8ee827ab50ea3b6f9a7f80b326",
-          "modified": "2025-04-06T11:36:18"
-        },
-        {
-          "path": "CdiResource\\language\\Hebrew.lang",
-          "size": 84756,
-          "hash": "37cc73859edb552bf98994f6a34b2584",
-          "modified": "2025-04-22T21:45:32"
-        },
-        {
-          "path": "CdiResource\\language\\Hungarian.lang",
-          "size": 90756,
-          "hash": "6849f1a670805fd6dd4e520ea1e426e0",
-          "modified": "2025-04-06T11:36:18"
-        },
-        {
-          "path": "CdiResource\\language\\Italian.lang",
-          "size": 90526,
-          "hash": "ef7dba043eab9c0115c738ff1e4a5613",
-          "modified": "2025-04-06T11:35:36"
-        },
-        {
-          "path": "CdiResource\\language\\Japanese.lang",
-          "size": 54806,
-          "hash": "0a17039dac627153ea0f7e62417e92c0",
-          "modified": "2025-04-06T11:40:50"
-        },
-        {
-          "path": "CdiResource\\language\\Korean.lang",
-          "size": 56976,
-          "hash": "efb5ee2a3cac87f0c57f4d07f848c341",
-          "modified": "2025-06-23T15:59:24"
-        },
-        {
-          "path": "CdiResource\\language\\Lithuanian.lang",
-          "size": 84008,
-          "hash": "bf86a2ab7d73ecb8f2aa38d2c38cf85a",
-          "modified": "2025-04-06T11:36:18"
-        },
-        {
-          "path": "CdiResource\\language\\Norwegian.lang",
-          "size": 83676,
-          "hash": "30cada749818f0f6c33cd6eb0cf6d941",
-          "modified": "2026-02-15T12:12:06"
-        },
-        {
-          "path": "CdiResource\\language\\Persian.lang",
-          "size": 85786,
-          "hash": "f815891584c3523a3aa9aa84f76e066d",
-          "modified": "2025-10-08T23:42:46"
-        },
-        {
-          "path": "CdiResource\\language\\Polish.lang",
-          "size": 90712,
-          "hash": "c92006f3388e66ac4262c87de83e3f0d",
-          "modified": "2026-02-15T12:12:06"
-        },
-        {
-          "path": "CdiResource\\language\\Portuguese.lang",
-          "size": 83546,
-          "hash": "c9a1ef41fd222d54bcde3e85c2def826",
-          "modified": "2025-06-10T22:52:00"
-        },
-        {
-          "path": "CdiResource\\language\\PortuguesePT.lang",
-          "size": 88028,
-          "hash": "673d788abb30623aac042dac5746c159",
-          "modified": "2025-06-10T22:52:34"
-        },
-        {
-          "path": "CdiResource\\language\\Romanian.lang",
-          "size": 85696,
-          "hash": "c4bdebab5c573572a78c109bc4cc22a0",
-          "modified": "2025-04-06T11:36:18"
-        },
-        {
-          "path": "CdiResource\\language\\Russian.lang",
-          "size": 89432,
-          "hash": "9b8a8e7763d2f2628ead69acdef1eda1",
-          "modified": "2025-04-06T11:36:18"
-        },
-        {
-          "path": "CdiResource\\language\\Serbian.lang",
-          "size": 83460,
-          "hash": "c3aa144cf0792c9634dc44b8a08afde6",
-          "modified": "2025-04-06T11:36:18"
-        },
-        {
-          "path": "CdiResource\\language\\Simplified Chinese.lang",
-          "size": 50480,
-          "hash": "08223cafc164f8a4e1ec26363d641395",
-          "modified": "2025-04-06T11:36:18"
-        },
-        {
-          "path": "CdiResource\\language\\Slovak.lang",
-          "size": 101670,
-          "hash": "a34dd964d06e1382143edc99f3abdff4",
-          "modified": "2025-04-21T04:07:48"
-        },
-        {
-          "path": "CdiResource\\language\\Slovenian.lang",
-          "size": 99262,
-          "hash": "b1a82248e7453b4578721fba80bc3919",
-          "modified": "2025-04-06T11:36:18"
-        },
-        {
-          "path": "CdiResource\\language\\Spanish.lang",
-          "size": 112252,
-          "hash": "6f077d2c1049dae194cdf6a183667272",
-          "modified": "2025-12-25T22:16:42"
-        },
-        {
-          "path": "CdiResource\\language\\Swedish.lang",
-          "size": 83542,
-          "hash": "b8da1226a890388b83221634dee7972d",
-          "modified": "2025-04-06T11:36:18"
-        },
-        {
-          "path": "CdiResource\\language\\Thai.lang",
-          "size": 87010,
-          "hash": "c5b3ee776a7d53b901be1f89e3584ccd",
-          "modified": "2025-04-06T11:36:18"
-        },
-        {
-          "path": "CdiResource\\language\\Traditional Chinese.lang",
-          "size": 50604,
-          "hash": "08f33c903d935a2f65bc9d25db125866",
-          "modified": "2025-11-27T18:59:28"
-        },
-        {
-          "path": "CdiResource\\language\\Turkish.lang",
-          "size": 94870,
-          "hash": "882b9817cbf22915d6d7bec261d627da",
-          "modified": "2025-04-06T11:36:18"
-        },
-        {
-          "path": "CdiResource\\language\\Ukrainian.lang",
-          "size": 89618,
-          "hash": "67832373cfe313868a851e3fa1b66a8a",
-          "modified": "2025-11-25T21:52:02"
-        },
-        {
-          "path": "CdiResource\\language\\Vietnamese.lang",
-          "size": 83664,
-          "hash": "1c288dd66f4845e9c0a1f0e776961682",
-          "modified": "2025-04-06T11:36:18"
-        },
-        {
-          "path": "CdiResource\\opus\\COPYING.txt",
-          "size": 19828,
-          "hash": "61d88eb3eb88d13e5670d46066bc5363",
-          "modified": "2013-09-08T12:01:44"
-        },
-        {
-          "path": "CdiResource\\opus\\opusdec.exe",
-          "size": 178688,
-          "hash": "1f3cf9f2eda491e461a44d956033d7ff",
-          "modified": "2013-09-08T13:25:10"
-        },
-        {
-          "path": "CdiResource\\opus\\README.txt",
-          "size": 1217,
-          "hash": "7cb9c96a425dbc1e3598b82d5c80668d",
-          "modified": "2013-09-08T12:08:48"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\Background-300.png",
-          "size": 30299,
-          "hash": "705c1ca212c848b9ecd21eee71cda9cc",
-          "modified": "2020-05-04T08:49:08"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskBad-100.png",
-          "size": 1570,
-          "hash": "6b024135553e6f8414fc00c169fc0459",
-          "modified": "2020-04-26T22:51:04"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskBad-125.png",
-          "size": 2079,
-          "hash": "7dccb94437ffae6d8f0a6e9b0df98e92",
-          "modified": "2020-04-26T22:50:20"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskBad-150.png",
-          "size": 6283,
-          "hash": "22c5a304b1221ff56fe75951cfd493db",
-          "modified": "2020-04-26T22:49:32"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskBad-200.png",
-          "size": 9345,
-          "hash": "6b8c3d768c396697597568dccdbf0775",
-          "modified": "2020-04-26T22:48:36"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskBad-250.png",
-          "size": 11952,
-          "hash": "00b554dbb3001cd52f5ab1a73033cf79",
-          "modified": "2020-04-26T22:47:38"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskBad-300.png",
-          "size": 15184,
-          "hash": "06318cff98faa18079fa7185d6ae3477",
-          "modified": "2020-04-26T22:45:58"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskBadMini-100.png",
-          "size": 1073,
-          "hash": "d5fa6709daa77eedb0e9569e2d43b734",
-          "modified": "2023-04-07T21:08:06"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskBadMini-125.png",
-          "size": 1437,
-          "hash": "24251bd0ebddaff20fdfcaeb558b7f6b",
-          "modified": "2023-04-07T21:08:06"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskBadMini-150.png",
-          "size": 1776,
-          "hash": "ca3c0e1edd118d3256f4ee8f82c31c6e",
-          "modified": "2023-04-07T21:08:06"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskBadMini-200.png",
-          "size": 2577,
-          "hash": "a9636ddfe6f07cbfd8ec99eb6f557c18",
-          "modified": "2023-04-07T21:08:06"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskBadMini-250.png",
-          "size": 8915,
-          "hash": "7c6264b0f5457586901790c8b5b19907",
-          "modified": "2023-04-07T21:08:06"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskBadMini-300.png",
-          "size": 11577,
-          "hash": "a71e3353bd732d00c5777c3783dbf547",
-          "modified": "2023-04-07T21:08:10"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskCaution-100.png",
-          "size": 1575,
-          "hash": "ebf65c3ba637ba86ed47a01951594cee",
-          "modified": "2020-04-26T22:43:48"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskCaution-125.png",
-          "size": 2057,
-          "hash": "c38c1a009cdda15ff7a2cf5ee61707ff",
-          "modified": "2020-04-26T22:43:04"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskCaution-150.png",
-          "size": 6023,
-          "hash": "b3ff7997c5c7052b7fb73ed4e71b1cc9",
-          "modified": "2020-04-26T22:41:58"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskCaution-200.png",
-          "size": 8974,
-          "hash": "69ed05fc465cc8b9b075c7e9cf8af1ff",
-          "modified": "2020-04-26T22:40:12"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskCaution-250.png",
-          "size": 11442,
-          "hash": "86509243cc3c1f481cbeac26b2ed75b8",
-          "modified": "2020-04-26T22:39:06"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskCaution-300.png",
-          "size": 15129,
-          "hash": "5ff6d7e161dc1e206d606781ba3dfd07",
-          "modified": "2020-04-26T22:37:48"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskCautionMini-100.png",
-          "size": 1073,
-          "hash": "0e3ecaf1b1cb4cc0bb6158731428e635",
-          "modified": "2023-04-07T21:08:04"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskCautionMini-125.png",
-          "size": 1437,
-          "hash": "0bf8b58e86780b5e3966c21c33459099",
-          "modified": "2023-04-07T21:08:04"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskCautionMini-150.png",
-          "size": 1808,
-          "hash": "cf567d5a05613f0d73c6e3cac049f144",
-          "modified": "2023-04-07T21:08:06"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskCautionMini-200.png",
-          "size": 2600,
-          "hash": "9fa9a4c17871a34fdd7a1a7860bc1ae7",
-          "modified": "2023-04-07T21:08:04"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskCautionMini-250.png",
-          "size": 8905,
-          "hash": "672f9ef6805959865a1e555b9bd0cb5c",
-          "modified": "2023-04-07T21:08:06"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskCautionMini-300.png",
-          "size": 11448,
-          "hash": "7ef5fc1fe873d237491c8ec143f2f3ee",
-          "modified": "2023-04-07T21:08:08"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskGood-100.png",
-          "size": 1598,
-          "hash": "064b165ff9fb10d0aa9747d2d8627bf3",
-          "modified": "2020-04-26T22:33:20"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskGood-125.png",
-          "size": 2128,
-          "hash": "6f1609e3bbf3778b26c5b5afd1c0d4e8",
-          "modified": "2020-04-26T22:32:30"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskGood-150.png",
-          "size": 6213,
-          "hash": "a41b4d1bb872d1383124e8e2235e7dea",
-          "modified": "2020-04-26T22:31:06"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskGood-200.png",
-          "size": 9279,
-          "hash": "ee5cfc4bd51490b22e5d3588024119ef",
-          "modified": "2020-04-26T22:30:10"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskGood-250.png",
-          "size": 11982,
-          "hash": "5eb94f4d6f4c5085b2e285817d87b1ef",
-          "modified": "2020-04-26T22:28:58"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskGood-300.png",
-          "size": 16132,
-          "hash": "cb1db319a85ebfb2348f5d32749ef30c",
-          "modified": "2020-04-26T22:27:42"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskGoodGreen-100.png",
-          "size": 1552,
-          "hash": "09cb0ddedbf3c355602f1eadaf240264",
-          "modified": "2020-04-26T22:59:48"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskGoodGreen-125.png",
-          "size": 2047,
-          "hash": "f983926bd69759b8e2478c8065cc5734",
-          "modified": "2020-04-26T22:58:52"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskGoodGreen-150.png",
-          "size": 5831,
-          "hash": "fd4e1689c655c7d22d2a5c7a7effac96",
-          "modified": "2020-04-26T22:57:52"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskGoodGreen-200.png",
-          "size": 8842,
-          "hash": "7c121365ab5864cf88cc9196a50ac1a3",
-          "modified": "2020-04-26T22:56:54"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskGoodGreen-250.png",
-          "size": 11142,
-          "hash": "bc0b7f9448940d6944057777b6062e8b",
-          "modified": "2020-04-26T22:54:04"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskGoodGreen-300.png",
-          "size": 14478,
-          "hash": "58e3279eccc6beeed25808c15f472f95",
-          "modified": "2020-04-26T22:52:48"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskGoodGreenMini-100.png",
-          "size": 1073,
-          "hash": "112a3e88f2a81c27647543b7054eea64",
-          "modified": "2023-04-07T21:08:04"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskGoodGreenMini-125.png",
-          "size": 1437,
-          "hash": "9d6c410849e93fd4e522b0f9323dda59",
-          "modified": "2023-04-07T21:08:04"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskGoodGreenMini-150.png",
-          "size": 1747,
-          "hash": "a5fb6fe6096ce555268b812352d6332c",
-          "modified": "2023-04-07T21:08:06"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskGoodGreenMini-200.png",
-          "size": 2562,
-          "hash": "fbc2c01d02bb70d2818f3ecf31f812dd",
-          "modified": "2023-04-07T21:08:06"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskGoodGreenMini-250.png",
-          "size": 8460,
-          "hash": "357d2c9ccdb661476a58e14c78966667",
-          "modified": "2023-04-07T21:08:08"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskGoodGreenMini-300.png",
-          "size": 11129,
-          "hash": "24238aac873b8f91cceee90276b50b0c",
-          "modified": "2023-04-07T21:08:08"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskGoodMini-100.png",
-          "size": 1073,
-          "hash": "34648b9004b4e6b6033ef1584c79e08c",
-          "modified": "2023-04-07T21:08:06"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskGoodMini-125.png",
-          "size": 1427,
-          "hash": "4fa9b62170756734981f5d2946bac1f0",
-          "modified": "2023-04-07T21:08:04"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskGoodMini-150.png",
-          "size": 1886,
-          "hash": "8bbcb6c7fa1aa4d29f4e20da2b93febb",
-          "modified": "2023-04-07T21:08:06"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskGoodMini-200.png",
-          "size": 2788,
-          "hash": "8c613b67afc94e2f92c4f094239e4722",
-          "modified": "2023-04-07T21:08:06"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskGoodMini-250.png",
-          "size": 9685,
-          "hash": "b812ba99a49fa899b26fbdb08b8e298a",
-          "modified": "2023-04-07T21:08:06"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskGoodMini-300.png",
-          "size": 13060,
-          "hash": "304c6d6f6e9a90bd00983974de18b184",
-          "modified": "2023-04-07T21:08:08"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskUnknown-100.png",
-          "size": 1435,
-          "hash": "0fd8e4822b71c929fdbd556ab203c572",
-          "modified": "2020-04-26T23:07:02"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskUnknown-125.png",
-          "size": 1849,
-          "hash": "8af06b1a625162fa289320e37a46e6bb",
-          "modified": "2020-04-26T23:06:20"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskUnknown-150.png",
-          "size": 4921,
-          "hash": "6a3f469bd17badda5fdddbf2b677f982",
-          "modified": "2020-04-26T23:05:28"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskUnknown-200.png",
-          "size": 7237,
-          "hash": "cb00763821dc787987443129cbbea7da",
-          "modified": "2020-04-26T23:04:06"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskUnknown-250.png",
-          "size": 9351,
-          "hash": "7eaef76c6087b206265962b672803183",
-          "modified": "2020-04-26T23:02:28"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskUnknown-300.png",
-          "size": 11689,
-          "hash": "f47b9b54311dad03fdd04fee5f6acb2b",
-          "modified": "2020-04-26T23:01:10"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskUnknownMini-100.png",
-          "size": 923,
-          "hash": "3089cdfcbb451cee653f875d4d400f20",
-          "modified": "2023-04-07T21:08:04"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskUnknownMini-125.png",
-          "size": 1178,
-          "hash": "7b7872c46de22134bb6488ba6b32a76e",
-          "modified": "2023-04-07T21:08:04"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskUnknownMini-150.png",
-          "size": 1452,
-          "hash": "e173861ca86367ba257bdda2690b726c",
-          "modified": "2023-04-07T21:08:06"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskUnknownMini-200.png",
-          "size": 2028,
-          "hash": "3f9829c7743782582e0696d1cdbe741c",
-          "modified": "2023-04-07T21:08:06"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskUnknownMini-250.png",
-          "size": 2496,
-          "hash": "707d97c2b9a14cedb425dc5b42eee2ee",
-          "modified": "2023-04-07T21:08:04"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\diskUnknownMini-300.png",
-          "size": 9176,
-          "hash": "882c6f71b2f22a0480f3aaa8403fed5f",
-          "modified": "2023-04-07T21:08:08"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\noDisk-100.png",
-          "size": 337,
-          "hash": "92c71e2ec7a34d8817654d5230921669",
-          "modified": "2020-04-26T22:12:18"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\noDisk-125.png",
-          "size": 394,
-          "hash": "7f6210d5e1ca3f804260f9cb65a73f89",
-          "modified": "2020-04-26T22:12:02"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\noDisk-150.png",
-          "size": 416,
-          "hash": "17d84c5b7b44c0b0ac1efa44c0e9a6b2",
-          "modified": "2020-04-26T22:11:38"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\noDisk-200.png",
-          "size": 534,
-          "hash": "f6ce267daa374082c2abc732890aeb7a",
-          "modified": "2020-04-26T22:11:42"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\noDisk-250.png",
-          "size": 650,
-          "hash": "baa965fc2f54dc4bbb05d57f8a155422",
-          "modified": "2020-04-26T22:11:44"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\noDisk-300.png",
-          "size": 731,
-          "hash": "2ec5a69e87573cea1cab164b3ff9c77b",
-          "modified": "2020-04-26T16:43:32"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\noDiskMini-100.png",
-          "size": 265,
-          "hash": "a882e983db167c9cb55dff0c84976dca",
-          "modified": "2023-04-07T21:08:04"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\noDiskMini-125.png",
-          "size": 300,
-          "hash": "47736504c369d216851c48d3ad142c4b",
-          "modified": "2023-04-07T21:08:04"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\noDiskMini-150.png",
-          "size": 308,
-          "hash": "1f197d52d2cd40f807da71c15e7e0e9d",
-          "modified": "2023-04-07T21:08:04"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\noDiskMini-200.png",
-          "size": 372,
-          "hash": "b4c567fabad272e19e9ad72b4d48626e",
-          "modified": "2023-04-07T21:08:04"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\noDiskMini-250.png",
-          "size": 406,
-          "hash": "e205e4273282aebdf9cd6a20049eb603",
-          "modified": "2023-04-07T21:08:06"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\noDiskMini-300.png",
-          "size": 449,
-          "hash": "506d93e63c1f321edd725f8edaf28ad3",
-          "modified": "2023-04-07T21:08:04"
-        },
-        {
-          "path": "CdiResource\\themes\\Dark\\theme.ini",
-          "size": 280,
-          "hash": "8251e612e478b58b49fb2c3f3ffe5ffa",
-          "modified": "2020-05-04T07:28:30"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\Background-300.png",
-          "size": 30296,
-          "hash": "77767641110eb0eb62cd38ac3494fd24",
-          "modified": "2021-02-02T21:54:22"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskBad-100.png",
-          "size": 1199,
-          "hash": "c70498d226015c0b27b5753e60d0ed84",
-          "modified": "2013-09-13T09:33:30"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskBad-125.png",
-          "size": 1825,
-          "hash": "24f6d010077b7d5101448d0beb40821c",
-          "modified": "2013-09-13T09:33:26"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskBad-150.png",
-          "size": 2351,
-          "hash": "7b38525a007f79b36ac8a4e00539dbc2",
-          "modified": "2013-09-13T09:33:22"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskBad-200.png",
-          "size": 8454,
-          "hash": "66507d870fcfe562556fb322eea9d23d",
-          "modified": "2013-09-13T09:33:16"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskBad-250.png",
-          "size": 8939,
-          "hash": "31c0669958610cff93c96737d0b34e80",
-          "modified": "2014-08-26T22:46:06"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskBad-300.png",
-          "size": 15066,
-          "hash": "ede479bbed1ef9cc26d89cb6bce87493",
-          "modified": "2013-09-13T09:33:12"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskBadMini-100.png",
-          "size": 981,
-          "hash": "90928c5d65a97d2e8cdc8db16c59911b",
-          "modified": "2023-04-07T21:08:22"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskBadMini-125.png",
-          "size": 1311,
-          "hash": "595a8cb296254ba0bf4462423d61a373",
-          "modified": "2023-04-07T21:08:22"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskBadMini-150.png",
-          "size": 1615,
-          "hash": "7adf8897c3cdeb23d738695ef74e23e3",
-          "modified": "2023-04-07T21:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskBadMini-200.png",
-          "size": 2390,
-          "hash": "ef2161c2fbb2a3d048b3dd843e97d610",
-          "modified": "2023-04-07T21:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskBadMini-250.png",
-          "size": 8207,
-          "hash": "6ecd97e1822739212dcb4fb2e43a28f5",
-          "modified": "2023-04-07T21:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskBadMini-300.png",
-          "size": 10627,
-          "hash": "f333affd7585491784f0844b4f9a7f25",
-          "modified": "2023-04-07T21:08:26"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskCaution-100.png",
-          "size": 1172,
-          "hash": "8a786eeed2321e66859dafa61d93568e",
-          "modified": "2013-09-13T09:33:08"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskCaution-125.png",
-          "size": 1784,
-          "hash": "f92dff7b59314a700f44f9e4ea2195ed",
-          "modified": "2013-09-13T09:33:02"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskCaution-150.png",
-          "size": 2316,
-          "hash": "06409a10ec0b273e3d1a02a11fc55a02",
-          "modified": "2013-09-13T09:32:52"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskCaution-200.png",
-          "size": 8205,
-          "hash": "f89b28e4bb232c0a29c38c590cc5b449",
-          "modified": "2013-09-13T09:32:44"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskCaution-250.png",
-          "size": 8591,
-          "hash": "28dcc3c6538c2d47bf618649a1bbc43b",
-          "modified": "2014-08-26T22:46:12"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskCaution-300.png",
-          "size": 14665,
-          "hash": "3fc7ce06c6c3a5b0d78d132326161b59",
-          "modified": "2013-09-13T09:32:38"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskCautionMini-100.png",
-          "size": 981,
-          "hash": "c4f94c62cd826126b54e19989e9100ad",
-          "modified": "2023-04-07T21:08:22"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskCautionMini-125.png",
-          "size": 1311,
-          "hash": "5a8aee38764305de16561aaea3ee2ffd",
-          "modified": "2023-04-07T21:08:22"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskCautionMini-150.png",
-          "size": 1577,
-          "hash": "e739a8cdccf78a08ab3d01df286a2ae4",
-          "modified": "2023-04-07T21:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskCautionMini-200.png",
-          "size": 2334,
-          "hash": "e84cf6778de7ba414fe5070a9ae0c751",
-          "modified": "2023-04-07T21:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskCautionMini-250.png",
-          "size": 7868,
-          "hash": "9a32d14999a32aea1267e4264871a8cd",
-          "modified": "2023-04-07T21:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskCautionMini-300.png",
-          "size": 10309,
-          "hash": "e3ecf4707c633d9fd5b5a38079ab04a1",
-          "modified": "2023-04-07T21:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskGood-100.png",
-          "size": 1181,
-          "hash": "c0e81a6dd776dcedbe2107bcad87bdcd",
-          "modified": "2013-09-13T09:32:28"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskGood-125.png",
-          "size": 1756,
-          "hash": "48f9dfc106f0d15d57d8cde00f1f7c71",
-          "modified": "2013-09-13T09:32:22"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskGood-150.png",
-          "size": 2322,
-          "hash": "d18aa9fd93386b21e760d179122ffa31",
-          "modified": "2013-09-13T09:32:14"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskGood-200.png",
-          "size": 8312,
-          "hash": "7854edff054ee0158a28fe385a34ddbf",
-          "modified": "2013-09-13T09:32:04"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskGood-250.png",
-          "size": 8954,
-          "hash": "4a3027643615e7437e231fc3cb3cfe12",
-          "modified": "2014-08-26T22:46:14"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskGood-300.png",
-          "size": 14617,
-          "hash": "1ec603e7f2e02ec7567ae1c403e5369e",
-          "modified": "2013-09-13T09:32:00"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskGoodGreen-100.png",
-          "size": 1178,
-          "hash": "812f2befcc5b8596f4fcd258a4f25da9",
-          "modified": "2013-09-13T09:31:54"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskGoodGreen-125.png",
-          "size": 1735,
-          "hash": "30883892389000bad289ffe7359d4074",
-          "modified": "2013-09-13T09:31:46"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskGoodGreen-150.png",
-          "size": 2306,
-          "hash": "7e61246afe17def870e8c8c39c271c9d",
-          "modified": "2013-09-13T09:31:38"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskGoodGreen-200.png",
-          "size": 8160,
-          "hash": "5e179148ea3bae4fb5de773e41eff782",
-          "modified": "2013-09-13T09:31:30"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskGoodGreen-250.png",
-          "size": 8504,
-          "hash": "45fb410c888ec8f13ef4a9906aae35a5",
-          "modified": "2014-08-26T22:46:18"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskGoodGreen-300.png",
-          "size": 14625,
-          "hash": "ec63dde60a1d1a2109f396b274393784",
-          "modified": "2013-09-13T09:31:20"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskGoodGreenMini-100.png",
-          "size": 981,
-          "hash": "88c411b79937d81bcb81cf97ad1f11c8",
-          "modified": "2023-04-07T21:08:22"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskGoodGreenMini-125.png",
-          "size": 1249,
-          "hash": "ca2d467499cbfe1da53e8623c95dfa90",
-          "modified": "2023-04-07T21:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskGoodGreenMini-150.png",
-          "size": 1580,
-          "hash": "d678efc17faa1caa323f76fe1e892be0",
-          "modified": "2023-04-07T21:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskGoodGreenMini-200.png",
-          "size": 2335,
-          "hash": "01f92a49845c8b49d914d847d3efd72e",
-          "modified": "2023-04-07T21:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskGoodGreenMini-250.png",
-          "size": 7824,
-          "hash": "1d960b7371452b34dffe5295873a8ac7",
-          "modified": "2023-04-07T21:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskGoodGreenMini-300.png",
-          "size": 10269,
-          "hash": "c83ba624a1ef6b6d985274fc2f215f8e",
-          "modified": "2023-04-07T21:08:26"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskGoodMini-100.png",
-          "size": 981,
-          "hash": "f3614436d1e903243ee967fa0104ac04",
-          "modified": "2023-04-07T21:08:22"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskGoodMini-125.png",
-          "size": 1256,
-          "hash": "03899690d0fb55e94371874d6b8a371f",
-          "modified": "2023-04-07T21:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskGoodMini-150.png",
-          "size": 1627,
-          "hash": "4dadf08584ef004136615d7787762bca",
-          "modified": "2023-04-07T21:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskGoodMini-200.png",
-          "size": 2449,
-          "hash": "f776f67030449585b0f8c6793d06f4d9",
-          "modified": "2023-04-07T21:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskGoodMini-250.png",
-          "size": 8293,
-          "hash": "17ba8c41fef26628aced353db27f7aa4",
-          "modified": "2023-04-07T21:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskGoodMini-300.png",
-          "size": 11199,
-          "hash": "2f68bfcc8492cce428410e241b4d4889",
-          "modified": "2023-04-07T21:08:26"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusBad-100.png",
-          "size": 871,
-          "hash": "93d294979316baf0bad26e9d6cbd1361",
-          "modified": "2013-09-12T23:28:28"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusBad-125.png",
-          "size": 1038,
-          "hash": "4cfbed1131c7b1570f0c134a826a2c92",
-          "modified": "2013-09-12T23:28:28"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusBad-150.png",
-          "size": 1267,
-          "hash": "895f862976e316e57f0587e611ae3043",
-          "modified": "2013-09-12T23:28:30"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusBad-200.png",
-          "size": 1468,
-          "hash": "9a368611c11d8e292a418d36d7cb53a4",
-          "modified": "2013-09-12T23:28:30"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusBad-250.png",
-          "size": 1934,
-          "hash": "0d3351f916163a65fdc6d29a137a4503",
-          "modified": "2014-08-26T22:46:20"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusBad-300.png",
-          "size": 2107,
-          "hash": "e766f8e3d9cc84b17083dd03b4656d18",
-          "modified": "2013-09-12T23:28:36"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusCaution-100.png",
-          "size": 883,
-          "hash": "b35cff135b50cce753090ba377ced098",
-          "modified": "2013-09-12T23:28:28"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusCaution-125.png",
-          "size": 1065,
-          "hash": "3bb0862ab1bfd318274a92778e7bf7ca",
-          "modified": "2013-09-12T23:28:28"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusCaution-150.png",
-          "size": 1011,
-          "hash": "4b4ee96e59b56a81f2169fe58aac4f26",
-          "modified": "2013-09-12T23:28:30"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusCaution-200.png",
-          "size": 1473,
-          "hash": "a67053de78133bf8b632024d2a94b21b",
-          "modified": "2013-09-12T23:28:36"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusCaution-250.png",
-          "size": 1900,
-          "hash": "017de99aa674b788dc3b7c9c9b399419",
-          "modified": "2014-08-26T22:46:20"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusCaution-300.png",
-          "size": 2141,
-          "hash": "dbcc3a877a8830e3e10e92f58d57149a",
-          "modified": "2013-09-12T23:28:34"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusGood-100.png",
-          "size": 918,
-          "hash": "ad2e97a4c59814858876abad24002ffd",
-          "modified": "2013-09-12T23:28:36"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusGood-125.png",
-          "size": 1108,
-          "hash": "a7e4c4a71d0d46d60e412002904285a3",
-          "modified": "2013-09-12T23:28:30"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusGood-150.png",
-          "size": 1264,
-          "hash": "183ab8c230bfd8aac4af018d867b55ac",
-          "modified": "2013-09-12T23:28:36"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusGood-200.png",
-          "size": 1489,
-          "hash": "cb3de488676f3fc81de8ac9292d2ef2d",
-          "modified": "2013-09-12T23:28:34"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusGood-250.png",
-          "size": 1981,
-          "hash": "0a26403f4f53f3cd9f17da8914339eeb",
-          "modified": "2014-08-28T21:38:34"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusGood-300.png",
-          "size": 2233,
-          "hash": "a6aefc882b2e62ad9c745f8e12f72f5c",
-          "modified": "2013-09-12T23:28:42"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusGoodGreen-100.png",
-          "size": 923,
-          "hash": "dce02b9a45fba2a70042c8c1e03d9b94",
-          "modified": "2013-09-12T23:28:36"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusGoodGreen-125.png",
-          "size": 1105,
-          "hash": "8d1ad40d84930c904a3c46a2e876110e",
-          "modified": "2013-09-12T23:28:36"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusGoodGreen-150.png",
-          "size": 1297,
-          "hash": "cd53ebbeedfcdbe04ac94f0323440d83",
-          "modified": "2013-09-12T23:28:36"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusGoodGreen-200.png",
-          "size": 1259,
-          "hash": "e8799e2989a9ec24ea55195adf9d2e89",
-          "modified": "2013-09-12T23:28:40"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusGoodGreen-250.png",
-          "size": 1630,
-          "hash": "44d5966ed0da0349927d41518ad20a9a",
-          "modified": "2014-08-26T22:46:24"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusGoodGreen-300.png",
-          "size": 1825,
-          "hash": "f8b559a259cfe0f8eb39d1596f371767",
-          "modified": "2013-09-12T23:28:48"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusUnknown-100.png",
-          "size": 721,
-          "hash": "c1ce67fb776dac5793910f863c5ea96f",
-          "modified": "2013-09-12T23:28:38"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusUnknown-125.png",
-          "size": 784,
-          "hash": "e15e09228df7b056b00ea72dcd01e6af",
-          "modified": "2013-09-12T23:28:42"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusUnknown-150.png",
-          "size": 868,
-          "hash": "6b96f8a52a5760036af1c44936f3ada0",
-          "modified": "2013-09-12T23:28:38"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusUnknown-200.png",
-          "size": 1269,
-          "hash": "a14be54713297b9431268096ffb982d8",
-          "modified": "2013-09-12T23:28:42"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusUnknown-250.png",
-          "size": 1425,
-          "hash": "fd75e7e0fd55bf1d9e2b9880edd02ec5",
-          "modified": "2014-08-26T22:46:26"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskStatusUnknown-300.png",
-          "size": 1656,
-          "hash": "6a19928f05edc50a0d1f19f91def9b1b",
-          "modified": "2013-09-12T23:28:40"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskUnknown-100.png",
-          "size": 1075,
-          "hash": "9fee1f9da061b73f0f3642c8f0baf908",
-          "modified": "2013-09-13T09:31:10"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskUnknown-125.png",
-          "size": 1617,
-          "hash": "db245be7cebac05d898e1dd5efc5f5e0",
-          "modified": "2013-09-13T09:31:00"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskUnknown-150.png",
-          "size": 2115,
-          "hash": "751d03bef4ba9a27f20dbb9f4535afee",
-          "modified": "2013-09-13T09:30:52"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskUnknown-200.png",
-          "size": 6670,
-          "hash": "0969952ec20efbf88ffabb228542b8ba",
-          "modified": "2013-09-13T09:30:42"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskUnknown-250.png",
-          "size": 2033,
-          "hash": "4d52efd159e237e0364dfff9360f70d6",
-          "modified": "2014-08-26T22:46:30"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskUnknown-300.png",
-          "size": 10881,
-          "hash": "c979ec302e4db3a645d9fb1229224dc2",
-          "modified": "2013-09-13T09:30:32"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskUnknownMini-100.png",
-          "size": 744,
-          "hash": "0a8c2e074d34efcb0f08ec5c98b7ec04",
-          "modified": "2023-04-07T21:08:22"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskUnknownMini-125.png",
-          "size": 918,
-          "hash": "7f2bc86872d9f0e1452df4013583b48d",
-          "modified": "2023-04-07T21:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskUnknownMini-150.png",
-          "size": 1135,
-          "hash": "4fa5c10b2e2b718a872c2ef62a003fef",
-          "modified": "2023-04-07T21:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskUnknownMini-200.png",
-          "size": 1611,
-          "hash": "2a9e08219a827704c193847e610dde4d",
-          "modified": "2023-04-07T21:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskUnknownMini-250.png",
-          "size": 1958,
-          "hash": "9ee82fa808a054f9be3e31d8663d917c",
-          "modified": "2023-04-07T21:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\diskUnknownMini-300.png",
-          "size": 2406,
-          "hash": "d5abca9bcc7bde0b102f2c192a381cb3",
-          "modified": "2023-04-07T21:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\logo-100.png",
-          "size": 19630,
-          "hash": "578156f45bb8479375b9de984665b185",
-          "modified": "2013-09-12T23:28:42"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\logo-125.png",
-          "size": 28351,
-          "hash": "9615b62f0c866e137cd293ff1b06934e",
-          "modified": "2013-09-12T23:28:54"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\logo-150.png",
-          "size": 38960,
-          "hash": "775f9311450012a853bb65a17ed43794",
-          "modified": "2013-09-12T23:28:56"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\logo-200.png",
-          "size": 62060,
-          "hash": "5d759140f4233affee03a5d1d40c2d81",
-          "modified": "2013-09-12T23:29:20"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\logo-250.png",
-          "size": 104490,
-          "hash": "1336b3ea367e9d2e61c532653195273d",
-          "modified": "2014-08-26T22:47:02"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\logo-300.png",
-          "size": 99798,
-          "hash": "1a5a9daac24270cabbbbc42fc90586ca",
-          "modified": "2013-09-12T23:29:22"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\nextDisk-100.png",
-          "size": 1099,
-          "hash": "dc3be62f884c9b96af9a3d5b2a937cb6",
-          "modified": "2013-09-12T23:29:24"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\nextDisk-125.png",
-          "size": 1267,
-          "hash": "f4fc4c73e6029a2aaefee1845e6a4816",
-          "modified": "2013-09-12T23:28:44"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\nextDisk-150.png",
-          "size": 1387,
-          "hash": "51f91ab993fae36ef3f9f0a46b90842e",
-          "modified": "2013-09-12T23:28:48"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\nextDisk-200.png",
-          "size": 1819,
-          "hash": "ebc5b548b45b30f10ad68bbc3d4504e7",
-          "modified": "2013-09-12T23:28:44"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\nextDisk-250.png",
-          "size": 2247,
-          "hash": "665680dbd59e0df574330ea25c6319d8",
-          "modified": "2014-08-26T22:46:32"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\nextDisk-300.png",
-          "size": 2614,
-          "hash": "625f0cd88996881079b2dae6bcd54ab7",
-          "modified": "2013-09-12T23:28:50"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\noDisk-100.png",
-          "size": 137,
-          "hash": "aca9c4d69b8c4779167452f77f415a9a",
-          "modified": "2013-09-12T23:28:48"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\noDisk-125.png",
-          "size": 149,
-          "hash": "f89f6f7f182e99137aeedd0d3adc7cb5",
-          "modified": "2013-09-12T23:28:50"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\noDisk-150.png",
-          "size": 158,
-          "hash": "f83433c960921db3f54b9ff1242d2014",
-          "modified": "2013-09-12T23:28:48"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\noDisk-200.png",
-          "size": 192,
-          "hash": "ab67e38fc7af2b34e1a7a9307f6df19b",
-          "modified": "2013-09-12T23:28:50"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\noDisk-250.png",
-          "size": 227,
-          "hash": "ba0d1b488b232c1657aa8ad800adef50",
-          "modified": "2014-08-26T22:46:36"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\noDisk-300.png",
-          "size": 276,
-          "hash": "394f29eb61c0ed08257d2f3ab8c19e49",
-          "modified": "2013-09-12T23:28:50"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\noDiskMini-100.png",
-          "size": 233,
-          "hash": "2a95f502a0418240b7fa978bdec48003",
-          "modified": "2023-04-07T21:08:22"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\noDiskMini-125.png",
-          "size": 266,
-          "hash": "fc45ee96ed63ed8b30d53ff0123be021",
-          "modified": "2023-04-07T21:08:22"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\noDiskMini-150.png",
-          "size": 278,
-          "hash": "fe020a7718d35cdbe2db506ccec125fb",
-          "modified": "2023-04-07T21:08:22"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\noDiskMini-200.png",
-          "size": 340,
-          "hash": "4db132d29cbf4acbce28bd581b4aa4b5",
-          "modified": "2023-04-07T21:08:22"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\noDiskMini-250.png",
-          "size": 175,
-          "hash": "af2c0ccd5dd202532352d9cef45e94f6",
-          "modified": "2023-04-07T21:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\noDiskMini-300.png",
-          "size": 196,
-          "hash": "242a499918e925009fafe4162e2945ca",
-          "modified": "2023-04-07T21:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\playSound-100.png",
-          "size": 1099,
-          "hash": "dc3be62f884c9b96af9a3d5b2a937cb6",
-          "modified": "2013-09-12T23:28:52"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\playSound-125.png",
-          "size": 1267,
-          "hash": "f4fc4c73e6029a2aaefee1845e6a4816",
-          "modified": "2013-09-12T23:28:50"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\playSound-150.png",
-          "size": 1387,
-          "hash": "51f91ab993fae36ef3f9f0a46b90842e",
-          "modified": "2013-09-12T23:28:52"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\playSound-200.png",
-          "size": 1819,
-          "hash": "ebc5b548b45b30f10ad68bbc3d4504e7",
-          "modified": "2013-09-12T23:28:52"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\playSound-250.png",
-          "size": 2247,
-          "hash": "665680dbd59e0df574330ea25c6319d8",
-          "modified": "2014-08-26T22:46:34"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\playSound-300.png",
-          "size": 2614,
-          "hash": "625f0cd88996881079b2dae6bcd54ab7",
-          "modified": "2013-09-12T23:28:54"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\preDisk-100.png",
-          "size": 1104,
-          "hash": "b49a97118724c54530d4c4eaefd729c8",
-          "modified": "2013-09-12T23:28:56"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\preDisk-125.png",
-          "size": 1245,
-          "hash": "d0d4a96b7ec9c2cdac4ca364b5d22add",
-          "modified": "2013-09-12T23:28:58"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\preDisk-150.png",
-          "size": 1414,
-          "hash": "1ef46937cd78ad1f232273c5a1e47974",
-          "modified": "2013-09-12T23:28:52"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\preDisk-200.png",
-          "size": 1724,
-          "hash": "ab46fc4346141474da3eb7bc948ab800",
-          "modified": "2013-09-12T23:28:54"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\preDisk-250.png",
-          "size": 2198,
-          "hash": "6b7ecaa9a54baa8273a5dfff6e2aa4b0",
-          "modified": "2014-08-26T22:46:40"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\preDisk-300.png",
-          "size": 2597,
-          "hash": "4570c3775bdc3320020ba59263117fa5",
-          "modified": "2013-09-12T23:28:56"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\selectSound-100.png",
-          "size": 1182,
-          "hash": "24547fdcc093f3f50403729f26895974",
-          "modified": "2013-09-12T23:28:58"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\selectSound-125.png",
-          "size": 1473,
-          "hash": "8c7777b148f208455c8d074cfd105dbc",
-          "modified": "2013-09-12T23:28:52"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\selectSound-150.png",
-          "size": 1745,
-          "hash": "fe8c1c21339e07e47233bb38fc85ec55",
-          "modified": "2013-09-12T23:28:54"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\selectSound-200.png",
-          "size": 2307,
-          "hash": "90f46efdce3f810e8e5746cfb935aa21",
-          "modified": "2013-09-12T23:28:54"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\selectSound-250.png",
-          "size": 2930,
-          "hash": "5a8363889b5f685ef2a0c9adb5ef084f",
-          "modified": "2014-08-26T22:46:38"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\selectSound-300.png",
-          "size": 3483,
-          "hash": "917b6391a67b937babcc916c7986f36f",
-          "modified": "2013-09-12T23:28:56"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureBad-100.png",
-          "size": 2364,
-          "hash": "6defc9e8c61308eb3ab469cdb4076a1d",
-          "modified": "2013-09-12T23:28:58"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureBad-125.png",
-          "size": 3151,
-          "hash": "63ddf45091639e180b49b02851db863e",
-          "modified": "2013-09-12T23:29:02"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureBad-150.png",
-          "size": 3895,
-          "hash": "2eac0bb9b9862c27f574dadd63b9730a",
-          "modified": "2013-09-12T23:28:54"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureBad-200.png",
-          "size": 5609,
-          "hash": "b34b7a27ef989c65f41e41aa2b82f507",
-          "modified": "2013-09-12T23:28:58"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureBad-250.png",
-          "size": 6857,
-          "hash": "820262b72acbaaa46c61ee280e109f0e",
-          "modified": "2014-08-26T22:46:48"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureBad-300.png",
-          "size": 9310,
-          "hash": "c34c94fb26331ea59f00c50e7ea8c92f",
-          "modified": "2013-09-12T23:29:06"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureCaution-100.png",
-          "size": 2381,
-          "hash": "3149bc7a65b825e4a9ccf646a490afe6",
-          "modified": "2013-09-12T23:29:10"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureCaution-125.png",
-          "size": 3151,
-          "hash": "d5af3f0ec144b4a234326e95002b57dd",
-          "modified": "2013-09-12T23:28:56"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureCaution-150.png",
-          "size": 3853,
-          "hash": "ef2d9297cae1a6508d8e519921b5c572",
-          "modified": "2013-09-12T23:28:58"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureCaution-200.png",
-          "size": 5606,
-          "hash": "30a64e19a4dd480bb78ec95be6308a25",
-          "modified": "2013-09-12T23:29:04"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureCaution-250.png",
-          "size": 6952,
-          "hash": "0140826006d7bd44ae1e66e5af940056",
-          "modified": "2014-08-26T22:46:42"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureCaution-300.png",
-          "size": 9330,
-          "hash": "912be1078065ca3a14c096fcc6486ce7",
-          "modified": "2013-09-12T23:29:12"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureGood-100.png",
-          "size": 2621,
-          "hash": "f8f84f5782ae011b707822d8ac8ee4d6",
-          "modified": "2013-09-12T23:28:56"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureGood-125.png",
-          "size": 3584,
-          "hash": "1a5aef1df0ac2ee801aaf9b09c2fd674",
-          "modified": "2013-09-12T23:28:58"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureGood-150.png",
-          "size": 4453,
-          "hash": "a9923c83b9977435b8b9f859aef46343",
-          "modified": "2013-09-12T23:29:02"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureGood-200.png",
-          "size": 6657,
-          "hash": "b549c2bb01222a8f354d1c512bcf3c59",
-          "modified": "2013-09-12T23:29:06"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureGood-250.png",
-          "size": 7831,
-          "hash": "101afe5292deacd1507e74de28ae3477",
-          "modified": "2014-08-26T22:46:52"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureGood-300.png",
-          "size": 10809,
-          "hash": "54a3195071c5f30181a097f244c46623",
-          "modified": "2013-09-12T23:29:08"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureGoodGreen-100.png",
-          "size": 2129,
-          "hash": "e54ebd1b038e8a2ddfaa45eefb3e0f9a",
-          "modified": "2013-09-12T23:29:10"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureGoodGreen-125.png",
-          "size": 2883,
-          "hash": "0d57c7c2571d61a7ab5a53cc0047a76d",
-          "modified": "2013-09-12T23:29:14"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureGoodGreen-150.png",
-          "size": 3561,
-          "hash": "c708d9540d14e7eef752119f352bde95",
-          "modified": "2013-09-12T23:29:16"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureGoodGreen-200.png",
-          "size": 5056,
-          "hash": "5005dc40937c9b60086bdedff1bdd77d",
-          "modified": "2013-09-12T23:29:02"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureGoodGreen-250.png",
-          "size": 6420,
-          "hash": "853bebd5532067b593011b195ff1791e",
-          "modified": "2014-08-26T22:46:50"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureGoodGreen-300.png",
-          "size": 8425,
-          "hash": "4f2e0879456beaaeca2ec2dd55289120",
-          "modified": "2013-09-12T23:29:10"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureUnknown-100.png",
-          "size": 1840,
-          "hash": "88b4976e1a7618d1bad04673d382fb62",
-          "modified": "2013-09-12T23:29:12"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureUnknown-125.png",
-          "size": 1621,
-          "hash": "156f616e23f3badafa693e920156ad50",
-          "modified": "2013-09-12T23:29:14"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureUnknown-150.png",
-          "size": 2008,
-          "hash": "bca80dd421fadc5ff24a0bf4d854ecd9",
-          "modified": "2013-09-12T23:29:04"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureUnknown-200.png",
-          "size": 2892,
-          "hash": "15ea90deb8484cd2e6c7f38654f53f0b",
-          "modified": "2013-09-12T23:29:10"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureUnknown-250.png",
-          "size": 3490,
-          "hash": "0dd877d80fbdf4035c167cdbbf50134d",
-          "modified": "2014-08-26T22:46:54"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\temperatureUnknown-300.png",
-          "size": 4750,
-          "hash": "c9056481e578354355d15886dce8d93d",
-          "modified": "2013-09-12T23:29:14"
-        },
-        {
-          "path": "CdiResource\\themes\\Default\\theme.ini",
-          "size": 263,
-          "hash": "13ad481754e04748b701e99dba1590d6",
-          "modified": "2020-05-04T14:27:42"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskBad-100.png",
-          "size": 131,
-          "hash": "4b754255ab6c7314d60a5bbff0630a75",
-          "modified": "2014-12-31T01:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskBad-125.png",
-          "size": 143,
-          "hash": "57d00fc4d307cc49a343aa5685e18694",
-          "modified": "2014-12-31T01:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskBad-150.png",
-          "size": 180,
-          "hash": "8b0ba3c6f57fd2f48346c84f6ff31e6a",
-          "modified": "2014-12-31T01:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskBad-200.png",
-          "size": 202,
-          "hash": "a1250ecf6b449fe4e70b0164793eb055",
-          "modified": "2014-12-31T01:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskBad-250.png",
-          "size": 236,
-          "hash": "6b84e6f8cb90f718df49021afe07d43e",
-          "modified": "2014-12-31T01:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskBad-300.png",
-          "size": 265,
-          "hash": "fc78d60fdc977251ca3b564914c64435",
-          "modified": "2014-12-31T01:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskBadMini-100.png",
-          "size": 127,
-          "hash": "7c8810f566c500cac77c11e33fb0a77c",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskBadMini-125.png",
-          "size": 159,
-          "hash": "fc842c61fda2c5ef6f022e97a6a40ebf",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskBadMini-150.png",
-          "size": 137,
-          "hash": "8d12b3bf1e6a399358b6bae9dc60cbbd",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskBadMini-200.png",
-          "size": 143,
-          "hash": "822d9b3947321f6d8e6ab4c1f49a6b03",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskBadMini-250.png",
-          "size": 215,
-          "hash": "9e15bd5edf86c03f7acadca0fe010115",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskBadMini-300.png",
-          "size": 244,
-          "hash": "c8471e1c486b7f3dff088c25744e9229",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskCaution-100.png",
-          "size": 131,
-          "hash": "acb3126003c909eaa219d73092b046b7",
-          "modified": "2014-12-31T01:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskCaution-125.png",
-          "size": 143,
-          "hash": "e6b880695e886fc7743450d4af5dbd70",
-          "modified": "2014-12-31T01:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskCaution-150.png",
-          "size": 180,
-          "hash": "0c7e4861ca820c4c88d218c251353246",
-          "modified": "2014-12-31T01:08:26"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskCaution-200.png",
-          "size": 202,
-          "hash": "94a17adccd7330472eaefd2333b9f131",
-          "modified": "2014-12-31T01:08:26"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskCaution-250.png",
-          "size": 236,
-          "hash": "7d856115325e43df0cb8efa546756bb7",
-          "modified": "2014-12-31T01:08:26"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskCaution-300.png",
-          "size": 265,
-          "hash": "96bbeabeb933db906e3fb21036e4565e",
-          "modified": "2014-12-31T01:08:26"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskCautionMini-100.png",
-          "size": 127,
-          "hash": "d685a0ea5f98b8b662f0a19840f08684",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskCautionMini-125.png",
-          "size": 159,
-          "hash": "bc1d5a63887cbe08f3ca7d89cabfddf4",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskCautionMini-150.png",
-          "size": 137,
-          "hash": "8e1c788c53467645601c2d7325d16959",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskCautionMini-200.png",
-          "size": 143,
-          "hash": "21f92e43beed2a88c88b3daf7c7c92d8",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskCautionMini-250.png",
-          "size": 215,
-          "hash": "1f7ce59a25462f542a40e2bafc894cda",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskCautionMini-300.png",
-          "size": 244,
-          "hash": "42b4c0b9dd7e7c03defa3e328866bc09",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskGood-100.png",
-          "size": 131,
-          "hash": "0d3dc8f9eb86fb340f094a4caf8ebaea",
-          "modified": "2014-12-31T01:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskGood-125.png",
-          "size": 145,
-          "hash": "313c4f1cb70e42c47331843c541f73b2",
-          "modified": "2014-12-31T01:08:24"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskGood-150.png",
-          "size": 184,
-          "hash": "b930f4ccb8433db8ec5a01c13cc35fdc",
-          "modified": "2014-12-31T01:08:26"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskGood-200.png",
-          "size": 204,
-          "hash": "33395eee58615df52592cf890a50a1c7",
-          "modified": "2014-12-31T01:08:26"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskGood-250.png",
-          "size": 238,
-          "hash": "7674b0c1ee0197189fdba073fc08029b",
-          "modified": "2014-12-31T01:08:26"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskGood-300.png",
-          "size": 268,
-          "hash": "e024d250a4958023a0a4e7d6c81cf497",
-          "modified": "2014-12-31T01:08:26"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskGoodGreen-100.png",
-          "size": 131,
-          "hash": "0d3dc8f9eb86fb340f094a4caf8ebaea",
-          "modified": "2014-12-31T01:08:26"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskGoodGreen-125.png",
-          "size": 145,
-          "hash": "313c4f1cb70e42c47331843c541f73b2",
-          "modified": "2014-12-31T01:08:26"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskGoodGreen-150.png",
-          "size": 184,
-          "hash": "b930f4ccb8433db8ec5a01c13cc35fdc",
-          "modified": "2014-12-31T01:08:26"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskGoodGreen-200.png",
-          "size": 204,
-          "hash": "33395eee58615df52592cf890a50a1c7",
-          "modified": "2014-12-31T01:08:26"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskGoodGreen-250.png",
-          "size": 238,
-          "hash": "7674b0c1ee0197189fdba073fc08029b",
-          "modified": "2014-12-31T01:08:26"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskGoodGreen-300.png",
-          "size": 268,
-          "hash": "e024d250a4958023a0a4e7d6c81cf497",
-          "modified": "2014-12-31T01:08:26"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskGoodGreenMini-100.png",
-          "size": 128,
-          "hash": "6ded12d0e24af8a7a8b829b454a4005e",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskGoodGreenMini-125.png",
-          "size": 157,
-          "hash": "344ba03eb5a3ae5391e271fd5483eb3f",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskGoodGreenMini-150.png",
-          "size": 138,
-          "hash": "80fbdb06ba90dd310076dc51727244c5",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskGoodGreenMini-200.png",
-          "size": 143,
-          "hash": "58ccb1b16c584f8679b796b84ec877c1",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskGoodGreenMini-250.png",
-          "size": 219,
-          "hash": "4ca23159f02f051cbbca8ecb49077533",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskGoodGreenMini-300.png",
-          "size": 244,
-          "hash": "7b054a30c4e34d47868f99d2d0a554b4",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskGoodMini-100.png",
-          "size": 128,
-          "hash": "6ded12d0e24af8a7a8b829b454a4005e",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskGoodMini-125.png",
-          "size": 157,
-          "hash": "344ba03eb5a3ae5391e271fd5483eb3f",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskGoodMini-150.png",
-          "size": 138,
-          "hash": "80fbdb06ba90dd310076dc51727244c5",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskGoodMini-200.png",
-          "size": 143,
-          "hash": "58ccb1b16c584f8679b796b84ec877c1",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskGoodMini-250.png",
-          "size": 219,
-          "hash": "4ca23159f02f051cbbca8ecb49077533",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskGoodMini-300.png",
-          "size": 244,
-          "hash": "7b054a30c4e34d47868f99d2d0a554b4",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusBad-100.png",
-          "size": 87,
-          "hash": "4ec3c0cc81ec1f8c8458fef478ead008",
-          "modified": "2014-12-31T01:08:28"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusBad-125.png",
-          "size": 89,
-          "hash": "24fed32d050853b477c80a3f4c4aad7c",
-          "modified": "2014-12-31T01:08:30"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusBad-150.png",
-          "size": 93,
-          "hash": "6933d34db4ac5f2f464addf438764c9f",
-          "modified": "2014-12-31T01:08:28"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusBad-200.png",
-          "size": 97,
-          "hash": "7e33cbd124b76855c7f01a9cb34c4e87",
-          "modified": "2014-12-31T01:08:30"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusBad-250.png",
-          "size": 99,
-          "hash": "0d8f15ce3ffae104766c1766474e647c",
-          "modified": "2014-12-31T13:47:38"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusBad-300.png",
-          "size": 101,
-          "hash": "0dcd39e6c26a6ef7a974ace6ccbfa247",
-          "modified": "2014-12-31T01:08:28"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusCaution-100.png",
-          "size": 87,
-          "hash": "b4b866f8df4e6d53b8385343be6ec823",
-          "modified": "2014-12-31T01:08:30"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusCaution-125.png",
-          "size": 89,
-          "hash": "b9e77e916652d4a5aa554cd37fabd728",
-          "modified": "2014-12-31T01:08:28"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusCaution-150.png",
-          "size": 93,
-          "hash": "69e06bbe6e432459ec33f144ba6a094e",
-          "modified": "2014-12-31T01:08:30"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusCaution-200.png",
-          "size": 97,
-          "hash": "d5e7dd8d84add91ace7bcdd7681525de",
-          "modified": "2014-12-31T01:08:28"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusCaution-250.png",
-          "size": 99,
-          "hash": "7603eb578c2b845afc06244d12339c53",
-          "modified": "2014-12-31T13:47:38"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusCaution-300.png",
-          "size": 101,
-          "hash": "d3316cbd1a3e38f4d643c720543e1396",
-          "modified": "2014-12-31T01:08:30"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusGood-100.png",
-          "size": 87,
-          "hash": "1733df3aca5a4d4a888099911f42fad5",
-          "modified": "2014-12-31T01:08:28"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusGood-125.png",
-          "size": 89,
-          "hash": "5c0a4fbe8b5c1ce2ae2a884739303671",
-          "modified": "2014-12-31T01:08:30"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusGood-150.png",
-          "size": 93,
-          "hash": "fc182a2c9aa99aee6cc3440ea1e85568",
-          "modified": "2014-12-31T01:08:28"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusGood-200.png",
-          "size": 97,
-          "hash": "6e0b1dc40764192081db981f53abeb3a",
-          "modified": "2014-12-31T01:08:30"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusGood-250.png",
-          "size": 99,
-          "hash": "45fe5648e87b25e1e3300f3d09615ed8",
-          "modified": "2014-12-31T01:08:28"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusGood-300.png",
-          "size": 101,
-          "hash": "e648228b5b287a6cdce6d2907420236b",
-          "modified": "2014-12-31T01:08:30"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusGoodGreen-100.png",
-          "size": 87,
-          "hash": "1733df3aca5a4d4a888099911f42fad5",
-          "modified": "2014-12-31T01:08:32"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusGoodGreen-125.png",
-          "size": 89,
-          "hash": "5c0a4fbe8b5c1ce2ae2a884739303671",
-          "modified": "2014-12-31T01:08:32"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusGoodGreen-150.png",
-          "size": 93,
-          "hash": "fc182a2c9aa99aee6cc3440ea1e85568",
-          "modified": "2014-12-31T01:08:32"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusGoodGreen-200.png",
-          "size": 97,
-          "hash": "6e0b1dc40764192081db981f53abeb3a",
-          "modified": "2014-12-31T01:08:32"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusGoodGreen-250.png",
-          "size": 99,
-          "hash": "45fe5648e87b25e1e3300f3d09615ed8",
-          "modified": "2014-12-31T13:47:38"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusGoodGreen-300.png",
-          "size": 101,
-          "hash": "e648228b5b287a6cdce6d2907420236b",
-          "modified": "2014-12-31T01:08:32"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusUnknown-100.png",
-          "size": 87,
-          "hash": "c9037cb6e1fc50ba4e5c28c0f5b3d611",
-          "modified": "2014-12-31T01:08:34"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusUnknown-125.png",
-          "size": 89,
-          "hash": "299e362140cd17e90362b662d0377666",
-          "modified": "2014-12-31T01:08:32"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusUnknown-150.png",
-          "size": 93,
-          "hash": "2e8fa648e4b8e61b23b2d203df4262f7",
-          "modified": "2014-12-31T01:08:34"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusUnknown-200.png",
-          "size": 97,
-          "hash": "20b4ec9c5dbc404f74f28f1f5eb8f3d8",
-          "modified": "2014-12-31T01:08:32"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusUnknown-250.png",
-          "size": 101,
-          "hash": "975bcf6a5c9f7d104f6b0a920e6d1560",
-          "modified": "2014-12-31T13:47:38"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskStatusUnknown-300.png",
-          "size": 101,
-          "hash": "975bcf6a5c9f7d104f6b0a920e6d1560",
-          "modified": "2014-12-31T01:08:32"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskUnknown-100.png",
-          "size": 131,
-          "hash": "bdcd21fdcf1f8d989d9cab8e7e34c413",
-          "modified": "2014-12-31T01:08:32"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskUnknown-125.png",
-          "size": 143,
-          "hash": "52001f0f45d2b5181481cd3df3b5e758",
-          "modified": "2014-12-31T01:08:32"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskUnknown-150.png",
-          "size": 180,
-          "hash": "a38cd9e311f9d181201b525cf0e597a4",
-          "modified": "2014-12-31T01:08:32"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskUnknown-200.png",
-          "size": 202,
-          "hash": "97a443c8409a05bb1f25e77f7c5bcd47",
-          "modified": "2014-12-31T01:08:34"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskUnknown-250.png",
-          "size": 238,
-          "hash": "aab658eceef7bce6d6c5114fb1c672cf",
-          "modified": "2014-12-31T01:08:32"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskUnknown-300.png",
-          "size": 268,
-          "hash": "ea01d492a3d853a6fdca7539523dfb54",
-          "modified": "2014-12-31T01:08:34"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskUnknownMini-100.png",
-          "size": 127,
-          "hash": "063b24dff92637193dded13befcadec1",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskUnknownMini-125.png",
-          "size": 159,
-          "hash": "522cee8b9400f28ebaa9583620282678",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskUnknownMini-150.png",
-          "size": 137,
-          "hash": "499444a54828a12316fd8a68415efefa",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskUnknownMini-200.png",
-          "size": 143,
-          "hash": "c45e0e04d76024bd38d5658635d17c18",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskUnknownMini-250.png",
-          "size": 216,
-          "hash": "e60584277614f27241881aa407ff7f4a",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\diskUnknownMini-300.png",
-          "size": 244,
-          "hash": "843011bfb7797832acbafe423e46a302",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\nextDisk-100.png",
-          "size": 296,
-          "hash": "a86fc5a573de9760d283d12e17761cc1",
-          "modified": "2014-12-31T01:08:34"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\nextDisk-125.png",
-          "size": 540,
-          "hash": "0b8d04c874b043ec49d3d0e63ee25730",
-          "modified": "2014-12-31T01:08:36"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\nextDisk-150.png",
-          "size": 299,
-          "hash": "457b89e9a7c0b228df61f06a6851628e",
-          "modified": "2014-12-31T01:08:34"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\nextDisk-200.png",
-          "size": 503,
-          "hash": "9d5727f7d657d1d2dc2e54da9fcefcfd",
-          "modified": "2014-12-31T01:08:36"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\nextDisk-250.png",
-          "size": 854,
-          "hash": "3ec8d5466f9abe9152e5dd1d2aae52ad",
-          "modified": "2014-12-31T01:08:34"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\nextDisk-300.png",
-          "size": 365,
-          "hash": "fdf1bdbfe18e8cf97145049a0483507d",
-          "modified": "2014-12-31T01:08:36"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\noDisk-100.png",
-          "size": 86,
-          "hash": "c58caa1b21c44d8c312445d4e693ae31",
-          "modified": "2014-12-31T01:08:34"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\noDisk-125.png",
-          "size": 88,
-          "hash": "68758adbe9d49c10f0e8dd5594cb96f4",
-          "modified": "2014-12-31T01:08:36"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\noDisk-150.png",
-          "size": 89,
-          "hash": "cfe1bdbddee228422b6591969cf37b7d",
-          "modified": "2014-12-31T01:08:34"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\noDisk-200.png",
-          "size": 96,
-          "hash": "eb3bdef780a52cc2e2aede49fd869a95",
-          "modified": "2014-12-31T01:08:36"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\noDisk-250.png",
-          "size": 97,
-          "hash": "8d15aab64b446b73e2a1f96f52063f5c",
-          "modified": "2014-12-31T01:08:34"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\noDisk-300.png",
-          "size": 99,
-          "hash": "e738544c70f71654bdd5bcc253cae52a",
-          "modified": "2014-12-31T01:08:36"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\noDiskMini-100.png",
-          "size": 84,
-          "hash": "c6dd252da559b23798ab4c9efce8b6cb",
-          "modified": "2023-04-08T10:40:22"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\noDiskMini-125.png",
-          "size": 85,
-          "hash": "393971eb8ff802d4111ed3b80eeb993c",
-          "modified": "2023-04-08T10:40:20"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\noDiskMini-150.png",
-          "size": 86,
-          "hash": "346f090d9c897ec26be9d7537223fb43",
-          "modified": "2023-04-08T10:40:22"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\noDiskMini-200.png",
-          "size": 89,
-          "hash": "65935fdfd0d13b9c6da754bdb774248b",
-          "modified": "2023-04-08T10:40:22"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\noDiskMini-250.png",
-          "size": 93,
-          "hash": "9427dc8c22c2f2694b9a602fe084e3cb",
-          "modified": "2023-04-08T10:40:22"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\noDiskMini-300.png",
-          "size": 97,
-          "hash": "e72d324f0aa71123b6fc09bde1ca1562",
-          "modified": "2023-04-08T10:40:22"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\preDisk-100.png",
-          "size": 297,
-          "hash": "3b0ac5721a10d6eefe0d19c71a317905",
-          "modified": "2014-12-31T01:08:34"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\preDisk-125.png",
-          "size": 538,
-          "hash": "e4c6da14a095342c6ba382b555b1f67d",
-          "modified": "2014-12-31T01:08:36"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\preDisk-150.png",
-          "size": 301,
-          "hash": "07057a001aeeba8b874795fa2e8ba790",
-          "modified": "2014-12-31T01:08:34"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\preDisk-200.png",
-          "size": 502,
-          "hash": "5cf344291e856104430af10fa26a881e",
-          "modified": "2014-12-31T01:08:36"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\preDisk-250.png",
-          "size": 854,
-          "hash": "62630cfa0bd94cf1c2201b18e86f8ef5",
-          "modified": "2014-12-31T01:08:38"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\preDisk-300.png",
-          "size": 366,
-          "hash": "c53adbaaeb847024c13a35aa1410c91f",
-          "modified": "2014-12-31T01:08:40"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureBad-100.png",
-          "size": 86,
-          "hash": "4e1af8ca20cc015411ecf87d64d8669f",
-          "modified": "2014-12-31T01:08:40"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureBad-125.png",
-          "size": 88,
-          "hash": "1c60c0d0166f18e9d81f5b8754d9ee13",
-          "modified": "2014-12-31T01:08:44"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureBad-150.png",
-          "size": 89,
-          "hash": "9d9ac73623c1875fd7202d557b118690",
-          "modified": "2014-12-31T01:08:38"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureBad-200.png",
-          "size": 95,
-          "hash": "f863ad9cade30bd6015b03bd0453c3a1",
-          "modified": "2014-12-31T01:08:40"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureBad-250.png",
-          "size": 97,
-          "hash": "75265120bcfdaf3c38b5b6f76c90c318",
-          "modified": "2014-12-31T01:08:40"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureBad-300.png",
-          "size": 99,
-          "hash": "3b1575fd1ae235c1d9b91c15d540cb9e",
-          "modified": "2014-12-31T01:08:42"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureCaution-100.png",
-          "size": 86,
-          "hash": "73881781c3e9f18d2764d471b839e974",
-          "modified": "2014-12-31T01:08:40"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureCaution-125.png",
-          "size": 88,
-          "hash": "c121cd4a2b12059084aef1959e4b2ad6",
-          "modified": "2014-12-31T01:08:40"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureCaution-150.png",
-          "size": 89,
-          "hash": "757fc796a386065bc5f3bfe9e7e8fa63",
-          "modified": "2014-12-31T01:08:42"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureCaution-200.png",
-          "size": 95,
-          "hash": "576ebe471bb1c6170455eae633e7888f",
-          "modified": "2014-12-31T01:08:38"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureCaution-250.png",
-          "size": 97,
-          "hash": "541d32690fca319ffaf8d5db75dd9e7b",
-          "modified": "2014-12-31T01:08:38"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureCaution-300.png",
-          "size": 99,
-          "hash": "6d090f0bded768066306299102f68814",
-          "modified": "2014-12-31T01:08:40"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureGood-100.png",
-          "size": 86,
-          "hash": "f715356fde55748f6f69411f752418c9",
-          "modified": "2014-12-31T01:08:42"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureGood-125.png",
-          "size": 88,
-          "hash": "dfeaa73e55f193af48472463cf16b569",
-          "modified": "2014-12-31T01:08:38"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureGood-150.png",
-          "size": 89,
-          "hash": "20ca525dca32a78a0353e40ee4adcda4",
-          "modified": "2014-12-31T01:08:40"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureGood-200.png",
-          "size": 95,
-          "hash": "b5ed03c438ebdf2c6374b2e50251d18b",
-          "modified": "2014-12-31T01:08:40"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureGood-250.png",
-          "size": 97,
-          "hash": "2897be9a65e8fa8a5b3a88f38c87263f",
-          "modified": "2014-12-31T01:08:42"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureGood-300.png",
-          "size": 99,
-          "hash": "577fff82b62d0656d8d51670d3aa02a0",
-          "modified": "2014-12-31T01:08:38"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureGoodGreen-100.png",
-          "size": 86,
-          "hash": "f715356fde55748f6f69411f752418c9",
-          "modified": "2014-12-31T01:08:40"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureGoodGreen-125.png",
-          "size": 88,
-          "hash": "dfeaa73e55f193af48472463cf16b569",
-          "modified": "2014-12-31T01:08:40"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureGoodGreen-150.png",
-          "size": 89,
-          "hash": "20ca525dca32a78a0353e40ee4adcda4",
-          "modified": "2014-12-31T01:08:42"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureGoodGreen-200.png",
-          "size": 95,
-          "hash": "b5ed03c438ebdf2c6374b2e50251d18b",
-          "modified": "2014-12-31T01:08:38"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureGoodGreen-250.png",
-          "size": 97,
-          "hash": "2897be9a65e8fa8a5b3a88f38c87263f",
-          "modified": "2014-12-31T01:08:38"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureGoodGreen-300.png",
-          "size": 99,
-          "hash": "577fff82b62d0656d8d51670d3aa02a0",
-          "modified": "2014-12-31T01:08:40"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureUnknown-100.png",
-          "size": 86,
-          "hash": "c4af0eb221ad6b28a5e55e9fe45da64f",
-          "modified": "2014-12-31T01:08:42"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureUnknown-125.png",
-          "size": 88,
-          "hash": "b0bbb06c6285e3596cebd38981613afd",
-          "modified": "2014-12-31T01:08:50"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureUnknown-150.png",
-          "size": 89,
-          "hash": "5f1047babc4ef901b9f9e33eb8af62ee",
-          "modified": "2014-12-31T01:08:54"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureUnknown-200.png",
-          "size": 95,
-          "hash": "b13abd82f96d9745850613fc0e4ac1be",
-          "modified": "2014-12-31T01:09:00"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureUnknown-250.png",
-          "size": 97,
-          "hash": "84900689b93148059827c93b50938d8c",
-          "modified": "2014-12-31T01:09:00"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\temperatureUnknown-300.png",
-          "size": 99,
-          "hash": "8c023787a2a310781faa973f46dc6d18",
-          "modified": "2014-12-31T01:08:46"
-        },
-        {
-          "path": "CdiResource\\themes\\FlatSquare\\theme.ini",
-          "size": 309,
-          "hash": "ca9541cb045f3952c3759a1b1c9bd7bf",
-          "modified": "2020-05-03T16:52:48"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskBad-100.png",
-          "size": 811,
-          "hash": "b1f59b960f191bee0afdee05f788bc77",
-          "modified": "2016-08-20T11:56:12"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskBad-125.png",
-          "size": 1027,
-          "hash": "7f4d03658fc0aa172a176258618a587c",
-          "modified": "2016-08-20T11:56:36"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskBad-150.png",
-          "size": 1229,
-          "hash": "8f3afdf5c51d18bc9cfb54583e48612d",
-          "modified": "2016-08-20T11:56:40"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskBad-200.png",
-          "size": 4362,
-          "hash": "c661a5a76efcb584febac6afd37a3291",
-          "modified": "2016-08-20T11:57:14"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskBad-250.png",
-          "size": 7440,
-          "hash": "4cc44f3b0dc10b90aca6f61ecf50ce93",
-          "modified": "2016-08-20T11:57:36"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskBad-300.png",
-          "size": 6476,
-          "hash": "333996814e8b95c2ba3a9ddffd530f05",
-          "modified": "2016-08-20T11:57:50"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskBadMini-100.png",
-          "size": 671,
-          "hash": "1785641889fd4c2cf24ddfde1e5cbbad",
-          "modified": "2023-04-08T10:39:58"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskBadMini-125.png",
-          "size": 898,
-          "hash": "1da23b4dc5421467ccc8452f630675c4",
-          "modified": "2023-04-08T10:40:00"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskBadMini-150.png",
-          "size": 969,
-          "hash": "e86e3a58077dfbfaee94b8ac7d9612fa",
-          "modified": "2023-04-08T10:39:58"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskBadMini-200.png",
-          "size": 1590,
-          "hash": "6d3d54013ee4f6cbf32ec126ab1ffd71",
-          "modified": "2023-04-08T10:40:00"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskBadMini-250.png",
-          "size": 4614,
-          "hash": "afc16d80c514208b70b15059b0b63b3b",
-          "modified": "2023-04-08T10:40:00"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskBadMini-300.png",
-          "size": 5076,
-          "hash": "4fe8ea8cabf43f5e6fdbf8c46cba3adf",
-          "modified": "2023-04-08T10:40:00"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskCaution-100.png",
-          "size": 799,
-          "hash": "8010477107ff2b63aa1d95ecc90bb461",
-          "modified": "2016-08-20T11:58:34"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskCaution-125.png",
-          "size": 994,
-          "hash": "a0595f74bd1afc84d1f8a52efcb98aa6",
-          "modified": "2016-08-20T11:58:46"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskCaution-150.png",
-          "size": 1206,
-          "hash": "d22cc9023bf007d270cd6f071c98be3e",
-          "modified": "2016-08-20T11:59:16"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskCaution-200.png",
-          "size": 4247,
-          "hash": "98b495abcbf42ee84c70d331d64f9e05",
-          "modified": "2016-08-20T11:59:34"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskCaution-250.png",
-          "size": 7107,
-          "hash": "b7d0278f593ddbd54592ade7b2ece938",
-          "modified": "2016-08-20T12:00:00"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskCaution-300.png",
-          "size": 6511,
-          "hash": "17622bcc1d7c066ed25d4fa107281932",
-          "modified": "2016-08-20T12:00:36"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskCautionMini-100.png",
-          "size": 666,
-          "hash": "8b5961c91fb85fcfe70dc12838b05131",
-          "modified": "2023-04-08T10:39:58"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskCautionMini-125.png",
-          "size": 871,
-          "hash": "2e45539ea251d28cfc60d55e86860af3",
-          "modified": "2023-04-08T10:40:00"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskCautionMini-150.png",
-          "size": 984,
-          "hash": "522383c31daa92fe4e45a0ef1bb3a000",
-          "modified": "2023-04-08T10:40:00"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskCautionMini-200.png",
-          "size": 1563,
-          "hash": "bc2e8f05ae887ccd981e1364dd55dafa",
-          "modified": "2023-04-08T10:40:00"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskCautionMini-250.png",
-          "size": 4613,
-          "hash": "046023b13f008b5d6343cbd3df8a57f6",
-          "modified": "2023-04-08T10:40:02"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskCautionMini-300.png",
-          "size": 5031,
-          "hash": "3d77eaa4e206fdd4605e78b3bfaee4cc",
-          "modified": "2023-04-08T10:40:00"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskGood-100.png",
-          "size": 806,
-          "hash": "3419b9eae6def0c59f887850242ebba8",
-          "modified": "2016-08-20T12:00:46"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskGood-125.png",
-          "size": 1013,
-          "hash": "7aec5760fd745e7b38491f6836cc611e",
-          "modified": "2016-08-20T12:00:52"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskGood-150.png",
-          "size": 1186,
-          "hash": "b1295a702c523892ddb23f8a4163473b",
-          "modified": "2016-08-20T12:01:20"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskGood-200.png",
-          "size": 4009,
-          "hash": "1ea6872b6d30454980cc7bc949ae6c92",
-          "modified": "2016-08-20T12:01:42"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskGood-250.png",
-          "size": 7539,
-          "hash": "1a74e14a596c6b6590a19e9d55b0851c",
-          "modified": "2016-08-20T12:02:14"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskGood-300.png",
-          "size": 5793,
-          "hash": "7e2925145e7ba825570b19777402067f",
-          "modified": "2016-08-20T12:02:36"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskGoodGreen-100.png",
-          "size": 806,
-          "hash": "3419b9eae6def0c59f887850242ebba8",
-          "modified": "2016-08-20T12:03:02"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskGoodGreen-125.png",
-          "size": 1013,
-          "hash": "7aec5760fd745e7b38491f6836cc611e",
-          "modified": "2016-08-20T12:03:08"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskGoodGreen-150.png",
-          "size": 1186,
-          "hash": "b1295a702c523892ddb23f8a4163473b",
-          "modified": "2016-08-20T12:03:38"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskGoodGreen-200.png",
-          "size": 4009,
-          "hash": "1ea6872b6d30454980cc7bc949ae6c92",
-          "modified": "2016-08-20T12:03:58"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskGoodGreen-250.png",
-          "size": 7539,
-          "hash": "1a74e14a596c6b6590a19e9d55b0851c",
-          "modified": "2016-08-20T12:04:28"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskGoodGreen-300.png",
-          "size": 5793,
-          "hash": "7e2925145e7ba825570b19777402067f",
-          "modified": "2016-08-20T12:04:52"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskGoodGreenMini-100.png",
-          "size": 746,
-          "hash": "ce67c00e5fc16f255afebb90a5ba9418",
-          "modified": "2023-04-08T10:40:00"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskGoodGreenMini-125.png",
-          "size": 897,
-          "hash": "c89dc2971316142d1cc479330a338bcd",
-          "modified": "2023-04-08T10:40:00"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskGoodGreenMini-150.png",
-          "size": 1048,
-          "hash": "3a1d70f6c256a518b51f133cd908e0fc",
-          "modified": "2023-04-08T10:39:58"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskGoodGreenMini-200.png",
-          "size": 1545,
-          "hash": "1fbf79ffcd0710a9ff4c5365b34e6390",
-          "modified": "2023-04-08T10:40:00"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskGoodGreenMini-250.png",
-          "size": 4810,
-          "hash": "d024aa21945d13e86d7521660666905c",
-          "modified": "2023-04-08T10:40:00"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskGoodGreenMini-300.png",
-          "size": 4765,
-          "hash": "41efba600bd2f169e24c707c6aebc0ef",
-          "modified": "2023-04-08T10:40:02"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskGoodMini-100.png",
-          "size": 746,
-          "hash": "ce67c00e5fc16f255afebb90a5ba9418",
-          "modified": "2023-04-08T10:40:00"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskGoodMini-125.png",
-          "size": 897,
-          "hash": "c89dc2971316142d1cc479330a338bcd",
-          "modified": "2023-04-08T10:40:00"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskGoodMini-150.png",
-          "size": 1048,
-          "hash": "3a1d70f6c256a518b51f133cd908e0fc",
-          "modified": "2023-04-08T10:39:58"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskGoodMini-200.png",
-          "size": 1545,
-          "hash": "1fbf79ffcd0710a9ff4c5365b34e6390",
-          "modified": "2023-04-08T10:40:00"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskGoodMini-250.png",
-          "size": 4810,
-          "hash": "d024aa21945d13e86d7521660666905c",
-          "modified": "2023-04-08T10:40:00"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskGoodMini-300.png",
-          "size": 4765,
-          "hash": "41efba600bd2f169e24c707c6aebc0ef",
-          "modified": "2023-04-08T10:40:00"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusBad-100.png",
-          "size": 871,
-          "hash": "93d294979316baf0bad26e9d6cbd1361",
-          "modified": "2013-09-12T23:28:28"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusBad-125.png",
-          "size": 1038,
-          "hash": "4cfbed1131c7b1570f0c134a826a2c92",
-          "modified": "2013-09-12T23:28:28"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusBad-150.png",
-          "size": 1267,
-          "hash": "895f862976e316e57f0587e611ae3043",
-          "modified": "2013-09-12T23:28:30"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusBad-200.png",
-          "size": 1468,
-          "hash": "9a368611c11d8e292a418d36d7cb53a4",
-          "modified": "2013-09-12T23:28:30"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusBad-250.png",
-          "size": 2214,
-          "hash": "c6687393ed94908e0a5f255188843431",
-          "modified": "2014-12-31T13:42:08"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusBad-300.png",
-          "size": 2107,
-          "hash": "e766f8e3d9cc84b17083dd03b4656d18",
-          "modified": "2013-09-12T23:28:36"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusCaution-100.png",
-          "size": 883,
-          "hash": "b35cff135b50cce753090ba377ced098",
-          "modified": "2013-09-12T23:28:28"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusCaution-125.png",
-          "size": 1065,
-          "hash": "3bb0862ab1bfd318274a92778e7bf7ca",
-          "modified": "2013-09-12T23:28:28"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusCaution-150.png",
-          "size": 1011,
-          "hash": "4b4ee96e59b56a81f2169fe58aac4f26",
-          "modified": "2013-09-12T23:28:30"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusCaution-200.png",
-          "size": 1473,
-          "hash": "a67053de78133bf8b632024d2a94b21b",
-          "modified": "2013-09-12T23:28:36"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusCaution-250.png",
-          "size": 2197,
-          "hash": "ba3db692dd3298e86c5c79b9b76c5299",
-          "modified": "2014-12-31T13:42:06"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusCaution-300.png",
-          "size": 2141,
-          "hash": "dbcc3a877a8830e3e10e92f58d57149a",
-          "modified": "2013-09-12T23:28:34"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusGood-100.png",
-          "size": 923,
-          "hash": "dce02b9a45fba2a70042c8c1e03d9b94",
-          "modified": "2014-08-26T23:10:52"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusGood-125.png",
-          "size": 1105,
-          "hash": "8d1ad40d84930c904a3c46a2e876110e",
-          "modified": "2014-08-26T23:10:54"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusGood-150.png",
-          "size": 1297,
-          "hash": "cd53ebbeedfcdbe04ac94f0323440d83",
-          "modified": "2014-08-26T23:10:56"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusGood-200.png",
-          "size": 1259,
-          "hash": "e8799e2989a9ec24ea55195adf9d2e89",
-          "modified": "2014-08-26T23:11:00"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusGood-250.png",
-          "size": 2222,
-          "hash": "d3e3658803f4a8fa203c556cf80d5983",
-          "modified": "2014-08-27T21:25:42"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusGood-300.png",
-          "size": 1825,
-          "hash": "f8b559a259cfe0f8eb39d1596f371767",
-          "modified": "2014-08-26T23:11:08"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusGoodGreen-100.png",
-          "size": 923,
-          "hash": "dce02b9a45fba2a70042c8c1e03d9b94",
-          "modified": "2013-09-12T23:28:36"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusGoodGreen-125.png",
-          "size": 1105,
-          "hash": "8d1ad40d84930c904a3c46a2e876110e",
-          "modified": "2013-09-12T23:28:36"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusGoodGreen-150.png",
-          "size": 1297,
-          "hash": "cd53ebbeedfcdbe04ac94f0323440d83",
-          "modified": "2013-09-12T23:28:36"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusGoodGreen-200.png",
-          "size": 1259,
-          "hash": "e8799e2989a9ec24ea55195adf9d2e89",
-          "modified": "2013-09-12T23:28:40"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusGoodGreen-250.png",
-          "size": 2106,
-          "hash": "6383265aab72b6031c704ac0fe2a47df",
-          "modified": "2014-12-31T13:42:08"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusGoodGreen-300.png",
-          "size": 1825,
-          "hash": "f8b559a259cfe0f8eb39d1596f371767",
-          "modified": "2013-09-12T23:28:48"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusUnknown-100.png",
-          "size": 721,
-          "hash": "c1ce67fb776dac5793910f863c5ea96f",
-          "modified": "2013-09-12T23:28:38"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusUnknown-125.png",
-          "size": 784,
-          "hash": "e15e09228df7b056b00ea72dcd01e6af",
-          "modified": "2013-09-12T23:28:42"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusUnknown-150.png",
-          "size": 868,
-          "hash": "6b96f8a52a5760036af1c44936f3ada0",
-          "modified": "2013-09-12T23:28:38"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusUnknown-200.png",
-          "size": 1269,
-          "hash": "a14be54713297b9431268096ffb982d8",
-          "modified": "2013-09-12T23:28:42"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusUnknown-250.png",
-          "size": 1033,
-          "hash": "598a9b5a5f348cf7715b420b1ce7fd6e",
-          "modified": "2014-12-31T13:42:06"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskStatusUnknown-300.png",
-          "size": 1656,
-          "hash": "6a19928f05edc50a0d1f19f91def9b1b",
-          "modified": "2013-09-12T23:28:40"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskUnknown-100.png",
-          "size": 427,
-          "hash": "0d10915c7ef68289eabb2c2faf7f61b6",
-          "modified": "2016-08-20T12:09:40"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskUnknown-125.png",
-          "size": 532,
-          "hash": "bc64ce6853fc6f35ca6955c72f886244",
-          "modified": "2016-08-20T12:09:42"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskUnknown-150.png",
-          "size": 618,
-          "hash": "144262b58e9171da1a217f5e9cfe082f",
-          "modified": "2016-08-20T12:09:54"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskUnknown-200.png",
-          "size": 926,
-          "hash": "8c4e821aef93671a44ab7e7955530546",
-          "modified": "2016-08-20T12:10:04"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskUnknown-250.png",
-          "size": 1562,
-          "hash": "c62c9be7cbd931c28d45d07e90c8fbbe",
-          "modified": "2016-08-20T12:10:16"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskUnknown-300.png",
-          "size": 2200,
-          "hash": "e85f6f27ebc43f6a83e7e65281939fb5",
-          "modified": "2016-08-20T12:10:38"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskUnknownMini-100.png",
-          "size": 347,
-          "hash": "981afb2d5e2dfd4f1116fbe5fae5372e",
-          "modified": "2023-04-08T10:39:58"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskUnknownMini-125.png",
-          "size": 444,
-          "hash": "e83bc0673b12810bb386a8c5f6eb7216",
-          "modified": "2023-04-08T10:39:58"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskUnknownMini-150.png",
-          "size": 457,
-          "hash": "e08a0c6b5299d949f83d0aaba16e61e9",
-          "modified": "2023-04-08T10:39:58"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskUnknownMini-200.png",
-          "size": 751,
-          "hash": "a8230e3b2b48a6deaccaa4e4bb9a04f1",
-          "modified": "2023-04-08T10:40:00"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskUnknownMini-250.png",
-          "size": 1125,
-          "hash": "5f565baf39ed4e0de8d0cdbcd86067fc",
-          "modified": "2023-04-08T10:40:00"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\diskUnknownMini-300.png",
-          "size": 1141,
-          "hash": "457686abcbb7f08094437457d4bc4e93",
-          "modified": "2023-04-08T10:40:00"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureBad-100.png",
-          "size": 840,
-          "hash": "f613e140eed2e221042fdae82d8b874d",
-          "modified": "2014-08-27T07:29:46"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureBad-125.png",
-          "size": 1017,
-          "hash": "9b40c2ee16d66f19bdbab1f587f61241",
-          "modified": "2014-08-27T07:29:48"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureBad-150.png",
-          "size": 1207,
-          "hash": "fab74d0394df19562e8d8b5eaf82f947",
-          "modified": "2014-08-27T07:29:50"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureBad-200.png",
-          "size": 1386,
-          "hash": "c8c83cbf7d7f8ed8675b21f00d7bd3fe",
-          "modified": "2014-08-27T07:29:52"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureBad-250.png",
-          "size": 1449,
-          "hash": "9b077b7bb9fd3a7190c2c989d4bc4312",
-          "modified": "2014-08-27T23:11:02"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureBad-300.png",
-          "size": 2167,
-          "hash": "287996b8bd31e16d898d850da227c426",
-          "modified": "2014-08-27T07:30:02"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureCaution-100.png",
-          "size": 1079,
-          "hash": "ae23a7383ffae883308c0a56b5ec62ce",
-          "modified": "2013-09-14T09:29:52"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureCaution-125.png",
-          "size": 1266,
-          "hash": "f27e753308c47ecd21b7a4c36cceac68",
-          "modified": "2013-09-14T09:31:08"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureCaution-150.png",
-          "size": 1519,
-          "hash": "fc199b271aaa6e3f3efa8577230c0bf5",
-          "modified": "2013-09-14T09:33:04"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureCaution-200.png",
-          "size": 2350,
-          "hash": "59195e003e5ea0f6d6c9395ce64c8488",
-          "modified": "2013-09-14T09:35:08"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureCaution-250.png",
-          "size": 1422,
-          "hash": "1de45f284a7ed073de11bad2a3368f2d",
-          "modified": "2014-08-27T23:11:02"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureCaution-300.png",
-          "size": 4139,
-          "hash": "8b450b66f250ac8a1331bf470a77c8bc",
-          "modified": "2013-09-14T09:36:30"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureGood-100.png",
-          "size": 863,
-          "hash": "8ab4c8980f0ced831adf85c9289481a3",
-          "modified": "2014-08-27T07:30:24"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureGood-125.png",
-          "size": 1046,
-          "hash": "bcf559e33fd2c882f116c28a9d5f0e64",
-          "modified": "2014-08-27T07:30:26"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureGood-150.png",
-          "size": 1233,
-          "hash": "ae189e3f4451f5d903d3eca14f9b805b",
-          "modified": "2014-08-27T07:30:28"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureGood-200.png",
-          "size": 1316,
-          "hash": "d0f553b0544bd16397fd0d6bed2b8eb0",
-          "modified": "2014-08-27T07:30:32"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureGood-250.png",
-          "size": 1300,
-          "hash": "ff12c2664da1fe2ea76e035229f08080",
-          "modified": "2014-08-27T23:11:02"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureGood-300.png",
-          "size": 2030,
-          "hash": "cdb318032c0e524062c363b4553bc700",
-          "modified": "2014-08-27T07:30:40"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureGoodGreen-100.png",
-          "size": 1095,
-          "hash": "10e7c2f0572fbae10a64c116459a5eb8",
-          "modified": "2013-09-14T09:30:16"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureGoodGreen-125.png",
-          "size": 1282,
-          "hash": "20ac6e8a7530946f98a05b261f432e17",
-          "modified": "2013-09-14T09:31:36"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureGoodGreen-150.png",
-          "size": 1541,
-          "hash": "95f71c090ce31d4e01879d167175d8f6",
-          "modified": "2013-09-14T09:33:30"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureGoodGreen-200.png",
-          "size": 2341,
-          "hash": "389d42a7afe0b7c3694397e5491e58d5",
-          "modified": "2013-09-14T09:35:44"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureGoodGreen-250.png",
-          "size": 1300,
-          "hash": "ff12c2664da1fe2ea76e035229f08080",
-          "modified": "2014-08-27T23:11:02"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureGoodGreen-300.png",
-          "size": 3999,
-          "hash": "693efc7e52f02c8f6fe26ffb3f0669a0",
-          "modified": "2013-09-14T09:36:54"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureUnknown-100.png",
-          "size": 990,
-          "hash": "0fbcca2c974396cc8d5fd826d6c8f100",
-          "modified": "2013-09-14T09:30:28"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureUnknown-125.png",
-          "size": 1179,
-          "hash": "70d5e30f1ace27f2083cdb826ef5e634",
-          "modified": "2013-09-14T09:31:46"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureUnknown-150.png",
-          "size": 1416,
-          "hash": "102bce5029a47305dcc0eb9056623047",
-          "modified": "2013-09-14T09:33:44"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureUnknown-200.png",
-          "size": 2125,
-          "hash": "6b5181338da3e65dfed4cd825c0c6d1c",
-          "modified": "2013-09-14T09:35:54"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureUnknown-250.png",
-          "size": 1180,
-          "hash": "c31ec502d1abc969d23cd66d70c8598e",
-          "modified": "2014-08-27T23:11:02"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\temperatureUnknown-300.png",
-          "size": 3572,
-          "hash": "a045dec3ca20d032073b63fcf9f97d32",
-          "modified": "2013-09-14T09:37:06"
-        },
-        {
-          "path": "CdiResource\\themes\\Simplicity\\theme.ini",
-          "size": 309,
-          "hash": "ca9541cb045f3952c3759a1b1c9bd7bf",
-          "modified": "2020-05-03T16:52:52"
+          "path": "CrystalDiskInfo.exe",
+          "size": 2782725,
+          "hash": "cba2e33a7fded55ddacf55d19d03e383",
+          "modified": "2026-05-24T10:16:44.569971"
         }
       ],
-      "total_files": 582,
-      "total_size": 14245283,
-      "last_updated": "2026-03-10T11:47:46.085968"
+      "total_files": 1,
+      "total_size": 2782725,
+      "last_updated": "2026-05-26T17:40:09.890989"
     },
     "lx-music-desktop": {
       "version": "20260310_120426",
@@ -24895,7 +21421,7 @@
       "last_updated": "2026-03-10T12:04:26.649765"
     },
     "PotPlayer": {
-      "version": "20260514_130128",
+      "version": "20260526_174010",
       "files": [
         {
           "path": "Alarm.wav",
@@ -24905,9 +21431,9 @@
         },
         {
           "path": "ATextOut64.dll",
-          "size": 3948032,
-          "hash": "50976c26b0f09aa909a51ca88cda3b86",
-          "modified": "2026-04-30T09:13:56"
+          "size": 3960336,
+          "hash": "501eb1a8db0df64073459bff6cde8988",
+          "modified": "2026-05-15T15:10:44"
         },
         {
           "path": "CaptureUWP64.dll",
@@ -24977,9 +21503,9 @@
         },
         {
           "path": "ffcodec64.dll",
-          "size": 43557888,
-          "hash": "571a1f2aee5ff78c1c5183d866e0abe0",
-          "modified": "2026-05-11T15:45:34"
+          "size": 43646976,
+          "hash": "e7b3beb1d0ea91d6c526a5d0d5757b7f",
+          "modified": "2026-05-21T10:23:44"
         },
         {
           "path": "FileList.txt",
@@ -25049,9 +21575,9 @@
         },
         {
           "path": "PotPlayer64.dll",
-          "size": 28792848,
-          "hash": "e6eb46de715af0c6600984acf50bdc19",
-          "modified": "2026-05-11T16:29:58"
+          "size": 28632080,
+          "hash": "f64a7fba57a77889aefb40e8ac615bfe",
+          "modified": "2026-05-21T15:36:44"
         },
         {
           "path": "PotPlayerMini64.exe",
@@ -25080,8 +21606,8 @@
         {
           "path": "uninstall.exe",
           "size": 241913,
-          "hash": "6ae0ead4eb1ab39efd2b282e2a3262b4",
-          "modified": "2026-05-14T11:25:48.995425"
+          "hash": "db9fbca67aa452b762e1ccecde0a4087",
+          "modified": "2026-05-26T10:42:40.504168"
         },
         {
           "path": "WebView2Loader64.dll",
@@ -25337,81 +21863,81 @@
         },
         {
           "path": "History\\Bulgarian.txt",
-          "size": 287218,
-          "hash": "c704bd57bea0ea5733abd0bb5bbacf1a",
-          "modified": "2026-05-11T16:22:24"
+          "size": 287447,
+          "hash": "a3c00682b99df2937e32fcb8572f66b2",
+          "modified": "2026-05-21T14:41:58"
         },
         {
           "path": "History\\Chinese(Simplified).txt",
-          "size": 138487,
-          "hash": "504d90edaeef3f0f0f6b5684aae6d642",
-          "modified": "2026-05-11T16:22:30"
+          "size": 138567,
+          "hash": "2c20d9560a5059cb89aa49128c2acea4",
+          "modified": "2026-05-21T14:42:02"
         },
         {
           "path": "History\\Chinese(Traditional).txt",
-          "size": 140799,
-          "hash": "56cce3f02e8b87278185d5996a3b4cb0",
-          "modified": "2026-05-11T16:22:32"
+          "size": 141028,
+          "hash": "6be8a0ccb8645636650268cfc4a523fa",
+          "modified": "2026-05-21T14:42:04"
         },
         {
           "path": "History\\English.txt",
-          "size": 159629,
-          "hash": "7da07165b3243272a8a9fc8322ce751e",
-          "modified": "2026-05-11T16:22:36"
+          "size": 159858,
+          "hash": "e676dfc90a71341c1116a3818ff61671",
+          "modified": "2026-05-21T14:42:08"
         },
         {
           "path": "History\\Hungarian.txt",
-          "size": 95193,
-          "hash": "1b92ba6359b0419703f970e564ee361e",
-          "modified": "2026-05-11T16:22:40"
+          "size": 95422,
+          "hash": "8bcfe31ce4fe0c098da557cbb1fc9ea7",
+          "modified": "2026-05-21T14:42:12"
         },
         {
           "path": "History\\Japanese.txt",
-          "size": 90811,
-          "hash": "e8c9ea0c44f8d1d9c395924a91e5d355",
-          "modified": "2026-05-11T16:22:44"
+          "size": 91040,
+          "hash": "4fca71f35dde175e541674551d90bcc3",
+          "modified": "2026-05-21T14:42:16"
         },
         {
           "path": "History\\Korean.txt",
-          "size": 161331,
-          "hash": "50e510bf68d0852e8f5753ec5ec8bced",
-          "modified": "2026-05-11T16:22:48"
+          "size": 161385,
+          "hash": "57eacf4fbd5c62b37f57f8c344775e7c",
+          "modified": "2026-05-21T14:42:20"
         },
         {
           "path": "History\\Kurdish.txt",
-          "size": 235208,
-          "hash": "6f80138148cad37921afb8e0d3405595",
-          "modified": "2026-05-11T16:22:52"
+          "size": 235437,
+          "hash": "ba8a20319de867164f9f26392681a153",
+          "modified": "2026-05-21T14:42:24"
         },
         {
           "path": "History\\Polish.txt",
-          "size": 175704,
-          "hash": "c6439e5dd19e135551c4656597e6d5f7",
-          "modified": "2026-05-11T16:22:56"
+          "size": 175933,
+          "hash": "750584b8919e3ea9cf2bdb6631811b6c",
+          "modified": "2026-05-21T14:42:26"
         },
         {
           "path": "History\\Russian.txt",
-          "size": 232363,
-          "hash": "c5f68c5764a1faec0c80d0b9a727e818",
-          "modified": "2026-05-11T16:22:58"
+          "size": 232680,
+          "hash": "759212549fafbd34468bb3a6cfa3cb6e",
+          "modified": "2026-05-21T14:42:32"
         },
         {
           "path": "History\\Serbian.txt",
-          "size": 89883,
-          "hash": "48aca96d7ec639c5113cd4a38a997761",
-          "modified": "2026-05-11T16:23:02"
+          "size": 90112,
+          "hash": "f30af62bc4601bb75ab6f8562ccf3549",
+          "modified": "2026-05-21T14:42:36"
         },
         {
           "path": "History\\Turkish.txt",
-          "size": 176479,
-          "hash": "fb1a2212a9be90713d7355a078057b21",
-          "modified": "2026-05-11T16:23:04"
+          "size": 176708,
+          "hash": "b0963d1a3ee3e2c18a5f323b6189f8aa",
+          "modified": "2026-05-21T14:42:40"
         },
         {
           "path": "History\\Ukrainian.txt",
-          "size": 145665,
-          "hash": "424e7b0f5c737e7fffce2ce23d64ee07",
-          "modified": "2026-05-11T16:23:06"
+          "size": 145894,
+          "hash": "895c35cf26fdace661628a545e884980",
+          "modified": "2026-05-21T14:42:42"
         },
         {
           "path": "Html\\ErrorList.htm",
@@ -25511,9 +22037,9 @@
         },
         {
           "path": "Language\\Chinese(Traditional).ini",
-          "size": 189216,
-          "hash": "6edd2cada28f06b33e7e88d4282fd277",
-          "modified": "2026-04-13T08:08:50"
+          "size": 153026,
+          "hash": "decf8ca29639be59b856c019f0b4215c",
+          "modified": "2026-05-19T14:07:12"
         },
         {
           "path": "Language\\Czech.ini",
@@ -25529,15 +22055,15 @@
         },
         {
           "path": "Language\\English.ini",
-          "size": 326810,
-          "hash": "cfc7de10a573998d17bcccb767f59d44",
-          "modified": "2026-04-14T07:33:16"
+          "size": 163533,
+          "hash": "85df8460a9eec38e0470ee788ea4166b",
+          "modified": "2026-05-19T14:06:20"
         },
         {
           "path": "Language\\French.ini",
-          "size": 368216,
-          "hash": "8986ad79f45defa0753c8067677cf164",
-          "modified": "2026-04-15T07:55:42"
+          "size": 189127,
+          "hash": "7797fc1cc08f7f6f4a909ec2514cef55",
+          "modified": "2026-05-19T14:06:30"
         },
         {
           "path": "Language\\German.ini",
@@ -25709,9 +22235,9 @@
         },
         {
           "path": "Module\\MediaInfo64.dll",
-          "size": 6646272,
-          "hash": "2f0e25da310c356168736d41396b28e0",
-          "modified": "2026-04-30T09:34:22"
+          "size": 6794752,
+          "hash": "8a0befa7d2dc1c06c754edfbb04b669d",
+          "modified": "2026-05-12T09:32:16"
         },
         {
           "path": "Module\\QuickSync64.dll",
@@ -25811,15 +22337,15 @@
         },
         {
           "path": "Module\\Whisper\\CPU\\main64.exe",
-          "size": 774144,
-          "hash": "95d77cf5dc367f821a827fb09f0a8bc7",
-          "modified": "2026-04-27T10:09:30"
+          "size": 774656,
+          "hash": "17f96d6285c313cc619854848de0c5ca",
+          "modified": "2026-05-18T15:13:40"
         },
         {
           "path": "Module\\Whisper\\CPU\\whisper64.dll",
-          "size": 3708928,
-          "hash": "921664ccf6b33a431ca33cbf6c3632a6",
-          "modified": "2026-04-30T10:11:02"
+          "size": 3764224,
+          "hash": "1ba2f1f8c5ba7ff657b4c446e15f4c0b",
+          "modified": "2026-05-21T07:54:44"
         },
         {
           "path": "Module\\Whisper\\Vulkan\\main.exe",
@@ -25829,9 +22355,9 @@
         },
         {
           "path": "Module\\Whisper\\Vulkan\\main64.exe",
-          "size": 774144,
-          "hash": "aabc5d6dab023254326c86f9080d0072",
-          "modified": "2026-04-27T09:54:58"
+          "size": 774656,
+          "hash": "5ea33e43a73a6d1f33f37189423513c0",
+          "modified": "2026-05-18T15:02:54"
         },
         {
           "path": "Module\\Whisper\\Vulkan\\whisper.dll",
@@ -25841,9 +22367,9 @@
         },
         {
           "path": "Module\\Whisper\\Vulkan\\whisper64.dll",
-          "size": 65396224,
-          "hash": "f4e0fcae06bf7d86f9a024eab7726cd2",
-          "modified": "2026-04-30T10:00:58"
+          "size": 60982784,
+          "hash": "3bbbb5dc45f81ea4dea2edf97246d73b",
+          "modified": "2026-05-21T07:44:46"
         },
         {
           "path": "PxShader\\Adaptive sharpen(Contrast).txt",
@@ -26807,8 +23333,8 @@
         }
       ],
       "total_files": 318,
-      "total_size": 276697162,
-      "last_updated": "2026-05-14T13:01:28.734608"
+      "total_size": 272053331,
+      "last_updated": "2026-05-26T17:40:10.455071"
     },
     "gh-release-fetch": {
       "version": "20260523_124114",

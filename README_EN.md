@@ -2,9 +2,16 @@
 
 中文 | [English](README_EN.md)
 
+## ☕ Buy Me a Coke
+
+Open source is hard — tips are welcome:  
+👉 [Afdian / 爱发电](https://ifdian.net/a/shellsec)
+
 A tool system for managing local software directories and automatically syncing updates, supporting GitHub and GitLab cloud storage, with Git accelerated downloads.
 
 For the latest curated software list and notes, see [`Lastb_soft_version.txt`](Lastb_soft_version.txt).
+
+**Maintainer page check** (optional — `software/` works fine without updates): see [`soft_page_check/`](soft_page_check/README.md). Run `monthly_sop.bat` to compare page titles; update and publish only when you confirm changes.
 
 This toolkit is built around **information security and reducing data leakage**, aiming to minimize cloud reporting, behavioral tracking, and algorithmic data harvesting where practical.
 
@@ -104,7 +111,11 @@ softgitup/
 ├── soft_sync.py            # Sync tool (GUI version)
 ├── sync_software.py        # Complete sync tool (command line, recommended)
 ├── build_exe.py            # Build script
-├── generate_and_push.bat   # One-click generate and push batch
+├── generate_and_push.bat   # Generate list.txt and push
+├── soft_page_check/        # Page title health check (see README)
+│   ├── monthly_sop.bat     # Monthly SOP entry (recommended)
+│   ├── monthly_check.bat   # Tier-A quick check (~42 pages)
+│   └── monthly_check_full.bat  # Quarterly full check
 ├── software/               # Local software directory
 │   ├── CCleaner/
 │   ├── EditPlus/
@@ -277,25 +288,33 @@ python sync_software.py
 
 ## Workflow
 
-### Software Update Process
-1. **Update Software Files**: Place new version software into `software/` directory
-2. **Generate List**: Run `python soft_manager.py` or use batch file
-3. **Push to GitHub**: Automatically commit and push updates
-4. **Sync to Other Devices**: Run sync tool on other devices
+### Maintainer: check → update → publish
 
-### Use Complete Sync Tool
+**Principle**: Clients can keep using `software/` without monthly updates. Title changes are hints only — confirm before downloading.
+
+| When | Action | Notes |
+|------|--------|-------|
+| **~Monthly** | [`soft_page_check/monthly_sop.bat`](soft_page_check/monthly_sop.bat) option `[1]` | Tier-A quick check + guided steps; or `monthly_check.bat` only |
+| **~Quarterly** | [`soft_page_check/monthly_check_full.bat`](soft_page_check/monthly_check_full.bat) **twice** | Full report: A + install list + 423down + 7xiazai |
+| **If changed** | Open `soft_page_check/reports/index.html` | Cracked / mirror / cloud links — download manually |
+| **To update** | Replace under `software/` | GitHub apps: `software/gh-release-fetch/run_update.bat` |
+| **Publish** | `generate_and_push.bat` at repo root | Regenerates `list.txt` and pushes |
+| **Optional** | Edit `Lastb_soft_version.txt` | Install notes or digest summary |
+
+Each monitor scope needs **two consecutive runs** before “title changed” appears. Details: [soft_page_check README](soft_page_check/README.md) (Chinese).
+
+### Client: pull updates
+
 ```bash
-# Use complete sync tool (recommended)
 python sync_software.py
-
-# Or use batch file (no Python environment required)
-一键快速同步.bat
+# or sync_software.exe / 一键快速同步.bat
 ```
-Features include:
-- Automatic sync of all software
-- Smart update detection
-- Automatic process management
-- Detailed logging
+
+### Legacy publish (skip page check)
+
+1. Place new files under `software/`
+2. Run `generate_and_push.bat`
+3. Run `sync_software.bat` / `sync_software.exe` on each client
 
 ## Configuration
 
@@ -809,6 +828,7 @@ MIT License
 
 ## 📚 Related Documentation
 
+- [**Page check & monthly SOP**](soft_page_check/README.md) — Maintainer workflow (Chinese)
 - [Configuration Guide](配置说明.md) - Detailed configuration parameters (Chinese)
 - [Local Server Guide](本地服务器使用说明.md) - Local file server setup guide (Chinese)
 - [手机隐私安全配置指南](手机隐私安全配置指南.md) - Complete mobile privacy configuration guide (Chinese)

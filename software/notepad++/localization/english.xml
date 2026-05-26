@@ -5,7 +5,7 @@ Translation note:
 2. All the comments are for explanation, they are not for translation.
 -->
 <NotepadPlus>
-	<Native-Langue name="English" filename="english.xml" version="8.9.3">
+	<Native-Langue name="English" filename="english.xml" version="8.9.5">
 		<Menu>
 			<Main>
 				<!-- Main Menu Entries -->
@@ -655,6 +655,10 @@ Translation note:
 					<Item id="2235" name="What is Global override?"/>
 				</SubDialog>
 			</StyleConfig>
+
+			<ColorPopup>
+				<Item id="1" name="More Colors..."/>
+			</ColorPopup>
 
 			<ShortcutMapper title="Shortcut Mapper">
 				<Item id="2602" name="Modify"/>
@@ -1611,6 +1615,9 @@ If you require the backward regex searching feature, consult the user manual for
 Please verify the search condition before performing the action."/> <!-- HowToReproduce: https://github.com/notepad-plus-plus/notepad-plus-plus/issues/14897#issuecomment-2564316224 -->
 			<Need2Restart2ShowMenuShortcuts title="Notepad++ needs to be restarted" message="Notepad++ needs to be restarted to show right menu shortcuts."/>
 			<NoAdminRight2ChangeReadOnlyFileAttribute title="Changing file read-only attribute failed" message="Please run Notepad++ as administrator to change the file attributes."/>
+			<ReadOnlyFileCannotBeSaved title="Save failed - File is Read-Only" message="&quot;$STR_REPLACE$&quot;
+The file is read-only and cannot be saved.
+Please remove read-only then save your file."/>
 		</MessageBox>
 		<ClipboardHistory>
 			<PanelTitle name="Clipboard History"/>

@@ -5,7 +5,7 @@ Translation note:
 2. All the comments are for explanation, they are not for translation.
 -->
 <NotepadPlus>
-	<Native-Langue name="Français" filename="french.xml" version="8.9.3">
+	<Native-Langue name="Français" filename="french.xml" version="8.9.5">
 		<Menu>
 			<Main>
 				<!-- Main Menu Entries -->
@@ -655,6 +655,10 @@ Translation note:
 					<Item id="2235" name="C'est quoi « Global override » ?"/>
 				</SubDialog>
 			</StyleConfig>
+
+			<ColorPopup>
+				<Item id="1" name="Plus de Couleurs..."/>
+			</ColorPopup>
 
 			<ShortcutMapper title="Gestionnaire de raccourcis clavier">
 				<Item id="2602" name="Modifier"/>
@@ -1611,6 +1615,9 @@ Si vous avez besoin de la fonction de recherche d’expression régulière inver
 Veuillez vérifier la condition de recherche avant de procéder à l'action."/> <!-- HowToReproduce: https://github.com/notepad-plus-plus/notepad-plus-plus/issues/14897#issuecomment-2564316224 -->
 			<Need2Restart2ShowMenuShortcuts title="Redémarrer Notepad++" message="Vous avez besoins de redémarrer Notepad++ afin d'afficher menu ＋ ▼ ✕ "/>
 			<NoAdminRight2ChangeReadOnlyFileAttribute title="Impossible de modifier l'attribut lecture seule" message="Veuillez lancer Notepad++ en mode « Administrateur » pour modifier cet attribut du fichier."/>
+			<ReadOnlyFileCannotBeSaved title="Échec de la sauvegarde - Fichier est en lecture seule" message="&quot;$STR_REPLACE$&quot;
+Le fichier est en lecture seule et ne peut pas être enregistré.
+Veuillez supprimer l'attribut « lecture seule » puis enregistrer votre fichier."/>
 		</MessageBox>
 		<ClipboardHistory>
 			<PanelTitle name="Historique du presse-papier"/>

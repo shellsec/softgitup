@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <NotepadPlus>
-	<Native-Langue name="台灣繁體" filename="taiwaneseMandarin.xml" version="8.9.3">
+	<Native-Langue name="台灣繁體" filename="taiwaneseMandarin.xml" version="8.9.5">
 		<Menu>
 			<Main>
 				<!-- Main Menu Entries -->
@@ -605,6 +605,11 @@
 					<Item id="2235" name="什麼是「Global override」？"/>
 				</SubDialog>
 			</StyleConfig>
+
+			<ColorPopup>
+				<Item id="1" name="更多顏色..."/>
+			</ColorPopup>
+
 			<ShortcutMapper title="管理快捷鍵">
 				<Item id="2602" name="修改"/>
 				<Item id="2603" name="刪除"/>
@@ -1478,6 +1483,9 @@
 			<FileMemoryAllocationFailed title="例外狀況：檔案記憶體分配失敗" message="可能沒有足夠的連續可用記憶體供 Notepad++ 載入檔案。"/>
 			<Need2Restart2ShowMenuShortcuts title="重新啟動 Notepad++" message="Notepad++ 需要重新啟動才能顯示選單右邊捷徑。"/>
 			<NoAdminRight2ChangeReadOnlyFileAttribute title="更改檔案維讀屬性失敗" message="請在系統管理員模式下重新啟動 Notepad++ 以使用此功能。"/>
+			<ReadOnlyFileCannotBeSaved title="儲存檔案失敗 - 該文件為唯讀" message="&quot;$STR_REPLACE$&quot;
+該文件為唯讀，無法儲存。
+請取消唯讀設定後再儲存檔案。"/>
 		</MessageBox>
 		<ClipboardHistory>
 			<PanelTitle name="剪貼簿記錄"/>

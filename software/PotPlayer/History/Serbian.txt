@@ -2,8 +2,12 @@
 Историја верзија Пот плејера
 
 ----------------------------------------------------------
-[260511]
+[260521]
 ----------------------------------------------------------
+- Significantly improved internal stability
+- Fixed an issue where colors appeared strange during RGB24 processing
+- Improved playback for some HTTP streams
+- Improved synchronization handling for the built-in audio renderer
 
 ----------------------------------------------------------
 [260401]
