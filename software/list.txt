@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-26T19:11:04.721074",
+  "generated_at": "2026-05-27T12:39:09.227294",
   "total_software": 21,
-  "total_files": 3997,
-  "total_size": 1499919097,
+  "total_files": 3995,
+  "total_size": 1499830732,
   "software": {
     "WinMemoryCleaner": {
       "version": "20260515_144655",
@@ -85,7 +85,7 @@
       "last_updated": "2026-03-10T11:47:39.734766"
     },
     "system_good": {
-      "version": "20260526_191103",
+      "version": "20260527_123908",
       "files": [
         {
           "path": "AutoHotkey.exe",
@@ -179,9 +179,9 @@
         },
         {
           "path": "Lastb_soft_version.txt",
-          "size": 120159,
-          "hash": "4829e70e94ec4b9ea7d0b6afa50b8de3",
-          "modified": "2026-05-26T19:10:51.962800"
+          "size": 120304,
+          "hash": "f2baabd04c4da3568a21e42436022584",
+          "modified": "2026-05-27T12:38:55.276196"
         },
         {
           "path": "lx-music-desktop.7z",
@@ -245,9 +245,9 @@
         },
         {
           "path": "putty.exe",
-          "size": 1709672,
-          "hash": "36e31f610eef3223154e6e8fd074190f",
-          "modified": "2025-06-30T18:33:04.970150"
+          "size": 1708656,
+          "hash": "751adc0b31a17f79d479c3b7a274c6da",
+          "modified": "2026-05-27T12:37:54.164470"
         },
         {
           "path": "requirements313.txt",
@@ -371,11 +371,11 @@
         }
       ],
       "total_files": 47,
-      "total_size": 567602547,
-      "last_updated": "2026-05-26T19:11:03.448256"
+      "total_size": 567601676,
+      "last_updated": "2026-05-27T12:39:08.002326"
     },
     "notepad++": {
-      "version": "20260526_174009",
+      "version": "20260527_123908",
       "files": [
         {
           "path": "config.xml",
@@ -427,9 +427,9 @@
         },
         {
           "path": "notepad++.exe",
-          "size": 8434672,
-          "hash": "acbbd09e03b81c46e23a3e86aa1922f7",
-          "modified": "2026-05-20T01:15:23.457751"
+          "size": 8442352,
+          "hash": "f0e4a69978db9754979a8499cdb5caa3",
+          "modified": "2026-05-26T22:31:48.871802"
         },
         {
           "path": "nppLogNulContentCorruptionIssue.xml",
@@ -448,18 +448,6 @@
           "size": 1526,
           "hash": "11b0a85dcd7045352f71e46d83de6d7e",
           "modified": "2026-01-30T01:34:23.921981"
-        },
-        {
-          "path": "session.xml",
-          "size": 50030,
-          "hash": "fcf253ad01103926cbae6269455ad503",
-          "modified": "2026-05-26T10:46:41.386608"
-        },
-        {
-          "path": "session.xml.inCaseOfCorruption.bak",
-          "size": 50030,
-          "hash": "753fb10e2509c8d2dcbecf3a1d63136e",
-          "modified": "2026-05-26T10:37:12.110128"
         },
         {
           "path": "shortcuts.xml",
@@ -1123,15 +1111,15 @@
         },
         {
           "path": "localization\\english.xml",
-          "size": 106275,
-          "hash": "2d9e3f83ef7052c935464756d4806855",
-          "modified": "2026-05-17T22:37:30.072981"
+          "size": 107451,
+          "hash": "d2352224f91b125efdc47c3951a32a8a",
+          "modified": "2026-05-26T22:24:12.589823"
         },
         {
           "path": "localization\\english_customizable.xml",
-          "size": 106289,
-          "hash": "ce92d4791133251b4d068ece6ee0d008",
-          "modified": "2026-05-17T22:37:30.072981"
+          "size": 107464,
+          "hash": "c8a0d00fbc964452d08ddfc6554723fb",
+          "modified": "2026-05-26T22:24:12.590822"
         },
         {
           "path": "localization\\esperanto.xml",
@@ -1165,9 +1153,9 @@
         },
         {
           "path": "localization\\french.xml",
-          "size": 119059,
-          "hash": "ae65bade5384d0cae1b67e341b584537",
-          "modified": "2026-05-17T22:37:30.072981"
+          "size": 120423,
+          "hash": "0fc092702e6fbf69fe8f8211d0b6c7b5",
+          "modified": "2026-05-26T22:24:12.592823"
         },
         {
           "path": "localization\\friulian.xml",
@@ -1465,9 +1453,9 @@
         },
         {
           "path": "localization\\taiwaneseMandarin.xml",
-          "size": 92062,
-          "hash": "8e0911f93580babd2cdf8ae6bbb6a31d",
-          "modified": "2026-05-17T22:37:30.075504"
+          "size": 93233,
+          "hash": "9011d317fc00e6c9e65db3dce3b36d4f",
+          "modified": "2026-05-26T22:24:12.593826"
         },
         {
           "path": "localization\\tajikCyrillic.xml",
@@ -1568,8 +1556,8 @@
         {
           "path": "plugins\\Config\\nppPluginList.dll",
           "size": 227824,
-          "hash": "d1c3605799e94a6163ac65fcd670b0a5",
-          "modified": "2026-05-20T01:15:26.738094"
+          "hash": "7b9ed8c995edcaa1b3879b2db29c4b03",
+          "modified": "2026-05-26T22:31:52.187667"
         },
         {
           "path": "plugins\\Config\\PythonScriptStartup.cnf",
@@ -2456,20 +2444,20 @@
         {
           "path": "plugins\\mimeTools\\mimeTools.dll",
           "size": 150000,
-          "hash": "11e8bd4f7a4b4ffeb0174a6890f75015",
-          "modified": "2026-05-20T01:15:37.380605"
+          "hash": "0771a03b5c03c801b5fd6b0824b0a711",
+          "modified": "2026-05-26T22:32:02.273471"
         },
         {
           "path": "plugins\\NppConverter\\NppConverter.dll",
           "size": 208368,
-          "hash": "81a5dd93a24a47c786bb6c3a9c1c2857",
-          "modified": "2026-05-20T01:15:40.986415"
+          "hash": "615ef0374ae9bd3cdeeac2144b6a8968",
+          "modified": "2026-05-26T22:32:05.609540"
         },
         {
           "path": "plugins\\NppExport\\NppExport.dll",
           "size": 159216,
-          "hash": "bb551b2843d7c59914cfa7892bd44efd",
-          "modified": "2026-05-20T01:15:33.655762"
+          "hash": "ba370dac59770b399a66d5d37bd89cf8",
+          "modified": "2026-05-26T22:31:58.929277"
         },
         {
           "path": "plugins\\PythonScript\\python312.dll",
@@ -8342,8 +8330,8 @@
         {
           "path": "updater\\GUP.exe",
           "size": 1368560,
-          "hash": "bcd738fbf56fe33e617821589c7dc6e6",
-          "modified": "2026-05-20T01:15:30.058090"
+          "hash": "6325c283cfdf2cf9699587cc48d159b2",
+          "modified": "2026-05-26T22:31:55.515995"
         },
         {
           "path": "updater\\gup.xml",
@@ -8388,9 +8376,9 @@
           "modified": "2026-05-16T09:37:18.743879"
         }
       ],
-      "total_files": 1335,
-      "total_size": 76478835,
-      "last_updated": "2026-05-26T17:40:09.198199"
+      "total_files": 1333,
+      "total_size": 76391341,
+      "last_updated": "2026-05-27T12:39:08.425999"
     },
     "notepad--": {
       "version": "20260519_121149",

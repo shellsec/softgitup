@@ -75,9 +75,10 @@ notepad++、notepad--、SublimeText、Obsidian+CLI
 https://www.423down.com/4966.html
 
 编辑器
-notepad++ 增加了实用插件
-https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.6/npp.8.9.6.portable.x64.zip
-https://gh-proxy.com/github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.6/npp.8.9.6.portable.x64.zip
+notepad++ 增加了实用插件，====官方版本直接覆盖====
+https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.6.1/npp.8.9.6.1.portable.x64.zip
+https://gh-proxy.com/github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.6.1/npp.8.9.6.1.portable.x64.zip
+
 核心特点：免费开源、语法高亮、多标签编辑，便携免安装，插件扩展能力强，适配远程桌面使用需求
 config.xml shortcuts.xml 去除空行 ctrl+k 设置了DirectWrite 默认搜索走chatgpt
 Notepad++ 在向日葵远程桌面中显示空白主要是由于渲染引擎冲突导致，具体来说：
@@ -259,7 +260,9 @@ system_good目录下
 落雪音乐 安装包，解压后251M超出大小了，更新安装到，Program Files\lx-music-desktop\ 即可
 https://github.com/lyswhut/lx-music-desktop/releases
 https://gh-proxy.com/github.com/lyswhut/lx-music-desktop/releases/download/v2.12.2/lx-music-desktop-v2.12.2-win_x64-green.7z
+https://www.lanzout.com/b481240
 2、请在GitHub上搜索 lx-music-source 寻找最新的第三方维护的音源
+https://github.com/Macrohard0001/lx-ikun-music-sources
 https://github.com/search?q=lx-music-source&type=repositories
 软件默认无音源，需自行添加：
 基本设置——自定义源——在线导入（任选一个就行），打钩，显示[初始化成功]
@@ -365,7 +368,7 @@ Ditto 3.25.113.0 剪贴板历史管理神器，支持搜索、分组、快捷键
 https://github.com/sabrogden/Ditto
 核心特点：记录所有剪贴板内容，支持搜索、分组、快捷键调用，可保存文本 / 图片 / HTML 等格式，轻量无捆绑
 
-putty Release 0.83 https://www.chiark.greenend.org.uk/~sgtatham/putty/
+putty Release 0.84 https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 核心特点：支持 ML-KEM 后量子密钥交换算法，Unicode 支持优化，免费无广告，轻量实用，是远程连接必备工具
 上面那个临时可以用，但是日常运维服务器还是需要专业管理
 MobaXterm 综合远程工具 汉化版 最新版 26.3
