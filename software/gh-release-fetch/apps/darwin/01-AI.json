@@ -327,6 +327,27 @@
     "run_installer": false
   },
   {
+    "id": "continue",
+    "简介": "Continue（macOS arm64 .vsix）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "releases_url": "https://bgithub.xyz/continuedev/continue/releases",
+    "repo_path": "continuedev/continue"
+  },
+  {
+    "id": "roo_code",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/RooCodeInc/Roo-Code/releases",
+    "repo_path": "RooCodeInc/Roo-Code"
+  },
+  {
+    "id": "openhands",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/All-Hands-AI/OpenHands/releases",
+    "repo_path": "All-Hands-AI/OpenHands"
+  },
+  {
     "id": "openclaw",
     "简介": "OpenClaw（macOS 用 Release 中 OpenClaw-*.dmg）",
     "分类": "AI",
@@ -538,5 +559,37 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "aider",
+    "简介": "aider（macOS arm64 tar.gz）",
+    "分类": "AI",
+    "releases_url": "https://bgithub.xyz/Aider-AI/aider/releases",
+    "repo_path": "Aider-AI/aider",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "aider-",
+      "darwin-arm64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "x86",
+      ".sha256"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "aider-{ver}-darwin-arm64.tar.gz"
+    ],
+    "save_name": "aider-{ver}-darwin-arm64.tar.gz"
   }
 ]

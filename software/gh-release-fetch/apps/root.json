@@ -30,12 +30,14 @@
       "说明": "每条应用的「分类」建议与所在分片文件名一致；新增应用时优先归入下表已有类，必要时新建 apps/windows/30-代理与隧道.json（数组）等分片，并为本文件内应用写上相同「分类」字符串。",
       "当前分片": "AI、下载、写作、办公、办公与设计、命令行、备份、多媒体、多媒体与设计、安全、工具、开发、效率、游戏、笔记、系统、终端、网络、网络与协作、网络与通讯、远程与协作、音视频、数据库、云原生、可观测、编辑器、金融与股票、加密货币、局域网文件共享、代理与隧道",
       "建议扩充（尚无独立分片时可先挂在相近类）": "浏览器；压缩与归档；截图与录屏；科学计算与数据；硬件与外围；教育学习；虚拟机（桌面级）",
+      "何时新建分片": "同一分类下条目持续增多（建议约 12 条以上）或语义与邻近类明显不同时，再新建 apps/<platform>/NN-新分类.json；否则优先挂已有分片。",
       "整理提示": "「网络与协作」「远程与协作」「网络与通讯」边界较接近，后续若觉得乱可合并为「网络与远程」等更少的大类。",
       "维护脚本": "tools/rebalance_dev_categories.py 曾用于从 12-开发.json 拆出 23～26 分片；已拆过后勿重复执行（会缺 id）。若需再次批量重划分类，应基于当前 JSON 另写脚本或改该脚本内的 MOVES 列表。"
     },
     "备份与恢复": "拆分前的完整单文件为仓库根目录 apps.json.monolith.bak。若需恢复单文件模式：删除整个 apps/ 目录（或至少删除 apps/root.json），将 apps.json.monolith.bak 改名为 apps.json。重新拆分可运行：python tools/split_apps_to_apps_dir.py（需先准备好根目录 apps.json）。",
     "重置 enabled": "将所有应用 JSON 里的 enabled 写回 false（改磁盘）：在项目根执行 python tools/reset_enabled_json.py；加 --dry-run 可只预览数量不写文件。独立清单包执行 python tools/reset_enabled_json.py --apps-dir VibeCodingToolsDown（快照默认在该包 tools/ 下）；也可用 VibeCodingToolsDown/tools/reset_enabled_json.bat。",
     "查找应用": "项目根 lookup_app.bat <关键词> 或 python lookup_app.py <关键词>：模糊检索 apps 分片中的 id/简介/repo 等，显示平台、分片路径与分类，并交互询问是否 enabled=true。",
+    "清单索引": "根目录 CATALOG.md 为自动生成的分片/条目概览（不含 99 占位分片）；刷新：python tools/generate_catalog_index.py",
     "download_subdir_by_platform": "根级若为 true，下载保存路径为 download_dir/<windows|darwin|linux>/...，便于区分系统类型；日志与「开始下载」也会标注平台名。"
   },
   "download_dir": ".",

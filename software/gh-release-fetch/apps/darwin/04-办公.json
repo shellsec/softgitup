@@ -22,5 +22,31 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/kiwix/kiwix-desktop/releases",
     "repo_path": "kiwix/kiwix-desktop"
+  },
+  {
+    "id": "affine",
+    "简介": "AFFiNE 知识库/文档/白板",
+    "releases_url": "https://bgithub.xyz/toeverything/AFFiNE/releases",
+    "repo_path": "toeverything/AFFiNE",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "分类": "办公",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "affine-",
+      "stable-macos-x64"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "arm64",
+      "blockmap"
+    ],
+    "use_download_filename": true
   }
 ]

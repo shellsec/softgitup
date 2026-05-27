@@ -33,5 +33,35 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "7zip",
+    "简介": "7-Zip（macOS tar.xz，ip7z/7zip）",
+    "分类": "工具",
+    "releases_url": "https://bgithub.xyz/ip7z/7zip/releases",
+    "repo_path": "ip7z/7zip",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "7z",
+      "mac.tar.xz"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "win",
+      "extra",
+      "arm"
+    ],
+    "installer_extensions": [
+      ".xz"
+    ],
+    "use_download_filename": true,
+    "save_name": "7zip-mac.tar.xz"
   }
 ]

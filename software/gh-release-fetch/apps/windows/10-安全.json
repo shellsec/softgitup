@@ -1164,5 +1164,34 @@
     "process_name": "Zen.exe",
     "kill_before_install": true,
     "run_installer": true
+  },
+  {
+    "id": "owasp_zap",
+    "简介": "OWASP ZAP（Web 安全测试，Windows 安装包）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/zaproxy/zaproxy/releases",
+    "repo_path": "zaproxy/zaproxy",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ZAP_",
+      "_Windows.exe"
+    ],
+    "href_exclude_substrings": [
+      "Linux",
+      "Darwin",
+      "CrossPlatform",
+      ".sha512"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "ZAP_{ver}_Windows.exe"
+    ],
+    "save_name": "ZAP_{ver}_Windows.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
   }
 ]

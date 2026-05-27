@@ -1,0 +1,120 @@
+[
+  {
+    "id": "losslesscut",
+    "简介": "LosslessCut（无损裁剪/合并）",
+    "分类": "音视频",
+    "releases_url": "https://bgithub.xyz/mifi/lossless-cut/releases",
+    "repo_path": "mifi/lossless-cut",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "LosslessCut-linux",
+      "AppImage"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "dmg"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "save_name": "LosslessCut-linux-x86_64.AppImage"
+  },
+  {
+    "id": "vidcutter",
+    "简介": "VidCutter（视频剪切/合并）",
+    "分类": "音视频",
+    "releases_url": "https://bgithub.xyz/ozmartian/vidcutter/releases",
+    "repo_path": "ozmartian/vidcutter",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "VidCutter-",
+      "x86_64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "macOS"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "download_names": [
+      "VidCutter-{ver}-x86_64.AppImage"
+    ],
+    "save_name": "VidCutter-{ver}-x86_64.AppImage"
+  },
+  {
+    "id": "syncplay",
+    "简介": "Syncplay（异地同步播放）",
+    "分类": "音视频",
+    "releases_url": "https://bgithub.xyz/Syncplay/syncplay/releases",
+    "repo_path": "Syncplay/syncplay",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Syncplay-",
+      "x86_64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "Setup.exe",
+      "dmg",
+      "Portable"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "download_names": [
+      "Syncplay-{ver}-x86_64.AppImage"
+    ],
+    "save_name": "Syncplay-{ver}-x86_64.AppImage"
+  },
+  {
+    "id": "openshot",
+    "简介": "OpenShot 视频编辑器（AppImage）",
+    "分类": "音视频",
+    "releases_url": "https://bgithub.xyz/OpenShot/openshot-qt/releases",
+    "repo_path": "OpenShot/openshot-qt",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "OpenShot",
+      "x86_64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "exe",
+      "dmg"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "download_names": [
+      "OpenShot-v{ver}-x86_64.AppImage"
+    ],
+    "save_name": "OpenShot-v{ver}-x86_64.AppImage"
+  }
+]

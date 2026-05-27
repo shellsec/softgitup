@@ -149,5 +149,67 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "filebrowser",
+    "简介": "FileBrowser（Web 文件管理，单二进制 zip）",
+    "分类": "局域网文件共享",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/filebrowser/filebrowser/releases",
+    "repo_path": "filebrowser/filebrowser",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "windows-amd64-filebrowser.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows-386",
+      "windows-arm64",
+      "darwin",
+      "linux"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "windows-amd64-filebrowser.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "alist",
+    "简介": "AList（多网盘挂载，Windows amd64 zip）",
+    "分类": "局域网文件共享",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/AlistGo/alist/releases",
+    "repo_path": "AlistGo/alist",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "windows-amd64",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "darwin",
+      "arm64",
+      "386",
+      ".tar.gz"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "alist-windows-amd64-{ver}.zip"
+    ],
+    "save_name": "alist-windows-amd64-{ver}.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

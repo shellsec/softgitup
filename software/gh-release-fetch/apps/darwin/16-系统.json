@@ -4,5 +4,35 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/qemu/qemu/releases",
     "repo_path": "qemu/qemu"
+  },
+  {
+    "id": "duf",
+    "简介": "duf 磁盘空间概览",
+    "releases_url": "https://bgithub.xyz/muesli/duf/releases",
+    "repo_path": "muesli/duf",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "分类": "系统",
+    "installer_markers": [
+      "duf_",
+      "Darwin_x86_64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "Windows",
+      "Linux",
+      "arm"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "duf_{ver}_Darwin_x86_64.tar.gz"
+    ],
+    "save_name": "duf_{ver}_Darwin_x86_64.tar.gz"
   }
 ]

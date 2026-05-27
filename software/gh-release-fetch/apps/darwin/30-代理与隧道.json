@@ -132,5 +132,138 @@
     "run_installer": false,
     "kill_before_install": false,
     "process_name": ""
+  },
+  {
+    "id": "hiddify_next",
+    "简介": "Hiddify Next（macOS dmg）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/hiddify/hiddify-next/releases",
+    "repo_path": "hiddify/hiddify-next",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Hiddify-MacOS.dmg"
+    ],
+    "href_exclude_substrings": [
+      "Installer.pkg",
+      "Windows",
+      "Linux",
+      "Android",
+      "Debian"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "Hiddify-MacOS.dmg"
+    ],
+    "save_name": "Hiddify-MacOS.dmg",
+    "windows_installer": false,
+    "run_installer": false,
+    "kill_before_install": false,
+    "process_name": ""
+  },
+  {
+    "id": "flclash_macos_arm64",
+    "简介": "FlClash（macOS Apple Silicon dmg）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/chen08209/FlClash/releases",
+    "repo_path": "chen08209/FlClash",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "FlClash-",
+      "macos-arm64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "amd64",
+      "windows",
+      "linux",
+      "android",
+      ".sha256"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "FlClash-{ver}-macos-arm64.dmg"
+    ],
+    "save_name": "FlClash-{ver}-macos-arm64.dmg",
+    "windows_installer": false,
+    "run_installer": false,
+    "kill_before_install": false,
+    "process_name": ""
+  },
+  {
+    "简介": "sing-box 代理内核",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/SagerNet/sing-box/releases",
+    "repo_path": "SagerNet/sing-box",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "sing_box_macos_arm64",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "sing-box-",
+      "darwin-arm64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "386",
+      "amd64-legacy",
+      "windows",
+      "linux",
+      "android"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "sing-box-{ver}-darwin-arm64.tar.gz"
+    ],
+    "save_name": "sing-box-{ver}-darwin-arm64.tar.gz"
+  },
+  {
+    "简介": "mihomo（macOS arm64 gz）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/SagerNet/sing-box/releases",
+    "repo_path": "SagerNet/sing-box",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "mihomo_macos_arm64",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "mihomo-darwin-arm64-v",
+      ".gz"
+    ],
+    "href_exclude_substrings": [
+      "go120",
+      "go121",
+      "compatible",
+      "amd64",
+      "windows",
+      "linux",
+      "android"
+    ],
+    "installer_extensions": [
+      ".gz"
+    ],
+    "download_names": [
+      "mihomo-darwin-arm64-v{ver}.gz"
+    ],
+    "save_name": "mihomo-darwin-arm64-v{ver}.gz"
   }
 ]

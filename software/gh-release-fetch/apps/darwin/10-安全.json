@@ -140,5 +140,68 @@
     "run_installer": false,
     "kill_before_install": false,
     "process_name": ""
+  },
+  {
+    "id": "owasp_zap",
+    "简介": "OWASP ZAP（macOS 包）",
+    "分类": "安全",
+    "releases_url": "https://bgithub.xyz/zaproxy/zaproxy/releases",
+    "repo_path": "zaproxy/zaproxy",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ZAP_",
+      "_Mac.dmg"
+    ],
+    "href_exclude_substrings": [
+      "Windows",
+      "Linux",
+      "CrossPlatform"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "ZAP_{ver}_Mac.dmg"
+    ],
+    "save_name": "ZAP_{ver}_Mac.dmg"
+  },
+  {
+    "id": "dive",
+    "简介": "dive Docker 镜像层分析",
+    "releases_url": "https://bgithub.xyz/wagoodman/dive/releases",
+    "repo_path": "wagoodman/dive",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "分类": "安全",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "dive_",
+      "darwin_amd64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "deb",
+      "rpm"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "dive_{ver}_darwin_amd64.tar.gz"
+    ],
+    "save_name": "dive_{ver}_darwin_amd64.tar.gz"
   }
 ]

@@ -407,5 +407,66 @@
     "process_name": "hx.exe",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "pulsar",
+    "简介": "Pulsar（Atom 继任编辑器，Windows zip）",
+    "分类": "编辑器",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/pulsar-edit/pulsar/releases",
+    "repo_path": "pulsar-edit/pulsar",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Pulsar.Setup.",
+      "x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "mac",
+      "linux",
+      ".blockmap"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Pulsar.Setup.{ver}.x64.exe"
+    ],
+    "save_name": "Pulsar.Setup.{ver}.x64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "lite_xl",
+    "简介": "Lite XL（轻量 Lua 编辑器，Windows portable zip）",
+    "分类": "编辑器",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/lite-xl/lite-xl/releases",
+    "repo_path": "lite-xl/lite-xl",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "lite-xl-",
+      "windows-x86_64.zip"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "macos",
+      "arm64",
+      "installer"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "lite-xl-{ver}-windows-x86_64.zip"
+    ],
+    "save_name": "lite-xl-{ver}-windows-x86_64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

@@ -500,5 +500,37 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "zerotier",
+    "简介": "ZeroTier 虚拟组网",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/zerotier/ZeroTierOne/releases",
+    "repo_path": "zerotier/ZeroTierOne",
+    "process_name": "",
+    "kill_before_install": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ZeroTier One",
+      "x64.msi"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "x86",
+      ".deb",
+      ".pkg"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "ZeroTier One {ver} x64.msi"
+    ],
+    "save_name": "ZeroTier One {ver} x64.msi",
+    "run_installer": true
   }
 ]

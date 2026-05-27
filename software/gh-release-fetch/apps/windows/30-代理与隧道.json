@@ -65,5 +65,152 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": true
+  },
+  {
+    "id": "hiddify_next",
+    "简介": "Hiddify Next（跨平台代理客户端，Meta/多协议；Windows 官方 Setup）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/hiddify/hiddify-next/releases",
+    "repo_path": "hiddify/hiddify-next",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Hiddify-Windows-Setup-x64",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "Portable",
+      "msix",
+      "Android",
+      "MacOS",
+      "Linux",
+      "Debian",
+      ".apk"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Hiddify-Windows-Setup-x64.exe"
+    ],
+    "save_name": "Hiddify-Windows-Setup-x64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "url_hint": "Hiddify"
+  },
+  {
+    "id": "flclash",
+    "简介": "FlClash（Flutter + Clash Meta 内核，Windows x64 安装包）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/chen08209/FlClash/releases",
+    "repo_path": "chen08209/FlClash",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "FlClash-",
+      "windows-amd64-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "android",
+      "linux",
+      "macos",
+      ".zip",
+      ".sha256",
+      ".deb",
+      ".rpm",
+      ".apk"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "FlClash-{ver}-windows-amd64-setup.exe"
+    ],
+    "save_name": "FlClash-{ver}-windows-amd64-setup.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "sing_box",
+    "简介": "sing-box（通用代理内核，Windows amd64 zip）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/SagerNet/sing-box/releases",
+    "repo_path": "SagerNet/sing-box",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "sing-box-",
+      "windows-amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "386",
+      "legacy",
+      "darwin",
+      "linux",
+      "android",
+      "dSYM",
+      "SFM-"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "sing-box-{ver}-windows-amd64.zip"
+    ],
+    "save_name": "sing-box-{ver}-windows-amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "mihomo",
+    "简介": "mihomo（Clash Meta 内核二进制，Windows amd64 zip）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/MetaCubeX/mihomo/releases",
+    "repo_path": "MetaCubeX/mihomo",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "mihomo-windows-amd64-v",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "go120",
+      "go121",
+      "go122",
+      "go123",
+      "go124",
+      "go125",
+      "compatible",
+      "-v1-v",
+      "-v2-v",
+      "-v3-v",
+      "arm64",
+      "386",
+      "linux",
+      "darwin",
+      "android",
+      ".deb",
+      ".rpm",
+      ".gz"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "mihomo-windows-amd64-v{ver}.zip"
+    ],
+    "save_name": "mihomo-windows-amd64-v{ver}.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

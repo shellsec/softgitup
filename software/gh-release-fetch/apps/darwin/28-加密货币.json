@@ -369,5 +369,69 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "简介": "Bitcoin Core",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/bitcoin-core/gui/releases",
+    "repo_path": "bitcoin-core/gui",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "bitcoin-",
+      "x86_64-apple-darwin.dmg"
+    ],
+    "href_exclude_substrings": [
+      ".asc",
+      "windows",
+      "linux",
+      "arm64"
+    ],
+    "id": "bitcoin_core",
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "bitcoin-{ver}-x86_64-apple-darwin.dmg"
+    ],
+    "save_name": "bitcoin-{ver}-x86_64-apple-darwin.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "electrum",
+    "简介": "Electrum（macOS dmg）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/spesmilo/electrum/releases",
+    "repo_path": "spesmilo/electrum",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "electrum-",
+      ".dmg"
+    ],
+    "href_exclude_substrings": [
+      ".asc",
+      "windows",
+      "linux",
+      "AppImage"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "electrum-{ver}.dmg"
+    ],
+    "save_name": "electrum-{ver}.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

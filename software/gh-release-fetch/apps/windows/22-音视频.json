@@ -75,5 +75,34 @@
     "process_name": "syncplay.exe",
     "kill_before_install": true,
     "run_installer": true
+  },
+  {
+    "id": "openshot",
+    "简介": "OpenShot 视频编辑器（Windows x64 exe）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/OpenShot/openshot-qt/releases",
+    "repo_path": "OpenShot/openshot-qt",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "OpenShot",
+      "x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "dmg",
+      "AppImage",
+      "arm64",
+      "portable"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "OpenShot-v{ver}-x64.exe"
+    ],
+    "save_name": "OpenShot-v{ver}-x64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
   }
 ]

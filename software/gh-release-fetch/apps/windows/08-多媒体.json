@@ -455,6 +455,19 @@
     "version_tag_as_on_github": true
   },
   {
+    "id": "jellyfin_server",
+    "简介": "Jellyfin 媒体服务器（Windows 安装包见 jellyfin.org/downloads；主仓库 GitHub Release 常无 exe/msi，本条仅索引，勿启用）",
+    "分类": "多媒体",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/jellyfin/jellyfin/releases",
+    "repo_path": "jellyfin/jellyfin",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "jellyfin"
+  },
+  {
     "id": "jellyfin_media_player",
     "简介": "Jellyfin 桌面客户端",
     "分类": "多媒体",

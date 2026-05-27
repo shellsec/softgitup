@@ -40,5 +40,40 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/inkscape/inkscape/releases",
     "repo_path": "inkscape/inkscape"
+  },
+  {
+    "简介": "Godot 游戏引擎",
+    "分类": "多媒体与设计",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/godotengine/godot/releases",
+    "repo_path": "godotengine/godot",
+    "href_exclude_substrings": [
+      "mono",
+      "android",
+      "web_editor",
+      "debug_symbols",
+      "win64",
+      "macos",
+      "arm64"
+    ],
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "godot",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Godot_v",
+      "linux.x86_64.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "Godot_v{ver}_linux.x86_64.zip"
+    ],
+    "save_name": "Godot_v{ver}_linux.x86_64.zip"
   }
 ]

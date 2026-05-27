@@ -58,5 +58,36 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/minetest/minetest/releases",
     "repo_path": "minetest/minetest"
+  },
+  {
+    "id": "ryujinx",
+    "简介": "Ryujinx（Switch 模拟器，linux）",
+    "分类": "游戏",
+    "releases_url": "https://bgithub.xyz/Ryubing/Ryujinx/releases",
+    "repo_path": "Ryubing/Ryujinx",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ryujinx-",
+      "x64"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "arm64",
+      "publish"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "ryujinx-{ver}-linux-x64.tar.gz"
+    ],
+    "save_name": "ryujinx-{ver}-linux-x64.tar.gz"
   }
 ]

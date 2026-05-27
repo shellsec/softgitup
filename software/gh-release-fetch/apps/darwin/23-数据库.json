@@ -57,5 +57,65 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "redis_insight",
+    "简介": "Redis Insight（macOS arm64 dmg）",
+    "分类": "数据库",
+    "releases_url": "https://bgithub.xyz/RedisInsight/RedisInsight/releases",
+    "repo_path": "RedisInsight/RedisInsight",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Redis-Insight",
+      "mac-arm64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux",
+      "blockmap"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "Redis-Insight-mac-arm64.dmg"
+  },
+  {
+    "id": "dbeaver",
+    "简介": "DBeaver CE 数据库客户端",
+    "releases_url": "https://bgithub.xyz/dbeaver/dbeaver/releases",
+    "repo_path": "dbeaver/dbeaver",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "分类": "数据库",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "dbeaver-ce-",
+      "macos-x86_64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "aarch64"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "dbeaver-ce-{ver}-macos-x86_64.dmg"
+    ],
+    "save_name": "dbeaver-ce-{ver}-macos-x86_64.dmg"
   }
 ]

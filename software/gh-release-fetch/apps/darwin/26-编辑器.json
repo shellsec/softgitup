@@ -46,5 +46,66 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/adonais/skylark/releases",
     "repo_path": "adonais/skylark"
+  },
+  {
+    "id": "pulsar",
+    "简介": "Pulsar（Atom 继任，macOS zip）",
+    "分类": "编辑器",
+    "releases_url": "https://bgithub.xyz/pulsar-edit/pulsar/releases",
+    "repo_path": "pulsar-edit/pulsar",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Pulsar-",
+      "mac.zip"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux",
+      "arm64",
+      "blockmap"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "Pulsar-mac.zip"
+  },
+  {
+    "id": "lite_xl",
+    "简介": "Lite XL（macOS tar.gz）",
+    "分类": "编辑器",
+    "releases_url": "https://bgithub.xyz/lite-xl/lite-xl/releases",
+    "repo_path": "lite-xl/lite-xl",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "lite-xl-",
+      "macos-aarch64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "x86"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "lite-xl-{ver}-macos-aarch64.tar.gz"
+    ],
+    "save_name": "lite-xl-{ver}-macos-aarch64.tar.gz"
   }
 ]

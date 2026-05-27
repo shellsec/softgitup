@@ -82,5 +82,129 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "简介": "qBittorrent（BT/磁力）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/qbittorrent/qBittorrent/releases",
+    "repo_path": "qbittorrent/qBittorrent",
+    "id": "qbittorrent",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "qbittorrent_",
+      "_dmg"
+    ],
+    "href_exclude_substrings": [
+      "Windows",
+      "Linux",
+      ".asc"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "qbittorrent.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "简介": "Transmission（BT 客户端）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/transmission/transmission/releases",
+    "repo_path": "transmission/transmission",
+    "id": "transmission",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Transmission-",
+      "-.dmg"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "pdb"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "Transmission-{ver}.dmg"
+    ],
+    "save_name": "Transmission-{ver}.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "简介": "Motrix（全能下载工具：HTTP/FTP/BT/磁力链）",
+    "分类": "下载",
+    "releases_url": "https://bgithub.xyz/agalwood/Motrix/releases",
+    "repo_path": "agalwood/Motrix",
+    "id": "motrix",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Motrix-",
+      ".dmg"
+    ],
+    "href_exclude_substrings": [
+      "AppImage",
+      "exe",
+      "yml",
+      "blockmap",
+      "arm64"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "Motrix.dmg"
+  },
+  {
+    "简介": "Gopeed（HTTP/BT 等，现代下载器）",
+    "分类": "下载",
+    "releases_url": "https://bgithub.xyz/GopeedLab/gopeed/releases",
+    "repo_path": "GopeedLab/gopeed",
+    "id": "gopeed",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Gopeed-v",
+      "macos-amd64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "qnap",
+      "arm64",
+      "blockmap"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "Gopeed-v{ver}-macos-amd64.dmg"
+    ],
+    "save_name": "Gopeed-v{ver}-macos-amd64.dmg"
   }
 ]

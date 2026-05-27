@@ -16,5 +16,59 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/charmbracelet/vhs/releases",
     "repo_path": "charmbracelet/vhs"
+  },
+  {
+    "id": "espanso",
+    "简介": "Espanso 文本扩展",
+    "releases_url": "https://bgithub.xyz/espanso/espanso/releases",
+    "repo_path": "espanso/espanso",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "分类": "效率",
+    "installer_markers": [
+      "Espanso-Linux-x86_64"
+    ],
+    "href_exclude_substrings": [
+      "Win",
+      "Mac",
+      "Portable"
+    ],
+    "use_download_filename": true
+  },
+  {
+    "id": "copyq",
+    "简介": "CopyQ 剪贴板管理",
+    "releases_url": "https://bgithub.xyz/hluk/CopyQ/releases",
+    "repo_path": "hluk/CopyQ",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "分类": "效率",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "copyq-",
+      "linux-x86_64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "setup.exe",
+      "macos",
+      "checksum"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "copyq-{ver}-linux-x86_64.tar.gz"
+    ],
+    "save_name": "copyq-{ver}-linux-x86_64.tar.gz"
   }
 ]

@@ -573,5 +573,37 @@
     "process_name": "moonlight.exe",
     "kill_before_install": true,
     "run_installer": true
+  },
+  {
+    "id": "ryujinx",
+    "简介": "Ryujinx（Nintendo Switch 模拟器，Windows x64 便携 zip）",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Ryubing/Ryujinx/releases",
+    "repo_path": "Ryubing/Ryujinx",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ryujinx-",
+      "win-x64.zip"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "osx",
+      "arm64",
+      "publish"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "ryujinx-{ver}-win-x64.zip"
+    ],
+    "save_name": "ryujinx-{ver}-win-x64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

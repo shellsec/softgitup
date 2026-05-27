@@ -199,5 +199,36 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/Martchus/syncthingtray/releases",
     "repo_path": "Martchus/syncthingtray"
+  },
+  {
+    "id": "zerotier",
+    "简介": "ZeroTier 虚拟组网",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/zerotier/ZeroTierOne/releases",
+    "repo_path": "zerotier/ZeroTierOne",
+    "process_name": "",
+    "kill_before_install": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "zerotier",
+      "x86_64",
+      ".deb"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "darwin",
+      "arm64",
+      "386"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".deb"
+    ],
+    "use_download_filename": true,
+    "save_name": "zerotier.deb",
+    "run_installer": false
   }
 ]

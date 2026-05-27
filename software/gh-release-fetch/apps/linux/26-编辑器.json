@@ -46,5 +46,65 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/adonais/skylark/releases",
     "repo_path": "adonais/skylark"
+  },
+  {
+    "id": "lite_xl",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/lite-xl/lite-xl/releases",
+    "repo_path": "lite-xl/lite-xl",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "简介": "Lite XL（Linux x86_64 tar.gz）",
+    "分类": "编辑器",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "lite-xl-",
+      "linux-x86_64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "macos",
+      "arm64"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "lite-xl-{ver}-linux-x86_64.tar.gz"
+    ],
+    "save_name": "lite-xl-{ver}-linux-x86_64.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "pulsar",
+    "简介": "Pulsar（Linux x64 tar.gz）",
+    "分类": "编辑器",
+    "releases_url": "https://bgithub.xyz/pulsar-edit/pulsar/releases",
+    "repo_path": "pulsar-edit/pulsar",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Pulsar-",
+      "linux-x64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "mac",
+      "arm64"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "Pulsar-linux-x64.tar.gz"
   }
 ]

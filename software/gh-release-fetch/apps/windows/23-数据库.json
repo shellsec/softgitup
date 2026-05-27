@@ -303,5 +303,34 @@
     "process_name": "DB Browser for SQLite.exe",
     "kill_before_install": true,
     "run_installer": true
+  },
+  {
+    "id": "redis_insight",
+    "简介": "Redis Insight（Redis 图形客户端，Windows exe）",
+    "分类": "数据库",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/RedisInsight/RedisInsight/releases",
+    "repo_path": "RedisInsight/RedisInsight",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Redis-Insight-win-installer",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "darwin",
+      "arm64",
+      ".blockmap"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Redis-Insight-win-installer.{ver}.exe"
+    ],
+    "save_name": "Redis-Insight-win-installer.{ver}.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
   }
 ]

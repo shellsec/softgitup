@@ -1,0 +1,221 @@
+2026-05-26 21:30:47,886 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 378 项，darwin 254 项，linux 252 项
+2026-05-26 21:30:47,886 - INFO - [hiddify_next] 尝试使用 GitHub API: https://api.github.com/repos/hiddify/hiddify-next/releases/latest
+2026-05-26 21:30:49,120 - INFO - [hiddify_next] 从 GitHub API 中找到下载链接: https://github.com/hiddify/hiddify-app/releases/download/v4.1.1/Hiddify-Windows-Setup-x64.exe
+2026-05-26 21:30:49,120 - INFO - [hiddify_next] 通过 GitHub API 找到最新版本: v4.1.1
+2026-05-26 21:30:49,124 - INFO - [flclash] 尝试使用 GitHub API: https://api.github.com/repos/chen08209/FlClash/releases/latest
+2026-05-26 21:30:49,933 - INFO - [flclash] 从 GitHub API 中找到下载链接: https://github.com/chen08209/FlClash/releases/download/v0.8.92/FlClash-0.8.92-windows-amd64-setup.exe
+2026-05-26 21:30:49,937 - INFO - [flclash] 通过 GitHub API 找到最新版本: v0.8.92
+2026-05-26 21:30:49,942 - INFO - [continue] 尝试使用 GitHub API: https://api.github.com/repos/continuedev/continue/releases/latest
+2026-05-26 21:30:50,802 - INFO - [continue] 从 GitHub API 中找到下载链接: https://github.com/continuedev/continue/releases/download/v1.2.22-vscode/continue-win32-x64-1.2.22.vsix
+2026-05-26 21:30:50,803 - INFO - [continue] 通过 GitHub API 找到最新版本: v1.2.22-vscode
+2026-05-26 21:30:50,806 - INFO - [roo_code] 尝试使用 GitHub API: https://api.github.com/repos/RooCodeInc/Roo-Code/releases/latest
+2026-05-26 21:30:51,645 - INFO - [roo_code] 从 GitHub API 中找到下载链接: https://github.com/RooCodeInc/Roo-Code/releases/download/v3.54.0/roo-cline-3.54.0.vsix
+2026-05-26 21:30:51,646 - INFO - [roo_code] 通过 GitHub API 找到最新版本: v3.54.0
+2026-05-26 21:30:51,676 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 378 项，darwin 254 项，linux 252 项
+2026-05-26 21:30:51,676 - INFO - [goland] 正在检查最新版本: https://www.jetbrains.com/go/download/
+2026-05-26 21:30:51,686 - WARNING - [goland] 发布页获取失败: https://www.jetbrains.com/go/download/ -> HTTPSConnectionPool(host='www.jetbrains.com', port=443): Max retries exceeded with url: /go/download/ (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000000004291930>: Failed to resolve 'www.jetbrains.com' ([Errno 11001] getaddrinfo failed)"))
+2026-05-26 21:30:51,687 - INFO - [goland] 正在检查最新版本: https://github.com/JetBrains/intellij-community/releases
+2026-05-26 21:30:53,400 - INFO - [goland] 已保存发布页 HTML: test.html
+2026-05-26 21:30:53,647 - INFO - [goland] 尝试从页面中查找下载链接...
+2026-05-26 21:30:53,692 - INFO - [goland] 尝试使用 GitHub API: https://api.github.com/repos/JetBrains/intellij-community/releases/tags/vpycharm%2F2026.1.2
+2026-05-26 21:30:54,459 - WARNING - [goland] GitHub API 补充下载链接失败: 404 Client Error: Not Found for url: https://api.github.com/repos/JetBrains/intellij-community/releases/tags/vpycharm%2F2026.1.2
+2026-05-26 21:30:54,463 - INFO - [goland] 找到最新版本: vpycharm/2026.1.2
+2026-05-26 21:30:54,463 - INFO - [goland] 成功使用发布页来源: https://github.com/JetBrains/intellij-community/releases
+2026-05-26 21:30:54,463 - WARNING - [goland] 未能在页面中找到下载链接，将使用拼接 URL
+2026-05-26 21:31:07,990 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 378 项，darwin 254 项，linux 252 项
+2026-05-26 21:38:53,894 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 391 项，darwin 249 项，linux 247 项
+2026-05-26 21:38:53,895 - INFO - [qbittorrent] 尝试使用 GitHub API: https://api.github.com/repos/qbittorrent/qBittorrent/releases/latest
+2026-05-26 21:38:54,600 - WARNING - [qbittorrent] 发布页解析失败，准备回退 GitHub API: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/qbittorrent/qBittorrent/releases/latest
+2026-05-26 21:38:54,601 - INFO - [qbittorrent] 尝试使用 GitHub API: https://api.github.com/repos/qbittorrent/qBittorrent/releases/latest
+2026-05-26 21:38:55,241 - ERROR - [qbittorrent] 检查版本时出错: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/qbittorrent/qBittorrent/releases/latest
+2026-05-26 21:38:55,245 - ERROR - Traceback (most recent call last):
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 592, in check_latest_version
+    return fetch_release_via_api(app, verify=verify)
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 435, in fetch_release_via_api
+    response.raise_for_status()
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python310\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/qbittorrent/qBittorrent/releases/latest
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 717, in check_latest_version
+    return fetch_release_via_api(app, verify=verify)
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 435, in fetch_release_via_api
+    response.raise_for_status()
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python310\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/qbittorrent/qBittorrent/releases/latest
+
+2026-05-26 21:38:56,258 - INFO - [transmission] 尝试使用 GitHub API: https://api.github.com/repos/transmission/transmission/releases/latest
+2026-05-26 21:38:56,913 - WARNING - [transmission] 发布页解析失败，准备回退 GitHub API: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/transmission/transmission/releases/latest
+2026-05-26 21:38:56,913 - INFO - [transmission] 尝试使用 GitHub API: https://api.github.com/repos/transmission/transmission/releases/latest
+2026-05-26 21:38:57,554 - ERROR - [transmission] 检查版本时出错: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/transmission/transmission/releases/latest
+2026-05-26 21:38:57,555 - ERROR - Traceback (most recent call last):
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 592, in check_latest_version
+    return fetch_release_via_api(app, verify=verify)
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 435, in fetch_release_via_api
+    response.raise_for_status()
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python310\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/transmission/transmission/releases/latest
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 717, in check_latest_version
+    return fetch_release_via_api(app, verify=verify)
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 435, in fetch_release_via_api
+    response.raise_for_status()
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python310\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/transmission/transmission/releases/latest
+
+2026-05-26 21:38:58,576 - INFO - [7zip] 尝试使用 GitHub API: https://api.github.com/repos/ip7z/7zip/releases/latest
+2026-05-26 21:38:59,208 - WARNING - [7zip] 发布页解析失败，准备回退 GitHub API: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/ip7z/7zip/releases/latest
+2026-05-26 21:38:59,209 - INFO - [7zip] 尝试使用 GitHub API: https://api.github.com/repos/ip7z/7zip/releases/latest
+2026-05-26 21:38:59,895 - ERROR - [7zip] 检查版本时出错: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/ip7z/7zip/releases/latest
+2026-05-26 21:38:59,897 - ERROR - Traceback (most recent call last):
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 592, in check_latest_version
+    return fetch_release_via_api(app, verify=verify)
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 435, in fetch_release_via_api
+    response.raise_for_status()
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python310\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/ip7z/7zip/releases/latest
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 717, in check_latest_version
+    return fetch_release_via_api(app, verify=verify)
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 435, in fetch_release_via_api
+    response.raise_for_status()
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python310\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/ip7z/7zip/releases/latest
+
+2026-05-26 21:39:00,910 - INFO - [autohotkey] 尝试使用 GitHub API: https://api.github.com/repos/AutoHotkey/AutoHotkey/releases/latest
+2026-05-26 21:39:01,584 - WARNING - [autohotkey] 发布页解析失败，准备回退 GitHub API: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/AutoHotkey/AutoHotkey/releases/latest
+2026-05-26 21:39:01,585 - INFO - [autohotkey] 尝试使用 GitHub API: https://api.github.com/repos/AutoHotkey/AutoHotkey/releases/latest
+2026-05-26 21:39:02,234 - ERROR - [autohotkey] 检查版本时出错: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/AutoHotkey/AutoHotkey/releases/latest
+2026-05-26 21:39:02,235 - ERROR - Traceback (most recent call last):
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 592, in check_latest_version
+    return fetch_release_via_api(app, verify=verify)
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 435, in fetch_release_via_api
+    response.raise_for_status()
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python310\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/AutoHotkey/AutoHotkey/releases/latest
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 717, in check_latest_version
+    return fetch_release_via_api(app, verify=verify)
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 435, in fetch_release_via_api
+    response.raise_for_status()
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python310\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/AutoHotkey/AutoHotkey/releases/latest
+
+2026-05-26 21:39:03,245 - INFO - [godot] 尝试使用 GitHub API: https://api.github.com/repos/godotengine/godot/releases/latest
+2026-05-26 21:39:03,907 - WARNING - [godot] 发布页解析失败，准备回退 GitHub API: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/godotengine/godot/releases/latest
+2026-05-26 21:39:03,908 - INFO - [godot] 尝试使用 GitHub API: https://api.github.com/repos/godotengine/godot/releases/latest
+2026-05-26 21:39:04,537 - ERROR - [godot] 检查版本时出错: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/godotengine/godot/releases/latest
+2026-05-26 21:39:04,538 - ERROR - Traceback (most recent call last):
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 592, in check_latest_version
+    return fetch_release_via_api(app, verify=verify)
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 435, in fetch_release_via_api
+    response.raise_for_status()
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python310\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/godotengine/godot/releases/latest
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 717, in check_latest_version
+    return fetch_release_via_api(app, verify=verify)
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 435, in fetch_release_via_api
+    response.raise_for_status()
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python310\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/godotengine/godot/releases/latest
+
+2026-05-26 21:39:05,551 - INFO - [filebrowser] 尝试使用 GitHub API: https://api.github.com/repos/filebrowser/filebrowser/releases/latest
+2026-05-26 21:39:06,239 - WARNING - [filebrowser] 发布页解析失败，准备回退 GitHub API: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/filebrowser/filebrowser/releases/latest
+2026-05-26 21:39:06,239 - INFO - [filebrowser] 尝试使用 GitHub API: https://api.github.com/repos/filebrowser/filebrowser/releases/latest
+2026-05-26 21:39:06,939 - ERROR - [filebrowser] 检查版本时出错: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/filebrowser/filebrowser/releases/latest
+2026-05-26 21:39:06,940 - ERROR - Traceback (most recent call last):
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 592, in check_latest_version
+    return fetch_release_via_api(app, verify=verify)
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 435, in fetch_release_via_api
+    response.raise_for_status()
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python310\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/filebrowser/filebrowser/releases/latest
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 717, in check_latest_version
+    return fetch_release_via_api(app, verify=verify)
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 435, in fetch_release_via_api
+    response.raise_for_status()
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python310\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/filebrowser/filebrowser/releases/latest
+
+2026-05-26 21:39:07,961 - INFO - [sing_box] 尝试使用 GitHub API: https://api.github.com/repos/SagerNet/sing-box/releases/latest
+2026-05-26 21:39:08,628 - WARNING - [sing_box] 发布页解析失败，准备回退 GitHub API: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/SagerNet/sing-box/releases/latest
+2026-05-26 21:39:08,628 - INFO - [sing_box] 尝试使用 GitHub API: https://api.github.com/repos/SagerNet/sing-box/releases/latest
+2026-05-26 21:39:09,300 - ERROR - [sing_box] 检查版本时出错: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/SagerNet/sing-box/releases/latest
+2026-05-26 21:39:09,301 - ERROR - Traceback (most recent call last):
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 592, in check_latest_version
+    return fetch_release_via_api(app, verify=verify)
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 435, in fetch_release_via_api
+    response.raise_for_status()
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python310\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/SagerNet/sing-box/releases/latest
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 717, in check_latest_version
+    return fetch_release_via_api(app, verify=verify)
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 435, in fetch_release_via_api
+    response.raise_for_status()
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python310\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/SagerNet/sing-box/releases/latest
+
+2026-05-26 21:39:10,310 - INFO - [mihomo] 尝试使用 GitHub API: https://api.github.com/repos/MetaCubeX/mihomo/releases/latest
+2026-05-26 21:39:10,997 - WARNING - [mihomo] 发布页解析失败，准备回退 GitHub API: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/MetaCubeX/mihomo/releases/latest
+2026-05-26 21:39:10,998 - INFO - [mihomo] 尝试使用 GitHub API: https://api.github.com/repos/MetaCubeX/mihomo/releases/latest
+2026-05-26 21:39:11,646 - ERROR - [mihomo] 检查版本时出错: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/MetaCubeX/mihomo/releases/latest
+2026-05-26 21:39:11,647 - ERROR - Traceback (most recent call last):
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 592, in check_latest_version
+    return fetch_release_via_api(app, verify=verify)
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 435, in fetch_release_via_api
+    response.raise_for_status()
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python310\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/MetaCubeX/mihomo/releases/latest
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 717, in check_latest_version
+    return fetch_release_via_api(app, verify=verify)
+  File "E:\GITHUB\已经发布\gh-release-fetch\auto_update.py", line 435, in fetch_release_via_api
+    response.raise_for_status()
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python310\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/MetaCubeX/mihomo/releases/latest
+
+2026-05-26 22:31:46,098 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 403 项，darwin 261 项，linux 265 项
+2026-05-26 22:33:17,217 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 403 项，darwin 288 项，linux 286 项
+2026-05-26 22:33:52,787 - INFO - 已从配置目录合并：E:\GITHUB\已经发布\gh-release-fetch\apps — windows 403 项，darwin 299 项，linux 297 项

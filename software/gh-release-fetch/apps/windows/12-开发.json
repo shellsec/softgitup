@@ -597,6 +597,19 @@
     "run_installer": true
   },
   {
+    "id": "goland",
+    "简介": "JetBrains GoLand IDE（商业/试用；请从 https://www.jetbrains.com/go/ 下载；本条仅索引，repo 占位，勿启用。Go 语言运行时请搜 id=go）",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/octocat/Hello-World/releases",
+    "repo_path": "octocat/Hello-World",
+    "url_hint": "goland",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
     "id": "hurl",
     "简介": "HTTP 请求测试（curl 风格）",
     "分类": "开发",
@@ -1418,6 +1431,103 @@
       "oxlint-x86_64-pc-windows-msvc.zip"
     ],
     "save_name": "oxlint-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "forgejo",
+    "简介": "Forgejo（Git 托管，Windows amd64 zip）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/forgejo/forgejo/releases",
+    "repo_path": "forgejo/forgejo",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "forgejo-",
+      "windows-4.0-amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "darwin",
+      "arm64",
+      "386",
+      ".asc",
+      "src"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "forgejo-{ver}-windows-4.0-amd64.zip"
+    ],
+    "save_name": "forgejo-{ver}-windows-4.0-amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "playwright_cli",
+    "简介": "Playwright CLI（Node 驱动浏览器自动化，Release zip）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/microsoft/playwright/releases",
+    "repo_path": "microsoft/playwright",
+    "installer_markers": [
+      "playwright-",
+      "win64.zip"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "mac",
+      "arm64"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "playwright-{ver}-win64.zip"
+    ],
+    "save_name": "playwright-{ver}-win64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "act",
+    "简介": "act（本地运行 GitHub Actions，Windows x64 zip）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/nektos/act/releases",
+    "repo_path": "nektos/act",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "act_Windows",
+      "x86_64.zip"
+    ],
+    "href_exclude_substrings": [
+      "Linux",
+      "Darwin",
+      "arm64",
+      "i386",
+      "checksum"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "act_Windows_{ver}_x86_64.zip"
+    ],
+    "save_name": "act_Windows_{ver}_x86_64.zip",
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false

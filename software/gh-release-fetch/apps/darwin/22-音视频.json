@@ -1,0 +1,123 @@
+[
+  {
+    "id": "losslesscut",
+    "简介": "LosslessCut（macOS dmg）",
+    "分类": "音视频",
+    "releases_url": "https://bgithub.xyz/mifi/lossless-cut/releases",
+    "repo_path": "mifi/lossless-cut",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "LosslessCut-mac",
+      ".dmg"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux",
+      "AppImage"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "save_name": "LosslessCut-mac-x64.dmg"
+  },
+  {
+    "id": "vidcutter",
+    "简介": "VidCutter（macOS dmg）",
+    "分类": "音视频",
+    "releases_url": "https://bgithub.xyz/ozmartian/vidcutter/releases",
+    "repo_path": "ozmartian/vidcutter",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "VidCutter-",
+      "macOS.dmg"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "AppImage"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "VidCutter-{ver}-macOS.dmg"
+    ],
+    "save_name": "VidCutter-{ver}-macOS.dmg"
+  },
+  {
+    "id": "syncplay",
+    "简介": "Syncplay（macOS dmg）",
+    "分类": "音视频",
+    "releases_url": "https://bgithub.xyz/Syncplay/syncplay/releases",
+    "repo_path": "Syncplay/syncplay",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Syncplay-",
+      ".dmg"
+    ],
+    "href_exclude_substrings": [
+      "Setup.exe",
+      "AppImage",
+      "Portable",
+      "deb"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "Syncplay-{ver}.dmg"
+    ],
+    "save_name": "Syncplay-{ver}.dmg"
+  },
+  {
+    "id": "openshot",
+    "简介": "OpenShot 视频编辑器（macOS dmg）",
+    "分类": "音视频",
+    "releases_url": "https://bgithub.xyz/OpenShot/openshot-qt/releases",
+    "repo_path": "OpenShot/openshot-qt",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "OpenShot",
+      "x86_64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "exe",
+      "AppImage",
+      "arm64"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "OpenShot-v{ver}-x86_64.dmg"
+    ],
+    "save_name": "OpenShot-v{ver}-x86_64.dmg"
+  }
+]

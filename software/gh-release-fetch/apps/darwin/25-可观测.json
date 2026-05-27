@@ -1,0 +1,204 @@
+[
+  {
+    "id": "grafana",
+    "简介": "Grafana 可观测性仪表盘",
+    "分类": "可观测",
+    "releases_url": "https://bgithub.xyz/grafana/grafana/releases",
+    "repo_path": "grafana/grafana",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "grafana_",
+      "darwin-amd64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "x86_64-unknown-linux"
+    ],
+    "use_download_filename": true
+  },
+  {
+    "id": "prometheus",
+    "简介": "Prometheus 监控",
+    "分类": "可观测",
+    "releases_url": "https://bgithub.xyz/prometheus/prometheus/releases",
+    "repo_path": "prometheus/prometheus",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "prometheus-",
+      "darwin-amd64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "x86_64-unknown-linux"
+    ],
+    "use_download_filename": true
+  },
+  {
+    "id": "jaeger",
+    "简介": "Jaeger 分布式链路追踪",
+    "分类": "可观测",
+    "releases_url": "https://bgithub.xyz/jaegertracing/jaeger/releases",
+    "repo_path": "jaegertracing/jaeger",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "jaeger-",
+      "darwin-amd64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "x86_64-unknown-linux"
+    ],
+    "use_download_filename": true
+  },
+  {
+    "id": "loki",
+    "简介": "Grafana Loki 日志聚合",
+    "分类": "可观测",
+    "releases_url": "https://bgithub.xyz/grafana/loki/releases",
+    "repo_path": "grafana/loki",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "loki-",
+      "darwin-amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "x86_64-unknown-linux"
+    ],
+    "use_download_filename": true
+  },
+  {
+    "id": "tempo",
+    "简介": "Grafana Tempo 追踪后端",
+    "分类": "可观测",
+    "releases_url": "https://bgithub.xyz/grafana/tempo/releases",
+    "repo_path": "grafana/tempo",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "tempo_",
+      "darwin_amd64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "x86_64-unknown-linux"
+    ],
+    "use_download_filename": true
+  },
+  {
+    "id": "vector",
+    "简介": "Vector 日志/指标采集",
+    "分类": "可观测",
+    "releases_url": "https://bgithub.xyz/vectordotdev/vector/releases",
+    "repo_path": "vectordotdev/vector",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "vector-",
+      "aarch64-apple-darwin.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "x86_64-unknown-linux"
+    ],
+    "use_download_filename": true
+  },
+  {
+    "id": "grafana_alloy",
+    "简介": "Grafana Alloy（OTel Collector 发行版）",
+    "分类": "可观测",
+    "releases_url": "https://bgithub.xyz/grafana/alloy/releases",
+    "repo_path": "grafana/alloy",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "alloy-",
+      "darwin-amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "x86_64-unknown-linux"
+    ],
+    "use_download_filename": true
+  },
+  {
+    "id": "netdata",
+    "简介": "Netdata（macOS 静态二进制）",
+    "分类": "可观测",
+    "releases_url": "https://bgithub.xyz/netdata/netdata/releases",
+    "repo_path": "netdata/netdata",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "netdata-",
+      "darwin-x86_64.gz"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "windows",
+      "arm",
+      "ppc"
+    ],
+    "installer_extensions": [
+      ".gz"
+    ]
+  }
+]

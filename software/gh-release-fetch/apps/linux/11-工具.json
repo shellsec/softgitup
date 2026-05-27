@@ -10,5 +10,35 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "7zip",
+    "简介": "7-Zip（Linux x64 tar.xz，ip7z/7zip）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/ip7z/7zip/releases",
+    "repo_path": "ip7z/7zip",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "7z",
+      "linux-x64.tar.xz"
+    ],
+    "href_exclude_substrings": [
+      "arm",
+      "mac",
+      "win",
+      "extra"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".xz"
+    ],
+    "use_download_filename": true,
+    "save_name": "7zip-linux-x64.tar.xz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

@@ -50,6 +50,15 @@
     "run_installer": false
   },
   {
+    "id": "goland",
+    "简介": "GoLand IDE：仅 jetbrains.com；勿启用。Go 语言搜 go。",
+    "分类": "开发",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/octocat/Hello-World/releases",
+    "repo_path": "octocat/Hello-World",
+    "url_hint": "goland"
+  },
+  {
     "id": "deno",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/denoland/deno/releases",
@@ -156,5 +165,156 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/oxc-project/oxc/releases",
     "repo_path": "oxc-project/oxc"
+  },
+  {
+    "id": "forgejo",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/forgejo/forgejo/releases",
+    "repo_path": "forgejo/forgejo",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "简介": "Forgejo（Linux amd64）",
+    "分类": "开发",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "forgejo-",
+      "linux-4.0-amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "darwin",
+      "arm64"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "forgejo-{ver}-linux-4.0-amd64.zip"
+    ],
+    "save_name": "forgejo-{ver}-linux-4.0-amd64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "act",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/nektos/act/releases",
+    "repo_path": "nektos/act",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "简介": "act（Linux x64）",
+    "分类": "开发",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "act_Linux",
+      "x86_64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "Windows",
+      "Darwin",
+      "arm64"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "act_Linux_{ver}_x86_64.tar.gz"
+    ],
+    "save_name": "act_Linux_{ver}_x86_64.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "playwright_cli",
+    "简介": "Playwright CLI（linux zip）",
+    "分类": "开发",
+    "releases_url": "https://bgithub.xyz/microsoft/playwright/releases",
+    "repo_path": "microsoft/playwright",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "playwright-",
+      "linux-x64.zip"
+    ],
+    "href_exclude_substrings": [
+      "win64",
+      "mac"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "playwright-{ver}-linux-x64.zip"
+    ],
+    "save_name": "playwright-{ver}-linux-x64.zip"
+  },
+  {
+    "id": "cmake",
+    "简介": "CMake 构建系统",
+    "releases_url": "https://bgithub.xyz/Kitware/CMake/releases",
+    "repo_path": "Kitware/CMake",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "分类": "开发",
+    "installer_markers": [
+      "cmake-",
+      "linux-x86_64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "Darwin",
+      "arm"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "cmake-{ver}-linux-x86_64.tar.gz"
+    ],
+    "save_name": "cmake-{ver}-linux-x86_64.tar.gz"
+  },
+  {
+    "id": "etcd",
+    "简介": "etcd 分布式键值",
+    "releases_url": "https://bgithub.xyz/etcd-io/etcd/releases",
+    "repo_path": "etcd-io/etcd",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "分类": "开发",
+    "installer_markers": [
+      "etcd-v",
+      "linux-amd64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "darwin",
+      "arm"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "etcd-v{ver}-linux-amd64.tar.gz"
+    ],
+    "save_name": "etcd-v{ver}-linux-amd64.tar.gz"
   }
 ]

@@ -365,6 +365,27 @@
     "run_installer": false
   },
   {
+    "id": "continue",
+    "简介": "Continue（Linux x64 .vsix，若 Release 提供）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "releases_url": "https://bgithub.xyz/continuedev/continue/releases",
+    "repo_path": "continuedev/continue"
+  },
+  {
+    "id": "roo_code",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/RooCodeInc/Roo-Code/releases",
+    "repo_path": "RooCodeInc/Roo-Code"
+  },
+  {
+    "id": "openhands",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/All-Hands-AI/OpenHands/releases",
+    "repo_path": "All-Hands-AI/OpenHands"
+  },
+  {
     "id": "openclaw",
     "简介": "OpenClaw（Linux 用 Release 中 OpenClaw-*.zip）",
     "分类": "AI",
@@ -573,6 +594,37 @@
     "windows_installer": false,
     "use_download_filename": true,
     "save_name": "deepseek-tui-linux-x64",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "aider",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/Aider-AI/aider/releases",
+    "repo_path": "Aider-AI/aider",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "简介": "aider（Linux x86_64）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "aider-",
+      "linux-x86_64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "darwin",
+      "arm64"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "aider-{ver}-linux-x86_64.tar.gz"
+    ],
+    "save_name": "aider-{ver}-linux-x86_64.tar.gz",
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false

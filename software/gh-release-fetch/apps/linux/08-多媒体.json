@@ -64,5 +64,18 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/mpv-player/mpv/releases",
     "repo_path": "mpv-player/mpv"
+  },
+  {
+    "id": "jellyfin_server",
+    "简介": "Jellyfin 媒体服务器（安装见 jellyfin.org；GitHub 主仓常无安装包，勿启用）",
+    "分类": "多媒体",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/jellyfin/jellyfin/releases",
+    "repo_path": "jellyfin/jellyfin",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "jellyfin"
   }
 ]

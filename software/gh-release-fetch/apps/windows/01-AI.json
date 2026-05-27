@@ -448,6 +448,81 @@
     "run_installer": false
   },
   {
+    "id": "continue",
+    "简介": "Continue（VS Code / JetBrains 系 AI 编程扩展，Release .vsix）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/continuedev/continue/releases",
+    "repo_path": "continuedev/continue",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "continue-win32-x64-",
+      ".vsix"
+    ],
+    "href_exclude_substrings": [
+      "darwin",
+      "linux",
+      "arm64",
+      "sbom",
+      ".zip"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".vsix"
+    ],
+    "use_download_filename": true,
+    "save_name": "continue-win32-x64.vsix",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "continue"
+  },
+  {
+    "id": "roo_code",
+    "简介": "Roo Code（原 Roo-Cline，VS Code AI 代理扩展，Release .vsix）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/RooCodeInc/Roo-Code/releases",
+    "repo_path": "RooCodeInc/Roo-Code",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "roo-cline-",
+      ".vsix"
+    ],
+    "href_exclude_substrings": [
+      "Source",
+      ".zip",
+      "sbom"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".vsix"
+    ],
+    "download_names": [
+      "roo-cline-{ver}.vsix"
+    ],
+    "save_name": "roo-cline-{ver}.vsix",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "openhands",
+    "简介": "OpenHands（开源 AI 软件工程师代理；桌面/CLI 以 Docker 与源码为主，GitHub Release 常无安装包；本条仅索引）",
+    "分类": "AI",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/All-Hands-AI/OpenHands/releases",
+    "repo_path": "All-Hands-AI/OpenHands",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
     "id": "openclaw",
     "简介": "OpenClaw（个人 AI 助手；Windows 用 Release 中 OpenClaw-*.zip）",
     "分类": "AI",
@@ -678,6 +753,38 @@
     ],
     "use_download_filename": true,
     "save_name": "deepseek-tui-windows-x64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "aider",
+    "简介": "aider（终端 AI 结对编程，Windows exe）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Aider-AI/aider/releases",
+    "repo_path": "Aider-AI/aider",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "aider-",
+      "windows-x86_64.exe"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "darwin",
+      "arm64",
+      ".sha256"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "download_names": [
+      "aider-{ver}-windows-x86_64.exe"
+    ],
+    "save_name": "aider-{ver}-windows-x86_64.exe",
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false

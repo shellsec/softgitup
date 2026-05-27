@@ -2,6 +2,11 @@
 
 **English** · [中文 README](README.zh-CN.md)
 
+## ☕ Buy me a cola
+
+Open source is hard — tips are welcome:  
+👉 [Afdian (爱发电)](https://ifdian.net/a/shellsec)
+
 | | |
 |:---|:---|
 | **Project name (EN)** | **GH Release Fetch** |
@@ -31,7 +36,7 @@ Separate from [`apps/`](apps/): AI-coding–oriented entries, `manifest.json` bu
 
 Categorized **Gitee** repos under [`GiteeExploreHot/catalog/`](GiteeExploreHot/catalog/); [`GiteeExploreHot/scripts/fetch_explore_hot.py`](GiteeExploreHot/scripts/fetch_explore_hot.py) writes `hot_repos.json` plus **`gitee_downloads.json`** (Windows/macOS/Linux URLs from `releases/latest` attachments). [`GiteeExploreHot/scripts/gitee_download.py`](GiteeExploreHot/scripts/gitee_download.py) pulls binaries into `GiteeExploreHot/downloads/…`. Windows one-shot: [`GiteeExploreHot/run_sync_gitee.bat`](GiteeExploreHot/run_sync_gitee.bat) (optional first arg `windows`, `darwin`, or `linux` to download after sync). Not wired into `auto_update.py` (GitHub-focused). See [`GiteeExploreHot/README.md`](GiteeExploreHot/README.md).
 
-**Approximate catalog size** (changes when you edit JSON): **~370** Windows entries across **30** shard files (including `30-代理与隧道.json`); **~240+** darwin and linux each. Confirm with the merge log line when you run the script.
+**Approximate catalog size** (changes when you edit JSON): **403** Windows, **299** darwin, **297** linux entries across **30** shard files each (plus `99-未匹配-windows分片` placeholders). See [`CATALOG.md`](CATALOG.md) for a per-shard table (`python tools/generate_catalog_index.py` to refresh). Confirm totals with the merge log line when you run the script.
 
 **Scope**: entries target assets discoverable from **GitHub (or mirrors)**. **No** cracked software, piracy, or license circumvention. Some rows are stubs until you add full `installer_markers` / `download_names` / `save_name` rules.
 
@@ -260,7 +265,8 @@ python lookup_app.py --no-prompt v2ray
 ## 13. Maintenance scripts
 
 - Fuzzy app lookup / enable: `lookup_app.bat <keyword>` or `python lookup_app.py <keyword>` (see §3)
-- Reset all `enabled` to `false`: `python tools/reset_enabled_json.py` (`--dry-run` to preview)
+- Reset all `enabled` to `false`: **`reset_enabled_json.bat`** at repo root, or `python tools/reset_enabled_json.py` (`--dry-run` to preview; snapshot defaults to `tools/last_enabled_before_reset.json`)
+- Restore `enabled` from snapshot: **`apply_enabled_snapshot.bat`** or `python tools/apply_enabled_snapshot.py`
 - Split legacy `apps/darwin.json` / `apps/linux.json` into shard dirs: `python tools/split_darwin_linux_to_dirs.py` (backs up `*.json.bak`)
 - Monolith vs `apps/` notes: [`apps/root.json`](apps/root.json) → `_说明`
 

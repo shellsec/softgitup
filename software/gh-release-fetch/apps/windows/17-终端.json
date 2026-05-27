@@ -202,5 +202,17 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "ghostty",
+    "简介": "Ghostty 终端（Windows 安装包尚未在 GitHub Release 稳定提供；macOS/Linux 见对应平台配置；本条仅占位）",
+    "分类": "终端",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/ghostty-org/ghostty/releases",
+    "repo_path": "ghostty-org/ghostty",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

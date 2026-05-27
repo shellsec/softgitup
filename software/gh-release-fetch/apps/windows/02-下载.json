@@ -153,5 +153,67 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "qbittorrent",
+    "简介": "qBittorrent（BT/磁力下载，Windows x64 安装包）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/qbittorrent/qBittorrent/releases",
+    "repo_path": "qbittorrent/qBittorrent",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "qbittorrent_",
+      "_x64_setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "_lt20_",
+      ".asc",
+      "arm64",
+      "x86"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "qbittorrent_{ver}_x64_setup.exe"
+    ],
+    "save_name": "qbittorrent_{ver}_x64_setup.exe",
+    "process_name": "qbittorrent.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "transmission",
+    "简介": "Transmission（BT 客户端，Windows x64 MSI）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/transmission/transmission/releases",
+    "repo_path": "transmission/transmission",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "transmission-",
+      "-x64.msi"
+    ],
+    "href_exclude_substrings": [
+      "qt5-x86",
+      "pdb",
+      "dsym",
+      ".7z",
+      "x86.msi"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "transmission-{ver}-x64.msi"
+    ],
+    "save_name": "transmission-{ver}-x64.msi",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
   }
 ]

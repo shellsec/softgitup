@@ -64,5 +64,36 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/suchnsuch/Tangent/releases",
     "repo_path": "suchnsuch/Tangent"
+  },
+  {
+    "id": "appflowy",
+    "简介": "AppFlowy 开源 Notion 类",
+    "releases_url": "https://bgithub.xyz/AppFlowy-IO/AppFlowy/releases",
+    "repo_path": "AppFlowy-IO/AppFlowy",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "分类": "笔记",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "AppFlowy-",
+      "macos-x86_64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "android"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "AppFlowy-{ver}-macos-x86_64.dmg"
+    ],
+    "save_name": "AppFlowy-{ver}-macos-x86_64.dmg"
   }
 ]

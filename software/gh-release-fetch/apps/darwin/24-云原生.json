@@ -52,5 +52,34 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/caddyserver/caddy/releases",
     "repo_path": "caddyserver/caddy"
+  },
+  {
+    "id": "consul",
+    "简介": "Consul 服务发现",
+    "releases_url": "https://bgithub.xyz/hashicorp/consul/releases",
+    "repo_path": "hashicorp/consul",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "分类": "云原生",
+    "installer_markers": [
+      "consul_",
+      "darwin_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "consul_{ver}_darwin_amd64.zip"
+    ],
+    "save_name": "consul_{ver}_darwin_amd64.zip"
   }
 ]

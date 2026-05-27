@@ -105,5 +105,145 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "hiddify_next",
+    "简介": "Hiddify Next（Linux x64 AppImage）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/hiddify/hiddify-next/releases",
+    "repo_path": "hiddify/hiddify-next",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Hiddify-Linux-x64-AppImage.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "tar.gz",
+      "Debian",
+      "Windows",
+      "MacOS",
+      "Android"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "download_names": [
+      "Hiddify-Linux-x64-AppImage.AppImage"
+    ],
+    "save_name": "Hiddify-Linux-x64-AppImage.AppImage",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "flclash_linux_amd64",
+    "简介": "FlClash（Linux amd64 deb）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/chen08209/FlClash/releases",
+    "repo_path": "chen08209/FlClash",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "FlClash-",
+      "linux-amd64.deb"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "windows",
+      "macos",
+      "android",
+      "AppImage",
+      ".rpm",
+      ".sha256"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".deb"
+    ],
+    "download_names": [
+      "FlClash-{ver}-linux-amd64.deb"
+    ],
+    "save_name": "FlClash-{ver}-linux-amd64.deb",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "简介": "sing-box 代理内核",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/SagerNet/sing-box/releases",
+    "repo_path": "SagerNet/sing-box",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "sing_box_linux_amd64",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "sing-box-",
+      "linux-amd64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "386",
+      "arm64",
+      "windows",
+      "darwin",
+      "android",
+      "dSYM"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "sing-box-{ver}-linux-amd64.tar.gz"
+    ],
+    "save_name": "sing-box-{ver}-linux-amd64.tar.gz"
+  },
+  {
+    "简介": "mihomo Clash Meta 内核（Linux amd64 gz）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/SagerNet/sing-box/releases",
+    "repo_path": "SagerNet/sing-box",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "mihomo_linux_amd64",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "mihomo-linux-amd64-v",
+      ".gz"
+    ],
+    "href_exclude_substrings": [
+      "go120",
+      "go121",
+      "go122",
+      "go123",
+      "compatible",
+      "arm64",
+      "windows",
+      "darwin",
+      "android",
+      ".deb",
+      ".rpm"
+    ],
+    "installer_extensions": [
+      ".gz"
+    ],
+    "download_names": [
+      "mihomo-linux-amd64-v{ver}.gz"
+    ],
+    "save_name": "mihomo-linux-amd64-v{ver}.gz"
   }
 ]

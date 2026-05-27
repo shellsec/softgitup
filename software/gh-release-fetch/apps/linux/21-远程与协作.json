@@ -4,5 +4,33 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/rustdesk/rustdesk/releases",
     "repo_path": "rustdesk/rustdesk"
+  },
+  {
+    "id": "barrier",
+    "简介": "Barrier 开源 KVM",
+    "releases_url": "https://bgithub.xyz/debauchee/barrier/releases",
+    "repo_path": "debauchee/barrier",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "分类": "远程与协作",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Barrier-",
+      "Linux-x86_64.deb"
+    ],
+    "href_exclude_substrings": [
+      "exe",
+      "dmg",
+      "sha256"
+    ],
+    "installer_extensions": [
+      ".deb"
+    ],
+    "use_download_filename": true
   }
 ]

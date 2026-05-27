@@ -246,5 +246,41 @@
     "process_name": "ente.exe",
     "kill_before_install": true,
     "run_installer": true
+  },
+  {
+    "id": "godot",
+    "简介": "Godot 游戏引擎（Windows x64 标准版 zip）",
+    "分类": "多媒体与设计",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/godotengine/godot/releases",
+    "repo_path": "godotengine/godot",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Godot_v",
+      "_win64.exe.zip"
+    ],
+    "href_exclude_substrings": [
+      "mono",
+      "win32",
+      "arm64",
+      "linux",
+      "macos",
+      "android",
+      "web_editor",
+      "debug_symbols"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "Godot_v{ver}_win64.exe.zip"
+    ],
+    "save_name": "Godot_v{ver}_win64.exe.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

@@ -2,6 +2,11 @@
 
 **中文** · [English README](README.md)
 
+## ☕ 请我喝可乐
+
+开源不易，欢迎赞助支持：  
+👉 [爱发电](https://ifdian.net/a/shellsec)
+
 | | |
 |:---|:---|
 | **英文名称** | **GH Release Fetch** |
@@ -38,7 +43,7 @@
 
 ### 仓库现状与收录范围（约略）
 
-合并配置后规模约为：**Windows 约 370 条**（[`apps/windows/`](apps/windows/) 下 **30** 个分类分片，含 `30-代理与隧道.json` 等）、**darwin / linux 各约 240+ 条**（分片命名与 Windows 一致）。数量会随你增删 JSON 变化，以运行 `python auto_update.py` 时日志里「已从 apps/ 目录合并配置」为准。
+合并配置后规模约为：**Windows 403 条**、**darwin 299 条**、**linux 297 条**（[`apps/windows/`](apps/windows/) 等下各 **30** 个分类分片；含 `99-未匹配-windows分片` 占位）。**分片级概览**见根目录 [`CATALOG.md`](CATALOG.md)（运行 `python tools/generate_catalog_index.py` 可刷新）。精确数以运行 `python auto_update.py` 时日志里「已从 apps/ 目录合并配置」为准。
 
 收录以 **GitHub（及镜像）上可解析的 Releases 资产** 为主，涵盖编辑器、笔记、安全、云原生、可观测、下载、办公与设计等常见分类。**不包含**破解、盗版或绕过授权的软件分发；个别条目仅含基础字段时需自行补全规则后才能稳定自动下载。
 
@@ -391,6 +396,7 @@ python lookup_app.py --no-prompt v2ray
 ## 13. 维护工具（可选）
 
 - **模糊查找应用 / 开启 enabled**：`lookup_app.bat <关键词>` 或 `python lookup_app.py <关键词>`（见 §3）
-- 将所有应用 JSON 中的 `enabled` 写回 `false`：在项目根执行 `python tools/reset_enabled_json.py`（可加 `--dry-run` 预览）
+- 将所有应用 JSON 中的 `enabled` 写回 `false`：项目根 **`reset_enabled_json.bat`** 或 `python tools/reset_enabled_json.py`（可加 `--dry-run` 预览；快照默认 `tools/last_enabled_before_reset.json`）
+- 按快照恢复 `enabled`：项目根 **`apply_enabled_snapshot.bat`** 或 `python tools/apply_enabled_snapshot.py`
 - 将 `apps/darwin.json`、`apps/linux.json` 按 windows 分片名拆到 `apps/darwin/`、`apps/linux/`：`python tools/split_darwin_linux_to_dirs.py`（会备份原单文件为 `*.json.bak`）
 - 单文件与 `apps/` 目录的拆分与恢复说明见 [`apps/root.json`](apps/root.json) 内 `_说明`

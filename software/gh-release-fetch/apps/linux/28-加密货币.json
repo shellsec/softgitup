@@ -304,5 +304,70 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "简介": "Bitcoin Core",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/bitcoin-core/gui/releases",
+    "repo_path": "bitcoin-core/gui",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "bitcoin-",
+      "x86_64-linux-gnu.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      ".asc",
+      "windows",
+      "osx",
+      "arm64",
+      "setup"
+    ],
+    "id": "bitcoin_core",
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "bitcoin-{ver}-x86_64-linux-gnu.tar.gz"
+    ],
+    "save_name": "bitcoin-{ver}-x86_64-linux-gnu.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "electrum",
+    "简介": "Electrum 轻钱包（Linux AppImage）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/spesmilo/electrum/releases",
+    "repo_path": "spesmilo/electrum",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "electrum-",
+      "AppImage"
+    ],
+    "href_exclude_substrings": [
+      ".asc",
+      "windows",
+      "mac",
+      "tar.gz"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "download_names": [
+      "electrum-{ver}-x86_64.AppImage"
+    ],
+    "save_name": "electrum-{ver}-x86_64.AppImage",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

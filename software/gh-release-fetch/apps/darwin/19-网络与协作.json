@@ -1,0 +1,99 @@
+[
+  {
+    "id": "mattermost_desktop",
+    "简介": "Mattermost 桌面客户端",
+    "分类": "网络与协作",
+    "releases_url": "https://bgithub.xyz/mattermost/desktop/releases",
+    "repo_path": "mattermost/desktop",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "mac-x64.dmg"
+    ],
+    "installer_markers_match_all": false,
+    "href_exclude_substrings": [
+      "win",
+      "linux",
+      "arm64"
+    ],
+    "use_download_filename": true
+  },
+  {
+    "id": "zulip_desktop",
+    "简介": "Zulip 桌面客户端",
+    "分类": "网络与协作",
+    "releases_url": "https://bgithub.xyz/zulip/zulip-desktop/releases",
+    "repo_path": "zulip/zulip-desktop",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "arm64.dmg"
+    ],
+    "installer_markers_match_all": false,
+    "href_exclude_substrings": [
+      "win",
+      "linux",
+      "x86"
+    ],
+    "use_download_filename": true
+  },
+  {
+    "id": "rocketchat_desktop",
+    "简介": "Rocket.Chat 桌面客户端",
+    "分类": "网络与协作",
+    "releases_url": "https://bgithub.xyz/RocketChat/Rocket.Chat.Electron/releases",
+    "repo_path": "RocketChat/Rocket.Chat.Electron",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "mac.dmg"
+    ],
+    "installer_markers_match_all": false,
+    "href_exclude_substrings": [
+      "win",
+      "linux",
+      "arm64"
+    ],
+    "use_download_filename": true
+  },
+  {
+    "id": "ferdium",
+    "简介": "Ferdium（聚合 Slack/Discord 等）",
+    "分类": "网络与协作",
+    "releases_url": "https://bgithub.xyz/ferdium/ferdium-app/releases",
+    "repo_path": "ferdium/ferdium-app",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "Ferdium-mac-arm64",
+      ".dmg"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      "linux",
+      "win",
+      "x86"
+    ],
+    "use_download_filename": true
+  }
+]
