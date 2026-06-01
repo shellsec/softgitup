@@ -1,11 +1,11 @@
 # GitHub 发行版拉取工具（GH Release Fetch）
 
-**中文** · [English README](README.md)
-
 ## ☕ 请我喝可乐
 
 开源不易，欢迎赞助支持：  
 👉 [爱发电](https://ifdian.net/a/shellsec)
+
+**中文** · [English README](README.md)
 
 | | |
 |:---|:---|
@@ -43,7 +43,7 @@
 
 ### 仓库现状与收录范围（约略）
 
-合并配置后规模约为：**Windows 403 条**、**darwin 299 条**、**linux 297 条**（[`apps/windows/`](apps/windows/) 等下各 **30** 个分类分片；含 `99-未匹配-windows分片` 占位）。**分片级概览**见根目录 [`CATALOG.md`](CATALOG.md)（运行 `python tools/generate_catalog_index.py` 可刷新）。精确数以运行 `python auto_update.py` 时日志里「已从 apps/ 目录合并配置」为准。
+合并配置后规模约为：**Windows 404 条**、**darwin 300 条**、**linux 298 条**（[`apps/windows/`](apps/windows/) 等下各 **30** 个分类分片；含 `99-未匹配-windows分片` 占位）。**分片级概览**见根目录 [`CATALOG.md`](CATALOG.md)（运行 `python tools/generate_catalog_index.py` 可刷新）。精确数以运行 `python auto_update.py` 时日志里「已从 apps/ 目录合并配置」为准。
 
 收录以 **GitHub（及镜像）上可解析的 Releases 资产** 为主，涵盖编辑器、笔记、安全、云原生、可观测、下载、办公与设计等常见分类。**不包含**破解、盗版或绕过授权的软件分发；个别条目仅含基础字段时需自行补全规则后才能稳定自动下载。
 

@@ -2,10 +2,14 @@
 """
 经测试，本 API 脚本不要加入到 exe 任务列表中，需单独运行；否则由管理器做「全部重启」时，
 被一起停止后再拉起会失败（如 python.exe 报 0xc0000142），远程重启会起不来。
+若已加入任务列表：以下接口会自动跳过 API 服务（白名单），避免接口先挂：
+  /shutdown、/reboot、/restart-all
+手动「全部停止」仍会停 API；需要时可单独控制。
 
 通知配置-最好关掉异常通知
 
 API 服务：通过 HTTP 调用主程序的 CLI（优先 exe，无则 main.py），供另一台机器远程启停、添加脚本等。
+也可在 GUI 面板「API: 启动API / 停止API / 重启API」独立管理，无需加入任务列表。
 
 使用方式：
   python WindowsBatchScriptManager_api_server.py [--port 8765] [--host 0.0.0.0]
@@ -31,6 +35,10 @@ API 服务：通过 HTTP 调用主程序的 CLI（优先 exe，无则 main.py）
   POST /start-all     - 全部启动
   POST /stop-all      - 全部停止
   POST /restart-all   - 全部重启
+  POST /shutdown      - 全部停止后关机（可选 ?force=true）
+  GET  /shutdown      - 同上（支持 GET）
+  POST /reboot        - 全部停止后重启系统（可选 ?force=true）
+  GET  /reboot        - 同上（支持 GET）
   GET  /config-path   - 配置路径
   POST /add           - 添加脚本
   DELETE /delete?id=  - 删除
@@ -46,6 +54,11 @@ import os
 import subprocess
 import sys
 from pathlib import Path
+
+try:
+    from version import __version__
+except ImportError:
+    __version__ = "1.1.0"
 
 ROOT = Path(__file__).resolve().parent
 # 主程序：Windows 打包后主要为 exe；无 exe 时（开发环境或 Mac/Linux）用 main.py
@@ -93,12 +106,12 @@ def require_api_key(x_api_key: str = Header(None, alias="X-API-Key")):
 
 
 def create_app():
-    app = FastAPI(title="Batch Script Manager API", version="1.0")
+    app = FastAPI(title="Batch Script Manager API", version=__version__)
 
     @app.get("/")
     def root(request: Request):
         if not ENABLE_DOCS:
-            return {"status": "ok"}
+            return {"status": "ok", "version": __version__}
         base = str(request.base_url).rstrip("/")
         auth_note = ""
         if not DISABLE_AUTH:
@@ -131,6 +144,8 @@ def create_app():
   <tr><td><span class="method get">GET</span> <span class="method post">POST</span></td><td><code>/start-all</code></td><td>启动所有脚本</td></tr>
   <tr><td><span class="method get">GET</span> <span class="method post">POST</span></td><td><code>/stop-all</code></td><td>停止所有脚本</td></tr>
   <tr><td><span class="method get">GET</span> <span class="method post">POST</span></td><td><code>/restart-all</code></td><td>重启所有脚本</td></tr>
+  <tr><td><span class="method get">GET</span> <span class="method post">POST</span></td><td><code>/shutdown</code></td><td>停止所有脚本后关机</td></tr>
+  <tr><td><span class="method get">GET</span> <span class="method post">POST</span></td><td><code>/reboot</code></td><td>停止所有脚本后重启系统</td></tr>
 </table>
 
 <h2>🎯 单脚本控制 (Single Script)</h2>
@@ -360,6 +375,40 @@ curl -X DELETE "{base}/delete?id=1"</div>
         except Exception:
             return PlainTextResponse(out)
 
+    def _do_power_action(action: str, force: bool = False):
+        args = ["--shutdown" if action == "shutdown" else "--reboot"]
+        if force:
+            args.append("--force")
+        out, err, code = run_cli(*args)
+        if code != 0:
+            raise HTTPException(status_code=500, detail=err or out or "failed")
+        try:
+            return JSONResponse(content=__import__("json").loads(out))
+        except Exception:
+            return PlainTextResponse(out or action)
+
+    @app.post("/shutdown")
+    def api_shutdown(force: bool = Query(False), x_api_key: str = Header(None, alias="X-API-Key")):
+        require_api_key(x_api_key)
+        return _do_power_action("shutdown", force=force)
+
+    @app.get("/shutdown")
+    def api_shutdown_get(force: bool = Query(False), x_api_key: str = Header(None, alias="X-API-Key")):
+        """GET 方式关机，便于浏览器或 curl 直接访问。"""
+        require_api_key(x_api_key)
+        return _do_power_action("shutdown", force=force)
+
+    @app.post("/reboot")
+    def api_reboot(force: bool = Query(False), x_api_key: str = Header(None, alias="X-API-Key")):
+        require_api_key(x_api_key)
+        return _do_power_action("reboot", force=force)
+
+    @app.get("/reboot")
+    def api_reboot_get(force: bool = Query(False), x_api_key: str = Header(None, alias="X-API-Key")):
+        """GET 方式重启系统，便于浏览器或 curl 直接访问。"""
+        require_api_key(x_api_key)
+        return _do_power_action("reboot", force=force)
+
     @app.post("/add")
     def api_add(
         name: str = Query(""),
@@ -578,6 +627,10 @@ def main():
   POST /start-all     - 全部启动
   POST /stop-all      - 全部停止
   POST /restart-all   - 全部重启
+  POST /shutdown      - 全部停止后关机（可选 ?force=true）
+  GET  /shutdown      - 同上（支持 GET）
+  POST /reboot        - 全部停止后重启系统（可选 ?force=true）
+  GET  /reboot        - 同上（支持 GET）
   GET  /config-path   - 配置路径
   POST /add           - 添加脚本
   DELETE /delete?id=  - 删除
@@ -590,11 +643,15 @@ def main():
         print(f'    curl -H "X-API-Key: {API_KEY}" "{base}/start?id=1"')
         print(f'    curl -H "X-API-Key: {API_KEY}" "{base}/stop-all"')
         print(f'    curl -H "X-API-Key: {API_KEY}" "{base}/restart-all"')
+        print(f'    curl -H "X-API-Key: {API_KEY}" "{base}/shutdown"')
+        print(f'    curl -H "X-API-Key: {API_KEY}" "{base}/reboot"')
     else:
         print(f'    curl "{base}/list"')
         print(f'    curl "{base}/start?id=1"')
         print(f'    curl "{base}/stop-all"')
         print(f'    curl "{base}/restart-all"')
+        print(f'    curl "{base}/shutdown"')
+        print(f'    curl "{base}/reboot"')
         print(f'    curl "{base}/start-all"')
         print(f'    curl "{base}/add?path=C:\\\\test.bat&name=Test"')
     print()

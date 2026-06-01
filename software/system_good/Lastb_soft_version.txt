@@ -95,7 +95,7 @@ DirectWrite 渲染问题：Notepad++ 使用的 DirectWrite 文本渲染技术在
 点击 "确定" 并重启 Notepad++
 自带插件和已经开发插件集合
 https://github.com/bruderstein/PythonScript/releases
-PythonScript_Full_3.0.25.0_x64
+https://github.com/bruderstein/PythonScript/releases/download/v3.0.25/PythonScript_Full_3.0.25.0_x64.zip
 
 notepad--
 核心特点：体积更小、启动更快，支持语法高亮、代码折叠，低资源占用，操作逻辑贴合中文用户习惯
@@ -429,7 +429,27 @@ Windows: cd "$env:APPDATA\Rime" && git pull
 其他系统以此类推
 实际我是在 %APPDATA%\Rime 里面执行 git clone --depth 1 https://github.com/gaboolic/rime-frost Rime，然后再复制覆盖过去，再选 白霜拼音
 
-4、其他开源输入法
+4、需要本地语音输入法输入，快速输入很舒服，F2直接输入识别
+VocoType 是一款运行在本地端侧的隐私安全语音输入工具，通过快捷键即可将语音实时转换为文字并自动输入到当前应用。支持语音转文字MCP、AI 优化文本、自定义替换词典、录音视频转文字等功能，让语音输入更高效、更安全。
+https://github.com/233stone/vocotype-cli
+https://vocotype.com/
+https://package.vocotype.com/package/release/VocoType_Windows.exe  24M已经内置了
+VocoType 是一款专为桌面端设计的离线语音输入软件。它利用先进的本地 AI 模型，将您的语音实时转换为文字，无需联网，确保100% 隐私安全。无论您是作家、程序员还是办公人员，VocoType 都能显著提升您的输入效率。
+Q: VocoType 收费吗？
+目前 VocoType 的核心功能完全免费。我们的目标是让更多人体验到本地化语音识别的便捷与安全。
+2. 核心功能与使用
+Q: 真的完全离线吗？
+是的。除了首次启动需要下载必要的 AI 模型文件外，后续所有的语音识别和文字转换工作都在您的电脑本地完成。您可以拔掉网线使用，非常适合处理法律文书、医疗病历或商业机密等敏感数据。
+Q: 识别准确率如何？
+得益于强大的 paraformer 模型，VocoType 在安静环境下的也能有极高的语音输入准确率。它支持中英文混合输入，无需手动切换语言，让您的思维流畅不中断。
+Q: 支持哪些语言？
+目前主要优化了中文（普通话）和英文的识别。未来我们将逐步增加对更多语言和方言的支持。
+https://mcprepository.com/233stone/vocotype-cli
+https://github.com/modelscope/FunASR
+本地模型确实有的
+C:\Users\Administrator\.cache\modelscope\hub\models\iic\speech_paraformer-large_asr_nat-zh-cn-16k-common-vocab8404-onnx\model_quant.onnx
+
+5、其他开源输入法
 墨奇输入法windows版
 https://github.com/gaboolic/moqi-im-windows
 清风输入法
@@ -437,11 +457,6 @@ https://github.com/huanfeng/WindInput
 薄荷输入
 https://cnb.cool/Mintimate/rime/oh-my-rime
 https://cnb.cool/Mintimate/rime/oh-my-rime-cli
-5、需要本地语音输入法输入
-VocoType 是一款运行在本地端侧的隐私安全语音输入工具，通过快捷键即可将语音实时转换为文字并自动输入到当前应用。支持语音转文字MCP、AI 优化文本、自定义替换词典、录音视频转文字等功能，让语音输入更高效、更安全。
-https://github.com/233stone/vocotype-cli
-https://vocotype.com/
-https://package.vocotype.com/package/release/VocoType_Windows.exe
 
 
 startback_aio.zip 开始菜单

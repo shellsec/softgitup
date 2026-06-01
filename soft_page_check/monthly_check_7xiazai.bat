@@ -1,39 +1,104 @@
 @echo off
+
 chcp 65001 >nul
+
 cd /d "%~dp0"
 
+
+
 echo ========================================
-echo 7xiazai 软件页快检（可选，非默认）
+
+echo 7xiazai 快检（系统 + 移动 分开比对）
+
 echo ========================================
+
 echo.
-echo 范围: 从列表页发现的软件详情页 title（含版本号）
-echo 刷新 URL: extract_7xiazai_pages.bat  （改 max_page 见 7xiazai_config.json）
+
+echo 刷新 URL: extract_7xiazai_pages.py  （改 max_page 见 7xiazai_config.json）
+
 echo.
+
+
 
 python extract_7xiazai_pages.py
-echo.
-python fetch_titles.py --scope 7xiazai --compare
+
+if errorlevel 1 goto fail
+
 echo.
 
-findstr /C:"\"compared_at\"" "reports\last_diff_7xiazai.json" >nul 2>&1
-if errorlevel 1 (
-    echo [首次运行] 已建立 7xiazai 基线。请再运行本 bat 一次才有比对结果。
-    goto after_result
-)
-if exist "changed_7xiazai_urls.txt" (
-    call :count_lines "changed_7xiazai_urls.txt"
-    echo [有变化] %CHG% 个 -^> open_changed_7xiazai.bat
-) else (
-    echo [无比对变化] 软件页标题与上次一致。
-)
-:after_result
+
+
+echo --- 系统 (PC/Windows 等) ---
+
+python fetch_titles.py --scope 7xiazai_system --compare
+
+if errorlevel 1 goto fail
+
+call :show 7xiazai_system changed_7xiazai_system_urls.txt
+
+
+
 echo.
+
+echo --- 移动 (Android/TV 等) ---
+
+python fetch_titles.py --scope 7xiazai_mobile --compare
+
+if errorlevel 1 goto fail
+
+call :show 7xiazai_mobile changed_7xiazai_mobile_urls.txt
+
+
+
 if exist "reports\index.html" start "" "%~dp0reports\index.html"
+
 pause
+
 exit /b 0
 
-:count_lines
-set "CHG=0"
-if not exist "%~1" exit /b 0
-for /f "usebackq delims=" %%L in ("%~1") do set /a CHG+=1
+
+
+:show
+
+findstr /C:"\"compared_at\"" "reports\last_diff_%~1.json" >nul 2>&1
+
+if errorlevel 1 (
+
+    echo   [首次] %~1 已建基线
+
+    goto :eof
+
+)
+
+if exist "%~2" (
+
+    call :count "%~2"
+
+    echo   [%~1] 标题变化: %N% 个
+
+) else (
+
+    echo   [%~1] 无比对变化
+
+)
+
+goto :eof
+
+
+
+:count
+
+set "N=0"
+
+for /f "usebackq delims=" %%L in ("%~1") do set /a N+=1
+
 exit /b 0
+
+
+
+:fail
+
+pause
+
+exit /b 1
+

@@ -16,7 +16,23 @@ from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 from build_watchlist import build as build_watchlist_index, domain_label, load_url_meta
+from list_scopes import (
+    EXTERNAL_LIST_SCOPES,
+    LEGACY_LIST_SCOPES,
+    LIST_SCOPE_DEFS,
+    changed_list_filename,
+    is_list_scope,
+    read_url_list,
+    scope_label as list_scope_label,
+)
 from report_html import build_index_html, save_diff
+
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+        sys.stderr.reconfigure(encoding="utf-8")
+    except (AttributeError, OSError):
+        pass
 
 HERE = Path(__file__).resolve().parent
 PAGES_ALL = HERE / "soft_pages_urls.txt"
@@ -25,6 +41,24 @@ PAGES_423DOWN = HERE / "423down_digest_urls.txt"
 PAGES_7XIAZAI = HERE / "7xiazai_list_urls.txt"
 HISTORY_DIR = HERE / "history"
 REPORTS_DIR = HERE / "reports"
+
+EXTERNAL_SCOPES = frozenset({"423down"}) | EXTERNAL_LIST_SCOPES
+
+SCOPE_URL_FILES: dict[str, Path] = {
+    "a": PAGES_A,
+    "all": PAGES_ALL,
+    "423down": PAGES_423DOWN,
+}
+for _scope, _defn in LIST_SCOPE_DEFS.items():
+    SCOPE_URL_FILES[_scope] = _defn["url_file"]
+
+CHANGED_LIST_FILES: dict[str, str] = {
+    "a": "changed_tier_a_urls.txt",
+    "all": "changed_pages_urls.txt",
+    "423down": "changed_423down_urls.txt",
+}
+for _scope in LIST_SCOPE_DEFS:
+    CHANGED_LIST_FILES[_scope] = changed_list_filename(_scope)
 
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -104,28 +138,41 @@ def ensure_7xiazai_list() -> None:
         from extract_7xiazai_pages import main as extract_7xiazai_pages
 
         extract_7xiazai_pages()
+    from split_7xiazai_urls import main as split_7xiazai_urls
+
+    split_7xiazai_urls()
 
 
-def load_urls(scope: str) -> tuple[list[str], Path]:
-    if scope == "a":
-        if not PAGES_A.exists():
-            build_watchlist_index()
-        src = PAGES_A
-    elif scope == "423down":
+def load_urls(scope: str) -> tuple[list[str], Path] | None:
+    if scope == "a" and not PAGES_A.exists():
+        build_watchlist_index()
+    if scope == "423down":
         ensure_423down_list()
-        src = PAGES_423DOWN
-    elif scope == "7xiazai":
+    elif scope in ("7xiazai_system", "7xiazai_mobile"):
         ensure_7xiazai_list()
-        src = PAGES_7XIAZAI
-    else:
-        src = PAGES_ALL
+
+    src = SCOPE_URL_FILES.get(scope)
+    if src is None:
+        raise ValueError(f"未知 scope: {scope}")
+
+    if is_list_scope(scope):
+        if not src.exists():
+            if LIST_SCOPE_DEFS[scope].get("optional"):
+                return None
+            raise FileNotFoundError(f"缺少 {src}（{LIST_SCOPE_DEFS[scope]['hint']}）")
+        urls = read_url_list(src)
+        if not urls:
+            if LIST_SCOPE_DEFS[scope].get("optional"):
+                return None
+            raise FileNotFoundError(f"清单为空: {src}")
+        return urls, src
+
     if not src.exists():
         hints = {
             "423down": "extract_423down_digest.bat",
-            "7xiazai": "extract_7xiazai_pages.bat",
         }
         hint = hints.get(scope, "extract_pages.bat / build_watchlist.bat")
-        raise FileNotFoundError(f"缺少 {src}，请先运行 {hint}")
+        raise FileNotFoundError(f"缺少 {src}，请先准备：{hint}")
     urls = [line.strip() for line in src.read_text(encoding="utf-8").splitlines() if line.strip()]
     return urls, src
 
@@ -290,13 +337,15 @@ def save_report(scope: str, diff: dict, snapshot_path: Path) -> Path:
 
 
 def scope_label(scope: str) -> str:
-    if scope == "423down":
-        return "423DOWN digest"
-    if scope == "7xiazai":
-        return "7xiazai 软件页"
-    if scope == "a":
-        return "A 类"
-    return "全量页面"
+    if is_list_scope(scope):
+        return list_scope_label(scope)
+    labels = {
+        "423down": "423DOWN digest",
+        "7xiazai": "7xiazai 软件页",
+        "a": "A 类",
+        "all": "全量页面",
+    }
+    return labels.get(scope, scope)
 
 
 def print_report(scope: str, diff: dict, snapshot_path: Path) -> None:
@@ -350,41 +399,42 @@ def print_report(scope: str, diff: dict, snapshot_path: Path) -> None:
 
 def write_scope_changed_lists(scope: str, diff: dict) -> None:
     if scope == "a":
-        f = write_open_list(diff["tier_a_candidates"], "changed_tier_a_urls.txt")
-        if f:
-            print(f"待打开(A类): {f.name} ({len(diff['tier_a_candidates'])} 个)")
-        elif not diff["open_candidates"]:
-            print("无标题变化，无需打开页面。")
-        else:
-            print("有变化但无 A 类项。")
-    elif scope == "423down":
-        f = write_open_list(diff["open_candidates"], "changed_423down_urls.txt")
-        if f:
-            print(f"待打开(423down): {f.name} ({len(diff['open_candidates'])} 个)")
-        else:
-            print("无标题变化，无需打开页面。")
-    elif scope == "7xiazai":
-        f = write_open_list(diff["open_candidates"], "changed_7xiazai_urls.txt")
-        if f:
-            print(f"待打开(7xiazai): {f.name} ({len(diff['open_candidates'])} 个)")
-        else:
-            print("无标题变化，无需打开页面。")
-    elif scope == "all":
-        f = write_open_list(diff["open_candidates"], "changed_pages_urls.txt")
-        if f:
-            print(f"待打开(全量): {f.name} ({len(diff['open_candidates'])} 个)")
-        else:
-            print("无标题变化，无需打开页面。")
+        urls = diff["tier_a_candidates"]
+        label = "A类"
+    elif scope in CHANGED_LIST_FILES:
+        urls = diff["open_candidates"]
+        label = scope_label(scope)
+    else:
+        return
+
+    fname = CHANGED_LIST_FILES[scope]
+    f = write_open_list(urls, fname)
+    if f:
+        print(f"待打开({label}): {f.name} ({len(urls)} 个)")
+    elif not diff["open_candidates"]:
+        print("无标题变化，无需打开页面。")
+    elif scope == "a":
+        print("有变化但无 A 类项。")
 
 
-def cmd_fetch(scope: str, compare_after: bool) -> int:
+def cmd_fetch(scope: str, compare_after: bool, skip_missing: bool = False) -> int:
+    loaded = load_urls(scope)
+    if loaded is None:
+        msg = f"[跳过] {scope_label(scope)} — 清单不存在或为空（可选 scope）"
+        if skip_missing:
+            print(msg)
+            return 0
+        print(msg)
+        return 0
+
+    urls, src = loaded
     meta: dict = {}
-    if scope not in ("423down", "7xiazai"):
+    if scope not in EXTERNAL_SCOPES:
         if not HERE.joinpath("url_meta.json").exists():
             build_watchlist_index()
         meta = load_url_meta()
-
-    urls, src = load_urls(scope)
+    elif scope in ("423down",) or is_list_scope(scope):
+        pass
     print(f"[{scope_label(scope)}] 抓取 {len(urls)} 个页面标题（并发 {WORKERS}）...")
 
     previous = load_previous(scope) if compare_after else None
@@ -396,8 +446,10 @@ def cmd_fetch(scope: str, compare_after: bool) -> int:
         for future in as_completed(futures):
             done += 1
             raw = future.result()
-            if scope in ("423down", "7xiazai"):
-                domain = "423down" if scope == "423down" else "7xiazai"
+            if scope in EXTERNAL_SCOPES:
+                domain = scope if is_list_scope(scope) else scope
+                if is_list_scope(scope):
+                    domain = LIST_SCOPE_DEFS[scope]["site"]
                 entries.append({**raw, "tier": scope, "software": [], "domain": domain})
             else:
                 entries.append(enrich_entry(raw, meta))
@@ -432,14 +484,23 @@ def cmd_fetch(scope: str, compare_after: bool) -> int:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="抓取页面标题并比对历史")
+    all_scopes = ["a", "all", "423down", "7xiazai"] + list(LIST_SCOPE_DEFS.keys()) + list(LEGACY_LIST_SCOPES.keys())
     parser.add_argument(
         "--scope",
-        choices=["a", "all", "423down", "7xiazai"],
+        choices=sorted(set(all_scopes)),
         default="a",
-        help="a=A类, all=装机区全页面, 423down=digest, 7xiazai=软件详情页",
+        help="list scope 按系统/移动拆分；hybase/dayanzai/down66/7xiazai 为旧名（依次跑 system+mobile）",
     )
     parser.add_argument("--compare", action="store_true", help="与上次同范围快照比对")
     args = parser.parse_args()
+
+    if args.scope in LEGACY_LIST_SCOPES:
+        rc = 0
+        for sub in LEGACY_LIST_SCOPES[args.scope]:
+            sub_rc = cmd_fetch(sub, compare_after=args.compare, skip_missing=True)
+            if sub_rc != 0:
+                rc = sub_rc
+        return rc
     return cmd_fetch(args.scope, compare_after=args.compare)
 
 

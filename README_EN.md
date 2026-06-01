@@ -295,7 +295,8 @@ python sync_software.py
 | When | Action | Notes |
 |------|--------|-------|
 | **~Monthly** | [`soft_page_check/monthly_sop.bat`](soft_page_check/monthly_sop.bat) option `[1]` | Tier-A quick check + guided steps; or `monthly_check.bat` only |
-| **~Quarterly** | [`soft_page_check/monthly_check_full.bat`](soft_page_check/monthly_check_full.bat) **twice** | Full report: A + install list + 423down + 7xiazai |
+| **~Quarterly** | [`soft_page_check/monthly_check_full.bat`](soft_page_check/monthly_check_full.bat) **twice** | Full report: A + install list + 423down + 7xiazai + list sites |
+| **List sites (optional)** | [`soft_page_check/monthly_check_list.bat`](soft_page_check/monthly_check_list.bat) | hybase / dayanzai / down66 only (`list/*_urls.txt`) |
 | **If changed** | Open `soft_page_check/reports/index.html` | Cracked / mirror / cloud links — download manually |
 | **To update** | Replace under `software/` | GitHub apps: `software/gh-release-fetch/run_update.bat` |
 | **Publish** | `generate_and_push.bat` at repo root | Regenerates `list.txt` and pushes |

@@ -212,5 +212,39 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "frpc_desktop",
+    "简介": "Frpc Desktop（frp 桌面 GUI 客户端，Windows Setup）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/luckjiawei/frpc-desktop/releases",
+    "repo_path": "luckjiawei/frpc-desktop",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Frpc-Desktop-Setup-",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "blockmap",
+      "ia32",
+      "-win.zip",
+      "mac",
+      "linux",
+      "AppImage",
+      "deb",
+      "dmg",
+      ".yml"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Frpc-Desktop-Setup-{ver}.exe"
+    ],
+    "save_name": "Frpc-Desktop-Setup-{ver}.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
   }
 ]

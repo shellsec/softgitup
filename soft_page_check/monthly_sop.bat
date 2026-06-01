@@ -20,15 +20,17 @@ echo   [3] 仅发布（已手工更新 software，直接 push）
 echo   [4] 季度 423down digest 检查
 echo   [5] 7xiazai 软件页检查（~650+ 软件 title）
 echo   [6] 打开 HTML 报告页
+echo   [7] list 三站检查（系统+移动 分开，hybase/dayanzai/down66）
 echo   [0] 退出
 echo.
-set /p "MENU=请选择 [0-6]: "
+set /p "MENU=请选择 [0-7]: "
 if "%MENU%"=="1" goto sop
 if "%MENU%"=="2" goto quick_only
 if "%MENU%"=="3" goto push_only
 if "%MENU%"=="4" goto digest
 if "%MENU%"=="5" goto xiazai
 if "%MENU%"=="6" goto open_report
+if "%MENU%"=="7" goto list_sites
 if "%MENU%"=="0" exit /b 0
 echo 无效选项，请重试。
 timeout /t 2 /nobreak >nul
@@ -90,6 +92,12 @@ goto menu
 echo.
 echo  --- 7xiazai 软件详情页 title ---
 call monthly_check_7xiazai.bat
+goto menu
+
+:list_sites
+echo.
+echo  --- list 三站（hybase + dayanzai + down66）---
+call monthly_check_list.bat
 goto menu
 
 :push_only

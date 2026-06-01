@@ -265,5 +265,42 @@
       "mihomo-darwin-arm64-v{ver}.gz"
     ],
     "save_name": "mihomo-darwin-arm64-v{ver}.gz"
+  },
+  {
+    "id": "frpc_desktop",
+    "简介": "Frpc Desktop（frp 桌面 GUI，macOS universal dmg）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/luckjiawei/frpc-desktop/releases",
+    "repo_path": "luckjiawei/frpc-desktop",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Frpc-Desktop-",
+      "universal.dmg"
+    ],
+    "href_exclude_substrings": [
+      "blockmap",
+      "arm64-mac",
+      "win",
+      "linux",
+      "AppImage",
+      "deb",
+      "exe",
+      ".zip",
+      ".yml"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "Frpc-Desktop-{ver}-universal.dmg"
+    ],
+    "save_name": "Frpc-Desktop-{ver}-universal.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

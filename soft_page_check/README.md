@@ -47,7 +47,7 @@ flowchart TD
 
 ### 首次使用（快检）
 
-**每个监控范围**（A / 全量 / 423down）都要 **连续跑两次** 才会出现「标题变化」：
+**每个监控范围**（A / 全量 / 423down / 7xiazai / list 三站）都要 **连续跑两次** 才会出现「标题变化」：
 
 | 范围 | 第一次 | 第二次 |
 |------|--------|--------|
@@ -55,6 +55,7 @@ flowchart TD
 | 全量 118 页 | 建立基线，无 `changed_pages_urls.txt` | 有比对结果 |
 | 423down digest | 同上 | 同上 |
 | 7xiazai 列表 | 同上 | 同上 |
+| hybase / dayanzai / down66 | 同上 | 同上 |
 
 控制台出现 **「首次运行该范围：已保存标题基线」** 时属于正常，不是报错。再跑一遍即可。
 
@@ -64,7 +65,8 @@ flowchart TD
 
 | 操作 | 频率 |
 |------|------|
-| `monthly_check_full.bat` — A + 装机 + 423down + 7xiazai | 约每季度（连跑两次） |
+| `monthly_check_full.bat` — A + 装机 + 423down + 7xiazai + list 三站 | 约每季度（连跑两次） |
+| `monthly_check_list.bat` — 仅 hybase + dayanzai + down66 | 约每季度（连跑两次） |
 
 ### SOP 主菜单说明
 
@@ -78,6 +80,7 @@ flowchart TD
 | **4 季度 423down** | digest 356 条全量比对 |
 | **5 7xiazai 列表** | 首页 ~ `/page/65/` 列表页快检 |
 | **6 打开报告页** | 刷新并打开 `index.html` |
+| **7 list 三站** | hybase + dayanzai + down66（`monthly_check_list.bat`） |
 
 ---
 
@@ -105,6 +108,13 @@ flowchart TD
 | 全量快检（A+装机+423down+7xiazai） | `monthly_check_full.bat` | 季度（连跑两次） |
 | **423down digest 全量（可选）** | `monthly_check_423down.bat` | 季度 / 想找新资源时 |
 | **7xiazai 软件页（可选）** | `monthly_check_7xiazai.bat` | 季度 / 扫 7xiazai 软件标题 |
+| **hybase 上新（可选）** | `monthly_check_hybase.bat` | 季度 / list 清单 |
+| **dayanzai Android（可选）** | `monthly_check_dayanzai.bat` | 季度 / list 清单 |
+| **down66 app（可选）** | `monthly_check_down66.bat` | 季度 / list 清单 |
+| **list 三站连跑** | `monthly_check_list.bat` | 季度 / 上述三站一次跑完 |
+| 打开 hybase 变化页 | `open_changed_hybase.bat` | hybase 快检后有变化时 |
+| 打开 dayanzai 变化页 | `open_changed_dayanzai.bat` | dayanzai 快检后有变化时 |
+| 打开 down66 变化页 | `open_changed_down66.bat` | down66 快检后有变化时 |
 | 打开 7xiazai 变化页 | `open_changed_7xiazai.bat` | 7xiazai 快检后有变化时 |
 | 打开 423down 变化页 | `open_changed_423down.bat` | digest 快检后有变化时 |
 | **打开 HTML 报告页** | `open_report.bat` | 随时查看 / 快检后自动打开 |
@@ -120,9 +130,13 @@ flowchart TD
 | **B 类** | 装机区其余参考页（输入法教程、工具对比等） | 76 | `soft_pages_urls.txt` 其余 |
 | **423down digest** | digest 区 423down 去重（可选） | 356 | `423down_digest_urls.txt` |
 | **7xiazai 软件页** | 从列表页解析的软件详情页（可选） | ~650+ | `7xiazai_list_urls.txt` |
+| **hybase 上新** | hybase.com soft/newlist（可选） | ~600 | `list/hybase_newlist_urls.txt` |
+| **dayanzai Android** | dayanzai.me/android 列表（可选） | ~262 | `list/dayanzai_android_urls.txt` |
+| **down66 app** | down66.com/app 列表（可选） | ~226 | `list/down66_app_urls.txt` |
 
 - **月度默认**：`monthly_check.bat` 只跑 A 类（42 页）。
-- **季度全量**：`monthly_check_full.bat` 一次刷新报告页 **四个分区**（A / 装机 / 423down / 7xiazai）。
+- **季度全量**：`monthly_check_full.bat` 一次刷新报告页 **七个分区**（A / 装机 / 423down / 7xiazai / hybase / dayanzai / down66）。
+- **仅 list 三站**：`monthly_check_list.bat`（约 1088 条）。
 
 A 类匹配规则在 [`build_watchlist.py`](build_watchlist.py) 的 `A_PATTERNS` 中维护；修改 `config.json` 或关键词后运行 `build_watchlist.bat` 刷新。
 
@@ -138,6 +152,13 @@ A 类匹配规则在 [`build_watchlist.py`](build_watchlist.py) 的 `A_PATTERNS`
 | `monthly_check_full.bat` | **季度全量**：A 类 42 + 装机区 118 + 423down + 7xiazai（约 600+ 页）；说明见 `full_check_intro.txt` |
 | `monthly_check_423down.bat` | **可选**：digest 区 423down 去重全量 + 比对（约 356 条） |
 | `monthly_check_7xiazai.bat` | **可选**：从列表页发现 ~650+ 软件详情页 + 比对标题 |
+| `monthly_check_hybase.bat` | **可选**：`list/hybase_newlist_urls.txt` 约 600 条 |
+| `monthly_check_dayanzai.bat` | **可选**：`list/dayanzai_android_urls.txt` 约 262 条 |
+| `monthly_check_down66.bat` | **可选**：`list/down66_app_urls.txt` 约 226 条 |
+| `monthly_check_list.bat` | **可选**：上述 list 三站连跑 |
+| `open_changed_hybase.bat` | 打开 `changed_hybase_urls.txt` |
+| `open_changed_dayanzai.bat` | 打开 `changed_dayanzai_urls.txt` |
+| `open_changed_down66.bat` | 打开 `changed_down66_urls.txt` |
 | `open_changed_7xiazai.bat` | 打开 `changed_7xiazai_urls.txt` |
 | `extract_7xiazai_pages.bat` | 生成 `7xiazai_list_urls.txt`（可改 `7xiazai_config.json`） |
 | `open_changed_423down.bat` | 打开 `changed_423down_urls.txt` 中的变化页 |
@@ -170,6 +191,9 @@ python fetch_titles.py --scope a --compare          REM A 类 + 比对（默认�
 python fetch_titles.py --scope all --compare        REM 装机区全量 + 比对
 python fetch_titles.py --scope 423down --compare    REM digest 423down 全量 + 比对
 python fetch_titles.py --scope 7xiazai --compare    REM 7xiazai 列表 + 比对
+python fetch_titles.py --scope hybase --compare     REM list/hybase 上新 + 比对
+python fetch_titles.py --scope dayanzai --compare   REM list/dayanzai Android + 比对
+python fetch_titles.py --scope down66 --compare     REM list/down66 app + 比对
 ```
 
 依赖：Python 3.6+，标准库即可，无需 `pip install`。
@@ -189,17 +213,27 @@ soft_page_check/
 ├── 423down_digest_urls.txt      ← digest 区 423down 去重（356，可选）
 ├── 7xiazai_list_urls.txt        ← 7xiazai 列表页（65+，可选）
 ├── 7xiazai_config.json          ← max_page 等配置
+├── list/                        ← 扩展站点 URL 清单（见 list/README.md）
+│   ├── hybase_newlist_urls.txt
+│   ├── dayanzai_android_urls.txt
+│   └── down66_app_urls.txt
 ├── watchlist.json               ← 完整分级索引（URL ↔ 软件 ↔ 域名）
 ├── url_meta.json                ← URL 元数据简表
 ├── changed_tier_a_urls.txt      ← 比对后有变化的 A 类 URL
 ├── changed_pages_urls.txt       ← 装机区全量比对的变化 URL
 ├── changed_423down_urls.txt     ← 423down digest 比对的变化 URL
 ├── changed_7xiazai_urls.txt     ← 7xiazai 比对的变化 URL
+├── changed_hybase_urls.txt      ← hybase 比对的变化 URL
+├── changed_dayanzai_urls.txt
+├── changed_down66_urls.txt
 ├── history/
 │   ├── titles_latest_A.json     ← A 类最新标题快照
 │   ├── titles_latest_ALL.json   ← 装机区全量最新快照
 │   ├── titles_latest_423DOWN.json
 │   ├── titles_latest_7XIAZAI.json
+│   ├── titles_latest_HYBASE.json
+│   ├── titles_latest_DAYANZAI.json
+│   ├── titles_latest_DOWN66.json
 │   └── titles_*_YYYY-MM-DD_*.json
 └── reports/
     ├── index.html               ← **HTML 报告页（推荐查看方式）**
@@ -220,7 +254,16 @@ soft_page_check/
 3. 若有变化 → 打开 **`reports/index.html`** → 人工确认后决定是否更新 `software/`。
 
 （使用 **`monthly_sop.bat` 选 [1]** 可一次走完上述逻辑与后续发布引导。）
-**季度全量**：连续跑两次 `monthly_check_full.bat`，报告页 **A / 装机 / 423down / 7xiazai** 四个分区都会有快照与变化比对。
+**季度全量**：连续跑两次 `monthly_check_full.bat`，报告页 **A / 装机 / 423down / 7xiazai / hybase / dayanzai / down66** 七个分区都会有快照与变化比对。
+
+---
+
+## list 三站可选监控（hybase / dayanzai / down66）
+
+- **来源**：`list/` 目录下手工维护的 `*_urls.txt`（详见 [`list/README.md`](list/README.md)）。
+- **数量**：hybase ~600、dayanzai ~262、down66 ~226。
+- **入口**：`monthly_check_hybase.bat` / `monthly_check_dayanzai.bat` / `monthly_check_down66.bat`，或一次跑完 `monthly_check_list.bat`。
+- **说明**：标题常带版本号，适合季度扫新资源；具体下载仍须手工。
 
 ---
 
@@ -261,7 +304,7 @@ soft_page_check/
 
 功能：
 
-- 四个分区：**A 类 / 装机全量 / 423down / 7xiazai**
+- 七个分区：**A 类 / 装机全量 / 423down / 7xiazai / hybase / dayanzai / down66**
 - **标题变化**（主区域）：链接、旧/新标题、打开按钮
 - **全部快照标题**（默认折叠）：当前抓到的每个页面标题，可搜索；有变化的条目带「有变化」标记
 - **搜索框**：变化区与快照区各有一个，互不影响
@@ -313,4 +356,4 @@ soft_page_check/
 2. **少开页面** — 爬标题比对历史，只打开有变化的 URL。
 3. **破解手工** — 自动化止于「提醒」，下载与验证必须人工完成。
 4. **A 类优先** — 只监控真正进 sync 清单的软件相关页面。
-5. **423down / 7xiazai 可选** — 独立库，不进默认月度快检；季度用 `monthly_check_full.bat` 一次跑齐。
+5. **423down / 7xiazai / list 三站可选** — 独立清单，不进默认月度快检；季度用 `monthly_check_full.bat` 或 `monthly_check_list.bat`。

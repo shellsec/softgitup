@@ -6,6 +6,8 @@ import json
 from datetime import datetime
 from pathlib import Path
 
+from list_scopes import LIST_SITE_GROUPS, LIST_SCOPE_DEFS, build_report_meta
+
 HERE = Path(__file__).resolve().parent
 REPORTS = HERE / "reports"
 HISTORY = HERE / "history"
@@ -38,16 +40,10 @@ SCOPE_META = {
         "changed_txt": "changed_423down_urls.txt",
         "accent": "#d97706",
     },
-    "7xiazai": {
-        "id": "7xiazai",
-        "title": "7xiazai 软件页",
-        "desc": "从列表页发现的软件详情页 title（含版本号），不含 /page/N/",
-        "snapshot": "titles_latest_7XIAZAI.json",
-        "diff": "last_diff_7xiazai.json",
-        "changed_txt": "changed_7xiazai_urls.txt",
-        "accent": "#7c3aed",
-    },
 }
+
+for _scope_key in LIST_SCOPE_DEFS:
+    SCOPE_META[_scope_key] = build_report_meta(_scope_key)
 
 
 def _read_json(path: Path) -> dict | None:
@@ -90,6 +86,8 @@ def _collect_scope_data(key: str) -> dict:
         "recovered_count": len(recovered_items),
         "unchanged_count": diff.get("unchanged_count", 0) if diff else None,
         "failed_count": len(failed),
+        "platform": meta.get("platform"),
+        "site": meta.get("site"),
     }
 
 
@@ -252,13 +250,108 @@ def _render_scope_section(data: dict) -> str:
     """
 
 
+def _render_scope_subsection(data: dict) -> str:
+    """list 站点内的 系统/移动 子分区。"""
+    sid = data["id"]
+    accent = data["accent"]
+    platform_label = "系统" if data.get("platform") == "system" else "移动"
+    fetched = data["fetched_at"] or "未运行"
+    has_diff = data["diff"] is not None
+    snapshot = data.get("snapshot")
+    snap_count = len(snapshot.get("entries", [])) if snapshot else 0
+    changed_url_set = {it.get("url") for it in data["changed_items"]}
+    stat_unchanged = (
+        str(data["unchanged_count"])
+        if data["unchanged_count"] is not None
+        else ("—" if not has_diff else "0")
+    )
+    urls_json = html.escape(json.dumps([it.get("url") for it in data["changed_items"]], ensure_ascii=False))
+    changed_block = (
+        _render_changed_cards(data["changed_items"], sid)
+        if has_diff
+        else '<p class="empty">尚无比对结果。对该子范围再运行一次带 --compare 的快检即可。</p>'
+    )
+    if not snapshot and not has_diff:
+        changed_block = '<p class="empty">清单未运行或为空（可选 PC 清单待补充 URL）。</p>'
+
+    return f"""
+    <div class="scope-sub" id="scope-{sid}" style="--accent:{accent}">
+      <header class="scope-sub-head">
+        <div>
+          <h3><span class="platform-badge platform-{data.get('platform', '')}">{platform_label}</span> {html.escape(data['desc'])}</h3>
+        </div>
+        <div class="scope-actions">
+          <button type="button" class="btn btn-sm" data-open-scope="{sid}"{" disabled" if not data['changed_items'] else ""}>
+            打开变化 ({data['changed_count']})
+          </button>
+        </div>
+      </header>
+      <div class="stats stats-compact">
+        <div class="stat"><b>{data['total']}</b><span>监控页</span></div>
+        <div class="stat highlight"><b>{data['changed_count']}</b><span>标题变化</span></div>
+        <div class="stat"><b>{stat_unchanged}</b><span>无变化</span></div>
+        <div class="stat"><b>{data['failed_count']}</b><span>失败</span></div>
+        <div class="stat wide"><b>{html.escape(fetched)}</b><span>快照</span></div>
+      </div>
+      <div class="toolbar">
+        <input type="search" class="search search-changed" placeholder="筛选 {platform_label} 变化…" data-scope="{sid}" />
+      </div>
+      <div class="items changed-items" data-scope-changed="{sid}">
+        {changed_block}
+      </div>
+      <script type="application/json" id="urls-{sid}">{urls_json}</script>
+      <details class="snapshot-box">
+        <summary>全部快照（{snap_count}）</summary>
+        <div class="toolbar">
+          <input type="search" class="search search-snapshot" placeholder="搜索…" data-scope="{sid}" />
+        </div>
+        <div class="snapshot-list" data-scope-snapshot="{sid}">
+          {_render_snapshot_rows(snapshot, sid, changed_url_set)}
+        </div>
+      </details>
+    </div>
+    """
+
+
+def _render_list_site_group(group: dict) -> str:
+    scope_data = [_collect_scope_data(s) for s in group["scopes"]]
+    total_changed = sum(d["changed_count"] for d in scope_data)
+    total_pages = sum(d["total"] for d in scope_data)
+    system_data = next((d for d in scope_data if d.get("platform") == "system"), None)
+    mobile_data = next((d for d in scope_data if d.get("platform") == "mobile"), None)
+    sys_chg = system_data["changed_count"] if system_data else 0
+    mob_chg = mobile_data["changed_count"] if mobile_data else 0
+    subs = "\n".join(_render_scope_subsection(d) for d in scope_data)
+
+    return f"""
+    <section class="site-group scope" id="site-{group['id']}" style="--accent:{group['accent']}">
+      <header class="scope-head">
+        <div>
+          <h2>{html.escape(group['title'])}</h2>
+          <p class="muted">{html.escape(group['desc'])}</p>
+        </div>
+      </header>
+      <div class="stats site-summary">
+        <div class="stat"><b>{total_pages}</b><span>合计监控</span></div>
+        <div class="stat highlight"><b>{total_changed}</b><span>合计变化</span></div>
+        <div class="stat"><b>{sys_chg}</b><span>系统变化</span></div>
+        <div class="stat"><b>{mob_chg}</b><span>移动变化</span></div>
+      </div>
+      {subs}
+    </section>
+    """
+
+
 def build_index_html() -> Path:
     REPORTS.mkdir(parents=True, exist_ok=True)
-    scopes = [_collect_scope_data(k) for k in ("a", "all", "423down", "7xiazai")]
+    core_scopes = [_collect_scope_data(k) for k in ("a", "all", "423down")]
+    list_sections = [_render_list_site_group(g) for g in LIST_SITE_GROUPS]
+    all_data = core_scopes + [d for g in LIST_SITE_GROUPS for d in [_collect_scope_data(s) for s in g["scopes"]]]
     generated = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    sections = "\n".join(_render_scope_section(s) for s in scopes)
-    total_changed = sum(s["changed_count"] for s in scopes)
+    sections = "\n".join(_render_scope_section(s) for s in core_scopes)
+    sections += "\n" + "\n".join(list_sections)
+    total_changed = sum(s["changed_count"] for s in all_data)
 
     doc = f"""<!DOCTYPE html>
 <html lang="zh-CN">
@@ -390,6 +483,21 @@ def build_index_html() -> Path:
     }}
     .toast.show {{ opacity: 1; }}
     footer {{ text-align: center; color: var(--muted); font-size: 0.8rem; margin-top: 24px; }}
+    .site-group {{ border-left: 4px solid var(--accent); }}
+    .site-summary {{ margin-bottom: 8px; }}
+    .scope-sub {{
+      border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px 18px;
+      margin-top: 14px; background: #fafbfc;
+    }}
+    .scope-sub-head {{ display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 10px; }}
+    .scope-sub h3 {{ margin: 0; font-size: 1rem; color: var(--text); font-weight: 600; }}
+    .stats-compact {{ margin-bottom: 10px; }}
+    .platform-badge {{
+      display: inline-block; font-size: 0.72rem; font-weight: 700; padding: 2px 8px;
+      border-radius: 999px; margin-right: 6px; vertical-align: middle;
+    }}
+    .platform-system {{ background: #dbeafe; color: #1e40af; }}
+    .platform-mobile {{ background: #fce7f3; color: #9d174d; }}
   </style>
 </head>
 <body>
@@ -403,7 +511,10 @@ def build_index_html() -> Path:
       <a href="#scope-a">A 类</a>
       <a href="#scope-all">装机全量</a>
       <a href="#scope-423down">423down</a>
-      <a href="#scope-7xiazai">7xiazai</a>
+      <a href="#site-7xiazai">7xiazai</a>
+      <a href="#site-hybase">hybase</a>
+      <a href="#site-dayanzai">dayanzai</a>
+      <a href="#site-down66">down66</a>
     </nav>
     {sections}
     <footer>soft_page_check/reports/index.html · 重新运行 monthly_check.bat 后刷新</footer>
@@ -469,7 +580,7 @@ def save_diff(scope: str, diff: dict, snapshot_path: Path) -> None:
         "snapshot": snapshot_path.name,
         **diff,
     }
-    key = {"a": "a", "all": "all", "423down": "423down", "7xiazai": "7xiazai"}[scope]
+    key = scope
     (REPORTS / f"last_diff_{key}.json").write_text(
         json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8"
     )

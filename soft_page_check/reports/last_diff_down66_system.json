@@ -1,0 +1,23 @@
+{
+  "compared_at": "2026-05-28 12:11:26",
+  "scope": "down66_system",
+  "snapshot": "titles_DOWN66_SYSTEM_2026-05-28_121126.json",
+  "new_urls": [],
+  "removed_urls": [],
+  "title_changed": [],
+  "recovered": [],
+  "unchanged_count": 356,
+  "failed": [
+    {
+      "url": "https://down66.com/xmlrpc.php",
+      "title": "",
+      "status": "http_error",
+      "error": "HTTP Error 405: Method Not Allowed",
+      "tier": "down66_system",
+      "software": [],
+      "domain": "down66"
+    }
+  ],
+  "open_candidates": [],
+  "tier_a_candidates": []
+}

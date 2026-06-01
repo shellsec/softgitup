@@ -30,22 +30,57 @@ if errorlevel 1 goto fail
 call :summary changed_423down_urls.txt last_diff_423down.json 423down
 
 echo.
-echo ========== 4/4 7xiazai 列表 ==========
+echo ========== 4/10 7xiazai 系统 ==========
 python extract_7xiazai_pages.py
 if errorlevel 1 goto fail
-python fetch_titles.py --scope 7xiazai --compare
+python fetch_titles.py --scope 7xiazai_system --compare
 if errorlevel 1 goto fail
-call :summary changed_7xiazai_urls.txt last_diff_7xiazai.json 7xiazai
+call :summary changed_7xiazai_system_urls.txt last_diff_7xiazai_system.json 7xiazai系统
+
+echo.
+echo ========== 5/10 7xiazai 移动 ==========
+python fetch_titles.py --scope 7xiazai_mobile --compare
+if errorlevel 1 goto fail
+call :summary changed_7xiazai_mobile_urls.txt last_diff_7xiazai_mobile.json 7xiazai移动
+
+echo.
+echo ========== 6/10 hybase 系统 ==========
+python fetch_titles.py --scope hybase_system --compare
+if errorlevel 1 goto fail
+call :summary changed_hybase_system_urls.txt last_diff_hybase_system.json hybase系统
+
+echo.
+echo ========== 7/10 hybase 移动 ==========
+python fetch_titles.py --scope hybase_mobile --compare
+if errorlevel 1 goto fail
+call :summary changed_hybase_mobile_urls.txt last_diff_hybase_mobile.json hybase移动
+
+echo.
+echo ========== 8/10 dayanzai 系统+移动 ==========
+python fetch_titles.py --scope dayanzai_system --compare
+python fetch_titles.py --scope dayanzai_mobile --compare
+if errorlevel 1 goto fail
+call :summary changed_dayanzai_mobile_urls.txt last_diff_dayanzai_mobile.json dayanzai移动
+
+echo.
+echo ========== 9/10 down66 系统+移动 ==========
+python fetch_titles.py --scope down66_system --compare
+python fetch_titles.py --scope down66_mobile --compare
+if errorlevel 1 goto fail
+call :summary changed_down66_mobile_urls.txt last_diff_down66_mobile.json down66移动
 
 echo.
 echo ============================================================
-echo  全量快检完成 - 报告页四个分区均已刷新
+echo  全量快检完成 - 报告页核心分区 + list 四站(系统/移动)
 echo ============================================================
 echo  打开变化页:
 echo    A类      open_changed_pages.bat
 echo    装机区   open_changed_pages.bat all
 echo    423down  open_changed_423down.bat
 echo    7xiazai  open_changed_7xiazai.bat
+echo    hybase   open_changed_hybase.bat
+echo    dayanzai open_changed_dayanzai.bat
+echo    down66   open_changed_down66.bat
 echo.
 if exist "reports\index.html" start "" "%~dp0reports\index.html"
 pause

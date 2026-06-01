@@ -160,6 +160,13 @@ def main() -> int:
     extras = urls_from_txt(base, exclude)
     merged = sorted(set(discovered) | set(extras))
     OUT.write_text("\n".join(merged) + "\n", encoding="utf-8")
+    list_out = HERE / "list" / "7xiazai_list_urls.txt"
+    list_out.parent.mkdir(parents=True, exist_ok=True)
+    list_out.write_text("\n".join(merged) + "\n", encoding="utf-8")
+
+    from split_7xiazai_urls import main as split_7xiazai_urls
+
+    split_7xiazai_urls()
 
     print()
     print(f"软件详情页（监控标题）: {len(merged)} 条 -> {OUT.name}")

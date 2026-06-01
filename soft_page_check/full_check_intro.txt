@@ -1,11 +1,16 @@
 ============================================================
- 季度全量快检 - A类 + 装机区 + 423down + 7xiazai
+ 季度全量快检 - A类 + 装机区 + 423down + 7xiazai + list三站
 ============================================================
 
  将依次抓取并比对:
    1. A 类同步软件      约 42 条
    2. 装机区全页面      约 118 条
    3. 423down digest    约 356 条
-   4. 7xiazai 软件页      约 650+ 条
- 合计约 1200+ 页，预计 10-20 分钟
+   4. 7xiazai 软件页    约 650+ 条
+   5. hybase 上新列表   约 600 条   (list/hybase_newlist_urls.txt)
+   6. dayanzai Android  约 262 条   (list/dayanzai_android_urls.txt)
+   7. down66 app        约 226 条   (list/down66_app_urls.txt)
+ 合计约 2300+ 页，预计 20-35 分钟
  每个范围首次运行仅建基线，连跑两次本 bat 才有标题变化
+
+ 仅跑 list 三站: monthly_check_list.bat

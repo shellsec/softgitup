@@ -1,11 +1,11 @@
 # GH Release Fetch
 
+## ☕ 请我喝可乐
+
+开源不易，欢迎赞助支持：  
+👉 [爱发电](https://ifdian.net/a/shellsec)
+
 **English** · [中文 README](README.zh-CN.md)
-
-## ☕ Buy me a cola
-
-Open source is hard — tips are welcome:  
-👉 [Afdian (爱发电)](https://ifdian.net/a/shellsec)
 
 | | |
 |:---|:---|
@@ -36,7 +36,7 @@ Separate from [`apps/`](apps/): AI-coding–oriented entries, `manifest.json` bu
 
 Categorized **Gitee** repos under [`GiteeExploreHot/catalog/`](GiteeExploreHot/catalog/); [`GiteeExploreHot/scripts/fetch_explore_hot.py`](GiteeExploreHot/scripts/fetch_explore_hot.py) writes `hot_repos.json` plus **`gitee_downloads.json`** (Windows/macOS/Linux URLs from `releases/latest` attachments). [`GiteeExploreHot/scripts/gitee_download.py`](GiteeExploreHot/scripts/gitee_download.py) pulls binaries into `GiteeExploreHot/downloads/…`. Windows one-shot: [`GiteeExploreHot/run_sync_gitee.bat`](GiteeExploreHot/run_sync_gitee.bat) (optional first arg `windows`, `darwin`, or `linux` to download after sync). Not wired into `auto_update.py` (GitHub-focused). See [`GiteeExploreHot/README.md`](GiteeExploreHot/README.md).
 
-**Approximate catalog size** (changes when you edit JSON): **403** Windows, **299** darwin, **297** linux entries across **30** shard files each (plus `99-未匹配-windows分片` placeholders). See [`CATALOG.md`](CATALOG.md) for a per-shard table (`python tools/generate_catalog_index.py` to refresh). Confirm totals with the merge log line when you run the script.
+**Approximate catalog size** (changes when you edit JSON): **404** Windows, **300** darwin, **298** linux entries across **30** shard files each (plus `99-未匹配-windows分片` placeholders). See [`CATALOG.md`](CATALOG.md) for a per-shard table (`python tools/generate_catalog_index.py` to refresh). Confirm totals with the merge log line when you run the script.
 
 **Scope**: entries target assets discoverable from **GitHub (or mirrors)**. **No** cracked software, piracy, or license circumvention. Some rows are stubs until you add full `installer_markers` / `download_names` / `save_name` rules.
 

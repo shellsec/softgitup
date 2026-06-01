@@ -245,5 +245,42 @@
       "mihomo-linux-amd64-v{ver}.gz"
     ],
     "save_name": "mihomo-linux-amd64-v{ver}.gz"
+  },
+  {
+    "id": "frpc_desktop",
+    "简介": "Frpc Desktop（frp 桌面 GUI，Linux amd64 deb）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/luckjiawei/frpc-desktop/releases",
+    "repo_path": "luckjiawei/frpc-desktop",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Frpc-Desktop_",
+      "_amd64.deb"
+    ],
+    "href_exclude_substrings": [
+      "blockmap",
+      "arm64",
+      "AppImage",
+      "rpm",
+      "win",
+      "mac",
+      "dmg",
+      "exe",
+      ".yml"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".deb"
+    ],
+    "download_names": [
+      "Frpc-Desktop_{ver}_amd64.deb"
+    ],
+    "save_name": "Frpc-Desktop_{ver}_amd64.deb",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]
