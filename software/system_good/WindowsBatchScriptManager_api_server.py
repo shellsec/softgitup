@@ -17,7 +17,19 @@ API 服务：通过 HTTP 调用主程序的 CLI（优先 exe，无则 main.py）
   python WindowsBatchScriptManager_api_server.py --no-auth --docs        # 关闭鉴权 + 开启 HTML 文档页面
 
 默认监听 0.0.0.0，可被本机及局域网/外网访问；仅本机访问可加 --host 127.0.0.1。
-依赖：pip install fastapi uvicorn
+
+Python 安装（仅 API 脚本需要；主程序 exe 不需要 Python）：
+  官方下载:     https://www.python.org/downloads/
+  Windows 页:   https://www.python.org/downloads/windows/
+  安装时勾选「Add python.exe to PATH」
+  验证:         python --version
+  依赖安装:     pip install fastapi uvicorn
+                或 pip install fastapi "uvicorn[standard]"
+
+可选 GET /exec 命令执行（默认关闭，高危）：
+  见下方「ENABLE_GET_CMD_EXEC」：去掉该行行首 # 后重启本脚本即可启用
+  示例: GET /exec?cmd=ipconfig%20/all
+  务必开启鉴权（不要用 --no-auth）、修改 API_KEY，勿暴露到公网
 
 接口示例：
   GET  /list          - 列表（需鉴权时加请求头 X-API-Key）
@@ -27,7 +39,7 @@ API 服务：通过 HTTP 调用主程序的 CLI（优先 exe，无则 main.py）
   GET  /start?id=1    - 启动（支持 GET）
   GET  /stop?id=1     - 停止（支持 GET）
   GET  /restart?id=1  - 重启（支持 GET）
-  POST /update?id=1   - 更新一条（可选 name, path, work_dir, group, script_type, interpreter, auto_restart, log_output）
+  POST /update?id=1   - 更新一条（可选 name, path, work_dir, group, script_type, interpreter, args, env_vars, auto_restart, log_output, schedule_*）
   GET  /update?id=1   - 同上（支持 GET）
   GET  /start-all     - 全部启动（支持 GET，便于浏览器/curl 直接访问）
   GET  /stop-all      - 全部停止（支持 GET）
@@ -40,10 +52,11 @@ API 服务：通过 HTTP 调用主程序的 CLI（优先 exe，无则 main.py）
   POST /reboot        - 全部停止后重启系统（可选 ?force=true）
   GET  /reboot        - 同上（支持 GET）
   GET  /config-path   - 配置路径
-  POST /add           - 添加脚本
+  POST /add?path=...  - 添加（path 必填；可选 args, env_vars, schedule_* 等）
   DELETE /delete?id=  - 删除
   GET  /export        - 导出配置
   POST /import        - 导入配置
+  GET  /exec?cmd=...  - 执行 cmd 命令（默认未启用，见 ENABLE_GET_CMD_EXEC）
 使用 --no-auth 时可不带 X-API-Key，直接请求，例如：
   curl "http://主机:8765/restart?id=1"
   curl "http://主机:8765/start-all"
@@ -70,11 +83,79 @@ DISABLE_AUTH = True
 # 是否开启根路径 HTML 文档页面（--docs 时设为 True）
 ENABLE_DOCS = False
 
+# ---------------------------------------------------------------------------
+# 可选：GET /exec 远程执行 cmd 命令（默认关闭）
+# 启用方式：去掉下一行行首的 # 后保存并重启 API 服务
+# 警告：等同远程 shell；务必鉴权（勿 --no-auth）、强 API_KEY、仅内网使用
+# ENABLE_GET_CMD_EXEC = True
+try:
+    ENABLE_GET_CMD_EXEC
+except NameError:
+    ENABLE_GET_CMD_EXEC = False
+
+_CMD_EXEC_TIMEOUT = 60
+_CMD_EXEC_MAX_OUTPUT = 65536
+
+
+def run_shell_command(cmd: str, timeout: int = _CMD_EXEC_TIMEOUT):
+    """经 cmd.exe /c 执行一条命令，返回 (stdout, stderr, returncode)。"""
+    cmd = (cmd or "").strip()
+    if not cmd:
+        return "", "empty command", -1
+    if timeout <= 0 or timeout > 300:
+        timeout = _CMD_EXEC_TIMEOUT
+    try:
+        r = subprocess.run(
+            ["cmd.exe", "/c", cmd],
+            cwd=str(ROOT),
+            capture_output=True,
+            text=True,
+            timeout=timeout,
+            encoding="utf-8",
+            errors="replace",
+        )
+        out = (r.stdout or "")[:_CMD_EXEC_MAX_OUTPUT]
+        err = (r.stderr or "")[:_CMD_EXEC_MAX_OUTPUT]
+        return out, err, r.returncode
+    except subprocess.TimeoutExpired:
+        return "", "command timeout (%ss)" % timeout, -1
+    except Exception as e:
+        return "", str(e), -1
+
 
 def get_cli_cmd():
     if MAIN_EXE.exists():
         return [str(MAIN_EXE)]
     return [sys.executable, str(MAIN_SCRIPT)]
+
+
+def _append_optional_cli_args(cmd_args, **kw):
+    """将可选字段转为 CLI 参数（仅传入非 None 的项）。"""
+    if kw.get("script_args") is not None:
+        cmd_args += ["--args", str(kw["script_args"])]
+    if kw.get("env_vars") is not None:
+        cmd_args += ["--env-vars", str(kw["env_vars"])]
+    if kw.get("depends_on") is not None:
+        cmd_args += ["--depends-on", str(kw["depends_on"])]
+    if kw.get("delay_after_dep") is not None:
+        cmd_args += ["--delay-after-dep", str(int(kw["delay_after_dep"]))]
+    if kw.get("schedule_enabled") is not None:
+        cmd_args += ["--schedule-enabled", "true" if kw["schedule_enabled"] else "false"]
+    if kw.get("schedule_action") is not None:
+        cmd_args += ["--schedule-action", str(kw["schedule_action"])]
+    if kw.get("schedule_type") is not None:
+        cmd_args += ["--schedule-type", str(kw["schedule_type"])]
+    if kw.get("schedule_time") is not None:
+        cmd_args += ["--schedule-time", str(kw["schedule_time"])]
+    if kw.get("schedule_interval") is not None:
+        cmd_args += ["--schedule-interval", str(int(kw["schedule_interval"]))]
+    if kw.get("schedule_weekday") is not None:
+        cmd_args += ["--schedule-weekday", str(int(kw["schedule_weekday"]))]
+    if kw.get("schedule_day") is not None:
+        cmd_args += ["--schedule-day", str(int(kw["schedule_day"]))]
+    if kw.get("schedule_once_date") is not None:
+        cmd_args += ["--schedule-once-date", str(kw["schedule_once_date"])]
+    return cmd_args
 
 
 def run_cli(*args, json_out=True):
@@ -417,27 +498,55 @@ curl -X DELETE "{base}/delete?id=1"</div>
         group: str = Query(""),
         script_type: str = Query(""),
         interpreter: str = Query(""),
+        script_args: str = Query("", alias="args"),
+        env_vars: str = Query(""),
         auto_restart: bool = Query(False),
         log_output: bool = Query(False),
+        schedule_enabled: bool = Query(None),
+        schedule_action: str = Query(None),
+        schedule_type: str = Query(None),
+        schedule_time: str = Query(None),
+        schedule_interval: int = Query(None),
+        schedule_weekday: int = Query(None),
+        schedule_day: int = Query(None),
+        schedule_once_date: str = Query(None),
+        depends_on: str = Query(""),
+        delay_after_dep: int = Query(None),
         x_api_key: str = Header(None, alias="X-API-Key"),
     ):
         require_api_key(x_api_key)
-        args = ["--add", "--path", path]
+        cmd_args = ["--add", "--path", path]
         if name:
-            args += ["--name", name]
+            cmd_args += ["--name", name]
         if work_dir:
-            args += ["--work-dir", work_dir]
+            cmd_args += ["--work-dir", work_dir]
         if group:
-            args += ["--group", group]
+            cmd_args += ["--group", group]
         if script_type:
-            args += ["--script-type", script_type]
+            cmd_args += ["--script-type", script_type]
         if interpreter:
-            args += ["--interpreter", interpreter]
+            cmd_args += ["--interpreter", interpreter]
         if auto_restart:
-            args += ["--auto-restart"]
+            cmd_args += ["--auto-restart"]
         if log_output:
-            args += ["--log-output"]
-        out, err, code = run_cli(*args)
+            cmd_args += ["--log-output"]
+        if depends_on:
+            cmd_args += ["--depends-on", depends_on]
+        _append_optional_cli_args(
+            cmd_args,
+            script_args=script_args or None,
+            env_vars=env_vars or None,
+            delay_after_dep=delay_after_dep,
+            schedule_enabled=schedule_enabled,
+            schedule_action=schedule_action,
+            schedule_type=schedule_type,
+            schedule_time=schedule_time,
+            schedule_interval=schedule_interval,
+            schedule_weekday=schedule_weekday,
+            schedule_day=schedule_day,
+            schedule_once_date=schedule_once_date,
+        )
+        out, err, code = run_cli(*cmd_args)
         if code != 0:
             raise HTTPException(status_code=400 if "path" in err.lower() else 500, detail=err or "failed")
         try:
@@ -453,29 +562,66 @@ curl -X DELETE "{base}/delete?id=1"</div>
             raise HTTPException(status_code=404 if "Not found" in err else 500, detail=err or "failed")
         return {"ok": True, "message": out or "deleted"}
 
-    def _do_update(id_or_name: str, name=None, path=None, work_dir=None, group=None, script_type=None, interpreter=None, auto_restart=None, log_output=None):
-        args = ["--update", id_or_name]
+    def _do_update(
+        id_or_name: str,
+        name=None,
+        path=None,
+        work_dir=None,
+        group=None,
+        script_type=None,
+        interpreter=None,
+        script_args=None,
+        env_vars=None,
+        auto_restart=None,
+        log_output=None,
+        schedule_enabled=None,
+        schedule_action=None,
+        schedule_type=None,
+        schedule_time=None,
+        schedule_interval=None,
+        schedule_weekday=None,
+        schedule_day=None,
+        schedule_once_date=None,
+        depends_on=None,
+        delay_after_dep=None,
+    ):
+        cmd_args = ["--update", id_or_name]
         if name is not None:
-            args += ["--name", str(name)]
+            cmd_args += ["--name", str(name)]
         if path is not None:
-            args += ["--path", str(path)]
+            cmd_args += ["--path", str(path)]
         if work_dir is not None:
-            args += ["--work-dir", str(work_dir)]
+            cmd_args += ["--work-dir", str(work_dir)]
         if group is not None:
-            args += ["--group", str(group)]
+            cmd_args += ["--group", str(group)]
         if script_type is not None:
-            args += ["--script-type", str(script_type)]
+            cmd_args += ["--script-type", str(script_type)]
         if interpreter is not None:
-            args += ["--interpreter", str(interpreter)]
+            cmd_args += ["--interpreter", str(interpreter)]
         if auto_restart is True:
-            args += ["--auto-restart"]
+            cmd_args += ["--auto-restart"]
         if auto_restart is False:
-            args += ["--no-auto-restart"]
+            cmd_args += ["--no-auto-restart"]
         if log_output is True:
-            args += ["--log-output"]
+            cmd_args += ["--log-output"]
         if log_output is False:
-            args += ["--no-log-output"]
-        return run_cli(*args)
+            cmd_args += ["--no-log-output"]
+        _append_optional_cli_args(
+            cmd_args,
+            script_args=script_args,
+            env_vars=env_vars,
+            depends_on=depends_on,
+            delay_after_dep=delay_after_dep,
+            schedule_enabled=schedule_enabled,
+            schedule_action=schedule_action,
+            schedule_type=schedule_type,
+            schedule_time=schedule_time,
+            schedule_interval=schedule_interval,
+            schedule_weekday=schedule_weekday,
+            schedule_day=schedule_day,
+            schedule_once_date=schedule_once_date,
+        )
+        return run_cli(*cmd_args)
 
     @app.post("/update")
     def api_update(
@@ -486,12 +632,46 @@ curl -X DELETE "{base}/delete?id=1"</div>
         group: str = Query(None),
         script_type: str = Query(None),
         interpreter: str = Query(None),
+        script_args: str = Query(None, alias="args"),
+        env_vars: str = Query(None),
         auto_restart: bool = Query(None),
         log_output: bool = Query(None),
+        schedule_enabled: bool = Query(None),
+        schedule_action: str = Query(None),
+        schedule_type: str = Query(None),
+        schedule_time: str = Query(None),
+        schedule_interval: int = Query(None),
+        schedule_weekday: int = Query(None),
+        schedule_day: int = Query(None),
+        schedule_once_date: str = Query(None),
+        depends_on: str = Query(None),
+        delay_after_dep: int = Query(None),
         x_api_key: str = Header(None, alias="X-API-Key"),
     ):
         require_api_key(x_api_key)
-        out, err, code = _do_update(id_or_name, name=name, path=path, work_dir=work_dir, group=group, script_type=script_type, interpreter=interpreter, auto_restart=auto_restart, log_output=log_output)
+        out, err, code = _do_update(
+            id_or_name,
+            name=name,
+            path=path,
+            work_dir=work_dir,
+            group=group,
+            script_type=script_type,
+            interpreter=interpreter,
+            script_args=script_args,
+            env_vars=env_vars,
+            auto_restart=auto_restart,
+            log_output=log_output,
+            schedule_enabled=schedule_enabled,
+            schedule_action=schedule_action,
+            schedule_type=schedule_type,
+            schedule_time=schedule_time,
+            schedule_interval=schedule_interval,
+            schedule_weekday=schedule_weekday,
+            schedule_day=schedule_day,
+            schedule_once_date=schedule_once_date,
+            depends_on=depends_on,
+            delay_after_dep=delay_after_dep,
+        )
         if code != 0:
             raise HTTPException(status_code=404 if "Not found" in err else 500, detail=err or "failed")
         try:
@@ -508,12 +688,46 @@ curl -X DELETE "{base}/delete?id=1"</div>
         group: str = Query(None),
         script_type: str = Query(None),
         interpreter: str = Query(None),
+        script_args: str = Query(None, alias="args"),
+        env_vars: str = Query(None),
         auto_restart: bool = Query(None),
         log_output: bool = Query(None),
+        schedule_enabled: bool = Query(None),
+        schedule_action: str = Query(None),
+        schedule_type: str = Query(None),
+        schedule_time: str = Query(None),
+        schedule_interval: int = Query(None),
+        schedule_weekday: int = Query(None),
+        schedule_day: int = Query(None),
+        schedule_once_date: str = Query(None),
+        depends_on: str = Query(None),
+        delay_after_dep: int = Query(None),
         x_api_key: str = Header(None, alias="X-API-Key"),
     ):
         require_api_key(x_api_key)
-        out, err, code = _do_update(id_or_name, name=name, path=path, work_dir=work_dir, group=group, script_type=script_type, interpreter=interpreter, auto_restart=auto_restart, log_output=log_output)
+        out, err, code = _do_update(
+            id_or_name,
+            name=name,
+            path=path,
+            work_dir=work_dir,
+            group=group,
+            script_type=script_type,
+            interpreter=interpreter,
+            script_args=script_args,
+            env_vars=env_vars,
+            auto_restart=auto_restart,
+            log_output=log_output,
+            schedule_enabled=schedule_enabled,
+            schedule_action=schedule_action,
+            schedule_type=schedule_type,
+            schedule_time=schedule_time,
+            schedule_interval=schedule_interval,
+            schedule_weekday=schedule_weekday,
+            schedule_day=schedule_day,
+            schedule_once_date=schedule_once_date,
+            depends_on=depends_on,
+            delay_after_dep=delay_after_dep,
+        )
         if code != 0:
             raise HTTPException(status_code=404 if "Not found" in err else 500, detail=err or "failed")
         try:
@@ -556,6 +770,26 @@ curl -X DELETE "{base}/delete?id=1"</div>
             except Exception:
                 pass
 
+    if ENABLE_GET_CMD_EXEC:
+
+        @app.get("/exec")
+        def api_exec_get(
+            cmd: str = Query(..., description="要执行的命令，如 ipconfig /all"),
+            timeout: int = Query(None, ge=1, le=300, description="超时秒数，默认 60"),
+            x_api_key: str = Header(None, alias="X-API-Key"),
+        ):
+            """GET 执行 cmd 命令（需 ENABLE_GET_CMD_EXEC=True）。返回 stdout/stderr/returncode。"""
+            require_api_key(x_api_key)
+            tout = timeout if timeout is not None else _CMD_EXEC_TIMEOUT
+            out, err, code = run_shell_command(cmd, timeout=tout)
+            return {
+                "ok": code == 0,
+                "returncode": code,
+                "stdout": out,
+                "stderr": err,
+                "cmd": cmd,
+            }
+
     return app
 
 
@@ -587,6 +821,8 @@ def main():
         print("Auth: enabled, API key (X-API-Key):", API_KEY)
     if ENABLE_DOCS:
         print("Docs: enabled (--docs), visit / for HTML API docs")
+    if ENABLE_GET_CMD_EXEC:
+        print("WARNING: GET /exec enabled — remote cmd execution; use strong API_KEY, do not use --no-auth on untrusted networks")
     print("Listen:", a.host, "port", a.port)
     print()
     print("=" * 60)
@@ -619,8 +855,9 @@ def main():
   GET  /start?id=1    - 启动（支持 GET）
   GET  /stop?id=1     - 停止（支持 GET）
   GET  /restart?id=1  - 重启（支持 GET）
-  POST /update?id=1   - 更新（可选 name, path, work_dir, group, script_type, interpreter, auto_restart, log_output）
+  POST /update?id=1   - 更新（可选 name, path, work_dir, group, script_type, interpreter, args, env_vars, auto_restart, log_output, schedule_*）
   GET  /update?id=1   - 同上（支持 GET）
+  POST /add?path=...  - 添加（path 必填；可选 args, env_vars, schedule_* 等）
   GET  /start-all     - 全部启动（支持 GET，便于浏览器/curl 直接访问）
   GET  /stop-all      - 全部停止（支持 GET）
   GET  /restart-all   - 全部重启（支持 GET）
@@ -632,10 +869,10 @@ def main():
   POST /reboot        - 全部停止后重启系统（可选 ?force=true）
   GET  /reboot        - 同上（支持 GET）
   GET  /config-path   - 配置路径
-  POST /add           - 添加脚本
   DELETE /delete?id=  - 删除
   GET  /export        - 导出配置
-  POST /import        - 导入配置""")
+  POST /import        - 导入配置
+  GET  /exec?cmd=...  - 执行 cmd（默认关闭；去掉脚本内 # ENABLE_GET_CMD_EXEC = True 的 # 后启用）""")
     print()
     print("  curl 示例:")
     if not DISABLE_AUTH:
