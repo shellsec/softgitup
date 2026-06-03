@@ -168,23 +168,19 @@ echo  ============================================================
 echo   月度更新 SOP · 步骤 3 续 · 下载与替换（手工）
 echo  ============================================================
 echo.
-echo   [GitHub 开源 / gh-release-fetch 已配置项]
-echo     %ROOT%\software\gh-release-fetch\run_update.bat
+echo   [GitHub · soft_page_check 内下载（仅快检有变化的项）]
+echo     fetch_github_on_changes.bat
 echo.
-echo   [423down / 网盘 / 破解版]
-echo     在报告页打开链接 -^> 浏览器下载 -^> 解压替换到:
+echo   [423down / 网盘 / 破解版 · 浏览器手工]
+echo     报告页打开链接 -^> 下载 -^> 解压替换到:
 echo     %ROOT%\software\对应子目录\
 echo.
-choice /C YN /M "是否现在运行 gh-release-fetch（可能较久，可跳过改用手工）"
+choice /C YN /M "是否现在按 GitHub 变化下载 Release（fetch_github_on_changes）"
 if not errorlevel 2 (
-    if exist "%ROOT%\software\gh-release-fetch\run_update.bat" (
-        cd /d "%ROOT%\software\gh-release-fetch"
-        call run_update.bat
-        cd /d "%~dp0"
-    ) else (
-        echo 未找到 gh-release-fetch，请手工下载。
-        pause
-    )
+    call "%~dp0fetch_github_on_changes.bat" --dry-run
+    echo.
+    choice /C YN /M "确认执行下载"
+    if not errorlevel 2 call "%~dp0fetch_github_on_changes.bat"
 )
 
 echo.

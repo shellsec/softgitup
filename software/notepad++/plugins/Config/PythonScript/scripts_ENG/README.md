@@ -16,13 +16,19 @@
    - 通常路径：`C:\Program Files\Notepad++\plugins\Config\PythonScript\scripts`
    - 或通过 Notepad++ 菜单：`Plugins` → `PythonScript` → `Scripts` → `Open Scripts Folder` 打开
 
-本仓库中 **`scripts_ENG`** 已按类别分子文件夹（菜单中为**子菜单**）；公共模块在 **`scripts_ENG/_lib`**：`folder_dialog_win.py`、`time_stamp_fmt.py`、`npp_eol.py`（多行模板插入用 CRLF 拼接，勿删）。
+本仓库中 **`scripts_ENG`** 已按类别分子文件夹（菜单中为**子菜单**）。公共模块在 **`scripts_ENG/_lib`**：`folder_dialog_win.py`、`time_stamp_fmt.py`、`npp_eol.py`、`ai_chat_jump.py`（勿删）。
 
 ### 与 `scripts`（中文脚本目录）的关系
 
-- **`scripts`**：子文件夹与脚本多为**中文名**（与 `scripts_CHS` 文件名对应表见同仓库 `scripts/README.md`）。
-- **`scripts_ENG`**：本目录为**英文名**脚本；子文件夹与 `scripts` 下中文文件夹一一对应（如 `01_Time_Insert` ↔ `01_时间与插入`，`02_Lines_Selection` ↔ `02_行与选区`）。
-- **`01_Time_Insert`**：插入模板与 `scripts/01_时间与插入` **字段条数与顺序一致**（提示为英文）；多行经 `template_block` 使用 **CRLF**（Windows）；**每条提示后留一空行**便于填写。单文件对应关系见 `scripts/README.md` 表格（如 `插入模板_工作.py` ↔ `insert_template_work.py`）。
+| `scripts_ENG` | `scripts` |
+|---------------|-----------|
+| `00_AI_Chat` | `00_AI对话跳转` |
+| `01_Time_Insert` | `01_时间与插入` |
+| `02_Lines_Selection` | `02_行与选区` |
+| … | … |
+
+- **`01_Time_Insert`**：与中文侧插入模板**字段条数与顺序一致**；`template_block` + CRLF；每条提示后空行。对照见 [scripts/README.md](../scripts/README.md)。
+- **`00_AI_Chat`**：24 AI sites in browser; **always copy** selection/full doc, then **Ctrl+V** (including ChatGPT; no URL prefill). No success **messageBox**. Edit **`prompts.ini`** (`[prompts]`). Scripts: `jump_<site>.py`, `jump_ai_menu.py`, `jump_prompt_pick_ai.py`. Logic: `_lib/ai_chat_jump.py` (`from Npp import editor, notepad`). Site order 1–24: see root [README.md](../README.md) section **AI 网页跳转**.
 
 ## 使用方法
 
@@ -197,6 +203,8 @@
 
 ## 更新日志
 
+- 2026-05-28：
+  - **`00_AI_Chat`**：24 mainstream AI sites; all use clipboard + paste (ChatGPT no URL `?q=`); no success popups; `00_` menu prefix; `getSelText()` fix; README sync.
 - 2026-05-15：
   - 配置根目录新增清空工具（`清空PythonScript脚本.cmd` / `Clear-PythonScriptScripts.ps1`）；根 [README.md](../README.md) 说明统一更新流程。
   - `01_Time_Insert` 插入模板与 `scripts/01_时间与插入` **字段对齐**（英文提示）；每条提示后保留空行；README 补充与 `scripts` 的对应说明。

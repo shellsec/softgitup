@@ -25,7 +25,7 @@ flowchart TD
   Q -->|是| S3[步骤3: 报告页打开链接人工确认]
   S3 --> Q2{确定要更新?}
   Q2 -->|否| EndOK
-  Q2 -->|是| DL[GitHub: gh-release-fetch / 其他: 手工下载]
+  Q2 -->|是| DL[soft_page_check: fetch_github_on_changes / 其他: 手工]
   DL --> REP[替换 software/ 对应目录]
   REP --> S4[步骤4 可选: 改 Lastb_soft_version.txt]
   S4 --> S5[步骤5: generate_and_push.bat]
@@ -39,7 +39,7 @@ flowchart TD
 | **1 快检** | 抓 A 类 ~42 页标题，与上月快照比对 | `monthly_sop.bat` 或 `monthly_check.bat` | 否（或看旧报告） |
 | **2 看报告** | 关注「A 类 · 同步软件」的**标题变化**数 | [`reports/index.html`](reports/index.html) | 否 |
 | **3 决策** | 变化 = 0 → **直接结束**；有变化 → 点开链接确认 | 报告页「打开 / 依次打开变化页」 | 无变化必跳过后续 |
-| **3 下载** | GitHub 项跑 gh-release-fetch；423down/破解 **浏览器手工下** | `software\gh-release-fetch\run_update.bat` | 仅「要更新」时 |
+| **3 下载** | GitHub 变化 → `soft_page_check\fetch_github_on_changes.bat`；423down/破解 **浏览器手工** | 仅「要更新」时 |
 | **3 替换** | 解压覆盖到 `software\子目录\` | 资源管理器 | 仅「要更新」时 |
 | **4 文档** | 改装机区说明、可选 append digest 一行 | `Lastb_soft_version.txt` | 可选 |
 | **5 发布** | 生成 `list.txt` 并 push | 根目录 `generate_and_push.bat` | 未改 software 则跳过 |
@@ -117,7 +117,8 @@ flowchart TD
 | 打开 down66 变化页 | `open_changed_down66.bat` | down66 快检后有变化时 |
 | 打开 7xiazai 变化页 | `open_changed_7xiazai.bat` | 7xiazai 快检后有变化时 |
 | 打开 423down 变化页 | `open_changed_423down.bat` | digest 快检后有变化时 |
-| **打开 HTML 报告页** | `open_report.bat` | 随时查看 / 快检后自动打开 |
+| 打开 HTML 报告页 | `open_report.bat` | 随时查看 / 快检后自动打开 |
+| **GitHub 有变化时拉 Release** | `fetch_github_on_changes.bat` | A 类快检后、变化 URL 为 github.com 且 gh 配置已 enabled |
 | 全量打开（兜底） | `open_soft_pages.bat` | 很少需要 |
 
 ---
@@ -264,6 +265,29 @@ soft_page_check/
 - **数量**：hybase ~600、dayanzai ~262、down66 ~226。
 - **入口**：`monthly_check_hybase.bat` / `monthly_check_dayanzai.bat` / `monthly_check_down66.bat`，或一次跑完 `monthly_check_list.bat`。
 - **说明**：标题常带版本号，适合季度扫新资源；具体下载仍须手工。
+
+---
+
+## GitHub Release 下载（在 soft_page_check 内）
+
+快检发现 **github.com** 标题变化后，在 **`soft_page_check`** 里下载对应 Release。  
+**只读引用** `software/gh-release-fetch/apps/` 里的配置与 `auto_update.py`，**不修改 gh-release-fetch 目录下的工具代码**。
+
+**前提**：在 `software/gh-release-fetch/apps/` 对应 JSON 里把应用设为 `"enabled": true`（改配置，不是改脚本）。
+
+**用法**（A 类快检有变化后，在 soft_page_check 目录）：
+
+```bat
+fetch_github_on_changes.bat
+python github_fetch_on_changes.py --dry-run   rem 预览
+```
+
+- 只处理变化 URL 为 `github.com/owner/repo` 且在 gh 配置中有 `repo_path` 的项  
+- 仅下载 **enabled=true** 的应用  
+- 423down / 7xiazai / list 四站仍浏览器手工  
+- 下载日志与安装包仍落在 `software/gh-release-fetch/`（由引用的 auto_update 写入）
+
+`monthly_sop.bat` 步骤 3 会询问是否运行 `fetch_github_on_changes.bat`。
 
 ---
 

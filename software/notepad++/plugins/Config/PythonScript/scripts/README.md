@@ -81,33 +81,69 @@
 | 插入模板_运动.py | insert_template_workout.py |
 | 插入模板_情绪.py | insert_template_mood.py |
 | 插入模板_副业.py | insert_template_side_gig.py |
+| 跳转_ChatGPT.py | jump_chatgpt.py |
+| 跳转_DeepSeek.py | jump_deepseek.py |
+| 跳转_Gemini.py | jump_gemini.py |
+| 跳转_Claude.py | jump_claude.py |
+| 跳转_Copilot.py | jump_copilot.py |
+| 跳转_Perplexity.py | jump_perplexity.py |
+| … | `00_AI对话跳转` 内其余 `跳转_*.py` ↔ `scripts_ENG/00_AI_Chat/jump_*.py` |
+| 一键跳转_AI.py | jump_ai_menu.py |
+| 跳转_提示词再选AI.py | jump_prompt_pick_ai.py |
 
 ## 目录结构（分类子文件夹）
 
-脚本按用途放在 `scripts` 下的子文件夹中；Notepad++ 菜单 **Plugins → Python Script → Scripts** 中会显示**与文件夹同名的子菜单**。
+脚本按用途放在子文件夹中；N++ 菜单 **Plugins → Python Script → Scripts** 显示**与文件夹同名的子菜单**。`00_` 前缀使 AI 跳转排在最前。
 
 | 子文件夹 | 内容概要 |
 |----------|----------|
-| `_lib` | 公共模块：`folder_dialog_win.py`、`time_stamp_fmt.py`（长串日期）、`npp_eol.py`（Windows CRLF 下多行插入用 `template_block`，避免只写 `\n` 时换行异常）。勿删。 |
-| `01_时间与插入` | 长串日期、UUID；各**插入模板**：首行长串日期，下接各字段行；**每条提示后留一空行**便于填写；换行由 `_lib/npp_eol.template_block` 统一为 CRLF（Windows）。**英文文件名、同字段**对照在 **`scripts_ENG/01_Time_Insert`**。 |
-| `02_行与选区` | 行尾、排序、待办、行号、Git 冲突拆分、Base64、大纲缩进、保存选区等 |
-| `03_编码与字符` | 全角半角、Unicode、路径斜杠 |
-| `04_格式化与转换` | JSON/XML/SQL、CSV→MD、Mermaid、时间戳、ASCII、摩尔斯等 |
-| `05_提取与遮罩` | 电话/IP/网址提取、敏感信息遮罩 |
-| `06_系统与网络` | 本机与网络信息、IP/MAC 等 |
-| `07_AI与Token` | AI 文本脚本、0token 系列、Token 计数 |
-| `08_文档与导图` | 批量 TXT→MD、大纲转 draw.io |
-| `09_快速捕获` | （当前 `scripts` 树未包含此文件夹时可忽略） |
-| `10_打开与杂项` | 打开官网/社区、脚本参考、注册表、随机串等 |
+| `00_AI对话跳转` | **24 个主流 AI 网页**；一律**复制**选区/全文 → 打开浏览器 → **Ctrl+V**；无成功弹窗；见下文专节 |
+| `01_时间与插入` | 长串日期、UUID、分类插入模板（每条提示后空行；CRLF 见 `npp_eol`） |
+| `02_行与选区` | 行尾、排序、待办、行号、Git 冲突、Base64、大纲缩进等 |
+| `03_编码与字符` | 全角半角、Unicode、路径 |
+| `04_格式化与转换` | JSON/XML/SQL、CSV→MD、Mermaid 等 |
+| `05_提取与遮罩` | 电话/IP/网址、敏感信息遮罩 |
+| `06_系统与网络` | 本机与网络信息 |
+| `07_AI与Token` | 本地 AI API 脚本、Token 统计、0token（**非**网页跳转） |
+| `08_文档与导图` | 批量 TXT→MD、大纲→draw.io |
+| `10_打开与杂项` | 打开官网/社区等 |
+| `_lib` | `folder_dialog_win.py`、`time_stamp_fmt.py`、`npp_eol.py`、`ai_chat_jump.py`（勿删） |
 
-（`folder_dialog_win.py`、`time_stamp_fmt.py`、`npp_eol.py` 位于各侧的 `_lib`：`scripts/_lib` 与 `scripts_ENG/_lib` 内容对齐；依赖脚本会自动向上查找本侧的 `_lib`。）
+`scripts/_lib` 与 `scripts_ENG/_lib` 内容对齐；脚本会自动向上查找本侧 `_lib`。
 
-**`scripts_ENG`**：英文脚本名与 `01_Time_Insert` 等子目录；插入模板与 `scripts/01_时间与插入` **字段一一对应**（提示为英文）。
+---
 
-**`0token` 前缀**：仅用于「文字脑图生成/还原」「准备投喂整理」等与 **Token / 投喂前整理** 强相关的脚本；其余为普通本地工具，文件名不再加此前缀。
+## `00_AI对话跳转` 说明
 
-脚本内容与 `scripts` 中一致，仅文件名不同，可按需在英文/中文脚本名之间切换使用。
+| 脚本 | 作用 |
+|------|------|
+| `跳转_<站点>.py` | 打开对应 AI 网页并复制内容（共 23 个单站脚本 + 下两项） |
+| `一键跳转_AI.py` | 输入序号 1–24 选站；可选是否拼接 `提示词.ini` |
+| `跳转_提示词再选AI.py` | 先选提示词，再选站点 |
+| `提示词.ini` | `[提示词]` 段配置前缀模板，`\n` 表示换行 |
+
+逻辑在 `_lib/ai_chat_jump.py`：`from Npp import editor, notepad`；文本用 `getSelText()`，无选区用全文。
+
+**序号 1–24**（与 `一键跳转_AI` 一致）：  
+ChatGPT、Claude、Gemini、Copilot、Perplexity、Grok、Poe、Meta AI、DeepSeek、Kimi、通义千问、豆包、文心一言、腾讯元宝、智谱清言、讯飞星火、秘塔 AI、天工 AI、阶跃星辰、MiniMax、扣子 Coze、百川、零一万物、智谱开放平台。
+
+英文目录：`scripts_ENG/00_AI_Chat`，配置 `prompts.ini`。
+
+---
+
+## 其它
+
+**`scripts_ENG`**：英文文件名；`01_时间与插入` 与 `01_Time_Insert` 模板字段一致（英文提示）。
+
+**`0token` 前缀**：仅用于脑图生成/还原、投喂前整理等 Token 相关脚本。
+
+**`scripts_CHS`**：若存在，为仅改文件名的中文副本，见文首「如何切换使用」。
 
 ## 维护：清空后统一更新
 
-在 **PythonScript 配置根目录**（`scripts` 的上一级）运行 `清空PythonScript脚本.cmd` 或 `Clear-PythonScriptScripts.ps1`，可清空 `scripts`、`scripts_ENG`、`scripts_CHS`（若存在）内的旧文件，再从仓库整包复制。详见 [../README.md](../README.md)。
+在配置根目录运行 `清空PythonScript脚本.cmd` 或 `Clear-PythonScriptScripts.ps1`，详见 [../README.md](../README.md)。
+
+## 更新日志
+
+- **2026-05-28**：`00_AI对话跳转` 扩展至 24 站；全部复制粘贴（含 ChatGPT）；去掉跳转成功弹窗；`00_` 前缀排序；README 同步。
+- **2026-05-15**：插入模板空行 + CRLF；`npp_eol`；根目录清空工具。
