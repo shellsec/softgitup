@@ -96,5 +96,236 @@
       "AppFlowy-{ver}-linux-x86_64.tar.gz"
     ],
     "save_name": "AppFlowy-{ver}-linux-x86_64.tar.gz"
+  },
+  {
+    "id": "cherrytree",
+    "简介": "优秀开源免费笔记软件 CherryTree 1.7.0.0 x64 中文多语免费版",
+    "分类": "笔记",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/giuspen/cherrytree/releases",
+    "repo_path": "giuspen/cherrytree",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "cherrytree",
+    "installer_extensions": [
+      ".AppImage",
+      ".tar.gz",
+      ".deb",
+      ".rpm",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "darwin",
+      "macos",
+      ".dmg",
+      ".pkg",
+      ".exe",
+      ".msi"
+    ]
+  },
+  {
+    "id": "trilium_notes",
+    "简介": "免费开源笔记应用程序 Trilium Notes 0.103.0 x64 官方中文免费版",
+    "分类": "笔记",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/zadam/trilium/releases",
+    "repo_path": "zadam/trilium",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "trilium_notes",
+    "installer_extensions": [
+      ".AppImage",
+      ".tar.gz",
+      ".deb",
+      ".rpm",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "darwin",
+      "macos",
+      ".dmg",
+      ".pkg",
+      ".exe",
+      ".msi"
+    ]
+  },
+  {
+    "id": "notesnook",
+    "简介": "开源免费加密笔记软件 Notesnook 3.3.18 x64 中文汉化解锁版",
+    "分类": "笔记",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/streetwriters/notesnook/releases",
+    "repo_path": "streetwriters/notesnook",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "notesnook",
+    "installer_extensions": [
+      ".AppImage",
+      ".tar.gz",
+      ".deb",
+      ".rpm",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "darwin",
+      "macos",
+      ".dmg",
+      ".pkg",
+      ".exe",
+      ".msi"
+    ]
+  },
+  {
+    "id": "beaver_notes",
+    "简介": "开源免费海狸笔记 Beaver Notes 4.4.0 x64 中文多语免费版",
+    "分类": "笔记",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Beaver-Notes/Beaver-Notes/releases",
+    "repo_path": "Beaver-Notes/Beaver-Notes",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "beaver_notes",
+    "installer_extensions": [
+      ".AppImage",
+      ".tar.gz",
+      ".deb",
+      ".rpm",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "darwin",
+      "macos",
+      ".dmg",
+      ".pkg",
+      ".exe",
+      ".msi"
+    ]
+  },
+  {
+    "id": "pinny_notes",
+    "简介": "开源桌面便签应用 Pinny Notes 1.13.0 钉在屏幕上的便签神器",
+    "分类": "笔记",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/63BeetleSmurf/PinnyNotes/releases",
+    "repo_path": "63BeetleSmurf/PinnyNotes",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "pinny_notes",
+    "installer_extensions": [
+      ".AppImage",
+      ".tar.gz",
+      ".deb",
+      ".rpm",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "darwin",
+      "macos",
+      ".dmg",
+      ".pkg",
+      ".exe",
+      ".msi"
+    ]
+  },
+  {
+    "id": "desktopnote",
+    "简介": "开源免费桌面笔记工具 DesktopNote 1.6.4 绿色中文版",
+    "分类": "笔记",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/changbowen/DesktopNote/releases",
+    "repo_path": "changbowen/DesktopNote",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "desktopnote",
+    "installer_extensions": [
+      ".AppImage",
+      ".tar.gz",
+      ".deb",
+      ".rpm",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "darwin",
+      "macos",
+      ".dmg",
+      ".pkg",
+      ".exe",
+      ".msi"
+    ]
+  },
+  {
+    "id": "crypto_notepad",
+    "简介": "开源免费加密记事本 Crypto Notepad 1.7.3 中文汉化版",
+    "分类": "笔记",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Crypto-Notepad/Crypto-Notepad/releases",
+    "repo_path": "Crypto-Notepad/Crypto-Notepad",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "crypto_notepad",
+    "installer_extensions": [
+      ".AppImage",
+      ".tar.gz",
+      ".deb",
+      ".rpm",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "darwin",
+      "macos",
+      ".dmg",
+      ".pkg",
+      ".exe",
+      ".msi"
+    ]
   }
 ]

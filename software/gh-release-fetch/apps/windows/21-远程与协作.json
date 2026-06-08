@@ -114,5 +114,24 @@
     "process_name": "Deskreen.exe",
     "kill_before_install": true,
     "run_installer": true
+  },
+  {
+    "id": "escrcpy",
+    "简介": "开源远程控制和屏幕镜像工具 Escrcpy 2.11.1 中文免费版（来源：dayanzai）",
+    "分类": "远程与协作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/viarotel-org/escrcpy/releases",
+    "repo_path": "viarotel-org/escrcpy",
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe",
+      ".msi"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "escrcpy"
   }
 ]

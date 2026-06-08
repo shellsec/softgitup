@@ -214,5 +214,62 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "putty",
+    "简介": "开源免费 SSH 和 Telnet 客户端 Putty 0.84 中文汉化版（来源：dayanzai）",
+    "分类": "终端",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/larryli/PuTTY/releases",
+    "repo_path": "larryli/PuTTY",
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe",
+      ".msi"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "putty"
+  },
+  {
+    "id": "xterminal",
+    "简介": "开源免费命令终端 xTerminal 3.0.1.0 + x64 中文多语免费版（来源：dayanzai）",
+    "分类": "终端",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/0x78654C/xTerminal/releases",
+    "repo_path": "0x78654C/xTerminal",
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe",
+      ".msi"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "xterminal"
+  },
+  {
+    "id": "nxshell",
+    "简介": "开源免费 Windows 终端仿真器 NxShell 1.9.3 中文多语免费版（来源：dayanzai）",
+    "分类": "终端",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/nxshell/nxshell/releases",
+    "repo_path": "nxshell/nxshell",
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe",
+      ".msi"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "nxshell"
   }
 ]

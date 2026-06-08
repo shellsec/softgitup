@@ -1,0 +1,892 @@
+ <!DOCTYPE html>
+<html dir="ltr" lang="zh_CN">
+<head>
+<meta name="msvalidate.01" content="FE06B6272C3B36B823E0826A18407097" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>开源无广告 MPV 播放器 MPV Player 0.41.0 + x64 官方正式版 - 大眼仔旭</title>
+<meta name="description" content="在数字化时代，我们越来越需要一个功能强大、简洁易用的媒体播放器来享受我们的音频和视频内容。MPV 播放器作为一款开源、跨平台的媒体播放器，不仅提供了出色的性能和兼容性，而且具备灵活的定制性，成为众多用户心目中的首选。" />
+<meta name="keywords" content="MPV Player 下载,MPV Player 官网,MPV Player 常用快捷键,MPV 播放器下载,开源播放器" />
+<link href="https://www.dayanzai.me/wp-content/themes/dayanzai/css/global.css" type="text/css" rel="stylesheet">
+<link href="https://www.dayanzai.me/wp-content/themes/dayanzai/css/index.css" type="text/css" rel="stylesheet">
+<link href="https://www.dayanzai.me/wp-content/themes/dayanzai/css/article.css" type="text/css" rel="stylesheet">
+<link href="https://www.dayanzai.me/wp-content/themes/dayanzai/css/style.css" type="text/css" rel="stylesheet">
+<link rel="shortcut icon" href="/favicon.ico" />
+<script type="text/javascript" src="https://www.dayanzai.me/wp-content/themes/dayanzai/js/jquery.js"></script>
+<script type="text/javascript" src="https://www.dayanzai.me/wp-content/themes/dayanzai/js/jquery.SuperSlide.2.1.1.js"></script>
+<link rel='stylesheet' id='FontAwesome-css'  href='https://www.dayanzai.me/wp-content/themes/dayanzai/images/fontawesome/css/font-awesome.min.css' type='text/css' media='all' />
+<!--[if lte IE 7]>
+	<link rel='stylesheet' id='FontAwesome-ie7-css'  href='https://www.dayanzai.me/wp-content/themes/dayanzai/images/fontawesome/css/font-awesome-ie7.min.css' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+	<script src="https://www.dayanzai.me/wp-content/themes/dayanzai/js/css3-mediaqueries.js"></script>
+<![endif]-->
+<script type="text/javascript" src="https://www.dayanzai.me/wp-content/themes/dayanzai/js/plugins.js"></script>
+<script type="text/javascript" src="https://www.dayanzai.me/wp-content/themes/dayanzai/js/core.js"></script>
+<script>
+$(function() {
+        $("img").lazyload({
+            effect:"fadeIn"
+          });
+        });
+    paceOptions = {
+      elements: true
+    };
+  </script>
+<style></style>
+<link rel='stylesheet' id='codecolorer-css'  href='https://www.dayanzai.me/wp-content/plugins/codecolorer/codecolorer.css?ver=0.9.16' type='text/css' media='screen' />
+<link rel='https://api.w.org/' href='https://www.dayanzai.me/wp-json/' />
+<link rel='prev' title='JAVA 开发环境 Java SE Development Kit (JDK) 25.0.2 x64 免费下载' href='https://www.dayanzai.me/java-se-development-kit.html' />
+<link rel='next' title='多网站视频下载器 By Click Downloader 2.4.30 x64 中文多语免费版' href='https://www.dayanzai.me/by-click-downloader.html' />
+
+<link rel="canonical" href="https://www.dayanzai.me/mpv-player.html" />
+<link rel="alternate" type="application/json+oembed" href="https://www.dayanzai.me/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.dayanzai.me%2Fmpv-player.html" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.dayanzai.me/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.dayanzai.me%2Fmpv-player.html&#038;format=xml" />
+</head>
+<body>
+<div class="header">
+  <div class="header-top">
+    <div class="header-in clearfix">
+      <h1 class="logo fl"><a href="https://www.dayanzai.me" class="standard-logo" data-dark-logo="https://www.dayanzai.me/wp-content/themes/dayanzai/images/logo.png"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/logo.png" alt="大眼仔旭"></a></h1>
+      <span class="xpxt fl"></span>
+      <div id="header"><ul id="menu-dayanzai" class="site-nav"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home"><a title="大眼仔首页导航菜单" href="https://www.dayanzai.me/">首页</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children dropdown"><a href="https://www.dayanzai.me/windows">微软应用</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a title="图形图像处理软件" href="https://www.dayanzai.me/windows/graphic">图形图像</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/windows/screen">屏幕录像</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/windows/network">网络软件</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent"><a href="https://www.dayanzai.me/windows/video">音频视频</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/windows/office">办公软件</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/windows/conversion">格式转换</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/windows/system">系统工具</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/windows/emulator">模拟器</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/windows/browser">浏览器</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/android">安卓应用</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children dropdown"><a href="https://www.dayanzai.me/tutorial">教程资源</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/tutorial/ffmpeg">FFmpeg 教程</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/tutorial/wordpress-tutorial">WordPress 教程</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/tutorial/windows-tutorial">Windows 教程</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/tutorial/inno-setup">Inno Setup 教程</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children dropdown"><a title="其它资源" href="https://www.dayanzai.me/other">其它资源</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/other/operating-system">操作系统</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/other/pc-hardware">电脑硬件</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/other/free-fonts">免费字体</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a title="关于我们" href="https://www.dayanzai.me/about">关于我们</a></li>
+</ul>      </div>
+      <div class="search fr">
+        <form id="search_mini_form" action="https://www.dayanzai.me" method="get">
+          <div class="form-search">
+            <button type="submit" title="Search" class="button"><i class="fa fa-search fa-lg"></i></button>
+            <input id="search" type="text" name="s" value="" placeholder="Search" class="input-text" maxlength="128" />
+            <button type="reset" id="gh-search-reset" class="gh-search-reset"><span class="gh-text-replace">×</span></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="main">
+<div class="topban">
+  <div class="w1200">
+    <div class="banshow"><div align="center"><script type="text/javascript">
+            var cpro_id = "u3487066";
+            
+    </script>
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/cm.js"></script></div></div>
+  </div>
+</div>
+	<!--顶部推荐-->
+	  <div class="notice" id="notice">
+    <ul>
+		<li><a target="_blank" <a href="https://www.dayanzai.me/notices/ads">检测到您正在使用广告拦截插件，请为本站添加白名单，既能正常拿资源，也能支持网站长久更新，非常感谢！</a></li>
+		<li><a target="_blank" <a href="https://www.dayanzai.me/notices/7502328"><font color=#FA2A2A>支付宝八月活动放水，打开支付宝扫码即可领大红包！！！！</font></a></li>
+    </ul>
+  </div>
+<script type="text/javascript">
+	jQuery("#notice").slide({ mainCell:"ul", effect:"topLoop", autoPlay:true});
+</script>	<div class="content mt15">
+		<div class="c-left">
+			<div class="spos">
+				<div class="position">当前位置：
+<a href="https://www.dayanzai.me" >首页</a>
+ &gt; <a href="https://www.dayanzai.me/windows">微软应用</a> &gt;  正文</div>				    <div class="c-item clearfix">
+						<div class="pic"><img src="https://www.dayanzai.me/wp-content/uploads/2023/12/MPV-Player.png" alt="开源无广告 MPV 播放器 MPV Player 0.41.0 + x64 官方正式版"></div>
+						<div class="r">
+							<p class="r-top"><span class="name">开源无广告 MPV 播放器 MPV Player 0.41.0 + x64 官方正式版</span></p>
+							<p class="other">作者：大眼仔~旭 日期：4个月前 (01-21) 评论：<a href="https://www.dayanzai.me/mpv-player.html#comments">1 条</a> </p>
+							<p class="desc">
+							<link rel="stylesheet" href="https://www.dayanzai.me/wp-content/themes/dayanzai/css/share.css">
+                            <script src="https://www.dayanzai.me/wp-content/themes/Dayanzai/js/social-share.min.js"></script>
+                            <div class="social-share"></div>
+						</div>
+					</div>
+					<div class="stopban">					</div>
+					<div class="gaishu">
+						<span>摘要：</span>在数字化时代，我们越来越需要一个功能强大、简洁易用的媒体播放器来享受我们的音频和视频内容。MPV 播放器作为一款开源、跨平台的媒体播放器，不仅提供了出色的性能和兼容性，而且具备灵活的定制性，成为众多用户心目中的首选。 MPV 播放器的发展历史可以追溯到 MPlayer 和 MPlayer2 两个项目。MPlayer 是&hellip;					</div>
+			</div>
+			<div class="soft-content">
+				<div class="intro-box">
+				    <p>在数字化时代，我们越来越需要一个功能强大、简洁易用的媒体播放器来享受我们的音频和视频内容。MPV 播放器作为一款开源、跨平台的<a href="https://www.dayanzai.me/vlc-media-player.html" target="_blank">媒体播放器</a>，不仅提供了出色的性能和兼容性，而且具备灵活的定制性，成为众多用户心目中的首选。</p>
+<p>MPV 播放器的发展历史可以追溯到 MPlayer 和 MPlayer2 两个项目。MPlayer 是一个知名的开源媒体播放器，它最早由匈牙利程序员 Árpád Gereöffy 于 2000 年发起开发，并在全球范围内得到了广泛的应用和支持。MPlayer 以其出色的性能和广泛的格式支持而闻名，成为许多用户的首选。</p>
+<div style="width: 850px" class="wp-caption aligncenter"><img class="" data-original="https://www.dayanzai.me/image/page/2023-12-11_163025.jpg" src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/loading.gif" alt="MPV Player 中文版" width="840" height="528" /><p class="wp-caption-text"><noscript><img class="" src="https://www.dayanzai.me/image/page/2023-12-11_163025.jpg" alt="MPV Player 中文版" width="840" height="528" /></noscript> MPV Player 中文版</p></div>
+<p>随着时间的推移，MPlayer 项目逐渐面临了一些技术和组织上的挑战，为了解决这些问题，MPlayer2 项目于 2011 年启动。MPlayer2 试图在 MPlayer 的基础上进行改进，并加入一些新的特性和技术，以提升整体的用户体验和性能。</p>
+<p>然而，MPlayer2 项目也遇到了一些困难，包括开发进度缓慢、社区活跃度下降等问题。正是在这样的背景下，MPV 项目于 2012 年由 MPlayer2 的部分开发者发起，旨在重新构建和优化媒体播放器的核心部分，同时舍弃了一些过时的技术和不必要的功能，使其更加轻量级、灵活和高效。</p>
+<p>MPV 项目的发展得到了开源社区的积极响应和支持，其不断改进的性能和功能吸引了越来越多的用户和开发者投入其中。如今，MPV 播放器已成为备受推崇的开源媒体播放器之一，其简洁的界面、强大的定制性和出色的性能使其在跨平台媒体播放领域独树一帜。</p>
+<h2>MPV Player 功能特色</h2>
+<p>强大的性能和格式支持<br />
+MPV 播放器基于 MPlayer 和 MPlayer2 项目，通过优化和改进，提供了卓越的播放性能。它支持几乎所有常见的音频和视频文件格式，包括 MPEG、AVI、WMV、FLAC、MP3 等，让您无需为不同格式的文件而烦恼。</p>
+<p>跨平台兼容性<br />
+MPV 播放器可在 Windows、MacOS 和 Linux 等多个操作系统上运行，为用户提供了极大的灵活性和便利性。无论您使用哪种操作系统，都可以轻松安装和使用 MPV 播放器，畅享高品质的媒体播放体验。</p>
+<p>简洁易用的用户界面<br />
+MPV 播放器的用户界面非常简洁，没有繁琐的菜单和复杂的设置。您只需要拖放文件到播放器窗口即可开始播放。同时，它还支持全屏、窗口化、调整音量等基本操作，让您可以专注于内容本身，而不被繁杂的界面所干扰。</p>
+<p>高度可定制性<br />
+MPV 播放器允许用户根据自己的需求进行高度的定制。通过编辑配置文件，您可以调整播放器的各种参数，如视频滤镜、音频增强、快捷键等。这使得 MPV 成为专业用户和技术爱好者的首选，满足了他们对个性化和精确控制的需求。</p>
+<p>命令行控制和脚本支持<br />
+MPV 播放器支持命令行控制，使得用户可以通过命令行输入来操纵播放器。这种灵活性不仅方便了技术用户，还为脚本编写提供了可能性，您可以编写脚本来自动化一些播放任务，提高工作效率。</p>
+<p>MPV Player 是一款免费、自由、开源、无广的全平台媒体播放器。底层采用了 MPlayer、mplayer2 和 FFmpeg 等开源项目。它支持各种媒体文件格式、音频和视频编解码器以及字幕类型，还带有极简的 GUI 界面以及丰富的命令行控制，依托于配置文件可高度自由的个性化定制，加之强大的脚本能力几乎可以让播放器做任何事情。</p>
+<p>MPV Player 播放器的性能开销低，高画质输出，硬件解码能力十分优秀（默认软解），播放体验（1080P、4K等视频）流畅无阻。MPV Player 并不是少数人的专属，我们每个人都可以拥抱它。</p>
+<h2>MPV Player 快捷键</h2>
+<p>当使用MPV播放器时，以下是一些常用的快捷键：</p>
+<table class="table">
+<tbody>
+<tr>
+<th><strong>快捷键</strong></th>
+<th><strong>功能</strong></th>
+<th><strong>快捷键</strong></th>
+<th><strong>功能</strong></th>
+</tr>
+<tr>
+<td>空格</td>
+<td>播放/暂停</td>
+<td>M</td>
+<td>静音</td>
+</tr>
+<tr>
+<td>左箭头</td>
+<td>快退（按住可连续快退）</td>
+<td>F</td>
+<td>切换全屏模式</td>
+</tr>
+<tr>
+<td>右箭头</td>
+<td>快进（按住可连续快进）</td>
+<td>Q</td>
+<td>退出播放器</td>
+</tr>
+<tr>
+<td>上箭头</td>
+<td>音量增加</td>
+<td>D</td>
+<td>打开/关闭字幕</td>
+</tr>
+<tr>
+<td>下箭头</td>
+<td>音量减小</td>
+<td>+</td>
+<td>增加播放速度</td>
+</tr>
+<tr>
+<td>[</td>
+<td>减少字幕延迟</td>
+<td>]</td>
+<td>增加字幕延迟</td>
+</tr>
+<tr>
+<td>O</td>
+<td>恢复正常播放速度</td>
+<td>1-9</td>
+<td>跳转到视频中的特定百分比位置（10% &#8211; 90%）</td>
+</tr>
+<tr>
+<td>R</td>
+<td>重载当前文件</td>
+<td>T</td>
+<td>显示时间和持续时间信息</td>
+</tr>
+<tr>
+<td>I</td>
+<td>显示多媒体文件的基本信息</td>
+<td>Tab</td>
+<td>切换音频轨道</td>
+</tr>
+<tr>
+<td>#</td>
+<td>切换字幕轨道</td>
+<td>/</td>
+<td>搜索并跳转到下一个匹配项</td>
+</tr>
+<tr>
+<td>*</td>
+<td>在文件管理器中打开当前目录</td>
+<td>N</td>
+<td>播放下一个文件</td>
+</tr>
+<tr>
+<td>P</td>
+<td>播放上一个文件</td>
+<td>，（逗号）</td>
+<td>减小字幕显示延迟</td>
+</tr>
+<tr>
+<td>。（句号）</td>
+<td>增加字幕显示延迟</td>
+<td>{</td>
+<td>减小音轨延迟</td>
+</tr>
+<tr>
+<td>}</td>
+<td>增加音轨延迟</td>
+<td>\（反斜杠）</td>
+<td>循环切换字幕显示模式</td>
+</tr>
+<tr>
+<td>W</td>
+<td>打开视频截图模式</td>
+<td>E</td>
+<td>打开音频截图模式</td>
+</tr>
+</tbody>
+</table>
+<h2>MPV Player 系统要求</h2>
+<p>不太古老的 Linux、<a href="https://www.dayanzai.me/shutup10.html" target="_blank">Windows 10</a> 或更高版本，或者 macOS 10.15 或更高版本。</p>
+<p>一个有点能力的 CPU。 如果 CPU 速度太慢而无法实时解码视频，硬件解码可能会有所帮助，但必须使用 &#8211;hwdec 选项显式启用。</p>
+<p>一个不算太蹩脚的 GPU。 mpv 的重点不是嵌入式或集成 GPU 上的节能播放（例如，默认情况下甚至不启用硬件解码）。 低功耗 GPU 可能会导致撕裂、卡顿等问题。主要视频输出使用着色器</p>
+<p>行视频渲染和缩放，而不是 GPU 固定功能硬件。 在 Windows 上，您可能需要确保图形驱动程序是最新的。 在某些情况下，古老的后备视频输出方法可以提供帮助（例如 Linux 上的 &#8211;vo=xv），但不建议或不支持这种使用。</p>
+<p>mpv 不会特意破坏较旧的硬件或旧的、不受支持的操作系统，但开发时并没有考虑到它们。 无法保证与此类设置保持兼容性。 如果一切顺利，那就将其视为一次快乐的意外。</p>
+<h2>MPV Player 许可证</h2>
+<p>GPL v2</p>
+<p><a href="https://mpv.io/" target="_blank"><span style="color: #ff6600;"><strong>官方主页</strong></span></a></p>
+<p><span style="color: #ff6600;">What&#8217;s new in mpv player 0.41.0 Stable</span><br />
+<span style="color: #ff6600;">Dec 27, 2025</span><br />
+<span style="color: #ff6600;">Key highlights:</span><br />
+<span style="color: #ff6600;">The libplacebo based gpu-next is now the default, instead of gpu</span><br />
+<span style="color: #ff6600;">Vulkan hardware decoding is preferred over other APIs</span><br />
+<span style="color: #ff6600;">New context_menu.lua script for right-click context menus</span><br />
+<span style="color: #ff6600;">AAudio backend for modern, JNI-free audio output on Android</span><br />
+<span style="color: #ff6600;">Improved default color management for gpu-next, and handling on Wayland</span><br />
+<span style="color: #ff6600;">Color representation protocol support for Wayland</span><br />
+<span style="color: #ff6600;">Tablet input support for Wayland</span><br />
+<span style="color: #ff6600;">Clipboard writing support for Wayland and a clipboard backend for X11</span><br />
+<span style="color: #ff6600;">Ambient light support on Linux (using sysfs ALS)</span><br />
+<span style="color: #ff6600;">Built-in helpers to register mpv as a media app on Windows</span><br />
+<span style="color: #ff6600;">Features:</span><br />
+<span style="color: #ff6600;">New:</span><br />
+<span style="color: #ff6600;">clipboard-wayland: support clipboard writing</span><br />
+<span style="color: #ff6600;">wayland: add support for wp-color-representation-v1</span><br />
+<span style="color: #ff6600;">wayland: tablet input support</span><br />
+<span style="color: #ff6600;">vo_gpu_next: add support for blend-subtitles=video</span><br />
+<span style="color: #ff6600;">meson: add mpv-register and mpv-unregister helpers on Windows</span><br />
+<span style="color: #ff6600;">context_menu.lua: add this script</span><br />
+<span style="color: #ff6600;">select.lua: add edit-config-file and edit-input-conf</span><br />
+<span style="color: #ff6600;">osc.lua: add indicator for buffering/loading</span><br />
+<span style="color: #ff6600;">osdep/linux-als: support &#8216;ambient-light&#8217; property on Linux</span><br />
+<span style="color: #ff6600;">clipboard-x11: add x11 clipboard backend</span><br />
+<span style="color: #ff6600;">ao/aaudio: implement native AAudio backend for Android</span><br />
+<span style="color: #ff6600;">Changed:</span><br />
+<span style="color: #ff6600;">vd_lavc: prefer Vulkan hwdec when available</span><br />
+<span style="color: #ff6600;">vd_lavc: prefer non-copy hwdec before falling back to -copy variant</span><br />
+<span style="color: #ff6600;">vo: move vo_mediacodec_embed to not be the default on Android</span><br />
+<span style="color: #ff6600;">sub/osd_libass: don&#8217;t rerender OSD if not changed</span><br />
+<span style="color: #ff6600;">vo: prefer vo_gpu_next over vo_gpu by default</span><br />
+<span style="color: #ff6600;">vo_gpu_next: respect ICC profile color space over any metadata</span><br />
+<span style="color: #ff6600;">vo_gpu_next: linearize sRGB as a pure 2.2 power function</span><br />
+<span style="color: #ff6600;">meson: warn if building with SDL2 due to known problems</span><br />
+<span style="color: #ff6600;">osxbundle: make bundle category configurable and default to video</span><br />
+<span style="color: #ff6600;">ao_pipewire: avoid setting any media.role by default</span><br />
+<span style="color: #ff6600;">Options and Commands:</span><br />
+<span style="color: #ff6600;">Added:</span><br />
+<span style="color: #ff6600;">sub: add control for libass caching options (glyph-limit, bitmap-max-size)</span><br />
+<span style="color: #ff6600;">vo: add options to control background tile appearance (transparency)</span><br />
+<span style="color: #ff6600;">command: add default and forced flags to the track add commands</span><br />
+<span style="color: #ff6600;">vo_gpu_next: add options to control subtitle peak for HDR output</span><br />
+<span style="color: #ff6600;">video/out/d3d11: add d3d11 composition mode support</span><br />
+<span style="color: #ff6600;">vd_lavc: add &#8211;hwdec-threads</span><br />
+<span style="color: #ff6600;">stream_bluray: add &#8211;bluray-angle</span><br />
+<span style="color: #ff6600;">vo_gpu_next: add options to control output colorspace metadata more precisely</span><br />
+<span style="color: #ff6600;">sub: make &#8211;sub-fix-timing configurable</span><br />
+<span style="color: #ff6600;">vo_gpu_next: add &#8211;hdr-reference-white</span><br />
+<span style="color: #ff6600;">audio/out: add &#8211;audio-set-media-role</span><br />
+<span style="color: #ff6600;">Changed:</span><br />
+<span style="color: #ff6600;">options: revert &#8211;prefetch-playlist default back to &#8216;no&#8217;</span><br />
+<span style="color: #ff6600;">vo_gpu_next: change &#8211;target-colorspace-hint to &#8216;auto&#8217; by default</span><br />
+<span style="color: #ff6600;">options: handle runtime &#8211;wid change</span><br />
+<span style="color: #ff6600;">options: reduce swapchain-depth to 2 by default</span><br />
+<span style="color: #ff6600;">screenshot: add osd and scaled flags to screenshot commands</span><br />
+<span style="color: #ff6600;">Fixes and Minor Enhancements:</span><br />
+<span style="color: #ff6600;">vo_kitty: add auto-multiplexer-passthrough option</span><br />
+<span style="color: #ff6600;">vd_lavc: enable FFv1 hwaccel by default</span><br />
+<span style="color: #ff6600;">clipboard-wayland: prevent reading from hung up fd</span><br />
+<span style="color: #ff6600;">demux_mkv: fix compilation after deprecated definitions removal</span><br />
+<span style="color: #ff6600;">filters: handle flipping video if displaymatrix indicates so</span><br />
+<span style="color: #ff6600;">player/scripting: fix race condition when destroying clients</span><br />
+<span style="color: #ff6600;">{osd,msg}: use PU codepoints for escape codes instead of invalid UTF-8</span><br />
+<span style="color: #ff6600;">vo_dmabuf_wayland: only load needed hardware decoding drivers</span><br />
+<span style="color: #ff6600;">video/image_writer: tag accurate bit depth</span><br />
+<span style="color: #ff6600;">demux_lavf: fix unconstrained cache size with wrapped AVFrame packets</span><br />
+<span style="color: #ff6600;">libarchive: fix reading name of certain UTF-8 files</span><br />
+<span style="color: #ff6600;">sub/sd_lavc: fix decoding with libaribb24</span><br />
+<span style="color: #ff6600;">ao_avfoundation: fix memory leak</span><br />
+<span style="color: #ff6600;">osc.lua: fix volume icon not updating while paused</span><br />
+<span style="color: #ff6600;">context_wayland: implement target_csp for wayland</span><br />
+<span style="color: #ff6600;">vo_gpu: fix target colorspace for redrawn frames</span><br />
+<span style="color: #ff6600;">vo_dmabuf_wayland: don&#8217;t set HDR metadata on SDR transfers</span><br />
+<span style="color: #ff6600;">vo_gpu_next: don&#8217;t do partial updates on hint luminance</span><br />
+<span style="color: #ff6600;">sub/ass_mp: add missing padding for ass packer</span><br />
+<span style="color: #ff6600;">stream_dvb: allow to enforce DVB-S/T for old zap format channels.conf</span><br />
+<span style="color: #ff6600;">demux_libarchive: fix reading archives with &#8216;%&#8217; in stream URL path</span><br />
+<span style="color: #ff6600;">vo_gpu_next: allow UINT upload if no other format is supported</span><br />
+<span style="color: #ff6600;">ytdl_hook.lua: fix incorrect default format used with yt-dlp</span><br />
+<span style="color: #ff6600;">vo_gpu_next: allow unsetting LUTs</span><br />
+<span style="color: #ff6600;">stream_bluray: use bd_get_main_title() to get main title</span><br />
+<span style="color: #ff6600;">vo_gpu_next: when tone-mapping, set better maxCLL value</span><br />
+<span style="color: #ff6600;">stream_libarchive: seek source stream to 0 before probing</span><br />
+<span style="color: #ff6600;">path-unix: support ~~desktop path expansion</span><br />
+<span style="color: #ff6600;">ytdl_hook.lua: don&#8217;t crash if playlist entries don&#8217;t have an usable URL</span><br />
+<span style="color: #ff6600;">mac/vulkan: fix frame not displayed when paused</span><br />
+<span style="color: #ff6600;">mac/common: render first frame on init if possible</span><br />
+<span style="color: #ff6600;">video/out/w32_common: support &#8211;wid=0</span><br />
+<span style="color: #ff6600;">demux_mkv: map and expose hearing/visual impaired flags</span><br />
+<span style="color: #ff6600;">player/misc: show percentage progress for &#8211;stream-dump</span><br />
+<span style="color: #ff6600;">command: fix null dereference for invalid command in input-commands</span><br />
+<span style="color: #ff6600;">cplugin: fix missing init of pfn_mpv_get_time_ns</span><br />
+<span style="color: #ff6600;">vo_dmabuf_wayland: actually reuse OSD buffers</span><br />
+<span style="color: #ff6600;">mp_image: add support for AVAlphaMode</span><br />
+<span style="color: #ff6600;">vo_gpu_next: add &#8211;border-background=blur and &#8211;background-blur-radius</span><br />
+<span style="color: #ff6600;">demux/cue: fix crash when there are no tracks</span><br />
+<span style="color: #ff6600;">vf_format: add some basic HDR10 metadata</span><br />
+<span style="color: #ff6600;">vo/context_android: fix surface tearing on resize</span><br />
+<span style="color: #ff6600;">meson: remove redundant &#8216;sdl2&#8217; option</span><br />
+<span style="color: #ff6600;">mac/common: fix window position on multi monitor setups</span><br />
+<span style="color: #ff6600;">vo_gpu_next: limit min_luma to 1000:1 contrast ratio in SDR mode</span><br />
+<span style="color: #ff6600;">ao_pipewire: fix some incorrect channel mappings</span><br />
+<span style="color: #ff6600;">wayland: correct geometry handling for rotated outputs</span><br />
+<span style="color: #ff6600;">demux: clear packet pool when upper memory limit is lowered</span><br />
+<span style="color: #ff6600;">mp_image: add ycgco-{re,ro} support</span><br />
+<span style="color: #ff6600;">wayland: convert luminance values to libplacebo space</span><br />
+<span style="color: #ff6600;">vo: trigger manual redraws at most at slightly over display fps</span><br />
+<span style="color: #ff6600;">osxbundle: add new macOS 26 compatible App icon</span><br />
+<span style="color: #ff6600;">wayland: support color-management-v1 version 2</span></p>
+<p>资源：2045.rar<br />
+解压密码：www.dayanzai.me<br />
+转载请保留出处，谢谢合作~<br />
+<a href="https://pan.baidu.com/s/1lghutd05jP2MyDUeDQ0_bw?pwd=injk" target="_blank">点击下载</a>（提取码：injk)<br />
+<a href="https://url89.ctfile.com/f/3965089-8662879252-84812b?p=536766" target="_blank">点击下载</a>（提取码：536766)<br />
+<a href="https://url89.ctfile.com/f/3965089-8662879252-84812b?p=536766" target="_blank">点击下载</a>（提取码：536766)<br />
+<a href="https://pan.baidu.com/s/11ogKKU95v6cmEV-UwiA71g?pwd=d5x3" target="_blank">点击下载</a>（提取码：d5x3)</p>
+				                        <!--<div class="reward">
+                        <div class="reward-button">
+                            赏
+                            <span class="reward-code">
+                            <span class="alipay-code">
+                            <img width="250" height="250" class="alipay-img wdp-appear" src="../image/alipay.jpg" alt="支付宝打赏" />
+                            <b>支付宝打赏</b>
+                        </span>
+                        <span class="wechat-code">
+                            <img width="250" height="250" class="wechat-img wdp-appear" src="../image/weipay.jpg" alt="微信打赏" />
+                            <b>微信打赏</b>
+                            </span>
+                        </span>
+                    </div>
+                        <p class="reward-notice">网站维护不易，鼓励一下站长，感谢！</p>
+                    </div>-->
+				</div>
+				<div class="tagls"><span class="time">标签：</span><a href="https://www.dayanzai.me/tag/mpv-player-%e4%b8%8b%e8%bd%bd" rel="tag">MPV Player 下载</a><a href="https://www.dayanzai.me/tag/mpv-player-%e5%ae%98%e7%bd%91" rel="tag">MPV Player 官网</a><a href="https://www.dayanzai.me/tag/mpv-player-%e5%b8%b8%e7%94%a8%e5%bf%ab%e6%8d%b7%e9%94%ae" rel="tag">MPV Player 常用快捷键</a><a href="https://www.dayanzai.me/tag/mpv-%e6%92%ad%e6%94%be%e5%99%a8%e4%b8%8b%e8%bd%bd" rel="tag">MPV 播放器下载</a><a href="https://www.dayanzai.me/tag/%e5%bc%80%e6%ba%90%e6%92%ad%e6%94%be%e5%99%a8" rel="tag">开源播放器</a></div>
+				<div class="down_show_intro_first_box">
+				<div align="center"><script type="text/javascript">
+    /*960*90 创建于 2018/7/18*/
+    var cpro_id = "u3487066";
+</script>
+<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script></div>				</div>
+			</div>
+			<div class="w880 mt15 saxyi">
+				<div class="aauthor">
+											<img src="/wp-content/themes/Dayanzai/images/authors_s.png" class="avatar avatar-180" height="180" width="180">		
+									</div>
+				<div class="axieyi">
+				声明：<a href="https://www.dayanzai.me">大眼仔旭</a> | </span>本文采用署名-非商业性使用-相同方式共享 4.0 国际许可协议[<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank" rel="external nofollow" title="Under Creative Commons">CC BY-NC-SA</a>]进行授权<br>文章名称：《<a href="https://www.dayanzai.me/mpv-player.html" rel="bookmark" title="开源无广告 MPV 播放器 MPV Player 0.41.0 + x64 官方正式版">开源无广告 MPV 播放器 MPV Player 0.41.0 + x64 官方正式版</a>》<br>文章固定链接：<a>https://www.dayanzai.me/mpv-player.html</a><br>本站资源仅供个人学习交流，请于下载后 24 小时内删除，不允许用于商业用途，否则法律问题自行承担。				</div>
+				<div class="azzsm">转载声明</div>
+			</div>			<span class="tyTestPos"></span>
+
+			<div id="jprj" class="w880 mt15">
+				  <ul class="prenext-list clearfix">
+					<li>					<a class="img" href="https://www.dayanzai.me/java-se-development-kit.html" target="_self"><img src="https://www.dayanzai.me/wp-content/uploads/2021/04/Java-SE-Development-Kit.png" alt="JAVA 开发环境 Java SE Development Kit (JDK) 25.0.2 x64 免费下载"></a>
+					  <div class="intro">
+						<p class="tit"><a title="JAVA 开发环境 Java SE Development Kit (JDK) 25.0.2 x64 免费下载" href="https://www.dayanzai.me/java-se-development-kit.html" target="_self">JAVA 开发环境 Java SE Development Kit (JDK) 25.0.2 x64 免费下载</a></p>
+						<p class="other">JAVA开发环境JavaSEDevelpmeKi(JDK)23.0发布啦！在Java中创建应用所需的基本资源，包括Java运行时...</p>
+					  </div>
+					  <a class="down-link" href="https://www.dayanzai.me/java-se-development-kit.html">阅读更多</a>
+
+					  </li>
+					  <li class="fr">
+					  
+					  <a class="img" href="https://www.dayanzai.me/by-click-downloader.html" target="_self"><img src="https://www.dayanzai.me/wp-content/uploads/2024/03/By-Click-Downloader.png" alt="多网站视频下载器 By Click Downloader 2.4.30 x64 中文多语免费版"></a>
+					  <div class="intro">
+						<p class="tit"><a title="多网站视频下载器 By Click Downloader 2.4.30 x64 中文多语免费版" href="https://www.dayanzai.me/by-click-downloader.html" target="_self">多网站视频下载器 By Click Downloader 2.4.30 x64 中文多语免费版</a></p>
+						<p class="other">ByClickDwladePemium是一款功能强大的视频和音频下载工具，它能够帮助用户轻松地从各种网站和平台...</p>
+					  </div>
+					  <a class="down-link" href="https://www.dayanzai.me/by-click-downloader.html">阅读更多</a>
+					  </li>
+					</ul>
+			</div>
+						<div id="rmjc" class="w880 mt15">
+				<div class="xihuan">
+					<h3><span>猜你喜欢</span></h3>
+					<ul class="xhxg-list clearfix">
+						
+<li><i>2014-05-04</i><a href="https://www.dayanzai.me/office-2003.html" title="Office 2003 SP3 精简中文版 Windows 办公必备软件">Office 2003 SP3 精简中文版 Windows 办公必备软件</a></li>
+<li><i>2021-07-17</i><a href="https://www.dayanzai.me/blockchain-technology-issues.html" title="您可能还不知道区块链技术存在的 5 大问题">您可能还不知道区块链技术存在的 5 大问题</a></li>
+<li><i>2016-05-01</i><a href="https://www.dayanzai.me/pose-studio.html" title="一款专业 3D 人物模型姿势调整软件 Pose Studio 1.0.4 中文汉化版">一款专业 3D 人物模型姿势调整软件 Pose Studio 1.0.4 中文汉化版</a></li>
+<li><i>2023-09-06</i><a href="https://www.dayanzai.me/hashtools.html" title="文件完整性验证工具 HashTools 4.8 x64 绿色中文汉化版">文件完整性验证工具 HashTools 4.8 x64 绿色中文汉化版</a></li>
+<li><i>2026-01-12</i><a href="https://www.dayanzai.me/total-video-converter.html" title="视频转换工具 Bigasoft Total Video Converter 6.6.2.9498 中文多语免费版">视频转换工具 Bigasoft Total Video Converter 6.6.2.9498 中文多语免费版</a></li>
+					</ul>
+				</div>
+				<div class="xiangguan">
+					<h3><span>相关推荐</span></h3>
+					<ul class="xhxg-list clearfix">
+						
+
+<li><i>2019-08-13</i><a href="https://www.dayanzai.me/image-tuner.html" title="免费图像处理工具 Image Tuner 6.8 绿色汉化中文版">免费图像处理工具 Image Tuner 6.8 绿色汉化中文版</a></li>
+<li><i>2018-09-23</i><a href="https://www.dayanzai.me/photoscan-pro.html" title="摄影测量与建模软件 Agisoft PhotoScan Pro 1.4.4 + x64 中文多语免费版">摄影测量与建模软件 Agisoft PhotoScan Pro 1.4.4 + x64 中文多语免费版</a></li>
+<li><i>2023-11-23</i><a href="https://www.dayanzai.me/how-to-write-a-research-paper.html" title="即将毕业的学生如何撰写研究论文入门指南">即将毕业的学生如何撰写研究论文入门指南</a></li>
+<li><i>2025-10-10</i><a href="https://www.dayanzai.me/msi-afterburner.html" title="微星显卡超频工具 MSI Afterburner 4.6.6 Build 16757 中文免费版">微星显卡超频工具 MSI Afterburner 4.6.6 Build 16757 中文免费版</a></li>
+<li><i>2024-08-19</i><a href="https://www.dayanzai.me/optimizer.html" title="开源 Windows 10/11 系统优化工具 Optimizer 16.7 中文多语免费版">开源 Windows 10/11 系统优化工具 Optimizer 16.7 中文多语免费版</a></li>
+					</ul>
+				</div>
+			</div>						<div class="w880 mt15"><div align="center"><a href="https://www.dayanzai.me" target="_blank"><img src="https://www.dayanzai.me/image/ad/gongzhonghao.png" border="0" /></a></div></div>			<div id="comment_box" class="w880 mt15">
+				<div class="cmtbox" style="clear:both;">
+					<script type="text/javascript" src="https://www.dayanzai.me/wp-content/themes/dayanzai/js/comments-ajax.js"></script>
+
+
+
+
+<div id="postcomments">
+	<div id="comments">
+		全部评论： <b> (1条)</b>
+	</div>
+	<ol class="commentlist" data-no-instant>
+		<li class="comment even thread-even depth-1" id="comment-30296"><div id="comment-30296" class="comment-wrap clearfix"><div class="c-avatar"><div class="comment-author vcard"><span class="comment-avatar clearfix"><img class="avatar" src="/wp-content/themes/Dayanzai/images/comment_users.jpg" /></span></div></div><div class="c-main" id="div-comment-30296"><div class="c-meta"><span class="c-author">kli</span>2024-04-21 01:24 <a rel='nofollow' class='comment-reply-link' href='https://www.dayanzai.me/mpv-player.html?replytocom=30296#respond' onclick='return addComment.moveForm( "div-comment-30296", "30296", "respond", "70455" )' aria-label='回复给kli'>回复</a></div>你们用新版输入法会干扰吗?以前的0.37版,打开输入法就自动关闭了,快捷键能直接用,
+现在的版本打开后输入法还是显示中文,快捷键都变成编码了,影响使用
+我在github找到最后能自动关闭输入法的版本是2023-11-30的版本,产品版本v0.37.0-58-g9774632a
+然后我自用的是0.37.0-134-ga16bad40,可惜这个版本没留安装包
+然后更近一点的2023-12-31,产品版本v0.37.0-145-gfccf4f2b开始,输入法就不自动关闭了<a class="vip4" title="评论达人 LV.4"></a></div></li><!-- #comment-## -->
+	</ol>	
+</div>
+
+	
+	<div id="respond"  class="respond-box">
+		<h3 class="comments-title">发表评论 <span id="cancel-comment-reply"><a rel="nofollow" id="cancel-comment-reply-link" href="/mpv-player.html#respond" style="display:none;">点击这里取消回复。</a></span></h3>
+					<form action="https://www.dayanzai.me/wp-comments-post.php" method="post" id="commentform">
+								
+					
+					<div id="comment-author-info" class="row" >   
+						<div class="comment-md-3">
+							<label for="author">昵称<span class="required">*</span></label>
+							<input type="text" name="author" id="author" class="comment-md-9" value="" size="22" tabindex="1" />
+						</div>
+						<div class="comment-md-3">
+							<label for="email">邮箱<span class="required">*</span></label>
+							<input type="email" name="email" id="email" class="comment-md-9" value="" size="22" tabindex="2" />
+						</div>
+						<div class="comment-md-3 comment-form-url">
+							<label for="url">网址<span class="required"></span></label>
+							<input type="text" name="url" id="url" class="comment-md-9" value="" size="22" tabindex="3" />
+						</div>
+					</div>
+								<div class="row comment-from-main">
+					<div class="comment-form-textarea">
+						<div class="comment-textarea-box">
+							<textarea class="comment-textarea" name="comment" id="comment"  placeholder="说点什么吧..."></textarea>
+						</div>
+					</div>
+
+					<div class="form-submit">
+						<a href="javascript:void(0);" class="facetoggle"><i class="fa fa-smile-o"></i> 表情</a>
+						<div class="comment-form-smiliess"><div id="smilelink" class="smilelink"><a href="javascript:void(0);" title="icon_mrgreen.gif" onclick="document.getElementById('comment').value += ' :mrgreen: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_mrgreen.gif" alt="icon_mrgreen.gif" /></a><a href="javascript:void(0);" title="icon_neutral.gif" onclick="document.getElementById('comment').value += ' :neutral: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_neutral.gif" alt="icon_neutral.gif" /></a><a href="javascript:void(0);" title="icon_twisted.gif" onclick="document.getElementById('comment').value += ' :twisted: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_twisted.gif" alt="icon_twisted.gif" /></a><a href="javascript:void(0);" title="icon_arrow.gif" onclick="document.getElementById('comment').value += ' :arrow: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_arrow.gif" alt="icon_arrow.gif" /></a><a href="javascript:void(0);" title="icon_eek.gif" onclick="document.getElementById('comment').value += ' :shock: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_eek.gif" alt="icon_eek.gif" /></a><a href="javascript:void(0);" title="icon_smile.gif" onclick="document.getElementById('comment').value += ' :smile: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_smile.gif" alt="icon_smile.gif" /></a><a href="javascript:void(0);" title="icon_confused.gif" onclick="document.getElementById('comment').value += ' :???: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_confused.gif" alt="icon_confused.gif" /></a><a href="javascript:void(0);" title="icon_cool.gif" onclick="document.getElementById('comment').value += ' :cool: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_cool.gif" alt="icon_cool.gif" /></a><a href="javascript:void(0);" title="icon_evil.gif" onclick="document.getElementById('comment').value += ' :evil: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_evil.gif" alt="icon_evil.gif" /></a><a href="javascript:void(0);" title="icon_biggrin.gif" onclick="document.getElementById('comment').value += ' :grin: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_biggrin.gif" alt="icon_biggrin.gif" /></a><a href="javascript:void(0);" title="icon_idea.gif" onclick="document.getElementById('comment').value += ' :idea: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_idea.gif" alt="icon_idea.gif" /></a><a href="javascript:void(0);" title="icon_redface.gif" onclick="document.getElementById('comment').value += ' :oops: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_redface.gif" alt="icon_redface.gif" /></a><a href="javascript:void(0);" title="icon_razz.gif" onclick="document.getElementById('comment').value += ' :razz: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_razz.gif" alt="icon_razz.gif" /></a><a href="javascript:void(0);" title="icon_rolleyes.gif" onclick="document.getElementById('comment').value += ' :roll: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_rolleyes.gif" alt="icon_rolleyes.gif" /></a><a href="javascript:void(0);" title="icon_wink.gif" onclick="document.getElementById('comment').value += ' :wink: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_wink.gif" alt="icon_wink.gif" /></a><a href="javascript:void(0);" title="icon_cry.gif" onclick="document.getElementById('comment').value += ' :cry: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_cry.gif" alt="icon_cry.gif" /></a><a href="javascript:void(0);" title="icon_surprised.gif" onclick="document.getElementById('comment').value += ' :eek: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_surprised.gif" alt="icon_surprised.gif" /></a><a href="javascript:void(0);" title="icon_lol.gif" onclick="document.getElementById('comment').value += ' :lol: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_lol.gif" alt="icon_lol.gif" /></a><a href="javascript:void(0);" title="icon_mad.gif" onclick="document.getElementById('comment').value += ' :mad: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_mad.gif" alt="icon_mad.gif" /></a><a href="javascript:void(0);" title="icon_sad.gif" onclick="document.getElementById('comment').value += ' :sad: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_sad.gif" alt="icon_sad.gif" /></a><a href="javascript:void(0);" title="icon_exclaim.gif" onclick="document.getElementById('comment').value += ' :!: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_exclaim.gif" alt="icon_exclaim.gif" /></a><a href="javascript:void(0);" title="icon_question.gif" onclick="document.getElementById('comment').value += ' :?: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_question.gif" alt="icon_question.gif" /></a></div></div>
+						<input class="btn-comment" name="submit" type="submit" id="submit" tabindex="5" title="发表评论" value="发表评论">
+						<input type='hidden' name='comment_post_ID' value='70455' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+											</div>
+					
+				</div>
+				<script type="text/javascript">	//Crel+Enter
+				//<![CDATA[
+					jQuery(document).on("click", ".facetoggle", function($) {
+    jQuery(".comment-form-smiliess").toggle();
+});
+					jQuery(document).keypress(function(e){
+						if(e.ctrlKey && e.which == 13 || e.which == 10) { 
+							jQuery("#submit").click();
+							document.body.focus();
+						} else if (e.shiftKey && e.which==13 || e.which == 10) {
+							jQuery("#submit").click();
+						}          
+					})
+				// ]]>
+				</script>
+			</form>
+			</div>					</div>
+			</div>
+		</div>
+		<div class="c-w300">
+            <div class="cbox-w300">
+
+								<div class="rban1"> <script type="text/javascript">
+            var cpro_id = "u3487069";
+            
+    </script>
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/cm.js"></script> </div>                <div class="zixun mt15"><!--推荐阅读-->
+                    <div class="hd">
+                        <h3><span><a href="https://www.dayanzai.me/windows" title="">MORE>></a></span>微软应用</h3>
+                    </div>
+                    <div class="bd">
+                        <ul class="text-list">						  <li class="up">
+							<div class="rank-c1"><em>1</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/transflash-tf-format-tool.html" title="专业 TF 卡格式化利器 TransFlash TF Format Tool Pro 3.2 中文汉化版" class="tit" rel="nofollow">专业 TF 卡格式化利器 TransFlash TF Format Tool Pro 3.2 中文汉化版</a> </div>
+						  </li>
+ 						  <li class="up">
+							<div class="rank-c1"><em>2</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/vuescan-pro.html" title="Windows 扫描仪增强软件 VueScan Pro 9.8.53.17 x64 轻松扫描各种文档" class="tit" rel="nofollow">Windows 扫描仪增强软件 VueScan Pro 9.8.53.17 x64 轻松扫描各种文档</a> </div>
+						  </li>
+ 						  <li class="up">
+							<div class="rank-c1"><em>3</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/process-lasso.html" title="系统进程优化工具 Process Lasso 18.1.0.44 + x64 中文多语免费版" class="tit" rel="nofollow">系统进程优化工具 Process Lasso 18.1.0.44 + x64 中文多语免费版</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>4</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/ashampoobs.html" title="阿香婆光盘刻录工具 Ashampoo Burning Studio 27.0.2.1 中文多语便携版" class="tit" rel="nofollow">阿香婆光盘刻录工具 Ashampoo Burning Studio 27.0.2.1 中文多语便携版</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>5</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/microsoft-edge.html" title="微软全新浏览器 Microsoft Edge 148.0.3967.54 + x64 中文商业版" class="tit" rel="nofollow">微软全新浏览器 Microsoft Edge 148.0.3967.54 + x64 中文商业版</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>6</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/mediamonkey.html" title="资深音乐媒体管理工具 MediaMonkey Gold 2024.2.2.3222 中文版" class="tit" rel="nofollow">资深音乐媒体管理工具 MediaMonkey Gold 2024.2.2.3222 中文版</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>7</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/usb-safely-remove.html" title="USB 安全移除工具 USB Safely Remove 7.4.1.1336 中文多语免费版" class="tit" rel="nofollow">USB 安全移除工具 USB Safely Remove 7.4.1.1336 中文多语免费版</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>8</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/duplicate-cleaner.html" title="重复文件搜索工具 Duplicate Cleaner 5.27.0 中文多语免费版" class="tit" rel="nofollow">重复文件搜索工具 Duplicate Cleaner 5.27.0 中文多语免费版</a> </div>
+						  </li>
+                         </ul>
+                    </div>
+                </div>
+								<div class="rban1 mt15"> <script type="text/javascript">
+            var cpro_id = "u3487069";
+            
+    </script>
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/cm.js"></script> </div>                <div class="zixun mt15"><!--推荐阅读-->
+                    <div class="hd">
+                        <h3><span><a href="https://www.dayanzai.me/android" title="">MORE>></a></span>安卓应用</h3>
+                    </div>
+                    <div class="bd">
+                        <ul class="text-list">						  <li class="up">
+							<div class="rank-c1"><em>1</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/macrodroid.html" title="安卓个性化自动化助手 MacroDroid 5.63.11 中文版实用工具" class="tit" rel="nofollow">安卓个性化自动化助手 MacroDroid 5.63.11 中文版实用工具</a> </div>
+						  </li>
+ 						  <li class="up">
+							<div class="rank-c1"><em>2</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/3c-all-in-one-toolbox.html" title="3C 多合一工具箱 3C All-in-One Toolbox 3.1.9 中文解锁版下载" class="tit" rel="nofollow">3C 多合一工具箱 3C All-in-One Toolbox 3.1.9 中文解锁版下载</a> </div>
+						  </li>
+ 						  <li class="up">
+							<div class="rank-c1"><em>3</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/sd-maid-se.html" title="Android 系统清理优化工具 SD Maid 2/SE 1.7.2 中文多语免费版" class="tit" rel="nofollow">Android 系统清理优化工具 SD Maid 2/SE 1.7.2 中文多语免费版</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>4</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/dns-speed-test.html" title="国内 DNS 哪个最快？DNS Speed Test 5.6.4 轻松测试 DNS 速度" class="tit" rel="nofollow">国内 DNS 哪个最快？DNS Speed Test 5.6.4 轻松测试 DNS 速度</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>5</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/ticktick.html" title="任务和规划时间工具 TickTick 8.0.7.0 帮助您制定生活工作计划" class="tit" rel="nofollow">任务和规划时间工具 TickTick 8.0.7.0 帮助您制定生活工作计划</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>6</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/apktool-m.html" title="Android 应用逆向工程助手 Apktool M 2.4.0-260501 官方下载" class="tit" rel="nofollow">Android 应用逆向工程助手 Apktool M 2.4.0-260501 官方下载</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>7</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/nova-launcher.html" title="安卓经典 Nova 启动器 Nova Launcher Prime 87500 (8.7.5) 更新发布" class="tit" rel="nofollow">安卓经典 Nova 启动器 Nova Launcher Prime 87500 (8.7.5) 更新发布</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>8</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/fing.html" title="安卓网络检测工具 Fing 12.12.0 中文多语免费版" class="tit" rel="nofollow">安卓网络检测工具 Fing 12.12.0 中文多语免费版</a> </div>
+						  </li>
+                         </ul>
+                    </div>
+                </div>
+								<div class="rban1 mt15"> <script type="text/javascript">
+            var cpro_id = "u3487069";
+            
+    </script>
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/cm.js"></script> </div>                <div class="zixun mt15"><!--推荐阅读-->
+                    <div class="hd">
+                        <h3><span><a href="https://www.dayanzai.me/tutorial" title="">MORE>></a></span>教程资源</h3>
+                    </div>
+                    <div class="bd">
+                        <ul class="text-list">						  <li class="up">
+							<div class="rank-c1"><em>1</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/tsforge-esu-for-windows-10.html" title="详解 TSforge：Windows10 非官方 ESU 激活完整教程" class="tit" rel="nofollow">详解 TSforge：Windows10 非官方 ESU 激活完整教程</a> </div>
+						  </li>
+ 						  <li class="up">
+							<div class="rank-c1"><em>2</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/disable-chrome-from-downloading-ai-models.html" title="一招禁止 Chrome/Edge 偷偷下载 4GB 本地 AI 模型方法" class="tit" rel="nofollow">一招禁止 Chrome/Edge 偷偷下载 4GB 本地 AI 模型方法</a> </div>
+						  </li>
+ 						  <li class="up">
+							<div class="rank-c1"><em>3</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/enable-the-firefox-rust-ad-blocking-engine.html" title="教你如何开启 Firefox 149/150 内置的 Rust 广告拦截引擎" class="tit" rel="nofollow">教你如何开启 Firefox 149/150 内置的 Rust 广告拦截引擎</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>4</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/log-analysis-user-statistics.html" title="什么是日志分析？它能透露关于访客的哪些信息？" class="tit" rel="nofollow">什么是日志分析？它能透露关于访客的哪些信息？</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>5</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/what-exactly-is-the-localhost.html" title="什么是 localhost？127.0.0.1 又是如何工作的？" class="tit" rel="nofollow">什么是 localhost？127.0.0.1 又是如何工作的？</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>6</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/fix-samsung-laptop-c-drive-inaccessibility.html" title="Windows 11 C 盘无法访问？微软官方修复三星电脑更新故障教程" class="tit" rel="nofollow">Windows 11 C 盘无法访问？微软官方修复三星电脑更新故障教程</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>7</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/windows-security-boot-certificate-update.html" title="Windows 安全启动证书即将过期，以下是更新至最新版本的方法" class="tit" rel="nofollow">Windows 安全启动证书即将过期，以下是更新至最新版本的方法</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>8</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/microsoft-activation-scripts.html" title="开源微软系统与软件激活工具合集 Microsoft Activation Scripts 3.10 更新发布" class="tit" rel="nofollow">开源微软系统与软件激活工具合集 Microsoft Activation Scripts 3.10 更新发布</a> </div>
+						  </li>
+                         </ul>
+                    </div>
+                </div>
+								<div class="rban1 mt15"> <script type="text/javascript">
+            var cpro_id = "u3487069";
+            
+    </script>
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/cm.js"></script> </div>                <div class="zixun mt15"><!--推荐阅读-->
+                    <div class="hd">
+                        <h3><span><a href="https://www.dayanzai.me/other" title="">MORE>></a></span>其它资源</h3>
+                    </div>
+                    <div class="bd">
+                        <ul class="text-list">						  <li class="up">
+							<div class="rank-c1"><em>1</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/alipay-benefits.html" title="<font color=#FC2E2E>支付宝碰一碰，周五支付有礼活动来了~</font>" class="tit" rel="nofollow"><font color=#FC2E2E>支付宝碰一碰，周五支付有礼活动来了~</font></a> </div>
+						  </li>
+ 						  <li class="up">
+							<div class="rank-c1"><em>2</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/php.html" title="Web 开发最好的编程语言 PHP 8.5.6 正式版已发布下载！" class="tit" rel="nofollow">Web 开发最好的编程语言 PHP 8.5.6 正式版已发布下载！</a> </div>
+						  </li>
+ 						  <li class="up">
+							<div class="rank-c1"><em>3</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/nextpad-for-mac.html" title="来自社区移植的 Nextpad++ for Mac，完美支持 Apple Silicon 与 Intel" class="tit" rel="nofollow">来自社区移植的 Nextpad++ for Mac，完美支持 Apple Silicon 与 Intel</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>4</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/tails-os.html" title="完全匿名的 Linux 发行版 Tails 7.7.2 ISO 镜像发布下载" class="tit" rel="nofollow">完全匿名的 Linux 发行版 Tails 7.7.2 ISO 镜像发布下载</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>5</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/denuvo-rip.html" title="Denuvo 防线全面失守，Hypervisor 技术终结 PC 游戏防盗版" class="tit" rel="nofollow">Denuvo 防线全面失守，Hypervisor 技术终结 PC 游戏防盗版</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>6</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/nvidia-driver.html" title="英伟达游戏显卡驱动 nVIDIA GeForce Game Ready Driver 596.36 WHQL 官方下载" class="tit" rel="nofollow">英伟达游戏显卡驱动 nVIDIA GeForce Game Ready Driver 596.36 WHQL 官方下载</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>7</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/fedora.html" title="开源 Linux 操作系统 Fedora 44.0 中文正式版发布！" class="tit" rel="nofollow">开源 Linux 操作系统 Fedora 44.0 中文正式版发布！</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>8</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/ubuntu.html" title="乌班图 Linux 系统 Ubuntu 26.04 发布更新镜像下载" class="tit" rel="nofollow">乌班图 Linux 系统 Ubuntu 26.04 发布更新镜像下载</a> </div>
+						  </li>
+                         </ul>
+                    </div>
+                </div>
+
+            </div>				<div class="rban1 mt15"> <script type="text/javascript">
+            var cpro_id = "u3487069";
+            
+    </script>
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/cm.js"></script> </div>				<div class="zxbq mt15"><!--最新标签-->
+					<div class="hd">
+                        <h3><span></span>最新标签</h3>
+                    </div>
+					<div class="label-box"><a href='https://www.dayanzai.me/tag/adobe' class="style1 f14 tag-link-5277 tag-link-position-1' title='8个话题' style='font-size: 8.9150326797386pt;">Adobe</a>
+<a href='https://www.dayanzai.me/tag/autodesk' class="style5 f18 tag-link-2447 tag-link-position-2' title='11个话题' style='font-size: 10.104575163399pt;">Autodesk</a>
+<a href='https://www.dayanzai.me/tag/chatgpt' class="style10 f14 tag-link-14441 tag-link-position-3' title='10个话题' style='font-size: 9.7385620915033pt;">ChatGPT</a>
+<a href='https://www.dayanzai.me/tag/github' class="style2 f14 tag-link-8990 tag-link-position-4' title='96个话题' style='font-size: 18.43137254902pt;">GitHub</a>
+<a href='https://www.dayanzai.me/tag/inno-setup-%e6%8a%80%e5%b7%a7' class="style8 f22 tag-link-3468 tag-link-position-5' title='19个话题' style='font-size: 12.117647058824pt;">Inno Setup 技巧</a>
+<a href='https://www.dayanzai.me/tag/inno-setup-%e6%95%99%e7%a8%8b' class="style4 f20 tag-link-3470 tag-link-position-6' title='21个话题' style='font-size: 12.483660130719pt;">Inno Setup 教程</a>
+<a href='https://www.dayanzai.me/tag/jetbrains' class="style9 f14 tag-link-8221 tag-link-position-7' title='8个话题' style='font-size: 8.9150326797386pt;">JetBrains</a>
+<a href='https://www.dayanzai.me/tag/linux-%e5%8f%91%e8%a1%8c%e7%89%88' class="style8 f16 tag-link-11817 tag-link-position-8' title='10个话题' style='font-size: 9.7385620915033pt;">Linux 发行版</a>
+<a href='https://www.dayanzai.me/tag/linux-%e7%b3%bb%e7%bb%9f' class="style1 f16 tag-link-11241 tag-link-position-9' title='7个话题' style='font-size: 8.4575163398693pt;">Linux 系统</a>
+<a href='https://www.dayanzai.me/tag/microsoft' class="style5 f20 tag-link-5503 tag-link-position-10' title='16个话题' style='font-size: 11.477124183007pt;">Microsoft</a>
+<a href='https://www.dayanzai.me/tag/office' class="style10 f22 tag-link-2488 tag-link-position-11' title='13个话题' style='font-size: 10.745098039216pt;">Office</a>
+<a href='https://www.dayanzai.me/tag/openai' class="style10 f18 tag-link-14459 tag-link-position-12' title='10个话题' style='font-size: 9.7385620915033pt;">OpenAI</a>
+<a href='https://www.dayanzai.me/tag/pdf-%e5%b7%a5%e5%85%b7' class="style1 f18 tag-link-176 tag-link-position-13' title='6个话题' style='font-size: 8pt;">PDF 工具</a>
+<a href='https://www.dayanzai.me/tag/pdf-%e7%bc%96%e8%be%91%e5%99%a8' class="style3 f18 tag-link-634 tag-link-position-14' title='11个话题' style='font-size: 10.104575163399pt;">PDF 编辑器</a>
+<a href='https://www.dayanzai.me/tag/pdf-%e9%98%85%e8%af%bb%e5%99%a8' class="style5 f22 tag-link-2232 tag-link-position-15' title='8个话题' style='font-size: 8.9150326797386pt;">PDF 阅读器</a>
+<a href='https://www.dayanzai.me/tag/win10-%e6%8a%80%e5%b7%a7' class="style7 f14 tag-link-11436 tag-link-position-16' title='24个话题' style='font-size: 13.032679738562pt;">Win10 技巧</a>
+<a href='https://www.dayanzai.me/tag/windows-10' class="style6 f16 tag-link-2260 tag-link-position-17' title='20个话题' style='font-size: 12.300653594771pt;">Windows 10</a>
+<a href='https://www.dayanzai.me/tag/windows-10-%e6%8a%80%e5%b7%a7' class="style5 f16 tag-link-11657 tag-link-position-18' title='19个话题' style='font-size: 12.117647058824pt;">Windows 10 技巧</a>
+<a href='https://www.dayanzai.me/tag/windows-11' class="style10 f18 tag-link-12458 tag-link-position-19' title='14个话题' style='font-size: 11.019607843137pt;">Windows 11</a>
+<a href='https://www.dayanzai.me/tag/windows-11-%e5%b0%8f%e6%8a%80%e5%b7%a7' class="style1 f22 tag-link-12857 tag-link-position-20' title='14个话题' style='font-size: 11.019607843137pt;">Windows 11 小技巧</a>
+<a href='https://www.dayanzai.me/tag/windows-11-%e6%8a%80%e5%b7%a7' class="style2 f16 tag-link-12631 tag-link-position-21' title='7个话题' style='font-size: 8.4575163398693pt;">Windows 11 技巧</a>
+<a href='https://www.dayanzai.me/tag/wise-soft' class="style10 f22 tag-link-3939 tag-link-position-22' title='10个话题' style='font-size: 9.7385620915033pt;">Wise Soft</a>
+<a href='https://www.dayanzai.me/tag/wordpress-%e6%8a%80%e5%b7%a7' class="style4 f14 tag-link-11482 tag-link-position-23' title='7个话题' style='font-size: 8.4575163398693pt;">WordPress 技巧</a>
+<a href='https://www.dayanzai.me/tag/%e4%bb%a3%e7%a0%81%e7%bc%96%e8%be%91%e5%99%a8' class="style6 f22 tag-link-3264 tag-link-position-24' title='15个话题' style='font-size: 11.202614379085pt;">代码编辑器</a>
+<a href='https://www.dayanzai.me/tag/%e5%85%8d%e8%b4%b9%e5%95%86%e7%94%a8%e5%ad%97%e4%bd%93' class="style10 f18 tag-link-10166 tag-link-position-25' title='36个话题' style='font-size: 14.588235294118pt;">免费商用字体</a>
+<a href='https://www.dayanzai.me/tag/%e5%85%8d%e8%b4%b9%e5%ad%97%e4%bd%93' class="style2 f14 tag-link-8621 tag-link-position-26' title='13个话题' style='font-size: 10.745098039216pt;">免费字体</a>
+<a href='https://www.dayanzai.me/tag/%e5%85%8d%e8%b4%b9%e5%ad%97%e4%bd%93%e4%b8%8b%e8%bd%bd' class="style1 f16 tag-link-9714 tag-link-position-27' title='8个话题' style='font-size: 8.9150326797386pt;">免费字体下载</a>
+<a href='https://www.dayanzai.me/tag/%e5%85%8d%e8%b4%b9%e8%bd%af%e4%bb%b6' class="style1 f22 tag-link-4273 tag-link-position-28' title='240个话题' style='font-size: 22pt;">免费软件</a>
+<a href='https://www.dayanzai.me/tag/%e5%8a%9e%e5%85%ac%e8%bd%af%e4%bb%b6' class="style7 f20 tag-link-2489 tag-link-position-29' title='26个话题' style='font-size: 13.307189542484pt;">办公软件</a>
+<a href='https://www.dayanzai.me/tag/%e5%8d%b8%e8%bd%bd%e5%b7%a5%e5%85%b7' class="style3 f14 tag-link-927 tag-link-position-30' title='6个话题' style='font-size: 8pt;">卸载工具</a>
+<a href='https://www.dayanzai.me/tag/%e5%9b%ba%e6%80%81%e7%a1%ac%e7%9b%98%e6%a3%80%e6%b5%8b%e5%b7%a5%e5%85%b7' class="style3 f22 tag-link-1227 tag-link-position-31' title='7个话题' style='font-size: 8.4575163398693pt;">固态硬盘检测工具</a>
+<a href='https://www.dayanzai.me/tag/%e5%9b%be%e5%83%8f%e5%a4%84%e7%90%86%e5%b7%a5%e5%85%b7' class="style10 f18 tag-link-1943 tag-link-position-32' title='11个话题' style='font-size: 10.104575163399pt;">图像处理工具</a>
+<a href='https://www.dayanzai.me/tag/%e5%9b%be%e5%83%8f%e6%9f%a5%e7%9c%8b%e5%99%a8' class="style5 f18 tag-link-2369 tag-link-position-33' title='7个话题' style='font-size: 8.4575163398693pt;">图像查看器</a>
+<a href='https://www.dayanzai.me/tag/%e5%9b%be%e5%83%8f%e6%b5%8f%e8%a7%88%e5%99%a8' class="style4 f14 tag-link-1507 tag-link-position-34' title='12个话题' style='font-size: 10.37908496732pt;">图像浏览器</a>
+<a href='https://www.dayanzai.me/tag/%e5%ae%89%e5%8d%93%e8%a7%86%e9%a2%91%e7%bc%96%e8%be%91%e5%99%a8' class="style6 f14 tag-link-6147 tag-link-position-35' title='8个话题' style='font-size: 8.9150326797386pt;">安卓视频编辑器</a>
+<a href='https://www.dayanzai.me/tag/%e5%ae%89%e8%a3%85%e5%8c%85%e5%88%b6%e4%bd%9c%e5%b7%a5%e5%85%b7' class="style4 f16 tag-link-1576 tag-link-position-36' title='7个话题' style='font-size: 8.4575163398693pt;">安装包制作工具</a>
+<a href='https://www.dayanzai.me/tag/%e5%b1%8f%e5%b9%95%e5%bd%95%e5%83%8f' class="style5 f20 tag-link-21 tag-link-position-37' title='13个话题' style='font-size: 10.745098039216pt;">屏幕录像</a>
+<a href='https://www.dayanzai.me/tag/%e5%b1%8f%e5%b9%95%e5%bd%95%e5%83%8f%e5%b7%a5%e5%85%b7' class="style8 f14 tag-link-1161 tag-link-position-38' title='12个话题' style='font-size: 10.37908496732pt;">屏幕录像工具</a>
+<a href='https://www.dayanzai.me/tag/%e5%b1%8f%e5%b9%95%e5%bd%95%e5%83%8f%e8%bd%af%e4%bb%b6' class="style8 f22 tag-link-7202 tag-link-position-39' title='10个话题' style='font-size: 9.7385620915033pt;">屏幕录像软件</a>
+<a href='https://www.dayanzai.me/tag/%e5%bc%80%e6%ba%90%e5%ad%97%e4%bd%93' class="style9 f22 tag-link-8620 tag-link-position-40' title='8个话题' style='font-size: 8.9150326797386pt;">开源字体</a>
+<a href='https://www.dayanzai.me/tag/%e5%bc%80%e6%ba%90%e8%bd%af%e4%bb%b6' class="style2 f14 tag-link-3725 tag-link-position-41' title='114个话题' style='font-size: 19.071895424837pt;">开源软件</a>
+<a href='https://www.dayanzai.me/tag/%e6%80%9d%e7%bb%b4%e5%af%bc%e5%9b%be' class="style6 f22 tag-link-2244 tag-link-position-42' title='7个话题' style='font-size: 8.4575163398693pt;">思维导图</a>
+<a href='https://www.dayanzai.me/tag/%e6%88%aa%e5%9b%be%e5%b7%a5%e5%85%b7' class="style10 f14 tag-link-1419 tag-link-position-43' title='11个话题' style='font-size: 10.104575163399pt;">截图工具</a>
+<a href='https://www.dayanzai.me/tag/%e6%95%b0%e6%8d%ae%e6%81%a2%e5%a4%8d' class="style3 f14 tag-link-261 tag-link-position-44' title='6个话题' style='font-size: 8pt;">数据恢复</a>
+<a href='https://www.dayanzai.me/tag/%e6%95%b0%e6%8d%ae%e6%81%a2%e5%a4%8d%e5%b7%a5%e5%85%b7' class="style5 f20 tag-link-844 tag-link-position-45' title='11个话题' style='font-size: 10.104575163399pt;">数据恢复工具</a>
+<a href='https://www.dayanzai.me/tag/%e6%96%87%e6%9c%ac%e7%bc%96%e8%be%91%e5%99%a8' class="style6 f20 tag-link-2463 tag-link-position-46' title='9个话题' style='font-size: 9.3725490196078pt;">文本编辑器</a>
+<a href='https://www.dayanzai.me/tag/%e6%a0%bc%e5%bc%8f%e8%bd%ac%e6%8d%a2%e5%b7%a5%e5%85%b7' class="style8 f14 tag-link-779 tag-link-position-47' title='9个话题' style='font-size: 9.3725490196078pt;">格式转换工具</a>
+<a href='https://www.dayanzai.me/tag/%e6%a1%8c%e9%9d%a2%e5%bd%95%e5%83%8f' class="style3 f16 tag-link-22 tag-link-position-48' title='10个话题' style='font-size: 9.7385620915033pt;">桌面录像</a>
+<a href='https://www.dayanzai.me/tag/%e6%b1%89%e5%8c%96%e5%b7%a5%e5%85%b7' class="style7 f20 tag-link-971 tag-link-position-49' title='6个话题' style='font-size: 8pt;">汉化工具</a>
+<a href='https://www.dayanzai.me/tag/%e7%b3%bb%e7%bb%9f%e4%bc%98%e5%8c%96%e5%b7%a5%e5%85%b7' class="style4 f14 tag-link-3918 tag-link-position-50' title='9个话题' style='font-size: 9.3725490196078pt;">系统优化工具</a>
+<a href='https://www.dayanzai.me/tag/%e7%b3%bb%e7%bb%9f%e5%a2%9e%e5%bc%ba' class="style6 f22 tag-link-4529 tag-link-position-51' title='10个话题' style='font-size: 9.7385620915033pt;">系统增强</a>
+<a href='https://www.dayanzai.me/tag/%e7%b3%bb%e7%bb%9f%e5%a2%9e%e5%bc%ba%e5%b7%a5%e5%85%b7' class="style6 f20 tag-link-5953 tag-link-position-52' title='18个话题' style='font-size: 11.934640522876pt;">系统增强工具</a>
+<a href='https://www.dayanzai.me/tag/%e7%bc%96%e7%a8%8b%e5%bc%80%e5%8f%91' class="style3 f20 tag-link-6293 tag-link-position-53' title='7个话题' style='font-size: 8.4575163398693pt;">编程开发</a>
+<a href='https://www.dayanzai.me/tag/%e8%a7%86%e9%a2%91%e6%92%ad%e6%94%be%e5%99%a8' class="style9 f18 tag-link-1916 tag-link-position-54' title='12个话题' style='font-size: 10.37908496732pt;">视频播放器</a>
+<a href='https://www.dayanzai.me/tag/%e8%a7%86%e9%a2%91%e7%bc%96%e8%be%91%e5%99%a8' class="style8 f20 tag-link-74 tag-link-position-55' title='6个话题' style='font-size: 8pt;">视频编辑器</a>
+<a href='https://www.dayanzai.me/tag/%e8%a7%86%e9%a2%91%e8%bd%ac%e6%8d%a2%e5%99%a8' class="style1 f16 tag-link-998 tag-link-position-56' title='7个话题' style='font-size: 8.4575163398693pt;">视频转换器</a>
+<a href='https://www.dayanzai.me/tag/%e8%a7%86%e9%a2%91%e8%bd%ac%e6%8d%a2%e5%b7%a5%e5%85%b7' class="style3 f14 tag-link-689 tag-link-position-57' title='24个话题' style='font-size: 13.032679738562pt;">视频转换工具</a>
+<a href='https://www.dayanzai.me/tag/%e8%a7%a3%e5%8e%8b%e7%bc%a9%e5%b7%a5%e5%85%b7' class="style3 f22 tag-link-3477 tag-link-position-58' title='7个话题' style='font-size: 8.4575163398693pt;">解压缩工具</a>
+<a href='https://www.dayanzai.me/tag/%e9%9f%b3%e4%b9%90%e6%92%ad%e6%94%be%e5%99%a8' class="style10 f22 tag-link-3007 tag-link-position-59' title='8个话题' style='font-size: 8.9150326797386pt;">音乐播放器</a>
+<a href='https://www.dayanzai.me/tag/%e9%9f%b3%e9%a2%91%e8%bd%ac%e6%8d%a2%e5%b7%a5%e5%85%b7' class="style10 f16 tag-link-395 tag-link-position-60' title='7个话题' style='font-size: 8.4575163398693pt;">音频转换工具</a></div>
+				</div>
+				<div class="c-ad mt20"><span id="5" class="tyTestPos"></span></div>
+			</div>
+			<div class="col-md-4">
+  
+  
+  <div id="sidebar" class="sidebar-widgets-wrap clearfix">
+    
+      </div>
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+</div>
+<div id="gotoTop" class="backtop"><span>返回顶部</span></div>
+
+<script type="text/javascript" src="https://www.dayanzai.me/wp-content/themes/dayanzai/js/functions.js"></script> 
+<div id="footer" class="mt20">
+    <div class="bottom">
+        <div class="w1200">
+<div class="footer_in">
+	<div class="footltit">
+		<div class="foottit1 a1">联系我们</div>
+		<div class="foottit2 a2">网站导航</div>
+		<div class="foottit3 a3">支持我们</div>
+	</div>
+	<div class="footlcont">
+		<div class="footcont1 a1"><p>有合作事业等可联系我们：<br>
+			邮箱：<a href="mailto:wcxu21@126.com" target="_blank" class="si-email3" title="点击发送邮件">wcxu21@126.com</a><br>
+			QQ：<a href="https://wpa.qq.com/msgrd?v=3&uin=2339736422&site=qq&menu=yes" target="_blank">2339736422</a>（大眼仔~旭）<br>
+			QQ群：<a href="https://qm.qq.com/q/VYHUmBoKac" target="_blank">632032882（点击加群）</a></p>
+			<div class="bt s"><a href="https://www.dayanzai.me/about" target="_blank">关于本站</a><a href="https://www.dayanzai.me/ads" target="_blank">广告合作</a><a href="https://www.dayanzai.me/sitemap_baidu.xml" target="_blank">站点地图</a></div>
+		</div>
+		<div class="footcont2 a2"><ul id="menu-dyz_bottomnav" class="footer_in_link"><li class="current-post-ancestor current-menu-parent"><a href="https://www.dayanzai.me/windows">微软应用</a></li>
+<li><a href="https://www.dayanzai.me/android">安卓应用</a></li>
+<li><a href="https://www.dayanzai.me/tutorial">教程资源</a></li>
+<li><a href="https://www.dayanzai.me/other">其它资源</a></li>
+<li><a href="https://www.dayanzai.me/about">关于我们</a></li>
+<li><a href="https://www.dayanzai.me/copyright">版权声明</a></li>
+</ul>			<div class="bt d"><a href="https://www.dayanzai.me/about" target="_blank">支持我们</a><a href="https://weibo.com/wcxu21" target="_blank"><i class="fa fa-weibo fa-2x"></i></a><a href="https://www.dayanzai.me/weixin" target="_blank"><i class="fa fa-tencent-weibo fa-2x"></i></a><a href="http://wpa.qq.com/msgrd?v=3&uin=2339736422&site=qq&menu=yes" target="_blank"><i class="fa fa-qq fa-2x"></i></a></div>
+		</div>
+		<div class="footcont3" style="float:right">
+			<a target="_blank" href="https://www.dayanzai.me/about" class="pays"><img src="/wp-content/themes/Dayanzai/images/wxpay.png" alt="微信捐赠"></a>
+			<a target="_blank" href="https://www.dayanzai.me/about" class="pays"><img src="/wp-content/themes/Dayanzai/images/zfbpay.png" alt="支付宝捐赠"></a>
+		</div>
+	</div>
+</div>
+	  <p style="border-top:1px solid #555; height:25px; margin-top:15px;"></p>
+      <p class="tips_text">本站是非经营性网站，网站资源部分收集整理于互联网，其著作权归原作者所有，如果有侵犯您权利的资源，请来信告知（附上权利证明到 wcxu21@126.com），我们将及时撤销相应资源。</p><p class="tips_text">Copyright © 2014~2026 WwW.DaYanZai.Me 保留所有权利<a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank">豫ICP备14005066号-1</a><span style="color: #ff2f1b;font-size: 20px">♥</span></p>        </div>
+    </div>
+</div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?dd923d5b273566d0e807590933596fc6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<script>(function(e) {
+    function t(e) {
+      var t = location.href,
+      n = t.split("").reverse(),
+      r = e.split(""),
+      i = [];
+      for (var s = 0,
+      o = 16; s < o; s++) i.push(r[s] + (n[s] || ""));
+      return i.join("")
+    }
+    var n = /([http|https]:\/\/[a-zA-Z0-9\_\.]+\.so\.com)/gi,
+    r = e.location.href;
+    if (r && !n.test(r) && window.navigator.appName) {
+      var i = "//s.360.cn/so/zz.gif",
+      o = "d182b3f28525f2db83acfaaf6e696dba",
+      u = t(o),
+      a = new Image;
+      r && (i += "?url=" + encodeURIComponent(r)),
+      o && (i += "&sid=" + o),
+      u && (i += "&token=" + u),
+      o && (a.src = i)
+    }
+  })(window);</script><script type="text/javascript">
+    /*自适应 创建于 2018/7/18*/
+    var cpro_id = "u3487072";
+</script>
+<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/cnw.js"></script>
+</body>
+</html><!-- WP Fastest Cache file was created in 0.53125 seconds, on 11-05-26 3:08:51 --><!-- via php -->

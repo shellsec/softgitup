@@ -468,5 +468,81 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "notepad_next",
+    "简介": "开源免费代码编辑器 Notepad Next 0.14 中文多语免费版（来源：dayanzai）",
+    "分类": "编辑器",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/dail8859/NotepadNext/releases",
+    "repo_path": "dail8859/NotepadNext",
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe",
+      ".msi"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "notepad_next"
+  },
+  {
+    "id": "akelpad",
+    "简介": "开源免费 Windows 记事本 AkelPad 4.10.0.8 + x64 中文绿色版（来源：dayanzai）",
+    "分类": "编辑器",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/ssrlive/akelpad/releases",
+    "repo_path": "ssrlive/akelpad",
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe",
+      ".msi"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "akelpad"
+  },
+  {
+    "id": "cudatext",
+    "简介": "免费开源代码编辑器 CudaText 1.222.0.0 + x64 中文多语免费版（来源：dayanzai）",
+    "分类": "编辑器",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Alexey-T/CudaText/releases",
+    "repo_path": "Alexey-T/CudaText",
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe",
+      ".msi"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "cudatext"
+  },
+  {
+    "id": "atom_editor",
+    "简介": "开源免费跨平台代码编辑器 Atom 1.63.0 + x64 官方中文最终版（来源：dayanzai）",
+    "分类": "编辑器",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/atom/atom/releases",
+    "repo_path": "atom/atom",
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe",
+      ".msi"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "atom_editor"
   }
 ]

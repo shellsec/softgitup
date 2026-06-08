@@ -4,5 +4,137 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/errata-ai/vale/releases",
     "repo_path": "errata-ai/vale"
+  },
+  {
+    "id": "sigil",
+    "简介": "专业 EPUB 格式电子书编辑器 Sigil 2.8.0 x64 中文多语免费版",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Sigil-Ebook/Sigil/releases",
+    "repo_path": "Sigil-Ebook/Sigil",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "sigil",
+    "installer_extensions": [
+      ".dmg",
+      ".pkg",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "win-",
+      "linux",
+      ".AppImage",
+      ".deb",
+      ".rpm",
+      ".exe",
+      ".msi",
+      "arm64"
+    ]
+  },
+  {
+    "id": "koodo_reader",
+    "简介": "开源跨平台电子书阅读器 Koodo Reader 2.3.5 免费好用的电子书阅读器",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/troyeguo/koodo-reader/releases",
+    "repo_path": "troyeguo/koodo-reader",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "koodo_reader",
+    "installer_extensions": [
+      ".dmg",
+      ".pkg",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "win-",
+      "linux",
+      ".AppImage",
+      ".deb",
+      ".rpm",
+      ".exe",
+      ".msi",
+      "arm64"
+    ]
+  },
+  {
+    "id": "thorium_reader",
+    "简介": "开源跨平台免费电子书阅读器 Thorium Reader 2.3.0 中文多语免费版",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/edrlab/thorium-reader/releases",
+    "repo_path": "edrlab/thorium-reader",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "thorium_reader",
+    "installer_extensions": [
+      ".dmg",
+      ".pkg",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "win-",
+      "linux",
+      ".AppImage",
+      ".deb",
+      ".rpm",
+      ".exe",
+      ".msi",
+      "arm64"
+    ]
+  },
+  {
+    "id": "boostnote",
+    "简介": "开源免费多平台 Markdown 写作工具 Boostnote 0.16.0 x64 中文多语免费版",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/BoostIO/boost-releases/releases",
+    "repo_path": "BoostIO/boost-releases",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "boostnote",
+    "installer_extensions": [
+      ".dmg",
+      ".pkg",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "win-",
+      "linux",
+      ".AppImage",
+      ".deb",
+      ".rpm",
+      ".exe",
+      ".msi",
+      "arm64"
+    ]
   }
 ]

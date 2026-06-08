@@ -48,5 +48,38 @@
       "blockmap"
     ],
     "use_download_filename": true
+  },
+  {
+    "id": "office_tool_plus",
+    "简介": "开源免费 Office 部署管理工具 Office Tool Plus 11.4.17.0 中文版",
+    "分类": "办公",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/YerongAI/Office-Tool/releases",
+    "repo_path": "YerongAI/Office-Tool",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "office_tool_plus",
+    "installer_extensions": [
+      ".AppImage",
+      ".tar.gz",
+      ".deb",
+      ".rpm",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "darwin",
+      "macos",
+      ".dmg",
+      ".pkg",
+      ".exe",
+      ".msi"
+    ]
   }
 ]

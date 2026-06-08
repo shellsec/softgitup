@@ -211,5 +211,43 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "nocab_desktop",
+    "简介": "开源免费无线传输工具 NoCab Desktop 1.4.7 中文多语免费版（来源：dayanzai）",
+    "分类": "局域网文件共享",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/nocab-transfer/nocab-desktop/releases",
+    "repo_path": "nocab-transfer/nocab-desktop",
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe",
+      ".msi"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "nocab_desktop"
+  },
+  {
+    "id": "synctrayzor",
+    "简介": "开源免费文件共享工具 SyncTrayzor 1.1.29 + x64 中文多语免费版（来源：dayanzai）",
+    "分类": "局域网文件共享",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/canton7/SyncTrayzor/releases",
+    "repo_path": "canton7/SyncTrayzor",
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe",
+      ".msi"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "synctrayzor"
   }
 ]

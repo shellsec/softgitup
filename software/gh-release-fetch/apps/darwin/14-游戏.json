@@ -89,5 +89,236 @@
       "ryujinx-{ver}-osx-x64.tar.gz"
     ],
     "save_name": "ryujinx-{ver}-osx-x64.tar.gz"
+  },
+  {
+    "id": "dosbox_x",
+    "简介": "经典 DOSBox 项目开源模拟器 DOSBox-X  2026.06.02 中文版",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/joncampbell123/dosbox-x/releases",
+    "repo_path": "joncampbell123/dosbox-x",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "dosbox_x",
+    "installer_extensions": [
+      ".dmg",
+      ".pkg",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "win-",
+      "linux",
+      ".AppImage",
+      ".deb",
+      ".rpm",
+      ".exe",
+      ".msi",
+      "arm64"
+    ]
+  },
+  {
+    "id": "ruffle",
+    "简介": "开源 Flash Player 模拟器 Ruffle Nightly 2026-05-11 免费下载",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/ruffle-rs/ruffle/releases",
+    "repo_path": "ruffle-rs/ruffle",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "ruffle",
+    "installer_extensions": [
+      ".dmg",
+      ".pkg",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "win-",
+      "linux",
+      ".AppImage",
+      ".deb",
+      ".rpm",
+      ".exe",
+      ".msi",
+      "arm64"
+    ]
+  },
+  {
+    "id": "sudokusolver",
+    "简介": "开源独数解算工具 SudokuSolver 1.14.1 中文多语免费版",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/DHancock/SudokuSolver/releases",
+    "repo_path": "DHancock/SudokuSolver",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "sudokusolver",
+    "installer_extensions": [
+      ".dmg",
+      ".pkg",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "win-",
+      "linux",
+      ".AppImage",
+      ".deb",
+      ".rpm",
+      ".exe",
+      ".msi",
+      "arm64"
+    ]
+  },
+  {
+    "id": "visualboyadvance_m",
+    "简介": "开源免费 GBA 模拟器 VisualBoyAdvance-M 2.2.3 轻松畅玩 GBA 怀旧游戏",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/visualboyadvance-m/visualboyadvance-m/releases",
+    "repo_path": "visualboyadvance-m/visualboyadvance-m",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "visualboyadvance_m",
+    "installer_extensions": [
+      ".dmg",
+      ".pkg",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "win-",
+      "linux",
+      ".AppImage",
+      ".deb",
+      ".rpm",
+      ".exe",
+      ".msi",
+      "arm64"
+    ]
+  },
+  {
+    "id": "ryujinx_2",
+    "简介": "开源免费 Switch 模拟器 Ryujinx 1.1.1403 中文多语免费版",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Ryujinx/Ryujinx/releases",
+    "repo_path": "Ryujinx/Ryujinx",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "ryujinx_2",
+    "installer_extensions": [
+      ".dmg",
+      ".pkg",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "win-",
+      "linux",
+      ".AppImage",
+      ".deb",
+      ".rpm",
+      ".exe",
+      ".msi",
+      "arm64"
+    ]
+  },
+  {
+    "id": "punes",
+    "简介": "开源跨平台 NES 模拟器 puNES 0.111 中文多语免费版",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/punesemu/puNES/releases",
+    "repo_path": "punesemu/puNES",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "punes",
+    "installer_extensions": [
+      ".dmg",
+      ".pkg",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "win-",
+      "linux",
+      ".AppImage",
+      ".deb",
+      ".rpm",
+      ".exe",
+      ".msi",
+      "arm64"
+    ]
+  },
+  {
+    "id": "my_nes",
+    "简介": "开源 NES 游戏模拟器 My Nes 7.13.8155.38062 中文绿色版",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/alaahadid/My-Nes/releases",
+    "repo_path": "alaahadid/My-Nes",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "my_nes",
+    "installer_extensions": [
+      ".dmg",
+      ".pkg",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "win-",
+      "linux",
+      ".AppImage",
+      ".deb",
+      ".rpm",
+      ".exe",
+      ".msi",
+      "arm64"
+    ]
   }
 ]

@@ -130,5 +130,24 @@
     "kill_before_install": true,
     "run_installer": true,
     "version_tag_as_on_github": true
+  },
+  {
+    "id": "thunderbird_2",
+    "简介": "开源免费雷鸟邮件客户端 Mozilla Thunderbird 151.0 + x64 中文多语免费版（来源：dayanzai）",
+    "分类": "网络与通讯",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/mozilla/kitsune/releases",
+    "repo_path": "mozilla/kitsune",
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe",
+      ".msi"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "thunderbird_2"
   }
 ]

@@ -532,5 +532,43 @@
     ],
     "save_name": "ZeroTier One {ver} x64.msi",
     "run_installer": true
+  },
+  {
+    "id": "internettest",
+    "简介": "开源免费网络测试工具 InternetTest Pro 9.1.0.2602 中文多语免费版（来源：dayanzai）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Leo-Corporation/InternetTest/releases",
+    "repo_path": "Leo-Corporation/InternetTest",
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe",
+      ".msi"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "internettest"
+  },
+  {
+    "id": "opentrace",
+    "简介": "OpenTrace 1.5.0.0 绿色中文版，让网络追踪从未如此简单（来源：dayanzai）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Archeb/opentrace/releases",
+    "repo_path": "Archeb/opentrace",
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe",
+      ".msi"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "opentrace"
   }
 ]

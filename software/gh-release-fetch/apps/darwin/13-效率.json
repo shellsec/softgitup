@@ -100,5 +100,236 @@
       "copyq-{ver}-macos.dmg"
     ],
     "save_name": "copyq-{ver}-macos.dmg"
+  },
+  {
+    "id": "powertoys_2",
+    "简介": "开源免费 Windows 实用程序 PowerToys 0.99.1 中文多语免费版",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/ZetaSp/PowerToys-Chinese-TransMOD/releases",
+    "repo_path": "ZetaSp/PowerToys-Chinese-TransMOD",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "powertoys_2",
+    "installer_extensions": [
+      ".dmg",
+      ".pkg",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "win-",
+      "linux",
+      ".AppImage",
+      ".deb",
+      ".rpm",
+      ".exe",
+      ".msi",
+      "arm64"
+    ]
+  },
+  {
+    "id": "maye",
+    "简介": "免费快速启动工具 Maye Nano 6.1.0.260422 中文免费版",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/25H/MayeNano/releases",
+    "repo_path": "25H/MayeNano",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "maye",
+    "installer_extensions": [
+      ".dmg",
+      ".pkg",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "win-",
+      "linux",
+      ".AppImage",
+      ".deb",
+      ".rpm",
+      ".exe",
+      ".msi",
+      "arm64"
+    ]
+  },
+  {
+    "id": "copytranslator",
+    "简介": "开源复制即翻译解决方案 CopyTranslator 12.1.0 中文免费版",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/copytranslator/CopyTranslator/releases",
+    "repo_path": "copytranslator/CopyTranslator",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "copytranslator",
+    "installer_extensions": [
+      ".dmg",
+      ".pkg",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "win-",
+      "linux",
+      ".AppImage",
+      ".deb",
+      ".rpm",
+      ".exe",
+      ".msi",
+      "arm64"
+    ]
+  },
+  {
+    "id": "quickclipboard",
+    "简介": "这款开源免费的 QuickClipboard 0.1.1 正在重新定义你的复制粘贴体验",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/mosheng1/QuickClipboard/releases",
+    "repo_path": "mosheng1/QuickClipboard",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "quickclipboard",
+    "installer_extensions": [
+      ".dmg",
+      ".pkg",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "win-",
+      "linux",
+      ".AppImage",
+      ".deb",
+      ".rpm",
+      ".exe",
+      ".msi",
+      "arm64"
+    ]
+  },
+  {
+    "id": "ksnip",
+    "简介": "开源免费屏幕截图工具 ksnip 1.10.1 中文多语免费版",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/ksnip/ksnip/releases",
+    "repo_path": "ksnip/ksnip",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "ksnip",
+    "installer_extensions": [
+      ".dmg",
+      ".pkg",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "win-",
+      "linux",
+      ".AppImage",
+      ".deb",
+      ".rpm",
+      ".exe",
+      ".msi",
+      "arm64"
+    ]
+  },
+  {
+    "id": "screenote",
+    "简介": "开源免费全快捷键截图/贴图工具 Screenote 2020-07-02 中文免费版",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/poerin/Screenote/releases",
+    "repo_path": "poerin/Screenote",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "screenote",
+    "installer_extensions": [
+      ".dmg",
+      ".pkg",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "win-",
+      "linux",
+      ".AppImage",
+      ".deb",
+      ".rpm",
+      ".exe",
+      ".msi",
+      "arm64"
+    ]
+  },
+  {
+    "id": "blinkmind",
+    "简介": "开源免费思维导图工具 BlinkMind 0.1.6 中文多语免费版",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/awehook/blink-mind-desktop/releases",
+    "repo_path": "awehook/blink-mind-desktop",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "blinkmind",
+    "installer_extensions": [
+      ".dmg",
+      ".pkg",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "win-",
+      "linux",
+      ".AppImage",
+      ".deb",
+      ".rpm",
+      ".exe",
+      ".msi",
+      "arm64"
+    ]
   }
 ]

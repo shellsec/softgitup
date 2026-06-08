@@ -1193,5 +1193,100 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": true
+  },
+  {
+    "id": "tinywall",
+    "简介": "开源免费 Windows 网络防火墙工具 TinyWall 3.5.1 中文多语免费版（来源：dayanzai）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/pylorak/TinyWall/releases",
+    "repo_path": "pylorak/TinyWall",
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe",
+      ".msi"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "tinywall"
+  },
+  {
+    "id": "fort_firewall",
+    "简介": "开源 Windows 防火墙下载 Fort Firewall 3.19.9 + x64 中文多语免费版（来源：dayanzai）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/tnodir/fort/releases",
+    "repo_path": "tnodir/fort",
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe",
+      ".msi"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "fort_firewall"
+  },
+  {
+    "id": "passliss",
+    "简介": "开源密码随机生成工具 Passliss 2.9.0.2302 中文多语免费版（来源：dayanzai）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Leo-Corporation/Passliss/releases",
+    "repo_path": "Leo-Corporation/Passliss",
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe",
+      ".msi"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "passliss"
+  },
+  {
+    "id": "keeweb",
+    "简介": "开源免费跨平台密码管理软件 KeeWeb 1.18.1 中文免费版（来源：dayanzai）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/keeweb/keeweb/releases",
+    "repo_path": "keeweb/keeweb",
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe",
+      ".msi"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "keeweb"
+  },
+  {
+    "id": "buttercup",
+    "简介": "开源免费跨平台密码管理软件 Buttercup 1.20.5 中文多语免费版（来源：dayanzai）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/buttercup/buttercup-desktop/releases",
+    "repo_path": "buttercup/buttercup-desktop",
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe",
+      ".msi"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "buttercup"
   }
 ]

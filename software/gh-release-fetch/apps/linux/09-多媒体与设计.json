@@ -75,5 +75,203 @@
       "Godot_v{ver}_linux.x86_64.zip"
     ],
     "save_name": "Godot_v{ver}_linux.x86_64.zip"
+  },
+  {
+    "id": "mrv2",
+    "简介": "开源VFX、动画与图形专业审阅工具 mrv2 v1.6.0 中文免费版",
+    "分类": "多媒体与设计",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/ggarra13/mrv2/releases",
+    "repo_path": "ggarra13/mrv2",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "mrv2",
+    "installer_extensions": [
+      ".AppImage",
+      ".tar.gz",
+      ".deb",
+      ".rpm",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "darwin",
+      "macos",
+      ".dmg",
+      ".pkg",
+      ".exe",
+      ".msi"
+    ]
+  },
+  {
+    "id": "upscayl",
+    "简介": "开源 AI 图像放大增强工具 Upscayl 2.15.0 x64 中文绿色汉化版",
+    "分类": "多媒体与设计",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/upscayl/upscayl/releases",
+    "repo_path": "upscayl/upscayl",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "upscayl",
+    "installer_extensions": [
+      ".AppImage",
+      ".tar.gz",
+      ".deb",
+      ".rpm",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "darwin",
+      "macos",
+      ".dmg",
+      ".pkg",
+      ".exe",
+      ".msi"
+    ]
+  },
+  {
+    "id": "makehuman",
+    "简介": "开源 3D 人物角色建模软件 MakeHuman 1.3.0 中文多语免费版",
+    "分类": "多媒体与设计",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/makehumancommunity/community-plugins-mhapi/releases",
+    "repo_path": "makehumancommunity/community-plugins-mhapi",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "makehuman",
+    "installer_extensions": [
+      ".AppImage",
+      ".tar.gz",
+      ".deb",
+      ".rpm",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "darwin",
+      "macos",
+      ".dmg",
+      ".pkg",
+      ".exe",
+      ".msi"
+    ]
+  },
+  {
+    "id": "waifu2x_gui",
+    "简介": "开源图像视频放大增强工具 Waifu2x GUI 0.5.0 中文绿色汉化版",
+    "分类": "多媒体与设计",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Tenpi/Waifu2x-GUI/releases",
+    "repo_path": "Tenpi/Waifu2x-GUI",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "waifu2x_gui",
+    "installer_extensions": [
+      ".AppImage",
+      ".tar.gz",
+      ".deb",
+      ".rpm",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "darwin",
+      "macos",
+      ".dmg",
+      ".pkg",
+      ".exe",
+      ".msi"
+    ]
+  },
+  {
+    "id": "waifu2x_extension_gui",
+    "简介": "图像视频智能放大工具 Waifu2x Extension GUI 3.111.01 中文免费版",
+    "分类": "多媒体与设计",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/AaronFeng753/Waifu2x-Extension-GUI/releases",
+    "repo_path": "AaronFeng753/Waifu2x-Extension-GUI",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "waifu2x_extension_gui",
+    "installer_extensions": [
+      ".AppImage",
+      ".tar.gz",
+      ".deb",
+      ".rpm",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "darwin",
+      "macos",
+      ".dmg",
+      ".pkg",
+      ".exe",
+      ".msi"
+    ]
+  },
+  {
+    "id": "superpng",
+    "简介": "Photoshop PNG 优化插件 SuperPNG 2.5 + x64 汉化中文版",
+    "分类": "多媒体与设计",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/fnordware/Supe.PNG/releases",
+    "repo_path": "fnordware/Supe.PNG",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "superpng",
+    "installer_extensions": [
+      ".AppImage",
+      ".tar.gz",
+      ".deb",
+      ".rpm",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "darwin",
+      "macos",
+      ".dmg",
+      ".pkg",
+      ".exe",
+      ".msi"
+    ]
   }
 ]

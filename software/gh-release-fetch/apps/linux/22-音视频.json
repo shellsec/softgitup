@@ -116,5 +116,104 @@
       "OpenShot-v{ver}-x86_64.AppImage"
     ],
     "save_name": "OpenShot-v{ver}-x86_64.AppImage"
+  },
+  {
+    "id": "screen_to_gif",
+    "简介": "开源免费 Gif 录制工具 ScreenToGif 2.43.1 中文多语免费版",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/NickeManarin/ScreenToGif/releases",
+    "repo_path": "NickeManarin/ScreenToGif",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "screen_to_gif",
+    "installer_extensions": [
+      ".AppImage",
+      ".tar.gz",
+      ".deb",
+      ".rpm",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "darwin",
+      "macos",
+      ".dmg",
+      ".pkg",
+      ".exe",
+      ".msi"
+    ]
+  },
+  {
+    "id": "simple_screen_recorder",
+    "简介": "开源 Windows 桌面录像工具 Simple Screen Recorder 1.3.4 中文多语免费版",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/lextrack/Simple-Screen-Recorder/releases",
+    "repo_path": "lextrack/Simple-Screen-Recorder",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "simple_screen_recorder",
+    "installer_extensions": [
+      ".AppImage",
+      ".tar.gz",
+      ".deb",
+      ".rpm",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "darwin",
+      "macos",
+      ".dmg",
+      ".pkg",
+      ".exe",
+      ".msi"
+    ]
+  },
+  {
+    "id": "quickcut",
+    "简介": "开源免费多功能视频编辑下载工具 QuickCut 1.6.10 中文免费版",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/HaujetZhao/QuickCut/releases",
+    "repo_path": "HaujetZhao/QuickCut",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "quickcut",
+    "installer_extensions": [
+      ".AppImage",
+      ".tar.gz",
+      ".deb",
+      ".rpm",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "darwin",
+      "macos",
+      ".dmg",
+      ".pkg",
+      ".exe",
+      ".msi"
+    ]
   }
 ]

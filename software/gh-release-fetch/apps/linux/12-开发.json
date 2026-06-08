@@ -316,5 +316,203 @@
       "etcd-v{ver}-linux-amd64.tar.gz"
     ],
     "save_name": "etcd-v{ver}-linux-amd64.tar.gz"
+  },
+  {
+    "id": "jpexs_flash_decompiler",
+    "简介": "免费开源 Flash 反编译工具 JPEXS Free Flash Decompiler 26.2.1 中文免费版",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/jindrapetrik/jpexs-decompiler/releases",
+    "repo_path": "jindrapetrik/jpexs-decompiler",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "jpexs_flash_decompiler",
+    "installer_extensions": [
+      ".AppImage",
+      ".tar.gz",
+      ".deb",
+      ".rpm",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "darwin",
+      "macos",
+      ".dmg",
+      ".pkg",
+      ".exe",
+      ".msi"
+    ]
+  },
+  {
+    "id": "ultimate_packer_for_executables",
+    "简介": "开源 EXE/Dll 资源压缩工具 UPX 5.1.1 + x64 发布！",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/upx/upx/releases",
+    "repo_path": "upx/upx",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "ultimate_packer_for_executables",
+    "installer_extensions": [
+      ".AppImage",
+      ".tar.gz",
+      ".deb",
+      ".rpm",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "darwin",
+      "macos",
+      ".dmg",
+      ".pkg",
+      ".exe",
+      ".msi"
+    ]
+  },
+  {
+    "id": "pe_bear",
+    "简介": "开源 PE 文件分析工具 PE-bear 0.7.1 中文绿色便携版",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/hasherezade/pe-bear/releases",
+    "repo_path": "hasherezade/pe-bear",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "pe_bear",
+    "installer_extensions": [
+      ".AppImage",
+      ".tar.gz",
+      ".deb",
+      ".rpm",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "darwin",
+      "macos",
+      ".dmg",
+      ".pkg",
+      ".exe",
+      ".msi"
+    ]
+  },
+  {
+    "id": "dnspy",
+    "简介": "开源 .Net 反汇编工具 dnSpy 6.5.1 + x64 中文绿色免费版",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/dnSpyEx/dnSpy/releases",
+    "repo_path": "dnSpyEx/dnSpy",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "dnspy",
+    "installer_extensions": [
+      ".AppImage",
+      ".tar.gz",
+      ".deb",
+      ".rpm",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "darwin",
+      "macos",
+      ".dmg",
+      ".pkg",
+      ".exe",
+      ".msi"
+    ]
+  },
+  {
+    "id": "codeblocks",
+    "简介": "开源免费 C/C++ 和 Fortran IDE Code::Blocks 24.04 中文汉化版",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/anbangli/codeblocks-cn/releases",
+    "repo_path": "anbangli/codeblocks-cn",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "codeblocks",
+    "installer_extensions": [
+      ".AppImage",
+      ".tar.gz",
+      ".deb",
+      ".rpm",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "darwin",
+      "macos",
+      ".dmg",
+      ".pkg",
+      ".exe",
+      ".msi"
+    ]
+  },
+  {
+    "id": "net_reactor_slayer",
+    "简介": "开源 .Net Reactor 脱壳工具 .Net Reactor Slayer 6.4.0 免费版下载",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/SychicBoy/NetReactorSlayer/releases",
+    "repo_path": "SychicBoy/NetReactorSlayer",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "net_reactor_slayer",
+    "installer_extensions": [
+      ".AppImage",
+      ".tar.gz",
+      ".deb",
+      ".rpm",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "darwin",
+      "macos",
+      ".dmg",
+      ".pkg",
+      ".exe",
+      ".msi"
+    ]
   }
 ]

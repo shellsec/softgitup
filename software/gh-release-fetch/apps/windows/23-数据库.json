@@ -332,5 +332,24 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": true
+  },
+  {
+    "id": "sqlitestudio",
+    "简介": "开源跨平台 SQLite 管理工具 SQLiteStudio 3.4.21 中文多语免费版（来源：dayanzai）",
+    "分类": "数据库",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/pawelsalawa/sqlitestudio/releases",
+    "repo_path": "pawelsalawa/sqlitestudio",
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe",
+      ".msi"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "sqlitestudio"
   }
 ]

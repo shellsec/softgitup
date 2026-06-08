@@ -117,5 +117,38 @@
       "dbeaver-ce-{ver}-macos-x86_64.dmg"
     ],
     "save_name": "dbeaver-ce-{ver}-macos-x86_64.dmg"
+  },
+  {
+    "id": "sqlitestudio",
+    "简介": "开源跨平台 SQLite 管理工具 SQLiteStudio 3.4.21 中文多语免费版",
+    "分类": "数据库",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/pawelsalawa/sqlitestudio/releases",
+    "repo_path": "pawelsalawa/sqlitestudio",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "sqlitestudio",
+    "installer_extensions": [
+      ".dmg",
+      ".pkg",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "win-",
+      "linux",
+      ".AppImage",
+      ".deb",
+      ".rpm",
+      ".exe",
+      ".msi",
+      "arm64"
+    ]
   }
 ]

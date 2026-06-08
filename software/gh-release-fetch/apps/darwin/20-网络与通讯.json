@@ -22,5 +22,38 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/telegramdesktop/tdesktop/releases",
     "repo_path": "telegramdesktop/tdesktop"
+  },
+  {
+    "id": "thunderbird_2",
+    "简介": "开源免费雷鸟邮件客户端 Mozilla Thunderbird 151.0 + x64 中文多语免费版",
+    "分类": "网络与通讯",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/mozilla/kitsune/releases",
+    "repo_path": "mozilla/kitsune",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "thunderbird_2",
+    "installer_extensions": [
+      ".dmg",
+      ".pkg",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "win64",
+      "win32",
+      "win-",
+      "linux",
+      ".AppImage",
+      ".deb",
+      ".rpm",
+      ".exe",
+      ".msi",
+      "arm64"
+    ]
   }
 ]

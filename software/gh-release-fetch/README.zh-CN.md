@@ -43,7 +43,9 @@
 
 ### 仓库现状与收录范围（约略）
 
-合并配置后规模约为：**Windows 404 条**、**darwin 300 条**、**linux 298 条**（[`apps/windows/`](apps/windows/) 等下各 **30** 个分类分片；含 `99-未匹配-windows分片` 占位）。**分片级概览**见根目录 [`CATALOG.md`](CATALOG.md)（运行 `python tools/generate_catalog_index.py` 可刷新）。精确数以运行 `python auto_update.py` 时日志里「已从 apps/ 目录合并配置」为准。
+合并配置后规模约为：**Windows 516 条**、**darwin 384 条**、**linux 382 条**（[`apps/windows/`](apps/windows/) 等下各 **30** 个分类分片；darwin/linux 的 `99-未匹配-windows分片` 仍为占位条目，Windows 侧该分片已清空）。**分片级概览**见根目录 [`CATALOG.md`](CATALOG.md)（运行 `python tools/generate_catalog_index.py` 可刷新）。精确数以运行 `python auto_update.py` 时日志里「已从 apps/ 目录合并配置」为准。
+
+Windows 可从 [大眼仔旭 Windows 专区](https://www.dayanzai.me/windows) 批量补收录开源项：`python tools/import_dayanzai_windows.py --apply`；同步到 macOS/Linux 清单：`python tools/sync_dayanzai_to_darwin_linux.py`（按 Windows 分类分片写入，默认 `prefer_api_assets` + 平台过滤，启用前建议试跑补全规则）。
 
 收录以 **GitHub（及镜像）上可解析的 Releases 资产** 为主，涵盖编辑器、笔记、安全、云原生、可观测、下载、办公与设计等常见分类。**不包含**破解、盗版或绕过授权的软件分发；个别条目仅含基础字段时需自行补全规则后才能稳定自动下载。
 
