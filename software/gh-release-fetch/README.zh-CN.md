@@ -26,7 +26,8 @@
 - `auto_update.py`：按配置抓取版本、下载文件、按需启动安装程序（优先读取 `apps/` 目录合并结果，否则使用单文件 `apps.json`）
 - `apps/`：推荐布局——[`apps/root.json`](apps/root.json)（全局）+ [`apps/windows/*.json`](apps/windows/) + [`apps/darwin/*.json`](apps/darwin/) + [`apps/linux/*.json`](apps/linux/)（均按分类拆成多个数组文件，与 windows 命名风格一致）；若无分片目录则回退单文件 `apps/darwin.json`、`apps/linux.json`。历史单文件备份见 `apps.json.monolith.bak`；darwin/linux 由单文件迁出后的备份见 `apps/darwin.json.bak`、`apps/linux.json.bak`
 - `run_update.bat`：Windows 下一键检查 Python、安装依赖并执行 `python auto_update.py`
-- `lookup_app.py` / `lookup_app.bat`：在 `apps/` 清单中**模糊检索**应用所在分片与分类，并可交互将 `enabled` 设为 `true`（见下文「查找应用并开启」）
+- `lookup_app.py` / `lookup_app.bat`：在 `apps/` 清单中**模糊检索**、可选开启 `enabled`、加入**更新列表**（见 §3 闭环）
+- `run_saved_apps.bat`：按列表一键开启并执行 `auto_update.py`（与 `lookup_app` 配套）
 
 ### VibeCodingToolsDown（可选独立清单）
 
@@ -187,19 +188,43 @@ lookup_app.bat drawio
 python lookup_app.py drawio
 ```
 
-脚本会列出匹配项的 **平台**、**分片路径**（如 `windows/05-办公与设计.json`）、**分类**、当前 **enabled** 状态，并询问是否将选中项设为 `enabled: true`。
+脚本会列出匹配项的 **平台**、**分片路径**（如 `windows/05-办公与设计.json`）、**分类**、当前 **enabled** 状态。交互流程：**选序号** → 可选 **开启 enabled** → 可选 **加入更新列表**（JSON 中 `root` 为 `"."`，路径相对仓库根，换机器也可用）。
 
 常用选项：
 
 | 选项 | 说明 |
 |------|------|
-| `--no-prompt` | 只查询，不询问是否开启 |
+| `--platform windows\|darwin\|linux` | 只显示该平台匹配项 |
+| `--save [文件]` | 选中项加入更新列表（默认 `saved_apps_<平台>.json`） |
+| `--no-save-prompt` | 不询问是否加入列表 |
+| `--no-prompt` | 只查询，不交互 |
 | `--yes` / `-y` | 对全部匹配项直接 `enabled=true` |
-| `--dry-run` | 预览将修改哪些文件，不写盘 |
+| `--dry-run` | 预览，不写盘 |
 | `--apps-dir VibeCodingToolsDown` | 检索另一套清单（与主 `apps/` 分离） |
 | `--min-score N` | 调低/调高模糊匹配阈值（默认 40） |
 
-交互时：`1` 或 `1,3` 选序号，`a` 开启全部匹配项，**回车** 跳过。
+交互时：`1` 或 `1,3` 选序号，`a` 选全部，**回车** 跳过。
+
+### 闭环：查询 → 列表 → 本机更新
+
+```bat
+REM 1. 搜索并加入列表（可多跑几次，列表会合并去重）
+lookup_app.bat --platform windows cherrytree
+
+REM 2. 一键按列表开启 enabled 并下载/更新
+run_saved_apps.bat
+```
+
+列表文件默认在仓库根 **`saved_apps_windows.json`**（macOS/Linux 为 `saved_apps_darwin.json` / `saved_apps_linux.json`）。可改名或放子目录：
+
+```bat
+lookup_app.bat --save lists\my.json joplin
+run_saved_apps.bat lists\my.json
+set SAVED_APPS_LIST=lists\my.json
+run_saved_apps.bat
+```
+
+大眼仔旭批量收录（仅 Windows 清单源）：`python tools/import_dayanzai_windows.py --apply`；同步到 darwin/linux：`python tools/sync_dayanzai_to_darwin_linux.py`。
 
 ### 方式 B：手改 JSON
 
@@ -397,7 +422,8 @@ python lookup_app.py --no-prompt v2ray
 
 ## 13. 维护工具（可选）
 
-- **模糊查找应用 / 开启 enabled**：`lookup_app.bat <关键词>` 或 `python lookup_app.py <关键词>`（见 §3）
+- **模糊查找 / 加入更新列表**：`lookup_app.bat <关键词>`（见 §3 闭环）
+- **按列表一键更新**：项目根 **`run_saved_apps.bat`** 或 `python tools/run_saved_apps.py`
 - 将所有应用 JSON 中的 `enabled` 写回 `false`：项目根 **`reset_enabled_json.bat`** 或 `python tools/reset_enabled_json.py`（可加 `--dry-run` 预览；快照默认 `tools/last_enabled_before_reset.json`）
 - 按快照恢复 `enabled`：项目根 **`apply_enabled_snapshot.bat`** 或 `python tools/apply_enabled_snapshot.py`
 - 将 `apps/darwin.json`、`apps/linux.json` 按 windows 分片名拆到 `apps/darwin/`、`apps/linux/`：`python tools/split_darwin_linux_to_dirs.py`（会备份原单文件为 `*.json.bak`）

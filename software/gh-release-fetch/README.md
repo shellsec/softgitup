@@ -26,7 +26,8 @@ This repository helps you maintain a **version-controlled list** of open-source 
 - [`auto_update.py`](auto_update.py) — loads merged config from [`apps/`](apps/) (or legacy root [`apps.json`](apps.json)), resolves latest release, downloads assets, optionally launches installers.
 - [`apps/`](apps/) — recommended layout: [`apps/root.json`](apps/root.json) + per-platform JSON shards under [`apps/windows/`](apps/windows/), [`apps/darwin/`](apps/darwin/), [`apps/linux/`](apps/linux/). Falls back to `apps/darwin.json` / `apps/linux.json` if shard dirs are empty. Monolith backup: `apps.json.monolith.bak`; optional backups after splitting: `apps/darwin.json.bak`, `apps/linux.json.bak`.
 - [`run_update.bat`](run_update.bat) — Windows shortcut: checks Python, installs deps, runs `python auto_update.py`.
-- [`lookup_app.py`](lookup_app.py) / [`lookup_app.bat`](lookup_app.bat) — fuzzy search in the `apps/` catalog (shard path, category, `enabled`), optional interactive enable (see **§3 Enable an app**).
+- [`lookup_app.py`](lookup_app.py) / [`lookup_app.bat`](lookup_app.bat) — fuzzy search, optional `enabled`, add to **saved update list** (see **§3** closed loop).
+- [`run_saved_apps.bat`](run_saved_apps.bat) — enable + run `auto_update.py` for all apps in that list.
 
 **Optional second catalog: [`VibeCodingToolsDown/`](VibeCodingToolsDown/)**
 
@@ -144,17 +145,38 @@ lookup_app.bat drawio
 python lookup_app.py drawio
 ```
 
-Lists **platform**, **shard path** (e.g. `windows/05-办公与设计.json`), **category**, and **enabled**, then prompts to set `enabled: true` for selected rows.
+Lists **platform**, **shard path** (e.g. `windows/05-办公与设计.json`), **category**, and **enabled**. Interactive flow: **pick rows** → optional **enable** → optional **add to update list** (JSON `root` is `"."`, paths relative to repo root).
 
 | Flag | Meaning |
 |------|---------|
+| `--platform windows\|darwin\|linux` | Filter to one platform |
+| `--save [FILE]` | Add selection to update list (default `saved_apps_<platform>.json`) |
+| `--no-save-prompt` | Do not ask to add to list |
 | `--no-prompt` | Search only |
 | `--yes` / `-y` | Enable all matches |
-| `--dry-run` | Preview writes |
+| `--dry-run` | Preview only |
 | `--apps-dir VibeCodingToolsDown` | Search the separate catalog |
 | `--min-score N` | Match threshold (default 40) |
 
-At the prompt: index `1` or `1,3`, `a` for all matches, **Enter** to skip.
+At the prompt: index `1` or `1,3`, `a` for all, **Enter** to skip.
+
+### Closed loop: search → list → update
+
+```bat
+lookup_app.bat --platform windows cherrytree
+run_saved_apps.bat
+```
+
+Default list files: `saved_apps_windows.json` (or `_darwin` / `_linux`). Custom path:
+
+```bat
+lookup_app.bat --save lists\my.json joplin
+run_saved_apps.bat lists\my.json
+set SAVED_APPS_LIST=lists\my.json
+run_saved_apps.bat
+```
+
+Bulk catalog from [dayanzai.me/windows](https://www.dayanzai.me/windows): `python tools/import_dayanzai_windows.py --apply`; sync to darwin/linux: `python tools/sync_dayanzai_to_darwin_linux.py`.
 
 ### Option B: edit JSON
 
@@ -266,7 +288,8 @@ python lookup_app.py --no-prompt v2ray
 
 ## 13. Maintenance scripts
 
-- Fuzzy app lookup / enable: `lookup_app.bat <keyword>` or `python lookup_app.py <keyword>` (see §3)
+- Fuzzy lookup / saved list: `lookup_app.bat <keyword>` (see §3 closed loop)
+- Update from list: **`run_saved_apps.bat`** or `python tools/run_saved_apps.py`
 - Reset all `enabled` to `false`: **`reset_enabled_json.bat`** at repo root, or `python tools/reset_enabled_json.py` (`--dry-run` to preview; snapshot defaults to `tools/last_enabled_before_reset.json`)
 - Restore `enabled` from snapshot: **`apply_enabled_snapshot.bat`** or `python tools/apply_enabled_snapshot.py`
 - Split legacy `apps/darwin.json` / `apps/linux.json` into shard dirs: `python tools/split_darwin_linux_to_dirs.py` (backs up `*.json.bak`)

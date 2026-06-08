@@ -53,7 +53,8 @@
 
 | 目的 | 命令 |
 |------|------|
-| 模糊查找应用、开启条目 | `lookup_app.bat <关键词>` 或 `python lookup_app.py <关键词>` |
+| 模糊查找、加入更新列表 | `lookup_app.bat <关键词>`（见 README §3 闭环） |
+| 按列表一键更新 | `run_saved_apps.bat` 或 `python tools/run_saved_apps.py` |
 | 批量下载已启用条目 | `python auto_update.py`（可选 `--platform windows\|darwin\|linux`） |
 | 全部关闭 enabled | 根目录 `reset_enabled_json.bat` 或 `python tools/reset_enabled_json.py` |
 | 字段说明与分类参考 | [`apps/root.json`](apps/root.json) 内 `_说明` |

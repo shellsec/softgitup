@@ -14,8 +14,9 @@ if errorlevel 1 (
 if "%~1"=="" (
     echo 用法: lookup_app.bat ^<关键词^> [更多关键词...]
     echo 示例: lookup_app.bat drawio
-    echo       lookup_app.bat v2ray
-    echo 选项请用: python lookup_app.py --help
+    echo       lookup_app.bat --platform windows cherrytree
+    echo 加入更新列表后一键更新: run_saved_apps.bat windows
+    echo 更多选项: python lookup_app.py --help
     pause
     exit /b 1
 )

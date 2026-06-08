@@ -1,8 +1,28 @@
 {
-  "generated_at": "2026-06-08T08:07:27Z",
+  "generated_at": "2026-06-08T08:51:44Z",
   "root": "E:/GITHUB/已经发布/gh-release-fetch",
-  "count": 0,
-  "items": [],
-  "by_category": {},
+  "count": 2,
+  "items": [
+    {
+      "path": "apps/windows/05-办公与设计.json",
+      "id": "drawio",
+      "分类": "办公与设计",
+      "简介": "流程图 / 架构图桌面版（draw.io）"
+    },
+    {
+      "path": "apps/windows/15-笔记.json",
+      "id": "joplin",
+      "分类": "笔记",
+      "简介": "Markdown 笔记，默认参与更新"
+    }
+  ],
+  "by_category": {
+    "办公与设计": [
+      "drawio"
+    ],
+    "笔记": [
+      "joplin"
+    ]
+  },
   "dry_run": false
 }
