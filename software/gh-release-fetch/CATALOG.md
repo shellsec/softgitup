@@ -49,6 +49,13 @@
 | `29-局域网文件共享.json` | 局域网文件共享 | 10 | 10 | 10 |
 | `30-代理与隧道.json` | 代理与隧道 | 7 | 9 | 8 |
 
+## 推荐阅读
+
+| 文档 | 内容 |
+|------|------|
+| [`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md) | Windows 全库应用介绍（516 条，30 分类；`python tools/generate_recommended_md.py` 刷新） |
+| [`RECOMMENDED.md`](RECOMMENDED.md) | 英文表格版 |
+
 ## 常用操作
 
 | 目的 | 命令 |

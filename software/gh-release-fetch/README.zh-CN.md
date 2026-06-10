@@ -29,6 +29,10 @@
 - `lookup_app.py` / `lookup_app.bat`：在 `apps/` 清单中**模糊检索**、可选开启 `enabled`、加入**更新列表**（见 §3 闭环）
 - `run_saved_apps.bat`：按列表一键开启并执行 `auto_update.py`（与 `lookup_app` 配套）
 
+### 推荐软件介绍（Markdown）
+
+不知道清单里有什么、各自干什么用时，先看 **[`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md)**：**Windows 全库 516 条**按 30 个分类的应用介绍（简介、仓库、分片、配置完整度、`lookup_app` 命令）。刷新：`python tools/generate_recommended_md.py`。分片统计见 [`CATALOG.md`](CATALOG.md)。
+
 ### VibeCodingToolsDown（可选独立清单）
 
 与主 [`apps/`](apps/) **完全分离** 的第二套配置，目录为 [`VibeCodingToolsDown/`](VibeCodingToolsDown/)：面向 AI 编程相关 IDE 等条目；各产品下载直链由 [`VibeCodingToolsDown/scripts/build_manifest.py`](VibeCodingToolsDown/scripts/build_manifest.py) 聚合写入 **`dist/vibecoding/manifest.json`**，[`auto_update.py`](auto_update.py) 通过条目中的 `resolve_via=github_pages_manifest` 与 [`VibeCodingToolsDown/root.json`](VibeCodingToolsDown/root.json) 里的 `vibecoding_manifest_url` 读取（支持本地相对路径或 **HTTPS**，例如 **`raw.githubusercontent.com`** 上的 manifest）。

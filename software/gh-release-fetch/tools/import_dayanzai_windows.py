@@ -12,6 +12,7 @@
 筛选：标题/摘要/标签含「开源」或标签含 GitHub；正文含 github.com 链接。
 无直链时尝试 GitHub Search API（需 GITHUB_TOKEN 环境变量，否则跳过）。
 新条目默认写入 apps/windows/99-未匹配-windows分片.json。
+缓存目录 tools/dayanzai_cache/ 仅加速重复抓取，已 .gitignore，日常 lookup/run_saved_apps 闭环不需要。
 """
 from __future__ import annotations
 

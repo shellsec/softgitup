@@ -11,6 +11,12 @@ A tool system for managing local software directories and automatically syncing 
 
 For the latest curated software list and notes, see [`Lastb_soft_version.txt`](Lastb_soft_version.txt).
 
+<!-- SOFTWARE_SIZE_START -->
+> 📦 **`software/` size stats** (auto-refreshed by `generate_and_push.bat`):
+> **21** packages, **4,075** files, **1.46 GB** total; generated at 2026-06-10 16:55.
+> Top 5 by size: system_good (601.3 MB), PotPlayer (260.5 MB), UltraEdit (198.3 MB), notepad++ (72.9 MB), SublimeText (66.1 MB).
+<!-- SOFTWARE_SIZE_END -->
+
 **Maintainer page check** (optional — `software/` works fine without updates): see [`soft_page_check/`](soft_page_check/README.md). Run `monthly_sop.bat` to compare page titles; update and publish only when you confirm changes.
 
 This toolkit is built around **information security and reducing data leakage**, aiming to minimize cloud reporting, behavioral tracking, and algorithmic data harvesting where practical.
@@ -64,16 +70,18 @@ The following is a **self-check summary** of choices in that list, useful when c
 ### 📦 Supported Software
 - **Text Editors**: Notepad++, notepad-, SublimeText, EditPlus, EmEditor (large files 16T), UltraEdit
 
-- **System Tools**: CCleaner, Everything, WinMemoryCleaner, CrystalDiskInfo, NetTime
+- **System Tools**: CCleaner, WiseCare365, Everything, WinMemoryCleaner, CrystalDiskInfo, NetTime (see the [CCleaner vs WiseCare365 vs PC Fresh comparison](CCleanerPro_vs_WiseCare365Pro_vs_PCFresh.txt), Chinese)
 
 - **Compression Tools**: WinRAR, 7-Zip, excellent image viewer XnViewMP
+
+- **Uninstall & Data Recovery**: GeekUninstaller (single portable exe; fast, removes leftovers, handles built-in Windows apps), DiskGenius (partition management / deleted-file recovery) — both under `system_good/`
 
 - **Startup Management**: HiBit Startup Manager, duplicate file finder Duplicate Cleaner Pro
 
 - **System Optimization**: system_good directory contains multiple system tools
   - Driver Management: Driver Talent (overseas version)
   - System Optimization: Start menu StartBackAIO supports all Windows versions, disable patch updates, KMS activation, disable built-in antivirus
-  - Utility Tools: Ditto clipboard, DuplicateCleaner duplicate file cleanup, Putty, SmartDefrag disk defragmentation, etc.
+  - Utility Tools: Ditto clipboard, DuplicateCleaner duplicate file cleanup, Putty, MobaXterm, SmartDefrag disk defragmentation, PC Fresh performance tuning, WizTree disk space analyzer, PasteEx clipboard-to-file, etc.
   - File Server: [copyparty](https://github.com/9001/copyparty) - Local self-hosted sync, Web file server, open source secure, multi-platform support
   - DNS Configuration Tools: One-click encrypted DNS (DoH) configuration
     - `Configure_AdGuard_DNS.bat` - Configure AdGuard DNS (free, blocks ads, trackers, malicious websites)  
@@ -835,6 +843,7 @@ MIT License
 - [手机隐私安全配置指南](手机隐私安全配置指南.md) - Complete mobile privacy configuration guide (Chinese)
 - [Mobile Privacy & Security Guide](Mobile_Privacy_Security_Guide.md) - Complete mobile privacy configuration guide (English)
 - [常用工具开源下载](常用工具开源下载.md) - Open-source download links for common tools (Chinese)
+- [Cleaner/optimizer comparison: CCleaner Pro vs WiseCare365 Pro vs PC Fresh](CCleanerPro_vs_WiseCare365Pro_vs_PCFresh.txt) - Auto-optimization features, benchmarks, setup guides and use-case matching, 2026 (Chinese)
 - [GitHub Releases on-demand updates (githubwindowntools)](software/githubwindowntools/README.md) - `apps.json`, enabling apps, `--platform`, mirrors / fallback behavior (README primarily Chinese)
 - [Software & privacy notes (source list)](Lastb_soft_version.txt) - Long-form curated list aligned with `software/system_good/` and related paths (mostly Chinese)
 

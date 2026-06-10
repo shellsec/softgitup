@@ -184,6 +184,47 @@ https://7-zip.org/download.html
 https://www.423down.com/778.html
 核心特点：汉化界面操作便捷，已注册无功能限制，支持多格式兼容，解压速度快，日常使用适配性高
 
+卸载工具
+GeekUninstaller 选这个
+实测 GeekUninstaller 会速度快，支持win自带的插件卸载 7MB
+https://geekuninstaller.com/download?version=1.5.3.170
+
+当然还有其他选择 https://www.ghxi.com/bulkcrapuninstaller.html 体积有点大，需要.NET
+HiBit Uninstaller 4.0.10 15MB
+https://www.hibitsoft.ir/HiBitUninstaller/Changelog.txt
+第一类：主打“卸载干净、深度扫描” (首选推荐)
+这类工具的核心是卸载后用更激进的算法扫描注册表和硬盘，删除顽固残留。
+软件  价格  优点  缺点  适合谁
+Revo Uninstaller Pro    付费 (有免费版)   业界标杆，扫描引擎非常强大，提供多种扫描模式，还有猎人模式、浏览器扩展管理。  免费版功能受限 (如缺少强力扫描)。  追求极致干净的进阶用户，愿意付费。
+Total Uninstall Professional    付费  特色是“安装监控”。先拍快照，再安装软件，卸载时精准还原所有改动，非常彻底。  界面稍显老旧，学习成本略高于Revo。 软件测试员、洁癖用户，需要100%回滚安装操作。
+HiBit Uninstaller   免费  免费中的强者。功能接近Revo付费版，有强制卸载、安装监视器、浏览器管理、注册表清理等。    知名度稍低，界面相对朴素。   不想付费，但需要强力卸载功能的用户。
+第二类：主打“轻巧便携、免费实用”
+这类工具不追求最极致的深度，但胜在免费、小巧、够用。
+软件  价格  优点  缺点  适合谁
+Geek Uninstaller    免费  极致轻巧 (约3MB)，单文件免安装，响应快，卸载后能清除常见残留。  功能单一，不支持监控安装，清理深度不如Revo。    绝大多数普通用户，想简单干净地卸载软件。
+Wise Program Uninstaller    免费  界面清爽友好，中文名“明智卸载”，支持安全卸载和强制卸载，有“卸载后寻找残留”功能。  深度扫描能力中等，比不上HiBit。  喜欢WiseCleaner产品风格的用户，求稳。
+Uninstall Tool  付费/有旧版免费    历史悠久，启动速度快，可以卸载Windows商店应用，管理自启动项。  免费版较老，新版本主要功能需付费。   习惯用老牌工具的用户。
+第三类：特定用途
+软件  价格  优点  缺点  适合谁
+Display Driver Uninstaller (DDU)    免费  显卡驱动卸载的王牌。能彻底清除N/A/I显卡的所有残留文件和注册表，解决驱动冲突问题。 不要用它卸载普通软件。界面简陋，只适合驱动。  需要更换显卡、更新驱动遇到问题、驱动冲突导致蓝屏的用户。
+Bulk Crap Uninstaller (BCU) 免费  开源、批量卸载利器。可以一次勾选多个软件自动卸载，过滤能力强大。    界面复杂，选项较多，对新手不太友好。  软件收藏家、系统封装者，需要一次性清理大量无用软件。
+IObit Uninstaller   免费增值    界面华丽，能强力卸载顽固软件、卸载浏览器插件，支持“安装监视器”。   IObit公司口碑一般 (曾有捆绑和争议行为)。    不太介意厂商背景，喜欢炫酷界面的用户。
+O&O AppBuster   免费  专门针对Windows系统自带的预装应用 (App) 和现代应用，清理干净。  不能卸载传统的Win32软件 (如Office、QQ)。    想彻底精简Windows系统，卸载掉所有自带垃圾应用的用户。
+总结：到底选哪个？
+如果你只想装一个简单好用的免费工具：选 Geek Uninstaller。
+如果你觉得Geek不够干净，又不想付费：选 HiBit Uninstaller。
+如果你愿意花钱买最专业的体验：选 Revo Uninstaller Pro。
+如果你要换显卡或解决驱动问题：选 Display Driver Uninstaller (DDU)。
+如果你想连系统自带应用一起干掉：选 O&O AppBuster。
+一句话
+日常用 Geek Uninstaller；觉得不够干净就换 HiBit Uninstaller；再不满足就上付费的 Revo Uninstaller Pro。
+
+硬盘分区 数据恢复 DiskGenius v6.0.1.1645 中文注册版
+DiskGenius-Pro-v6.0.1.1645-x64-Chs
+https://down66.com/diskgenius
+https://423down.lanzout.com/b0f3u4nyf#292a
+为啥最终放进来，主要拿来恢复误删除文件，很好用
+
 系统工具
 CCleaner Pro v6.40.11562 注册版
 核心特点：无强制安装杀毒软件，清洁优化功能有效，专业版功能全开，支持系统垃圾清理、注册表优化，避免 7.x 版本的隐私追踪、功能失效问题
@@ -616,6 +657,11 @@ https://www.ghxi.com/visualcppredist.html
 元宝需要组件Microsoft Edge WebView2
 https://www.423down.com/16774.html
 https://developer.microsoft.com/zh-cn/microsoft-edge/webview2
+Microsoft Edge v149.0.4022.62 离线安装包 - 果核剥壳
+https://www.ghxi.com/microsoftedge.html
+
+
+
 
 python版本
 最快”的 CPython 的确是 3.14，但**“最快 + 最稳定”** 目前仍是 Python 3.11.x
@@ -1327,7 +1373,8 @@ SoftGitUp是一个跨平台的软件同步工具
 /shellsec/softgitup
 软件卸载
 /Klocman/Bulk-Crap-Uninstaller
-
+WPS Office 2023 v12.8.2.21555 专业增强版 永久激活
+https://down66.com/wps-office-2023
 
 
 # [2026-05-14] Microsoft .NET Runtime(.NET8.0) v8.0.26
@@ -2027,6 +2074,7 @@ https://www.423down.com/13787.html
 https://www.423down.com/12771.html
 # [2025-05-14] xb21cn_Win10 v22H2 Build 19045.5854.1
 https://www.423down.com/13996.html
+
 
 
 安卓投屏

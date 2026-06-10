@@ -10,6 +10,12 @@
 一个用于管理本地软件目录并自动同步更新的工具系统，支持GitHub和GitLab云存储，支持Git加速下载。
 具体可查看 [`Lastb_soft_version.txt`](Lastb_soft_version.txt) 最新更新文档。
 
+<!-- SOFTWARE_SIZE_START -->
+> 📦 **software/ 体积统计**（`generate_and_push.bat` 自动刷新）：
+> 共 **21** 款软件、**4,075** 个文件，合计 **1.46 GB**；统计时间 2026-06-10 16:55。
+> 体积 Top5：system_good (601.3 MB)、PotPlayer (260.5 MB)、UltraEdit (198.3 MB)、notepad++ (72.9 MB)、SublimeText (66.1 MB)。
+<!-- SOFTWARE_SIZE_END -->
+
 **维护者月度快检**（可选，不更新 `software/` 也完全可用）：见 [`soft_page_check/`](soft_page_check/README.md) — 双击 `monthly_sop.bat` 检查页面标题变化，有变化再手工更新并发布。
 
 本工具集基于**信息安全与数据防泄漏原则**构建，尽可能减少云端上报、行为跟踪与算法数据收割
@@ -63,16 +69,18 @@
 ### 📦 支持的软件
 - **文本编辑器**: Notepad++、notepad-、SublimeText、EditPlus、EmEditor(大文件16T)、UltraEdit
 
-- **系统工具**: CCleaner、Everything、WinMemoryCleaner、CrystalDiskInfo、NetTime
+- **系统工具**: CCleaner、WiseCare365、Everything、WinMemoryCleaner、CrystalDiskInfo、NetTime（清理优化怎么选见 [CCleaner vs WiseCare365 vs PC Fresh 对比](CCleanerPro_vs_WiseCare365Pro_vs_PCFresh.txt)）
 
 - **压缩工具**: WinRAR、7-Zip、非常好用看图工具XnViewMP
+
+- **卸载与数据恢复**: GeekUninstaller（单文件免安装，卸载快、清残留、支持系统自带应用）、DiskGenius（分区管理 / 误删文件恢复），均位于 `system_good/`
 
 - **启动管理**: HiBit Startup Manager，查找重复文件 Duplicate Cleaner Pro
 
 - **系统优化**: system_good目录包含多个系统工具
   - 驱动管理: 驱动人生海外版 (DriverTalent)
   - 系统优化: 开始菜单StartBackAIO支持全系win、关闭补丁更新、kms激活、关闭自带杀毒
-  - 实用工具: Ditto剪贴板、DuplicateCleaner重复文件清理、Putty、SmartDefrag磁盘整理等
+  - 实用工具: Ditto剪贴板、DuplicateCleaner重复文件清理、Putty、MobaXterm、SmartDefrag磁盘整理、PC Fresh性能调优、WizTree磁盘空间分析、PasteEx剪贴板落文件等
   - 文件服务器: [copyparty](https://github.com/9001/copyparty) - 本地自行建站同步、Web文件服务器、开源安全、多平台支持
   - DNS配置工具: 一键配置加密DNS (DoH)
     - `Configure_AdGuard_DNS.bat` - 配置 AdGuard DNS（免费，拦截广告、跟踪器、恶意网站）  
@@ -837,6 +845,7 @@ MIT License
 - [手机隐私安全配置指南](手机隐私安全配置指南.md) - iOS/Android/国产系统隐私安全配置完整指南（中文）
 - [Mobile Privacy & Security Guide](Mobile_Privacy_Security_Guide.md) - Complete mobile privacy configuration guide (English)
 - [常用工具开源下载](常用工具开源下载.md) - 常用工具开源下载
+- [清理优化选型对比：CCleaner Pro vs WiseCare365 Pro vs PC Fresh](CCleanerPro_vs_WiseCare365Pro_vs_PCFresh.txt) - 自动优化功能、实测数据、配置指南与适用场景对比（2026）
 - [GitHub Releases 按需更新（githubwindowntools）](software/githubwindowntools/README.md) - `apps.json` 配置、启用应用、指定平台与镜像回退等说明
 - [装机清单原文](Lastb_soft_version.txt) - 与本仓库 `software/system_good/` 等目录配套的软件与隐私向说明（长文）
 

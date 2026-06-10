@@ -29,6 +29,10 @@ This repository helps you maintain a **version-controlled list** of open-source 
 - [`lookup_app.py`](lookup_app.py) / [`lookup_app.bat`](lookup_app.bat) — fuzzy search, optional `enabled`, add to **saved update list** (see **§3** closed loop).
 - [`run_saved_apps.bat`](run_saved_apps.bat) — enable + run `auto_update.py` for all apps in that list.
 
+### Recommended apps (Markdown guide)
+
+Browse **[`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md)** — all **516** Windows apps by category (intro, repo, shard, lookup command). Regenerate: `python tools/generate_recommended_md.py`. Stats: [`CATALOG.md`](CATALOG.md).
+
 **Optional second catalog: [`VibeCodingToolsDown/`](VibeCodingToolsDown/)**
 
 Separate from [`apps/`](apps/): AI-coding–oriented entries, `manifest.json` built by [`VibeCodingToolsDown/scripts/build_manifest.py`](VibeCodingToolsDown/scripts/build_manifest.py), consumed via `resolve_via=github_pages_manifest` and `vibecoding_manifest_url` in [`VibeCodingToolsDown/root.json`](VibeCodingToolsDown/root.json) (local path or HTTPS, e.g. raw GitHub). Windows: [`run_update_VibeCodingToolsDown.bat`](VibeCodingToolsDown/run_update_VibeCodingToolsDown.bat). Reset/restore `enabled` for this catalog only: [`VibeCodingToolsDown/tools/reset_enabled_json.bat`](VibeCodingToolsDown/tools/reset_enabled_json.bat) / [`apply_enabled_snapshot.bat`](VibeCodingToolsDown/tools/apply_enabled_snapshot.bat) (snapshots under that folder’s `tools/`). CLI: `python auto_update.py --apps-dir VibeCodingToolsDown` or `python vibe_update.py` from that folder. CI: copy [`VibeCodingToolsDown/ci/vibecodingtoolsdown-pages.monorepo.example.yml`](VibeCodingToolsDown/ci/vibecodingtoolsdown-pages.monorepo.example.yml) to `.github/workflows/` when your token can modify workflows (needs `workflow` scope for HTTPS PAT). See [`VibeCodingToolsDown/README.md`](VibeCodingToolsDown/README.md).

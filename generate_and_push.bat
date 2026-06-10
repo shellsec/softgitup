@@ -29,6 +29,8 @@ python soft_manager.py --generate-only
 if %errorlevel% equ 0 (
     echo.
     echo 软件列表生成成功！
+    echo 正在刷新 README.md 中的 software 体积统计...
+    python update_readme_size.py
     echo [OK] 请运行 push_git.bat 提交并推送.
     echo.
     echo 操作完成！
