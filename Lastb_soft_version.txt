@@ -12,6 +12,31 @@ $$$$$$$  |$$ |  $$ |\$$$$$$$\ $$ |$$ |$$$$$$$  |\$$$$$$$\ \$$$$$$$\
 """
 个人数字生存指南
 基于信息安全和数据安全的思想减少上报敏感数据和保护自身避免算法收割
+最好的重装系统方案，无需U盘，无广告，随时想装就装下载系统+重装到C盘即可
+1、下载系统，默认百度网盘
+https://www.yyczxt.com/
+https://www.yyczxt.com/original.html#Windows/Windows11/26H1
+https://www.yyczxt.com/original.html#Windows/Windows11/25H2
+2、无需U盘，一键加载iso重装系统
+从“不需要PE”这个需求出发，最推荐你使用 EasyRC 这款工具。它是一个免费、绿色的软件，可以直接在Windows系统里运行，避免了PE工具可能带来的广告捆绑问题。
+⚙️ 工具推荐与对比
+工具名称    核心优势    适用场景
+EasyRC  操作简单，界面友好，社区普遍评价纯净。 用户口碑较好，是首选的“纯净版”重装工具。
+Hasleo WinToHDD 功能全面，支持“热克隆”系统，内置“创建多安装USB”等高级功能。   功能最全面，除了重装，还能克隆系统、创建多功能启动盘。
+CoolReinstall   绿色版无需安装，可以在线下载系统，下载速度很快。    追求极致简便，或希望软件同时提供系统镜像下载的用户。
+Ventoy  开源免费，兼容性强，支持多ISO并存。 手边有U盘，追求最通用、最灵活安装方式的用户。
+3、EasyRC下载 30MB+，功能丰富，无广告，且可以在线安装系统。都是纯净系统 EasyRC.7z
+https://firpe.cn/page-196
+更新日志
+https://firpe.cn/page-609
+https://firpe.cn/
+参考内容：
+https://cloud.tencent.cn/developer/article/2662167?policyId=1004
+https://cloud.tencent.cn/developer/article/2646514?policyId=1004
+其他测试过，有广告
+laomaotao 优启通，繁琐
+
+
 Zen 是一款适用于 Windows、macOS 和 Linux 的开源系统级广告拦截器和隐私保护程序。它的工作原理是设置一个代理，拦截来自所有应用程序的 HTTP 请求，并阻止那些投放广告、跟踪监控您的行为、恶意软件和其他不需要的内容的脚本。通过在系统级别运行，Zen 可以防御浏览器扩展无法防御的威胁，例如嵌入桌面应用程序和操作系统组件中的跟踪器。Zen 附带了许多预装的过滤器，而且还可以轻松添加主机文件和 EasyList 样式的过滤器，能够根据特定需求定制保护。
 PS：为啥不用adguard，adguard卡网
 https://github.com/anfragment/zen
@@ -964,34 +989,6 @@ https://github.com/huiyadanli/PasteEx
 安装 / 解压后运行一次，它会自动加到右键菜单。
 先复制一大段文字（Ctrl+C）
 在文件夹空白处 → 右键 → Paste As File
-
-
-
-最好的重装系统方案，无需U盘，无广告，下载系统+重装到C盘即可
-1、下载系统，默认百度网盘
-https://www.yyczxt.com/
-https://www.yyczxt.com/original.html#Windows/Windows11/26H1
-https://www.yyczxt.com/original.html#Windows/Windows11/25H2
-2、无需U盘，一键加载iso重装系统
-从“不需要PE”这个需求出发，最推荐你使用 EasyRC 这款工具。它是一个免费、绿色的软件，可以直接在Windows系统里运行，避免了PE工具可能带来的广告捆绑问题。
-⚙️ 工具推荐与对比
-工具名称    核心优势    适用场景
-EasyRC  操作简单，界面友好，社区普遍评价纯净。 用户口碑较好，是首选的“纯净版”重装工具。
-Hasleo WinToHDD 功能全面，支持“热克隆”系统，内置“创建多安装USB”等高级功能。   功能最全面，除了重装，还能克隆系统、创建多功能启动盘。
-CoolReinstall   绿色版无需安装，可以在线下载系统，下载速度很快。    追求极致简便，或希望软件同时提供系统镜像下载的用户。
-Ventoy  开源免费，兼容性强，支持多ISO并存。 手边有U盘，追求最通用、最灵活安装方式的用户。
-官方 setup.exe    最原生安全，系统自带。 系统仍可正常运行，仅需执行普通升级/安装的用户。
-3、EasyRC下载 30MB+，功能丰富，无广告，且可以在线安装系统 EasyRC.7z
-https://firpe.cn/page-196
-更新日志
-https://firpe.cn/page-609
-https://firpe.cn/
-参考内容：
-https://cloud.tencent.cn/developer/article/2662167?policyId=1004
-https://cloud.tencent.cn/developer/article/2646514?policyId=1004
-优启通，繁琐
-其他测试过，有广告
-laomaotao
 
 
 
