@@ -12,8 +12,8 @@
 
 <!-- SOFTWARE_SIZE_START -->
 > 📦 **software/ 体积统计**（`generate_and_push.bat` 自动刷新）：
-> 共 **21** 款软件、**4,075** 个文件，合计 **1.46 GB**；统计时间 2026-06-10 16:55。
-> 体积 Top5：system_good (601.3 MB)、PotPlayer (260.5 MB)、UltraEdit (198.3 MB)、notepad++ (72.9 MB)、SublimeText (66.1 MB)。
+> 共 **21** 款软件、**4,076** 个文件，合计 **1.49 GB**；统计时间 2026-06-10 21:31。
+> 体积 Top5：system_good (632.7 MB)、PotPlayer (260.5 MB)、UltraEdit (198.3 MB)、notepad++ (72.9 MB)、SublimeText (66.1 MB)。
 <!-- SOFTWARE_SIZE_END -->
 
 **维护者月度快检**（可选，不更新 `software/` 也完全可用）：见 [`soft_page_check/`](soft_page_check/README.md) — 双击 `monthly_sop.bat` 检查页面标题变化，有变化再手工更新并发布。
