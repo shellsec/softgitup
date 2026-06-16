@@ -2,12 +2,17 @@
 Історія версій PotPlayer
 
 ----------------------------------------------------------
-[260601]
+[260616]
 ----------------------------------------------------------
+* Removed Kakao TV
+
++ Added pause function when navigating via the navigation bar
+
 - Significantly improved internal stability
 - Fixed an issue where colors appeared strange during RGB24 processing
 - Improved playback for some HTTP streams
-- Improved synchronization handling for the built-in audio renderer
+- Improved sync processing for the built-in audio renderer
+- Fixed an issue where certain MP4 files behaved abnormally during playback
 
 ----------------------------------------------------------
 [260401]
