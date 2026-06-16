@@ -817,8 +817,14 @@ def main():
     import uvicorn
     if DISABLE_AUTH:
         print("Auth: disabled (--no-auth)")
+        if a.host == "0.0.0.0":
+            print("WARNING: Auth disabled and listening on 0.0.0.0 — do not expose to untrusted networks", file=sys.stderr)
     else:
         print("Auth: enabled, API key (X-API-Key):", API_KEY)
+        if API_KEY == "change-me-in-production":
+            print("WARNING: Using default API_KEY — set --api-key or env API_KEY before production use", file=sys.stderr)
+    if a.host == "0.0.0.0" and API_KEY == "change-me-in-production":
+        print("WARNING: Listening on all interfaces with default API key", file=sys.stderr)
     if ENABLE_DOCS:
         print("Docs: enabled (--docs), visit / for HTML API docs")
     if ENABLE_GET_CMD_EXEC:
