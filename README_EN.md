@@ -13,7 +13,7 @@ For the latest curated software list and notes, see [`Lastb_soft_version.txt`](L
 
 <!-- SOFTWARE_SIZE_START -->
 > 📦 **`software/` size stats** (auto-refreshed by `generate_and_push.bat`):
-> **21** packages, **4,078** files, **1.54 GB** total; generated at 2026-06-16 21:02.
+> **21** packages, **4,078** files, **1.54 GB** total; generated at 2026-06-17 09:26.
 > Top 5 by size: system_good (665.5 MB), PotPlayer (276.0 MB), UltraEdit (198.3 MB), notepad++ (72.9 MB), SublimeText (66.1 MB).
 <!-- SOFTWARE_SIZE_END -->
 

@@ -359,6 +359,21 @@ https://github.com/anilbeesetti/nextplayer 速度可以慢速到0.2,最慢了
 https://gh-proxy.com/github.com/anilbeesetti/nextplayer/releases/download/v0.16.3/nextplayer-v0.16.3-universal.apk
 https://7xiazai.com/xplayer 效果也不错
 https://7xiazai.com/nplayer
+| 需求场景 | iOS 推荐 | Android 推荐 |
+|----------|---------|-------------|
+| **零成本·通吃格式·无广告** | VLC for iOS | VLC for Android |
+| **最强字幕+手势操控** | nPlayer | MX Player |
+| **NAS/海报墙/家庭影院感** | Infuse | Nova Video Player 或 Kodi |
+| **国内网盘直挂** | VidHub | Kodi + Alist / 直接用各网盘官方App |
+视频格式转换工具推荐：2026年最好用的免费格式转换软件
+5款主流格式转换工具综合对比
+软件  支持格式    批量转换    画质/压缩   上手难度    是否免费    推荐场景
+HandBrake   几乎全部输入 → MP4/MKV    支持  ★★★★★（H.265）    ⭐⭐⭐（稍复杂）    完全免费    高质量压缩/归档
+格式工厂    几乎全部 ↔ 几乎全部 支持  ★★★（可配置）    ⭐⭐⭐⭐⭐（极简单）  免费（含广告） 日常批量转换
+VLC（内置转换）   几乎全部 → MP4/MKV等 不支持 ★★★ ⭐⭐⭐⭐（较简单）   完全免费    单文件快速转换
+FFmpeg（命令行） 支持所有格式  支持  ★★★★★（最强）   ⭐（需学命令） 完全免费    开发者/高级用户
+在线转换（CloudConvert等） 500+格式  有限制 ★★★ ⭐⭐⭐⭐⭐（无需安装） 免费版有次数限制    偶尔转换/临时使用
+
 
 
 system_good目录下
@@ -441,6 +456,13 @@ https://www.ghxi.com/faststone.html
 https://github.com/XMuli/SunnyCapturer/releases
 snipaste.com
 https://www.snipaste.com/index.html
+5款录屏软件综合对比
+软件  直播支持    画质上限    有无水印    资源占用    上手难度    是否免费    推荐指数
+OBS Studio  支持  无上限 无水印 中等  ⭐⭐⭐（较复杂）    完全免费    ⭐⭐⭐⭐⭐
+EV录屏    支持  1080p   无水印 低   ⭐⭐⭐⭐⭐（极简单）  免费版可用   ⭐⭐⭐⭐⭐
+Win+G 游戏栏   不支持 1080p/60fps 无水印 极低  ⭐⭐⭐⭐⭐（系统自带） 系统自带    ⭐⭐⭐⭐
+ShareX  不支持 无上限 无水印 低   ⭐⭐⭐（功能多较复杂） 完全免费    ⭐⭐⭐⭐
+Bandicam    不支持 4K/120fps   免费版有水印  极低  ⭐⭐⭐⭐⭐（简单）   免费版有限制  ⭐⭐⭐⭐
 
 
 MediaManage，对比其他工具不是15M就是40M太大了，这个才1.5m速度很快
