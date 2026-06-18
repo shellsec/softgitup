@@ -501,10 +501,6 @@ ghpym.com
 查找重复文件 Duplicate Cleaner Pro v5.27.0 绿色便携版注册版不要更新 Duplicate.7z
 核心特点：精准扫描删除各类重复文件，释放磁盘空间，绿色便携无残留，切记不要更新
 
-Ditto 3.25.113.0 剪贴板历史管理神器，支持搜索、分组、快捷键，绿色版可用
-https://github.com/sabrogden/Ditto
-核心特点：记录所有剪贴板内容，支持搜索、分组、快捷键调用，可保存文本 / 图片 / HTML 等格式，轻量无捆绑
-
 putty Release 0.84 https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 核心特点：支持 ML-KEM 后量子密钥交换算法，Unicode 支持优化，免费无广告，轻量实用，是远程连接必备工具
 上面那个临时可以用，但是日常运维服务器还是需要专业管理
@@ -790,7 +786,16 @@ https://www.python.org/downloads/release/python-31114/
 https://www.python.org/ftp/python/3.11.9/python-3.11.9-amd64.exe
 
 
-# 复制黏贴粘贴版，同步
+# 复制黏贴粘贴版，同步工具
+目前首选 uniclipboard 20MB
+https://github.com/UniClipboard/UniClipboard
+作者 https://www.z2blog.com/
+目前使用这个 https://www.uniclipboard.app/zh，体验感更加好，关键解决了老机器显卡显示问题
+开源、端到端加密的通用剪贴板。文本、图片、文件在 Mac、Windows、Linux、iPhone 与 Android 之间实时同步——无需账号，也不经过任何第三方服务器。
+全平台支持 https://github.com/UniClipboard/UniClipboard/releases
+https://gh-proxy.com/github.com/UniClipboard/UniClipboard/releases/download/v0.16.0-alpha.3/UniClipboard_0.16.0-alpha.3_x64-portable.zip
+
+crosspaste.com这个网络老是出现问题，放弃，crosspaste 159MB，一个uniclipboard 20MB
 # 局域网 + 注重隐私：选 CrossPaste 或 DecentPaste，P2P 传输无服务器记录
 # 跨网络 + 自建服务器：选 SyncClipboard，Docker 部署便捷
 # 全平台 + 全格式：选 ClipShare，移动端适配优秀
@@ -804,6 +809,10 @@ https://gh-proxy.com/github.com/CrossPaste/crosspaste-desktop/releases/download/
 老机器稳定版本（集成显卡，GT740，k6000之类）
 https://gh-proxy.com/github.com/CrossPaste/crosspaste-desktop/releases/download/1.2.4.1778/crosspaste-1.2.4-1778-windows-amd64.zip
 
+Ditto 3.25.113.0 剪贴板历史管理神器，支持搜索、分组、快捷键，绿色版可用 4.8MB
+https://github.com/sabrogden/Ditto
+核心特点：记录所有剪贴板内容，支持搜索、分组、快捷键调用，可保存文本 / 图片 / HTML 等格式，轻量无捆绑
+https://github.com/sabrogden/Ditto/releases/download/3.25.113.0/DittoPortable_3_25_113_0.zip
 
 迅雷 Thunder v12.4.4.3740 去广告绿色精简版
 迅雷12正式版(Thunder)采用了扁平化设计界面,全新升级了极速下载引擎,增加了离线下载加速,云盘空间扩容至12TB超级会员专属特权,增强了云盘在线播放器能力,此外,增加了磁力链接在线解析,资源嗅探等功能插件
@@ -1392,6 +1401,8 @@ https://www.423down.com/16475.html
 https://www.7xiazai.com/photoshop2025
 PC虚拟机，模拟器
 https://www.virtualbox.org/wiki/Downloads
+https://www.ghxi.com/virtualbox.html
+https://download.virtualbox.org/virtualbox/6.1.36/VirtualBox-6.1.36-152435-Win.exe
 https://www.ghxi.com/?s=VMware
 https://www.7xiazai.com/ldplayer
 https://www.ghxi.com/mumumnq.html
