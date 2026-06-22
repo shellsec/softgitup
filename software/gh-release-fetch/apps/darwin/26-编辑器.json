@@ -239,5 +239,252 @@
       ".msi",
       "arm64"
     ]
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "void_editor",
+    "简介": "Void（macOS arm64 zip）",
+    "分类": "编辑器",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Void-darwin-arm64-",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "sha1",
+      "sha256",
+      "reh",
+      "x64",
+      "win32",
+      "linux",
+      "exe"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "Void-darwin-arm64-{ver}.zip"
+    ],
+    "save_name": "Void-darwin-arm64-{ver}.zip",
+    "releases_url": "https://bgithub.xyz/voideditor/binaries/releases",
+    "repo_path": "voideditor/binaries"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "neovide",
+    "简介": "Neovide（macOS Apple Silicon dmg）",
+    "分类": "编辑器",
+    "installer_markers": [
+      "Neovide-aarch64-apple-darwin",
+      ".dmg"
+    ],
+    "href_exclude_substrings": [
+      "x86_64",
+      "AppImage",
+      "exe",
+      "msi",
+      "zsync"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "Neovide-aarch64-apple-darwin.dmg"
+    ],
+    "save_name": "Neovide-aarch64-apple-darwin.dmg",
+    "releases_url": "https://bgithub.xyz/neovide/neovide/releases",
+    "repo_path": "neovide/neovide"
+  },
+  {
+    "id": "cursor",
+    "简介": "Cursor macOS universal zip（manifest）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "cursor",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "save_name": "Cursor-darwin-universal.zip"
+  },
+  {
+    "id": "trae",
+    "简介": "Trae macOS dmg（manifest）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "trae",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_extensions": [
+      ".dmg",
+      ".zip"
+    ]
+  },
+  {
+    "id": "trae_cn",
+    "简介": "Trae CN dmg（manifest）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "trae_cn",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_extensions": [
+      ".dmg",
+      ".zip"
+    ]
+  },
+  {
+    "id": "trae_solo",
+    "简介": "TRAE SOLO dmg（manifest）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "trae_solo",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_extensions": [
+      ".dmg",
+      ".zip"
+    ]
+  },
+  {
+    "id": "qoder",
+    "简介": "Qoder dmg（manifest）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "qoder",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_extensions": [
+      ".dmg",
+      ".zip"
+    ]
+  },
+  {
+    "id": "qoderwork",
+    "简介": "QoderWork dmg（manifest）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "qoderwork",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_extensions": [
+      ".dmg",
+      ".zip"
+    ]
+  },
+  {
+    "id": "workbuddy",
+    "简介": "WorkBuddy mac zip（manifest）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "workbuddy",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_extensions": [
+      ".dmg",
+      ".zip"
+    ]
+  },
+  {
+    "id": "codebuddy",
+    "简介": "CodeBuddy dmg（manifest）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "codebuddy",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_extensions": [
+      ".dmg",
+      ".zip"
+    ]
+  },
+  {
+    "id": "codebuddy_cn",
+    "简介": "CodeBuddy CN dmg（manifest）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "codebuddy_cn",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_extensions": [
+      ".dmg",
+      ".zip"
+    ]
+  },
+  {
+    "id": "antigravity",
+    "简介": "Antigravity dmg（manifest）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "antigravity",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_extensions": [
+      ".dmg",
+      ".zip"
+    ]
   }
 ]

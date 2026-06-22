@@ -106,5 +106,41 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/zellij-org/zellij/releases",
     "repo_path": "zellij-org/zellij"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "kilo_cli",
+    "简介": "Kilo Code CLI / 独立包（zip/tar.gz）",
+    "分类": "命令行",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "kilo-linux-x64",
+      ".tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "vscode",
+      "vsix",
+      "baseline",
+      "musl",
+      "darwin",
+      "linux",
+      "arm64"
+    ],
+    "installer_extensions": [
+      ".zip",
+      ".tar.gz"
+    ],
+    "download_names": [
+      "kilo-linux-x64.tar.gz"
+    ],
+    "save_name": "kilo-linux-x64.tar.gz",
+    "releases_url": "https://bgithub.xyz/Kilo-Org/kilocode/releases",
+    "repo_path": "Kilo-Org/kilocode"
   }
 ]

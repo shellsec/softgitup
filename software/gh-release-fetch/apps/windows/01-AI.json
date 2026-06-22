@@ -788,5 +788,219 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "cockpit_tools",
+    "简介": "Cockpit Tools（通用 AI IDE 账号管理：Cursor / Copilot / Windsurf / Codex 等多账号切换、配额监控与多开）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/jlcodes99/cockpit-tools/releases",
+    "repo_path": "jlcodes99/cockpit-tools",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Cockpit.Tools_",
+      "_x64-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "arm64",
+      ".msi",
+      ".sig",
+      "SHA256",
+      "darwin",
+      "linux",
+      "AppImage",
+      ".deb",
+      ".rpm"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Cockpit.Tools_{ver}_x64-setup.exe"
+    ],
+    "save_name": "Cockpit.Tools_{ver}_x64-setup.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "kilocode",
+    "简介": "Kilo Code（开源 AI 编程 VS Code 扩展）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "kilo-vscode-win32-x64",
+      ".vsix"
+    ],
+    "href_exclude_substrings": [
+      "darwin",
+      "linux",
+      "arm64",
+      "alpine",
+      "baseline"
+    ],
+    "installer_extensions": [
+      ".vsix"
+    ],
+    "download_names": [],
+    "save_name": "kilo-vscode-win32-x64.vsix",
+    "releases_url": "https://bgithub.xyz/Kilo-Org/kilocode/releases",
+    "repo_path": "Kilo-Org/kilocode"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "id": "open_webui_desktop",
+    "简介": "Open WebUI Desktop（本地 AI 聊天桌面端）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "open-webui-x64-setup",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "blockmap",
+      "dmg",
+      "mac",
+      "yml"
+    ],
+    "download_names": [
+      "open-webui-x64-setup.exe"
+    ],
+    "save_name": "open-webui-x64-setup.exe",
+    "releases_url": "https://bgithub.xyz/open-webui/desktop/releases",
+    "repo_path": "open-webui/desktop"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "crush",
+    "简介": "Crush（Charmbracelet 终端 AI 编程助手）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "crush_",
+      "Windows_x86_64.zip"
+    ],
+    "href_exclude_substrings": [
+      "i386",
+      "armv7",
+      "sbom",
+      "sigstore",
+      "rpm",
+      "pkg.tar"
+    ],
+    "installer_extensions": [
+      ".zip",
+      ".tar.gz"
+    ],
+    "download_names": [
+      "crush_{ver}_Windows_x86_64.zip"
+    ],
+    "save_name": "crush_{ver}_Windows_x86_64.zip",
+    "releases_url": "https://bgithub.xyz/charmbracelet/crush/releases",
+    "repo_path": "charmbracelet/crush"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "id": "langflow",
+    "简介": "Langflow（可视化 LLM 工作流桌面端）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Langflow_",
+      "x64_en-US.msi"
+    ],
+    "href_exclude_substrings": [
+      "dmg",
+      "whl",
+      "aarch64",
+      "universal"
+    ],
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "Langflow_{ver}_x64_en-US.msi"
+    ],
+    "save_name": "Langflow_{ver}_x64_en-US.msi",
+    "releases_url": "https://bgithub.xyz/langflow-ai/langflow/releases",
+    "repo_path": "langflow-ai/langflow"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "tabbyml",
+    "简介": "Tabby（自托管 AI 代码补全服务 / 本地推理包）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "tabby_x86_64-windows-msvc-cpu",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "cuda",
+      "vulkan",
+      "cuda123",
+      "cuda124"
+    ],
+    "installer_extensions": [
+      ".zip",
+      ".tar.gz"
+    ],
+    "download_names": [
+      "tabby_x86_64-windows-msvc-cpu.zip"
+    ],
+    "save_name": "tabby_x86_64-windows-msvc-cpu.zip",
+    "releases_url": "https://bgithub.xyz/TabbyML/tabby/releases",
+    "repo_path": "TabbyML/tabby"
+  },
+  {
+    "id": "kiro",
+    "简介": "Kiro CLI（manifest：prod.download.cli.kiro.dev）",
+    "分类": "AI",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "kiro",
+    "version_tag_as_on_github": false,
+    "use_download_filename": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "save_name": "kiro-cli-x86_64-pc-windows-msvc.msi"
   }
 ]

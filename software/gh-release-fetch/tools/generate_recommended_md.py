@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""从 apps/<platform> 分片生成 RECOMMENDED.zh-CN.md / RECOMMENDED.md。"""
+"""从 apps/<platform> 分片生成各平台 RECOMMENDED*.md。"""
 from __future__ import annotations
 
+import argparse
 import json
 import os
 import re
@@ -13,6 +14,18 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 APPS = os.path.join(ROOT, "apps")
 SHARD_RE = re.compile(r"^(\d+)-(.+)\.json$", re.UNICODE)
 PLATFORMS = ("windows", "darwin", "linux")
+
+OUTPUT_NAMES: dict[str, tuple[str, str]] = {
+    "windows": ("RECOMMENDED.zh-CN.md", "RECOMMENDED.md"),
+    "darwin": ("RECOMMENDED.darwin.zh-CN.md", "RECOMMENDED.darwin.md"),
+    "linux": ("RECOMMENDED.linux.zh-CN.md", "RECOMMENDED.linux.md"),
+}
+
+PLATFORM_LABEL: dict[str, str] = {
+    "windows": "Windows",
+    "darwin": "macOS",
+    "linux": "Linux",
+}
 
 
 def _load_shard(path: str) -> list[dict]:
@@ -63,7 +76,6 @@ def _rule_badge(row: dict) -> str:
 def _title_from_row(row: dict) -> str:
     intro = _clean_intro(row["简介"])
     if intro:
-        # 取简介第一句/逗号前，去掉版本号尾巴
         head = re.split(r"[，,。]", intro)[0].strip()
         head = re.sub(r"\s+v?\d+[\d.]*.*$", "", head)
         if 4 <= len(head) <= 48:
@@ -71,17 +83,36 @@ def _title_from_row(row: dict) -> str:
     return row["id"].replace("_", " ")
 
 
+def _platform_nav(platform: str) -> str:
+    links = []
+    for plat in PLATFORMS:
+        if plat == platform:
+            continue
+        zh_name = OUTPUT_NAMES[plat][0]
+        links.append("[%s](%s)" % (PLATFORM_LABEL[plat], zh_name))
+    return " · ".join(links)
+
+
+def _lookup_cmd(platform: str, app_id: str) -> str:
+    if platform == "windows":
+        return "lookup_app.bat --platform windows %s" % app_id
+    return "python lookup_app.py --platform %s %s" % (platform, app_id)
+
+
 def build_zh(platform: str = "windows") -> str:
     by_cat = collect(platform)
     total = sum(len(v) for v in by_cat.values())
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    label = PLATFORM_LABEL[platform]
+    nav = _platform_nav(platform)
     lines = [
-        "# 推荐开源软件（全分类导读）",
+        "# 推荐开源软件（%s · 全分类导读）" % label,
         "",
         "> 由 `python tools/generate_recommended_md.py` 根据 [`apps/%s/`](apps/%s/) 自动生成，"
         "生成日期：**%s**。条目 **%d** 个（%s 平台）。"
         % (platform, platform, now, total, platform),
-        "> 技术索引与分片统计见 [`CATALOG.md`](CATALOG.md)。启用/更新：`lookup_app.bat <id>` → `run_saved_apps.bat`。",
+        "> 其它平台导读：%s。" % nav,
+        "> 技术索引与分片统计见 [`CATALOG.md`](CATALOG.md)。启用/更新：lookup → `run_saved_apps`（Windows 可用 `run_saved_apps.bat`）。",
         "",
         "---",
         "",
@@ -103,7 +134,7 @@ def build_zh(platform: str = "windows") -> str:
             meta.append("分片：`apps/%s/%s`" % (platform, row["shard"]))
             meta.append("配置：%s" % badge)
             lines.append("- " + " · ".join(meta))
-            lines.append("- 查找：`lookup_app.bat --platform %s %s`" % (platform, row["id"]))
+            lines.append("- 查找：`%s`" % _lookup_cmd(platform, row["id"]))
             lines.append("")
         lines.append("---")
         lines.append("")
@@ -114,12 +145,16 @@ def build_en(platform: str = "windows") -> str:
     by_cat = collect(platform)
     total = sum(len(v) for v in by_cat.values())
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    label = PLATFORM_LABEL[platform]
+    zh_name = OUTPUT_NAMES[platform][0]
+    nav = _platform_nav(platform)
     lines = [
-        "# Recommended apps (full catalog guide)",
+        "# Recommended apps (%s · full catalog guide)" % label,
         "",
         "> Auto-generated from [`apps/%s/`](apps/%s/) on **%s**. **%d** entries."
         % (platform, platform, now, total),
-        "> Details: [`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md). Index: [`CATALOG.md`](CATALOG.md).",
+        "> Chinese guide: [`%s`](%s). Other platforms: %s. Index: [`CATALOG.md`](CATALOG.md)."
+        % (zh_name, zh_name, nav),
         "",
     ]
     for cat, rows in by_cat.items():
@@ -137,20 +172,36 @@ def build_en(platform: str = "windows") -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
-def main():
-    import sys
-
-    plat = "windows"
-    if len(sys.argv) > 1:
-        plat = sys.argv[1]
-    zh_path = os.path.join(ROOT, "RECOMMENDED.zh-CN.md")
-    en_path = os.path.join(ROOT, "RECOMMENDED.md")
+def write_platform(platform: str) -> tuple[str, str]:
+    zh_name, en_name = OUTPUT_NAMES[platform]
+    zh_path = os.path.join(ROOT, zh_name)
+    en_path = os.path.join(ROOT, en_name)
     with open(zh_path, "w", encoding="utf-8") as f:
-        f.write(build_zh(plat))
+        f.write(build_zh(platform))
     with open(en_path, "w", encoding="utf-8") as f:
-        f.write(build_en(plat))
-    print("Wrote", zh_path)
-    print("Wrote", en_path)
+        f.write(build_en(platform))
+    return zh_path, en_path
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser(
+        description="从 apps/<platform> 生成 RECOMMENDED*.md（默认三平台全量）"
+    )
+    ap.add_argument(
+        "platforms",
+        nargs="*",
+        metavar="PLATFORM",
+        help="指定平台 windows / darwin / linux；省略则三平台全量",
+    )
+    args = ap.parse_args()
+    targets = list(args.platforms) if args.platforms else list(PLATFORMS)
+    bad = [p for p in targets if p not in PLATFORMS]
+    if bad:
+        ap.error("未知平台: %s（可选: %s）" % (", ".join(bad), ", ".join(PLATFORMS)))
+    for plat in targets:
+        zh_path, en_path = write_platform(plat)
+        print("Wrote", zh_path)
+        print("Wrote", en_path)
 
 
 if __name__ == "__main__":

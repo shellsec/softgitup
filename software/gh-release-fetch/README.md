@@ -31,7 +31,15 @@ This repository helps you maintain a **version-controlled list** of open-source 
 
 ### Recommended apps (Markdown guide)
 
-Browse **[`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md)** — all **516** Windows apps by category (intro, repo, shard, lookup command). Regenerate: `python tools/generate_recommended_md.py`. Stats: [`CATALOG.md`](CATALOG.md).
+Full catalog guides by platform:
+
+| Platform | Chinese | English table | Scale |
+|----------|---------|---------------|-------|
+| Windows | [`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md) | [`RECOMMENDED.md`](RECOMMENDED.md) | 516 |
+| macOS | [`RECOMMENDED.darwin.zh-CN.md`](RECOMMENDED.darwin.zh-CN.md) | [`RECOMMENDED.darwin.md`](RECOMMENDED.darwin.md) | 384 |
+| Linux | [`RECOMMENDED.linux.zh-CN.md`](RECOMMENDED.linux.zh-CN.md) | [`RECOMMENDED.linux.md`](RECOMMENDED.linux.md) | 382 |
+
+Regenerate all: `python tools/generate_recommended_md.py`. Stats: [`CATALOG.md`](CATALOG.md).
 
 **Optional second catalog: [`VibeCodingToolsDown/`](VibeCodingToolsDown/)**
 

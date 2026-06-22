@@ -544,5 +544,209 @@
     "kill_before_install": false,
     "run_installer": false,
     "url_hint": "atom_editor"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "id": "void_editor",
+    "简介": "Void（开源 AI 代码编辑器，基于 VS Code）",
+    "分类": "编辑器",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "VoidUserSetup-x64-",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "sha1",
+      "sha256",
+      "reh",
+      "zip",
+      "darwin",
+      "linux"
+    ],
+    "download_names": [
+      "VoidUserSetup-x64-{ver}.exe"
+    ],
+    "save_name": "VoidUserSetup-x64-{ver}.exe",
+    "releases_url": "https://bgithub.xyz/voideditor/binaries/releases",
+    "repo_path": "voideditor/binaries"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "neovide",
+    "简介": "Neovide（Neovim 图形前端）",
+    "分类": "编辑器",
+    "installer_markers": [
+      "neovide.exe.zip"
+    ],
+    "href_exclude_substrings": [
+      "dmg",
+      "AppImage",
+      "msi",
+      "zsync",
+      "darwin"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "neovide.exe.zip"
+    ],
+    "save_name": "neovide.exe.zip",
+    "releases_url": "https://bgithub.xyz/neovide/neovide/releases",
+    "repo_path": "neovide/neovide"
+  },
+  {
+    "id": "cursor",
+    "简介": "Cursor（manifest：cursor-downloads + 官方 CDN）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "cursor",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": true,
+    "process_name": "Cursor.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "save_name": "CursorUserSetup-x64-{ver}.exe"
+  },
+  {
+    "id": "trae",
+    "简介": "Trae IDE（manifest：api.trae.ai）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "trae",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "trae_cn",
+    "简介": "Trae 国内版（manifest：api.trae.cn）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "trae_cn",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "trae_solo",
+    "简介": "TRAE SOLO（manifest；Windows/Linux 常无包）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "trae_solo",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "qoder",
+    "简介": "Qoder IDE（manifest：qoder.com CDN）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "qoder",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "qoderwork",
+    "简介": "QoderWork 桌面（manifest）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "qoderwork",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "workbuddy",
+    "简介": "WorkBuddy（manifest：copilot.tencent.com）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "workbuddy",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "codebuddy",
+    "简介": "CodeBuddy 国际版（manifest：codebuddy.ai）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "codebuddy",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "codebuddy_cn",
+    "简介": "CodeBuddy 国内版（manifest：copilot.tencent.com）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "codebuddy_cn",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "antigravity",
+    "简介": "Google Antigravity（manifest：edgedl CDN）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "antigravity",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
   }
 ]

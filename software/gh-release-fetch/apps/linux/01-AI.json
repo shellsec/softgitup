@@ -628,5 +628,289 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "cockpit_tools",
+    "简介": "Cockpit Tools（通用 AI IDE 账号管理；Linux amd64 AppImage）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/jlcodes99/cockpit-tools/releases",
+    "repo_path": "jlcodes99/cockpit-tools",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Cockpit.Tools_",
+      "amd64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      ".exe",
+      ".msi",
+      ".dmg",
+      ".deb",
+      ".rpm",
+      "aarch64",
+      "arm64",
+      ".sig",
+      "SHA256",
+      "darwin",
+      "windows"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "download_names": [
+      "Cockpit.Tools_{ver}_amd64.AppImage"
+    ],
+    "save_name": "Cockpit.Tools_{ver}_amd64.AppImage",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "kilocode",
+    "简介": "Kilo Code（开源 AI 编程 VS Code 扩展）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "kilo-vscode-linux-x64",
+      ".vsix"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "darwin",
+      "arm64",
+      "alpine"
+    ],
+    "installer_extensions": [
+      ".vsix"
+    ],
+    "download_names": [],
+    "save_name": "kilo-vscode-linux-x64.vsix",
+    "releases_url": "https://bgithub.xyz/Kilo-Org/kilocode/releases",
+    "repo_path": "Kilo-Org/kilocode"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "open_webui_desktop",
+    "简介": "Open WebUI Desktop（Linux x86_64 AppImage）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "open-webui_x86_64",
+      "AppImage"
+    ],
+    "href_exclude_substrings": [
+      "exe",
+      "dmg",
+      "blockmap",
+      "yml",
+      "arm64"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "download_names": [
+      "open-webui_x86_64.AppImage"
+    ],
+    "save_name": "open-webui_x86_64.AppImage",
+    "releases_url": "https://bgithub.xyz/open-webui/desktop/releases",
+    "repo_path": "open-webui/desktop"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "crush",
+    "简介": "Crush（Charmbracelet 终端 AI 编程助手）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "crush_",
+      "Linux_x86_64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "i386",
+      "armv7",
+      "sbom",
+      "sigstore",
+      "rpm",
+      "pkg.tar"
+    ],
+    "installer_extensions": [
+      ".zip",
+      ".tar.gz"
+    ],
+    "download_names": [
+      "crush_{ver}_Linux_x86_64.tar.gz"
+    ],
+    "save_name": "crush_{ver}_Linux_x86_64.tar.gz",
+    "releases_url": "https://bgithub.xyz/charmbracelet/crush/releases",
+    "repo_path": "charmbracelet/crush"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "tabbyml",
+    "简介": "Tabby（自托管 AI 代码补全服务 / 本地推理包）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "tabby_x86_64-manylinux_2_28.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "cuda",
+      "vulkan",
+      "cuda123",
+      "cuda124"
+    ],
+    "installer_extensions": [
+      ".zip",
+      ".tar.gz"
+    ],
+    "download_names": [
+      "tabby_x86_64-manylinux_2_28.tar.gz"
+    ],
+    "save_name": "tabby_x86_64-manylinux_2_28.tar.gz",
+    "releases_url": "https://bgithub.xyz/TabbyML/tabby/releases",
+    "repo_path": "TabbyML/tabby"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "jan",
+    "简介": "Jan（离线优先的本地 AI 聊天客户端）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Jan_",
+      "amd64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "setup.exe",
+      "deb",
+      "zip",
+      "arm64",
+      "sha"
+    ],
+    "installer_extensions": [
+      ".dmg",
+      ".AppImage"
+    ],
+    "download_names": [
+      "Jan_{ver}_amd64.AppImage"
+    ],
+    "save_name": "Jan_{ver}_amd64.AppImage",
+    "releases_url": "https://bgithub.xyz/janhq/jan/releases",
+    "repo_path": "janhq/jan"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "gpt4all",
+    "简介": "GPT4All（Linux x64 安装器 .run）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "gpt4all-installer-linux-v",
+      ".run"
+    ],
+    "href_exclude_substrings": [
+      "macos",
+      "win",
+      "arm",
+      "sha"
+    ],
+    "installer_extensions": [
+      ".run"
+    ],
+    "download_names": [
+      "gpt4all-installer-linux-v{ver}.run"
+    ],
+    "save_name": "gpt4all-installer-linux-v{ver}.run",
+    "releases_url": "https://bgithub.xyz/nomic-ai/gpt4all/releases",
+    "repo_path": "nomic-ai/gpt4all"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "lobe_chat",
+    "简介": "Lobe Chat Hub（Linux AppImage）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "LobeHub-",
+      ".AppImage"
+    ],
+    "href_exclude_substrings": [
+      "setup.exe",
+      "dmg",
+      "arm64",
+      "blockmap",
+      "deb",
+      "rpm",
+      "snap"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "download_names": [
+      "LobeHub-{ver}.AppImage"
+    ],
+    "save_name": "LobeHub-{ver}.AppImage",
+    "releases_url": "https://bgithub.xyz/lobehub/lobe-chat/releases",
+    "repo_path": "lobehub/lobe-chat"
+  },
+  {
+    "id": "kiro",
+    "简介": "Kiro CLI Linux（manifest）",
+    "分类": "AI",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "kiro",
+    "version_tag_as_on_github": false,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

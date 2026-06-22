@@ -591,5 +591,322 @@
       "aider-{ver}-darwin-arm64.tar.gz"
     ],
     "save_name": "aider-{ver}-darwin-arm64.tar.gz"
+  },
+  {
+    "id": "cockpit_tools",
+    "简介": "Cockpit Tools（通用 AI IDE 账号管理；macOS universal dmg）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/jlcodes99/cockpit-tools/releases",
+    "repo_path": "jlcodes99/cockpit-tools",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Cockpit.Tools_",
+      "universal.dmg"
+    ],
+    "href_exclude_substrings": [
+      ".exe",
+      ".msi",
+      ".deb",
+      ".rpm",
+      "AppImage",
+      ".sig",
+      "SHA256",
+      "aarch64",
+      "x64.dmg",
+      "tar.gz",
+      "windows",
+      "linux"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "Cockpit.Tools_{ver}_universal.dmg"
+    ],
+    "save_name": "Cockpit.Tools_{ver}_universal.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "kilocode",
+    "简介": "Kilo Code（开源 AI 编程 VS Code 扩展）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "kilo-vscode-darwin-arm64",
+      ".vsix"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "x64.vsix",
+      "alpine"
+    ],
+    "installer_extensions": [
+      ".vsix"
+    ],
+    "download_names": [],
+    "save_name": "kilo-vscode-darwin-arm64.vsix",
+    "releases_url": "https://bgithub.xyz/Kilo-Org/kilocode/releases",
+    "repo_path": "Kilo-Org/kilocode"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "open_webui_desktop",
+    "简介": "Open WebUI Desktop（macOS x64 dmg）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "open-webui-x64",
+      ".dmg"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "blockmap",
+      "exe",
+      "yml",
+      "zip"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "open-webui-x64.dmg"
+    ],
+    "save_name": "open-webui-x64.dmg",
+    "releases_url": "https://bgithub.xyz/open-webui/desktop/releases",
+    "repo_path": "open-webui/desktop"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "crush",
+    "简介": "Crush（Charmbracelet 终端 AI 编程助手）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "crush_",
+      "Darwin_arm64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "i386",
+      "armv7",
+      "sbom",
+      "sigstore",
+      "rpm",
+      "pkg.tar"
+    ],
+    "installer_extensions": [
+      ".zip",
+      ".tar.gz"
+    ],
+    "download_names": [
+      "crush_{ver}_Darwin_arm64.tar.gz"
+    ],
+    "save_name": "crush_{ver}_Darwin_arm64.tar.gz",
+    "releases_url": "https://bgithub.xyz/charmbracelet/crush/releases",
+    "repo_path": "charmbracelet/crush"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "langflow",
+    "简介": "Langflow（macOS universal dmg）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Langflow_",
+      "universal.dmg"
+    ],
+    "href_exclude_substrings": [
+      "msi",
+      "whl",
+      "x64_en"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "Langflow_{ver}_universal.dmg"
+    ],
+    "save_name": "Langflow_{ver}_universal.dmg",
+    "releases_url": "https://bgithub.xyz/langflow-ai/langflow/releases",
+    "repo_path": "langflow-ai/langflow"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "tabbyml",
+    "简介": "Tabby（自托管 AI 代码补全服务 / 本地推理包）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "tabby_aarch64-apple-darwin",
+      ".tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "cuda",
+      "vulkan",
+      "cuda123",
+      "cuda124"
+    ],
+    "installer_extensions": [
+      ".zip",
+      ".tar.gz"
+    ],
+    "download_names": [
+      "tabby_aarch64-apple-darwin.tar.gz"
+    ],
+    "save_name": "tabby_aarch64-apple-darwin.tar.gz",
+    "releases_url": "https://bgithub.xyz/TabbyML/tabby/releases",
+    "repo_path": "TabbyML/tabby"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "jan",
+    "简介": "Jan（离线优先的本地 AI 聊天客户端）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Jan_",
+      "universal.dmg"
+    ],
+    "href_exclude_substrings": [
+      "setup.exe",
+      "deb",
+      "zip",
+      "arm64",
+      "sha"
+    ],
+    "installer_extensions": [
+      ".dmg",
+      ".AppImage"
+    ],
+    "download_names": [
+      "Jan_{ver}_universal.dmg"
+    ],
+    "save_name": "Jan_{ver}_universal.dmg",
+    "releases_url": "https://bgithub.xyz/janhq/jan/releases",
+    "repo_path": "janhq/jan"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "gpt4all",
+    "简介": "GPT4All（本地运行 LLM 的桌面客户端）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "gpt4all-installer-macos-v",
+      ".dmg"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "win",
+      "arm",
+      "sha"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "gpt4all-installer-macos-v{ver}.dmg"
+    ],
+    "save_name": "gpt4all-installer-macos-v{ver}.dmg",
+    "releases_url": "https://bgithub.xyz/nomic-ai/gpt4all/releases",
+    "repo_path": "nomic-ai/gpt4all"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "lobe_chat",
+    "简介": "Lobe Chat Hub（多模型 AI 桌面客户端，LobeHub）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "LobeHub-",
+      "x64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "setup.exe",
+      "AppImage",
+      "arm64",
+      "blockmap",
+      "zip",
+      "deb",
+      "rpm"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "LobeHub-{ver}-x64.dmg"
+    ],
+    "save_name": "LobeHub-{ver}-x64.dmg",
+    "releases_url": "https://bgithub.xyz/lobehub/lobe-chat/releases",
+    "repo_path": "lobehub/lobe-chat"
+  },
+  {
+    "id": "kiro",
+    "简介": "Kiro CLI macOS（manifest）",
+    "分类": "AI",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "kiro",
+    "version_tag_as_on_github": false,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

@@ -1,9 +1,9 @@
-# Recommended apps (full catalog guide)
+# Recommended apps (Windows · full catalog guide)
 
-> Auto-generated from [`apps/windows/`](apps/windows/) on **2026-06-09**. **516** entries.
-> Details: [`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md). Index: [`CATALOG.md`](CATALOG.md).
+> Auto-generated from [`apps/windows/`](apps/windows/) on **2026-06-22**. **536** entries.
+> Chinese guide: [`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md). Other platforms: [macOS](RECOMMENDED.darwin.zh-CN.md) · [Linux](RECOMMENDED.linux.zh-CN.md). Index: [`CATALOG.md`](CATALOG.md).
 
-## AI (31)
+## AI (38)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -17,8 +17,10 @@
 | `cherry_studio` | Cherry Studio（多模型 AI 桌面客户端，CherryHQ） | `CherryHQ/cherry-studio` |
 | `claude_code` | Claude Code（Anthropic 官方终端 CLI 原生构建，Windows x64 zip） | `anthropics/claude-code` |
 | `cline` | Cline（VS Code / Cursor 系扩展，Release .vsix） | `cline/cline` |
+| `cockpit_tools` | Cockpit Tools（通用 AI IDE 账号管理：Cursor / Copilot / Windsurf / Codex 等多账号切换、配额监控与多开） | `jlcodes99/cockpit-tools` |
 | `codex_cli` | OpenAI Codex CLI（Rust 发行包，Windows x64 推荐 exe.zip） | `openai/codex` |
 | `continue` | Continue（VS Code / JetBrains 系 AI 编程扩展，Release .vsix） | `continuedev/continue` |
+| `crush` | Crush（Charmbracelet 终端 AI 编程助手） | `charmbracelet/crush` |
 | `deepseek_cli` | DeepSeek-TUI dispatcher（deepseek 命令；Windows x64；需配套 deepseek_tui 一起放到 PATH） | `Hmbown/DeepSeek-TUI` |
 | `deepseek_tui` | DeepSeek-TUI companion runtime（deepseek-tui 命令；Windows x64；需与 deepseek_cli 同时存在） | `Hmbown/DeepSeek-TUI` |
 | `gemini_cli` | Gemini CLI（Google 官方；Release 多为 gemini-cli-bundle.zip 通用包） | `google-gemini/gemini-cli` |
@@ -27,17 +29,22 @@
 | `gpt4all` | GPT4All（本地运行 LLM 的桌面客户端） | `nomic-ai/gpt4all` |
 | `immersive_translate` | 沉浸式翻译（浏览器扩展离线包，Chrome zip；解压后开发者模式加载） | `immersive-translate/immersive-translate` |
 | `jan` | Jan（离线优先的本地 AI 聊天客户端） | `janhq/jan` |
+| `kilocode` | Kilo Code（开源 AI 编程 VS Code 扩展） | `Kilo-Org/kilocode` |
+| `kiro` | Kiro CLI（manifest：prod.download.cli.kiro.dev） | `-` |
 | `langchain_note` | LangChain：Python/JS 开发框架，通过 PyPI/npm 安装，不适合本项目的 GitHub Release 二进制拉取。 | `langchain-ai/langchain` |
+| `langflow` | Langflow（可视化 LLM 工作流桌面端） | `langflow-ai/langflow` |
 | `llamaindex_note` | LlamaIndex：Python 开发框架，通过 pip 安装，无本工具链所需的独立安装包 Release。 | `run-llama/llama_index` |
 | `lobe_chat` | Lobe Chat Hub（多模型 AI 桌面客户端，LobeHub） | `lobehub/lobe-chat` |
 | `nextchat` | NextChat（原 ChatGPT-Next-Web）：仓库 ChatGPTNextWeb/NextChat 的 Release 多为源码；在线/部署见... | `ChatGPTNextWeb/NextChat` |
 | `ollama` | Ollama（本地运行大模型与 OpenAI 风格 API） | `ollama/ollama` |
 | `open_claude_cowork` | Open Claude Cowork（ComposioHQ/open-claude-cowork）：当前仓库无 GitHub Release 二进制，需 ... | `ComposioHQ/open-claude-cowork` |
+| `open_webui_desktop` | Open WebUI Desktop（本地 AI 聊天桌面端） | `open-webui/desktop` |
 | `opencat` | OpenCat：分发以 macOS App Store 等渠道为主，无固定 GitHub Release 二进制；repo_path 仅满足配置校验，勿启用。 | `octocat/Hello-World` |
 | `openclaw` | OpenClaw（个人 AI 助手；Windows 用 Release 中 OpenClaw-*.zip） | `openclaw/openclaw` |
 | `opencode` | OpenCode（开源 AI 编程代理 / 桌面端，SST 团队） | `sst/opencode` |
 | `openhands` | OpenHands（开源 AI 软件工程师代理；桌面/CLI 以 Docker 与源码为主，GitHub Release 常无安装包；本条仅索引） | `All-Hands-AI/OpenHands` |
 | `roo_code` | Roo Code（原 Roo-Cline，VS Code AI 代理扩展，Release .vsix） | `RooCodeInc/Roo-Code` |
+| `tabbyml` | Tabby（自托管 AI 代码补全服务 / 本地推理包） | `TabbyML/tabby` |
 
 ## 下载 (16)
 
@@ -157,7 +164,7 @@
 | `tempo` | Grafana Tempo（分布式追踪后端） | `grafana/tempo` |
 | `vector` | Vector（日志/指标采集与路由） | `vectordotdev/vector` |
 
-## 命令行 (22)
+## 命令行 (23)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -171,6 +178,7 @@
 | `glow` | 终端 Markdown 阅读器 | `charmbracelet/glow` |
 | `hyperfine` | 命令行基准测试工具 | `sharkdp/hyperfine` |
 | `jq` | JSON 命令行处理（官方发布页） | `jqlang/jq` |
+| `kilo_cli` | Kilo Code CLI / 独立包（zip/tar.gz） | `Kilo-Org/kilocode` |
 | `lsd` | ls 增强（zip） | `lsd-rs/lsd` |
 | `micro` | 终端编辑器 micro（zip） | `zyedidia/micro` |
 | `nushell` | Nushell（结构化数据的现代 Shell） | `nushell/nushell` |
@@ -565,13 +573,17 @@
 | `windows_terminal` | Windows 终端（多标签 Shell） | `microsoft/terminal` |
 | `xterminal` | 开源免费命令终端 xTerminal 3.0.1.0 + x64 中文多语免费版 | `0x78654C/xTerminal` |
 
-## 编辑器 (21)
+## 编辑器 (33)
 
 | id | Intro | repo |
 |----|-------|------|
 | `akelpad` | 开源免费 Windows 记事本 AkelPad 4.10.0.8 + x64 中文绿色版 | `ssrlive/akelpad` |
+| `antigravity` | Google Antigravity（manifest：edgedl CDN） | `-` |
 | `atom_editor` | 开源免费跨平台代码编辑器 Atom 1.63.0 + x64 官方中文最终版 | `atom/atom` |
+| `codebuddy` | CodeBuddy 国际版（manifest：codebuddy.ai） | `-` |
+| `codebuddy_cn` | CodeBuddy 国内版（manifest：copilot.tencent.com） | `-` |
 | `cudatext` | 免费开源代码编辑器 CudaText 1.222.0.0 + x64 中文多语免费版 | `Alexey-T/CudaText` |
+| `cursor` | Cursor（manifest：cursor-downloads + 官方 CDN） | `-` |
 | `fork` | Fork Git 图形客户端（Windows） | `fork-dev/fork` |
 | `gitextensions` | Git Extensions — Git 图形界面 | `gitextensions/gitextensions` |
 | `helix` | Helix（模态终端文本编辑器，Rust） | `helix-editor/helix` |
@@ -579,16 +591,24 @@
 | `imhex` | 十六进制编辑器 | `WerWolv/ImHex` |
 | `lapce` | Rust 编写的代码编辑器 | `lapce/lapce` |
 | `lite_xl` | Lite XL（轻量 Lua 编辑器，Windows portable zip） | `lite-xl/lite-xl` |
+| `neovide` | Neovide（Neovim 图形前端） | `neovide/neovide` |
 | `neovim` | Neovim 编辑器（Windows zip） | `neovim/neovim` |
 | `notepad_minusminus` | Notepad--（国产轻量跨平台编辑器，GPL，便携 zip） | `cxasm/notepad--` |
 | `notepad_next` | 开源免费代码编辑器 Notepad Next 0.14 中文多语免费版 | `dail8859/NotepadNext` |
 | `notepadplusplus` | 轻量文本编辑器，x64 安装包 | `notepad-plus-plus/notepad-plus-plus` |
 | `pulsar` | Pulsar（Atom 继任编辑器，Windows zip） | `pulsar-edit/pulsar` |
+| `qoder` | Qoder IDE（manifest：qoder.com CDN） | `-` |
+| `qoderwork` | QoderWork 桌面（manifest） | `-` |
 | `skylark` | Skylark（C 编写，文本/十六进制、便携 7z，GPL） | `adonais/skylark` |
 | `sublime_merge` | Sublime Merge Git 客户端 | `sublimehq/sublime_merge` |
+| `trae` | Trae IDE（manifest：api.trae.ai） | `-` |
+| `trae_cn` | Trae 国内版（manifest：api.trae.cn） | `-` |
+| `trae_solo` | TRAE SOLO（manifest；Windows/Linux 常无包） | `-` |
+| `void_editor` | Void（开源 AI 代码编辑器，基于 VS Code） | `voideditor/binaries` |
 | `vscode` | Visual Studio Code（微软构建） | `microsoft/vscode` |
 | `vscodium` | VS Code 开源构建，无微软遥测 | `VSCodium/vscodium` |
 | `winmerge` | 目录与文件差异对比、合并 | `WinMerge/winmerge` |
+| `workbuddy` | WorkBuddy（manifest：copilot.tencent.com） | `-` |
 | `zed` | Zed（Rust 高性能编辑器，开源，Windows x64 安装包） | `zed-industries/zed` |
 
 ## 网络 (21)

@@ -1,6 +1,6 @@
 # apps 软件清单索引
 
-> 自动生成：运行 `python tools/generate_catalog_index.py` 刷新。生成时间：**2026-06-08 08:05 UTC**
+> 自动生成：运行 `python tools/generate_catalog_index.py` 刷新。生成时间：**2026-06-22 08:22 UTC**
 
 主清单数据在 [`apps/`](apps/)（`windows` / `darwin` / `linux` 各 30 个分类分片）。本文件只做**概览与导航**，不替代 JSON 配置。
 
@@ -8,9 +8,9 @@
 
 | 平台 | 条目数 | 已启用 (`enabled: true`) | 分类分片 |
 |------|--------|--------------------------|----------|
-| windows | 516 | 0 | 30 |
-| darwin | 384 | 0 | 30 |
-| linux | 382 | 0 | 30 |
+| windows | 536 | 0 | 30 |
+| darwin | 407 | 0 | 30 |
+| linux | 405 | 0 | 30 |
 
 不含 `99-未匹配-windows分片.json`（占位/待归类条目）。精确数以运行 `python auto_update.py` 时日志「已从 apps/ 目录合并配置」为准。
 
@@ -18,12 +18,12 @@
 
 | 分片文件 | 分类 | Windows | Darwin | Linux |
 |----------|------|---------|--------|-------|
-| `01-AI.json` | AI | 31 | 29 | 30 |
+| `01-AI.json` | AI | 38 | 39 | 39 |
 | `02-下载.json` | 下载 | 16 | 16 | 16 |
 | `03-写作.json` | 写作 | 8 | 5 | 5 |
 | `04-办公.json` | 办公 | 10 | 6 | 6 |
 | `05-办公与设计.json` | 办公与设计 | 3 | 1 | 1 |
-| `06-命令行.json` | 命令行 | 22 | 18 | 18 |
+| `06-命令行.json` | 命令行 | 23 | 19 | 19 |
 | `07-备份.json` | 备份 | 4 | 3 | 3 |
 | `08-多媒体.json` | 多媒体 | 33 | 25 | 25 |
 | `09-多媒体与设计.json` | 多媒体与设计 | 16 | 14 | 14 |
@@ -43,25 +43,17 @@
 | `23-数据库.json` | 数据库 | 12 | 8 | 8 |
 | `24-云原生.json` | 云原生 | 18 | 10 | 10 |
 | `25-可观测.json` | 可观测 | 7 | 8 | 8 |
-| `26-编辑器.json` | 编辑器 | 21 | 14 | 14 |
+| `26-编辑器.json` | 编辑器 | 33 | 26 | 27 |
 | `27-金融与股票.json` | 金融与股票 | 5 | 5 | 4 |
 | `28-加密货币.json` | 加密货币 | 9 | 13 | 11 |
 | `29-局域网文件共享.json` | 局域网文件共享 | 10 | 10 | 10 |
 | `30-代理与隧道.json` | 代理与隧道 | 7 | 9 | 8 |
 
-## 推荐阅读
-
-| 文档 | 内容 |
-|------|------|
-| [`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md) | Windows 全库应用介绍（516 条，30 分类；`python tools/generate_recommended_md.py` 刷新） |
-| [`RECOMMENDED.md`](RECOMMENDED.md) | 英文表格版 |
-
 ## 常用操作
 
 | 目的 | 命令 |
 |------|------|
-| 模糊查找、加入更新列表 | `lookup_app.bat <关键词>`（见 README §3 闭环） |
-| 按列表一键更新 | `run_saved_apps.bat` 或 `python tools/run_saved_apps.py` |
+| 模糊查找应用、开启条目 | `lookup_app.bat <关键词>` 或 `python lookup_app.py <关键词>` |
 | 批量下载已启用条目 | `python auto_update.py`（可选 `--platform windows\|darwin\|linux`） |
 | 全部关闭 enabled | 根目录 `reset_enabled_json.bat` 或 `python tools/reset_enabled_json.py` |
 | 字段说明与分类参考 | [`apps/root.json`](apps/root.json) 内 `_说明` |

@@ -1,11 +1,12 @@
-# 推荐开源软件（全分类导读）
+# 推荐开源软件（Windows · 全分类导读）
 
-> 由 `python tools/generate_recommended_md.py` 根据 [`apps/windows/`](apps/windows/) 自动生成，生成日期：**2026-06-09**。条目 **516** 个（windows 平台）。
-> 技术索引与分片统计见 [`CATALOG.md`](CATALOG.md)。启用/更新：`lookup_app.bat <id>` → `run_saved_apps.bat`。
+> 由 `python tools/generate_recommended_md.py` 根据 [`apps/windows/`](apps/windows/) 自动生成，生成日期：**2026-06-22**。条目 **536** 个（windows 平台）。
+> 其它平台导读：[macOS](RECOMMENDED.darwin.zh-CN.md) · [Linux](RECOMMENDED.linux.zh-CN.md)。
+> 技术索引与分片统计见 [`CATALOG.md`](CATALOG.md)。启用/更新：lookup → `run_saved_apps`（Windows 可用 `run_saved_apps.bat`）。
 
 ---
 
-## AI（31）
+## AI（38）
 
 ### aichat（终端里用 OpenAI/本地模型等 · `aichat`
 
@@ -77,6 +78,13 @@ Cline（VS Code / Cursor 系扩展，Release .vsix）
 - 仓库：`cline/cline` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows cline`
 
+### cockpit tools · `cockpit_tools`
+
+Cockpit Tools（通用 AI IDE 账号管理：Cursor / Copilot / Windsurf / Codex 等多账号切换、配额监控与多开）
+
+- 仓库：`jlcodes99/cockpit-tools` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows cockpit_tools`
+
 ### OpenAI Codex CLI（Rust 发行包 · `codex_cli`
 
 OpenAI Codex CLI（Rust 发行包，Windows x64 推荐 exe.zip）
@@ -90,6 +98,13 @@ Continue（VS Code / JetBrains 系 AI 编程扩展，Release .vsix）
 
 - 仓库：`continuedev/continue` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows continue`
+
+### Crush（Charmbracelet 终端 AI 编程助手） · `crush`
+
+Crush（Charmbracelet 终端 AI 编程助手）
+
+- 仓库：`charmbracelet/crush` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
+- 查找：`lookup_app.bat --platform windows crush`
 
 ### deepseek cli · `deepseek_cli`
 
@@ -147,12 +162,33 @@ Jan（离线优先的本地 AI 聊天客户端）
 - 仓库：`janhq/jan` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows jan`
 
+### Kilo Code（开源 AI 编程 VS Code 扩展） · `kilocode`
+
+Kilo Code（开源 AI 编程 VS Code 扩展）
+
+- 仓库：`Kilo-Org/kilocode` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
+- 查找：`lookup_app.bat --platform windows kilocode`
+
+### Kiro CLI（manifest：prod.download.cli.kiro.dev） · `kiro`
+
+Kiro CLI（manifest：prod.download.cli.kiro.dev）
+
+- 分片：`apps/windows/01-AI.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`lookup_app.bat --platform windows kiro`
+
 ### LangChain：Python/JS 开发框架 · `langchain_note`
 
 LangChain：Python/JS 开发框架，通过 PyPI/npm 安装，不适合本项目的 GitHub Release 二进制拉取。
 
 - 仓库：`langchain-ai/langchain` · 分片：`apps/windows/01-AI.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows langchain_note`
+
+### Langflow（可视化 LLM 工作流桌面端） · `langflow`
+
+Langflow（可视化 LLM 工作流桌面端）
+
+- 仓库：`langflow-ai/langflow` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows langflow`
 
 ### LlamaIndex：Python 开发框架 · `llamaindex_note`
 
@@ -189,6 +225,13 @@ Open Claude Cowork（ComposioHQ/open-claude-cowork）：当前仓库无 GitHub R
 - 仓库：`ComposioHQ/open-claude-cowork` · 分片：`apps/windows/01-AI.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows open_claude_cowork`
 
+### Open WebUI Desktop（本地 AI 聊天桌面端） · `open_webui_desktop`
+
+Open WebUI Desktop（本地 AI 聊天桌面端）
+
+- 仓库：`open-webui/desktop` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows open_webui_desktop`
+
 ### OpenCat：分发以 macOS App Store 等渠道为主 · `opencat`
 
 OpenCat：分发以 macOS App Store 等渠道为主，无固定 GitHub Release 二进制；repo_path 仅满足配置校验，勿启用。
@@ -223,6 +266,13 @@ Roo Code（原 Roo-Cline，VS Code AI 代理扩展，Release .vsix）
 
 - 仓库：`RooCodeInc/Roo-Code` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows roo_code`
+
+### Tabby（自托管 AI 代码补全服务 / 本地推理包） · `tabbyml`
+
+Tabby（自托管 AI 代码补全服务 / 本地推理包）
+
+- 仓库：`TabbyML/tabby` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
+- 查找：`lookup_app.bat --platform windows tabbyml`
 
 ---
 
@@ -804,7 +854,7 @@ Vector（日志/指标采集与路由）
 
 ---
 
-## 命令行（22）
+## 命令行（23）
 
 ### Atuin（Shell 历史同步/检索 · `atuin`
 
@@ -875,6 +925,13 @@ JSON 命令行处理（官方发布页）
 
 - 仓库：`jqlang/jq` · 分片：`apps/windows/06-命令行.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows jq`
+
+### Kilo Code CLI / 独立包（zip/tar.gz） · `kilo_cli`
+
+Kilo Code CLI / 独立包（zip/tar.gz）
+
+- 仓库：`Kilo-Org/kilocode` · 分片：`apps/windows/06-命令行.json` · 配置：已配匹配规则
+- 查找：`lookup_app.bat --platform windows kilo_cli`
 
 ### ls 增强（zip） · `lsd`
 
@@ -3226,7 +3283,7 @@ Windows 终端（多标签 Shell）
 
 ---
 
-## 编辑器（21）
+## 编辑器（33）
 
 ### 开源免费 Windows 记事本 AkelPad · `akelpad`
 
@@ -3235,6 +3292,13 @@ Windows 终端（多标签 Shell）
 - 仓库：`ssrlive/akelpad` · 分片：`apps/windows/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows akelpad`
 
+### Google Antigravity（manifest：edgedl CDN） · `antigravity`
+
+Google Antigravity（manifest：edgedl CDN）
+
+- 分片：`apps/windows/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`lookup_app.bat --platform windows antigravity`
+
 ### 开源免费跨平台代码编辑器 Atom · `atom_editor`
 
 开源免费跨平台代码编辑器 Atom 1.63.0 + x64 官方中文最终版
@@ -3242,12 +3306,33 @@ Windows 终端（多标签 Shell）
 - 仓库：`atom/atom` · 分片：`apps/windows/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows atom_editor`
 
+### CodeBuddy 国际版（manifest：codebuddy.ai） · `codebuddy`
+
+CodeBuddy 国际版（manifest：codebuddy.ai）
+
+- 分片：`apps/windows/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`lookup_app.bat --platform windows codebuddy`
+
+### CodeBuddy 国内版（manifest：copilot.tencent.com） · `codebuddy_cn`
+
+CodeBuddy 国内版（manifest：copilot.tencent.com）
+
+- 分片：`apps/windows/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`lookup_app.bat --platform windows codebuddy_cn`
+
 ### 免费开源代码编辑器 CudaText · `cudatext`
 
 免费开源代码编辑器 CudaText 1.222.0.0 + x64 中文多语免费版
 
 - 仓库：`Alexey-T/CudaText` · 分片：`apps/windows/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows cudatext`
+
+### Cursor（manifest：cursor-downloads + 官方 CDN） · `cursor`
+
+Cursor（manifest：cursor-downloads + 官方 CDN）
+
+- 分片：`apps/windows/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`lookup_app.bat --platform windows cursor`
 
 ### Fork Git 图形客户端（Windows） · `fork`
 
@@ -3298,6 +3383,13 @@ Lite XL（轻量 Lua 编辑器，Windows portable zip）
 - 仓库：`lite-xl/lite-xl` · 分片：`apps/windows/26-编辑器.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows lite_xl`
 
+### Neovide（Neovim 图形前端） · `neovide`
+
+Neovide（Neovim 图形前端）
+
+- 仓库：`neovide/neovide` · 分片：`apps/windows/26-编辑器.json` · 配置：已配匹配规则
+- 查找：`lookup_app.bat --platform windows neovide`
+
 ### Neovim 编辑器（Windows zip） · `neovim`
 
 Neovim 编辑器（Windows zip）
@@ -3333,6 +3425,20 @@ Pulsar（Atom 继任编辑器，Windows zip）
 - 仓库：`pulsar-edit/pulsar` · 分片：`apps/windows/26-编辑器.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows pulsar`
 
+### Qoder IDE（manifest：qoder.com CDN） · `qoder`
+
+Qoder IDE（manifest：qoder.com CDN）
+
+- 分片：`apps/windows/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`lookup_app.bat --platform windows qoder`
+
+### QoderWork 桌面（manifest） · `qoderwork`
+
+QoderWork 桌面（manifest）
+
+- 分片：`apps/windows/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`lookup_app.bat --platform windows qoderwork`
+
 ### Skylark（C 编写 · `skylark`
 
 Skylark（C 编写，文本/十六进制、便携 7z，GPL）
@@ -3346,6 +3452,34 @@ Sublime Merge Git 客户端
 
 - 仓库：`sublimehq/sublime_merge` · 分片：`apps/windows/26-编辑器.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows sublime_merge`
+
+### Trae IDE（manifest：api.trae.ai） · `trae`
+
+Trae IDE（manifest：api.trae.ai）
+
+- 分片：`apps/windows/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`lookup_app.bat --platform windows trae`
+
+### Trae 国内版（manifest：api.trae.cn） · `trae_cn`
+
+Trae 国内版（manifest：api.trae.cn）
+
+- 分片：`apps/windows/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`lookup_app.bat --platform windows trae_cn`
+
+### TRAE SOLO（manifest；Windows/Linux 常无包） · `trae_solo`
+
+TRAE SOLO（manifest；Windows/Linux 常无包）
+
+- 分片：`apps/windows/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`lookup_app.bat --platform windows trae_solo`
+
+### Void（开源 AI 代码编辑器 · `void_editor`
+
+Void（开源 AI 代码编辑器，基于 VS Code）
+
+- 仓库：`voideditor/binaries` · 分片：`apps/windows/26-编辑器.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows void_editor`
 
 ### Visual Studio Code（微软构建） · `vscode`
 
@@ -3367,6 +3501,13 @@ VS Code 开源构建，无微软遥测
 
 - 仓库：`WinMerge/winmerge` · 分片：`apps/windows/26-编辑器.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows winmerge`
+
+### WorkBuddy（manifest：copilot.tencent.com） · `workbuddy`
+
+WorkBuddy（manifest：copilot.tencent.com）
+
+- 分片：`apps/windows/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`lookup_app.bat --platform windows workbuddy`
 
 ### Zed（Rust 高性能编辑器 · `zed`
 

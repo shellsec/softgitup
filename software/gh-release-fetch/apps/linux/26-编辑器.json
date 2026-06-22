@@ -238,5 +238,239 @@
       ".exe",
       ".msi"
     ]
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "void_editor",
+    "简介": "Void（Linux x64 tar.gz）",
+    "分类": "编辑器",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Void-linux-x64-",
+      ".tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "sha1",
+      "sha256",
+      "reh",
+      "darwin",
+      "win32",
+      "exe"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "Void-linux-x64-{ver}.tar.gz"
+    ],
+    "save_name": "Void-linux-x64-{ver}.tar.gz",
+    "releases_url": "https://bgithub.xyz/voideditor/binaries/releases",
+    "repo_path": "voideditor/binaries"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "neovide",
+    "简介": "Neovide（Linux AppImage）",
+    "分类": "编辑器",
+    "installer_markers": [
+      "neovide.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "dmg",
+      "exe",
+      "msi",
+      "zsync",
+      "darwin",
+      ".tar"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "download_names": [
+      "neovide.AppImage"
+    ],
+    "save_name": "neovide.AppImage",
+    "releases_url": "https://bgithub.xyz/neovide/neovide/releases",
+    "repo_path": "neovide/neovide"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "pearai",
+    "简介": "PearAI（开源 AI 编辑器；GitHub Release 当前主要为 Linux tar.gz）",
+    "分类": "编辑器",
+    "installer_markers": [
+      "PearAI-linux.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "beta",
+      "sha"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "PearAI-linux.tar.gz"
+    ],
+    "save_name": "PearAI-linux.tar.gz",
+    "releases_url": "https://bgithub.xyz/trypear/pearai-app/releases",
+    "repo_path": "trypear/pearai-app"
+  },
+  {
+    "id": "cursor",
+    "简介": "Cursor（manifest 当前 linux 多为 null，勿盲目启用）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "cursor",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "trae",
+    "简介": "Trae Linux（manifest）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "trae",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "trae_cn",
+    "简介": "Trae CN Linux（manifest）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "trae_cn",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "trae_solo",
+    "简介": "TRAE SOLO（manifest）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "trae_solo",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "qoder",
+    "简介": "Qoder Linux（manifest）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "qoder",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "qoderwork",
+    "简介": "QoderWork（manifest）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "qoderwork",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "workbuddy",
+    "简介": "WorkBuddy（manifest；Linux 常 null）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "workbuddy",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "codebuddy",
+    "简介": "CodeBuddy Linux（manifest）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "codebuddy",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "codebuddy_cn",
+    "简介": "CodeBuddy CN Linux（manifest）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "codebuddy_cn",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "antigravity",
+    "简介": "Antigravity Linux（manifest）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "antigravity",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

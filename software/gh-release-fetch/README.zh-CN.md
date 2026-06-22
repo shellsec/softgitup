@@ -31,7 +31,15 @@
 
 ### 推荐软件介绍（Markdown）
 
-不知道清单里有什么、各自干什么用时，先看 **[`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md)**：**Windows 全库 516 条**按 30 个分类的应用介绍（简介、仓库、分片、配置完整度、`lookup_app` 命令）。刷新：`python tools/generate_recommended_md.py`。分片统计见 [`CATALOG.md`](CATALOG.md)。
+不知道清单里有什么、各自干什么用时，先看各平台全分类导读（简介、仓库、分片、配置完整度、lookup 命令）：
+
+| 平台 | 中文导读 | 英文简表 | 规模（约） |
+|------|----------|----------|------------|
+| Windows | [`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md) | [`RECOMMENDED.md`](RECOMMENDED.md) | 516 条 |
+| macOS | [`RECOMMENDED.darwin.zh-CN.md`](RECOMMENDED.darwin.zh-CN.md) | [`RECOMMENDED.darwin.md`](RECOMMENDED.darwin.md) | 384 条 |
+| Linux | [`RECOMMENDED.linux.zh-CN.md`](RECOMMENDED.linux.zh-CN.md) | [`RECOMMENDED.linux.md`](RECOMMENDED.linux.md) | 382 条 |
+
+刷新三份文档：`python tools/generate_recommended_md.py`（或指定 `windows` / `darwin` / `linux`）。分片统计见 [`CATALOG.md`](CATALOG.md)。
 
 ### VibeCodingToolsDown（可选独立清单）
 
