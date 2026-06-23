@@ -1645,5 +1645,41 @@
     "kill_before_install": false,
     "run_installer": false,
     "url_hint": "net_reactor_slayer"
+  },
+  {
+    "id": "geolibre",
+    "简介": "GeoLibre Desktop（OpenGeos 开源 GIS 桌面端，遥感/地理空间）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/opengeos/GeoLibre/releases",
+    "repo_path": "opengeos/GeoLibre",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "GeoLibre.Desktop_",
+      "_x64-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "portable",
+      ".msi",
+      ".msix",
+      ".sig",
+      "android",
+      "darwin",
+      "linux",
+      "AppImage",
+      ".deb",
+      ".rpm"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "GeoLibre.Desktop_{ver}_x64-setup.exe"
+    ],
+    "save_name": "GeoLibre.Desktop_{ver}_x64-setup.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
   }
 ]

@@ -21,12 +21,22 @@
 
 This repository helps you maintain a **version-controlled list** of open-source (and other) apps that ship binaries on **GitHub Releases**, and automate **check → download → (optional) install** instead of clicking through noisy release pages.
 
+### Design: two tracks
+
+| Track | When | In this repo |
+|-------|------|----------------|
+| **Git** | Open source with parseable GitHub/Gitee Releases | `apps/` + `lookup_app` → `run_saved_apps`; optional `GiteeExploreHot/`, `VibeCodingToolsDown/` |
+| **Channels** | Intro pages, mirrors, vendor CDN, non-Release distribution | `tools/soft_page_check/` periodic title checks; `search_soft_pages.bat`; manual download after changes |
+
+Open source on Git; everything else on monitored channels (scheduled checks). Do not force non-Git apps into `apps/`. Optional `tools/dayanzai_cache/` when running `import_dayanzai_windows.py` is local-only (gitignored) and safe to delete after import.
+
 **Core files**
 
 - [`auto_update.py`](auto_update.py) — loads merged config from [`apps/`](apps/) (or legacy root [`apps.json`](apps.json)), resolves latest release, downloads assets, optionally launches installers.
 - [`apps/`](apps/) — recommended layout: [`apps/root.json`](apps/root.json) + per-platform JSON shards under [`apps/windows/`](apps/windows/), [`apps/darwin/`](apps/darwin/), [`apps/linux/`](apps/linux/). Falls back to `apps/darwin.json` / `apps/linux.json` if shard dirs are empty. Monolith backup: `apps.json.monolith.bak`; optional backups after splitting: `apps/darwin.json.bak`, `apps/linux.json.bak`.
 - [`run_update.bat`](run_update.bat) — Windows shortcut: checks Python, installs deps, runs `python auto_update.py`.
 - [`lookup_app.py`](lookup_app.py) / [`lookup_app.bat`](lookup_app.bat) — fuzzy search, optional `enabled`, add to **saved update list** (see **§3** closed loop).
+- [`search_soft_pages.bat`](search_soft_pages.bat) — search **intro page titles** from [`tools/soft_page_check/`](tools/soft_page_check/) (dayanzai, down66, 7xiazai, etc.) and open URLs in the browser; complements GitHub catalog lookup.
 - [`run_saved_apps.bat`](run_saved_apps.bat) — enable + run `auto_update.py` for all apps in that list.
 
 ### Recommended apps (Markdown guide)
@@ -35,9 +45,9 @@ Full catalog guides by platform:
 
 | Platform | Chinese | English table | Scale |
 |----------|---------|---------------|-------|
-| Windows | [`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md) | [`RECOMMENDED.md`](RECOMMENDED.md) | 516 |
-| macOS | [`RECOMMENDED.darwin.zh-CN.md`](RECOMMENDED.darwin.zh-CN.md) | [`RECOMMENDED.darwin.md`](RECOMMENDED.darwin.md) | 384 |
-| Linux | [`RECOMMENDED.linux.zh-CN.md`](RECOMMENDED.linux.zh-CN.md) | [`RECOMMENDED.linux.md`](RECOMMENDED.linux.md) | 382 |
+| Windows | [`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md) | [`RECOMMENDED.md`](RECOMMENDED.md) | 536 |
+| macOS | [`RECOMMENDED.darwin.zh-CN.md`](RECOMMENDED.darwin.zh-CN.md) | [`RECOMMENDED.darwin.md`](RECOMMENDED.darwin.md) | 407 |
+| Linux | [`RECOMMENDED.linux.zh-CN.md`](RECOMMENDED.linux.zh-CN.md) | [`RECOMMENDED.linux.md`](RECOMMENDED.linux.md) | 405 |
 
 Regenerate all: `python tools/generate_recommended_md.py`. Stats: [`CATALOG.md`](CATALOG.md).
 
@@ -49,7 +59,26 @@ Separate from [`apps/`](apps/): AI-coding–oriented entries, `manifest.json` bu
 
 Categorized **Gitee** repos under [`GiteeExploreHot/catalog/`](GiteeExploreHot/catalog/); [`GiteeExploreHot/scripts/fetch_explore_hot.py`](GiteeExploreHot/scripts/fetch_explore_hot.py) writes `hot_repos.json` plus **`gitee_downloads.json`** (Windows/macOS/Linux URLs from `releases/latest` attachments). [`GiteeExploreHot/scripts/gitee_download.py`](GiteeExploreHot/scripts/gitee_download.py) pulls binaries into `GiteeExploreHot/downloads/…`. Windows one-shot: [`GiteeExploreHot/run_sync_gitee.bat`](GiteeExploreHot/run_sync_gitee.bat) (optional first arg `windows`, `darwin`, or `linux` to download after sync). Not wired into `auto_update.py` (GitHub-focused). See [`GiteeExploreHot/README.md`](GiteeExploreHot/README.md).
 
-**Approximate catalog size** (changes when you edit JSON): **516** Windows, **384** darwin, **382** linux entries across **30** shard files each (darwin/linux may still use `99-未匹配-windows分片` placeholders; the Windows shard file is empty). See [`CATALOG.md`](CATALOG.md) for a per-shard table (`python tools/generate_catalog_index.py` to refresh). Confirm totals with the merge log line when you run the script.
+**Optional intro-page monitor: [`tools/soft_page_check/`](tools/soft_page_check/)**
+
+Separate from the GitHub **`apps/`** catalog: tracks **page titles** on dayanzai, down66, 7xiazai, hybase, 423down, tier-A install pages, etc. Use repo-root **[`search_soft_pages.bat`](search_soft_pages.bat)** to search ~5500+ indexed URLs and open matches in the browser.
+
+| Task | Entry |
+|------|--------|
+| Search titles / open URLs | **`search_soft_pages.bat <keyword>`** |
+| Monthly SOP | `tools\soft_page_check\monthly_sop.bat` |
+| **Monthly · tier A** (~42 pages, ~15s) | `monthly_check.bat` |
+| **Quarterly · all channels** (~2300+ pages, ~20–35 min; **title diff only, no downloads**) | `monthly_check_full.bat` |
+| List sites only (hybase + dayanzai + down66) | `monthly_check_list.bat` |
+| HTML report | `open_report.bat` |
+
+Details: [`tools/soft_page_check/README.md`](tools/soft_page_check/README.md).
+
+**Approximate catalog size** (changes when you edit JSON): **536** Windows, **407** darwin, **405** linux entries across **30** shard files each (**excluding** `99-未匹配-windows分片.json` placeholders). See [`CATALOG.md`](CATALOG.md) for a per-shard table (`python tools/generate_catalog_index.py` to refresh). Confirm totals with the merge log line when you run the script.
+
+Some AI IDE rows in main `apps/` use `resolve_via=github_pages_manifest` via `vibecoding_manifest_url` in [`apps/root.json`](apps/root.json) (default `./VibeCodingToolsDown/dist/vibecoding/manifest.json`). Refresh with `python VibeCodingToolsDown/scripts/build_manifest.py` before enabling those entries.
+
+**Duplicate `id`**: within one platform, each `id` must appear once across all shards (including `99-*`); remove stale placeholders if `auto_update.py` reports duplicates.
 
 Bulk extend from [dayanzai.me/windows](https://www.dayanzai.me/windows): `python tools/import_dayanzai_windows.py --apply` (Windows), then `python tools/sync_dayanzai_to_darwin_linux.py` for darwin/linux (API-first stubs; tune markers before enabling).
 
@@ -172,6 +201,19 @@ Lists **platform**, **shard path** (e.g. `windows/05-办公与设计.json`), **c
 
 At the prompt: index `1` or `1,3`, `a` for all, **Enter** to skip.
 
+### Option A′: intro-page title search (not the GitHub catalog)
+
+Search captured titles from download-site intro pages and open URLs:
+
+```bat
+search_soft_pages.bat 7zip
+search_soft_pages.bat --scope dayanzai WindowTabs
+search_soft_pages.bat --open github copilot
+search_soft_pages.bat --stats
+```
+
+Flags: `--scope` (e.g. `dayanzai`, `a`), `--open` (open top matches without prompting), `--stats` (index size).
+
 ### Closed loop: search → list → update
 
 ```bat
@@ -286,6 +328,8 @@ python auto_update.py --platform windows
 python auto_update.py --insecure
 lookup_app.bat drawio
 python lookup_app.py --no-prompt v2ray
+search_soft_pages.bat --stats
+search_soft_pages.bat 7zip
 ```
 
 ---
@@ -295,17 +339,42 @@ python lookup_app.py --no-prompt v2ray
 - Log file: `update_log.txt`
 - Saved release HTML: `github_page_<platform>_<app_id>.html` (e.g. `github_page_windows_obsidian.html`)
 - On failure: check `releases_url`, fallbacks, markers vs real asset names, TLS, `enabled`, API rate limits
+- **Duplicate `id`**: remove stale rows from `99-未匹配-windows分片.json` if the same `id` exists in a proper shard
 
 ---
 
 ## 13. Maintenance scripts
 
-- Fuzzy lookup / saved list: `lookup_app.bat <keyword>` (see §3 closed loop)
-- Update from list: **`run_saved_apps.bat`** or `python tools/run_saved_apps.py`
+### Daily use
+
+| Goal | Command |
+|------|---------|
+| Fuzzy search GitHub catalog / saved list | `lookup_app.bat <keyword>` (§3) |
+| Search intro-page titles / open URLs | **`search_soft_pages.bat <keyword>`** |
+| Update from saved list | **`run_saved_apps.bat`** or `python tools/run_saved_apps.py` |
+| Regenerate RECOMMENDED*.md | `python tools/generate_recommended_md.py` |
+| Refresh [`CATALOG.md`](CATALOG.md) | `python tools/generate_catalog_index.py` |
+
+### enabled & layout
+
 - Reset all `enabled` to `false`: **`reset_enabled_json.bat`** at repo root, or `python tools/reset_enabled_json.py` (`--dry-run` to preview; snapshot defaults to `tools/last_enabled_before_reset.json`)
 - Restore `enabled` from snapshot: **`apply_enabled_snapshot.bat`** or `python tools/apply_enabled_snapshot.py`
 - Split legacy `apps/darwin.json` / `apps/linux.json` into shard dirs: `python tools/split_darwin_linux_to_dirs.py` (backs up `*.json.bak`)
 - Monolith vs `apps/` notes: [`apps/root.json`](apps/root.json) → `_说明`
+
+### Bulk catalog import (idempotent; do not re-run blindly)
+
+| Script | Purpose |
+|--------|---------|
+| `tools/import_dayanzai_windows.py --apply` | Import open-source GitHub rows from dayanzai.me/windows |
+| `tools/split_dayanzai_unmatched.py` | Move `99-未匹配` rows into category shards |
+| `tools/sync_dayanzai_to_darwin_linux.py` | Mirror new Windows rows to darwin/linux |
+| `tools/append_catalog_batch5.py` | AI IDE ecosystem (Kilo, Open WebUI, Void, manifest rows in main `apps/`, etc.) |
+| `tools/append_catalog_batch2.py` … `batch4.py` | Historical cross-platform batches |
+
+### Intro-page monitoring
+
+See [`tools/soft_page_check/README.md`](tools/soft_page_check/README.md): `monthly_check.bat`, `monthly_sop.bat`, `fetch_github_on_changes.bat`, `search_pages.py` (via root `search_soft_pages.bat`).
 
 ---
 

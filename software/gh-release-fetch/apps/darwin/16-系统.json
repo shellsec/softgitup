@@ -102,39 +102,6 @@
     ]
   },
   {
-    "id": "optimizerduck",
-    "简介": "开源免费 Windows 系统优化利器 optimizerDuck v2.20.0 更新发布",
-    "分类": "系统",
-    "enabled": false,
-    "prefer_api_assets": true,
-    "version_tag_as_on_github": true,
-    "releases_url": "https://bgithub.xyz/itsfatduck/optimizerDuck/releases",
-    "repo_path": "itsfatduck/optimizerDuck",
-    "windows_installer": false,
-    "process_name": "",
-    "kill_before_install": false,
-    "run_installer": false,
-    "url_hint": "optimizerduck",
-    "installer_extensions": [
-      ".dmg",
-      ".pkg",
-      ".zip"
-    ],
-    "href_exclude_substrings": [
-      "windows",
-      "win64",
-      "win32",
-      "win-",
-      "linux",
-      ".AppImage",
-      ".deb",
-      ".rpm",
-      ".exe",
-      ".msi",
-      "arm64"
-    ]
-  },
-  {
     "id": "nwinfo",
     "简介": "开源电脑硬件信息检测工具 NWinfo 1.6.4 绿色中文便携版",
     "分类": "系统",

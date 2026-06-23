@@ -10,19 +10,19 @@ if errorlevel 1 goto fail
 python build_watchlist.py
 if errorlevel 1 goto fail
 
-echo ========== 1/4 A 类 - config.json 同步软件 ==========
+echo ========== 1/12 A 类 - config.json 同步软件 ==========
 python fetch_titles.py --scope a --compare
 if errorlevel 1 goto fail
 call :summary changed_tier_a_urls.txt last_diff_a.json A类
 
 echo.
-echo ========== 2/4 装机区 - 指南之前全部页面 ==========
+echo ========== 2/12 装机区 - 指南之前全部页面 ==========
 python fetch_titles.py --scope all --compare
 if errorlevel 1 goto fail
 call :summary changed_pages_urls.txt last_diff_all.json 装机区
 
 echo.
-echo ========== 3/4 423down digest ==========
+echo ========== 3/12 423down digest ==========
 python extract_423down_digest.py
 if errorlevel 1 goto fail
 python fetch_titles.py --scope 423down --compare
@@ -30,7 +30,7 @@ if errorlevel 1 goto fail
 call :summary changed_423down_urls.txt last_diff_423down.json 423down
 
 echo.
-echo ========== 4/10 7xiazai 系统 ==========
+echo ========== 4/12 7xiazai 系统 ==========
 python extract_7xiazai_pages.py
 if errorlevel 1 goto fail
 python fetch_titles.py --scope 7xiazai_system --compare
@@ -38,36 +38,47 @@ if errorlevel 1 goto fail
 call :summary changed_7xiazai_system_urls.txt last_diff_7xiazai_system.json 7xiazai系统
 
 echo.
-echo ========== 5/10 7xiazai 移动 ==========
+echo ========== 5/12 7xiazai 移动 ==========
 python fetch_titles.py --scope 7xiazai_mobile --compare
 if errorlevel 1 goto fail
 call :summary changed_7xiazai_mobile_urls.txt last_diff_7xiazai_mobile.json 7xiazai移动
 
 echo.
-echo ========== 6/10 hybase 系统 ==========
+echo ========== 6/12 hybase 系统 ==========
 python fetch_titles.py --scope hybase_system --compare
 if errorlevel 1 goto fail
 call :summary changed_hybase_system_urls.txt last_diff_hybase_system.json hybase系统
 
 echo.
-echo ========== 7/10 hybase 移动 ==========
+echo ========== 7/12 hybase 移动 ==========
 python fetch_titles.py --scope hybase_mobile --compare
 if errorlevel 1 goto fail
 call :summary changed_hybase_mobile_urls.txt last_diff_hybase_mobile.json hybase移动
 
 echo.
-echo ========== 8/10 dayanzai 系统+移动 ==========
+echo ========== 8/12 dayanzai 系统 ==========
+python extract_list_system_urls.py
+if errorlevel 1 goto fail
 python fetch_titles.py --scope dayanzai_system --compare
+if errorlevel 1 goto fail
+call :summary changed_dayanzai_system_urls.txt last_diff_dayanzai_system.json dayanzai系统
+
+echo.
+echo ========== 9/10 dayanzai 移动 ==========
 python fetch_titles.py --scope dayanzai_mobile --compare
 if errorlevel 1 goto fail
 call :summary changed_dayanzai_mobile_urls.txt last_diff_dayanzai_mobile.json dayanzai移动
 
 echo.
-echo ========== 9/10 down66 系统+移动 ==========
-python fetch_titles.py --scope down66_system --compare
-python fetch_titles.py --scope down66_mobile --compare
+echo ========== 10/12 down66 系统 ==========
+python extract_list_system_urls.py
 if errorlevel 1 goto fail
-call :summary changed_down66_mobile_urls.txt last_diff_down66_mobile.json down66移动
+python fetch_titles.py --scope down66_system --compare
+if errorlevel 1 goto fail
+call :summary changed_down66_system_urls.txt last_diff_down66_system.json down66系统
+
+echo.
+echo ========== 12/12 down66 移动 ==========
 
 echo.
 echo ============================================================

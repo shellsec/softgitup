@@ -515,5 +515,44 @@
       ".msi",
       "arm64"
     ]
+  },
+  {
+    "id": "geolibre",
+    "简介": "GeoLibre Desktop（macOS Apple Silicon dmg）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/opengeos/GeoLibre/releases",
+    "repo_path": "opengeos/GeoLibre",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "GeoLibre.Desktop_",
+      "aarch64.dmg"
+    ],
+    "href_exclude_substrings": [
+      ".exe",
+      ".msi",
+      ".msix",
+      ".deb",
+      ".rpm",
+      "AppImage",
+      "x64.dmg",
+      "android",
+      "tar.gz",
+      "windows",
+      "linux"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "GeoLibre.Desktop_{ver}_aarch64.dmg"
+    ],
+    "save_name": "GeoLibre.Desktop_{ver}_aarch64.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

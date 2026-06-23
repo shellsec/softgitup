@@ -7,7 +7,10 @@ echo down66 快检（系统 + 移动 分开比对）
 echo ========================================
 echo.
 
-echo --- 系统 (PC，清单为空则跳过) ---
+echo --- 系统 (PC) ---
+python extract_list_system_urls.py
+if errorlevel 1 goto fail
+echo.
 python fetch_titles.py --scope down66_system --compare
 if errorlevel 1 goto fail
 call :show down66_system changed_down66_system_urls.txt

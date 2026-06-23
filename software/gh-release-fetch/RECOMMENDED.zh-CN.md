@@ -1,6 +1,6 @@
 # 推荐开源软件（Windows · 全分类导读）
 
-> 由 `python tools/generate_recommended_md.py` 根据 [`apps/windows/`](apps/windows/) 自动生成，生成日期：**2026-06-23**。条目 **538** 个（windows 平台）。
+> 由 `python tools/generate_recommended_md.py` 根据 [`apps/windows/`](apps/windows/) 自动生成，生成日期：**2026-06-23**。条目 **540** 个（windows 平台）。
 > 其它平台导读：[macOS](RECOMMENDED.darwin.zh-CN.md) · [Linux](RECOMMENDED.linux.zh-CN.md)。
 > 技术索引与分片统计见 [`CATALOG.md`](CATALOG.md)。启用/更新：lookup → `run_saved_apps`（Windows 可用 `run_saved_apps.bat`）。
 
@@ -1918,7 +1918,7 @@ PeaZip（压缩/解压缩工具）
 
 ---
 
-## 开发（60）
+## 开发（61）
 
 ### act（本地运行 GitHub Actions · `act`
 
@@ -2045,6 +2045,13 @@ Forgejo（Git 托管，Windows amd64 zip）
 
 - 仓库：`forgejo/forgejo` · 分片：`apps/windows/12-开发.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows forgejo`
+
+### GeoLibre Desktop（OpenGeos 开源 GIS 桌面端 · `geolibre`
+
+GeoLibre Desktop（OpenGeos 开源 GIS 桌面端，遥感/地理空间）
+
+- 仓库：`opengeos/GeoLibre` · 分片：`apps/windows/12-开发.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows geolibre`
 
 ### Git for Windows（官方安装包） · `git_for_windows`
 
@@ -2960,7 +2967,7 @@ Markdown 写作环境
 
 ---
 
-## 系统（35）
+## 系统（36）
 
 ### Windows · `auto_dark_mode`
 
@@ -3074,11 +3081,11 @@ LightBulb 开源护眼软件 LightBulb 2.7.1 + x64 中文绿色版
 - 仓库：`hellzerg/optimizer` · 分片：`apps/windows/16-系统.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows optimizer`
 
-### 开源免费 Windows 系统优化利器 optimizerDuck · `optimizerduck`
+### optimizerDuck（Windows 系统优化与清理工具） · `optimizerduck`
 
-开源免费 Windows 系统优化利器 optimizerDuck v2.20.0 更新发布
+optimizerDuck（Windows 系统优化与清理工具）
 
-- 仓库：`itsfatduck/optimizerDuck` · 分片：`apps/windows/16-系统.json` · 配置：基础条目（试跑前建议补规则）
+- 仓库：`itsfatduck/optimizerDuck` · 分片：`apps/windows/16-系统.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows optimizerduck`
 
 ### Windows 密钥激活次数查询工具 PID Key Checker · `pid_key_checker`
@@ -3185,6 +3192,13 @@ UniGetUI（Winget / Scoop 等的图形化软件包管理前端，原 WingetUI）
 
 - 仓库：`rcmaehl/WhyNotWin11` · 分片：`apps/windows/16-系统.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows whynotwin11`
+
+### windowtabs · `windowtabs`
+
+WindowTabs（为任意窗口添加浏览器式标签页；Standard Software 开源维护版）
+
+- 仓库：`standard-software/WindowTabs` · 分片：`apps/windows/16-系统.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows windowtabs`
 
 ### 开源免费 Windows 动态桌面壁纸 WinDynamicDesktop · `windynamicdesktop`
 

@@ -431,22 +431,32 @@
   },
   {
     "id": "optimizerduck",
-    "简介": "开源免费 Windows 系统优化利器 optimizerDuck v2.20.0 更新发布（来源：dayanzai）",
+    "简介": "optimizerDuck（Windows 系统优化与清理工具）",
     "分类": "系统",
     "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
     "releases_url": "https://bgithub.xyz/itsfatduck/optimizerDuck/releases",
     "repo_path": "itsfatduck/optimizerDuck",
-    "windows_installer": true,
-    "installer_extensions": [
-      ".exe",
-      ".msi"
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "optimizerDuck-Windows-x64-",
+      ".exe"
     ],
+    "href_exclude_substrings": [
+      "arm64",
+      "x86",
+      ".sha256",
+      ".sha1"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "optimizerDuck-Windows-x64-{ver}.exe"
+    ],
+    "save_name": "optimizerDuck-Windows-x64-{ver}.exe",
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false,
-    "url_hint": "optimizerduck"
+    "run_installer": true
   },
   {
     "id": "nwinfo",
@@ -770,5 +780,33 @@
     "kill_before_install": false,
     "run_installer": false,
     "url_hint": "nsudo"
+  },
+  {
+    "id": "windowtabs",
+    "简介": "WindowTabs（为任意窗口添加浏览器式标签页；Standard Software 开源维护版）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/standard-software/WindowTabs/releases",
+    "repo_path": "standard-software/WindowTabs",
+    "installer_markers": [
+      "WtSetup.msi"
+    ],
+    "href_exclude_substrings": [
+      "WindowTabs.zip",
+      ".zip"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "WtSetup.msi"
+    ],
+    "save_name": "WindowTabs-{ver}-WtSetup.msi",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
   }
 ]

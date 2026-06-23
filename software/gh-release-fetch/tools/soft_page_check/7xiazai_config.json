@@ -1,0 +1,22 @@
+{
+  "base": "https://www.7xiazai.com",
+  "max_page": 65,
+  "discover_from_lists": true,
+  "exclude_slugs": [
+    "app",
+    "os",
+    "data",
+    "design",
+    "hardware",
+    "media",
+    "microsoft",
+    "software",
+    "mediaapp",
+    "tag",
+    "category",
+    "author",
+    "feed",
+    "comments"
+  ],
+  "note": "从首页~page/N 解析软件详情页链接；不监控列表页本身。改 max_page 后运行 refresh_urls.bat 7xiazai"
+}

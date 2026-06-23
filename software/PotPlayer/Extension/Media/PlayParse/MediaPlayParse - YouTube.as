@@ -2114,7 +2114,8 @@ string PlayitemParse(const string &in path, dictionary &MetaData, array<dictiona
 									item["url"] = s5;
 									subtitle.insertLast(item);
 								}
-								track = track.NextSiblingElement("track");
+								// track = track.NextSiblingElement("track");
+								track = track.NextSiblingElement();
 							}
 						}
 					}

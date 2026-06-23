@@ -21,12 +21,22 @@
 
 **曾用称呼**：GithubWinDownTools；现用 **GH Release Fetch / GitHub 发行版拉取工具** 以反映多平台配置与用途。
 
+### 设计原则（两条线）
+
+| 线 | 适用 | 本仓库 |
+|----|------|--------|
+| **Git 线** | 开源、Release 在 GitHub/Gitee 上可解析 | `apps/` + `lookup_app` → `run_saved_apps`；可选 `GiteeExploreHot/`、`VibeCodingToolsDown/` |
+| **频道线** | 其它（介绍页、网盘、厂商 CDN、非 Release 分发） | `tools/soft_page_check/` 定期抓标题比对；`search_soft_pages.bat` 按标题打开链接；变化后 **人工** 下载或替换装机包 |
+
+**开源走 Git，其它走各类频道；频道按节奏定期快检**（不必把非 Git 软件硬塞进 `apps/`）。大眼仔等频道里筛出的开源项可用 `import_dayanzai_windows.py` 写入 Git 线；本地抓取缓存 `tools/dayanzai_cache/` 可删（`.gitignore`），再导入时会自动重建。
+
 核心文件：
 
 - `auto_update.py`：按配置抓取版本、下载文件、按需启动安装程序（优先读取 `apps/` 目录合并结果，否则使用单文件 `apps.json`）
 - `apps/`：推荐布局——[`apps/root.json`](apps/root.json)（全局）+ [`apps/windows/*.json`](apps/windows/) + [`apps/darwin/*.json`](apps/darwin/) + [`apps/linux/*.json`](apps/linux/)（均按分类拆成多个数组文件，与 windows 命名风格一致）；若无分片目录则回退单文件 `apps/darwin.json`、`apps/linux.json`。历史单文件备份见 `apps.json.monolith.bak`；darwin/linux 由单文件迁出后的备份见 `apps/darwin.json.bak`、`apps/linux.json.bak`
 - `run_update.bat`：Windows 下一键检查 Python、安装依赖并执行 `python auto_update.py`
 - `lookup_app.py` / `lookup_app.bat`：在 `apps/` 清单中**模糊检索**、可选开启 `enabled`、加入**更新列表**（见 §3 闭环）
+- `search_soft_pages.bat`：在 [`tools/soft_page_check/`](tools/soft_page_check/) 已抓取的介绍页**标题**中搜索并打开链接（dayanzai / down66 / 7xiazai / 装机 A 类等，与 GitHub 清单互补）
 - `run_saved_apps.bat`：按列表一键开启并执行 `auto_update.py`（与 `lookup_app` 配套）
 
 ### 推荐软件介绍（Markdown）
@@ -35,9 +45,9 @@
 
 | 平台 | 中文导读 | 英文简表 | 规模（约） |
 |------|----------|----------|------------|
-| Windows | [`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md) | [`RECOMMENDED.md`](RECOMMENDED.md) | 516 条 |
-| macOS | [`RECOMMENDED.darwin.zh-CN.md`](RECOMMENDED.darwin.zh-CN.md) | [`RECOMMENDED.darwin.md`](RECOMMENDED.darwin.md) | 384 条 |
-| Linux | [`RECOMMENDED.linux.zh-CN.md`](RECOMMENDED.linux.zh-CN.md) | [`RECOMMENDED.linux.md`](RECOMMENDED.linux.md) | 382 条 |
+| Windows | [`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md) | [`RECOMMENDED.md`](RECOMMENDED.md) | 536 条 |
+| macOS | [`RECOMMENDED.darwin.zh-CN.md`](RECOMMENDED.darwin.zh-CN.md) | [`RECOMMENDED.darwin.md`](RECOMMENDED.darwin.md) | 407 条 |
+| Linux | [`RECOMMENDED.linux.zh-CN.md`](RECOMMENDED.linux.zh-CN.md) | [`RECOMMENDED.linux.md`](RECOMMENDED.linux.md) | 405 条 |
 
 刷新三份文档：`python tools/generate_recommended_md.py`（或指定 `windows` / `darwin` / `linux`）。分片统计见 [`CATALOG.md`](CATALOG.md)。
 
@@ -54,11 +64,37 @@
 
 与 [`apps/`](apps/)（面向 **GitHub Releases**）**独立**：[`GiteeExploreHot/catalog/`](GiteeExploreHot/catalog/) 按主题维护 `owner/repo`；[`GiteeExploreHot/scripts/fetch_explore_hot.py`](GiteeExploreHot/scripts/fetch_explore_hot.py) 生成 **`data/gitee_downloads.json`**（从 Gitee `releases/latest` 解析附件并归类 **windows / darwin / linux**），[`GiteeExploreHot/scripts/gitee_download.py`](GiteeExploreHot/scripts/gitee_download.py) 可按平台拉取到本包 `downloads/`。**Windows 一键**：[`GiteeExploreHot/run_sync_gitee.bat`](GiteeExploreHot/run_sync_gitee.bat)（可选参数 `windows` / `darwin` / `linux` 表示同步后再下载）。**未接入** `auto_update.py`。详见 [`GiteeExploreHot/README.md`](GiteeExploreHot/README.md)。
 
+### soft_page_check（介绍页标题监控 · 可选）
+
+目录 [`tools/soft_page_check/`](tools/soft_page_check/) 与主 `apps/` **独立**：监控 **dayanzai / down66 / 7xiazai / hybase / 423down / 装机 A 类** 等介绍页的 `<title>` 变化，用于发现「可能有新版本」的资讯页，**不负责** GitHub 自动下载。
+
+| 用途 | 入口 |
+|------|------|
+| **按标题搜介绍页并打开** | 仓库根 **`search_soft_pages.bat <关键词>`**（索引约 5500+ URL，见 `history/titles_latest_*.json`） |
+| 月度快检 SOP | `tools\soft_page_check\monthly_sop.bat` |
+| **每月 · A 类**（~42 页，~15 秒） | `tools\soft_page_check\monthly_check.bat` |
+| **每季 · 频道全量**（~2300+ 页，~20–35 分钟，**只比标题、不下载软件**） | `tools\soft_page_check\monthly_check_full.bat` |
+| 仅 list 三站（hybase + dayanzai + down66） | `tools\soft_page_check\monthly_check_list.bat` |
+| HTML 报告 | `tools\soft_page_check\open_report.bat` → `reports/index.html` |
+| GitHub 页标题变化后拉 Release | `tools\soft_page_check\fetch_github_on_changes.bat` |
+
+**与 `lookup_app` 的分工**：`lookup_app` → **GitHub Releases 清单**（查 id、下载、更新）；`search_soft_pages` → **各站介绍页**（按标题打开网页）。首次使用快检需连跑两次才建立「标题变化」基线，详见 [`tools/soft_page_check/README.md`](tools/soft_page_check/README.md)。
+
+```bat
+search_soft_pages.bat 7zip
+search_soft_pages.bat --scope dayanzai 优化
+search_soft_pages.bat --stats
+```
+
 ### 仓库现状与收录范围（约略）
 
-合并配置后规模约为：**Windows 516 条**、**darwin 384 条**、**linux 382 条**（[`apps/windows/`](apps/windows/) 等下各 **30** 个分类分片；darwin/linux 的 `99-未匹配-windows分片` 仍为占位条目，Windows 侧该分片已清空）。**分片级概览**见根目录 [`CATALOG.md`](CATALOG.md)（运行 `python tools/generate_catalog_index.py` 可刷新）。精确数以运行 `python auto_update.py` 时日志里「已从 apps/ 目录合并配置」为准。
+合并配置后规模约为：**Windows 536 条**、**darwin 407 条**、**linux 405 条**（[`apps/windows/`](apps/windows/) 等下各 **30** 个分类分片；**不含** `99-未匹配-windows分片.json` 占位条目）。**分片级概览**见根目录 [`CATALOG.md`](CATALOG.md)（运行 `python tools/generate_catalog_index.py` 可刷新）。精确数以运行 `python auto_update.py` 时日志里「已从 apps/ 目录合并配置」为准。
 
-Windows 可从 [大眼仔旭 Windows 专区](https://www.dayanzai.me/windows) 批量补收录开源项：`python tools/import_dayanzai_windows.py --apply`；同步到 macOS/Linux 清单：`python tools/sync_dayanzai_to_darwin_linux.py`（按 Windows 分类分片写入，默认 `prefer_api_assets` + 平台过滤，启用前建议试跑补全规则）。
+主清单以 **GitHub Releases**（及镜像）为主；部分 AI IDE（Cursor、Trae、Qoder 等）通过 `resolve_via=github_pages_manifest` 读取 [`apps/root.json`](apps/root.json) 中的 `vibecoding_manifest_url`（默认 `./VibeCodingToolsDown/dist/vibecoding/manifest.json`）。使用前可先运行 `python VibeCodingToolsDown/scripts/build_manifest.py` 刷新 manifest。
+
+**注意**：同一平台内 **`id` 不可重复**（含 `99-` 分片）。若 `auto_update.py` 报「重复的 id」，请从占位分片删除与正式分片同 id 的条目。
+
+Windows 可从 [大眼仔旭 Windows 专区](https://www.dayanzai.me/windows) 批量补收录开源项：`python tools/import_dayanzai_windows.py --apply`（可选本地缓存 `tools/dayanzai_cache/`，导入完成后可删）；同步到 macOS/Linux：`python tools/sync_dayanzai_to_darwin_linux.py`。
 
 收录以 **GitHub（及镜像）上可解析的 Releases 资产** 为主，涵盖编辑器、笔记、安全、云原生、可观测、下载、办公与设计等常见分类。**不包含**破解、盗版或绕过授权的软件分发；个别条目仅含基础字段时需自行补全规则后才能稳定自动下载。
 
@@ -216,6 +252,22 @@ python lookup_app.py drawio
 | `--min-score N` | 调低/调高模糊匹配阈值（默认 40） |
 
 交互时：`1` 或 `1,3` 选序号，`a` 选全部，**回车** 跳过。
+
+### 方式 A′：介绍页标题搜索（非 GitHub 清单）
+
+在 **dayanzai / down66 / 7xiazai** 等已抓取标题中搜索并打开浏览器（见 [`tools/soft_page_check/`](tools/soft_page_check/)）：
+
+```bat
+search_soft_pages.bat 7zip
+search_soft_pages.bat dayanzai WindowTabs
+search_soft_pages.bat --open github copilot
+```
+
+| 选项 | 说明 |
+|------|------|
+| `--scope dayanzai` / `a` / `hybase_system` 等 | 限定来源 |
+| `--open` | 不交互，直接打开前几条匹配 |
+| `--stats` | 显示索引条数与各来源规模 |
 
 ### 闭环：查询 → 列表 → 本机更新
 
@@ -420,6 +472,8 @@ python auto_update.py --insecure
 ```bat
 lookup_app.bat drawio
 python lookup_app.py --no-prompt v2ray
+search_soft_pages.bat --stats
+search_soft_pages.bat 7zip
 ```
 
 ---
@@ -429,14 +483,39 @@ python lookup_app.py --no-prompt v2ray
 - 运行日志：`update_log.txt`
 - 各应用抓取到的发布页 HTML：`github_page_<platform>_<app_id>.html`（例如 `github_page_windows_obsidian.html`）
 - 下载失败时优先检查：`releases_url` 是否可访问、是否已回退到官方页或 API、`installer_markers` / `download_names` 是否仍与真实资产一致、网络与证书、条目是否已 `enabled: true`、是否命中 GitHub API 限流
+- **`重复的 id`**：同一平台多个分片出现相同 `id` 时脚本会拒绝加载；检查 `99-未匹配-windows分片.json` 是否与正式分片重复
 
 ---
 
 ## 13. 维护工具（可选）
 
-- **模糊查找 / 加入更新列表**：`lookup_app.bat <关键词>`（见 §3 闭环）
-- **按列表一键更新**：项目根 **`run_saved_apps.bat`** 或 `python tools/run_saved_apps.py`
+### 日常使用
+
+| 目的 | 命令 |
+|------|------|
+| GitHub 清单模糊查找 / 加入更新列表 | `lookup_app.bat <关键词>`（见 §3） |
+| 介绍页标题搜索 / 打开链接 | **`search_soft_pages.bat <关键词>`** |
+| 按列表一键更新 | **`run_saved_apps.bat`** 或 `python tools/run_saved_apps.py` |
+| 刷新推荐导读 Markdown | `python tools/generate_recommended_md.py` |
+| 刷新 [`CATALOG.md`](CATALOG.md) | `python tools/generate_catalog_index.py` |
+
+### enabled 与清单维护
+
 - 将所有应用 JSON 中的 `enabled` 写回 `false`：项目根 **`reset_enabled_json.bat`** 或 `python tools/reset_enabled_json.py`（可加 `--dry-run` 预览；快照默认 `tools/last_enabled_before_reset.json`）
 - 按快照恢复 `enabled`：项目根 **`apply_enabled_snapshot.bat`** 或 `python tools/apply_enabled_snapshot.py`
 - 将 `apps/darwin.json`、`apps/linux.json` 按 windows 分片名拆到 `apps/darwin/`、`apps/linux/`：`python tools/split_darwin_linux_to_dirs.py`（会备份原单文件为 `*.json.bak`）
 - 单文件与 `apps/` 目录的拆分与恢复说明见 [`apps/root.json`](apps/root.json) 内 `_说明`
+
+### 批量扩充收录（幂等脚本，勿重复执行）
+
+| 脚本 | 用途 |
+|------|------|
+| `tools/import_dayanzai_windows.py --apply` | 从大眼仔旭 Windows 专区抓取开源 GitHub 项 |
+| `tools/split_dayanzai_unmatched.py` | 将 `99-未匹配` 分片拆到各分类 |
+| `tools/sync_dayanzai_to_darwin_linux.py` | Windows 新条目同步到 darwin/linux |
+| `tools/append_catalog_batch5.py` | AI IDE 生态补录（Kilo、Open WebUI、Void、manifest 迁入主 apps 等） |
+| `tools/append_catalog_batch2.py` ~ `batch4.py` | 历史批处理（跨平台常用软件） |
+
+### 介绍页监控（soft_page_check）
+
+详见 [`tools/soft_page_check/README.md`](tools/soft_page_check/README.md)：`monthly_check.bat`、`monthly_sop.bat`、`fetch_github_on_changes.bat`、`search_pages.py`（由根目录 `search_soft_pages.bat` 调用）。

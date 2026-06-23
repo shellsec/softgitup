@@ -514,5 +514,43 @@
       ".exe",
       ".msi"
     ]
+  },
+  {
+    "id": "geolibre",
+    "简介": "GeoLibre Desktop（Linux amd64 AppImage）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/opengeos/GeoLibre/releases",
+    "repo_path": "opengeos/GeoLibre",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "GeoLibre.Desktop_",
+      "amd64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      ".exe",
+      ".msi",
+      ".dmg",
+      ".deb",
+      ".rpm",
+      "aarch64",
+      "android",
+      "tar.gz",
+      "windows",
+      "darwin"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "download_names": [
+      "GeoLibre.Desktop_{ver}_amd64.AppImage"
+    ],
+    "save_name": "GeoLibre.Desktop_{ver}_amd64.AppImage",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

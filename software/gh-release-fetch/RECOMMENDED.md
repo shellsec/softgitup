@@ -1,6 +1,6 @@
 # Recommended apps (Windows · full catalog guide)
 
-> Auto-generated from [`apps/windows/`](apps/windows/) on **2026-06-23**. **538** entries.
+> Auto-generated from [`apps/windows/`](apps/windows/) on **2026-06-23**. **540** entries.
 > Chinese guide: [`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md). Other platforms: [macOS](RECOMMENDED.darwin.zh-CN.md) · [Linux](RECOMMENDED.linux.zh-CN.md). Index: [`CATALOG.md`](CATALOG.md).
 
 ## AI (38)
@@ -347,7 +347,7 @@
 | `pineapple_picture` | 免费开源菠萝看图 Pineapple Picture 1.4.1 中文多语免费版 | `BLumia/pineapple-pictures` |
 | `quick_picture_viewer` | 开源免费轻量级 Windows 图像查看器 Quick Picture Viewer 3.1.4 中文免费版 | `ModuleArt/quick-picture-viewer` |
 
-## 开发 (60)
+## 开发 (61)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -369,6 +369,7 @@
 | `fastfetch` | Fastfetch（系统信息展示，neofetch 的现代替代品，速度快） | `fastfetch-cli/fastfetch` |
 | `fnm` | Fast Node Manager（fnm） | `Schniz/fnm` |
 | `forgejo` | Forgejo（Git 托管，Windows amd64 zip） | `forgejo/forgejo` |
+| `geolibre` | GeoLibre Desktop（OpenGeos 开源 GIS 桌面端，遥感/地理空间） | `opengeos/GeoLibre` |
 | `git_for_windows` | Git for Windows（官方安装包） | `git-for-windows/git` |
 | `git_lfs` | Git LFS 大文件扩展 | `git-lfs/git-lfs` |
 | `git_windows` | Git for Windows（含 Git Bash） | `git-for-windows/git` |
@@ -518,7 +519,7 @@
 | `yanknote` | Yank Note（yn）Markdown 笔记，本地优先、可运行代码块 | `purocean/yn` |
 | `zettlr` | Markdown 写作环境 | `Zettlr/Zettlr` |
 
-## 系统 (35)
+## 系统 (36)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -538,7 +539,7 @@
 | `nsudo` | 开源免费系统管理软件 NSudo 8.2.0 中文免费版 | `Thdub/NSudo_Installer` |
 | `nwinfo` | 开源电脑硬件信息检测工具 NWinfo 1.6.4 绿色中文便携版 | `a1ive/nwinfo` |
 | `optimizer` | 开源 Windows 10/11 系统优化工具 Optimizer 16.7 中文多语免费版 | `hellzerg/optimizer` |
-| `optimizerduck` | 开源免费 Windows 系统优化利器 optimizerDuck v2.20.0 更新发布 | `itsfatduck/optimizerDuck` |
+| `optimizerduck` | optimizerDuck（Windows 系统优化与清理工具） | `itsfatduck/optimizerDuck` |
 | `pid_key_checker` | Windows 密钥激活次数查询工具 PID Key Checker 4.0.0.0 中文免费版 | `Ja7ad/PIDChecker` |
 | `powertoys` | 窗口置顶、重排、快捷键、命令面板等系统增强 | `microsoft/PowerToys` |
 | `processhacker` | Process Hacker 进程监视（现 System Informer） | `processhacker/processhacker` |
@@ -554,6 +555,7 @@
 | `unigetui` | UniGetUI（Winget / Scoop 等的图形化软件包管理前端，原 WingetUI） | `marticliment/WingetUI` |
 | `ventoy` | 多系统 U 盘启动（windows zip） | `ventoy/Ventoy` |
 | `whynotwin11` | 开源检测 Win11 硬件需求工具 WhyNotWin11 2.7.0.0 中文多语免费版 | `rcmaehl/WhyNotWin11` |
+| `windowtabs` | WindowTabs（为任意窗口添加浏览器式标签页；Standard Software 开源维护版） | `standard-software/WindowTabs` |
 | `windynamicdesktop` | 开源免费 Windows 动态桌面壁纸 WinDynamicDesktop 5.6.1 中文免费版 | `t1m0thyj/WinDynamicDesktop` |
 | `winslop` | 开源免费 Windows 11 优化工具 Winslop 26.03.110 绿色中文版 | `builtbybel/Winslop` |
 | `wsl_manager` | 开源 WSL 发行版管理器 WSL Manager 1.11.0 中文多语免费版 | `bostrot/wsl2-distro-manager` |
