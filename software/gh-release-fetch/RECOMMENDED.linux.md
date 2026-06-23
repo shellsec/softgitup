@@ -1,6 +1,6 @@
 # Recommended apps (Linux · full catalog guide)
 
-> Auto-generated from [`apps/linux/`](apps/linux/) on **2026-06-22**. **405** entries.
+> Auto-generated from [`apps/linux/`](apps/linux/) on **2026-06-23**. **407** entries.
 > Chinese guide: [`RECOMMENDED.linux.zh-CN.md`](RECOMMENDED.linux.zh-CN.md). Other platforms: [Windows](RECOMMENDED.zh-CN.md) · [macOS](RECOMMENDED.darwin.zh-CN.md). Index: [`CATALOG.md`](CATALOG.md).
 
 ## AI (39)
@@ -39,7 +39,7 @@
 | `nextchat` | NextChat：Release 多为源码；部署见项目说明。 | `ChatGPTNextWeb/NextChat` |
 | `ollama` | - | `ollama/ollama` |
 | `open_claude_cowork` | Open Claude Cowork：仓库无 Release 二进制。 | `ComposioHQ/open-claude-cowork` |
-| `open_webui_desktop` | Open WebUI Desktop（Linux AppImage；Release 以 yml 为主，试跑前核对资产） | `open-webui/desktop` |
+| `open_webui_desktop` | Open WebUI Desktop（Linux x86_64 AppImage） | `open-webui/desktop` |
 | `opencat` | OpenCat：以 App Store 等为主；repo_path 仅满足配置校验，勿启用。 | `octocat/Hello-World` |
 | `openclaw` | OpenClaw（Linux 用 Release 中 OpenClaw-*.zip） | `openclaw/openclaw` |
 | `opencode` | - | `sst/opencode` |
@@ -152,7 +152,7 @@
 | `tempo` | Grafana Tempo 追踪后端 | `grafana/tempo` |
 | `vector` | Vector 日志/指标采集 | `vectordotdev/vector` |
 
-## 命令行 (19)
+## 命令行 (20)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -171,6 +171,7 @@
 | `ripgrep` | - | `BurntSushi/ripgrep` |
 | `sd` | - | `chmln/sd` |
 | `starship` | - | `starship/starship` |
+| `uniclipboard_cli` | UniClipboard CLI（Linux x86_64 musl tar.gz） | `UniClipboard/UniClipboard` |
 | `yazi` | - | `sxyazi/yazi` |
 | `yq` | - | `mikefarah/yq` |
 | `zellij` | - | `zellij-org/zellij` |
@@ -336,7 +337,7 @@
 | `ultimate_packer_for_executables` | 开源 EXE/Dll 资源压缩工具 UPX 5.1.1 + x64 发布！ | `upx/upx` |
 | `uv` | - | `astral-sh/uv` |
 
-## 效率 (12)
+## 效率 (13)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -351,6 +352,7 @@
 | `quickclipboard` | 这款开源免费的 QuickClipboard 0.1.1 正在重新定义你的复制粘贴体验 | `mosheng1/QuickClipboard` |
 | `screenote` | 开源免费全快捷键截图/贴图工具 Screenote 2020-07-02 中文免费版 | `poerin/Screenote` |
 | `stretchly` | - | `hovancik/stretchly` |
+| `uniclipboard` | UniClipboard（跨平台剪贴板同步与管理；Linux amd64 AppImage） | `UniClipboard/UniClipboard` |
 | `vhs` | - | `charmbracelet/vhs` |
 
 ## 数据库 (8)

@@ -142,5 +142,73 @@
     "save_name": "kilo-darwin-arm64.zip",
     "releases_url": "https://bgithub.xyz/Kilo-Org/kilocode/releases",
     "repo_path": "Kilo-Org/kilocode"
+  },
+  {
+    "id": "uniclipboard_cli",
+    "简介": "UniClipboard CLI（macOS Apple Silicon tar.gz）",
+    "分类": "命令行",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/UniClipboard/UniClipboard/releases",
+    "repo_path": "UniClipboard/UniClipboard",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "uniclipboard-cli-",
+      "aarch64-apple-darwin.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "windows-msvc",
+      "linux",
+      "x86_64-apple",
+      ".sig",
+      "SHA256",
+      "UniClipboard_"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "uniclipboard-cli-{ver}-aarch64-apple-darwin.tar.gz"
+    ],
+    "save_name": "uniclipboard-cli-{ver}-aarch64-apple-darwin.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "uniclipboard_cli_x64",
+    "简介": "UniClipboard CLI（macOS Intel x64 tar.gz）",
+    "分类": "命令行",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/UniClipboard/UniClipboard/releases",
+    "repo_path": "UniClipboard/UniClipboard",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "uniclipboard-cli-",
+      "x86_64-apple-darwin.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "windows-msvc",
+      "linux",
+      "aarch64",
+      ".sig",
+      "SHA256",
+      "UniClipboard_"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "uniclipboard-cli-{ver}-x86_64-apple-darwin.tar.gz"
+    ],
+    "save_name": "uniclipboard-cli-{ver}-x86_64-apple-darwin.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

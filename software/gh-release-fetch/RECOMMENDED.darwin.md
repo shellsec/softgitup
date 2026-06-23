@@ -1,6 +1,6 @@
 # Recommended apps (macOS · full catalog guide)
 
-> Auto-generated from [`apps/darwin/`](apps/darwin/) on **2026-06-22**. **407** entries.
+> Auto-generated from [`apps/darwin/`](apps/darwin/) on **2026-06-23**. **411** entries.
 > Chinese guide: [`RECOMMENDED.darwin.zh-CN.md`](RECOMMENDED.darwin.zh-CN.md). Other platforms: [Windows](RECOMMENDED.zh-CN.md) · [Linux](RECOMMENDED.linux.zh-CN.md). Index: [`CATALOG.md`](CATALOG.md).
 
 ## AI (39)
@@ -155,7 +155,7 @@
 | `tempo` | Grafana Tempo 追踪后端 | `grafana/tempo` |
 | `vector` | Vector 日志/指标采集 | `vectordotdev/vector` |
 
-## 命令行 (19)
+## 命令行 (21)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -174,6 +174,8 @@
 | `ripgrep` | - | `BurntSushi/ripgrep` |
 | `sd` | - | `chmln/sd` |
 | `starship` | - | `starship/starship` |
+| `uniclipboard_cli` | UniClipboard CLI（macOS Apple Silicon tar.gz） | `UniClipboard/UniClipboard` |
+| `uniclipboard_cli_x64` | UniClipboard CLI（macOS Intel x64 tar.gz） | `UniClipboard/UniClipboard` |
 | `yazi` | - | `sxyazi/yazi` |
 | `yq` | - | `mikefarah/yq` |
 | `zellij` | - | `zellij-org/zellij` |
@@ -339,7 +341,7 @@
 | `ultimate_packer_for_executables` | 开源 EXE/Dll 资源压缩工具 UPX 5.1.1 + x64 发布！ | `upx/upx` |
 | `uv` | - | `astral-sh/uv` |
 
-## 效率 (13)
+## 效率 (15)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -354,6 +356,8 @@
 | `quickclipboard` | 这款开源免费的 QuickClipboard 0.1.1 正在重新定义你的复制粘贴体验 | `mosheng1/QuickClipboard` |
 | `screenote` | 开源免费全快捷键截图/贴图工具 Screenote 2020-07-02 中文免费版 | `poerin/Screenote` |
 | `stretchly` | - | `hovancik/stretchly` |
+| `uniclipboard` | UniClipboard（跨平台剪贴板同步与管理；macOS Apple Silicon dmg） | `UniClipboard/UniClipboard` |
+| `uniclipboard_x64_dmg` | UniClipboard（macOS Intel x64 dmg） | `UniClipboard/UniClipboard` |
 | `vhs` | - | `charmbracelet/vhs` |
 | `vocotype` | VocoType（本地端侧语音转文字输入工具，内置 Paraformer 中文 ASR 模型；macOS Universal dmg，兼容 Apple S... | `233stone/vocotype-cli` |
 

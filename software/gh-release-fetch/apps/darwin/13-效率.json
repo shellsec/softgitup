@@ -331,5 +331,87 @@
       ".msi",
       "arm64"
     ]
+  },
+  {
+    "id": "uniclipboard",
+    "简介": "UniClipboard（跨平台剪贴板同步与管理；macOS Apple Silicon dmg）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/UniClipboard/UniClipboard/releases",
+    "repo_path": "UniClipboard/UniClipboard",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "UniClipboard_",
+      "aarch64.dmg"
+    ],
+    "href_exclude_substrings": [
+      ".exe",
+      ".msi",
+      ".deb",
+      ".rpm",
+      "AppImage",
+      "x64.dmg",
+      "portable",
+      ".sig",
+      "SHA256",
+      "cli-",
+      "tar.gz",
+      "windows",
+      "linux"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "UniClipboard_{ver}_aarch64.dmg"
+    ],
+    "save_name": "UniClipboard_{ver}_aarch64.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "uniclipboard_x64_dmg",
+    "简介": "UniClipboard（macOS Intel x64 dmg）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/UniClipboard/UniClipboard/releases",
+    "repo_path": "UniClipboard/UniClipboard",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "UniClipboard_",
+      "x64.dmg"
+    ],
+    "href_exclude_substrings": [
+      ".exe",
+      ".msi",
+      ".deb",
+      ".rpm",
+      "AppImage",
+      "aarch64",
+      "portable",
+      ".sig",
+      "SHA256",
+      "cli-",
+      "tar.gz",
+      "windows",
+      "linux"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "UniClipboard_{ver}_x64.dmg"
+    ],
+    "save_name": "UniClipboard_{ver}_x64.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

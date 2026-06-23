@@ -301,5 +301,46 @@
       ".exe",
       ".msi"
     ]
+  },
+  {
+    "id": "uniclipboard",
+    "简介": "UniClipboard（跨平台剪贴板同步与管理；Linux amd64 AppImage）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/UniClipboard/UniClipboard/releases",
+    "repo_path": "UniClipboard/UniClipboard",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "UniClipboard_",
+      "amd64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      ".exe",
+      ".msi",
+      ".dmg",
+      ".deb",
+      ".rpm",
+      "aarch64",
+      "portable",
+      ".sig",
+      "SHA256",
+      "cli-",
+      "tar.gz",
+      "windows",
+      "darwin"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "download_names": [
+      "UniClipboard_{ver}_amd64.AppImage"
+    ],
+    "save_name": "UniClipboard_{ver}_amd64.AppImage",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

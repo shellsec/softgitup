@@ -1,6 +1,6 @@
 # 推荐开源软件（macOS · 全分类导读）
 
-> 由 `python tools/generate_recommended_md.py` 根据 [`apps/darwin/`](apps/darwin/) 自动生成，生成日期：**2026-06-22**。条目 **407** 个（darwin 平台）。
+> 由 `python tools/generate_recommended_md.py` 根据 [`apps/darwin/`](apps/darwin/) 自动生成，生成日期：**2026-06-23**。条目 **411** 个（darwin 平台）。
 > 其它平台导读：[Windows](RECOMMENDED.zh-CN.md) · [Linux](RECOMMENDED.linux.zh-CN.md)。
 > 技术索引与分片统计见 [`CATALOG.md`](CATALOG.md)。启用/更新：lookup → `run_saved_apps`（Windows 可用 `run_saved_apps.bat`）。
 
@@ -791,7 +791,7 @@ Vector 日志/指标采集
 
 ---
 
-## 命令行（19）
+## 命令行（21）
 
 ### atuin · `atuin`
 
@@ -897,6 +897,20 @@ Kilo Code CLI / 独立包（zip/tar.gz）
 
 - 仓库：`starship/starship` · 分片：`apps/darwin/06-命令行.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin starship`
+
+### UniClipboard CLI（macOS Apple Silicon tar.gz） · `uniclipboard_cli`
+
+UniClipboard CLI（macOS Apple Silicon tar.gz）
+
+- 仓库：`UniClipboard/UniClipboard` · 分片：`apps/darwin/06-命令行.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin uniclipboard_cli`
+
+### UniClipboard CLI（macOS Intel x64 tar.gz） · `uniclipboard_cli_x64`
+
+UniClipboard CLI（macOS Intel x64 tar.gz）
+
+- 仓库：`UniClipboard/UniClipboard` · 分片：`apps/darwin/06-命令行.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin uniclipboard_cli_x64`
 
 ### yazi · `yazi`
 
@@ -1831,7 +1845,7 @@ Playwright CLI（darwin zip）
 
 ---
 
-## 效率（13）
+## 效率（15）
 
 ### 开源免费思维导图工具 BlinkMind · `blinkmind`
 
@@ -1909,6 +1923,20 @@ Espanso 文本扩展
 
 - 仓库：`hovancik/stretchly` · 分片：`apps/darwin/13-效率.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`python lookup_app.py --platform darwin stretchly`
+
+### uniclipboard · `uniclipboard`
+
+UniClipboard（跨平台剪贴板同步与管理；macOS Apple Silicon dmg）
+
+- 仓库：`UniClipboard/UniClipboard` · 分片：`apps/darwin/13-效率.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin uniclipboard`
+
+### UniClipboard（macOS Intel x64 dmg） · `uniclipboard_x64_dmg`
+
+UniClipboard（macOS Intel x64 dmg）
+
+- 仓库：`UniClipboard/UniClipboard` · 分片：`apps/darwin/13-效率.json` · 配置：已配匹配规则
+- 查找：`python lookup_app.py --platform darwin uniclipboard_x64_dmg`
 
 ### vhs · `vhs`
 

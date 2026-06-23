@@ -1,6 +1,6 @@
 # 推荐开源软件（Windows · 全分类导读）
 
-> 由 `python tools/generate_recommended_md.py` 根据 [`apps/windows/`](apps/windows/) 自动生成，生成日期：**2026-06-22**。条目 **536** 个（windows 平台）。
+> 由 `python tools/generate_recommended_md.py` 根据 [`apps/windows/`](apps/windows/) 自动生成，生成日期：**2026-06-23**。条目 **538** 个（windows 平台）。
 > 其它平台导读：[macOS](RECOMMENDED.darwin.zh-CN.md) · [Linux](RECOMMENDED.linux.zh-CN.md)。
 > 技术索引与分片统计见 [`CATALOG.md`](CATALOG.md)。启用/更新：lookup → `run_saved_apps`（Windows 可用 `run_saved_apps.bat`）。
 
@@ -854,7 +854,7 @@ Vector（日志/指标采集与路由）
 
 ---
 
-## 命令行（23）
+## 命令行（24）
 
 ### Atuin（Shell 历史同步/检索 · `atuin`
 
@@ -988,6 +988,13 @@ sed 式查找替换（更直观）
 
 - 仓库：`starship/starship` · 分片：`apps/windows/06-命令行.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows starship`
+
+### UniClipboard CLI（Windows x64 zip） · `uniclipboard_cli`
+
+UniClipboard CLI（Windows x64 zip）
+
+- 仓库：`UniClipboard/UniClipboard` · 分片：`apps/windows/06-命令行.json` · 配置：已配匹配规则
+- 查找：`lookup_app.bat --platform windows uniclipboard_cli`
 
 ### Yazi（终端文件管理器 · `yazi`
 
@@ -2335,7 +2342,7 @@ Zig 语言工具链
 
 ---
 
-## 效率（20）
+## 效率（21）
 
 ### 开源免费思维导图工具 BlinkMind · `blinkmind`
 
@@ -2455,6 +2462,13 @@ Alt+Space 类启动器，可搜应用与插件
 
 - 仓库：`hovancik/stretchly` · 分片：`apps/windows/13-效率.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows stretchly`
+
+### UniClipboard（跨平台剪贴板同步与管理 · `uniclipboard`
+
+UniClipboard（跨平台剪贴板同步与管理，Rust + Tauri）
+
+- 仓库：`UniClipboard/UniClipboard` · 分片：`apps/windows/13-效率.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows uniclipboard`
 
 ### VHS（终端录屏生成 GIF/视频 · `vhs`
 

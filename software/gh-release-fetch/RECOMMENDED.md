@@ -1,6 +1,6 @@
 # Recommended apps (Windows · full catalog guide)
 
-> Auto-generated from [`apps/windows/`](apps/windows/) on **2026-06-22**. **536** entries.
+> Auto-generated from [`apps/windows/`](apps/windows/) on **2026-06-23**. **538** entries.
 > Chinese guide: [`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md). Other platforms: [macOS](RECOMMENDED.darwin.zh-CN.md) · [Linux](RECOMMENDED.linux.zh-CN.md). Index: [`CATALOG.md`](CATALOG.md).
 
 ## AI (38)
@@ -164,7 +164,7 @@
 | `tempo` | Grafana Tempo（分布式追踪后端） | `grafana/tempo` |
 | `vector` | Vector（日志/指标采集与路由） | `vectordotdev/vector` |
 
-## 命令行 (23)
+## 命令行 (24)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -187,6 +187,7 @@
 | `ripgrep_all` | 在 PDF/压缩包等中全文搜索 | `phiresky/ripgrep-all` |
 | `sd` | sed 式查找替换（更直观） | `chmln/sd` |
 | `starship` | 跨 Shell 极简提示符 | `starship/starship` |
+| `uniclipboard_cli` | UniClipboard CLI（Windows x64 zip） | `UniClipboard/UniClipboard` |
 | `yazi` | Yazi（终端文件管理器，异步预览，Rust 实现） | `sxyazi/yazi` |
 | `yq` | YAML/XML/JSON 命令行处理器 | `mikefarah/yq` |
 | `zellij` | Zellij（终端多窗格/会话与工作区，tmux 的现代替代之一） | `zellij-org/zellij` |
@@ -411,7 +412,7 @@
 | `watchexec` | 文件变更时执行命令 | `watchexec/watchexec` |
 | `zig` | Zig 语言工具链 | `ziglang/zig` |
 
-## 效率 (20)
+## 效率 (21)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -432,6 +433,7 @@
 | `screenote` | 开源免费全快捷键截图/贴图工具 Screenote 2020-07-02 中文免费版 | `poerin/Screenote` |
 | `sharex` | 截图、录屏、OCR、上传分享 | `ShareX/ShareX` |
 | `stretchly` | 番茄钟与休息提醒 | `hovancik/stretchly` |
+| `uniclipboard` | UniClipboard（跨平台剪贴板同步与管理，Rust + Tauri） | `UniClipboard/UniClipboard` |
 | `vhs` | VHS（终端录屏生成 GIF/视频，charmbracelet） | `charmbracelet/vhs` |
 | `vocotype` | VocoType（本地端侧语音转文字输入工具，内置 Paraformer 中文 ASR 模型；Windows x64 NSIS 安装包） | `233stone/vocotype-cli` |
 | `wox` | 应用启动器（安装包名无版本号） | `Wox-launcher/Wox` |

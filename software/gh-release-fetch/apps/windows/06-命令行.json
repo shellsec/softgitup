@@ -659,5 +659,39 @@
     "save_name": "kilo-windows-x64.zip",
     "releases_url": "https://bgithub.xyz/Kilo-Org/kilocode/releases",
     "repo_path": "Kilo-Org/kilocode"
+  },
+  {
+    "id": "uniclipboard_cli",
+    "简介": "UniClipboard CLI（Windows x64 zip）",
+    "分类": "命令行",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/UniClipboard/UniClipboard/releases",
+    "repo_path": "UniClipboard/UniClipboard",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "uniclipboard-cli-",
+      "x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "apple-darwin",
+      "linux",
+      "aarch64",
+      ".sig",
+      "SHA256",
+      "UniClipboard_"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "uniclipboard-cli-{ver}-x86_64-pc-windows-msvc.zip"
+    ],
+    "save_name": "uniclipboard-cli-{ver}-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]
