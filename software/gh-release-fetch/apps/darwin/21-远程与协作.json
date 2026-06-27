@@ -65,5 +65,33 @@
       ".msi",
       "arm64"
     ]
+  },
+  {
+    "id": "deskreen",
+    "简介": "Deskreen（屏幕共享）",
+    "分类": "远程与协作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "deskreen-ce-",
+      "macOS.dmg"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux",
+      "AppImage"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "deskreen.dmg",
+    "releases_url": "https://bgithub.xyz/pavlobu/deskreen/releases",
+    "repo_path": "pavlobu/deskreen"
   }
 ]

@@ -433,5 +433,89 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "sparrow_wallet",
+    "简介": "Sparrow Wallet（Bitcoin）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "Sparrow-",
+      "x86_64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux",
+      "deb"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "Sparrow.dmg",
+    "releases_url": "https://bgithub.xyz/sparrowwallet/sparrow/releases",
+    "repo_path": "sparrowwallet/sparrow"
+  },
+  {
+    "id": "wasabi_wallet",
+    "简介": "Wasabi Wallet（Bitcoin 隐私）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "Wasabi-",
+      "macOS.dmg"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux",
+      "deb"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "Wasabi.dmg",
+    "releases_url": "https://bgithub.xyz/zkSNACKs/WalletWasabi/releases",
+    "repo_path": "zkSNACKs/WalletWasabi"
+  },
+  {
+    "id": "feather_wallet",
+    "简介": "Feather Wallet",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "feather-",
+      "macos.dmg"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux",
+      "AppImage"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "feather.dmg",
+    "releases_url": "https://bgithub.xyz/feather-wallet/feather/releases",
+    "repo_path": "feather-wallet/feather"
   }
 ]

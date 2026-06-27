@@ -1,0 +1,106 @@
+[
+  {
+    "id": "cgeo",
+    "简介": "c:geo（Geocaching 客户端，含离线 DB）",
+    "分类": "数据库",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "cgeo-foss-release",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "google",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "cgeo.apk",
+    "releases_url": "https://bgithub.xyz/cgeo/cgeo/releases",
+    "repo_path": "cgeo/cgeo"
+  },
+  {
+    "id": "cgeo_db",
+    "简介": "c:geo（Geocaching · 含离线数据库）",
+    "分类": "数据库",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "cgeo-foss-release",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "google",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "cgeo_db.apk",
+    "releases_url": "https://bgithub.xyz/cgeo/cgeo/releases",
+    "repo_path": "cgeo/cgeo"
+  },
+  {
+    "id": "andotp",
+    "简介": "andOTP（2FA · 含备份导出）",
+    "分类": "数据库",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "andOTP-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "andotp.apk",
+    "releases_url": "https://bgithub.xyz/andOTP/andOTP/releases",
+    "repo_path": "andOTP/andOTP"
+  }
+]

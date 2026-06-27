@@ -205,7 +205,7 @@
   },
   {
     "id": "ksnip",
-    "简介": "开源免费屏幕截图工具 ksnip 1.10.1 中文多语免费版",
+    "简介": "ksnip（Linux x86_64 AppImage）",
     "分类": "效率",
     "enabled": false,
     "prefer_api_assets": true,
@@ -218,23 +218,23 @@
     "run_installer": false,
     "url_hint": "ksnip",
     "installer_extensions": [
-      ".AppImage",
-      ".tar.gz",
-      ".deb",
-      ".rpm",
-      ".zip"
+      ".AppImage"
     ],
     "href_exclude_substrings": [
       "windows",
-      "win64",
-      "win32",
-      "darwin",
-      "macos",
-      ".dmg",
-      ".pkg",
-      ".exe",
-      ".msi"
-    ]
+      "deb",
+      "rpm",
+      "dmg"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ksnip-",
+      "x86_64.AppImage"
+    ],
+    "download_names": [
+      "ksnip-{ver}-x86_64.AppImage"
+    ],
+    "save_name": "ksnip-{ver}-x86_64.AppImage"
   },
   {
     "id": "screenote",
@@ -342,5 +342,268 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "flameshot",
+    "简介": "Flameshot（Linux AppImage 打包 zip）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "artifact-appimage-x86_64.zip"
+    ],
+    "href_exclude_substrings": [
+      "sha256",
+      "arm64",
+      "armhf",
+      "debian",
+      "fedora",
+      "flatpak",
+      "snap",
+      "ubuntu",
+      "win64",
+      "macos"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "flameshot-appimage-x86_64.zip",
+    "releases_url": "https://bgithub.xyz/flameshot-org/flameshot/releases",
+    "repo_path": "flameshot-org/flameshot"
+  },
+  {
+    "id": "snipaste",
+    "简介": "Snipaste（Linux x86_64 AppImage，官方 archives CDN）",
+    "分类": "效率",
+    "releases_url": "https://zh.snipaste.com/download.html",
+    "repo_path": "snipaste-cn/desktop",
+    "enabled": false,
+    "prefer_api_assets": false,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Snipaste-",
+      "x86_64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "-x86.zip",
+      "arm64",
+      ".dmg",
+      "-x64.zip",
+      "Beta",
+      "Snipaste-1.",
+      "Snipaste-2.10",
+      "Snipaste-2.9",
+      "Snipaste-2.8",
+      "Snipaste-2.7"
+    ],
+    "download_url_templates": [
+      "https://download.snipaste.com/archives/Snipaste-{ver_plain}-x86_64.AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "download_names": [
+      "Snipaste-{ver}-x86_64.AppImage"
+    ],
+    "save_name": "Snipaste-{ver}-x86_64.AppImage",
+    "url_hint": "Snipaste"
+  },
+  {
+    "id": "picpick",
+    "简介": "PicPick（截图/取色/标尺；官网 picpick.app 分发，GitHub 无安装包；勿启用）",
+    "分类": "效率",
+    "releases_url": "https://picpick.app/en/download",
+    "repo_path": "picpick/picpick",
+    "prefer_api_assets": true,
+    "url_hint": "picpick",
+    "enabled": false,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "OhMyShot_",
+      "_amd64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      ".sig",
+      ".deb",
+      ".rpm",
+      ".dmg",
+      "setup",
+      "app.tar",
+      "aarch64"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "download_names": [
+      "OhMyShot_{ver}_amd64.AppImage"
+    ],
+    "save_name": "OhMyShot_{ver}_amd64.AppImage",
+    "releases_url": "https://bgithub.xyz/redf0x1/ohmyshot-releases/releases",
+    "repo_path": "redf0x1/ohmyshot-releases",
+    "id": "ohmyshot",
+    "简介": "OhMyShot（Linux x86_64 AppImage）"
+  },
+  {
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "OpenShots_",
+      "_amd64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "cli",
+      ".deb",
+      ".rpm",
+      ".dmg",
+      "aarch64",
+      ".msi"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "download_names": [
+      "OpenShots_{ver}_amd64.AppImage"
+    ],
+    "save_name": "OpenShots_{ver}_amd64.AppImage",
+    "releases_url": "https://bgithub.xyz/Tracekit-Dev/openshots/releases",
+    "repo_path": "Tracekit-Dev/openshots",
+    "id": "openshots",
+    "简介": "OpenShots（Linux x86_64 AppImage）"
+  },
+  {
+    "id": "snapx",
+    "简介": "SnapX（ShareX 跨平台分支；pinned v0.3.0，latest 多为 flatpak）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "pinned_release_tag": "v0.3.0",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "SnapX-Avalonia-Release-",
+      "Linux-X64.tar.zst"
+    ],
+    "href_exclude_substrings": [
+      "ARM64",
+      "Windows",
+      "macOS"
+    ],
+    "installer_extensions": [
+      ".zst"
+    ],
+    "use_download_filename": true,
+    "save_name": "SnapX-Linux-X64.tar.zst",
+    "releases_url": "https://bgithub.xyz/SnapXL/SnapX/releases",
+    "repo_path": "SnapXL/SnapX"
+  },
+  {
+    "id": "xerahs",
+    "简介": "XerahS（ShareX 风格跨平台截图/上传）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "XerahS-",
+      "linux-x64.flatpak"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "win-",
+      "mac-",
+      ".deb",
+      ".rpm",
+      ".exe"
+    ],
+    "installer_extensions": [
+      ".flatpak"
+    ],
+    "use_download_filename": true,
+    "save_name": "XerahS-linux-x64.flatpak",
+    "releases_url": "https://bgithub.xyz/KovaForge/XerahS/releases",
+    "repo_path": "KovaForge/XerahS"
+  },
+  {
+    "id": "pixpin",
+    "简介": "PixPin（官方暂无 Linux 版；占位勿启用）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": false,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "releases_url": "https://bgithub.xyz/pixpin-cn/desktop/releases",
+    "url_hint": "pixpin",
+    "repo_path": "pixpin-cn/desktop"
+  },
+  {
+    "id": "rambox",
+    "简介": "Rambox（多账号 Web 应用）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "Rambox-",
+      "linux-x64.deb"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "mac"
+    ],
+    "installer_extensions": [
+      ".deb"
+    ],
+    "use_download_filename": true,
+    "save_name": "Rambox-linux.deb",
+    "releases_url": "https://bgithub.xyz/ramboxapp/community-edition/releases",
+    "repo_path": "ramboxapp/community-edition"
   }
 ]

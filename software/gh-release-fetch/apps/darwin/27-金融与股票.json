@@ -159,5 +159,60 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "actual_budget",
+    "简介": "Actual Budget（本地记账）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "Actual-",
+      "macos.dmg"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux",
+      "AppImage"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "Actual.dmg",
+    "releases_url": "https://bgithub.xyz/actualbudget/actual/releases",
+    "repo_path": "actualbudget/actual"
+  },
+  {
+    "id": "ta_lib",
+    "简介": "TA-Lib",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "ta-lib-",
+      "darwin-x86_64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "ta-lib-darwin.tar.gz",
+    "releases_url": "https://bgithub.xyz/ta-lib/ta-lib/releases",
+    "repo_path": "ta-lib/ta-lib"
   }
 ]

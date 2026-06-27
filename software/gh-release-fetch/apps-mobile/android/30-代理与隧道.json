@@ -1,0 +1,265 @@
+[
+  {
+    "id": "v2rayng",
+    "简介": "v2rayNG（Android 代理客户端，VLESS/Reality 等）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "v2rayNG_",
+      "universal",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "fdroid",
+      "arm64-v8a",
+      "armeabi",
+      "x86_64",
+      "x86.",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "v2rayng.apk",
+    "releases_url": "https://bgithub.xyz/2dust/v2rayNG/releases",
+    "repo_path": "2dust/v2rayNG"
+  },
+  {
+    "id": "hiddify",
+    "简介": "Hiddify（代理客户端，Android）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Hiddify-Android-universal",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "fdroid",
+      "arm64",
+      "x86",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "hiddify.apk",
+    "releases_url": "https://bgithub.xyz/hiddify/hiddify-next/releases",
+    "repo_path": "hiddify/hiddify-next"
+  },
+  {
+    "id": "flclash",
+    "简介": "FlClash（Clash 系 Android 客户端）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "FlClash-",
+      "android",
+      "arm64-v8a",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "armeabi",
+      "x86",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "flclash.apk",
+    "releases_url": "https://bgithub.xyz/chen08209/FlClash/releases",
+    "repo_path": "chen08209/FlClash"
+  },
+  {
+    "id": "clash_meta_android",
+    "简介": "Clash Meta for Android",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "cmfa-",
+      "universal",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "armeabi",
+      "x86",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "clash_meta_android.apk",
+    "releases_url": "https://bgithub.xyz/MetaCubeX/ClashMetaForAndroid/releases",
+    "repo_path": "MetaCubeX/ClashMetaForAndroid"
+  },
+  {
+    "id": "sagernet",
+    "简介": "SagerNet（sing-box 系 Android 客户端）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "SN-",
+      "arm64-v8a",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "armeabi",
+      "x86",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "sagernet.apk",
+    "releases_url": "https://bgithub.xyz/SagerNet/SagerNet/releases",
+    "repo_path": "SagerNet/SagerNet"
+  },
+  {
+    "id": "nekobox",
+    "简介": "NekoBox（sing-box 系 Android 客户端）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "NekoBox",
+      "arm64-v8a",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "x86",
+      "armeabi",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "nekobox.apk",
+    "releases_url": "https://bgithub.xyz/MatsuriDayo/NekoBoxForAndroid/releases",
+    "repo_path": "MatsuriDayo/NekoBoxForAndroid"
+  },
+  {
+    "id": "clash_for_android",
+    "简介": "Clash for Android（已归档 · 仍可下载历史 Release）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "cfa-",
+      "arm64-v8a",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "x86",
+      "armeabi",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "clash_for_android.apk",
+    "releases_url": "https://bgithub.xyz/Kr328/ClashForAndroid/releases",
+    "repo_path": "Kr328/ClashForAndroid"
+  }
+]

@@ -81,5 +81,291 @@
       "consul_{ver}_linux_amd64.zip"
     ],
     "save_name": "consul_{ver}_linux_amd64.zip"
+  },
+  {
+    "id": "podman",
+    "简介": "Podman（无守护进程容器，Desktop/CLI）",
+    "分类": "云原生",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "podman-remote-static-linux_amd64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "windows",
+      "darwin"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "podman-remote-linux-amd64.tar.gz",
+    "releases_url": "https://bgithub.xyz/containers/podman/releases",
+    "repo_path": "containers/podman"
+  },
+  {
+    "id": "portainer",
+    "简介": "Portainer（容器管理 UI 服务端包）",
+    "分类": "云原生",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "portainer-",
+      "linux-amd64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "checksum",
+      "windows",
+      "arm"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "portainer-linux-amd64.tar.gz",
+    "releases_url": "https://bgithub.xyz/portainer/portainer/releases",
+    "repo_path": "portainer/portainer"
+  },
+  {
+    "id": "k9s",
+    "简介": "K9s（K8s 终端 UI，Linux amd64）",
+    "分类": "云原生",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "k9s_Linux_amd64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "Windows",
+      "Darwin",
+      "arm",
+      ".sbom"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "k9s_Linux_amd64.tar.gz"
+    ],
+    "save_name": "k9s_Linux_amd64.tar.gz",
+    "releases_url": "https://bgithub.xyz/derailed/k9s/releases",
+    "repo_path": "derailed/k9s"
+  },
+  {
+    "id": "helm",
+    "简介": "Helm（K8s 包管理，Linux amd64）",
+    "分类": "云原生",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "helm-v",
+      "linux-amd64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "darwin",
+      "arm"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "helm-v{ver}-linux-amd64.tar.gz"
+    ],
+    "save_name": "helm-v{ver}-linux-amd64.tar.gz",
+    "releases_url": "https://bgithub.xyz/helm/helm/releases",
+    "repo_path": "helm/helm"
+  },
+  {
+    "id": "terraform",
+    "简介": "Terraform",
+    "分类": "云原生",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "terraform_",
+      "linux_amd64"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "darwin",
+      "386",
+      "arm"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "terraform_{ver}_linux_amd64.zip"
+    ],
+    "save_name": "terraform_{ver}_linux_amd64.zip",
+    "releases_url": "https://bgithub.xyz/hashicorp/terraform/releases",
+    "repo_path": "hashicorp/terraform"
+  },
+  {
+    "id": "packer",
+    "简介": "Packer",
+    "分类": "云原生",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "packer_",
+      "linux_amd64"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "darwin",
+      "386",
+      "arm"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "packer_{ver}_linux_amd64.zip"
+    ],
+    "save_name": "packer_{ver}_linux_amd64.zip",
+    "releases_url": "https://bgithub.xyz/hashicorp/packer/releases",
+    "repo_path": "hashicorp/packer"
+  },
+  {
+    "id": "nomad",
+    "简介": "Nomad",
+    "分类": "云原生",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "nomad_",
+      "linux_amd64"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "darwin",
+      "386",
+      "arm"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "nomad_{ver}_linux_amd64.zip"
+    ],
+    "save_name": "nomad_{ver}_linux_amd64.zip",
+    "releases_url": "https://bgithub.xyz/hashicorp/nomad/releases",
+    "repo_path": "hashicorp/nomad"
+  },
+  {
+    "id": "minikube",
+    "简介": "minikube（本地 K8s）",
+    "分类": "云原生",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "minikube-linux-amd64"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "darwin",
+      "arm"
+    ],
+    "use_download_filename": true,
+    "save_name": "minikube-linux-amd64",
+    "releases_url": "https://bgithub.xyz/kubernetes/minikube/releases",
+    "repo_path": "kubernetes/minikube"
+  },
+  {
+    "id": "kind",
+    "简介": "kind（K8s in Docker）",
+    "分类": "云原生",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "kind-linux-amd64"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "darwin",
+      ".sha256"
+    ],
+    "use_download_filename": true,
+    "save_name": "kind-linux-amd64",
+    "releases_url": "https://bgithub.xyz/kubernetes-sigs/kind/releases",
+    "repo_path": "kubernetes-sigs/kind"
+  },
+  {
+    "id": "devspace",
+    "简介": "DevSpace（K8s 开发工具）",
+    "分类": "云原生",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "devspace-linux-amd64"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "darwin",
+      "arm"
+    ],
+    "use_download_filename": true,
+    "save_name": "devspace-linux-amd64",
+    "releases_url": "https://bgithub.xyz/devspace-sh/devspace/releases",
+    "repo_path": "devspace-sh/devspace"
   }
 ]

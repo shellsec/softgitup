@@ -15,7 +15,32 @@
     "id": "goose_ai",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/block/goose/releases",
-    "repo_path": "block/goose"
+    "repo_path": "block/goose",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "简介": "Goose（Linux x86_64 gnu tar.gz）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "goose-x86_64-unknown-linux-gnu",
+      ".tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "darwin",
+      "windows",
+      "aarch64",
+      "vulkan",
+      "bzip2"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "goose-x86_64-unknown-linux-gnu.tar.gz"
   },
   {
     "id": "aichat",
@@ -511,15 +536,34 @@
   },
   {
     "id": "github_copilot_cli",
-    "简介": "GitHub Copilot：IDE 插件或 gh copilot，无单一 Linux 安装包。",
+    "简介": "GitHub Copilot CLI（Linux x64 glibc tar.gz）",
     "分类": "AI",
     "enabled": false,
-    "releases_url": "https://bgithub.xyz/microsoft/vscode/releases",
-    "repo_path": "microsoft/vscode",
+    "releases_url": "https://bgithub.xyz/github/copilot-cli/releases",
+    "repo_path": "github/copilot-cli",
     "windows_installer": false,
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false
+    "run_installer": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "copilot-linux-x64",
+      ".tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "musl",
+      "arm64",
+      "darwin",
+      "windows",
+      "tgz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "copilot-linux-x64.tar.gz"
   },
   {
     "id": "langchain_note",
@@ -912,5 +956,264 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "headroom",
+    "简介": "Headroom（LLM 输入压缩库，Linux x86_64 wheel）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/chopratejas/headroom/releases",
+    "repo_path": "chopratejas/headroom",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "headroom_ai-",
+      "manylinux_2_28_x86_64.whl"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "macosx",
+      "tgz",
+      "openclaw",
+      ".tar.gz"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".whl"
+    ],
+    "download_names": [
+      "headroom_ai-{ver}-cp310-abi3-manylinux_2_28_x86_64.whl"
+    ],
+    "save_name": "headroom_ai-{ver}-cp310-abi3-manylinux_2_28_x86_64.whl",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "rtk",
+    "简介": "RTK（CLI 代理压缩 LLM token，Linux x86_64 musl tar.gz）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/rtk-ai/rtk/releases",
+    "repo_path": "rtk-ai/rtk",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "rtk-x86_64-unknown-linux-musl.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "windows",
+      "darwin",
+      "deb",
+      "rpm",
+      "checksums"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "rtk-x86_64-unknown-linux-musl.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "vscode_copilot_chat",
+    "简介": "GitHub Copilot Chat（VS Code 扩展 .vsix）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "GitHub.copilot-chat.",
+      ".vsix"
+    ],
+    "href_exclude_substrings": [
+      "sbom",
+      "sig"
+    ],
+    "installer_extensions": [
+      ".vsix"
+    ],
+    "use_download_filename": true,
+    "save_name": "GitHub.copilot-chat.vsix",
+    "releases_url": "https://bgithub.xyz/microsoft/vscode-copilot-chat/releases",
+    "repo_path": "microsoft/vscode-copilot-chat"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "opencode_cli",
+    "简介": "OpenCode CLI（opencode-ai 独立 CLI；Linux x86_64 tar.gz）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "opencode-linux-x86_64",
+      ".tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "deb",
+      "rpm",
+      "mac",
+      "checksums"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "opencode-linux-x86_64.tar.gz",
+    "releases_url": "https://bgithub.xyz/opencode-ai/opencode/releases",
+    "repo_path": "opencode-ai/opencode"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": false,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "sourcegraph_src_cli",
+    "简介": "Sourcegraph src CLI（linux，Cody/源码搜索生态）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "src-cli_",
+      "_linux_amd64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "darwin",
+      "windows",
+      "arm64",
+      "checksums"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "src-cli_{ver}_linux_amd64.tar.gz"
+    ],
+    "save_name": "src-cli_{ver}_linux_amd64.tar.gz",
+    "releases_url": "https://bgithub.xyz/sourcegraph/src-cli/releases",
+    "repo_path": "sourcegraph/src-cli"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "zed_codex_acp",
+    "简介": "Zed Codex ACP（在 Zed 中使用 Codex，linux）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "codex-acp-",
+      "x86_64-unknown-linux-gnu.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "darwin",
+      "aarch64",
+      "musl"
+    ],
+    "installer_extensions": [
+      ".zip",
+      ".tar.gz"
+    ],
+    "download_names": [
+      "codex-acp-{ver}-x86_64-unknown-linux-gnu.tar.gz"
+    ],
+    "save_name": "codex-acp-{ver}-x86_64-unknown-linux-gnu.tar.gz",
+    "releases_url": "https://bgithub.xyz/zed-industries/codex-acp/releases",
+    "repo_path": "zed-industries/codex-acp"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": false,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "amazon_q_cli",
+    "简介": "Amazon Q Developer CLI（aws/amazon-q-developer-cli；Release 无附件，请用官方 curl/install 脚本；勿启用）",
+    "分类": "AI",
+    "releases_url": "https://bgithub.xyz/aws/amazon-q-developer-cli/releases",
+    "repo_path": "aws/amazon-q-developer-cli",
+    "url_hint": "amazon-q"
+  },
+  {
+    "id": "langflow",
+    "简介": "Langflow",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Langflow_",
+      "amd64.deb"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "mac",
+      "msi"
+    ],
+    "installer_extensions": [
+      ".deb"
+    ],
+    "use_download_filename": true,
+    "save_name": "Langflow-linux.deb",
+    "releases_url": "https://bgithub.xyz/langflow-ai/langflow/releases",
+    "repo_path": "langflow-ai/langflow"
+  },
+  {
+    "id": "goose_desktop",
+    "简介": "Goose 桌面版",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "Goose-linux-x64",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "win32",
+      "darwin"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "Goose-linux-x64.zip",
+    "releases_url": "https://bgithub.xyz/block/goose/releases",
+    "repo_path": "block/goose"
   }
 ]

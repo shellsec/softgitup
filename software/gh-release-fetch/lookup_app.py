@@ -11,9 +11,10 @@
   python lookup_app.py --dry-run drawio      # 只查询，不写文件
 
 加入更新列表（根目录 saved_apps_<平台>.json，配合 run_saved_apps.bat 一键更新）：
-  python lookup_app.py cherrytree            # 交互：选序号 → 是否 enabled → 是否加入列表
-  python lookup_app.py --save cherrytree     # 选中后默认加入列表（仍询问序号）
-  python lookup_app.py -y --save drawio      # 全部开启并加入列表
+  python lookup_app.py cherrytree            # 交互：1立刻下载 / 2加入并下载 / 3加入列表 / 4启用
+  python lookup_app.py --save cherrytree     # 选中后可用操作 3 加入列表
+  python lookup_app.py -y --download drawio  # 全部匹配项：立刻下载（不改 enabled）
+  python lookup_app.py --download termux     # 交互选中后默认操作 1 立刻下载
 """
 
 from __future__ import annotations
@@ -22,15 +23,20 @@ import argparse
 import json
 import os
 import re
+import subprocess
 import sys
 
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-DEFAULT_APPS_DIR = os.path.join(SCRIPT_DIR, "apps")
-PLATFORMS = ("windows", "darwin", "linux")
-SHARD_RE = re.compile(r"^\d+-(.+)\.json$", re.UNICODE)
-
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__)) if not getattr(sys, "frozen", False) else os.path.dirname(os.path.abspath(sys.executable))
 if SCRIPT_DIR not in sys.path:
     sys.path.insert(0, SCRIPT_DIR)
+
+from tools.ghrf_runtime import resolve_auto_update_argv  # noqa: E402
+
+DEFAULT_APPS_DIR = os.path.join(SCRIPT_DIR, "apps")
+PLATFORMS = ("windows", "darwin", "linux", "android", "ios")
+DESKTOP_PLATFORMS = ("windows", "darwin", "linux")
+SHARD_RE = re.compile(r"^\d+-(.+)\.json$", re.UNICODE)
+
 from tools.app_list import (  # noqa: E402
     default_list_basename,
     default_list_path,
@@ -44,10 +50,21 @@ def _dump(path: str, data) -> None:
         f.write("\n")
 
 
+def platform_keys_for_apps_dir(apps_dir: str) -> tuple[str, ...]:
+    root = os.path.join(apps_dir, "root.json")
+    if os.path.isfile(root):
+        with open(root, encoding="utf-8") as f:
+            cfg = json.load(f)
+        keys = cfg.get("platform_keys")
+        if isinstance(keys, list) and keys:
+            return tuple(str(k) for k in keys)
+    return DESKTOP_PLATFORMS
+
+
 def discover_shard_files(apps_dir: str) -> list[tuple[str, str]]:
     """返回 [(platform, abspath), ...]"""
     out: list[tuple[str, str]] = []
-    for plat in PLATFORMS:
+    for plat in platform_keys_for_apps_dir(apps_dir):
         sub = os.path.join(apps_dir, plat)
         if os.path.isdir(sub):
             for name in sorted(os.listdir(sub)):
@@ -277,32 +294,135 @@ def prompt_add_to_saved_list(
     return True
 
 
+def prompt_action_mode() -> str | None:
+    """一次选择后续操作：1 立刻下载 | 2 加入并下载 | 3 加入列表 | 4 启用 | 回车跳过。"""
+    print()
+    print("请选择操作：")
+    print("  1 = 立刻下载（不修改 enabled）")
+    print("  2 = 加入更新列表并立刻下载")
+    print("  3 = 加入更新列表 saved_apps_<平台>.json")
+    print("  4 = 设为 enabled=true")
+    print("  回车 = 跳过")
+    try:
+        line = input("> ").strip()
+    except (EOFError, KeyboardInterrupt):
+        print("\n已取消。")
+        return None
+    if not line:
+        print("未选择操作。")
+        return None
+    if line in ("1", "2", "3", "4"):
+        return line
+    low = line.lower()
+    if low in ("d", "download", "下载", "down"):
+        return "1"
+    if low in ("sd", "save-download", "加入下载", "列表下载"):
+        return "2"
+    if low in ("s", "save", "list", "列表", "加入"):
+        return "3"
+    if low in ("e", "enable", "启用", "on"):
+        return "4"
+    print("无效输入: %r（请输入 1 / 2 / 3 / 4）" % line)
+    return None
+
+
+def _apps_dir_cli_args(apps_dir: str) -> list[str]:
+    if os.path.normpath(apps_dir) == os.path.normpath(DEFAULT_APPS_DIR):
+        return []
+    try:
+        rel = os.path.relpath(apps_dir, SCRIPT_DIR)
+        if not rel.startswith(".."):
+            return ["--apps-dir", rel]
+    except ValueError:
+        pass
+    return ["--apps-dir", apps_dir]
+
+
+def run_download_now(
+    chosen: list[dict],
+    apps_dir: str,
+    dry_run: bool,
+    *,
+    insecure: bool = False,
+) -> int:
+    """按 id 调用 auto_update 下载（不修改 enabled）。"""
+    downloadable = [h for h in chosen if h.get("platform") != "ios"]
+    skipped_ios = len(chosen) - len(downloadable)
+    if skipped_ios:
+        print("[提示] 跳过 %d 条 iOS 占位（无 GitHub 安装包）。" % skipped_ios)
+    if not downloadable:
+        print("没有可下载的条目。")
+        return 1
+
+    by_plat: dict[str, list[str]] = {}
+    for h in downloadable:
+        by_plat.setdefault(h["platform"], []).append(h["id"])
+
+    exit_code = 0
+    extra = _apps_dir_cli_args(apps_dir)
+    if insecure:
+        extra.append("--insecure")
+
+    for plat, ids in sorted(by_plat.items()):
+        ids = sorted(set(ids))
+        cmd = resolve_auto_update_argv(
+            SCRIPT_DIR, ["--platform", plat, *extra, *ids]
+        )
+        print()
+        print("[下载] 平台 %s：%s" % (plat, ", ".join(ids)))
+        if dry_run:
+            print("[dry-run] 将执行: %s" % " ".join(cmd))
+            continue
+        r = subprocess.run(cmd, cwd=SCRIPT_DIR)
+        if r.returncode != 0:
+            exit_code = r.returncode
+    return exit_code
+
+
 def run_interactive(
     hits: list[dict],
     apps_dir: str,
     dry_run: bool,
     *,
-    auto_save: bool,
-    ask_save: bool,
     save_path: str | None = None,
-) -> None:
+    prefer_download: bool = False,
+    insecure: bool = False,
+) -> int:
     chosen = prompt_choose_hits(hits)
     if not chosen:
-        return
+        return 0
 
     print("\n已选 %d 条。" % len(chosen))
-    if any(not h["enabled"] for h in chosen):
-        if prompt_yes_no("是否设为 enabled=true？(y/n) "):
-            n = apply_enable(chosen, dry_run)
-            if n:
-                print("共开启 %d 条。" % n)
-    else:
-        print("所选条目均已 enabled=true。")
 
-    if ask_save or auto_save:
+    action: str | None
+    if prefer_download:
+        action = "1"
+        print("操作: 1（--download 立刻下载）")
+    else:
+        action = prompt_action_mode()
+    if not action:
+        return 0
+
+    if action == "1":
+        return run_download_now(chosen, apps_dir, dry_run, insecure=insecure)
+    if action == "2":
         prompt_add_to_saved_list(
-            chosen, apps_dir, dry_run, auto=auto_save, save_path=save_path
+            chosen, apps_dir, dry_run, auto=True, save_path=save_path
         )
+        return run_download_now(chosen, apps_dir, dry_run, insecure=insecure)
+    if action == "3":
+        prompt_add_to_saved_list(
+            chosen, apps_dir, dry_run, auto=True, save_path=save_path
+        )
+        return 0
+    if action == "4":
+        n = apply_enable(chosen, dry_run)
+        if n:
+            print("共开启 %d 条。" % n)
+        elif all(h["enabled"] for h in chosen):
+            print("所选条目均已 enabled=true。")
+        return 0
+    return 0
 
 
 def enable_all_matches(hits: list[dict], dry_run: bool) -> int:
@@ -343,6 +463,17 @@ def main() -> int:
         "--platform",
         choices=PLATFORMS,
         help="只显示该平台的匹配项",
+    )
+    parser.add_argument(
+        "--download",
+        "-d",
+        action="store_true",
+        help="交互时默认操作 1（立刻下载）；与 -y 联用则对全部匹配项立刻下载（不改 enabled）",
+    )
+    parser.add_argument(
+        "--insecure",
+        action="store_true",
+        help="下载时传给 auto_update.py（跳过 HTTPS 证书校验）",
     )
     parser.add_argument(
         "--save",
@@ -389,6 +520,8 @@ def main() -> int:
             save_path = default_list_path(SCRIPT_DIR, args.platform)
 
     if args.no_prompt:
+        if args.download:
+            return run_download_now(hits, apps_dir, args.dry_run, insecure=args.insecure)
         if args.save is not None:
             prompt_add_to_saved_list(
                 hits, apps_dir, args.dry_run, auto=True, save_path=save_path
@@ -396,27 +529,29 @@ def main() -> int:
         return 0
 
     if args.yes:
-        n = enable_all_matches(hits, args.dry_run)
-        if n:
-            print("\n共开启 %d 条。" % n)
-        if args.save is not None or not args.no_save_prompt:
-            if args.save is not None:
-                prompt_add_to_saved_list(
-                    hits, apps_dir, args.dry_run, auto=True, save_path=save_path
-                )
-            elif not args.no_save_prompt:
-                prompt_add_to_saved_list(hits, apps_dir, args.dry_run, auto=False)
-        return 0
+        exit_code = 0
+        if args.download:
+            exit_code = run_download_now(hits, apps_dir, args.dry_run, insecure=args.insecure)
+        else:
+            n = enable_all_matches(hits, args.dry_run)
+            if n:
+                print("\n共开启 %d 条。" % n)
+        if args.save is not None and not args.download:
+            prompt_add_to_saved_list(
+                hits, apps_dir, args.dry_run, auto=True, save_path=save_path
+            )
+        elif not args.no_save_prompt and not args.download:
+            prompt_add_to_saved_list(hits, apps_dir, args.dry_run, auto=False)
+        return exit_code
 
-    run_interactive(
+    return run_interactive(
         hits,
         apps_dir,
         args.dry_run,
-        auto_save=args.save is not None,
-        ask_save=not args.no_save_prompt,
         save_path=save_path,
+        prefer_download=args.download,
+        insecure=args.insecure,
     )
-    return 0
 
 
 if __name__ == "__main__":

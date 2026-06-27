@@ -1,0 +1,245 @@
+[
+  {
+    "id": "element_x",
+    "简介": "Element X（Matrix 客户端）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": false,
+    "installer_markers": [
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "test",
+      "sources",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "element_x.apk",
+    "releases_url": "https://bgithub.xyz/element-hq/element-x-android/releases",
+    "repo_path": "element-hq/element-x-android"
+  },
+  {
+    "id": "simplex_chat",
+    "简介": "SimpleX Chat（端到端加密聊天）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "simplex-aarch64",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "armv7",
+      "x86",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "simplex_chat.apk",
+    "releases_url": "https://bgithub.xyz/simplex-chat/simplex-chat/releases",
+    "repo_path": "simplex-chat/simplex-chat"
+  },
+  {
+    "id": "nextcloud",
+    "简介": "Nextcloud（Android 客户端）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "nextcloud-",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "gplay",
+      "debug",
+      "beta",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "nextcloud.apk",
+    "releases_url": "https://bgithub.xyz/nextcloud/android/releases",
+    "repo_path": "nextcloud/android"
+  },
+  {
+    "id": "fedilab",
+    "简介": "Fedilab（Mastodon 客户端）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "fedilab-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "fedilab.apk",
+    "releases_url": "https://bgithub.xyz/stom79/Fedilab/releases",
+    "repo_path": "stom79/Fedilab"
+  },
+  {
+    "id": "tusky",
+    "简介": "Tusky（Mastodon 客户端）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Tusky-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "tusky.apk",
+    "releases_url": "https://bgithub.xyz/tuskyapp/Tusky/releases",
+    "repo_path": "tuskyapp/Tusky"
+  },
+  {
+    "id": "mattermost",
+    "简介": "Mattermost（团队聊天）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Mattermost",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "mattermost.apk",
+    "releases_url": "https://bgithub.xyz/mattermost/mattermost-mobile/releases",
+    "repo_path": "mattermost/mattermost-mobile"
+  },
+  {
+    "id": "rocketchat",
+    "简介": "Rocket.Chat（团队聊天）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Rocket.Chat",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "rocketchat.apk",
+    "releases_url": "https://bgithub.xyz/RocketChat/Rocket.Chat.ReactNative/releases",
+    "repo_path": "RocketChat/Rocket.Chat.ReactNative"
+  }
+]

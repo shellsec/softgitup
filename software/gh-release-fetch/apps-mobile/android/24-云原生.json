@@ -1,0 +1,74 @@
+[
+  {
+    "id": "gotify",
+    "简介": "Gotify（自托管推送通知 Android 客户端）",
+    "分类": "云原生",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "gotify-",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "gotify.apk",
+    "releases_url": "https://bgithub.xyz/gotify/android/releases",
+    "repo_path": "gotify/android"
+  },
+  {
+    "id": "netbird",
+    "简介": "NetBird（WireGuard 组网 · 含 Android 客户端）",
+    "分类": "云原生",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "netbird",
+      "android",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "windows",
+      "darwin",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "netbird.apk",
+    "releases_url": "https://bgithub.xyz/netbirdio/netbird/releases",
+    "repo_path": "netbirdio/netbird"
+  }
+]

@@ -210,5 +210,154 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "oh_my_posh",
+    "简介": "Oh My Posh（终端提示符主题引擎）",
+    "分类": "命令行",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "posh-darwin-arm64"
+    ],
+    "href_exclude_substrings": [
+      "amd64",
+      "linux",
+      "windows"
+    ],
+    "use_download_filename": true,
+    "save_name": "posh-darwin-arm64",
+    "releases_url": "https://bgithub.xyz/JanDeDobbeleer/oh-my-posh/releases",
+    "repo_path": "JanDeDobbeleer/oh-my-posh"
+  },
+  {
+    "id": "oh_my_posh_darwin_intel",
+    "简介": "Oh My Posh（macOS Intel 二进制）",
+    "分类": "命令行",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "posh-darwin-amd64"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "linux",
+      "windows"
+    ],
+    "use_download_filename": true,
+    "save_name": "posh-darwin-amd64",
+    "releases_url": "https://bgithub.xyz/JanDeDobbeleer/oh-my-posh/releases",
+    "repo_path": "JanDeDobbeleer/oh-my-posh"
+  },
+  {
+    "id": "micro",
+    "简介": "micro（终端编辑器）",
+    "分类": "命令行",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "micro-",
+      "darwin"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux"
+    ],
+    "use_download_filename": true,
+    "save_name": "micro-darwin.zip",
+    "releases_url": "https://bgithub.xyz/zyedidia/micro/releases",
+    "repo_path": "zyedidia/micro"
+  },
+  {
+    "id": "nushell",
+    "简介": "Nushell（结构化 Shell）",
+    "分类": "命令行",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "nu-",
+      "aarch64-apple-darwin"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "x86_64"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "nu-darwin-arm64.tar.gz",
+    "releases_url": "https://bgithub.xyz/nushell/nushell/releases",
+    "repo_path": "nushell/nushell"
+  },
+  {
+    "id": "lsd",
+    "简介": "lsd（彩色 ls）",
+    "分类": "命令行",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "lsd_",
+      "aarch64-apple-darwin"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux-gnu"
+    ],
+    "use_download_filename": true,
+    "save_name": "lsd-darwin-arm64",
+    "releases_url": "https://bgithub.xyz/lsd-rs/lsd/releases",
+    "repo_path": "lsd-rs/lsd"
+  },
+  {
+    "id": "ripgrep_all",
+    "简介": "ripgrep-all（PDF/Office 内 ripgrep）",
+    "分类": "命令行",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "ripgrep_all-v",
+      "aarch64-apple-darwin"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux"
+    ],
+    "use_download_filename": true,
+    "save_name": "ripgrep_all-darwin-arm64",
+    "releases_url": "https://bgithub.xyz/phiresky/ripgrep-all/releases",
+    "repo_path": "phiresky/ripgrep-all"
   }
 ]

@@ -1,0 +1,139 @@
+[
+  {
+    "id": "gitjournal",
+    "简介": "GitJournal（Git 同步日记/写作）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "GitJournal-android",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "gitjournal.apk",
+    "releases_url": "https://bgithub.xyz/GitJournal/GitJournal/releases",
+    "repo_path": "GitJournal/GitJournal"
+  },
+  {
+    "id": "plume",
+    "简介": "Plume（ActivityPub 微博客）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Plume-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "plume.apk",
+    "releases_url": "https://bgithub.xyz/Plume-Org/Plume/releases",
+    "repo_path": "Plume-Org/Plume"
+  },
+  {
+    "id": "readera",
+    "简介": "ReadEra（电子书阅读）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "readera",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "premium",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "readera.apk",
+    "releases_url": "https://bgithub.xyz/readera/Readera/releases",
+    "repo_path": "readera/Readera"
+  },
+  {
+    "id": "einkbro",
+    "简介": "EinkBro（轻量浏览器/阅读）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "EinkBro-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "einkbro.apk",
+    "releases_url": "https://bgithub.xyz/plateaukao/einkbro/releases",
+    "repo_path": "plateaukao/einkbro"
+  }
+]

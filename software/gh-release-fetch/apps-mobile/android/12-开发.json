@@ -1,0 +1,175 @@
+[
+  {
+    "id": "acode",
+    "简介": "Acode（Android 代码编辑器）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "app-fdroid",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "play",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "acode.apk",
+    "releases_url": "https://bgithub.xyz/Acode-Foundation/Acode/releases",
+    "repo_path": "Acode-Foundation/Acode"
+  },
+  {
+    "id": "siyuan",
+    "简介": "SiYuan（本地优先笔记/知识库）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "siyuan-",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "android-arm",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "siyuan.apk",
+    "releases_url": "https://bgithub.xyz/siyuan-note/siyuan/releases",
+    "repo_path": "siyuan-note/siyuan"
+  },
+  {
+    "id": "logseq",
+    "简介": "Logseq（大纲/双链笔记）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Logseq-android",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "logseq.apk",
+    "releases_url": "https://bgithub.xyz/logseq/logseq/releases",
+    "repo_path": "logseq/logseq"
+  },
+  {
+    "id": "github_mobile",
+    "简介": "GitHub Mobile（官方 Android 客户端）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "github",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "beta",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "github_mobile.apk",
+    "releases_url": "https://bgithub.xyz/github/github/releases",
+    "repo_path": "github/github"
+  },
+  {
+    "id": "mgit",
+    "简介": "MGit（Android Git 客户端）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "MGit-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "mgit.apk",
+    "releases_url": "https://bgithub.xyz/maksim-korotkov/MGit/releases",
+    "repo_path": "maksim-korotkov/MGit"
+  }
+]

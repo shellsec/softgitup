@@ -320,5 +320,321 @@
       ".exe",
       ".msi"
     ]
+  },
+  {
+    "id": "scummvm",
+    "简介": "ScummVM（经典游戏引擎）",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "scummvm-",
+      "Linux-x86_64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "mac"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "use_download_filename": true,
+    "save_name": "scummvm.AppImage",
+    "releases_url": "https://bgithub.xyz/scummvm/scummvm/releases",
+    "repo_path": "scummvm/scummvm"
+  },
+  {
+    "id": "sunshine",
+    "简介": "Sunshine（Moonlight 串流服务端）",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "Sunshine-",
+      "ubuntu-22.04-amd64.deb"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "mac",
+      "appimage"
+    ],
+    "installer_extensions": [
+      ".deb"
+    ],
+    "use_download_filename": true,
+    "save_name": "sunshine-linux.deb",
+    "releases_url": "https://bgithub.xyz/LizardByte/Sunshine/releases",
+    "repo_path": "LizardByte/Sunshine"
+  },
+  {
+    "id": "openmw",
+    "简介": "OpenMW（上古卷轴 III 引擎）",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "OpenMW-",
+      "linux"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "mac"
+    ],
+    "use_download_filename": true,
+    "save_name": "OpenMW-linux.tar.gz",
+    "releases_url": "https://bgithub.xyz/OpenMW/openmw/releases",
+    "repo_path": "OpenMW/openmw"
+  },
+  {
+    "id": "0ad",
+    "简介": "0 A.D.（即时战略，Linux deb）",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "0ad_",
+      "amd64.deb"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "mac"
+    ],
+    "installer_extensions": [
+      ".deb"
+    ],
+    "use_download_filename": true,
+    "save_name": "0ad-linux.deb",
+    "releases_url": "https://bgithub.xyz/0ad/0ad/releases",
+    "repo_path": "0ad/0ad"
+  },
+  {
+    "id": "rpcs3",
+    "简介": "RPCS3（PS3 模拟器 AppImage）",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "rpcs3-v",
+      "Linux64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "mac"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "use_download_filename": true,
+    "save_name": "rpcs3.AppImage",
+    "releases_url": "https://bgithub.xyz/RPCS3/rpcs3/releases",
+    "repo_path": "RPCS3/rpcs3"
+  },
+  {
+    "id": "dosbox_staging",
+    "简介": "DOSBox Staging",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "dosbox-staging-",
+      "linux"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "mac"
+    ],
+    "use_download_filename": true,
+    "save_name": "dosbox-staging-linux.tar.gz",
+    "releases_url": "https://bgithub.xyz/dosbox-staging/dosbox-staging/releases",
+    "repo_path": "dosbox-staging/dosbox-staging"
+  },
+  {
+    "id": "moonlight_qt",
+    "简介": "Moonlight（串流客户端）",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "Moonlight-",
+      "x64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "mac"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "use_download_filename": true,
+    "save_name": "moonlight.AppImage",
+    "releases_url": "https://bgithub.xyz/moonlight-stream/moonlight-qt/releases",
+    "repo_path": "moonlight-stream/moonlight-qt"
+  },
+  {
+    "id": "openra",
+    "简介": "OpenRA",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "OpenRA-",
+      "linux-x64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "mac"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "OpenRA-linux.tar.gz",
+    "releases_url": "https://bgithub.xyz/OpenRA/OpenRA/releases",
+    "repo_path": "OpenRA/OpenRA"
+  },
+  {
+    "id": "openrct2",
+    "简介": "OpenRCT2",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "OpenRCT2-",
+      "linux-x86_64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "mac"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "OpenRCT2-linux.tar.gz",
+    "releases_url": "https://bgithub.xyz/OpenRCT2/OpenRCT2/releases",
+    "repo_path": "OpenRCT2/OpenRCT2"
+  },
+  {
+    "id": "playnite",
+    "简介": "Playnite（Linux AppImage）",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "Playnite-",
+      "Linux-x64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "mac"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "use_download_filename": true,
+    "save_name": "Playnite.AppImage",
+    "releases_url": "https://bgithub.xyz/JosefNemec/Playnite/releases",
+    "repo_path": "JosefNemec/Playnite"
+  },
+  {
+    "id": "warzone2100",
+    "简介": "Warzone 2100",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "warzone2100_",
+      "linux"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "mac"
+    ],
+    "use_download_filename": true,
+    "save_name": "warzone2100-linux",
+    "releases_url": "https://bgithub.xyz/Warzone2100/warzone2100/releases",
+    "repo_path": "Warzone2100/warzone2100"
+  },
+  {
+    "id": "xemu",
+    "简介": "Xemu（Xbox 模拟器 AppImage）",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "xemu-v",
+      "AppImage"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "mac"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "use_download_filename": true,
+    "save_name": "xemu.AppImage",
+    "releases_url": "https://bgithub.xyz/xemu-project/xemu/releases",
+    "repo_path": "xemu-project/xemu"
   }
 ]

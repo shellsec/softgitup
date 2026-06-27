@@ -320,5 +320,242 @@
       ".msi",
       "arm64"
     ]
+  },
+  {
+    "id": "scummvm",
+    "简介": "ScummVM（经典游戏引擎）",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "scummvm-",
+      "macosx.dmg"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux",
+      "AppImage"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "scummvm.dmg",
+    "releases_url": "https://bgithub.xyz/scummvm/scummvm/releases",
+    "repo_path": "scummvm/scummvm"
+  },
+  {
+    "id": "sunshine",
+    "简介": "Sunshine（Moonlight 串流服务端）",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "Sunshine-",
+      "macos.dmg"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "deb"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "sunshine-macos.dmg",
+    "releases_url": "https://bgithub.xyz/LizardByte/Sunshine/releases",
+    "repo_path": "LizardByte/Sunshine"
+  },
+  {
+    "id": "openmw",
+    "简介": "OpenMW（上古卷轴 III 引擎）",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "OpenMW-",
+      "osx"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux"
+    ],
+    "use_download_filename": true,
+    "save_name": "OpenMW-macos.dmg",
+    "releases_url": "https://bgithub.xyz/OpenMW/openmw/releases",
+    "repo_path": "OpenMW/openmw"
+  },
+  {
+    "id": "0ad",
+    "简介": "0 A.D.（macOS dmg）",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "0ad-",
+      "osx.dmg"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "0ad-macos.dmg",
+    "releases_url": "https://bgithub.xyz/0ad/0ad/releases",
+    "repo_path": "0ad/0ad"
+  },
+  {
+    "id": "dosbox_staging",
+    "简介": "DOSBox Staging",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "dosbox-staging-",
+      "macos"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux"
+    ],
+    "use_download_filename": true,
+    "save_name": "dosbox-staging-macos.dmg",
+    "releases_url": "https://bgithub.xyz/dosbox-staging/dosbox-staging/releases",
+    "repo_path": "dosbox-staging/dosbox-staging"
+  },
+  {
+    "id": "moonlight_qt",
+    "简介": "Moonlight（串流客户端）",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "Moonlight-",
+      "macos.dmg"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux",
+      "AppImage"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "moonlight.dmg",
+    "releases_url": "https://bgithub.xyz/moonlight-stream/moonlight-qt/releases",
+    "repo_path": "moonlight-stream/moonlight-qt"
+  },
+  {
+    "id": "openra",
+    "简介": "OpenRA",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "OpenRA-",
+      "macos.dmg"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "OpenRA-macos.dmg",
+    "releases_url": "https://bgithub.xyz/OpenRA/OpenRA/releases",
+    "repo_path": "OpenRA/OpenRA"
+  },
+  {
+    "id": "openrct2",
+    "简介": "OpenRCT2",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "OpenRCT2-",
+      "macos-universal.dmg"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "OpenRCT2-macos.dmg",
+    "releases_url": "https://bgithub.xyz/OpenRCT2/OpenRCT2/releases",
+    "repo_path": "OpenRCT2/OpenRCT2"
+  },
+  {
+    "id": "warzone2100",
+    "简介": "Warzone 2100",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "warzone2100_",
+      "macos"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux"
+    ],
+    "use_download_filename": true,
+    "save_name": "warzone2100-macos.dmg",
+    "releases_url": "https://bgithub.xyz/Warzone2100/warzone2100/releases",
+    "repo_path": "Warzone2100/warzone2100"
   }
 ]

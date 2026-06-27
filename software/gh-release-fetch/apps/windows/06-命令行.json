@@ -693,5 +693,36 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "oh_my_posh",
+    "简介": "Oh My Posh（终端提示符主题引擎）",
+    "分类": "命令行",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "install-x64.msi"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "msix",
+      "arm.",
+      "delta"
+    ],
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "install-x64.msi"
+    ],
+    "save_name": "oh-my-posh-install-x64.msi",
+    "releases_url": "https://bgithub.xyz/JanDeDobbeleer/oh-my-posh/releases",
+    "repo_path": "JanDeDobbeleer/oh-my-posh"
   }
 ]

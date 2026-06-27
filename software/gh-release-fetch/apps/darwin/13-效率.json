@@ -235,7 +235,7 @@
   },
   {
     "id": "ksnip",
-    "简介": "开源免费屏幕截图工具 ksnip 1.10.1 中文多语免费版",
+    "简介": "ksnip（macOS dmg）",
     "分类": "效率",
     "enabled": false,
     "prefer_api_assets": true,
@@ -248,23 +248,23 @@
     "run_installer": false,
     "url_hint": "ksnip",
     "installer_extensions": [
-      ".dmg",
-      ".pkg",
-      ".zip"
+      ".dmg"
     ],
     "href_exclude_substrings": [
       "windows",
-      "win64",
-      "win32",
-      "win-",
-      "linux",
-      ".AppImage",
-      ".deb",
-      ".rpm",
-      ".exe",
-      ".msi",
-      "arm64"
-    ]
+      "AppImage",
+      "deb",
+      "rpm"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ksnip-",
+      ".dmg"
+    ],
+    "download_names": [
+      "ksnip-{ver}.dmg"
+    ],
+    "save_name": "ksnip-{ver}.dmg"
   },
   {
     "id": "screenote",
@@ -413,5 +413,408 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "pixpin",
+    "简介": "PixPin（macOS universal dmg，官方 CDN；下载页 https://pixpin.cn/download/）",
+    "分类": "效率",
+    "enabled": false,
+    "releases_url": "https://pixpin.cn/download/",
+    "repo_path": "pixpin-cn/desktop",
+    "prefer_api_assets": false,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "PixPin_cn_zh-cn_",
+      "_uni.dmg"
+    ],
+    "href_exclude_substrings": [
+      ".exe",
+      "portable"
+    ],
+    "download_url_templates": [
+      "https://down.pixpin.cn/PixPin_cn_zh-cn_{ver_plain}_uni.dmg"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "PixPin_cn_zh-cn_{ver}_uni.dmg"
+    ],
+    "save_name": "PixPin_cn_zh-cn_{ver}_uni.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "PixPin"
+  },
+  {
+    "id": "flameshot",
+    "简介": "Flameshot（macOS Apple Silicon dmg）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Flameshot-",
+      "macos-arm64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "sha256",
+      "intel",
+      "win64",
+      "artifact",
+      "zip"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "Flameshot-macos-arm64.dmg",
+    "releases_url": "https://bgithub.xyz/flameshot-org/flameshot/releases",
+    "repo_path": "flameshot-org/flameshot"
+  },
+  {
+    "id": "snipaste",
+    "简介": "Snipaste（macOS dmg，官方 archives CDN）",
+    "分类": "效率",
+    "releases_url": "https://zh.snipaste.com/download.html",
+    "repo_path": "snipaste-cn/desktop",
+    "enabled": false,
+    "prefer_api_assets": false,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Snipaste-",
+      ".dmg"
+    ],
+    "href_exclude_substrings": [
+      "-x86.zip",
+      "arm64",
+      "AppImage",
+      "-x64.zip",
+      "arm64.zip",
+      "Beta",
+      "Snipaste-1.",
+      "Snipaste-2.10",
+      "Snipaste-2.9",
+      "Snipaste-2.8",
+      "Snipaste-2.7"
+    ],
+    "download_url_templates": [
+      "https://download.snipaste.com/archives/Snipaste-{ver_plain}.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "Snipaste-{ver}.dmg"
+    ],
+    "save_name": "Snipaste-{ver}.dmg",
+    "url_hint": "Snipaste"
+  },
+  {
+    "id": "flameshot_darwin_intel",
+    "简介": "Flameshot（macOS Intel dmg）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Flameshot-",
+      "macos-intel.dmg"
+    ],
+    "href_exclude_substrings": [
+      "sha256",
+      "arm64",
+      "win64",
+      "artifact"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "Flameshot-macos-intel.dmg",
+    "releases_url": "https://bgithub.xyz/flameshot-org/flameshot/releases",
+    "repo_path": "flameshot-org/flameshot"
+  },
+  {
+    "id": "picpick",
+    "简介": "PicPick（截图/取色/标尺；官网 picpick.app 分发，GitHub 无安装包；勿启用）",
+    "分类": "效率",
+    "releases_url": "https://picpick.app/en/download",
+    "repo_path": "picpick/picpick",
+    "prefer_api_assets": true,
+    "url_hint": "picpick",
+    "enabled": false,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "OhMyShot_",
+      "_aarch64.dmg"
+    ],
+    "href_exclude_substrings": [
+      ".sig",
+      "AppImage",
+      "setup",
+      "x64.dmg",
+      "app.tar",
+      ".deb",
+      ".rpm"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "OhMyShot_{ver}_aarch64.dmg"
+    ],
+    "save_name": "OhMyShot_{ver}_aarch64.dmg",
+    "releases_url": "https://bgithub.xyz/redf0x1/ohmyshot-releases/releases",
+    "repo_path": "redf0x1/ohmyshot-releases",
+    "id": "ohmyshot",
+    "简介": "OhMyShot（macOS Apple Silicon dmg）"
+  },
+  {
+    "id": "ohmyshot_darwin_intel",
+    "简介": "OhMyShot（macOS Intel dmg）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "OhMyShot_",
+      "_x64.dmg"
+    ],
+    "href_exclude_substrings": [
+      ".sig",
+      "aarch64",
+      "AppImage",
+      "setup",
+      "app.tar"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "OhMyShot_{ver}_x64.dmg"
+    ],
+    "save_name": "OhMyShot_{ver}_x64.dmg",
+    "releases_url": "https://bgithub.xyz/redf0x1/ohmyshot-releases/releases",
+    "repo_path": "redf0x1/ohmyshot-releases"
+  },
+  {
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "OpenShots_",
+      "_aarch64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "cli",
+      "AppImage",
+      ".deb",
+      ".rpm",
+      "_x64",
+      ".msi"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "OpenShots_{ver}_aarch64.dmg"
+    ],
+    "save_name": "OpenShots_{ver}_aarch64.dmg",
+    "releases_url": "https://bgithub.xyz/Tracekit-Dev/openshots/releases",
+    "repo_path": "Tracekit-Dev/openshots",
+    "id": "openshots",
+    "简介": "OpenShots（macOS Apple Silicon dmg）"
+  },
+  {
+    "id": "openshots_darwin_intel",
+    "简介": "OpenShots（macOS Intel dmg）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "OpenShots_",
+      "_x64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "cli",
+      "AppImage",
+      "aarch64",
+      ".deb",
+      ".msi"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "OpenShots_{ver}_x64.dmg"
+    ],
+    "save_name": "OpenShots_{ver}_x64.dmg",
+    "releases_url": "https://bgithub.xyz/Tracekit-Dev/openshots/releases",
+    "repo_path": "Tracekit-Dev/openshots"
+  },
+  {
+    "id": "snapx",
+    "简介": "SnapX（ShareX 跨平台分支；pinned v0.3.0，latest 多为 flatpak）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "pinned_release_tag": "v0.3.0",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "SnapX-Avalonia-Release-",
+      "macOS-ARM64.zip"
+    ],
+    "href_exclude_substrings": [
+      "X64.zip",
+      "Linux",
+      "Windows"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "SnapX-macOS-ARM64.zip",
+    "releases_url": "https://bgithub.xyz/SnapXL/SnapX/releases",
+    "repo_path": "SnapXL/SnapX"
+  },
+  {
+    "id": "xerahs",
+    "简介": "XerahS（ShareX 风格跨平台截图/上传）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "XerahS-",
+      "-mac-x64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "win-",
+      "linux-",
+      "flatpak"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "XerahS-mac-x64.tar.gz",
+    "releases_url": "https://bgithub.xyz/KovaForge/XerahS/releases",
+    "repo_path": "KovaForge/XerahS"
+  },
+  {
+    "id": "xerahs_darwin_arm64",
+    "简介": "XerahS（macOS Apple Silicon tar.gz）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "XerahS-",
+      "-mac-arm64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "x64",
+      "win-",
+      "linux-"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "XerahS-mac-arm64.tar.gz",
+    "releases_url": "https://bgithub.xyz/KovaForge/XerahS/releases",
+    "repo_path": "KovaForge/XerahS"
+  },
+  {
+    "id": "rambox",
+    "简介": "Rambox（多账号 Web 应用）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "Rambox-",
+      "mac-universal.dmg"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux",
+      "deb"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "Rambox.dmg",
+    "releases_url": "https://bgithub.xyz/ramboxapp/community-edition/releases",
+    "repo_path": "ramboxapp/community-edition"
   }
 ]

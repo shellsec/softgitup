@@ -1,14 +1,15 @@
 # Recommended apps (Windows · full catalog guide)
 
-> Auto-generated from [`apps/windows/`](apps/windows/) on **2026-06-23**. **540** entries.
+> Auto-generated from [`apps/windows/`](apps/windows/) on **2026-06-27**. **567** entries.
 > Chinese guide: [`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md). Other platforms: [macOS](RECOMMENDED.darwin.zh-CN.md) · [Linux](RECOMMENDED.linux.zh-CN.md). Index: [`CATALOG.md`](CATALOG.md).
 
-## AI (38)
+## AI (46)
 
 | id | Intro | repo |
 |----|-------|------|
 | `aichat` | aichat（终端里用 OpenAI/本地模型等，多提供商 CLI） | `sigoden/aichat` |
 | `aider` | aider（终端 AI 结对编程，Windows exe） | `Aider-AI/aider` |
+| `amazon_q_cli` | Amazon Q Developer CLI（aws/amazon-q-developer-cli；Release 无附件，请用官方 curl/insta... | `aws/amazon-q-developer-cli` |
 | `anything_llm` | AnythingLLM（本地 RAG / 文档聊天桌面端；版本 tag 来自 GitHub API，安装包走官方 CDN latest） | `Mintplex-Labs/anything-llm` |
 | `anything_llm_arm64` | AnythingLLM Windows ARM64（同上，CDN latest Arm64 安装包） | `Mintplex-Labs/anything-llm` |
 | `botgem` | BotGem（AI 桌面客户端；Windows 安装包在 gaodeng/botgem-docs Release） | `gaodeng/botgem-docs` |
@@ -19,14 +20,17 @@
 | `cline` | Cline（VS Code / Cursor 系扩展，Release .vsix） | `cline/cline` |
 | `cockpit_tools` | Cockpit Tools（通用 AI IDE 账号管理：Cursor / Copilot / Windsurf / Codex 等多账号切换、配额监控与多开） | `jlcodes99/cockpit-tools` |
 | `codex_cli` | OpenAI Codex CLI（Rust 发行包，Windows x64 推荐 exe.zip） | `openai/codex` |
+| `codex_plus_plus` | CodexPlusPlus（Codex App 增强工具，Windows x64 安装包） | `BigPizzaV3/CodexPlusPlus` |
 | `continue` | Continue（VS Code / JetBrains 系 AI 编程扩展，Release .vsix） | `continuedev/continue` |
 | `crush` | Crush（Charmbracelet 终端 AI 编程助手） | `charmbracelet/crush` |
 | `deepseek_cli` | DeepSeek-TUI dispatcher（deepseek 命令；Windows x64；需配套 deepseek_tui 一起放到 PATH） | `Hmbown/DeepSeek-TUI` |
 | `deepseek_tui` | DeepSeek-TUI companion runtime（deepseek-tui 命令；Windows x64；需与 deepseek_cli 同时存在） | `Hmbown/DeepSeek-TUI` |
 | `gemini_cli` | Gemini CLI（Google 官方；Release 多为 gemini-cli-bundle.zip 通用包） | `google-gemini/gemini-cli` |
-| `github_copilot_cli` | GitHub Copilot：以 VS Code / JetBrains 插件或 gh copilot 为主，无单一 Windows 安装包 Releas... | `microsoft/vscode` |
-| `goose_ai` | Goose（block 开源 AI 编程助手，Windows CLI 压缩包） | `block/goose` |
+| `github_copilot_cli` | GitHub Copilot CLI（官方 github/copilot-cli，Windows x64 MSI） | `github/copilot-cli` |
+| `goose_ai` | Goose（block 开源 AI 编程助手，Windows CLI zip） | `block/goose` |
+| `goose_desktop` | Goose 桌面版（Windows Electron zip，Goose-win32-x64） | `block/goose` |
 | `gpt4all` | GPT4All（本地运行 LLM 的桌面客户端） | `nomic-ai/gpt4all` |
+| `headroom` | Headroom（压缩工具输出/日志/RAG 再喂给 LLM，省 token；Python wheel / npm 包） | `chopratejas/headroom` |
 | `immersive_translate` | 沉浸式翻译（浏览器扩展离线包，Chrome zip；解压后开发者模式加载） | `immersive-translate/immersive-translate` |
 | `jan` | Jan（离线优先的本地 AI 聊天客户端） | `janhq/jan` |
 | `kilocode` | Kilo Code（开源 AI 编程 VS Code 扩展） | `Kilo-Org/kilocode` |
@@ -44,7 +48,11 @@
 | `opencode` | OpenCode（开源 AI 编程代理 / 桌面端，SST 团队） | `sst/opencode` |
 | `openhands` | OpenHands（开源 AI 软件工程师代理；桌面/CLI 以 Docker 与源码为主，GitHub Release 常无安装包；本条仅索引） | `All-Hands-AI/OpenHands` |
 | `roo_code` | Roo Code（原 Roo-Cline，VS Code AI 代理扩展，Release .vsix） | `RooCodeInc/Roo-Code` |
+| `rtk` | RTK（CLI 代理：常见开发命令输出压缩 60–90% token，Rust 单文件） | `rtk-ai/rtk` |
+| `sourcegraph_src_cli` | Sourcegraph src CLI（windows，Cody/源码搜索生态） | `sourcegraph/src-cli` |
 | `tabbyml` | Tabby（自托管 AI 代码补全服务 / 本地推理包） | `TabbyML/tabby` |
+| `vscode_copilot_chat` | GitHub Copilot Chat（VS Code 扩展 .vsix） | `microsoft/vscode-copilot-chat` |
+| `zed_codex_acp` | Zed Codex ACP（在 Zed 中使用 Codex，windows） | `zed-industries/codex-acp` |
 
 ## 下载 (16)
 
@@ -67,7 +75,7 @@
 | `ydl_ui` | 开源免费 Youtube 视频下载工具 YDL-UI 2.9.1 中文多语免费版 | `Maxstupo/ydl-ui` |
 | `youtube_downloader_gui` | 开源免费视频下载工具 Open Video Downloader 2.4.0 中文免费版 | `jely2002/youtube-dl-gui` |
 
-## 云原生 (18)
+## 云原生 (20)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -84,7 +92,9 @@
 | `minikube` | 本地 Kubernetes 单节点集群 | `kubernetes/minikube` |
 | `nomad` | 工作负载调度与编排 | `hashicorp/nomad` |
 | `packer` | 镜像构建自动化 | `hashicorp/packer` |
+| `podman` | Podman（无守护进程容器，Desktop/CLI） | `containers/podman` |
 | `podman_desktop` | Podman Desktop 容器桌面 | `containers/podman-desktop` |
+| `portainer` | Portainer（容器管理 UI 服务端包） | `portainer/portainer` |
 | `rancher_desktop` | Rancher Desktop（K8s/容器） | `rancher-sandbox/rancher-desktop` |
 | `skaffold` | Kubernetes 开发工作流 | `GoogleContainerTools/skaffold` |
 | `terraform` | 基础设施即代码（IaC） | `hashicorp/terraform` |
@@ -152,7 +162,7 @@
 | `specter_desktop` | Specter Desktop（比特币多签/硬件钱包协调与节点管理桌面端） | `cryptoadvance/specter-desktop` |
 | `wasabi_wallet` | Wasabi Wallet（比特币桌面钱包，CoinJoin 隐私向；请自行了解当地合规） | `zkSNACKs/WalletWasabi` |
 
-## 可观测 (7)
+## 可观测 (8)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -162,9 +172,10 @@
 | `loki` | Grafana Loki（日志聚合，Windows 二进制 zip） | `grafana/loki` |
 | `prometheus` | Prometheus 监控 | `prometheus/prometheus` |
 | `tempo` | Grafana Tempo（分布式追踪后端） | `grafana/tempo` |
+| `uptime_kuma` | Uptime Kuma（监控面板 dist 源码包） | `louislam/uptime-kuma` |
 | `vector` | Vector（日志/指标采集与路由） | `vectordotdev/vector` |
 
-## 命令行 (24)
+## 命令行 (25)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -182,6 +193,7 @@
 | `lsd` | ls 增强（zip） | `lsd-rs/lsd` |
 | `micro` | 终端编辑器 micro（zip） | `zyedidia/micro` |
 | `nushell` | Nushell（结构化数据的现代 Shell） | `nushell/nushell` |
+| `oh_my_posh` | Oh My Posh（终端提示符主题引擎） | `JanDeDobbeleer/oh-my-posh` |
 | `procs` | 进程列表查看器（Rust） | `dalance/procs` |
 | `ripgrep` | grep 替代（rg，zip） | `BurntSushi/ripgrep` |
 | `ripgrep_all` | 在 PDF/压缩包等中全文搜索 | `phiresky/ripgrep-all` |
@@ -308,8 +320,8 @@
 | `veracrypt` | 磁盘加密（VeraCrypt） | `veracrypt/VeraCrypt` |
 | `vscanplus` | VscanPlus 网站漏洞扫描（基于 vscan 二次开发，端口/指纹/目录 fuzz/POC） | `youki992/VscanPlus` |
 | `yubikey_manager` | YubiKey Manager（Yubico 设备管理） | `Yubico/yubikey-manager` |
-| `zen_desktop` | Zen 系统级广告拦截与隐私守护（Windows x64 安装包） | `ZenPrivacy/zen-desktop` |
-| `zen_desktop_arm64` | Zen 系统级广告拦截与隐私守护（Windows ARM64 安装包） | `ZenPrivacy/zen-desktop` |
+| `zen_desktop` | Zen 系统级广告拦截与隐私守护（irbis-sh/zen-desktop，原 anfragment/zen；Windows x64 安装包） | `irbis-sh/zen-desktop` |
+| `zen_desktop_arm64` | Zen 系统级广告拦截与隐私守护（irbis-sh/zen-desktop，原 anfragment/zen；Windows ARM64 安装包） | `irbis-sh/zen-desktop` |
 
 ## 局域网文件共享 (10)
 
@@ -347,7 +359,7 @@
 | `pineapple_picture` | 免费开源菠萝看图 Pineapple Picture 1.4.1 中文多语免费版 | `BLumia/pineapple-pictures` |
 | `quick_picture_viewer` | 开源免费轻量级 Windows 图像查看器 Quick Picture Viewer 3.1.4 中文免费版 | `ModuleArt/quick-picture-viewer` |
 
-## 开发 (61)
+## 开发 (62)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -362,6 +374,7 @@
 | `chezmoi` | 点文件（dotfiles）管理 | `twpayne/chezmoi` |
 | `cmake` | CMake 构建系统（Windows x64 安装包） | `Kitware/CMake` |
 | `codeblocks` | 开源免费 C/C++ 和 Fortran IDE Code::Blocks 24.04 中文汉化版 | `anbangli/codeblocks-cn` |
+| `ddev` | DDEV（本地 PHP/Drupal/WordPress 容器开发环境） | `ddev/ddev` |
 | `deno` | Deno JavaScript/TypeScript 运行时 | `denoland/deno` |
 | `dnspy` | 开源 .Net 反汇编工具 dnSpy 6.5.1 + x64 中文绿色免费版 | `dnSpyEx/dnSpy` |
 | `dprint` | dprint（多语言格式化，带插件生态） | `dprint/dprint` |
@@ -413,7 +426,7 @@
 | `watchexec` | 文件变更时执行命令 | `watchexec/watchexec` |
 | `zig` | Zig 语言工具链 | `ziglang/zig` |
 
-## 效率 (21)
+## 效率 (30)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -421,23 +434,32 @@
 | `copyq` | CopyQ（剪贴板历史与管理） | `hluk/CopyQ` |
 | `copytranslator` | 开源复制即翻译解决方案 CopyTranslator 12.1.0 中文免费版 | `copytranslator/CopyTranslator` |
 | `espanso` | 文本扩展/片段工具（安装包名无版本号） | `espanso/espanso` |
-| `flameshot` | 开源免费截图工具 Flameshot 13.2.0 x64 中文多语免费版 | `flameshot-org/flameshot` |
+| `flameshot` | Flameshot（开源截图/标注） | `flameshot-org/flameshot` |
 | `flow_launcher` | Flow Launcher（Windows 启动器 / 全局搜索与插件） | `Flow-Launcher/Flow.Launcher` |
 | `flowlauncher` | Alt+Space 类启动器，可搜应用与插件 | `Flow-Launcher/Flow.Launcher` |
 | `greenshot` | 截图与标注 | `greenshot/greenshot` |
-| `ksnip` | 开源免费屏幕截图工具 ksnip 1.10.1 中文多语免费版 | `ksnip/ksnip` |
+| `greenshot_portable` | Greenshot 便携版（Windows zip） | `greenshot/greenshot` |
+| `ksnip` | ksnip（开源截图/标注，Windows zip） | `ksnip/ksnip` |
 | `maye` | 免费快速启动工具 Maye Nano 6.1.0.260422 中文免费版 | `25H/MayeNano` |
+| `ohmyshot` | OhMyShot（截图美化/标注/滚动截图/GIF；跨平台 GitHub Release） | `redf0x1/ohmyshot-releases` |
+| `openshots` | OpenShots（Tauri 截图美化/标注，跨平台） | `Tracekit-Dev/openshots` |
 | `picgo` | 图床上传工具 | `Molunerfinn/PicGo` |
+| `picpick` | PicPick（截图/取色/标尺；官网 picpick.app 分发，GitHub 无安装包；勿启用） | `picpick/picpick` |
+| `pixpin` | PixPin（截图/贴图/长截图/OCR；官方 CDN down.pixpin.cn，非 GitHub Release） | `pixpin-cn/desktop` |
 | `powertoys_2` | 开源免费 Windows 实用程序 PowerToys 0.99.1 中文多语免费版 | `ZetaSp/PowerToys-Chinese-TransMOD` |
 | `quickclipboard` | 这款开源免费的 QuickClipboard 0.1.1 正在重新定义你的复制粘贴体验 | `mosheng1/QuickClipboard` |
 | `rambox` | 多网页应用聚合（社区版） | `ramboxapp/community-edition` |
 | `screenote` | 开源免费全快捷键截图/贴图工具 Screenote 2020-07-02 中文免费版 | `poerin/Screenote` |
 | `sharex` | 截图、录屏、OCR、上传分享 | `ShareX/ShareX` |
+| `snapx` | SnapX（ShareX 跨平台分支；pinned v0.3.0，latest 多为 flatpak） | `SnapXL/SnapX` |
+| `snipaste` | Snipaste（截图/贴图/OCR；官方 CDN download.snipaste.com） | `snipaste-cn/desktop` |
 | `stretchly` | 番茄钟与休息提醒 | `hovancik/stretchly` |
+| `sunny_capturer` | SunnyCapturer（跨平台截图/OCR/贴图/翻译，XMuli 开源） | `XMuli/SunnyCapturer` |
 | `uniclipboard` | UniClipboard（跨平台剪贴板同步与管理，Rust + Tauri） | `UniClipboard/UniClipboard` |
 | `vhs` | VHS（终端录屏生成 GIF/视频，charmbracelet） | `charmbracelet/vhs` |
 | `vocotype` | VocoType（本地端侧语音转文字输入工具，内置 Paraformer 中文 ASR 模型；Windows x64 NSIS 安装包） | `233stone/vocotype-cli` |
 | `wox` | 应用启动器（安装包名无版本号） | `Wox-launcher/Wox` |
+| `xerahs` | XerahS（ShareX 风格跨平台截图/上传） | `KovaForge/XerahS` |
 
 ## 数据库 (12)
 
@@ -519,11 +541,12 @@
 | `yanknote` | Yank Note（yn）Markdown 笔记，本地优先、可运行代码块 | `purocean/yn` |
 | `zettlr` | Markdown 写作环境 | `Zettlr/Zettlr` |
 
-## 系统 (36)
+## 系统 (37)
 
 | id | Intro | repo |
 |----|-------|------|
 | `auto_dark_mode` | Windows 10 自动深色模式 Auto Dark Mode X 11.0.0.54 中文多语免费版 | `Armin2208/Windows-Auto-Night-Mode` |
+| `balena_etcher` | balenaEtcher（USB 启动盘写入） | `balena-io/etcher` |
 | `context_menu_manager` | Windows 右键菜单管理工具 ContextMenuManager 3.3.3.1 中文免费版 | `BluePointLilac/ContextMenuManager` |
 | `dreamscene2` | 开源 Windows 动态桌面工具 DreamScene2 中文免费版 | `he55/DreamScene2` |
 | `duf` | 磁盘空间概览（df 替代） | `muesli/duf` |
@@ -560,7 +583,7 @@
 | `winslop` | 开源免费 Windows 11 优化工具 Winslop 26.03.110 绿色中文版 | `builtbybel/Winslop` |
 | `wsl_manager` | 开源 WSL 发行版管理器 WSL Manager 1.11.0 中文多语免费版 | `bostrot/wsl2-distro-manager` |
 
-## 终端 (12)
+## 终端 (13)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -575,9 +598,10 @@
 | `warp` | Warp（agentic 终端与开发环境，源码在 GitHub；正式安装包由 warp.dev 分发，Release 页无 exe/dmg 等资产；本条仅... | `warpdotdev/warp` |
 | `wezterm` | GPU 加速终端，Lua 配置 | `wezterm/wezterm` |
 | `windows_terminal` | Windows 终端（多标签 Shell） | `microsoft/terminal` |
+| `windterm` | WindTerm（SSH/SFTP/终端，便携版） | `kingToolbox/WindTerm` |
 | `xterminal` | 开源免费命令终端 xTerminal 3.0.1.0 + x64 中文多语免费版 | `0x78654C/xTerminal` |
 
-## 编辑器 (33)
+## 编辑器 (34)
 
 | id | Intro | repo |
 |----|-------|------|
@@ -611,16 +635,18 @@
 | `void_editor` | Void（开源 AI 代码编辑器，基于 VS Code） | `voideditor/binaries` |
 | `vscode` | Visual Studio Code（微软构建） | `microsoft/vscode` |
 | `vscodium` | VS Code 开源构建，无微软遥测 | `VSCodium/vscodium` |
+| `windsurf` | Windsurf IDE（Codeium AI IDE；官网 codeium.com/windsurf 分发，GitHub 无桌面安装包；勿启用） | `Exafunction/Windsurf` |
 | `winmerge` | 目录与文件差异对比、合并 | `WinMerge/winmerge` |
 | `workbuddy` | WorkBuddy（manifest：copilot.tencent.com） | `-` |
 | `zed` | Zed（Rust 高性能编辑器，开源，Windows x64 安装包） | `zed-industries/zed` |
 
-## 网络 (21)
+## 网络 (22)
 
 | id | Intro | repo |
 |----|-------|------|
 | `angryip` | 局域网 IP 扫描 | `angryip/ipscan` |
 | `bandwhich` | 终端带宽按进程展示 | `imsnif/bandwhich` |
+| `chrome_updater` | Chrome 离线安装包下载与便携版制作（Fyne GUI） | `libsgh/chrome_updater` |
 | `cloudflared` | Cloudflare Tunnel 客户端 | `cloudflare/cloudflared` |
 | `croc` | croc（端到端加密传文件，命令行） | `schollz/croc` |
 | `internettest` | 开源免费网络测试工具 InternetTest Pro 9.1.0.2602 中文多语免费版 | `Leo-Corporation/InternetTest` |
@@ -681,14 +707,15 @@
 | `openbb_desktop` | OpenBB Open Data Platform（桌面端：金融/投研数据与工具链入口） | `OpenBB-finance/OpenBB` |
 | `ta_lib` | TA-Lib（技术分析 C 库；Windows x86_64 官方 zip，量化/指标常用） | `ta-lib/ta-lib` |
 
-## 音视频 (7)
+## 音视频 (8)
 
 | id | Intro | repo |
 |----|-------|------|
+| `ffmpeg_builds` | FFmpeg（BtbN 预编译 master/latest 构建） | `BtbN/FFmpeg-Builds` |
 | `losslesscut` | LosslessCut（无损裁剪/合并视频音频，Windows 便携版） | `mifi/lossless-cut` |
 | `openshot` | OpenShot 视频编辑器（Windows x64 exe） | `OpenShot/openshot-qt` |
 | `quickcut` | 开源免费多功能视频编辑下载工具 QuickCut 1.6.10 中文免费版 | `HaujetZhao/QuickCut` |
-| `screen_to_gif` | 开源免费 Gif 录制工具 ScreenToGif 2.43.1 中文多语免费版 | `NickeManarin/ScreenToGif` |
+| `screen_to_gif` | ScreenToGif（GIF/录屏，Windows x64 安装包） | `NickeManarin/ScreenToGif` |
 | `simple_screen_recorder` | 开源 Windows 桌面录像工具 Simple Screen Recorder 1.3.4 中文多语免费版 | `lextrack/Simple-Screen-Recorder` |
 | `syncplay` | Syncplay（异地同步播放本地视频，连麦追剧） | `Syncplay/syncplay` |
 | `vidcutter` | VidCutter（基于 mpv 的视频剪切/合并） | `ozmartian/vidcutter` |

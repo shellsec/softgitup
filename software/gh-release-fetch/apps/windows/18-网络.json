@@ -378,6 +378,35 @@
     "url_hint": "Thorium"
   },
   {
+    "id": "chrome_updater",
+    "简介": "Chrome 离线安装包下载与便携版制作（Fyne GUI）",
+    "分类": "网络",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/libsgh/chrome_updater/releases",
+    "repo_path": "libsgh/chrome_updater",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers": [
+      "chrome_updater-windows-amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "386",
+      "arm64"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "chrome_updater-windows-amd64.zip"
+    ],
+    "save_name": "chrome_updater-windows-amd64.zip",
+    "use_download_filename": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "chrome_updater"
+  },
+  {
     "id": "croc",
     "简介": "croc（端到端加密传文件，命令行）",
     "分类": "网络",

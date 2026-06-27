@@ -1,0 +1,105 @@
+[
+  {
+    "id": "simple_draw",
+    "简介": "Simple Draw（轻量绘图/标注）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "draw-fdroid-release",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "proprietary",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "simple_draw.apk",
+    "releases_url": "https://bgithub.xyz/SimpleMobileTools/Simple-Draw/releases",
+    "repo_path": "SimpleMobileTools/Simple-Draw"
+  },
+  {
+    "id": "uhabits",
+    "简介": "Loop Habit Tracker（习惯养成）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "uhabits-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "uhabits.apk",
+    "releases_url": "https://bgithub.xyz/iSoron/uhabits/releases",
+    "repo_path": "iSoron/uhabits"
+  },
+  {
+    "id": "habitica",
+    "简介": "Habitica（习惯 RPG 待办）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Habitica",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "habitica.apk",
+    "releases_url": "https://bgithub.xyz/HabitRPG/habitica-android/releases",
+    "repo_path": "HabitRPG/habitica-android"
+  }
+]

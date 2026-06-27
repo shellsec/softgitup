@@ -107,7 +107,7 @@
   },
   {
     "id": "screen_to_gif",
-    "简介": "开源免费 Gif 录制工具 ScreenToGif 2.43.1 中文多语免费版（来源：dayanzai）",
+    "简介": "ScreenToGif（GIF/录屏，Windows x64 安装包）",
     "分类": "音视频",
     "enabled": false,
     "prefer_api_assets": true,
@@ -116,13 +116,28 @@
     "repo_path": "NickeManarin/ScreenToGif",
     "windows_installer": true,
     "installer_extensions": [
-      ".exe",
       ".msi"
     ],
-    "process_name": "",
+    "process_name": "ScreenToGif.exe",
     "kill_before_install": false,
-    "run_installer": false,
-    "url_hint": "screen_to_gif"
+    "run_installer": true,
+    "url_hint": "screen_to_gif",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ScreenToGif.",
+      "Light.Setup.x64.msi"
+    ],
+    "href_exclude_substrings": [
+      "Portable",
+      "Arm64",
+      "x86.",
+      "Package",
+      "msix"
+    ],
+    "download_names": [
+      "ScreenToGif.{ver}.Light.Setup.x64.msi"
+    ],
+    "save_name": "ScreenToGif.{ver}.Light.Setup.x64.msi"
   },
   {
     "id": "simple_screen_recorder",
@@ -161,5 +176,34 @@
     "kill_before_install": false,
     "run_installer": false,
     "url_hint": "quickcut"
+  },
+  {
+    "id": "ffmpeg_builds",
+    "简介": "FFmpeg（BtbN 预编译 master/latest 构建）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": false,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "pinned_release_tag": "latest",
+    "installer_markers": [
+      "ffmpeg-master-latest-win64-gpl.zip"
+    ],
+    "href_exclude_substrings": [
+      "shared",
+      "lgpl",
+      "arm",
+      "linux"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "ffmpeg-win64-gpl.zip",
+    "releases_url": "https://bgithub.xyz/BtbN/FFmpeg-Builds/releases",
+    "repo_path": "BtbN/FFmpeg-Builds"
   }
 ]

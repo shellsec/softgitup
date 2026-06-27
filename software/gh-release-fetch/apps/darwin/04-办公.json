@@ -81,5 +81,29 @@
       ".msi",
       "arm64"
     ]
+  },
+  {
+    "id": "typst",
+    "简介": "Typst（排版系统）",
+    "分类": "办公",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "typst-aarch64-apple-darwin"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "x86_64"
+    ],
+    "use_download_filename": true,
+    "save_name": "typst-darwin-arm64",
+    "releases_url": "https://bgithub.xyz/typst/typst/releases",
+    "repo_path": "typst/typst"
   }
 ]

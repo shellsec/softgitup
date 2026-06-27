@@ -1,0 +1,71 @@
+[
+  {
+    "id": "connectbot",
+    "简介": "ConnectBot（SSH 客户端）",
+    "分类": "终端",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ConnectBot-v",
+      "oss.apk"
+    ],
+    "href_exclude_substrings": [
+      "google",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "connectbot.apk",
+    "releases_url": "https://bgithub.xyz/connectbot/connectbot/releases",
+    "repo_path": "connectbot/connectbot"
+  },
+  {
+    "id": "termux_widget",
+    "简介": "Termux:Widget（终端小部件）",
+    "分类": "终端",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "termux-widget",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "termux_widget.apk",
+    "releases_url": "https://bgithub.xyz/termux/termux-widget/releases",
+    "repo_path": "termux/termux-widget"
+  }
+]

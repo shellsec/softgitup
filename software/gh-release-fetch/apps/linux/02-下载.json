@@ -508,5 +508,28 @@
       ".exe",
       ".msi"
     ]
+  },
+  {
+    "id": "gallery_dl",
+    "简介": "gallery-dl（图库/B站等批量下载 CLI）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "gallery-dl.bin"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "mac"
+    ],
+    "use_download_filename": true,
+    "save_name": "gallery-dl.bin",
+    "releases_url": "https://bgithub.xyz/mikf/gallery-dl/releases",
+    "repo_path": "mikf/gallery-dl"
   }
 ]

@@ -346,7 +346,7 @@
   },
   {
     "id": "mpv",
-    "简介": "极简命令行媒体播放器（Windows 构建）",
+    "简介": "mpv（Windows x64 官方 zip；安装说明 https://mpv.io/installation/）",
     "分类": "多媒体",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/mpv-player/mpv/releases",
@@ -354,22 +354,28 @@
     "installer_markers": [
       "mpv-",
       "x86_64",
-      "win.zip"
+      "w64-mingw32"
     ],
     "href_exclude_substrings": [
       "aarch64",
-      "linux",
-      "darwin"
+      "i686",
+      "macos",
+      "msvc"
     ],
     "windows_installer": true,
     "download_names": [
-      "mpv-{ver}-x86_64-w64-mingw.zip"
+      "mpv-{ver}-x86_64-w64-mingw32.zip"
     ],
-    "save_name": "mpv-{ver}-x86_64-w64-mingw.zip",
+    "save_name": "mpv-{ver}-x86_64-w64-mingw32.zip",
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false,
-    "version_tag_as_on_github": true
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "url_hint": "mpv"
   },
   {
     "id": "avidemux",
@@ -772,5 +778,70 @@
     "kill_before_install": false,
     "run_installer": false,
     "url_hint": "batchencoder"
+  },
+  {
+    "id": "mpv_shinchiro",
+    "简介": "mpv（Windows x64 git 构建，shinchiro；见 mpv.io/installation/）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": false,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "mpv-x86_64-",
+      ".7z"
+    ],
+    "href_exclude_substrings": [
+      "dev",
+      "i686",
+      "aarch64",
+      "ffmpeg",
+      "-v3-",
+      "debug"
+    ],
+    "installer_extensions": [
+      ".7z"
+    ],
+    "use_download_filename": true,
+    "save_name": "mpv-shinchiro-x64.7z",
+    "releases_url": "https://bgithub.xyz/shinchiro/mpv-winbuild-cmake/releases",
+    "repo_path": "shinchiro/mpv-winbuild-cmake"
+  },
+  {
+    "id": "mpv_zhongfly",
+    "简介": "mpv（Windows x64 git 构建，zhongfly；见 mpv.io/installation/）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": false,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "mpv-x86_64-",
+      ".7z"
+    ],
+    "href_exclude_substrings": [
+      "dev",
+      "debug",
+      "i686",
+      "aarch64",
+      "ffmpeg",
+      "lgpl",
+      "-v3-"
+    ],
+    "installer_extensions": [
+      ".7z"
+    ],
+    "use_download_filename": true,
+    "save_name": "mpv-zhongfly-x64.7z",
+    "releases_url": "https://bgithub.xyz/zhongfly/mpv-winbuild/releases",
+    "repo_path": "zhongfly/mpv-winbuild"
   }
 ]

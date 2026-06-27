@@ -1,0 +1,111 @@
+[
+  {
+    "id": "fenix",
+    "简介": "Firefox for Android（Fenix）",
+    "分类": "浏览器",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "fenix-",
+      "arm64-v8a",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "x86",
+      "debug",
+      "beta",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "fenix.apk",
+    "releases_url": "https://bgithub.xyz/mozilla-mobile/fenix/releases",
+    "repo_path": "mozilla-mobile/fenix"
+  },
+  {
+    "id": "duckduckgo_android",
+    "简介": "DuckDuckGo Privacy Browser",
+    "分类": "浏览器",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "duckduckgo-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "play",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "duckduckgo_android.apk",
+    "releases_url": "https://bgithub.xyz/duckduckgo/Android/releases",
+    "repo_path": "duckduckgo/Android"
+  },
+  {
+    "id": "cromite",
+    "简介": "Cromite（Chromium 去 Google 化浏览器）",
+    "分类": "浏览器",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Cromite",
+      "arm64",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "x86",
+      "armeabi",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "cromite.apk",
+    "releases_url": "https://bgithub.xyz/uazo/cromite/releases",
+    "repo_path": "uazo/cromite"
+  }
+]

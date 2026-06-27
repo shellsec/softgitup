@@ -215,5 +215,34 @@
       ".exe",
       ".msi"
     ]
+  },
+  {
+    "id": "ffmpeg_builds",
+    "简介": "FFmpeg（BtbN 预编译 master/latest 构建）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": false,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "pinned_release_tag": "latest",
+    "installer_markers": [
+      "ffmpeg-master-latest-linux64-gpl.tar.xz"
+    ],
+    "href_exclude_substrings": [
+      "shared",
+      "lgpl",
+      "win",
+      "arm"
+    ],
+    "installer_extensions": [
+      ".xz"
+    ],
+    "use_download_filename": true,
+    "save_name": "ffmpeg-linux64-gpl.tar.xz",
+    "releases_url": "https://bgithub.xyz/BtbN/FFmpeg-Builds/releases",
+    "repo_path": "BtbN/FFmpeg-Builds"
   }
 ]

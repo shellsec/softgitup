@@ -1,0 +1,320 @@
+[
+  {
+    "id": "termux",
+    "简介": "Termux（Android 终端 / 包管理）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "termux-app_",
+      "universal",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "bootstrap",
+      "armeabi",
+      "x86_64-only",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "termux.apk",
+    "releases_url": "https://bgithub.xyz/termux/termux-app/releases",
+    "repo_path": "termux/termux-app"
+  },
+  {
+    "id": "obtainium",
+    "简介": "Obtainium（从 GitHub 等源追踪并更新 APK）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Obtainium",
+      "universal",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "arm64-v8a",
+      "armeabi",
+      "x86_64",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "obtainium.apk",
+    "releases_url": "https://bgithub.xyz/ImranR98/Obtainium/releases",
+    "repo_path": "ImranR98/Obtainium"
+  },
+  {
+    "id": "material_files",
+    "简介": "Material Files（开源文件管理器）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "app-release",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "lite",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "material_files.apk",
+    "releases_url": "https://bgithub.xyz/zhanghai/MaterialFiles/releases",
+    "repo_path": "zhanghai/MaterialFiles"
+  },
+  {
+    "id": "appmanager",
+    "简介": "App Manager（应用/权限/组件管理）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "AppManager_v",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "appmanager.apk",
+    "releases_url": "https://bgithub.xyz/MuntashirAkon/AppManager/releases",
+    "repo_path": "MuntashirAkon/AppManager"
+  },
+  {
+    "id": "amaze",
+    "简介": "Amaze File Manager（开源文件管理器）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "app-fdroid-release",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "lite",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "amaze.apk",
+    "releases_url": "https://bgithub.xyz/TeamAmaze/AmazeFileManager/releases",
+    "repo_path": "TeamAmaze/AmazeFileManager"
+  },
+  {
+    "id": "droidify",
+    "简介": "Droid-ify（F-Droid 客户端）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "app-release",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "droidify.apk",
+    "releases_url": "https://bgithub.xyz/Droid-ify/client/releases",
+    "repo_path": "Droid-ify/client"
+  },
+  {
+    "id": "neo_store",
+    "简介": "Neo Store（F-Droid 客户端）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Neo_Store_",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "neo_store.apk",
+    "releases_url": "https://bgithub.xyz/NeoApplications/Neo-Store/releases",
+    "repo_path": "NeoApplications/Neo-Store"
+  },
+  {
+    "id": "breezy_weather",
+    "简介": "Breezy Weather（开源天气）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "breezy-weather",
+      "arm64-v8a",
+      "standard.apk"
+    ],
+    "href_exclude_substrings": [
+      "armeabi",
+      "x86",
+      "debug",
+      "freenet",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "breezy_weather.apk",
+    "releases_url": "https://bgithub.xyz/breezy-weather/breezy-weather/releases",
+    "repo_path": "breezy-weather/breezy-weather"
+  },
+  {
+    "id": "datamonitor",
+    "简介": "DataMonitor（流量监控）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "DataMonitor-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "datamonitor.apk",
+    "releases_url": "https://bgithub.xyz/itsdrill/DataMonitor/releases",
+    "repo_path": "itsdrill/DataMonitor"
+  }
+]

@@ -119,5 +119,106 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "actual_budget",
+    "简介": "Actual Budget（本地记账）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "Actual-",
+      "linux-x64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "mac"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "use_download_filename": true,
+    "save_name": "Actual.AppImage",
+    "releases_url": "https://bgithub.xyz/actualbudget/actual/releases",
+    "repo_path": "actualbudget/actual"
+  },
+  {
+    "id": "openbb_desktop",
+    "简介": "OpenBB Desktop（金融终端）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "OpenBB",
+      "linux"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "mac"
+    ],
+    "use_download_filename": true,
+    "save_name": "OpenBB-linux",
+    "releases_url": "https://bgithub.xyz/OpenBB-finance/OpenBB/releases",
+    "repo_path": "OpenBB-finance/OpenBB"
+  },
+  {
+    "id": "go_stock",
+    "简介": "go-stock",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "go-stock-linux-amd64"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "darwin"
+    ],
+    "use_download_filename": true,
+    "save_name": "go-stock-linux-amd64",
+    "releases_url": "https://bgithub.xyz/ArvinLovegood/go-stock/releases",
+    "repo_path": "ArvinLovegood/go-stock"
+  },
+  {
+    "id": "ta_lib",
+    "简介": "TA-Lib",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "ta-lib-",
+      "linux-x86_64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "mac"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "ta-lib-linux.tar.gz",
+    "releases_url": "https://bgithub.xyz/ta-lib/ta-lib/releases",
+    "repo_path": "ta-lib/ta-lib"
   }
 ]

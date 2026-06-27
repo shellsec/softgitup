@@ -117,9 +117,14 @@ def render(rows, totals, shard_order) -> str:
         "",
         "## 批量维护脚本（追加条目，幂等）",
         "",
-        "- `tools/append_catalog_batch2.py`",
-        "- `tools/append_catalog_batch3.py`",
-        "- `tools/append_catalog_batch4.py`",
+        "- `tools/append_catalog_batch2.py` … `append_catalog_batch4.py` — 早期跨平台批",
+        "- `tools/append_catalog_batch5.py` — AI IDE 生态",
+        "- `tools/append_catalog_batch6.py` — AI 编程 / Copilot 类",
+        "- `tools/append_catalog_batch7.py` — 截图/贴图/OCR（Snipaste、OhMyShot 等）",
+        "- `tools/append_catalog_batch8.py` — SnapX/XerahS、系统/云原生/多媒体等",
+        "- `tools/append_catalog_batch9.py` — 跨平台缺口大补（命令行/安全/游戏等）",
+        "- `tools/append_catalog_batch10.py` — 安全 CLI、编辑器、备份、AI 等",
+        "- `tools/append_catalog_batch11.py` — Vault/Trivy/Terrascan 等",
         "",
     ]
     return "\n".join(lines)

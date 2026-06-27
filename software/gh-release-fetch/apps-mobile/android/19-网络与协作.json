@@ -1,0 +1,140 @@
+[
+  {
+    "id": "nextcloud_talk",
+    "简介": "Nextcloud Talk（音视频会议）",
+    "分类": "网络与协作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "talk-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "beta",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "nextcloud_talk.apk",
+    "releases_url": "https://bgithub.xyz/nextcloud/talk-android/releases",
+    "repo_path": "nextcloud/talk-android"
+  },
+  {
+    "id": "jitsi_meet",
+    "简介": "Jitsi Meet（视频会议）",
+    "分类": "网络与协作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "jitsi-meet",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "sdk",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "jitsi_meet.apk",
+    "releases_url": "https://bgithub.xyz/jitsi/jitsi-meet/releases",
+    "repo_path": "jitsi/jitsi-meet"
+  },
+  {
+    "id": "zulip",
+    "简介": "Zulip（团队聊天）",
+    "分类": "网络与协作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "zulip-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "zulip.apk",
+    "releases_url": "https://bgithub.xyz/zulip/zulip-flutter/releases",
+    "repo_path": "zulip/zulip-flutter"
+  },
+  {
+    "id": "davx5",
+    "简介": "DAVx5（CalDAV/CardDAV 同步）",
+    "分类": "网络与协作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "davx5-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "davx5.apk",
+    "releases_url": "https://bgithub.xyz/bitfireAT/davx5/releases",
+    "repo_path": "bitfireAT/davx5"
+  }
+]

@@ -1,0 +1,106 @@
+[
+  {
+    "id": "appflowy",
+    "简介": "AppFlowy（Notion 类笔记，Android）",
+    "分类": "笔记",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "AppFlowy-",
+      "android.apk"
+    ],
+    "href_exclude_substrings": [
+      "ios",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "appflowy.apk",
+    "releases_url": "https://bgithub.xyz/AppFlowy-IO/AppFlowy/releases",
+    "repo_path": "AppFlowy-IO/AppFlowy"
+  },
+  {
+    "id": "joplin",
+    "简介": "Joplin（Markdown 笔记，Android）",
+    "分类": "笔记",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "joplin-v",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "beta",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "joplin.apk",
+    "releases_url": "https://bgithub.xyz/laurent22/joplin-android/releases",
+    "repo_path": "laurent22/joplin-android"
+  },
+  {
+    "id": "notally",
+    "简介": "Notally（极简笔记）",
+    "分类": "笔记",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Notally-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "notally.apk",
+    "releases_url": "https://bgithub.xyz/c0de517/notally/releases",
+    "repo_path": "c0de517/notally"
+  }
+]

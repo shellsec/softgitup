@@ -1,0 +1,140 @@
+[
+  {
+    "id": "shelter",
+    "简介": "Shelter（工作资料隔离/双开）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Shelter",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "shelter.apk",
+    "releases_url": "https://bgithub.xyz/PeterCxy/Shelter/releases",
+    "repo_path": "PeterCxy/Shelter"
+  },
+  {
+    "id": "lawnchair",
+    "简介": "Lawnchair（开源启动器）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Lawnchair",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "nightly",
+      "play",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "lawnchair.apk",
+    "releases_url": "https://bgithub.xyz/LawnchairLauncher/lawnchair/releases",
+    "repo_path": "LawnchairLauncher/lawnchair"
+  },
+  {
+    "id": "insular",
+    "简介": "Insular（工作资料隔离）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Insular-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "insular.apk",
+    "releases_url": "https://bgithub.xyz/oberon/Insular/releases",
+    "repo_path": "oberon/Insular"
+  },
+  {
+    "id": "app_ops",
+    "简介": "App Ops（权限/Ops 管理）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "AppOps",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "app_ops.apk",
+    "releases_url": "https://bgithub.xyz/RikkaApps/App-Ops-reborn/releases",
+    "repo_path": "RikkaApps/App-Ops-reborn"
+  }
+]

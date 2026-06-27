@@ -1,0 +1,141 @@
+[
+  {
+    "id": "libretube",
+    "简介": "LibreTube（YouTube 客户端）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "LibreTube",
+      "arm64-v8a",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "x86",
+      "armeabi",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "libretube.apk",
+    "releases_url": "https://bgithub.xyz/libre-tube/LibreTube/releases",
+    "repo_path": "libre-tube/LibreTube"
+  },
+  {
+    "id": "transistor",
+    "简介": "Transistor（网络电台）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "transistor-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "transistor.apk",
+    "releases_url": "https://bgithub.xyz/rockstormorg/transistor-app/releases",
+    "repo_path": "rockstormorg/transistor-app"
+  },
+  {
+    "id": "voice",
+    "简介": "Voice（有声书播放器）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "voice-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "voice.apk",
+    "releases_url": "https://bgithub.xyz/PaulWoitaschek/Voice/releases",
+    "repo_path": "PaulWoitaschek/Voice"
+  },
+  {
+    "id": "skytube",
+    "简介": "SkyTube（YouTube 客户端 · 开源）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "SkyTube",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "skytube.apk",
+    "releases_url": "https://bgithub.xyz/SkyTubeApp/SkyTube/releases",
+    "repo_path": "SkyTubeApp/SkyTube"
+  }
+]

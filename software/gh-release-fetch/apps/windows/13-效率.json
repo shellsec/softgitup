@@ -379,7 +379,7 @@
   },
   {
     "id": "flameshot",
-    "简介": "开源免费截图工具 Flameshot 13.2.0 x64 中文多语免费版（来源：dayanzai）",
+    "简介": "Flameshot（开源截图/标注）",
     "分类": "效率",
     "enabled": false,
     "prefer_api_assets": true,
@@ -388,32 +388,62 @@
     "repo_path": "flameshot-org/flameshot",
     "windows_installer": true,
     "installer_extensions": [
-      ".exe",
       ".msi"
     ],
-    "process_name": "",
+    "process_name": "flameshot.exe",
     "kill_before_install": false,
-    "run_installer": false,
-    "url_hint": "flameshot"
+    "run_installer": true,
+    "url_hint": "flameshot",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Flameshot-",
+      "win64.msi"
+    ],
+    "href_exclude_substrings": [
+      "sha256",
+      ".zip",
+      "macos",
+      "artifact",
+      "appimage"
+    ],
+    "download_names": [
+      "Flameshot-{ver}-win64.msi"
+    ],
+    "save_name": "Flameshot-{ver}-win64.msi"
   },
   {
     "id": "ksnip",
-    "简介": "开源免费屏幕截图工具 ksnip 1.10.1 中文多语免费版（来源：dayanzai）",
+    "简介": "ksnip（开源截图/标注，Windows zip）",
     "分类": "效率",
     "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
     "releases_url": "https://bgithub.xyz/ksnip/ksnip/releases",
     "repo_path": "ksnip/ksnip",
-    "windows_installer": true,
+    "windows_installer": false,
     "installer_extensions": [
-      ".exe",
-      ".msi"
+      ".zip"
     ],
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false,
-    "url_hint": "ksnip"
+    "url_hint": "ksnip",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ksnip-",
+      "-windows.zip"
+    ],
+    "href_exclude_substrings": [
+      "AppImage",
+      "deb",
+      "rpm",
+      "dmg",
+      "msi"
+    ],
+    "download_names": [
+      "ksnip-{ver}-windows.zip"
+    ],
+    "save_name": "ksnip-{ver}-windows.zip"
   },
   {
     "id": "screenote",
@@ -487,5 +517,277 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": true
+  },
+  {
+    "id": "pixpin",
+    "简介": "PixPin（截图/贴图/长截图/OCR；官方 CDN down.pixpin.cn，非 GitHub Release）",
+    "分类": "效率",
+    "enabled": false,
+    "releases_url": "https://pixpin.cn/download/",
+    "repo_path": "pixpin-cn/desktop",
+    "prefer_api_assets": false,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "PixPin_cn_zh-cn_",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "dmg",
+      "_uni",
+      "portable"
+    ],
+    "download_url_templates": [
+      "https://down.pixpin.cn/PixPin_cn_zh-cn_{ver_plain}.exe"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "PixPin_cn_zh-cn_{ver}.exe"
+    ],
+    "save_name": "PixPin_cn_zh-cn_{ver}.exe",
+    "process_name": "PixPin.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "url_hint": "PixPin"
+  },
+  {
+    "id": "snipaste",
+    "简介": "Snipaste（截图/贴图/OCR；官方 CDN download.snipaste.com）",
+    "分类": "效率",
+    "releases_url": "https://zh.snipaste.com/download.html",
+    "repo_path": "snipaste-cn/desktop",
+    "enabled": false,
+    "prefer_api_assets": false,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Snipaste-",
+      "-x64.zip"
+    ],
+    "href_exclude_substrings": [
+      "-x86.zip",
+      "arm64",
+      "AppImage",
+      ".dmg",
+      "Beta",
+      "Snipaste-1.",
+      "Snipaste-2.10",
+      "Snipaste-2.9",
+      "Snipaste-2.8",
+      "Snipaste-2.7"
+    ],
+    "download_url_templates": [
+      "https://download.snipaste.com/archives/Snipaste-{ver_plain}-x64.zip"
+    ],
+    "download_names": [
+      "Snipaste-{ver}-x64.zip"
+    ],
+    "save_name": "Snipaste-{ver}-x64.zip",
+    "url_hint": "Snipaste"
+  },
+  {
+    "id": "sunny_capturer",
+    "简介": "SunnyCapturer（跨平台截图/OCR/贴图/翻译，XMuli 开源）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "SunnyCapturer_setup_",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "portable",
+      "ocr_cpu",
+      "ocr_gpu",
+      "7z",
+      "checksums"
+    ],
+    "download_names": [
+      "SunnyCapturer_setup_{ver}.exe"
+    ],
+    "save_name": "SunnyCapturer_setup_{ver}.exe",
+    "releases_url": "https://bgithub.xyz/XMuli/SunnyCapturer/releases",
+    "repo_path": "XMuli/SunnyCapturer"
+  },
+  {
+    "id": "greenshot_portable",
+    "简介": "Greenshot 便携版（Windows zip）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Greenshot-PORTABLE-",
+      "-RELEASE.zip"
+    ],
+    "href_exclude_substrings": [
+      "INSTALLER"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "Greenshot-PORTABLE-{ver}-RELEASE.zip"
+    ],
+    "save_name": "Greenshot-PORTABLE-{ver}-RELEASE.zip",
+    "releases_url": "https://bgithub.xyz/greenshot/greenshot/releases",
+    "repo_path": "greenshot/greenshot"
+  },
+  {
+    "id": "picpick",
+    "简介": "PicPick（截图/取色/标尺；官网 picpick.app 分发，GitHub 无安装包；勿启用）",
+    "分类": "效率",
+    "releases_url": "https://picpick.app/en/download",
+    "repo_path": "picpick/picpick",
+    "prefer_api_assets": true,
+    "url_hint": "picpick",
+    "enabled": false,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "installer_markers": [
+      "OhMyShot_",
+      "_x64-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      ".sig",
+      ".deb",
+      ".rpm",
+      "AppImage",
+      ".dmg",
+      ".msi",
+      "app.tar"
+    ],
+    "download_names": [
+      "OhMyShot_{ver}_x64-setup.exe"
+    ],
+    "save_name": "OhMyShot_{ver}_x64-setup.exe",
+    "releases_url": "https://bgithub.xyz/redf0x1/ohmyshot-releases/releases",
+    "repo_path": "redf0x1/ohmyshot-releases",
+    "id": "ohmyshot",
+    "简介": "OhMyShot（截图美化/标注/滚动截图/GIF；跨平台 GitHub Release）"
+  },
+  {
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "installer_markers": [
+      "OpenShots_",
+      "_x64_en-US.msi"
+    ],
+    "href_exclude_substrings": [
+      "cli",
+      "AppImage",
+      ".deb",
+      ".rpm",
+      ".dmg",
+      "aarch64"
+    ],
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "OpenShots_{ver}_x64_en-US.msi"
+    ],
+    "save_name": "OpenShots_{ver}_x64_en-US.msi",
+    "releases_url": "https://bgithub.xyz/Tracekit-Dev/openshots/releases",
+    "repo_path": "Tracekit-Dev/openshots",
+    "id": "openshots",
+    "简介": "OpenShots（Tauri 截图美化/标注，跨平台）"
+  },
+  {
+    "id": "snapx",
+    "简介": "SnapX（ShareX 跨平台分支；pinned v0.3.0，latest 多为 flatpak）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "pinned_release_tag": "v0.3.0",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "SnapX-Avalonia-Release-",
+      "Windows-X64.zip"
+    ],
+    "href_exclude_substrings": [
+      "ARM64",
+      "Linux",
+      "macOS"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "SnapX-Avalonia-Release-{ver}-Windows-X64.zip"
+    ],
+    "save_name": "SnapX-Avalonia-Release-{ver}-Windows-X64.zip",
+    "releases_url": "https://bgithub.xyz/SnapXL/SnapX/releases",
+    "repo_path": "SnapXL/SnapX"
+  },
+  {
+    "id": "xerahs",
+    "简介": "XerahS（ShareX 风格跨平台截图/上传）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "XerahS-",
+      "-win-x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      ".msi",
+      "flatpak",
+      ".deb",
+      ".rpm",
+      "mac-"
+    ],
+    "download_names": [
+      "XerahS-{ver}-win-x64.exe"
+    ],
+    "save_name": "XerahS-{ver}-win-x64.exe",
+    "releases_url": "https://bgithub.xyz/KovaForge/XerahS/releases",
+    "repo_path": "KovaForge/XerahS"
   }
 ]

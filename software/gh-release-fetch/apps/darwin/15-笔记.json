@@ -326,5 +326,118 @@
       ".msi",
       "arm64"
     ]
+  },
+  {
+    "id": "marktext",
+    "简介": "MarkText（macOS dmg）",
+    "分类": "笔记",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "marktext-",
+      "-x64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "setup.exe",
+      "AppImage",
+      "arm"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "marktext-x64.dmg",
+    "releases_url": "https://bgithub.xyz/marktext/marktext/releases",
+    "repo_path": "marktext/marktext"
+  },
+  {
+    "id": "siyuan",
+    "简介": "思源笔记",
+    "分类": "笔记",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "siyuan-",
+      "mac.dmg"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux",
+      "apk"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "siyuan-mac.dmg",
+    "releases_url": "https://bgithub.xyz/siyuan-note/siyuan/releases",
+    "repo_path": "siyuan-note/siyuan"
+  },
+  {
+    "id": "xournalpp",
+    "简介": "Xournal++（手写/PDF 标注）",
+    "分类": "笔记",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "xournalpp-",
+      "macOS.dmg"
+    ],
+    "href_exclude_substrings": [
+      "Windows",
+      "Debian",
+      "AppImage"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "xournalpp-macos.dmg",
+    "releases_url": "https://bgithub.xyz/xournalpp/xournalpp/releases",
+    "repo_path": "xournalpp/xournalpp"
+  },
+  {
+    "id": "yanknote",
+    "简介": "Yank Note（Markdown 笔记）",
+    "分类": "笔记",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "Yank-Note-mac-x64-",
+      ".dmg"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux",
+      "blockmap"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "Yank-Note-mac.dmg",
+    "releases_url": "https://bgithub.xyz/purocean/yn/releases",
+    "repo_path": "purocean/yn"
   }
 ]

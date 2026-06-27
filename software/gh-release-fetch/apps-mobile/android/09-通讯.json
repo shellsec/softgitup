@@ -1,0 +1,109 @@
+[
+  {
+    "id": "thunderbird_android",
+    "简介": "Thunderbird for Android（原 K-9 Mail）",
+    "分类": "通讯",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "thunderbird-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "beta",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "thunderbird_android.apk",
+    "releases_url": "https://bgithub.xyz/thunderbird/thunderbird-android/releases",
+    "repo_path": "thunderbird/thunderbird-android"
+  },
+  {
+    "id": "smsforwarder",
+    "简介": "SmsForwarder（短信/来电/通知转发与自动化）",
+    "分类": "通讯",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "SmsF_",
+      "universal",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "armeabi",
+      "arm64-v8a",
+      "x86_64",
+      "x86_",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "smsforwarder.apk",
+    "releases_url": "https://bgithub.xyz/pppscn/SmsForwarder/releases",
+    "repo_path": "pppscn/SmsForwarder"
+  },
+  {
+    "id": "simple_dialer",
+    "简介": "Fossify Dialer（开源拨号）",
+    "分类": "通讯",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "dialer-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "simple_dialer.apk",
+    "releases_url": "https://bgithub.xyz/FossifyOrg/Dialer/releases",
+    "repo_path": "FossifyOrg/Dialer"
+  }
+]

@@ -1,0 +1,142 @@
+[
+  {
+    "id": "simple_gallery",
+    "简介": "Gallery（开源相册，ReFra）",
+    "分类": "办公与设计",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "universal-release.apk"
+    ],
+    "href_exclude_substrings": [
+      "offline",
+      "ML",
+      "debug",
+      "armeabi",
+      "x86",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "simple_gallery.apk",
+    "releases_url": "https://bgithub.xyz/IacobIonut01/Gallery/releases",
+    "repo_path": "IacobIonut01/Gallery"
+  },
+  {
+    "id": "simple_calendar",
+    "简介": "Simple Calendar（开源日历）",
+    "分类": "办公与设计",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "calendar-fdroid-release",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "proprietary",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "simple_calendar.apk",
+    "releases_url": "https://bgithub.xyz/SimpleMobileTools/Simple-Calendar/releases",
+    "repo_path": "SimpleMobileTools/Simple-Calendar"
+  },
+  {
+    "id": "graphene_camera",
+    "简介": "GrapheneOS Camera（开源相机）",
+    "分类": "办公与设计",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Camera-",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "graphene_camera.apk",
+    "releases_url": "https://bgithub.xyz/GrapheneOS/Camera/releases",
+    "repo_path": "GrapheneOS/Camera"
+  },
+  {
+    "id": "fossify_music",
+    "简介": "Fossify Music Player（音乐播放器）",
+    "分类": "办公与设计",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "music-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "fossify_music.apk",
+    "releases_url": "https://bgithub.xyz/FossifyOrg/Music-Player/releases",
+    "repo_path": "FossifyOrg/Music-Player"
+  }
+]

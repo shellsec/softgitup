@@ -1,0 +1,140 @@
+[
+  {
+    "id": "openboard",
+    "简介": "OpenBoard（开源 Gboard 替代键盘）",
+    "分类": "输入",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "OpenBoard_",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "test",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "openboard.apk",
+    "releases_url": "https://bgithub.xyz/openboard-team/openboard/releases",
+    "repo_path": "openboard-team/openboard"
+  },
+  {
+    "id": "helium",
+    "简介": "Helium（开源键盘）",
+    "分类": "输入",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "helium-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "helium.apk",
+    "releases_url": "https://bgithub.xyz/Helium314/Helium/releases",
+    "repo_path": "Helium314/Helium"
+  },
+  {
+    "id": "florisboard",
+    "简介": "FlorisBoard（开源键盘）",
+    "分类": "输入",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "FlorisBoard-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "beta",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "florisboard.apk",
+    "releases_url": "https://bgithub.xyz/florisboard/florisboard/releases",
+    "repo_path": "florisboard/florisboard"
+  },
+  {
+    "id": "simple_keyboard",
+    "简介": "Simple Keyboard（SimpleMobileTools 键盘）",
+    "分类": "输入",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "keyboard-fdroid-release",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "simple_keyboard.apk",
+    "releases_url": "https://bgithub.xyz/SimpleMobileTools/Simple-Keyboard/releases",
+    "repo_path": "SimpleMobileTools/Simple-Keyboard"
+  }
+]

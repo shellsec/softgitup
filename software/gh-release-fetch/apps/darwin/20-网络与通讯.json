@@ -55,5 +55,33 @@
       ".msi",
       "arm64"
     ]
+  },
+  {
+    "id": "thunderbird",
+    "简介": "Thunderbird（邮件客户端）",
+    "分类": "网络与通讯",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "Thunderbird",
+      ".dmg"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux",
+      "tar.xz"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "Thunderbird.dmg",
+    "releases_url": "https://bgithub.xyz/thunderbird/thunderbird/releases",
+    "repo_path": "thunderbird/thunderbird"
   }
 ]

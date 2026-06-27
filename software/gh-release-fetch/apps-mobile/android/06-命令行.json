@@ -1,0 +1,105 @@
+[
+  {
+    "id": "termux_api",
+    "简介": "Termux:API（Termux 扩展）",
+    "分类": "命令行",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "termux-api-app_",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "bootstrap",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "termux_api.apk",
+    "releases_url": "https://bgithub.xyz/termux/termux-api/releases",
+    "repo_path": "termux/termux-api"
+  },
+  {
+    "id": "termux_widget",
+    "简介": "Termux:Widget（Termux 桌面小部件）",
+    "分类": "命令行",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "termux-widget",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "termux_widget.apk",
+    "releases_url": "https://bgithub.xyz/termux/termux-widget/releases",
+    "repo_path": "termux/termux-widget"
+  },
+  {
+    "id": "android_terminal",
+    "简介": "Android Terminal Emulator（本地 Shell）",
+    "分类": "命令行",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "TerminalEmulator",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "android_terminal.apk",
+    "releases_url": "https://bgithub.xyz/JackPal/Android-Terminal-Emulator/releases",
+    "repo_path": "JackPal/Android-Terminal-Emulator"
+  }
+]

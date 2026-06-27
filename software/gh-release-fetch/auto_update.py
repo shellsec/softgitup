@@ -29,7 +29,13 @@ try:
 except ImportError:
     urllib3 = None
 
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+def _script_dir():
+    if getattr(sys, "frozen", False):
+        return os.path.dirname(os.path.abspath(sys.executable))
+    return os.path.dirname(os.path.abspath(__file__))
+
+
+SCRIPT_DIR = _script_dir()
 CONFIG_PATH = os.path.join(SCRIPT_DIR, "apps.json")
 APPS_DIR = os.path.join(SCRIPT_DIR, "apps")
 APPS_ROOT_FRAGMENT = os.path.join(APPS_DIR, "root.json")
@@ -122,7 +128,7 @@ def _load_platform_apps(apps_dir, platform_key):
     return []
 
 
-def load_config_from_apps_dir(apps_dir):
+def load_config_from_apps_dir(apps_dir, only_platforms=None):
     root_path = os.path.join(apps_dir, "root.json")
     if not os.path.isfile(root_path):
         raise FileNotFoundError(f"缺少 {root_path}")
@@ -131,22 +137,28 @@ def load_config_from_apps_dir(apps_dir):
     if not isinstance(cfg, dict):
         raise ValueError("apps/root.json 必须是 JSON 对象")
     cfg.setdefault("platforms", {})
-    for key in ("windows", "darwin", "linux"):
+    platform_keys = cfg.get("platform_keys") or ("windows", "darwin", "linux")
+    if only_platforms:
+        want = {normalize_platform_arg(p) or p for p in only_platforms if p}
+        keys_to_load = [k for k in platform_keys if k in want]
+        if not keys_to_load:
+            keys_to_load = sorted(want)
+    else:
+        keys_to_load = list(platform_keys)
+    for key in keys_to_load:
         cfg["platforms"][key] = _load_platform_apps(apps_dir, key)
-    logger.info(
-        "已从配置目录合并：%s — windows %s 项，darwin %s 项，linux %s 项",
-        apps_dir,
-        len(cfg["platforms"].get("windows") or []),
-        len(cfg["platforms"].get("darwin") or []),
-        len(cfg["platforms"].get("linux") or []),
+    counts = ", ".join(
+        "%s %s 项" % (k, len(cfg["platforms"].get(k) or [])) for k in keys_to_load
     )
+    logger.info("已从配置目录合并：%s — %s", apps_dir, counts)
     cfg["_apps_config_root"] = os.path.abspath(apps_dir)
     return cfg
 
 
-def load_config(apps_dir=None):
+def load_config(apps_dir=None, only_platforms=None):
     """
     apps_dir: 可选，为含 root.json 的配置根目录（相对路径时相对本脚本所在目录）。
+    only_platforms: 仅合并这些平台分片（如 ["windows"]），避免其它平台数据错误阻断本次任务。
     默认使用 apps/（存在 apps/root.json 时）或 apps.json。
     """
     if apps_dir:
@@ -156,9 +168,9 @@ def load_config(apps_dir=None):
         root_path = os.path.join(path, "root.json")
         if not os.path.isfile(root_path):
             raise FileNotFoundError("缺少 %s（--apps-dir 须指向含 root.json 的目录）" % root_path)
-        return load_config_from_apps_dir(path)
+        return load_config_from_apps_dir(path, only_platforms=only_platforms)
     if os.path.isfile(APPS_ROOT_FRAGMENT):
-        return load_config_from_apps_dir(APPS_DIR)
+        return load_config_from_apps_dir(APPS_DIR, only_platforms=only_platforms)
     if os.path.isfile(CONFIG_PATH):
         with open(CONFIG_PATH, encoding="utf-8") as f:
             return json.load(f)
@@ -390,6 +402,10 @@ def api_release_tag_url(app, version):
     return f"https://api.github.com/repos/{repo}/releases/tags/{encoded}"
 
 
+def pinned_release_tag(app):
+    return (app.get("pinned_release_tag") or app.get("release_tag_hint") or "").strip() or None
+
+
 def extract_version_for_app(app, version):
     version = (version or "").strip()
     if not version:
@@ -414,12 +430,13 @@ def asset_targets_app(asset_name, asset_url, app):
         return False
     exts = installer_extensions(app)
     base = href.split("?", 1)[0].lower()
-    if exts and not any(base.endswith(e) for e in exts):
+    if exts and not any(base.endswith(e.lower()) for e in exts):
         return False
     return href_allowed_for_app(href, app)
 
 
 def fetch_release_via_api(app, verify=True, version_hint=None):
+    version_hint = version_hint or pinned_release_tag(app)
     url = api_release_tag_url(app, version_hint) if version_hint else api_latest_release_url(app)
     logger.info("[%s] 尝试使用 GitHub API: %s", app["id"], url)
     response = requests.get(
@@ -500,13 +517,19 @@ def normalize_platform_arg(name):
     if not name:
         return None
     n = name.strip().lower()
-    aliases = {"win": "windows", "mac": "darwin", "macos": "darwin", "osx": "darwin"}
+    aliases = {
+        "win": "windows",
+        "mac": "darwin",
+        "macos": "darwin",
+        "osx": "darwin",
+        "apk": "android",
+    }
     return aliases.get(n, n)
 
 
 def apps_list_from_config(cfg, platform_override=None):
     """
-    优先使用 platforms.<windows|darwin|linux> 分块；
+    优先使用 platforms.<windows|darwin|linux|android|ios> 分块；
     若仍使用根级 apps（旧版），则按条目的 only_on 过滤当前系统。
     """
     if isinstance(cfg.get("platforms"), dict):
@@ -574,7 +597,7 @@ def link_targets_app(href, text, app):
     if base.endswith(".blockmap") or base.endswith(".sig") or base.endswith(".digest"):
         return False
     exts = installer_extensions(app)
-    if exts and not any(base.endswith(e) for e in exts):
+    if exts and not any(base.endswith(e.lower()) for e in exts):
         return False
     return True
 
@@ -652,7 +675,7 @@ def check_latest_version(app, debug_html_path, verify=True, cfg=None, platform_k
                     continue
                 if exts_for_scan:
                     base = href.split("?", 1)[0].lower()
-                    if not any(base.endswith(e) for e in exts_for_scan):
+                    if not any(base.endswith(e.lower()) for e in exts_for_scan):
                         continue
                 if not href_allowed_for_app(href, app):
                     continue
@@ -666,6 +689,10 @@ def check_latest_version(app, debug_html_path, verify=True, cfg=None, platform_k
                 break
 
         version = find_release_version_from_page(soup, app)
+        if not version and download_url:
+            ver_in_url = re.search(r"(\d+\.\d+\.\d+(?:\.\d+)?)", download_url)
+            if ver_in_url:
+                version = extract_version_for_app(app, ver_in_url.group(1))
         if not version:
             latest_release = soup.find("div", class_="release-header")
             if not latest_release:
@@ -963,14 +990,17 @@ def run_installer(installer_path):
 
 def select_apps(cfg, only_ids, platform_override=None):
     apps = apps_list_from_config(cfg, platform_override)
-    enabled = [a for a in apps if a.get("enabled", True)]
     if not only_ids:
-        return enabled
-    want = {x.lower() for x in only_ids}
-    picked = [a for a in enabled if a.get("id", "").lower() in want]
-    unknown = want - {a.get("id", "").lower() for a in picked}
-    for u in unknown:
-        logger.warning("未处理 id=%r：不存在或未启用（请在 apps.json 中设置 enabled）", u)
+        return [a for a in apps if a.get("enabled", True)]
+    by_id = {a.get("id", "").lower(): a for a in apps if a.get("id")}
+    picked = []
+    for raw in only_ids:
+        key = raw.lower()
+        app = by_id.get(key)
+        if app:
+            picked.append(app)
+        else:
+            logger.warning("未处理 id=%r：配置中不存在", raw)
     return picked
 
 
@@ -1010,6 +1040,11 @@ def update_one(app, download_root, verify=True, platform_key=None, cfg=None):
         logger.info("[%s] 配置为仅下载，跳过结束进程与启动安装包", aid)
         return 0
 
+    ext = os.path.splitext(installer_path)[1].lower()
+    if ext in (".apk", ".aab", ".ipa"):
+        logger.info("[%s] 移动端安装包仅下载，不执行安装（%s）", aid, ext)
+        return 0
+
     if app.get("kill_before_install", True):
         kill_process(app.get("process_name") or "")
         time.sleep(2)
@@ -1024,12 +1059,12 @@ def main():
     parser.add_argument(
         "app_id",
         nargs="*",
-        help="只处理这些 id（须已在配置中 enabled）；省略则处理所有已启用的项",
+        help="只处理这些 id（省略则仅处理 enabled=true 的项；指定 id 时不要求 enabled）",
     )
     parser.add_argument(
         "--platform",
         metavar="NAME",
-        help="读取 platforms.<NAME>（windows|darwin|linux），默认随当前系统",
+        help="读取 platforms.<NAME>（windows|darwin|linux|android|ios），默认随当前系统",
     )
     parser.add_argument(
         "--insecure",
@@ -1043,17 +1078,18 @@ def main():
     )
     args = parser.parse_args()
 
+    platform_key = normalize_platform_arg(args.platform) or detect_platform_key()
+
     try:
-        cfg = load_config(apps_dir=args.apps_dir)
+        cfg = load_config(apps_dir=args.apps_dir, only_platforms=[platform_key])
     except Exception as e:
         logger.error("%s", e)
         return 1
 
     download_root = resolve_download_root(cfg)
-    platform_key = normalize_platform_arg(args.platform) or detect_platform_key()
     apps = select_apps(cfg, args.app_id, args.platform)
     if not apps:
-        logger.error("没有可处理的应用：请检查 apps.json 中的 enabled，或命令行指定的 id")
+        logger.error("没有可处理的应用：请检查 enabled 或命令行指定的 id 是否存在")
         return 1
 
     verify = resolve_tls_verify(cfg, args.insecure)

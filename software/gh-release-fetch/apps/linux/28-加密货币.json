@@ -369,5 +369,170 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "bisq",
+    "简介": "Bisq（去中心化交易所）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "Bisq-64bit-",
+      ".deb"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "mac",
+      "rpm"
+    ],
+    "installer_extensions": [
+      ".deb"
+    ],
+    "use_download_filename": true,
+    "save_name": "Bisq-linux.deb",
+    "releases_url": "https://bgithub.xyz/bisq-network/bisq/releases",
+    "repo_path": "bisq-network/bisq"
+  },
+  {
+    "id": "sparrow_wallet",
+    "简介": "Sparrow Wallet（Bitcoin）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "Sparrow-",
+      "x86_64.deb"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "mac",
+      "rpm"
+    ],
+    "installer_extensions": [
+      ".deb"
+    ],
+    "use_download_filename": true,
+    "save_name": "Sparrow-linux.deb",
+    "releases_url": "https://bgithub.xyz/sparrowwallet/sparrow/releases",
+    "repo_path": "sparrowwallet/sparrow"
+  },
+  {
+    "id": "wasabi_wallet",
+    "简介": "Wasabi Wallet（Bitcoin 隐私）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "Wasabi-",
+      "linux-x64.deb"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "mac"
+    ],
+    "installer_extensions": [
+      ".deb"
+    ],
+    "use_download_filename": true,
+    "save_name": "Wasabi-linux.deb",
+    "releases_url": "https://bgithub.xyz/zkSNACKs/WalletWasabi/releases",
+    "repo_path": "zkSNACKs/WalletWasabi"
+  },
+  {
+    "id": "feather_wallet",
+    "简介": "Feather Wallet",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "feather-",
+      "linux-x64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "mac"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "use_download_filename": true,
+    "save_name": "feather.AppImage",
+    "releases_url": "https://bgithub.xyz/feather-wallet/feather/releases",
+    "repo_path": "feather-wallet/feather"
+  },
+  {
+    "id": "specter_desktop",
+    "简介": "Specter Desktop",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "specter-desktop-",
+      "linux-x64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "mac"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "use_download_filename": true,
+    "save_name": "specter.AppImage",
+    "releases_url": "https://bgithub.xyz/cryptoadvance/specter-desktop/releases",
+    "repo_path": "cryptoadvance/specter-desktop"
+  },
+  {
+    "id": "lnd",
+    "简介": "LND（Lightning 节点 Linux）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "lnd-linux-amd64-v",
+      ".tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "mac",
+      "arm"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "lnd-linux-amd64.tar.gz",
+    "releases_url": "https://bgithub.xyz/lightningnetwork/lnd/releases",
+    "repo_path": "lightningnetwork/lnd"
   }
 ]

@@ -282,5 +282,115 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "mihomo",
+    "简介": "mihomo（Clash Meta 内核）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "mihomo-linux-amd64-v",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "darwin",
+      "windows",
+      "arm"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "mihomo-linux-amd64.zip",
+    "releases_url": "https://bgithub.xyz/MetaCubeX/mihomo/releases",
+    "repo_path": "MetaCubeX/mihomo"
+  },
+  {
+    "id": "sing_box",
+    "简介": "sing-box（通用代理平台）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "sing-box-",
+      "linux-amd64"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "darwin",
+      "arm"
+    ],
+    "use_download_filename": true,
+    "save_name": "sing-box-linux-amd64",
+    "releases_url": "https://bgithub.xyz/SagerNet/sing-box/releases",
+    "repo_path": "SagerNet/sing-box"
+  },
+  {
+    "id": "clash_verge_rev",
+    "简介": "Clash Verge Rev（Clash 客户端）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "Clash.Verge_",
+      "amd64.deb"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "dmg",
+      "arm64",
+      "AppImage"
+    ],
+    "installer_extensions": [
+      ".deb"
+    ],
+    "use_download_filename": true,
+    "save_name": "Clash.Verge.deb",
+    "releases_url": "https://bgithub.xyz/clash-verge-rev/clash-verge-rev/releases",
+    "repo_path": "clash-verge-rev/clash-verge-rev"
+  },
+  {
+    "id": "flclash",
+    "简介": "FlClash（Flutter Clash 客户端）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "FlClash-",
+      "linux-amd64.deb"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "mac",
+      "rpm"
+    ],
+    "installer_extensions": [
+      ".deb"
+    ],
+    "use_download_filename": true,
+    "save_name": "FlClash-linux.deb",
+    "releases_url": "https://bgithub.xyz/chen08209/FlClash/releases",
+    "repo_path": "chen08209/FlClash"
   }
 ]

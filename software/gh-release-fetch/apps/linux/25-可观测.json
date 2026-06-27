@@ -208,5 +208,30 @@
     "installer_extensions": [
       ".gz"
     ]
+  },
+  {
+    "id": "uptime_kuma",
+    "简介": "Uptime Kuma（监控面板 dist 源码包，非安装程序）",
+    "分类": "可观测",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "dist.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "checksum"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "uptime-kuma-dist.tar.gz",
+    "releases_url": "https://bgithub.xyz/louislam/uptime-kuma/releases",
+    "repo_path": "louislam/uptime-kuma"
   }
 ]

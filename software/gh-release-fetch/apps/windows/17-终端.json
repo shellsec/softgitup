@@ -271,5 +271,34 @@
     "kill_before_install": false,
     "run_installer": false,
     "url_hint": "nxshell"
+  },
+  {
+    "id": "windterm",
+    "简介": "WindTerm（SSH/SFTP/终端，便携版）",
+    "分类": "终端",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "WindTerm_",
+      "Windows_Portable_x86_64.zip"
+    ],
+    "href_exclude_substrings": [
+      "x86_32",
+      "Linux",
+      "Mac"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "WindTerm-Windows-x64.zip",
+    "releases_url": "https://bgithub.xyz/kingToolbox/WindTerm/releases",
+    "repo_path": "kingToolbox/WindTerm"
   }
 ]

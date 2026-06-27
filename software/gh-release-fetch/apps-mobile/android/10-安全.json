@@ -1,0 +1,140 @@
+[
+  {
+    "id": "netguard",
+    "简介": "NetGuard（无 root 防火墙 / 网络监控）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "NetGuard-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "play",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "netguard.apk",
+    "releases_url": "https://bgithub.xyz/M66B/NetGuard/releases",
+    "repo_path": "M66B/NetGuard"
+  },
+  {
+    "id": "blokada",
+    "简介": "Blokada（广告/追踪拦截）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "blokada",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "legacy",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "blokada.apk",
+    "releases_url": "https://bgithub.xyz/blokadaorg/blokada-apps-android/releases",
+    "repo_path": "blokadaorg/blokada-apps-android"
+  },
+  {
+    "id": "wasted",
+    "简介": "Wasted（紧急自毁/反取证）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "wasted-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "wasted.apk",
+    "releases_url": "https://bgithub.xyz/x13a/Wasted/releases",
+    "repo_path": "x13a/Wasted"
+  },
+  {
+    "id": "dns66",
+    "简介": "DNS66（ hosts 广告拦截 · 项目已归档）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "dns66",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "dns66.apk",
+    "releases_url": "https://bgithub.xyz/julian-klode/dns66/releases",
+    "repo_path": "julian-klode/dns66"
+  }
+]

@@ -4,9 +4,16 @@ set PYTHONIOENCODING=utf-8
 set PYTHONUTF8=1
 cd /d "%~dp0"
 
+if exist "%~dp0run_saved_apps.exe" (
+    "%~dp0run_saved_apps.exe" %*
+    set EXITCODE=%ERRORLEVEL%
+    if %EXITCODE% neq 0 pause
+    exit /b %EXITCODE%
+)
+
 python --version >nul 2>&1
 if errorlevel 1 (
-    echo [ERROR] 未找到 Python，请先安装 Python 3。
+    echo [ERROR] 未找到 Python 或 run_saved_apps.exe，请先安装 Python 3 或运行 tools\build_exe.ps1。
     pause
     exit /b 1
 )

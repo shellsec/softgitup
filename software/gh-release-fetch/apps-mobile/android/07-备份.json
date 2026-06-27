@@ -1,0 +1,173 @@
+[
+  {
+    "id": "ente_photos",
+    "简介": "Ente Photos（端到端加密相册备份）",
+    "分类": "备份",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ente-",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "locker",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "ente_photos.apk",
+    "releases_url": "https://bgithub.xyz/ente-io/ente/releases",
+    "repo_path": "ente-io/ente"
+  },
+  {
+    "id": "floccus",
+    "简介": "floccus（浏览器书签同步到 WebDAV/Nextcloud）",
+    "分类": "备份",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "floccus-build-v",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "floccus.apk",
+    "releases_url": "https://bgithub.xyz/floccusaddon/floccus/releases",
+    "repo_path": "floccusaddon/floccus"
+  },
+  {
+    "id": "seedvault",
+    "简介": "Seedvault（Android 备份）",
+    "分类": "备份",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Seedvault-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "seedvault.apk",
+    "releases_url": "https://bgithub.xyz/seedvault-app/seedvault/releases",
+    "repo_path": "seedvault-app/seedvault"
+  },
+  {
+    "id": "wallabag",
+    "简介": "wallabag（稍后阅读）",
+    "分类": "备份",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "wallabag",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "wallabag.apk",
+    "releases_url": "https://bgithub.xyz/wallabag/android-app/releases",
+    "repo_path": "wallabag/android-app"
+  },
+  {
+    "id": "proton_drive",
+    "简介": "Proton Drive（端到端加密云盘 Android）",
+    "分类": "备份",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ProtonDrive",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "proton_drive.apk",
+    "releases_url": "https://bgithub.xyz/ProtonMail/proton-drive-android/releases",
+    "repo_path": "ProtonMail/proton-drive-android"
+  }
+]

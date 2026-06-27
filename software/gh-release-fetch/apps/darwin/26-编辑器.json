@@ -486,5 +486,128 @@
       ".dmg",
       ".zip"
     ]
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": false,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "windsurf",
+    "简介": "Windsurf IDE（Codeium AI IDE；官网 codeium.com/windsurf 分发，GitHub 无桌面安装包；勿启用）",
+    "分类": "编辑器",
+    "releases_url": "https://bgithub.xyz/Exafunction/Windsurf/releases",
+    "repo_path": "Exafunction/Windsurf",
+    "url_hint": "windsurf"
+  },
+  {
+    "id": "helix",
+    "简介": "Helix（modal 编辑器）",
+    "分类": "编辑器",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "helix-",
+      "aarch64-macos.tar.xz"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "x86_64"
+    ],
+    "installer_extensions": [
+      ".xz"
+    ],
+    "use_download_filename": true,
+    "save_name": "helix-macos-arm64.tar.xz",
+    "releases_url": "https://bgithub.xyz/helix-editor/helix/releases",
+    "repo_path": "helix-editor/helix"
+  },
+  {
+    "id": "vscode",
+    "简介": "Visual Studio Code",
+    "分类": "编辑器",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "VSCode-darwin-universal.zip"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "win32"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "vscode-darwin-universal.zip",
+    "releases_url": "https://bgithub.xyz/microsoft/vscode/releases",
+    "repo_path": "microsoft/vscode"
+  },
+  {
+    "id": "sublime_merge",
+    "简介": "Sublime Merge",
+    "分类": "编辑器",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "sublime_merge_build",
+      "_mac.zip"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "deb"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "sublime_merge_mac.zip",
+    "releases_url": "https://bgithub.xyz/sublimehq/sublime_merge/releases",
+    "repo_path": "sublimehq/sublime_merge"
+  },
+  {
+    "id": "fork",
+    "简介": "Fork（Git 客户端，macOS）",
+    "分类": "编辑器",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "Fork-",
+      ".dmg"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "exe"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "Fork.dmg",
+    "releases_url": "https://bgithub.xyz/fork-dev/fork/releases",
+    "repo_path": "fork-dev/fork"
   }
 ]

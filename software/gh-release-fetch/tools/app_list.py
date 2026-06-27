@@ -7,7 +7,8 @@ import json
 import os
 from datetime import datetime, timezone
 
-PLATFORMS = ("windows", "darwin", "linux")
+PLATFORMS = ("windows", "darwin", "linux", "android", "ios")
+MOBILE_PLATFORMS = ("android", "ios")
 
 
 def _dump(path: str, data) -> None:

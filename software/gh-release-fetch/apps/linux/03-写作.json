@@ -136,5 +136,81 @@
       ".exe",
       ".msi"
     ]
+  },
+  {
+    "id": "pandoc",
+    "简介": "Pandoc（Linux amd64 deb）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "pandoc-",
+      "-1-amd64.deb"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "mac",
+      "arm",
+      "tar.gz"
+    ],
+    "installer_extensions": [
+      ".deb"
+    ],
+    "use_download_filename": true,
+    "save_name": "pandoc-linux-amd64.deb",
+    "releases_url": "https://bgithub.xyz/jgm/pandoc/releases",
+    "repo_path": "jgm/pandoc"
+  },
+  {
+    "id": "mdbook",
+    "简介": "mdBook（Rust 静态书生成器）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "installer_markers": [
+      "mdbook-v",
+      "x86_64-unknown-linux-gnu.tar.gz"
+    ],
+    "save_name": "mdbook-linux-x64.tar.gz",
+    "releases_url": "https://bgithub.xyz/rust-lang/mdBook/releases",
+    "repo_path": "rust-lang/mdBook"
+  },
+  {
+    "id": "zola",
+    "简介": "Zola（静态站点生成器）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "installer_markers": [
+      "zola-v",
+      "x86_64-unknown-linux-gnu.tar.gz"
+    ],
+    "save_name": "zola-linux-x64.tar.gz",
+    "releases_url": "https://bgithub.xyz/getzola/zola/releases",
+    "repo_path": "getzola/zola"
   }
 ]

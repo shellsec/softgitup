@@ -1,0 +1,71 @@
+[
+  {
+    "id": "home_assistant",
+    "简介": "Home Assistant Companion",
+    "分类": "智能家居",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "app-full-release.apk",
+      "home-assistant"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "minimal",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "home_assistant.apk",
+    "releases_url": "https://bgithub.xyz/home-assistant/android/releases",
+    "repo_path": "home-assistant/android"
+  },
+  {
+    "id": "domoticz",
+    "简介": "Domoticz（智能家居 Android 客户端）",
+    "分类": "智能家居",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "domoticz",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "domoticz.apk",
+    "releases_url": "https://bgithub.xyz/domoticz/domoticz-android/releases",
+    "repo_path": "domoticz/domoticz-android"
+  }
+]

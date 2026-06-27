@@ -38,7 +38,8 @@
     "重置 enabled": "将所有应用 JSON 里的 enabled 写回 false（改磁盘）：在项目根执行 python tools/reset_enabled_json.py；加 --dry-run 可只预览数量不写文件。独立清单包执行 python tools/reset_enabled_json.py --apps-dir VibeCodingToolsDown（快照默认在该包 tools/ 下）；也可用 VibeCodingToolsDown/tools/reset_enabled_json.bat。",
     "查找应用": "项目根 lookup_app.bat <关键词> 或 python lookup_app.py <关键词>：模糊检索 apps 分片中的 id/简介/repo 等，显示平台、分片路径与分类，并交互询问是否 enabled=true。",
     "清单索引": "根目录 CATALOG.md 为自动生成的分片/条目概览（不含 99 占位分片）；刷新：python tools/generate_catalog_index.py",
-    "download_subdir_by_platform": "根级若为 true，下载保存路径为 download_dir/<windows|darwin|linux>/...，便于区分系统类型；日志与「开始下载」也会标注平台名。"
+    "移动端清单": "独立目录 apps-mobile/（android / ios），索引 CATALOG.mobile.md；刷新：python tools/generate_mobile_catalog_index.py；用法见 apps-mobile/root.json",
+    "download_subdir_by_platform": "根级若为 true，下载保存路径为 download_dir/<windows|darwin|linux|android|ios>/...，便于区分系统类型；日志与「开始下载」也会标注平台名。"
   },
   "download_dir": ".",
   "download_subdir_by_platform": true,

@@ -1,0 +1,106 @@
+[
+  {
+    "id": "markor",
+    "简介": "Markor（Markdown 笔记，离线优先）",
+    "分类": "笔记",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "markor-",
+      "flavor",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "markor.apk",
+    "releases_url": "https://bgithub.xyz/gsantner/markor/releases",
+    "repo_path": "gsantner/markor"
+  },
+  {
+    "id": "orgzly",
+    "简介": "Orgzly（Org mode 笔记）",
+    "分类": "笔记",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "orgzly-",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "orgzly.apk",
+    "releases_url": "https://bgithub.xyz/orgzly/orgzly-android/releases",
+    "repo_path": "orgzly/orgzly-android"
+  },
+  {
+    "id": "standard_notes",
+    "简介": "Standard Notes（加密笔记）",
+    "分类": "笔记",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "StandardNotes",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "beta",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "standard_notes.apk",
+    "releases_url": "https://bgithub.xyz/standardnotes/mobile/releases",
+    "repo_path": "standardnotes/mobile"
+  }
+]

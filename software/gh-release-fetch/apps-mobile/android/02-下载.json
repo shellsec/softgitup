@@ -1,0 +1,141 @@
+[
+  {
+    "id": "aurora_store",
+    "简介": "Aurora Store（Play 商店客户端，开源）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "AuroraStore",
+      "universal",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "vanilla",
+      "nightly",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "aurora_store.apk",
+    "releases_url": "https://bgithub.xyz/whyGitHub/AuroraStore/releases",
+    "repo_path": "whyGitHub/AuroraStore"
+  },
+  {
+    "id": "fdroid",
+    "简介": "F-Droid（开源应用商店客户端）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "F-Droid_",
+      "unsigned.apk"
+    ],
+    "href_exclude_substrings": [
+      "test",
+      "privileged",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "fdroid.apk",
+    "releases_url": "https://bgithub.xyz/fdroid/fdroidclient/releases",
+    "repo_path": "fdroid/fdroidclient"
+  },
+  {
+    "id": "accrescent",
+    "简介": "Accrescent（开源应用商店）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "accrescent",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "accrescent.apk",
+    "releases_url": "https://bgithub.xyz/accrescent/accrescent/releases",
+    "repo_path": "accrescent/accrescent"
+  },
+  {
+    "id": "upgradeall",
+    "简介": "UpgradeAll（多源应用更新追踪）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "UpgradeAll-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "upgradeall.apk",
+    "releases_url": "https://bgithub.xyz/DUpdate/UpgradeAll/releases",
+    "repo_path": "DUpdate/UpgradeAll"
+  }
+]

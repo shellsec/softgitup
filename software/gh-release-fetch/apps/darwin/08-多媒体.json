@@ -6,12 +6,6 @@
     "repo_path": "HandBrake/HandBrake"
   },
   {
-    "id": "obs",
-    "enabled": false,
-    "releases_url": "https://bgithub.xyz/obsproject/obs-studio/releases",
-    "repo_path": "obsproject/obs-studio"
-  },
-  {
     "id": "recordly",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/webadderall/Recordly/releases",
@@ -63,7 +57,27 @@
     "id": "mpv",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/mpv-player/mpv/releases",
-    "repo_path": "mpv-player/mpv"
+    "repo_path": "mpv-player/mpv",
+    "简介": "mpv（macOS Apple Silicon 官方 zip，仅下载）",
+    "分类": "多媒体",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "mpv-",
+      "macos",
+      "-arm"
+    ],
+    "href_exclude_substrings": [
+      "intel",
+      "windows",
+      "i686",
+      "mingw"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "mpv-macos-arm.zip",
+    "url_hint": "mpv"
   },
   {
     "id": "jellyfin_server",
@@ -506,5 +520,208 @@
       ".msi",
       "arm64"
     ]
+  },
+  {
+    "id": "vlc",
+    "简介": "VLC 媒体播放器（macOS dmg）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "vlc-",
+      "darwin.dmg"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux",
+      "arm64"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "vlc-{ver}-darwin.dmg"
+    ],
+    "save_name": "vlc-{ver}-darwin.dmg",
+    "url_hint": "vlc",
+    "releases_url": "https://bgithub.xyz/videolan/vlc/releases",
+    "repo_path": "videolan/vlc"
+  },
+  {
+    "id": "lmms",
+    "简介": "LMMS（数字音频工作站）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "lmms-",
+      ".dmg"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux",
+      "AppImage"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "lmms.dmg",
+    "releases_url": "https://bgithub.xyz/LMMS/lmms/releases",
+    "repo_path": "LMMS/lmms"
+  },
+  {
+    "id": "mediainfo",
+    "简介": "MediaInfo（媒体元数据）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "MediaInfo_GUI_",
+      "_Mac.dmg"
+    ],
+    "href_exclude_substrings": [
+      "Windows",
+      "Ubuntu",
+      "deb"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "MediaInfo_GUI.dmg",
+    "releases_url": "https://bgithub.xyz/MediaArea/MediaInfo/releases",
+    "repo_path": "MediaArea/MediaInfo"
+  },
+  {
+    "id": "spotube",
+    "简介": "Spotube（Spotify 客户端）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "spotube-",
+      "macos-universal.dmg"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "deb"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "spotube-macos.dmg",
+    "releases_url": "https://bgithub.xyz/KRTirtho/spotube/releases",
+    "repo_path": "KRTirtho/spotube"
+  },
+  {
+    "id": "avidemux",
+    "简介": "Avidemux（视频编辑）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "avidemux_",
+      "Qt6_64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux",
+      "AppImage"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "avidemux.dmg",
+    "releases_url": "https://bgithub.xyz/meonstal/Avidemux/releases",
+    "repo_path": "meonstal/Avidemux"
+  },
+  {
+    "id": "subtitleedit",
+    "简介": "Subtitle Edit（字幕编辑）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "SubtitleEdit-",
+      "Mac.zip"
+    ],
+    "href_exclude_substrings": [
+      "Windows",
+      "Linux"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "SubtitleEdit-Mac.zip",
+    "releases_url": "https://bgithub.xyz/SubtitleEdit/subtitleedit/releases",
+    "repo_path": "SubtitleEdit/subtitleedit"
+  },
+  {
+    "id": "mpv_macos_intel",
+    "简介": "mpv（macOS Intel 官方 zip，仅下载）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "mpv-",
+      "macos",
+      "intel"
+    ],
+    "href_exclude_substrings": [
+      "-arm",
+      "windows",
+      "i686",
+      "mingw"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "mpv-macos-intel.zip",
+    "url_hint": "mpv",
+    "releases_url": "https://bgithub.xyz/mpv-player/mpv/releases",
+    "repo_path": "mpv-player/mpv"
   }
 ]

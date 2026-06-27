@@ -1,0 +1,109 @@
+[
+  {
+    "id": "pocketpal",
+    "简介": "PocketPal（本地 LLM 聊天，Android）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "PocketPal",
+      "universal",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "armeabi",
+      "x86",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "pocketpal.apk",
+    "releases_url": "https://bgithub.xyz/AIRetrofit/PocketPal-Android/releases",
+    "repo_path": "AIRetrofit/PocketPal-Android"
+  },
+  {
+    "id": "mlc_chat",
+    "简介": "MLC Chat（设备端 LLM，Android）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "MLCChat",
+      "android",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "x86",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "mlc_chat.apk",
+    "releases_url": "https://bgithub.xyz/mlc-ai/mlc-chat-android/releases",
+    "repo_path": "mlc-ai/mlc-chat-android"
+  },
+  {
+    "id": "maid",
+    "简介": "maid（Mobile AI 本地聊天）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "maid-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "maid.apk",
+    "releases_url": "https://bgithub.xyz/Mobile-Artificial-Intelligence/maid/releases",
+    "repo_path": "Mobile-Artificial-Intelligence/maid"
+  }
+]

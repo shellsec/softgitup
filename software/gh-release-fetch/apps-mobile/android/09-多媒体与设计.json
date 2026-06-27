@@ -1,0 +1,105 @@
+[
+  {
+    "id": "simple_gallery_smt",
+    "简介": "Simple Gallery（SimpleMobileTools 相册）",
+    "分类": "多媒体与设计",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "gallery-",
+      "foss-release.apk"
+    ],
+    "href_exclude_substrings": [
+      "proprietary",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "simple_gallery_smt.apk",
+    "releases_url": "https://bgithub.xyz/SimpleMobileTools/Simple-Gallery/releases",
+    "repo_path": "SimpleMobileTools/Simple-Gallery"
+  },
+  {
+    "id": "fossify_gallery",
+    "简介": "Fossify Gallery（开源相册）",
+    "分类": "多媒体与设计",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "gallery-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "fossify_gallery.apk",
+    "releases_url": "https://bgithub.xyz/FossifyOrg/Gallery/releases",
+    "repo_path": "FossifyOrg/Gallery"
+  },
+  {
+    "id": "fossify_calendar",
+    "简介": "Fossify Calendar（开源日历）",
+    "分类": "多媒体与设计",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "calendar-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "fossify_calendar.apk",
+    "releases_url": "https://bgithub.xyz/FossifyOrg/Calendar/releases",
+    "repo_path": "FossifyOrg/Calendar"
+  }
+]

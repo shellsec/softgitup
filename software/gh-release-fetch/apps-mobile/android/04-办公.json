@@ -1,0 +1,107 @@
+[
+  {
+    "id": "wikipedia",
+    "简介": "Wikipedia（维基百科 Android）",
+    "分类": "办公",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "app-alpha-universal",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "beta",
+      "debug",
+      "test",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "wikipedia.apk",
+    "releases_url": "https://bgithub.xyz/wikimedia/apps-android-wikipedia/releases",
+    "repo_path": "wikimedia/apps-android-wikipedia"
+  },
+  {
+    "id": "streetcomplete",
+    "简介": "StreetComplete（OpenStreetMap 众包编辑）",
+    "分类": "办公",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "StreetComplete-v",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "streetcomplete.apk",
+    "releases_url": "https://bgithub.xyz/streetcomplete/StreetComplete/releases",
+    "repo_path": "streetcomplete/StreetComplete"
+  },
+  {
+    "id": "libreoffice_viewer",
+    "简介": "LibreOffice Viewer（Android 文档查看）",
+    "分类": "办公",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "LibreOffice",
+      "Viewer",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "libreoffice_viewer.apk",
+    "releases_url": "https://bgithub.xyz/TéléchargementsLibreOffice/libo-android-config/releases",
+    "repo_path": "TéléchargementsLibreOffice/libo-android-config"
+  }
+]

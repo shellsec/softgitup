@@ -1,3 +1,10 @@
+# PyInstaller 输出
+dist/exe/
+build/pyinstaller/
+/auto_update.exe
+/lookup_app.exe
+/run_saved_apps.exe
+
 # dayanzai 全量抓取本地缓存（import_dayanzai_windows.py），可删可重建
 tools/dayanzai_cache/
 

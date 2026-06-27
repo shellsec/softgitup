@@ -63,7 +63,11 @@
     "id": "mpv",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/mpv-player/mpv/releases",
-    "repo_path": "mpv-player/mpv"
+    "repo_path": "mpv-player/mpv",
+    "简介": "mpv（Linux：官方 GitHub Release 无预编译包，请用发行版包管理器或 https://mpv.io/installation/）",
+    "分类": "多媒体",
+    "prefer_api_assets": false,
+    "run_installer": false
   },
   {
     "id": "jellyfin_server",
@@ -506,5 +510,174 @@
       ".exe",
       ".msi"
     ]
+  },
+  {
+    "id": "vlc",
+    "简介": "VLC 媒体播放器（Linux x86_64 tar.xz）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "vlc-",
+      "linux64.tar.xz"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "darwin",
+      "arm",
+      ".exe"
+    ],
+    "installer_extensions": [
+      ".xz"
+    ],
+    "download_names": [
+      "vlc-{ver}-linux64.tar.xz"
+    ],
+    "save_name": "vlc-{ver}-linux64.tar.xz",
+    "url_hint": "vlc",
+    "releases_url": "https://bgithub.xyz/videolan/vlc/releases",
+    "repo_path": "videolan/vlc"
+  },
+  {
+    "id": "lmms",
+    "简介": "LMMS（数字音频工作站）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "lmms-",
+      "Linux-x86_64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "mac"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "use_download_filename": true,
+    "save_name": "lmms.AppImage",
+    "releases_url": "https://bgithub.xyz/LMMS/lmms/releases",
+    "repo_path": "LMMS/lmms"
+  },
+  {
+    "id": "mediainfo",
+    "简介": "MediaInfo（媒体元数据）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "MediaInfo_GUI_",
+      "Ubuntu_amd64.deb"
+    ],
+    "href_exclude_substrings": [
+      "Windows",
+      "Mac"
+    ],
+    "installer_extensions": [
+      ".deb"
+    ],
+    "use_download_filename": true,
+    "save_name": "MediaInfo_GUI.deb",
+    "releases_url": "https://bgithub.xyz/MediaArea/MediaInfo/releases",
+    "repo_path": "MediaArea/MediaInfo"
+  },
+  {
+    "id": "spotube",
+    "简介": "Spotube（Spotify 客户端）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "spotube-",
+      "linux-x86_64.deb"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "mac",
+      "arm"
+    ],
+    "installer_extensions": [
+      ".deb"
+    ],
+    "use_download_filename": true,
+    "save_name": "spotube-linux.deb",
+    "releases_url": "https://bgithub.xyz/KRTirtho/spotube/releases",
+    "repo_path": "KRTirtho/spotube"
+  },
+  {
+    "id": "avidemux",
+    "简介": "Avidemux（视频编辑）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "avidemux_",
+      "Qt6AppImage"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "mac"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "use_download_filename": true,
+    "save_name": "avidemux.AppImage",
+    "releases_url": "https://bgithub.xyz/meonstal/Avidemux/releases",
+    "repo_path": "meonstal/Avidemux"
+  },
+  {
+    "id": "subtitleedit",
+    "简介": "Subtitle Edit（字幕编辑）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "SubtitleEdit-",
+      "Linux.zip"
+    ],
+    "href_exclude_substrings": [
+      "Windows",
+      "Mac"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "SubtitleEdit-Linux.zip",
+    "releases_url": "https://bgithub.xyz/SubtitleEdit/subtitleedit/releases",
+    "repo_path": "SubtitleEdit/subtitleedit"
   }
 ]

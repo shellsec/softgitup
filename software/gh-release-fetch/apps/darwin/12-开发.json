@@ -554,5 +554,284 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "ddev",
+    "简介": "DDEV（本地 PHP/Drupal/WordPress 容器开发环境）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ddev_macos-arm64.v",
+      ".tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "amd64.v"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "ddev-macos-arm64.tar.gz",
+    "releases_url": "https://bgithub.xyz/ddev/ddev/releases",
+    "repo_path": "ddev/ddev"
+  },
+  {
+    "id": "glab",
+    "简介": "glab（GitLab CLI）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "glab_",
+      "darwin_amd64"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "386",
+      "arm"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "glab_{ver}_darwin_amd64.zip"
+    ],
+    "save_name": "glab_{ver}_darwin_amd64.zip",
+    "releases_url": "https://bgithub.xyz/gitlab-org/cli/releases",
+    "repo_path": "gitlab-org/cli"
+  },
+  {
+    "id": "gitea",
+    "简介": "Gitea（轻量 Git 服务二进制）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "gitea-",
+      "darwin-amd64"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "arm"
+    ],
+    "use_download_filename": true,
+    "save_name": "gitea-darwin-amd64",
+    "releases_url": "https://bgithub.xyz/go-gitea/gitea/releases",
+    "repo_path": "go-gitea/gitea"
+  },
+  {
+    "id": "fnm",
+    "简介": "fnm（Fast Node Manager）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "fnm-macos.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "fnm-macos.zip",
+    "releases_url": "https://bgithub.xyz/Schniz/fnm/releases",
+    "repo_path": "Schniz/fnm"
+  },
+  {
+    "id": "ninja",
+    "简介": "Ninja（构建系统）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "ninja-mac.zip"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "ninja-mac.zip",
+    "releases_url": "https://bgithub.xyz/ninja-build/ninja/releases",
+    "repo_path": "ninja-build/ninja"
+  },
+  {
+    "id": "hugo_extended",
+    "简介": "Hugo Extended（静态站点）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "hugo_extended_",
+      "darwin-universal"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "arm"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "hugo_extended_{ver}_darwin-universal.zip"
+    ],
+    "save_name": "hugo_extended_{ver}_darwin-universal.zip",
+    "releases_url": "https://bgithub.xyz/gohugoio/hugo/releases",
+    "repo_path": "gohugoio/hugo"
+  },
+  {
+    "id": "astgrep",
+    "简介": "ast-grep（AST 代码搜索）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ast-grep-",
+      "darwin_amd64"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "386",
+      "arm"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "ast-grep-{ver}_darwin_amd64.zip"
+    ],
+    "save_name": "ast-grep-{ver}_darwin_amd64.zip",
+    "releases_url": "https://bgithub.xyz/ast-grep/ast-grep/releases",
+    "repo_path": "ast-grep/ast-grep"
+  },
+  {
+    "id": "dprint",
+    "简介": "dprint（代码格式化）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "dprint-aarch64-apple-darwin.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux-gnu"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "dprint-darwin-arm64.zip",
+    "releases_url": "https://bgithub.xyz/dprint/dprint/releases",
+    "repo_path": "dprint/dprint"
+  },
+  {
+    "id": "hurl",
+    "简介": "Hurl（HTTP 测试 CLI）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "hurl-",
+      "aarch64-apple-darwin"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux-gnu"
+    ],
+    "use_download_filename": true,
+    "save_name": "hurl-darwin-arm64",
+    "releases_url": "https://bgithub.xyz/Orange-OpenSource/hurl/releases",
+    "repo_path": "Orange-OpenSource/hurl"
+  },
+  {
+    "id": "netron",
+    "简介": "Netron（模型可视化）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "netron-",
+      "Darwin-x64.zip"
+    ],
+    "href_exclude_substrings": [
+      "Windows",
+      "Linux"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "netron-Darwin-x64.zip",
+    "releases_url": "https://bgithub.xyz/lutzroeder/netron/releases",
+    "repo_path": "lutzroeder/netron"
   }
 ]

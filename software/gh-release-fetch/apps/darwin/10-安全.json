@@ -98,8 +98,8 @@
   {
     "id": "zen_desktop",
     "enabled": false,
-    "releases_url": "https://bgithub.xyz/ZenPrivacy/zen-desktop/releases",
-    "repo_path": "ZenPrivacy/zen-desktop",
+    "releases_url": "https://bgithub.xyz/irbis-sh/zen-desktop/releases",
+    "repo_path": "irbis-sh/zen-desktop",
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
     "installer_markers_match_all": true,
@@ -121,8 +121,8 @@
   {
     "id": "zen_desktop_arm64",
     "enabled": false,
-    "releases_url": "https://bgithub.xyz/ZenPrivacy/zen-desktop/releases",
-    "repo_path": "ZenPrivacy/zen-desktop",
+    "releases_url": "https://bgithub.xyz/irbis-sh/zen-desktop/releases",
+    "repo_path": "irbis-sh/zen-desktop",
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
     "installer_markers_match_all": true,
@@ -368,5 +368,532 @@
       ".msi",
       "arm64"
     ]
+  },
+  {
+    "id": "grype",
+    "简介": "Grype（镜像漏洞扫描）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "grype_",
+      "darwin_amd64"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "386",
+      "arm"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "grype_{ver}_darwin_amd64.zip"
+    ],
+    "save_name": "grype_{ver}_darwin_amd64.zip",
+    "releases_url": "https://bgithub.xyz/anchore/grype/releases",
+    "repo_path": "anchore/grype"
+  },
+  {
+    "id": "syft",
+    "简介": "Syft（SBOM）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "syft_",
+      "darwin_amd64"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "386",
+      "arm"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "syft_{ver}_darwin_amd64.zip"
+    ],
+    "save_name": "syft_{ver}_darwin_amd64.zip",
+    "releases_url": "https://bgithub.xyz/anchore/syft/releases",
+    "repo_path": "anchore/syft"
+  },
+  {
+    "id": "nuclei",
+    "简介": "Nuclei（漏洞模板扫描）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "nuclei_",
+      "darwin_amd64"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "386",
+      "arm"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "nuclei_{ver}_darwin_amd64.zip"
+    ],
+    "save_name": "nuclei_{ver}_darwin_amd64.zip",
+    "releases_url": "https://bgithub.xyz/projectdiscovery/nuclei/releases",
+    "repo_path": "projectdiscovery/nuclei"
+  },
+  {
+    "id": "cosign",
+    "简介": "cosign（容器签名）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "cosign-darwin-amd64"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "arm"
+    ],
+    "use_download_filename": true,
+    "save_name": "cosign-darwin-amd64",
+    "releases_url": "https://bgithub.xyz/sigstore/cosign/releases",
+    "repo_path": "sigstore/cosign"
+  },
+  {
+    "id": "amass",
+    "简介": "OWASP Amass（子域枚举）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "amass_Darwin_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "checksums"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "amass-darwin-amd64.zip",
+    "releases_url": "https://bgithub.xyz/owasp-amass/amass/releases",
+    "repo_path": "owasp-amass/amass"
+  },
+  {
+    "id": "httpx_pd",
+    "简介": "httpx（HTTP 探测）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "httpx_",
+      "darwin_amd64"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "386",
+      "arm"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "httpx_{ver}_darwin_amd64.zip"
+    ],
+    "save_name": "httpx_{ver}_darwin_amd64.zip",
+    "releases_url": "https://bgithub.xyz/projectdiscovery/httpx/releases",
+    "repo_path": "projectdiscovery/httpx"
+  },
+  {
+    "id": "fossa_cli",
+    "简介": "FOSSA CLI",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "fossa_",
+      "darwin_amd64"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "386",
+      "arm"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "fossa_{ver}_darwin_amd64.zip"
+    ],
+    "save_name": "fossa_{ver}_darwin_amd64.zip",
+    "releases_url": "https://bgithub.xyz/fossas/fossa-cli/releases",
+    "repo_path": "fossas/fossa-cli"
+  },
+  {
+    "id": "kubescape",
+    "简介": "Kubescape（K8s 安全扫描）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "kubescape_",
+      "darwin_amd64"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "sbom"
+    ],
+    "use_download_filename": true,
+    "save_name": "kubescape-darwin-amd64",
+    "releases_url": "https://bgithub.xyz/kubescape/kubescape/releases",
+    "repo_path": "kubescape/kubescape"
+  },
+  {
+    "id": "slsa_verifier",
+    "简介": "slsa-verifier",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "slsa-verifier-darwin-amd64"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux"
+    ],
+    "use_download_filename": true,
+    "save_name": "slsa-verifier-darwin-amd64",
+    "releases_url": "https://bgithub.xyz/slsa-framework/slsa-verifier/releases",
+    "repo_path": "slsa-framework/slsa-verifier"
+  },
+  {
+    "id": "rekor_cli",
+    "简介": "Rekor CLI",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "rekor-cli-darwin-amd64"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "sbom"
+    ],
+    "use_download_filename": true,
+    "save_name": "rekor-cli-darwin-amd64",
+    "releases_url": "https://bgithub.xyz/sigstore/rekor/releases",
+    "repo_path": "sigstore/rekor"
+  },
+  {
+    "id": "kubeaudit",
+    "简介": "kubeaudit",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "kubeaudit_",
+      "darwin_amd64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "kubeaudit-darwin.tar.gz",
+    "releases_url": "https://bgithub.xyz/shopify/kubeaudit/releases",
+    "repo_path": "shopify/kubeaudit"
+  },
+  {
+    "id": "crowdsec",
+    "简介": "CrowdSec",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "crowdsec_",
+      "darwin_amd64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "msi"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "crowdsec-darwin.tar.gz",
+    "releases_url": "https://bgithub.xyz/crowdsecurity/crowdsec/releases",
+    "repo_path": "crowdsecurity/crowdsec"
+  },
+  {
+    "id": "osquery",
+    "简介": "osquery",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "osquery-",
+      "darwin.pkg"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "deb"
+    ],
+    "installer_extensions": [
+      ".pkg"
+    ],
+    "use_download_filename": true,
+    "save_name": "osquery-darwin.pkg",
+    "releases_url": "https://bgithub.xyz/osquery/osquery/releases",
+    "repo_path": "osquery/osquery"
+  },
+  {
+    "id": "vault",
+    "简介": "Vault",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "vault_",
+      "darwin_amd64"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "386",
+      "arm"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "vault_{ver}_darwin_amd64.zip"
+    ],
+    "save_name": "vault_{ver}_darwin_amd64.zip",
+    "releases_url": "https://bgithub.xyz/hashicorp/vault/releases",
+    "repo_path": "hashicorp/vault"
+  },
+  {
+    "id": "trivy",
+    "简介": "Trivy（漏洞扫描）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "trivy_",
+      "macOS-64bit.zip"
+    ],
+    "href_exclude_substrings": [
+      "Windows",
+      "Linux",
+      "ARM"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "trivy-darwin.zip",
+    "releases_url": "https://bgithub.xyz/aquasecurity/trivy/releases",
+    "repo_path": "aquasecurity/trivy"
+  },
+  {
+    "id": "terrascan",
+    "简介": "Terrascan",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "terrascan_",
+      "Darwin_x86_64.zip"
+    ],
+    "href_exclude_substrings": [
+      "Windows",
+      "Linux"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "terrascan-darwin.zip",
+    "releases_url": "https://bgithub.xyz/tenable/terrascan/releases",
+    "repo_path": "tenable/terrascan"
+  },
+  {
+    "id": "veracrypt",
+    "简介": "VeraCrypt",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "VeraCrypt_",
+      "macOS.dmg"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux",
+      "Portable"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "VeraCrypt.dmg",
+    "releases_url": "https://bgithub.xyz/veracrypt/VeraCrypt/releases",
+    "repo_path": "veracrypt/VeraCrypt"
+  },
+  {
+    "id": "yubikey_manager",
+    "简介": "YubiKey Manager",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "yubikey-manager-qt-",
+      "mac.dmg"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux",
+      "AppImage"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "yubikey-manager.dmg",
+    "releases_url": "https://bgithub.xyz/Yubico/yubikey-manager-qt/releases",
+    "repo_path": "Yubico/yubikey-manager-qt"
+  },
+  {
+    "id": "keepass",
+    "简介": "KeePass（macOS 无官方版；请用 keepassxc）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": false,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "keepass",
+    "releases_url": "https://bgithub.xyz/KeePass/KeePass/releases",
+    "repo_path": "KeePass/KeePass"
   }
 ]

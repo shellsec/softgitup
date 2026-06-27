@@ -1,0 +1,71 @@
+[
+  {
+    "id": "unstoppable_wallet",
+    "简介": "Unstoppable Wallet（多链加密货币钱包）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "unstoppable_wallet_github",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "google_play",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "unstoppable_wallet.apk",
+    "releases_url": "https://bgithub.xyz/horizontalsystems/unstoppable-wallet-android/releases",
+    "repo_path": "horizontalsystems/unstoppable-wallet-android"
+  },
+  {
+    "id": "green_wallet",
+    "简介": "Green（Blockstream 比特币钱包）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "green",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "green_wallet.apk",
+    "releases_url": "https://bgithub.xyz/Blockstream/green_android/releases",
+    "repo_path": "Blockstream/green_android"
+  }
+]

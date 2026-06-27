@@ -1,0 +1,357 @@
+[
+  {
+    "id": "bitwarden_android",
+    "简介": "Bitwarden（Android 客户端）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "com.x8bit.bitwarden",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "fdroid",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "bitwarden_android.apk",
+    "releases_url": "https://bgithub.xyz/bitwarden/android/releases",
+    "repo_path": "bitwarden/android"
+  },
+  {
+    "id": "signal",
+    "简介": "Signal（端到端加密通讯）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Signal-Android",
+      "universal",
+      "release",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "play",
+      "debug",
+      "armeabi",
+      "x86",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "signal.apk",
+    "releases_url": "https://bgithub.xyz/signalapp/Signal-Android/releases",
+    "repo_path": "signalapp/Signal-Android"
+  },
+  {
+    "id": "mullvad",
+    "简介": "Mullvad VPN（Android）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "MullvadVPN-",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "fdroid",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "mullvad.apk",
+    "releases_url": "https://bgithub.xyz/mullvad/mullvadvpn-app/releases",
+    "repo_path": "mullvad/mullvadvpn-app"
+  },
+  {
+    "id": "proton_mail",
+    "简介": "Proton Mail（Android）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ProtonMail-",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "beta",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "proton_mail.apk",
+    "releases_url": "https://bgithub.xyz/ProtonMail/proton-mail-android/releases",
+    "repo_path": "ProtonMail/proton-mail-android"
+  },
+  {
+    "id": "proton_vpn",
+    "简介": "Proton VPN（Android）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ProtonVPN-",
+      "production",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "beta",
+      "debug",
+      "fdroid",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "proton_vpn.apk",
+    "releases_url": "https://bgithub.xyz/ProtonVPN/android-app/releases",
+    "repo_path": "ProtonVPN/android-app"
+  },
+  {
+    "id": "keepass2android",
+    "简介": "KeePass2Android（KeePass 客户端）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "keepass2android",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "beta",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "keepass2android.apk",
+    "releases_url": "https://bgithub.xyz/PhilippC/keepass2android/releases",
+    "repo_path": "PhilippC/keepass2android"
+  },
+  {
+    "id": "aegis",
+    "简介": "Aegis（2FA 验证器）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Aegis",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "fdroid",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "aegis.apk",
+    "releases_url": "https://bgithub.xyz/AegisAuthenticator/Aegis/releases",
+    "repo_path": "AegisAuthenticator/Aegis"
+  },
+  {
+    "id": "open_keychain",
+    "简介": "OpenKeychain（OpenPGP 密钥管理）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "OpenKeychain",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "beta",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "open_keychain.apk",
+    "releases_url": "https://bgithub.xyz/open-keychain/open-keychain/releases",
+    "repo_path": "open-keychain/open-keychain"
+  },
+  {
+    "id": "fair_email",
+    "简介": "FairEmail（隐私向邮件客户端）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "FairEmail-v",
+      "github-release.apk"
+    ],
+    "href_exclude_substrings": [
+      "large",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "fair_email.apk",
+    "releases_url": "https://bgithub.xyz/M66B/FairEmail/releases",
+    "repo_path": "M66B/FairEmail"
+  },
+  {
+    "id": "rethink_dns",
+    "简介": "Rethink DNS + Firewall（DNS/防火墙）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "rethink",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "rethink_dns.apk",
+    "releases_url": "https://bgithub.xyz/rethinkhealth/rethink-app/releases",
+    "repo_path": "rethinkhealth/rethink-app"
+  }
+]

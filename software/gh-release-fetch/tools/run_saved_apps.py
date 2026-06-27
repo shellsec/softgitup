@@ -17,9 +17,15 @@ import os
 import subprocess
 import sys
 
-SCRIPT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if getattr(sys, "frozen", False):
+    SCRIPT_DIR = os.path.dirname(os.path.abspath(sys.executable))
+else:
+    SCRIPT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 if SCRIPT_DIR not in sys.path:
     sys.path.insert(0, SCRIPT_DIR)
+
+from tools.ghrf_runtime import resolve_auto_update_argv  # noqa: E402
 
 from tools.app_list import (  # noqa: E402
     PLATFORMS,
@@ -100,7 +106,6 @@ def main() -> int:
         print("（dry-run：将 apply enabled + auto_update --platform %s %d 个 id）" % (platform, len(ids)))
         return 0
 
-    py = sys.executable
     if not args.skip_enable:
         snap_arg = list_path
         try:
@@ -108,20 +113,40 @@ def main() -> int:
                 snap_arg = os.path.relpath(list_path, SCRIPT_DIR)
         except ValueError:
             pass  # 不同盘符等：保留绝对路径
-        apply_cmd = [
-            py,
-            os.path.join(SCRIPT_DIR, "tools", "apply_enabled_snapshot.py"),
-            "--root",
-            SCRIPT_DIR,
-            "--snapshot-path",
-            snap_arg,
-        ]
         print("\n[1/2] 开启 enabled …")
-        r = subprocess.run(apply_cmd, cwd=SCRIPT_DIR)
-        if r.returncode != 0:
-            return r.returncode
+        if getattr(sys, "frozen", False):
+            from tools import apply_enabled_snapshot as apply_mod
 
-    upd = [py, os.path.join(SCRIPT_DIR, "auto_update.py"), "--platform", platform, *ids]
+            old_argv = sys.argv
+            sys.argv = [
+                "apply_enabled_snapshot.py",
+                "--root",
+                SCRIPT_DIR,
+                "--snapshot-path",
+                snap_arg,
+            ]
+            try:
+                apply_mod.main()
+            except SystemExit as e:
+                code = e.code
+                if code not in (None, 0):
+                    return int(code) if isinstance(code, int) else 1
+            finally:
+                sys.argv = old_argv
+        else:
+            apply_cmd = [
+                sys.executable,
+                os.path.join(SCRIPT_DIR, "tools", "apply_enabled_snapshot.py"),
+                "--root",
+                SCRIPT_DIR,
+                "--snapshot-path",
+                snap_arg,
+            ]
+            r = subprocess.run(apply_cmd, cwd=SCRIPT_DIR)
+            if r.returncode != 0:
+                return r.returncode
+
+    upd = resolve_auto_update_argv(SCRIPT_DIR, ["--platform", platform, *ids])
     if args.insecure:
         upd.append("--insecure")
     if args.apps_dir:

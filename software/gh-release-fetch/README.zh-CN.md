@@ -12,12 +12,49 @@
 | **英文名称** | **GH Release Fetch** |
 | **中文名称** | **GitHub 发行版拉取工具** |
 | **仓库地址** | [`shellsec/gh-release-fetch`](https://github.com/shellsec/gh-release-fetch) |
-| **英文描述** | Cross-platform **JSON catalog + Python helper** to resolve versions from **GitHub Releases** (release pages and API), pick the right Windows/macOS/Linux asset, download it, and optionally run the installer. Mirrors are tried first where configured, with fallback to `github.com`. |
-| **中文描述** | 基于 **GitHub Releases**（发布页与 API）的跨平台 **JSON 清单 + Python 脚本**：解析版本、匹配安装包/归档、下载并可选择启动安装程序；支持镜像优先与回退官方。 |
+| **英文描述** | **Search by name, download or update** — no hunting Release pages, version tags, or direct URLs. A curated JSON catalog + scripts resolve the latest GitHub Release (or CDN/manifest where configured), pick the right Windows/macOS/Linux asset, download it, and optionally run the installer. Mirrors are tried first with fallback to `github.com`. |
+| **中文描述** | **按名字搜索即可下载/更新**——不必自己翻 GitHub Release 页、不必记版本号或找直链。维护者在 JSON 清单里写好匹配规则；你用 `lookup_app.bat` 搜软件名，脚本自动解析最新 Release 并匹配对应平台安装包，镜像失败回退官方。 |
+
+### 你能得到什么
+
+| 你**不用**自己做 | 工具替你做了 |
+|------------------|--------------|
+| 去 GitHub 翻 Release、在几十个附件里找 x64 / dmg / AppImage | 按清单规则解析**最新 tag**，过滤架构与格式，选出对的安装包 |
+| 记住「现在该下 v几、链接是哪条」 | 下载文件名通常带**版本号**（由 `save_name` 等模板生成） |
+| 自己维护一长串下载地址 | 仓库 **500+ 条**已收录规则，**模糊搜索**即可用 |
+
+```bat
+lookup_app.bat drawio
+REM 选序号 → 1 立刻下载（无需改 enabled）→ 2 加入并下载 → 3 仅加入列表 → 4 启用
+```
+
+**边界**：规则写在清单里，**收录与维护**仍是维护者/社区工作；部分条目仅占位或规则不全时无法自动下。非 GitHub/CDN 可解析的分发走 **频道线**（`search_soft_pages.bat` 搜介绍页，人工下载）。
+
+### 复制到 GitHub「About」
+
+在仓库页右侧 **About → ⚙** 粘贴：
+
+**Description（中文）**
+
+```
+GitHub 发行版拉取工具：500+ 开源软件清单，搜名字即可下载/更新，无需自己翻 Release 页或找下载链接。脚本自动解析最新版本并匹配 Win/macOS/Linux 安装包，支持 lookup 一键下载与批量更新。
+```
+
+**Description（English）**
+
+```
+GH Release Fetch: 500+ app catalog — search by name, download/update without hunting Release pages or URLs. Auto-resolves latest assets for Windows/macOS/Linux. One-click lookup + batch updates.
+```
+
+**Website（可选）** `https://github.com/shellsec/gh-release-fetch#readme`
+
+**Topics（建议）** `github-releases` `windows` `macos` `linux` `download-manager` `open-source-software` `automation` `python` `software-catalog`
 
 ---
 
-这是一个基于 **GitHub Releases**（及发布页 HTML / API）的按需下载、更新 Windows / macOS / Linux 安装包或归档的脚本仓库。
+这是一个 **「搜名字 → 自动找最新包 → 下载（可选安装）」** 的工具仓库：维护者把「怎么从 GitHub Releases / CDN 找对安装包」写成 JSON 规则；**使用者不必自己盯版本号、不必去 Release 页复制链接**。
+
+底层仍基于 **GitHub Releases**（及发布页 HTML / API），按需更新 Windows / macOS / Linux（及可选 Android APK 下载）安装包或归档。
 
 **曾用称呼**：GithubWinDownTools；现用 **GH Release Fetch / GitHub 发行版拉取工具** 以反映多平台配置与用途。
 
@@ -35,8 +72,8 @@
 - `auto_update.py`：按配置抓取版本、下载文件、按需启动安装程序（优先读取 `apps/` 目录合并结果，否则使用单文件 `apps.json`）
 - `apps/`：推荐布局——[`apps/root.json`](apps/root.json)（全局）+ [`apps/windows/*.json`](apps/windows/) + [`apps/darwin/*.json`](apps/darwin/) + [`apps/linux/*.json`](apps/linux/)（均按分类拆成多个数组文件，与 windows 命名风格一致）；若无分片目录则回退单文件 `apps/darwin.json`、`apps/linux.json`。历史单文件备份见 `apps.json.monolith.bak`；darwin/linux 由单文件迁出后的备份见 `apps/darwin.json.bak`、`apps/linux.json.bak`
 - `run_update.bat`：Windows 下一键检查 Python、安装依赖并执行 `python auto_update.py`
-- `lookup_app.py` / `lookup_app.bat`：在 `apps/` 清单中**模糊检索**、可选开启 `enabled`、加入**更新列表**（见 §3 闭环）
-- `search_soft_pages.bat`：在 [`tools/soft_page_check/`](tools/soft_page_check/) 已抓取的介绍页**标题**中搜索并打开链接（dayanzai / down66 / 7xiazai / 装机 A 类等，与 GitHub 清单互补）
+- `lookup_app.py` / `lookup_app.bat`：在清单中**模糊检索** → 选条目 → **1 立刻下载 / 2 加入并下载 / 3 加入列表 / 4 启用**（见 §3）
+- `search_soft_pages.bat`：在 [`tools/soft_page_check/`](tools/soft_page_check/) 已抓取的介绍页**标题**中搜索并打开链接；**无参数**时提示输入关键词（与 GitHub 清单互补）
 - `run_saved_apps.bat`：按列表一键开启并执行 `auto_update.py`（与 `lookup_app` 配套）
 
 ### 推荐软件介绍（Markdown）
@@ -45,9 +82,9 @@
 
 | 平台 | 中文导读 | 英文简表 | 规模（约） |
 |------|----------|----------|------------|
-| Windows | [`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md) | [`RECOMMENDED.md`](RECOMMENDED.md) | 536 条 |
-| macOS | [`RECOMMENDED.darwin.zh-CN.md`](RECOMMENDED.darwin.zh-CN.md) | [`RECOMMENDED.darwin.md`](RECOMMENDED.darwin.md) | 407 条 |
-| Linux | [`RECOMMENDED.linux.zh-CN.md`](RECOMMENDED.linux.zh-CN.md) | [`RECOMMENDED.linux.md`](RECOMMENDED.linux.md) | 405 条 |
+| Windows | [`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md) | [`RECOMMENDED.md`](RECOMMENDED.md) | 567 条 |
+| macOS | [`RECOMMENDED.darwin.zh-CN.md`](RECOMMENDED.darwin.zh-CN.md) | [`RECOMMENDED.darwin.md`](RECOMMENDED.darwin.md) | 539 条 |
+| Linux | [`RECOMMENDED.linux.zh-CN.md`](RECOMMENDED.linux.zh-CN.md) | [`RECOMMENDED.linux.md`](RECOMMENDED.linux.md) | 539 条 |
 
 刷新三份文档：`python tools/generate_recommended_md.py`（或指定 `windows` / `darwin` / `linux`）。分片统计见 [`CATALOG.md`](CATALOG.md)。
 
@@ -70,17 +107,22 @@
 
 | 用途 | 入口 |
 |------|------|
-| **按标题搜介绍页并打开** | 仓库根 **`search_soft_pages.bat <关键词>`**（索引约 5500+ URL，见 `history/titles_latest_*.json`） |
+| **按标题搜介绍页并打开** | 仓库根 **`search_soft_pages.bat`**（无参数时提示输入关键词；亦支持 `search_soft_pages.bat 7zip`） |
 | 月度快检 SOP | `tools\soft_page_check\monthly_sop.bat` |
 | **每月 · A 类**（~42 页，~15 秒） | `tools\soft_page_check\monthly_check.bat` |
-| **每季 · 频道全量**（~2300+ 页，~20–35 分钟，**只比标题、不下载软件**） | `tools\soft_page_check\monthly_check_full.bat` |
-| 仅 list 三站（hybase + dayanzai + down66） | `tools\soft_page_check\monthly_check_list.bat` |
+| **每季 · 频道全量**（~2300+ 页，~20–35 分钟，**只比标题、不下载**） | `tools\soft_page_check\monthly_check_full.bat` |
+| 单站快检 / 打开变化页 | `monthly_check_site.bat <站点>` / `open_changed_site.bat <站点>`（`423down` `7xiazai` `hybase` `dayanzai` `down66`） |
+| list 四站连跑 | `tools\soft_page_check\monthly_check_list.bat`（7xiazai + hybase + dayanzai + down66） |
+| 刷新 URL 清单 | `tools\soft_page_check\refresh_urls.bat`（`core` / `all` / `423down` / `7xiazai` …） |
+| 清理历史快照 | `tools\soft_page_check\prune_artifacts.bat` |
 | HTML 报告 | `tools\soft_page_check\open_report.bat` → `reports/index.html` |
-| GitHub 页标题变化后拉 Release | `tools\soft_page_check\fetch_github_on_changes.bat` |
+| A 类 GitHub 页变化后拉 Release | `tools\soft_page_check\fetch_github_on_changes.bat`（只读引用本仓库 `apps/` + `auto_update.py`） |
 
-**与 `lookup_app` 的分工**：`lookup_app` → **GitHub Releases 清单**（查 id、下载、更新）；`search_soft_pages` → **各站介绍页**（按标题打开网页）。首次使用快检需连跑两次才建立「标题变化」基线，详见 [`tools/soft_page_check/README.md`](tools/soft_page_check/README.md)。
+**与 `lookup_app` 的分工**：`lookup_app` → **GitHub Releases 清单**；`search_soft_pages` → **各站介绍页标题**。本仓库通常**无** `Lastb_soft_version.txt`，快检会沿用 `soft_page_check` 内已有 URL 缓存；装机发布流程（`generate_and_push.bat` / `software/`）属可选的 SoftGitUp 侧，**gh-release-fetch 主流程用 `run_saved_apps.bat` 等**。首次快检需连跑两次才建立「标题变化」基线，详见 [`tools/soft_page_check/README.md`](tools/soft_page_check/README.md)。
 
 ```bat
+search_soft_pages.bat
+REM 无参数：提示输入关键词（与 lookup_app.bat 相同交互）
 search_soft_pages.bat 7zip
 search_soft_pages.bat --scope dayanzai 优化
 search_soft_pages.bat --stats
@@ -88,7 +130,9 @@ search_soft_pages.bat --stats
 
 ### 仓库现状与收录范围（约略）
 
-合并配置后规模约为：**Windows 536 条**、**darwin 407 条**、**linux 405 条**（[`apps/windows/`](apps/windows/) 等下各 **30** 个分类分片；**不含** `99-未匹配-windows分片.json` 占位条目）。**分片级概览**见根目录 [`CATALOG.md`](CATALOG.md)（运行 `python tools/generate_catalog_index.py` 可刷新）。精确数以运行 `python auto_update.py` 时日志里「已从 apps/ 目录合并配置」为准。
+合并配置后规模约为：**Windows 567 条**、**darwin 539 条**、**linux 539 条**（[`apps/windows/`](apps/windows/) 等下各 **30** 个分类分片；**不含** `99-未匹配-windows分片.json` 占位条目）。**分片级概览**见根目录 [`CATALOG.md`](CATALOG.md)（运行 `python tools/generate_catalog_index.py` 可刷新）。精确数以运行 `python auto_update.py` 时日志里「已从 apps/ 目录合并配置」为准。
+
+**移动端**（独立清单 [`apps-mobile/`](apps-mobile/)）：Android **164 条** / **39 分片**（30 类 + 移动专属；GitHub APK **仅下载**）；iOS **52 条** App Store 占位（**不可** auto_update）。索引 [`CATALOG.mobile.md`](CATALOG.mobile.md)。
 
 主清单以 **GitHub Releases**（及镜像）为主；部分 AI IDE（Cursor、Trae、Qoder 等）通过 `resolve_via=github_pages_manifest` 读取 [`apps/root.json`](apps/root.json) 中的 `vibecoding_manifest_url`（默认 `./VibeCodingToolsDown/dist/vibecoding/manifest.json`）。使用前可先运行 `python VibeCodingToolsDown/scripts/build_manifest.py` 刷新 manifest。
 
@@ -105,32 +149,39 @@ Windows 可从 [大眼仔旭 Windows 专区](https://www.dayanzai.me/windows) �
 日常装开源桌面工具时，常见摩擦包括：
 
 - **Release 页信息杂**：同一版本下有 macOS / Linux / Windows、便携版、校验文件等，手动找对的 `.exe` / `.msi` / `.zip` 费时且容易下错架构。
-- **版本不直观**：页面标题、API `latest`、预发布（pre-release）混在一起，**不清楚当前最新 tag 对应哪个安装包**。
+- **版本与链接分散**：页面标题、API `latest`、预发布混在一起，**用户只想装最新版，却要自己判断 tag 和直链**。
 - **网络不稳定**：直连 GitHub 慢或被拦；纯镜像站又可能 403、证书异常，需要 **可回退的拉取策略**。
-- **工具一多就难维护**：编辑器、笔记、CLI、运行时各自去官网点一遍，**缺少一份可版本化、可筛选的「软件清单」**。
+- **工具一多就难维护**：编辑器、笔记、CLI、运行时各自去官网点一遍，**缺少一份可搜索、可一键更新的「软件清单」**。
 
-本仓库用 **统一 JSON 配置 + 脚本** 把「查版本 → 选对资产 → 下载 →（可选）启动安装」串起来，并针对上述情况做了 **镜像失败回退官方、HTML 与 API 互补、按 tag / 文件名规则过滤** 等处理（细节见下文「发布页镜像与自适应回退」及 `auto_update.py`）。
+本仓库把 **「查最新版本 → 选对资产 → 下载 →（可选）安装」** 做成可复用流程：**你负责搜软件名（或维护列表），脚本负责版本解析与链接匹配**（镜像失败回退官方、HTML 与 API 互补等，见下文）。
 
 ---
 
 ## 面向谁、适合做什么
 
-- **关注开源桌面软件、希望定期跟上新版本** 的用户或运维：把常用项目在配置里 `enabled: true`，按需或 **定时**（Windows 任务计划程序、Linux/macOS `cron` 等）执行 `python auto_update.py`，减少手工刷 Releases。
-- **需要明确「当前装的是哪一版」**：下载文件名由 `save_name` 等模板控制，通常带 **版本号**；运行日志写入 `update_log.txt`，并会保留 `github_page_<platform>_<id>.html` 便于核对发布页解析结果（平台为 `windows` / `darwin` / `linux`）。
-- **不适合**：主要走应用商店、无公开 GitHub Release、或安装包命名毫无规律且无法写匹配规则的闭源软件（需另找分发方式）。
+- **只想装/更新某个开源工具、不想翻 Release 页**：`lookup_app.bat 关键词` → 选 **1 立刻下载**（不必先改 `enabled`）。
+- **有一批常用软件、希望定期跟上新版本**：用 **2/3** 加入 `saved_apps_*.json`，再 `run_saved_apps.bat` 批量更新。
+- **维护清单或跑定时任务**：把规则写进 JSON，对稳定条目设 `enabled: true`，用任务计划/cron 跑 `auto_update.py`。
+- **不适合**：主要走应用商店、无公开可解析安装包、或命名毫无规律且无法写匹配规则的闭源软件（走 **频道线** 或人工）。
 
 ---
 
-## 版本与更新：你需要关注什么
+## 版本与更新：谁需要关注什么
 
-| 关注点 | 说明 |
+| 角色 | 需要关注什么 |
+|------|--------------|
+| **普通用户**（lookup 搜名下载） | 一般**不用**自己找下载链接、不用记版本号；搜名字 → 选 1/2 即可 |
+| **列表用户**（`run_saved_apps`） | 列表里有哪些软件、定时/一键更新是否成功 |
+| **维护者 / 无人值守 cron** | 上游是否改名安装包、匹配规则是否仍有效、哪些条目 `enabled` |
+
+| 技术细节 | 说明 |
 |--------|------|
-| **脚本每次会重新解析「当前最新」** | 以发布页与 GitHub API 为准；不是「增量同步整个仓库」，而是按配置拉取 **你启用条目** 对应的 **Release 资产**。GitHub API 的 `latest` 通常指向 **非草稿、非预发布** 的最新一条；若项目只发预发布，解析结果可能因仓库设置而异，需以实际日志与下载 URL 为准。 |
-| **本地是否重复下载** | 若本地已有同版本、同名文件，行为以 `auto_update.py` 中下载逻辑为准；建议结合日志与保存文件名中的版本判断是否已更新。 |
-| **配置也要随上游变** | 上游若改名安装包、改 tag 规则（例如去掉 `v` 前缀），可能需在对应 JSON 里调整 `installer_markers`、`download_names`、`version_tag_as_on_github`、`prefer_api_assets` 等字段。 |
-| **条目质量参差** | 仓库里收录了大量 **目录型** 条目；**只有匹配规则写全的条目** 才适合无人值守定时跑，其余需自行补全或仅手工启用测试。 |
+| **脚本每次重新解析「当前最新」** | 以发布页与 GitHub API 为准；`latest` 通常为非草稿、非预发布的最新 tag（因仓库设置而异，以日志为准）。 |
+| **本地是否重复下载** | 若本地已有同版本、同名文件，行为以 `auto_update.py` 下载逻辑为准；看日志与文件名中的版本即可。 |
+| **配置随上游变** | 上游改 tag 规则或安装包命名时，需在 JSON 调整 `installer_markers`、`download_names` 等（**维护者工作**）。 |
+| **条目质量参差** | 仅规则写全的条目适合无人值守；占位条目需补规则或仅手工测试。 |
 
-简言之：**脚本帮你盯「上游 Release 与资产链接」；你这边要盯「哪些应用启用、规则是否仍匹配、定时任务是否执行成功」**。
+简言之：**日常使用交给脚本找版本和链接；清单规则与批量策略由你或维护者负责。**
 
 ---
 
@@ -143,12 +194,30 @@ Windows 可从 [大眼仔旭 Windows 专区](https://www.dayanzai.me/windows) �
 | 项目 | 说明 |
 |------|------|
 | **操作系统** | 脚本可在 **Windows、macOS、Linux** 上运行；`run_update.bat` 仅适用于 Windows。 |
-| **Python** | **3.6 及以上**（与 `run_update.bat` 提示一致）；建议使用当前仍受支持的 3.x 版本。 |
-| **包管理** | 已安装 **pip**，可执行 `pip install -r requirements.txt`。 |
+| **Python** | **3.6 及以上**（与 `run_update.bat` 提示一致）；建议使用当前仍受支持的 3.x 版本。Windows 也可选 **exe**（见下），日常不必装 Python。 |
+| **包管理** | 已安装 **pip**，可执行 `pip install -r requirements.txt`（使用 exe 时可跳过）。 |
+
+### 无 Python（Windows · 可选 exe）
+
+可将主流程打成 **3 个 exe**，与 [`apps/`](apps/) 放在**同一仓库根目录**；对应 bat **优先调用 exe**，没有 exe 再 fallback `python`。
+
+| exe | bat | 作用 |
+|-----|-----|------|
+| `lookup_app.exe` | [`lookup_app.bat`](lookup_app.bat) | 模糊搜索 → 1/2/3/4 操作 |
+| `auto_update.exe` | [`run_update.bat`](run_update.bat) | 下载/更新（批量或指定 id） |
+| `run_saved_apps.exe` | [`run_saved_apps.bat`](run_saved_apps.bat) | 按 `saved_apps_*.json` 批量更新 |
+
+打包（本机需 Python **一次**）：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File tools\build_exe.ps1
+```
+
+产物在 `dist/exe/`，复制上述 3 个 exe 到仓库根即可。`search_soft_pages.bat`、维护脚本仍依赖 Python。
 
 ### Python 依赖（requirements.txt）
 
-安装后包含但不限于：
+使用 **Python 路径**时安装，包含但不限于：
 
 - `requests`（≥2.25.0）：HTTP 请求、GitHub API
 - `beautifulsoup4`（≥4.9.0）：解析 GitHub Releases 页面 HTML
@@ -175,8 +244,9 @@ pip install -r requirements.txt
 
 ### 使用前提与能力边界
 
-- **只处理 `enabled: true` 的条目**；命令行指定 `id` 时，该条目也必须已启用，否则提示不存在或未启用。
-- **数据源以 GitHub 为主**：适合在 Releases 上提供可识别安装包/归档的开源项目；**非 GitHub 分发**（如仅官网、应用商店）的闭源产品通常无法直接套用同一套规则。
+- **批量模式**只处理 `enabled: true` 的条目（如直接 `python auto_update.py` 不带 id）。
+- **指定 id 下载**（如 `lookup_app` 选 1，或 `auto_update.py drawio`）**不要求** `enabled=true`。
+- **数据源以 GitHub 为主**（部分条目走 CDN / manifest）；非可解析分发的闭源产品走 **频道线**。
 - 仓库中条目数量多，但 **规则完整度不一**：带齐 `installer_markers`、`download_names`、`save_name` 等的条目才可稳定自动下载；仅有基础字段的条目需自行补全规则后才能依赖脚本下载。
 
 ---
@@ -236,7 +306,14 @@ lookup_app.bat drawio
 python lookup_app.py drawio
 ```
 
-脚本会列出匹配项的 **平台**、**分片路径**（如 `windows/05-办公与设计.json`）、**分类**、当前 **enabled** 状态。交互流程：**选序号** → 可选 **开启 enabled** → 可选 **加入更新列表**（JSON 中 `root` 为 `"."`，路径相对仓库根，换机器也可用）。
+脚本会列出匹配项的 **平台**、**分片路径**、**分类**、当前 **enabled** 状态。交互流程：**选序号** → **选操作**：
+
+| 操作 | 说明 |
+|------|------|
+| **1** | 立刻下载（**不**改 `enabled`） |
+| **2** | 加入更新列表 **并** 立刻下载 |
+| **3** | 仅加入更新列表（`saved_apps_<平台>.json`） |
+| **4** | 设为 `enabled=true` |
 
 常用选项：
 
@@ -246,7 +323,8 @@ python lookup_app.py drawio
 | `--save [文件]` | 选中项加入更新列表（默认 `saved_apps_<平台>.json`） |
 | `--no-save-prompt` | 不询问是否加入列表 |
 | `--no-prompt` | 只查询，不交互 |
-| `--yes` / `-y` | 对全部匹配项直接 `enabled=true` |
+| `--yes` / `-y` | 对全部匹配项直接 `enabled=true`（常与 `--save` 联用） |
+| `--download` / `-d` | 交互时默认 **1** 立刻下载；与 `-y` 联用则对全部匹配项立刻下载 |
 | `--dry-run` | 预览，不写盘 |
 | `--apps-dir VibeCodingToolsDown` | 检索另一套清单（与主 `apps/` 分离） |
 | `--min-score N` | 调低/调高模糊匹配阈值（默认 40） |
@@ -255,9 +333,10 @@ python lookup_app.py drawio
 
 ### 方式 A′：介绍页标题搜索（非 GitHub 清单）
 
-在 **dayanzai / down66 / 7xiazai** 等已抓取标题中搜索并打开浏览器（见 [`tools/soft_page_check/`](tools/soft_page_check/)）：
+在 **dayanzai / down66 / 7xiazai** 等已抓取标题中搜索并打开浏览器（见 [`tools/soft_page_check/`](tools/soft_page_check/)）。**无参数**双击或运行 `search_soft_pages.bat` 会提示输入关键词（行为同 `lookup_app.bat`）。
 
 ```bat
+search_soft_pages.bat
 search_soft_pages.bat 7zip
 search_soft_pages.bat dayanzai WindowTabs
 search_soft_pages.bat --open github copilot
@@ -472,6 +551,7 @@ python auto_update.py --insecure
 ```bat
 lookup_app.bat drawio
 python lookup_app.py --no-prompt v2ray
+search_soft_pages.bat
 search_soft_pages.bat --stats
 search_soft_pages.bat 7zip
 ```
@@ -482,8 +562,9 @@ search_soft_pages.bat 7zip
 
 - 运行日志：`update_log.txt`
 - 各应用抓取到的发布页 HTML：`github_page_<platform>_<app_id>.html`（例如 `github_page_windows_obsidian.html`）
-- 下载失败时优先检查：`releases_url` 是否可访问、是否已回退到官方页或 API、`installer_markers` / `download_names` 是否仍与真实资产一致、网络与证书、条目是否已 `enabled: true`、是否命中 GitHub API 限流
-- **`重复的 id`**：同一平台多个分片出现相同 `id` 时脚本会拒绝加载；检查 `99-未匹配-windows分片.json` 是否与正式分片重复
+- 下载失败时优先检查：`releases_url` 是否可访问、是否已回退到官方页或 API、`installer_markers` / `download_names` / `download_url_templates` 是否仍与真实资产一致、网络与证书、是否命中 GitHub API 限流
+- **`enabled`**：**批量** `python auto_update.py`（不带 id）只处理 `enabled: true`；**lookup 选 1/2** 或 **`auto_update.py <id>` 指定 id 时不要求 enabled**
+- **`重复的 id`**：同一平台多个分片出现相同 `id` 时会报错；`auto_update --platform windows` 仅合并 **windows** 分片，其它平台的重复 id **不会挡住** 本次 Windows 下载。检查 `99-未匹配-windows分片.json` 是否与正式分片重复
 
 ---
 
@@ -494,10 +575,12 @@ search_soft_pages.bat 7zip
 | 目的 | 命令 |
 |------|------|
 | GitHub 清单模糊查找 / 加入更新列表 | `lookup_app.bat <关键词>`（见 §3） |
-| 介绍页标题搜索 / 打开链接 | **`search_soft_pages.bat <关键词>`** |
+| 介绍页标题搜索 / 打开链接 | **`search_soft_pages.bat`**（无参数可交互输入） |
 | 按列表一键更新 | **`run_saved_apps.bat`** 或 `python tools/run_saved_apps.py` |
+| Windows 无 Python 打包 exe | `powershell -File tools\build_exe.ps1` → 复制 `dist/exe/*.exe` 到仓库根 |
 | 刷新推荐导读 Markdown | `python tools/generate_recommended_md.py` |
 | 刷新 [`CATALOG.md`](CATALOG.md) | `python tools/generate_catalog_index.py` |
+| 刷新 [`CATALOG.mobile.md`](CATALOG.mobile.md) | `python tools/generate_mobile_catalog_index.py` |
 
 ### enabled 与清单维护
 
@@ -513,9 +596,15 @@ search_soft_pages.bat 7zip
 | `tools/import_dayanzai_windows.py --apply` | 从大眼仔旭 Windows 专区抓取开源 GitHub 项 |
 | `tools/split_dayanzai_unmatched.py` | 将 `99-未匹配` 分片拆到各分类 |
 | `tools/sync_dayanzai_to_darwin_linux.py` | Windows 新条目同步到 darwin/linux |
-| `tools/append_catalog_batch5.py` | AI IDE 生态补录（Kilo、Open WebUI、Void、manifest 迁入主 apps 等） |
+| `tools/append_catalog_batch5.py` … `batch11.py` | AI IDE、截图/OCR、跨平台缺口等（见 [`CATALOG.md`](CATALOG.md)） |
+| `tools/append_mobile_catalog_batch1.py` | 首批 Android APK + iOS App Store 占位（见 [`CATALOG.mobile.md`](CATALOG.mobile.md)） |
+| `tools/append_mobile_catalog_batch2.py` | v2rayNG、SmsForwarder（Android） |
+| `tools/append_mobile_catalog_batch3.py` | 按桌面 30 分类大补 Android（约 +65 条） |
+| `tools/append_mobile_catalog_batch4.py` | NipaPlay-Reload、NextPlayer、mpv-android（Android） |
+| `tools/append_mobile_catalog_batch5.py` | Android 薄分类大补 + iOS App Store 占位扩展 |
+| `tools/append_mobile_catalog_batch6.py` | Android / iOS 尽量全覆盖（batch5 后再 +77） |
 | `tools/append_catalog_batch2.py` ~ `batch4.py` | 历史批处理（跨平台常用软件） |
 
 ### 介绍页监控（soft_page_check）
 
-详见 [`tools/soft_page_check/README.md`](tools/soft_page_check/README.md)：`monthly_check.bat`、`monthly_sop.bat`、`fetch_github_on_changes.bat`、`search_pages.py`（由根目录 `search_soft_pages.bat` 调用）。
+详见 [`tools/soft_page_check/README.md`](tools/soft_page_check/README.md)。常用：`monthly_check.bat`、`monthly_check_site.bat`、`open_changed_site.bat`、`refresh_urls.bat`、`search_soft_pages.bat`（根目录）、`fetch_github_on_changes.bat`。

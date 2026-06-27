@@ -152,5 +152,126 @@
       ".exe",
       ".msi"
     ]
+  },
+  {
+    "id": "cockroach",
+    "简介": "CockroachDB（Linux/macOS 二进制）",
+    "分类": "数据库",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "cockroach-v",
+      ".linux-amd64"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "darwin",
+      "src"
+    ],
+    "installer_extensions": [
+      ".tgz",
+      ".tar.gz",
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "cockroach-linux-amd64.tgz",
+    "releases_url": "https://bgithub.xyz/cockroachdb/cockroach/releases",
+    "repo_path": "cockroachdb/cockroach"
+  },
+  {
+    "id": "dolt",
+    "简介": "Dolt（Git 语义数据库）",
+    "分类": "数据库",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "dolt-linux-amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "darwin",
+      "arm"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "dolt-linux-amd64.zip",
+    "releases_url": "https://bgithub.xyz/dolthub/dolt/releases",
+    "repo_path": "dolthub/dolt"
+  },
+  {
+    "id": "sqlc",
+    "简介": "sqlc",
+    "分类": "数据库",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "sqlc_",
+      "linux_amd64"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "darwin",
+      "386",
+      "arm"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "sqlc_{ver}_linux_amd64.zip"
+    ],
+    "save_name": "sqlc_{ver}_linux_amd64.zip",
+    "releases_url": "https://bgithub.xyz/sqlc-dev/sqlc/releases",
+    "repo_path": "sqlc-dev/sqlc"
+  },
+  {
+    "id": "usql",
+    "简介": "usql（通用 SQL CLI）",
+    "分类": "数据库",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "usql-",
+      "linux-amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "darwin",
+      "arm"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "usql-{ver}-linux-amd64.zip"
+    ],
+    "save_name": "usql-{ver}-linux-amd64.zip",
+    "releases_url": "https://bgithub.xyz/xo/usql/releases",
+    "repo_path": "xo/usql"
   }
 ]

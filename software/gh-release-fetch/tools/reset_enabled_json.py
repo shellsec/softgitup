@@ -39,15 +39,21 @@ def _dump(path, data):
         f.write("\n")
 
 
+def _platform_keys_for_apps_dir(apps_dir):
+    root_path = os.path.join(apps_dir, "root.json")
+    if os.path.isfile(root_path):
+        with open(root_path, encoding="utf-8") as f:
+            cfg = json.load(f)
+        keys = cfg.get("platform_keys")
+        if isinstance(keys, list) and keys:
+            return tuple(str(k) for k in keys)
+    return ("windows", "darwin", "linux")
+
+
 def _discover_split_json_files(apps_dir):
     """与 process_apps_dir 相同的分片 JSON 列表（绝对路径）。"""
     files = []
-    win = os.path.join(apps_dir, "windows")
-    if os.path.isdir(win):
-        for name in sorted(os.listdir(win)):
-            if name.endswith(".json"):
-                files.append(os.path.join(win, name))
-    for plat in ("darwin", "linux"):
+    for plat in _platform_keys_for_apps_dir(apps_dir):
         sub = os.path.join(apps_dir, plat)
         used_dir = False
         if os.path.isdir(sub):
@@ -56,7 +62,7 @@ def _discover_split_json_files(apps_dir):
                 for name in names:
                     files.append(os.path.join(sub, name))
                 used_dir = True
-        if not used_dir:
+        if not used_dir and plat in ("darwin", "linux"):
             p = os.path.join(apps_dir, "%s.json" % plat)
             if os.path.isfile(p):
                 files.append(p)

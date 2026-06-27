@@ -508,5 +508,64 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "podman",
+    "简介": "Podman（无守护进程容器，Desktop/CLI）",
+    "分类": "云原生",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "podman-installer-windows-amd64.msi"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "darwin",
+      "linux",
+      "remote"
+    ],
+    "installer_extensions": [
+      ".msi"
+    ],
+    "use_download_filename": true,
+    "save_name": "podman-installer-windows-amd64.msi",
+    "releases_url": "https://bgithub.xyz/containers/podman/releases",
+    "repo_path": "containers/podman"
+  },
+  {
+    "id": "portainer",
+    "简介": "Portainer（容器管理 UI 服务端包）",
+    "分类": "云原生",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "portainer-",
+      "windows1809-amd64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "checksum",
+      "linux",
+      "arm",
+      "ltsc2022"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "portainer-windows-amd64.tar.gz",
+    "releases_url": "https://bgithub.xyz/portainer/portainer/releases",
+    "repo_path": "portainer/portainer"
   }
 ]

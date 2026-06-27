@@ -1,8 +1,8 @@
 # soft_page_check — 软件页面快检
 
-从装机清单 [`Lastb_soft_version.txt`](../../Lastb_soft_version.txt)（**「最终选择指南」之前**）提取页面 URL；若本仓库无此文件，快检会**沿用已有** `soft_pages_urls.txt`。也可设置环境变量 `LASTB_SOFT_VERSION=完整路径`。
+从装机清单 [`Lastb_soft_version.txt`](../../Lastb_soft_version.txt)（**「最终选择指南」之前**）提取页面 URL；**本仓库通常无此文件**，快检会**沿用已有** `soft_pages_urls.txt`。也可设置 `LASTB_SOFT_VERSION=完整路径` 或 `SOFT_PAGE_CHECK_ROOT=工作区根目录`。
 
-**不更新 `software/` 也完全可用**——本工具只做健康检查，不负责下载。破解 / 423down / 网盘类资源仍需手工下载后再替换目录并执行 [`generate_and_push.bat`](../generate_and_push.bat)。
+**不跑发布也完全可用**——本工具只做标题健康检查。频道站（423down / dayanzai 等）须手工下载；GitHub 变化可用 `fetch_github_on_changes.bat`（引用本仓库 `apps/`）。若你另有 SoftGitUp 装机同步，才涉及 `software/` 与 `generate_and_push.bat`。
 
 > **月度更新入口**：双击 **[`monthly_sop.bat`](monthly_sop.bat)**，按步骤引导完成「快检 → 看报告 → 决定是否更新 → 发布」。
 
@@ -12,7 +12,7 @@
 
 ### 一句话
 
-**每月跑一遍 SOP → 报告里 A 类无变化就收工；有变化再手工下包 → 替换 `software/` → `generate_and_push.bat` → 客户端 `sync_software`。**
+**每月跑一遍快检 → 报告里 A 类无变化就收工；有变化再人工处理。** GitHub 项可走 `fetch_github_on_changes.bat`；频道站手工；SoftGitUp 用户再替换 `software/` 并 `generate_and_push.bat`。
 
 ### 流程图
 
@@ -42,7 +42,7 @@ flowchart TD
 | **3 下载** | GitHub 变化 → `soft_page_check\fetch_github_on_changes.bat`；423down/破解 **浏览器手工** | 仅「要更新」时 |
 | **3 替换** | 解压覆盖到 `software\子目录\` | 资源管理器 | 仅「要更新」时 |
 | **4 文档** | 改装机区说明、可选 append digest 一行 | `Lastb_soft_version.txt` | 可选 |
-| **5 发布** | 生成 `list.txt` 并 push | 根目录 `generate_and_push.bat` | 未改 software 则跳过 |
+| **5 发布** | SoftGitUp：`generate_and_push.bat`；**gh-release-fetch**：`run_saved_apps.bat` 等 | 未改软件则跳过 |
 | **6 同步** | 各机器拉新版本 | `sync_software.bat` | 仅发布后 |
 
 ### 首次使用（快检）
@@ -80,7 +80,7 @@ flowchart TD
 | **4 季度 423down** | digest 356 条全量比对 |
 | **5 7xiazai 列表** | 首页 ~ `/page/65/` 列表页快检 |
 | **6 打开报告页** | 刷新并打开 `index.html` |
-| **7 list 三站** | hybase + dayanzai + down66（`monthly_check_list.bat`） |
+| **7 list 四站** | 7xiazai + hybase + dayanzai + down66（`monthly_check_list.bat`） |
 
 ---
 
@@ -113,7 +113,7 @@ flowchart TD
 | 打开某站变化页 | `open_changed_site.bat <站点>` | 快检后有变化时 |
 | 清理历史快照 | `prune_artifacts.bat` | 磁盘紧 / 提交前 |
 | 打开 HTML 报告页 | `open_report.bat` | 随时查看 / 快检后自动打开 |
-| **按标题搜介绍页并打开** | 仓库根目录 `search_soft_pages.bat <关键词>` | 随时（索引来自 `history/titles_latest_*.json`） |
+| **按标题搜介绍页并打开** | 仓库根目录 `search_soft_pages.bat`（无参数时提示输入关键词） | 随时（索引来自 `history/titles_latest_*.json`） |
 | **GitHub 有变化时拉 Release** | `fetch_github_on_changes.bat` | A 类快检后、变化 URL 为 github.com 且 gh 配置已 enabled |
 | 全量打开（兜底） | `open_soft_pages.bat` | 很少需要 |
 
@@ -133,7 +133,7 @@ flowchart TD
 
 - **月度默认**：`monthly_check.bat` 只跑 A 类（42 页）。
 - **季度全量**：`monthly_check_full.bat` 一次刷新报告页 **七个分区**（A / 装机 / 423down / 7xiazai / hybase / dayanzai / down66）。
-- **仅 list 三站**：`monthly_check_list.bat`（约 1088 条）。
+- **仅 list 四站连跑**：`monthly_check_list.bat`（7xiazai + hybase + dayanzai + down66，约 1088+ 条）。
 
 A 类匹配规则在 [`build_watchlist.py`](build_watchlist.py) 的 `A_PATTERNS` 中维护；修改 `config.json` 或关键词后运行 `refresh_urls.bat watchlist` 刷新。
 
@@ -168,6 +168,7 @@ A 类匹配规则在 [`build_watchlist.py`](build_watchlist.py) 的 `A_PATTERNS`
 | `fetch_titles.py` | 并发抓取标题并比对历史 |
 | `report_html.py` | 生成 HTML 报告页 `reports/index.html` |
 | `search_pages.py` | 按标题搜索（由根目录 `search_soft_pages.bat` 调用） |
+| `paths.py` | 工作区根目录、`Lastb_soft_version.txt`、`apps/` 路径解析 |
 | `prune_artifacts.py` | 清理带日期的历史快照与旧 `report_*.txt` |
 
 `fetch_titles.py` 每次运行结束会自动刷新报告页。
@@ -195,6 +196,10 @@ soft_page_check/
 ├── README.md                    ← 本说明
 ├── monthly_sop.bat              ← 月度更新 SOP（推荐入口）
 ├── monthly_check.bat            ← 仅 A 类快检
+├── monthly_check_site.bat       ← 单站快检
+├── open_changed_site.bat        ← 打开某站变化页
+├── refresh_urls.bat             ← 刷新 URL 清单
+├── prune_artifacts.bat          ← 清理历史快照
 ├── soft_pages_urls.txt          ← 全部页面 URL（118，自动生成）
 ├── all_urls.txt                 ← 含直链在内的全部 URL（138，仅供参考）
 ├── watch_tier_a_urls.txt        ← A 类监控 URL（自动生成）
@@ -250,9 +255,11 @@ soft_page_check/
 ## GitHub Release 下载（在 soft_page_check 内）
 
 快检发现 **github.com** 标题变化后，在 **`soft_page_check`** 里下载对应 Release。  
-**只读引用** `software/gh-release-fetch/apps/` 里的配置与 `auto_update.py`，**不修改 gh-release-fetch 目录下的工具代码**。
+**只读引用**本仓库 [`apps/`](../../apps/) 与 [`auto_update.py`](../../auto_update.py)（亦兼容旧布局 `software/gh-release-fetch/`），**不修改** gh-release-fetch 工具代码。
 
-**前提**：在 `software/gh-release-fetch/apps/` 对应 JSON 里把应用设为 `"enabled": true`（改配置，不是改脚本）。
+**前提（`fetch_github_on_changes` 批量路径）**：在 `apps/` 对应 JSON 里把应用设为 `"enabled": true` 时，才会被该脚本下载。
+
+与主流程 **`lookup_app` 选 1/2 立刻下载** 或 **`auto_update.py <id>`** 不同：后者**指定 id 时不要求** `enabled=true`。
 
 **用法**（A 类快检有变化后，在 soft_page_check 目录）：
 
@@ -261,12 +268,12 @@ fetch_github_on_changes.bat
 python github_fetch_on_changes.py --dry-run   rem 预览
 ```
 
-- 只处理变化 URL 为 `github.com/owner/repo` 且在 gh 配置中有 `repo_path` 的项  
-- 仅下载 **enabled=true** 的应用  
+- 只处理变化 URL 为 `github.com/owner/repo` 且在 `apps/` 中有 `repo_path` 的项  
+- **`fetch_github_on_changes` 路径**：仅下载 **`enabled=true`** 的应用（与 lookup 指定 id 下载无关）  
 - 423down / 7xiazai / list 四站仍浏览器手工  
-- 下载日志与安装包仍落在 `software/gh-release-fetch/`（由引用的 auto_update 写入）
+- 下载目录由 `auto_update.py` 配置（`resolve_download_root`）
 
-`monthly_sop.bat` 步骤 3 会询问是否运行 `fetch_github_on_changes.bat`。
+`monthly_sop.bat` 步骤 3 会询问是否运行 `fetch_github_on_changes.bat`（本仓库无 `generate_and_push.bat` 时，SOP 发布步骤会提示改用 Git 线脚本）。
 
 ---
 
@@ -343,13 +350,15 @@ python github_fetch_on_changes.py --dry-run   rem 预览
 
 ## 与主仓库的关系
 
-| 主仓库文件 | 关系 |
+| 文件 / 目录 | 关系 |
 |-----------|------|
-| `Lastb_soft_version.txt` | URL 与说明的源文档 |
-| `config.json` → `software_dirs` | 定义 A 类监控范围 |
-| `software/` | 实际同步的软件目录；本工具**不修改**此目录 |
-| `generate_and_push.bat` | 确认更新软件**之后**才需要运行 |
-| 根目录 [`README.md`](../README.md) | 客户端同步与维护者更新流程总览 |
+| `Lastb_soft_version.txt` | 装机区 URL 源文档（**可选**；无则沿用 `soft_pages_urls.txt`） |
+| `config.json` → `software_dirs` | SoftGitUp 侧 A 类范围（**可选**；无则用 `build_watchlist.py` 内 `A_PATTERNS`） |
+| [`apps/`](../../apps/) + `auto_update.py` | **gh-release-fetch 主清单**；`fetch_github_on_changes` 只读引用 |
+| `software/`、`generate_and_push.bat` | SoftGitUp 装机同步（**本仓库通常没有**） |
+| 根目录 [`README.zh-CN.md`](../../README.zh-CN.md) | 维护者总览 |
+
+环境变量（见 [`paths.py`](paths.py)）：`LASTB_SOFT_VERSION`、`SOFT_PAGE_CHECK_ROOT`、`GH_RELEASE_FETCH_ROOT`、`SOFT_PAGE_CHECK_CONFIG`。
 
 ---
 
@@ -359,4 +368,4 @@ python github_fetch_on_changes.py --dry-run   rem 预览
 2. **少开页面** — 爬标题比对历史，只打开有变化的 URL。
 3. **破解手工** — 自动化止于「提醒」，下载与验证必须人工完成。
 4. **A 类优先** — 只监控真正进 sync 清单的软件相关页面。
-5. **423down / 7xiazai / list 三站可选** — 独立清单，不进默认月度快检；季度用 `monthly_check_full.bat` 或 `monthly_check_list.bat`。
+5. **423down / 7xiazai / list 四站可选** — 独立清单，不进默认月度快检；季度用 `monthly_check_full.bat` 或 `monthly_check_list.bat`。

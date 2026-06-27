@@ -1,0 +1,446 @@
+[
+  {
+    "id": "spotube",
+    "简介": "Spotube（跨平台 Spotify 客户端）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Spotube-android",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "x86",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "spotube.apk",
+    "releases_url": "https://bgithub.xyz/KRTirtho/spotube/releases",
+    "repo_path": "KRTirtho/spotube"
+  },
+  {
+    "id": "seal",
+    "简介": "Seal（yt-dlp 系 Android 下载器）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Seal-",
+      "universal",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "armeabi",
+      "arm64-v8a-only",
+      "x86",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "seal.apk",
+    "releases_url": "https://bgithub.xyz/JunkFood02/Seal/releases",
+    "repo_path": "JunkFood02/Seal"
+  },
+  {
+    "id": "smarttube",
+    "简介": "SmartTube（YouTube 第三方 TV/手机客户端）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "SmartTube_stable",
+      "arm64-v8a",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "x86",
+      "armeabi",
+      "beta",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "smarttube.apk",
+    "releases_url": "https://bgithub.xyz/yuliskov/SmartTubeNext/releases",
+    "repo_path": "yuliskov/SmartTubeNext"
+  },
+  {
+    "id": "aniyomi",
+    "简介": "Aniyomi（Tachiyomi 系漫画阅读器）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "aniyomi",
+      "arm64-v8a",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "x86",
+      "armeabi",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "aniyomi.apk",
+    "releases_url": "https://bgithub.xyz/aniyomiorg/aniyomi/releases",
+    "repo_path": "aniyomiorg/aniyomi"
+  },
+  {
+    "id": "mihon",
+    "简介": "Mihon（Tachiyomi 系漫画阅读器）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "mihon",
+      "arm64-v8a",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "x86",
+      "armeabi",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "mihon.apk",
+    "releases_url": "https://bgithub.xyz/mihonapp/mihon/releases",
+    "repo_path": "mihonapp/mihon"
+  },
+  {
+    "id": "organicmaps",
+    "简介": "Organic Maps（离线地图）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "OrganicMaps-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "beta",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "organicmaps.apk",
+    "releases_url": "https://bgithub.xyz/organicmaps/organicmaps/releases",
+    "repo_path": "organicmaps/organicmaps"
+  },
+  {
+    "id": "nipaplay",
+    "简介": "NipaPlay-Reload（跨平台媒体播放 / 动画追番，Android）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "NipaPlay-",
+      "Android-universal",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "arm64-v8a",
+      "armeabi",
+      "x86_64",
+      "Linux",
+      "Windows",
+      "macOS",
+      "AppImage",
+      ".deb",
+      ".rpm",
+      ".msix",
+      ".zip",
+      ".dmg",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "nipaplay.apk",
+    "releases_url": "https://bgithub.xyz/MCDFsteve/NipaPlay-Reload/releases",
+    "repo_path": "MCDFsteve/NipaPlay-Reload"
+  },
+  {
+    "id": "nextplayer",
+    "简介": "Next Player（Android 原生本地视频播放器）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "nextplayer-v",
+      "universal",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "arm64-v8a",
+      "armeabi",
+      "x86_64",
+      "x86.",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "nextplayer.apk",
+    "releases_url": "https://bgithub.xyz/anilbeesetti/nextplayer/releases",
+    "repo_path": "anilbeesetti/nextplayer"
+  },
+  {
+    "id": "mpv_android",
+    "简介": "mpv for Android（mpv-android 官方构建；亦见 https://mpv.io/installation/）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "app-default-universal",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "arm64-v8a",
+      "armeabi",
+      "x86",
+      "api29",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "mpv_android.apk",
+    "releases_url": "https://bgithub.xyz/mpv-android/mpv-android/releases",
+    "repo_path": "mpv-android/mpv-android"
+  },
+  {
+    "id": "innertune",
+    "简介": "InnerTune（YouTube Music 第三方）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "InnerTune-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "innertune.apk",
+    "releases_url": "https://bgithub.xyz/z-huang/InnerTune/releases",
+    "repo_path": "z-huang/InnerTune"
+  },
+  {
+    "id": "antennapod",
+    "简介": "AntennaPod（播客客户端）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "AntennaPod-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "free",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "antennapod.apk",
+    "releases_url": "https://bgithub.xyz/AntennaPod/AntennaPod/releases",
+    "repo_path": "AntennaPod/AntennaPod"
+  },
+  {
+    "id": "musicolet",
+    "简介": "Musicolet（离线音乐播放器）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Musicolet",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "musicolet.apk",
+    "releases_url": "https://bgithub.xyz/krosbits/Musicolet/releases",
+    "repo_path": "krosbits/Musicolet"
+  }
+]

@@ -81,5 +81,60 @@
       ".exe",
       ".msi"
     ]
+  },
+  {
+    "id": "typst",
+    "简介": "Typst（排版系统）",
+    "分类": "办公",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "typst-x86_64-unknown-linux-musl"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "apple"
+    ],
+    "installer_extensions": [
+      ".tar.xz",
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "typst-linux-x64",
+    "releases_url": "https://bgithub.xyz/typst/typst/releases",
+    "repo_path": "typst/typst"
+  },
+  {
+    "id": "pdfarranger",
+    "简介": "PDF Arranger（PDF 合并/拆分，Linux）",
+    "分类": "办公",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "pdfarranger",
+      "fedora"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "mac"
+    ],
+    "installer_extensions": [
+      ".rpm",
+      ".deb"
+    ],
+    "use_download_filename": true,
+    "save_name": "pdfarranger-linux.rpm",
+    "releases_url": "https://bgithub.xyz/pdfarranger/pdfarranger/releases",
+    "repo_path": "pdfarranger/pdfarranger"
   }
 ]

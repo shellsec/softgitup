@@ -1,0 +1,70 @@
+[
+  {
+    "id": "vimtouch",
+    "简介": "VimTouch（Android 上的 Vim）",
+    "分类": "编辑器",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "VimTouch",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "vimtouch.apk",
+    "releases_url": "https://bgithub.xyz/vimtouch/vimtouch/releases",
+    "repo_path": "vimtouch/vimtouch"
+  },
+  {
+    "id": "helio_editor",
+    "简介": "Helio Editor（音乐创作）",
+    "分类": "编辑器",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Helio",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "helio_editor.apk",
+    "releases_url": "https://bgithub.xyz/helio-editor/HelioEditor/releases",
+    "repo_path": "helio-editor/HelioEditor"
+  }
+]

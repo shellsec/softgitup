@@ -1,0 +1,211 @@
+[
+  {
+    "id": "syncthing_android",
+    "简介": "Syncthing（Android 客户端）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "syncthing-android-",
+      "universal",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "syncthing_android.apk",
+    "releases_url": "https://bgithub.xyz/syncthing/syncthing-android/releases",
+    "repo_path": "syncthing/syncthing-android"
+  },
+  {
+    "id": "tailscale_android",
+    "简介": "Tailscale（Android VPN/组网）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "tailscale-android-",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "fdroid-only",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "tailscale_android.apk",
+    "releases_url": "https://bgithub.xyz/tailscale/tailscale-android/releases",
+    "repo_path": "tailscale/tailscale-android"
+  },
+  {
+    "id": "immich_android",
+    "简介": "Immich（自托管相册 Android 客户端）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "immich-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "ios",
+      "server",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "immich_android.apk",
+    "releases_url": "https://bgithub.xyz/immich-app/immich/releases",
+    "repo_path": "immich-app/immich"
+  },
+  {
+    "id": "kdeconnect",
+    "简介": "KDE Connect（手机与桌面互联）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "KDEConnect-",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "kdeconnect.apk",
+    "releases_url": "https://bgithub.xyz/KDE/kdeconnect-kde/releases",
+    "repo_path": "KDE/kdeconnect-kde"
+  },
+  {
+    "id": "owncloud",
+    "简介": "ownCloud（Android 客户端）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "owncloud_",
+      "original-release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "beta",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "owncloud.apk",
+    "releases_url": "https://bgithub.xyz/owncloud/android/releases",
+    "repo_path": "owncloud/android"
+  },
+  {
+    "id": "wireguard_android",
+    "简介": "WireGuard（Android VPN 客户端）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "wireguard",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "wireguard_android.apk",
+    "releases_url": "https://bgithub.xyz/WireGuard/wireguard-android/releases",
+    "repo_path": "WireGuard/wireguard-android"
+  }
+]

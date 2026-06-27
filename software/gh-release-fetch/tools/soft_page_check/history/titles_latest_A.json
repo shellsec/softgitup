@@ -1,14 +1,14 @@
 {
-  "fetched_at": "2026-06-23 11:02:59",
+  "fetched_at": "2026-06-27 17:32:42",
   "scope": "a",
   "source": "watch_tier_a_urls.txt",
   "count": 42,
   "entries": [
     {
       "url": "https://7-zip.org/download.html",
-      "title": "Download",
-      "status": "ok",
-      "error": "",
+      "title": "",
+      "status": "url_error",
+      "error": "timed out",
       "tier": "A",
       "software": [
         "7-Zip"
@@ -204,9 +204,9 @@
     },
     {
       "url": "https://www.123pan.com/s/A6cA-e9oJh",
-      "title": "",
-      "status": "error",
-      "error": "The read operation timed out",
+      "title": "123云盘",
+      "status": "ok",
+      "error": "",
       "tier": "A",
       "software": [
         "CCleaner"
@@ -281,7 +281,7 @@
     },
     {
       "url": "https://www.423down.com/3050.html",
-      "title": "PotPlayer播放器 260622(1.7.22961) 绿色版 - 423DownPotPlayer下载_Daum PotPlayer 260622 中文绿色版(2026最新版/精简优化版/视频播放器) - 423Down",
+      "title": "PotPlayer播放器 260623(1.7.22968) 绿色版 - 423DownPotPlayer下载_Daum PotPlayer 260623 中文绿色版(2026最新版/精简优化版/视频播放器) - 423Down",
       "status": "ok",
       "error": "",
       "tier": "A",
@@ -292,7 +292,7 @@
     },
     {
       "url": "https://www.423down.com/3471.html",
-      "title": "安全验证...",
+      "title": "Wise Care 365 Pro v8.0.2 Build 731 特别版 - 423DownWiseCare365下载_Wise Care 365 Pro v8.0 中文绿色版 (2026最新版/系统优化/垃圾清理) - 423Down",
       "status": "ok",
       "error": "",
       "tier": "A",
@@ -336,7 +336,7 @@
     },
     {
       "url": "https://www.423down.com/7569.html",
-      "title": "安全验证...",
+      "title": "EmEditor(大文件编辑器) v26.1.1 中文绿色版 - 423DownEmEditor下载_EmEditor Professional v26.1 中文绿色版 (2026最新版/大文件编辑器/文本编辑器) - 423Down",
       "status": "ok",
       "error": "",
       "tier": "A",
@@ -347,7 +347,7 @@
     },
     {
       "url": "https://www.423down.com/778.html",
-      "title": "安全验证...",
+      "title": "WinRAR(压缩软件) v7.22 Stable 烈火汉化版 - 423DownWinRAR下载_WinRAR 7.22 烈火汉化版 (压缩软件/解压缩工具/装机必备) - 423Down",
       "status": "ok",
       "error": "",
       "tier": "A",
@@ -358,7 +358,7 @@
     },
     {
       "url": "https://www.423down.com/9655.html",
-      "title": "安全验证...",
+      "title": "Microsoft Visual C++ 2022 14.51.36247.0 - 423DownVC运行库下载_Microsoft Visual C++ Redistributable 2022 官方中文版 (2026最新版/系统运行库) - 423Down",
       "status": "ok",
       "error": "",
       "tier": "A",
@@ -424,9 +424,9 @@
     },
     {
       "url": "https://www.hybase.com/pc/windows/3471.html",
-      "title": "",
-      "status": "url_error",
-      "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1017)",
+      "title": "[Windows] �ų�����ϵͳ�Ż����� Wise Care 365 Pro v8.0.2.731 �⼤��� - �������",
+      "status": "ok",
+      "error": "",
       "tier": "A",
       "software": [
         "WiseCare365"
@@ -446,7 +446,7 @@
     },
     {
       "url": "https://www.videohelp.com/software/PotPlayer",
-      "title": "PotPlayer 260622 Download Free - VideoHelp",
+      "title": "PotPlayer 260623 Download Free - VideoHelp",
       "status": "ok",
       "error": "",
       "tier": "A",

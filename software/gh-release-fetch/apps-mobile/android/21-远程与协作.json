@@ -1,0 +1,110 @@
+[
+  {
+    "id": "rustdesk",
+    "简介": "RustDesk（远程桌面 Android 客户端）",
+    "分类": "远程与协作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "rustdesk-",
+      "aarch64",
+      "signed.apk"
+    ],
+    "href_exclude_substrings": [
+      "x86",
+      "armeabi",
+      "unsigned",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "rustdesk.apk",
+    "releases_url": "https://bgithub.xyz/rustdesk/rustdesk/releases",
+    "repo_path": "rustdesk/rustdesk"
+  },
+  {
+    "id": "hop_to_desk",
+    "简介": "HopToDesk（远程桌面）",
+    "分类": "远程与协作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "HopToDesk",
+      "Android",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "x86",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "hop_to_desk.apk",
+    "releases_url": "https://bgithub.xyz/HopToDesk/HopToDesk/releases",
+    "repo_path": "HopToDesk/HopToDesk"
+  },
+  {
+    "id": "unified_remote",
+    "简介": "Unified Remote（通用远程控制）",
+    "分类": "远程与协作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "UnifiedRemote",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "unified_remote.apk",
+    "releases_url": "https://bgithub.xyz/UnifiedRemote/Droid/releases",
+    "repo_path": "UnifiedRemote/Droid"
+  }
+]

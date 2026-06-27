@@ -1,0 +1,176 @@
+[
+  {
+    "id": "newpipe",
+    "简介": "NewPipe（YouTube 第三方客户端）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "NewPipe_",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "newpipe.apk",
+    "releases_url": "https://bgithub.xyz/TeamNewPipe/NewPipe/releases",
+    "repo_path": "TeamNewPipe/NewPipe"
+  },
+  {
+    "id": "vlc_android",
+    "简介": "VLC for Android",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "VLC-Android-",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "neon",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "vlc_android.apk",
+    "releases_url": "https://bgithub.xyz/videolan/vlc-android/releases",
+    "repo_path": "videolan/vlc-android"
+  },
+  {
+    "id": "osmand",
+    "简介": "OsmAnd（离线地图 / 导航）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Osmand-",
+      "universal",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "nightly",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "osmand.apk",
+    "releases_url": "https://bgithub.xyz/osmandapp/OsmAnd/releases",
+    "repo_path": "osmandapp/OsmAnd"
+  },
+  {
+    "id": "jellyfin_android",
+    "简介": "Jellyfin（Android 客户端）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "jellyfin",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "beta",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "jellyfin_android.apk",
+    "releases_url": "https://bgithub.xyz/jellyfin/jellyfin-android/releases",
+    "repo_path": "jellyfin/jellyfin-android"
+  },
+  {
+    "id": "finamp",
+    "简介": "Finamp（Jellyfin 音乐客户端）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "finamp-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "finamp.apk",
+    "releases_url": "https://bgithub.xyz/jmshrv/finamp/releases",
+    "repo_path": "jmshrv/finamp"
+  }
+]

@@ -273,5 +273,61 @@
       ".exe",
       ".msi"
     ]
+  },
+  {
+    "id": "rawtherapee",
+    "简介": "RawTherapee",
+    "分类": "多媒体与设计",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "RawTherapee_",
+      "AppImage"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "osx"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "use_download_filename": true,
+    "save_name": "RawTherapee.AppImage",
+    "releases_url": "https://bgithub.xyz/Beep6581/RawTherapee/releases",
+    "repo_path": "Beep6581/RawTherapee"
+  },
+  {
+    "id": "ente_photos",
+    "简介": "Ente Photos",
+    "分类": "多媒体与设计",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ente-",
+      "x86_64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "mac",
+      "exe"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "use_download_filename": true,
+    "save_name": "ente-photos.AppImage",
+    "releases_url": "https://bgithub.xyz/ente-io/photos-desktop/releases",
+    "repo_path": "ente-io/photos-desktop"
   }
 ]

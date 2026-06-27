@@ -218,5 +218,37 @@
       ".msi",
       "arm64"
     ]
+  },
+  {
+    "id": "obs",
+    "简介": "OBS Studio（macOS Apple Silicon dmg）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "OBS-Studio-",
+      "macOS-Apple.dmg"
+    ],
+    "href_exclude_substrings": [
+      "Windows",
+      "Linux",
+      "Intel"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "OBS-Studio-{ver}-macOS-Apple.dmg"
+    ],
+    "save_name": "OBS-Studio-{ver}-macOS-Apple.dmg",
+    "url_hint": "OBS-Studio",
+    "releases_url": "https://bgithub.xyz/obsproject/obs-studio/releases",
+    "repo_path": "obsproject/obs-studio"
   }
 ]

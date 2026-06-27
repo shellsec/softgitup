@@ -1,0 +1,139 @@
+[
+  {
+    "id": "samourai",
+    "简介": "Samourai Wallet（比特币隐私钱包）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Samourai",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "test",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "samourai.apk",
+    "releases_url": "https://bgithub.xyz/samourai-wallet/samourai-wallet/releases",
+    "repo_path": "samourai-wallet/samourai-wallet"
+  },
+  {
+    "id": "bluewallet",
+    "简介": "BlueWallet（Bitcoin Lightning 钱包）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "BlueWallet-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "bluewallet.apk",
+    "releases_url": "https://bgithub.xyz/BlueWallet/BlueWallet/releases",
+    "repo_path": "BlueWallet/BlueWallet"
+  },
+  {
+    "id": "monerujo",
+    "简介": "Monerujo（Monero 钱包）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "monerujo",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "monerujo.apk",
+    "releases_url": "https://bgithub.xyz/monerujo-io/monerujo/releases",
+    "repo_path": "monerujo-io/monerujo"
+  },
+  {
+    "id": "schildbach_wallet",
+    "简介": "Bitcoin Wallet（Schildbach）",
+    "分类": "加密货币",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "bitcoin-wallet",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "schildbach_wallet.apk",
+    "releases_url": "https://bgithub.xyz/bitcoin-wallet/bitcoin-wallet/releases",
+    "repo_path": "bitcoin-wallet/bitcoin-wallet"
+  }
+]

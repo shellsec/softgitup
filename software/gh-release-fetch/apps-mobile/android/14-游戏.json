@@ -1,0 +1,223 @@
+[
+  {
+    "id": "luanti",
+    "简介": "Luanti / Minetest（开源沙盒游戏）",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "luanti-",
+      "arm64-v8a",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "armeabi",
+      "x86",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "luanti.apk",
+    "releases_url": "https://bgithub.xyz/minetest/minetest/releases",
+    "repo_path": "minetest/minetest"
+  },
+  {
+    "id": "ppsspp",
+    "简介": "PPSSPP（PSP 模拟器）",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "PPSSPP",
+      "arm64-v8a",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "x86",
+      "armeabi",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "ppsspp.apk",
+    "releases_url": "https://bgithub.xyz/hrydgard/ppsspp/releases",
+    "repo_path": "hrydgard/ppsspp"
+  },
+  {
+    "id": "dolphin",
+    "简介": "Dolphin Emulator（GameCube/Wii 模拟器）",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "dolphin-master",
+      "arm64-v8a",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "x86",
+      "armeabi",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "dolphin.apk",
+    "releases_url": "https://bgithub.xyz/dolphinemu/dolphin/releases",
+    "repo_path": "dolphinemu/dolphin"
+  },
+  {
+    "id": "retroarch_android",
+    "简介": "RetroArch（模拟器前端，Android）",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "RetroArch",
+      "arm64-v8a",
+      "apk"
+    ],
+    "href_exclude_substrings": [
+      "x86",
+      "armeabi",
+      "debug",
+      "ra32",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "retroarch_android.apk",
+    "releases_url": "https://bgithub.xyz/libretro/RetroArch/releases",
+    "repo_path": "libretro/RetroArch"
+  },
+  {
+    "id": "lemuroid",
+    "简介": "Lemuroid（模拟器前端）",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "lemuroid-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "lemuroid.apk",
+    "releases_url": "https://bgithub.xyz/Swordfish90/Lemuroid/releases",
+    "repo_path": "Swordfish90/Lemuroid"
+  },
+  {
+    "id": "scummvm",
+    "简介": "ScummVM（经典游戏引擎）",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "scummvm",
+      "android",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      "win",
+      "linux",
+      "macos",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "scummvm.apk",
+    "releases_url": "https://bgithub.xyz/scummvm/scummvm/releases",
+    "repo_path": "scummvm/scummvm"
+  }
+]

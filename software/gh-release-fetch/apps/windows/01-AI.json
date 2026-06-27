@@ -103,7 +103,7 @@
   },
   {
     "id": "goose_ai",
-    "简介": "Goose（block 开源 AI 编程助手，Windows CLI 压缩包）",
+    "简介": "Goose（block 开源 AI 编程助手，Windows CLI zip）",
     "分类": "AI",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/block/goose/releases",
@@ -119,7 +119,8 @@
       "Goose-win32",
       "darwin",
       "linux",
-      "aarch64"
+      "aarch64",
+      "cuda"
     ],
     "installer_extensions": [
       ".zip"
@@ -127,10 +128,12 @@
     "download_names": [
       "goose-x86_64-pc-windows-msvc.zip"
     ],
-    "save_name": "goose-x86_64-pc-windows-msvc-{ver}.zip",
+    "save_name": "goose-x86_64-pc-windows-msvc.zip",
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false
+    "run_installer": false,
+    "windows_installer": false,
+    "use_download_filename": true
   },
   {
     "id": "aichat",
@@ -664,15 +667,34 @@
   },
   {
     "id": "github_copilot_cli",
-    "简介": "GitHub Copilot：以 VS Code / JetBrains 插件或 gh copilot 为主，无单一 Windows 安装包 Release。本条仅作说明占位。",
+    "简介": "GitHub Copilot CLI（官方 github/copilot-cli，Windows x64 MSI）",
     "分类": "AI",
     "enabled": false,
-    "releases_url": "https://bgithub.xyz/microsoft/vscode/releases",
-    "repo_path": "microsoft/vscode",
-    "windows_installer": false,
+    "releases_url": "https://bgithub.xyz/github/copilot-cli/releases",
+    "repo_path": "github/copilot-cli",
+    "windows_installer": true,
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false
+    "run_installer": true,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "copilot-x64",
+      ".msi"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "darwin",
+      "linux",
+      "tgz",
+      "win32-x64.zip"
+    ],
+    "installer_extensions": [
+      ".msi"
+    ],
+    "use_download_filename": true,
+    "save_name": "copilot-x64.msi"
   },
   {
     "id": "langchain_note",
@@ -1002,5 +1024,234 @@
       ".msi"
     ],
     "save_name": "kiro-cli-x86_64-pc-windows-msvc.msi"
+  },
+  {
+    "id": "headroom",
+    "简介": "Headroom（压缩工具输出/日志/RAG 再喂给 LLM，省 token；Python wheel / npm 包）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/chopratejas/headroom/releases",
+    "repo_path": "chopratejas/headroom",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "headroom-ai-",
+      ".tgz"
+    ],
+    "href_exclude_substrings": [
+      "openclaw",
+      "whl",
+      "manylinux",
+      "macosx",
+      ".tar.gz"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tgz"
+    ],
+    "download_names": [
+      "headroom-ai-{ver}.tgz"
+    ],
+    "save_name": "headroom-ai-{ver}.tgz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "rtk",
+    "简介": "RTK（CLI 代理：常见开发命令输出压缩 60–90% token，Rust 单文件）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/rtk-ai/rtk/releases",
+    "repo_path": "rtk-ai/rtk",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "rtk-x86_64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "linux",
+      "darwin",
+      "deb",
+      "rpm",
+      "checksums"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "rtk-x86_64-pc-windows-msvc.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "codex_plus_plus",
+    "简介": "CodexPlusPlus（Codex App 增强工具，Windows x64 安装包）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/BigPizzaV3/CodexPlusPlus/releases",
+    "repo_path": "BigPizzaV3/CodexPlusPlus",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "CodexPlusPlus-",
+      "windows-x64-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "macos",
+      "dmg",
+      "latest.json",
+      "arm64"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "CodexPlusPlus-{ver}-windows-x64-setup.exe"
+    ],
+    "save_name": "CodexPlusPlus-{ver}-windows-x64-setup.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "goose_desktop",
+    "简介": "Goose 桌面版（Windows Electron zip，Goose-win32-x64）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Goose-win32-x64",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "cuda",
+      "darwin",
+      "linux",
+      "goose-x86_64"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "Goose-win32-x64.zip",
+    "releases_url": "https://bgithub.xyz/block/goose/releases",
+    "repo_path": "block/goose"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "vscode_copilot_chat",
+    "简介": "GitHub Copilot Chat（VS Code 扩展 .vsix）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "GitHub.copilot-chat.",
+      ".vsix"
+    ],
+    "href_exclude_substrings": [
+      "sbom",
+      "sig"
+    ],
+    "installer_extensions": [
+      ".vsix"
+    ],
+    "use_download_filename": true,
+    "save_name": "GitHub.copilot-chat.vsix",
+    "releases_url": "https://bgithub.xyz/microsoft/vscode-copilot-chat/releases",
+    "repo_path": "microsoft/vscode-copilot-chat"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": false,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "sourcegraph_src_cli",
+    "简介": "Sourcegraph src CLI（windows，Cody/源码搜索生态）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "src-cli_",
+      "_windows_amd64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "darwin",
+      "linux",
+      "checksums"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "src-cli_{ver}_windows_amd64.tar.gz"
+    ],
+    "save_name": "src-cli_{ver}_windows_amd64.tar.gz",
+    "releases_url": "https://bgithub.xyz/sourcegraph/src-cli/releases",
+    "repo_path": "sourcegraph/src-cli"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "zed_codex_acp",
+    "简介": "Zed Codex ACP（在 Zed 中使用 Codex，windows）",
+    "分类": "AI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "codex-acp-",
+      "aarch64-pc-windows-msvc.zip"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "darwin",
+      "x86_64-pc"
+    ],
+    "installer_extensions": [
+      ".zip",
+      ".tar.gz"
+    ],
+    "download_names": [
+      "codex-acp-{ver}-aarch64-pc-windows-msvc.zip"
+    ],
+    "save_name": "codex-acp-{ver}-aarch64-pc-windows-msvc.zip",
+    "releases_url": "https://bgithub.xyz/zed-industries/codex-acp/releases",
+    "repo_path": "zed-industries/codex-acp"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": false,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "id": "amazon_q_cli",
+    "简介": "Amazon Q Developer CLI（aws/amazon-q-developer-cli；Release 无附件，请用官方 curl/install 脚本；勿启用）",
+    "分类": "AI",
+    "releases_url": "https://bgithub.xyz/aws/amazon-q-developer-cli/releases",
+    "repo_path": "aws/amazon-q-developer-cli",
+    "url_hint": "amazon-q"
   }
 ]

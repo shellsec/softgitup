@@ -4,5 +4,61 @@
     "enabled": false,
     "releases_url": "https://bgithub.xyz/jgraph/drawio-desktop/releases",
     "repo_path": "jgraph/drawio-desktop"
+  },
+  {
+    "id": "rnote",
+    "简介": "Rnote（手写笔记）",
+    "分类": "办公与设计",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "rnote-",
+      "macos.dmg"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux",
+      "flatpak"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "rnote.dmg",
+    "releases_url": "https://bgithub.xyz/flxzt/rnote/releases",
+    "repo_path": "flxzt/rnote"
+  },
+  {
+    "id": "stirling_pdf",
+    "简介": "Stirling-PDF（PDF 工具集）",
+    "分类": "办公与设计",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "Stirling-PDF-",
+      "macos.dmg"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux",
+      "jar"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "Stirling-PDF.dmg",
+    "releases_url": "https://bgithub.xyz/Stirling-Tools/Stirling-PDF/releases",
+    "repo_path": "Stirling-Tools/Stirling-PDF"
   }
 ]

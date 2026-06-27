@@ -1681,5 +1681,35 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": true
+  },
+  {
+    "id": "ddev",
+    "简介": "DDEV（本地 PHP/Drupal/WordPress 容器开发环境）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ddev_windows_amd64_installer.v",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "zip",
+      "macos",
+      "linux"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "use_download_filename": true,
+    "save_name": "ddev-installer.exe",
+    "releases_url": "https://bgithub.xyz/ddev/ddev/releases",
+    "repo_path": "ddev/ddev"
   }
 ]

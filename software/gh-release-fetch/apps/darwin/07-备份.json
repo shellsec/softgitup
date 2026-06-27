@@ -72,5 +72,89 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "restic",
+    "简介": "restic（macOS amd64 二进制 zip）",
+    "分类": "备份",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "restic_",
+      "darwin_amd64.zip"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "386",
+      "arm",
+      ".bz2"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "restic-darwin-amd64.zip",
+    "releases_url": "https://bgithub.xyz/restic/restic/releases",
+    "repo_path": "restic/restic"
+  },
+  {
+    "id": "duplicacy",
+    "简介": "Duplicacy",
+    "分类": "备份",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "duplicacy_osx_x64_"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux",
+      "freebsd"
+    ],
+    "use_download_filename": true,
+    "save_name": "duplicacy-osx-x64",
+    "releases_url": "https://bgithub.xyz/gilbertchen/duplicacy/releases",
+    "repo_path": "gilbertchen/duplicacy"
+  },
+  {
+    "id": "rustic",
+    "简介": "rustic（restic 兼容）",
+    "分类": "备份",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "rustic-v",
+      "aarch64-apple-darwin"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "x86_64"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "rustic-darwin-arm64.tar.gz",
+    "releases_url": "https://bgithub.xyz/rustic-rs/rustic/releases",
+    "repo_path": "rustic-rs/rustic"
   }
 ]

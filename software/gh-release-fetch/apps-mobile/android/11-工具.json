@@ -1,0 +1,241 @@
+[
+  {
+    "id": "tasks",
+    "简介": "Tasks.org（开源待办/效率）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "tasks-fdroid",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "googleplay",
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "tasks.apk",
+    "releases_url": "https://bgithub.xyz/tasks/tasks/releases",
+    "repo_path": "tasks/tasks"
+  },
+  {
+    "id": "simple_notes",
+    "简介": "Simple Notes（SimpleMobileTools 笔记）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "notes-fdroid-release",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "simple_notes.apk",
+    "releases_url": "https://bgithub.xyz/SimpleMobileTools/Simple-Notes/releases",
+    "repo_path": "SimpleMobileTools/Simple-Notes"
+  },
+  {
+    "id": "simple_contacts",
+    "简介": "Simple Contacts（SimpleMobileTools 通讯录）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "contacts-fdroid-release",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "simple_contacts.apk",
+    "releases_url": "https://bgithub.xyz/SimpleMobileTools/Simple-Contacts/releases",
+    "repo_path": "SimpleMobileTools/Simple-Contacts"
+  },
+  {
+    "id": "binary_eye",
+    "简介": "Binary Eye（二维码扫描）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "BinaryEye-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "binary_eye.apk",
+    "releases_url": "https://bgithub.xyz/markusfisch/BinaryEye/releases",
+    "repo_path": "markusfisch/BinaryEye"
+  },
+  {
+    "id": "fossify_calculator",
+    "简介": "Fossify Calculator（计算器）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "calculator-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "fossify_calculator.apk",
+    "releases_url": "https://bgithub.xyz/FossifyOrg/Calculator/releases",
+    "repo_path": "FossifyOrg/Calculator"
+  },
+  {
+    "id": "fossify_clock",
+    "简介": "Fossify Clock（时钟/闹钟）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "clock-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "fossify_clock.apk",
+    "releases_url": "https://bgithub.xyz/FossifyOrg/Clock/releases",
+    "repo_path": "FossifyOrg/Clock"
+  },
+  {
+    "id": "fossify_messages",
+    "简介": "Fossify Messages（短信）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "messages-",
+      "release.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "debug",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "fossify_messages.apk",
+    "releases_url": "https://bgithub.xyz/FossifyOrg/Messages/releases",
+    "repo_path": "FossifyOrg/Messages"
+  }
+]

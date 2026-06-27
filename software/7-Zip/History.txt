@@ -5,6 +5,11 @@ This file contains information about changes for latest versions of 7-Zip.
 The full changelog file can be downloaded here:
 https://7-zip.org/history.txt
 
+26.02          2026-06-25
+-------------------------
+- Some bugs and vulnerabilities were fixed.
+
+
 26.01          2026-04-27
 -------------------------
 - linux version of 7-Zip can use huge pages (2 MB pages). It can increase compression
@@ -19,6 +24,7 @@ https://7-zip.org/history.txt
     -spor : 7-Zip will replace asterisk (*) character in the path specified in the -o{dir_path}
             with the archive name. This is the default option.
 - some bugs were fixed.
+- CVE-2026-48095 : A vulnerability was fixed : Heap buffer overflow in the NTFS archive handler.
 
 
 26.00          2026-02-12

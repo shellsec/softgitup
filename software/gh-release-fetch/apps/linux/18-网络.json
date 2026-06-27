@@ -296,5 +296,84 @@
       ".exe",
       ".msi"
     ]
+  },
+  {
+    "id": "nextcloud_desktop",
+    "简介": "Nextcloud 桌面客户端",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "Nextcloud-",
+      "x86_64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "mac",
+      "arm"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "use_download_filename": true,
+    "save_name": "Nextcloud.AppImage",
+    "releases_url": "https://bgithub.xyz/nextcloud/desktop/releases",
+    "repo_path": "nextcloud/desktop"
+  },
+  {
+    "id": "netbird",
+    "简介": "NetBird（WireGuard 组网）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "netbird-ui-linux_",
+      "linux_amd64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "darwin"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "netbird-ui-linux.tar.gz",
+    "releases_url": "https://bgithub.xyz/netbirdio/netbird/releases",
+    "repo_path": "netbirdio/netbird"
+  },
+  {
+    "id": "xh",
+    "简介": "xh（彩色 HTTP 客户端）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers": [
+      "xh-v",
+      "x86_64-unknown-linux-musl"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "apple"
+    ],
+    "use_download_filename": true,
+    "save_name": "xh-linux-musl",
+    "releases_url": "https://bgithub.xyz/ducaale/xh/releases",
+    "repo_path": "ducaale/xh"
   }
 ]
