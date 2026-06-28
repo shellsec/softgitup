@@ -40,12 +40,14 @@ Build-One "lookup_app" "lookup_app.py"
 Build-One "run_saved_apps" "tools\run_saved_apps.py"
 Build-One "search_soft_pages" "tools\soft_page_check\search_pages.py" @(
     "--paths", $SoftCheck,
-    "--hidden-import", "list_scopes"
+    "--hidden-import", "list_scopes",
+    "--hidden-import", "gamer520_live_search"
 )
 Build-One "search_games" "tools\soft_page_check\search_games.py" @(
     "--paths", $SoftCheck,
     "--hidden-import", "list_scopes",
-    "--hidden-import", "search_pages"
+    "--hidden-import", "search_pages",
+    "--hidden-import", "gamer520_live_search"
 )
 
 Write-Host ""

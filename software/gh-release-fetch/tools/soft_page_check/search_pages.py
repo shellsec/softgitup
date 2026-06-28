@@ -271,6 +271,36 @@ def print_stats(index: list[dict]) -> None:
         print("  %-28s %5d" % (label, n))
 
 
+def _gamer520_live_fallback(
+    queries: list[str],
+    scope_filter: str,
+    index_scopes: frozenset[str] | None,
+    limit: int,
+) -> list[dict]:
+    sf = (scope_filter or "").strip().lower()
+    if sf and sf != "gamer520":
+        return []
+    if index_scopes is not None and "gamer520" not in index_scopes:
+        return []
+    try:
+        from gamer520_live_search import search_live
+    except ImportError:
+        return []
+
+    seen: set[str] = set()
+    rows: list[dict] = []
+    for q in queries:
+        for row in search_live(q, limit=limit):
+            if match_score(q, row) <= 0:
+                continue
+            u = row["url"]
+            if u in seen:
+                continue
+            seen.add(u)
+            rows.append(row)
+    return rows
+
+
 def pick_and_open(hits: list[dict], auto_open: bool) -> int:
     if not hits:
         print("无匹配。换关键词，或先运行 monthly_check / fetch_titles 建立标题快照。")
@@ -363,6 +393,18 @@ def run_search(
         return 0
 
     hits = search(index, args.queries, args.scope)
+    if not hits:
+        live = _gamer520_live_fallback(
+            args.queries,
+            args.scope,
+            index_scopes,
+            args.limit,
+        )
+        if live:
+            print(
+                "本地近期首页列表无匹配，已改用 gamer520 站内搜索（PC/Switch 混排）。"
+            )
+            hits = live
     if args.limit and len(hits) > args.limit and not args.open:
         pass
     return pick_and_open(hits, args.open)

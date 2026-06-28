@@ -98,7 +98,7 @@ Categorized **Gitee** repos under [`GiteeExploreHot/catalog/`](GiteeExploreHot/c
 
 **Optional intro-page monitor: [`tools/soft_page_check/`](tools/soft_page_check/)**
 
-Separate from the GitHub **`apps/`** catalog: tracks **page titles** on dayanzai, down66, 7xiazai, hybase, 423down, **gamer520** (games), tier-A install pages, etc. Use repo-root **[`search_soft_pages.bat`](search_soft_pages.bat)** to search ~5500+ indexed URLs and open matches in the browser. **Games:** [`search_games.bat`](search_games.bat) (gamer520 only). **No arguments:** prompts for keywords (same as `lookup_app.bat`).
+Separate from the GitHub **`apps/`** catalog: tracks **page titles** on dayanzai, down66, 7xiazai, hybase, 423down, **gamer520** (games), tier-A install pages, etc. Use repo-root **[`search_soft_pages.bat`](search_soft_pages.bat)** to search ~5500+ indexed URLs and open matches in the browser. **Games:** [`search_games.bat`](search_games.bat) (gamer520; local recent list + **live site search fallback**). **No arguments:** prompts for keywords (same as `lookup_app.bat`).
 
 | Task | Entry |
 |------|--------|
@@ -183,7 +183,7 @@ Pack **5 exe files** beside [`apps/`](apps/). Bats use **Python when installed**
 | `lookup_app.exe` | [`lookup_app.bat`](lookup_app.bat) | Search → actions 1/2/3/4 |
 | `run_saved_apps.exe` | [`run_saved_apps.bat`](run_saved_apps.bat) | Batch update from saved list |
 | `search_soft_pages.exe` | [`search_soft_pages.bat`](search_soft_pages.bat) | Search intro-page titles |
-| `search_games.exe` | [`search_games.bat`](search_games.bat) | Search gamer520 game pages |
+| `search_games.exe` | [`search_games.bat`](search_games.bat) | Search gamer520 game pages (local index + live site fallback) |
 | `auto_update.exe` | [`run_update.bat`](run_update.bat) / lookup download | Download engine |
 
 Build (needs Python **once** on the build machine):
@@ -318,16 +318,17 @@ At the row prompt: index `1` or `1,3`, `a` for all, **Enter** to skip.
 
 ### Option A″: game channel search (gamer520)
 
-Search **game intro pages** on gamer520.com and open URLs in the browser. Does **not** download files. Open-source tools → `lookup_app`; utility intro pages → `search_soft_pages`.
+Search **game intro pages** on gamer520.com and open URLs in the browser. **Falls back to live site search** (`?s=query`, PC/Switch mixed, requires network) when the local index has no match. Does **not** download files. Open-source tools → `lookup_app`; utility intro pages → `search_soft_pages`.
 
 ```bat
 search_games.bat
 search_games.bat 艾尔登
+search_games.bat 卡比
 search_games.bat --open 黑神话
 search_games.bat --stats
 ```
 
-Refresh URL list: `tools\soft_page_check\refresh_urls.bat gamer520` (**50 listing pages** by default, ~1000 URLs). Title check: `monthly_check_site.bat gamer520` (run twice for baseline).
+The local index covers **recent homepage listings** (`refresh_urls.bat gamer520`, **50 pages** by default, ~1000 URLs). Older posts may only appear via live site search (source label: `gamer520 · 游戏（站内搜索）`). Title check: `monthly_check_site.bat gamer520` (run twice for baseline).
 
 ### Option A′: intro-page title search (not the GitHub catalog)
 

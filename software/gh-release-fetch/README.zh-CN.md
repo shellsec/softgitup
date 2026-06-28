@@ -119,7 +119,7 @@ GH Release Fetch: 500+ app catalog — search by name, download/update without h
 | HTML 报告 | `tools\soft_page_check\open_report.bat` → `reports/index.html` |
 | A 类 GitHub 页变化后拉 Release | `tools\soft_page_check\fetch_github_on_changes.bat`（只读引用本仓库 `apps/` + `auto_update.py`） |
 
-**与 `lookup_app` 的分工**：`lookup_app` → **GitHub Releases 清单**；`search_soft_pages` → **各站工具介绍页标题**；`search_games` → **gamer520 游戏页**（均只打开链接，不自动下载）。本仓库通常**无** `Lastb_soft_version.txt`；首次快检需连跑两次才建立「标题变化」基线，详见 [`tools/soft_page_check/README.md`](tools/soft_page_check/README.md)。
+**与 `lookup_app` 的分工**：`lookup_app` → **GitHub Releases 清单**；`search_soft_pages` → **各站工具介绍页标题**；`search_games` → **gamer520 游戏页**（本地近期列表 + 无匹配时站内搜索；均只打开链接，不自动下载）。本仓库通常**无** `Lastb_soft_version.txt`；首次快检需连跑两次才建立「标题变化」基线，详见 [`tools/soft_page_check/README.md`](tools/soft_page_check/README.md)。
 
 ```bat
 search_soft_pages.bat
@@ -208,7 +208,7 @@ Windows 可从 [大眼仔旭 Windows 专区](https://www.dayanzai.me/windows) �
 | `lookup_app.exe` | [`lookup_app.bat`](lookup_app.bat) | 模糊搜索 → 1/2/3/4 |
 | `run_saved_apps.exe` | [`run_saved_apps.bat`](run_saved_apps.bat) | 按列表批量更新 |
 | `search_soft_pages.exe` | [`search_soft_pages.bat`](search_soft_pages.bat) | 搜工具介绍页标题（打开链接） |
-| `search_games.exe` | [`search_games.bat`](search_games.bat) | 搜 gamer520 游戏页（打开链接） |
+| `search_games.exe` | [`search_games.bat`](search_games.bat) | 搜 gamer520 游戏页（本地近期 + 站内搜索回退） |
 | `auto_update.exe` | [`run_update.bat`](run_update.bat) / lookup 选 1 调用 | 下载引擎 |
 
 打包（本机需 Python **一次**）：
@@ -371,16 +371,17 @@ lookup_app.bat draw
 
 ### 方式 A″：游戏频道搜索（gamer520）
 
-在 **gamer520.com** 已抓取标题中搜索并打开浏览器。**不提供**自动下载；开源工具用 `lookup_app`，工具介绍页用 `search_soft_pages`。
+在 **gamer520.com** 已抓取标题中搜索并打开浏览器；**本地无匹配时自动改用站内搜索**（`?s=关键词`，PC/Switch 混排，需联网）。**不提供**自动下载；开源工具用 `lookup_app`，工具介绍页用 `search_soft_pages`。
 
 ```bat
 search_games.bat
 search_games.bat 艾尔登
+search_games.bat 卡比
 search_games.bat --open 黑神话
 search_games.bat --stats
 ```
 
-刷新 URL 清单：`tools\soft_page_check\refresh_urls.bat gamer520`（默认抓 **50 页**，约千条）。标题快检：`monthly_check_site.bat gamer520`（首次需连跑两次建基线）。
+本地索引来自首页近期列表（`refresh_urls.bat gamer520` 默认 **50 页**，约千条，适合搜新上架）。较旧条目（如部分「星之卡比」）可能不在本地索引中，会走站内搜索；来源显示为 `gamer520 · 游戏（站内搜索）`。刷新 URL 清单：`tools\soft_page_check\refresh_urls.bat gamer520`。标题快检：`monthly_check_site.bat gamer520`（首次需连跑两次建基线）。
 
 ### 方式 A′：介绍页标题搜索（非 GitHub 清单）
 

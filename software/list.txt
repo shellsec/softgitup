@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-28T11:58:19.993528",
+  "generated_at": "2026-06-28T15:09:07.201425",
   "total_software": 21,
-  "total_files": 4780,
-  "total_size": 1738220005,
+  "total_files": 4781,
+  "total_size": 1739137379,
   "software": {
     "WinMemoryCleaner": {
       "version": "20260515_144655",
@@ -23691,7 +23691,7 @@
       "last_updated": "2026-06-26T17:25:18.437338"
     },
     "gh-release-fetch": {
-      "version": "20260628_115819",
+      "version": "20260628_150907",
       "files": [
         {
           "path": "apply_enabled_snapshot.bat",
@@ -23701,9 +23701,9 @@
         },
         {
           "path": "auto_update.exe",
-          "size": 17868354,
-          "hash": "bf2bc5c12b9c3368a279440c5ac1b17a",
-          "modified": "2026-06-27T20:24:41.022062"
+          "size": 17869486,
+          "hash": "938368a1c3f8235c9c169e38f9d8820b",
+          "modified": "2026-06-28T15:03:54.969450"
         },
         {
           "path": "auto_update.py",
@@ -23731,9 +23731,9 @@
         },
         {
           "path": "lookup_app.exe",
-          "size": 6576164,
-          "hash": "544e26e8d57b069f5bd7d5eeb86134ea",
-          "modified": "2026-06-27T20:24:53.451895"
+          "size": 6577453,
+          "hash": "c4aee4eddd23008b1c47d8d6722d58f9",
+          "modified": "2026-06-28T15:04:07.429429"
         },
         {
           "path": "lookup_app.py",
@@ -23749,15 +23749,15 @@
         },
         {
           "path": "README.md",
-          "size": 26687,
-          "hash": "a8c7bdc669d7915e8b70dc19f05a9138",
-          "modified": "2026-06-28T11:56:32.727706"
+          "size": 27020,
+          "hash": "c90bd2b95fb653b603547d118b79594e",
+          "modified": "2026-06-28T15:02:58.780129"
         },
         {
           "path": "README.zh-CN.md",
-          "size": 37147,
-          "hash": "f97991d1183d7f7658068fe83b09fa6b",
-          "modified": "2026-06-28T11:56:03.292671"
+          "size": 37579,
+          "hash": "018792b9ac2b0150282a493a391c3b1e",
+          "modified": "2026-06-28T15:02:57.817482"
         },
         {
           "path": "RECOMMENDED.darwin.md",
@@ -23815,9 +23815,9 @@
         },
         {
           "path": "run_saved_apps.exe",
-          "size": 6570092,
-          "hash": "49a1910a1ff96dea93bc3d6f0e58f47b",
-          "modified": "2026-06-27T20:25:05.735956"
+          "size": 6568744,
+          "hash": "8305c57afe9ca5e5b6793f328915f8a4",
+          "modified": "2026-06-28T15:04:20.174610"
         },
         {
           "path": "run_update.bat",
@@ -23833,9 +23833,9 @@
         },
         {
           "path": "search_games.exe",
-          "size": 6598978,
-          "hash": "3a849117c3811d82f270fd46d705a596",
-          "modified": "2026-06-28T11:54:03.524453"
+          "size": 7054821,
+          "hash": "8a2a95022611821d1449215102078819",
+          "modified": "2026-06-28T15:04:47.126490"
         },
         {
           "path": "search_soft_pages.bat",
@@ -23845,9 +23845,9 @@
         },
         {
           "path": "search_soft_pages.exe",
-          "size": 6596959,
-          "hash": "6b18545aba4f0ec9c2ada0479b2ada76",
-          "modified": "2026-06-28T11:53:49.643720"
+          "size": 7052993,
+          "hash": "fc34b8c0e500e1fecaa7eec186faede3",
+          "modified": "2026-06-28T15:04:33.579593"
         },
         {
           "path": "apps\\darwin.json.bak",
@@ -24889,9 +24889,9 @@
         },
         {
           "path": "tools\\build_exe.ps1",
-          "size": 1768,
-          "hash": "f4ca92ed8d1a77ff8743945c6afd3be1",
-          "modified": "2026-06-28T11:27:56.536201"
+          "size": 1864,
+          "hash": "304dd1846a4bcd9aa0b5ad3ae4a42aeb",
+          "modified": "2026-06-28T15:03:14.403644"
         },
         {
           "path": "tools\\check_catalog_ids.py",
@@ -28062,6 +28062,12 @@
           "modified": "2026-06-01T14:50:40.599650"
         },
         {
+          "path": "tools\\soft_page_check\\gamer520_live_search.py",
+          "size": 2341,
+          "hash": "ed217a396e1eaedd4695f8e560d6b3f7",
+          "modified": "2026-06-28T14:59:59.736192"
+        },
+        {
           "path": "tools\\soft_page_check\\github_fetch_on_changes.py",
           "size": 8154,
           "hash": "e28e54cfc38e2ed4395346a194846e10",
@@ -28171,9 +28177,9 @@
         },
         {
           "path": "tools\\soft_page_check\\search_pages.py",
-          "size": 13042,
-          "hash": "3163d2fe4925213d74719a89f8428598",
-          "modified": "2026-06-28T11:32:23.434465"
+          "size": 14211,
+          "hash": "bd4bee71a36269d5b96cc1b2bfb026a7",
+          "modified": "2026-06-28T15:00:50.932911"
         },
         {
           "path": "tools\\soft_page_check\\soft_pages_urls.txt",
@@ -28537,9 +28543,9 @@
         },
         {
           "path": "tools\\soft_page_check\\list\\README.md",
-          "size": 2595,
-          "hash": "bcb49bcea597663bd6125e07cbbe598e",
-          "modified": "2026-06-28T11:39:59.671652"
+          "size": 2648,
+          "hash": "4eb17eba8b0635c3470a321ac16b18c8",
+          "modified": "2026-06-28T15:05:07.127719"
         },
         {
           "path": "tools\\soft_page_check\\reports\\index.html",
@@ -28848,9 +28854,9 @@
           "modified": "2026-04-28T10:52:16.244682"
         }
       ],
-      "total_files": 859,
-      "total_size": 91531363,
-      "last_updated": "2026-06-28T11:58:19.993528"
+      "total_files": 860,
+      "total_size": 92448737,
+      "last_updated": "2026-06-28T15:09:07.201425"
     }
   }
 }
