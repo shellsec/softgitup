@@ -4,27 +4,24 @@ set PYTHONIOENCODING=utf-8
 set PYTHONUTF8=1
 cd /d "%~dp0"
 
+python --version >nul 2>&1
+if not errorlevel 1 (
+    python tools\run_saved_apps.py %*
+    goto finish
+)
+
 if exist "%~dp0run_saved_apps.exe" (
     "%~dp0run_saved_apps.exe" %*
-    set EXITCODE=%ERRORLEVEL%
-    if %EXITCODE% neq 0 pause
-    exit /b %EXITCODE%
+    goto finish
 )
 
-python --version >nul 2>&1
-if errorlevel 1 (
-    echo [ERROR] 未找到 Python 或 run_saved_apps.exe，请先安装 Python 3 或运行 tools\build_exe.ps1。
-    pause
-    exit /b 1
-)
+echo [ERROR] 未找到 Python 或 run_saved_apps.exe
+echo   有 Python: 安装 Python 3 后直接运行本 bat
+echo   无 Python: powershell -File tools\build_exe.ps1 后复制 dist\exe\run_saved_apps.exe 到本目录
+pause
+exit /b 1
 
-REM 用法:
-REM   run_saved_apps.bat
-REM   run_saved_apps.bat windows
-REM   run_saved_apps.bat my_list.json
-REM   set SAVED_APPS_LIST=my_list.json
-REM 列表 JSON 可在任意位置；未指定时默认仓库根 saved_apps_<平台>.json
-python tools\run_saved_apps.py %*
+:finish
 set EXITCODE=%ERRORLEVEL%
 if %EXITCODE% neq 0 pause
 exit /b %EXITCODE%

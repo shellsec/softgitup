@@ -1,0 +1,719 @@
+ <!DOCTYPE html>
+<html dir="ltr" lang="zh_CN">
+<head>
+<meta name="msvalidate.01" content="FE06B6272C3B36B823E0826A18407097" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>开源数据库工具 PostgreSQL 18.4 中文多语免费版 - 大眼仔旭</title>
+<meta name="description" content="PostgreSQL 是世界上最先进的开源数据库，也是第四大最受欢迎的数据库。在20多年的开发中，PostgreSQL 由一个组织良好，高度原则性和经验丰富的开源社区管理。它是一个面向对象的数据库，完全符合 ACID 标准且具有高度可扩展性，使社区能够随着工作负载需求的发展添加新的特性和功能。" />
+<meta name="keywords" content="PostgreSQL 下载,PostgreSQL 中文版,PostgreSQL 官网,开源数据库工具" />
+<link href="https://www.dayanzai.me/wp-content/themes/dayanzai/css/global.css" type="text/css" rel="stylesheet">
+<link href="https://www.dayanzai.me/wp-content/themes/dayanzai/css/index.css" type="text/css" rel="stylesheet">
+<link href="https://www.dayanzai.me/wp-content/themes/dayanzai/css/article.css" type="text/css" rel="stylesheet">
+<link href="https://www.dayanzai.me/wp-content/themes/dayanzai/css/style.css" type="text/css" rel="stylesheet">
+<link rel="shortcut icon" href="/favicon.ico" />
+<script type="text/javascript" src="https://www.dayanzai.me/wp-content/themes/dayanzai/js/jquery.js"></script>
+<script type="text/javascript" src="https://www.dayanzai.me/wp-content/themes/dayanzai/js/jquery.SuperSlide.2.1.1.js"></script>
+<link rel='stylesheet' id='FontAwesome-css'  href='https://www.dayanzai.me/wp-content/themes/dayanzai/images/fontawesome/css/font-awesome.min.css' type='text/css' media='all' />
+<!--[if lte IE 7]>
+	<link rel='stylesheet' id='FontAwesome-ie7-css'  href='https://www.dayanzai.me/wp-content/themes/dayanzai/images/fontawesome/css/font-awesome-ie7.min.css' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+	<script src="https://www.dayanzai.me/wp-content/themes/dayanzai/js/css3-mediaqueries.js"></script>
+<![endif]-->
+<script type="text/javascript" src="https://www.dayanzai.me/wp-content/themes/dayanzai/js/plugins.js"></script>
+<script type="text/javascript" src="https://www.dayanzai.me/wp-content/themes/dayanzai/js/core.js"></script>
+<script>
+$(function() {
+        $("img").lazyload({
+            effect:"fadeIn"
+          });
+        });
+    paceOptions = {
+      elements: true
+    };
+  </script>
+<style></style>
+<link rel='stylesheet' id='codecolorer-css'  href='https://www.dayanzai.me/wp-content/plugins/codecolorer/codecolorer.css?ver=0.9.16' type='text/css' media='screen' />
+<link rel='https://api.w.org/' href='https://www.dayanzai.me/wp-json/' />
+<link rel='prev' title='谷歌推出搭载三家芯片的  Googlebook，AI 交互成最大亮点' href='https://www.dayanzai.me/google-launches-googlebook-for-pc.html' />
+<link rel='next' title='Mac 虚拟机 VMware Fusion Pro 26H1 Build 25388279 中文多语免费版' href='https://www.dayanzai.me/vmware-fusion.html' />
+
+<link rel="canonical" href="https://www.dayanzai.me/postgresql.html" />
+<link rel="alternate" type="application/json+oembed" href="https://www.dayanzai.me/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.dayanzai.me%2Fpostgresql.html" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.dayanzai.me/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.dayanzai.me%2Fpostgresql.html&#038;format=xml" />
+</head>
+<body>
+<div class="header">
+  <div class="header-top">
+    <div class="header-in clearfix">
+      <h1 class="logo fl"><a href="https://www.dayanzai.me" class="standard-logo" data-dark-logo="https://www.dayanzai.me/wp-content/themes/dayanzai/images/logo.png"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/logo.png" alt="大眼仔旭"></a></h1>
+      <span class="xpxt fl"></span>
+      <div id="header"><ul id="menu-dayanzai" class="site-nav"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home current-post-parent"><a title="大眼仔首页导航菜单" href="https://www.dayanzai.me/">首页</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-has-children dropdown"><a href="https://www.dayanzai.me/windows">微软应用</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a title="图形图像处理软件" href="https://www.dayanzai.me/windows/graphic">图形图像</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/windows/screen">屏幕录像</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/windows/network">网络软件</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/windows/video">音频视频</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent"><a href="https://www.dayanzai.me/windows/office">办公软件</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/windows/conversion">格式转换</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/windows/system">系统工具</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/windows/emulator">模拟器</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/windows/browser">浏览器</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/android">安卓应用</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children dropdown"><a href="https://www.dayanzai.me/tutorial">教程资源</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/tutorial/ffmpeg">FFmpeg 教程</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/tutorial/wordpress-tutorial">WordPress 教程</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/tutorial/windows-tutorial">Windows 教程</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/tutorial/inno-setup">Inno Setup 教程</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children dropdown"><a title="其它资源" href="https://www.dayanzai.me/other">其它资源</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/other/operating-system">操作系统</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/other/pc-hardware">电脑硬件</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="https://www.dayanzai.me/other/free-fonts">免费字体</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a title="关于我们" href="https://www.dayanzai.me/about">关于我们</a></li>
+</ul>      </div>
+      <div class="search fr">
+        <form id="search_mini_form" action="https://www.dayanzai.me" method="get">
+          <div class="form-search">
+            <button type="submit" title="Search" class="button"><i class="fa fa-search fa-lg"></i></button>
+            <input id="search" type="text" name="s" value="" placeholder="Search" class="input-text" maxlength="128" />
+            <button type="reset" id="gh-search-reset" class="gh-search-reset"><span class="gh-text-replace">×</span></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="main">
+<div class="topban">
+  <div class="w1200">
+    <div class="banshow"><div align="center"><script type="text/javascript">
+            var cpro_id = "u3487066";
+            
+    </script>
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/cm.js"></script></div></div>
+  </div>
+</div>
+	<!--顶部推荐-->
+	  <div class="notice" id="notice">
+    <ul>
+		<li><a target="_blank" <a href="https://www.dayanzai.me/notices/ads">检测到您正在使用广告拦截插件，请为本站添加白名单，既能正常拿资源，也能支持网站长久更新，非常感谢！</a></li>
+		<li><a target="_blank" <a href="https://www.dayanzai.me/notices/7502328"><font color=#FA2A2A>支付宝八月活动放水，打开支付宝扫码即可领大红包！！！！</font></a></li>
+    </ul>
+  </div>
+<script type="text/javascript">
+	jQuery("#notice").slide({ mainCell:"ul", effect:"topLoop", autoPlay:true});
+</script>	<div class="content mt15">
+		<div class="c-left">
+			<div class="spos">
+				<div class="position">当前位置：
+<a href="https://www.dayanzai.me" >首页</a>
+ &gt; <a href="https://www.dayanzai.me/windows">微软应用</a> &gt; <a href="https://www.dayanzai.me/windows/office">办公软件</a> &gt;  正文</div>				    <div class="c-item clearfix">
+						<div class="pic"><img src="https://www.dayanzai.me/wp-content/uploads/2021/09/pgAdmin.png" alt="开源数据库工具 PostgreSQL 18.4 中文多语免费版"></div>
+						<div class="r">
+							<p class="r-top"><span class="name">开源数据库工具 PostgreSQL 18.4 中文多语免费版</span></p>
+							<p class="other">作者：大眼仔~旭 日期：11小时前 评论：<a href="https://www.dayanzai.me/postgresql.html#respond">0 条</a> </p>
+							<p class="desc">
+							<link rel="stylesheet" href="https://www.dayanzai.me/wp-content/themes/dayanzai/css/share.css">
+                            <script src="https://www.dayanzai.me/wp-content/themes/Dayanzai/js/social-share.min.js"></script>
+                            <div class="social-share"></div>
+						</div>
+					</div>
+					<div class="stopban">					</div>
+					<div class="gaishu">
+						<span>摘要：</span>PostgreSQL 是世界上最先进的开源数据库，也是第四大最受欢迎的数据库。在20多年的开发中，PostgreSQL 由一个组织良好，高度原则性和经验丰富的开源社区管理。它是一个面向对象的数据库，完全符合 ACID 标准且具有高度可扩展性，使社区能够随着工作负载需求的发展添加新的特性和功能。 由于其可扩展性，Post&hellip;					</div>
+			</div>
+			<div class="soft-content">
+				<div class="intro-box">
+				    <p>PostgreSQL 是世界上最先进的<a href="https://www.dayanzai.me/heidisql.html" target="_blank">开源数据库</a>，也是第四大最受欢迎的数据库。在20多年的开发中，PostgreSQL 由一个组织良好，高度原则性和经验丰富的开源社区管理。它是一个面向对象的数据库，完全符合 ACID 标准且具有高度可扩展性，使社区能够随着工作负载需求的发展添加新的特性和功能。</p>
+<p>由于其可扩展性，PostgreSQL 提供了多种内置的 PostgreSQL 数据类型，包括 JSON，XML，HSTORE（键值），Geo-spatial（PostGIS），IPv6，灵活的索引，具有复合索引，GiST，SP-GiST，GIN;全文搜索，在线索引重组;后台工作线程，例如称为 Mongress 的托管进程，它接受 MongoDB 查询以与 Postgres 数据接口;一个 contrib 模块接口：pgcrypto（数据加密），pg_trgm（查找“类似”数据），HSTORE（无模式数据）;和广泛的 SQL 支持。</p>
+<p>PostgreSQL 可以在所有主要的操作系统上运行，包括 Linux，UNIX（AIX，BSD，HP-UX，macOS，Solaris）和 Windows。它提供以下编程语言：PL / pgSQL，PL / SQL，Java，Python，Ruby，C / C +，PHP，Perl，Tcl，Scheme。Postgres 还提供以下库接口：OCI、libpq、JDBC、ODBC、.NET、Perl、Python、Ruby、C/C+、PHP、Lisp、Scheme 和 Qt。</p>
+<p>PostgreSQL 数据库提供企业级数据库解决方案，并被许多行业的各种企业使用，包括金融服务，信息技术，政府以及媒体和通信。</p>
+<div style="width: 847px" class="wp-caption aligncenter"><img class="" data-original="https://www.dayanzai.me/image/page/2022-05-13_150300.png" src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/loading.gif" alt="PostgreSQL 中文版" width="837" height="607" /><p class="wp-caption-text"><noscript><img class="" src="https://www.dayanzai.me/image/page/2022-05-13_150300.png" alt="PostgreSQL 中文版" width="837" height="607" /></noscript> PostgreSQL 中文多语免费版</p></div>
+<h2>什么是 PostgreSQL？</h2>
+<p>PostgreSQL 是一个功能强大的开源对象关系数据库系统，它使用并扩展了 <a href="https://www.dayanzai.me/phpmyadmin.html" target="_blank">SQL 语言</a>，并结合了许多可安全存储和扩展最复杂数据工作负载的特性。 PostgreSQL 的起源可以追溯到 1986 年，作为加州大学伯克利分校 POSTGRES 项目的一部分，并在核心平台上进行了 30 多年的积极开发。</p>
+<p>PostgreSQL 因其久经考验的架构、可靠性、数据完整性、强大的功能集、可扩展性以及软件背后的开源社区致力于始终如一地提供高性能和创新解决方案而赢得了良好的声誉。 PostgreSQL 可在所有主要操作系统上运行，自 2001 年以来一直符合 ACID，并具有强大的附加组件，例如流行的 PostGIS 地理空间数据库扩展器。毫不奇怪，PostgreSQL 已成为许多人和组织选择的开源关系数据库。</p>
+<p>开始使用 PostgreSQL 从未如此简单 &#8211; 选择一个您想要构建的项目，让 PostgreSQL 安全可靠地存储您的数据。</p>
+<h2>为什么使用 PostgreSQL？</h2>
+<p>PostgreSQL 具有许多功能，旨在帮助开发人员构建应用程序，帮助管理员保护数据完整性和构建容错环境，并帮助您管理数据，无论数据集有多大或多小。除了免费和开源之外，PostgreSQL 还具有高度可扩展性。例如，您可以定义自己的数据类型、构建自定义函数，甚至使用不同的编程语言编写代码，而无需重新编译数据库！</p>
+<p>PostgreSQL 试图符合 SQL 标准，这样的一致性不会与传统特性相矛盾或可能导致糟糕的架构决策。支持 SQL 标准所需的许多功能，但有时语法或功能略有不同。随着时间的推移，可以预期进一步朝着一致性迈进。从 2021 年 9 月发布的第 14 版开始，PostgreSQL 至少符合 SQL:2016 Core 一致性的 179 个强制性特性中的 170 个。在撰写本文时，没有任何关系数据库完全符合该标准。</p>
+<p>以下是 PostgreSQL 中各种功能的详尽列表，每个主要版本中都会添加更多功能：</p>
+<ul>
+<li><strong>数据类型</strong></li>
+</ul>
+<p>基元：整数、数字、字符串、布尔值<br />
+结构化：日期/时间、数组、范围/多范围、UUID<br />
+文档：JSON/JSONB、XML、键值（Hstore）<br />
+几何：点、线、圆、多边形<br />
+自定义：复合，自定义类型</p>
+<ul>
+<li><strong>数据完整性</strong></li>
+</ul>
+<p>唯一，不为空<br />
+主密钥<br />
+外密钥<br />
+排除约束<br />
+显式锁，建议锁</p>
+<ul>
+<li><strong>并发性，性能</strong></li>
+</ul>
+<p>索引：B-tree、多列、表达式、部分<br />
+高级索引：GiST、SP-Gist、KNN Gist、GIN、BRIN、覆盖索引、布隆过滤器<br />
+复杂的查询计划器/优化器、仅索引扫描、多列统计信息<br />
+事务、嵌套事务（通过保存点）<br />
+多版本并发控制 (MVCC)<br />
+读取查询的并行化和构建 B-tree 索引<br />
+表分区<br />
+SQL 标准中定义的所有事务隔离级别，包括 Serializable<br />
+表达式的即时 (JIT) 编译</p>
+<ul>
+<li><strong>可靠性，灾难恢复</strong></li>
+</ul>
+<p>预写式日志记录 (WAL)<br />
+复制：异步、同步、逻辑<br />
+时间点恢复 (PITR)，活动备用<br />
+表空间</p>
+<ul>
+<li><strong>安全</strong></li>
+</ul>
+<p>身份验证：GSSAPI、SSPI、LDAP、SCRAM-SHA-256、证书等<br />
+强大的门禁系统<br />
+列和行级别的安全性<br />
+使用证书和其他方法的多因素身份验证</p>
+<ul>
+<li><strong>可扩展性</strong></li>
+</ul>
+<p>存储函数和过程<br />
+过程语言：PL/PGSQL、Perl、Python（等等）<br />
+SQL/JSON 路径表达式<br />
+外部数据包装器：使用标准 SQL 接口连接到其他数据库或流<br />
+可定制的表格存储界面<br />
+许多提供附加功能的扩展，包括 PostGIS</p>
+<ul>
+<li><strong>国际化，文本搜索</strong></li>
+</ul>
+<p>支持国际字符集，例如 通过 ICU 整理<br />
+不区分大小写和不区分重音的排序规则<br />
+全文搜索</p>
+<p>您可以在 PostgreSQL 文档中发现更多功能。 此外，PostgreSQL 具有高度可扩展性：许多功能（例如索引）都定义了 API，以便您可以使用 PostgreSQL 进行构建以解决您的挑战。</p>
+<p>PostgreSQL 已被证明具有高度可扩展性，无论是在它可以管理的庞大数据量还是在它可以容纳的并发用户数量上。 生产环境中有活跃的 PostgreSQL 集群来管理数 TB 的数据，以及专门的系统来管理数 PB 的数据。</p>
+<p>此外，该应用程序还具有直观的功能，即 Vacuum、Analyze 和 Reindex，可帮助您在几秒钟内维护数据库对象。第一个函数扫描数据库或表中不再使用的行。如果一行被更新或删除，之前的内容不会被替换，而是被标记为无效。第二个功能名为分析，调查每个选定的数据库或表包含的所有可用值。重新索引功能可帮助您快速重建索引，以防它们被不寻常的插入数据模式修改。</p>
+<p>总的来说，PostgreSQL 被证明是一个稳定的解决方案，可以帮助 DBA 快速管理多个数据库，并且由于它支持包括 Perl、Java、Ruby、C/C++ 和 Python 在内的各种编程语言，它能够运行不同的存储过程和 SQL脚本。</p>
+<h2>PostgreSQL 许可证</h2>
+<p>PostgreSQL 是在 PostgreSQL 许可证下发布的，这是一个自由的开源许可证，类似于 BSD 或 MIT 许可证。</p>
+<p><a href="https://www.postgresql.org/" target="_blank"><span style="color: #ff6600;"><strong>官方主页</strong></span></a></p>
+<p>官方下载：<a href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads" target="_blank">https://www.enterprisedb.com/downloads/postgres-postgresql-downloads</a></p>
+				                        <!--<div class="reward">
+                        <div class="reward-button">
+                            赏
+                            <span class="reward-code">
+                            <span class="alipay-code">
+                            <img width="250" height="250" class="alipay-img wdp-appear" src="../image/alipay.jpg" alt="支付宝打赏" />
+                            <b>支付宝打赏</b>
+                        </span>
+                        <span class="wechat-code">
+                            <img width="250" height="250" class="wechat-img wdp-appear" src="../image/weipay.jpg" alt="微信打赏" />
+                            <b>微信打赏</b>
+                            </span>
+                        </span>
+                    </div>
+                        <p class="reward-notice">网站维护不易，鼓励一下站长，感谢！</p>
+                    </div>-->
+				</div>
+				<div class="tagls"><span class="time">标签：</span><a href="https://www.dayanzai.me/tag/postgresql-%e4%b8%8b%e8%bd%bd" rel="tag">PostgreSQL 下载</a><a href="https://www.dayanzai.me/tag/postgresql-%e4%b8%ad%e6%96%87%e7%89%88" rel="tag">PostgreSQL 中文版</a><a href="https://www.dayanzai.me/tag/postgresql-%e5%ae%98%e7%bd%91" rel="tag">PostgreSQL 官网</a><a href="https://www.dayanzai.me/tag/%e5%bc%80%e6%ba%90%e6%95%b0%e6%8d%ae%e5%ba%93%e5%b7%a5%e5%85%b7" rel="tag">开源数据库工具</a></div>
+				<div class="down_show_intro_first_box">
+				<div align="center"><script type="text/javascript">
+    /*960*90 创建于 2018/7/18*/
+    var cpro_id = "u3487066";
+</script>
+<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js"></script></div>				</div>
+			</div>
+			<div class="w880 mt15 saxyi">
+				<div class="aauthor">
+											<img src="/wp-content/themes/Dayanzai/images/authors_s.png" class="avatar avatar-180" height="180" width="180">		
+									</div>
+				<div class="axieyi">
+				声明：<a href="https://www.dayanzai.me">大眼仔旭</a> | </span>本文采用署名-非商业性使用-相同方式共享 4.0 国际许可协议[<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank" rel="external nofollow" title="Under Creative Commons">CC BY-NC-SA</a>]进行授权<br>文章名称：《<a href="https://www.dayanzai.me/postgresql.html" rel="bookmark" title="开源数据库工具 PostgreSQL 18.4 中文多语免费版">开源数据库工具 PostgreSQL 18.4 中文多语免费版</a>》<br>文章固定链接：<a>https://www.dayanzai.me/postgresql.html</a><br>本站资源仅供个人学习交流，请于下载后 24 小时内删除，不允许用于商业用途，否则法律问题自行承担。				</div>
+				<div class="azzsm">转载声明</div>
+			</div>			<span class="tyTestPos"></span>
+
+			<div id="jprj" class="w880 mt15">
+				  <ul class="prenext-list clearfix">
+					<li>					<a class="img" href="https://www.dayanzai.me/google-launches-googlebook-for-pc.html" target="_self"><img src="https://www.dayanzai.me/wp-content/uploads/2023/01/Google.png" alt="谷歌推出搭载三家芯片的  Googlebook，AI 交互成最大亮点"></a>
+					  <div class="intro">
+						<p class="tit"><a title="谷歌推出搭载三家芯片的  Googlebook，AI 交互成最大亮点" href="https://www.dayanzai.me/google-launches-googlebook-for-pc.html" target="_self">谷歌推出搭载三家芯片的  Googlebook，AI 交互成最大亮点</a></p>
+						<p class="other">2026年5月13日，谷歌在TheAdidShw活动上正式发布全新笔记本品类Gglebk，官宣其为Chmebk的迭代替代...</p>
+					  </div>
+					  <a class="down-link" href="https://www.dayanzai.me/google-launches-googlebook-for-pc.html">阅读更多</a>
+
+					  </li>
+					  <li class="fr">
+					  
+					  <a class="img" href="https://www.dayanzai.me/vmware-fusion.html" target="_self"><img src="https://www.dayanzai.me/wp-content/uploads/2017/10/vmware-fusion.png" alt="Mac 虚拟机 VMware Fusion Pro 26H1 Build 25388279 中文多语免费版"></a>
+					  <div class="intro">
+						<p class="tit"><a title="Mac 虚拟机 VMware Fusion Pro 26H1 Build 25388279 中文多语免费版" href="https://www.dayanzai.me/vmware-fusion.html" target="_self">Mac 虚拟机 VMware Fusion Pro 26H1 Build 25388279 中文多语免费版</a></p>
+						<p class="other">Mac虚拟机VMwaeFusiPfessial中文版由大眼仔旭发布。VMwaeFusi：适用于Mac的简单强大的虚拟机。借助...</p>
+					  </div>
+					  <a class="down-link" href="https://www.dayanzai.me/vmware-fusion.html">阅读更多</a>
+					  </li>
+					</ul>
+			</div>
+						<div id="rmjc" class="w880 mt15">
+				<div class="xihuan">
+					<h3><span>猜你喜欢</span></h3>
+					<ul class="xhxg-list clearfix">
+						
+<li><i>2025-01-21</i><a href="https://www.dayanzai.me/invokeai.html" title="开源 AI 图像绘画工具 InvokeAI 5.6.0 发布下载">开源 AI 图像绘画工具 InvokeAI 5.6.0 发布下载</a></li>
+<li><i>2023-11-11</i><a href="https://www.dayanzai.me/macbook-buy.html" title="针对不同需求苹果 MacBook 笔记本系列选购参考指南">针对不同需求苹果 MacBook 笔记本系列选购参考指南</a></li>
+<li><i>2024-01-03</i><a href="https://www.dayanzai.me/camera-digital-signature.html" title="日本相机制造商将利用数字签名来对抗 AI 图像技术">日本相机制造商将利用数字签名来对抗 AI 图像技术</a></li>
+<li><i>2024-05-23</i><a href="https://www.dayanzai.me/windows-server-2022.html" title="微软官方 MSDN 原版 Windows Server 2022 ISO 镜像已开放下载">微软官方 MSDN 原版 Windows Server 2022 ISO 镜像已开放下载</a></li>
+<li><i>2026-03-05</i><a href="https://www.dayanzai.me/xnview.html" title="经典免费实用看图浏览/管理/转换工具 XnView 2.52.5 中文完整版">经典免费实用看图浏览/管理/转换工具 XnView 2.52.5 中文完整版</a></li>
+					</ul>
+				</div>
+				<div class="xiangguan">
+					<h3><span>相关推荐</span></h3>
+					<ul class="xhxg-list clearfix">
+						
+
+<li><i>2022-11-19</i><a href="https://www.dayanzai.me/winiso.html" title="ISO 光盘映像工具 WinISO 7.1.1.8357 中文多语免费版">ISO 光盘映像工具 WinISO 7.1.1.8357 中文多语免费版</a></li>
+<li><i>2026-04-11</i><a href="https://www.dayanzai.me/ssd-fresh.html" title="SSD 固态硬盘优化工具 Abelssoft SSD Fresh 2026 15.04.71721 中文多语免费版">SSD 固态硬盘优化工具 Abelssoft SSD Fresh 2026 15.04.71721 中文多语免费版</a></li>
+<li><i>2023-12-21</i><a href="https://www.dayanzai.me/sata-vs-sas.html" title="计算机中的硬盘 SAS 与 SATA 接口哪种最好？">计算机中的硬盘 SAS 与 SATA 接口哪种最好？</a></li>
+<li><i>2022-09-14</i><a href="https://www.dayanzai.me/macrorit-disk-partition.html" title="分区专家专业版 Macrorit Disk Partition Expert 6.1.2.0 + x64 汉化中文版">分区专家专业版 Macrorit Disk Partition Expert 6.1.2.0 + x64 汉化中文版</a></li>
+<li><i>2023-06-06</i><a href="https://www.dayanzai.me/dao-li-ti.html" title="全新商用中文字体上线，阿里妈妈刀隶体免费下载！">全新商用中文字体上线，阿里妈妈刀隶体免费下载！</a></li>
+					</ul>
+				</div>
+			</div>						<div class="w880 mt15"><div align="center"><a href="https://www.dayanzai.me" target="_blank"><img src="https://www.dayanzai.me/image/ad/gongzhonghao.png" border="0" /></a></div></div>			<div id="comment_box" class="w880 mt15">
+				<div class="cmtbox" style="clear:both;">
+					<script type="text/javascript" src="https://www.dayanzai.me/wp-content/themes/dayanzai/js/comments-ajax.js"></script>
+
+
+
+
+<div id="postcomments">
+	<div id="comments">
+		全部评论： <b> (0条)</b>
+	</div>
+	<div class="nomore">
+		^_^ 暂无评论！
+	</div>
+</div>
+
+	
+	<div id="respond"  class="respond-box">
+		<h3 class="comments-title">发表评论 <span id="cancel-comment-reply"><a rel="nofollow" id="cancel-comment-reply-link" href="/postgresql.html#respond" style="display:none;">点击这里取消回复。</a></span></h3>
+					<form action="https://www.dayanzai.me/wp-comments-post.php" method="post" id="commentform">
+								
+					
+					<div id="comment-author-info" class="row" >   
+						<div class="comment-md-3">
+							<label for="author">昵称<span class="required">*</span></label>
+							<input type="text" name="author" id="author" class="comment-md-9" value="" size="22" tabindex="1" />
+						</div>
+						<div class="comment-md-3">
+							<label for="email">邮箱<span class="required">*</span></label>
+							<input type="email" name="email" id="email" class="comment-md-9" value="" size="22" tabindex="2" />
+						</div>
+						<div class="comment-md-3 comment-form-url">
+							<label for="url">网址<span class="required"></span></label>
+							<input type="text" name="url" id="url" class="comment-md-9" value="" size="22" tabindex="3" />
+						</div>
+					</div>
+								<div class="row comment-from-main">
+					<div class="comment-form-textarea">
+						<div class="comment-textarea-box">
+							<textarea class="comment-textarea" name="comment" id="comment"  placeholder="说点什么吧..."></textarea>
+						</div>
+					</div>
+
+					<div class="form-submit">
+						<a href="javascript:void(0);" class="facetoggle"><i class="fa fa-smile-o"></i> 表情</a>
+						<div class="comment-form-smiliess"><div id="smilelink" class="smilelink"><a href="javascript:void(0);" title="icon_mrgreen.gif" onclick="document.getElementById('comment').value += ' :mrgreen: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_mrgreen.gif" alt="icon_mrgreen.gif" /></a><a href="javascript:void(0);" title="icon_neutral.gif" onclick="document.getElementById('comment').value += ' :neutral: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_neutral.gif" alt="icon_neutral.gif" /></a><a href="javascript:void(0);" title="icon_twisted.gif" onclick="document.getElementById('comment').value += ' :twisted: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_twisted.gif" alt="icon_twisted.gif" /></a><a href="javascript:void(0);" title="icon_arrow.gif" onclick="document.getElementById('comment').value += ' :arrow: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_arrow.gif" alt="icon_arrow.gif" /></a><a href="javascript:void(0);" title="icon_eek.gif" onclick="document.getElementById('comment').value += ' :shock: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_eek.gif" alt="icon_eek.gif" /></a><a href="javascript:void(0);" title="icon_smile.gif" onclick="document.getElementById('comment').value += ' :smile: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_smile.gif" alt="icon_smile.gif" /></a><a href="javascript:void(0);" title="icon_confused.gif" onclick="document.getElementById('comment').value += ' :???: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_confused.gif" alt="icon_confused.gif" /></a><a href="javascript:void(0);" title="icon_cool.gif" onclick="document.getElementById('comment').value += ' :cool: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_cool.gif" alt="icon_cool.gif" /></a><a href="javascript:void(0);" title="icon_evil.gif" onclick="document.getElementById('comment').value += ' :evil: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_evil.gif" alt="icon_evil.gif" /></a><a href="javascript:void(0);" title="icon_biggrin.gif" onclick="document.getElementById('comment').value += ' :grin: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_biggrin.gif" alt="icon_biggrin.gif" /></a><a href="javascript:void(0);" title="icon_idea.gif" onclick="document.getElementById('comment').value += ' :idea: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_idea.gif" alt="icon_idea.gif" /></a><a href="javascript:void(0);" title="icon_redface.gif" onclick="document.getElementById('comment').value += ' :oops: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_redface.gif" alt="icon_redface.gif" /></a><a href="javascript:void(0);" title="icon_razz.gif" onclick="document.getElementById('comment').value += ' :razz: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_razz.gif" alt="icon_razz.gif" /></a><a href="javascript:void(0);" title="icon_rolleyes.gif" onclick="document.getElementById('comment').value += ' :roll: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_rolleyes.gif" alt="icon_rolleyes.gif" /></a><a href="javascript:void(0);" title="icon_wink.gif" onclick="document.getElementById('comment').value += ' :wink: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_wink.gif" alt="icon_wink.gif" /></a><a href="javascript:void(0);" title="icon_cry.gif" onclick="document.getElementById('comment').value += ' :cry: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_cry.gif" alt="icon_cry.gif" /></a><a href="javascript:void(0);" title="icon_surprised.gif" onclick="document.getElementById('comment').value += ' :eek: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_surprised.gif" alt="icon_surprised.gif" /></a><a href="javascript:void(0);" title="icon_lol.gif" onclick="document.getElementById('comment').value += ' :lol: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_lol.gif" alt="icon_lol.gif" /></a><a href="javascript:void(0);" title="icon_mad.gif" onclick="document.getElementById('comment').value += ' :mad: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_mad.gif" alt="icon_mad.gif" /></a><a href="javascript:void(0);" title="icon_sad.gif" onclick="document.getElementById('comment').value += ' :sad: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_sad.gif" alt="icon_sad.gif" /></a><a href="javascript:void(0);" title="icon_exclaim.gif" onclick="document.getElementById('comment').value += ' :!: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_exclaim.gif" alt="icon_exclaim.gif" /></a><a href="javascript:void(0);" title="icon_question.gif" onclick="document.getElementById('comment').value += ' :?: '"><img src="https://www.dayanzai.me/wp-content/themes/dayanzai/images/smilies/icon_question.gif" alt="icon_question.gif" /></a></div></div>
+						<input class="btn-comment" name="submit" type="submit" id="submit" tabindex="5" title="发表评论" value="发表评论">
+						<input type='hidden' name='comment_post_ID' value='59399' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+											</div>
+					
+				</div>
+				<script type="text/javascript">	//Crel+Enter
+				//<![CDATA[
+					jQuery(document).on("click", ".facetoggle", function($) {
+    jQuery(".comment-form-smiliess").toggle();
+});
+					jQuery(document).keypress(function(e){
+						if(e.ctrlKey && e.which == 13 || e.which == 10) { 
+							jQuery("#submit").click();
+							document.body.focus();
+						} else if (e.shiftKey && e.which==13 || e.which == 10) {
+							jQuery("#submit").click();
+						}          
+					})
+				// ]]>
+				</script>
+			</form>
+			</div>					</div>
+			</div>
+		</div>
+		<div class="c-w300">
+            <div class="cbox-w300">
+
+								<div class="rban1"> <script type="text/javascript">
+            var cpro_id = "u3487069";
+            
+    </script>
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/cm.js"></script> </div>                <div class="zixun mt15"><!--推荐阅读-->
+                    <div class="hd">
+                        <h3><span><a href="https://www.dayanzai.me/windows" title="">MORE>></a></span>微软应用</h3>
+                    </div>
+                    <div class="bd">
+                        <ul class="text-list">						  <li class="up">
+							<div class="rank-c1"><em>1</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/vmware-workstation.html" title="威睿工作站 VMware Workstation Pro 26H1 v26.0.1810 中文免费版" class="tit" rel="nofollow">威睿工作站 VMware Workstation Pro 26H1 v26.0.1810 中文免费版</a> </div>
+						  </li>
+ 						  <li class="up">
+							<div class="rank-c1"><em>2</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/vmware-fusion.html" title="Mac 虚拟机 VMware Fusion Pro 26H1 Build 25388279 中文多语免费版" class="tit" rel="nofollow">Mac 虚拟机 VMware Fusion Pro 26H1 Build 25388279 中文多语免费版</a> </div>
+						  </li>
+ 						  <li class="up">
+							<div class="rank-c1"><em>3</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/postgresql.html" title="开源数据库工具 PostgreSQL 18.4 中文多语免费版" class="tit" rel="nofollow">开源数据库工具 PostgreSQL 18.4 中文多语免费版</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>4</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/affinity-studio.html" title="Canva 推出免费设计工具 Canva Affinity 3.2.1.4425 中文版" class="tit" rel="nofollow">Canva 推出免费设计工具 Canva Affinity 3.2.1.4425 中文版</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>5</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/rainmeter.html" title="雨滴桌面 Rainmeter 4.5.24 Build 3857 中文多语免费版" class="tit" rel="nofollow">雨滴桌面 Rainmeter 4.5.24 Build 3857 中文多语免费版</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>6</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/pixieditor.html" title="开源像素艺术编辑软件 PixiEditor 2.1.1.4 中文多语免费版" class="tit" rel="nofollow">开源像素艺术编辑软件 PixiEditor 2.1.1.4 中文多语免费版</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>7</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/musescore.html" title="开源线谱打谱软件 MuseScore 4.7.0 x64 专业制作音乐曲谱" class="tit" rel="nofollow">开源线谱打谱软件 MuseScore 4.7.0 x64 专业制作音乐曲谱</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>8</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/trilium-notes.html" title="免费开源笔记应用程序 Trilium Notes 0.103.0 x64 官方中文免费版" class="tit" rel="nofollow">免费开源笔记应用程序 Trilium Notes 0.103.0 x64 官方中文免费版</a> </div>
+						  </li>
+                         </ul>
+                    </div>
+                </div>
+								<div class="rban1 mt15"> <script type="text/javascript">
+            var cpro_id = "u3487069";
+            
+    </script>
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/cm.js"></script> </div>                <div class="zixun mt15"><!--推荐阅读-->
+                    <div class="hd">
+                        <h3><span><a href="https://www.dayanzai.me/android" title="">MORE>></a></span>安卓应用</h3>
+                    </div>
+                    <div class="bd">
+                        <ul class="text-list">						  <li class="up">
+							<div class="rank-c1"><em>1</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/password-safe-and-manager.html" title="安卓密码管理器 Password Safe and Manager 9.4.0 中文专业版" class="tit" rel="nofollow">安卓密码管理器 Password Safe and Manager 9.4.0 中文专业版</a> </div>
+						  </li>
+ 						  <li class="up">
+							<div class="rank-c1"><em>2</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/applock-pro.html" title="安卓隐私的智能应用锁 AppLock Pro 5.7.3 中文汉化版" class="tit" rel="nofollow">安卓隐私的智能应用锁 AppLock Pro 5.7.3 中文汉化版</a> </div>
+						  </li>
+ 						  <li class="up">
+							<div class="rank-c1"><em>3</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/winrar-for-android.html" title="安卓解压缩工具 WinRAR for Android 7.22 build 132 中文专业版" class="tit" rel="nofollow">安卓解压缩工具 WinRAR for Android 7.22 build 132 中文专业版</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>4</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/sleep-as-android.html" title="安卓睡眠追踪 Sleep as Android 20260429 轻松管理手机睡眠模式" class="tit" rel="nofollow">安卓睡眠追踪 Sleep as Android 20260429 轻松管理手机睡眠模式</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>5</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/android-xplayer.html" title="谷歌市场评分最高之一播放器 XPlayer 2.6.2 安卓本地高清播放器" class="tit" rel="nofollow">谷歌市场评分最高之一播放器 XPlayer 2.6.2 安卓本地高清播放器</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>6</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/xcast.html" title="安卓手机投屏大师 Cast to TV &#8211; XCast v2.5.0 中文多语免费版" class="tit" rel="nofollow">安卓手机投屏大师 Cast to TV &#8211; XCast v2.5.0 中文多语免费版</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>7</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/rs-file-manager.html" title="RS 文件浏览器 RS File Manager 2.2.8 安卓手机文件管理器" class="tit" rel="nofollow">RS 文件浏览器 RS File Manager 2.2.8 安卓手机文件管理器</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>8</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/split-apks-installer.html" title="安卓 XAPK 拆分安装神器 SAI: Split APKs Installer v2.2.4 中文去广告版" class="tit" rel="nofollow">安卓 XAPK 拆分安装神器 SAI: Split APKs Installer v2.2.4 中文去广告版</a> </div>
+						  </li>
+                         </ul>
+                    </div>
+                </div>
+								<div class="rban1 mt15"> <script type="text/javascript">
+            var cpro_id = "u3487069";
+            
+    </script>
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/cm.js"></script> </div>                <div class="zixun mt15"><!--推荐阅读-->
+                    <div class="hd">
+                        <h3><span><a href="https://www.dayanzai.me/tutorial" title="">MORE>></a></span>教程资源</h3>
+                    </div>
+                    <div class="bd">
+                        <ul class="text-list">						  <li class="up">
+							<div class="rank-c1"><em>1</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/tsforge-esu-for-windows-10.html" title="详解 TSforge：Windows10 非官方 ESU 激活完整教程" class="tit" rel="nofollow">详解 TSforge：Windows10 非官方 ESU 激活完整教程</a> </div>
+						  </li>
+ 						  <li class="up">
+							<div class="rank-c1"><em>2</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/disable-chrome-from-downloading-ai-models.html" title="一招禁止 Chrome/Edge 偷偷下载 4GB 本地 AI 模型方法" class="tit" rel="nofollow">一招禁止 Chrome/Edge 偷偷下载 4GB 本地 AI 模型方法</a> </div>
+						  </li>
+ 						  <li class="up">
+							<div class="rank-c1"><em>3</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/enable-the-firefox-rust-ad-blocking-engine.html" title="教你如何开启 Firefox 149/150 内置的 Rust 广告拦截引擎" class="tit" rel="nofollow">教你如何开启 Firefox 149/150 内置的 Rust 广告拦截引擎</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>4</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/log-analysis-user-statistics.html" title="什么是日志分析？它能透露关于访客的哪些信息？" class="tit" rel="nofollow">什么是日志分析？它能透露关于访客的哪些信息？</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>5</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/what-exactly-is-the-localhost.html" title="什么是 localhost？127.0.0.1 又是如何工作的？" class="tit" rel="nofollow">什么是 localhost？127.0.0.1 又是如何工作的？</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>6</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/fix-samsung-laptop-c-drive-inaccessibility.html" title="Windows 11 C 盘无法访问？微软官方修复三星电脑更新故障教程" class="tit" rel="nofollow">Windows 11 C 盘无法访问？微软官方修复三星电脑更新故障教程</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>7</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/windows-security-boot-certificate-update.html" title="Windows 安全启动证书即将过期，以下是更新至最新版本的方法" class="tit" rel="nofollow">Windows 安全启动证书即将过期，以下是更新至最新版本的方法</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>8</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/microsoft-activation-scripts.html" title="开源微软系统与软件激活工具合集 Microsoft Activation Scripts 3.10 更新发布" class="tit" rel="nofollow">开源微软系统与软件激活工具合集 Microsoft Activation Scripts 3.10 更新发布</a> </div>
+						  </li>
+                         </ul>
+                    </div>
+                </div>
+								<div class="rban1 mt15"> <script type="text/javascript">
+            var cpro_id = "u3487069";
+            
+    </script>
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/cm.js"></script> </div>                <div class="zixun mt15"><!--推荐阅读-->
+                    <div class="hd">
+                        <h3><span><a href="https://www.dayanzai.me/other" title="">MORE>></a></span>其它资源</h3>
+                    </div>
+                    <div class="bd">
+                        <ul class="text-list">						  <li class="up">
+							<div class="rank-c1"><em>1</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/google-launches-googlebook-for-pc.html" title="谷歌推出搭载三家芯片的  Googlebook，AI 交互成最大亮点" class="tit" rel="nofollow">谷歌推出搭载三家芯片的  Googlebook，AI 交互成最大亮点</a> </div>
+						  </li>
+ 						  <li class="up">
+							<div class="rank-c1"><em>2</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/what-is-remotion.html" title="什么是 Remotion？让 AI 大模型生成 React 代码搞定自动化视频生成" class="tit" rel="nofollow">什么是 Remotion？让 AI 大模型生成 React 代码搞定自动化视频生成</a> </div>
+						  </li>
+ 						  <li class="up">
+							<div class="rank-c1"><em>3</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/tails-os.html" title="完全匿名的 Linux 发行版 Tails 7.7.3 ISO 镜像发布下载" class="tit" rel="nofollow">完全匿名的 Linux 发行版 Tails 7.7.3 ISO 镜像发布下载</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>4</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/macos-sonoma.html" title="苹果发布 macOS Sonoma 14.8.7 (23J20) 正式版 系统镜像下载" class="tit" rel="nofollow">苹果发布 macOS Sonoma 14.8.7 (23J20) 正式版 系统镜像下载</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>5</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/macos-sequoia-compatibility.html" title="macOS Sequoia 15.7.7 下载，您的 Mac 兼容 macOS Sequoia 吗?" class="tit" rel="nofollow">macOS Sequoia 15.7.7 下载，您的 Mac 兼容 macOS Sequoia 吗?</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>6</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/alipay-benefits.html" title="<font color=#FC2E2E>支付宝碰一碰，周五支付有礼活动来了~</font>" class="tit" rel="nofollow"><font color=#FC2E2E>支付宝碰一碰，周五支付有礼活动来了~</font></a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>7</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/php.html" title="Web 开发最好的编程语言 PHP 8.5.6 正式版已发布下载！" class="tit" rel="nofollow">Web 开发最好的编程语言 PHP 8.5.6 正式版已发布下载！</a> </div>
+						  </li>
+ 						  <li >
+							<div class="rank-c1"><em>8</em></div>
+							<div class="title"> <a href="https://www.dayanzai.me/nextpad-for-mac.html" title="来自社区移植的 Nextpad++ for Mac，完美支持 Apple Silicon 与 Intel" class="tit" rel="nofollow">来自社区移植的 Nextpad++ for Mac，完美支持 Apple Silicon 与 Intel</a> </div>
+						  </li>
+                         </ul>
+                    </div>
+                </div>
+
+            </div>				<div class="rban1 mt15"> <script type="text/javascript">
+            var cpro_id = "u3487069";
+            
+    </script>
+    <script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/cm.js"></script> </div>				<div class="zxbq mt15"><!--最新标签-->
+					<div class="hd">
+                        <h3><span></span>最新标签</h3>
+                    </div>
+					<div class="label-box"><a href='https://www.dayanzai.me/tag/adobe' class="style10 f14 tag-link-5277 tag-link-position-1' title='8个话题' style='font-size: 8.9150326797386pt;">Adobe</a>
+<a href='https://www.dayanzai.me/tag/autodesk' class="style7 f22 tag-link-2447 tag-link-position-2' title='11个话题' style='font-size: 10.104575163399pt;">Autodesk</a>
+<a href='https://www.dayanzai.me/tag/chatgpt' class="style2 f16 tag-link-14441 tag-link-position-3' title='10个话题' style='font-size: 9.7385620915033pt;">ChatGPT</a>
+<a href='https://www.dayanzai.me/tag/github' class="style10 f20 tag-link-8990 tag-link-position-4' title='97个话题' style='font-size: 18.43137254902pt;">GitHub</a>
+<a href='https://www.dayanzai.me/tag/inno-setup-%e6%8a%80%e5%b7%a7' class="style7 f14 tag-link-3468 tag-link-position-5' title='19个话题' style='font-size: 12.117647058824pt;">Inno Setup 技巧</a>
+<a href='https://www.dayanzai.me/tag/inno-setup-%e6%95%99%e7%a8%8b' class="style10 f22 tag-link-3470 tag-link-position-6' title='21个话题' style='font-size: 12.483660130719pt;">Inno Setup 教程</a>
+<a href='https://www.dayanzai.me/tag/jetbrains' class="style1 f16 tag-link-8221 tag-link-position-7' title='8个话题' style='font-size: 8.9150326797386pt;">JetBrains</a>
+<a href='https://www.dayanzai.me/tag/linux-%e5%8f%91%e8%a1%8c%e7%89%88' class="style4 f18 tag-link-11817 tag-link-position-8' title='10个话题' style='font-size: 9.7385620915033pt;">Linux 发行版</a>
+<a href='https://www.dayanzai.me/tag/linux-%e7%b3%bb%e7%bb%9f' class="style6 f14 tag-link-11241 tag-link-position-9' title='7个话题' style='font-size: 8.4575163398693pt;">Linux 系统</a>
+<a href='https://www.dayanzai.me/tag/microsoft' class="style10 f20 tag-link-5503 tag-link-position-10' title='16个话题' style='font-size: 11.477124183007pt;">Microsoft</a>
+<a href='https://www.dayanzai.me/tag/office' class="style2 f18 tag-link-2488 tag-link-position-11' title='13个话题' style='font-size: 10.745098039216pt;">Office</a>
+<a href='https://www.dayanzai.me/tag/openai' class="style4 f16 tag-link-14459 tag-link-position-12' title='10个话题' style='font-size: 9.7385620915033pt;">OpenAI</a>
+<a href='https://www.dayanzai.me/tag/pdf-%e5%b7%a5%e5%85%b7' class="style10 f22 tag-link-176 tag-link-position-13' title='6个话题' style='font-size: 8pt;">PDF 工具</a>
+<a href='https://www.dayanzai.me/tag/pdf-%e7%bc%96%e8%be%91%e5%99%a8' class="style6 f18 tag-link-634 tag-link-position-14' title='11个话题' style='font-size: 10.104575163399pt;">PDF 编辑器</a>
+<a href='https://www.dayanzai.me/tag/pdf-%e9%98%85%e8%af%bb%e5%99%a8' class="style7 f22 tag-link-2232 tag-link-position-15' title='8个话题' style='font-size: 8.9150326797386pt;">PDF 阅读器</a>
+<a href='https://www.dayanzai.me/tag/win10-%e6%8a%80%e5%b7%a7' class="style6 f22 tag-link-11436 tag-link-position-16' title='24个话题' style='font-size: 13.032679738562pt;">Win10 技巧</a>
+<a href='https://www.dayanzai.me/tag/windows-10' class="style8 f18 tag-link-2260 tag-link-position-17' title='20个话题' style='font-size: 12.300653594771pt;">Windows 10</a>
+<a href='https://www.dayanzai.me/tag/windows-10-%e6%8a%80%e5%b7%a7' class="style6 f20 tag-link-11657 tag-link-position-18' title='19个话题' style='font-size: 12.117647058824pt;">Windows 10 技巧</a>
+<a href='https://www.dayanzai.me/tag/windows-11' class="style9 f14 tag-link-12458 tag-link-position-19' title='14个话题' style='font-size: 11.019607843137pt;">Windows 11</a>
+<a href='https://www.dayanzai.me/tag/windows-11-%e5%b0%8f%e6%8a%80%e5%b7%a7' class="style7 f16 tag-link-12857 tag-link-position-20' title='14个话题' style='font-size: 11.019607843137pt;">Windows 11 小技巧</a>
+<a href='https://www.dayanzai.me/tag/windows-11-%e6%8a%80%e5%b7%a7' class="style7 f20 tag-link-12631 tag-link-position-21' title='7个话题' style='font-size: 8.4575163398693pt;">Windows 11 技巧</a>
+<a href='https://www.dayanzai.me/tag/wise-soft' class="style2 f16 tag-link-3939 tag-link-position-22' title='10个话题' style='font-size: 9.7385620915033pt;">Wise Soft</a>
+<a href='https://www.dayanzai.me/tag/wordpress-%e6%8a%80%e5%b7%a7' class="style10 f20 tag-link-11482 tag-link-position-23' title='7个话题' style='font-size: 8.4575163398693pt;">WordPress 技巧</a>
+<a href='https://www.dayanzai.me/tag/%e4%bb%a3%e7%a0%81%e7%bc%96%e8%be%91%e5%99%a8' class="style9 f20 tag-link-3264 tag-link-position-24' title='15个话题' style='font-size: 11.202614379085pt;">代码编辑器</a>
+<a href='https://www.dayanzai.me/tag/%e5%85%8d%e8%b4%b9%e5%95%86%e7%94%a8%e5%ad%97%e4%bd%93' class="style6 f14 tag-link-10166 tag-link-position-25' title='36个话题' style='font-size: 14.588235294118pt;">免费商用字体</a>
+<a href='https://www.dayanzai.me/tag/%e5%85%8d%e8%b4%b9%e5%ad%97%e4%bd%93' class="style6 f14 tag-link-8621 tag-link-position-26' title='13个话题' style='font-size: 10.745098039216pt;">免费字体</a>
+<a href='https://www.dayanzai.me/tag/%e5%85%8d%e8%b4%b9%e5%ad%97%e4%bd%93%e4%b8%8b%e8%bd%bd' class="style10 f20 tag-link-9714 tag-link-position-27' title='8个话题' style='font-size: 8.9150326797386pt;">免费字体下载</a>
+<a href='https://www.dayanzai.me/tag/%e5%85%8d%e8%b4%b9%e8%bd%af%e4%bb%b6' class="style3 f14 tag-link-4273 tag-link-position-28' title='240个话题' style='font-size: 22pt;">免费软件</a>
+<a href='https://www.dayanzai.me/tag/%e5%8a%9e%e5%85%ac%e8%bd%af%e4%bb%b6' class="style3 f18 tag-link-2489 tag-link-position-29' title='26个话题' style='font-size: 13.307189542484pt;">办公软件</a>
+<a href='https://www.dayanzai.me/tag/%e5%8d%b8%e8%bd%bd%e5%b7%a5%e5%85%b7' class="style8 f20 tag-link-927 tag-link-position-30' title='6个话题' style='font-size: 8pt;">卸载工具</a>
+<a href='https://www.dayanzai.me/tag/%e5%9b%ba%e6%80%81%e7%a1%ac%e7%9b%98%e6%a3%80%e6%b5%8b%e5%b7%a5%e5%85%b7' class="style9 f22 tag-link-1227 tag-link-position-31' title='7个话题' style='font-size: 8.4575163398693pt;">固态硬盘检测工具</a>
+<a href='https://www.dayanzai.me/tag/%e5%9b%be%e5%83%8f%e5%a4%84%e7%90%86%e5%b7%a5%e5%85%b7' class="style2 f18 tag-link-1943 tag-link-position-32' title='11个话题' style='font-size: 10.104575163399pt;">图像处理工具</a>
+<a href='https://www.dayanzai.me/tag/%e5%9b%be%e5%83%8f%e6%9f%a5%e7%9c%8b%e5%99%a8' class="style4 f14 tag-link-2369 tag-link-position-33' title='7个话题' style='font-size: 8.4575163398693pt;">图像查看器</a>
+<a href='https://www.dayanzai.me/tag/%e5%9b%be%e5%83%8f%e6%b5%8f%e8%a7%88%e5%99%a8' class="style3 f16 tag-link-1507 tag-link-position-34' title='12个话题' style='font-size: 10.37908496732pt;">图像浏览器</a>
+<a href='https://www.dayanzai.me/tag/%e5%ae%89%e5%8d%93%e8%a7%86%e9%a2%91%e7%bc%96%e8%be%91%e5%99%a8' class="style10 f22 tag-link-6147 tag-link-position-35' title='8个话题' style='font-size: 8.9150326797386pt;">安卓视频编辑器</a>
+<a href='https://www.dayanzai.me/tag/%e5%ae%89%e8%a3%85%e5%8c%85%e5%88%b6%e4%bd%9c%e5%b7%a5%e5%85%b7' class="style1 f20 tag-link-1576 tag-link-position-36' title='7个话题' style='font-size: 8.4575163398693pt;">安装包制作工具</a>
+<a href='https://www.dayanzai.me/tag/%e5%b1%8f%e5%b9%95%e5%bd%95%e5%83%8f' class="style6 f18 tag-link-21 tag-link-position-37' title='13个话题' style='font-size: 10.745098039216pt;">屏幕录像</a>
+<a href='https://www.dayanzai.me/tag/%e5%b1%8f%e5%b9%95%e5%bd%95%e5%83%8f%e5%b7%a5%e5%85%b7' class="style9 f22 tag-link-1161 tag-link-position-38' title='12个话题' style='font-size: 10.37908496732pt;">屏幕录像工具</a>
+<a href='https://www.dayanzai.me/tag/%e5%b1%8f%e5%b9%95%e5%bd%95%e5%83%8f%e8%bd%af%e4%bb%b6' class="style1 f16 tag-link-7202 tag-link-position-39' title='10个话题' style='font-size: 9.7385620915033pt;">屏幕录像软件</a>
+<a href='https://www.dayanzai.me/tag/%e5%bc%80%e6%ba%90%e5%ad%97%e4%bd%93' class="style6 f18 tag-link-8620 tag-link-position-40' title='8个话题' style='font-size: 8.9150326797386pt;">开源字体</a>
+<a href='https://www.dayanzai.me/tag/%e5%bc%80%e6%ba%90%e8%bd%af%e4%bb%b6' class="style6 f14 tag-link-3725 tag-link-position-41' title='114个话题' style='font-size: 19.071895424837pt;">开源软件</a>
+<a href='https://www.dayanzai.me/tag/%e6%80%9d%e7%bb%b4%e5%af%bc%e5%9b%be' class="style7 f22 tag-link-2244 tag-link-position-42' title='7个话题' style='font-size: 8.4575163398693pt;">思维导图</a>
+<a href='https://www.dayanzai.me/tag/%e6%88%aa%e5%9b%be%e5%b7%a5%e5%85%b7' class="style10 f16 tag-link-1419 tag-link-position-43' title='11个话题' style='font-size: 10.104575163399pt;">截图工具</a>
+<a href='https://www.dayanzai.me/tag/%e6%95%b0%e6%8d%ae%e6%81%a2%e5%a4%8d' class="style7 f22 tag-link-261 tag-link-position-44' title='6个话题' style='font-size: 8pt;">数据恢复</a>
+<a href='https://www.dayanzai.me/tag/%e6%95%b0%e6%8d%ae%e6%81%a2%e5%a4%8d%e5%b7%a5%e5%85%b7' class="style5 f16 tag-link-844 tag-link-position-45' title='11个话题' style='font-size: 10.104575163399pt;">数据恢复工具</a>
+<a href='https://www.dayanzai.me/tag/%e6%96%87%e6%9c%ac%e7%bc%96%e8%be%91%e5%99%a8' class="style1 f20 tag-link-2463 tag-link-position-46' title='9个话题' style='font-size: 9.3725490196078pt;">文本编辑器</a>
+<a href='https://www.dayanzai.me/tag/%e6%a0%bc%e5%bc%8f%e8%bd%ac%e6%8d%a2%e5%b7%a5%e5%85%b7' class="style1 f22 tag-link-779 tag-link-position-47' title='9个话题' style='font-size: 9.3725490196078pt;">格式转换工具</a>
+<a href='https://www.dayanzai.me/tag/%e6%a1%8c%e9%9d%a2%e5%bd%95%e5%83%8f' class="style3 f14 tag-link-22 tag-link-position-48' title='10个话题' style='font-size: 9.7385620915033pt;">桌面录像</a>
+<a href='https://www.dayanzai.me/tag/%e6%b1%89%e5%8c%96%e5%b7%a5%e5%85%b7' class="style10 f20 tag-link-971 tag-link-position-49' title='6个话题' style='font-size: 8pt;">汉化工具</a>
+<a href='https://www.dayanzai.me/tag/%e7%b3%bb%e7%bb%9f%e4%bc%98%e5%8c%96%e5%b7%a5%e5%85%b7' class="style9 f20 tag-link-3918 tag-link-position-50' title='9个话题' style='font-size: 9.3725490196078pt;">系统优化工具</a>
+<a href='https://www.dayanzai.me/tag/%e7%b3%bb%e7%bb%9f%e5%a2%9e%e5%bc%ba' class="style3 f18 tag-link-4529 tag-link-position-51' title='10个话题' style='font-size: 9.7385620915033pt;">系统增强</a>
+<a href='https://www.dayanzai.me/tag/%e7%b3%bb%e7%bb%9f%e5%a2%9e%e5%bc%ba%e5%b7%a5%e5%85%b7' class="style7 f18 tag-link-5953 tag-link-position-52' title='18个话题' style='font-size: 11.934640522876pt;">系统增强工具</a>
+<a href='https://www.dayanzai.me/tag/%e7%bc%96%e7%a8%8b%e5%bc%80%e5%8f%91' class="style5 f16 tag-link-6293 tag-link-position-53' title='7个话题' style='font-size: 8.4575163398693pt;">编程开发</a>
+<a href='https://www.dayanzai.me/tag/%e8%a7%86%e9%a2%91%e6%92%ad%e6%94%be%e5%99%a8' class="style10 f14 tag-link-1916 tag-link-position-54' title='12个话题' style='font-size: 10.37908496732pt;">视频播放器</a>
+<a href='https://www.dayanzai.me/tag/%e8%a7%86%e9%a2%91%e7%bc%96%e8%be%91%e5%99%a8' class="style4 f20 tag-link-74 tag-link-position-55' title='6个话题' style='font-size: 8pt;">视频编辑器</a>
+<a href='https://www.dayanzai.me/tag/%e8%a7%86%e9%a2%91%e8%bd%ac%e6%8d%a2%e5%99%a8' class="style10 f20 tag-link-998 tag-link-position-56' title='7个话题' style='font-size: 8.4575163398693pt;">视频转换器</a>
+<a href='https://www.dayanzai.me/tag/%e8%a7%86%e9%a2%91%e8%bd%ac%e6%8d%a2%e5%b7%a5%e5%85%b7' class="style10 f14 tag-link-689 tag-link-position-57' title='24个话题' style='font-size: 13.032679738562pt;">视频转换工具</a>
+<a href='https://www.dayanzai.me/tag/%e8%a7%a3%e5%8e%8b%e7%bc%a9%e5%b7%a5%e5%85%b7' class="style2 f22 tag-link-3477 tag-link-position-58' title='7个话题' style='font-size: 8.4575163398693pt;">解压缩工具</a>
+<a href='https://www.dayanzai.me/tag/%e9%9f%b3%e4%b9%90%e6%92%ad%e6%94%be%e5%99%a8' class="style7 f18 tag-link-3007 tag-link-position-59' title='8个话题' style='font-size: 8.9150326797386pt;">音乐播放器</a>
+<a href='https://www.dayanzai.me/tag/%e9%9f%b3%e9%a2%91%e8%bd%ac%e6%8d%a2%e5%b7%a5%e5%85%b7' class="style2 f18 tag-link-395 tag-link-position-60' title='7个话题' style='font-size: 8.4575163398693pt;">音频转换工具</a></div>
+				</div>
+				<div class="c-ad mt20"><span id="5" class="tyTestPos"></span></div>
+			</div>
+			<div class="col-md-4">
+  
+  
+  <div id="sidebar" class="sidebar-widgets-wrap clearfix">
+    
+      </div>
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+</div>
+<div id="gotoTop" class="backtop"><span>返回顶部</span></div>
+
+<script type="text/javascript" src="https://www.dayanzai.me/wp-content/themes/dayanzai/js/functions.js"></script> 
+<div id="footer" class="mt20">
+    <div class="bottom">
+        <div class="w1200">
+<div class="footer_in">
+	<div class="footltit">
+		<div class="foottit1 a1">联系我们</div>
+		<div class="foottit2 a2">网站导航</div>
+		<div class="foottit3 a3">支持我们</div>
+	</div>
+	<div class="footlcont">
+		<div class="footcont1 a1"><p>有合作事业等可联系我们：<br>
+			邮箱：<a href="mailto:wcxu21@126.com" target="_blank" class="si-email3" title="点击发送邮件">wcxu21@126.com</a><br>
+			QQ：<a href="https://wpa.qq.com/msgrd?v=3&uin=2339736422&site=qq&menu=yes" target="_blank">2339736422</a>（大眼仔~旭）<br>
+			QQ群：<a href="https://qm.qq.com/q/VYHUmBoKac" target="_blank">632032882（点击加群）</a></p>
+			<div class="bt s"><a href="https://www.dayanzai.me/about" target="_blank">关于本站</a><a href="https://www.dayanzai.me/ads" target="_blank">广告合作</a><a href="https://www.dayanzai.me/sitemap_baidu.xml" target="_blank">站点地图</a></div>
+		</div>
+		<div class="footcont2 a2"><ul id="menu-dyz_bottomnav" class="footer_in_link"><li class="current-post-ancestor"><a href="https://www.dayanzai.me/windows">微软应用</a></li>
+<li><a href="https://www.dayanzai.me/android">安卓应用</a></li>
+<li><a href="https://www.dayanzai.me/tutorial">教程资源</a></li>
+<li><a href="https://www.dayanzai.me/other">其它资源</a></li>
+<li><a href="https://www.dayanzai.me/about">关于我们</a></li>
+<li><a href="https://www.dayanzai.me/copyright">版权声明</a></li>
+</ul>			<div class="bt d"><a href="https://www.dayanzai.me/about" target="_blank">支持我们</a><a href="https://weibo.com/wcxu21" target="_blank"><i class="fa fa-weibo fa-2x"></i></a><a href="https://www.dayanzai.me/weixin" target="_blank"><i class="fa fa-tencent-weibo fa-2x"></i></a><a href="http://wpa.qq.com/msgrd?v=3&uin=2339736422&site=qq&menu=yes" target="_blank"><i class="fa fa-qq fa-2x"></i></a></div>
+		</div>
+		<div class="footcont3" style="float:right">
+			<a target="_blank" href="https://www.dayanzai.me/about" class="pays"><img src="/wp-content/themes/Dayanzai/images/wxpay.png" alt="微信捐赠"></a>
+			<a target="_blank" href="https://www.dayanzai.me/about" class="pays"><img src="/wp-content/themes/Dayanzai/images/zfbpay.png" alt="支付宝捐赠"></a>
+		</div>
+	</div>
+</div>
+	  <p style="border-top:1px solid #555; height:25px; margin-top:15px;"></p>
+      <p class="tips_text">本站是非经营性网站，网站资源部分收集整理于互联网，其著作权归原作者所有，如果有侵犯您权利的资源，请来信告知（附上权利证明到 wcxu21@126.com），我们将及时撤销相应资源。</p><p class="tips_text">Copyright © 2014~2026 WwW.DaYanZai.Me 保留所有权利<a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank">豫ICP备14005066号-1</a><span style="color: #ff2f1b;font-size: 20px">♥</span></p>        </div>
+    </div>
+</div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?dd923d5b273566d0e807590933596fc6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<script>(function(e) {
+    function t(e) {
+      var t = location.href,
+      n = t.split("").reverse(),
+      r = e.split(""),
+      i = [];
+      for (var s = 0,
+      o = 16; s < o; s++) i.push(r[s] + (n[s] || ""));
+      return i.join("")
+    }
+    var n = /([http|https]:\/\/[a-zA-Z0-9\_\.]+\.so\.com)/gi,
+    r = e.location.href;
+    if (r && !n.test(r) && window.navigator.appName) {
+      var i = "//s.360.cn/so/zz.gif",
+      o = "d182b3f28525f2db83acfaaf6e696dba",
+      u = t(o),
+      a = new Image;
+      r && (i += "?url=" + encodeURIComponent(r)),
+      o && (i += "&sid=" + o),
+      u && (i += "&token=" + u),
+      o && (a.src = i)
+    }
+  })(window);</script><script type="text/javascript">
+    /*自适应 创建于 2018/7/18*/
+    var cpro_id = "u3487072";
+</script>
+<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/cnw.js"></script>
+</body>
+</html><!-- WP Fastest Cache file was created in 0.625 seconds, on 15-05-26 18:42:07 --><!-- via php -->

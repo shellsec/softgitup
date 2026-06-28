@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import os
+import shlex
 import sys
 
 
@@ -16,10 +17,57 @@ def repo_root(from_file: str | None = None) -> str:
         return os.path.dirname(os.path.abspath(sys.executable))
     if from_file:
         path = os.path.abspath(from_file)
-        if os.path.basename(path).startswith("run_saved") or path.replace("\\", "/").endswith("/tools/run_saved_apps.py"):
+        norm = path.replace("\\", "/")
+        if os.path.basename(path).startswith("run_saved") or norm.endswith("/tools/run_saved_apps.py"):
             return os.path.dirname(os.path.dirname(path))
+        if norm.endswith("/tools/soft_page_check/search_pages.py"):
+            return os.path.dirname(os.path.dirname(os.path.dirname(path)))
         return os.path.dirname(path)
     return os.path.dirname(os.path.abspath(sys.argv[0]))
+
+
+def soft_page_check_dir(from_file: str | None = None) -> str:
+    return os.path.join(repo_root(from_file), "tools", "soft_page_check")
+
+
+def prompt_cli_line(
+    usage_lines: list[str],
+    prompt: str,
+    *,
+    allow_empty: bool = False,
+) -> str | None:
+    """无命令行参数时展示用法并读一行；取消或空输入返回 None。"""
+    for line in usage_lines:
+        print(line)
+    print()
+    try:
+        text = input(prompt).strip()
+    except (EOFError, KeyboardInterrupt):
+        print("\n已取消。")
+        return None
+    if not text:
+        if allow_empty:
+            return ""
+        print("未输入，已退出。")
+        return None
+    return text
+
+
+def argv_from_prompt(
+    usage_lines: list[str],
+    prompt: str,
+) -> bool:
+    """
+    若 sys.argv 仅有程序名，则提示输入并 shlex 拆入 sys.argv。
+    返回 False 表示用户取消或空输入（调用方应 exit 0）。
+    """
+    if len(sys.argv) > 1:
+        return True
+    text = prompt_cli_line(usage_lines, prompt)
+    if text is None:
+        return False
+    sys.argv[1:] = shlex.split(text, posix=(os.name != "nt"))
+    return True
 
 
 def resolve_auto_update_argv(root: str, extra: list[str] | None = None) -> list[str]:

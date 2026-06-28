@@ -6,6 +6,7 @@ set "SITE=%~1"
 if "%SITE%"=="" goto usage
 
 if /i "%SITE%"=="423down" goto site_423down
+if /i "%SITE%"=="gamer520" goto site_gamer520
 if /i "%SITE%"=="7xiazai" goto site_7xiazai
 if /i "%SITE%"=="hybase" goto site_hybase
 if /i "%SITE%"=="dayanzai" goto site_dayanzai
@@ -19,6 +20,13 @@ echo === 423down digest 快检 ===
 call refresh_urls.bat 423down nopause || goto fail
 python fetch_titles.py --scope 423down --compare || goto fail
 call :summary changed_423down_urls.txt last_diff_423down.json 423down
+goto finish
+
+:site_gamer520
+echo === gamer520 快检（近期文章）===
+call refresh_urls.bat gamer520 nopause || goto fail
+python fetch_titles.py --scope gamer520 --compare || goto fail
+call :summary changed_gamer520_urls.txt last_diff_gamer520.json gamer520
 goto finish
 
 :site_7xiazai
@@ -84,7 +92,7 @@ exit /b 1
 
 :usage
 echo 用法: monthly_check_site.bat ^<站点^>
-echo   423down  7xiazai  hybase  dayanzai  down66
+echo   423down  gamer520  7xiazai  hybase  dayanzai  down66
 echo.
 echo 多站连跑: monthly_check_list.bat
 echo 全量:     monthly_check_full.bat

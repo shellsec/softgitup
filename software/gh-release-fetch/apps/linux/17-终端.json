@@ -235,5 +235,34 @@
     "save_name": "rio-linux",
     "releases_url": "https://bgithub.xyz/raphamorim/rio/releases",
     "repo_path": "raphamorim/rio"
+  },
+  {
+    "id": "termora",
+    "简介": "Termora（终端/SSH 客户端）",
+    "分类": "终端",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum"
+    ],
+    "releases_url": "https://bgithub.xyz/TermoraDev/termora/releases",
+    "repo_path": "TermoraDev/termora"
   }
 ]

@@ -98,15 +98,16 @@ Categorized **Gitee** repos under [`GiteeExploreHot/catalog/`](GiteeExploreHot/c
 
 **Optional intro-page monitor: [`tools/soft_page_check/`](tools/soft_page_check/)**
 
-Separate from the GitHub **`apps/`** catalog: tracks **page titles** on dayanzai, down66, 7xiazai, hybase, 423down, tier-A install pages, etc. Use repo-root **[`search_soft_pages.bat`](search_soft_pages.bat)** to search ~5500+ indexed URLs and open matches in the browser. **No arguments:** prompts for keywords (same as `lookup_app.bat`).
+Separate from the GitHub **`apps/`** catalog: tracks **page titles** on dayanzai, down66, 7xiazai, hybase, 423down, **gamer520** (games), tier-A install pages, etc. Use repo-root **[`search_soft_pages.bat`](search_soft_pages.bat)** to search ~5500+ indexed URLs and open matches in the browser. **Games:** [`search_games.bat`](search_games.bat) (gamer520 only). **No arguments:** prompts for keywords (same as `lookup_app.bat`).
 
 | Task | Entry |
 |------|--------|
 | Search titles / open URLs | **`search_soft_pages.bat`** or **`search_soft_pages.bat <keyword>`** (repo root) |
+| Search game pages (gamer520) | **`search_games.bat`** or **`search_games.bat <keyword>`** |
 | Monthly SOP | `tools\soft_page_check\monthly_sop.bat` |
 | **Monthly · tier A** (~42 pages, ~15s) | `tools\soft_page_check\monthly_check.bat` |
 | **Quarterly · all channels** (~2300+ pages, ~20–35 min; title diff only) | `tools\soft_page_check\monthly_check_full.bat` |
-| Per-site check / open changed URLs | `monthly_check_site.bat <site>` / `open_changed_site.bat <site>` |
+| Per-site check / open changed URLs | `monthly_check_site.bat <site>` / `open_changed_site.bat <site>` (`423down` `7xiazai` `hybase` `dayanzai` `down66` **`gamer520`**) |
 | List four sites batch | `tools\soft_page_check\monthly_check_list.bat` (7xiazai + hybase + dayanzai + down66) |
 | Refresh URL lists | `tools\soft_page_check\refresh_urls.bat` |
 | Prune dated snapshots | `tools\soft_page_check\prune_artifacts.bat` |
@@ -175,13 +176,15 @@ The script handles **version resolution and asset matching**; you search by name
 
 ### No Python (Windows · optional exe)
 
-Pack the main workflow into **3 exe files** beside [`apps/`](apps/); matching bats **prefer exe**, then fall back to `python`.
+Pack **5 exe files** beside [`apps/`](apps/). Bats use **Python when installed**, otherwise **exe**. Double-clicking an exe also prompts for keywords when run with no args.
 
 | exe | bat | Role |
 |-----|-----|------|
-| `lookup_app.exe` | [`lookup_app.bat`](lookup_app.bat) | Fuzzy search → actions 1/2/3/4 |
-| `auto_update.exe` | [`run_update.bat`](run_update.bat) | Download/update (batch or by id) |
-| `run_saved_apps.exe` | [`run_saved_apps.bat`](run_saved_apps.bat) | Update from `saved_apps_*.json` |
+| `lookup_app.exe` | [`lookup_app.bat`](lookup_app.bat) | Search → actions 1/2/3/4 |
+| `run_saved_apps.exe` | [`run_saved_apps.bat`](run_saved_apps.bat) | Batch update from saved list |
+| `search_soft_pages.exe` | [`search_soft_pages.bat`](search_soft_pages.bat) | Search intro-page titles |
+| `search_games.exe` | [`search_games.bat`](search_games.bat) | Search gamer520 game pages |
+| `auto_update.exe` | [`run_update.bat`](run_update.bat) / lookup download | Download engine |
 
 Build (needs Python **once** on the build machine):
 
@@ -189,7 +192,21 @@ Build (needs Python **once** on the build machine):
 powershell -ExecutionPolicy Bypass -File tools\build_exe.ps1
 ```
 
-Output: `dist/exe/` — copy the three exe files to the repo root. `search_soft_pages.bat` and maintainer scripts still need Python.
+Output: `dist/exe/` — copy all **5 exe** files to the repo root. Maintainer scripts still need Python.
+
+**Windows Release zip** (exe + catalog + soft_page_check index, ready to unzip):
+
+```bat
+pack_windows_release.bat
+```
+
+Or:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File tools\pack_windows_release.ps1 -Version 1.0.0
+```
+
+Output: `dist/release/gh-release-fetch-windows-<version>.zip`. Details: [`release/windows/PACKAGING.md`](release/windows/PACKAGING.md).
 
 ### Dependencies (`requirements.txt`)
 
@@ -256,6 +273,26 @@ lookup_app.bat drawio
 python lookup_app.py drawio
 ```
 
+**Quick reference** (matches the on-screen help when you run `lookup_app` with no arguments):
+
+```text
+Usage: lookup_app [options and keywords...]
+Examples: lookup_app drawio
+         lookup_app --platform android termux
+After picking rows: 1=download now  2=save+download  3=save list  4=enable
+Non-interactive:    lookup_app -y --download drawio
+```
+
+**No arguments:** `lookup_app.bat` prompts for a keyword (you can type `--platform android termux` on the same line).
+
+**Two-step flow:** search → pick row (`1`, `1,3`, `a`, or **Enter** to skip) → pick action **1**–**4**. Short keywords like `draw` often match **three rows** (darwin / linux / windows with the same `id`); pick the right platform or narrow with `--platform windows drawio`.
+
+```text
+lookup_app.bat draw
+> 3          # windows row
+> 1          # download now (does not change enabled)
+```
+
 Lists **platform**, **shard path**, **category**, and **enabled**. Interactive flow: **pick rows** → **pick action**:
 
 | Action | Meaning |
@@ -278,6 +315,19 @@ Lists **platform**, **shard path**, **category**, and **enabled**. Interactive f
 | `--min-score N` | Match threshold (default 40) |
 
 At the row prompt: index `1` or `1,3`, `a` for all, **Enter** to skip.
+
+### Option A″: game channel search (gamer520)
+
+Search **game intro pages** on gamer520.com and open URLs in the browser. Does **not** download files. Open-source tools → `lookup_app`; utility intro pages → `search_soft_pages`.
+
+```bat
+search_games.bat
+search_games.bat 艾尔登
+search_games.bat --open 黑神话
+search_games.bat --stats
+```
+
+Refresh URL list: `tools\soft_page_check\refresh_urls.bat gamer520` (**50 listing pages** by default, ~1000 URLs). Title check: `monthly_check_site.bat gamer520` (run twice for baseline).
 
 ### Option A′: intro-page title search (not the GitHub catalog)
 
@@ -433,8 +483,10 @@ search_soft_pages.bat 7zip
 |------|---------|
 | Fuzzy search GitHub catalog / saved list | `lookup_app.bat <keyword>` (§3) |
 | Search intro-page titles / open URLs | **`search_soft_pages.bat`** (no-arg interactive) |
+| Search game pages (gamer520) | **`search_games.bat`** |
 | Update from saved list | **`run_saved_apps.bat`** or `python tools/run_saved_apps.py` |
 | Build Windows exe (no Python for daily use) | `powershell -File tools\build_exe.ps1` → copy `dist/exe/*.exe` to repo root |
+| **Pack Release zip (one-click)** | **`pack_windows_release.bat`** or `tools\pack_windows_release.ps1` |
 | Regenerate RECOMMENDED*.md | `python tools/generate_recommended_md.py` |
 | Refresh [`CATALOG.md`](CATALOG.md) | `python tools/generate_catalog_index.py` |
 

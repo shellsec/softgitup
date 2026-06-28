@@ -763,5 +763,133 @@
     "releases_url": "https://bgithub.xyz/Exafunction/Windsurf/releases",
     "repo_path": "Exafunction/Windsurf",
     "url_hint": "windsurf"
+  },
+  {
+    "id": "notepad4",
+    "简介": "Notepad4（Notepad2 分支）",
+    "分类": "编辑器",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum"
+    ],
+    "releases_url": "https://bgithub.xyz/zufuliu/notepad4/releases",
+    "repo_path": "zufuliu/notepad4"
+  },
+  {
+    "id": "markdown_it",
+    "简介": "markdown-it（JS 库 Release，非安装包）",
+    "分类": "编辑器",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum"
+    ],
+    "installer_extensions": [
+      ".tgz",
+      ".zip"
+    ],
+    "releases_url": "https://bgithub.xyz/markdown-it/markdown-it/releases",
+    "repo_path": "markdown-it/markdown-it"
+  },
+  {
+    "id": "weasel",
+    "简介": "小狼毫 Weasel（Windows Rime 输入法）",
+    "分类": "编辑器",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "weasel",
+      "installer"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "releases_url": "https://bgithub.xyz/rime/weasel/releases",
+    "repo_path": "rime/weasel"
+  },
+  {
+    "id": "wind_input",
+    "简介": "WindInput（Windows 输入法）",
+    "分类": "编辑器",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum"
+    ],
+    "releases_url": "https://bgithub.xyz/huanfeng/WindInput/releases",
+    "repo_path": "huanfeng/WindInput"
   }
 ]

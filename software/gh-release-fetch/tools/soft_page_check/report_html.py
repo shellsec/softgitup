@@ -40,6 +40,15 @@ SCOPE_META = {
         "changed_txt": "changed_423down_urls.txt",
         "accent": "#d97706",
     },
+    "gamer520": {
+        "id": "gamer520",
+        "title": "gamer520 · 游戏",
+        "desc": "gamer520.com 近期文章（首页 50 页分页，非全站 sitemap）",
+        "snapshot": "titles_latest_GAMER520.json",
+        "diff": "last_diff_gamer520.json",
+        "changed_txt": "changed_gamer520_urls.txt",
+        "accent": "#7c2d12",
+    },
 }
 
 for _scope_key in LIST_SCOPE_DEFS:
@@ -344,7 +353,7 @@ def _render_list_site_group(group: dict) -> str:
 
 def build_index_html() -> Path:
     REPORTS.mkdir(parents=True, exist_ok=True)
-    core_scopes = [_collect_scope_data(k) for k in ("a", "all", "423down")]
+    core_scopes = [_collect_scope_data(k) for k in ("a", "all", "423down", "gamer520")]
     list_sections = [_render_list_site_group(g) for g in LIST_SITE_GROUPS]
     all_data = core_scopes + [d for g in LIST_SITE_GROUPS for d in [_collect_scope_data(s) for s in g["scopes"]]]
     generated = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -511,6 +520,7 @@ def build_index_html() -> Path:
       <a href="#scope-a">A 类</a>
       <a href="#scope-all">装机全量</a>
       <a href="#scope-423down">423down</a>
+      <a href="#scope-gamer520">gamer520</a>
       <a href="#site-7xiazai">7xiazai</a>
       <a href="#site-hybase">hybase</a>
       <a href="#site-dayanzai">dayanzai</a>

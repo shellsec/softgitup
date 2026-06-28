@@ -206,5 +206,63 @@
     "kill_before_install": false,
     "run_installer": false,
     "url_hint": "boostnote"
+  },
+  {
+    "id": "flymd",
+    "简介": "flymd（Markdown 编辑器）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum"
+    ],
+    "releases_url": "https://bgithub.xyz/flyhunterl/flymd/releases",
+    "repo_path": "flyhunterl/flymd"
+  },
+  {
+    "id": "doocs_md",
+    "简介": "doocs/md（Markdown 编辑器）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum"
+    ],
+    "releases_url": "https://bgithub.xyz/doocs/md/releases",
+    "repo_path": "doocs/md"
   }
 ]

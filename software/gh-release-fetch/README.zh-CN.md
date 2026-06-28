@@ -103,22 +103,23 @@ GH Release Fetch: 500+ app catalog — search by name, download/update without h
 
 ### soft_page_check（介绍页标题监控 · 可选）
 
-目录 [`tools/soft_page_check/`](tools/soft_page_check/) 与主 `apps/` **独立**：监控 **dayanzai / down66 / 7xiazai / hybase / 423down / 装机 A 类** 等介绍页的 `<title>` 变化，用于发现「可能有新版本」的资讯页，**不负责** GitHub 自动下载。
+目录 [`tools/soft_page_check/`](tools/soft_page_check/) 与主 `apps/` **独立**：监控 **dayanzai / down66 / 7xiazai / hybase / 423down / gamer520（游戏）/ 装机 A 类** 等介绍页的 `<title>` 变化，用于发现「可能有新版本」的资讯页，**不负责** GitHub 自动下载。
 
 | 用途 | 入口 |
 |------|------|
 | **按标题搜介绍页并打开** | 仓库根 **`search_soft_pages.bat`**（无参数时提示输入关键词；亦支持 `search_soft_pages.bat 7zip`） |
+| **按标题搜游戏页（gamer520）** | 仓库根 **`search_games.bat`** |
 | 月度快检 SOP | `tools\soft_page_check\monthly_sop.bat` |
 | **每月 · A 类**（~42 页，~15 秒） | `tools\soft_page_check\monthly_check.bat` |
 | **每季 · 频道全量**（~2300+ 页，~20–35 分钟，**只比标题、不下载**） | `tools\soft_page_check\monthly_check_full.bat` |
-| 单站快检 / 打开变化页 | `monthly_check_site.bat <站点>` / `open_changed_site.bat <站点>`（`423down` `7xiazai` `hybase` `dayanzai` `down66`） |
+| 单站快检 / 打开变化页 | `monthly_check_site.bat <站点>` / `open_changed_site.bat <站点>`（`423down` `7xiazai` `hybase` `dayanzai` `down66` **`gamer520`**） |
 | list 四站连跑 | `tools\soft_page_check\monthly_check_list.bat`（7xiazai + hybase + dayanzai + down66） |
 | 刷新 URL 清单 | `tools\soft_page_check\refresh_urls.bat`（`core` / `all` / `423down` / `7xiazai` …） |
 | 清理历史快照 | `tools\soft_page_check\prune_artifacts.bat` |
 | HTML 报告 | `tools\soft_page_check\open_report.bat` → `reports/index.html` |
 | A 类 GitHub 页变化后拉 Release | `tools\soft_page_check\fetch_github_on_changes.bat`（只读引用本仓库 `apps/` + `auto_update.py`） |
 
-**与 `lookup_app` 的分工**：`lookup_app` → **GitHub Releases 清单**；`search_soft_pages` → **各站介绍页标题**。本仓库通常**无** `Lastb_soft_version.txt`，快检会沿用 `soft_page_check` 内已有 URL 缓存；装机发布流程（`generate_and_push.bat` / `software/`）属可选的 SoftGitUp 侧，**gh-release-fetch 主流程用 `run_saved_apps.bat` 等**。首次快检需连跑两次才建立「标题变化」基线，详见 [`tools/soft_page_check/README.md`](tools/soft_page_check/README.md)。
+**与 `lookup_app` 的分工**：`lookup_app` → **GitHub Releases 清单**；`search_soft_pages` → **各站工具介绍页标题**；`search_games` → **gamer520 游戏页**（均只打开链接，不自动下载）。本仓库通常**无** `Lastb_soft_version.txt`；首次快检需连跑两次才建立「标题变化」基线，详见 [`tools/soft_page_check/README.md`](tools/soft_page_check/README.md)。
 
 ```bat
 search_soft_pages.bat
@@ -126,6 +127,7 @@ REM 无参数：提示输入关键词（与 lookup_app.bat 相同交互）
 search_soft_pages.bat 7zip
 search_soft_pages.bat --scope dayanzai 优化
 search_soft_pages.bat --stats
+search_games.bat 艾尔登
 ```
 
 ### 仓库现状与收录范围（约略）
@@ -199,13 +201,15 @@ Windows 可从 [大眼仔旭 Windows 专区](https://www.dayanzai.me/windows) �
 
 ### 无 Python（Windows · 可选 exe）
 
-可将主流程打成 **3 个 exe**，与 [`apps/`](apps/) 放在**同一仓库根目录**；对应 bat **优先调用 exe**，没有 exe 再 fallback `python`。
+可将日常流程打成 **5 个 exe**，与 [`apps/`](apps/) 放在**同一仓库根目录**。对应 bat：**有 Python 时走 `.py`**，**无 Python 时用 exe**（双击 exe 也会提示输入关键词）。
 
 | exe | bat | 作用 |
 |-----|-----|------|
-| `lookup_app.exe` | [`lookup_app.bat`](lookup_app.bat) | 模糊搜索 → 1/2/3/4 操作 |
-| `auto_update.exe` | [`run_update.bat`](run_update.bat) | 下载/更新（批量或指定 id） |
-| `run_saved_apps.exe` | [`run_saved_apps.bat`](run_saved_apps.bat) | 按 `saved_apps_*.json` 批量更新 |
+| `lookup_app.exe` | [`lookup_app.bat`](lookup_app.bat) | 模糊搜索 → 1/2/3/4 |
+| `run_saved_apps.exe` | [`run_saved_apps.bat`](run_saved_apps.bat) | 按列表批量更新 |
+| `search_soft_pages.exe` | [`search_soft_pages.bat`](search_soft_pages.bat) | 搜工具介绍页标题（打开链接） |
+| `search_games.exe` | [`search_games.bat`](search_games.bat) | 搜 gamer520 游戏页（打开链接） |
+| `auto_update.exe` | [`run_update.bat`](run_update.bat) / lookup 选 1 调用 | 下载引擎 |
 
 打包（本机需 Python **一次**）：
 
@@ -213,7 +217,21 @@ Windows 可从 [大眼仔旭 Windows 专区](https://www.dayanzai.me/windows) �
 powershell -ExecutionPolicy Bypass -File tools\build_exe.ps1
 ```
 
-产物在 `dist/exe/`，复制上述 3 个 exe 到仓库根即可。`search_soft_pages.bat`、维护脚本仍依赖 Python。
+产物在 `dist/exe/`，复制上述 **5 个 exe** 到仓库根即可。维护脚本（`monthly_check` 等）仍依赖 Python。
+
+**打 Release 附件 zip**（含 exe + 清单 + 索引，解压即用）：
+
+```bat
+pack_windows_release.bat
+```
+
+或：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File tools\pack_windows_release.ps1 -Version 1.0.0
+```
+
+输出 `dist/release/gh-release-fetch-windows-<版本>.zip`，说明见 [`release/windows/PACKAGING.md`](release/windows/PACKAGING.md)。
 
 ### Python 依赖（requirements.txt）
 
@@ -306,6 +324,26 @@ lookup_app.bat drawio
 python lookup_app.py drawio
 ```
 
+**速查**（与无参数运行 `lookup_app` 时屏幕提示一致）：
+
+```text
+用法: lookup_app [选项与关键词...]
+示例: lookup_app drawio
+      lookup_app --platform android termux
+选条目后: 1=立刻下载  2=加入并下载  3=加入列表  4=启用
+跳过交互: lookup_app -y --download drawio
+```
+
+**无参数：** 直接运行 `lookup_app.bat` 会提示输入关键词（同一行可带 `--platform android termux` 等）。
+
+**两步交互：** 搜索 → 选序号（`1`、`1,3`、`a`，**回车**跳过）→ 选操作 **1**–**4**。短关键词如 `draw` 常出现 **三条**（darwin / linux / windows，同一 `id`）；选对平台，或用 `--platform windows drawio` 缩小范围。
+
+```text
+lookup_app.bat draw
+> 3          # 选 windows 行
+> 1          # 立刻下载（不改 enabled）
+```
+
 脚本会列出匹配项的 **平台**、**分片路径**、**分类**、当前 **enabled** 状态。交互流程：**选序号** → **选操作**：
 
 | 操作 | 说明 |
@@ -330,6 +368,19 @@ python lookup_app.py drawio
 | `--min-score N` | 调低/调高模糊匹配阈值（默认 40） |
 
 交互时：`1` 或 `1,3` 选序号，`a` 选全部，**回车** 跳过。
+
+### 方式 A″：游戏频道搜索（gamer520）
+
+在 **gamer520.com** 已抓取标题中搜索并打开浏览器。**不提供**自动下载；开源工具用 `lookup_app`，工具介绍页用 `search_soft_pages`。
+
+```bat
+search_games.bat
+search_games.bat 艾尔登
+search_games.bat --open 黑神话
+search_games.bat --stats
+```
+
+刷新 URL 清单：`tools\soft_page_check\refresh_urls.bat gamer520`（默认抓 **50 页**，约千条）。标题快检：`monthly_check_site.bat gamer520`（首次需连跑两次建基线）。
 
 ### 方式 A′：介绍页标题搜索（非 GitHub 清单）
 
@@ -576,6 +627,7 @@ search_soft_pages.bat 7zip
 |------|------|
 | GitHub 清单模糊查找 / 加入更新列表 | `lookup_app.bat <关键词>`（见 §3） |
 | 介绍页标题搜索 / 打开链接 | **`search_soft_pages.bat`**（无参数可交互输入） |
+| 游戏页标题搜索（gamer520） | **`search_games.bat`** |
 | 按列表一键更新 | **`run_saved_apps.bat`** 或 `python tools/run_saved_apps.py` |
 | Windows 无 Python 打包 exe | `powershell -File tools\build_exe.ps1` → 复制 `dist/exe/*.exe` 到仓库根 |
 | 刷新推荐导读 Markdown | `python tools/generate_recommended_md.py` |

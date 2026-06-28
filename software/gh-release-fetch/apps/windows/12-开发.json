@@ -1711,5 +1711,63 @@
     "save_name": "ddev-installer.exe",
     "releases_url": "https://bgithub.xyz/ddev/ddev/releases",
     "repo_path": "ddev/ddev"
+  },
+  {
+    "id": "laxuhub",
+    "简介": "Laxuhub",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum"
+    ],
+    "releases_url": "https://bgithub.xyz/ashi876/Laxuhub/releases",
+    "repo_path": "ashi876/Laxuhub"
+  },
+  {
+    "id": "softgitup",
+    "简介": "softgitup",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum"
+    ],
+    "releases_url": "https://bgithub.xyz/shellsec/softgitup/releases",
+    "repo_path": "shellsec/softgitup"
   }
 ]

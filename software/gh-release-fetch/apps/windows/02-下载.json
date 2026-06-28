@@ -386,5 +386,47 @@
     "kill_before_install": false,
     "run_installer": false,
     "url_hint": "persepolis_download_manager"
+  },
+  {
+    "id": "ghost_downloader_3",
+    "简介": "Ghost Downloader 3（多线程下载器）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      "Linux",
+      "macOS",
+      "Android",
+      "arm64",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Windows-x86_64",
+      "Setup.exe"
+    ],
+    "installer_extensions": [".exe"],
+    "windows_installer": true,
+    "run_installer": true,
+    "releases_url": "https://bgithub.xyz/XiaoYouChR/Ghost-Downloader-3/releases",
+    "repo_path": "XiaoYouChR/Ghost-Downloader-3"
   }
 ]

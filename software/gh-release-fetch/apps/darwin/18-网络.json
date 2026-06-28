@@ -301,5 +301,34 @@
     "save_name": "xh-darwin-arm64",
     "releases_url": "https://bgithub.xyz/ducaale/xh/releases",
     "repo_path": "ducaale/xh"
+  },
+  {
+    "id": "simple_web_server",
+    "简介": "Simple Web Server",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum"
+    ],
+    "releases_url": "https://bgithub.xyz/terreng/simple-web-server/releases",
+    "repo_path": "terreng/simple-web-server"
   }
 ]

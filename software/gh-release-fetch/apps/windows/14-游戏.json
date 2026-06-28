@@ -738,5 +738,34 @@
     "kill_before_install": false,
     "run_installer": false,
     "url_hint": "my_nes"
+  },
+  {
+    "id": "naughty_damage_pack",
+    "简介": "NaughtyDamagePack",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum"
+    ],
+    "releases_url": "https://bgithub.xyz/fzxx/NaughtyDamagePack/releases",
+    "repo_path": "fzxx/NaughtyDamagePack"
   }
 ]

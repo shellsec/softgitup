@@ -30,7 +30,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__)) if not getattr(sys, "fro
 if SCRIPT_DIR not in sys.path:
     sys.path.insert(0, SCRIPT_DIR)
 
-from tools.ghrf_runtime import resolve_auto_update_argv  # noqa: E402
+from tools.ghrf_runtime import argv_from_prompt, resolve_auto_update_argv  # noqa: E402
 
 DEFAULT_APPS_DIR = os.path.join(SCRIPT_DIR, "apps")
 PLATFORMS = ("windows", "darwin", "linux", "android", "ios")
@@ -430,8 +430,20 @@ def enable_all_matches(hits: list[dict], dry_run: bool) -> int:
 
 
 def main() -> int:
+    if not argv_from_prompt(
+        [
+            "用法: lookup_app [选项与关键词...]",
+            "示例: lookup_app drawio",
+            "      lookup_app --platform android termux",
+            "交互选条目: 1=立刻下载  2=加入并下载  3=加入列表  4=启用",
+            "直接下载: lookup_app -y --download drawio",
+        ],
+        "请输入关键词（可含 --platform android 等）: ",
+    ):
+        return 0
+
     parser = argparse.ArgumentParser(description="在 apps 配置中模糊查找应用并可开启 enabled")
-    parser.add_argument("query", nargs="+", help="关键词（如 drawio、v2ray）")
+    parser.add_argument("query", nargs="*", help="关键词（如 drawio、v2ray）")
     parser.add_argument(
         "--apps-dir",
         default=DEFAULT_APPS_DIR,
@@ -490,6 +502,19 @@ def main() -> int:
     )
     args = parser.parse_args()
 
+    if not args.query:
+        from tools.ghrf_runtime import prompt_cli_line
+
+        text = prompt_cli_line([], "请输入搜索关键词: ")
+        if not text:
+            return 0
+        import shlex
+
+        args.query = shlex.split(text, posix=(os.name != "nt"))
+    if not args.query:
+        print("[ERROR] 需要至少一个关键词。", file=sys.stderr)
+        return 1
+
     apps_dir = args.apps_dir
     if not os.path.isabs(apps_dir):
         apps_dir = os.path.normpath(os.path.join(SCRIPT_DIR, apps_dir))
@@ -498,9 +523,6 @@ def main() -> int:
         return 1
 
     query = " ".join(args.query).strip()
-    if not query:
-        parser.print_help()
-        return 1
 
     print("检索: %r  （目录: %s）" % (query, apps_dir))
     hits = search_apps(apps_dir, query, min_score=args.min_score)

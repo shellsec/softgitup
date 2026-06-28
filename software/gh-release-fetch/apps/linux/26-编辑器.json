@@ -571,5 +571,38 @@
     "save_name": "sublime_merge.deb",
     "releases_url": "https://bgithub.xyz/sublimehq/sublime_merge/releases",
     "repo_path": "sublimehq/sublime_merge"
+  },
+  {
+    "id": "markdown_it",
+    "简介": "markdown-it（JS 库 Release，非安装包）",
+    "分类": "编辑器",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum"
+    ],
+    "installer_extensions": [
+      ".tgz",
+      ".zip"
+    ],
+    "releases_url": "https://bgithub.xyz/markdown-it/markdown-it/releases",
+    "repo_path": "markdown-it/markdown-it"
   }
 ]

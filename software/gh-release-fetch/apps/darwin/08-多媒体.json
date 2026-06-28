@@ -723,5 +723,93 @@
     "url_hint": "mpv",
     "releases_url": "https://bgithub.xyz/mpv-player/mpv/releases",
     "repo_path": "mpv-player/mpv"
+  },
+  {
+    "id": "lx_music_desktop",
+    "简介": "洛雪音乐助手（桌面版）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm",
+      "macos",
+      "linux",
+      "ia32",
+      "source"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "win_x64"
+    ],
+    "installer_extensions": [
+      ".7z",
+      ".exe"
+    ],
+    "releases_url": "https://bgithub.xyz/lyswhut/lx-music-desktop/releases",
+    "repo_path": "lyswhut/lx-music-desktop"
+  },
+  {
+    "id": "listen1_desktop",
+    "简介": "Listen 1（聚合音乐播放器）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum"
+    ],
+    "releases_url": "https://bgithub.xyz/listen1/listen1_desktop/releases",
+    "repo_path": "listen1/listen1_desktop"
+  },
+  {
+    "id": "player",
+    "简介": "Koel（自托管音乐播放器）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum"
+    ],
+    "releases_url": "https://bgithub.xyz/koel/player/releases",
+    "repo_path": "koel/player"
   }
 ]

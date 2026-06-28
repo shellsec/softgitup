@@ -833,5 +833,34 @@
     "save_name": "netron-Darwin-x64.zip",
     "releases_url": "https://bgithub.xyz/lutzroeder/netron/releases",
     "repo_path": "lutzroeder/netron"
+  },
+  {
+    "id": "xtool",
+    "简介": "xtool（Xcode 命令行工具链辅助）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum"
+    ],
+    "releases_url": "https://bgithub.xyz/xtool-org/xtool/releases",
+    "repo_path": "xtool-org/xtool"
   }
 ]
