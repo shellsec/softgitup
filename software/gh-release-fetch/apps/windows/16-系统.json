@@ -479,22 +479,35 @@
   },
   {
     "id": "lightbulb",
-    "简介": "LightBulb 开源护眼软件 LightBulb 2.7.1 + x64 中文绿色版（来源：dayanzai）",
+    "简介": "根据日出日落自动调节屏幕色温，减轻用眼疲劳（Tyrrrz/LightBulb，仅 Windows）",
     "分类": "系统",
     "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
     "releases_url": "https://bgithub.xyz/Tyrrrz/LightBulb/releases",
     "repo_path": "Tyrrrz/LightBulb",
+    "url_hint": "lightbulb",
+    "installer_markers": [
+      "LightBulb-Installer",
+      "win-x64"
+    ],
+    "installer_markers_match_all": true,
+    "href_exclude_substrings": [
+      "arm64",
+      "x86",
+      ".zip"
+    ],
     "windows_installer": true,
     "installer_extensions": [
-      ".exe",
-      ".msi"
+      ".exe"
     ],
-    "process_name": "",
-    "kill_before_install": false,
-    "run_installer": false,
-    "url_hint": "lightbulb"
+    "download_names": [
+      "LightBulb-Installer.win-x64.exe"
+    ],
+    "save_name": "LightBulb-Installer-{ver}-win-x64.exe",
+    "process_name": "LightBulb.exe",
+    "kill_before_install": true,
+    "run_installer": true
   },
   {
     "id": "efi_boot_editor",
@@ -1197,5 +1210,35 @@
     ],
     "releases_url": "https://bgithub.xyz/Klocman/Bulk-Crap-Uninstaller/releases",
     "repo_path": "Klocman/Bulk-Crap-Uninstaller"
+  },
+  {
+    "id": "wsl",
+    "简介": "Windows Subsystem for Linux（WSL2 官方 x64 安装包）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/microsoft/WSL/releases",
+    "repo_path": "microsoft/WSL",
+    "url_hint": "wsl",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "wsl.",
+      ".x64.msi"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "msixbundle",
+      "ARM64"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "use_download_filename": true,
+    "save_name": "wsl.msi",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
   }
 ]

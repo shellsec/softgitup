@@ -392,5 +392,43 @@
     "save_name": "FlClash-linux.deb",
     "releases_url": "https://bgithub.xyz/chen08209/FlClash/releases",
     "repo_path": "chen08209/FlClash"
+  },
+  {
+    "id": "dev_sidecar",
+    "简介": "开发者边车：加速 GitHub、git clone、Release 下载等开发网络请求（Linux x86_64 AppImage）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/docmirror/dev-sidecar/releases",
+    "repo_path": "docmirror/dev-sidecar",
+    "url_hint": "dev-sidecar",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "DevSidecar-",
+      "linux-x86_64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "armv7l",
+      "windows",
+      "macos",
+      ".deb",
+      ".rpm",
+      ".tar.gz",
+      ".exe",
+      ".dmg"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "download_names": [
+      "DevSidecar-{ver}-linux-x86_64.AppImage"
+    ],
+    "save_name": "DevSidecar-{ver}-linux-x86_64.AppImage",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

@@ -1,2154 +1,2700 @@
-                                   用户手册
-                                   ~~~~~~~~
-                              RAR 7.22 控制台版本
-                              ~~~~~~~~~~~~~~~~~~~
+                             User's Manual
+                             ~~~~~~~~~~~~~
+                        RAR 7.23 console version
+                        ~~~~~~~~~~~~~~~~~~~~~~~~
 
-                          =-=-=-=-=-=-=-=-=-=-=-=-=-=-
-                          欢迎使用 RAR 压缩文件管理器!
-                          -=-=-=-=-=-=-=-=-=-=-=-=-=-=
+                       =-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                       Welcome to the RAR Archiver!
+                       -=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
- 简介
- ~~~~
+ Introduction
+ ~~~~~~~~~~~~
 
-      RAR 是一个让您在命令行模式中管理压缩文件的控制台应用。RAR 提供压缩、加
-  密、数据恢复和许多其它此手册中描述的其它功能。
+    RAR is a console application allowing to manage archive files
+  in command line mode. RAR provides compression, encryption,
+  data recovery and many other functions described in this manual.
 
-      RAR 只支持 RAR 格式压缩文件，它默认有 .rar 扩展名。不支持 ZIP 和其他格
-  式。即使创建压缩文件时指定了 .zip 扩展名，它仍然是 RAR 格式的。Windows 用户
-  可以安装 WinRAR，它支持更多的压缩文件类型，包括 RAR 和 ZIP 格式。
+    RAR supports only RAR format archives, which have .rar file name
+  extension by default. ZIP and other formats are not supported.
+  Even if you specify .zip extension when creating an archive, it will
+  still be in RAR format. Windows users may install WinRAR, which supports
+  more archive types including RAR and ZIP formats.
 
-      WinRAR 提供了图形用户界面和命令行模式。虽然控制台 RAR 和图形界面 WinRAR 
-  有相似的命令行语法，但是它们还有有一些不同。所以推荐使用此 rar.txt 手册用于
-  控制台 RAR(rar.exe 在 Windows 版本的情况下)，winrar.chm 是图形界面 WinRAR
-  (winrar.exe) 的帮助文件。
+    WinRAR provides both graphical user interface and command line mode.
+  While console RAR and GUI WinRAR have the similar command line syntax,
+  some differences exist. So it is recommended to use this rar.txt manual
+  for console RAR (rar.exe in case of Windows version) and winrar.chm
+  WinRAR help file for GUI WinRAR (winrar.exe).
 
 
- 配置文件
- ~~~~~~~~
+ Configuration file
+ ~~~~~~~~~~~~~~~~~~
 
-  Unix 版本的 RAR 和 UnRAR 从用户的 home 或 /etc 目录中的 .rarrc 文件读取配置文件信息
-  (存储在 HOME 环境变量中)
+  RAR and UnRAR for Unix systems read configuration information from
+  .rarrc file in a user's home directory (stored in HOME environment
+  variable), in /etc directory, in $XDG_CONFIG_HOME/rar
+  or in $HOME/.config/rar if XDG_CONFIG_HOME environment variable
+  isn't defined.
 
-  Windows 的版本 RAR 和 UnRAR 从 rar.ini 文件读取配置文件信息，它放在 rar.exe 文件相
-  同的目录中。
+  RAR and UnRAR for Windows read configuration information from rar.ini file,
+  placed in the same directory as the rar.exe file.
 
-  这个文件包含下列字符串:
+  This file can contain the following string:
 
-  switches=<任何 RAR 参数，用空格分开>
+  switches=<any RAR switches separated by spaces>
 
-  例如:
+  For example:
 
   switches=-m5 -s
 
-  也可能为个别 RAR 命令指定单独的参数集，使用以下句法：
+  It is also possible to specify separate switch sets for individual
+  RAR commands using the following syntax:
 
-  switches_<command>=<任何 RAR 参数，用空格分开>
+  switches_<command>=<any RAR switches separated by spaces>
 
-  例如:
+  For example:
 
   switches_a=-m5 -s
   switches_x=-o+
 
- 环境变量
+
+
+ Environment variable
+ ~~~~~~~~~~~~~~~~~~~~
+
+    Default parameters may be added to the RAR command line by establishing
+    an environment variable "RARINISWITCHES".
+
+    For instance, in Unix systems following lines may be added to your
+    profile:
+
+      RARINISWITCHES='-s -md1024'
+      export RARINISWITCHES
+
+    RAR will use this string as default parameters in the command line and
+    will create "solid" archives with 1024 MB sliding dictionary size.
+
+    RAR handles options with priority as following:
+
+       command line switches                   highest priority
+       switches in the RARINISWITCHES variable lower priority
+       switches saved in configuration file    lowest priority
+
+
+ Log file
  ~~~~~~~~
 
-    可以通过建立"RAR"环境变量来添加默认参数到命令行中.
-
-    例如，在 Unix 中，下列命令行可以被添加到您的配置中:
-
-      RAR='-s -md1024'
-      export RAR
-
-    RAR 将使用这个字符串作为命令行的默认参数，并将使用 1024 MB 字典大小来创建
-    “固实”压缩文件。
-
-    RAR 控制选项使用下列优先级:
-
-       命名行参数                              最高优先级
-       在 RAR 变量中的参数                     低优先级
-       保存在配置文件中的参数                  最低优先级
+  If switch -ilog is specified in the command line or configuration file,
+  RAR will write informational messages about errors encountered while
+  processing archives into a log file. Read the switch -ilog description
+  for more details.
 
 
- 日志文件
- ~~~~~~~~
+ The file order list for solid archiving - rarfiles.lst
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  如果在命令行或配置文件中指定参数 -ilog ，RAR 将会把处理压缩文件中遇到的错误
-  等写到日志文件中。读取参数 -ilog 描述获得更多信息。
+  rarfiles.lst contains a user-defined file list, which tells RAR
+  the order in which to add files to a solid archive. It may contain
+  file names, wildcards and special entry - $default. The default
+  entry defines the place in order list for files not matched
+  with other entries in this file. The comment character is ';'.
 
+  In Windows this file should be placed in the same directory as RAR
+  or in %APPDATA%\WinRAR directory, in Unix systems - to the user's home
+  directory or in /etc.
 
- 固实压缩的文件列表 - rarfiles.lst
- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Tips to provide improved compression and speed of operation:
 
-  rarfiles.lst 包含一个用户定义的文件列表，告诉 RAR 添加文件到固实压缩文件时的顺
-  序。它可以包含文件名通配符和指定项目 -$default。默认项目定义了这个文件中与
-  其他项目不相符时的顺序清单位置。 注释字符是 ';'.
+  - similar files should be grouped together in the archive;
+  - frequently accessed files should be placed at the beginning.
 
-  在 Windows 中，这个文件应该放在 RAR 所在的或 %APPDATA%\WinRAR 目录中,
-  在 Unix 中- 放在用户的 home 目录或在 /etc 中。
-
-  提高压缩率和操作速度的提示:
-
-  - 在压缩文件中，小文件应该被组织在一起;
-  - 频繁被处理的文件应该放在开始的位置。
-
-  普通的掩码越靠近顶端优先权就越高，但是这个规则存在例外。如果 rarfiles.lst
-  包含两个掩码，并且所有文件既匹配第一个掩码，也匹配第二个掩码， 较小的子集
-  或者更精确的匹配拥有更高的优先权。例如，如果您用 *.cpp 和 f*.cpp 掩码，
-  f*.cpp 拥有更高的优先权，因此 'filename.cpp' 的位置会根据 'f*.cpp' 而不是 
-  '*.cpp' 来选择。
+  Normally masks placed nearer to the top of list have a higher priority,
+  but there is an exception from this rule. If rarfiles.lst contains such
+  two masks that all files matched by one mask are also matched by another,
+  that mask which matches a smaller subset of file names will have higher
+  priority regardless of its position in the list. For example, if you have
+  *.cpp and f*.cpp masks, f*.cpp has a higher priority, so the position of
+  'filename.cpp' will be chosen according to 'f*.cpp', not '*.cpp'.
 
 
- RAR 命令行语法
- ~~~~~~~~~~~~~~
+ RAR command line syntax
+ ~~~~~~~~~~~~~~~~~~~~~~~
 
- 语法
+ Syntax
 
-    RAR <命令>  [ -<参数> ]  <压缩文件>  [ <@列表文件...> ]
-        [ <文件...> ]  [ <解压路径\> ]
+    RAR <command>  [ -<switches> ]  <archive>  [ <@listfiles...> ]
+        [ <files...> ]  [ <path_to_extract\> ]
 
- 描述
+ Description
 
-    命令是单个字符或字符串，指定要由 RAR 执行的操作。参数被用来改变 RAR 执行
-    操作的方法。其它参数是压缩文件名和被压缩的文件或要从压缩文件中被解压文件。
-    
-    列表文件是一个包括处理的文件名的纯文本文件。第一列应该以文件名开始。可以
-    在//字符后添加注释。例如，您可以创建包含下列字符串的 backup.lst:
+    Command is a single character or string specifying an action to be
+    performed by RAR. Switches are designed to modify the way RAR performs
+    such action. Other parameters are archive name and files to be archived
+    or extracted.
 
-    c:\work\doc\*.txt         //备份文本文档
-    c:\work\image\*.bmp       //备份图片
+    Listfiles are plain text files containing names of files to process.
+    File names must start at the first column. It is possible to
+    put comments to the listfile after // characters. For example,
+    you can create backup.lst containing the following strings:
+
+    c:\work\doc\*.txt         //backup text documents
+    c:\work\image\*.bmp       //backup pictures
     c:\work\misc
 
-    接着运行:
+    and then run:
 
        rar a backup @backup.lst
 
-    如果您希望从标准输入设备读取文件名,指定空的文件列表名(只有@)。
+    If you wish to read file names from stdin (standard input),
+    specify the empty listfile name (just @).
 
-    默认, 控制台 RAR 的列表文件中使用单字节编码。但是可以使用 -sc<字符集>l 
-    参数重定义。
+    By default, console RAR uses the single byte encoding in list files,
+    but it can be redefined with -sc<charset>l switch.
 
-    您可以在同一命令行指定普通文件名和列表文件。如果文件和列表
-    文件都未被指定，那么 RAR 将默认是 *.*，来处理所有文件。
+    You can specify both usual file names and list files in the same
+    command line. If neither files nor listfiles are specified,
+    then *.* is implied and RAR will process all files.
 
-    path_to_extract 包含目标目录名称，后跟一个路径分隔符。例如，它在 Windows 
-    中为 c:\dest\，在 Unix 中为 data/。它指定在 x 和 e 命令中放置解压文件的
-    目录。如果该目录不存在，则由 RAR 进行创建。此外还可以使用 -op<path> 参数
-    对其进行设置。
+    path_to_extract includes the destination directory name followed by
+    a path separator character. For example, it can be c:\dest\ in Windows
+    or data/ in Unix systems. It specifies the directory to place extracted
+    files in 'x' and 'e' commands. This directory is created by RAR if it
+    does not exist yet. Alternatively it can be set with -op<path> switch.
 
-    许多 RAR 命令，例如解压、测试和列表，都允许在压缩文件名中使用通配符。如
-    在压缩文件名掩码中没有指定扩展名，RAR 会认为是 .rar，所以 * 意味着所有
-    .rar 扩展名的压缩文件。如果您需要处理所有没有扩展名的压缩文件，请使用
-    *. 掩码。*.* 掩码选择所有文件。在压缩和删除时，压缩文件名中不允许有通配
-    符。
+    Many RAR commands, such as extraction, test or list, allow to use
+    wildcards in archive name. If no extension is specified in archive
+    mask, RAR assumes .rar, so * means all archives with .rar extension.
+    If you need to process all archives without extension, use *. mask.
+    *.* mask selects all files. Wildcards in archive name are not allowed
+    when archiving and deleting.
 
-    在 Unix 中，您需要将 RAR 命令行参数置于单引号或双引号中，防止被 Shell
-    解释。例如，这个命令将从当前目录中所有的 RAR 压缩文件中解压的 *.asm 文件:
+    In Unix systems you need to enclose RAR command line parameters
+    containing wildcards in single or double quotes to prevent their expansion
+    by Unix shell. For example, this command will extract *.asm files
+    from all *.rar archives in current directory:
 
        rar e '*.rar' '*.asm'
 
 
-    命令可以是下列中的任何一个:
+    Command could be any of the following:
 
-    a       添加文件到压缩文件中。
+    a       Add files to archive.
 
-            例子:
+            Examples:
 
-            1) 从当前目录添加所有的 *.hlp 文件到 help.rar 压缩文件:
+            1) add all *.hlp files from the current directory to
+            the archive help.rar:
 
             rar a help *.hlp
 
-            2) 把当前目录和子目录的所有文件压缩为 362000 字节大小、固实的、
-            自解压分卷压缩文件并对没个卷添加恢复记录:
+            2) archive all files from the current directory and subdirectories
+            to 362000 bytes size solid, self-extracting volumes
+            and add the recovery record to each volume:
 
             rar a -r -v362 -s -sfx -rr save
 
-            因为尾指定文件名，假设为所有文件 (*)。
+            Because no file names are specified, all files (*) are assumed.
 
-            3) 作为一个特别的例外，如果目录名被作为参数指定并且目录名不包
-            含文件掩码和尾随路径分隔符，即使没有指定 -r 参数，目录和子目录
-            的所有内容都会被添加到压缩文件中。
+            3) as a special exception, if directory name is specified as
+            an argument and if directory name does not include file masks
+            and trailing path separator, the entire contents of the directory
+            and all subdirectories will be added to the archive even
+            if switch -r is not specified.
 
-            下面的命令会把 Bitmaps 目录和它的子目录中的所有文件添加到 RAR
-            压缩文件 Pictures.rar 中:
+            The following command will add all files from the directory
+            Bitmaps and its subdirectories to the RAR archive Pictures.rar:
 
             rar a Pictures.rar Bitmaps
 
-            4) 如果目录包含文件掩码或尾随路径分隔符，将会应用普通的规则，您
-            需要指定 -r 参数来处理它的子目录。
+            4) if directory name includes the trailing path separator,
+            normal rules apply and you need to specify switch -r to process
+            its subdirectories.
 
-            下列命令会把 Bitmaps 目录中除了子目录外的所有文件添加，因为未
-            指定参数 -r:
+            The following command will add all files from directory Bitmaps,
+            but not from its subdirectories, because switch -r is not
+            specified:
 
             rar a Pictures.rar Bitmaps\*
 
 
-    c       添加压缩文件注释。当压缩文件被处理时注释被显示。文件的注释长度限
-            制为 256 KB。
+    c       Add archive comment. Comments are displayed while the archive is
+            being processed. Comment length is limited to 256 KB.
 
-            例子:
+            Examples:
 
             rar c distrib.rar
 
-            注释也可以使用 -z[名称] 参数从文件添加:
-            下列命令从 info.txt 文件添加一个注释:
+            Also comments may be added from a file using -z[file] switch.
+            The following command adds a comment from info.txt file:
 
             rar c -zinfo.txt dummy
 
 
-    ch      改变压缩文件参数。
+    ch      Change archive parameters.
 
-            此命令能和大多数压缩文件变量参数一起使用修改压缩文件参数。对于象
-            -cl, -cu, -tl 等没有专门命令的参数特别方便。
+            This command can be used with most of archive modification
+            switches to modify archive parameters. It is especially
+            convenient for switches like -cl, -cu, -tl, which do not
+            have a dedicated command.
 
-            它不能重新压缩、解密或加密压缩文件数据，它不能整合或创建卷。如果
-            不和其它参数一起使用，'ch' 命令仅复制压缩文件数据而不修改它。
+            It is not able to recompress, encrypt or decrypt archive data
+            and it cannot merge or create volumes. If no switches are
+            specified, 'ch' command just copies the archive data without
+            modification.
 
-            如果结合 -amr 参数一起使用来恢复已保存的归档名称和时间，将忽视其
-            他归档修改参数。
+            If used with -amr switch to restore the saved archive name
+            and time, other archive modification switches are ignored.
 
-            例如:
+            Example:
 
-            设置压缩文件时间为最新的文件:
+            Set archive time to latest file:
 
             rar ch -tl files.rar
 
 
-    cw      写压缩文件注释到指定文件。
+    cw      Write archive comment to specified file.
 
-            输出文件格式依赖于 -sc 参数。
+            Format of output file depends on -sc switch.
 
-            如果输出文件名没有指定，注释数据会被发送到标准输出设备。
+            If output file name is not specified, comment data will be
+            sent to stdout.
 
-            例子:
+            Examples:
 
-            1) rar cw oldarch comment.txt
+            1) rar cw arc comment.txt
 
             2) rar cw -scuc arc unicode.txt
 
             3) rar cw arc
 
 
-    d       从压缩文件中删除文件。请注意，如果这个命令导致压缩文件中所有文件
-            全部删除，这个空的压缩文件将被删除。
+    d       Delete files from archive. If this command removes all files
+            from archive, the empty archive is removed.
 
 
-    e       不带压缩路径解压文件。
+    e       Extract files without archived paths.
 
-            解压的文件不包括它们的路径部分,因此所有文件都创建到同一个目标目录
-            中。
+            Extract files excluding their path component, so all files
+            are created in the same destination directory.
 
-            如果您要解压完整路径名，请使用 'x' 命令。
+            Use 'x' command if you wish to extract full pathnames.
 
-            例子:
+            Example:
 
             rar e -or html.rar *.css css\
 
-            从 html.rar 压缩文件中解压所有 *.css 文件到 css 目录，不包括存
-            档的路径。多个文件有相同的名称时自动重命名解压的文件。
+            extract all *.css files from html.rar archive to 'css' directory
+            excluding archived paths. Rename extracted files automatically
+            in case several files have the same name.
 
 
-    f       更新压缩文件中的文件。更新压缩文件中比要添加的文件更老的文件。这个命令不
-            向压缩文件中添加新文件。
+    f       Freshen files in archive. Updates archived files older
+            than files to add. This command will not add new files
+            to the archive.
 
 
-    i[i|c|h|t]=<字符串>
-            在压缩文件中查找字符串。
+    i[i|c|h|t]=<string>
+            Find string in archives.
 
-            支持下列可选参数:
+            Supports following optional parameters:
 
-              i - 不区分大小写(默认);
+              i - case insensitive search (default);
 
-              c - 区分大小写搜索;
+              c - case sensitive search;
 
-              h - 十六进制搜索;
+              h - hexadecimal search;
 
-              t - 使用 ANSI、UTF-8、UTF-16 和 OEM (仅 Windows) 字符表 ;
+              t - use ANSI, UTF-8, UTF-16 and OEM (Windows only)
+                  character tables;
 
-            如果没有指定任何参数，它可以使用简化的命令行语法 i<字符串> 来代
-            替 i=<字符串>
+            If no parameters are specified, it is possible to use
+            the simplified command syntax i<string> instead of i=<string>
 
-            它允许指定带有另外一个参数的 't' 变量，例如，ict=字符串 在上面提
-            及的所有表中执行区分大小写的搜索。
+            It is allowed to specify 't' modifier with other parameters,
+            for example, ict=string performs case sensitive search
+            using all mentioned above character tables.
 
-            例子:
+            Examples:
 
             1) rar "ic=first level" -r c:\*.rar *.txt
 
-            在 c:\*.rar 压缩文件中的 *.txt 文件执行区分大小写的 "first level"
-            字符串的搜索
+            Perform case sensitive search of "first level" string
+            in *.txt files in *.rar archives on the disk c:
 
             2) rar ih=f0e0aeaeab2d83e3a9 -r e:\texts\*.rar
 
-            在 e:\text 目录下的 rar 压缩文件中搜索十六进制字符串
-            f0 e0 ae ae ab 2d 83 e3 a9。
+            Search for hex string f0 e0 ae ae ab 2d 83 e3 a9
+            in rar archives in e:\texts directory.
 
 
-    k       锁定归档。
+    k       Lock archive.
+    
+            RAR cannot modify locked archives, so locking important archives
+            prevents their accidental modification by RAR. Such protection
+            might be especially useful in case of RAR commands processing
+            archives in groups.
 
-            RAR 无法修改锁定的归档，因此锁定重要的归档可防止 RAR 
-            意外修改它们。尤其在 RAR 命令分组处理归档时，这种保护
-            可能特别有用。
+            This command is not intended or able to prevent modification
+            by other tools or willful third party. It implements a safety
+            measure only for accidental data change by RAR.
 
-            此命令不旨在或不能阻止其他工具或第三方有意进行修改。
-            它仅针对 WinRAR 引起的意外数据变更实行安全措施。
-
-            例子:
+            Example:
 
             rar k final.rar
 
 
     l[t[a],b]
-            压缩文件的内容列表[技术信息[全部], 无修饰]。
+            List archive contents [technical [all], bare].
+    
+            'l' command lists archived file attributes, size, date,
+            time and name, one file per line. If file is encrypted,
+            line starts from '*' character.
 
-            'l' 列出存档文件的属性、大小、日期、时间和名称，每个文件一行。如
-            果文件被加密，行以 * 号开始。
+            'lt' displays the detailed file information in multiline mode.
+            This information includes file checksum value, host OS,
+            compression options and other parameters.
 
-            'lt' 以多行模式显示详细的文件信息。此信息包括文件校验和值、主机
-            OS、压缩选项和其他参数。
+            'lta' provide the detailed information not only for files,
+            but also for service headers like NTFS streams
+            or file security data.
 
-            'lta' 不仅提供文件的详细信息，也给出服务器头，如 NTFS 流或文件安
-            全数据。
+            'lb' lists bare file names with path, one per line,
+            without any additional information.
 
-            'lb' 列出单纯的带有路径的文件名，每行一个，没有任何其他信息。
+            You can use -v switch to list contents of all volumes
+            in volume set: rar l -v vol.part1.rar
 
-            您可以使用 -v 参数列出卷组中所有卷的内容: rar l -v vol.part1.rar
-
-            命令 'lt', 'lta' 和 'lb' 等同于 'vt', 'vta' 和 'vb'。
-
-
-    m[f]    移动到压缩文件中[只用于文件]。移动文件和目录会使压缩操作完成后它
-            们被删除。如果使用变量'f'和/或应用参数'-ed'，则不删除目录。
-
-
-    p       打印文件到标准输出设备。
-
-            将解压缩的文件数据发送到标准输出。此命令会抑制信息性消息，因此它
-            们不会与文件数据混合。
+            Commands 'lt', 'lta' and 'lb' are equal to 'vt', 'vta'
+            and 'vb' correspondingly.
 
 
-    r       修复压缩文件。压缩文件修复是在两阶段中完成的。首先，在损坏的压缩
-            文件中查找恢复记录(参照'rr'命令)。如果压缩文件包含以前添加的恢复
-            记录，并且如果损坏的数据恢复区域是连续并且小于恢复记录的纠错码大
-            小，则重建压缩文件成功的几率很高。当这个阶段完成，一个名为 
-            fixed.arcname.rar 的新压缩文件会被创建，'arcname' 的位置是原始的
-            (损坏的)压缩文件名。
+    m[f]    Move to archive [files only]. Moving files and directories
+            results in the files and directories being erased upon
+            successful completion of the packing operation. Directories will
+            not be removed if 'f' modifier is used and/or '-ed' switch is
+            applied.
 
-            如果损坏的压缩文件不包含恢复记录或如果压缩文件没有完全恢复导致大
-            的损伤，将执行第二阶段。这一阶段期间只重建压缩文件的结构，而不可
-            能恢复校验失败的文件。它仍然可能恢复未受损的文件，因文件结构破坏。
-            这对于非固实压缩文件通常有用。此阶段不会影响加密文件头的压缩文件，
-            这样的文件只有在存在恢复记录时才能被修复。
 
-            当第二阶段完成，重建结构的压缩文件被保存为 rebuilt.arcname.rar,
-            'arcname' 的位置是原始压缩文件名。
+    p       Print file to stdout.
 
-            默认情况下,修复的压缩文件创建到当前目录中，但是您可以添加一个可选
-            的 destpath\ 参数指定其他目标目录。
+            Send unpacked file data to stdout. Informational messages
+            are suppressed with this command, so they are not mixed
+            with file data.
 
-            例子:
+    
+    r       Repair archive. Archive repairing is performed in two stages.
+            First, the damaged archive is searched for a recovery record
+            (see 'rr' command). If archive contains the previously added
+            recovery record and if damaged data area is continuous
+            and smaller than error correction code size in recovery record,
+            chance of successful archive reconstruction is high.
+            When this stage has been completed, a new archive is created,
+            named as fixed.arcname.rar, where 'arcname' is the original
+            (damaged) archive name.
+
+            If broken archive does not contain a recovery record or if
+            archive is not completely recovered due to major damage,
+            second stage is performed. During this stage only the archive
+            structure is reconstructed and it is impossible to recover
+            files which fail checksum validation, it is still possible,
+            however, to recover undamaged files, which were inaccessible
+            due to the broken archive structure. Mostly this is useful
+            for non-solid archives. This stage is never efficient
+            for archives with encrypted file headers, which can be repaired
+            only if recovery record is present.
+
+            When the second stage is completed, the reconstructed archive
+            is saved as rebuilt.arcname.rar, where 'arcname' is
+            the original archive name.
+
+            By default, repaired archives are created in the current
+            directory, but you can append an optional destpath\ parameter
+            to specify another destination directory.
+
+            Example:
 
             rar r buggy.rar c:\fixed\
 
-            修复 buggy.rar 并把结果放到 'c:\fixed' 目录中。
+            repair buggy.rar and place the result to 'c:\fixed' directory.
 
-    rc      使用恢复卷(.rev 文件)重建丢失的卷。您需要指定任何已存在的 .rar 或
-            .rev 卷作为压缩文件名。
 
-            例如：
+    rc      Reconstruct missing and damaged volumes using recovery volumes
+            (.rev files). You need to specify any existing  .rar or .rev
+            volume as the archive name.
+
+            Example:
 
             rar rc backup.part03.rar
 
-            读取 'rv' 命令描述得到关于恢复卷的信息。
+            Read 'rv' command description for information about
+            recovery volumes.
 
 
-    rn      重命名压缩文件。
+    rn      Rename archived files.
 
-            命令语法是:
+            The command syntax is:
 
-            rar rn <压缩文件名> <源文件名1> <目标文件名1> ... <源文件名N> <目
-            标文件名N>
+            rar rn <arcname> <srcname1> <destname1> ... <srcnameN> <destnameN>
 
-            例如，下列命令:
+            For example, the following command:
 
             rar rn data.rar readme.txt readme.bak info.txt info.bak
 
-            在压缩文件 data.rar 中将把 readme.txt 重命名为 readme.bak 并把
-            info.txt 重命名为 info.bak。
+            will rename readme.txt to readme.bak and info.txt to info.bak
+            in the archive data.rar.
 
-            在源文件和目标文件名中可以使用通配符来进行简单像改变文件扩展名
-            的名称转换。例如:
+            It is allowed to use wildcards in the source and destination
+            names for simple name transformations like changing file
+            extensions. For example:
 
             rar rn data.rar *.txt *.bak
 
-            将把所有的 *.txt 文件重命名为 *.bak。
+            will rename all *.txt files to *.bak.
 
-            RAR 不检查目标文件名是否已经在压缩文件中存在，所以您需要小心，
-            防止重名。尤其是使用通配符时特别重要。这个命令有潜在的危险，
-            因为一个错误的通配符可以损坏所有的压缩文件名。
-
-
-    rr[N]   添加数据恢复记录。可选，冗余信息(恢复记录)可以被添加到压缩文件
-            中。在增大压缩文件大小的同时，它能在磁盘错误或其它数据损坏的情
-            况下帮助恢复存档的文件，只要损坏不是太严重。可以使用命令“r”
-            (repair) 处理这种损坏。
-
-            RAR 4.x 和 RAR 5.0 压缩文件使用不同的恢复记录结构和算法。
-
-            RAR 4.x 恢复记录基于 XOR 算法。您可以用恢复区块数或压缩文件大小
-            的百分比来指定 4.x 恢复记录的大小。只是将指定区块数直接添加到
-            “rr”后，如“rr1000”指定 1000 个区块。要使用百分比则可以在百
-            分数后附加“p”或“%”后缀，如“rr5p”或“rr5%”表示 5%。注意，
-            如果您从 Windows 的 .bat 或 .cmd 文件运行这个命令时，您需要使用
-            “rr5%%”代替“rr5%”，因为批处理命令把符号'%'作为批处理文件开
-            始的参数。在这种情况下您可以使用‘p’ 代替‘%’更方便。
-
-            RAR 4.x 恢复区块有 512 字节长，如果损坏的区域是连续的，每个分区
-            可以帮助恢复 512 字节的损坏信息。在多重损坏的情况下，此值肯能会
-            低。最大的恢复区块数是 524288。
-
-            4.x 恢复记录的大小可以使用公式<压缩文件大小>/256 + <恢复记录数>
-            *512字节 估计，而且不得超过受保护数据的大小或 256 MB。
-
-            RAR 5.0 恢复记录使用 Reed-Solomon 纠错码。其修复连续损坏的能力和
-            RAR 4.x 一样,允许恢复数据略少于恢复记录大小。但它在有多重损坏区
-            域以及数据位置发生偏移时比 RAR 4.x 记录更有效。
-
-            RAR 5.0 恢复记录不使用 512 字节区块，您仅可以用压缩文件大小的百分
-            比来指定它的大小。不管‘%’或‘p’后缀是否存在，RAR 5.0 格式中，
-            RAR 都会把值作为百分比对待。所以‘rr5’和‘rr5p’都是 5% 的意思。
-            由于服务数据开销实际产生的恢复记录大小只是大约匹配用户定义的百分
-            比，对于小压缩文件差距比较大。
-
-            允许的 RAR 5.0 恢复记录大小的最大值是 1000%。在创建和修复时，更大
-            的恢复记录会导致处理速度变慢。
-
-            RAR 5.0 恢复记录比恢复记录本身更耐损坏，可以利用部分损坏的恢复记
-            录数据。但是，请注意，“修复”命令不修复恢复记录的损坏块。只有文
-            件数据可以被更正。压缩文件修复成功后，您可能需要对保存的文件创建
-            一个新的恢复记录。
-
-            如果您不带任何可选参数使用‘rr’命令，WinRAR 默认会把恢复记录的
-            大小设为压缩文件大小的 3%。
-
-            虽然恢复记录提高了修复受损压缩文件的机会，但它并不能保证成功恢复。
-            要考虑将恢复记录功能与为重要数据制作的多个压缩文件副本保存到不同
-            媒体的这种方式相结合。
-
-            例子:
-
-            rar rr5p arcname
-
-            添加压缩文件大小 5% 的恢复记录。
+            RAR does not check if the destination file name is already
+            present in the archive, so you need to be careful to avoid
+            duplicated names. It is especially important when using
+            wildcards. Such a command is potentially dangerous, because
+            a wrong wildcard may corrupt all archived names.
 
 
-    rv[N]   创建恢复卷(.rev文件)，以后它可以用于重建卷组中丢失的文件。这个命
-            令只对多卷压缩文件敏感，您需要在组中指定第一个分卷文件的文件名。
-            例如:
+    rr[N]   Add the data recovery record. 
+    
+            Recovery record is the data area, optionally added to archive
+            and containing error correction codes, namely Reed-Solomon codes
+            for RAR 5.0 archive format. While it increases the archive size,
+            it helps to recover archived files in case of disk failure
+            or data loss of other kind, provided that damage is not too
+            severe. Such recovery can be done with 'R' repair command.
+
+            Optional 'N' parameter defines the recovery record size
+            as a percent of archive size. If it is omitted, 3% is assumed.
+            Maximum allowed recovery record size is 1000%. Larger recovery
+            records are processed slower both when creating and repairing.
+            Due to service data overhead, the actual resulting recovery record
+            size only approximately matches the user defined percent
+            and difference is larger for smaller archives.
+
+            In case of a single continuous damage, typically it is possible
+            to restore slightly less data than recovery record size.
+            Recoverable data size can be lower for multiple damages.
+
+            If a recovery record is partially broken, its remaining valid data
+            still can be utilized to repair files. Repair command does not
+            fix broken blocks in recovery record itself, only file data
+            is corrected. After successful archive repair, you may need to
+            create a new recovery record for rescued files.
+
+            While the recovery record improves chances to repair damaged
+            archives, it does not guarantee the successful recovery.
+            Consider combining the recovery record feature with making
+            multiple archive copies to different media for important data.
+
+            Example:
+
+            rar rr5 arcname
+
+            add the recovery record of 5% of archive size.
+
+
+    rv[N]   Create recovery volumes (.rev files), which can be later
+            used to reconstruct missing and damaged files in a volume
+            set. This command makes sense only for multivolume archives
+            and you need to specify the name of the first volume
+            in the set as the archive name. For example:
 
             rar rv3 data.part01.rar
 
-            这个功能可以被用来备份，例如，发送一个多卷压缩文件到一个新组，并
-            且部分接收者没有收其中的一些文件。重新发送恢复卷代替普通卷，可以
-            减少传送文件的总数。
+            This feature may be useful for backups or, for example,
+            when you posted a multivolume archive to a newsgroup
+            and a part of subscribers did not receive some of the files.
+            Reposting recovery volumes instead of usual volumes
+            may reduce the total number of files to repost.
 
-            每个恢复卷可以重建一个丢失的 RAR 卷。例如，如果您有30个卷，3个恢
-            复卷，您可以创建任何3个丢失的卷。如果.rev文件的数目少于丢失卷的
-            数目，重建将不可能。对于普通和恢复卷的总数，RAR 4.x 不能超过255，
-            RAR 5.0 不能超过 65535。
+            Each recovery volume is able to reconstruct one missing
+            or damaged RAR volume. For example, if you have 30 volumes
+            and 3 recovery volumes, you are able to reconstruct any
+            3 missing volumes. If the number of .rev files is less than
+            the number of missing volumes, reconstructing is impossible.
+            The total number of usual and recovery volumes must not
+            exceed 65535.
 
-            原来的 RAR 卷在卷被创建后不能被修改。修复算法使用存储在 REV 文件
-            和 RAR 卷中的数据来重建丢失的 RAR 卷。所有如果您修改了 RAR 卷，
-            例如，在创建 REV 文件后锁定它们，修复操作将失败。
+            Original RAR volumes must not be modified after creating
+            recovery volumes. Recovery algorithm uses data stored both
+            in REV files and in RAR volumes to rebuild missing RAR volumes.
+            So if you modify RAR volumes, for example, lock them, after
+            creating REV files, recovery process will fail.
 
-            除了恢复数据，RAR 5.0 恢复卷文件也存储了类似于文件校验和的服务信
-            息来保护 RAR 文件。所以它们比它们要保护的 RAR 卷要稍大。所以如果
-            您要把 RAR 和 REV 文件单独复制的移动媒介中，您需要把它考虑在内并
-            指定 RAR 卷的大小比媒介的大小少几 K 字节。
+            Additionally to recovery data, RAR 5.0 recovery volumes
+            also store service information such as checksums of protected
+            RAR files. So they are slightly larger than RAR volumes
+            which they protect. If you plan to copy individual RAR and REV
+            files to some removable media, you need to take it into account
+            and specify RAR volume size by a few kilobytes smaller
+            than media size.
 
-            可选的 <N> 参数指定要创建的恢复卷的数目。它必须少于 RAR 4.x 集合
-            中 RAR 卷的总数，而且不得超过 RAR 5.0 格式的 RAR 卷数的 10 倍。
-            将自动调整超过此阈值的值。
+            The optional <N> parameter specifies a number of recovery
+            volumes to create. It must not be larger than tenfold amount
+            of RAR volumes. Values exceeding the threshold are adjusted
+            automatically.
 
-            您也可以附加一个百分号或“p”字符到这个参数上，这样创建的 .rev 
-            文件的数目将等于从 RAR 卷总数获得的这个百分比。例如:
+            You may also append a percent or 'p' character to this parameter,
+            in such case the number of creating .rev files will be equal to
+            this percent taken from the total number of RAR volumes.
+            For example:
 
             rar rv15% data.part01.rar
 
-            如果忽略 <N> 参数，则将其设置成 10%。
+            If <N> parameter is omitted, it is set to 10%.
 
-            RAR 不管是使用‘rc’命令或自动时，如果在解压时无法定位下一卷，并
-            且发现可用数目的 .rev 文件，对丢失的卷和损坏的卷都试图重建。
+            RAR reconstructs missing and damaged volumes either when
+            using 'rc' command or automatically, if it cannot locate
+            the next volume and finds the required number of .rev files
+            when unpacking.
 
-            损坏卷的原始副本在被重建前重命名为 *.bad。例如，volname.part03.rar
-            将被重命名为volname.part03.rar.bad。
+            Original copies of damaged volumes are renamed to *.bad
+            before reconstruction. For example, volname.part03.rar
+            will be renamed to volname.part03.rar.bad.
 
 
-    s[名称] 转换压缩文件成自解压格式。压缩文件和自解压模块合并(使用
-            default.sfx模块或在参数中指定)。在 Windows 版本中 default.sfx 应
-            该放在RAR.exe 所在目录下，在 Unix 中在用户的 home 目录中，在
-            /usr/lib 或 /usr/local/lib 下。
+    s[name] Convert archive to SFX. The archive is merged with a SFX module
+            (using a module in file default.sfx or specified in the switch).
+            In Windows version default.sfx should be placed in the same
+            directory as the rar.exe, in Unix systems - in the user's home
+            directory, in /usr/lib or /usr/local/lib.
 
-    s-      从已存在的自解压压缩文件中删除自解压模块。RAR 创建一个不带自解压
-            模块的新的压缩文件，原来的自解压文件不会被删除。
+            Windows version uses default32.sfx name for 32-bit SFX module.
 
-    t       测试压缩文件。为了验证指定的文件，这个命令执行虚拟的文件解压操作，
-            不写出任何输出数据流。
+    s-      Remove SFX module from the already existing SFX archive.
+            RAR creates a new archive without SFX module, the original
+            SFX archive is not deleted.
 
-            例子:
+    t       Test archive files. This command performs a dummy file
+            extraction, writing nothing to the output stream, in order to
+            validate the specified file(s).
 
-            在当前目录测试压缩文件:
+            Examples:
 
-            或对于 Unix:
+            Test archives in current directory:
+
+            rar t *
+
+            or for Unix systems:
 
             rar t '*'
 
-            当前目录开始，测试所有子目录下的压缩包：
+            User may test archives in all sub-directories, starting
+            with the current path:
 
             rar t -r *
 
-            或对于 Unix:
+            or for Unix systems:
 
             rar t -r '*'
 
 
-    u       更新压缩文件中的文件。添加不在压缩文件中的文件，并更新比要添加的文件更老的
-            已压缩文件。
+    u       Update files in archive. Adds files not yet in the archive
+            and updates archived files that are older than files to add.
 
 
     v[t[a],b]
-            详细列出压缩文件内容[技术信息[全部], 无修饰]。
+            Verbosely list archive contents [technical [all], bare].
+    
+            'v' command lists archived file attributes, size, packed size,
+            compression ratio, date, time, checksum and name, one file
+            per line. If file is encrypted, line starts from '*' character.
+            For BLAKE2sp checksum only two first and one last symbol are
+            displayed.
 
-            'v' 命令列出存档文件的属性、大小、压缩后大小、压缩率、日期、时间、
-            校验和和名称，每个文件一行。如果文件被加密，行以 * 号开始。对于
-            BLAKE2sp 校验和仅有两个前面的和一个后面的符号被显示。
+            'vt' displays the detailed file information in multiline mode.
+            This information includes file checksum value, host OS,
+            compression options and other parameters.
 
-            'vt' 以多行模式显示详细的文件信息。此信息包括文件校验和值、主机 
-            OS、压缩选项和其他参数。
+            'vta' provide the detailed information not only for files,
+            but also for service headers like NTFS streams
+            or file security data.
 
-            'vta' 不仅提供文件的详细信息，也给出服务器头，如 NTFS 流或文件安
-            全数据。
+            'vb' lists bare file names with path, one per line,
+            without any additional information.
 
-            'vb' 列出单纯的带有路径的文件名，每行一个，没有任何其他信息。
+            You can use -v switch to list contents of all volumes
+            in volume set: rar v -v vol.part1.rar
 
-            您可以使用 -v 参数列出卷组中所有卷的内容: rar v -v vol.part1.rar
+            Commands 'vt', 'vta' and 'vb' are equal to 'lt', 'lta'
+            and 'lb' correspondingly.
 
-            命令 'vt', 'vta' 和 'vb' 等同于 'lt', 'lta' 和 'lb'。
 
+    x       Extract files with full path.
 
-    x       带绝对路径解压
+            Examples:
 
-            例子:
-
-            1) 解压 10cents.txt 到当前目录，不显示压缩文件注释
+            1) extract 10cents.txt to current directory not displaying
+               the archive comment
 
                rar x -c- dime 10cents.txt
 
-            2) 从 docs.rar 解压 *.txt 到 c:\docs 目录
+            2) extract *.txt from docs.rar to c:\docs directory
 
                rar x docs.rar *.txt c:\docs\
 
-            3) 解压 docs.rar 的完整内容当当前目录
+            3) extract the entire contents of docs.rar to current directory
 
                rar x docs.rar
 
-    参数 (与命令结合使用):
+
+    Switches (used in conjunction with a command):
 
 
-    -?      显示命令和参数的帮助。和没有参数或输入非法命令行选项时相同。
+    -?      Display help on commands and switches.
+            Same as none or illegal command line option are entered.
 
 
-    --      停止参数扫描
+    --      Stop switches scanning
 
-            这个参数告诉 RAR 命令行中没有更多的参数了。如果压缩文件或文件名
-            以 - 符号开头，可以使用它。没有'--'参数，这样的名字将被作为参数
-            对待。
+            This switch tells to RAR that there are no more switches
+            in the command line. It could be useful, if either archive
+            or file name starts from '-' character. Without '--' switch
+            such a name would be treated as a switch.
 
-            例子:
+            Example:
 
-            从当前目录添加所有文件到固实压缩文件'-StrangeName'
+            add all files from the current directory to the solid archive
+            '-StrangeName'
 
             RAR a -s -- -StrangeName
 
 
-    -@[+]   禁用 [启用] 文件列表
-						
-            RAR 把“@”字符开始的命令行参数作为文件列表对待。因此在默认情况
-            下，RAR 在遇到“@文件名”参数时会尝试读取“文件名”文件列表。但
-            如果存在“@文件名”的文件，RAR 将参数作为“@文件名”文件，而不是
-            读取文件列表的文件。
+    -@[+]   Disable [enable] file lists
 
-            参数 -@[+] 书允许定义如何处理“@”字符开始的参数，以避免这种歧义。
+            RAR treats command line parameters starting from '@' character
+            as file lists. So by default, RAR attempts to read 'filename'
+            filelist, when encountering '@filename' parameter.
+            But if '@filename' file exists, RAR treats the parameter
+            as '@filename' file instead of reading the file list.
 
-            如果指定了 -@，所有此参数后的参数都将被视为文件名，而不是文件列表。
+            Switch -@[+] allows to avoid this ambiguity and strictly
+            define how to handle parameters starting from '@' character.
 
-            如果指定了 -@+，所有此参数后的参数都将被视为文件列表，而不是文件名。
+            If you specify -@, all such parameters found after this switch
+            will be considered as file names, not file lists.
 
-            此参数不会影响位于之前的参数。
+            If you specify -@+, all such parameters found after this switch
+            will be considered as file lists, not file names.
 
-            例子:
+            This switch does not affect processing parameters located
+            before it.
 
-            测试压缩文件 '@home'
+            Example:
+
+            test the archived file '@home'
 
             rar t -@ notes.rar @home
 
 
-    -ac     压缩或解压后清除存档属性（仅Windows版本）。
+    -ac     Clear Archive attribute after compression or extraction
+            (Windows version only).
 
-            如果在压缩时指定了此参数，成功压缩的文件的“存档”文件属性被清除。
-           当解压时，-ac 会清除解压文件的“存档”属性。此参数不影响目录属性。
+            If -ac is specified when archiving, "Archive" file attribute
+            is cleared for successfully compressed files. When extracting,
+            -ac will clear "Archive" attribute for extracted files.
+            This switch does not affect directory attributes.
 
 
-    -ad[1,2]  备选目标路径
+    -ad[1,2]
+            Alternate destination path.
 
-            这个选项在解压一组压缩文件时可能很有用。
+            This option may be useful when unpacking a group of archives.
 
-            参数 -ad 和 -ad1 为从每个归档文件解压的文件创建一个单独的目录。这些
-            单独的目录将在 -ad 的目标目录中创建，以及在 -ad1 的每个归档目录中创建。
+            Switches -ad and -ad1 create a separate directory for files
+            unpacked from each archive. These separate directories are
+            created in destination directory for -ad and in each archive's
+            directory for -ad1.
 
-             参数 -ad2 将解压的文件直接放置到每个归档的目录中。不会创建单独的目录。
+            Switch -ad2 places unpacked files directly to each archive's
+            directory. Separate directories are not created.
 
-             -ad1 和 -ad2 参数将忽略目标目录参数。
+            Destination directory parameter is ignored for -ad1 and -ad2
+            switches.
 
-            例子:
+            Examples:
 
             1) rar x -ad *.rar data\
 
-               RAR 将每一个解压的文件在'data'下创建子目录。
+               RAR will create subdirectories below 'data'
+               for every unpacking archive.
 
             2) rar x -r -ad1 arc\*.rar
 
-               WinRAR 将会递归扫描 'arc' 文件夹搜索 *.rar 压缩文件，并在每
-               个压缩文件文件夹里创建子文件夹。
-
-    -ag[格式]
-            使用当前的日期和时间生成压缩文件名。
-
-            当创建或处理压缩文件时附加当前日期字符串到压缩文件名上。用于每日
-            备份。
-
-            附加的字符串格式有几种可选的格式参数定义或使用"YYYYMMDDHHMMSS"。
-            字符串的格式可以包含下列字符:
-
-            Y   - 年
-            M   - 月
-            MMM - 使用文本字符串作为月名(Jan，Feb，等.)
-            W   - 年的第几周 (每星期从星期一开始)
-            A   - 星期几 (星期一为 1，星期日为 7)
-            D   - 月的第几天
-            E   - 年的第几天
-            H   - 小时
-            M   - 分 (将小时后的前两个“M”视为分钟)
-            I   - 分 (不管小时的位置，都被作为分钟对待)
-            S   - 秒
-            N   - 压缩文件数。RAR 搜索要生成的名字的文件是否存在，如果发现
-                  它已经存在，将递增一个压缩文件数字，直到生成一个唯一的名字。
-                  'N' 格式化字符在创建卷时不被支持。
-                  当执行如解压等非压缩操作时，RAR的选择前第一未使用名称的现
-                  有压缩文件或如果没有这样的压缩文件存在则设置N为1。
-
-            上面列出的每个字符串仅表示添加到压缩文件名中的一个字符。例如,
-            使用  WW 表示 2 位数的星期或 YYYY 定义 4 位数的年。
-
-            如果在格式化字符串的第一个字符是'+'，日期字符串和基本压缩文件名
-            位置交换，所以日期将在压缩文件名之前。
-
-            如果格式字符串中的第一个字符为“F”，则字符串的其余部分为 -ag 
-            参数指定默认的格式字符串。只有被放置到 rar.ini 配置文件或 RAR 环境
-            变量时，此类 -agf<default_format> 参数才具有实用值。例如，如果我们
-            将 RAR 环境变量设置为 -agfYYYY-MMM-DD，我们可以使用 -ag，而不使用
-            假定为 YYYY-MMM-DD 格式字符串的参数。
-
-            格式化字符串可以包含在 '{' 和 '}' 包含的可选字符。此文本插入到压
-            缩文件名中。
-
-            所有其它字符被不变地添加到文件名上。
-
-            如果您需要处理已经存在的压缩文件，小心使用 -ag 参数。依赖于以前
-            使用的 -ag 传送的格式化字符串和时间，生成的和现有的压缩文件名可
-            能不匹配。在这种情况下 RAR 会创建或打开一个新的压缩文件，而不是
-            处理现有文件。您可以使用 -log 参数写入生成的压缩文件名到一个文
-            件，然后从文件读取它再做进一步的处理。
+               RAR will recursively scan 'arc' directory for *.rar archives
+               and create subdirectories in each archive's directory.
 
 
-            例子:
+    -ag[format]
+            Generate archive name using the current date and time.
 
-            1) 使用默认 YYYYMMDDHHMMSS 格式
+            Appends the current date string to an archive name when
+            creating or processing an archive. Useful for daily backups.
+
+            Format of the appending string is defined by the optional
+            "format" parameter or by "YYYYMMDDHHMMSS" if this parameter
+            is absent. The format string may include the following
+            characters:
+
+            Y   - year
+            M   - 1 or 2 'M' define the month number
+            MMM - 3 or more 'M' define the month name as a text string
+            O   - month name as a text string regardless of characters number
+            W   - a week number (a week starts with Monday)
+            A   - day of week number (Monday is 1, Sunday - 7)
+            K   - day of week name as a text string
+            D   - day of month
+            E   - day of year
+            H   - hours
+            M   - minutes (first two 'M' after hours treated as minutes)
+            I   - minutes (treated as minutes regardless of hours position)
+            S   - seconds
+            N   - archive number. RAR searches for already existing archive
+                  with generated name and if found, increments the archive
+                  number until generating a unique name. 'N' format character
+                  is not supported when creating volumes.
+                  When performing non-archiving operations like extracting,
+                  RAR selects the existing archive preceding the first
+                  unused name or sets N to 1 if no such archive exists.
+
+            Each of format string characters listed above represents only
+            one character added to archive name. For example, use WW for
+            two digit week number or YYYY to define four digit year.
+            Excessive format characters exceeding the available field width
+            are ignored.
+
+            If the first character in the format string is '+', positions
+            of the date string and base archive name are exchanged,
+            so a date will precede an archive name.
+
+            If the first character in the format string is 'F', the rest of
+            string specifies the default format string for -ag switch.
+            Such -agf<default_format> switch has a practical value only
+            if placed to rar.ini configuration file or RARINISWITCHES
+            environment variable. For example, if we set RARINISWITCHES
+            environment variable to -agfYYYY-MMM-DD, we can use -ag without
+            a parameter with YYYY-MMM-DD format string assumed.
+
+            The format string may contain optional text enclosed in '{'
+            and '}' characters. This text is inserted into archive name.
+
+            All other characters are added to an archive name without
+            changes.
+
+            If you need to process an already existing archive, be careful
+            with -ag switch. Depending on the format string and time passed
+            since previous -ag use, generated and existing archive names
+            may mismatch. In this case RAR will create or open a new archive
+            instead of processing the already existing one. You may use
+            -log switch to write the generated archive name to a file
+            and then read it from file for further processing.
+
+
+            Examples:
+
+            1) use the default YYYYMMDDHHMMSS format
 
                rar a -ag backup
 
-            2) 使用 DD-MMM-YY 格式
+            2) use DD-MMM-YY format
 
                rar t -agDD-MMM-YY backup
 
-            3) 使用 YYYYMMDDHHMM 格式，替换'backup'之前的日期
+            3) use YYYYMMDDHHMM format, place date before 'backup'
 
                rar a -ag+YYYYMMDDHHMM backup
 
-            4) 使用 YYYY-WW-A 格式，包含区段描述
+            4) use YYYY-WW-A format, include fields description
 
                rar a -agYYYY{year}-WW{week}-A{wday} backup
 
-            5) 使用 YYYYMMDD 和压缩文件数。它允许您在同一天使用 -agyymmdd-nn
-               数次，每一个新的压缩文件名都将包含一个新的递增数字。
+            5) use YYYYMMDD and the archive number. It allows to generate
+               unique names even when YYYYMMDD format mask used more than
+               once in the same day
 
                rar a -agYYYYMMDD-NN backup
 
 
-    -ai     忽略文件属性。
+    -ai     Ignore file attributes.
 
-            当解压时实用此参数，RAR 不对解压的文件设置存储在压缩文件中的常
-            规文件属性。此参数保留由操作系统赋予新创建文件的属性。
+            If this switch is used when extracting, RAR does not set
+            general file attributes stored in archive to extracted files.
+            This switch preserves attributes assigned by operating system
+            to a newly created file.
 
-            在 Windows 中它影响存档、系统、隐藏和只读属性。在 Unix 中，用
-            户、组和其它文件属性。
+            If this switch is used when archiving, predefined values,
+            typical for file and directory, are stored instead of actual
+            attributes.
+
+            In Windows it affects archive, system, hidden and read-only
+            attributes. in Unix systems - user, group, and other file
+            permissions.
 
 
     -am[s,r]
-            归档名称和时间 [保存, 恢复]
+            Archive name and time [save, restore]
 
-            -ams 参数保留归档的元数据，其中包括原始的归档名称和创建时间。
-            它可以与归档修改命令一起使用，例如“a”或“ch”。
-            保存的元数据显示在“l”和“v”归档列表命令的标题中。
+            Switch -ams preserves the archive metadata, which includes
+            the original archive name and creation time. It can be used
+            with archive modification commands, such as 'a' or 'ch'.
+            Saved metadata is displayed in header of 'l' and 'v' archive
+            list commands.
 
-            如果和 -tk 或 -tl 参数一起使用，-ams 会保存由这些参数设置的归档
-            修改时间。
-           
-            -amr 参数将归档重命名为保存的名称。它还将存储时间设置为 Windows 
-            中的归档创建和修改时间，以及 Unix 中的归档修改时间。
-            它只能与“ch”命令一起使用，如果指定了 -amr，它将忽略所有其他归档修改参数。
+            If used together with -tk or -tl switches, -ams saves
+            the archive modification time set by these switches.
 
-            会将没有“s”和“r”修饰符的 -am 参数视为 -ams。
+            Switch -amr renames an archive to saved name. Also it sets
+            the stored time as the archive creation and modification time
+            in Windows and as the archive modification time in Unix systems.
+            It can be used together with 'ch' command only, which ignores
+            all other archive modification switches if -amr is specified.
+
+            Switch -am without 's' and 'r' modifiers is treated as -ams.
 
 
-            示例:
+            Examples:
 
-            1) 创建 files.rar 并保存其元数据
+            1) create files.rar and save its metadata
 
                rar a -am files.rar
 
-            2) 恢复 myfiles.rar 的原始名称
+            2) restore the original name of myfiles.rar
 
                rar ch -amr myfiles.rar
 
 
-    -ao     添加带有 "存档" 属性的文件
-            (仅 Windows 版本)。
+    -ao     Add files with "Archive" attribute set
+            (Windows version only).
 
-            如果存档时使用了 -ao，仅会添加带有 "存档" 属性的文件到该压缩文件。
-            该参数不影响目录，因此所有匹配的目录都会添加而无论其属性。
-            您还可以指定 -ed 参数，如果您希望忽略所有目录记录。
-            
-            例子:
+            If -ao is used when archiving, only files with "Archive"
+            file attribute will be added to archive. This switch does not
+            affect directories, so all matching directories are added
+            regardless of their attributes. You can also specify -ed switch
+            if you prefer to omit all directory records.
 
-            添加磁盘C:上所有带有 "存档" 属性的文件到'f:backup'，并清除所有
-            文件的 "存档" 属性
+            Example:
+
+            add all disk C: files with "Archive" attribute set
+            to the 'f:backup' and clear files "Archive" attribute
 
             rar a -r -ac -ao f:backup c:\*.*
 
 
-    -ap<path>     
-            设置压缩文件内部的路径。当添加文件到压缩文件中时，路径被整合到文
-            件名中，解压时从文件名删除。
+    -ap<path>
+            Set path inside archive. This path is merged to file
+            names when adding files to an archive and removed
+            from file names when extracting.
 
-            例如，如果您希望添加文件'readme.txt'到目录压缩文件'release'
-            的'DOCS\ENG'中，您可以运行:
+            For example, if you wish to add the file 'readme.txt'
+            to the directory 'DOCS\ENG' of archive 'release',
+            you may run:
 
             rar a -apDOCS\ENG release readme.txt
 
-            或者解压'ENG'到当前目录中:
+            or to extract 'ENG' to the current directory:
 
             rar x -apDOCS release DOCS\ENG\*.*
 
 
-    -as     同步压缩文件内容
+    -as     Synchronize archive contents
 
-            如果压缩时使用这个参数，这些在当前被添加文件列表中不存在的被压缩
-            文件将从压缩文件中删除。它对于使用这个参数和 -u(更新)组合同步一
-            个压缩文件和正在压缩目录的内容很便利。
+            If this switch is used when archiving, those archived files
+            which are not present in the list of the currently added
+            files, will be deleted from the archive. It is convenient to
+            use this switch in combination with -u (update) to synchronize
+            contents of archive and archiving directory.
 
-            例如，执行这个命令后:
+            For example, after the command:
 
             rar a -u -as backup sources\*.cpp
 
-            压缩文件'backup.rar'将只包含目录'sources'中的*.cpp文件，所有其它
-            文件将被从压缩文件中删除。它和创建新的压缩文件很相像，但是有一个
-            重要的不同:如果最近备份之后没有文件被修改，这个操作比创建新的压
-            缩文件执行得快。
+            the archive 'backup.rar' will contain only *.cpp files
+            from directory 'sources', all other files will be deleted
+            from the archive. It looks similar to creating a new archive,
+            but with one important exception: if no files are modified
+            since the last backup, the operation is performed much faster
+            than the creation of a new archive.
 
 
-    -cfg-   忽略配置文件和 RAR 环境变量。
+    -cfg-   Ignore configuration file and RARINISWITCHES environment variable.
 
 
-    -cl     转换文件名成小写字母。
+    -cl     Convert file names to lower case.
 
 
-    -cu     转换文件名成大写字母。
+    -cu     Convert file names to upper case.
 
 
-    -c-     禁止显示注释。
+    -c-     Disable comments show.
 
 
-    -df     压缩后删除文件
+    -df     Delete files after archiving
 
-            移动文件到压缩文件中。这个参数与命令'A'组合执行和命令'M'是同一动
-            作。
-
-
-    -dh     打开共享文件
-
-            允许处理有其它应用程序打开写的文件。
-
-            如果应用程序允许对文件的读取访问，这个参数有效。但是如果文件的访
-            问类型是私有，文件打开操作仍然会失败。
-
-            这个选项很危险，因为它允许压缩一个文件，而同时正被其它应用程序修
-            改，所以小心使用。
+            Move files to archive. This switch in combination with
+            the command "A" performs the same action as the command "M".
 
 
-    -dr     删除文件到回收站
+    -dh     Open shared files
 
-            压缩后删除文件并把它们放到回收站中。仅可用于 Windows 版本。
+            Allows to process files opened by other applications
+            for writing.
 
+            This switch helps if an application allowed read access
+            to file, but if all types of file access are prohibited,
+            the file open operation will still fail.
 
-    -ds     添加到一个固实压缩文件时不排序。
-
-
-    -dw     压缩操作后清除文件
-
-            压缩后清除文件。在删除文件数据前使用 0 字节文件覆盖它们, 防止恢
-            复删除的文件，文件被截短并重命名为临时名称。
-
-            请注意，这种做法是为普通硬盘设计的，但可能无法覆盖固态磁盘上的原
-            始文件数据，因为 SSD 磨损平衡技术的结果和更复杂的数据地址。
+            This option could be dangerous, because it allows
+            to archive a file, which at the same time is modified
+            by another application, so use it carefully.
 
 
-    -ed     不添加空目录
+    -dr     Delete files to Recycle Bin
 
-            这个参数指出空目录不被存储到被创建的压缩文件中。当解压这样一个压
-            缩文件时, RAR 会基于他们内部的文件路径创建非空的目录。关于空目录
-            的信息丢失。非空目录除了名字外(访问权限, 流, 等。)其他所有属性全
-            部丢失, 所以只有在您不需要保留这样的信息时使用此参数。
-
-            如果 -ed 和 'm' 命令或 -df 参数一起被使用，RAR 将不能移除空的目录。
+            Delete files after archiving and place them to Recycle Bin.
+            Available in Windows version only.
 
 
-    -ep     从名称中排除路径。包含此参数时，文件在加入压缩文件时不会包含路
-            径信息。这可能会有在压缩文件中存在数个相同名称的结果。
-
-            如果用于解压缩时，会为解压的文件忽略压缩的路径，以便所有文件都在              同一个目标目录下创建。
+    -ds     Do not sort files while adding to a solid archive.
 
 
-    -ep1    从文件名中排除底层目录。不要存储或解压在命令行中输入的路径。如果            路径包含通配符则忽略此参数。
+    -dw     Wipe files after archiving
 
-            例子:
+            Delete files after archiving. Before deleting file data
+            are overwritten by zero bytes to prevent recovery of deleted
+            files, file is truncated and renamed to temporary name.
 
-            1) tmp 目录中的所有文件和目录都将被添加到压缩文件'test'中，但是被             压缩文件名路径不包含'tmp\'
+            Please be aware that such approach is designed for usual
+            hard disks, but may fail to overwrite the original file data
+            on solid state disks, as result of SSD wear leveling technology
+            and more complicated data addressing.
 
-            rar a -ep1 -r test tmp\*
 
-            这等价于下列命令:
+    -ed     Do not add empty directories
 
-            cd tmp
-            rar a -r ..\test
-            cd ..
+            This switch indicates that directory records are not to be
+            stored in the created archive. When extracting such archives,
+            RAR creates non-empty directories based on paths of files
+            contained in them. Information about empty directories is
+            lost. All attributes of non-empty directories except a name
+            (access rights, streams, etc.) will be lost as well, so use
+            this switch only if you do not need to preserve such information.
 
-            2) 解压文件并匹配 images\* 掩码到 dest\ 目录，
-               但从已创建文件的路径里删除 'images\':
+            If -ed is used with 'm' command or -df switch, RAR will not
+            remove empty directories.
+
+
+    -ep     Exclude paths from names. This switch enables files to be
+            added to an archive without including the path information.
+            This could result in multiple files with the same name
+            existing in the archive.
+
+            If used when extracting, archived paths are ignored
+            for extracted files, so all files are created in the same
+            destination directory.
+
+
+    -ep1    Exclude base dir from names. Do not store or extract the path
+            entered in the command line. Ignored if path includes wildcards.
+
+            Examples:
+
+            1) add all files and directories from 'tmp' directory to archive
+               'test', but exclude 'tmp\' from archived names path:
+
+               rar a -ep1 -r test tmp\*
+
+               This is an equivalent to commands:
+
+               cd tmp
+               rar a -r ..\test
+               cd ..
+
+            2) extract files matching images\* mask to dest\ directory,
+               but remove 'images\' from paths of created files:
 
                rar x -ep1 data images\* dest\
 
 
-    -ep2    扩展路径成完全路径。压缩时存储文件的完全路径(除了盘符和根目录路
-            径).
+    -ep2    Expand paths to full. Store full file paths (except the drive
+            letter and leading path separator) when archiving.
 
-    -ep3    扩展路径为包含盘符的完全路径。
-            仅用于 Windows 版本。
 
-            压缩时如果使用此参数则保存和恢复包括盘符的完全的文件路径。磁盘分
-            隔符(冒号)被下划线字符替换。
+    -ep3    Expand paths to full including the drive letter.
+            Windows version only.
 
-            如果您解压时使用 -ep3，它把下划线改回为冒号并且把文件解压到它们
-            原始的目录和磁盘中。如果用户也指定了目标路径，它会被忽略。
+            This switch stores full file paths including the drive
+            letter if used when archiving. Drive separators (colons)
+            are replaced by underscore characters.
 
-            压缩和解压恢复它们原来的状态时提取，会把 UNC 路径从\\server\share
-            转换为__server\share。
+            If you use -ep3 when extracting, it will change
+            underscores back to colons and create unpacked files
+            in their original directories and disks. If the user
+            also specified a destination path, it will be ignored.
 
-            此参数对于把数个磁盘备份到同一个压缩文件有帮助。例如，您可以运行:
+            It also converts UNC paths from \\server\share to
+            __server\share when archiving and restores them to
+            the original state when extracting.
+
+            This switch can help to backup several disks to the same
+            archive. For example, you may run:
 
             rar a -ep3 -r backup.rar c:\ d:\ e:\
 
-            来创建备份并且:
+            to create backup and:
 
             rar x -ep3 backup.rar
 
-            来恢复它。
+            to restore it.
 
-            小心使用 -ep3 参数，只有您确认压缩文件不包含任何恶意文件。换句话
-            说，如果是您自己创建的压缩文件或您完全相信它的作者才使用它。此开
-            关允许覆盖在您的计算机上任何地方的任何文件，包括重要的系统文件和
-            通常仅用于备份和恢复的目的。
+            But be cautious and use -ep3 only if you are sure that
+            extracting archive does not contain any malicious files.
+            In other words, use it if you have created an archive yourself
+            or completely trust its author. This switch allows to overwrite
+            any file in any location on your computer including important
+            system files and should normally be used only for the purpose
+            of backup and restore.
 
-
+    
     -ep4<path>
-            排除名称中的路径前缀。
+            Exclude the path prefix from names.
 
-            如果在归档时使用此参数，则如果指定路径位于此类名称的开头但与整个
-            名称不匹配，则该路径将从归档名称中排除。将与已准备好存储在压缩文
-            件中的名称进行比较，并删除驱动器号和前导路径分隔符。
+            If this switch is used when archiving, the specified path
+            is excluded from archived names if it is found in the beginning
+            of such name, but does not match the entire name. Comparison
+            is performed with names already prepared to store in archive,
+            with removed drive letters and leading path separators.
 
-            例如：
+            For example:
 
             rar a -ep4texts\books archive c:\texts\books\technical
 
-            删除已归档名称中的“text\books”。由于将与保存在压缩文件中的名称
-            进行比较，我们不能使用 -ep4c:\texts\books。
+            removes "text\books" from archived names, so they start
+            from 'technical'. Since comparison is performed with names,
+            as they are stored in archive, we can't use -ep4c:\texts\books.
 
-            如果在解压时使用此参数，其工作方式与 -ap<path> 参数类似。如果在已
-            归档文件名的开头存在路径，则将其删除。例如：
+            If this switch is used when extracting, it works similarly to
+            -ap<path> switch. Path is removed if it is present
+            in the beginning of archived file name. For example:
 
             rar x -ep4texts\books archive
 
-            删除已归档路径开头的“texts\books”。
+            removes 'texts\books' from those archived paths,
+            which start from it.
 
 
-    -e[+]<属性>
-            指定排除或包含掩码属性文件。
+    -e[+]<attr>
+            Specifies file exclude or include attributes mask.
 
-            <属性> 是十进位，八进位(以 '0' 开头)或十六进位 (以 '0x' 开头)
-            的数字格式。
+            <attr> is a number in the decimal, octal (with leading '0')
+            or hex (with leading '0x') format.
 
-            默认, 在 <属性>没有‘+’标记, 此参数定义排除掩码。如果对 <属性>
-            和文件属性按位进行 AND 逻辑运算的结果不为 0，则文件将不会被处理。
+            By default, without '+' sign before <attr>, this switch
+            defines the exclude mask. So if result of bitwise AND between
+            <attr> and file attributes is nonzero, file would not be
+            processed.
 
-            如果‘+’符号存在，它指定包含掩码。只有具有在掩码中指定的属性中
-            的至少一种的文件会被处理。
+            If '+' sign is present, it specifies the include mask.
+            Only those files which have at least one attribute specified
+            in the mask will be processed.
 
-            在 Windows 版本中也可以使用D、S、H、A代替数字掩码符号表示目录和
-            文件的系统，隐藏，存档和只读属性。给出的属性的顺序并不重要。
-            Unix 版本支持 D 和 V 符号来定义目录和设备属性。
+            In Windows version is also possible to use symbols D, S, H,
+            A and R instead of a digital mask to denote directories
+            and files with system, hidden, archive and read-only attributes.
+            The order in which the attributes are given is not significant.
+            Unix version supports D and V symbols to define directory
+            and device attributes.
 
-            允许在命令行中把 -e<atr> 和 -e+<atr> 都指定。
+            It is allowed to specify both -e<attr> and -e+<attr>
+            in the same command line.
 
-            示例:
+            Examples:
 
-            1) 仅有文件夹名字而不包含它们的内容
+            1) archive only directory names without their contents
 
                rar a -r -e+d dirs
 
-            2) 不压缩系统和隐藏属性的文件:
+            2) do not compress system and hidden files:
 
                rar a -esh files
 
-            3) 不解压只读文件:
+            3) do not extract read-only files:
 
                rar x -er files
 
 
-    -f      更新文件。可以在解压或创建压缩文件时使用。命令字符串"a -f"等价于
-            命令'f'，您也可以和命令'm'或'mf'一起使用'-f' 。如果参数'-f'和命
-            令'x'或'e'一起使用，则只有旧文件能被从压缩文件中解压的新版本替换。
+    -f      Freshen files. May be used with archive extraction or creation.
+            The command string "a -f" is equivalent to the command 'f', you
+            could also use the switch '-f' with the commands 'm' or 'mf'. If
+            the switch '-f' is used with the commands 'x' or 'e', then only
+            old files would be replaced with new versions extracted from the
+            archive.
 
 
-    -hp[p]  加密文件数据和头。
+    -hp[p]  Encrypt both file data and headers.
 
-            这个参数和 -p[pwd] 类似，但是参数 -p 只加密文件数据，而使文件名等
-            其它信息可见。这个参数加密所有包括文件数据、文件名、大小、属性、
-            注释和其它块等所有可感知压缩文件区域，所以它提供了更高的安全等
-            级。在压缩文件中使用-hp 加密，没有密码甚至不可能查看文件列表。
+            This switch is similar to -p[pwd], but switch -p encrypts
+            only file data and leaves other information like file names
+            visible. This switch encrypts all sensitive archive areas
+            including file data, file names, sizes, attributes, comments
+            and other blocks, so it provides a higher security level.
+            Without a password it is impossible to view even the list of
+            files in archive encrypted with -hp.
 
-            例子:
+            Example:
 
             rar a -hpfGzq5yKw secret report.txt
 
-            将添加文件 report.txt 到加密的压缩文件secret.rar中，使用密码
-            'fGzq5yKw'
+            will add the file report.txt to the encrypted archive
+            secret.rar using the password 'fGzq5yKw'
 
 
     -ht[b|c]
-            选择文件校验和的哈希类型 [BLAKE2,CRC32]。
+            Select hash type [BLAKE2,CRC32] for file checksum.
 
-            RAR 压缩文件的文件数据完整性由为每个存档文件计算和存储的校验和保
-            护。
+            File data integrity in RAR archive is protected by checksums
+            calculated and stored for every archived file.
 
-            默认情况下，WinRAR 使用 CRC32 函数来计算校验和。RAR 5.0 压缩文件
-            格式还允许选择 BLAKE2 哈希函数代替CRC32。
+            By default, RAR uses CRC32 function to calculate the checksum.
+            RAR 5.0 archive format also allows to select BLAKE2sp hash
+            function instead of CRC32.
 
-            BLAKE2 哈希使用 -htb 参数，CRC32函数使用 -htc 参数。因为 CRC32 
-            是默认的算法，所以只有在需要覆盖 WinRAR 配置中 -htb 模式时，您才
-            可能需要 -htc。
+            Specify -htb switch for BLAKE2sp and -htc for CRC32 hash function.
+            Since CRC32 is the default algorithm, you may need -htc only to
+            override -htb in RAR configuration.
 
-            CRC32 输出是 32 位长。虽然 CRC32 属性适合检测大部分意外的数据错
-            误，它还没有可靠到可以验证文件数据。换句话说，如果两个文件有相同
-            的CRC32，它不保证文件内容是相同的。
+            CRC32 output is 32 bit length. While CRC32 properties are
+            suitable to detect most of unintentional data errors,
+            it is not reliable enough to verify file data identity.
+            In other words, if two files have the same CRC32,
+            it does not guarantee that file contents is the same.
 
-            BLAKE2sp 输出是 256 位。作为一个密码学可靠性的强大哈希函数，它几
-            乎可以保证如果两个文件如果有相同的 BLAKE2sp 值，则它们的内容是相
-            同的。BLAKE2sp 的错误检测能力也比较短的 CRC32 更可靠。
-           
-            因为 BLAKE2sp 输出较长，-htb 参数生成的压缩文件也会略大。
-
-            如果压缩文件头没有加密 (无参数 -hp)，对于加密 RAR 5.0 文件的文件
-            校验和被修改使用一种特殊的密码依赖算法，不可能基于校验和猜测文件
-            内容。不要期待这样的加密文件校验和匹配常规和 BLAKE2sp 和 CRC32 值。
+            BLAKE2sp output is 256 bit. Being a cryptographically strong
+            hash function, it practically guarantees that if two files
+            have the same value of BLAKE2sp, their contents is the same.
+            BLAKE2sp error detection property is also more reliable than
+            in shorter CRC32.
             
-            此参数仅支持 RAR 5.0 压缩文件, 所以您需要和它一起使用 -ma 参数。
+            Since BLAKE2sp output is longer, resulting archive is
+            slightly larger for -htb switch.
 
-            您可以使用‘vt’或‘lt’命令查看存档文件的校验和。
+            If archive headers are unencrypted (no switch -hp), checksums
+            for encrypted RAR 5.0 files are modified using a special
+            password dependent algorithm, to make impossible guessing
+            file contents based on checksums. Do not expect such encrypted
+            file checksums to match usual CRC32 and BLAKE2sp values.
+            
+            This switch is supported only by RAR 5.0 format.
+
+            You can see checksums of archived files using 'vt' or 'lt'
+            commands.
     
 
-            例子:
+            Example:
 
-            rar a -ma -htb lists.rar *.lst
+            rar a -htb lists.rar *.lst
 
-            使用 BLAKE2 作为文件校验和添加 *.lst 到 lists.rar。
+            will add *.lst to lists.rar using BLAKE2sp for file checksums.
 
 
     -id[c,d,n,p,q]
-            显示或禁用消息。
+            Display or disable messages.
 
-            参数 -idc 禁用版权字符串。
+            Switch -idc disables the copyright string.
 
-            参数 -idd 在操作结束禁止显示“完成”字符串。
+            Switch -idd disables "Done" string at the end of operation.
 
-            参数 -idn 在创建、测试或提取压缩文件时，禁用已归档
-            的名称输出。它在将文件解压到不存在的目录时，会禁用
-            目录创建消息。它也会影响其他一些归档处理命令。它不会
-            隐藏其他消息和总百分比指示器。-idn 可能会产生较小的
-            视觉瑕疵，例如百分比指示器覆盖错误消息的最后几个字符。
+            Switch -idn disables archived names output when creating,
+            testing or extracting an archive. It disables directory creation
+            messages when unpacking a file to non-existing directory.
+            It can affect some other archive processing commands as well.
+            It does not hide other messages and total percentage indicator.
+            Minor visual artifacts, such as percentage indicator overwriting
+            few last characters of error messages, are possible with -idn.
 
-            参数 -idp 禁止百分比指示。
+            Switch -idp disables the percentage indicator.
 
-            参数 -idq 打开安静模式, 仅错误消息和问题能被显示。
+            Switch -idq turns on the quiet mode, so only error messages
+            and questions are displayed.
 
-            允许一次使用数个修饰,
-            如果参数 -idcdp 是正确的。
-
-
-    -ieml[.][地址]
-            使用 E-mail发送压缩文件。只有 Windows 版本可用。
-
-            附加一个使用添加命令创建或被更新的压缩文件到 E-mail 信息中。您需
-            要有 MAPI 兼容的E-mail客户端来使用这个参数(大部分现代的 E-mail
-            程序支持MAPI接口)。
-
-            您可以在参数中直接输入详细E-mail地址或留为空白。在以后可以由您的
-            E-mail 程序询问。可以指定用分号或逗号隔开的数个地址。
-
-            如果您添加一个'.'字母到 -ieml，成功附加到E-mail中后压缩文件会被
-            删除。如果创建多卷压缩文件使用这个参数，每一卷都附加单独的
-            E-mail 信息。
+            It is allowed to use several modifiers at once,
+            so switch -idcdp is correct.
 
 
-    -ierr   发送所有消息到标准错误设备。
+    -ieml[.][addr]
+            Send archive by email. Windows version only.
+
+            Attach an archive created or updated by the add command
+            to email message. You need to have a MAPI compliant email
+            client to use this switch (most modern email programs
+            support MAPI interface).
+
+            You may enter a destination email address directly
+            in the switch or leave it blank. In the latter case you
+            will be asked for it by your email program. It is possible
+            to specify several addresses separated by commas or semicolons.
+
+            If you append a dot character to -ieml, an archive will be
+            deleted after it was successfully attached to an email.
+            If the switch is used when creating a multivolume archive,
+            every volume is attached to a separate email message.
 
 
-    -ilog[文件名]
-            记录错误到文件中。
+    -ierr   Send all messages to stderr.
 
-            把错误信息写到 RAR 目录中的 rar.log 文件中。也可以在参数中指定其
-            它的日志文件名代替默认的 rar.log，例如，-ilogc:\log\backup.log。
-            如果指定的文件名不包含路径，日志文件将会使用下列默认创建:
 
-            把错误信息写到 RAR 目录中的 rar.log 文件中。如果选项 "名称" 参数
-            没有指定, 日志文件将会使用下列默认创建:
+    -ilog[name]
+            Log errors to file.
 
-            Unix: .rarlog 放在用户的 home 目录中;
-            Windows: rar.log 放在 %APPDATA%\WinRAR 目录中。
+            Write error messages to rar.log file. If optional 'name'
+            parameter is not specified, the log file is created
+            using the following defaults:
 
-            如果“名称”参数包含无路径的文件名, RAR 会在默认目录中使用上面指
-            定的名称创建日志文件。如果您想改变日志文件的位置, 需要在“名称”
-            参数中包含路径和文件名。
+            Unix systems: .rarlog file in the user's home directory;
+            Windows:      rar.log file in %APPDATA%\WinRAR directory.
 
-            默认情况下，日志文件使用 UTF-16 小端字节序编码，可以使用 -sc<字符
-            集>g参数修改，如 -scag 使用原生单字节编码。
+            If 'name' parameter includes a file name without path,
+            RAR will create the log file in the default directory
+            mentioned above using the specified name. Include both path
+            and name to 'name' parameter if you wish to change
+            the location of log file.
 
-            例如:
+            By default, log file uses UTF-16 little endian encoding,
+            but it can be changed with -sc<charset>g switch, such as -scag
+            for native single byte encoding.
+
+
+            Example:
 
             rar a -ilogc:\log\backup.log backup d:\docs
 
-            发生错误时会创建 c:\log\backup.log 日志文件。
+            will create c:\log\backup.log log file in case of errors.
 
 
-    -inul   禁止所有消息。
+    -inul   Disable all messages.
 
 
     -ioff[n]
-            在完成操作后关闭计算机。使用-ioff 或 -ioff1来关闭PC电源，-ioff2 来
-            休眠，-ioff3 来睡眠，以及 -ioff4 来重启。操作系统必须支持相应的电
-            源管理功能。如果使用此参数启动了多个 RAR 副本，则会由最后结束的一
-            份来关闭 PC。只有 Windows 版本可用。
+            Turn PC off after completing an operation.
+
+            Use -ioff or -ioff1 to turn PC off, -ioff2 to hibernate,
+            -ioff3 to sleep and -ioff4 to restart. Appropriate power features
+            must be supported by operating system.
+
+            If several RAR copies are started with this switch,
+            PC is turned off by a copy finished last.
+            
+            Windows version only.
 
 
     -isnd[-]
-            控制通知的声音。
-            使用 -isnd 来启用通知的声音，使用 -isnd- 来禁用它们。
+            Control notification sounds.
 
-    -iver   显示版本号并退出。您可以仅运行 "RAR -iver"。
-
-
-    -k      锁定压缩文件. 任何试图改变压缩文件的命令都会被忽略。
+            Use -isnd to enable notification sounds and -isnd- to disable them.
 
 
-    -kb     保留损坏的解压文件。
-
-            RAR 默认解压后删除校验和错误的文件。参数 -kb 指定校验和错误的文
-            件不会被删除。
+    -iver   Display the version number and quit. You can run just "RAR -iver".
 
 
-    -log[格式][=名称]
-            写入名称到日志文件。
+    -k      Lock archive.
+    
+            Prevents accidental archive modification by RAR.
+            See the 'k' command description for details.
 
-            此参数允许写入在压缩、解压、删除和列表命令中的压缩文件和文件名到
-            指定的文本文件。它的行为被 '格式' 字符串定义，可以包含下面一个或
-            多个字符:
+            Example:
 
-            A - 写入压缩文件名到日志文件。如果 RAR 创建或处理了卷，所有的卷
-                名称都被记录。
+            rar a -k final.rar srcfiles
 
-            F - 写入处理的文件名到日志文件。它包含了添加到压缩文件中和从压缩
-                文件中解压、删除的文件或列出的压缩文件内的文件。
 
-            P - 如果指定名称的日志文件已经存在，则附加数据到现有文件后，而不
-                是创建一个新的。
+    -kb     Keep broken extracted files.
 
-            U - 以 Unicode 格式写入文件。
+            RAR, by default, deletes files with checksum errors
+            after extraction. The switch -kb specifies that files
+            with checksum errors should not be deleted.
 
-            如果 'A' 和 'F' 都被指定，则为 'A'。
 
-            '名称' 允许指定日志文件的名称。它必须用 '=' 字符和 '格式' 字符串
-            分隔。如果 '名称' 不存在，RAR 会使用默认的 rarinfo.log 文件名。
+    -log[fmt][=name]
+            Write names to log file.
 
-            在同一命令行中允许指定多个 -log 参数。
+            This switch allows to write archive and file names to specified
+            text file in archiving, extracting, deleting and listing commands.
+            Its behavior is defined by 'fmt' string, which can include one
+            or more of following characters:
 
-            此参数在您需要用 -ag 或 -v 参数在批处理脚本中处理创建的压缩文件时
-            特别有用。在使用适当的命令创建一个压缩文件，然后从 arcname.txt 读
-            取生成的 RAR 压缩文件名称时，您可以指定 -loga=arcname.txt。例如，
-            在 Windows 批处理文件中它可以是：set /p name=<arcname.txt。
+            A - write archive names to log file. If RAR creates or processes
+                volumes, all volume names are logged.
 
-            例子:
+            F - write processed file names to log file. It includes
+                files added to archive and extracted, deleted or listed
+                files inside of archive.
 
-            1) 写入创建的卷的名字到 vollist.txt:
+            P - if log file with specified name exists, append data
+                to existing file instead of creating a new one.
+
+            U - write data in Unicode format.
+
+            If neither 'A' nor 'F' are specified, 'A' is assumed.
+
+            'name' parameter allows to specify the name of log file.
+            It must be separated from 'fmt' string by '=' character.
+            If 'name' is not present, RAR will use the default rarinfo.log
+            file name.
+
+            It is allowed to specify several -log switches in the same
+            command line.
+
+            This switch can be particularly useful, when you need to process
+            an archive created with -ag or -v switches in a batch script.
+            You can specify -loga=arcname.txt when creating an archive
+            and then read an archive name generated by RAR from arcname.txt
+            with an appropriate command. For example, in Windows batch file
+            it can be: set /p name=<arcname.txt.
+
+            Examples:
+
+            1) write names of created volumes to vollist.txt:
 
                rar a -v100m -loga=vollist.txt volume.rar c:\data
 
-            2) 以 Unicode 格式写入生成的压缩文件名到 backup.txt:
+            2) write the generated archive name to backup.txt in Unicode:
 
                rar a -ag -logau=backup.txt backup.rar myfiles\*
 
-            3) 写入测试过的卷的名字到 vollist.txt 和测试的卷内的压缩文件名到
-               filelist.txt:
+            3) write names of tested volumes to vollist.txt and names
+               of tested archived files inside of volumes to filelist.txt:
 
                rar t -log=vollist.txt -logf=filelist.txt volume.part01.rar
 
 
-    -m<n>   设置压缩模式:
+    -m<n>   Set compression method:
 
-       -m0   存储      添加到压缩文件时不压缩文件。
-       -m1   最快      使用最快方式(低压缩)
-       -m2   较快      使用快速压缩方式
-       -m3   标准      使用标准(默认)压缩方式
-       -m4   较好      使用较好压缩方式(较好压缩，但是慢)
-       -m5   最好      使用最大压缩方式(最好的压缩，但是最慢)
+       -m0   store     do not compress file when adding to archive
+       -m1   fastest   use fastest method (less compressive)
+       -m2   fast      use fast compression method
+       -m3   normal    use normal (default) compression method
+       -m4   good      use good compression method (more
+                       compressive, but slower)
+       -m5   best      use best compression method (slightly more
+                       compressive, but slowest)
 
-            如果没有指定这个参数，RAR使用-m3方式(标准压缩)。
-
-
-    -ma[4|5]
-            指定压缩格式的版本。
-
-            默认 RAR 创建的压缩文件采用 RAR 5.x 格式。
-            使用 -ma4 来创建 RAR 4.0 压缩文件。
-            在您需要覆盖保存在配置中的 -ma4 时，使用 -ma5 或 仅 -ma 
-            来强制 RAR 使用 RAR 5.0 格式。
-
-            此参数仅在创建新的压缩文件时使用。更新现有压缩文件时它被忽略。
+            If this switch is not specified, RAR uses -m3 method
+            (normal compression).
 
 
-    -mc<参数>
-            设置高级压缩参数。
+    -mc<par>
+            Set advanced compression parameters.
 
-            这个参数主要是用于进行测试和试验，在真实环境中通常最好允许 RAR
-            自动选择最佳参数。请注意，不适当的使用这些参数可能导致非常严重执
-            行和压缩损失，所以只有在您清楚理解您所要做的时候使用它。
+            Improper use of this switch may lead to suboptimal performance
+            and compression. This switch has the following syntax:
 
-            它有下列语法:
+            -mc[channels][mode][+ or -]
 
-            -mc[参数1][:参数2][模块][+ 或 -]
+            where <mode> is the single character field defining
+            the compression algorithm to be configured.
 
-            <模块>的位置是指示压缩算法的一个字符，它必须被设置。
+            Possible <mode> values are:
 
-            它有下列值:
+              D       - delta compression;
+              E       - x86 executable compression;
+              L       - long range search;
+              X       - exhaustive search.
 
-              A       - 声音压缩;
-              C       - 真彩色(RGB)数据压缩;
-              D       - 增值压缩;
-              E       - x86 Intel 可执行文件压缩;
-              T       - 文本压缩。
+            '+' sign at the end of switch applies the selected algorithm
+            to all processed data, '-' disables it completely.
+            If no sign is specified, RAR chooses modes automatically,
+            based on data and current compression method.
+            Switch -mc- disables all modes.
 
-            RAR 5.0 压缩文件格式仅支持 'D' 和 'E' 值。
-
-            在参数结尾的'+'标记应用选择的算法模块处理所有的数据，'-'完全禁用
-            该模块。如果没有指定标记，RAR 将基于数据和当前的压缩模式自动选择
-            模块。
-
-            参数 -mc- 禁止所有可选模块，只允许常规的压缩算法。
-
-            <参数1> 和 <参数2> 根据模块而决定的参数，其描述如下。
-
-            音频压缩，增值压缩：
-
-            <参数1> 是通道的字节数 (可以是1 - 31)。RAR 拆分多位声道成单位声
-            道，例如，两个16位音频声道可以被 RAR 看作每个宽一字节的四个声道。
-
-            <参数2> 被忽略。
+            <Channels> parameter is used by delta compression and ignored
+            by other modes. Available modes are described below.
 
 
-            x86 Intel 可执行文件压缩
-            真彩(RGB)数据压缩:
+            Delta compression
 
-            <参数1> 和 <参数2> 被忽略。
-
-
-            文本压缩:
-
-            文本压缩算法对于纯文本数据提供显著的高压缩率。但它无法利用多个
-            CPU 核的效率，导致在多核与多处理器环境下它比常规算法的压缩时间
-            更慢。另外，它的解压速度比常规算法更慢，无论CPU的核数是多少。
-            这就是为什么文本压缩算法默认是禁用的。您可以指定 -mct 参数来允许
-            RAR 为合适的数据自动选择此算法。参数 -mct+ 将为所有数据强制使用
-            文本压缩。
-
-            参数 -mct 也可以包括 <参数1> 和 <参数2>, 因此它的完整句法是：
-            -mc[参数1][:参数2]t[+ 或 -]。
-
-            <参数1> 是 PPM 算法的次序+ (可以是 2 - 63)。通常高的值会略微提高
-            多余数据的压缩率，但是必须有足够的内存来用于 PPM。在缺乏内存的条
-            件下结果可能相反。更高的规则值会减慢压缩和解压的速度。
-
-            <参数2> 对于 PPM 可用的以兆字节位单位的内存 (1-128)。更高的值可以
-            提高压缩率，但是注意PPM压缩和解压使用的内存大小相等，所以创建一
-            个压缩文件时如果分配太多的内存，其他人在安装了比较少内存的机器上
-            解压它时可能出现问题。解压缩也可以使用虚拟内存，但是可能变得非常
-            慢。
+            Splits data to several single byte channels and calculates
+            the difference between them. Can improve the compression ratio
+            of table data. <Channels> is the number of byte channels
+            from 1 to 31.
 
 
-            例子:
+            x86 executable compression
 
-            1) 参数 -mc1a+ 强制使用对所有数据使用8位单声道声音压缩算法。
-
-            2) 参数 -mc10:40t+ 强制使用对所有数据使用文本压缩优化算法,设置压
-               缩次序到 10 并分配40 MB内存。
-
-            3) 参数 -mc12t 设置压缩次序到 12，设置文本压缩顺序为12，当使用文
-               本压缩时，让RAR决定何时使用它。
-
-            4) 参数 -mct- -mcd- 禁止文本和增值压缩。
+            Can improve the compression ratio of 32 and 64 bit x86 executables.
 
 
-    -md<n>[k,m,g]
-            选择字典大小。
+            Long range search
 
-            这个可变大小的字典是被压缩算法使用的专用的内存区域。如果被压缩文
-            件的大小(或在一个固实压缩文件中的总文件大小)比压缩文件大许多，则
-            通常增加字典大小会增加压缩率，减慢压缩速度和增加内存需要。
-
-            对于 RAR 4.x 压缩格式，字典大小可以是: 64 KB, 128 KB, 256 KB,
-            512 KB, 1 MB, 2 MB, 4 MB。
-
-            对于 RAR 5.0 压缩格式，字典大小可以是: 128 KB, 256 KB, 512 KB, 
-            1 MB, 2 MB, 4 MB, 8 MB, 16 MB, 32 MB, 64 MB, 128 MB, 256 MB, 
-            512 MB, 1 GB。
-
-            您可以附加 'k', 'm' 和 'g' 后缀指定大小单位是 KB，MB 和 GB, 例如，
-            -md64m 指 64MB 字典。如果后缀不存在，默认是 MB，所以 -md64m 等于
-            -md64。
-
-            在压缩时 RAR 需要大约 6 倍于指定字典大小的内存。因此 512 MB 和 
-            1 GB 大小的字典仅在 64 位的 RAR 版本中可用。解压时，分配略多于一
-            个字典大小的内存，所以 32 位和 64 位版本可以解压所有字典大小的压
-            缩文件，包括1 GB。
-
-            如果固实压缩文件所有源文件的大小，或非固实文件最大源文件的大小，
-            至少是字典大小的1/2，则 RAR 可以减少字典大小。它可以减少内存的
-            使用率而不会减小压缩比。
-
-            RAR 4.x 的默认可变字典大小是 4 MB。RAR 5.0 压缩格式是 32 MB。
-
-            例子:
-
-            RAR a -s -ma -md128 lib *.dll
-
-            以 128 MB 字典创建 RAR 5.0 格式固实压缩文件。
+            Enables the search algorithm designed to efficiently locate
+            longer and more distant repeated data blocks. It can helps to
+            improve the compression ratio and sometimes speed for redundant
+            data like big text files. This algorithm increases memory
+            requirements when archiving, but doesn't affect extraction
+            memory requirements or speed.
+            
+            If neither -mcl+ nor -mcl- are specified, RAR applies the long
+            range search depending on the compression method, dictionary size
+            and other parameters. This algorithm is required and enabled
+            automatically for dictionaries exceeding 4 GB, where it can't be
+            turned off with -mcl- switch.
+            
+            Long range search mode is applicable to -m2..-m5 compression
+            methods and ignored for -m1.
 
 
-    -ms[列表]
-            指定存储文件类型。
+            Exhaustive search
 
-            指定不压缩而直接存贮的文件类型。这个参数被用来存储已经压缩的文件，
-            这将帮助增加压缩速度，而不会显著的减小压缩率。
+            Enables much slower and more exhaustive repeated data search
+            and compression algorithm. It might provide the additional
+            compression gain on some types of redundant data, but at much
+            lower speed. Long range search is needed to implement this mode
+            efficiently, so -mcx activates it automatically.
 
-            可选参数 <列表> 参数定义使用分号隔开的文件扩展名列表。例如，
-            -msrar;zip;jpg 将强制RAR不压缩直接存储所有的RAR和ZIP压缩文件和
-            JPG 图像。它也允许在列表中指定通配符文件掩码，所以 -ms*.rar;
-            *.zip;*.jpg 也可以工作。允许使用多个 -ms 参数，如 -msrar -mszip
-            替代 -msrar;zip.
 
-            Unix 中包含多个文件类型的 -ms 参数需要括在引号中。可以保护 Unix
-            shell 中分号的处理。另一个解决方案是对每个文件类型使用单独的
-            -ms<类型> 参数。
+            Example:
 
-            如果 <列表> 没有被指定，-ms 参数将使用默认的包含下列文件类型的扩
-            展设置:
+            RAR a -s -md1g -mcx texts *.txt
+
+            create a solid archive with 1 GB dictionary and exhaustive search.
+
+
+    -md[x]<size>[k,m,g]
+            Select the dictionary size.
+
+            Sliding dictionary is the memory area used by compression
+            algorithm to find and compress repeated data patterns. 
+            If size of file to compress, or total files size in case
+            of solid archive, is larger than dictionary size, increasing
+            the dictionary is likely to increase the compression ratio,
+            reduce the archiving speed and increase memory requirements.
+
+            For RAR 5.0 archive format the dictionary size can be:
+            128 KB, 256 KB, 512 KB, 1 MB, 2 MB, 4 MB, 8 MB, 16 MB,
+            32 MB, 64 MB, 128 MB, 256 MB, 512 MB, 1 GB, 2 GB, 4 GB.
+
+            RAR 7.0 extends the maximum dictionary size up to 64 GB
+            and permits not power of 2 sizes for dictionaries exceeding 4 GB.
+            Such archives can be unpacked by RAR 7.0 and newer.
+
+            By default, RAR refuses to unpack archives with dictionary
+            exceeding 4 GB. It is done to prevent the unexpected large memory
+            allocation. Use -md<size> or -mdx<size> to allow unpacking
+            dictionaries up to and including the specified size.
+            Unlike -md<size>, -mdx<size> is applied to extraction only
+            and can be added to rar.ini configuration file or RARINISWITCHES
+            environment variable, not affecting archiving commands.
+
+            'k', 'm' and 'g' modifiers placed after the size, set kilobyte,
+            megabyte and gigabyte units, like -md64m for 64 MB dictionary.
+            If no modifier is present, megabytes are assumed for -md<size>
+            and gigabytes for -mdx<size> switch, so -md64m and -md64
+            or -mdx8 and -mdx8g are equal.
+
+            Compression memory requirements vary depending on the dictionary
+            size and presence of long range search -mcl switch.
+            Rough estimate is 7x of dictionary size for 1 GB and 1.5x
+            for 64 GB dictionary.
+
+            When extracting, slightly more than a single dictionary size
+            is allocated.
+
+            If size of all source files for solid archive or size of largest
+            source file for non-solid archive is at least twice less than
+            dictionary size, RAR can reduce the dictionary size. It helps
+            to lower memory usage without decreasing compression.
+
+            Default sliding dictionary size is 32 MB.
+
+            Example:
+
+            RAR a -s -md128 lib *.dll
+
+            create a solid archive in RAR 5.0 format with 128 MB dictionary.
+
+
+    -me[par]
+            Set encryption parameters.
+
+            Now only "s" parameter is supported. You can use -mes switch
+            to skip encrypted files when extracting or testing.
+
+
+    -mlp    Use large memory pages.
+
+            Use larger memory allocation units, which can improve archiving
+            and, in some cases, extraction speed. Typically the performance
+            gain is more significant for bigger compression dictionaries
+            and slower compression methods.
+
+            This switch requires "Lock pages in memory" privilege
+            and if it is missing, RAR proposes to assign it to the current
+            user account, making it available for other software too.
+            Windows restart is necessary to activate the newly assigned
+            privilege.
+
+            Large memory pages can't be placed to Windows swap file
+            and always occupy the physical memory. When this switch
+            is present, Windows Task Manager can display incorrect
+            memory usage values for RAR.
+
+            Available in Windows version only.
+
+            Example:
+
+            rar a -mlp backup.rar data\*
+
+    
+    -ms[list]
+            Specify file types to store.
+
+            Specify file types, which will be stored without compression.
+            This switch may be used to store already compressed files,
+            which helps to increase archiving speed without noticeable
+            loss in the compression ratio.
+
+            Optional <list> parameter defines the list of file extensions
+            separated by semicolons. For example, -msrar;zip;jpg will
+            force RAR to store without compression all RAR and ZIP
+            archives and JPG images. It is also allowed to specify wildcard
+            file masks in the list, so -ms*.rar;*.zip;*.jpg will work too.
+            Several -ms switches are permitted, such as -msrar -mszip
+            instead of -msrar;zip.
+
+            In Unix systems -ms switch containing several file types needs
+            to be enclosed in quote marks. It protects semicolons from
+            processing by Unix shell. Another solution is to use individual
+            -ms<type> switches for every file type.
+
+            If <list> is not specified, -ms switch will use the default
+            set of extensions, which includes the following file types:
 
             7z, ace, arj, bz2, cab, gz, jpeg, jpg, lha, lz, lzh, mp3,
             rar, taz, tbz2, tgz, txz, zst, xz, z, zip, zipx, tzst
 
 
-    -mt<线程>
-            设置线程数。仅可用于 Window 版本。
+    -mt<threads>
+            Set the number of threads.
 
-            <线程> 参数可以是从 1 到 64 的值。它定义对于压缩算法及其它 RAR 
-            模块的活动线程的推荐最大数，以便启动多个线程。尽管 RAR 尝试遵从
-            这些推荐，有时真实的活动线程数可能超过指定的值。
+            <threads> parameter can take values from 1 to 64.
+            It defines the recommended maximum number of active threads
+            for compression algorithm also as for other RAR modules,
+            which can start several threads. While RAR attempts to follow
+            this recommendation, sometimes the real number of active
+            threads can exceed the specified value.
 
-            改变 <线程> 参数轻微影响压缩率，所以如果所有其它压缩参数相等而
-            使用不同的 -mt 参数创建的压缩文件不会解压得一样连贯。
+            Change of <threads> parameter slightly affects the compression
+            ratio, so archives created with different -mt switches
+            will not be exactly the same even if all other compression
+            settings are equal.
 
-            如果没有指定 -mt 参数，RAR 会尝试检测可用的处理器的数量并自动
-            选择优化的线程数。
+            If -mt switch is not specified, RAR will try to detect
+            the number of available processors and select the optimal
+            number of threads automatically.
+    
 
+    -n<f>   Additionally filter included files.
 
-    -n<f>   附加过滤器包含文件
+            Apply the mask as an additional filter to included file list.
+            Wildcards can be used both in the name and file parts of
+            file mask. See switch -x description for details on mask syntax.
+            You can specify the switch '-n' several times.
 
-            应用掩码为一个附加的过滤器来包含文件列表。通配符在文件掩码的名称
-            和文件部分都可用。有关掩码的句法详见参数 -x 的描述。
-	    您可以数次指定参数‘-n’。
+            This switch does not replace usual file masks, which still
+            need to be entered in the command line. It is an additional
+            filter limiting processed files only to those matching
+            the include mask specified in -n switch. It can help to
+            reduce the command line length sometimes.
 
-            此关不能替换通常的文件掩码，仍然需要在命令行中输入。它是一个附加
-            的过滤器限制处理的文件那些仅匹配在 –n 参数中指定掩码的文件。某些
-            时候它可以帮助减少命令行的长度。
-
-            例如，如果您需要压缩在 Project 和 Info 文件夹内的所有的 *.txt 和
-            *.lst 文件，您可以输入:
+            For example, if you need to compress all *.txt and *.lst
+            files in directories Project and Info, you can enter:
 
             rar a -r text Project\*.txt Project\*.lst Info\*.txt Info\*.lst
 
-            或使用参数 -n:
+            or using the switch -n:
 
             rar a -r -n*.txt -n*.lst text Project Info
 
 
-    -n@<lf> 从列表文件读取附加过滤器掩码。
+    -n@<lf> Read additional filter masks from list file.
 
-            和 -n<文件> 参数类似，但是从列表文件读取过滤器掩码。如果您使用无
-            列表名参数的 -n@，它会从 stdin 读取过滤器掩码。
+            Similar to -n<f> switch, but reads filter masks from
+            the list file. If you use -n@ without the list file name
+            parameter, it will read filter masks from stdin.
 
-            此参数不替换通常的列表文件或文件掩码，它们仍需输入到命令行里。
-            它是一个额外的过滤器，用来限制仅处理那些匹配 -n 参数里指定的包含
-            掩码的文件。
+            This switch does not replace usual list files or file masks,
+            which still need to be entered in the command line.
+            It is an additional filter limiting processed files only to
+            those matching the include mask specified in -n switch.
 
-            示例:
+            Example:
 
             rar a -r -n@inclist.txt text Project Info @listfile.txt
 
 
-    -oc     设置 NTFS 压缩属性。只可用于 Windows 版本。
+    -oc     Set NTFS Compressed attribute. Windows version only.
 
-            此参数允许解压文件时恢复 NTFS 压缩属性。RAR 在创建一个压缩文件时
-            保存“压缩”文件属性，但是如果不指定 -oc 参数就不会恢复它们。
+            This switch allows to restore NTFS Compressed attribute
+            when extracting files. RAR saves Compressed file attribute
+            when creating an archive, but does not restore it unless
+            -oc switch is specified.
 
-    -oh     把硬链接作为链接而不是文件。
+    -oh     Save hard links as the link instead of the file.
 
-            如果压缩中的文件包含数个 NTFS 硬链接，会把首个硬链接作为普通文件
-            存储，同组中剩下的硬链接作为首文件的链接存储。在解压这些文件的时
-            候，WinARR 会创建硬链接，而不是普通文件。
+            If archiving files include several hard links, store the first
+            archived hard link as usual file and the rest of hard links
+            in the same set as links to this first file. When extracting
+            such files, RAR will create hard links instead of usual files.
 
-            您一定不要在创建压缩文件后删除或重命名压缩文件中首个硬链接，因为
-            这导致不可能解压下面的链接。如果您修改首个链接，解压后下面链接的
-            内容也会被修改。解压命令要成功创建下面的硬链接必须涉及首硬链接。
+            You must not delete or rename the first hard link in archive
+            after the archive was created, because it will make extraction
+            of following links impossible. If you modify the first link,
+            all following links will also have the modified contents
+            after extracting. Extraction command must involve the first
+            hard link to create following hard links successfully.
     
-            此参数仅被 RAR 5.0 格式支持。
+            This switch is supported only by RAR 5.0 format.
 
 
-    -oi[0-4][:<最小大小>]
-            把相同文件保存为引用。
+    -oi[0-4][:<minsize>]
+            Save identical files as references.
 
-            参数 -oi0 (或仅 -oi-) 关闭相同文件处理，这样这些文件会被作为普通
-            文件压缩。可以被用来覆盖存储在 RAR 配置中的其它 -oi 值。
+            Switch -oi0 (or just -oi-) turns off identical file processing,
+            so such files are compressed as usual files. It can be used to
+            override another -oi value stored in RAR configuration.
 
-            如果指定了 -oi1 (或仅 -oi)，在启动压缩之前 WinRAR 会分析文件的内
-            容。如果找到几个相同的文件，组中的第一个文件作为普通文件保存，所
-            有剩下的文件保存为第一个文件的引用。这可以减少压缩文件的大小，但
-            对生成的压缩文件有一些限制。压缩文件创建后，您一定不要删除或重命
-            名文件压缩文件中的第一个相同文件，因为这会使后面的文件使用它作参
-            考的文件不能解压。如果您修改了第一个文件，后面的文件的内容在解压
-            后也会被修改。
-
-            虽然通常可以在不解压缩第一个文件的情况下解压缩引用，但在某些情况下，
-            可能必须使第一个文件参与提取来成功创建后续文件。这种情况包括存储在
-            几个可移动媒体上的多卷归档和包含大量引用的归档。
-
-            仅当您压缩了大量相同的文件并且以后不会修改归档时，才建议使用 -oi。
-            如果所有相同的文件小到足以匹配压缩字典，则指定 -md<n> 参数、-s 参数
-            可以提供比 -oi 更灵活的解决方案。
-
-            参数 -oi2 和 -oi1 类似，仅有的区别是：在开始压缩之前会显示找到的
-            相同文件的名字。
-
-            参数 -oi3 和 -oi4 允许利用 RAR 生成相同文件的列表。尽管您还需要提
-            供一个虚拟的压缩文件名使命令的语法有效。在这种模式下压缩文件不会
-            被创建也没有任何内容被压缩。如果使用 -oi3，会显示文件大小和名称，
-            每一个相同的文件组用空行分隔。参数 -oi4 显示单纯的文件名并跳过相
-            同文件组的第一个文件,所以仅列出重复的。
-
-            可选的 <最小大小> 值允许定义最小文件大小的阈值。小于 <最小大小> 
-            的文件不被分析看作是不同的。如果这个参数不存在，默认值是 64 KB。
-            选择太小 <最小大小> 可能增加检测相同的文件所需的时间。
-    
-            参数 -oi1 和 -oi2 仅被 RAR 5.0 格式支持。
-
-            例子:
-
-            1) rar a -oi -ma archive
-
-            把当前目录中的内容保存到 archive.rar。把相同文件保存为引用。
-
-            2) rar a -oi3:1000000 -r dummy c:\photo\*.jpg
-
-            列出 c:\photo 和它的子目录中找到的所有大于等于 1000000 字节大小重复的
-            *.jpg 文件。
-    
-
-    -ol[a]  将符号链接作为链接处理 [绝对路径]
+            If -oi1 (or just -oi) is specified, RAR analyzes the file
+            contents before starting archiving. If several identical files
+            are found, the first file in the set is saved as usual file
+            and all following files are saved as references to this first
+            file. It allows to reduce the archive size, but applies some
+            restrictions to resulting archive. You must not delete or rename
+            the first identical file in archive after the archive was
+            created, because it will make extraction of following files
+            using it as a reference impossible. If you modify the first file,
+            following files will also have the modified contents
+            after extracting.
             
-            把符号链接保存为链接，以便文件或目录内容不被存档。在 Windows 版本中它
-            也把分析点保存为链接。这些文档项目在解压时被恢复为符号链接或分析点。
+            While typically it is possible to unpack a reference without
+            unpacking the first file, in some cases it might be necessary
+            to involve the first file into extraction to create following
+            files successfully. Such cases include a multivolume archive
+            stored on several removable media and archives containing
+            a very large number of references.
 
-            Unix 中 RAR 4.x 和 RAR 5.0 都支持，Windows 中仅 RAR 5.0 支持。
+            It is recommended to use -oi only if you compress a lot of
+            identical files and will not modify an archive later.
+            If all identical files are small enough to fit into
+            compression dictionary specified with -md<n> switch,
+            switch -s can provide more flexible solution than -oi.
 
-            Windows 中，解压时您需要管理员权限创建符号链接。
+            Switch -oi2 is similar to -oi1, with the only difference:
+            it will display names of found identical files before starting
+            archiving.
 
-            RAR 在使用-ol 参数压缩时添加所有链接，无论目标是什么。解压缩时，
-            为了防止将文件放在目标文件夹之外，解压缩命令会跳过使用绝对路径
-            的符号链接，链接目标中过多的“..”或其他具有潜在危险的链接参数。
-            它也会将一些链接转换为文件夹。您可以使用 -ola 参数来关闭这些安全
-            检查，并按原样解压所有链接。
+            Switches -oi3 and -oi4 allow to utilize RAR to generate
+            lists of identical files. Though you still need to provide
+            a dummy archive name to make the command syntax valid,
+            in this mode an archive is not created and nothing is compressed.
+            If -oi3 is used, file sizes and names are displayed
+            and every identical file group is separated with empty line.
+            Switch -oi4 displays bare file names and skips the first
+            identical file in every file group, so only duplicates
+            are listed.
 
-            这些链接指向解压目标文件夹以外的文件夹会带来安全风险。只有在您确
-            保归档内容十分安全（例如您自己的备份）时才能启用此解压。
+            Optional <minsize> value allows to define the minimum file size
+            threshold. Files smaller than <minsize> are not analyzed
+            and not considered as identical. If this parameter is not
+            present, it is assumed to be 64 KB by default. Selecting
+            too small <minsize> may increase the time required to detect
+            identical files.
 
-            总是解压 RAR 认为安全的链接，无论是使用 -ol 还是 -ola 参数。
+            <minsize> can include an optional trailing unit type character.
+            Unit type can be 'b' or 'B' for bytes, 'k' for kilobytes,
+            'K' for thousands of bytes, 'm' for megabytes, 'M' for millions
+            of bytes, 'g' for gigabytes, 'G' for billions of bytes,
+            't' for terabytes, 'T' for trillions of bytes. If this character
+            is not present, bytes are assumed.
+
+            Examples:
+
+            1) rar a -oi archive
+
+            Save the current directory contents to archive.rar.
+            Store identical files as references.
+
+            2) rar a -oi3:1M -r dummy c:\photo\*.jpg
+
+            List all duplicate *.jpg files larger than or equal to
+            1000000 bytes, found in c:\photo and its subdirectories.
+    
+
+    -ol[a,-]
+            Process symbolic links as the link [absolute paths, skip].
+            
+            Save symbolic links as links, so file or directory contents
+            is not archived. In Windows version it also saves reparse points
+            as links. Such archive entries are restored as symbolic links
+            or reparse points when extracting.
+
+            Supported in RAR versions for both Windows and Unix systems.
+
+            In Windows you may need to run RAR as administrator to create
+            symbolic links when extracting.
+
+            RAR adds all links regardless of target when archiving with
+            -ol switch. When extracting, to prevent placing files outside
+            of destination directory RAR can skip symbolic links with
+            absolute paths, the excessive number of ".." in link target
+            or other potentially dangerous link parameters. Also it can
+            convert some of links to directories. You can turn off these
+            security checks and extract all links as is with -ola switch.
+
+            Placing files outside of destination directory can present
+            a security risk when extracting. Use -ola switch only if you
+            are sure that archive contents is safe, such as your own backup.
+
+            Links that are considered safe by RAR are extracted always
+            regardless of -ol or -ola switch, unless -ol- is specified.
+
+            Switch -ol- skips symbolic links when archiving or extracting.
+
+    -om[-|1][=list]
+            Propagate Mark of the Web.
+
+            Internet browsers can add so called Mark of the Web to downloaded
+            files. It is stored in Zone.Identifier NTFS alternate data stream
+            and provides the information about file security zone, original
+            location also as other optional fields. Various software can use
+            it for security purposes.
+
+            By default the console RAR doesn't copy contents the archive
+            Mark of the Web to files extracted from this archive,
+            but such archive Mark of the Web propagation can be enabled
+            with this switch.
+
+            If this switch is followed by '1', all Mark of the Web fields
+            are copied from archive to extracted files. For -om without '1'
+            only the security zone value is propagated. Information contained
+            in other fields might be useful to identify a file source,
+            but it can disclose the potentially confidential file download
+            location, IP address and other sensitive information if file
+            is shared with other persons. So the default behavior of this
+            switch without '1' modifier is to omit all fields except
+            the security zone value.
+
+            Optional '-' parameter prohibits Mark of the Web propagation
+            and can be used to override settings stored in rar.ini
+            configuration file or RARINISWITCHES environment variable.
+
+            Optional <list> parameter defines the list of file extensions
+            separated by semicolons. For example, -om=doc;exe;bat will
+            force RAR to propagate Mark of the Web only for *.doc, *.exe
+            and *.bat files. It is also allowed to specify wildcard
+            file masks in the list, so -om=*.doc;*.exe;*.bat will work too.
+            If list is omitted, all extracted files are assumed.
+
+            Switch -os can be used to preserve source files Mark of the Web
+            when archiving, so it is restored when extracting.
+
+            Examples:
+
+            1) rar x -om archive.rar
+
+            propagate the archive Mark of the Web to all extracted files.
+            Include security zone value only.
+
+            2) rar x -om1=doc;exe archive.rar
+
+            propagate the archive Mark of the Web to *.doc and *.exe.
+            Include all Mark of the Web fields.
 
 
-    -oni    允许潜在的不兼容名称。
+    -oni    Allow potentially incompatible names.
 
-            尽管 NTFS 文件系统允许文件名称带有后缀空格和小数点，也允许文件名
-            作为已保留设备的名称，有很多 Windows 程序无法正确处理此类名称。
-            如果未指定此参数，RAR 会删除后缀空格和小数点，如果解压时它们存在
-            于文件名中。它还将下划线字符插入已保留设备名称的开头，例如 aux。
+            While NTFS file system permits file names with trailing spaces
+            and dots, also as reserved device names, a lot of Windows
+            programs fail to process such names correctly. If this switch
+            is not specified, RAR removes trailing spaces and dots, if any, 
+            from file names when extracting. It also inserts the underscore
+            character in the beginning of reserved device names, such as aux.
 
-            如果您需要按原样解压此类名称，请指定此参数。这可能会带来兼容性甚至
-            安全隐患。
+            Specify this switch if you need to extract such names as is.
+            It might be associated with compatibility or even security risks.
 
-            仅适用于 Windows 版本。
+            Windows version only.
 
     -op<path>
-            设置输出路径。
+            Set the output path.
 
-            在“x”和“e”命令中指定要放置解压文件的目录。如果该目录不存在，
-            则由 RAR 进行创建。
+            Specify the directory to place extracted files in 'x' and 'e'
+            commands. This directory is created by RAR if it does not
+            exist yet.
 
-            与 <path_to_extract\> 命令行参数不同， -op 参数还接受没有尾随路
-            径分隔符的路径。
-            
-            例如：
+            Unlike <path_to_extract\> command line parameter, -op switch
+            also accepts paths without trailing path separator character.
+
+            Example:
 
             rar x -opdest archive
 
-            将 .rar 压缩文件的内容解压到“dest”目录。
+            unpacks contents of archive.rar to 'dest' directory.
 
 
-
-    -or     如果相同名字的文件已经存在则自动重命名解压的文件。重命名文件将得
-            到象 'filename(N).txt' 的名字，'filename.txt' 的位置是原始的文件
-            名，如果文件存在 'N' 是从 1 增加数字。
-
-
-    -os     保存 NTFS 流。 只有 Windows 版本可用。
-
-            这个参数意味着只能在 NTFS 文件系统下使用，并允许储存与文件相关的
-            交替数据流。如果您使用软件以交替数据流来存储数据并在压缩时希望保
-            留这些流，则您可能需要指定这个参数。
-
-            对于 NTFS 加密的文件不保存数据流。
+    -or     Rename extracted files automatically if file with the same name
+            already exists. Renamed file will get the name like
+            'filename(N).txt', where 'filename.txt' is the original file
+            name and 'N' is a number starting from 1 and incrementing
+            if file exists.
 
 
-    -ow     当压缩时保存文件安全信息和解压时恢复它们时，使用这个参数。
+    -os     Save NTFS streams. Windows version only.
 
-            Unix 版本的 RAR 当使用这个参数时保存文件所有者和组。
+            This switch has meaning only for NTFS file system and allows
+            to save alternate data streams associated with a file.
+            You may need to specify it when archiving if you use software
+            storing data in alternative streams and wish to preserve
+            these streams.
 
-            Windows 版本存储所有者、组、文件许可和校验信息，但是您必须有读取
-            它们的必需的权限。 注意只有 NTFS 文件系统支持在Windows下的文件基
-            本安全数据。
+            Streams are not saved for NTFS encrypted files.
 
 
-    -o[+|-] 设置覆盖模式。可以在解压或更新文件时使用。下列模式可用:
+    -ow     Use this switch when archiving to save file security
+            information and when extracting to restore it.
 
-              -o           覆盖前询问
-                           (默认用于解压文件);
+            RAR version for Unix systems saves file owner and group
+            when using this switch.
 
-              -o+          覆盖所有
-                           (默认用于更新的压缩文件);
+            Windows version stores owner, group, file permissions and
+            audit information, but only if you have necessary privileges
+            to read them. Note that only NTFS file system supports
+            file based security under Windows.
 
-              -o-          跳过已存在的文件。
 
-   
-    -p[pwd] 设置密码
+    -o[+|-] Set the overwrite mode. Can be used both when extracting
+            and updating archived files. Following modes are available:
 
-            压缩时，使用字符串<pwd>作为密码来加密文件，或解压缩时解密。密码
-            大小写敏感，最大长度为127个字符。超过这个长度的密码将被截短。如
-            果您在命令行忽略密码，您会看到一个输入密码的提示。您也能使用文件
-            重定向或管道来指定密码，如果缺少 <pwd> 参数。
+              -o           Ask before overwrite
+                           (default for extracting files);
 
-            例子:
+              -o+          Overwrite all
+                           (default for updating archived files);
+
+              -o-          Skip existing files.
+
+
+    -p[pwd] Set password
+
+            Set password <pwd> to encrypt files when archiving
+            or to decrypt when extracting.
+
+            Passwords are case-sensitive. Maximum password length is
+            127 characters. Longer passwords are truncated to this length.
+            If you omit a password in command line, you will be prompted
+            with "Enter password" message. You can also use file redirection
+            or pipe to specify a password if <pwd> parameter is missing.
+
+            Examples:
 
             1) rar a -psecret texts.rar *.txt
 
-            添加 *.txt 文件并用密码"secret"加密.
+            add files *.txt and encrypt them with password "secret".
 
             2) rar -p texts.rar *.txt < psw.txt
 
-            设置 psw.txt 文件的内容为密码。
+            set contents of psw.txt file as a password.
 
 
     -qo[-|+]
-            添加快速打开信息 [无|强制]
+            Add quick open information [none|force]
 
-            RAR 压缩文件在描述的每个文件的数据前存储包含如文件名称、时间、大
-            小和属性的信息的文件头。这种方法比把所有文件头储存在一个连续的块
-            中更能防止损坏，后者如果损坏或丢失会摧毁整个压缩文件的内容。但在
-            更可靠的同时，这些文件头散布于整个压缩文件，如果我们需要在类似 
-            WinRAR 图形界面的外壳中快速打开压缩文件的内容时的访问速度太慢。
+            RAR archives store every file header containing information
+            such as file name, time, size and attributes immediately
+            before data of described file. This approach is more damage
+            resistant than storing all file headers in a single continuous
+            block, which if broken or truncated would destroy the entire
+            archive contents. But while being more reliable, such file
+            headers scattered around the entire archive are slower to
+            access if we need to quickly open the archive contents 
+            in a shell like WinRAR graphical interface.
 
-            要提高压缩文件的打开速度，而且要整个压缩文件不依赖于单一易受损块，
-            RAR 5.0 压缩文件可以包含一个可选的快速打开的记录。这些记录被添加
-            到压缩文件的结尾，包含附加在压缩文件内的普通文件头的文件名和其它
-            文件信息的副本被存储在一个单一的连续块中。因为块是连续的，所以其
-            内容可以被快速读取，而不需要执行大量的磁盘寻道操作。此块中每一个
-            文件头都被校验和保护。如果 WinRAR 检测到快速打开信息被破坏，它会
-            从压缩文件内重新读取这部分的头信息，所以防伤害性能没有被减弱。
+            To improve archive open speed and still not make the entire
+            archive dependent on a single damaged block, RAR 5.0 archives
+            can include an optional quick open record. Such record is
+            added to the end of archive and contains copies of file names
+            and other file information stored in a single continuous block
+            additionally to normal file headers inside of archive.
+            Since the block is continuous, its contents can be read quickly,
+            without necessity to perform a lot of disk seek operations.
+            Every file header in this block is protected with a checksum.
+            If RAR detects that quick open information is damaged,
+            it resorts to reading individual headers from inside of archive,
+            so damage resistance is not lessened.
 
-            快速打开记录包含文件头的完整副本，这可能是数十或数百个字节/文件，
-            会把压缩文件的大小增加相同的量。当文件数据大小与文件头差不多大时，
-            对于许多小文件，大小的增加是很明显的。所以在默认情况下，如果没有
-            指定 -qo 或 -qo 没有使用参数，WinRAR 只对相对大的文件存储头副本，
-            对小文件继续使用本地头。具体的文件大小阈值依赖解 WinRAR 的版本。
-            这种方法提供了一个在打开速度和压缩文件大小之间的合理折衷。如果您
-            想要最大的压缩文件打开速度，而不管大小，您可以使用 -qo+ 存储所有
-            文件头的副本。如果您需要尽可能小的压缩文件，而不关心压缩文件在不
-            同的程序中打开的速度，指定 -qo- 完全排除快速打开信息。
+            Quick open record contains the full copy of file header,
+            which may be several tens or hundreds of bytes per file,
+            increasing the archive size by the same amount. This size
+            increase is most noticeable for many small files, when file
+            data size is comparable to file header. So by default,
+            if no -qo is specified or -qo without parameter is used,
+            RAR stores copies of headers only for relatively large files
+            and continues to use local headers for smaller files.
+            Concrete file size threshold can depend on RAR version.
+            Such approach provides a reasonable open speed to archive size
+            tradeoff. If you prefer to have the maximum archive open speed
+            regardless of size, you can use -qo+ to store copies of all
+            file headers. If you need to have the smallest possible archive
+            and do not care about archive open speed in different programs,
+            specify -qo- to exclude the quick open information completely.
 
-            如果您想测试此参数的性能效果，确保压缩文件的内容没有存储在磁盘的
-            缓存中。对于缓存的压缩文件没有进行真正的磁盘搜索，这使访问没有快
-            速打开记录的文件头也很快。
+            Switch -qo- also prohibits access to quick open information
+            in existing archives, such as when extracting or listing
+            their contents.
+
+            If you wish to measure the performance effect of this switch,
+            be sure that archive contents is not stored in a disk cache.
+            No real disk seeks are performed for cached archive file,
+            making access to file headers fast even without quick open
+            record.
 
     
-    -r      包含子文件夹，可以使用命令:
-            a，u，f，m，x，e，t，p，v，l，c，cf 和 s.
+    -r      Recurse subdirectories. May be used with commands:
+            a, u, f, m, x, e, t, p, v, l, c, cf and s.
 
-            当使用命令 'a'，'u'，'f'，'m' 将处理在所有子目录中以及当前工作目
-            录的中的文件。
+            When used with the commands 'a', 'u', 'f', 'm' will process
+            files in all sub-directories as well as the current working
+            directory.
 
-            当使用命令 x，e，t，p，v，l，c，cf 或 s 将处理在子目录以及当前工
-            作目录中所有压缩文件。
+            When used with the commands x, e, t, p, v, l, c, cf or s will
+            process all archives in sub-directories as well as the current
+            working directory.
 
 
-    -r-     禁用递归。
+    -r-     Disable recursion.
 
-            在某些情况下，即使没有指定 -r 参数 RAR 也会自动启用递归。参数 -r-
-            禁止它。
+            Even without -r switch RAR can enable the recursion
+            automatically in some situations. Switch -r- prohibits it.
 
-            压缩时如果您指定了目录名，目录名不包含通配符，即使 -r 参数没有指定，
-            默认 RAR 添加目录的内容。如果磁盘根目录没有把通配符作为文件掩码指定，
-            RAR 也会自动启用递归。参数 -r- 禁用此行为。
+            If you specify a directory name when archiving and if such
+            name does not include wildcards, by default RAR adds
+            the directory contents even if switch -r is not specified.
+            Also RAR automatically enables the recursion if disk root
+            without wildcards is specified as a file mask. Switch -r-
+            disables such behavior.
 
-            例子:
+            For example:
 
             rar a -r- arc dirname
 
-            命令仅会添加空目录 'dirname' 目录并忽略它的内容。下列命令:
+            command will add only the empty 'dirname' directory and ignore
+            its contents. Following command:
 
             rar a -r- arc c:\
 
-            会仅压缩 c: 根目录的内容并不会包含子目录。
+            will compress contents of root c: directory only and
+            will not recurse into subdirectories.
 
 
-    -r0     和 -r 相似，但是当使用命令 'a'，'u'，'f'，'m'，将仅对包括通配符
-            '*' 和 '?' 的文件掩码递归子目录。
+    -r0     Similar to -r, but when used with the commands 'a', 'u', 'f',
+            'm' will recurse into subdirectories only for those file masks,
+            which include wildcard characters '*' and '?'.
 
-            此参数仅用于文件名。没有文件名部分的目录名，如 'dirname'，不受 -r0
-            影响，如果没有指定 -r- 参数，它们的内容被完全添加到压缩文件中。
+            This switch works only for file names. Directory names without
+            a file name part, such as 'dirname', are not affected by -r0
+            and their contents is added to archive completely unless -r-
+            switch is specified.
 
-            例子:
+            Example:
 
             rar a -r0 docs.rar *.doc readme.txt
 
-            从当前目录和它的子目录添加 *.doc 和仅当前文件夹中的 readme.txt 文件
-            到 docs.rar 压缩文件。在使用 -r 参数的情况下，RAR 会从子目录中搜索
-            readme.txt。
+            add *.doc files from the current directory and its subdirectories
+            and readme.txt only from the current directory to docs.rar
+            archive. In case of usual -r switch, RAR would search for
+            readme.txt in subdirectories too.
 
 
     -ri<p>[:<s>]
-            设置优先级和休眠时间。只有在 Windows 版本的  RAR 中可用。
-            这个参数让 RAR 在多任务环境下时，用来控制系统载入负荷。可用任务
-            优先级值从 0 到 15。
+            Set priority and sleep time. Available only in RAR for Windows.
+            This switch regulates system load by RAR in multitasking
+            environment. Possible task priority <p> values are 0 - 15.
 
-            当 <p> 等于 0 时，RAR 使用默认任务优先级。1 对应
-            最低的任务优先权，15 - 最高。
+            If <p> is 0, RAR uses the default task priority.
+            <p> equal to 1 sets the lowest possible priority,
+            15 - the highest possible.
 
-            休眠时间 <s> 是从 0 到 1000  (毫秒)的值。这是 RAR 压缩或解
-            压缩操作期间读或写时将会归还到系统的时段。休眠时间设定在几个
-            相同优先级任务在系统中同时运行时有用。
+            Sleep time <s> is a value from 0 to 1000 (milliseconds).
+            This is a period of time that RAR gives back to the system
+            after read or write operations while compressing or extracting.
+            Non-zero <s> may be useful if you need to reduce system load
+            even more than can be achieved with <p> parameter.
 
-            例子:
+            Example:
 
-            使用默认优先级执行 RAR，并且每次读取或写入后有10 ms的休眠
+            execute RAR with default priority and 10 ms sleep time:
 
-            rar a -r -sfx -ri0:10 backup *.*
-
-
-    -rr[N]  添加数据恢复记录。这个参数在创建或修改压缩文件被用来添加压缩文件
-            数据的恢复记录。
-
-
-    -rv[N]  创建恢复卷。这个参数在创建多卷压缩文件时用来创建恢复卷。查看
-            'rv[N]'命令的详细描述。
+            rar a -ri0:10 backup *.*
 
 
-    -s      创建固实压缩文件。固实格式是一种特别的压缩包。它把压缩文件内数个
-            或所有文件作为一个连续的数据流对待。
-
-            当添加大量小文件或类似的文件时，固实压缩的压缩率会显着增加。但它
-            也有几个重要的缺点：更新现有固实压缩文件速度慢，个别文件的读取速
-            度较慢，降低损坏恢复可能。
-
-            通常固实文件内的文件按扩展名排序，但是可以使用 -ds 参数禁用排序
-            或使用一个特殊文件, rarfiles.lst 来定义文件顺序。
+    -rr[N]  Add the data recovery record. This switch is used when creating
+            or modifying an archive to add the data recovery record to
+            archive. See 'rr[N]' command description for details.
 
 
-            例子:
-
-            使用512KB的字典创建固实压缩文件 sources.rar ，包含全部子目录，从
-            当前目录开始，只添加.asm文件:
-
-            rar a -s -md512 sources.rar *.asm -r
+    -rv[N]  Create recovery volumes. This switch is used when creating
+            a multivolume archive to generate recovery volumes.
+            See the 'rv[N]' command description for details.
 
 
-    -s<N>   根据文件计数创建固实组
+    -s[=<par>]
+            Create solid archive. Solid archive is an archive packed by
+            a special compression method, which treats several or all
+            files within the archive as one continuous data stream.
 
-            和 -s 相似，但是在压缩<N>文件后重置压缩文件的状态。通常减少压缩率，
-            但是也能减少损坏的固实压缩文件中的文件丢失。
+            Solid archiving significantly increases compression, when
+            adding a large number of small, similar files. But it also
+            has a few important disadvantages: slower updating of existing
+            solid archives, slower access to individual files, lower
+            damage resistance.
+
+            Usually files in a solid archive are sorted by extension.
+            But it is possible to disable sorting with -ds switch or set
+            an alternative file order using a special file, rarfiles.lst.
+
+            This switch can include one or more optional modifiers after '='
+            character. Most of these modifiers control the solid statistics
+            reset inside of archive, overriding the continuous solid stream
+            mode of plain -s switch. Resetting the statistics typically
+            leads to lower compression, faster access to individual files,
+            stored after reset, and higher chances to extract such files
+            if archive was broken. Here are switches with possible modifiers.
+
+            -s=-  Disable solid archiving. It allows to override -s in rar.ini
+            configuration file or RARINISWITCHES environment variable.
+
+            -s=d  Do not reset the solid statistics between volumes.
+
+            -s=v  Always reset the solid statistics between volumes.
+            By default RAR resets the solid statistics at the first new file
+            in a new volume, provided that enough data was packed since
+            the previous reset. This switch resets it regardless of data size.
+
+            -s=e  Reset the solid statistics if file extension is changed.
+
+            -s=<N>f  Reset the solid statistics after adding every N files.
+
+            -s=<N><k|m|g>  Reset the solid statistics after packing every
+            data block of specified size in KB, MB or GB, such as -s=100m.
+
+            -s=r  Reset the solid statistics before adding new files
+            to existing archive.
+
+            It is allowed to combine multiple modifiers in the same switch,
+            such as -s=e100f.
+
+            Example:
+
+            add all *.c and *.h files from the current directory to
+            the solid archive sources.rar:
+
+            rar a -s sources.rar *.c *.h
 
 
-    -sc<字符集>[对象]
-            指定字符集。
+    -sc<charset>[objects]
+            Specify the character set.
 
-            “字符集”参数是强制的, 可以使用下列值:
+            'Charset' parameter is mandatory and can have one
+            of the following values:
 
               U - Unicode UTF-16;
               F - Unicode UTF-8;
-              A - 本机单字节编码，这是 ANSI Windows 版本;
-              O - OEM (DOS) 编码。仅用于 Windows 版本;
+              A - the native single byte encoding, which is ANSI
+                  for Windows version;
+              O - OEM (DOS) encoding. Windows version only.
 
-            源 UTF-16 文件（例如列表文件或注释）的端字节序（Endianness），基于
-            字节序标记来检测。
-            如果丢失字节序标记，假定为小端字节序（little endian）编码。
+            Endianness of source UTF-16 files, such as list files
+            or comments, is detected based on the byte order mark.
+            If byte order mask is missing, little endian encoding is assumed.
 
-            “对象”参数是可选的, 可以使用下列值:
+            'Objects' parameter is optional and can have one of
+            the following values:
 
-              G - -ilog 参数生成的日志文件;
-              L - 列表文件;
-              C - 命令文件。
-              R - 发送至重定向文件和管道的消息（仅 Windows）。 
+              G - log files produced by -ilog switch;
+              L - list files;
+              C - comment files;
+              R - messages sent to redirected files and pipes (Windows only). 
 
-            它允许指定不只一个对象, 例如, -scolc。如果 '对象' 参数丢失, '字符
-            集' 会应用到所有对象。
+            It is allowed to specify more than one object, for example,
+            -scolc. If 'objects' parameter is missing, 'charset' is applied
+            to all objects.
 
-            此参数允许指定在 -z[文件] 参数中的文件的字符集, 列表文件和注释文
-            件在 "cw" 命令中写入。l
+            This switch allows to specify the character set for files
+            in -z[file] switch, list files and comment files written by
+            "cw" command.
 
-            例子:
+            Examples:
 
             1) rar a -scol data @list
 
-            使用 OEM 编码读取 'list' 中包含的名称。
+            Read names contained in 'list' using OEM encoding.
 
             2) rar c -scuc -zcomment.txt data
 
-            读取 comment.txt 为 Unicode 文件。
+            Read comment.txt as Unicode file.
 
             3) rar cw -scuc data comment.txt
 
-            写入 comment.txt 为 Unicode 文件。
+            Write comment.txt as Unicode file.
 
             4) rar lb -scur data > list.txt
 
-            以 Unicode 格式将 data.rar 中的压缩文件名称保存到 list.txt。
+            Save archived file names in data.rar to list.txt in Unicode.
 
 
-    -se     根据扩展名创建固实组
+    -sfx[name]
+            Create SFX archives. If this switch is used when creating a new
+            archive, a Self-Extracting archive (using a module in file
+            default.sfx or specified in the switch) would be created.
+            In Windows version default.sfx should be placed in the same
+            directory as the rar.exe, in Unix systems - in the user's home
+            directory, in /usr/lib or /usr/local/lib.
 
-            和 -s 相似，但是如果文件扩展名改变，重置压缩文件的状态。通常减少压
-            缩率，但是也能减少损坏的固实压缩文件中的文件丢失。
+            Windows version uses default32.sfx name for 32-bit SFX module.
 
-
-    -sfx[名称]
-            创建自解压压缩文件。如果建立新压缩文件时使用此参数，自解压文件(使
-            用 default.sfx 模块或在参数中指定)将被创建。在 Windows 版本中，
-            default.sfx 应该在 rar.exe 所在的目录中，在 Unix 中 - 在用户的 home
-            目录中。在/usr/lib 或 /usr/local/lib 中。
-
-            例子:
+            Example:
 
             rar a -sfxwincon.sfx myinst
 
-            使用 wincon.sfx 自解压模块创建自解压(SFX)压缩文件。
+            create SelF-eXtracting (SFX) archive using wincon.sfx
+            SFX-module.
 
 
-    -si[名称]
-            在创建、解压或测试一个压缩文件时从 stdin（标准输入）读取数据。
+    -si[name]
+            Read data from stdin (standard input), when creating, extracting
+            or testing an archive. 
             
-            在归档时，可选的“name”参数允许在创建的压缩文件中指定压缩 stdin 
-            数据的文件名。如果缺少此参数，则将此名称设置为“stdin”。
+            When archiving, the optional 'name' parameter allows to specify
+            a file name of compressed stdin data in the created archive.
+            If this parameter is missing, the name will be set to 'stdin'.
 
-            解压时，命令行中指定的压缩文件名称仅用于信息性消息，但实际压缩文件
-            的数据是从 stdin 读取的。因此可以应用任何虚拟压缩文件的名称。
+            When extracting, the archive name specified in the command line
+            is used only in informational messages, but actual archive data
+            is read from stdin. So any dummy archive name can be applied.
             
-            从 stdin 读取压缩文件数据时，RAR 无法执行需要向后搜索的操作。在这种
-            模式下有些功能无法使用，包括显示压缩文件备注、恢复测试记录、使用快速
-            打开信息和处理多卷压缩文件。
+            RAR cannot perform operations requiring backward seeks
+            when reading archive data from stdin. Incomplete list of
+            features unavailable in such mode includes displaying archive
+            comments, testing the recovery record, utilizing the quick open
+            information, processing multivolume archives.
 
-            -si 不允许需要用户交互的任何提示，这会导致程序终止。如果可以覆盖现有
-            文件或解压缩加密的文件，请使用 -o[+|-|r]、-p<pwd> 或 -mes 参数来避免
-            此类提示。
+            Any prompts requiring user interaction are not allowed with
+            -si and lead to program termination. If overwriting existing
+            files or unpacking encrypted files is possible, avoid such
+            prompts with -o[+|-|r], -p<pwd> or -mes switches.
 
-            例如：
+            Examples:
 
-            1) 压缩“type readme.txt”输出为“readme.rar”文件
+            1) compress 'type readme.txt' output as 'readme.rar' file
 
             type readme.txt | rar a -sireadme.txt readme.rar
 
-            2) 解压 docs.rar 到“docs”目录
+            2) unpack docs.rar to 'docs' directory
 
             type docs.rar | rar x -si -o+ -pmypwd dummy docs\
 
 
-    -sl<大小>
-            仅处理那些文件大小小于本参数的 <大小> 里指定的值的文件。
-            参数 <大小> 必须以字节为单位。
+    -sl<size>[b|B|k|K|m|M|g|G|t|T]
+            Process only those files, which size is less than
+            specified in <size> parameter of this switch.
+
+            Unit type character following the size value can be 'b' or 'B'
+            for bytes, 'k' for kilobytes, 'K' for thousands of bytes,
+            'm' for megabytes, 'M' for millions of bytes, 'g' for gigabytes,
+            'G' for billions of bytes, 't' for terabytes, 'T' for trillions
+            of bytes. If this character is not present, bytes are assumed.
 
 
-    -sm<大小>
-            仅处理那些文件大小大于本参数的 <大小> 里指定的值的文件。
-            参数 <大小> 必须以字节为单位。
+    -sm<size>[b|B|k|K|m|M|g|G|t|T]
+            Process only those files, which size is more than
+            specified in <size> parameter of this switch.
+            
+            Unit type character following the size value can be 'b' or 'B'
+            for bytes, 'k' for kilobytes, 'K' for thousands of bytes,
+            'm' for megabytes, 'M' for millions of bytes, 'g' for gigabytes,
+            'G' for billions of bytes, 't' for terabytes, 'T' for trillions
+            of bytes. If this character is not present, bytes are assumed.
 
 
-    -sv     创建互不依赖的固实压缩文件
-
-            当开始一个新的卷时，RAR 默认尽可能的尝试重置固实格式状态，但是只有
-            在上一次复位后，又压缩了足够多的数据。(至少几兆字节)。
-
-            这个参数会强制 RAR 忽略打包的数据大小，并试图对任何大小的分卷重置
-            状态。这会降低压缩率，但在固实卷组中的数个卷之一丢失或损坏时可以
-            增加解压部分数据的机会。
-
-            注意有时候 RAR 即使使用这个参数也无法重置状态。例如，当压缩一个
-            大文件成许多分割卷时就不能完成。RAR 只能在分离文件之间重置状态，
-            而不能用在单独文件上。
-
-            在创建不带卷的压缩文件时忽略。
+    -t      Test files after archiving. This switch is especially
+            useful in combination with the move command, so files will be
+            deleted only if the archive had been successfully tested.
 
 
-    -sv-    创建互相依赖的固实压缩文件
+    -ta[m,c,a,o]<date>
+            Process only files modified after the specified date.
+            Files matching the specified date exactly are also included.
 
-            禁止卷之间重设固实状态。
+            Format of the date string is YYYYMMDDHHMMSS. It is allowed to
+            insert separators like '-' or ':' to the date string and omit
+            trailing fields. For example, switch -ta2001-11-20 is correct. 
+            Internally it will be expanded to -ta20011120000000 and treated
+            as "files modified after 0 hour 0 minutes 0 seconds
+            on 20 November 2001".
 
-            这将稍微提高压缩率，但是意味着如果数个固实卷之一丢失或损坏时减
-            少解压部分数据的机会。
+            Use 'm', 'c', 'a' modifiers to specify modification,
+            creation (ctime in Unix systems) and last access time accordingly,
+            such as -tac20011120 for creation time or ctime.
+            If such modifier is omitted, the modification time is assumed.
 
-            在创建不带卷的压缩文件时忽略。
-
-
-    -s-     禁止固实压缩
-
-
-    -t      压缩后测试文件。这个参数在和移动命令组合使用时非常有用，所以只有
-            压缩文件已经被成功测试后，文件才会被删除。
-
-
-    -ta[m,c,a,o]<日期>
-            只处理指定日期之后修改的文件。也包括完全匹配指定日期的文件。
-
-            日期字符串的格式是 YYYYMMDDHHMMSS。它允许在日期字符串中插入'-'
-            或 ':'的分隔符，并忽略后部区域。例如，下列参数是正确的:
-            -ta2001-11-20在内部它被转换成 -ta20011120000000 并作为"从2001
-            年11月20日0时0分0秒后修改的区域"对待。
-
-            使用 'm', 'c', 'a' 参数来指定相应的修改、创建 (Unix 中为 ctime)
-            和上次访问时间，例如 -tac20011120 表示创建时间。
-            如果此类参数被忽略，则假定为修改时间。
-
-            允许在同一个参数里使用几个修饰参数，例如 -tamc20190215，来为所            
-            有指定的时间设置相同的日期。
-            另外，您可以添加几个时间过滤参数到命令行。
-            默认情况下，时间过滤器使用 AND 逻辑，因此一个文件必须匹配所有            
-            此类过滤器才能被处理。它可以用 'o' 修饰参数来修改为 OR 逻辑，            
-            这样一个文件必须至少匹配一个 'o' 过滤器。
-            例如，使用 -taco20190201 -tamo20190210 来包含创建于 2019-02-01             
-            之后或修改于 2019-02-10 之后的文件。
-
-    -tb[m,c,a,o]<日期>
-            只处理指定日期之前修改的文件。不包括完全匹配指定日期的文件。参数
-            的格式和 -ta<日期> 相同。
+            It is allowed to use several modifiers in the same switch,
+            such as -tamc20190215, to set the same date for all specified
+            times. Alternatively you can add several time filtering
+            switches to command line. By default, time filters use AND logic,
+            so a file must match all such filters to be processed.
+            It can be changed to OR logic with 'o' modifier, so a file will
+            have to match at least one 'o' filter. For example, use
+            -taco20190201 -tamo20190210 to include files created after
+            2019-02-01 or modified after 2019-02-10.
 
 
-    -tk     保存原始压缩文件日期。防止当正在改变一个压缩文件时RAR修改文件。
+    -tb[m,c,a,o]<date>
+            Process only files modified before the specified date.
+            Files matching the specified date exactly are not included.
+
+            Format of the switch is the same as -ta<date>.
 
 
-    -tl     设置压缩文件的日期为最新文件的日期。强制RAR设置改变的压缩文件的日
-            期为压缩文件中最新文件的日期。
+    -tk[<date>]
+            Keep the original or set the specified archive time.
+            
+            If used without parameter, prevents RAR from modifying
+            the archive time when changing an archive.
+
+            Optional date parameter in YYYYMMDDHHMMSS format specifies
+            the date to assign to archive modification time. It is allowed
+            to insert separators like '-' or ':' to the date string
+            and omit trailing fields. For example, switch -tk2025-06-01
+            is correct.
 
 
-    -tn[m,c,a,o]<时间>
-            处理指定时间以后的新文件。也包括完全匹配指定日期的文件。时间字符串
-            格式时:
+    -tl     Set archive time to newest file. Forces RAR to set the time of
+            changed archive to the date of the newest file in the archive.
+
+
+    -tn[m,c,a,o]<time>
+            Process files newer than the specified time period.
+            Files matching the specified time period exactly are also included.
+
+            Format of the time string is:
 
             [<ndays>d][<nhours>h][<nminutes>m][<nseconds>s]
 
-            例如，使用参数 -tn15d 来处理更新了15天的文件，-tn2h30m 来处理更
-            新了2小时30分的文件。
+            For example, use switch -tn15d to process files newer
+            than 15 days and -tn2h30m to process files newer than
+            2 hours 30 minutes.
 
-            使用 'm', 'c', 'a' 参数来指定相应的修改、创建(Unix 中为 ctime)
-            和上次访问时间，例如 -tnc2h30m 表示创建时间。
-            如果此类参数被忽略，则假定为修改时间。
+            Use 'm', 'c', 'a' modifiers to specify modification,
+            creation (ctime in Unix systems) and last access time accordingly,
+            such as -tnc2h30m for creation time or ctime.
+            If such modifier is omitted, the modification time is assumed.
 
-            允许在同一个参数里使用几个修饰参数，例如 -tnmc30d，来为所有指定的时间
-            设置相同的日期。另外，您可以添加几个时间过滤参数到命令行。默认情况下，
-            时间过滤器使用 AND 逻辑，因此一个文件必须匹配所有此类过滤器才能被处理。
-            它可以用 'o' 修饰参数来修改为 OR 逻辑，这样一个文件必须至少匹配一个 'o' 
-            过滤器。例如，使用 tnco30d -tnmo20d 来包含创建时间超过 30 天或修改时间
-            超过 20 天的文件。
+            It is allowed to use several modifiers in the same switch,
+            such as -tnmc30d, to set the same period for all specified times.
+            Alternatively you can add several time filtering switches to
+            command line. By default, time filters use AND logic,
+            so a file must match all such filters to be processed.
+            It can be changed to OR logic with 'o' modifier, so a file
+            will have to match at least one 'o' filter. For example,
+            use -tnco30d -tnmo20d to include files with creation time
+            newer than 30 days or modification time newer than 20 days.
 
-    -to[m,c,a,o]<时间>
-            处理指定时间以前的旧文件。不包括完全匹配指定日期的文件。参数的格式和 
-            -tn<时间> 相同。
+    -to[m,c,a,o]<time>
+            Process files older than the specified time period.
+            Files matching the specified time period exactly are not included.
+
+            Format of the switch is the same as -tn<time>.
 
 
     -ts[m,c,a,p][+,-,1]
-            保存或恢复文件时间(修改，创建或 ctime，访问)。
+            Save or restore file time (modification, creation or ctime,
+            access, preserve).
 
-            使用 -tsm 来保存文件的修改时间。-tsc 参数在 Windows 中保存创建时间，在
-            Unix 中保存更改时间，也称为 ctime。-tsa 参数保存上次访问时间。允许使用
-            多个 -ts 参数，例如 -tsc -tsa。如果未指定“m”、“c”或“a”，则假定所有
-            三个文件时间。
+            Use -tsm to save the file modification time. Switch -tsc saves
+            the creation time in Windows and the change time, also known
+            as ctime, in Unix systems. Switch -tsa saves the last access time.
+            Multiple -ts switches, such as -tsc -tsa, are allowed.
+            If 'm', 'c' or 'a' are not specified, all three file times
+            are assumed.
 
-            附加 '+' 来保存文件时间并带有最大的精度。具体值取决于操作系统和
-            文件系统，并且可以在 Windows 里达到 100 纳秒，在 Unix 里达到 1 
-            纳秒。 附加 '1' 来设置 1 秒精确度，或者 '-' 不保存文件时间。
-            如果没有 '+', '-' 或 '1'，则假定为 '+'，因此 -ts+ 和 -ts 都保存
-            三种高精度时间。
+            Append '+' to store a file time with maximum possible precision.
+            The exact value depends on the particular operating system
+            also as the file system and can be up to 100 nanoseconds
+            in Windows and 1 nanosecond in Unix systems. Append '1' to set
+            1 second precision or '-' to not save a file time, such as -ts-
+            to omit all 3 times. If '+', '-' or '1' are not present,
+            '+' is assumed, so -ts+ and -ts both save all three high
+            precision times.
 
-            同一文件的所有存储时间始终具有相同的精度。如果指定了不同的精度，
-            例如 -tsm1 -tsc+，则选择常用精度。
+            All stored times for same file always have the same precision.
+            If different precisions are specified, such as -tsm1 -tsc+,
+            common one is selected.
 
-            RAR 4.x 压缩文件总是含有修改时间，并且对于 RAR 4.x 压缩文件
-             -tsm- 仍然保存修改时间并带有最低的 2秒精度。另外两个时间可以
-            禁用。RAR 5.0 压缩文件允许忽略任何文件时间包括修改，因此解压
-            的文件将会有当前系统时间。
-            参数 -tsm- -tsc- -tsa- 或 -ts- 会保存低精度修改时间用于 RAR 4.x 
-            并且对于 RAR 5.0 压缩文件没有文件时间。
-            
-            如果 -ts 参数未指定，RAR 保存最高精度的修改时间并忽略其它时间。
+            If -ts switch is not specified, RAR stores the high precision
+            modification time and omits two other times.
 
-            默认时 RAR 仅为已解压的文件设置修改时间，即使压缩文件包含其它时间。
-            解压时请使用 -ts- 或 -ts+ 来设置这三个时间，-tsc 和 -tsa 来设置创
-            建和上次访问时间，-tsm- 或 -ts- 来设置当前的系统时间而不是保存在压
-            缩文件里的修改时间。
+            By default RAR sets only the modification time for extracted files,
+            even if archive contains other times. Use -ts or -ts+ when
+            unpacking to set all three times, -tsc and -tsa to set
+            creation (ctime in Unix systems) and last access times,
+            -tsm- or -ts- to set the current system time instead of
+            modification time stored in archive.
 
-            解压时 Windows 允许设置所有三种文件时间。
-            在 Unix 里我们可以设置修改时间和上次访问时间，但不能设置更改时间。
+            Windows allows to set all three file times when unpacking.
+            In Unix systems we can set the modification and last access,
+            but not the change time.
 
-            使用 -tsp 参数可以在归档时保留源文件原始的上次访问文件时间。此参数
-            尝试保留归档文件原始的上次访问时间，但不控制将哪些时间戳存储到归档中。
-            为此，它必须结合其他 -ts 参数一起使用。例如，如果我们希望保存上次访问
-            归档时间，并保留源文件的上次访问时间，我们需要同时使用 -tsa -tsp。参数
-             -tsp 可以防止打开一些没有该参数也能打开的文件。
+            Use -tsp switch to preserve the original last access file time
+            of source files when archiving. This switch attempts to keep
+            the original last access time of archiving files, but it does not
+            control, which timestamps are to be stored in archive.
+            It has to be combined with other -ts switches for this purpose.
+            For example, if we wish to save the last access time to archive
+            and preserve the last access time of source files, we need
+            to use -tsa -tsp together. To open some files with -tsp switch,
+            it may be necessary to run RAR as administrator.
 
-            虽然 -tsp 受 RAR for Windows 的支持，但不能保证适用于其他平台。
+            While -tsp is supported by RAR for Windows, it is not guaranteed
+            to work for other platforms.
 
-            允许在同一个参数中组合多个修饰符，例如 -tscap 而不是 -tsc -tsa -tsp。
+            It is allowed to combine several modifiers in the same switch,
+            such as -tscap instead of -tsc -tsa -tsp.
 
-            例子:
+            Examples:
 
             1) rar a -ts backup
 
-            使用最高精确度存储所有文件时间。
+            Store all file times with the highest possible precision.
 
             2) rar x -tsa backup
 
-            恢复修改和最近访问时间。参数 -tsm 不是必需的，因为 RAR 默认设置
-            修改时间。如果我们希望恢复上次访问时间，我们应该使用 -tsm- -tsa参数：
+            Restore modification and last access time. Switch -tsm is not
+            required, because RAR sets the modification time by default.
+            If we wish to restore only the last access time, we should use
+            -tsm- -tsa switches.
 
             3) rar a -tsm1 -tsc1 -tsp backup
 
-            存储低精确度的修改和创建或 ctime 时间。
-            保留源文件的上次访问时间。
-            或者，我们可以使用 -tsm1c1p 而不是 -tsm1 -tsc1 -tsp。
+            Store low precision modification and creation or ctime times.
+            Preserve the last access time of source files.
+            Alternatively we could use -tsm1c1p instead of -tsm1 -tsc1 -tsp.
 
 
-    -u      更新文件。 这可在解压或创建压缩文件时使用。命令字符串 'a -u' 和
-            命令 'u'等效。您也可以使用参数'-u'和命令'm'和'mf'一起使用。如果开
-            关'-u'使用与命令'x'或'e'一起使用，则在磁盘上不存在的文件和比在磁
-            盘上的拷贝新的文件将从压缩文件中解压。
+    -u      Update files. May be used with archive extraction or creation.
+            The command string "a -u" is equivalent to the command 'u', you
+            could also use the switch '-u' with the commands 'm' or 'mf'. If
+            the switch '-u' is used with the commands 'x' or 'e', then files
+            not present on the disk and files newer than their copies on the
+            disk would extracted from the archive.
 
 
-    -v      创建自动检测大小的卷或列出所有的卷
+    -v      Create volumes with size autodetection or list all volumes
 
-            当正在创建或正在列表卷时这个参数可以使用。
+            This switch may be used when creating or listing volumes.
 
-            在第一种情况下，它启用卷的自动大小检测，所以新的卷将使用目标媒体
-            上的所有可用空间。当在可移动磁盘上创建卷时非常便利。您可以在 -v
-            <大小> 的描述中读到更多关于卷的信息。
+            In the first case it enables volume size autodetection,
+            so new volumes will use all available space on the destination
+            media. It is convenient when creating volumes on removable
+            disks. You may read more about volumes in -v<size> description.
 
-            在第二种情况下，在命令行中当这个参数和'V' 或 'L'命令一起使用，它
-            强制 RAR 列出从指定卷开始的所有卷的内容。没有这个参数，RAR 只显
-            示单独的被指定卷的内容。
+            In the second case, when this switch is used together with
+            'V' or 'L' command, it forces RAR to list contents of all
+            volumes starting from that specified in the command line.
+            Without this switch RAR displays contents of only one single
+            specified volume.
 
 
-    -v<大小>[k|b|m|M|g|G]
-            建立卷，大小=<大小>*1000 [*1024 | *1]。
-            默认此参数使用 <大小> 作为一千(1000)字节(非1024 字节)。您也可以
-            输入符号 "k" 来表示千字节(1024)的大小，或者符号 "b" 表示字节，兆
-            字节(1024 x 1024)为 -"m"，而一百万个字节是 - "M"，G字节 - 'g',
-            十亿个字节 - 'G'。
+    -v<size>[b|B|k|K|m|M|g|G|t|T]
+            Create volumes of the specified size.
 
-            如果大小被忽略，将使用自动检测。
+            Unit type character following the size value can be 'b' or 'B'
+            for bytes, 'k' for kilobytes, 'K' for thousands of bytes,
+            'm' for megabytes, 'M' for millions of bytes, 'g' for gigabytes,
+            'G' for billions of bytes, 't' for terabytes, 'T' for trillions
+            of bytes. If this character is not present, the size value
+            is treated as thousands of bytes
 
-            它允许使用十进位小数。作为十进制的标记。例如，v1.5g 参数表示 1.5
-            GB。
+            If the size is omitted, autodetection will be used.
 
-            您可以指定几个 -v 参数来为不同的卷设置不同的大小。例如:
+            It is allowed to enter decimal fractions using the dot as
+            the decimal mark. For example, -v1.5g means 1.5 gigabytes.
+
+            You may specify several -v switches to set different sizes
+            for different volumes. For example:
 
               rar a -v100k -v200k -v300k arcname
 
-            第一卷设为 100 KB 大小, 第二卷设为 200 KB, 剩下的为 300 KB。
+            sets 100 KB size for first volume, 200 KB for second
+            and 300 KB for all following volumes.
 
-            如果在可移动磁盘上创建卷，第一卷被创建后，用户将被提示:
+            If volumes are created on removable media, then after
+            the creation of the first volume, the user will be prompted
+            with:
 
-              创建下一卷: 是/否/全部
+              Create next volume: Yes/No/All
 
-            此时，您可以改变磁盘。回答'A'将使所有的卷不暂停地被创建。
+            At this moment in time, you should change the disks. Answering
+            'A' will cause all volumes to be created without a pause.
 
-            默认 RAR 卷以‘volname.partNNN.rar’格式命名，NNN的地方是卷号。
-            RAR 4.x 压缩格式使用 -vn 参数可能选择成其它的扩展基本命名规则，卷
-            组中第一卷文件由.rar 的扩展名，以后卷从 .r00 到 .r99 命名。RAR 5.0
-            压缩文件不支持 -vn 和扩展基本名称。
+            RAR volumes have names like 'volname.partNNN.rar', where NNN
+            is the volume number.
+            
+            Volumes created by older RAR versions could use the another naming
+            scheme, where the first volume file in a multi-volume set had
+            .rar extension, followed by volumes with extensions from .r00 to
+            .r99. RAR can unpack such volumes, but doesn't use the extension
+            based names for new archives.
 
-            当解压或测试多卷压缩文件时，您必须只使用第一卷的文件名。如果在驱
-            动器中没有下一卷并且磁盘可移动，用户会被提示:
+            When extracting or testing a multi-volume archive you must use
+            only the first volume name. If there is no next volume
+            on the drive and the disk is removable, the user will be
+            prompted with:
 
-             插入磁盘带有 <下一卷名>
+             Insert disk with <next volume name>
 
-            插入带有正确卷的磁盘并按任意键。
+            Insert the disk with the correct volume and press any key.
 
-            如果在解压过程中，下一卷没有找到或卷放在不可移动磁盘上，RAR 将显
-            示下列信息后中断:
+            If while extracting, the next volume is not found and volumes
+            are placed on the non-removable disk, RAR will abort with
+            the error message:
 
-             没有找到 <卷名>
+             Cannot find <volume name>
 
-            压缩卷不可以被修改。命令'd'，'f'，'u'，'s' 不能在多卷组中使用。
-            命令'a'只可以用在创建新的多卷序列时。
+            Archive volumes cannot be modified. The commands 'd', 'f', 'u',
+            's' cannot be used with Multi-volume sets. The command 'a' may
+            be used only for the creation of a new multi-volume sequence.
 
-            也许，虽然不太可能，多卷组中文件大小可能比未压缩时大，原因是'存
-            储'特征(如果大小增加时不压缩)在多卷组中不能启用。
+            It is possible, although unlikely, that the file size, of a file
+            in a multi-volume set, could be greater than its uncompressed
+            size. This is due to the fact that 'storing' (no compression if
+            size increases) cannot be enabled for multi-volume sets.
 
-            压缩卷可以是自解压格式，这样的压缩文件可使用 '-v' 或 '-sfx'参数
-            创建。
+            Archive volumes may be Self-Extracting (SFX). Such an archive
+            should be created using both the '-v' and '-sfx' switches.
 
-            例子:
+            Example:
 
-            创建每卷为 1 GB 的实体卷:
+            create solid volumes 1 GB each:
 
             rar a -s -v1g volume.rar bitmaps
 
 
-    -vd     创建卷之前清除磁盘内容
+    -vd     Erase disk contents before creating volume
 
-            当使用 '-vd' 时，目标盘上的所有文件和目录都将被删除。这个参数只
-            能用在可移动磁盘上，使用这个参数不能删除硬盘内容。
-
-
-    -ver[n] 文件版本控制
-
-            当在已经存在的压缩文件中更新文件时，强制 RAR 保留前一文件版本。
-            旧版本被命名为'filename;n'，'n'处是版本号。
-
-            当不使用参数 -ver 解压一个压缩文件，rar 默认只解压最近添加的文件
-            版本，它的名字不能包含数字后缀。但是如果您正确指定了文件名，包括
-            版本，它也可以解压。例如，'rar x arcname'将只解压最新版本，当使
-            用 'rar x arcname file.txt;5' 将解压 'file.txt;5'，如果它在压缩
-            文件中存在的话。
-
-            解压时如果您不带参数指定-ver参数，
-            RAR 将解压所有和文件掩码匹配的所有文件中的所有版本。这样版本号没
-            有从未压缩文件名中删除。您也可以使用数字作为-ver的参数来解压一个
-            具体的文件版本。它将告诉RAR只解压这个版本并从文件名中删除版本号。
-            例如，'rar x -ver5 arcname' 将只解压第五版本文件。
-
-            如果压缩时您指定了‘n’参数，它会限制在压缩文件中文件版本的最大
-            数字。超过此限制的旧的文件版本会被移除。
-
-            当使用 -ver 参数压缩时，建议在要添加的文件里避免 'filename;n' 
-            格式的名称。此类名称可能导致重复项目，如果在压缩文件里存在较老版
-            本的同名文件或将在之后创建。
-
-    -vn     使用旧风格的卷命名法则
-
-            默认 RAR 卷以'volname.partNNN.rar'格式命名，NNN的地方是卷号。RAR
-            4.x 压缩格式使用-vn参数可能转换成其它的扩展基本命名规则，卷组中第
-            一卷文件由 .rar 的扩展名，以后卷从 .r00 到 .r99 命名。RAR 5.0 压
-            缩文件不支持 -vn 和扩展基本名称。
+            All files and directories on the target disk will be erased
+            when '-vd' is used.  The switch applies only to removable
+            media, the hard disk cannot be erased using this switch.
 
 
-    -vp     每一卷后暂停
+    -ver[n] File version control
 
-            默认处理下一卷前，RAR 仅在使用可移动驱动器上并且剩余的磁盘空间
-            小于卷大小时询问确认。这个参数强制 RAR 在创建或解压卷前总是进行
-            这样的询问。例如，如果您要在创建后立即把新卷复制到其它媒体时有
-            用。
+            Forces RAR to keep previous file versions when updating
+            files in the already existing archive. Old versions are
+            renamed to 'filename;n', where 'n' is the version number.
+
+            By default, when unpacking an archive without the switch
+            -ver, RAR extracts only the last added file version, the name
+            of which does not include a numeric suffix. But if you specify
+            a file name exactly, including a version, it will be also
+            unpacked. For example, 'rar x arcname' will unpack only
+            last versions, when 'rar x arcname file.txt;5' will unpack
+            'file.txt;5', if it is present in the archive.
+
+            If you specify -ver switch without a parameter when unpacking,
+            RAR will extract all versions of all files that match
+            the entered file mask. In this case a version number is
+            not removed from unpacked file names. You may also extract
+            a concrete file version specifying its number as -ver parameter.
+            It will tell RAR to unpack only this version and remove
+            a version number from file names. For example,
+            'rar x -ver5 arcname' will unpack only 5th file versions.
+
+            If you specify 'n' parameter when archiving, it will limit
+            the maximum number of file versions stored in the archive.
+            Old file versions exceeding this threshold will be removed.
+
+            When archiving with -ver switch, it is recommended to avoid
+            names in 'filename;n' format among files to add. Such names
+            can lead to duplicate entries if old version with same name
+            either is present in archive or will be created later.
 
 
-    -w<p>   分配工作目录至<p>。
+    -vp     Pause before each volume
 
-            RAR 会在归档修改这样的操作中创建临时文件。此参数可以用来为这些
-            临时文件指定目录。该目录必须已经存在。
+            By default RAR asks for confirmation before processing
+            next volume only when archiving to removable disks and only
+            if free disk space is less than volume size. This switch
+            forces RAR to always ask for such confirmation when creating
+            or extracting volumes. For example, it can be useful if you
+            wish to copy new volumes to another media immediately after
+            creating.
 
-            例子：
 
-            在将新备注添加到 info.rar 时，为临时文件使用 d:\tmp 目录
+    -w<p>   Assign work directory to <p>.
+    
+            RAR creates temporary files in some operations like archive
+            modification. This switch can be used to specify the directory
+            for such temporary files. This directory must already exist.
+
+            Example:
+
+            use d:\tmp directory for temporary files when adding a new
+            comment to info.rar
 
             RAR c -wd:\tmp -zcomment.txt info.rar
 
 
-    -x<f>   排除指定的文件或文件夹 <f>，通配符可以用在文件名和文件掩码的路径
-            部分。您可以在同一命令行中数次指定参数'-x'来定义数个排除掩码。
+    -x<f>   Exclude the specified <f> file or directory. Wildcards can be
+            used in both the name and path parts of file mask. You can
+            specify the switch '-x' several times to define several
+            exclusion masks in the same command line.
 
-            如果掩码包含通配符，它应用到当前目录中的文件和它的子目录。没有
-            通配符它不递归，“filename”掩码会在压缩时仅排除当前目录中的
-            'filename' 文件或解压时排除压缩文件根目录中的 'filename'。
+            If mask contains wildcards, it applies to files in current
+            directory and its subdirectories. It is not recursive without
+            wildcards, so "filename" mask will exclude 'filename' file
+            only in current directory when archiving or in root archive
+            directory when extracting.
 
-            使用 "*\filename" 语法排除所有目录中的所有 "filename"。
+            Use "*\filename" syntax to exclude "filename" recursively
+            in all directories.
 
-            如果您知道一个文件的确切路径，您可以是使用“路径\文件名”语法来
-            仅排除“文件名”的此副本。如果您在解压一个压缩文件时使用 -x路径\
-            文件名语法，“路径”必须是一个压缩文件内的路径，而不是在解压后的
-            磁盘上的文件路径。
+            If you know the exact path to file, you can use "path\filename"
+            syntax to exclude only this copy of "filename". If you use
+            -xpath\filename syntax when unpacking an archive, "path" must be
+            the path inside of archive, not the file path on the disk after
+            unpacking.
 
-            默认，包含通配符的掩码仅应用于文件。如果您需要使用有通配符的掩码
-            排除多个目录，要使用特殊的语法来用于目录排除掩码。这样的掩码必须
-            在后面跟一个斜线的路径分隔符(Windows 是 '\'，Unix 是 '/')。例如，
-            "*tmp*\"掩码会排除所有匹配 "*tmp*" 掩码的目录，"*\tmp\"会排除所有
-            的 'tmp' 目录，由于通配符的存在，掩码会应用于当前目录和它的子目录
-            中的内容。
+            By default, masks containing wildcards are applied only to files.
+            If you need a mask with wildcards to exclude several directories,
+            use the special syntax for directory exclusion masks.
+            Such masks must have the trailing path separator character
+            ('\' for Windows and '/' for Unix systems). For example, "*tmp*\"
+            mask will exclude all directories matching "*tmp*" and "*\tmp\"
+            will exclude all 'tmp' directories. Since wildcards are present,
+            both masks will be applied to contents of current directory
+            and all its subdirectories.
 
-            如果您要仅排除一个目录，不要使用任何通配符，指定确切的包含相对或
-            绝对路径的目录名。这种情况下您不需要为掩码追加附件的路径分隔符，
-            只有在掩码中包含通配符，需要把它们从文件排除掩码中区分出来时才必
-            须。
+            If you wish to exclude only one directory, specify the exact
+            name of directory including the absolute or relative path
+            without any wildcards. In this case you do not need to append
+            the path separator to mask, which is required only for directory
+            exclusion masks containing wildcards to distinguish them
+            from file exclusion masks.
 
-            例子:
+            Examples:
 
             1) rar a -r -x*.jpg -x*.avi rawfiles
 
-            压缩当前目录和它的子目录中的除了 *.jpg 和 *.avi 文件外的所有文件；
+            compress all files except *.jpg and *.avi in current directory
+            and its subdirectories;
 
             2) rar a -r -x*\temp\ savec c:\*
 
-            压缩 C: 上除了 'temp' 文件夹中的 'temp' 目录和文件外的所有文件；
+            compress all files on the disk c: except 'temp' directories
+            and files inside of 'temp' directories;
 
             3) rar x -x*.txt docs
 
-            从 docs.rar 解压除了 *.txt 外的所有文件。
+            extract all files except *.txt from docs.rar.
 
 
-    -x@<lf> 排除指定文件列表中列出的文件。如果您使用 -x@ 而没有列表文件名参数，
-            它会从标准输入设备读取文件名。
+    -x@<lf> Exclude files listed in the specified list file. If you use -x@
+            without the list file name parameter, it will read file names
+            from stdin.
 
-            例子：
+            Example:
 
             rar a -x@exlist.txt arch *.exe
 
 
-    -y      对于所有询问全部回答是。
+    -y      Assume Yes on all queries.
 
 
-    -z[file]   从文件<file>中读取压缩文件注释。
-	    此参数可以用于任何压缩文件修改命令，以从文件读取压缩文件注释并将其
-	    添加到压缩文件。如果您需要指定注释文本文件的字符集，请使用 -sc 参数。
-	    如果 <f> 没有指定，注释从标准输入设备读取。
+    -z[file]
+            Read archive comment from file <file>.
+            
+            This switch can be used with any archive modification command
+            to read the archive comment from file and add it to archive.
+            Use with -sc switch if you need to specify the character set
+            for comment text file. If <file> is not present, comment
+            is read from stdin.
 
 
- 限制
- ~~~~
 
-    命令限制:
+ Limitations
+ ~~~~~~~~~~~
 
-    命令 'd','u','f','c','cf' 不能用于分卷压缩文件。
+    Command limitations:
 
-    命令 'a' 不能用来更新分卷压缩文件，只能用来创建一个新的。
+    Commands 'd','u','f','c','cf' will not operate with archive volumes.
 
-
- 返回值
- ~~~~~~
-
-    RAR 成功操作后返回 0 。非 0 返回码意味着操作由于某种错误被取消:
-
-       0   操作成功
-       1   没有发生致命错误
-       2   发生一个致命错误
-       3   无效校验和。数据损坏
-       4   试图修改使用 'k' 命令锁定的压缩文件
-       5   写入磁盘错误
-       6   文件打开错误
-       7   错误的命令行选项
-       8   没有足够的内存进行操作
-       9   文件创建错误
-      10   没有找到与指定的掩码和选项匹配的文件。
-      11   密码错误
-      12   读取错误
-     255   用户中断操作
+    Command 'a' cannot be used to update an archive volume, only to
+    create a new one.
 
 
- 术语表
- ~~~~~~
+ Exit values
+ ~~~~~~~~~~~
 
-    压缩文件     包含一个或一个以上文件的压缩和/或加密的特定文件。
+    RAR exits with a zero code (0) in case of successful operation.
+    Non-zero exit code indicates some kind of error:
 
-    压缩         减少数据大小的编码方法。
+    Code   Description   
 
-    校验和       数据块或文件的计算值，用于检查数据或文件认证。
+     0     Successful operation.
+     1     Non fatal error(s) occurred.
+     2     A fatal error occurred.
+     3     Invalid checksum. Data is damaged.
+     4     Attempt to modify an archive locked by 'k' command.
+     5     Write error.
+     6     File open error.
+     7     Wrong command line option.
+     8     Not enough memory.
+     9     File create error
+    10     No files matching the specified mask and options were found.
+    11     Wrong password.
+    12     Read error.
+    13     Bad archive.
+   255     User stopped the process.
 
-    SFX 文件     自解压压缩文件。可执行文件格式的压缩文件，由自解压模块和
-                 其后的压缩数据组成。只需要运行此文件就能开始解压。
 
-    固实         对压缩文件使用专用的压缩方式(把所有文件看成一个连续的数据
-                 流)打包。当压缩大量小文件特别有利。
+ Glossary
+ ~~~~~~~~
 
-    卷           压缩文件的拆分部分。拆分一个压缩文件成卷允许把它们存储在多
-                 个移动磁盘上。固实格式卷解压时必须从序列中的第一个开始。
+    Archive      Special file containing one or more files optionally
+                 compressed and/or encrypted.
+
+    Compression  A method of encoding data to reduce it's size.
+
+    Checksum     Value calculating for data block or file and allowing to
+                 check data or file validity.
+
+    SFX archive  SelF-eXtracting archive. Archive in executable format,
+                 consisting of self-extracting module followed by
+                 compressed data. It is enough to run such executable to
+                 start extraction.
+
+    Solid        An archive packed using a special compression method which
+                 sees all files as one continuous data stream. Particularly
+                 advantageous when packing a large number of small files.
+
+    Volume       Part of a split archive. Splitting an archive to volumes
+                 allows storing them on several removable disks.
+                 Solid volumes must be extracted starting from first
+                 volume in sequence.
 
 
-  版权所有
+
+ Copyrights
 
     (c) 1993-2026 Alexander Roshal
 

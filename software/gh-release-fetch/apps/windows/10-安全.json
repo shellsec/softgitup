@@ -1358,7 +1358,7 @@
   },
   {
     "id": "heu_kms",
-    "简介": "HEU KMS Activator",
+    "简介": "HEU KMS Activator（Release 为 rar 压缩包，非直链 exe）",
     "分类": "安全",
     "enabled": false,
     "prefer_api_assets": true,
@@ -1367,8 +1367,15 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false,
+    "url_hint": "HEU_KMS",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "HEU_KMS_Activator",
+      ".rar"
+    ],
     "use_download_filename": true,
     "href_exclude_substrings": [
+      ".iso",
       "source",
       "src.",
       "-src",
@@ -1383,10 +1390,14 @@
       "checksum"
     ],
     "installer_extensions": [
+      ".rar",
       ".zip",
-      ".7z",
-      ".exe"
+      ".7z"
     ],
+    "download_names": [
+      "HEU_KMS_Activator_v{ver}.rar"
+    ],
+    "save_name": "HEU_KMS_Activator_v{ver}.rar",
     "releases_url": "https://bgithub.xyz/zbezj/HEU_KMS_Activator/releases",
     "repo_path": "zbezj/HEU_KMS_Activator"
   },

@@ -246,5 +246,44 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": true
+  },
+  {
+    "id": "dev_sidecar",
+    "简介": "开发者边车：加速 GitHub、git clone、Release 下载等开发网络请求",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/docmirror/dev-sidecar/releases",
+    "repo_path": "docmirror/dev-sidecar",
+    "url_hint": "dev-sidecar",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "DevSidecar-",
+      "windows-x86_64"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "ia32",
+      "universal",
+      "macos",
+      "linux",
+      ".dmg",
+      ".deb",
+      ".rpm",
+      ".AppImage",
+      ".tar.gz"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "download_names": [
+      "DevSidecar-{ver}-windows-x86_64.exe"
+    ],
+    "save_name": "DevSidecar-{ver}-windows-x86_64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
   }
 ]

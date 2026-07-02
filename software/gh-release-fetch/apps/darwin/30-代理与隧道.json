@@ -411,5 +411,79 @@
     "save_name": "FlClash-macos.dmg",
     "releases_url": "https://bgithub.xyz/chen08209/FlClash/releases",
     "repo_path": "chen08209/FlClash"
+  },
+  {
+    "id": "dev_sidecar",
+    "简介": "开发者边车：加速 GitHub、git clone、Release 下载等开发网络请求（Apple Silicon）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/docmirror/dev-sidecar/releases",
+    "repo_path": "docmirror/dev-sidecar",
+    "url_hint": "dev-sidecar",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "DevSidecar-",
+      "macos-arm64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "macos-x86_64",
+      "windows",
+      "linux",
+      ".exe",
+      ".deb",
+      ".rpm",
+      ".AppImage",
+      ".tar.gz"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "DevSidecar-{ver}-macos-arm64.dmg"
+    ],
+    "save_name": "DevSidecar-{ver}-macos-arm64.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "dev_sidecar_intel",
+    "简介": "开发者边车：加速 GitHub、git clone、Release 下载等开发网络请求（Intel Mac）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/docmirror/dev-sidecar/releases",
+    "repo_path": "docmirror/dev-sidecar",
+    "url_hint": "dev-sidecar",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "DevSidecar-",
+      "macos-x86_64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "macos-arm64",
+      "windows",
+      "linux",
+      ".exe",
+      ".deb",
+      ".rpm",
+      ".AppImage",
+      ".tar.gz"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "DevSidecar-{ver}-macos-x86_64.dmg"
+    ],
+    "save_name": "DevSidecar-{ver}-macos-x86_64.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

@@ -367,5 +367,62 @@
     "save_name": "devspace-linux-amd64",
     "releases_url": "https://bgithub.xyz/devspace-sh/devspace/releases",
     "repo_path": "devspace-sh/devspace"
+  },
+  {
+    "id": "docker_desktop",
+    "简介": "Docker Desktop 官方 deb（x86_64；从 Docker 文档发布说明解析）",
+    "分类": "云原生",
+    "enabled": false,
+    "resolve_via": "docker_desktop",
+    "docker_desktop_asset": "linux_amd64_deb",
+    "version_tag_as_on_github": true,
+    "releases_url": "https://docs.docker.com/desktop/release-notes/",
+    "repo_path": "docker/docs",
+    "url_hint": "docker desktop",
+    "windows_installer": false,
+    "installer_extensions": [
+      ".deb"
+    ],
+    "use_download_filename": true,
+    "save_name": "docker-desktop-amd64.deb",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "docker_compose",
+    "简介": "Docker Compose CLI 独立二进制（docker/compose，Linux x86_64）",
+    "分类": "云原生",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/docker/compose/releases",
+    "repo_path": "docker/compose",
+    "url_hint": "docker compose",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "docker-compose-linux",
+      "x86_64"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "armv",
+      "ppc64",
+      "riscv",
+      "s390x",
+      "sha256",
+      "sbom",
+      "sigstore",
+      "provenance",
+      "checksums",
+      "windows",
+      "darwin"
+    ],
+    "windows_installer": false,
+    "use_download_filename": true,
+    "save_name": "docker-compose-linux-x86_64",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

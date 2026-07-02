@@ -266,7 +266,7 @@
   },
   {
     "id": "nextplayer",
-    "简介": "Next Player（Android 原生本地视频播放器）",
+    "简介": "Next Player（Android 开源本地视频播放器，倍速可慢至约 0.2x；Release 用 universal.apk）",
     "分类": "多媒体",
     "enabled": false,
     "prefer_api_assets": true,
@@ -275,6 +275,7 @@
     "kill_before_install": false,
     "windows_installer": false,
     "process_name": "",
+    "url_hint": "nextplayer",
     "installer_extensions": [
       ".apk"
     ],
@@ -297,8 +298,11 @@
       ".json",
       ".txt"
     ],
+    "download_names": [
+      "nextplayer-v{ver}-universal.apk"
+    ],
     "use_download_filename": true,
-    "save_name": "nextplayer.apk",
+    "save_name": "nextplayer-v{ver}-universal.apk",
     "releases_url": "https://bgithub.xyz/anilbeesetti/nextplayer/releases",
     "repo_path": "anilbeesetti/nextplayer"
   },

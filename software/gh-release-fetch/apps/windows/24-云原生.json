@@ -567,5 +567,61 @@
     "save_name": "portainer-windows-amd64.tar.gz",
     "releases_url": "https://bgithub.xyz/portainer/portainer/releases",
     "repo_path": "portainer/portainer"
+  },
+  {
+    "id": "docker_desktop",
+    "简介": "Docker Desktop 官方安装包（从 Docker 文档发布说明解析最新版与直链）",
+    "分类": "云原生",
+    "enabled": false,
+    "resolve_via": "docker_desktop",
+    "docker_desktop_asset": "windows_x64",
+    "version_tag_as_on_github": true,
+    "releases_url": "https://docs.docker.com/desktop/release-notes/",
+    "repo_path": "docker/docs",
+    "url_hint": "docker desktop",
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "use_download_filename": true,
+    "save_name": "Docker Desktop Installer.exe",
+    "process_name": "Docker Desktop.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "docker_compose",
+    "简介": "Docker Compose CLI 独立二进制（docker/compose 官方 Release）",
+    "分类": "云原生",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/docker/compose/releases",
+    "repo_path": "docker/compose",
+    "url_hint": "docker compose",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "docker-compose-windows",
+      "x86_64"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "sha256",
+      "sbom",
+      "sigstore",
+      "provenance",
+      "checksums",
+      "darwin",
+      "linux"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "use_download_filename": true,
+    "save_name": "docker-compose-windows-x86_64.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

@@ -338,5 +338,111 @@
     "save_name": "devspace-darwin-amd64",
     "releases_url": "https://bgithub.xyz/devspace-sh/devspace/releases",
     "repo_path": "devspace-sh/devspace"
+  },
+  {
+    "id": "docker_desktop",
+    "简介": "Docker Desktop 官方 dmg（Apple Silicon；从 Docker 文档发布说明解析）",
+    "分类": "云原生",
+    "enabled": false,
+    "resolve_via": "docker_desktop",
+    "docker_desktop_asset": "darwin_arm64",
+    "version_tag_as_on_github": true,
+    "releases_url": "https://docs.docker.com/desktop/release-notes/",
+    "repo_path": "docker/docs",
+    "url_hint": "docker desktop",
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "Docker.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "docker_desktop_intel",
+    "简介": "Docker Desktop 官方 dmg（Intel Mac；从 Docker 文档发布说明解析）",
+    "分类": "云原生",
+    "enabled": false,
+    "resolve_via": "docker_desktop",
+    "docker_desktop_asset": "darwin_amd64",
+    "version_tag_as_on_github": true,
+    "releases_url": "https://docs.docker.com/desktop/release-notes/",
+    "repo_path": "docker/docs",
+    "url_hint": "docker desktop",
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "Docker.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "docker_compose",
+    "简介": "Docker Compose CLI 独立二进制（docker/compose，Apple Silicon）",
+    "分类": "云原生",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/docker/compose/releases",
+    "repo_path": "docker/compose",
+    "url_hint": "docker compose",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "docker-compose-darwin",
+      "aarch64"
+    ],
+    "href_exclude_substrings": [
+      "x86_64",
+      "sha256",
+      "sbom",
+      "sigstore",
+      "provenance",
+      "checksums",
+      "windows",
+      "linux"
+    ],
+    "windows_installer": false,
+    "use_download_filename": true,
+    "save_name": "docker-compose-darwin-aarch64",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "docker_compose_intel",
+    "简介": "Docker Compose CLI 独立二进制（docker/compose，Intel Mac）",
+    "分类": "云原生",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/docker/compose/releases",
+    "repo_path": "docker/compose",
+    "url_hint": "docker compose",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "docker-compose-darwin",
+      "x86_64"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "sha256",
+      "sbom",
+      "sigstore",
+      "provenance",
+      "checksums",
+      "windows",
+      "linux"
+    ],
+    "windows_installer": false,
+    "use_download_filename": true,
+    "save_name": "docker-compose-darwin-x86_64",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]
