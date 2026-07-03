@@ -2501,6 +2501,40 @@ string ParserPlaylistItem(JsonValue object, array<dictionary> &pls, string vid)
 			pls.insertLast(item);
 		}
 	}
+	else
+	{
+		JsonValue videoId = object["videoId"];
+
+		if (videoId.isString())
+		{
+			string url = "https://www.youtube.com/watch?v=" + videoId.asString();
+			if (IsArrayExist(pls, url)) return lastvideoId;
+
+			JsonValue title = GetJsonPath(object, "/title/simpleText");
+			if (!title.isString()) title = GetJsonPath(object, "/title/runs/0/text");
+			if (title.isString())
+			{
+				JsonValue simpleText = GetJsonPath(object, "/lengthText/simpleText");
+				string duration;
+
+				if (simpleText.isString()) duration = simpleText.asString();
+
+				string thumb;
+				JsonValue thumbnail = GetJsonPath(object, "/thumbnail/thumbnails/0/url");
+				if (thumbnail.isString()) thumb = thumbnail.asString();
+
+				lastvideoId = videoId.asString();
+
+				dictionary item;
+				item["url"] = url;
+				item["title"] = title.asString();
+				item["duration"] = duration;
+				if (!thumb.empty()) item["thumbnail"] = thumb;
+				if (lastvideoId == vid) item["current"] = "1";
+				pls.insertLast(item);
+			}
+		}
+	}
 	return lastvideoId;
 }
 
@@ -2567,10 +2601,10 @@ array<dictionary> PlaylistParse(const string &in path)
 				{
 					JsonValue contents = GetJsonPath(root, "/contents/twoColumnBrowseResultsRenderer/tabs/0/tabRenderer/content/sectionListRenderer/contents/0/itemSectionRenderer/contents");
 
-					if (!contents.isArray()) contents = GetJsonPath(root, "/contents/twoColumnWatchNextResults/secondaryResults/secondaryResults/results/0/itemSectionRenderer/contents");
+					if (!contents.isArray()) contents = GetJsonPath(root, "/contents/twoColumnWatchNextResults/playlist/playlist/contents");
 					if (contents.isArray())
 					{
-						for(int j = 0, len = contents.size(); j < len; j++)
+						for (int j = 0, len = contents.size(); j < len; j++)
 						{
 							JsonValue content = contents[j];
 
@@ -2579,6 +2613,30 @@ array<dictionary> PlaylistParse(const string &in path)
 								JsonValue lockupViewModel = content["lockupViewModel"];
 
 								if (lockupViewModel.isObject()) lastvideoId = ParserPlaylistItem(lockupViewModel, ret, vid);
+								else
+								{
+									JsonValue playlistPanelVideoRenderer = content["playlistPanelVideoRenderer"];
+									if (playlistPanelVideoRenderer.isObject()) lastvideoId = ParserPlaylistItem(playlistPanelVideoRenderer, ret, vid);
+									else
+									{
+										JsonValue contents2 = GetJsonPath(content, "/playlistVideoListRenderer/contents");
+
+										if (contents2.isArray())
+										{
+											for (int k = 0, len = contents2.size(); k < len; k++)
+											{
+												JsonValue content2 = contents2[k];
+												if (content2.isObject())
+												{
+													JsonValue playlistVideoRenderer = content2["playlistVideoRenderer"];
+
+													if (playlistVideoRenderer.isObject()) lastvideoId = ParserPlaylistItem(playlistVideoRenderer, ret, vid);
+												}
+											}
+										}
+									}
+								
+								}
 								HostIncTimeOut(5000);
 							}
 						}

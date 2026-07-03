@@ -303,7 +303,7 @@ CrystalDiskInfo 硬盘检测工具 CrystalDiskInfo v9.9.1
 https://www.423down.com/5432.html
 核心特点：中文界面易操作，绿色免装，实时检测硬盘健康、温度、使用时长等关键数据，及时预警硬盘故障
 
-Everything Version V1.5.0.1415b.x64
+Everything Version V1.5.0.1416b.x64
 核心特点：检索速度极快，支持模糊搜索、精准匹配，轻量不占资源，适配大数量文件的快速查找
 https://www.voidtools.com/forum/viewtopic.php?f=12&t=9787
 
@@ -336,7 +336,7 @@ NetTime v3.2.0.233 时间同步
 https://www.timesynctool.com/
 核心特点：体积小巧、同步速度快，精准校准系统时间，无广告无后台，适配各类网络环境下的时间同步需求
 
-影音播放器 PotPlayer64 260623 (June 22, 2026)  官网版
+影音播放器 PotPlayer64 260703 Beta  官网版
 https://www.423down.com/3050.html
 https://www.videohelp.com/software/PotPlayer
 https://potplayer.tv/
@@ -1066,6 +1066,80 @@ https://github.com/huiyadanli/PasteEx
 安装 / 解压后运行一次，它会自动加到右键菜单。
 先复制一大段文字（Ctrl+C）
 在文件夹空白处 → 右键 → Paste As File
+
+
+密码破解工具
+真能吃显卡的压缩包密码恢复工具，主要分两条路：免费开源的命令行派（hashcat 是标杆） 和 Windows GUI 商业派（Accent/PassFab/Passware 这类）。ARCHPR 零售版之所以被嫌弃，就是因为它 GPU 调用浅，下面这几个才是真·GPU 加速。
+🥇 Hashcat —— GPU 密码恢复的标杆
+开源免费，支持 300+ 算法，RAR5（-m 13000）/ ZIP AES（-m 13600）/ RAR3（-m 12500）全齐，CUDA + OpenCL 双引擎，NVIDIA/AMD 都能挂，速度比 ARCHPR 零售版高一到两个数量级。
+典型流程（Windows 举例）：
+# 1. 提哈希（用 John the Ripper 附带的 rar2john/zip2john）
+rar2john secret.rar > rar_hash.txt
+zip2john "文件.zip" > zip_hash.txt
+# 2. GPU 字典攻击
+hashcat.exe -m 13000 -a 0 rar_hash.txt rockyou.txt -O -w 3
+# 3. 掩码攻击（记得后四位是数字）
+hashcat.exe -m 13600 -a 3 zip_hash.txt ?u?l?l?l?d?d?d?d
+关键参数：
+• -m 13000 = RAR5，-m 13600 = ZIP AES（PKZIP Compressed 也可能是 17200/17225，看 zip2john 输出的前缀定）
+• -a 0 字典 / -a 3 掩码 / -a 6 字典+掩码
+• -w 3/4 拉满 GPU 工作负载（4 会影响前台流畅度）
+• -O 内核优化，RAR5/ZIP-AES 必加，否则速度打骨折
+• hashcat -I 先验 GPU 是否被识别，看不到就是驱动/CUDA 没装对
+💡 速度量级参考：RTX 4090 跑 RAR5（PBKDF2-HMAC-SHA256 × 262144 轮）大约 10 万 H/s 级别，8 位复杂密码纯暴力仍要按月算，但字典+规则能压到分钟级。这活 ARCHPR 零售版 CPU 跑是几千 H/s，差几十倍。
+🥈 John the Ripper（Jumbo 版）—— 半 GPU
+Hashcat 的"老对手"，RAR5/ZIP-AES 的 GPU 支持不如 hashcat 深，但好处是自带 rar2john / zip2john 提哈希，很多人是 JtR 提 hash + hashcat 跑 GPU 的组合拳。如果你已经装了 Jumbo，懒得另下 hashcat 也可以直接 --fork 多 GPU，但速度确实差一截。
+🪟 Windows GUI 向（不想碰命令行）
+工具 GPU 支持格式 备注
+Accent RAR Password Recovery Pro ✅ CUDA/OpenCL RAR3 / RAR5 全支持 俄系老牌，GUI 比 ARCHPR 良心，RAR 专用
+PassFab for ZIP ✅ GPU + 多核 CPU ZIP / AES-ZIP 界面傻瓜化，三步走，但只管 ZIP 不管 RAR
+Passware Kit Forensic ✅ 强 GPU + 分布式 几乎全格式（ZIP/RAR/7Z/Office/PDF…） 取证级，贵（千美元级），企业/警队用，个人一般不买
+Accent ZIP Password Recovery ✅ GPU ZIP 全系 Accent 家的 ZIP 版，跟上面 RAR 版是兄弟
+这些 GUI 工具的 GPU 加速是真·调用显卡（不像 ARCHPR 零售版那样敷衍），但算法内核优化还是 hashcat 最深——同样一张 4090，hashcat 跑 RAR5 比 Accent 还能再快个 20-30%，只是 Accent/PassFab 不用写命令。
+🎯 怎么选
+• RAR5 / ZIP-AES + 愿意敲命令 → 直接 hashcat，免费 + 最快，没对手
+• RAR5 + 怕命令行、要 GUI → Accent RAR Pro，俄系那个，比 ARCHPR 强
+• ZIP 忘了密码、要最省事 → PassFab for ZIP 或 Accent ZIP 版，下一步下一步
+• 企业取证预算、全格式通吃 → Passware Kit Forensic
+• macOS 用户 → hashcat 照样跑（OpenCL），别碰 GPUZipCracker 那种只支持传统 ZIP 不支 AES 的玩具
+⚠️ 不管哪个工具，RAR5/ZIP-AES 的瓶颈不在显卡而在 PBKDF2 的 26 万轮迭代——8 位复杂密码纯暴力，4090 也得按月算。所以 GPU 工具只是把"几个月"压成"几天/几小时"，真要快还是得靠字典 + 规则（best64.rule 之类）或者你有已知明文线索。
+你那个包是 RAR 还是 ZIP？RAR5 还是老 RAR3？密码有没有任何线索（位数、是否含数字/年份/键盘规律）？说一下我能给你直接配 -m 值和攻击策略，不用自己试参数。
+以下是各款 GPU 加速压缩包密码恢复工具 的官方/权威下载地址，按之前介绍的顺序排列：
+1. Hashcat（免费开源 · GPU 标杆）
+• 官网主页：https://hashcat.net/hashcat/
+• 直接下载（v7.1.2，含 Windows 版）：https://hashcat.net/hashcat/
+• GitHub 仓库：https://github.com/hashcat/hashcat
+• 安装说明：下载 7z 包解压即用，无需安装；hashcat -I 验 GPU 识别
+💡 认准 hashcat.net 域名，这是唯一官网。
+2. John the Ripper Jumbo（免费开源 · 半 GPU）
+• 官网主页：https://www.openwall.com/john/
+• Windows 64 位二进制（1.9.0-jumbo-1）：https://github.com/openwall/john-packages/releases/latest
+• GitHub 仓库：https://github.com/openwall/john
+页面提供 x64/x86 两种 zip 包，下载解压后 run\john.exe 即可运行。
+3. Accent RAR Password Recovery（RAR 专用 · GUI）
+• 官网主页：https://passcovery.com/products/accentrpr.htm
+• 中文下载中心：https://accent-rar-password-recovery.apsgo.cn
+• 免费演示版：官网首页直接下载，限制为"只显示密码前两位 + 单次最长 30 分钟"
+支持 RAR3/RAR5，CUDA + OpenCL 全系显卡加速。
+4. Accent ZIP Password Recovery（ZIP 专用 · GUI）
+• 官网主页：https://passcovery.com/products/accentzpr.htm
+• 中文下载中心：https://accent-zip-password-recovery.apsgo.com/zh-cn
+• 免费演示版：同上，限制同 RAR 版
+支持经典 ZIP 加密 + WinZip AES（.zipx），GPU 加速。
+5. PassFab for ZIP（ZIP 专用 · 傻瓜化 GUI）
+• 国际官网：https://www.passfab.com/products/passfab_for_zip.html
+• 中文官网：https://www.passfab.cn/
+纯 GUI 下一步式操作，GPU 加速，适合不想碰命令行的用户。
+6. Passware Kit Forensic（取证级 · 全格式）
+• 官网主页：https://www.passware.com/
+• Forensic 版介绍页：https://www.passware.com/kit-forensic/
+企业/取证预算才考虑，支持 400+ 文件类型，GPU 分布式，千美元级授权。
+⚠️ 下载安全提醒
+• 只从官网下载，不要搜"破解版/绿色版"，这类工具是捆绑重灾区
+• Hashcat / JtR 是开源项目，完全免费，看到收费的"hashcat 下载站"都是镜像或骗局
+• Accent 系列、先下免费演示版试跑，确认能识别你的包、显卡被调用后再购买
+• 使用前提是你有权恢复该压缩包密码，仅用于自己遗忘密码的合法场景
+需要的话，告诉我你的包是 RAR 还是 ZIP、RAR5 还是老 RAR3、显卡型号，我能帮你选最合适的工具并配好攻击参数，不用自己踩坑。
 
 
 
