@@ -788,5 +788,30 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "mactools",
+    "简介": "MacTools / WaMacTools（macOS 菜单栏工具箱：清洁模式、Finder 右键、清空下载等）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/ggbond268/MacTools/releases",
+    "repo_path": "ggbond268/MacTools",
+    "installer_markers": [
+      "MacTools.dmg"
+    ],
+    "href_exclude_substrings": [
+      "sha256"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "MacTools.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "windows_installer": false
   }
 ]

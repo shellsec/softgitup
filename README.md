@@ -12,7 +12,7 @@
 
 <!-- SOFTWARE_SIZE_START -->
 > 📦 **software/ 体积统计**（`generate_and_push.bat` 自动刷新）：
-> 共 **21** 款软件、**4,790** 个文件，合计 **1.62 GB**；统计时间 2026-07-06 13:04。
+> 共 **21** 款软件、**4,790** 个文件，合计 **1.62 GB**；统计时间 2026-07-06 17:40。
 > 体积 Top5：system_good (689.7 MB)、PotPlayer (252.4 MB)、UltraEdit (198.3 MB)、gh-release-fetch (88.2 MB)、notepad++ (72.9 MB)。
 <!-- SOFTWARE_SIZE_END -->
 

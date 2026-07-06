@@ -673,5 +673,32 @@
     "process_name": "Cyberduck.exe",
     "kill_before_install": true,
     "run_installer": true
+  },
+  {
+    "id": "flowpick",
+    "简介": "FlowPick（媒体资源嗅探浏览器扩展，Chrome zip；小众软件推荐）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": false,
+    "releases_url": "https://bgithub.xyz/ezwebtools/flowpick/releases",
+    "repo_path": "ezwebtools/flowpick",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "flowpick-",
+      "-chrome.zip"
+    ],
+    "href_exclude_substrings": [
+      "firefox",
+      "sources"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

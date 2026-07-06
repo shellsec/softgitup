@@ -1242,6 +1242,34 @@
     "run_installer": true
   },
   {
+    "id": "pinkbin",
+    "简介": "Pinkbin（AI 磁盘分析清理，Tauri；小众软件推荐）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": false,
+    "releases_url": "https://bgithub.xyz/cccyd2003-qwq/pinkbin/releases",
+    "repo_path": "cccyd2003-qwq/pinkbin",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Pinkbin_",
+      "x64-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "portable",
+      ".msi",
+      "en-US"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "use_download_filename": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
     "id": "virtualbox",
     "简介": "Oracle VirtualBox（x86 虚拟机；manifest：download.virtualbox.org）",
     "分类": "系统",

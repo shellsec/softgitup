@@ -873,5 +873,29 @@
     ],
     "releases_url": "https://bgithub.xyz/TNT-Likely/BeeCount/releases",
     "repo_path": "TNT-Likely/BeeCount"
+  },
+  {
+    "id": "fileshelf",
+    "简介": "FileShelf（Windows 便携文件架，暂存路径不复制文件；小众软件推荐）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/lartpang/FileShelf/releases",
+    "repo_path": "lartpang/FileShelf",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "FileShelf-v",
+      "win-x64-portable.zip"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "FileShelf-v{ver}-win-x64-portable.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]
