@@ -425,6 +425,30 @@ Keyvol 是Windows 平台极简音量控制小工具，这里提供安全获取�
 说明：这是 Keyvol 开发者首发的帖子，可下载纯净版，无广告无捆绑
 
 
+
+[Windows] XYplorer资源管理器v28.30.1300 高级便携版 [Hybase.com]黑域基地
+XYplorer.rar 很好用，就放在 D:\Program Files\XYplorer ，文件统一管理
+https://www.hybase.com/pc/windows/2818.html
+XYplorer 是一款有很多人推荐的经典的替代微软 Windows 系统内置资源管理器的多功能增强文件管理软件，特色是支持多面板/多窗格分栏显示和操作，以及多标签页切换等...
+所以无论是浏览文件列表、文件内容预览、批量重命名，还是文件搜索、过滤和分类都能做到非常的高效和顺手。
+测试后这样不会注册失败
+拉这个 到任务栏 D:\Program Files\XYplorer\XYplorerPortable.exe ，不然会注册失效，也不要替换系统里的
+XYplorer 右键打开 CMD/PowerShell 完整 4 种方案
+方案 1：自带快捷键（最快，无需配置）
+XY 内置命令：在此处打开命令提示符
+快捷键：Ctrl + Alt + P 直接在当前目录弹出 CMD
+调用脚本：地址栏输入 ::OpenCommandPromptHere 回车
+方案 2：空白区域右键菜单添加终端（推荐，XY 内部右键）
+XY 可以自定义文件列表空白处右键菜单，直接出现「打开 CMD/PowerShell」
+步骤
+顶部菜单 Tools(工具) → Configuration(配置) → Mouse(鼠标) → Custom Context Menu(自定义右键菜单)
+下拉选择：Background (right-click empty list space)（空白区域右键）
+编辑菜单文本，粘贴以下两行：
+plaintext
+&打开CMD此处|::OpenCommandPromptHere
+&打开PowerShell此处|::run "powershell.exe -noexit -Command Set-Location ""<curpath>"""
+确定保存，现在在文件夹空白处右键，直接出现两个终端选项
+
 IObit SmartDefrag(智能磁盘整理) SmartDefrag_11.2.0.472_Single.zip - 果核剥壳 磁盘比较多碎片会导致运行慢磁盘问题
 https://www.423down.com/10540.html
 https://www.ghxi.com/iobitsmartdefrag.html
@@ -799,10 +823,12 @@ https://github.com/UniClipboard/UniClipboard
 目前使用这个，体验感更加好，关键解决了老机器显卡显示问题
 开源、端到端加密的通用剪贴板。文本、图片、文件在 Mac、Windows、Linux、iPhone 与 Android 之间实时同步——无需账号，也不经过任何第三方服务器。
 全平台支持 https://github.com/UniClipboard/UniClipboard/releases
-这个是可以自动更新的 D:\Program Files\UniClipboard
-https://release.uniclipboard.app/artifacts/v0.15.0/UniClipboard_0.15.0_x64-setup.exe
+
+D:\Program Files\UniClipboard 这个是可以自动更新的 
+https://release.uniclipboard.app/artifacts/v0.15.0/UniClipboard_0.18.0_x64-setup.exe
+
 这个便携式解压就可以用
-https://github.com/UniClipboard/UniClipboard/releases/download/v0.16.0-alpha.7/UniClipboard_0.16.0-alpha.7_x64-portable.zip
+https://github.com/UniClipboard/UniClipboard/releases/download/v0.18.0/UniClipboard_0.18.0_x64-portable.zip
 其他版本 Mac、Windows、Linux、iPhone 与 Android
 https://www.uniclipboard.app/zh/download
 
@@ -1011,11 +1037,11 @@ https://github.com/choyy/VirtualDesktopSwitcher/releases/download/1.3.6/VirtualD
 释放窗口：把窗口拖拽到屏幕底部或顶部的目标桌面缩略图上，然后松开鼠标。程序就会被完整地移动到那个桌面了。
 
 
-CareUEyes Pro v2.5.1.0 高级便携版 屏幕亮度对比度调节+番茄钟倒计时 5MB
+[Windows] 电脑屏幕护眼神器 CareUEyes Pro v2.6.0.0 高级便携版 屏幕亮度对比度调节+番茄钟倒计时 5MB
 CareUEyes Pro是一款非常好用的专业电脑护眼工具，软件小巧，界面简单，它可以自动过滤电脑屏幕的蓝光，让屏幕显示更加的不伤眼，更加舒适，有效保护你的眼睛，可以自定义调节屏幕的色调，从温暖到不太温暖，可以自由调节，还可以调节屏幕的亮度，调整亮度适合你的眼睛，观看屏幕更加舒适，支持多种使用场景的选择。包括办公、智能、游戏、电影、夜晚、阅读和编辑等多种应用场景类型，根据你的使用场景选择合适的色温，对眼睛更加友好，对于长期办公的朋友可以选择办公模式进行使用，支持定时器，可以自动提醒用户休息，每隔一段时间提醒你休息，可以设置休息的时间，间隔时间，还可以设置随机的锁屏壁纸，支持热键操作，快捷键操作更加方便。
 CareUEyes是一款非常有用的眼部护理软件，它可以帮助您减轻眼睛疲劳并让您的眼睛休息。PC屏幕亮度设置不当是造成眼睛疲劳的主要原因之一，因为它包含蓝光。但是，使用此软件，您现在可以通过在屏幕上应用蓝光滤镜来摆脱那些蓝光。
-https://care-eyes.com/
 CareUEyes_Pro.zip 
+https://care-eyes.com/
 https://www.hybase.com/pc/windows/468.html
 https://pan.baidu.com/s/1cjM01BMDNxoI-u801enSyg?pwd=HyHy
 购买渠道    授权类型    价格  备注

@@ -13,8 +13,8 @@ For the latest curated software list and notes, see [`Lastb_soft_version.txt`](L
 
 <!-- SOFTWARE_SIZE_START -->
 > 📦 **`software/` size stats** (auto-refreshed by `generate_and_push.bat`):
-> **21** packages, **4,789** files, **1.61 GB** total; generated at 2026-07-03 18:07.
-> Top 5 by size: system_good (677.5 MB), PotPlayer (252.4 MB), UltraEdit (198.3 MB), gh-release-fetch (88.2 MB), notepad++ (72.9 MB).
+> **21** packages, **4,790** files, **1.62 GB** total; generated at 2026-07-06 13:04.
+> Top 5 by size: system_good (689.7 MB), PotPlayer (252.4 MB), UltraEdit (198.3 MB), gh-release-fetch (88.2 MB), notepad++ (72.9 MB).
 <!-- SOFTWARE_SIZE_END -->
 
 **Maintainer page check** (optional — `software/` works fine without updates): see [`soft_page_check/`](soft_page_check/README.md). Run `monthly_sop.bat` to compare page titles; update and publish only when you confirm changes.
