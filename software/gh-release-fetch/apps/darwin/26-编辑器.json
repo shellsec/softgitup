@@ -31,9 +31,38 @@
   },
   {
     "id": "zed",
+    "简介": "Zed（Rust 高性能编辑器；macOS Apple Silicon dmg）",
+    "分类": "编辑器",
     "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
     "releases_url": "https://bgithub.xyz/zed-industries/zed/releases",
-    "repo_path": "zed-industries/zed"
+    "repo_path": "zed-industries/zed",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Zed-aarch64",
+      ".dmg"
+    ],
+    "href_exclude_substrings": [
+      "remote-server",
+      "x86_64",
+      ".exe",
+      "linux",
+      "bwrap",
+      "blockmap",
+      ".sig"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "Zed-aarch64.dmg"
+    ],
+    "save_name": "Zed-aarch64.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   },
   {
     "id": "notepad_minusminus",
@@ -488,18 +517,33 @@
     ]
   },
   {
+    "id": "zcode",
+    "简介": "ZCode（GLM 官方 AI 编程桌面端，manifest：cdn-zcode.z.ai）",
+    "分类": "编辑器",
     "enabled": false,
-    "prefer_api_assets": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "zcode",
     "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "url_hint": "zcode",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "windsurf",
+    "简介": "Windsurf / Devin Desktop（manifest：windsurf-stable.codeium.com；安装包名 Devin*）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "windsurf",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
     "windows_installer": false,
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false,
-    "id": "windsurf",
-    "简介": "Windsurf IDE（Codeium AI IDE；官网 codeium.com/windsurf 分发，GitHub 无桌面安装包；勿启用）",
-    "分类": "编辑器",
-    "releases_url": "https://bgithub.xyz/Exafunction/Windsurf/releases",
-    "repo_path": "Exafunction/Windsurf",
     "url_hint": "windsurf"
   },
   {

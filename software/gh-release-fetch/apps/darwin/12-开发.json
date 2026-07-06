@@ -862,5 +862,33 @@
     ],
     "releases_url": "https://bgithub.xyz/xtool-org/xtool/releases",
     "repo_path": "xtool-org/xtool"
+  },
+  {
+    "id": "cutter",
+    "简介": "Cutter（Rizin 逆向工程 GUI，macOS dmg）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/rizinorg/cutter/releases",
+    "repo_path": "rizinorg/cutter",
+    "installer_markers": [
+      "Cutter-v",
+      "macOS-arm64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "Windows",
+      "Linux",
+      "Qt5"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "Cutter-v{ver}-macOS-arm64.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "windows_installer": false
   }
 ]

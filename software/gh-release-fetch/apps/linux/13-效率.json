@@ -692,5 +692,41 @@
     ],
     "releases_url": "https://bgithub.xyz/anufrievroman/calcure/releases",
     "repo_path": "anufrievroman/calcure"
+  },
+  {
+    "id": "calendar_diary",
+    "简介": "Calendar Diary（日历日记；Linux arm64 AppImage）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/trustdev-org/calendar-diary/releases",
+    "repo_path": "trustdev-org/calendar-diary",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "CalendarDiary-",
+      "arm64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "blockmap",
+      ".zip",
+      ".exe",
+      "darwin",
+      "latest",
+      ".yml",
+      ".yaml",
+      ".deb",
+      ".dmg",
+      "unpacked"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "use_download_filename": true,
+    "save_name": "CalendarDiary.AppImage",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

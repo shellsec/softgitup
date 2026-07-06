@@ -903,5 +903,40 @@
     ],
     "releases_url": "https://bgithub.xyz/anufrievroman/calcure/releases",
     "repo_path": "anufrievroman/calcure"
+  },
+  {
+    "id": "calendar_diary",
+    "简介": "Calendar Diary（日历日记；macOS arm64 dmg）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/trustdev-org/calendar-diary/releases",
+    "repo_path": "trustdev-org/calendar-diary",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "CalendarDiary-",
+      "-arm64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "blockmap",
+      ".zip",
+      ".exe",
+      "linux",
+      "latest",
+      ".yml",
+      ".yaml",
+      ".deb",
+      "AppImage"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "CalendarDiary.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

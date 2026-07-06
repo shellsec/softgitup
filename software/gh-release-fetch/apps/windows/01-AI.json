@@ -452,7 +452,7 @@
   },
   {
     "id": "continue",
-    "简介": "Continue（VS Code / JetBrains 系 AI 编程扩展，Release .vsix）",
+    "简介": "Continue（VS Code / JetBrains 系 AI 编程扩展，Release .vsix；注意 v2.x 部分 Release 无 .vsix 资产）",
     "分类": "AI",
     "enabled": false,
     "prefer_api_assets": true,
@@ -1006,6 +1006,21 @@
     "save_name": "tabby_x86_64-windows-msvc-cpu.zip",
     "releases_url": "https://bgithub.xyz/TabbyML/tabby/releases",
     "repo_path": "TabbyML/tabby"
+  },
+  {
+    "id": "lmstudio",
+    "简介": "LM Studio（本地运行 LLM 桌面端；manifest：lmstudio.ai/download/latest）",
+    "分类": "AI",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "lmstudio",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": true,
+    "process_name": "LM Studio.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "save_name": "LM-Studio-{ver}-x64.exe"
   },
   {
     "id": "kiro",

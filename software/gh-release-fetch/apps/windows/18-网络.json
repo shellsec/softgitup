@@ -657,5 +657,21 @@
     ],
     "releases_url": "https://bgithub.xyz/BornToBeRoot/NETworkManager/releases",
     "repo_path": "BornToBeRoot/NETworkManager"
+  },
+  {
+    "id": "cyberduck",
+    "简介": "Cyberduck（FTP/SFTP/WebDAV/S3/Azure 等文件传输；manifest：update.cyberduck.io）",
+    "分类": "网络",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "cyberduck",
+    "releases_url": "https://bgithub.xyz/iterate-ch/cyberduck/releases",
+    "repo_path": "iterate-ch/cyberduck",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": true,
+    "process_name": "Cyberduck.exe",
+    "kill_before_install": true,
+    "run_installer": true
   }
 ]

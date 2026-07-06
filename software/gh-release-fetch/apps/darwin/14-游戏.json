@@ -557,5 +557,35 @@
     "save_name": "warzone2100-macos.dmg",
     "releases_url": "https://bgithub.xyz/Warzone2100/warzone2100/releases",
     "repo_path": "Warzone2100/warzone2100"
+  },
+  {
+    "id": "rpcs3",
+    "简介": "RPCS3（PS3 模拟器；GitHub Release 常无附件，可配合 manifest 或官网）",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/RPCS3/rpcs3/releases",
+    "repo_path": "RPCS3/rpcs3",
+    "installer_markers": [
+      "rpcs3-v",
+      "macos"
+    ],
+    "href_exclude_substrings": [
+      "win",
+      "linux",
+      "appimage"
+    ],
+    "installer_extensions": [
+      ".dmg",
+      ".zip",
+      ".7z"
+    ],
+    "use_download_filename": true,
+    "save_name": "rpcs3-macos.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "windows_installer": false
   }
 ]

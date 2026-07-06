@@ -404,5 +404,21 @@
     ],
     "releases_url": "https://bgithub.xyz/terreng/simple-web-server/releases",
     "repo_path": "terreng/simple-web-server"
+  },
+  {
+    "id": "cyberduck",
+    "简介": "Cyberduck（Linux 无官方直链；manifest linux 为 null，请用 apt/snap/flatpak 或 iterate-ch/cyberduck 源码）",
+    "分类": "网络",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "cyberduck",
+    "releases_url": "https://bgithub.xyz/iterate-ch/cyberduck/releases",
+    "repo_path": "iterate-ch/cyberduck",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

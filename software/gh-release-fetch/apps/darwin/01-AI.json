@@ -1,15 +1,70 @@
 [
   {
     "id": "ollama",
+    "简介": "Ollama（本地运行大模型；macOS 默认 Ollama-darwin.zip；亦可选 Ollama.dmg）",
+    "分类": "AI",
     "enabled": false,
+    "prefer_api_assets": true,
     "releases_url": "https://bgithub.xyz/ollama/ollama/releases",
-    "repo_path": "ollama/ollama"
+    "repo_path": "ollama/ollama",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Ollama-darwin",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "windows",
+      "install.",
+      "sha256",
+      ".tgz",
+      ".tar.zst"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "Ollama-darwin.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   },
   {
     "id": "opencode",
+    "简介": "OpenCode 桌面端（macOS arm64 dmg）",
+    "分类": "AI",
     "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
     "releases_url": "https://bgithub.xyz/sst/opencode/releases",
-    "repo_path": "sst/opencode"
+    "repo_path": "sst/opencode",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "opencode-desktop-mac-arm64",
+      ".dmg"
+    ],
+    "href_exclude_substrings": [
+      "blockmap",
+      ".zip",
+      "linux",
+      "windows",
+      "x64-baseline",
+      "mac-x64",
+      ".yml",
+      ".json"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "opencode-desktop-mac-arm64.dmg"
+    ],
+    "save_name": "opencode-desktop-mac-arm64.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   },
   {
     "id": "goose_ai",
@@ -44,9 +99,37 @@
   },
   {
     "id": "aichat",
+    "简介": "aichat（终端多模型 CLI；macOS Apple Silicon tar.gz）",
+    "分类": "AI",
     "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
     "releases_url": "https://bgithub.xyz/sigoden/aichat/releases",
-    "repo_path": "sigoden/aichat"
+    "repo_path": "sigoden/aichat",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "aichat-v",
+      "aarch64-apple-darwin.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "x86_64-apple",
+      "windows",
+      "linux",
+      "i686",
+      "armv7",
+      "musl"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "aichat-v{ver}-aarch64-apple-darwin.tar.gz"
+    ],
+    "save_name": "aichat-v{ver}-aarch64-apple-darwin.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   },
   {
     "id": "anything_llm",
@@ -353,18 +436,69 @@
   },
   {
     "id": "continue",
-    "简介": "Continue（macOS arm64 .vsix）",
+    "简介": "Continue（macOS arm64 .vsix；v2.x 部分 Release 无 .vsix 资产）",
     "分类": "AI",
     "enabled": false,
     "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
     "releases_url": "https://bgithub.xyz/continuedev/continue/releases",
-    "repo_path": "continuedev/continue"
+    "repo_path": "continuedev/continue",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "continue-darwin-arm64-",
+      ".vsix"
+    ],
+    "href_exclude_substrings": [
+      "win32",
+      "linux",
+      "x64",
+      "alpine",
+      "armhf",
+      "sbom",
+      ".zip"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".vsix"
+    ],
+    "download_names": [
+      "continue-darwin-arm64-{ver}.vsix"
+    ],
+    "save_name": "continue-darwin-arm64-{ver}.vsix",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   },
   {
     "id": "roo_code",
+    "简介": "Roo Code（VS Code AI 代理扩展，Release .vsix）",
+    "分类": "AI",
     "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
     "releases_url": "https://bgithub.xyz/RooCodeInc/Roo-Code/releases",
-    "repo_path": "RooCodeInc/Roo-Code"
+    "repo_path": "RooCodeInc/Roo-Code",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "roo-cline-",
+      ".vsix"
+    ],
+    "href_exclude_substrings": [
+      "Source",
+      ".zip",
+      "sbom"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".vsix"
+    ],
+    "download_names": [
+      "roo-cline-{ver}.vsix"
+    ],
+    "save_name": "roo-cline-{ver}.vsix",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   },
   {
     "id": "openhands",
@@ -937,6 +1071,20 @@
     "save_name": "LobeHub-{ver}-x64.dmg",
     "releases_url": "https://bgithub.xyz/lobehub/lobe-chat/releases",
     "repo_path": "lobehub/lobe-chat"
+  },
+  {
+    "id": "lmstudio",
+    "简介": "LM Studio macOS（manifest；默认 arm64 dmg）",
+    "分类": "AI",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "lmstudio",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   },
   {
     "id": "kiro",

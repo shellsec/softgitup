@@ -1769,5 +1769,33 @@
     ],
     "releases_url": "https://bgithub.xyz/shellsec/softgitup/releases",
     "repo_path": "shellsec/softgitup"
+  },
+  {
+    "id": "cutter",
+    "简介": "Cutter（Rizin 逆向工程 GUI）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/rizinorg/cutter/releases",
+    "repo_path": "rizinorg/cutter",
+    "installer_markers": [
+      "Cutter-v",
+      "Windows-x86_64.zip"
+    ],
+    "href_exclude_substrings": [
+      "macOS",
+      "Linux",
+      "Qt5"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "Cutter-v{ver}-Windows-x86_64.zip",
+    "process_name": "cutter.exe",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

@@ -773,5 +773,21 @@
     ],
     "releases_url": "https://bgithub.xyz/anfragment/zen/releases",
     "repo_path": "anfragment/zen"
+  },
+  {
+    "id": "virtualbox",
+    "简介": "Oracle VirtualBox（Linux tar.bz2；manifest：download.virtualbox.org）",
+    "分类": "系统",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "virtualbox",
+    "releases_url": "https://www.virtualbox.org/wiki/Downloads",
+    "repo_path": "oracle/virtualbox",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

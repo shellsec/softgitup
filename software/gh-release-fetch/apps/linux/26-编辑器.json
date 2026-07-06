@@ -31,9 +31,40 @@
   },
   {
     "id": "zed",
+    "简介": "Zed（Rust 高性能编辑器；Linux x86_64 tar.gz）",
+    "分类": "编辑器",
     "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
     "releases_url": "https://bgithub.xyz/zed-industries/zed/releases",
-    "repo_path": "zed-industries/zed"
+    "repo_path": "zed-industries/zed",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "zed-linux-x86_64",
+      ".tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "remote-server",
+      "aarch64",
+      "bwrap",
+      "darwin",
+      "windows",
+      ".exe",
+      ".dmg",
+      "blockmap",
+      ".sig"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "download_names": [
+      "zed-linux-x86_64.tar.gz"
+    ],
+    "save_name": "zed-linux-x86_64.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   },
   {
     "id": "notepad_minusminus",
@@ -474,18 +505,36 @@
     "run_installer": false
   },
   {
+    "id": "zcode",
+    "简介": "ZCode（GLM 官方 AI 编程桌面端，manifest：cdn-zcode.z.ai）",
+    "分类": "编辑器",
     "enabled": false,
-    "prefer_api_assets": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "zcode",
     "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "url_hint": "zcode",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "windsurf",
+    "简介": "Windsurf / Devin Desktop Linux（manifest；tar.gz）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "windsurf",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
     "windows_installer": false,
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false,
-    "id": "windsurf",
-    "简介": "Windsurf IDE（Codeium AI IDE；官网 codeium.com/windsurf 分发，GitHub 无桌面安装包；勿启用）",
-    "分类": "编辑器",
-    "releases_url": "https://bgithub.xyz/Exafunction/Windsurf/releases",
-    "repo_path": "Exafunction/Windsurf",
+    "installer_extensions": [
+      ".tar.gz"
+    ],
     "url_hint": "windsurf"
   },
   {

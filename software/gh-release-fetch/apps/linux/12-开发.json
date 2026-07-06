@@ -833,5 +833,33 @@
     "save_name": "netron-Linux-x64.zip",
     "releases_url": "https://bgithub.xyz/lutzroeder/netron/releases",
     "repo_path": "lutzroeder/netron"
+  },
+  {
+    "id": "cutter",
+    "简介": "Cutter（Rizin 逆向工程 GUI，Linux AppImage）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/rizinorg/cutter/releases",
+    "repo_path": "rizinorg/cutter",
+    "installer_markers": [
+      "Cutter-v",
+      "Linux-x86_64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "Windows",
+      "macOS",
+      "Qt5"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "use_download_filename": true,
+    "save_name": "Cutter-v{ver}-Linux-x86_64.AppImage",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "windows_installer": false
   }
 ]
