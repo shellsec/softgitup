@@ -1,60 +1,60 @@
-<?xml version="1.0"?>
-<Templates encode="utf8escenc"><Template Name="auto" Comments="0" Strings="0">auto [+var+] = [+value+];</Template><Template Name="bool">bool [+var+] = [+false+];</Template><Template Name="char">char [+var+][] = "[+value+]";</Template><Template Name="class">class [+className+] {
+<?xml version="1.0" encoding="UTF-8"?>
+<Templates encode="utf8escenc" version="2.0"><UETemplate Name="auto" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[auto [+var+] = [+value+];]]></UETemplate><UETemplate Name="bool" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[bool [+var+] = [+false+];]]></UETemplate><UETemplate Name="char" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[char [+var+][] = "[+value+]";]]></UETemplate><UETemplate Name="class" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[class [+className+] {
 	^
-};</Template><Template Name="const_cast">const_cast&lt;[+newtype+]&gt;([+expression+])</Template><Template Name="delete">delete [+var+];</Template><Template Name="do">do
+};]]></UETemplate><UETemplate Name="const_cast" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[const_cast<[+newtype+]>([+expression+])]]></UETemplate><UETemplate Name="delete" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[delete [+var+];]]></UETemplate><UETemplate Name="do" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[do
 {
 	^
 }
-while([+evaluation+]);</Template><Template Name="dynamic_cast">dynamic_cast&lt;[+newtype+]&gt;([+expression+])</Template><Template Name="else">else 
+while([+evaluation+]);]]></UETemplate><UETemplate Name="dynamic_cast" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[dynamic_cast<[+newtype+]>([+expression+])]]></UETemplate><UETemplate Name="else" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[else 
 {
 	^
-}</Template><Template Name="elseif">else if ([+evaluation+])
+}]]></UETemplate><UETemplate Name="elseif" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[else if ([+evaluation+])
 {
 	^
-}</Template><Template Name="enum">enum [+name+] { [+values+] } [+objects+];</Template><Template Name="explicit">explicit [+className+]([+params+]);</Template><Template Name="extern">extern [+strliteral+] [+declaration+];</Template><Template Name="float">float [+var+] = [+number+];</Template><Template Name="for">for (int [+n+]=[+X+]; [+n+]&lt;[+Y+]; [+n+]++)
+}]]></UETemplate><UETemplate Name="enum" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[enum [+name+] { [+values+] } [+objects+];]]></UETemplate><UETemplate Name="explicit" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[explicit [+className+]([+params+]);]]></UETemplate><UETemplate Name="extern" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[extern [+strliteral+] [+declaration+];]]></UETemplate><UETemplate Name="float" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[float [+var+] = [+number+];]]></UETemplate><UETemplate Name="for" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[for (int [+n+]=[+X+]; [+n+]<[+Y+]; [+n+]++)
 {
 	^
-}</Template><Template Name="friend">friend [+className+];</Template><Template Name="function">[+type+] [+name+] ([+parameters+])
+}]]></UETemplate><UETemplate Name="friend" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[friend [+className+];]]></UETemplate><UETemplate Name="function" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[[+type+] [+name+] ([+parameters+])
 {
 	^
-}</Template><Template Name="if" Comments="0" Strings="0">if ([+evaluation+]) 
+}]]></UETemplate><UETemplate Name="if" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[if ([+evaluation+]) 
 {
 	^
-}</Template><Template Name="include">#include "[+filename+]"</Template><Template Name="inline">inline [+type+] [+name+] ([+params+])
+}]]></UETemplate><UETemplate Name="include" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[#include "[+filename+]"]]></UETemplate><UETemplate Name="inline" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[inline [+type+] [+name+] ([+params+])
 {
 	^
-}</Template><Template Name="int">int [+var+] = [+integer+];</Template><Template Name="mutable">mutable [+type+] [+var+];</Template><Template Name="namespace">namespace [+nsName+]
+}]]></UETemplate><UETemplate Name="int" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[int [+var+] = [+integer+];]]></UETemplate><UETemplate Name="mutable" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[mutable [+type+] [+var+];]]></UETemplate><UETemplate Name="namespace" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[namespace [+nsName+]
 {
 	^
-}</Template><Template Name="operator">operator[+symbol+]([+params+]);</Template><Template Name="private">private:
-	[+members+];</Template><Template Name="protected">protected:
-	[+members+];</Template><Template Name="public">public:
-	[+members+];</Template><Template Name="reinterpret_cast">reinterpret_cast&lt;[+newtype+]&gt;([+expression+])</Template><Template Name="sizeof">sizeof([+char+])</Template><Template Name="static">static [+int+] [+n+]=[+val+]; </Template><Template Name="static_cast">static_cast&lt;[+newtype+]&gt;([+expression+])</Template><Template Name="struct">struct [+name+]
+}]]></UETemplate><UETemplate Name="operator" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[operator[+symbol+]([+params+]);]]></UETemplate><UETemplate Name="private" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[private:
+	[+members+];]]></UETemplate><UETemplate Name="protected" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[protected:
+	[+members+];]]></UETemplate><UETemplate Name="public" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[public:
+	[+members+];]]></UETemplate><UETemplate Name="reinterpret_cast" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[reinterpret_cast<[+newtype+]>([+expression+])]]></UETemplate><UETemplate Name="sizeof" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[sizeof([+char+])]]></UETemplate><UETemplate Name="static" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[static [+int+] [+n+]=[+val+]; ]]></UETemplate><UETemplate Name="static_cast" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[static_cast<[+newtype+]>([+expression+])]]></UETemplate><UETemplate Name="struct" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[struct [+name+]
 {
 	[+memtype+] [+memname+];
 	^
-} [+object names+];</Template><Template Name="switch">switch ([+expression+])
+} [+object names+];]]></UETemplate><UETemplate Name="switch" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[switch ([+expression+])
 {
 	case [+value+]:
 		^ 
 	break;
 	default:
 		
-}</Template><Template Name="template">template&lt;[+paramslist+]&gt; [+declaration+]</Template><Template Name="this">this-&gt;[+member+]</Template><Template Name="try">try
+}]]></UETemplate><UETemplate Name="template" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[template<[+paramslist+]> [+declaration+]]]></UETemplate><UETemplate Name="this" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[this->[+member+]]]></UETemplate><UETemplate Name="try" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[try
 {
 	^ // code to try
 }
 catch ([+type+] [+e+])
 {
 	// error handling
-}</Template><Template Name="typedef">typedef [+type+] [+identifier+];</Template><Template Name="typeid">typeid([+type+])</Template><Template Name="typename">typename [+identifier+]</Template><Template Name="union">union [+tag+]
+}]]></UETemplate><UETemplate Name="typedef" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[typedef [+type+] [+identifier+];]]></UETemplate><UETemplate Name="typeid" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[typeid([+type+])]]></UETemplate><UETemplate Name="typename" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[typename [+identifier+]]]></UETemplate><UETemplate Name="union" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[union [+tag+]
 {
 	[+memtype+] [+memname+];
 	^
 } [+objects+];
-</Template><Template Name="using">using namespace [+nsName+];</Template><Template Name="uuid">uuid("[+guid+]")</Template><Template Name="virtual">virtual [+type+] [+name+];</Template><Template Name="void">void [+function+] ([+params+])
+]]></UETemplate><UETemplate Name="using" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[using namespace [+nsName+];]]></UETemplate><UETemplate Name="uuid" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[uuid("[+guid+]")]]></UETemplate><UETemplate Name="virtual" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[virtual [+type+] [+name+];]]></UETemplate><UETemplate Name="void" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[void [+function+] ([+params+])
 {
 	^
-}</Template><Template Name="volatile">volatile [+type+] [+var+];</Template><Template Name="whcar_t">wchar_t [+name+] = [+value+];</Template><Template Name="while">while ([+evaluation+]) {
+}]]></UETemplate><UETemplate Name="volatile" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[volatile [+type+] [+var+];]]></UETemplate><UETemplate Name="whcar_t" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[wchar_t [+name+] = [+value+];]]></UETemplate><UETemplate Name="while" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[while ([+evaluation+]) {
 	^ 
-}</Template></Templates>
+}]]></UETemplate></Templates>

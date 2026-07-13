@@ -146,7 +146,7 @@ https://www.423down.com/7569.html
 SublimeText v4200 注册版
 核心特点：启动秒开、低资源占用，支持多光标编辑、代码补全，插件库丰富可实现全功能拓展，跨平台适配 Windows/Mac/Linux
 
-UltraEdit 2025.0.0.24 64-bit 注册版  //目录里目前选这个
+UltraEdit 2026.0.0.23 64-bit  v33.0.0.23-x64 注册版  //目录里目前选这个
 核心特点：支持十六进制编辑、大文件处理、代码高亮与折叠，自带文件对比、FTP/SFTP，兼容各类编程语言，专业级功能全覆盖
 选 UltraEdit 注册版：
 定位：全能文本 / 代码编辑器，主打高效编辑、大文件处理、多格式支持
@@ -294,7 +294,7 @@ PC Fresh”削减结束不必要的 Windows 服务，优化启动程序，并解
 一键模式会让你的电脑进入超速状态，一键关闭所有不必要的东西以获得最大速度。 我可以在安全和电动工具模块中找到更多选项和调整。 通过这些工具，用户可以对硬盘进行碎片整理、优化内存使用、分析存储空间以及显示系统信息。
 支持的操作系统：Windows 11、Windows 10、Windows 8.1、Windows 7
 
-WiseCare365 WiseCare365.7z Wise Care 365 Pro v8.0.1.730 免激活版 策略优化比较好
+WiseCare365 WiseCare365.7z Wise Care 365 Pro v8.0.4.732 免激活版 策略优化比较好
 https://www.423down.com/3471.html
 https://www.hybase.com/pc/windows/3471.html
 核心特点：绿色免装无残留，策略优化能力优异，一站式实现系统清理、垃圾删除、系统提速，功能全面且轻量化
@@ -1213,21 +1213,36 @@ https://www.423down.com/12155.html
 外贸高频切换节点、需要快速测速 / 自动更新
 长期稳定使用、看重安全更新与兼容性
 多设备 / 多平台统一配置（V2rayN 跨 Win/macOS/Linux）
-科学 出国 Windows V2rayN 外贸 跨境 7.19.4
+科学 出国 Windows V2rayN 外贸 跨境 7.23.2
 https://www.down66.com/v2n
 https://github.com/2dust/v2rayN/releases
-https://github.com/2dust/v2rayN/releases/download/7.21.1/v2rayN-windows-64.zip
-https://gh-proxy.com/github.com/2dust/v2rayN/releases/download/7.21.1/v2rayN-windows-64.zip
+https://github.com/2dust/v2rayN/releases/download/7.23.2/v2rayN-windows-64.zip
+https://gh-proxy.com/github.com/2dust/v2rayN/releases/download/7.23.2/v2rayN-windows-64.zip
 
 Android
 https://github.com/2dust/v2rayNg
-https://github.com/2dust/v2rayNG/releases/download/2.1.5/v2rayNG_2.1.5_universal.apk
-https://gh-proxy.com/github.com/2dust/v2rayNG/releases/download/2.1.5/v2rayNG_2.1.5_universal.apk
+https://github.com/2dust/v2rayNG/releases/download/2.2.6/v2rayNG_2.2.6_universal.apk
+https://gh-proxy.com/github.com/2dust/v2rayNG/releases/download/2.2.6/v2rayNG_2.2.6_universal.apk
 
-Iphone/mac-shadowrocket
+Iphone-ios/macairpro笔记本-shadowrocket
 https://apps.apple.com/hk/app/shadowrocket/id932747118
 https://github.com/2dust/v2rayN/releases
-https://gh-proxy.com/github.com/2dust/v2rayN/releases/download/7.21.1/v2rayN-macos-64.dmg
+https://github.com/2dust/v2rayN/releases/download/7.23.2/v2rayN-macos-64.dmg
+https://gh-proxy.com/github.com/2dust/v2rayN/releases/download/7.23.2/v2rayN-macos-64.dmg
+macOS
+非zip格式包为安装版，存储文件位置为系统规定的用户文件中
+支持的系统版本
+macOS 12+
+macOS x64
+v2rayN-macos-64.zip 执行：chmod +x v2rayN 普通用户运行 ./v2rayN
+v2rayN-macos-64.dmg 由于安装包没有签名，会提示应用已损坏；安装后需要运行：xattr -cr /Applications/v2rayN.app
+macOS arm64
+v2rayN-macos-arm64.zip 执行：chmod +x v2rayN 普通用户运行 ./v2rayN
+v2rayN-macos-arm64.dmg 由于安装包没有签名，会提示应用已损坏；安装后需要运行：xattr -cr /Applications/v2rayN.app
+
+Windows/Linux/Mac 安装 Clash Verge
+https://www.ermao.net/article/0gematwc/
+https://github.com/clash-verge-rev/clash-verge-rev
 
 2. 选 Clash for Windows 的情况（仅特殊）
 已有大量 Clash 规则 / 配置，不想迁移
@@ -1239,7 +1254,7 @@ Clash for Windows
 支持：Shadowsocks、VMess、Trojan、Snell、Socks5、HTTP (S)Clash for Windows
 不支持：VLESS、Reality、Hysteria2 等新协议
 问题：新机场 / 新节点常不兼容，易连不上
-V2rayN 7.19.4
+V2rayN 7.23.2
 全兼容：VMess、VLESS、Trojan、Shadowsocks、Hysteria2、Tuic、Socks5 等
 优势：适配绝大多数现代机场配置，新协议 / 新节点兼容性极强
 2. 规则与分流（外贸多场景必备）
@@ -1247,7 +1262,7 @@ Clash for Windows
 规则系统成熟：域名 / IP / 进程 / GeoIP 分流、代理组（负载均衡 / 自动 fallback）Clash for Windows
 适合：复杂规则、精细化分流
 局限：规则文件格式与 V2Ray 不互通，迁移麻烦
-V2rayN 7.19.4
+V2rayN 7.23.2
 模式：全局 / PAC / 智能分流、自定义路由、TUN 模式
 优势：一键导入订阅、自动更新节点、延迟 / 速度测试
 适合：外贸高频切换节点、快速测速选优

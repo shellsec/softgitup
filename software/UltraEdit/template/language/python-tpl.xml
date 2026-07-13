@@ -1,9 +1,9 @@
-<?xml version="1.0"?>
-<Templates encode="utf8escenc"><Template Name="if" Comments="0" Strings="0">if ([+expression+]):
-	^</Template><Template Name="elif" Comments="0" Strings="0">elif ([+expression+]):
-	^</Template><Template Name="else" Comments="0" Strings="0">else: 
-	^</Template><Template Name="while" Comments="0" Strings="0">while ([+evaluation+]): {
-	^</Template><Template Name="for" Comments="0" Strings="0">for [+var+] in [+sequence+]:
-	^ # code to be executed</Template><Template Name="list" Comments="0" Strings="0">[+listname+] = ['[+item1+]', '[+item2+]', '[+item3+]'];</Template><Template Name="dict" Comments="0" Strings="0">dict = {'[+key1+]':'[+val1+]', [+key2+]':'[+val2+]'} </Template><Template Name="def" Comments="0" Strings="0">def [+functionName+]( [+parameters+] ):
+<?xml version="1.0" encoding="UTF-8"?>
+<Templates encode="utf8escenc" version="2.0"><UETemplate Name="if" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[if ([+expression+]):
+	^]]></UETemplate><UETemplate Name="elif" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[elif ([+expression+]):
+	^]]></UETemplate><UETemplate Name="else" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[else: 
+	^]]></UETemplate><UETemplate Name="while" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[while ([+evaluation+]): {
+	^]]></UETemplate><UETemplate Name="for" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[for [+var+] in [+sequence+]:
+	^ # code to be executed]]></UETemplate><UETemplate Name="list" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[[+listname+] = ['[+item1+]', '[+item2+]', '[+item3+]'];]]></UETemplate><UETemplate Name="dict" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[dict = {'[+key1+]':'[+val1+]', [+key2+]':'[+val2+]'} ]]></UETemplate><UETemplate Name="def" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[def [+functionName+]( [+parameters+] ):
 	^
-	return</Template></Templates>
+	return]]></UETemplate></Templates>

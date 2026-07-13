@@ -1,10 +1,8 @@
-<?xml version="1.0"?>
-<Templates encode="utf8escenc">
-<Template Name="New script">try {
+<?xml version="1.0" encoding="UTF-8"?>
+<Templates encode="utf8escenc" version="2.0"><UETemplate Name="New script" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[try {
 ^
 exit 0
 } catch {
 "Error in line $($_.InvocationInfo.ScriptLineNumber) | $($Error[0])"
 exit 1
-}</Template>
-</Templates>
+}]]></UETemplate></Templates>

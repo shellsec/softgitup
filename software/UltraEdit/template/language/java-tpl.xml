@@ -1,32 +1,32 @@
-<?xml version="1.0"?>
-<Templates encode="utf8escenc"><Template Name="byte" Comments="0" Strings="0">byte [+b+] = [+0+];</Template><Template Name="char" Comments="0" Strings="0">char [+c+] = '[+string+]';</Template><Template Name="class" Comments="0" Strings="0">[+public+] class [+className+] {
+<?xml version="1.0" encoding="UTF-8"?>
+<Templates encode="utf8escenc" version="2.0"><UETemplate Name="byte" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[byte [+b+] = [+0+];]]></UETemplate><UETemplate Name="char" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[char [+c+] = '[+string+]';]]></UETemplate><UETemplate Name="class" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[[+public+] class [+className+] {
  	^
-}</Template><Template Name="do" Comments="0" Strings="0">do {
+}]]></UETemplate><UETemplate Name="do" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[do {
  	^ // code to execute
-} while ([+evaluation+])  </Template><Template Name="double" Comments="0" Strings="0">double [+d+] = [+0.0d+];</Template><Template Name="else" Comments="0" Strings="0">else {
+} while ([+evaluation+])  ]]></UETemplate><UETemplate Name="double" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[double [+d+] = [+0.0d+];]]></UETemplate><UETemplate Name="else" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[else {
  	^
-}</Template><Template Name="else if" Comments="0" Strings="0">else if ([+evaluation+]) {
+}]]></UETemplate><UETemplate Name="else if" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[else if ([+evaluation+]) {
  	^
-}</Template><Template Name="enum" Comments="0" Strings="0">enum [+Name+] { [+CONSTANTS+] }</Template><Template Name="finally" Comments="0" Strings="0">finally {
+}]]></UETemplate><UETemplate Name="enum" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[enum [+Name+] { [+CONSTANTS+] }]]></UETemplate><UETemplate Name="finally" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[finally {
  	^
-}</Template><Template Name="float" Comments="0" Strings="0">float [+b+] = [+0+]f;</Template><Template Name="for" Comments="0" Strings="0">for (int [+n+]=[+X+]; [+n+]&lt;[+Y+]; [+n+]++) {
+}]]></UETemplate><UETemplate Name="float" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[float [+b+] = [+0+]f;]]></UETemplate><UETemplate Name="for" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[for (int [+n+]=[+X+]; [+n+]<[+Y+]; [+n+]++) {
  	^
-}</Template><Template Name="for-each" Comments="0" Strings="0">for ([+type var+]: [+array+]) {
+}]]></UETemplate><UETemplate Name="for-each" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[for ([+type var+]: [+array+]) {
 	^
-}</Template><Template Name="if" Comments="0" Strings="0">if ([+evaluation+]) {
+}]]></UETemplate><UETemplate Name="if" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[if ([+evaluation+]) {
  	^
-}</Template><Template Name="import" Comments="0" Strings="0">import [+className+];</Template><Template Name="int" Comments="0" Strings="0">byte [+i+] = [+0+];</Template><Template Name="interface" Comments="0" Strings="0">interface [+intName+] {
+}]]></UETemplate><UETemplate Name="import" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[import [+className+];]]></UETemplate><UETemplate Name="int" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[byte [+i+] = [+0+];]]></UETemplate><UETemplate Name="interface" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[interface [+intName+] {
 	^
-}</Template><Template Name="long" Comments="0" Strings="0">long [+l+] = [+0+];</Template><Template Name="method" Comments="0" Strings="0">[+public+] [+void+] [+functionName+]([+parameters+]) {
+}]]></UETemplate><UETemplate Name="long" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[long [+l+] = [+0+];]]></UETemplate><UETemplate Name="method" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[[+public+] [+void+] [+functionName+]([+parameters+]) {
 	^
-}</Template><Template Name="package" Comments="0" Strings="0">package [+pkgName+];</Template><Template Name="short" Comments="0" Strings="0">short [+s+] = [+0+];</Template><Template Name="String" Comments="0" Strings="0">String [+str+] = "[+string+]";</Template><Template Name="super" Comments="0" Strings="0">super.[+methodName+]();</Template><Template Name="switch" Comments="0" Strings="0">switch ([+expression+]) {
+}]]></UETemplate><UETemplate Name="package" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[package [+pkgName+];]]></UETemplate><UETemplate Name="short" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[short [+s+] = [+0+];]]></UETemplate><UETemplate Name="String" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[String [+str+] = "[+string+]";]]></UETemplate><UETemplate Name="super" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[super.[+methodName+]();]]></UETemplate><UETemplate Name="switch" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[switch ([+expression+]) {
 	case [+value+]: ^
 		break;
 	default:
-}</Template><Template Name="try" Comments="0" Strings="0">try {
+}]]></UETemplate><UETemplate Name="try" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[try {
 	^
 } catch ([+exception+]) {
 	 
-}</Template><Template Name="while" Comments="0" Strings="0">while ([+evaluation+]) {
+}]]></UETemplate><UETemplate Name="while" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[while ([+evaluation+]) {
 	^
-}</Template></Templates>
+}]]></UETemplate></Templates>

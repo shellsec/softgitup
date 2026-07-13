@@ -1,20 +1,20 @@
-<?xml version="1.0"?>
-<Templates encode="utf8escenc"><Template Name="If" Comments="0" Strings="0">If [+evaluation+] Then
+<?xml version="1.0" encoding="UTF-8"?>
+<Templates encode="utf8escenc" version="2.0"><UETemplate Name="If" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[If [+evaluation+] Then
 	^
 End If
-</Template><Template Name="ElseIf" Comments="0" Strings="0">ElseIf [+evaluation+] Then
+]]></UETemplate><UETemplate Name="ElseIf" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[ElseIf [+evaluation+] Then
 	^
-</Template><Template Name="Else" Comments="0" Strings="0">Else
+]]></UETemplate><UETemplate Name="Else" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[Else
 	^
-End If</Template><Template Name="Select" Comments="0" Strings="0">Select Case [+expression+]
+End If]]></UETemplate><UETemplate Name="Select" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[Select Case [+expression+]
 Case [+statement+]
 	^
 Case Else
 	' default
-End Select</Template><Template Name="For" Comments="0" Strings="0">For [+evaluation+]
+End Select]]></UETemplate><UETemplate Name="For" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[For [+evaluation+]
 	^ ' Code to run
-Next</Template><Template Name="While" Comments="0" Strings="0">While [+evaluation+]
+Next]]></UETemplate><UETemplate Name="While" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[While [+evaluation+]
 	^ ' Code to run
-End While</Template><Template Name="Function" Comments="0" Strings="0">Function [+functionName+]([+parameters+])
+End While]]></UETemplate><UETemplate Name="Function" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[Function [+functionName+]([+parameters+])
 	^
-End Function</Template><Template Name="Dim" Comments="0" Strings="0">Dim [+varName+] As [+String+]</Template></Templates>
+End Function]]></UETemplate><UETemplate Name="Dim" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[Dim [+varName+] As [+String+]]]></UETemplate></Templates>

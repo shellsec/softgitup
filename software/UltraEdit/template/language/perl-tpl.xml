@@ -1,12 +1,12 @@
-<?xml version="1.0"?>
-<Templates encode="utf8escenc"><Template Name="if" Comments="0" Strings="0">if ([+evaluation+]) {
+<?xml version="1.0" encoding="UTF-8"?>
+<Templates encode="utf8escenc" version="2.0"><UETemplate Name="if" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[if ([+evaluation+]) {
 	^
-}</Template><Template Name="elsif" Comments="0" Strings="0">elsif ([+evaluation+]) 
+}]]></UETemplate><UETemplate Name="elsif" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[elsif ([+evaluation+]) 
 	^
-}</Template><Template Name="else" Comments="0" Strings="0">else {
+}]]></UETemplate><UETemplate Name="else" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[else {
 	^
-}</Template><Template Name="while" Comments="0" Strings="0">while ([+evaluation+]) {
+}]]></UETemplate><UETemplate Name="while" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[while ([+evaluation+]) {
 	^ // code to be executed
-}</Template><Template Name="for" Comments="0" Strings="0">for ($[+i+] = [+X+]; $[+i+] &lt; [+Y+]; $[+i+]++) {
+}]]></UETemplate><UETemplate Name="for" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[for ($[+i+] = [+X+]; $[+i+] < [+Y+]; $[+i+]++) {
 	^ // code to be executed
-}</Template><Template Name="sysopen" Comments="0" Strings="0">sysopen([+handle+], [+file+], [+O_RDONLY+]);</Template><Template Name="print" Comments="0" Strings="0">print "[+text+]";</Template><Template Name="array" Comments="0" Strings="0">@[+arrayName+] = ("[+val+]", "[+val2+]");</Template></Templates>
+}]]></UETemplate><UETemplate Name="sysopen" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[sysopen([+handle+], [+file+], [+O_RDONLY+]);]]></UETemplate><UETemplate Name="print" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[print "[+text+]";]]></UETemplate><UETemplate Name="array" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[@[+arrayName+] = ("[+val+]", "[+val2+]");]]></UETemplate></Templates>

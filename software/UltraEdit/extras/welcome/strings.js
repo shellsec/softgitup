@@ -54,16 +54,16 @@ langs = {
   },
 
   theme_head : {
-    en: '1) Theme',
-    ptb: '1) Tema',
-    de: '1) Thema',
-    fr: '1) Thème',
-    sp: '1) Tema',
-    it: '1) Tema',
-    ko: '1) 테마',
-    ja: '1) テーマの',
-    chs: '1) 主题',
-    cht: '1) 主題'
+    en: '1 | Theme',
+    ptb: '1 | Tema',
+    de: '1 | Thema',
+    fr: '1 | Thème',
+    sp: '1 | Tema',
+    it: '1 | Tema',
+    ko: '1 | 테마',
+    ja: '1 | テーマの',
+    chs: '1 | 主题',
+    cht: '1 | 主題'
   },
 
   theme_caption : {
@@ -80,16 +80,16 @@ langs = {
   },
 
   layout_head : {
-    en: '2) Layout',
-    ptb: '2) Layout',
-    de: '2) Layout',
-    fr: '2) Disposition',
-    sp: '2) Diseño',
-    it: '2) Layout',
-    ko: '2) 레이아웃',
-    ja: '2) レイアウト',
-    chs: '2) 布局',
-    cht: '2) 版面配置'
+    en: '2 | Layout',
+    ptb: '2 | Layout',
+    de: '2 | Layout',
+    fr: '2 | Disposition',
+    sp: '2 | Diseño',
+    it: '2 | Layout',
+    ko: '2 | 레이아웃',
+    ja: '2 | レイアウト',
+    chs: '2 | 布局',
+    cht: '2 | 版面配置'
   },
 
   layout_caption : {
@@ -158,16 +158,16 @@ langs = {
   },
 
   ribbon_head : {
-    en: '3) Ribbon or menu / toolbars',
-    ptb:'3) Faixa de opções ou menu / ferramentas',
-    de: '3) Menüband oder Menü / Symbolleisten',
-    fr: '3) Ruban ou menu / barre d’outils',
-    sp: '3) Cinta o menú/barras de herramientas',
-    it: '3) Ribbon o menu / barre degli strumenti',
-    ko: '3) 리본 또는 메뉴 / 도구 모음',
-    ja: '3) リボンもしくはメニュー / ツールバー',
-    chs:'3) 功能区或菜单/工具栏',
-    cht:'3) Ribbon 或功能表/工具列'
+    en: '3 | Ribbon or menu / toolbars',
+    ptb:'3 | Faixa de opções ou menu / ferramentas',
+    de: '3 | Menüband oder Menü / Symbolleisten',
+    fr: '3 | Ruban ou menu / barre d’outils',
+    sp: '3 | Cinta o menú/barras de herramientas',
+    it: '3 | Ribbon o menu / barre degli strumenti',
+    ko: '3 | 리본 또는 메뉴 / 도구 모음',
+    ja: '3 | リボンもしくはメニュー / ツールバー',
+    chs:'3 | 功能区或菜单/工具栏',
+    cht:'3 | Ribbon 或功能表/工具列'
   },
 
   ribbon_caption : {
@@ -223,16 +223,16 @@ langs = {
   },
 
   settings_head : {
-    en: '4) A couple settings',
-    ptb:'4) Algumas configurações',
-    de: '4) Einige Einstellungen',
-    fr: '4) Quelques paramètres',
-    sp: '4) Un par de ajustes',
-    it: '4) Un paio di impostazioni',
-    ko: '4) 연결 설정',
-    ja: '4) 複数の設定',
-    chs:'4) 配对设置',
-    cht:'4) 幾種設定'
+    en: '4 | A couple settings',
+    ptb:'4 | Algumas configurações',
+    de: '4 | Einige Einstellungen',
+    fr: '4 | Quelques paramètres',
+    sp: '4 | Un par de ajustes',
+    it: '4 | Un paio di impostazioni',
+    ko: '4 | 연결 설정',
+    ja: '4 | 複数の設定',
+    chs:'4 | 配对设置',
+    cht:'4 | 幾種設定'
   },
 
   backups : {

@@ -1,440 +1,842 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Permissions-Policy" content="clipboard-write=(self)">
-    <title>Pieces for UltraEdit</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            font-family: sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Permissions-Policy" content="clipboard-write=(self)">
+  <title>Pieces for UltraEdit</title>
+  <style>
+    :root {
+      --bg: #252525;
+      --surface: #353535;
+      --text: #e8eaed;
+      --muted: #a0a7b4;
+      --accent: #4c8bf5;
+      --backdrop: rgba(0,0,0,.55);
+      --radius: 14px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    
+    body {
+      margin: 0; 
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif;
+      background: linear-gradient(180deg, var(--bg), var(--bg) 35%);
+      color: var(--text); 
+    }
+    
+    html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-family: sans-serif;
+    }
 
-        iframe {
-            border: none;
-            width: 100%;
-            height: 100%;
-            font-family: sans-serif;
-        }
-    </style>
+    iframe.pieces {
+        border: none;
+        width: 100%;
+        height: 95%;
+        font-family: sans-serif;
+    }
+    
+    div.settings {
+        border: none;
+        width: 100%;
+        height: 20px;
+        font-family: sans-serif;
+    }
+    
+    /* Trigger */
+    .settings-trigger {
+      border: none; 
+      background: var(--surface); 
+      color: var(--text);
+      padding: 0.2rem 1rem; 
+      border-radius: 100px; 
+      cursor: pointer;
+      /*box-shadow: var(--shadow);*/
+      font-weight: 100; 
+      letter-spacing: .3px;
+    }
+    
+    .settings-trigger:focus-visible { 
+      outline: 3px solid var(--accent); 
+      outline-offset: 2px; 
+    }
+
+    /* Overlay/backdrop */
+    .overlay {
+      padding: 0.2rem;
+      display: none; 
+      background: var(--bg);
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .overlay[open] { 
+      --radius: 14px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      display: flex; 
+    }
+
+    /* Dialog panel */
+    .dialog {
+      width: min(420px, calc(100vw - 2rem));
+      background: var(--surface); 
+      border-radius: var(--radius);
+      /*box-shadow: var(--shadow);*/
+      /*border: 1px solid #272b33;*/
+      padding: 1rem 1rem 1.25rem;
+      transform: translateY(8px); 
+      opacity: 0;
+      transition: transform .18s ease, opacity .18s ease;
+    }  
+    
+    .overlay[open] .dialog { 
+      transform: translateY(0); 
+      opacity: 1; 
+    }
+
+    .dialog header {
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      gap: .75rem; 
+      padding: .25rem .5rem .5rem;
+    }
+    
+    .dialog h2 {
+      margin: 0;
+      font-size: 1.1rem;
+      letter-spacing: .2px;
+    }   
+    
+    .close-btn {
+      border: none; 
+      background: transparent; 
+      color: var(--muted);
+      font-size: 1.25rem; 
+      line-height: 1; 
+      padding: .35rem .5rem; 
+      border-radius: 8px; 
+      cursor: pointer;
+    }    
+    
+    .close-btn:hover { 
+      color: var(--text); 
+    }
+    
+    .close-btn:focus-visible { 
+      outline: 3px solid var(--accent); 
+      outline-offset: 2px; 
+    }
+    
+    .content { 
+      padding: .25rem .5rem .25rem; 
+    }
+    
+    fieldset { 
+      border: none; 
+      margin: 0; 
+      padding: 0; 
+    }
+    
+    .option {
+      display: flex; 
+      align-items: center; 
+      gap: .6rem; 
+      padding: .6rem .4rem; 
+      border-radius: 10px;
+    }
+    
+    .option:hover { 
+      background: #1b1f26; 
+    }
+    
+    .option label { 
+      cursor: pointer; 
+    }
+    
+    .hint { 
+      color: var(--muted); 
+      font-size: .9rem; 
+      margin: .2rem 0 0 .2rem; 
+    }
+
+    .actions {
+      display: flex; 
+      gap: .6rem; 
+      justify-content: flex-end; 
+      padding: .75rem .5rem 0;
+    }
+    
+    .btn {
+      border: 1px solid #2b313b; 
+      background: #1a1f27; 
+      color: var(--text);
+      padding: .55rem .9rem; 
+      border-radius: 10px; 
+      cursor: pointer;
+    }
+    
+    .btn.primary { 
+      background: var(--accent); 
+      border-color: transparent; 
+      color: white; 
+    }
+    
+    .btn:focus-visible { 
+      outline: 3px solid var(--accent); 
+      outline-offset: 2px; 
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .dialog { transition: none; }
+    }
+  </style>
 </head>
 <body>
-    <div id="status" style="text-align: center; display: none; margin: 20pt;">
-            <img id="logo" style="width: 300px" src="./light-pieces-logo.png"><br><br><br>
-            <h3 id="message">Pieces for Developers is not installed</h3>
-            <a id="linkDownload" target="_blank" href="https://docs.pieces.app/installation-getting-started/windows">Download Pieces</a>
+  <div id="status" style="text-align: center; display: none; margin: 20pt;">
+    <img id="logo" style="width: 300px" src="./light-pieces-logo.png"><br>
+    <br>
+    <br>
+    <h3 id="message">Pieces for Developers is not installed</h3><a id="linkDownload" target="_blank" href="https://docs.pieces.app/installation-getting-started/windows">Download Pieces</a>
+  </div>
+  <div width="100%" id="update" style="display: none; margin-right: 20px;">
+    <table width="100%" align="center" style="margin: 10px; border: 1px solid white; border-radius: 10px;">
+      <tr>
+        <td width="40px;" rowspan="2" style="padding: 10px;"><!--<img id="icon" style="width: 40px" src="./pieces_os.png">--></td>
+        <td style="text-align: left; padding: 5px;"><b>Pieces OS needs an update!</b></td>
+      </tr>
+      <tr>
+        <td style="text-align: left; padding: 5px;">Locate and click on the Pieces icon in your system tray to install it.</td>
+      </tr>
+    </table>
+  </div>
+  <div id="error" style="text-align: center; display: none; margin: 5pt" allow="clipboard-write"></div>
+  <div id="settings" class="settings" style='margin: 5pt; display: none; font-size:14px; text-align:right;'>
+    <button class="settings-trigger" style='font-size:10px; text-decoration:none;'>Settings</button> &nbsp; &nbsp;
+  </div><!-- Overlay dialog -->
+  <div class="overlay" id="overlay" aria-hidden="true">
+    <div class="dialog" id="settingsDialog" role="dialog" aria-modal="true" aria-labelledby="dialogTitle">
+      <header>
+        <h2 id="dialogTitle">Query Context Settings</h2><button class="close-btn" id="closeSettings" type="button" aria-label="Close settings">✖</button>
+      </header>
+      <div class="content">
+        Default AI query context is the active file. Query context may be expanded with the following options:
+        <fieldset>
+          <div class="option">
+            <input type="checkbox" id="openFiles"> <label for="openFiles">Include all open files</label>
+          </div>
+          <div class="option">
+            <input type="checkbox" id="siblingFiles"> <label for="siblingFiles">Include all files in active file folder</label>
+          </div>
+          <div class="option">
+            <input type="checkbox" id="projectFiles"> <label for="projectFiles">Include all files in current project</label>
+          </div>
+        </fieldset>
+        <p class="hint" style="display:none;">Press Esc to close. Click outside the panel to dismiss.</p>
+      </div>
+      <div class="actions">
+        <button class="btn" type="button" id="cancelBtn" style="display:none;">Cancel</button> <button class="btn primary" type="button" id="saveBtn" style="display:none;">Save</button>
+      </div>
     </div>
-    <div width="100%" id="update" style="display: none; margin-right: 20px;">
-    	<table width="100%" align="center" style="margin: 10px; border: 1px solid white; border-radius: 10px;">
-    		<tr>
-    		  <td width="40px;" rowspan="2" style="padding: 10px;"><!--<img id="icon" style="width: 40px" src="./pieces_os.png">--></td>
-    		  <td style="text-align: left; padding: 5px;"><b>Pieces OS needs an update!</b></td>
-    	  </tr>
-    	  <tr>
-    	  	<td style="text-align: left; padding: 5px;">Locate and click on the Pieces icon in your system tray to install it.</td>
-    	  </tr>
-    	</table>
-    </div>
-    <div id="error" style="text-align: center; display: none; margin: 5pt" allow="clipboard-write"></div>
-    <iframe id="pieces"></iframe>
-    <script>
-        const PIECES_MIN_PORT = 39300;
-        const PIECES_MAX_PORT = 39333;
+  </div>
+  <iframe id="pieces" class="pieces" name="pieces"></iframe> 
+  <script>      
+    const PIECES_MIN_PORT = 39300;
+    const PIECES_MAX_PORT = 39333;
 
-        const PIECES_ERROR_NONE = 0;
-        const PIECES_ERROR_INSTALL = 1;
-        const PIECES_ERROR_PORT = 2;
-        const PIECES_ERROR_VERSION = 3;
-        const PIECES_ERROR_CONNECT = 4;
-        const PIECES_ERROR_GETURL = 5;
-        const PIECES_ERROR_UPDATE = 6;
+    const PIECES_ERROR_NONE = 0;
+    const PIECES_ERROR_INSTALL = 1;
+    const PIECES_ERROR_PORT = 2;
+    const PIECES_ERROR_VERSION = 3;
+    const PIECES_ERROR_CONNECT = 4;
+    const PIECES_ERROR_GETURL = 5;
+    const PIECES_ERROR_UPDATE = 6;
 
-        let debugMode = false;
+    let debugMode = false;
 
-        var g_ultraedit_last_error_state = PIECES_ERROR_NONE;
-        var g_ultraedit_pieces_connect_port = 39300;
+    var g_ultraedit_last_error_state = PIECES_ERROR_NONE;
+    var g_ultraedit_pieces_connect_port = 39300;
 
-        const errtag = document.getElementById("error");
-        const pcsfrm = document.getElementById("pieces");
+    var g_ultraedit_pieces_add_open_files_to_context = false;
+    var g_ultraedit_pieces_add_sibling_files_to_context = false;
+    var g_ultraedit_pieces_add_project_files_to_context = false;
+                
+    //Query context settings
+    (function () {
+      const openBtn = document.getElementById('settings');
+      const overlay = document.getElementById('overlay');
+      const dialog = document.getElementById('settingsDialog');
+      const closeBtn = document.getElementById('closeSettings');
+      const cancelBtn = document.getElementById('cancelBtn');
+      const saveBtn = document.getElementById('saveBtn');
+      const pieces = document.getElementById('pieces');
 
-        const observer = new MutationObserver((mutationsList) => {
-            mutationsList.forEach((mutation) => {
-                if (mutation.type === "characterData" || mutation.type === "childList") {
-                    if (errtag.innerText.trim() !== "") {
-                        errtag.style.display = "block";
-                        pcsfrm.style.display = "none";
-                    } else {
-                        errtag.style.display = "none";
-                        pcsfrm.style.display = "block";
-                    }
+      let lastFocused = null;
+
+      function openDialog() {
+        lastFocused = document.activeElement;
+        overlay.setAttribute('open', '');
+        overlay.removeAttribute('aria-hidden');
+        pieces.setAttribute('aria-hidden', 'true');
+        pieces.style.display = "none";
+        
+        // Move focus to first focusable element inside the dialog
+        //const focusable = dialog.querySelectorAll('button, input, [tabindex]:not([tabindex="-1"])');
+        //(focusable[0] || dialog).focus();
+
+        // Simple focus trap
+        function trap(e) {
+          if (e.key === 'Tab') {
+            const nodes = Array.from(dialog.querySelectorAll('button, input, [tabindex]:not([tabindex="-1"])'));
+            const first = nodes[0], last = nodes[nodes.length - 1];
+            if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+            else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+          } else if (e.key === 'Escape') {
+            closeDialog();
+          }
+        }
+        dialog.dataset._trap = '1';
+        dialog.addEventListener('keydown', trap);
+        dialog._trapHandler = trap;
+        
+        document.getElementById('openFiles').checked = g_ultraedit_pieces_add_open_files_to_context;
+        document.getElementById('siblingFiles').checked = g_ultraedit_pieces_add_sibling_files_to_context;
+        document.getElementById('projectFiles').checked = g_ultraedit_pieces_add_project_files_to_context;
+      }
+
+      function closeDialog() {
+        overlay.removeAttribute('open');
+        overlay.setAttribute('aria-hidden', 'true');
+        pieces.removeAttribute('aria-hidden');
+        pieces.style.display = "block";
+        if (dialog._trapHandler) {
+          dialog.removeEventListener('keydown', dialog._trapHandler);
+          delete dialog._trapHandler;
+        }
+        (lastFocused || openBtn).focus();       
+        const state = {
+          openFiles: document.getElementById('openFiles').checked,
+          siblingFiles: document.getElementById('siblingFiles').checked,
+          projectFiles: document.getElementById('projectFiles').checked
+        };
+        
+        g_ultraedit_pieces_add_open_files_to_context = state.openFiles;
+        g_ultraedit_pieces_add_sibling_files_to_context = state.siblingFiles;
+        g_ultraedit_pieces_add_project_files_to_context = state.projectFiles;
+        
+        UltraEdit.writeScriptSetting("openFiles", g_ultraedit_pieces_add_open_files_to_context);
+        UltraEdit.writeScriptSetting("siblingFiles", g_ultraedit_pieces_add_sibling_files_to_context);
+        UltraEdit.writeScriptSetting("projectFiles", g_ultraedit_pieces_add_project_files_to_context);
+        
+        console.log('Saved settings:', state);
+      }
+
+      // Open actions
+      openBtn.addEventListener('click', openDialog);
+
+      // Close actions
+      closeBtn.addEventListener('click', closeDialog);
+      cancelBtn.addEventListener('click', closeDialog);
+
+      // Backdrop click
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) closeDialog();
+      });
+
+      // Example ?save? handler
+      saveBtn.addEventListener('click', () => {
+        const state = {
+          openFiles: document.getElementById('openFiles').checked,
+          siblingFiles: document.getElementById('siblingFiles').checked,
+          projectFiles: document.getElementById('projectFiles').checked
+        };
+        console.log('Saved settings:', state);
+        closeDialog();
+      });
+    })();            
+
+    const errtag = document.getElementById("error");
+    const pcsfrm = document.getElementById("pieces");
+
+    const observer = new MutationObserver((mutationsList) => {
+        mutationsList.forEach((mutation) => {
+            if (mutation.type === "characterData" || mutation.type === "childList") {
+                if (errtag.innerText.trim() !== "") {
+                    errtag.style.display = "block";
+                    pcsfrm.style.display = "none";
+                } else {
+                    errtag.style.display = "none";
+                    pcsfrm.style.display = "block";
                 }
-            });
+            }
         });
+    });
 
-        observer.observe(errtag, {
-            childList: true,
-            subtree: true,
-            characterData: true
-        });
+    observer.observe(errtag, {
+        childList: true,
+        subtree: true,
+        characterData: true
+    });
 
-        function setErrorState(state) {
-            g_ultraedit_last_error_state = state;
+    function setErrorState(state) {
+        g_ultraedit_last_error_state = state;
+    }
+
+    function piecesAskCopilot(query_, selection_, extension_, filepath_, openFiles_, siblingFiles_, projectFiles_) {
+        let filespaths = [];
+        
+        //console.log(g_ultraedit_pieces_add_open_files_to_context);
+        //console.log(g_ultraedit_pieces_add_sibling_files_to_context);
+        //console.log(g_ultraedit_pieces_add_project_files_to_context);
+        
+        if (g_ultraedit_pieces_add_open_files_to_context == true) {
+            //console.log("openFiles: ", openFiles_);
+            filespaths = filespaths.concat(openFiles_);
         }
 
-        function piecesAskCopilot(query_, selection_, extension_, filepath_) {
-            const message = {
-                type: "askCopilot",
-                destination: "webview",
-                data: {
-                    query: query_,
-                    relevant: {
-                        text: selection_,
-                        extension: extension_,
-                        filePath: filepath_
-                    }
+        if (g_ultraedit_pieces_add_sibling_files_to_context == true) {
+            //console.log("siblingFiles: ", siblingFiles_);
+            filespaths = filespaths.concat(siblingFiles_);
+        }
+        if (g_ultraedit_pieces_add_project_files_to_context == true) {
+            //console.log("projectFiles: ", projectFiles_);
+            filespaths = filespaths.concat(projectFiles_);
+        }
+        
+        console.log(filespaths);
+        
+        const message = {
+            type: "askCopilot",
+            destination: "webview",
+            data: {
+                query: query_,
+                relevant: {
+                    text: selection_,
+                    extension: extension_,
+                    filePath: filepath_
+                },
+                files: {
+                  paths: filespaths
                 }
-            };
-            const iframe = document.getElementById('pieces');
-            iframe ?.contentWindow ?.postMessage(message, "*");
-        }
-
-        function getCopilotState() {
-
-        }
-
-        function argbToRgb(argb) {
-            // Extract the red, green, and blue components from the ARGB value
-            let r = (argb >> 16) & 0xFF;
-            let g = (argb >> 8) & 0xFF;
-            let b = argb & 0xFF;
-
-            // Format the RGB value as a string
-            return `rgb(${r}, ${g}, ${b})`;
-        }
-
-        function getTheme() {
-            return UltraEdit.theme;
-        }
-
-        function handleExtensionMessage(event) {
-            switch (event.data.type) {
-                case "loaded":
-                    event.data.data = UltraEdit.piecesLoaded;
-                    break;
-                case "setTheme":
-                    event.data.data = UltraEdit.piecesLoaded;
-                    break;
-                case "insertAtCursor":
-                    UltraEdit.activeDocument.write(event.data.data.toString());
-                    break;
-                case "copyToClipboard":
-                    navigator.clipboard.writeText(event.data.data.toString());
-                    break;
-                case "pasteFromClipboard":
-                    event.data.data = navigator.clipboard.readText();
-                    break;
-                case "displayNotification":
-                    //document.getElementById("error").innerText = event.data.data;
-                    break;
             }
-        }
+        };
+        const iframe = document.getElementById('pieces');
+        iframe ?.contentWindow ?.postMessage(message, "*");
+    }
 
-        async function isPiecesInstalled() {
-            let piecesSuitePath = UltraEdit.readRegistryValue("HKEY_LOCAL_MACHINE", "SOFTWARE\\Classes\\Local Settings\\Software\\Microsoft\\Windows\\CurrentVersion\\AppModel\\PackageRepository\\Packages\\com.MeshIntelligentTechnologi.PiecesSuite_1.2.0.0_x64__84gz00a5z79wr", "Path");
-            if (piecesSuitePath === "") {
-                throw "not installed";
-            }
-        }
+    function getCopilotState() {
 
-        async function getPiecesPort() {
-            g_ultraedit_pieces_connect_port = UltraEdit.readTextFile("%USERPROFILE%\\Documents\\com.pieces.os\\production\\Config\\.port.txt");
+    }
+
+    // Convert "rgb(r,g,b)" → "hsl(h, s%, l%)" with optional lightness offset
+    function rgbtohsl(rgbStr, lOffset = 0) {
+      const match = rgbStr.match(/rgb\s*\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)/i);
+      if (!match) throw new Error("Invalid RGB string format");
+    
+      let [_, r, g, b] = match;
+      r = parseInt(r) / 255;
+      g = parseInt(g) / 255;
+      b = parseInt(b) / 255;
+    
+      const max = Math.max(r, g, b);
+      const min = Math.min(r, g, b);
+      let h, s;
+      let l = (max + min) / 2;
+    
+      if (max === min) {
+        h = s = 0; // achromatic
+      } else {
+        const d = max - min;
+        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+    
+        switch (max) {
+          case r:
+            h = (g - b) / d + (g < b ? 6 : 0);
+            break;
+          case g:
+            h = (b - r) / d + 2;
+            break;
+          case b:
+            h = (r - g) / d + 4;
+            break;
+        }
+    
+        h /= 6;
+      }
+    
+      let H = Math.round(h * 360);
+      let S = Math.round(s * 100);
+      let L = Math.round(l * 100 + lOffset);
+    
+      // Clamp L to [0, 100]
+      L = Math.max(0, Math.min(100, L));
+    
+      return `hsl(${H}, ${S}%, ${L}%)`;
+    }
+
+    function argbToRgb(argb) {
+        // Extract the red, green, and blue components from the ARGB value
+        let r = (argb >> 16) & 0xFF;
+        let g = (argb >> 8) & 0xFF;
+        let b = argb & 0xFF;
+
+        // Format the RGB value as a string
+        return `rgb(${r}, ${g}, ${b})`;
+    }
+
+    function getTheme() {
+      try{
+        return UltraEdit.theme;
+      } catch (error) {
+        let theme = '{ "scaffoldBackgroundColor": "0", "primary": "16777215" }';
+        return theme;
+      }
+    }
+
+    function handleExtensionMessage(event) {
+        switch (event.data.type) {
+            case "loaded":
+                event.data.data = UltraEdit.piecesLoaded;
+                break;
+            case "setTheme":
+                event.data.data = UltraEdit.piecesLoaded;
+                break;
+            case "insertAtCursor":
+                UltraEdit.activeDocument.write(event.data.data.toString());
+                break;
+            case "copyToClipboard":
+                navigator.clipboard.writeText(event.data.data.toString());
+                break;
+            case "pasteFromClipboard":
+                event.data.data = navigator.clipboard.readText();
+                break;
+            case "displayNotification":
+                //document.getElementById("error").innerText = event.data.data;
+                break;
+        }
+    }
+
+    async function isPiecesInstalled() {
+        //BDH: Need a better method to detect installation
+        //Commenting code below to avoid false "Pieces is not installed" messages
+        
+        //let piecesSuitePath = UltraEdit.readRegistryValue("HKEY_LOCAL_MACHINE", "SOFTWARE\\Classes\\Local Settings\\Software\\Microsoft\\Windows\\CurrentVersion\\AppModel\\PackageRepository\\Packages\\com.MeshIntelligentTechnologi.PiecesSuite_1.2.0.0_x64__84gz00a5z79wr", "Path");
+        //if (piecesSuitePath === "") {
+        //    throw "not installed";
+        //}
+    }
+
+    async function getPiecesPort() {
+        let appdataConfig = "%LOCALAPPDATA%\\Mesh Intelligent Technologies, Inc\\Pieces OS\\com.pieces.os\\production\\Config\\.port.txt";
+        let documentsConfig = "%USERPROFILE%\\Documents\\com.pieces.os\\production\\Config\\.port.txt";
+        //Read from appdata first
+        g_ultraedit_pieces_connect_port = UltraEdit.readTextFile(appdataConfig);
+        if (g_ultraedit_pieces_connect_port > 39333 || g_ultraedit_pieces_connect_port < 39300) {
+            //Read from legacy port location
+            g_ultraedit_pieces_connect_port = UltraEdit.readTextFile(documentsConfig);
             if (g_ultraedit_pieces_connect_port > 39333 || g_ultraedit_pieces_connect_port < 39300) {
+                //Port not found throw
                 throw "invalid port";
             }
         }
+    }
 
-        async function connectToPiecesOS(port) {
-            const endpoint = `http://localhost:${port}/connect`;
-            seededApplication = {
-                application: {
-                    name: 'ULTRA_EDIT',
-                    version: '1.0.0',
-                    platform: 'WINDOWS'
+    async function connectToPiecesOS(port) {
+        const endpoint = `http://localhost:${port}/connect`;
+        seededApplication = {
+            application: {
+                name: 'ULTRA_EDIT',
+                version: '1.0.0',
+                platform: 'WINDOWS'
+            },
+        };
+        const platform = navigator.userAgent || navigator.platform || "";
+        if (platform.includes("Mac")) {
+            seededApplication.application.platform = 'MACOS';
+            port = 5323;
+        } else if (platform.includes("Linux")) {
+            seededApplication.application.platform = 'LINUX';
+            port = 5323;
+        }
+        try {
+            const response = await fetch(endpoint, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
                 },
+                body: JSON.stringify(seededApplication),
+            });
+
+            if (!response.ok) {
+                const errorText = await response.text();
+                throw new Error(`status: ${response.status}: ${errorText}`);
+            }
+            return await response.json();
+        } catch (error) {
+            throw error;
+        }
+    }
+
+    async function getCopilotURLFromPiecesOS(port, application) {
+        const endpoint = `http://localhost:${port}/os/applet/launch`;
+        const data = {
+            type: 'COPILOT',
+            parent: application,
+        };
+
+        try {
+            const response = await fetch(endpoint, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (!response.ok) {
+                const errorText = await response.text();
+                throw new Error(`status: ${response.status}: ${errorText}`);
+            }
+
+            return await response.json();
+        } catch (error) {
+            throw error;
+        }
+    }
+
+    async function checkForUpdates(port) {
+      const endpoint = `http://localhost:${port}/os/update/check`;
+        try {
+            const response = await fetch(endpoint, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: "{}"
+            });
+
+            if (!response.ok) {
+                const errorText = await response.text();
+                throw new Error(`status: ${response.status}: ${errorText}`);
+            }
+
+            return await response.json();
+        } catch (error) {
+            throw error;
+        }
+    }
+    
+    async function LoadCopilot() {
+        try {
+            setErrorState(PIECES_ERROR_INSTALL);
+            await isPiecesInstalled();
+
+            setErrorState(PIECES_ERROR_PORT);
+            await getPiecesPort();
+            if (g_ultraedit_pieces_connect_port < PIECES_MIN_PORT || g_ultraedit_pieces_connect_port > PIECES_MAX_PORT) {
+                throw "invalid port";
+            }
+
+            setErrorState(PIECES_ERROR_VERSION);
+            const version = await fetch(`http://localhost:${g_ultraedit_pieces_connect_port}/.well-known/version`)
+                .then((res) => res.text())
+                .catch(() => null);
+
+            setErrorState(PIECES_ERROR_CONNECT);
+            const context = await connectToPiecesOS(g_ultraedit_pieces_connect_port);
+
+            setErrorState(PIECES_ERROR_UPDATE);
+            const updateCheck = await checkForUpdates(g_ultraedit_pieces_connect_port);
+            if(updateCheck.status == "AVAILABLE") {
+              document.getElementById("update").style.display = "block";
+            }
+                    
+            setErrorState(PIECES_ERROR_GETURL);
+            const copilotPort = await getCopilotURLFromPiecesOS(g_ultraedit_pieces_connect_port, context.application);
+
+            const launchedPort = copilotPort.port;
+            const fullCopilotURL = new URL(`http://localhost:${launchedPort}`);
+            //fullCopilotURL.searchParams.append('application', JSON.stringify(context));
+            //fullCopilotURL.searchParams.append('state', getCopilotState());
+            const theme = getTheme();
+            fullCopilotURL.searchParams.append('theme', theme);
+            const coCap = {
+                insertAtCursor: 0b0000_0001, // 1
+                askCopilot: 0b0000_0010, // 2
+                acceptChanges: 0b0000_0100, // 4
+                displayNotification: 0b0000_1000, // 8
+                persistState: 0b0001_0000, // 16
+                previewAsset: 0b0010_0000, // 32
+                openSettings: 0b0100_0000, // 64
+                searchAssets: 0b1000_0000, // 128
+                launchPos: 0b0000_0001 << 8, // 256
+                installPos: 0b0000_0010 << 8, // 512
+                corsProxy: 0b0000_0100 << 8, // 1024
+                setTheme: 0b0000_1000 << 8, // 2048
+                addToContext: 0b0001_0000 << 8, // 4092
+                copyToClipboard: 0b0010_0000 << 8, // 8192
+                loaded: 0b0100_0000 << 8, // 16384
+                pasteFromClipboard: 0b1000_0000 << 8  // 32768
             };
-            const platform = navigator.userAgent || navigator.platform || "";
-            if (platform.includes("Mac")) {
-                seededApplication.application.platform = 'MACOS';
-                port = 5323;
-            } else if (platform.includes("Linux")) {
-                seededApplication.application.platform = 'LINUX';
-                port = 5323;
-            }
-            try {
-                const response = await fetch(endpoint, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(seededApplication),
-                });
 
-                if (!response.ok) {
-                    const errorText = await response.text();
-                    throw new Error(`status: ${response.status}: ${errorText}`);
-                }
-                return await response.json();
-            } catch (error) {
-                throw error;
-            }
-        }
-
-        async function getCopilotURLFromPiecesOS(port, application) {
-            const endpoint = `http://localhost:${port}/os/applet/launch`;
-            const data = {
-                type: 'COPILOT',
-                parent: application,
-            };
-
-            try {
-                const response = await fetch(endpoint, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data),
-                });
-
-                if (!response.ok) {
-                    const errorText = await response.text();
-                    throw new Error(`status: ${response.status}: ${errorText}`);
-                }
-
-                return await response.json();
-            } catch (error) {
-                throw error;
-            }
-        }
-
-        async function checkForUpdates(port) {
-        	const endpoint = `http://localhost:${port}/os/update/check`;
-            try {
-                const response = await fetch(endpoint, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: "{}"
-                });
-
-                if (!response.ok) {
-                    const errorText = await response.text();
-                    throw new Error(`status: ${response.status}: ${errorText}`);
-                }
-
-                return await response.json();
-            } catch (error) {
-                throw error;
-            }
-        }
-        
-        async function LoadCopilot() {
-            try {
-                setErrorState(PIECES_ERROR_INSTALL);
-                await isPiecesInstalled();
-
-                setErrorState(PIECES_ERROR_PORT);
-                await getPiecesPort();
-                if (g_ultraedit_pieces_connect_port < PIECES_MIN_PORT || g_ultraedit_pieces_connect_port > PIECES_MAX_PORT) {
-                    throw "invalid port";
-                }
-
-                setErrorState(PIECES_ERROR_VERSION);
-                const version = await fetch(`http://localhost:${g_ultraedit_pieces_connect_port}/.well-known/version`)
-                    .then((res) => res.text())
-                    .catch(() => null);
-
-                setErrorState(PIECES_ERROR_CONNECT);
-                const context = await connectToPiecesOS(g_ultraedit_pieces_connect_port);
-
-                setErrorState(PIECES_ERROR_UPDATE);
-                const updateCheck = await checkForUpdates(g_ultraedit_pieces_connect_port);
-                if(updateCheck.status == "AVAILABLE") {
-                	document.getElementById("update").style.display = "block";
-                }
-                        
-                setErrorState(PIECES_ERROR_GETURL);
-                const copilotPort = await getCopilotURLFromPiecesOS(g_ultraedit_pieces_connect_port, context.application);
-
-                const launchedPort = copilotPort.port;
-                const fullCopilotURL = new URL(`http://localhost:${launchedPort}`);
-                //fullCopilotURL.searchParams.append('application', JSON.stringify(context));
-                //fullCopilotURL.searchParams.append('state', getCopilotState());
-                const theme = getTheme();
-                fullCopilotURL.searchParams.append('theme', theme);
-                const coCap = {
-                    insertAtCursor: 0b0000_0001, // 1
-                    askCopilot: 0b0000_0010, // 2
-                    acceptChanges: 0b0000_0100, // 4
-                    displayNotification: 0b0000_1000, // 8
-                    persistState: 0b0001_0000, // 16
-                    previewAsset: 0b0010_0000, // 32
-                    openSettings: 0b0100_0000, // 64
-                    searchAssets: 0b1000_0000, // 128
-                    launchPos: 0b0000_0001 << 8, // 256
-                    installPos: 0b0000_0010 << 8, // 512
-                    corsProxy: 0b0000_0100 << 8, // 1024
-                    setTheme: 0b0000_1000 << 8, // 2048
-                    addToContext: 0b0001_0000 << 8, // 4092
-                    copyToClipboard: 0b0010_0000 << 8, // 8192
-                    loaded: 0b0100_0000 << 8, // 16384
-                    pasteFromClipboard: 0b1000_0000 << 8  // 32768
-                };
-
-                fullCopilotURL.searchParams.append(
-                    'capabilities', (coCap.insertAtCursor | coCap.askCopilot | coCap.setTheme
-                        | coCap.copyToClipboard | coCap.loaded | coCap.pasteFromClipboard
-                        | coCap.displayNotification).toString());
-
-                let iframe = document.getElementById("pieces");
-
-                window.addEventListener("message", (event) => {
-                    if (event.data.destination == "webview")
-                        return;
-                    handleExtensionMessage(event);
-                });
-
-                iframe.addEventListener("load", () => {
-                    UltraEdit.piecesLoaded = true;
-                    document.documentElement.style.overflow = "hidden";
-                    setErrorState(PIECES_ERROR_NONE);
-                });
-
-                iframe.src = fullCopilotURL;
-            } catch (error) {
-                const iframe = document.getElementById("pieces");
-                const iframeDocument = iframe.contentWindow.document;
-                iframeDocument.body.innerHTML = "";
-                document.getElementById("linkDownload").style.display = "none";
-                switch (g_ultraedit_last_error_state) {
-                    case PIECES_ERROR_INSTALL:
-                        document.getElementById("status").style.display = "block";
-                        document.getElementById("error").innerText = "";
-                        document.getElementById("linkDownload").style.display = "block";
-                        break;
-                    case PIECES_ERROR_PORT:
-                        document.getElementById("status").style.display = "block";
-                        document.getElementById("error").innerText = "";
-                        document.getElementById("message").innerHTML = "Pieces isn't running. <br><br>Type \"Pieces OS\" in the Windows Taskbar Search field and press the Enter key.";
-                        document.getElementById("error").innerText = "Error: Unable to determine Pieces connection port"
-                        break;
-                    case PIECES_ERROR_VERSION:
-                        document.getElementById("status").style.display = "block";
-                        document.getElementById("error").innerText = "";
-                        document.getElementById("message").innerHTML = "Pieces isn't running. <br><br>Type \"Pieces OS\" in the Windows Taskbar Search field and press the Enter key.";
-                        document.getElementById("error").innerText = "Error: Unable to determine Pieces version"
-                        break;
-                    case PIECES_ERROR_CONNECT:
-                        document.getElementById("status").style.display = "block";
-                        document.getElementById("error").innerText = "";
-                        document.getElementById("message").innerHTML = "Pieces isn't running. <br><br>Type \"Pieces OS\" in the Windows Taskbar Search field and press the Enter key.";
-                        document.getElementById("error").innerText = "Error: Unable to connect to Pieces"
-                        break;
-                    case PIECES_ERROR_GETURL:
-                        document.getElementById("status").style.display = "block";
-                        document.getElementById("error").innerText = "";
-                        document.getElementById("message").innerHTML = "Pieces isn't running. <br><br>Type \"Pieces OS\" in the Windows Taskbar Search field and press the Enter key.";
-                        document.getElementById("error").innerText = "Error: Unable to determine Pieces copilot port"
-                        break;
-                    case PIECES_ERROR_UPDATE:
-                        document.getElementById("status").style.display = "block";
-                        document.getElementById("error").innerText = "";
-                        document.getElementById("message").innerHTML = "Unable to check for updates";
-                        document.getElementById("error").innerText = error;
-                    default:
-                        document.getElementById("error").innerText = error;
-                        break;
-                }
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
-            const theme = JSON.parse(getTheme());
-            let backgroundColor = argbToRgb(theme.scaffoldBackgroundColor);
-            let foregroundColor = argbToRgb(theme.primary);
-            document.body.style.backgroundColor = backgroundColor;
-            document.body.style.color = foregroundColor;
-
-            let darkMode = theme.darkMode;
-            let logo = document.getElementById("logo");
-            if (darkMode == true) {
-                logo.src = "./light-pieces-logo.png"
-            }
-            else {
-                logo.src = "./dark-pieces-logo.png"
-            }
-
-            let linkDownload = document.getElementById("linkDownload");
-            linkDownload.style.color = foregroundColor;
+            fullCopilotURL.searchParams.append(
+                'capabilities', (coCap.insertAtCursor | coCap.askCopilot | coCap.setTheme
+                    | coCap.copyToClipboard | coCap.loaded | coCap.pasteFromClipboard
+                    | coCap.displayNotification).toString());
 
             let iframe = document.getElementById("pieces");
+
+            window.addEventListener("message", (event) => {
+                if (event.data.destination == "webview")
+                    return;
+                handleExtensionMessage(event);
+            });
+
+            iframe.addEventListener("load", () => {
+                UltraEdit.piecesLoaded = true;
+                document.documentElement.style.overflow = "hidden";
+                setErrorState(PIECES_ERROR_NONE);
+            });
+
+            iframe.src = fullCopilotURL;
+            
+            document.getElementById("settings").style.display = "block";              
+        } catch (error) {
+            const iframe = document.getElementById("pieces");
             const iframeDocument = iframe.contentWindow.document;
-            iframeDocument.body.style.backgroundColor = backgroundColor;
-            iframeDocument.body.style.color = foregroundColor;
-            iframeDocument.body.style.display = "flex";
-            iframeDocument.body.style.justifyContent = "left";
-            iframeDocument.body.style.alignItems = "left";
-            iframeDocument.body.style.height = "100%";
-            iframeDocument.body.style.margin = "0";
-            iframeDocument.body.innerHTML = "<p style='margin: 5pt'>Loading Pieces...</p>";
-            LoadCopilot();
-        });
-        
-        
-        ///////////////////////////////////////////////////////////
-        // Utility functions
-        ///////////////////////////////////////////////////////////
-        
-        //Convert ARGB from application theme to RGB usable by HTML and JavaScript
-        function uewv_argbToRgb(argb) {
-            let r = (argb >> 16) & 0xFF;
-            let g = (argb >> 8) & 0xFF;
-            let b = argb & 0xFF;
-
-            return `rgb(${r}, ${g}, ${b})`;
+            iframeDocument.body.innerHTML = "";
+            document.getElementById("linkDownload").style.display = "none";
+            switch (g_ultraedit_last_error_state) {
+                case PIECES_ERROR_INSTALL:
+                    document.getElementById("status").style.display = "block";
+                    document.getElementById("error").innerText = "";
+                    document.getElementById("linkDownload").style.display = "block";
+                    break;
+                case PIECES_ERROR_PORT:
+                    document.getElementById("status").style.display = "block";
+                    document.getElementById("error").innerText = "";
+                    document.getElementById("message").innerHTML = "Pieces isn't running. <br><br>Type \"Pieces OS\" in the Windows Taskbar Search field and press the Enter key.";
+                    document.getElementById("error").innerText = "Error: Unable to determine Pieces connection port"
+                    break;
+                case PIECES_ERROR_VERSION:
+                    document.getElementById("status").style.display = "block";
+                    document.getElementById("error").innerText = "";
+                    document.getElementById("message").innerHTML = "Pieces isn't running. <br><br>Type \"Pieces OS\" in the Windows Taskbar Search field and press the Enter key.";
+                    document.getElementById("error").innerText = "Error: Unable to determine Pieces version"
+                    break;
+                case PIECES_ERROR_CONNECT:
+                    document.getElementById("status").style.display = "block";
+                    document.getElementById("error").innerText = "";
+                    document.getElementById("message").innerHTML = "Pieces isn't running. <br><br>Type \"Pieces OS\" in the Windows Taskbar Search field and press the Enter key.";
+                    document.getElementById("error").innerText = "Error: Unable to connect to Pieces"
+                    break;
+                case PIECES_ERROR_GETURL:
+                    document.getElementById("status").style.display = "block";
+                    document.getElementById("error").innerText = "";
+                    document.getElementById("message").innerHTML = "Pieces isn't running. <br><br>Type \"Pieces OS\" in the Windows Taskbar Search field and press the Enter key.";
+                    document.getElementById("error").innerText = "Error: Unable to determine Pieces copilot port"
+                    break;
+                case PIECES_ERROR_UPDATE:
+                    document.getElementById("status").style.display = "block";
+                    document.getElementById("error").innerText = "";
+                    document.getElementById("message").innerHTML = "Unable to check for updates";
+                    document.getElementById("error").innerText = error;
+                default:
+                    document.getElementById("error").innerText = error;
+                    break;
+            }
         }
-        
-        //Setup foreground/background colors from current UltraEdit theme
-        function uewv_setTheme() {
-        	  location.reload();
-        }
-        
-        
-        ///////////////////////////////////////////////////////////
-        // Plugin events
-        ///////////////////////////////////////////////////////////
-        
-        //Called when a document is opened in UltraEdit
-        document.addEventListener("uewve_documentAdd", (event) => {
-        });
+    }
 
-        //Called when a document is closed in UltraEdit
-        document.addEventListener("uewve_documentRemove", (event) => {
-        });
+    document.addEventListener("DOMContentLoaded", () => {
+        const theme = JSON.parse(getTheme());
+        let backgroundColor = argbToRgb(theme.scaffoldBackgroundColor);
+        let foregroundColor = argbToRgb(theme.primary);
+        document.documentElement.style.setProperty('--bg', backgroundColor);
+        document.documentElement.style.setProperty('--surface', rgbtohsl(backgroundColor,10));
+        document.documentElement.style.setProperty('--text', foregroundColor);
+        document.body.style.backgroundColor = backgroundColor;
+        document.body.style.color = foregroundColor;
+
+        g_ultraedit_pieces_add_open_files_to_context = UltraEdit.readScriptSetting("openFiles") === "True" ? true : false;
+        console.log(g_ultraedit_pieces_add_open_files_to_context);
+        g_ultraedit_pieces_add_sibling_files_to_context = UltraEdit.readScriptSetting("siblingFiles") === "True" ? true : false;
+        console.log(g_ultraedit_pieces_add_sibling_files_to_context);
+        g_ultraedit_pieces_add_project_files_to_context = UltraEdit.readScriptSetting("projectFiles") === "True" ? true : false;
+        console.log(g_ultraedit_pieces_add_project_files_to_context);
         
-        //Called when the active theme is changed in UltraEdit
-        document.addEventListener("uewve_themeChange", (event) => {
-            uewv_setTheme();
-        });
-        
-        //Called when all plugin initialization is complete
-        document.addEventListener("uewve_apiInitialized", (event) => {
-        });
-        
-    </script>
+        let darkMode = theme.darkMode;
+        let logo = document.getElementById("logo");
+        if (darkMode == true) {
+            logo.src = "./light-pieces-logo.png"
+        }
+        else {
+            logo.src = "./dark-pieces-logo.png"
+        }
+
+        let linkDownload = document.getElementById("linkDownload");
+        linkDownload.style.color = foregroundColor;
+
+        let iframe = document.getElementById("pieces");
+        const iframeDocument = iframe.contentWindow.document;
+        iframeDocument.body.style.backgroundColor = backgroundColor;
+        iframeDocument.body.style.color = foregroundColor;
+        iframeDocument.body.style.display = "flex";
+        iframeDocument.body.style.justifyContent = "left";
+        iframeDocument.body.style.alignItems = "left";
+        iframeDocument.body.style.height = "100%";
+        iframeDocument.body.style.margin = "0";
+        iframeDocument.body.innerHTML = "<p style='margin: 5pt'>Loading Pieces...</p>";
+        LoadCopilot();
+    });
+    
+    
+    ///////////////////////////////////////////////////////////
+    // Utility functions
+    ///////////////////////////////////////////////////////////
+    
+    //Convert ARGB from application theme to RGB usable by HTML and JavaScript
+    function uewv_argbToRgb(argb) {
+        let r = (argb >> 16) & 0xFF;
+        let g = (argb >> 8) & 0xFF;
+        let b = argb & 0xFF;
+
+        return `rgb(${r}, ${g}, ${b})`;
+    }
+    
+    //Setup foreground/background colors from current UltraEdit theme
+    function uewv_setTheme() {
+        location.reload();
+    }
+    
+    
+    ///////////////////////////////////////////////////////////
+    // Plugin events
+    ///////////////////////////////////////////////////////////
+    
+    //Called when a document is opened in UltraEdit
+    document.addEventListener("uewve_documentAdd", (event) => {
+    });
+
+    //Called when a document is closed in UltraEdit
+    document.addEventListener("uewve_documentRemove", (event) => {
+    });
+    
+    //Called when the active theme is changed in UltraEdit
+    document.addEventListener("uewve_themeChange", (event) => {
+        uewv_setTheme();
+    });
+    
+    //Called when all plugin initialization is complete
+    document.addEventListener("uewve_apiInitialized", (event) => {
+    });
+    
+  </script>
 </body>
 </html>

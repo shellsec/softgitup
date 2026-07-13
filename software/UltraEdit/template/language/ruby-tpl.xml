@@ -1,14 +1,14 @@
-<?xml version="1.0"?>
-<Templates encode="utf8escenc"><Template Name="if" Comments="0" Strings="0">if [+evaluation+]
+<?xml version="1.0" encoding="UTF-8"?>
+<Templates encode="utf8escenc" version="2.0"><UETemplate Name="if" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[if [+evaluation+]
 	^
-end</Template><Template Name="elsif" Comments="0" Strings="0">elsif [+evaluation+]
+end]]></UETemplate><UETemplate Name="elsif" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[elsif [+evaluation+]
 	^
-end</Template><Template Name="else" Comments="0" Strings="0">else 
-	^</Template><Template Name="while" Comments="0" Strings="0">while [+evaluation+]
+end]]></UETemplate><UETemplate Name="else" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[else 
+	^]]></UETemplate><UETemplate Name="while" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[while [+evaluation+]
 	^ # code to be executed
-end</Template><Template Name="until" Comments="0" Strings="0">until [+expression+]
+end]]></UETemplate><UETemplate Name="until" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[until [+expression+]
 	^ # code to run
-end</Template><Template Name="def" Comments="0" Strings="0">def [+functionname+]([+parameters+])
+end]]></UETemplate><UETemplate Name="def" Comments="0" Strings="0" version="1.0" Description=""><![CDATA[def [+functionname+]([+parameters+])
 	^ 
 	return
-end</Template></Templates>
+end]]></UETemplate></Templates>

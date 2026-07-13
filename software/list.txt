@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-06T17:40:28.288290",
+  "generated_at": "2026-07-13T11:56:51.065894",
   "total_software": 21,
-  "total_files": 4790,
-  "total_size": 1741156155,
+  "total_files": 4802,
+  "total_size": 1768250531,
   "software": {
     "WinMemoryCleaner": {
       "version": "20260515_144655",
@@ -85,7 +85,7 @@
       "last_updated": "2026-06-10T16:55:24.069987"
     },
     "system_good": {
-      "version": "20260706_174027",
+      "version": "20260713_115648",
       "files": [
         {
           "path": "AutoHotkey.exe",
@@ -191,9 +191,9 @@
         },
         {
           "path": "Lastb_soft_version.txt",
-          "size": 143961,
-          "hash": "def72ff90b383af51b111916d79e4c85",
-          "modified": "2026-07-06T13:04:13.016704"
+          "size": 144783,
+          "hash": "a2a3edd4d6372a4dde636e2adfc5859e",
+          "modified": "2026-07-13T11:24:09.435237"
         },
         {
           "path": "lx-music-desktop.7z",
@@ -413,8 +413,8 @@
         }
       ],
       "total_files": 54,
-      "total_size": 723184658,
-      "last_updated": "2026-07-06T17:40:27.013638"
+      "total_size": 723185480,
+      "last_updated": "2026-07-13T11:56:48.851750"
     },
     "notepad++": {
       "version": "20260604_153356",
@@ -12189,7 +12189,7 @@
       "last_updated": "2026-05-14T13:01:27.506258"
     },
     "WiseCare365": {
-      "version": "20260520_125030",
+      "version": "20260713_115649",
       "files": [
         {
           "path": "WiseCare365Portable.exe",
@@ -12206,8 +12206,8 @@
         {
           "path": "App\\AppInfo\\AppInfo.ini",
           "size": 211,
-          "hash": "ce5eabbdfc8b2af664098e140ff661c8",
-          "modified": "2026-05-18T16:30:20.242434"
+          "hash": "047628620d4bc2008fa459a960d3eca1",
+          "modified": "2026-07-10T16:51:31.944282"
         },
         {
           "path": "App\\AppInfo\\Launcher\\WiseCare365Portable.ini",
@@ -12247,21 +12247,21 @@
         },
         {
           "path": "App\\WiseCare365\\7z.dll",
-          "size": 1154200,
-          "hash": "5b1b0909f3748dc06bb666ae1df54d86",
-          "modified": "2026-05-11T14:00:58"
+          "size": 1919128,
+          "hash": "2553709ef3346bb220fbcfbf27db79c7",
+          "modified": "2026-05-11T14:00:54"
         },
         {
           "path": "App\\WiseCare365\\dc_native.dll",
-          "size": 2545536,
-          "hash": "a3ad07de702b92594e02c45e82c58c6c",
-          "modified": "2026-05-11T14:02:30"
+          "size": 4350576,
+          "hash": "df531446e2d0f7c5ddbf0293cde05112",
+          "modified": "2026-06-01T16:32:06"
         },
         {
           "path": "App\\WiseCare365\\DManager.dll",
-          "size": 3007128,
-          "hash": "2d5fa23794550448ee391bc2600c1905",
-          "modified": "2026-05-11T14:01:22"
+          "size": 4679320,
+          "hash": "a9954e0d8152c243f3b9db930da5b9f7",
+          "modified": "2026-05-11T14:01:16"
         },
         {
           "path": "App\\WiseCare365\\fileshredder.ico",
@@ -12283,15 +12283,15 @@
         },
         {
           "path": "App\\WiseCare365\\Rate.info",
-          "size": 1167251,
-          "hash": "f5a8335daa4f0eb190f8c52885e4993c",
-          "modified": "2026-04-24T14:11:28"
+          "size": 1168805,
+          "hash": "1c271805638fbb97c8c065af190ff58d",
+          "modified": "2026-07-09T15:36:08"
         },
         {
           "path": "App\\WiseCare365\\sqlite3.dll",
-          "size": 916632,
-          "hash": "540f4b9195928a1135af2263d3d44197",
-          "modified": "2026-05-11T14:02:42"
+          "size": 2902680,
+          "hash": "4f423ab12f2bd8c3fe0309c7b34ab454",
+          "modified": "2026-05-11T14:02:40"
         },
         {
           "path": "App\\WiseCare365\\ssleay32.dll",
@@ -12301,39 +12301,39 @@
         },
         {
           "path": "App\\WiseCare365\\WiseCare365.exe",
-          "size": 16087704,
-          "hash": "f9f5c4f10c82da1748ee9535137eb918",
-          "modified": "2026-05-18T15:23:46.842633"
+          "size": 21681304,
+          "hash": "e9c173b126536642b41b382ccf492ddf",
+          "modified": "2026-07-09T16:35:32.904062"
         },
         {
           "path": "App\\WiseCare365\\WiseDefrag.dll",
-          "size": 397464,
-          "hash": "5e89e8100d5f8ab25cbd81be7f544e32",
-          "modified": "2026-05-11T14:01:58"
+          "size": 508056,
+          "hash": "cf97ac4da560da7a092009d0db951886",
+          "modified": "2026-05-11T14:01:54"
         },
         {
           "path": "App\\WiseCare365\\WiseEraser.dll",
-          "size": 1459864,
-          "hash": "da84a690968560ac1b0875e961997f77",
-          "modified": "2026-05-11T14:02:06"
+          "size": 4705432,
+          "hash": "a180a49952acee7b9b39b2d42d605b6d",
+          "modified": "2026-07-09T09:12:44"
         },
         {
           "path": "App\\WiseCare365\\WiseTray.exe",
-          "size": 8411288,
-          "hash": "68e7bfed185e166376129a744e2254d7",
-          "modified": "2026-05-11T14:02:14"
+          "size": 12199064,
+          "hash": "5ba3cfcce2817dcfae355c2907c0354c",
+          "modified": "2026-07-06T15:39:04"
         },
         {
           "path": "App\\WiseCare365\\WiseTurbo.exe",
-          "size": 8745624,
-          "hash": "9d9afa813c9260bd0abe7178452830f9",
-          "modified": "2026-05-11T14:02:22"
+          "size": 12511896,
+          "hash": "640788f77e044ec7b2cfc6891c1d0499",
+          "modified": "2026-06-01T16:31:56"
         },
         {
           "path": "App\\WiseCare365\\WJSLib.dll",
-          "size": 174232,
-          "hash": "838bc9c96873c7a65a2244e583eaf1b1",
-          "modified": "2026-05-11T14:01:32"
+          "size": 289432,
+          "hash": "ab50793084129051aa07eb0bc9029b79",
+          "modified": "2026-05-29T13:58:20"
         },
         {
           "path": "App\\WiseCare365\\Languages\\Abkhazian.ini",
@@ -12373,15 +12373,15 @@
         },
         {
           "path": "App\\WiseCare365\\Languages\\Chinese(Simplified).ini",
-          "size": 148952,
-          "hash": "a76f87f247293f75860b5efd7bd546ea",
-          "modified": "2026-04-30T15:33:42"
+          "size": 146360,
+          "hash": "8c370adf0323d96fcc222fd38df67348",
+          "modified": "2026-07-08T13:17:24"
         },
         {
           "path": "App\\WiseCare365\\Languages\\Chinese(Traditional).ini",
-          "size": 140196,
-          "hash": "e9e17efc7b44f8dfdf44cc45e7e0de71",
-          "modified": "2026-04-07T10:07:12"
+          "size": 144324,
+          "hash": "7cf13b746b76645d26ad2202a9bd8ec4",
+          "modified": "2026-06-05T13:09:06"
         },
         {
           "path": "App\\WiseCare365\\Languages\\Croatian.ini",
@@ -12415,21 +12415,21 @@
         },
         {
           "path": "App\\WiseCare365\\Languages\\English.ini",
-          "size": 207912,
-          "hash": "474d872532365a95f9c8e41e8ba51aa2",
-          "modified": "2026-04-30T15:29:10"
+          "size": 208816,
+          "hash": "484bb256c4c483a74e9006fd616f54cc",
+          "modified": "2026-07-08T12:32:32"
         },
         {
           "path": "App\\WiseCare365\\Languages\\Finnish.ini",
-          "size": 227154,
-          "hash": "bf74f939d91329f22ff6b49cfb07230e",
-          "modified": "2025-11-17T09:02:00"
+          "size": 238496,
+          "hash": "c0bbf16b89447f2d89f3c8223f23d6b1",
+          "modified": "2026-06-03T13:20:10"
         },
         {
           "path": "App\\WiseCare365\\Languages\\French.ini",
-          "size": 218928,
-          "hash": "91d256b8d4014217e25bf89875c6d541",
-          "modified": "2026-01-08T11:55:26"
+          "size": 229220,
+          "hash": "14e70506e8b382b5ee88fd3dec313bb8",
+          "modified": "2026-06-02T13:54:18"
         },
         {
           "path": "App\\WiseCare365\\Languages\\Georgian.ini",
@@ -12439,9 +12439,9 @@
         },
         {
           "path": "App\\WiseCare365\\Languages\\German.ini",
-          "size": 233990,
-          "hash": "5cc3432488ea9ba9807980cea942205b",
-          "modified": "2026-02-09T09:28:00"
+          "size": 241158,
+          "hash": "422831b181a6e8ef7367cea324f1c755",
+          "modified": "2026-06-17T10:49:12"
         },
         {
           "path": "App\\WiseCare365\\Languages\\Greek.ini",
@@ -12475,15 +12475,15 @@
         },
         {
           "path": "App\\WiseCare365\\Languages\\Japanese.ini",
-          "size": 160448,
-          "hash": "7f805e4392b80e6afcc30f8ac7da1b28",
-          "modified": "2026-02-24T09:52:08"
+          "size": 164786,
+          "hash": "f23687869d81ee6b02f1422836c88d9f",
+          "modified": "2026-06-11T09:03:38"
         },
         {
           "path": "App\\WiseCare365\\Languages\\Korean.ini",
-          "size": 149492,
-          "hash": "8dee27a9cbc212ffc2d0b15eb11304d7",
-          "modified": "2025-08-09T15:51:06"
+          "size": 163622,
+          "hash": "fe98e81bfc3de8e99a76e37c89745711",
+          "modified": "2026-06-03T13:16:36"
         },
         {
           "path": "App\\WiseCare365\\Languages\\Kurdish.ini",
@@ -12505,9 +12505,9 @@
         },
         {
           "path": "App\\WiseCare365\\Languages\\Norwegian(Bokmal).ini",
-          "size": 197018,
-          "hash": "55113898e3e13550fc58938a4e28381b",
-          "modified": "2024-09-27T09:14:08"
+          "size": 218588,
+          "hash": "55e3fcb74ed9b9a78666a6f67234240d",
+          "modified": "2026-06-03T13:22:56"
         },
         {
           "path": "App\\WiseCare365\\Languages\\Norwegian(Nynorsk).ini",
@@ -12541,9 +12541,9 @@
         },
         {
           "path": "App\\WiseCare365\\Languages\\Romanian.ini",
-          "size": 235058,
-          "hash": "6a86f19d865f84eaf8b9dd5dce283d35",
-          "modified": "2026-02-25T09:19:26"
+          "size": 242376,
+          "hash": "303b44e89fc75b60e4d87e6b77b18c4d",
+          "modified": "2026-06-16T09:40:04"
         },
         {
           "path": "App\\WiseCare365\\Languages\\Russian.ini",
@@ -12559,9 +12559,9 @@
         },
         {
           "path": "App\\WiseCare365\\Languages\\Slovak.ini",
-          "size": 213154,
-          "hash": "d73d945313bdebca3b099cc626d64db4",
-          "modified": "2026-01-15T23:01:42"
+          "size": 219906,
+          "hash": "335cc4d9ee5f98ebc37bbaf056239ab6",
+          "modified": "2026-05-20T23:54:48"
         },
         {
           "path": "App\\WiseCare365\\Languages\\Slovenian.ini",
@@ -12625,8 +12625,8 @@
         }
       ],
       "total_files": 72,
-      "total_size": 54994876,
-      "last_updated": "2026-05-20T12:50:30.817633"
+      "total_size": 77928996,
+      "last_updated": "2026-07-13T11:56:49.597509"
     },
     "EditPlus": {
       "version": "20260625_160923",
@@ -20495,523 +20495,541 @@
       "last_updated": "2026-06-27T18:01:18.824384"
     },
     "UltraEdit": {
-      "version": "20260310_114745",
+      "version": "20260713_115650",
       "files": [
         {
           "path": "!)卸载清除残留.bat",
           "size": 4865,
           "hash": "438efa60f8fe0a8611730f32881b6a54",
-          "modified": "2025-07-09T16:38:50.147003"
+          "modified": "2026-07-11T19:32:26.957491"
         },
         {
           "path": "!)添删右键菜单.bat",
           "size": 5697,
           "hash": "95c892ec9a8d80cf061ad0a3781ee0a5",
-          "modified": "2025-07-09T16:38:50.148021"
+          "modified": "2021-02-20T13:30:33.944477"
+        },
+        {
+          "path": "Appx64.url",
+          "size": 123,
+          "hash": "f9476d21a85d2d6ade584f973df820df",
+          "modified": "2026-07-05T08:49:26.489219"
         },
         {
           "path": "changes.txt",
-          "size": 156429,
-          "hash": "88b48266049b1d40444e0befd4de7549",
-          "modified": "2025-07-09T16:38:50.657223"
+          "size": 167451,
+          "hash": "67cfbb46fdaf5696cd391bcc00e9c36c",
+          "modified": "2026-06-25T08:26:00"
+        },
+        {
+          "path": "changes_ultraedit.md",
+          "size": 173825,
+          "hash": "077656cea968816b1e25878311b56e2a",
+          "modified": "2026-06-04T21:28:56"
         },
         {
           "path": "dbghelp.dll",
           "size": 1508016,
           "hash": "6b811708c844e865859b25c097534e4b",
-          "modified": "2025-07-09T16:38:50.676207"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "icudt74.dll",
           "size": 30796408,
           "hash": "e4a6bfebf7e30af8d29276d4201b47d5",
-          "modified": "2025-07-09T16:38:50.935572"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "icuin74.dll",
           "size": 2920056,
           "hash": "d9d18352c38fc2bb5b5546664ac0f439",
-          "modified": "2025-07-09T16:38:50.957797"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "icuuc74.dll",
           "size": 2049144,
           "hash": "9eeee0ced4ad1370d25024f4dc5b38a6",
-          "modified": "2025-07-09T16:38:50.973651"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "idm_tidylib.dll",
           "size": 891000,
           "hash": "265dfa13f910abf6189364b6e3c70d16",
-          "modified": "2025-07-09T16:38:50.980164"
+          "modified": "2026-06-25T08:26:00"
         },
         {
-          "path": "lua5.1.dll",
-          "size": 359416,
-          "hash": "c916c7815286c5233a49deac81f8543e",
-          "modified": "2025-07-09T16:38:51.002803"
+          "path": "lua5.3.dll",
+          "size": 490904,
+          "hash": "743c633c1516fb2b9b5d2769de806ffd",
+          "modified": "2026-07-10T13:24:59.619863"
         },
         {
           "path": "ProtectionPlusDLL.dll",
-          "size": 10200176,
-          "hash": "607aa992e187e53cb112b58d6ed1168a",
-          "modified": "2025-07-09T16:38:50.595790"
+          "size": 10316976,
+          "hash": "fc1a635731dbf94d5d69a273ff0737fc",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "taglist.uet",
-          "size": 55563,
-          "hash": "357c385bb9f0565de98d28a36fef7920",
-          "modified": "2025-07-09T16:38:51.029983"
+          "size": 55572,
+          "hash": "f51801f9081f32faa234c61454d32cd4",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "UACHelper.exe",
-          "size": 3183736,
-          "hash": "82e8a59781df3c234500a4294f9a963f",
-          "modified": "2025-07-09T16:38:50.647869"
+          "size": 3177648,
+          "hash": "5d061b91a9ef323a12f9e0255b45edfa",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "ue32ctmn.dll",
-          "size": 1170544,
-          "hash": "38164ca6d7b56b5665b090e9468bc9b9",
-          "modified": "2025-07-09T16:38:51.491510"
+          "size": 1155264,
+          "hash": "773fdcbea1feaf626265348464c0bedf",
+          "modified": "2026-07-10T13:24:56"
         },
         {
           "path": "ue64ctmn.dll",
-          "size": 1292400,
-          "hash": "5a16d84013ad6057a15dd92886b96d06",
-          "modified": "2025-07-09T16:38:51.497731"
+          "size": 1264832,
+          "hash": "cd16d693d9cb6abc9beba1d19d536cb4",
+          "modified": "2026-07-10T13:24:56"
         },
         {
           "path": "uedit64.chm",
           "size": 2954423,
           "hash": "705bcbdef70df54601b658b66edb6640",
-          "modified": "2025-07-09T16:38:51.517396"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "uedit64.com",
-          "size": 306176,
-          "hash": "8e68d244f1a5b287ed06a2e17a1efffa",
-          "modified": "2025-07-09T16:38:51.522045"
+          "size": 303616,
+          "hash": "f3fef350f6798ac99d506328d5eb753c",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "uedit64.exe",
-          "size": 46200432,
-          "hash": "79fbad62356245c74d627c02ac419cb3",
-          "modified": "2025-07-09T16:38:52.028180"
+          "size": 49153728,
+          "hash": "8673980124aa362b1dfd31cfe47f920f",
+          "modified": "2026-07-10T13:33:49.925949"
         },
         {
           "path": "uedit64.lng",
-          "size": 293710,
-          "hash": "416cc4bc4bef6edf755da216eeadef19",
-          "modified": "2025-07-09T16:38:52.031300"
+          "size": 294324,
+          "hash": "03d83c0b534e8a72d0d2774169119996",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "UEDOS32.exe",
-          "size": 307824,
-          "hash": "93a1f8d1652bd2802f6d5bef2531ba39",
-          "modified": "2025-07-09T16:38:50.652039"
+          "size": 307904,
+          "hash": "4ec4817912ca5329a53e8d8b58ca9d87",
+          "modified": "2026-07-02T01:51:33"
         },
         {
           "path": "uehh.exe",
-          "size": 92784,
-          "hash": "cb082d22929ec49e8619b2bff68a1570",
-          "modified": "2025-07-09T16:38:52.041822"
+          "size": 85184,
+          "hash": "cde84238fc30f956cf5e6b226f14551e",
+          "modified": "2026-07-02T01:51:35"
         },
         {
           "path": "uejs.dll",
           "size": 995824,
           "hash": "4116dd07e6c1b693d4ebcc59a4144202",
-          "modified": "2025-07-09T16:38:52.054484"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "ueres.dll",
-          "size": 41177600,
-          "hash": "61446b71252c083abb121e7117c4420b",
-          "modified": "2025-07-09T16:38:52.231334"
+          "size": 40992448,
+          "hash": "49390236e7a48f41033c7a1fc03038c9",
+          "modified": "2026-07-02T01:51:24"
         },
         {
           "path": "WebView2Loader.dll",
           "size": 165952,
           "hash": "0ad9319fa14d39c0812583337546ca20",
-          "modified": "2025-07-09T16:38:50.655141"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "xmllint.exe",
-          "size": 1264760,
-          "hash": "a665e8dc6cb2c54240b4393e93fafc87",
-          "modified": "2025-07-09T16:38:52.285245"
+          "size": 1189552,
+          "hash": "fade5fbb15ebf1b632d03c009c75c99d",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "default data\\themes\\Charcoal.ue-theme",
           "size": 50628,
           "hash": "06e0e87c7991604c0a365eeefd4b0eec",
-          "modified": "2025-07-09T16:38:50.678314"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "default data\\themes\\Classic.ue-theme",
           "size": 38736,
           "hash": "23b6c54d2a89c4e0e3dd27b2300c2f32",
-          "modified": "2025-07-09T16:38:50.679527"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "default data\\themes\\Espresso.ue-theme",
           "size": 45301,
           "hash": "b9753883eae4884ead83d5abb1119594",
-          "modified": "2025-07-09T16:38:50.680542"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "default data\\themes\\Glitch.ue-theme",
           "size": 55032,
           "hash": "6109e7cd30ba43dac2ca9d503f027237",
-          "modified": "2025-07-09T16:38:50.682605"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "default data\\themes\\Midnight.ue-theme",
           "size": 52338,
           "hash": "4d3034d4b86abfc417cf3741f801162b",
-          "modified": "2025-07-09T16:38:50.683615"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "default data\\themes\\Modern Light.ue-theme",
           "size": 41893,
           "hash": "28fe0540f7ee2271e1bef0d4bd708f39",
-          "modified": "2025-07-09T16:38:50.685659"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "default data\\themes\\Monokai Pro.ue-theme",
           "size": 46812,
           "hash": "3217deea16d44d9e0bdc47dba253975a",
-          "modified": "2025-07-09T16:38:50.686727"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "default data\\themes\\One Dark.ue-theme",
           "size": 51535,
           "hash": "88de1b0609e72c946b5136b70f39e101",
-          "modified": "2025-07-09T16:38:50.687780"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "default data\\themes\\Predawn.ue-theme",
           "size": 48234,
           "hash": "1fdb5905e3110fb685ba610dc597e24c",
-          "modified": "2025-07-09T16:38:50.688831"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "default data\\themes\\Slate.ue-theme",
           "size": 41560,
           "hash": "183a5f791323c7ddef009771dc895937",
-          "modified": "2025-07-09T16:38:50.688831"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "default data\\themes\\Sterling.ue-theme",
           "size": 42846,
           "hash": "5422db2ddd4d6972c876b778596ce9cd",
-          "modified": "2025-07-09T16:38:50.689885"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "default data\\themes\\Studio Dark.ue-theme",
           "size": 47681,
           "hash": "f330af3dd4f487ce9448ba00ee2812f4",
-          "modified": "2025-07-09T16:38:50.690903"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "default data\\themes\\Titanium.ue-theme",
           "size": 53034,
           "hash": "0ae08a30bf0ae31be2e708dbb9259e75",
-          "modified": "2025-07-09T16:38:50.690903"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "default data\\themes\\Twilight.ue-theme",
           "size": 52629,
           "hash": "2e9becedb4f7d2b5e58e9ed6264d18b3",
-          "modified": "2025-07-09T16:38:50.691920"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "ErrorReporting\\IDMMonitor.exe",
-          "size": 153200,
-          "hash": "7ff2f2591432a43cfdeabd86ad20c26a",
-          "modified": "2025-07-09T16:38:50.151810"
+          "size": 153264,
+          "hash": "2ea2ba3b8f27dd2d922ee2657008e3d7",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "ErrorReporting\\IDMRem.dll",
-          "size": 132720,
-          "hash": "4d94fcb379c8e312980815a2f1d92efb",
-          "modified": "2025-07-09T16:38:50.390779"
+          "size": 132784,
+          "hash": "0846d4753ec389a6f5a68ea155864066",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\style.css",
           "size": 4201,
           "hash": "520bfb89df8600048077940d2dd5bb8d",
-          "modified": "2025-07-09T16:38:50.707479"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\commandpalette\\commandpalette.xml",
           "size": 168838,
           "hash": "b16b5b741013f52d4b70ecf204c8f06e",
-          "modified": "2025-07-09T16:38:50.693963"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\fp\\fp.html",
           "size": 32941,
           "hash": "352dc37bd1b39c6ee7d81a24bdc0826b",
-          "modified": "2025-07-09T16:38:50.695139"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\fp\\style.css",
           "size": 2366,
           "hash": "5bfadcafe587042110383181e622af73",
-          "modified": "2025-07-09T16:38:50.699189"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\fp\\js\\arrange.js",
           "size": 3025,
           "hash": "ab5f8ddd3a109efba922a337da97a8fa",
-          "modified": "2025-07-09T16:38:50.696154"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\fp\\js\\localize.js",
           "size": 9311,
           "hash": "d6d12e84cf845f46047647f3138d7b9f",
-          "modified": "2025-07-09T16:38:50.697163"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\fp\\js\\style.js",
           "size": 2657,
           "hash": "e015938748f365309025f82a8eaefcfe",
-          "modified": "2025-07-09T16:38:50.698176"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\images\\bg-repeat.gif",
           "size": 752,
           "hash": "98a226006895e028187d0bafe4d1b784",
-          "modified": "2025-07-09T16:38:50.701256"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\images\\footer.gif",
           "size": 534,
           "hash": "31cd6df3acaffe2ef11fd191515ea36a",
-          "modified": "2025-07-09T16:38:50.702278"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\images\\header.gif",
           "size": 3220,
           "hash": "a324dc91b45bd8cd7e2649696ebe33b6",
-          "modified": "2025-07-09T16:38:50.703314"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\images\\uc_icon.gif",
           "size": 861,
           "hash": "0f274b86296511946712372033ba871c",
-          "modified": "2025-07-09T16:38:50.704329"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\images\\ue3_icon.gif",
           "size": 637,
           "hash": "645ae243de0e55352f61e092d1d92130",
-          "modified": "2025-07-09T16:38:50.705342"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\images\\ues_icon.gif",
           "size": 924,
           "hash": "c72cd2dd099b6add590ee3ac60ee22cd",
-          "modified": "2025-07-09T16:38:50.706393"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\images\\ue_icon.gif",
           "size": 957,
           "hash": "c7adecc3a9b3687fb69941fecb1309cb",
-          "modified": "2025-07-09T16:38:50.706393"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\images\\us_icon.gif",
           "size": 951,
           "hash": "2ce19b954a24b742ac869b592d5d751c",
-          "modified": "2025-07-09T16:38:50.707479"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\welcome\\arrange.js",
-          "size": 8582,
-          "hash": "ba5ec30fd6c0012502c299734fc1629b",
-          "modified": "2025-07-09T16:38:50.708528"
+          "size": 9285,
+          "hash": "058327d068e4705fb8704e4bd1cad423",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\welcome\\idmwelcome.html",
-          "size": 7206,
-          "hash": "cfade31a1d79763cf9d4ca21d0ef8e5d",
-          "modified": "2025-07-09T16:38:50.709544"
+          "size": 7074,
+          "hash": "aa93bd4bd77a7b500f69e68ef3ada413",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\welcome\\strings.js",
-          "size": 10969,
-          "hash": "103ffc418b5ef86e417c5c9f2f0d99bb",
-          "modified": "2025-07-09T16:38:50.724670"
+          "size": 11009,
+          "hash": "34be242ad3de37ebde189b10a9b4a4ba",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\welcome\\style.css",
-          "size": 3340,
-          "hash": "85ebe0a11f06ac2e1cfa3a13b7a2512a",
-          "modified": "2025-07-09T16:38:50.725796"
+          "size": 3904,
+          "hash": "1986aa2f920f2c466df2dc7b7955af5c",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\welcome\\t2.css",
           "size": 1500,
-          "hash": "20d67d7a5fa946d7282e28edab111b2a",
-          "modified": "2025-07-09T16:38:50.725796"
+          "hash": "8691ff8b49f1d98a9711a443c98e2b28",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\welcome\\t3.css",
           "size": 414,
           "hash": "e1fba6bd37c41698e1613636d94579d2",
-          "modified": "2025-07-09T16:38:50.726808"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\welcome\\t4.css",
           "size": 382,
           "hash": "72b00c45ab4cd8315e8268b8bc55ae01",
-          "modified": "2025-07-09T16:38:50.726808"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\welcome\\t5.css",
           "size": 414,
           "hash": "a68e98bb6f4c4ea6a9229edb4bf5ab8a",
-          "modified": "2025-07-09T16:38:50.727818"
+          "modified": "2026-06-25T08:26:00"
+        },
+        {
+          "path": "extras\\welcome\\images\\arrow.png",
+          "size": 4679,
+          "hash": "1a6c92c10d87a28d8d80b8eb3bd5cbf0",
+          "modified": "2026-06-02T11:10:11"
         },
         {
           "path": "extras\\welcome\\images\\check.png",
           "size": 2300,
           "hash": "b3d49080812dfccec9b8efbde61ad3bd",
-          "modified": "2025-07-09T16:38:50.709544"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\welcome\\images\\check_lt.png",
           "size": 1597,
           "hash": "616dfd3fe78bd468495712bb5ed45e54",
-          "modified": "2025-07-09T16:38:50.710784"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\welcome\\images\\layout_balanced.png",
           "size": 1190,
           "hash": "54877b57d1e6ba4266a8f6be890532e6",
-          "modified": "2025-07-09T16:38:50.717041"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\welcome\\images\\layout_clean.png",
           "size": 1152,
           "hash": "18fc43b0ac75fe0df9a83bb05816f05a",
-          "modified": "2025-07-09T16:38:50.718048"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\welcome\\images\\layout_lean.png",
           "size": 1181,
           "hash": "03e756657eb023112d81e5078522e353",
-          "modified": "2025-07-09T16:38:50.719081"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\welcome\\images\\layout_multi-window.png",
           "size": 1208,
           "hash": "9d79e4f97ebafaa32e3db90c2637de06",
-          "modified": "2025-07-09T16:38:50.719081"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\welcome\\images\\menus.png",
           "size": 18865,
           "hash": "9473b81c8ea0afd04b0e2f6291f0d8ca",
-          "modified": "2025-07-09T16:38:50.720057"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\welcome\\images\\menus_toolbars.png",
           "size": 18661,
           "hash": "3a70d60034ec6f1abd4206292b045d9e",
-          "modified": "2025-07-09T16:38:50.720565"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\welcome\\images\\ribbon.png",
           "size": 26526,
           "hash": "dd2bebf4e7acaebc8c366a6e0e09dccc",
-          "modified": "2025-07-09T16:38:50.721602"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\welcome\\images\\theme_1.png",
           "size": 23090,
           "hash": "c6b19099ebac6721e4c8db1880dd3bc5",
-          "modified": "2025-07-09T16:38:50.721602"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\welcome\\images\\theme_2.png",
           "size": 24455,
           "hash": "4fe9cb2c63d0461c5ce95e797626b76d",
-          "modified": "2025-07-09T16:38:50.722638"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\welcome\\images\\theme_3.png",
           "size": 22345,
           "hash": "bedabaef866dc6f444b88555730481eb",
-          "modified": "2025-07-09T16:38:50.723654"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\welcome\\images\\theme_4.png",
           "size": 22951,
           "hash": "b50a9dd0171ff294c1963fd4d5a60737",
-          "modified": "2025-07-09T16:38:50.723654"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\welcome\\images\\theme_5.png",
           "size": 23692,
           "hash": "1b9cbe11c144bb6541b85d4d1dc1718e",
-          "modified": "2025-07-09T16:38:50.724670"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\welcome\\images\\chs\\menus.png",
           "size": 26423,
           "hash": "eaf09032437ea994dc4281111a4b6094",
-          "modified": "2025-07-09T16:38:50.711794"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\welcome\\images\\chs\\menus_toolbars.png",
           "size": 21393,
           "hash": "63f51db48d53994d28e2806b96a735af",
-          "modified": "2025-07-09T16:38:50.711794"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\welcome\\images\\chs\\ribbon.png",
           "size": 29388,
           "hash": "14a5d1d7e28531cdbce6e8a49a35c7ec",
-          "modified": "2025-07-09T16:38:50.712838"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\welcome\\images\\chs\\theme_1.png",
           "size": 23090,
           "hash": "c6b19099ebac6721e4c8db1880dd3bc5",
-          "modified": "2025-07-09T16:38:50.713858"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\welcome\\images\\chs\\theme_2.png",
           "size": 24455,
           "hash": "4fe9cb2c63d0461c5ce95e797626b76d",
-          "modified": "2025-07-09T16:38:50.714897"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\welcome\\images\\chs\\theme_3.png",
           "size": 22345,
           "hash": "bedabaef866dc6f444b88555730481eb",
-          "modified": "2025-07-09T16:38:50.714897"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\welcome\\images\\chs\\theme_4.png",
           "size": 22951,
           "hash": "b50a9dd0171ff294c1963fd4d5a60737",
-          "modified": "2025-07-09T16:38:50.715919"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "extras\\welcome\\images\\chs\\theme_5.png",
           "size": 23692,
           "hash": "1b9cbe11c144bb6541b85d4d1dc1718e",
-          "modified": "2025-07-09T16:38:50.717041"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "GNU\\astyle.exe",
           "size": 642032,
           "hash": "61e336a67814bc5778a85f3a9e271e99",
-          "modified": "2025-07-09T16:38:50.399298"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "GNU\\cmark-gfm-extensions.dll",
@@ -21027,141 +21045,147 @@
         },
         {
           "path": "GNU\\cmark-gfm.exe",
-          "size": 32152,
-          "hash": "dfefe680bad043c53d889a70b34b9752",
-          "modified": "2025-07-09T16:38:50.410649"
+          "size": 246464,
+          "hash": "f7398be1dcf36fd910a2db1600c3daa3",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "GNU\\ctags.exe",
-          "size": 1022576,
-          "hash": "96139b74f477f0b146b4c74147072032",
-          "modified": "2025-07-09T16:38:50.420468"
+          "size": 1036480,
+          "hash": "eb077fa0703fdc1e55ce941f18f200ec",
+          "modified": "2026-07-02T01:51:27"
         },
         {
           "path": "GNU\\libxml2.dll",
-          "size": 1424504,
-          "hash": "5f70f6c18c95fd4a74afec52fdbd9653",
-          "modified": "2025-07-09T16:38:50.435171"
+          "size": 1306304,
+          "hash": "d5fecdc6d435d0d4bc960840136efd9e",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "GNU\\licenses\\astyle.license",
           "size": 7922,
           "hash": "e4ca5986b66eb549d5bbcf295c09af80",
-          "modified": "2025-07-09T16:38:50.436190"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "GNU\\licenses\\boost.license",
           "size": 1403,
           "hash": "abbb8d344fec0fb192130692ef3e6afe",
-          "modified": "2025-07-09T16:38:50.437337"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "GNU\\licenses\\cmark-gfm.license",
           "size": 7737,
           "hash": "9591f64d1b23c74f8009cac1c9ad6821",
-          "modified": "2025-07-09T16:38:50.438378"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "GNU\\licenses\\ctags.license",
           "size": 18687,
           "hash": "86008e4c0e98c01e476302e1d88acf27",
-          "modified": "2025-07-09T16:38:50.439424"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "GNU\\licenses\\curl.license",
           "size": 1095,
           "hash": "28e9fd7f71eaae7db5feadab33d0d0df",
-          "modified": "2025-07-09T16:38:50.440461"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "GNU\\licenses\\iconv.license",
           "size": 25773,
           "hash": "d0628ce7be6a8ae5d64a9a3a75027b4b",
-          "modified": "2025-07-09T16:38:50.440461"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "GNU\\licenses\\icu.license",
           "size": 2400,
           "hash": "7dfd69d41ecc6d7b75a0a732426552fd",
-          "modified": "2025-07-09T16:38:50.441473"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "GNU\\licenses\\libjpeg.license",
           "size": 1126,
           "hash": "1288bcf00ab6ab70a7d7e512ff68e437",
-          "modified": "2025-07-09T16:38:50.442484"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "GNU\\licenses\\libpng.license",
           "size": 5477,
           "hash": "e3a680aabd8c2af97c89c0786e007f50",
-          "modified": "2025-07-09T16:38:50.442484"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "GNU\\licenses\\libssh2.license",
           "size": 2000,
           "hash": "21be00e84b2260277708720940a7b301",
-          "modified": "2025-07-09T16:38:50.443495"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "GNU\\licenses\\libtiff.license",
           "size": 1162,
           "hash": "cce55a8974fad27933e59742cec07388",
-          "modified": "2025-07-09T16:38:50.443495"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "GNU\\licenses\\libxml2.license",
           "size": 1297,
           "hash": "399f2c2b83142b9cf22d37d0193af178",
-          "modified": "2025-07-09T16:38:50.444506"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "GNU\\licenses\\openssl.license",
           "size": 6244,
           "hash": "fa3ba8f723db9109f2bd56b118fa60b4",
-          "modified": "2025-07-09T16:38:50.445652"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "GNU\\licenses\\tidy.license",
           "size": 2087,
           "hash": "8df8ed91fe02b6fe993c19479dc83c52",
-          "modified": "2025-07-09T16:38:50.446662"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "GNU\\licenses\\wxWidgets.license",
           "size": 2464,
           "hash": "cc4d24fc3b83513feda7353729f294ab",
-          "modified": "2025-07-09T16:38:50.446662"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "GNU\\licenses\\zlib.license",
           "size": 1170,
           "hash": "2eddbbf73bc5f57eb25e62648127079d",
-          "modified": "2025-07-09T16:38:50.447672"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "GNU\\sort\\cyggcc_s-seh-1.dll",
           "size": 85640,
           "hash": "0134f5b2af7b29bf389043960a2277b2",
-          "modified": "2025-07-09T16:38:50.449766"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "GNU\\sort\\cygiconv-2.dll",
           "size": 1098376,
           "hash": "b4fa9ce0696916abe783ff09e79d79b4",
-          "modified": "2025-07-09T16:38:50.459136"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "GNU\\sort\\cygintl-8.dll",
           "size": 53384,
           "hash": "e72b113918fb572c129e721e8ef2f35d",
-          "modified": "2025-07-09T16:38:50.460176"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "GNU\\sort\\cygwin1.dll",
           "size": 3579952,
           "hash": "158af24d38351f1f9b840f7418996449",
-          "modified": "2025-07-09T16:38:50.488590"
+          "modified": "2026-06-25T08:26:00"
+        },
+        {
+          "path": "GNU\\sort\\gnu_sort.exe",
+          "size": 119432,
+          "hash": "bf8903357955e01971e7a640fdee81dc",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "GNU\\sort\\sort.exe",
@@ -21173,199 +21197,235 @@
           "path": "GNU\\src\\source_code.txt",
           "size": 1717,
           "hash": "282da728076d3c0c742fee4f00eafda4",
-          "modified": "2025-07-09T16:38:50.491670"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "lst\\gl_js.js",
           "size": 38201,
           "hash": "5058451b71fa25465d191beaea3a4cf3",
-          "modified": "2025-07-09T16:38:50.981184"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "lst\\gl_pascal.cs",
           "size": 76404,
           "hash": "2c580e137bb2cb00444814abfc998115",
-          "modified": "2025-07-09T16:38:50.982206"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "lst\\gl_pb.pb",
           "size": 28752,
           "hash": "25f864f98eb4111cffddc36e11579bd8",
-          "modified": "2025-07-09T16:38:50.984308"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "lst\\gl_php.php",
           "size": 194070,
           "hash": "6f18a60bcd5abd9956508ac9911516a1",
-          "modified": "2025-07-09T16:38:50.988469"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "lst\\gl_py.py",
           "size": 354267,
           "hash": "27b7b8aa0df61992b8515952752ea328",
-          "modified": "2025-07-09T16:38:50.994872"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "lst\\gl_rb.rb",
           "size": 16,
           "hash": "e13ea7e55cab51dfc73295211fb2ab8d",
-          "modified": "2025-07-09T16:38:50.997626"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "lst\\gl_vbs.cs",
           "size": 5948,
           "hash": "6a6a42d9d8960494a330e712491f7931",
-          "modified": "2025-07-09T16:38:50.998643"
+          "modified": "2026-06-25T08:26:00"
+        },
+        {
+          "path": "plugins\\Ask UltraEdit\\AskUltraEdit.html",
+          "size": 9506,
+          "hash": "75a4f11bd264db5dd257305e54664924",
+          "modified": "2026-06-25T08:26:00"
+        },
+        {
+          "path": "plugins\\Ask UltraEdit\\AskUltraEdit.js",
+          "size": 1692,
+          "hash": "e37610629b5d4c778debd17ff67ff1c9",
+          "modified": "2026-06-25T08:26:00"
+        },
+        {
+          "path": "plugins\\Ask UltraEdit\\manifest.json",
+          "size": 998,
+          "hash": "bfb91782bb54808232e8272c8af135fd",
+          "modified": "2026-06-25T08:26:00"
+        },
+        {
+          "path": "plugins\\Ask UltraEdit\\ue-chat.png",
+          "size": 23225,
+          "hash": "3c1d2fc63ca16314a666ae38e959f44c",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "plugins\\code surround\\CodeSurround.js",
           "size": 8378,
           "hash": "fbcd0c5ecd524e402606e60ddd6b8aa7",
-          "modified": "2025-07-09T16:38:51.007026"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "plugins\\code surround\\manifest.json",
           "size": 1286,
           "hash": "587cfd882c8feef46f8309741826aada",
-          "modified": "2025-07-09T16:38:51.007026"
+          "modified": "2026-06-25T08:26:00"
+        },
+        {
+          "path": "plugins\\EDI Functions\\EDIFunctions.js",
+          "size": 7632,
+          "hash": "da824b3ea456b0475549e914fe42fee9",
+          "modified": "2026-06-25T08:26:00"
+        },
+        {
+          "path": "plugins\\EDI Functions\\manifest.json",
+          "size": 612,
+          "hash": "3fa60ce29cafc6d70557797fddd62ed3",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "plugins\\file splitter\\manifest.json",
           "size": 1092,
           "hash": "6e3d382c2cb4852873837915f4ce8f3b",
-          "modified": "2025-07-09T16:38:51.009280"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "plugins\\file splitter\\SplitFile.js",
           "size": 10728,
           "hash": "f2f8b48785137913a5a18cf923adf94e",
-          "modified": "2025-07-09T16:38:51.008262"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "plugins\\json to xml\\json-to-xml.js",
           "size": 25996,
           "hash": "bfcc68bac3e412867130e61e0490e761",
-          "modified": "2025-07-09T16:38:51.012401"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "plugins\\json to xml\\manifest.json",
           "size": 1260,
           "hash": "2092e7103daf6bfc00ce98ea83dc1fc6",
-          "modified": "2025-07-09T16:38:51.013809"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "plugins\\json to xml\\XmlConverter.js",
           "size": 4388,
           "hash": "5c2215548829c9575c66b1f5ac895f85",
-          "modified": "2025-07-09T16:38:51.011383"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "plugins\\pieces\\dark-pieces-circle.png",
           "size": 11797,
           "hash": "3bebbead37f09e5ca49ca71de39ab7cb",
-          "modified": "2025-07-09T16:38:51.014832"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "plugins\\pieces\\dark-pieces-logo.png",
           "size": 55147,
           "hash": "b3626e5ce01b3e2652e7c6a20429126e",
-          "modified": "2025-07-09T16:38:51.016936"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "plugins\\pieces\\index.html",
-          "size": 19286,
-          "hash": "eaff3ca0e9950817f4de009f92f03a55",
-          "modified": "2025-07-09T16:38:51.017957"
+          "size": 31864,
+          "hash": "285e0302e95e3b664c35107a3c7be598",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "plugins\\pieces\\light-pieces-circle.png",
           "size": 12626,
           "hash": "aecd1aa24c17db9d60c358d34449d7d1",
-          "modified": "2025-07-09T16:38:51.017957"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "plugins\\pieces\\light-pieces-logo.png",
           "size": 9310,
           "hash": "c87f6ed68561d836374b79529cc7992a",
-          "modified": "2025-07-09T16:38:51.018976"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "plugins\\pieces\\manifest.json",
           "size": 520,
-          "hash": "9f6a0808455a3b7f31404061a898202c",
-          "modified": "2025-07-09T16:38:51.020520"
+          "hash": "00bcb9ddcb680edf165f0f14f5453ab9",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "plugins\\pieces\\Pieces.js",
           "size": 1068,
           "hash": "fbe38f8888f080f2f8131f05a5d77d58",
-          "modified": "2025-07-09T16:38:51.014832"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "plugins\\sql formatter\\manifest.json",
           "size": 1150,
           "hash": "b9332cbf70dc5d530da24b1b1302497a",
-          "modified": "2025-07-09T16:38:51.021539"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "plugins\\sql formatter\\sql-formatter-min.js",
           "size": 459656,
           "hash": "16ec5c5749c9b8736b2f288a1d45bce0",
-          "modified": "2025-07-09T16:38:51.024877"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "plugins\\sql formatter\\SQLFormatter.js",
           "size": 6612,
           "hash": "0335ebf0f402032692d25eb465f81720",
-          "modified": "2025-07-09T16:38:51.021539"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "plugins\\tabs to spaces\\ConvertTabsToSpacesLeading.js",
           "size": 4900,
           "hash": "d8cf347e2074d2253acd2871daec23f2",
-          "modified": "2025-07-09T16:38:51.025896"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "plugins\\tabs to spaces\\manifest.json",
           "size": 1164,
           "hash": "e4c782b3f508ef08a7aef83eb4935034",
-          "modified": "2025-07-09T16:38:51.026906"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "plugins\\WebTools\\manifest.json",
           "size": 724,
           "hash": "aef0fa4a33574660bed6bb35ae0a5603",
-          "modified": "2025-07-09T16:38:51.005860"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "plugins\\WebTools\\WebTools.html",
           "size": 9802,
           "hash": "21cb07683754bcf7886165820e6c35f6",
-          "modified": "2025-07-09T16:38:51.004840"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "plugins\\WebTools\\WebTools.js",
           "size": 1144,
           "hash": "7b57393285f952e4431a199c1d6afd4a",
-          "modified": "2025-07-09T16:38:51.004840"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "scripts\\header.js",
           "size": 1517,
           "hash": "348453a8e9ef18916ada44a588a4a89f",
-          "modified": "2025-07-09T16:38:51.027949"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "scripts\\hello.js",
           "size": 1105,
           "hash": "0d962a4145a505bf555be8a614d30f54",
-          "modified": "2025-07-09T16:38:51.027949"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "scripts\\stringvar.js",
           "size": 1608,
           "hash": "f3bdb14a59074f95984318cf967548d2",
-          "modified": "2025-07-09T16:38:51.028968"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "template\\language\\batch-tpl.xml",
@@ -21375,75 +21435,75 @@
         },
         {
           "path": "template\\language\\csharp-tpl.xml",
-          "size": 3177,
-          "hash": "cd11be506d447cd2c4ad608c22849dae",
-          "modified": "2025-07-09T16:38:51.032050"
+          "size": 6495,
+          "hash": "cdca741b8664e241314e2ea7b4531d07",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "template\\language\\css-tpl.xml",
-          "size": 994,
-          "hash": "0ceac00dc091fe00c4aadcef9a81591e",
-          "modified": "2025-07-09T16:38:51.033105"
+          "size": 1795,
+          "hash": "7dad6bb9848f4d68a03fd2a30c35b4aa",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "template\\language\\c_cplusplus-tpl.xml",
-          "size": 3383,
-          "hash": "f96244e4f8cfbec99fee54d2d7f7610b",
-          "modified": "2025-07-09T16:38:51.032050"
+          "size": 6618,
+          "hash": "3a979d211fe11ff01f40567bf1d612b2",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "template\\language\\html-tpl.xml",
-          "size": 2154,
-          "hash": "2a23429e1df99dc4ccbc40dbc884b654",
-          "modified": "2025-07-09T16:38:51.034150"
+          "size": 2114,
+          "hash": "dae7fb5c6d59784485caac3c6187d9c5",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "template\\language\\java-tpl.xml",
-          "size": 2335,
-          "hash": "46949923b9f40bb6d6b514910c686161",
-          "modified": "2025-07-09T16:38:51.034150"
+          "size": 3488,
+          "hash": "422d2d33e5315c18b35a83934f56d27d",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "template\\language\\javascript-tpl.xml",
-          "size": 946,
-          "hash": "590feff65529fe5764f61392aab7e4d2",
-          "modified": "2025-07-09T16:38:51.035170"
+          "size": 1599,
+          "hash": "e355505319e8dbf36902ff8ac065721f",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "template\\language\\mysql-tpl.xml",
-          "size": 800,
-          "hash": "cb7c45b1fe6ac009a1b0592970dd5782",
-          "modified": "2025-07-09T16:38:51.035170"
+          "size": 1391,
+          "hash": "b9a199e03734141e1111be607dbdbfa8",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "template\\language\\perl-tpl.xml",
-          "size": 844,
-          "hash": "e3ca1269c7a97991ad87688b81e08a7a",
-          "modified": "2025-07-09T16:38:51.036193"
+          "size": 1232,
+          "hash": "5d17c23f0a095bdbc05848be5ce58adc",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "template\\language\\php-tpl.xml",
-          "size": 9624,
-          "hash": "54ebfb69a4172f24ef88ce6e68be6220",
-          "modified": "2025-07-09T16:38:51.036193"
+          "size": 18293,
+          "hash": "6d0b06cec6d2bebe546e2fbfdb2210b3",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "template\\language\\powershell-tpl.xml",
-          "size": 217,
-          "hash": "b00d3c05b981186beace7a9dd4076df1",
-          "modified": "2025-07-09T16:38:51.037306"
+          "size": 316,
+          "hash": "1487c33df76379544a08134bf918305d",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "template\\language\\python-tpl.xml",
-          "size": 832,
-          "hash": "849363748affb719ed135ae631bdfab7",
-          "modified": "2025-07-09T16:38:51.037306"
+          "size": 1223,
+          "hash": "8367d039d0f3e7c1c44bdbfdb0a00a8d",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "template\\language\\ruby-tpl.xml",
-          "size": 629,
-          "hash": "9c1b8abec345a7f4263248796ae05bed",
-          "modified": "2025-07-09T16:38:51.038440"
+          "size": 930,
+          "hash": "25bedb36c9a2203888dd74fda86cc851",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "template\\language\\shell-tpl.xml",
@@ -21453,15 +21513,15 @@
         },
         {
           "path": "template\\language\\vbscript-tpl.xml",
-          "size": 892,
-          "hash": "31c36080dda514ec899f2c5cf7b9e18d",
-          "modified": "2025-07-09T16:38:51.039451"
+          "size": 1283,
+          "hash": "a9c39cce98f8b8ac79ac2b645c8d7781",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "template\\language\\visualbasic-tpl.xml",
-          "size": 885,
-          "hash": "05a7a3b7ab71664ecb2b871ca10d56e2",
-          "modified": "2025-07-09T16:38:51.040463"
+          "size": 1276,
+          "hash": "6aaa69de4d21b7e5b16a7f203e341256",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "template\\language\\wf-tpl.xml",
@@ -21473,294 +21533,306 @@
           "path": "tools\\jsl\\jsl.default.conf",
           "size": 6191,
           "hash": "f6ba40f801a309bf9a388db067c0a2bd",
-          "modified": "2025-07-09T16:38:51.043503"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "tools\\jsl\\jsl.exe",
           "size": 571688,
           "hash": "4196ca107c0666b6769b2ca937da07d0",
-          "modified": "2025-07-09T16:38:51.051800"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "translations\\zh_CN\\skpp.mo",
           "size": 27724,
           "hash": "2f45cba96adf61463a8ce3c6c4dc4f1f",
-          "modified": "2025-07-09T16:38:51.052814"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "translations\\zh_CN\\wxstd.mo",
           "size": 84906,
           "hash": "313e1d37f357141bbfae31f8ea35a732",
-          "modified": "2025-07-09T16:38:51.055075"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "uclite\\ucl.chm",
           "size": 254049,
           "hash": "a9e1819e266b6053919d86ed9f9e7a82",
-          "modified": "2025-07-09T16:38:51.064227"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "uclite\\ucl.exe",
-          "size": 33947768,
-          "hash": "26a538dc48f560371eb25d0704c43107",
-          "modified": "2025-07-09T16:38:51.356289"
+          "size": 34481344,
+          "hash": "526b11b544cc4566ae2df70dbcd21d72",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "uclite\\ucres.dll",
-          "size": 12559992,
-          "hash": "c5b8d9b67cf5c9f7ca8393e99d885ceb",
-          "modified": "2025-07-09T16:38:51.477703"
+          "size": 12803776,
+          "hash": "f1c099fafb864e39d6f652fd640cd946",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "uclite\\default data\\themes\\Classic.ue-theme",
-          "size": 38140,
-          "hash": "10627b6e5195dc889d917f9d294303ed",
-          "modified": "2025-07-09T16:38:51.057104"
+          "size": 37788,
+          "hash": "3cf9d091591363b12f959e361ed120b8",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "uclite\\default data\\themes\\Espresso.ue-theme",
-          "size": 40392,
-          "hash": "bcedcba5609ed08324d8fdefc2d74b82",
-          "modified": "2025-07-09T16:38:51.058113"
+          "size": 40002,
+          "hash": "98cae083218de0ecd441d15630a737d5",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "uclite\\default data\\themes\\Midnight.ue-theme",
-          "size": 49570,
-          "hash": "5e0bcb3d0ffd59e9b8254a5fbafa7b94",
-          "modified": "2025-07-09T16:38:51.059123"
+          "size": 49055,
+          "hash": "7b7a0e8f79f6461d324567c64474ac09",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "uclite\\default data\\themes\\Modern Light.ue-theme",
-          "size": 36004,
-          "hash": "53eacbeaeb7f79a0fcbb45c411bc19a0",
-          "modified": "2025-07-09T16:38:51.060135"
+          "size": 35674,
+          "hash": "bcb3162e676d7d141d7ddc391858e3b4",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "uclite\\default data\\themes\\Slate.ue-theme",
-          "size": 34488,
-          "hash": "f4b9b930cd0a85e20aff6da2fbd1c564",
-          "modified": "2025-07-09T16:38:51.061148"
+          "size": 34181,
+          "hash": "2e5aabd8ca3b74e6298e6fb0d2f1c76a",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "uclite\\default data\\themes\\Sterling.ue-theme",
-          "size": 34894,
-          "hash": "52806227ef582bc947db96e18222ebeb",
-          "modified": "2025-07-09T16:38:51.061148"
+          "size": 34579,
+          "hash": "62db028dd6c4f147b9da546bc6680e74",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "uclite\\default data\\themes\\Titanium.ue-theme",
-          "size": 47497,
-          "hash": "d928fb86f673c4e88dc9a007f22a25b2",
-          "modified": "2025-07-09T16:38:51.062161"
+          "size": 47019,
+          "hash": "104aeb5b216d0e43b075a5a84269223c",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\batch.uew",
           "size": 2661,
           "hash": "4f3a58bb5f0bb54a588d04a023888a38",
-          "modified": "2025-07-09T16:38:52.232386"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\csharp.uew",
           "size": 2244,
           "hash": "d4c35195ed085ac7bc3f9b14234fc910",
-          "modified": "2025-07-09T16:38:52.234419"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\css.uew",
-          "size": 27858,
-          "hash": "2931b2c913556ef1554161818caba108",
-          "modified": "2025-07-09T16:38:52.235440"
+          "size": 27863,
+          "hash": "43449359b2cc9ede555bb0e226f6091d",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\c_cplusplus.uew",
           "size": 4555,
           "hash": "c60459f0e0f8c76120d893cd359004c4",
-          "modified": "2025-07-09T16:38:52.233403"
+          "modified": "2026-06-25T08:26:00"
+        },
+        {
+          "path": "wordfiles\\EDI X12.uew",
+          "size": 4174,
+          "hash": "e2bc7ef1a8842f58572fd8f0bd24ecf0",
+          "modified": "2026-06-25T08:26:00"
+        },
+        {
+          "path": "wordfiles\\EDIFACT.uew",
+          "size": 765,
+          "hash": "8cc8bc718da38f0742d7aba9c618d484",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\html.uew",
           "size": 24726,
           "hash": "b69d26dfa0437b94cb7d45b114c6188e",
-          "modified": "2025-07-09T16:38:52.238640"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\java.uew",
           "size": 8934,
           "hash": "9f58a5e1cb1431e4406cf50861a43811",
-          "modified": "2025-07-09T16:38:52.240232"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\javascript.uew",
           "size": 9793,
           "hash": "4eecd58e264d6301e9f0fb4c2ceaf98c",
-          "modified": "2025-07-09T16:38:52.241251"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\json.uew",
-          "size": 355,
-          "hash": "882119c0d0955d5dff92b4d954345524",
-          "modified": "2025-07-09T16:38:52.242268"
+          "size": 357,
+          "hash": "0ce4281c42ba6791d10dc9993b23f6fc",
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\markdown.uew",
           "size": 316,
           "hash": "86979f9a5c32f6342a9f520f2f1df2dc",
-          "modified": "2025-07-09T16:38:52.255880"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\mysql.uew",
           "size": 4067,
           "hash": "15267b18b036909523aee52048003993",
-          "modified": "2025-07-09T16:38:52.256916"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\perl.uew",
           "size": 4933,
           "hash": "29a980dc30c4bbbcc4af7698c393cefc",
-          "modified": "2025-07-09T16:38:52.257936"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\php.uew",
           "size": 140489,
           "hash": "e1e3ce86900fc04b06d0c7778867462b",
-          "modified": "2025-07-09T16:38:52.262118"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\powershell.uew",
           "size": 21133,
           "hash": "7a076c5833f935601ff74f177e229c30",
-          "modified": "2025-07-09T16:38:52.263162"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\python.uew",
           "size": 6639,
           "hash": "834dd8221e425c7da37d3c0cee1ddb24",
-          "modified": "2025-07-09T16:38:52.264180"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\ruby.uew",
           "size": 9158,
           "hash": "aff4f178fcb46ba0f47c2f0f06fde50b",
-          "modified": "2025-07-09T16:38:52.265195"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\shell.uew",
           "size": 4522,
           "hash": "7ae912768f3c5e4dba46dad8220e5234",
-          "modified": "2025-07-09T16:38:52.266241"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\vbscript.uew",
           "size": 9498,
           "hash": "69d49e328a53f8fefd703eacedd6c94c",
-          "modified": "2025-07-09T16:38:52.267380"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\visualbasic.uew",
           "size": 8363,
           "hash": "62db1be7204dd4db2693fd883d6255f7",
-          "modified": "2025-07-09T16:38:52.267380"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\wf.uew",
           "size": 1954,
           "hash": "d2d962a80a2d023fda93c2174c970193",
-          "modified": "2025-07-09T16:38:52.268429"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\xml.uew",
           "size": 15575,
           "hash": "44173c129e690a2232fab34ff789abc7",
-          "modified": "2025-07-09T16:38:52.269447"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\legacy\\csharp.uew",
           "size": 2145,
           "hash": "85013682abab4311d4689d1c3a141417",
-          "modified": "2025-07-09T16:38:52.245331"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\legacy\\css.uew",
           "size": 19510,
           "hash": "2798603e41ab9eaf0a17d2416740183b",
-          "modified": "2025-07-09T16:38:52.246374"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\legacy\\c_cplusplus.uew",
           "size": 4986,
           "hash": "2b5638849438652ce27ec75b9249a71b",
-          "modified": "2025-07-09T16:38:52.244312"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\legacy\\html.uew",
           "size": 6727,
           "hash": "aadbc8ee2079778c4e873f9c5f2b3e1b",
-          "modified": "2025-07-09T16:38:52.247426"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\legacy\\java.uew",
           "size": 8834,
           "hash": "7d3a9a6974190264fd4186028d619a7a",
-          "modified": "2025-07-09T16:38:52.248445"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\legacy\\javascript.uew",
           "size": 8050,
           "hash": "03d36e8d98bc37a4aa182c7e2fd4acb0",
-          "modified": "2025-07-09T16:38:52.248445"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\legacy\\mysql.uew",
           "size": 3916,
           "hash": "08c62071425852a7826757619ad13f7a",
-          "modified": "2025-07-09T16:38:52.249460"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\legacy\\perl.uew",
           "size": 4969,
           "hash": "cd7cf81f4212133165ec9c6581aa1afc",
-          "modified": "2025-07-09T16:38:52.249460"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\legacy\\php.uew",
           "size": 88546,
           "hash": "dbb44922abb806cda4aa1bc8af7382ba",
-          "modified": "2025-07-09T16:38:52.251552"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\legacy\\python.uew",
           "size": 6055,
           "hash": "b8595429a584eab171a356d9efc542b5",
-          "modified": "2025-07-09T16:38:52.251552"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\legacy\\ruby.uew",
           "size": 8938,
           "hash": "e9e14060198e4ef5f1e3fb0115446f51",
-          "modified": "2025-07-09T16:38:52.252598"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\legacy\\vbscript.uew",
           "size": 9153,
           "hash": "cffa780e5e8711f09d1d3b7ef63d6dac",
-          "modified": "2025-07-09T16:38:52.252598"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\legacy\\visualbasic.uew",
           "size": 7950,
           "hash": "0dd1b9eaef825d1e5ca740e7a0be9dfa",
-          "modified": "2025-07-09T16:38:52.253621"
+          "modified": "2026-06-25T08:26:00"
         },
         {
           "path": "wordfiles\\legacy\\xml.uew",
           "size": 15575,
           "hash": "44173c129e690a2232fab34ff789abc7",
-          "modified": "2025-07-09T16:38:52.253621"
+          "modified": "2026-06-25T08:26:00"
         }
       ],
-      "total_files": 210,
-      "total_size": 207982067,
-      "last_updated": "2026-03-10T11:47:45.797012"
+      "total_files": 222,
+      "total_size": 212141501,
+      "last_updated": "2026-07-13T11:56:50.660623"
     },
     "CrystalDiskInfo": {
       "version": "20260526_174009",

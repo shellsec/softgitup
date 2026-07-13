@@ -1,64 +1,64 @@
-<?xml version="1.0"?>
-<Templates encode="utf8escenc"><Template Name="bool">bool [+var+] = [+false+];</Template><Template Name="byte">byte [+x+] = [+0+];</Template><Template Name="char">char [+var+] = '[+string+]';</Template><Template Name="checked">checked ([+expression+])</Template><Template Name="class">class [+name+]
+<?xml version="1.0" encoding="UTF-8"?>
+<Templates encode="utf8escenc" version="2.0"><UETemplate Name="bool" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[bool [+var+] = [+false+];]]></UETemplate><UETemplate Name="byte" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[byte [+x+] = [+0+];]]></UETemplate><UETemplate Name="char" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[char [+var+] = '[+string+]';]]></UETemplate><UETemplate Name="checked" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[checked ([+expression+])]]></UETemplate><UETemplate Name="class" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[class [+name+]
 {
 	^
-}</Template><Template Name="decimal">decimal [+var+] = [+int+]m;</Template><Template Name="delegate">delegate [+void+] [+name+]([+params+]);</Template><Template Name="do">do 
+}]]></UETemplate><UETemplate Name="decimal" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[decimal [+var+] = [+int+]m;]]></UETemplate><UETemplate Name="delegate" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[delegate [+void+] [+name+]([+params+]);]]></UETemplate><UETemplate Name="do" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[do 
 {
 	^ 
-} while ([+evaluation+]) </Template><Template Name="double">double [+var+] = [+int+];</Template><Template Name="else">else
-	^</Template><Template Name="elseif">else 
+} while ([+evaluation+]) ]]></UETemplate><UETemplate Name="double" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[double [+var+] = [+int+];]]></UETemplate><UETemplate Name="else" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[else
+	^]]></UETemplate><UETemplate Name="elseif" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[else 
 	if ([+evaluation+])
-		^</Template><Template Name="enum">enum [+identifier+] {[+list+]};</Template><Template Name="event">event [+delegate+] [+name+]</Template><Template Name="fixed">fixed ([+type+]* [+pointer+] = [+exp+]) {
+		^]]></UETemplate><UETemplate Name="enum" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[enum [+identifier+] {[+list+]};]]></UETemplate><UETemplate Name="event" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[event [+delegate+] [+name+]]]></UETemplate><UETemplate Name="fixed" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[fixed ([+type+]* [+pointer+] = [+exp+]) {
 	^
-}</Template><Template Name="float">float [+var+] = [+number+];</Template><Template Name="for">for (int [+n+]=[+X+]; [+n+]&lt;=[+Y+]; [+n+]++)
+}]]></UETemplate><UETemplate Name="float" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[float [+var+] = [+number+];]]></UETemplate><UETemplate Name="for" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[for (int [+n+]=[+X+]; [+n+]<=[+Y+]; [+n+]++)
 {
 	^ 
-}</Template><Template Name="foreach">foreach ([+type+] [+var+] in [+col+])
+}]]></UETemplate><UETemplate Name="foreach" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[foreach ([+type+] [+var+] in [+col+])
 {
 	^
-} </Template><Template Name="function">[+visibility+] [+return type+] [+name+] ([+parameters+])
+} ]]></UETemplate><UETemplate Name="function" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[[+visibility+] [+return type+] [+name+] ([+parameters+])
 {
 	^ // statements
-}</Template><Template Name="if">if ([+evaluation+]) 
-	^</Template><Template Name="int">int [+var+] = [+int+];</Template><Template Name="interface">interface [+name+]
+}]]></UETemplate><UETemplate Name="if" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[if ([+evaluation+]) 
+	^]]></UETemplate><UETemplate Name="int" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[int [+var+] = [+int+];]]></UETemplate><UETemplate Name="interface" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[interface [+name+]
 {
 	^
-}</Template><Template Name="lock">lock ([+this+])
+}]]></UETemplate><UETemplate Name="lock" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[lock ([+this+])
 {
 	^
-}</Template><Template Name="long">long [+var+] = [+int+];</Template><Template Name="namespace">namespace [+name+]
+}]]></UETemplate><UETemplate Name="long" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[long [+var+] = [+int+];]]></UETemplate><UETemplate Name="namespace" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[namespace [+name+]
 {
 	^
-}</Template><Template Name="new">new [+objName+] ([+params+]);</Template><Template Name="object">object [+name+];</Template><Template Name="operator">operator [+oper+]([+opType+] [+operand+])
+}]]></UETemplate><UETemplate Name="new" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[new [+objName+] ([+params+]);]]></UETemplate><UETemplate Name="object" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[object [+name+];]]></UETemplate><UETemplate Name="operator" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[operator [+oper+]([+opType+] [+operand+])
 {
 	^
-}</Template><Template Name="return">return [+expression+];</Template><Template Name="sbyte">sbyte [+var+] = [+int+];</Template><Template Name="sealed">sealed class [+name+]
+}]]></UETemplate><UETemplate Name="return" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[return [+expression+];]]></UETemplate><UETemplate Name="sbyte" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[sbyte [+var+] = [+int+];]]></UETemplate><UETemplate Name="sealed" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[sealed class [+name+]
 {
 	^
-}</Template><Template Name="short">short [+var+] = [+int+];</Template><Template Name="sizeof">sizeof([+type+])</Template><Template Name="stackalloc">stackalloc [+type+][[+expression+]]</Template><Template Name="static">static [+type+] [+name+]()
+}]]></UETemplate><UETemplate Name="short" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[short [+var+] = [+int+];]]></UETemplate><UETemplate Name="sizeof" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[sizeof([+type+])]]></UETemplate><UETemplate Name="stackalloc" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[stackalloc [+type+][[+expression+]]]]></UETemplate><UETemplate Name="static" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[static [+type+] [+name+]()
 {
 	^
-}</Template><Template Name="string">string [+var+] = "[+string+]";</Template><Template Name="struct">struct [+identifier+]
+}]]></UETemplate><UETemplate Name="string" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[string [+var+] = "[+string+]";]]></UETemplate><UETemplate Name="struct" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[struct [+identifier+]
 {
 	^
-}</Template><Template Name="switch">switch ([+expression+])
+}]]></UETemplate><UETemplate Name="switch" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[switch ([+expression+])
 {
 	case [+value+]:
 		^ 
 	break;
 	default:
 		
-}</Template><Template Name="throw">throw [+expression+];</Template><Template Name="try">try
+}]]></UETemplate><UETemplate Name="throw" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[throw [+expression+];]]></UETemplate><UETemplate Name="try" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[try
 {
 	^ // code to try
 }
 catch [+err+]
 {
 	// error handling
-}</Template><Template Name="typeof">typeof([+type+])</Template><Template Name="uint">uint [+var+] = [+int+];</Template><Template Name="ulong">ulong [+var+] = [+int+];</Template><Template Name="unchecked">unchecked ([+expression+])</Template><Template Name="unsafe">unsafe [+static+] [+void+] [+name+]([+params+]
+}]]></UETemplate><UETemplate Name="typeof" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[typeof([+type+])]]></UETemplate><UETemplate Name="uint" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[uint [+var+] = [+int+];]]></UETemplate><UETemplate Name="ulong" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[ulong [+var+] = [+int+];]]></UETemplate><UETemplate Name="unchecked" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[unchecked ([+expression+])]]></UETemplate><UETemplate Name="unsafe" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[unsafe [+static+] [+void+] [+name+]([+params+]
 {
 	^
-}</Template><Template Name="ushort">ushort [+var+] = [+int+];</Template><Template Name="void">void [+name+]();</Template><Template Name="while">while ([+evaluation+]) 
+}]]></UETemplate><UETemplate Name="ushort" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[ushort [+var+] = [+int+];]]></UETemplate><UETemplate Name="void" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[void [+name+]();]]></UETemplate><UETemplate Name="while" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[while ([+evaluation+]) 
 {
 	^
-}</Template></Templates>
+}]]></UETemplate></Templates>

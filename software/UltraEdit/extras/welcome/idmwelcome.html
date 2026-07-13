@@ -1,175 +1,189 @@
 ﻿<!doctype html>
 <html lang="en">
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=11">
-    <meta charset="utf-8">
-    <title>Welcome</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="strings.js"></script>
-    <script src="arrange.js"></script>
-    <script>
-      function genclick(element) {
-        element.click();
-      }
-    </script>
-  </head>
-  <body id="idmwelcome">
-    <div id="header">
-      <h1><span class="l_header"></span></h1>
-    </div>
-    <!-- 1) Choose theme -->
-    <table class="row" id="theme_select">
-      <!-- header row -->
-      <tr>
-        <th colspan="5">
-          <h2><span class="l_theme_head"></span></h2>
-          <p class="caption"><span class="l_theme_caption"></span></p>
-        </th>
-      </tr>
-      <!-- thumbs row -->
-      <tr>
-        <td>
-          <a href="javascript:void(0)" id="theme_1_click" class="selectTheme select chosen">
-            <img id="theme_1" src="images/theme_1.png" alt="Screenshot of Studio Dark theme" class="img_loc thumb"><br>
-            <h3>Studio Dark</h3>
-          </a>
-        </td>
-        <td>
-          <a href="javascript:void(0)" id="theme_2_click" class="select selectTheme" data-css="t2">
-            <img id="theme_2" src="images/theme_2.png" alt="Screenshot of One Dark theme" class="img_loc thumb"><br>
-            <h3>One Dark</h3>
-          </a>
-        </td>
-        <td>
-          <a href="javascript:void(0)" id="theme_3_click" class="select selectTheme" data-css="t3">
-            <img id="theme_3" src="images/theme_3.png" alt="Screenshot of Monokai Pro theme" class="img_loc thumb"><br>
-            <h3>Monokai Pro</h3>
-          </a>
-        </td>
-        <td>
-          <a href="javascript:void(0)" id="theme_4_click" class="select selectTheme" data-css="t4">
-            <img id="theme_4" src="images/theme_4.png" alt="Screenshot of Charcoal theme" class="img_loc thumb"><br>
-            <h3>Charcoal</h3>
-          </a>
-        </td>
-        <td class="last">
-          <a href="javascript:void(0)" id="theme_5_click" class="select selectTheme" data-css="t5">
-            <img id="theme_5" src="images/theme_5.png" alt="Screenshot of Predawn theme" class="img_loc thumb"><br>
-            <h3>Predawn</h3>
-          </a>
-        </td>
-      </tr>
-    </table>
-    <!-- 2) Choose layout -->
-    <table class="something row" id="layout_select">
-      <!-- header row -->
-      <tr>
-        <th colspan="4">
-          <h2><span class="l_layout_head"></span></h2>
-          <p class="caption"><span class="l_layout_caption"></span></p>
-        </th>
-      </tr>
-      <!-- thumbs row -->
-      <tr>
-        <td>
-          <a id="Balanced" href="javascript:void(0)" class="select chosen">
-            <img id="layout_balanced" src="images/layout_balanced.png" alt="Screenshot of Balanced layout" class="thumb"><br>
-            <h3><span class="l_layout_balanced"></span></h3>
-          </a>
-        </td>
-        <td>
-          <a id="Lean" href="javascript:void(0)" class="select">
-            <img id="layout_lean" src="images/layout_lean.png" alt="Screenshot of Lean layout" class="thumb"><br>
-            <h3><span class="l_layout_lean"></span></h3>
-          </a>
-        </td>
-        <td>
-          <a id="Clean" href="javascript:void(0)" class="select">
-            <img id="layout_clean" src="images/layout_clean.png" alt="Screenshot of Clean layout" class="thumb"><br>
-            <h3><span class="l_layout_clean"></span></h3>
-          </a>
-        </td>
-        <td class="last">
-          <a id="Multi-Window" href="javascript:void(0)" class="select">
-            <img id="layout_multi" src="images/layout_multi-window.png" alt="Screenshot of Multi-window layout" class="thumb"><br>
-            <h3><span class="l_layout_multi"></span></h3>
-          </a>
-        </td>
-      </tr>
-    </table>
-    <!-- 3) Choose ribbons / menus -->
-    <table class="row" id="ribbon_select">
-      <!-- header row -->
-      <tr>
-        <th colspan="4">
-          <h2><span class="l_ribbon_head"></span></h2>
-          <p class="caption"><span class="l_ribbon_caption"></span></p>
-        </th>
-      </tr>
-      <!-- thumbs row -->
-      <tr>
-        <td>
-          <a id="ribbon" href="javascript:void(0)" class="select chosen">
-            <img id="ui_ribbon" src="images/ribbon.png" alt="Screenshot of ribbon" class="img_loc thumb th_r"><br>
-            <h3><span class="l_ribbon"></span></h3>
-          </a>
-        </td>
-        <td>
-          <a id="menus_toolbars" href="javascript:void(0)" class="select">
-            <img id="ui_menus_toolbars" src="images/menus_toolbars.png" alt="Screenshot of menus and toolbars. Select this if using a screen reader" class="img_loc thumb th_r"><br>
-            <h3><span class="l_menus"></span></h3>
-          </a>
-        </td>
-        <td class="last">
-          <a id="menus" href="javascript:void(0)" class="select">
-            <img id="ui_menus" src="images/menus.png" alt="Screenshot of menus only" class="img_loc thumb th_r"><br>
-            <h3><span class="l_menu_only"></span></h3>
-          </a>
-        </td>
-      </tr>
-    </table>
-    <!-- 4) Settings -->
-    <table class="row" id="settings">
-      <!-- header row -->
-      <tr>
-        <th colspan="4">
-          <h2><span class="l_settings_head"></span></h2>
-        </th>
-      </tr>
-      <!-- thumbs row -->
-      <tr>
-        <td>
-          <h4><span class="l_backups"></span></h4>
-          <form class="s_form" id="s_backups">
-            <div class="s_checkbox">
-              <input id="s_bak_1" name="s_bak" type="radio" checked><label for="s_bak_1"><span class="l_backup_option_1"></span></label>
-            </div>
-            <div class="s_checkbox">
-              <input id="s_bak_2" name="s_bak" type="radio"><label for="s_bak_2"><span class="l_backup_option_2"></span></label><br>
-              <input type="text" name="backup_folder" id="s_bak_2i" oninput="genclick(this)">
-              <input type="button" name="backup_browse" id="s_bak_bff" value="...">
-           </div>
-            <div class="s_checkbox">
-              <input id="s_bak_3" name="s_bak" type="radio"><label for="s_bak_3"><span class="l_backup_option_3"></span></label>
-            </div>
-          </form>
-        </td>
-        <td class="last">
-          <h4><span class="l_tabs"></span></h4>
-          <form class="s_form" id="s_tabs">
-            <div class="s_checkbox">
-              <span class="l_tabs_option_1"></span>
-              <input type="text" name="s_tab_size" id="s_tab_size" value="4" oninput="genclick(this)">
-            </div>
-            <div class="s_checkbox">
-              <input id="s_tab_1" name="s_tab" type="radio"><label for="s_tab_1" checked><span class="l_tabs_option_2"></span></label>
-            </div>
-            <div class="s_checkbox">
-              <input id="s_tab_2" name="s_tab" type="radio"><label for="s_tab_2"><span class="l_tabs_option_3"></span></label>
-            </div>
-          </form>
-        </td>
-      </tr>
-    </table>
-  </body>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=11">
+		<meta charset="utf-8">
+		<title>Welcome</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="strings.js"></script>
+		<script src="arrange.js"></script>
+		<script>
+			function genclick(element) {
+				element.click();
+			}
+		</script>
+	</head>
+	<body id="idmwelcome">
+		<!-- page title/header -->
+		<div class="frame">
+			<div class="top_row">
+				<table class="top_row" id="theme_select">
+					<tr>
+						<td colspan="5">
+							<div id="header">
+									<img id="arrow" src="images/arrow.png">&nbsp;
+									<span class="l_header"></span>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<br>
+			<!-- 1) Choose theme -->
+			<table class="row" id="theme_select">
+				<!-- header row -->
+				<tr>
+					<th colspan="5">
+						<span class="category l_theme_head"></span> &nbsp; <span class="description l_theme_caption"></span>
+					</th>
+				</tr>
+				<!-- thumbs row -->
+				<tr>
+					<td>
+						<a href="javascript:void(0)" id="theme_1_click" class="select selectTheme chosen">
+							<img id="theme_1" src="images/theme_1.png" alt="Screenshot of Studio Dark theme" class="img_loc thumb"><br>
+							<!--<h3>Studio Dark</h3>-->
+						</a>
+					</td>
+					<td>
+						<a href="javascript:void(0)" id="theme_2_click" class="select selectTheme" data-css="t2">
+							<img id="theme_2" src="images/theme_2.png" alt="Screenshot of One Dark theme" class="img_loc thumb"><br>
+							<!--<h3>One Dark</h3>-->
+						</a>
+					</td>
+					<td>
+						<a href="javascript:void(0)" id="theme_3_click" class="select selectTheme" data-css="t3">
+							<img id="theme_3" src="images/theme_3.png" alt="Screenshot of Monokai Pro theme" class="img_loc thumb"><br>
+							<!--<h3>Monokai Pro</h3>-->
+						</a>
+					</td>
+					<td>
+						<a href="javascript:void(0)" id="theme_4_click" class="select selectTheme" data-css="t4">
+							<img id="theme_4" src="images/theme_4.png" alt="Screenshot of Charcoal theme" class="img_loc thumb"><br>
+							<!--<h3>Charcoal</h3>-->
+						</a>
+					</td>
+					<td class="last">
+						<a href="javascript:void(0)" id="theme_5_click" class="select selectTheme" data-css="t5">
+							<img id="theme_5" src="images/theme_5.png" alt="Screenshot of Predawn theme" class="img_loc thumb"><br>
+							<!--<h3>Predawn</h3>-->
+						</a>
+					</td>
+				</tr>
+			</table>
+			<!-- 2) Choose layout -->
+			<table class="something row" id="layout_select">
+				<!-- header row -->
+				<tr>
+					<th colspan="4">
+						<span class="category l_layout_head"></span> &nbsp; <span class="description l_layout_caption"></span>
+					</th>
+				</tr>
+				<!-- thumbs row -->
+				<tr>
+					<td>
+						<a id="Balanced" href="javascript:void(0)" class="select chosen">
+							<img id="layout_balanced" src="images/layout_balanced.png" alt="Screenshot of Balanced layout" class="thumb"><br>
+							<!--<h3><span class="l_layout_balanced"></span></h3>-->
+						</a>
+					</td>
+					<td>
+						<a id="Lean" href="javascript:void(0)" class="select">
+							<img id="layout_lean" src="images/layout_lean.png" alt="Screenshot of Lean layout" class="thumb"><br>
+							<!--<h3><span class="l_layout_lean"></span></h3>-->
+						</a>
+					</td>
+					<td>
+						<a id="Clean" href="javascript:void(0)" class="select">
+							<img id="layout_clean" src="images/layout_clean.png" alt="Screenshot of Clean layout" class="thumb"><br>
+							<!--<h3><span class="l_layout_clean"></span></h3>-->
+						</a>
+					</td>
+					<td class="last">
+						<a id="Multi-Window" href="javascript:void(0)" class="select">
+							<img id="layout_multi" src="images/layout_multi-window.png" alt="Screenshot of Multi-window layout" class="thumb"><br>
+							<!--<h3><span class="l_layout_multi"></span></h3>-->
+						</a>
+					</td>
+				</tr>
+			</table>
+			<!-- 3) Choose ribbons / menus -->
+			<table class="row" id="ribbon_select">
+				<!-- header row -->
+				<tr>
+					<th colspan="4">
+						<span class="category l_ribbon_head"></span> &nbsp; <span class="description l_ribbon_caption"></span>
+					</th>
+				</tr>
+				<!-- thumbs row -->
+				<tr>
+					<td>
+						<a id="ribbon" href="javascript:void(0)" class="select chosen">
+							<img id="ui_ribbon" src="images/ribbon.png" alt="Screenshot of ribbon" class="img_loc thumb th_r"><br>
+							<!--<h3><span class="l_ribbon"></span></h3>-->
+						</a>
+					</td>
+					<td>
+						<a id="menus_toolbars" href="javascript:void(0)" class="select">
+							<img id="ui_menus_toolbars" src="images/menus_toolbars.png" alt="Screenshot of menus and toolbars. Select this if using a screen reader" class="img_loc thumb th_r"><br>
+							<!--<h3><span class="l_menus"></span></h3>-->
+						</a>
+					</td>
+					<td class="last">
+						<a id="menus" href="javascript:void(0)" class="select">
+							<img id="ui_menus" src="images/menus.png" alt="Screenshot of menus only" class="img_loc thumb th_r"><br>
+							<!--<h3><span class="l_menu_only"></span></h3>-->
+						</a>
+					</td>
+				</tr>
+			</table>
+			<!-- 4) Settings -->
+			<table class="row" id="settings">
+				<!-- header row -->
+				<tr>
+					<th colspan="2">
+						<span class="category l_settings_head"></span>
+					</th>
+				</tr>
+				<!-- thumbs row -->
+				<tr id="settings_panel">
+					<td class="settings_section">
+						<br>
+						<h4><span class="l_backups"></span></h4>
+						<form class="s_form" id="s_backups">
+							<div class="s_checkbox">
+								<input id="s_bak_1" name="s_bak" type="radio" checked><label for="s_bak_1"><span class="l_backup_option_1"></span></label>
+							</div>
+							<div class="s_checkbox">
+								<input id="s_bak_2" name="s_bak" type="radio"><label for="s_bak_2"><span class="l_backup_option_2"></span></label><br>
+								<input type="text" name="backup_folder" id="s_bak_2i" oninput="genclick(this)">
+								<input type="button" name="backup_browse" id="s_bak_bff" value="...">
+							</div>
+							<div class="s_checkbox">
+								<input id="s_bak_3" name="s_bak" type="radio"><label for="s_bak_3"><span class="l_backup_option_3"></span></label>
+							</div>
+						</form>
+						<br>
+					</td>
+					<td class="settings_section last">
+						<br>
+						<h4><span class="l_tabs"></span></h4>
+						<form class="s_form" id="s_tabs">
+							<div class="s_checkbox">
+								<span class="l_tabs_option_1"></span>
+								<input type="text" name="s_tab_size" id="s_tab_size" value="4" oninput="genclick(this)">
+							</div>
+							<div class="s_checkbox">
+								<input id="s_tab_1" name="s_tab" type="radio"><label for="s_tab_1" checked><span class="l_tabs_option_2"></span></label>
+							</div>
+							<div class="s_checkbox">
+								<input id="s_tab_2" name="s_tab" type="radio"><label for="s_tab_2"><span class="l_tabs_option_3"></span></label>
+							</div>
+						</form>
+						<br>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</body>
 </html>

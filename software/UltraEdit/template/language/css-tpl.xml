@@ -1,14 +1,14 @@
-<?xml version="1.0"?>
-<Templates encode="utf8escenc"><Template Name="a.hover, a.active">a.hover, a.active {
+<?xml version="1.0" encoding="UTF-8"?>
+<Templates encode="utf8escenc" version="2.0"><UETemplate Name="a.hover, a.active" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[a.hover, a.active {
 	color: #[+color+];
 	font-weight: [+strong+];
 	text-decoration: [+underline+];
-}</Template><Template Name="a.link, a.visited">a.link, a.visited {
+}]]></UETemplate><UETemplate Name="a.link, a.visited" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[a.link, a.visited {
 	color: #[+color+];
 	font-weight: [+strong+];
 	text-decoration: [+none+];
-}</Template><Template Name="background">background: #[+fff+] url('[+file+]') [+no-repeat+] [+left+] [+top+];</Template><Template Name="border">border: [+1+]px [+solid+] [+#fff+];</Template><Template Name="class">.[+class name+] {
+}]]></UETemplate><UETemplate Name="background" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[background: #[+fff+] url('[+file+]') [+no-repeat+] [+left+] [+top+];]]></UETemplate><UETemplate Name="border" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[border: [+1+]px [+solid+] [+#fff+];]]></UETemplate><UETemplate Name="class" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[.[+class name+] {
 	^
-}</Template><Template Name="font">font: normal [+12px+] [+Georgia,serif+];</Template><Template Name="id">#[+ID name+] {
+}]]></UETemplate><UETemplate Name="font" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[font: normal [+12px+] [+Georgia,serif+];]]></UETemplate><UETemplate Name="id" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[#[+ID name+] {
 	^
-}</Template><Template Name="import">import ("[+URL+]");</Template><Template Name="list-style">list-style: [+disc+] [+outside+] [+none+];</Template><Template Name="margin">margin: [+0+] [+0+] [+0+] [+0+];</Template><Template Name="padding">padding: [+0+] [+0+] [+0+] [+0+];</Template></Templates>
+}]]></UETemplate><UETemplate Name="import" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[import ("[+URL+]");]]></UETemplate><UETemplate Name="list-style" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[list-style: [+disc+] [+outside+] [+none+];]]></UETemplate><UETemplate Name="margin" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[margin: [+0+] [+0+] [+0+] [+0+];]]></UETemplate><UETemplate Name="padding" version="1.0" Description="" Comments="0" Strings="0"><![CDATA[padding: [+0+] [+0+] [+0+] [+0+];]]></UETemplate></Templates>

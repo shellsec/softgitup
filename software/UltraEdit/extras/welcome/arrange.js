@@ -49,7 +49,7 @@ window.onload = function() {
   }
 
   // Set default theme selection based on the app
-  var themes = ['theme_2_click', 'theme_3_click', 'theme_4_click', 'theme_5_click'];
+  var themes = ['theme_1_click', 'theme_2_click', 'theme_3_click', 'theme_4_click', 'theme_5_click'];
   if (theme !== '') {
     for (i = 0; i < themes.length; i++) {
       var element = document.getElementById(themes[i]);
@@ -67,8 +67,8 @@ window.onload = function() {
             s.setAttribute('id', 'CssDynAdd');
             head.appendChild(s);
           }
-          var element2 = document.getElementById('theme_1_click');
-          element2.className = element2.className.replace("chosen", "");
+          //var element2 = document.getElementById('theme_1_click');
+          //element2.className = element2.className.replace("chosen", "");
         }
       }
     }
@@ -120,7 +120,7 @@ window.onload = function() {
   ------------------------------------- */
 
   // selectThings should contain all IDs of tables containing a user-selectable setting
-  var selectThings = ["theme_select", "layout_select", "ribbon_select"];
+  var selectThings = ["layout_select", "ribbon_select"];
   var classChoice = "select";
   var classAdd = "chosen";
 
@@ -151,6 +151,14 @@ window.onload = function() {
     if (cssAttr) {
       var addCSS = cssAttr + ".css"
       themeEls[i].addEventListener('click', function() {
+        for (i = 0; i < themes.length; i++) {
+          var element = document.getElementById(themes[i]);
+          if (element) {
+            element.className = element.className.replace("chosen", "");
+          }
+        }
+        var evt = event.target || window.event.srcElement;
+        evt.parentElement.className += " " + classAdd;
         removeElement('CssDynAdd')
         var head = document.getElementsByTagName('head')[0];
         var s = document.createElement('link');
@@ -163,7 +171,15 @@ window.onload = function() {
       // in this case, default style should be used,
       // so we must REMOVE any dynamically inserted style
       themeEls[i].addEventListener('click', function() {
-		  removeElement('CssDynAdd')
+        for (i = 0; i < themes.length; i++) {
+          var element = document.getElementById(themes[i]);
+          if (element) {
+            element.className = element.className.replace("chosen", "");
+          }
+        }
+        var evt = event.target || window.event.srcElement;
+        evt.parentElement.className += " " + classAdd;
+  		  removeElement('CssDynAdd')
       });
     }
   }

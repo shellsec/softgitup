@@ -1,0 +1,3296 @@
+﻿### UltraEdit History
+
+### 2026.0 
+
+ - Features and enhancements
+     * Integrated __Ask UltraEdit__ AI chat window
+       - Natural language access to full Help documentation
+       - Get feature use case recommendations from the full Power Tip library
+     * FTP enhanced server compatibility update
+       - Added Key Exchange Algorithm - `diffie-hellman-group18-sha512` support
+       - Added Key Exchange Algorithm - `diffie-hellman-group16-sha512` support
+       - Added Key Exchange Algorithm - `curve25519-sha256@libssh.org` support
+       - Added Cipher Algorithm - `3des-cbc` support
+       - Added MAC Algorithm - `hmac-sha2-256-etm@openssh.com` support
+       - Added Cipher Algorithm - `rijndael256-cbc` support
+       - Added Cipher Algorithm - `rijndael-cbc@lysator.liu.se` support
+
+ - Other notable quality improvements
+     * Crypto algorithm could not be negotiated error returned when connecting to server
+     * __List lines containing find string__ omits some valid matches
+     * Indent of multiple selections doesn't work
+     * __Paste column__ doesn't preserve pad spaces
+     * Content in upper pane scrolls when typing in column mode in lower pane during split window editing
+     * File in use error message on closing Account Manager dialog window
+     * FTP transfer completes successfully but FTP open dialog remains locked for up to 25 seconds after transfer is complete
+     * Saving via FTPS to Windows Server 2022 takes a very long time
+     * "Error in certificate" dialog is shown every time connection is made
+     * Content is pasted in wrong location when pasting in column mode on line with TABS
+     * Search in "All open files" doesn't work as expected if "Filter" option has previously been selected
+     * __Column mode__ delete key behavior changed
+     * Addressed multiple FTPS stability issues
+     * Windows clipboard is not updated for secondary application when copying in __Column mode__
+     * Addressed crash while editing wordfile with specific settings
+     * Batch file run from __User tool__ cannot delete a file that's already open
+     * Updated default language template files
+     * Files opened via command palette are not automatically added to Recently opened files list in File lists view
+     * UltraEdit inserts TABS on empty lines since
+     * __Perl__ option for regular expressions is lost on application restart
+     * Crash with syntax highlighted file and switching to Contemporary menus
+     * Focus unexpectedly jumps to previously matched string when pressing <kbd>CTRL+F</kbd>
+     * Unexpected selection after using "Insert number"
+     * JSCompressDocument and JSFormatDocument have no effect in macro
+     * Change "Find" button to "Cancel" in __Find in Files__ dialog during search
+     * Bugs with key mapping
+     * __HEX mode__ selection issues
+     * Column reference in status bar not as expected with multi-byte characters
+     * Focus in file shifts erratically when crossing lines with no text while creating column mode selection
+     * Repeated crashes while navigating in document
+     * Alt+H in German 'Ersetzen in Dateien' window activates the wrong edit field
+     * Syntax highlighting of dates (substrings starting with a digit) not working anymore
+     * Selection is cleared when "search string not found" dialog is shown
+     * Top pane scrolls unexpectedly with __Column mode__ editing in split pane view
+     * Reproducble crash after changing regex type in Find dialog
+     * Crash while attempting find with specific settings
+
+---     
+### 2025.2 Update 1
+
+ - Decimal and hex character offset returned in __Character Info__ dialog is wrong
+ - Find what text has poor contrast with certain themes in __Hex Find/Replace__ dialog
+ - Text rendering truncated after column mode editing
+ - __Find/Replace__ dialog highlighting shows red background even with match
+ - Drop down in WebTools window is black block with Classic theme
+ - __Live highlighting__: Docmap shows highlighting after find dialog is closed
+ - __Live highlighting__: Find/Replace regex highlights using what appears to be a "greedy" match
+ - Selected text in __Hex Mode__ is not deleted as expected
+ - Add matching theme support for __Live highlighting__ background color
+ - Registry keys for Cloud Services still created on install
+ - Incorrect URL highlighting with specific URLs
+ - Crash when trying to use __Command Palette__ to find a file (not reproducible)
+ - uedit64.com and uestudio.com tools not installed by all-in-one installers
+ - Enterprise License should be changed to "Volume License" in About dialog
+ - Content incorrectly underlined as URL
+ - Replace in selected text loses selection when search string is entered
+ - Text entry fields in __Find/Find in Files__ dialogs have low contrast background colors
+ - Add lock to disable "Download latest version" option
+ - Crash when reloading XML file on startup (not reproducible)
+ - Crash when working with FTP in Explorer pane (not reproducible)
+ 
+---
+### 2025.2
+
+ - Features and enhancements
+     * Search and regular expression live mode
+       - Result selection updates as you type
+       - “Find what” text control provides regex syntax feedback (background color changes to indicate valid/invalid regular expression)
+     * __EDI Wrap/Unwrap__ convenience functions
+       - New __EDI Functions__ dropdown in the ribbon (Coding->Formatting)
+       - Unwrap raw EDI data for easier reading, editing, and correction
+       - Wrap corrected EDI data to conform to transmission standards
+
+ - Other notable quality improvements
+     * Improved tab sizing/handling, text selection, and general editing when using column mode with proportional and fixed-width fonts
+     * Improved product stability on startup with certain configurations
+     * Lines at end of file seem to disappear after using <kbd>ALT+SUBTRACT</kbd>
+     * File name is replaced by selected folder name when navigating __Save to FTP__ dialog
+     * Updated default language template files with minor additions and corrections
+     * Updated default tags list with minor additions and corrections
+     * Make context menu work in FTP open/save dialogs when clicking below directory listing
+     * Unable to connect to legacy mainframe server
+     * __Hex Copy Selected View__ not working
+     * "Invalid data received from remote server" error with FTP
+     * Customer cannot connect via SFTP
+     * Cannot load a macro containing JSONFormatDocument
+     * Hang/crashes when trying to open large file from Z/OS mainframe
+     * Add support for OPENSSH format private key for SFTP
+     * Sorting of identical content in different columns doesn't yield same result when TABs exist in document
+     * Cursor is not displayed as expected from active line/column highlighting
+     * Line/column position is indicated incorrectly in status bar in lines with tabs
+     * FTP log window not shown when working with only Cloud Storage accounts
+     * __FTP Browser__: deleting folder from remote folder tree, succeeds, but does not remove it from the tree control
+     * __FTP Browser__: deleting folder from remote file list does not remove folder from remote directory tree
+     * "&" is shown as \u0026 in folder name in FTP Open dialog
+     * Output window shown when connecting using FTP Open
+     * Selection shifts unexpectedly after editing & saving
+     * Column number indicated in ruler does not match line/col position shown in status bar
+     * __SSH/telnet console__: fixed missing tab icons
+     * __SSH/Telnet console__: fixed per account font setting
+     * __SSH/Telnet console__: improved tab text spacing and alignment
+
+---
+### 2025.1 Update 1
+
+ - FTP component selector for current/legacy wod component
+ - Large file options text is clipped in German if path is too long
+ - Failure to connect to older Linux servers using FTP
+ - Unable to connect to certain mainframe servers
+ - __Sort__ returns "Sort error! Check sort parameters"
+ - __FTP Browser__ window hidden after invoking context menu
+ - Restore previously supported <kbd>Shift + F3</kbd> search functionality
+ - Replace all in selected text in column mode replaces text outside selection
+
+---
+### 2025.1
+
+ - Features and enhancements
+     * Updated FTP/FTPS/SFTP protocol, algorithm, and key support
+       - New ECDSA support:
+         * ecdsa-sha2-nistp256, ecdsa-sha2-nistp384, ecdsa-sha2-nistp512
+       - Improved support for:
+         * rsa-sha2-256, rsa-sha2-512
+         * ed25519, ecdh-sha2-nistp256, curve25519-sha256
+         * aes128-ctr, aes192-ctr, aes256-ctr
+         * chacha20-poly1305, rsa-2048
+         * hmac-sha2-256, hmac-sha2-512
+     * Added EDI wordfiles to default set
+     * Enhanced __Pieces__ plugin with optional file/folder context
+       - __All open files__
+       - __Project files__
+       - __Active file folder__
+
+ - Other notable quality improvements
+     * Caret is lost with split window multi-caret editing
+     * Erroneous new line after paste in __Find__ when in column mode
+     * Customer sees "Error in Macro" when trying to run basic macro
+     * Hotkeys specified for macros are not saved properly
+     * UC Lite is opened for file compare rather than specified third party tool
+     * Plugins not shown correctly in localized builds in traditional menus
+     * Crash after entering Git credentials
+     * Shell extension menu is incorrect or missing for files with very long paths
+     * Impossible to enable a pre-installed plugin once it's been disabled
+     * Add accelerator for __Show hints__ in contemporary menu
+     * Newly created/saved macro is not added to __Macro List__
+     * Status bar should indicate the offset at the end of the selection
+     * Focus doesn't return to active file when hex find/replace is closed with <kbd>ESC</kbd>
+     * Corrected enable/disable state in __Hex Find/Replace__ dialog
+     * "Error in Macro" reported when loading macro from mounted Google drive
+     * Docked hex find/replace dialog doesn't work like other docked windows
+     * Add accelerator for __Edit macros__ for traditional menus
+     * Sum selection ignores negative values
+     * Add support for HTTP command line license activation
+     * Selection is incorrect after repeated script execution with undo
+     * Unable to re-enable disabled default plugins using __Plugin Manager__
+     * External tool, xmllint.exe, doesn't execute
+     * Incorrect undo results with specific operation set
+     * __Pieces__ plugin updated with new __Query context settings__
+     * EDI X12 and EDIFACT wordfiles added
+     * UI language selection now available (application restart required)
+     * Addressed error in Portuguese translations of __Configuration__ dialog
+     * Improved translation for new language settings
+     * Updated aes128-gcm/aes256-gcm support
+     * __JSON Manager__: improved dialog and control theme contrast
+     * __JSON Manager__: Parsing cancel and restart inconsistencies
+     * __JSON Manager__: negative numbers are highlighted incorrectly
+     * Improved selection accuracy in column mode with mouse
+     * Unable to customize context menu with specific settings
+     * Improved URL parsing and display
+     * Recent file list display issue in __Command Palette__
+     * Improved hex mode byte deletion using keyboard
+
+---
+### 2025.0
+
+ - Features and enhancements
+     * Integrated Git (added to UltraEdit)
+        * Git repo detection
+        * __Git Branch Manager__, merge, push, pull, etc
+        * __Project__ and __File explorer__ integration and overlays
+     * Improved __Column mode__ support for Unicode
+     * __WebTools__ plugin preview
+     * Plugin SDK preview
+        * __Plugin Manager__ and __Plugin Wizard__
+        * Examples and SDK documentation
+
+ - Other notable quality improvements
+     * Crash when selecting very long wrapped lines with <kbd>Ctrl + Shift + Right arrow</kbd>
+     * Current HEX offset is not retained correctly after restart
+     * Crash with sum selection and specific file
+     * Detect changes to installed plugin on restart
+     * Enable webview context menu and devtools for Applet plugins
+     * Incomplete replace in selected text with column selection
+     * Caret jumps to unexpected position when using up/down arrows
+     * Caret jumps after minor editing
+     * Welcome page is not displayed - "File not found" error shown
+     * Crash with __Modify macro__ in __Macro List__
+     * __Add Help files__ results in error with URL
+     * Caret disappears while working
+     * License ID missing in __Start support request__ email
+     * Cosmetic/sizing fixes for __Advanced__ » __Settings__ » __Editor__ » __Advanced__ page
+     * Subdued text isn't displayed as expected with __Aero Harmony__ theme
+     * Sum selection with German locale doesn't work as expected
+     * Column mode selection near end of long lines doesn't work as expected
+     * Right click on URL includes invalid characters following URL
+     * __Set HEX Selection__ dialog window __Classic__ theme improvements
+     * All characters shown with extra space between them in __SSH/telnet console__
+     * Hang after trying to close a newly created file
+     * Wikipedia web search function only supports single words
+     * "Sh&ow hints" shown in __Command palette__
+     * __HTML Text2HTML__ command, __Use HTML Entity numbers__, output missing trailing ';'
+     * Markdown file detection ignores file extension
+     * Multi-line text cannot be pasted into SSH terminal
+     * <kbd>Enter</kbd> key fails to open file in __FTP Open__ dialog
+     * Certain URLs are not highlighted/underlined
+     * Trailing characters erroneously included in URL highlighting/underlining
+     * __JSON Reformat/Compress__ commands disabled
+     * Shutdown hang with specific settings and files
+     * Incorrectly underlines IP addresses as URLs
+     * Crash during file save with specific settings and files
+     * __PowerShell terminal__ doesn't work with custom install directory
+     * <kbd>Ctrl + C</kbd> with column mode selection causes file to be marked as modified
+     * Typing character with column mode selection doesn't replace all selected chars
+     * Column overstrike options not working
+     * Clicking on *Download Git for Windows* link returns 404 error
+     * Text field label is truncated in Git options dialog
+     * Duplicate attribute "onerror" in the HTML wordfile
+     * Editing and file refreshing very slow with files with long lines
+     * Column select and copy does not work with supplementary code points
+     * License ID missing in body of email created with __Start support request__
+     * Incorrect original file name in version information
+     * Space selection issue with certain fonts
+     * Crash during column mode editing with certain files
+     * Undo doesn't work as expected in column mode
+     * __Help__ button in __Print Setup__ dialog window doesn't open help
+     * Button __Help__ in __Account Manager__ dialog window opens the default help page
+     * Default help page opened on pressing key <kbd>F1</kbd> for __HEX Find/Replace__
+     * Default help page opened on pressing key <kbd>F1</kbd> for __Find in Files__ and __Replace in Files__
+     * *Maximum number of backups* field accept more than the defined values.
+     * In __Charcoal__ theme, text area is difficult to see in __Find and Replace__ dialog
+
+---
+### 2024.3
+
+ - Editing improvements
+     * Focus shifts to wrong file during editing with tiled windows
+     * Fixed *Allow positioning beyond line end* setting for certain cases
+     * __Reformat paragraph__ does not seem to reformat all selected lines when followed by non-blank lines
+     * Incorrect characters displayed during editing for specific UTF-8 files and language/region settings
+     * Fixed hang when reformatting XML for certain XML files
+
+ - Search, function list, and sum selection improvements
+     * Perl regex __Find__ returns empty error dialog
+     * <kbd>Shift + Enter</kbd> find previous command option for find dialog is not saved
+     * Unexpected results with sum selection and incorrect settings for locale
+     * Result field in __Sum columns/selection__ is too small
+     * Function list content changes after minor edit and save with certain files
+
+ - Other notable quality improvements
+     * <kbd>Ctrl + N</kbd> will not create new file when no files are open if __File explorer__ is docked
+     * __Restore project__ functionality is not working as expected with some projects
+     * Create new file fails after application minimizes to system tray due to sleep settings
+     * *Disable* options from __File handling__ » __Large files__ added to command palette
+     * Improved display of __Manage themes__ dialog for UHD screens and certain scaling settings
+     * Addressed `writeText` scripting API allowing text write to read-only files
+     * Removing a script does not free up the associated hotkey
+     * Addressed versioning inconsistencies for __Start support request__ content
+     * Crash after pasting very long line and pressing <kbd>Ctrl + Shift + Home</kbd> with specific data
+     * Crash when double clicking on divider between source HTML and live preview content
+     * Crashes or hangs on startup with some system configurations
+
+---
+### 2024.2
+
+ - Features and enhancements
+     * __Pieces for Developers__ plugin
+         * AI Copilot and assistant
+         * Available both offline and online
+         * Choose your favorite LLM/service
+             * OpenAI's ChatGPT
+             * Google's Gemini
+             * Anthropic's Claude
+     * Hex mode enhancements
+         * __Select range__ command
+         * Delete selected bytes
+         * __Hex Insert/Delete__ dialog: Insert arbitrary byte value
+     * Option to underline URLs in open files
+
+ - Other notable quality improvements
+     * Line number in __Find String List__ window is incorrect
+     * Prevent duplicate clipboard history entries
+     * Add setting to use an audio cue ("beep") when search string is not found
+     * Add setting to disable __Quick Find__ control animation
+     * Function list is shown for wrong file after application restart if second file has a bookmark
+     * <kbd>Ctrl + B</kbd> followed by <kbd>Del</kbd> doesn't select and delete XML tag/element
+     * Global templates exist in `UETMPLTE.TPL` file but are not shown in UE after trying to add new template
+     * Templates with non-ASCII characters stored with entities in template file are loaded wrong
+     * Make <kbd>ESC</kbd> key in __HEX Find/Replace__ cancel the dialog
+     * Create empty hex file with new document command
+     * Impossible to position cursor correctly in long wrapped line preceded by tabs/spaces
+     * Function list content changes after minor edit and save
+     * Create a new file in hex editor mode
+     * Default C++ templates incorrect
+
+---
+### 2024.1
+
+ - Features and enhancements
+     * New __Start support request__ command
+         * Generates new email using default system email client
+         * Captures commonly needed user and system information
+         * Captures current application information
+     * Enhanced XML manager editing for attributes and values
+     * New horizontal split view for __Live Preview__
+     * New remote file upload/download progress bar in application status bar
+     * New compare file command added to file tab menu for easy access
+     * Compare tool configuration UI added to support any compare utility
+     * Enabled horizontal scrolling with secondary mouse wheel, trackpad, gestures, etc.
+     * New underline setting for URLs instead of highlighting
+     * Improved readability and usability of compare settings dialog
+     * New command to start default email application by clicking any email address in open documents
+     * Automatically recover previously open files after a crash without a prompt (reduces user interaction)
+     * Full cloud storage support in __FTP Browser__
+     * PowerShell and SSH terminal enhancements for text and command colors
+
+ - Other notable quality improvements
+     * Improved code folding support for ASP code
+     * Improved positioning and selection range for *active line highlighting* for wrapped lines
+     * Addressed selection issues with specific search ranges and EOF conditions
+     * Resolved discrepancies with differing search count results from different search features
+     * Addressed dialog control enable/disable state discrepancies with user tool configuration dialog
+     * Corrected negative column number display for certain HTML files
+     * Addressed multiple issues with display and editing with non-English text, code pages, and encodings
+     * Resolved multiple issues with tab settings and tab displays
+     * Resolved multiple printing issues with indentation, positioning, and wrapping
+     * Improved __Save as__ functionality to match and preserve current file type
+
+---
+### 2024.0
+
+ - Features and enhancements
+     * Support for cloud storage services
+         * Google Drive
+         * Microsoft OneDrive
+         * Amazon S3
+         * Dropbox
+         * Access and edit files from all your cloud storage services
+     * Application scripting additions
+         * New document properties: `dateCreated`, `dateModified`, `dateAccessed`,
+           `fileAttributes`, `owner`, `syntaxHighlighting`, `characters`, `lines`,
+           `nonEmptyLines`, `sLOC`, `averageLineLength`, `longestLine`, `changedLines`
+         * `readText`/`writeText` functions
+         * `getEnvironmentVariable` function
+     * Updated __SSH/Telnet__ dockable window
+         * Latest encryption standards
+         * Support for key agents
+
+ - Other notable quality improvements
+     * Honor Windows setting to hide cursor (mouse pointer) while typing
+     * Allow sorting by clicking on the column headers in the Windows dialog
+     * Add "Copy" button to __Sum Selected Text__ dialog for total value
+     * Sum selection returns incorrect negative value
+     * Add link to main downloads page in __Support__ menu
+     * Add ability to run PowerShell script from context menu in __Project__ or __File explorer__ view
+     * Add __New script__ as default PowerShell template
+     * Default language for syntax highlighting is changed if new wordfiles are added
+     * Second instead of first configuration item selected on using __Find__ in __Configuration__
+     * Display issues with __Manage Themes__ dialog on Windows 11 at 175% scaling and UHD resolutions
+     * Clipped labels in __Modify Templates__/__Modify Groups__ dialogs at 125% scaling
+     * File extension based font setting is ignored
+     * URL selection is incorrect in Markdown file
+     * Default template fails to appear, after closing and reopening the file
+     * Renaming a file is not reflected in file lists
+     * Creating a new template with the same existing template name
+     * __New script__ default template does not appear for all applicable template groups
+     * UI elements not clearly visible after resizing __Modify Templates__ dialog
+
+---
+### 2023.2
+
+ - Features and enhancements
+     * Macro edit/create and settings UI update
+         * Consolidates global macro settings into a single __Macro Settings__ dialog
+         * Improved edit/create macro dialogs
+         * Individual macro settings now exposed in edit/create dialogs
+     * Proof of concept plugin framework
+         * Plugin: Code surround
+         * Plugin: SQL formatter
+         * Plugin: JSON to XML
+         * Plugin: File splitter
+         * Plugin: Tabs to spaces (leading)
+     * New community reviewed and approved application icons
+
+ - Other notable quality improvements
+     * Files saved without an extension erroneously have CSH extension
+     * Hang when trying to access __Find__ history
+     * <kbd>Alt</kbd> shortcuts added to macro play dialog
+     * __FTP Browser__ now uses dockable window font for local/remote panes
+     * Extension is incorrectly added when file is saved
+     * Expose current tab stop value in scripting API
+     * Reproducible hang when inserting comment on last line of file
+     * Resolved intermittent startup instability
+     * Brace matching is incorrect in PHP when strings include braces
+     * New community reviewed and approved application icon
+     * libcurl updated to 8.4.0
+     * OpenSSL updated to 3.0.10
+
+---
+### 2023.1
+
+ - Features and enhancements
+     * Enhanced large file mode
+         * Brings all large file settings into a common location
+         * Easily customize large file optimizations
+         * Enable/disable line numbers, code folding, IntelliTips, and more
+         * Access from __Configuration__ » __File handling__ » __Large files__ settings page
+     * New __Replace once__ functionality added to __Find/Replace__ dialog
+     * Improved detection and highlighting of URLs in source files
+     * Environment variables now supported for default backup directory
+     * PowerShell terminal font can now be customized
+
+ - Other notable quality improvements
+     * Improved detection of PowerShell scripts
+     * Addressed crash when loading specific project data
+     * Selection after spell checking __Change__ doesn't work correctly
+     * "Right click"...*Only if CTRL is pressed* spell check option not working
+     * Focus is in wrong pane after opening file from FTP and invoking __Find__ dialog
+     * Display standard deletion confirmation message box when __Remove script__ is selected
+     * Added setting to specify the number of recent projects shown in list in ribbon/submenu
+     * Improved C# function detection for function list
+     * Spaces at beginning of lines are dropped when inserting templates
+     * Dragging a selection in column mode and dropping it doesn't work as expected
+     * __Find next__ (<kbd>F3</kbd>) with unlimited columns not working as expected
+
+---
+### 2023.0
+
+ - Features and enhancements
+     * Application scripting update
+         * Modern JavaScript support and full browser capabilities
+         * Legacy JavaScript support by default for full backwards compatibility
+         * Enable latest JavaScript by adding header to script: `// @Engine=WebView2`
+     * Dockable PowerShell terminal
+         * Dockable window, place anywhere you wish as a floating window or dock in any orientation
+         * Execute any valid shell commands
+         * Edit and run PowerShell scripts from the ribbon
+         * Run selected portions of PowerShell scripts
+     * Enhanced live preview: Dev Tools
+         * Select __Inspect__ from the live preview context menu
+         * Review DOM and loaded resources
+     * Enhanced live preview: Select/Capture/Print
+         * Select command from live preview context menu
+         * Capture as text
+         * Capture as image
+         * Print rendered page to printer or PDF
+     * Spell check improvements
+     * FTP/FTPS/SFTP improvements
+
+ - Other notable enhancements and quality improvements
+     * Caret position is incorrect with certain UTF-8 content
+     * __Comment/Uncomment__ improvements
+     * URL highlighting and interaction improvements
+     * Highlighting incorrect after replace all in selected text
+     * Inserting multi-line HTML templates positions the closing tag incorrectly
+     * Incorrect highlighting of inline PHP comments
+     * Active string isn't highlighted correctly after quick find
+     * Crash on startup with specific command line parameters
+     * Caret jumps to beginning of line when editing with __Live Preview__ enabled
+     * Enable updated JavaScript support for command line script execution
+     * Spell check checks entire document instead of selection
+     * Added __PHP__, __Python__, __Ruby__, and __PowerShell__ commands to __Coding__ ribbon
+     * Crash in command palette with `\` root path
+     * Crash when inserting a template
+     * Unable to scroll to leftmost tab when single line scrollable tabs are enabled
+     * FTP: Parsing certain large directories is very slow
+     * FTP: Issue loading PPK v3 keys
+     * FTP: Files opened in wrong tab group when using tiled windows mode
+     * FTP: Extra line added to files opened using ASCII transfer mode
+     * FTP: __Rename folder__ navigates into folder instead of renaming with __Show current directory only__ enabled
+     * FTP: <kbd>F5</kbd> triggers __Capitalize__ command in active file when focus is in FTP pane
+     * Caret position and auto complete dialog incorrect with <kbd>Ctrl + Backspace</kbd>
+     * Brace matching incorrectly highlights brace inside string
+     * Macro quick record forces `Find Up` for find actions
+     * Crash after sorting file with specific content
+     * Quick find skips first occurrence in file after search wraps from end to beginning of UTF-16 file
+     * __Find__ (and subsequent find string selection) works in ANSI file, but not in UTF-16 files
+     * __Find next__ skips first occurrence of search string in large file
+     * __Find__ skips valid matches for search string
+     * JSON manager hangs/crashes when trying to work with very large files (30 GB+)
+
+---
+### 2022.2
+
+ - Features and enhancements
+     * Footnote support for markdown live preview
+     * Task list checkbox support for markdown live preview
+     * New theme: __Monokai Pro__
+     * Open URLs with <kbd>Ctrl + Shift + click</kbd> in currently open files
+     * Updated CSS wordfile
+     * <kbd>Ctrl + Left/Right arrow</kbd> now works for column mode
+     * Option to automatically recover documents on system or application failure
+     * FTP/FTPS/SFTP is updated to the latest encryption, hashing, and protocol standards including full TLS 1.3 support
+     * Telnet/SSH is updated to the latest encryption, hashing and protocol standards
+ - Other notable quality improvements
+     * File added erroneously to project root instead of group folder
+     * Wordfile changes not reflected until files saved
+     * Command line flags return incorrect path error
+     * Reindent selection doesn't work with unordered list
+     * Status bar flickers while typing with wrapped lines
+     * <kbd>F3</kbd> doesn't work as expected with infinite column mode
+     * Perl highlighting shows all text as comment following `\qq`
+     * Perl regex with `\K` not finding all matches
+     * Quick find UI is hidden or partially visible
+     * Crash when using sum selection
+
+---
+### 2022.1
+
+ - Two-factor authentication (2FA) for SFTP
+     * Full support for connecting to servers that require 2FA verification code / Time-based one-time passwords (TOTP)
+     * New __Interactive login__ account option (__Advanced__ tab)
+     * 2FA accounts are limited to one connection to prevent multiple 2FA prompts
+     * Connection maintained during file editing to avoid further 2FA prompts
+ - Chrome (Edgium) rendering for browser view / live preview
+     * Upgrades HTML / Markdown preview to modern rendering engine
+     * Requires WebView2 browser component from Microsoft (included in Win 11, available on Win 10)
+     * Fallback to older browser control for legacy rendering on systems not supporting WebView2
+ - Command palette expansions
+     * Quick open file from history
+         * Type `\` then begin typing part of file path or name to filter results; ex: `\myFile.js`
+         * Select path and press <kbd>Enter</kbd> to open
+         * Clear one or all paths from history
+         * Unlimited number of items for file path histories
+     * Quick open any file
+         * Begin typing file path and command palette will offer auto-completing matches
+         * Select a matching folder to add it to the path
+         * Select a matching file to open it
+         * Supports letter drives and UNC paths
+         * Wildcard support for opening multiple files at once; e.g. `C:\prj\class*.cpp`
+     * Go-to shorthand
+         * Type `:` (colon) then line number / column number to jump to location; e.g.: `:300,25`
+         * Type `:b` to see list of bookmarks, then select bookmark to jump to
+         * Type `:b2` then press <kbd>Enter</kbd> to jump to bookmark 2, or `:bMyBook` to jump to bookmark named `MyBook`
+         * Type `:p` then page break number to jump to page break; e.g.: `:p5`
+     * Search and insert templates from command palette
+ - Syntax highlighting parser overhaul
+     * Source code highlighting data now abstracted from edit control, improving performance and resolving dozens of issues
+     * Syntax highlighting preserved with selections
+     * Support for block comments opened with same characters as line comments
+     * Support for arbitrary string pairs (square brackets, backticks, etc.)
+     * Added support for Perl quote-like string operators, e.g.: `qq(STRING)`
+     * Improved XML code highlighting with embedded CDATA sections
+     * Addressed syntax highlighting issues with word-wrapped lines
+ - HTML Tidy overhaul
+     * Updated HTML Tidy library to latest version
+     * New HTML Tidy UI with dozens of additional options
+     * New command and associated key mapping to run HTML Tidy
+ - Output window improvements and additions
+     * Add and remove any number of output windows
+     * Rename output window tabs
+     * Select and copy partial or whole lines in output window
+ - Other notable user experience improvements
+     * Ability to rename unsaved file tab
+     * User tools automatically import embedded icon from external executable
+     * Re-engineered user clipboards now support selections of greater than 4 GB (exceeding Windows clipboard limitations)
+     * Add file to project now uses regular __File Open__ dialog
+     * Reformat JSON now automatically applies code highlighting
+     * Size column is now right aligned in all FTP file lists
+ - Other notable quality improvements
+     * Addressed issue with child windows opening off screen when last positioned on disconnected monitor
+     * Addressed issues parsing URL formats for right click open
+     * Addressed __Reformat Paragraph__ issues with large selections of text
+     * Addressed issue with __Save selection as__ and GB of selected data
+     * Addressed file lock issue when saving FTP file
+     * Removed 160 byte limit on application title bar
+     * Improved selection while in column mode
+     * Addressed "Server signature does not match" issue with SFTP
+     * Addressed issue with duplicated characters in SSH log
+     * Added missing *To uppercase* command to key mapping
+     * Added file path and name to non-DOS line terminator prompt
+     * Addressed tool performance issue with *Show DOS box* enabled
+     * Further theming improvements
+
+---
+### 2022.0
+
+ - Improved startup speed and performance
+     * Various optimizations to startup routines
+     * Startup speed reduced by up to 50%
+ - __File view / explorer__ window improvements
+     * Existing file view tabs split out into separate dockable windows
+         * __File explorer__
+         * __Project__
+         * __File lists__ (favorites, recents, etc.)
+         * __Open files__
+     * Ribbon / menu toggles and key mappings added for new windows
+ - __Macro__ improvements
+     * Greatly improved macro playback speed
+     * Reduced screen updates to improve performance
+     * Per-macro option to disable screen updates to improve macro playback speed
+     * Comment support (use `#` to create a comment line ignored by macro parser)
+     * `GetValue` supports 64-bit integers
+     * `SaveAs` now uses default save directory in all cases
+     * Addressed issue with duplicated key mappings
+     * Addressed focus issue with `GetValue` prompt
+ - __Column mode__ enhancements
+     * Improved performance for column editing in large files
+     * New option for __Insert/Fill Columns__ to ignore last line if empty
+ - __Find String List__ (*List lines containing string*) improvements
+     * Greatly improved performance, especially in large files
+     * New option to automatically refresh results
+     * Double clicking result highlights match in file
+     * Added <kbd>F5</kbd> keyboard shortcut to refresh results
+ - __Favorite files__ improvements
+     * Redesigned interface to show columns
+     * Sort favorite files by name or path
+     * Addressed issue with __+All open files__ button
+ - __User tool__ improvements
+     * Tool output now displayed in real-time
+     * Added support for running tools on remote (FTP) files
+     * Tool runtime input via `%modify%` now uses active clipboard
+     * Addressed issue with shifting key mappings when adding or removing tools
+     * Tool tooltips in ribbon now display name
+     * Improved scaling for custom tool icons in toolbar
+ - __Perl regular expression__ improvements
+     * New config setting to make Perl regexp searches case sensitive
+     * Dot (`.`) no longer matches new line
+     * Added support for Perl regexp `DEFINE` feature
+     * Improved memory handling to support more complex regexps
+ - __Settings__ improvements
+     * Fully resizable settings dialog - text and controls flow and wrap as dialog is resized
+     * INI path selectable with new __Open__ button for fast access to its folder in __Application Layout__ » __Advanced__
+     * Improved usability of __Settings__ search
+     * Improved settings for default file open directory in __File handling__ » __Load__
+     * Various UI tweaks and fixes throughout settings
+ - New option to create new file when all other files are closed
+ - Command palette now fully resizable
+ - Introduced year-based versioning system
+ - Many issues resolved
+
+---
+### 28.20
+
+ - Interactive __Find in Files__
+     * New option for *Interactive results* in __Find in Files__ dialog
+     * Provides "live" view of all search results in a single edit tab
+     * Expand and collapse search results as needed
+     * Modify matched files directly in results
+     * Perform mass replaces in one or all results
+     * Save each result individually, or all at once
+ - Scroll through file tabs with the mouse wheel
+     * Set in file tabs context menu
+     * Set in __Settings__ » __Application layout__ » __File tabs__ » __Miscellaneous__
+ - Ability to remove items from __Recently opened__ / __Recently closed__ lists in __File View__ (__Lists__ tab)
+ - Added three new dark color themes (__Studio Dark__, __One Dark__, __Predawn__)
+ - Added key mapping support for __Go to Previous__ / __Next Position__
+ - Added *Yes and make active* option to __File Change Detection__ prompt
+ - Changed split window behavior to show same view in both splits
+ - Added IntelliTips automatic scanning of external *include* folder configured in __Settings__ » __Auto-complete__ » __IntelliTips__ » __Parser__
+ - FTP component updates
+ - Addressed __File Change Detection__ prompt appearing for FTP files
+ - Improved support for Perl regexp negative lookbehinds
+ - Improved selection for binary data and non-printable characters in text mode
+ - Other minor fixes and improvements
+
+---
+### 28.10
+
+ - IntelliTips improvements
+     * Implemented threading for improved performance when parsing source files
+     * Eliminated slowness when typing in IntelliTips-parsed file
+     * Updated and modernized parser engine
+     * Added support for dozens of additional languages
+ - Improved performance
+     * Faster loading of multiple files
+     * Improved file tab handling with many files open
+     * Faster project load
+ - Updated Ctags (to universal-ctags) for more robust and modern symbol parsing
+ - Improved auto-complete to be more user friendly and less obtrusive
+ - __Find in Files__ improvements when searching files with corrupt / incorrect encodings
+ - Improved storage and handling of settings and customizations data
+ - Smarter handling of auto-recovered unsaved files with *Save State* enabled
+ - Renamed update exe to prevent erroneous launch from Windows Temp File cleanup
+ - Removed legacy spell check support (Aspell) for increased application security
+ - Miscellaneous improvements to increase application performance and reliability
+
+---
+### 28.00
+
+ - IntelliTips
+     * Code-aware suggestions for auto-completing class members, methods, etc.
+     * Function tips for typing parameters in function call
+     * UltraEdit parses active file and parent folder for symbols
+     * Supports local files and files opened via FTP
+     * Optionally scan other folders
+     * New config options in __Settings__ » __Auto-complete__ » __IntelliTips__
+ - Improved auto-complete
+     * Fully themed auto-complete dialog
+     * Choose when auto-complete automatically shows in __Settings__ » __Auto-complete__
+ - Fully resizable __Find__ and __Replace__ dialogs
+ - New context menu option __Delete lines__ in __Find String List__ to delete all lines containing string
+ - New option to *Highlight all items found* with __Replace__
+ - __Highlight all selected__ optionally matches
+     * *Whole word only*
+     * *Case*
+ - __Save and Close__ command
+ - __Open last-closed tab__ option (file tab context menu)
+ - Ability to save an empty, new file
+ - __Save as__ option to leave both original file and new file open
+     * Added support for remote (FTP) files as well
+ - Go to previous and next position using forward and back buttons mouse
+ - Dynamic highlighting of XML and HTML attributes and values
+ - Clicking in line margin to select now selects entire soft-wrapped line
+ - Expanded theme support with most dialogs using theme colors
+ - Other minor enhancements and issues addressed
+
+---
+### 27.10
+
+ - File properties
+     * Dockable window displays information about active file
+     * File attributes, encoding, line/character statistics, etc.
+     * Copy one or all file properties to clipboard
+     * Collapsible information sections
+ - Image preview for HTML / web files
+     * Hover over image reference in source to see preview in tooltip
+     * Supported in HTML, CSS, JavaScript, JSON, Markdown, PHP, Python, Ruby, Perl
+     * Supports BMP, GIF, JPE/JPG/JPEG, PNG, and TIFF image formats
+     * See original image size and color mode
+  - UAC administrator override prompt for modifying and saving system files
+  - Unlimited line length - no forced wrap
+     * Unlimited line length option added in __Settings__ » __Editor display__ » __Miscellaneous__
+     * Set max columns before wrap to values greater than 20,000
+  - Hide / show unchanged lines (__View__ » __Hide/show__ drop down)
+  - Combine multiple files
+     * Accessible via __Edit__ tab » __File__ (__Insert__ group) » __Insert multiple files__
+     * Select one or more files from multiple locations
+     * Set order of inserted files
+     * Option to add new line if missing from inserted file(s)
+     * Line terminators automatically normalized if *On paste convert line endings* set in __Settings__ » __File handling__ » __Conversions__
+  - Jump to function definition
+     * <kbd>Ctrl + right click</kbd> on function call in source to jump to its definition
+     * Function must be listed in function list
+  - Eliminated view shift when selecting all (<kbd>Ctrl + A</kbd>)
+  - Manually set syntax highlighting type now remembered between sessions
+  - Syntax highlighting preserved for HTML / XML matching tag highlights
+  - Added Unicode BOM indicator to encoding value in status bar
+  - Improved display when toggling full screen mode
+  - Window framework update to improve performance and correct display issues
+  - Improved handling of literal caret (`^`) in templates
+  - Improvements for inserting files of different encodings and line terminator formats
+
+---
+### 27.00
+
+ - __Cloud Sync__
+     * Secure, cloud-based syncing of settings between different systems
+     * Authenticate with Google, GitHub, or Microsoft account
+     * Push / pull all settings, or specific settings categories
+     * Backup / restore system
+     * Manage, rename, and remove instances from sync account
+     * Requires a subscription license including __Cloud Services__
+ - __Compute hash__ for active file or selected text (__Coding__ tab » __Tools__ group)
+     * MD5, CRC, SHA1, and SHA256 algorithms calculated and shown
+     * Copy hash value from result dialog
+     * Key mapping available
+     * Command line support available: `uedit64` `/md5` | `/crc` | `/sha1` | `/sha256` `<file>`
+     * No file size limitations
+ - New options in file tabs context menu to sort file tabs by
+     * __Name__
+     * __Location__
+     * __File extension__
+     * __Date modified__
+ - Dialog overhaul to modernize settings and configs
+     * __Apply__ / __OK__ buttons removed where applicable
+     * Obsolete settings and controls removed
+ - Unlimited bookmark support
+     * Set unlimited bookmarks in a file...even multi-GB files with hundreds of thousands of bookmarks
+     * Greatly improved performance for toggling bookmarks and with __Bookmark Viewer__
+ - New option *Bookmark matching lines* in __Find__ dialog
+     * Automatically set bookmarks for all lines containing match (instead of using __Find String List__)
+     * Find bookmarks are tracked and appear separately from standard bookmarks
+     * Allows you to quickly and easily delete, cut, or copy all lines containing search string
+     * __Clear Find bookmarks__ (__Home__ » __Bookmarks__ sub-menu) while preserving manually set bookmarks
+ - New option in function list context menu to avoid automatically expanding function
+ - Support for horizontal scrolling via <kbd>Shift + mouse wheel</kbd>
+ - Added __Compress XML__ / minify (__Coding__ tab)
+ - Various other enhancements and improvements...
+
+---
+### 26.20
+
+ - Internal improvements for multi-segmented edit control
+ - Progress bar (in status bar) for large parsing / edit operations
+ - Ability to immediately cancel long-running operations via <kbd>ESC</kbd>, including
+     * Find / quick find
+     * Replace
+     * Macros
+     * Goto
+     * <kbd>Ctrl + Home</kbd> / <kbd>Ctrl + End</kbd>
+     * File open – cancel opening a huge file, or a large number of files
+     * Convert CSV / fixed width
+     * Convert tabs to spaces / spaces to tabs
+     * Convert line ends / wrap
+     * Reformat XML / JSON
+     * Reindent / reformat
+     * Print
+
+---
+### 26.10
+
+ - Greatly improved performance
+     * Threaded __Quick Find__ for greatly improved performance in large files
+     * Faster scrolling and editing, especially in files with hidden lines
+     * Better performance when word wrap is enabled
+     * Faster undo / redo
+     * Improved grouped undo
+     * Eliminated flickering while typing
+     * Faster scrolling with HTML / XML tag highlighting
+     * Smoother scrolling with large files
+     * Improvements for indent guidelines with large sections of code
+
+---
+### 26.00
+
+ - Command palette
+     * Easy and quick access to all of UltraEdit's functionality and settings via <kbd>Ctrl + Shift + P</kbd>
+     * Filter commands in search box at top
+     * Pin favorite commands / settings to top of list
+     * Access recently used commands in most-recently-used list
+     * Run macros, scripts, and user tools directly from command palette
+ - JavaScript / CSS minifier and decompressor
+     * JS/CSS drop down includes reformat, compress, and JavaScript Lint options
+     * New __Formatting__ group in __Coding__ tab containing all code reformatting tools
+ - Re-engineered code folding
+     * Open – and fold – huge source files (up to 500 MB)
+     * Faster parsing of huge files with foldable code
+     * Much more accurate and better performing folding
+ - Macro performance overhaul
+     * In many cases, macros complete in a fraction of the time of previous versions – in some cases, nearly instant!
+     * Improved macro performance and stability for huge files
+ - Highlight all occurrences of string on double click (no <kbd>Shift</kbd> required)
+ - Hints bar
+     * See tips and hints contextualized to the work you're doing
+     * Scroll through all hints
+     * Hints are designed to be automatic and unobtrusive
+ - New expand / collapse all option in function list context menu
+ - Status bar shows total number of lines in file
+ - Modernized key mapping
+     * Re-map <kbd>Ctrl + Tab</kbd> and <kbd>Ctrl + Shift + Tab</kbd> (provides browser-like tab switching behavior)
+     * __Replace in Files__ re-mapped to <kbd>Ctrl + Shift + R</kbd>
+     * __Quick record__ macro re-mapped to <kbd>Ctrl + Shift + Q</kbd>
+
+---
+### 25.20
+
+ - Markdown support
+     * Preview Markdown files (via __Coding__ » __Live preview__ or __Browser view__)
+     * Preview uses GitHub Flavored Markdown (GFM) library for rendering
+     * Select different styles for Markdown rendering (or add your own)
+     * Special Markdown syntax highlighting (with new `MARKDOWN_LANG`) language marker
+     * Support for embedded HTML highlighting
+ - Live HTML preview
+     * Split window with code view and browser view
+     * Code changes (saved and unsaved) are automatically updated in browser view
+     * Position sync: Double click on element in preview to jump to its location in source
+     * Configure under __Advanced__ » __Settings__ » __Editor__ » __XML / HTML / Markdown__
+     * Updated HTML rendering component to support modern HTML / CSS / JS
+     * Added support for copying (via <kbd>Ctrl + C</kbd>) selected text
+ - Save state
+     * Close UltraEdit without being prompted to save anything, then pick up where you left off – unsaved changes are restored
+     * Works for local, network, FTP, and even unsaved *Edit* files
+     * Prefer prompts to save? Disable this feature under __Advanced__ » __Settings__ » __File handling__ » __Session options__
+ - Close unsaved *Edit* files with no prompt to save
+     * This optional feature can be set under __Advanced__ » __Settings__ » __File handling__ » __Session options__
+ - Improved file tab handling on startup
+ - Changed default temporary file location
+ - Many fixes and internal improvements
+
+---
+### 25.10
+
+ - Code folding enhancements
+     * "Peek" at folded code (hover over "..." to see preview of collapsed text in a tooltip)
+     * <kbd>Ctrl + click</kbd> on folding node to expand / collapse all sub-nodes of that node
+     * <kbd>Alt + click</kbd> on folding node to expand / collapse all folding nodes in the active file
+     * Expand / collapse code from any line within folding section (not just first line)
+ - Full Unicode support in wordfiles
+     * Create wordfiles containing Unicode characters
+     * Wordfiles can be saved as ANSI, UTF-8, or UTF-16, with or without BOM
+     * Use Unicode characters in keywords, comment characters, indent/unindent strings, brace matching, more...
+ - New `/Word Select Include` wordfiles setting for overriding delimiters for navigating / selecting
+     * Allows you to set override default delimiters on a per-language basis
+     * For example, `/Word Select Include = $` would cause the `$` symbol to be included when double clicking a word to select
+     * This would also cause <kbd>Ctrl + Left/Right</kbd> arrow to skip `$` (instead of stopping on it)
+ - Delimiter based sort
+     * Specify delimiter to sort by field (instead of specific column numbers)
+     * Makes IP address sort possible
+ - Faster brace / tag matching in source with very long lines
+ - __Filter on selection__ switches to __Clear filter__ when toggled on
+
+---
+### 25.00
+
+ - Collapsible __Find in Files__ results for output window (per file)
+ - __Find in Files__ results highlighting in output window
+     * Highlighting for matches, file path / name, line number, text, and more
+     * Modify colors in new __Output__ tab in theme manager
+ - New spell checker based on Windows API
+     * Replaces Aspell on Windows 8.1 and later (Windows 7 will still use Aspell)
+     * Supports all encodings, including Unicode formats
+     * Language support based upon installed languages on Windows
+     * Supports filters for strings, comments, HTML, and XML
+ - Bookmark enhancements
+     * New bookmark gutter (right side of line numbers)
+     * Ability to click in bookmark gutter to toggle bookmarks
+     * Access special bookmark context menu by right clicking bookmark gutter
+     * Optionally disable bookmark gutter
+ - New __Open folder__ option in __Explorer__ context menu
+     * Selected folder set as root in file view __Explorer__ pane
+     * Selected folder set as __Find in Files__ and __File Open__ default directories
+ - New __Filter on selection__ in __Home__ tab to show only lines in file containing selected text
+ - Ability to add macros or scripts to toolbar, ribbon, or context menu
+ - Key mapping, toolbar / ribbon support for __Save and upload to server__ for FTP-linked files
+ - New __Automatically upload saved files__ option to FTP-linked folder context menu (__Project__ tab)
+ - Ability to customize tags inserted by HTML toolbar buttons
+ - Ability to set output encoding for user tools (ANSI, UTF-8, or UTF-16)
+ - Folder picker button in __Find / Replace in Files__ dialog now uses standard Windows open dialog
+ - Much more responsive XML / JSON manager trees, especially with large structures and data
+ - Greatly improved performance for files opened from slow network or VPN
+ - Internally refactored UTF-8 handling
+     * Greatly improved editing for multi-byte ANSI formats (mostly Asian fonts / scripts)
+     * Better display of non-Latin characters in UTF-8 files
+     * Better handling of column editing with special characters in UTF-8 files
+     * UTF-8 to UTF-16 conversion happens in memory – avoids conversion of temp file
+
+---
+### 24.20
+
+ - Folded code highlighting
+     * Folding control turns solid when section is collapsed
+     * Background coloring for first line of folded code
+     * Configure colors for the above in theme
+ - Tab delimited sort (sorts file based on tab-separated value fields instead of column numbers)
+ - Greatly improved performance and memory management when writing thousands of results to __Output Window__ or __Find String List__
+ - Greatly improved performance of __Delete All Hidden Lines__, especially with many lines hidden
+ - Greatly improved performance with many strings highlighted via __Highlight all__ or __Quick Find__
+ - Much smoother scrolling with large sections of hidden code / text
+ - Quicker canceling of __Find / Replace in Files__
+ - Syntax highlighting preserved for partially selected keywords
+ - Status bar *Bytes selected* now reports *Chars selected* instead (mainly for UTF-8 files)
+ - Function list no longer shows functions in block comments
+ - SSH/Telnet and FTP now prompt for user name when not set
+ - Improved display and spacing of line number margin (decreased width when line numbers disabled)
+ - Title bar no longer uses black color for text with darker title bar background
+ - Addressed issue where unmatched string char in regexp causes unwanted string highlighting
+ - Addressed issue with line numbers in __Find String List__ when file contains mixed line terminators
+ - Addressed issue with missing vertical scrollbar in vertically oriented multi-line file tabs
+ - Addressed erroneous file change detection prompt with time zone change or daylight savings change
+ - Addressed word wrap issues with non-Latin characters
+ - Addressed issues with "OR" operators in Unix regular expressions
+ - Addressed lazy/greedy issues with wildcards in Unix regular expressions
+ - Addressed issue with UltraEdit legacy regular expression wildcard
+ - Addressed issue with occasional hang during __FTP Save__
+ - Addressed XML / HTML tag highlighting issues with Asian characters
+ - Addressed several column mode issues when editing multi-byte (Asian) characters
+ - Addressed other column mode issues
+ - Addressed issues with paths containing Unicode characters in .prj/.pui
+ - Reverted accelerator keys for __File Change Detection__ dialog buttons
+ - Various other minor issues addressed
+
+---
+### 24.10
+
+ - JSON manager
+     * Provides tree-style view of JSON data (based upon .json file extension)
+     * Copy, cut, paste, and duplicate JSON objects and keys
+     * See table of key / value data for selected object
+     * Expand / collapse all nodes
+     * Drag-and-drop JSON objects / keys to move them
+     * Format, compress, and re-parse active JSON file
+ - JSON reformatter (__Coding__ tab) to reformat, reindent, and compress JSON
+ - New wordfile and special syntax highlighting support for JSON
+ - Greatly improved performance with __Document Map__, especially in large files
+ - Greatly improved performance with __Line Change Indicator__ (LCI), especially in large files
+ - Addressed all issues related to LCI
+
+---
+### 24.00
+
+ - Native Unicode rewrite / refactoring of code for greatly improved handling and detection
+     * Better rendering of non-Latin text in various Unicode formats
+     * Better handling of Unicode file paths in title bar, file tabs, open file list, etc.
+     * Resolved all issues related to opening files with Unicode characters
+     * Greatly improved detection of (non-Unicode) code pages
+     * Improved detection of UTF-8 string declaration
+     * Automatic font / script substitution for non-Roman and OEM character sets
+     * New __Encoding__ settings under __Advanced__ » __Settings__ » __File handling__ » __Encoding__
+     * Ability to set fallback encoding / code page when auto-detection cannot determine
+     * New prompt to convert ANSI file to UTF-8 when pasting Unicode/UTF-8 content
+     * Support for using Unicode with `^c` and `^s` variables in macros/scripts
+     * Added option to handle tool output as Unicode (in __Output__ tab of tool settings)
+     * Proper and full rendering in menus, dialogs, etc. for all language versions, regardless of OS language
+     * Addressed multi-caret issues when inserting Asian / multi-byte characters
+     * Addressed caret "jumping" issues in UTF-8 files
+     * Addressed issues related to opening and saving UTF-8 files via FTP
+     * Addressed issues related to word wrap with multi-byte characters / Asian scripts
+     * Addressed caret positioning issues with Asian characters in Unicode / UTF-8 files
+     * Countless other Unicode / UTF-8 improvements and adjustments
+ - Full Unicode support for / in
+     * Macros and scripts
+     * Function list
+     * Tag list
+     * Output window
+     * Auto-complete
+     * Key mapping
+     * Open address and search toolbars
+     * Ctags
+     * Insert column
+ - GUI to easily browse, add, and remove syntax highlighting languages
+     * Access from __Coding__ tab or __Advanced__ » __Settings__ » __Editor display__ » __Syntax highlighting__
+     * Check languages to add them, uncheck to remove them
+     * Search / filter for languages
+     * Reset syntax highlighting back to factory defaults
+ - Find / replace enhancements
+     * Optionally leave replace dialog open when doing step-by-step replace
+     * Added ability to scroll find / replace histories with mouse wheel
+     * Added support for Perl regexp buffer boundaries (`\A`, `\z`, etc.)
+     * Added unobtrusive notification when search wraps to other end of file
+     * Find / replace *In* setting now defaults to selected text only if 2 or more lines selected
+     * Search in column now supports column number up to 20,000
+     * Improved performance with many filtered lines (*Show / hide lines*)
+     * Addressed many Perl regexp issues
+     * Addressed __Count all__ issue with Unicode characters
+     * Addressed issues with slim replace dialog buttons
+     * Addressed several quick find issues
+ - Find string list enhancements
+     * Find string list scrolls to track active line in edit window
+     * Ability to create new file from find string list contents (context menu)
+     * Highlighting of matches in find string list (toggle in context menu)
+ - Find / replace in files enhancements
+     * Added button to set find / replace in files directory to active file's directory on the fly
+     * Added notification to status bar when find / replace in files completes
+     * Status bar indicates number of matches / files searched as search progresses
+     * Vastly improved performance and speed when writing results to output window
+     * __Find in Files__ now checks each file for BOM and uses BOM-specified encoding for search
+     * Added *Active file* option to encoding drop down (uses active file's encoding for search)
+     * Added *Auto-detect* option to encoding drop down (will auto-detect each file's encoding during search)
+     * Better results and display when searching across multiple encodings
+     * Addressed issue with double clicking on FTP file in find in [open] files results
+ - XML manager enhancements
+     * Added drag-and-drop support to move elements
+     * New __Copy XPath__ option for nodes/attributes
+     * Added highlighting of current (edit window) position
+     * Addressed issues with incorrectly reported error positions
+     * Several other issues addressed
+ - Drag-and-drop images / graphics, or browse to images, to insert them in active HTML document
+     * Drag-and-drop any number of images directly into an HTML based file
+     * For most HTML and web files, `<img>` links will be automatically inserted
+     * For CSS files, the URL to the image will be inserted
+     * Modify the HTML / CSS formats for inserted images in __Settings__ » __Editor__ » __Image drag-and-drop__
+     * Hold <kbd>Ctrl</kbd> while dragging and dropping to modify the format on the fly
+ - Select and open multiple files at once from __Recently opened / closed__ files menu
+     * New option __Open all__
+     * Hold <kbd>Ctrl</kbd> and click files to select multiple at once
+     * Click __Open selected__ to open all checked items
+ - __Join lines__ feature (__Edit__ tab)
+     * Option to preserve leading spaces in __Advanced__ » __Settings__ » __Editor__ » __Advanced__
+ - Compare in UC Pro externally detected changes from file change detection prompt
+ - New context menu for __Lists__ tab in file view
+     * __Add folders/files__
+     * __Show names only__
+     * __Rename file__
+     * __Remove file from list__
+ - __Close all files to left / right__ in file tab context menu (with key mapping support)
+ - __Add to__ [__Favorite / Project__] __Files__ options on file tab / file view context menu
+ - Drag-and-drop file tabs to file view __Project__ and __Lists__ tab to add to projects and lists
+ - New option to use classic theme for printing (__Page setup__ dialog)
+ - User tools and default associated shortcuts now begin with `1` instead of `0`
+ - Standardized capitalization of text (sentence case) in menus and UI
+ - New `/LanguageMarker` flag for wordfiles for expanded shebang line recognition
+ - New option to disable automatic hex mode for files containing nulls (hex 00) in __Advanced__ » __Settings__ » __Editor__ » __Hex mode__
+ - __Defaults__ button in sort settings dialog
+ - __Delete selected lines__ now deletes complete line even if not completely selected
+ - Paste into multiple selected columns while in column mode now pastes into all columns
+ - Full customization support for edit window and file tab context menus
+ - Improved performance and data handling with shared FTP accounts
+ - Optimized file change detection to avoid pause when checking for changes in all open files
+ - Support for OpenSSH 7.0+ (SSH console)
+ - Addressed issues related to FTP-linked project folder
+ - Addressed several issues when default ANSI encoding set to non-Latin code page
+
+---
+### 23.20
+
+ - Brace auto-completion
+     * Brace pairs defined in wordfile are auto-closed when opening brace is typed
+     * If no braces in wordfile, or if file is not syntax highlighted, `()`, `{}`, and `[]` are used as defaults
+     * Pressing <kbd>Enter</kbd> will reposition close brace on separate line while maintaining proper indent levels
+     * Pressing <kbd>Backspace</kbd> immediately following auto-completion will remove both opening and closing brace
+     * Typing close brace skips over auto-completed close brace without inserting second brace
+     * Can be disabled for non-highlighted (plain text) files
+     * Can be disabled for comments and strings
+ - String auto-completion
+     * Can be disabled for non-highlighted (plain text) files
+     * Can be disabled for comments
+ - Lightning fast file sorting
+     * Sort large files in a fraction of the time of previous versions
+     * More efficient memory management when sorting
+     * More reliable sort; many issues addressed
+     * Removed (now obsolete) alternate sort method
+ - Near instantaneous file loading
+     * Improved performance for normal file open, drag-and-drop, project reloading, etc.
+     * Makes startup exponentially quicker when reloading multiple files
+ - Traditional menu option for legacy menu key accelerator support
+     * Right click on ribbon and select __Toolbar/Menu Mode__ » __Traditional menus__
+     * Restored traditional toolbars for this mode
+ - New syntax highlighting for
+     * DOS batch files
+     * Unix shell scripts
+     * PowerShell scripts
+     * Wordfiles
+ - New UC Lite with both 32-bit and 64-bit versions
+ - Set open address and search bar widths in __Settings__ » __Toolbars/Menus__ » __Miscellaneous__
+
+---
+### 23.10
+
+ - Find/replace issues addressed
+     * Addressed issue with __Find String List__ truncating lines after 260 columns
+     * Addressed issue with __Find String List__ not displaying `&` symbol in non-English versions
+     * Improved elimination of duplicates in search histories
+     * Addressed issue with __Find in Files__ results highlighting more than the search keyword
+ - Column mode issues addressed
+     * Addressed replace in selection issues when in column mode
+     * Addressed cut/copy/paste issues in column mode
+     * Addressed issues deleting columns
+     * Addressed issue inserting HTML tags while in column mode
+     * Addressed issue with <kbd>Shift + End</kbd> not working as expected
+     * Addressed column mode selection performance issue with __Document Map__ enabled
+     * Addressed several other isolated issues when working in column mode
+ - User tool issues addressed
+     * User tools added to ribbon now show custom tool name instead of default name
+     * Addressed sizing issues with custom bitmaps for user tools
+     * Addressed issue with custom tool icons when large icons are enabled
+ - Addressed maximized window / title bar issues
+ - Addressed issues with variable and wildcard syntax highlighting with word wrap
+ - Addressed issue with custom help files in toolbar / menu mode
+ - Addressed issues with edit window minimize, restore, and close controls
+ - Addressed issue with stopping macro recording in toolbar / menu mode
+ - Addressed issues with caret when using <kbd>Page Up</kbd> / <kbd>Page Down</kbd> with folded lines
+ - Addressed issue with __Sort file tabs on open__ when dockable tabs are enabled
+ - Addressed issue with showing __Recent Files__ on __File__ menu
+ - Addressed issue that caused caret to disappear when clicking on status bar icon in hex mode
+ - Addressed accelerator conflict for __Select__ and __Sort__ in ribbon
+ - Various other issues addressed
+
+---
+### 23.00
+
+ - New UI featuring ribbon and classic toolbar/menu mode
+     * Ribbon UI
+       - Menu commands organized in logical groups for quicker access
+       - __Quick Access Toolbar__ (QAT) in application title bar
+       - Access commands via ribbon accelerators (<kbd>Alt</kbd>)
+       - Optional compact mode for consolidating vertical space
+       - Customize ribbon and QAT with your own ribbon tabs and/or groups
+     * Toolbar/menu mode
+       - Provides classic menu and toolbar interface as with previous versions
+       - Create and customize toolbars
+     * Updated and modernized icons throughout application
+ - Full support for UHD / 4k+ displays
+ - Improved startup speed
+
+---
+### 22.20
+
+ - native 64-bit version released
+ - greatly improved startup speed
+ - various other performance improvements
+
+---
+### 22.10
+
+ - Smarter indentation of auto-completed XML/HTML close tags
+     * After closing tag is automatically inserted, press <kbd>Enter</kbd>
+     * UE will reposition and properly indent the closing tag on the line beneath the new (active) line
+ - Convert __Quick Find__ to multi-select
+     * Press <kbd>Ctrl + ,</kbd> (comma) with __Highlight All__ active to convert them to multi-selections
+     * Select some text, then press <kbd>Ctrl + ,</kbd> to convert all occurrences of selection to multi-selections
+     * Create custom key mapping in __Advanced__ » __Configuration__ » __Key Mapping__ (*ViewConvertHighlightedToSelection*)
+ - __Highlight All Selected__ and search highlighting shown in the __Document Map__
+ - __Highlight All Selected__ now uses entire selection (instead of just word under caret)
+ - Performance improvements for multi-caret editing with many selections/carets
+ - __Document Map__ improvements with column mode, selecting, changing syntax highlighting, etc.
+ - Added support for select all with <kbd>Ctrl + A</kbd> in __Edit Macro__ dialog
+ - Addressed display issues in Asian languages (Chinese, Japanese, Korean)
+   with child windows, file tabs, tooltips, and other UI elements
+ - Improved selection and highlighting in column mode
+ - Addressed split window issues
+ - Addressed issues with __Revert to Saved__ after manually changing file encoding
+ - Addressed issues when converting file encoding and then reverting to saved
+ - Addressed issue with *Wrap after column #, insert CR/LF*
+ - Addressed issue with line change indicator not showing for changes on first line of folded/hidden block
+ - Addressed some minor __Find/Find in Files__ issues
+ - Addressed issues with __Recently Closed Files__ list
+ - Addressed CSS syntax highlighting colors with some themes
+ - Addressed issue with __Open Address Bar__ width
+ - Various other minor improvements
+
+---
+### 22.00
+
+ - __Document Map__
+     * "Filmstrip" overview of active file for visual context and quick navigation
+     * Zoom in or out to see more or less of the file
+     * Optionally shows bookmarks, code folding, and active line
+     * Optionally reposition caret on click
+     * Toggle via __View__ » __Views/Lists__ or via toolbar icon
+ - Vertically split window
+     * Accessible via __Window__ menu or via splitter next to horizontal scrollbar
+     * Split window both vertically and horizontally for 4-way view of file
+ - __Recently Closed Files__ menu item
+     * Added beneath __Recently Opened Files__ in __File__ menu
+     * Includes a "first in, first out" ordered list of most recently closed files
+     * Mirrors same number of entries set for __Recently Opened Files__
+ - __Cut/copy all bookmarked lines__ (__Search__ » __Bookmarks__ submenu)
+ - __Trim Leading Spaces__ (__Format__ menu)
+ - New macro commands
+     * `CopyAllBookmarkLines`
+     * `CutAllBookmarkLines`
+     * `TrimLeadingSpaces`
+ - New scripting commands (`UltraEdit.activeDocument`)
+     * `copyAllBookmarkLines`
+     * `cutAllBookmarkLines`
+     * `trimLeadingSpaces`
+ - New key mapping commands
+     * *FormatTrimLeadingSpaces* (<kbd>Ctrl + \\</kbd> is default)
+     * *FormatTrimTrailingSpaces* (<kbd>Ctrl + /</kbd> is default)
+     * *ViewShowHideDocumentMap*
+     * *EditCopyAllBookmarkedLines*
+     * *EditCutAllBookmarkedLines*
+     * *WindowVerticalSplitWindow*
+
+---
+### 21.30
+
+ - New FTP/SFTP options
+     * *Enable Keep Alive*
+     * *Enable IPv6*
+ - __Find in Files__ improvements
+     * __Find in Files__ speed writing to output window greatly improved
+ - Code folding improvements
+     * Code folding guide was not consistently drawn with many nested folds/unfolds
+ - FTP / SFTP issues addressed
+     * Can't delete directory / folder via FTP if it contains files
+     * No prompt regarding FTP file overwrite if user doesn't connect to server first
+     * Canceling FTP transfer doesn't actually cancel it - it continues to run silently in the background
+     * Problems connecting to VMS FTP server from UltraEdit
+     * FTP browser won't reconnect after connecting, browsing, and disconnecting without restart
+     * Non-empty directories cannot be deleted but there is no error message
+ - Addressed scripting issues
+     * Hotkeys to access scripts in __Scripting__ menu no longer work
+     * Focus to edit window is lost after playing script from hotkey or script list
+     * `isFound()` always returns false in hex mode
+ - Addressed __Find__/__Replace__ issues
+     * __Select Color__ dialog and __Find String List__ both closed when pressing <kbd>ESC</kbd>
+     * *Selected Text* option should be disabled if no text is selected
+     * <kbd>Ctrl + Home</kbd> causes <kbd>F3</kbd> to search for wrong string
+     * Perl regular expression __Find__ with *List lines containing string* causes hang
+     * __Find String List__ only lists matched string rather than entire line when searching with Perl regular expressions
+ - Addressed __Find in Files__/__Replace in Files__ issues
+     * Menu item to cancel FiF/RiF should reflect whether canceling __Find in Files__ or __Replace in Files__
+     * Impossible to cancel __Find in Files__ when output is being written
+     * *In* setting for __Find in Files__ reverts to *Files listed* when switching projects
+     * __Find in Files in this Directory__ from __Explorer__ context menu doesn't populate FiF dialog with path
+ - Addressed split window issues
+     * Modifications done in split window are not reflected properly (or at all) in inactive window
+     * Split window does not show modified content of file after pressing <kbd>Backspace</kbd> to remove recent change
+     * Split window doesn't reflect switch to column mode in both panes
+     * Line numbers in lower pane of split window are not properly updated
+       after adding a line in the upper pane and deleting it with backspace
+ - Cursor position jumps to top of file after __Decode Base64__
+ - __Comment Selection__ inserts HTML comment into PHP file
+ - __Comment / Uncomment Selection__ should be disabled if nothing is selected
+ - Column number and file size in status bar jump around when moving selection of lines across columns
+ - Column mode status not tracked properly when using quick column mode and column mode together
+ - Toggling word wrap moves the active line to the bottom of the edit window
+ - Better handling for opening URLs in text via context menu
+ - Incorrect auto-correct applied after automatically closing XML/HTML
+ - <kbd>Shift + scroll</kbd> to select large amount of data fails to select everything
+ - Scroll thumb not resized after cutting selection from file
+ - Title bar context menu does not respond
+ - __Insert Class__ doesn't allow users to correctly insert a Java class even though referenced in dialog
+ - Project doesn't reload workspace as closed (tiled/maximized state)
+ - With dockable tabs and hidden file tabs, projects are always reloaded with maximized files
+ - Case sensitivity not consistent for line and block comments for syntax highlighting
+ - And more...
+
+---
+### 21.20
+
+ - This release is largely a maintenance release with over 150 improvements and fixes for the following
+     * Column mode editing / drag-and-drop
+     * Quick column mode
+     * Hide / show lines and code folding
+     * Folding for block comments in HTML
+     * Scripted find / replace
+     * Perl regular expression find/replace
+     * Compare files (UC Lite)
+     * Find in files with customized output format
+     * Shebang detection for syntax highlighting
+     * Mixed line terminator handling
+     * Open file under caret via context menu
+     * Word wrap
+     * Undo/redo
+     * Hex mode
+     * Themes and user interface
+     * Menu access via key accelerators
+     * OEM and special character input
+     * File and selection sort
+     * CSS color tooltips
+     * Project and workspace reload
+     * Status bar
+     * FTP connectivity and transfer issues
+     * Scrolling via mouse wheel in FTP dialogs
+     * Stability and performance
+     * And more...
+
+---
+### 21.10
+
+ - Dockable __Find and Replace__ dialogs
+     * Tabbed __Find__, __Replace__, __Find in Files__ and __Replace in Files__ all in one dialog
+     * Matches your custom theme
+     * Can be floating or dockable and resizable
+ - Multi-caret editing
+     * Full cut/copy/paste support with multiple carets or selections
+ - Theming improvements
+     * Themed FTP account manager
+     * Themed __FTP Open/Save__ dialogs
+     * Various other minor theme improvements
+
+---
+### 21.00
+
+ - Multi-caret editing
+     * <kbd>Ctrl + click</kbd> to activate multiple carets
+     * <kbd>Ctrl + click</kbd> on a caret to remove it from the set
+     * Press <kbd>Ctrl + Alt + Z</kbd> to remove last-activated caret
+     * Perform basic editing tasks in multiple locations in the file at once
+     * Supports HTML/XML tag auto-completion
+ - __Quick Find__
+     * Supersedes incremental search
+     * Press <kbd>Ctrl + F</kbd> to open __Quick Find__ then begin typing search string. Matches are highlighted as you type.
+     * Press <kbd>Enter</kbd> to move to the next search string
+     * Press <kbd>Ctrl + Enter</kbd> to move to the previous search string
+     * Number of matches shown in status bar
+ - Re-imagined FTP browser
+     * Split file view for both local and remote pane
+     * Drag-and-drop to download / upload files
+     * New controls and colors to match theme
+     * Various internal improvements for better performance
+ - Theme improvements
+     * Custom scrollbars to match theme colors
+     * Custom form elements (input fields, controls, etc.)
+ - FTP transfers shown in output window
+     * New __FTP Transfers__ tab in output window
+     * Shows transfer status for remote files opened via __Explorer__ view or via reload/recent files
+
+---
+### 20.00
+
+ - New __Themes__
+     * Dialog for modifying themes added under __View__ » __Themes__ » __Manage Themes__
+     * Allow users to customize display of menus, toolbars, dockable windows, status bar, and more.
+     * Users may select pre-defined themes or define new ones
+     * Enables users to change layout and colors for application framework and edit window/syntax highlighting with a single selection
+ - New CSS color tooltips
+     * Hovering cursor over a supported color definition causes a color "swatch" to be displayed.
+       Users can <kbd>Ctrl + click</kbd> on "swatch" to invoke OS color picker to select a new color.
+     * *Display CSS color tooltips* configuration option added under __Advanced__ » __Configuration__ » __Editor Display__ » __Miscellaneous__
+     * Detects and supports colors defined in the following formats
+       - Hex RGB
+       - Functional notation RGB
+       - RGBA
+       - HSL
+       - HSLA
+     * Tooltips supported in the following file types
+       - HTML
+       - CSS
+       - JavaScript
+       - PHP
+       - Perl
+       - Python
+       - Ruby
+ - __Artistic Style__ updated to version 2.03
+     * Added support for configuration files
+     * __Artistic Style__ dialog completely updated to support new features
+ - CSS wordfile updated to support CSS3
+ - __Power User__, __Programmer__, __Notepad Replacement__, __Simplistic__, __System Administrator__, __Technical Writer__
+   and __Web Developer__ environments are replaced by __Balanced__, __Clean__, __Lean__ and __Multi-Window__ layouts
+ - Various other minor enhancements and improvements
+
+---
+### 19.10
+
+ - __Version backup__ support for remote FTP files
+     * *On FTP Save* added to __Configuration__ » __File Handling__ » __Backup__
+     * *Default FTP backup directory* added to __Configuration__ » __File Handling__ » __Backup__
+     * Existing auto-save options moved to __Configuration__ » __File Handling__ » __Save__
+ - __Auto-complete__ improvements
+     * *Exact case matches listed first* option added under __Configuration__ » __Editor__ » __Auto-complete__
+     * Fully typed words are not shown in auto-complete dialog
+     * Auto-complete dialog now closes if the only match is typed completely
+ - __UltraFinder__ integration
+     * Spawns __Find files__ or __Find duplicates__ search in active process directory
+ - __UltraSentry__ integration
+     * Send active file to __Shredder__
+     * Send active file to __Digital Locker__
+     * Encrypt file
+ - Full Perl regex support for tree-style function list
+     * More robust and precise expressions
+     * Much improved matches for functions/parameters for default languages
+ - Full __Jump List__ support
+     * __Pinned__ and __Recent__ items now listed in UltraEdit __Jump List__
+     * Accessible with right click on taskbar icon
+ - UltraEdit set as generic association to text file types (will appear in __Open with__ context menu)
+ - New __Window__ menu item __Enable tiling / Dockable tabs__
+     * Quickly toggle between dockable/non-dockable file tabs
+ - New __Simplistic__ environment for minimalistic layout (replaces __Notepad Replacement__)
+ - Addressed reindent selection issue when 2 open indent strings are on one line
+ - Various other minor enhancements and improvements
+
+---
+### 19.00
+
+ - Significant performance gains in several areas
+     * Startup speed
+     * Loading/opening files (with temp files)
+     * Switching between file tabs
+ - New status bar
+     * Encoding selector
+      - Changes encoding used to view active file
+      - Will not change file's original encoding
+     * Syntax highlighting selector
+     * Read-only toggle
+     * Insert/overstrike toggle
+     * Separate areas for line terminator and file encoding properties
+     * Better display
+ - Perl regular expression overhaul
+     * Performance
+      - Searching in large files
+      - __Find In Files__
+     * Accuracy
+      - Several Perl regexp issues addressed
+      - Full support for negative lookahead/lookbehind searches
+ - File tab drag-and-drop improvements
+     * Drag file tab outside of UltraEdit to open it in new instance
+     * File's settings retained when dragging and dropping between instances
+ - __Copy__/__Paste__ syntax highlighting in RTF and HTML
+     * Available under __Edit__ » __Copy Special__
+     * Paste text with HTML/CSS markup to render highlighting within a browser
+     * Paste syntax colored text into other RTF editors (like MS Word)
+ - Automatic detection and highlighting for file types without extensions
+     * Perl via shebang (ex: `#!/bin/perl`)
+     * PHP via shebang (ex: `#!/bin/php`)
+     * Python via shebang (ex: `#!/bin/python`)
+     * XML via declaration (ex: `<?xml version="1.0"?>`)
+ - __File View__ improvements
+     * Modernized icons
+     * Optionally show hidden files
+ - New option to enable close button on each file tab
+ - Improved support for *Maintain separate process for each file opened from external application*
+ - Various other minor enhancements and improvements
+
+---
+### 18.20
+
+ - __Smart Template__ improvements
+     * Project-based templates
+     * Insert templates by name via macros/scripting (refer to __Help__ documentation for syntax)
+     * Drag-and-drop text to template list to create new templates
+     * Modify template name directly in template list
+     * Open template file directly in editor (right click template group in template list)
+     * Description field for templates (displayed in tooltip in template list)
+ - __Line Change Indicator__ improvements
+     * Jump to next or previous change in active file
+     * Ability to configure LCI width
+     * All reported LCI issues fixed
+ - Option to delete unencrypted backup file(s) when encrypting files
+ - Improved configuration options for __File Associations__
+ - Several improvements for running macros on large amounts of data
+ - Addressed issues with __Backup/Restore User Customizations__
+ - Addressed issues with __Delete All Hidden Lines__
+ - Several other enhancements and improvements
+
+---
+### 18.10
+
+ - Code folding based on indent level
+     * Automatic for Python files (.py file extension)
+     * Can be activated for other languages by adding `EnableCFByIndent` flag to wordfile
+ - __Smart Template__ improvements
+     * Ability to set selectable parameters in __Smart Template__ variables
+      - Use pipe character to separate parameters (ex: `[+dog|cat|pig+]`)
+      - When inserting template, variable will open auto-complete list with selectable parameters
+     * New context menu for template listing in __Modify Templates__ dialog
+      - Sort templates alphabetically
+      - Move/copy selected template to group
+     * __Modify Templates__ dialog is resizable
+     * Template editor in __Modify Templates__ dialog now respects user's color settings
+     * Support for `%APPDATA%` environment variable in templates directory configuration
+ - File name variables (`[FILE_PATH]` and `[FULL_FILE_NAME]`) now work with FTP files
+ - Set __Output Window__ font separately from other child window fonts (right click in __Output Window__)
+ - Improved C/C++ function strings to eliminate false positives
+
+---
+### 18.00
+
+ - __Smart Templates__
+     * Redesigned, modeless __Modify Templates__ dialog
+     * Ability to add user-defined variables to templates
+     * Template auto-suggestion (provides smart suggestion of matching template based upon what you type)
+     * Ability to insert templates via auto-complete dialog
+     * Drag-and-drop templates from template list into active file to insert them
+     * New __Languages__ template group to store templates based on syntax highlighting languages
+     * New template behavior configuration options in __Advanced__ » __Configuration__ » __Templates__
+     * Access __Global__, __Environment__, and __Language__ templates at the same time
+     * Template files stored in XML format
+ - Automatic auto-completion of closing HTML/XML tags
+     * Configurable in __Advanced__ » __Configuration__ » __Editor__ » __XML/HTML__
+     * Configure whether to close on same line or on new line
+ - Dockable *Lines containing find string* window
+     * This window can now be docked, floating, or auto-hidden
+     * Window options are now available in right click context menu
+ - Full support for proportional fonts
+     * Corrected caret positioning issues with fonts that are not fixed-width
+     * Improved syntax highlighting for fonts that are not fixed-width
+ - Increased __Recent Files__ list from 16 to 32
+ - Improved performance when creating and modifying FTP accounts
+ - Added support for automatically connecting to FTP account when opening __FTP Open__ or __Browse__ dialog
+ - Added support for both 32- and 64-bit shell integration DLLs on 64-bit systems
+
+---
+### 17.30
+
+ - New scripting functionality
+     * `UTF8ToASCII()` - converts UTF-8 file to ASCII
+     * `ASCIIToUTF8()` - converts ASCII file to UTF-8
+ - New macro functionality
+     * `UTF8ToASCII` - converts UTF-8 file to ASCII
+     * `ASCIIToUTF8` - converts ASCII file to UTF-8
+ - __Find__/__Replace__ improvements
+     * Better handling of Perl regex results in __Lines Containing Find String__ window
+     * Better highlighting of Perl regex matches in __Find in Files__ output
+     * Selecting text and pressing __Find__/__Replace__ hotkey updates __Find__/__Replace__ string when dialog is already open
+ - __Syntax Highlighting__ improvements
+     * Improved highlighting of nested block comments
+     * Improved syntax highlighting with word wrap
+     * More flexible __Comment Add__/__Remove__
+     * Better writing of custom highlighting colors to wordfile
+ - Improved handling of saving multiple files to FTP
+ - Improved performance when selecting text in large files
+ - Improved handling of file paths with multi-byte Unicode characters
+ - Improvements to __Explorer__ tab in __File View__
+ - Several translation/localization improvements in non-English versions
+ - Files created via command line respect default line terminator setting
+ - Specific fixes for issues, including
+     * Fixed drag-and-drop editing issues
+     * Fixed __Undo__/__Redo__ issue with restoring data
+     * Fixed __Comment Add__ / __Comment Remove__ with leading whitespace
+     * Fixed issue where toggling column mode closes __Lines Containing Find String__ dialog
+     * Fixed auto-correction of word while word is still being typed
+     * Fixed issue where clicking __Cancel__ to save changes prompt gives focus to wrong file
+     * Fixed issue where characters inserted via <kbd>Alt + numeric keypad</kbd> don't display properly in UTF-8 file
+     * Disabled tag insertion when in hex mode
+     * Fixed issue where <kbd>Shift + double click</kbd> doesn't highlight all selected if *Use persistent highlight all* is disabled
+ - Various other improvements and enhancements
+
+---
+### 17.20
+
+ - __Active Column Highlighting__
+     * Can be enabled and configured in __View__ » __Set Colors__
+     * Menu (__View__), toolbar, and key mapping command
+ - Open all files matched by __Find in Files__/__Replace in Files__
+     * New `FindInFiles` and `ReplInFiles` macro property: `OpenMatchingFiles`
+     * New scripting property: `UltraEdit.frInFiles.openMatchingFiles` (Boolean)
+ - New *Date created* (`$Dc`) and *Date modified* (`$Dm`) template options for __Find in Files__ output
+     * Configured in __Advanced__ » __Configuration__ » __Search__ » __Set Find Output Format__
+ - New scripting functionality (all document objects)
+     * `cancelSelect()` - cancels the current selection (if any) without changing caret position
+     * `gotoEndOfPrevWord()` - moves caret to end of previous word
+     * `gotoEndOfPrevWordSelect()` - selects from current position to end of previous word
+     * `gotoEndOfNextWord()` - moves caret to end of next word
+     * `gotoEndOfNextWordSelect()` - selects from current position to end of next word
+ - New macro functionality
+     * `CancelSelect` - cancels the current selection (if any) without changing caret position
+     * `GotoEndOfPrevWord` - moves caret to end of previous word
+     * `GotoEndOfPrevWordSelect` - selects from current position to end of previous word
+     * `GotoEndOfNextWord` - moves caret to end of next word
+     * `GotoEndOfNextWordSelect` - selects from current position to end of next word
+ - Selected bytes/lines information displayed in status bar
+ - Ability to __Add all open files__ to lists/favorites in __Lists__ tab of __File View__
+     * To access this option, click the "__...__" button in the __Lists__ tab
+ - Ability to clear undo buffer
+     * New option in __Edit__ menu
+     * New key mapping command: *EditClearUndo*
+     * Can be added as a toolbar button
+ - Ability to delete files in __FTP Browser__ with <kbd>Del</kbd> key
+ - <kbd>Ctrl + Shift + Arrow</kbd> keys can now select to word boundaries in file path field of __FTP Open__/__Save__/__Browse__
+ - Removed prompt to close open files during project open if only unsaved *Edit* files are open
+ - Open files are no longer closed when creating a new project
+     * Only applicable if *Close all files when opening or switching projects* is enabled
+ - Ability to save user-specific project PUI files in `%APPDATA%\IDMComp\UltraEdit`
+     * Can be configured in __Advanced__ » __Configuration__ » __File Handling__ » __Advanced__
+ - __Yes to All__ and __No to All__ options added to __File no longer available__ prompt
+ - Improvements to __Goto__ in hex mode to support addresses in very large files
+ - Non-default wordfiles no longer removed when updating default wordfiles
+ - New Python wordfile added to default wordfiles
+ - Cursor now changes to pointer when hovering over margin
+ - New MSI installer option (in addition to EXE)
+     * MSI requires Windows Vista SP2 or greater
+ - More user-friendly licensing/registration messaging
+ - Redesigned __Check for Updates__ dialog and messaging
+ - Re-skinned installer with new messaging
+ - New file status icons in file tabs
+     * Note: This change should help make file tab icons more distinguishable to colorblind users
+ - Updated taglist file
+ - Other minor improvements
+
+---
+### 17.10
+
+ - New scripting functionality (all document objects)
+     * `gotoPos()` - Goes to specified position (passed as parameter) in number of char from beginning of file
+     * `gotoPosSelect()` - Goes to specified position (passed as parameter) in number of char from beginning
+       of file while making a selection
+     * `clearAllBookmarks()` - Removes all bookmarks from file
+     * `isReadOnly()` - Returns true or false based on whether file is read-only
+     * `readOnlyOn()` - Sets "read only" attribute for file
+     * `readOnlyOff()` - Removes "read only" attribute for file
+     * `isWordWrap()` - Returns true or false based on whether word wrap is toggled
+     * `wordWrapOn()` - Turns word wrap on
+     * `wordWrapOff()` - Turns word wrap off
+ - __Brace Matching__ advancements
+     * New __Jump to matching brace__ functionality (no selection)
+     * New *SearchGoToBrace* key mapping item
+     * *SearchMatchBrace* is now *SearchSelectToBrace*
+ - __Spell As You Type__ additions
+     * Ability to toggle from toolbar icon
+     * New *SpellAsYouType* key mapping item
+ - FTP advancements
+     * Clear FTP directory drop down history (added at bottom of drop down list)
+     * Improved __Download from server__ and __Download with sync__ with linked project folders
+     * Last-used FTP directory no longer remembered between instances
+ - Project improvements
+     * Improved relative path handling
+     * Separate __Add Folder__ and __Add Group__ commands
+ - General usability enhancements and advancements
+     * Option to disable file tab tool tips (from file tab context menu)
+     * Ability to hide all toolbars (from toolbar context menu)
+     * __List Lines Containing String__ dialog reports total number of lines found
+     * Lower pane of split explorer view remembers column widths from session to session
+     * __XML Convert to CR/LF__ now available for all files, regardless of extension
+     * Version backup support for UNC file paths
+     * *Save as type* always remembered in __Save As__ dialog
+     * Improvements for default directory with __File__ » __Open__ dialog
+     * Version details are now selectable in __About__ dialog
+ - Internal speed/performance and other minor enhancements
+ - Added option to __Advanced__ » __Configuration__ » __Toolbars/Menus__ » __Miscellaneous__ » *Auto-detect files under cursor*
+   to disable the open file under cursor feature in the file context menu
+
+---
+### 17.00
+
+ - New menu and toolbar icons
+     * Locking toolbars
+ - __File View__ enhancements
+     * __Split Folder__ and __File View__
+     * Network browsing
+     * __Open files__ dialog for folders - ability to open multiple files from a single or multiple selected directories
+     * Drag-and-drop functionality - drag files to view to open or drag tabs to add to __Lists__ or __Project__ tabs in __File View__
+ - __XML Manager__ enhancements
+     * Attribute pane - view a node's attributes with this split window
+     * Ability to __Format Document__ from context menu
+     * Document tree remains expanded on refresh
+     * Double clicking node expands code folding if applicable
+ - XML/HTML tag highlighting
+ - File tab status icons
+ - Vista / Windows 7 style open/save dialogs
+ - Ability to change order of file name and application name in title bar
+ - <kbd>Shift + double click</kbd> word to highlight all occurrences in file
+ - *Persistent highlight all*
+ - Increase number of word groups in wordfile to 20
+ - Support __Count All__ in selected text and with *Search In Column*
+ - Performance improvements when using __Remove Indents__
+ - New industry standard installer
+ - Other minor improvements
+
+---
+### 16.30
+
+ - FTP improvements
+     * FTP files saved locally reflect correct saved/unsaved state
+     * Internal/performance improvements for SFTP transfers
+     * Better management of permissions with multiple files (browser)
+     * Improvements for FTPS transfers
+     * Addressed FTP account issue when using registry for settings
+ - __Find__/__Replace__ improvements
+     * Performance improvement to __Find Next__/__Prev__ (<kbd>F3</kbd>)
+     * Minor improvements to dialogs / accelerator keys
+     * Better memory allocation when replacing with new line (`^p`)
+     * Perl regexp improvements
+     * Improvements to search __Favorites__ dialog
+ - Macro performance advancements
+     * Better memory allocation
+     * Improved execution of column mode operations
+ - __Line Change Indicator (LCI)__ improvements with
+     * __Trim trailing spaces__
+     * __Undo__
+ - Folding improvements
+     * Better indicator for folded text with hide/show lines and first line in file
+     * Display adjustments for code folding gutter
+ - Column mode improvements
+     * Better management of columnar selection near end of lines
+     * Improved __Replace__ *in Selected Text* while in column mode
+     * Improved __Undo__ of column mode operations
+ - __XML Manager__ improvements
+     * Improved integration between __XML Manager__ and code folding
+     * Improved error report updating
+ - Framework/display improvements
+     * Better full-screen mode for larger screen resolutions
+     * Resizable __Ctags symbol__ dialog
+     * More fluid child window animation
+     * Tooltips adjustments and improvements
+     * Ability to set font sizes in file tabs and child windows
+ - Font quality improvements
+     * Addressed clipping issues
+     * Improved quality at different point sizes
+     * Better rendering of font styles (bold, italic, etc.)
+ - Improvements for localizations
+     * Dialog adjustments for non-English operating systems and versions
+     * Improvements in German localization for __Find in Files__ key accelerators
+     * Better display of diacritics in file tabs
+ - Other improvements
+     * Tag list
+     * XML Manager
+     * Bookmarks
+     * Command line support
+     * Environments
+     * Syntax highlighting
+     * HTML tidy UTF-8 output file
+     * Support for *Description* field in __Scripts__ dialog
+     * Better management of locks on files/folders
+     * Changed default Ctags file location (for Vista/Win7)
+     * Improvements to opening __Find in Files__ results from output window
+     * Better UltraCompare Pro integration for 3-way compare
+     * Several internal stability and performance improvements
+
+---
+### 16.20
+
+ - Dialog refresh
+     * Re-engineered dialogs for ease of use, improved organization and space economy
+     * Better visual hierarchy for __Tool__, __Project__, and __Advanced__ configuration dialogs
+     * Revamped __Find__/__Replace__ dialogs
+ - Column editing
+     * __Convert to Fixed Column__/__Convert to Character Delimited__ improvements
+     * New option for sort field auto-population, improved __Cut__/__Undo__
+ - Edit/undo/redo enhancements
+     * Improved __Undo__ buffer; preservation when toggling to hex mode
+     * Smarter regular expression, UTF-8, and replace undo operations
+ - FTP/SFTP revisions in __Open__, __Import__, __Filter__, __History__, __Context__ menu
+     * Improved performance
+     * Import of legacy FTP account data
+     * Account sharing improvements
+ - Enriched text formatting
+     * Better performance of XML conversion to CR/LF
+     * __HTML Tidy__ option for *Character Encoding*
+ - Numerous display upgrades
+     * Unicode characters, scrollbars, file tabs, docked windows, output window
+     * Split window, hex mode, undo operations with line change indicator (LCI)
+     * Many other LCI improvements
+     * Bold text in brace highlighting
+ - Increased performance in opening a multiple file __Macro__ or __Project__
+ - __Find__/__Replace__ advancements
+     * Added accelerator keys for __Hide/Show lines__ buttons to __Find__ dialog
+     * __Find in Files__/__Replace in Files__ advancements
+     * __Find in Projects__ ignore options
+     * Improved __Find__/__Replace__ regular expressions
+     * Additional shortcuts for __Find in Files__ dialog
+ - __Sort__ advancements in performance and precision
+     * New option for auto-population of column fields
+ - Other targeted refinements of importance
+     * __Environments__, __File Tabs__, __File Tree__, __Explorer__
+     * __Function List__ updating
+     * Status bar, __HTML Tag List__, __HTML Toolbar__, __Save__ operations
+     * __Brace matching__, data to __Output Window__
+     * __Column markers__
+ - Much improved font rendering (predominantly with clear-type fonts)
+     * __Font__, __Printer Font__, __Hex/Column Mode Font__, __Reset Font__
+ - Expanded XML functionality
+     * Improved __Code Folding__ parsing __Hide/Show lines__ for XML files
+     * Numerous __XML Manager__ enhancements
+ - __Syntax Highlighting__
+     * Better handling of large (greater than 2.5 GB) XML highlighted files
+     * Improved C# wordfile
+ - Miscellaneous
+     * Option to disable mouse wheel scroll/zoom
+     * New __Print__ option to display first line of file in print header
+     * Greater Win 7 x64 compatibility
+     * Many, many user requested refinements and nuances addressed
+     * UE Mobile (portable) support for single/multiple instances
+     * UE3 __Backup/Restore__ support of customizations
+ - Other minor improvements
+
+---
+### 16.10
+
+ - __Code Folding__ - *Indent Graphic Lines*
+ - __Replace In Files__ - *Interactive Mode* (confirmation dialog)
+ - *Scroll Wheel Zooming*
+ - __Project__ - *Auto Load Macro*
+ - __Scripting__ - variable dump feature using `var_dump` function
+ - __Shared FTP Accounts__ with UltraCompare and UEStudio
+ - __Sort__ dialog - pre-populate from column mode selection
+ - Performance improvements for load files
+ - More minor changes...
+
+---
+### 16.00
+
+ - __Line Change/Modification Indicator__
+     * Indicates lines that have changed
+     * Track changes across file save
+     * Toggle on/off per file from toolbar and menu
+ - Quick column mode
+ - __Find In Selection__ - maintains selection
+ - __Hide/Show__ all lines containing search target
+ - __Delete All Hidden Lines__
+ - Highlight 'search' string in output window results
+ - UTF-8 improvements
+     * Add code page selection to __Find__/__Replace In Files__ dialog
+     * Add *UTF-8* as *New File Creation* setting
+ - __Insert File__ to convert to specified file type
+ - __Comment/Uncomment Selection__
+ - __Scripting__ enhancements including
+     * Scripting code page support
+     * New property - `UltraEdit.activeDocumentIdx` - which returns index of active document in document array
+     * Ability to include one script in another
+     * `LineTerminator` property enhancements
+ - Auto brace matching to match both braces
+ - Add visual clue file is read only
+ - Allow text editing from __XML Manager__
+ - Regular expression builder
+ - __Function List__ improvements
+     * Ability to define function list regular expressions through GUI interface
+     * Unlimited expressions
+     * Ability to define sub groups
+ - Make files listed in results returned from __Replace in Files__ clickable in output window
+ - __Undo__ enhancements
+     * __Tools__ - *Replace selected text with captured output*
+     * Insert file supported
+
+---
+### 15.20
+
+ - __Undo__ enhancements
+     * Users can undo larger than previous limit of approx 25-50 kB per operation
+ - __Undo__ support for the following
+     * __Wrap after column #, insert CR/LF__
+     * __Convert to Fixed Columns__
+     * __Convert to Character Delimited__
+     * __Insert String at Every Increment__
+     * __Sort__
+     * __Convert CRLFs to Wrap__
+     * __Convert Wrap to CRLF__
+     * __Tabs To Spaces__
+     * __Spaces To Tabs (all)__
+     * __Spaces To Tabs (leading)__
+     * __XML Convert To CRLFs__
+     * __Artistic Style Formatter__
+     * __ReIndent Selection__
+     * __Reformat Paragraph__
+ - __Tabs to Spaces__ / __Spaces to Tabs__
+     * New setting to ignore tabs in string literals in syntax highlighted files in
+       __Advanced__ » __Configuration__ » __Editor Display__ » __Formatting__ with
+       *Do not convert spaces and tabs inside comments and strings*
+ - Added support for Base64 encoding/decoding of selected text
+     * Key mapping support
+     * Macro support
+     * Scripting support (`activeDocument` object)
+       - `encodeBase64`
+       - `decodeBase64`
+ - *List Lines Containing String* now uses *Edit* window font
+ - Performance improvements for multi-file open
+
+---
+### 15.10
+
+ - __XML Manager__
+     * Double click position to any node
+     * <kbd>SHIFT</kbd> with double click to select node
+     * Cut, copy, paste node
+     * Replace node with paste from clipboard
+     * Move node up/down
+     * Duplicate node
+     * Reformat XML document
+ - __Column Marker__ enhancements
+     * Unlimited number of column markers
+     * Ability to define groups
+ - __Code Folding__ enhancements
+     * Code folding graphical lines
+     * Folding processing in its own thread
+ - __Sort__ removal of duplicates based on sort key criteria
+ - __XML Lint__ obeys wordfile extensions for XML files
+
+---
+### 15.00
+
+ - New interface and usability improvements
+     * All new __Open Address Bar__
+     * All new __File Tabs__ with optional coloring
+     * Convenient __Open File__ dropdown menu
+     * Tabbed child windows - includes auto-hide
+     * All new toolbars with gradient shading
+     * Drag-and-drop __Vertical/Horizontal Tiled__ views
+     * Dockable file tabs resize automatically
+     * User adjustable controls for auto-hide windows
+     * UltraCompare Lite facelift
+     * And more...
+ - Ability to delete bookmarked lines
+ - Ability to toggle all column markers on or off
+ - Ability to move templates up or down in __Template List__
+ - Ability to create a file on server via __FTP Browser__
+ - SSH/Telnet session logging
+ - __Web Search__ toolbar
+     * Modifiable via the context menu
+     * User assignable via key mapping
+ - __Find__ and __Replace__ column positions now automatically
+   filled in from start and end positions of selected text
+ - Greater integration between UltraEdit and UltraCompare
+   including ability for UE and UC to pass font, code page, and script
+ - Unlimited number of languages/wordfiles
+ - Syntax color info moved to wordfile
+ - Wordfile in individual files
+
+---
+### 14.20.1
+
+ - FTP
+     * FTP dialogs have trouble with very long directory path.
+     * __FTP Open__ account drop down list very small on Windows 2000.
+     * Relative file paths no longer work with FTP.
+     * Incorrect behavior of binary/ASCII selectors in __FTP Open__/__Save__ dialog.
+     * Saving new Unix file via FTP loses line terminators.
+     * Double clicking symlink in __FTP Save As__ dialog causes file name to be replaced with symlink dir name.
+     * __FTP Browser__ folders can't be opened after selection by pressing <kbd>Enter</kbd>
+     * Unable to close UltraEdit after __Save to FTP__ error
+     * When using multiple __Save As to FTP__ commands, only the first one executes
+     * Local copy directory no longer works
+     * Full FTP file path no longer populates __Save As to FTP__ dialog
+ - Function list
+     * Function list not working with split window.
+     * Function list not working for files opened via FTP/SFTP/FTPS.
+     * Function list not working for duplicate window.
+     * Crash with function list and long function signatures.
+     * Function list with multi-language highlighting eats memory and CPU
+ - JavaScript engine
+     * JavaScript __Replace in Files__ replaces in hidden directories when instructed not to.
+     * Specific JavaScript write to output window causes application crash.
+     * Scripted __Find__ in document referenced from document array fails.
+     * Scripting document method `setActive()` fails
+ - Comparing files opened in UltraEdit via FTP broken.
+ - Copy line jumps to top of file if file unsaved.
+ - Macros
+     * Unbalanced quotes cause issues in macro editor.
+     * Macro content lost when macro is saved.
+     * Adding `ReplInFiles` or modifying it in the editor causes it to be removed from the macro
+ - Find/replace
+     * Incorrect highlighting of matched text when using <kbd>F3</kbd> in column mode.
+     * Crash from Perl regexp replace in files using hex value replace.
+
+---
+### 14.20
+
+ - FTP enhancements
+     * Added support for FTPS
+     * New __FTP Open__/__Save__ dialog
+     * Asynchronous __Revert to Saved__
+     * New options in __FTP Account Manager__ to support FTPS
+ - __Function List__ in its own thread
+ - Option to move focus to function list on refresh
+ - Ability to add up to 20 external help files
+ - Ability to specify order of columns in __Bookmark Viewer__
+ - Option to activate file in __Open files__ list on single click
+ - Ability to display line numbers in __List Lines Containing Strings__
+ - Added function to move all floating windows inside application window
+   (located on __View__ » __View/Lists__ menu)
+ - Scripting enhancement to support `UltraEdit.clipboardContent`
+ - Installer to remember installation options for subsequent installs
+ - UE icon on the context menu
+
+---
+### 14.10.1
+
+ - Issue with UltraCompare integration with restricted install
+ - Indent/unindent issues with 12,2 as tab space values
+ - Syntax highlighting after copy/paste in PHP file
+ - Unexpected outcome indent/folding from auto XHTML detection
+ - SSH/telnet resize command to HP UX causes crash
+ - Local file deleted following __Save As to FTP__ w/no temp files
+ - Cursor changes position following focus change
+ - File truncation with extremely large files and Perl regex replace
+ - Crash using <kbd>Enter</kbd> to open file from __Open files__ list
+ - Out of memory error with __Convert to Fixed Column__
+ - Scrolling to bottom in SQL file
+ - __Save As to FTP__ brings up __FTP Open__ dialog
+ - Fix for blank __Find in Files__ results file after cursor/scrollbar movement
+ - Restored functionality of selected text populating find window
+ - updated zlib DLL for latest security patch
+ - Fixed possible crash with Nvidia submenu on context menu in taskbar
+ - Fixed crash with Unix-style regexp
+ - Fixed crash following hex edit in file converted to UTF-8
+ - Fixed issue with sort parameters being changed following sort via script
+ - Fixed issue with special replace characters in Perl regular expressions used in script
+ - Fixed issue with menu hotkeys not working on application open with no other files open
+ - Fixed __Web Search__ searching for last-used __Find__ string instead of selected text
+ - __Lists__ buttons in __File Tree__ view updated after adding new list
+ - Fixed cosmetic issue with __Open__ button on __Favorite Files__ dialog during resize
+ - (UEStudio only) ues64ctmn.dll added for 64-bit shell integration
+ - __Save As__ hang when saving an unedited file with versioned backup enabled
+
+---
+### 14.10
+
+ - Find enhancements
+     * Ability to name __Favorites__ in __Find__/__Replace__ dialogs
+     * Ability to specify exclude file names and extensions
+     * Find lines that do NOT match search criteria
+     * When replacing selected text, set default to *Selected Text*
+ - __Insert__ menu as a separate main menu
+ - __Open As__ functionality for Unicode and binary files
+ - Files selected in Windows Explorer to load in a single new instance
+ - Link to Windows menu on right click in UE __Explorer__
+ - __Bookmark List__ enhancements
+     * Automatically pick up text from file
+     * Line and column number
+     * Selectable, resizable columns
+     * Cursoring through file will highlight bookmark in list view
+ - Auto re-encrypt file on save
+ - XHTML detection and folding
+ - Respect default browser in __Quick Start Guide__
+ - Wordfile and taglist versioning to facilitate future updates
+
+---
+### 14.00b
+
+ - Installation support for restricted install (non-admin users)
+ - Resizable ASCII table
+ - Moved advanced configuration navigation box to top of dialog
+ - Fixes for some issues with __Find__/__Replace__ in scripting
+ - Websearch supports extended ASCII characters
+ - Accelerator keys in __Find__/__Replace__ dialogs now unique in all languages
+ - Fixed issue with Perl-style positive lookahead regular expressions
+ - Fixed issue with special Perl-style regex characters in replace not being interpreted
+ - Current regex style now indicated next to *Regular Expressions* checkbox
+ - Fix for Unicode files without BOM not being detected
+ - __Project Settings Add__/__Remove__ buttons active for UNC paths
+ - Optimized performance for project loading
+ - Fix for __Find Next__ in *All Open Files* not cycling through all files
+ - Fixes for some issues with replace command in macros
+ - Miscellaneous toolbar and environment enhancements
+ - Fixes for all known and reproducible crashes and hangs, including
+     * Crash and "out of memory" errors with Perl regex
+     * Open Road crash with German version
+     * Stack-overflow crash with user macro
+     * Crash when connecting to SFTP server in FTP browser
+     * Crash comparing blank *Edit1* file to previous selected file
+
+---
+### 14.00a
+
+ - Placement of ASpell spell as you type suggestion window
+ - Convert to fixed column and last char of line
+ - __Find__/__Replace__ dialog shortcut keys
+ - __Count All__ only enabled for *Current File*
+ - Enable/disable menu functions cosmetic changes
+ - __Find__ - disable *Highlight all items found* in *All Open Files*
+ - __Find__ - disable *List Lines Containing String* in *All Open Files*
+ - Cursor pos after Perl regex replace
+ - When doing a replace, if the matching word is already selected it skips it.
+ - Macro looping with `IfFound`
+ - XML close comment
+ - Crash running script using method `saveAs()`
+ - __File Save__ prompt after backup timer period, on new file
+
+---
+### 14.00
+
+ - File encryption / decryption to encrypt and decrypt current or multiple files
+ - __Environment Selector__ - allows use of predefined or user createable environments that
+   remember the state of all of UltraEdit's dockable windows, toolbars and more for user
+   convenience. Quickly switch to the environment you need for the task at hand.
+     * Switchable items in each __Environment__ include
+       - Menus and toolbars
+       - Application launch size and position
+       - Dockable windows plus size and position
+       - Template list
+     * Switch __Environments__ with a single click
+     * Manage __Environments__
+     * Create your own custom __Environments__
+     * __Import__ / __Export Environments__
+ - Redesigned and enhanced __Find__ and __Replace__ dialogs
+     * Multi-line scrollable text boxes
+     * Collapsible __Advanced__ options
+     * Ability to search in specified column range
+ - MSI installer
+ - Move current line up or down in file
+ - Compare modified file with version on disk
+ - Compare 2 snippets of text
+ - New __Web Search__ toolbar
+ - Dockable named bookmark list
+ - Dockable ASCII table
+ - Redesigned __Set Colors__ dialog
+ - Auto tab row adjustment (fixed auto-adjust tabs)
+ - Updated __Navigate__ option to search all terms in all config pages
+ - Single __Open__ prompt for converting Unix files
+ - Single __Save__ prompt for multiple modified files
+ - Separate project file for user-specific and workspace information
+
+---
+### 13.20
+
+ - Find improvements
+     * __Favorites__ button for __Find__ and __Replace__
+     * __Find in Files__ in a separate thread
+     * __Find in Files__ to optionally pick up word under cursor
+     * Search string now displayed in __Not Found__ dialog box
+     * Options for auto-reset of find settings in configuration
+     * Macro search string no longer added to __Find__ history
+ - __Persistent Selection__
+     * Allows selection of text without use of <kbd>Shift</kbd> key
+     * Selection persists until
+       - Another selection is started
+       - Selection is cut, deleted, or pasted
+     * Selection can be extended at a later time by selecting persistent selection again
+     * Persistent selection anchor point can be reset by <kbd>Ctrl + left click</kbd>
+ - Option to alphabetize tabs automatically on file open
+ - Visual indication macro is being recorded on status bar
+ - Configurable auto-complete results
+ - SSH/Telnet now allows <kbd>Ctrl + Insert</kbd> copy and <kbd>Shift + Insert</kbd> paste
+ - Autosave when UE window loses focus
+ - Prompt only once for autosave on new document
+
+---
+### 13.10a
+
+ - Crash when backspacing from end of file while selecting text
+ - Reverted to wordfile with UE regular expressions only
+ - Error opening FTP file in __Explorer__ view when connecting to MVS server
+ - Cannot add FTP files to projects
+ - Moving caret when text is selected stops at selection boundary
+ - Incorrect alignment/position when __Show Spaces/Tabs__ enabled
+ - Syntax highlighting of multi-line strings
+ - Fold of multi-line nested block comments in REXX
+ - Function list refresh on file changed from disk
+ - Adjust scroll thumb for Perl regex find target
+ - Bookmark edit and save with no file edits
+ - Word wrap with auto line indent, then undo
+ - Display of UTF-8 file following conversions to ASCII
+ - Saving local file to FTP server generates local file open error
+ - Crash when exiting application while saving FTP file
+ - __Save All__ command not disabled when all files saved
+ - __Clear Histories__ command not completely removing all __Recent Files__ menu entries
+ - Search with regular expressions enabled causes application hang
+ - Search option *Match files if string is not found* not working with regular expressions enabled
+ - Replace in selection corrupts file when Perl regular expressions are enabled
+ - Crash with __Find In Files__ with *Results to Edit Window* and closing and rerunning a __Find In Files__
+ - Invalid argument encountered when bringing up the __Find__ or __Replace__ dialog
+ - Function list not displaying functions from UTF-8 files when Perl regular expressions enabled
+ - Directory erroneously shows up in *File/Types* combo box of UltraEdit __Find in Files__ dialog
+ - Windows __Add or Remove Programs__ not displaying UE icon
+ - If a file is loaded, and you open another file from command line, cursor disappears
+ - <kbd>Ctrl</kbd> and/or <kbd>Alt</kbd> and any cursor key not allowed in key mapping
+ - Crash when connecting to FTP server with long server banner
+ - Saving an FTP file stalls part-way through reporting __Upload Command Failed__
+ - Added menu/toolbar icon for __Show Spaces/Tabs__ command
+ - Added support for column mode to __Goto__ line/column select in a macro
+ - Added remember font option in __ASCII Table__ dialog
+ - Added key mapping for __Show Line Endings__
+ - Updated SFTP component
+ - Updated SSH/Telnet component
+
+---
+### 13.10
+
+ - __Paste Special__ command to paste RTF and HTML source into UltraEdit
+ - Ability to launch new UE session from __Advanced__ menu and new command
+   line parameters `/fni` (force new instance) and `/foi` (force old instance)
+ - __Quick Start Guide__ dialog
+ - Scripting improvements
+     * New scripting object: `outputWindow`
+     * New scripting properties
+       - UltraEdit object
+         `clipboardIdx`, `columnMode`, `insOvrMode`, `regexMode`
+       - Document object
+         `currentColumnNum`, `currentLineNum`, `currentPos`, `fileSize`, `hexMode`
+       - outputWindow object
+         `showOutput`, `showStatus`, `visible`
+     * New scripting methods
+       - UltraEdit object
+         `messageBox`
+       - outputWindow object
+         `clear`, `copy`, `showWindow`, `write`
+     * Command line execution
+ - Enhanced __Clipboard History__
+ - IE browser has improved support for dependencies such as image and CSS files
+ - Enhanced __File Tree__ view
+     * Optional drive labels in __Explorer__ tab
+     * New __Lists__ tab for __Favorites__ and user created file groups/lists
+     * __Filter__ for __Explorer__ tab
+     * File find for __Open__ tab
+ - Wordfile option now supports Perl regular expressions for __Function List__: `/Regexp Type = Perl`
+ - __Space/Tab__ and __Line Ending__ options for color and individual display
+ - Autosizing toolbars with support for button overflow
+ - Support for up to 12 selectable column markers
+ - Option to specify how cursor moves off selection
+ - Ability to refresh __List Lines Containing String__
+ - Option to automatically copy selected text without having to right click copy or press <kbd>Ctrl + C</kbd>
+ - Chords for macros
+ - Option for underscore caret
+ - Option for word stops at each capitalized letter within a word (CamelCase)
+ - Improved registration process now supports pasting entire registration email
+ - Other minor changes
+
+---
+### 13.00a
+
+ - Improved startup time
+ - Support for additional code pages
+ - Improved handling of Perl regex in __Find__/__Replace__
+ - File modified date/time uses current locale format
+ - Added __Toggle Browser View__ to main toolbar
+ - Added tex.conv file for Aspell filter support
+ - Changing of directories on VMS servers
+ - Handling of date/time for FTP/SFTP files
+ - "Not a plain file" message when opening multiple FTP files
+ - Truncated FTP file/folder names when names include spaces
+ - Handling of absolute/relative paths for files in projects
+ - `[$replace$]` in templates with UTF-8/UTF-16 files
+ - Previous bookmark select does not require a parameter
+ - JavaScript `setActive` function did not change `activeDocument`
+ - Script issue using `insertMode`, `hexOn`/`hexOff`, `columnModeOn`/`columnModeOff`
+ - Issue with replace selection in replace method in scripting
+ - Issue with extended ASCII characters in script method write()
+ - Issue converting __CR/LFs to Wrap__ in UTF-8 files
+ - Read Only status when opening files from MRU list
+ - Erroneous IE save dialog when toggling browser view
+ - UTF-8 files and preserving cursor when switching to/from hex mode
+ - __HTML Color Selector__ in languages other than English
+ - Sort of UTF-8/UTF-16 files results in extraneous BOM
+ - "No Error Occurred" attempting to open a non-existent file
+ - Several __Explorer__ view enhancements
+ - Out of memory condition in UE/Unix regular expression replace
+ - Issue with __File Change Detection__ and UltraCompare integration
+ - Hang on exit using versioned backups
+ - Addressed several crash scenarios
+
+---
+### 13.00
+
+ - Integrated scripting support
+ - Spell check while typing
+ - MSI installer support
+ - Search in *Favorite files*
+ - Search and replace will step through all open files
+ - __Find in Files__ for any files not containing search string
+ - User customizable format of __Find in Files__ result
+ - Integrated IE browser support to show active HTML file
+ - __Explorer__ view uses system-registered icons for file types
+ - Express install for typical installations
+ - Prompt before UE is set as *View Source Editor* during install
+ - Cursor word-right or word-left to optionally stop at underscore
+ - Syntax highlighting support of verbatim string literals
+ - Nested comments for languages
+
+---
+### 12.20b
+
+ - Added __Open in UltraEdit__ right click menu command to remote file listing of __FTP/SFTP Browser__
+ - File names with `$` are now handled correctly for VAX/VMS FTP servers
+ - Fixed support for BS2000 FTP servers
+ - Fixed issue with date/time display in __FTP/SFTP Browser__
+ - Crash with SSH/Telnet window and host key verification
+ - Crash in print preview with <kbd>Alt + C</kbd> command
+ - Issue with __HTML Tidy__ and *Use memory buffers for editing* option
+ - Sort preference now remembered in __FTP/SFTP Browser__
+ - Fixed crash in __Find__ when searching for `^p` with *List Lines Containing String* option enabled
+ - Fixed crash when recovering files on application restart
+ - Fixed issue with data corruption of Unicode files saved via FTP/SFTP (Unix files only)
+ - Improved handling of spell-checking when using TeX filter
+ - __FTP Open__/__Save__ as dialog will now correctly display file sizes larger than 4 GB
+ - Fixed crash on application close when saving FTP files
+ - Fixed issue with FTP files failing to save on application close
+ - Fixed SSH/Telnet hang when switching between terminal tabs
+ - Support for __CSE Validator__ free version
+ - Fixed issue with toggling external FTP accounts erasing account information
+ - Fixed issue with using negated character classes like `[^a-c]+` with the Perl regex engine
+ - Improved handling of UTF-8 values in __Replace__ dialog when using *All Open Files* option
+ - Fixed issue with regular expression corrupting default colors of edit window
+ - Fixed issue with passing ignore options to UltraCompare Lite
+ - Fixed issue with horizontal scrollbars not being displayed in UltraCompare Lite
+ - Fixed issue with passing compare mode options to UltraCompare Lite
+ - Fixed Unicode display issue with __Function List__
+ - Fixed issue with UE regex and extended ASCII characters
+ - Fixed __XML Convert to CR/LFs__ on very large files
+ - Fixed issue with display of lines of Chinese chars from non Unicode files in __List Lines Containing String__
+ - Fixed issue with auto-indent wrapped lines
+ - Word wrap enhancement to bind trailing space with preceding word
+ - Fixed cursor pos of trim trailing spaces when cursor is in trailing spaces
+ - Fixed crash involving undo and find/replace
+ - Fixed intermittent failures of Perl regex engine within macros
+ - Fixed macro failure when using Perl regex with replace
+ - Fixed crash when replacing large text blocks
+ - Fixed splitter window delete file on large files
+ - Fixed issue with modified FTP file failing to save when closed
+ - Fixed issue with modified FTP file failing to close when saved
+ - Fixed issue with FTP account data, such as server name, not being validated when creating an account
+ - Fixed issue with __Replace__ always replacing from top
+ - Fixed asynchronous FTP open/save crash/hang with multiple FTP/SFTP files
+ - Fixed path handling for several FTP server variants
+ - Fixed path handling in __FTP Browser__ when downloading/uploading single directories
+ - Fixed crash in FTP/SFTP and SSH/Telnet account manager
+ - Fixed crash in FTP/SFTP when using cached passwords or passphrases
+ - Improved handling of cached passwords and passphrases when opening/saving multiple FTP/SFTP files
+ - Fixed issue with __Replace__ in *All Open Files* not displaying number of replaces
+
+---
+### 12.20a
+
+ - Fixed focus issue on connect/disconnect in SSH/Telnet console
+ - Fixed crash when hitting escape in SSH/Telnet console
+ - Fixed issue with FTP save failure closing file
+ - Fixed issue with invalid host name in SSH/Telnet window on connect
+ - Fixed issue with upload of subfolders of FTP linked folders
+ - Fixed issue with log window when switching between FTP and SFTP
+ - Fixed several issues with Explorer integration and shell extension DLL
+ - Fixed issue with end of line replace including line terminators
+ - Fixed issue with multiple replace targets on multi-line match
+ - Fixed __Replace All__ not using Perl regex in replace dialog
+ - Fixed issue with __Count All__ using Perl regex engine
+ - Fixed __Replace__ following a __Convert to fixed column__ and __Convert OEM to ASCII__
+ - Fixed issue with INI file using windows directory when admin user
+ - Fixed ghost characters with auto indent wrapped lines with no indent
+ - Fixed issue scrolling window left using mouse select or drag
+ - Fixed issue with bookmark adjust when pasting lines in UTF-8 file
+ - Fixed issue with folding state not saved for some UTF-8 files
+ - Fixed macro load error with __Goto__ function
+ - Fixed print selection from hex edit mode
+ - Fixed scrollbar in output window for __HTML Validator__ output
+ - Fixed __HTML Tidy__ to generate output when no errors are detected in file
+ - Fixed file tab coloring when tab is dragged to another position
+ - Added support for mouse wheel scroll in SSH/Telnet console
+ - Added SSH host fingerprint prompt and caching
+ - Remember last used account in __FTP/SFTP Browser__ and __Account Manager__
+ - Remember password when opening previously open FTP/SFTP files
+
+---
+### 12.20
+
+ - SSH/Telnet Window
+ - Multi-key mappings (sometimes called chords)
+ - Auto-indent wrapped lines
+ - Support for Windows x64 Shell integration
+ - Ability to view and print __Key Mapping__ from configuration
+ - Support for __Alternate Data Streams__ on NTFS file systems
+ - Support for dual monitors
+ - Right click __Find in Files__ from __Explorer__ in __File Tree__ view
+ - Spell check in *strings* or *comments*
+ - *Grouped undo* option
+ - __File Tab Color Highlighting__ on a per file extension basis (optional)
+ - Bookmark now includes column number with line number (optional)
+ - Default the __View As__ option for *new unsaved files* (config item)
+ - Saving of folded lines is now optional (config item)
+ - Showing of last line of fold in syntax highlighted files is now optional (config item)
+ - Ability to see path to the INI file in config
+ - *Integration with Explorer* now a configuration item
+ - New settings for __Output Window__ (via right click context menu)
+     * __Use Spaces instead of Tabs__
+     * __Show Tooltips in output window__
+ - Change working directory if no files are open in directory
+ - Mouse wheel scrolls window under mouse pointer
+
+---
+### 12.10b
+
+ - FTP/SFTP fixes
+     * Removing an FTP/SFTP account leaves empty entry in __Explorer__ view
+     * FTP disconnection causes tree view to revert to initial or root directory
+     * SFTP authentication failure requires application restart instead of prompting for correct credentials
+     * Blank file names in FTP directory listing for BS2000 servers
+     * FTP file name displayed when uploading is prepended with a number
+     * Crash when attempting to use a deleted FTP account
+     * Support for Tandem/Guardian FTP with __FTP Browser__ and __Explorer__ View
+     * __FTP Browser__, __File View__, and __Open__/__Save__ do not use a mutual password/passphrase caching system
+     * __Local Copy__ feature for FTP/SFTP no longer works
+     * FTP/SFTP files opened on program startup or when opening a project are corrupted if file names are identical
+     * __FTP Save__ failure leaves file in read-only mode
+     * Error dialog when attempting to use __Version Backup__ with FTP Files
+     * Specifying line numbers in FTP files opened from the command line does not work
+     * Remove folder ignored when using FTP linked folders
+ - Search using *Regular Expressions*
+     * Search in selection incorrectly highlights previous character
+     * __Replace in Files__ dialog settings were not being remembered
+     * Search and replace of end of line characters duplicated letters after the first line
+     * *Perl compatible Regular Expression* found no functions when used in __Ctags__
+     * __Find Next__ did not properly update cursor position
+     * Issue with not scrolling horizontally to highlighted found object
+     * __Find Prev__ could cause hang or crash with *Perl compatible Regular Expressions*
+     * Replace in selection on multi-line and partial line matching code
+     * Focus to find dialog problem with *Perl compatible Regular Expressions*
+ - Other fixes
+     * Open file paths are now relative for project files
+     * __File Associations__ did not remember a new association to file
+     * Cursor move to next word stops working after a while when editing UTF-8 files
+     * Cursor positioning using command line options in UTF-8 files
+     * Pipe character appended to file names saved using __FTP Browser__
+     * Clipboard history does not capture clipboard data from other clipboards only clipboard 0
+     * Improve readability of clipboard history entries by displaying line ending characters as `\r` and `\n`
+
+---
+### 12.10a
+
+ - Crash when configuring custom tab stop values
+ - Crash while navigating in __File Tree__ view
+ - Crash when deleting bookmark
+ - Crash on auto-recovery of an unsaved new file
+ - Fixed CSE validator .dll error with an expired v7.01 Pro Trial version
+ - Added __FTP Log__ dialog, requires `Show FTP Log=1` in `Settings` section of INI file
+ - Addressed MVS and Tandem parsing issues
+ - Inactivity or disconnection will no longer cause __FTP Browser__/__Tree__ to revert to initial or root directory
+ - Passwords and key passphrases will be cleared if connection fails
+ - Passphrases for SFTP are now correctly remembered for all FTP functions (open/save, tree view, browser)
+ - PCRE and selecting between cursor and last find (<kbd>Shift + F3</kbd>) works correctly
+ - PCRE and code unfolding works correctly
+ - Local copy for FTP supported for tree view, browser, and async save
+ - VMS FTP servers when using logical path names will now work
+ - Issue with __FTP Account Manager__ and clearing data fields
+ - Issue with UC Lite and registry corruption
+ - Crash with tooltips and tags list window
+ - __Clipboard History__ now captures __Cut__/__Copy__ from all UE clipboards
+ - Added support for Windows NT4
+ - Issue with UE Unix style regular expressions and __Find__/__Replace__ with beginning of line anchor
+ - Fixed opening and saving of FTP files to MVS servers
+ - Account conversion will now correctly interpret nonstandard SFTP ports when updating from previous version
+ - Crash in __Find in Files__
+
+---
+### 12.10
+
+ - Color selector enhancements
+ - __FTP Accounts__ dialog redesign
+ - __FTP Browser__
+ - __Asynchronous Save__/__Open__ of FTP/SFTP files
+ - Date based synchronization of FTP linked project folders
+ - Clipboard history
+ - Code page conversion support
+ - Xmllint support
+ - Named bookmarks
+ - __Find in Files__ ignore directories in search and replace
+ - Method to backup UE toolbar and other personal customizations
+
+---
+### 12.00
+
+ - *Perl-compatible Regular Expressions* - real Unix-style regular expressions
+ - FTP/SFTP enhancements
+     * __FTP Accounts__ shown and accessible in __File Tree__ view
+     * FTP settings may now be in user definable file
+     * Ability to link local folder and remote folder and
+       upload/download files between remote server and local system
+ - Find / replace enhancements
+     * Much improved Unicode support
+     * Dialogs have full Unicode support
+     * Highlight all found occurrences of string
+ - New macro commands
+     * `IfFTP` to check if file is an FTP file
+     * `IfCharGt` to check if character is greater than value
+     * `IfColNumGt` to check if column number is greater than value
+ - Increased __User__ and __Project Tools__ to 25 each
+ - New improved dialog for __User__ and __Project Tools__
+ - Improved (Aspell) spelling support
+ - Code folding support for ignore strings and comment strings
+ - Enhanced support for UltraCompare Professional including 3-way compare
+ - Right click compare from UltraEdit __File Tree__ view
+ - All menus and toolbars switch together when changing user profiles
+ - Added key mapping for
+     * *NextWindowPanel*   <kbd>Ctrl + F1O</kbd>
+     * *PrevWindowPanel*   <kbd>Alt + F1O</kbd>
+     * *EditPasteCopy*     <kbd>Ctrl + Shift + V</kbd>
+     * *ProfileSelectMenu* <kbd>Alt + F8</kbd>
+
+---
+### 11.20
+
+ - New presentation of __Advanced__ » __Configuration__ dialogs
+ - User-configurable right click context menu for main edit windows and __File Tabs__
+ - Ability to customize the tags created by the HTML toolbar
+ - Ability to edit Unicode big endian
+ - Support for direct editing of ASCII escaped Unicode
+ - Big endian to little endian conversion capability
+ - Ability to add line endings to XML files that have little or none
+ - Usability enhancements for toolbar configuration including drag-and-drop
+ - Added integration with UltraSentry to securely delete UltraEdit temporary files
+ - Provided options to remove recent document and project histories
+ - Ability to set default edit window size
+
+---
+### 11.10c
+
+ - Fixed intermittent scrolling crash
+ - Fixed extra new line issue when replacing with regular expression
+ - Changed compare function to not minimize all other open files
+ - Fixed font increase/decrease irregular point size behavior
+ - Changed __EBCDIC to ASCII__ conversion to more closely match expected behavior
+ - Fixed syntax highlighting and function list parsing for FTP files
+ - Files opened via the Windows Explorer context menu will now be detected as read-only correctly
+ - The <kbd>ESC</kbd> key will now cancel out of the __FTP Accounts__ dialog instead of saving
+ - Added __EBCDIC__ and __Create CTAGS__ to available toolbar commands
+ - Files opened via FTP will now remember their ASCII/BINARY type when saved
+ - FTP fixes for Stratus VOS
+ - Fixed print/print preview of syntax highlighted files
+ - Fixed syntax highlighting issues with multiple languages in single line
+ - Added configuration setting for old style Windows file list management
+ - Fixed cursor positioning problem with Chinese font
+ - Other minor fixes
+
+---
+### 11.10b
+
+ - Fixed multi-line quoted string issue in multi-language file
+ - Fixed on paste line ending conversions on Windows 9X
+ - Fixed issue with trailing spaces in FTP file names
+ - Added error message to differentiate between folders and groups in new folder dialog
+ - Fixed heap corruption in undo buffer, specifically search/replace operations on files with long lines
+ - Fixed issue with missing Red/Green/Blue bitmaps in color selector
+ - Added crash dump feature
+ - Fixed filtered display of project folder subdirectories
+ - Fixed __Find in Files__, __Function List__, and __Ctags__ when searching project folder subdirectories
+ - Fixed highlighting issues and crash of FTP/SFTP __Save As__ with syntax highlighted files
+ - Fixed conflict when changing desktop background color on XP systems
+ - Fixed SFTP truncated or missing file names in file listing
+ - Fixed UTF-8 false positive detection issue
+ - Fixed synchronization issue with multiple instances of UE
+ - Fixed simultaneous opening of multiple files with a single instance of UE
+ - Removed f90 and f95 from the default `FORTRAN_LANG` file extension list
+ - __Explorer__ view will now update correctly when drives are added/removed from the system
+ - Fixed relative path issues with project tag file/word file
+ - Fixed drag-and-drop when selection is top line of display and mouse is clicked left of first column
+ - Installer fixes (only applies to `uedit32_all.zip` NOT hotfix), added All Users desktop shortcut,
+   fixed admin issues with start menu shortcuts
+ - Fixed update of function list in multi-language syntax highlighted Unicode files
+ - Corrected multi-line string switch for unknown languages
+ - Added check for attempting reindent selection of lines greater than 20,000 characters
+ - Maintain text selection while scrolling through large Unicode files
+ - Fixed __Undo__ issue with converted Unix files
+ - Fixed screen jump when folding/unfolding code near the end of a file
+ - Improved SFTP support for VAX/VMS
+ - Fixed Aspell issue with single quotes causing false positive
+ - Fixed crash with scrolling through code folded sections of file
+ - Corrected painting issue when code folding sections greater than 75 kB
+ - Fixed brace matching in non-syntax highlighted files
+ - Fixed crash when pasting UTF-16/UTF-8
+
+---
+### 11.10a
+
+ - Fixed corruption issue with __Undo__/__Redo__ of Unix/Mac files
+ - FTP file list now correctly displays file sizes greater than 2 GB
+ - Corrected bookmark display issue in word-wrapped file
+ - Fixed replace history when replacing with ""
+ - Find output from Mac/Unix files will now position correctly when double clicked in output window
+ - Output window command __Copy to Clipboard__ will now include DOS line endings in the output
+ - Fixed possible screen jump going in and out of column mode
+ - Re-wrap screen text when font size is changed while in word wrap mode
+ - Fixed column mode copy/paste command with UTF-8/UTF-16 files
+ - Fixed FTP save issue with UTF-8 files
+ - Added FTP support for HP Tandem systems using Guardian file system
+ - Fixed double FTP change directory issue on some servers
+ - Fixed paste of text into find combo box w/read only files
+ - Added language indicator to status bar for syntax highlighted languages
+ - Fixed Aspell spell checking of non-syntax highlighted files
+ - Improved performance of large XML files without line feeds
+ - Fixed issue with auto-correct using cursor keys
+ - Fixed crash displaying ASCII chars above 128 in syntax highlighted files
+ - Corrected CSS highlighting in multi-language file
+ - Corrected parsing of VBScript language in multi-language file
+ - Project tool custom icons will now display in menus and toolbars
+ - Multi-byte file names (Korean) can now be opened from __Project__ tree view.
+ - Fixed __Save as__ *ANSI/ASCII* causes file to be corrupted.
+ - Multiple monitor tooltips now appear in the correct location
+ - Improved UTF-16 file detection
+ - Defaults button from key mapping dialog will now restore defaults instead of clearing all mappings
+ - Fixed issue where deleting menu/toolbar configuration files causes UE not to start
+ - Added support for detection of Windows 95 to correct graphical issues with the UE toolbar
+ - Fixed crash in __Find in Files__ when trying to search with no documents open
+ - Fixed user tool crash when selection is passed to tool but no selection has been made in hex mode
+
+---
+### 11.10
+
+ - New icons
+ - Clipboard conversion on paste, Unix/Mac/DOS line endings
+ - Enhanced __Save As__ dialog
+ - Replace in project files
+ - __Check for Updates__ capability
+ - Auto-detect Unicode (UTF-16) files without BOM
+
+---
+### 11.00b
+
+ - Fix for toolbar configuration save and load from INI file
+ - Fixed cursor positioning when toggling into hex mode
+ - Added new INI option for windows font: `Extra Windows Font=`Font Name (Default: `Extra Windows Font=Tahoma`)
+ - Added new INI option for windows font size: `Extra Windows Font Height=`-Font Size (Default: `Extra Windows Font Height=-13`)
+ - Added new INI option for file tab font: `TAB Windows Font=`Font Name (Default: `TAB Windows Font=Tahoma`)
+ - Added new INI option for file tab font size: `TAB Windows Font Height=`-Font Size (Default: `TAB Windows Font Height=-13`)
+ - Added *Use Check Marks on Menus* configuration for blind users
+ - Fix for crash in __Find in Files__
+ - Fix for crash while attempting to add invalid words to spell checker word list
+ - Fix for __Find in Files__ when searching *Open Files* and files are UTF-8/UTF-16
+ - Fix for __Replace in Files__ for *Open Files* when files are UTF-8/UTF-16
+ - Fix for __Replace__ in *All Open Files* when files are UTF-8/UTF-16
+ - __Project Settings__ dialog now shows complete path
+ - Quick search toolbar entry now works if on multiple toolbars at once
+ - Auto-complete fixes
+ - FTP/SFTP bugfixes, including crash, and correctly reloading remote file
+ - Fixes for automatic outdenting in Perl
+ - Win 9x startup issue with ueres.dll
+ - Crash with split windows and delete
+ - Many changes for multi-language files with syntax highlighting, folding and indenting
+ - __File Tree__ view __Sort__ now includes path
+ - Project file fixes
+ - Added capability to change size (length) of that search window in toolbar by
+   double clicking on the find combo box item in toolbar customization window
+ - Fixed line number being chopped with some fonts
+ - Many other minor issues
+
+---
+### 11.00a
+
+ - Several project related issues including refresh
+ - Only partial project path showing in project list in some instances
+ - __File Tree__ view no longer access floppy/removable drives with mouse over
+ - __File Tree__ view did not display drives created using the `SUBST` command
+ - Files with an .s03 extension show up as .s0303 in the __File Tree__ view
+ - Undocked windows (__File Tree__ view and others) now remember if they are undocked when closed
+ - The HTML toolbar function __Text2HTML__ did not support some conversions
+ - __HTML Bookmark__ button changed to anchor to avoid confusion
+ - HTML __B__ (old) button undo did not remove the `<B>` tag
+ - Added more icons to toolbar configuration.
+ - Toolbar position not saved in some conditions
+ - Fixed issues with capture output from tools not always working
+ - Output window fixes
+ - Function list not always detecting functions that previous versions detected
+ - Some functions not showing if function strings ended with asterisk (`*`)
+ - Fixed display issues with line numbers being clipped
+ - Fixed display issue with themes/manifest files.
+ - Configuration changes to spelling checker options did not always activate button __Apply__
+ - Support <kbd>Ctrl + B</kbd> brace matching on non-syntax highlighted files
+ - Fixes for multi-line strings
+ - Added default folding strings for XML
+ - Very slow drawing of XML files with very large lines
+ - Crash on save if it's a new file that is syntax highlighted
+ - Escape for __Auto-Complete__ dialog
+ - Positioning problem with spell checker and Unicode file
+ - Crash with GUID used multiple times at beginning of file
+ - Insert color default color issue
+ - Icons left in system tray when UltraEdit closes and minimized to system tray
+ - Auto correct on return key
+ - Several minor FTP/SFTP issues including MVS
+ - Other minor fixes
+
+---
+### 11.00
+
+ - Enhanced configurable menu / TB support
+     * Easier to use
+     * Save configurations
+     * Multiple configurations, select for appropriate task
+ - HTML toolbar
+     * Preconfigured for most popular functions
+ - Improved HTML Tidy support
+     * Updated
+     * __Configuration__ dialog for __Tidy Configuration__
+ - Aspell Spell checker (more languages available)
+ - Enhanced user interface
+     * Framework/window changes
+     * Improved bookmarks
+     * Ruler guide for caret position
+     * "Explorer" style __File Tree__ view
+     * Improved document tabs
+ - Code folding
+     * Fold any function or structure (C/C++)
+     * __Collapse All__ and __Expand All__
+ - Copy/append line if no select (option)
+ - Enhanced brace matching
+     * New highlight based on line/column background
+     * User configurable match strings
+ - File logging
+     * Automatically update log files at configurable interval
+     * Files can individually be set to be log files
+ - Multi-language (HTML file types only) syntax highlighting
+ - Tools toolbar
+     * Enhanced color selector
+     * __CSS Style Builder__
+     * HTML Tidy enhanced interface/configuration dialog
+     * Globally __Unique ID Number__ generator
+     * Number converter (converts selection: binary, octal, decimal, hexadecimal)
+     * __Artistic Style Formatter__
+ - Other minor changes
+     * Lock <kbd>Insert Mode</kbd> key (inhibit __Overstrike__)
+     * Disable auto hex mode
+     * Open from Windows Explorer does not change the most recent file list
+     * __Always on Top__ function now in __View__ menu
+     * Enhancements to reindentation
+     * Syntax highlighting is supported with wrapped lines
+
+---
+### 10.20d
+
+ - Bugfixes
+     * Fix right click context menu broke in v10.20d
+     * Fix Unix FTP dates
+     * Multiple instance issues fixed
+     * Several issues related to UTF-8/Unicode file handling fixed
+     * Output window issues fixed
+     * Access violation issues fixed
+     * __Find in Files__ issues fixed
+     * FTP filter settings issue fixed
+     * Fixed __Project__ group issue with *Relative to Project File* setting
+     * Opening files through symbolic links fixed
+     * Duplicate entries in __Recent File List__ from __FTP Open__/__Save__ fixed
+     * SFTP multi-file permissions issue fixed
+     * __Replace All__ issue fixed
+     * Other minor issues
+
+---
+### 10.20c
+
+ - Bugfixes
+     * Random print problem fixed
+     * Print on NT4 fixed
+     * Works with debuggers running
+     * UTF-8 problem with UTF-8 last character of file
+     * A few reports of startup problems fixed
+     * Other minor issues
+
+---
+### 10.20b
+
+ - Bugfixes
+     * Lock up on some NT/98 systems on launch
+     * Some random crashes fixed
+     * Display/selection of Asian double-byte characters fixed
+     * __FTP Save As__ sometimes reported change after save when no change was made
+     * UTF-8 character conversion on very large files
+     * Other minor issues
+     * Added `%d` to tools commands to represent directory name WITHOUT backslash
+       (`%D` for short directory name)
+
+---
+### 10.20a
+
+ - Bugfixes
+     * Problems with tabs, particularly on Win 9x/Me
+     * Problems with a few lockups when starting on Win 9x/Me
+     * Print preview problems
+     * __Find in Files__ in macro after being edited did not work
+     * Load time for files from Windows Explorer after UltraEdit is running is much quicker
+     * Other minor fixes
+
+---
+### 10.20
+
+ - __Multiple Tab Positions__
+ - __Duplicate Line__
+ - __New Line/Insert Line__
+ - Tooltips for tabs show document path
+ - __Tree View__ function to change view to drive/path of active file
+ - __Character Properties__ pop-up dialog to show
+     * Value of character in decimal/hex and display
+     * Offset of character from start of file in decimal/hex
+ - Additional macro commands for
+     * __Find in Files__ and __Replace in Files__
+     * Conversion from __ASCII to UNICODE__
+     * __UNICODE to ASCII__
+     * __Duplicate Line__
+     * __New Line/Insert Line__
+ - Command line option (`-f`) to search for a string from the command line
+     * Must be the last parameter of the command line
+     * Use the settings from the last find within UltraEdit to allow flexibility
+ - Increased performance for __Trim Trailing Spaces__
+ - Display conversion for ISO 8859-2 fonts from Windows normal fonts
+ - New CHM based help
+ - SFTP now supports PuTTY key format
+ - INI file is now by default under the `%APPDATA%` folder UNLESS one already exists in the Windows folder then it is used for compatibility
+ - Other minor changes
+
+---
+### 10.10c
+
+ - Bugfixes
+     * FTP current directory not always set correctly when switching accounts if not doing a browse
+     * Project files sometimes does not sort the first file correctly
+     * Loading projects from older releases occasionally crashes
+     * Improvements to copy/paste between Unicode and non-Unicode applications
+     * Screen sometimes not rendered correctly after selection on XP
+     * Other minor issues
+
+---
+### 10.10b
+
+ - Bugfixes
+     * Some list boxes not shown correctly when docked horizontally (not vertically)
+     * Syntax highlighting dialog not showing all languages in some cases
+     * __Output Window__ scroll width fixed for very long lines
+     * Folder files not always shown in __Project List__
+     * Opening project with open files in __File Tree__ view would show project files in list
+     * Print/print preview sometimes shows an extra character at end of file
+     * Problem with cut/delete of large sections from files greater than 2 GB
+     * Revert to saved with UTF-8 BOM files would show the BOM characters
+     * UltraCompare Lite fixes
+     * Other minor issues
+ - Added check for UltraCompare Professional and use it if installed instead of UltraCompare Lite
+ - For usability for those that are visually impaired added text indicators in
+   the __General Configuration__ tab to indicate items that were checked or not
+
+---
+### 10.10a
+
+ - Bugfixes
+     * UltraCompare binary mode on Win 9x/Me not showing results
+     * Paste in hex mode of data including nulls fails
+     * Paste some non-English characters in some locales caused character conversions
+     * Several issues with projects including directories
+     * __Find in Files__ always did a recursive search
+     * Fix spell checker dialogs for non-English versions
+     * Other minor issues
+ - Added font setting for UltraCompare
+ - Added INI settings allowing user to determine if the BOM should be written
+     * `Write UTF-8 BOM = 1` - This setting causes the editor to write out the __Byte Order Mark__ (BOM) header
+       in a file when it is saved. If this is not set, it will not write out the BOM unless the file contained
+       it when it was loaded into the editor. If so, the BOM will be written to the file irrespective of the
+       setting. The BOM is an industry standard indicating the contents of the file for various Unicode formats.
+       This is set be default internally.
+     * `Write UTF-8 BOM NF = 1` - This setting causes the editor to write out the __Byte Order Mark__ (BOM) header
+       in a file when it is saved if the file is a new file created within UltraEdit. If the `Write UTF-8 BOM`
+       setting above is set, then the BOM will always be written and this is ignored. Otherwise, the BOM will
+       only be written out for new files if this is set.
+
+---
+### 10.10
+
+ - Resizeable dialogs for __FTP Open__/__Save As__, __ASCII Table__ and __Find List Lines Containing String__
+ - __Column Insert Number__ feature allows hex or decimal
+ - __Project Directories__ allow *Recursive* addition of files/folders
+ - SFTP allows __Public/Private Key__ encryption
+ - Improved UTF-8 support with BOM detection
+ - Max columns increased to allow up to 20,000
+ - Word count enhanced with additional information
+ - <kbd>Alt+ Up/Down</kbd> commands to switch documents according to __File Tab__ order
+ - Additional macro commands added for
+     * __Conversion to__/__from EBCDIC__
+     * __Next__/__Previous Document__
+ - Setting of code page and locale
+     * Locale used (optionally) for sort
+     * Code page used for Unicode conversions
+ - Increased __Undo__ buffer sizes
+ - Double click empty spaces to select all contiguous space
+ - Open of Unicode paths via drag-and-drop from Windows Explorer
+ - Sort optionally uses locale to sort
+ - New file compare
+     * Improved interface
+     * Better algorithms
+     * Supports binary compare
+     * Supports FTP files without saving locally
+ - Double click document file tab to close file
+ - Added INI setting to not automatically browse when changing FTP account
+   (Default now not to browse)
+ - Other minor changes
+
+---
+### 10.00c
+
+ - Bugfixes
+     * Correction for syntax highlighting block comments
+     * Fix problem with "Cannot allocate memory for text expansion" after using *Preserve Case* find
+     * Fixed problems related to users with advanced setting to use memory buffers set
+     * Fixed problem with macros and column mode
+     * Other minor issues
+
+---
+### 10.00b
+
+ - Bugfixes
+     * Installer issue sometimes causing a path problem
+     * Word-wrap positioning bug
+     * Other minor issues
+
+---
+### 10.00a
+
+ - Bugfixes
+     * Uninstall not working correctly
+     * Sort issue with Unicode files
+     * Regular expression problem fixed
+     * __Project/Tree__ view issues
+     * SFTP issues
+     * Other minor issues
+
+---
+### 10.00
+
+ - Secure FTP support (SFTP)
+ - __CSE HTML Validator__ integration
+     * __Run Validation__
+     * __Setup Validator Options and Configuration__
+     * __Job Type__ support
+     * Requires CSE HTML Validator from www.htmlvalidator.com
+ - Syntax highlighting based on file name
+ - Project additions include
+     * Support for nested groups with no limit on depth
+     * Directories allowed as a group
+     * Directory groups dynamically updated
+     * Direct addition/removal of files from __File Tree__ view
+ - FTP drop down for recent directories/per account
+ - Function to close all files but active file added to __File__ menu and __File Tab__ right click menu
+ - Macro command additions
+     * `IfFTP` to check if file is an FTP file
+     * `IfCharGt` to check if character is greater than value
+     * `IfColNumGt` to check if column number is greater than value
+ - User tool ability to pass the line and column of the cursor to tool
+ - Syntax highlighting allows delimiters to be start character of word
+ - Support for __OEM Fixed Font__ selection
+ - *Preserve Case* __Replace__ to preserve the case of a word when being replaced
+ - Option for CHM user help files to always be on top, or not
+ - __File Tree__ view remembers horizontal scroll position between sessions
+ - Many additional configuration items for user preferences
+ - INI settings moved to configuration
+ - Other minor changes
+
+---
+### 9.20b
+
+ - Bugfixes
+     * Fix "random" crash/UltraEdit disappear after __Find in Files__ and other list related operations (created in v9.20a)
+     * Fix issues relating to hiding lines
+     * Minor syntax highlighting changes with string comments
+     * Fix problem with finding matches braces at end of file
+     * Other minor issues
+
+---
+### 9.20a
+
+ - Bugfixes
+     * Function list scrollbar not shown
+     * Tools in macros run from command line did not display captured output
+     * __Project__ menu could not be disabled on main menu
+     * Focus now goes to edit window if closing __Function List__ or __Tree View__ when they have focus
+     * Corrected __Save As__ issues with MVS FTP file names
+     * Corrected FTP directory listing for Stratus
+     * Other minor issues
+
+---
+### 9.20
+
+ - Function list highlights function that cursor is in
+ - __Auto-Complete__ includes functions in function list
+ - Automatic highlighting of brackets/braces as typing or positioning occurs
+ - Automatic highlighting of brackets/braces includes `<` and `>` for HTML designated files
+ - __Incremental Search__
+ - __Quick Record Macros__ - one keystroke recording
+ - File tabs showing file names may be dragged and dropped individually
+ - Macro support added for __Copy Active Path/Name__
+ - Macro support added for __Save All__
+ - Increase find/replace string limit to 30,000 characters when using `^c` or `^s`
+ - Allow environment variables in tool commands/paths (`%Env:`)
+ - New indent strings to specify indentation if string is at start of line
+ - Marker characters can now have same the same start and end characters
+ - __FTP Save__ (not save as) option to save local copy of file automatically
+ - Hex mode copy function to copy hex view of text to clipboard
+ - New INI setting (`One Based Ruler`) to allow the ruler to start at 1, not 0
+ - Output window now scrolls when data is added to it from tools commands
+ - Keystroke added for __Split Window__ and __File Rename__
+ - Other minor changes
+
+---
+### 9.10b
+
+ - Changed directory browser to get rid of delay for non-connected drives
+ - Bugfixes
+     * Fix problem with *Read-Only* setting change changing properties of file when INI setting not set
+     * Fix problem with sort of Unicode files
+     * Fix problem with wrap/CRLF conversions on double byte files
+     * Fix delete line in column mode
+     * Fix problem with last line not being converted in Unix-DOS conversion
+     * Fix problem with __Undo__ and __Replace All__
+     * Other minor fixes
+
+---
+### 9.10a
+
+ - Bugfixes
+     * Fix for column number range with line comment restrictions
+     * Added *Check Short Name* INI setting (set to 0 to disable check when opening file
+       for matching name with existing names). On some servers the short name is the same,
+       causing UltraEdit not to open the file.
+     * Fix problem with opening FTP files from command line if UltraEdit already running
+     * Fix problem of opening multiple files with wildcards from command line
+     * Fixed some issue with sort, including numeric sort
+     * Fixed issues with MVS __Save/Save As__
+     * Fix problem with replace in selected text in column mode
+     * Fix issues with find and selected text
+     * Other minor issues reported
+
+---
+### 9.10
+
+ - Support for files greater than 4 GB (previously support was for files up to 2 GB)
+ - __View__ menu items (and toolbar support) to zoom in/out by increasing/decreasing font size
+ - Sort support for up to 4 sort keys, much quicker in most cases
+ - Sort option for numeric sort vs. alphanumeric
+ - __Back__/__Forward__ functions take you to the previous place you edited, or
+   scrolled from, or jumped to a tag from etc. and works across multiple files
+ - Added FTP support for AS400
+ - Added FTP support for MVS
+ - FTP dialog now has a log mode that shows the FTP session between UltraEdit and the FTP server
+ - Increased performance for macros under some conditions
+ - Increased performance for __Replace All__ on larger files
+ - Added *Default Open Directory* and *Default Project File Directory*
+ - Syntax highlighting allows user to specify what characters precede line comments
+ - Syntax highlighting allows user to specify what columns line comments are valid for
+ - INI setting to disable new style toolbar and menus - use old style
+   toolbar configuration compatible with screen readers and quicker load
+ - Add option for tool configuration to save active file (or not) before running the tool
+ - __Quick Open__ now has option to open all match files recursively through sub directories
+ - Command line option to force OEM character set
+ - __Find in Files__ with an empty find string will create listing of all
+   files matching directory/name specification
+ - __Undo__ supported for __Replace all__
+ - INI option to use memory for editing
+ - Updated HTML Tidy version
+
+---
+### 9.00c
+
+ - Bugfixes
+     * New file created on load not automatically being closed when file is opened
+     * Fix problem with Unicode and syntax highlighting comments
+     * Hex mode not accepting ASCII character input
+     * Fixed problem with some UTF-8 or Unicode files being corrupted with extra '00'
+     * Other minor issues
+
+---
+### 9.00b
+
+ - Bugfixes
+     * Issues relating to display of page break
+     * On XP, non printable characters are not displayed by system routines
+       and are ignored. Changed UltraEdit to display `?` instead
+     * Fixed crash with macros invoked from the command line that also exit
+     * Corrected __Find in Files__ positioning with some Unix files
+     * Fixed several problems with Unicode files
+     * Fixed problem with __Print Preview__ and tabs with two pages on one page
+     * Fixed scrolling problem with hidden lines
+     * Fixed problem with replace in selection when selection made from right to left
+     * Corrected problem with relative paths in projects
+     * Fixed crash at startup with Nvidia drivers and nView
+     * Other minor issues
+ - Added INI setting *Display DOS Lines Only* that causes only lines terminated with CR/LF to display as separate lines
+ - Added INI setting *ClearType* for XP users that use ClearType fonts to provide better display of these with syntax highlighting
+ - Added __View Template List__ to key mapping
+
+---
+### 9.00a
+
+ - Bugfixes
+     * Issues relating to display of page break
+     * Unicode search of Asian characters sometimes failed
+     * Addressed several issues with menu hot keys
+     * Running tools will cause the file change detection to run
+     * Fixed issue with some user tool bitmaps not showing correctly on some systems
+     * Fixed problem with UTF-8 and FTP save
+     * Fixed problems with __Column Mode__ and UTF-8/Unicode files
+     * Fixed problem with file associations setting the wrong default icon registry setting
+     * Fixed FTP problem with some passwords not working
+     * Fixed FTP problem with some links and directory changes
+     * Other minor issues reported
+ - Added per tool option to display DOS box while running
+ - Changed __Find in Files__ back to pre-V9 default for directory with INI setting
+   `FIFUseActiveFilePath` option in the `[Settings]` section to default to active file path
+ - Added Hungarian spelling dictionary
+
+---
+### 9.00
+
+ - Multiple toolbars available (user configurable)
+ - Configurable menus
+ - Icons on menus
+ - Find "entry" box/drop down on toolbar for quick finds
+ - Macros can be run when file is loaded and when file is saved
+ - Macro functions for `IfNameIs` and `IfExtIs` to check active file name/extension within macros for conditional statements
+ - Improved macro shortcut support
+ - Reformmatting of existing code to indent/unindent based on language
+ - Automatic unindenting now happens when unindent string typed, not after newline
+ - Syntax highlighting support for up to 20 languages
+ - EBCDIC/HEX combined view without conversion
+ - Printing support of hidden lines
+ - User tools may have user icons or bitmaps
+ - User tools now run by default without command window showing
+ - Increased number of function strings to 6 for syntax highlighting
+ - Commands for going to end of next or previous word
+ - New template list view provided for quick access to templates
+ - Ctags support¹
+     * Project specific Ctag file with option to create automatically when opened
+     * Configurable parameters and tag file for use outside of projects
+     * __Find Symbol__ command will locate symbol in ctag file of selected
+       item or item under cursor and position to it in appropriate file
+     * ¹ Requires the use of third party CTag EXE for tag file generation (links provided)
+ - INI setting to disable left cursor from going to end of previous line
+ - Tools with output to output window run without showing DOS box
+ - Command line parameter (`/a`) added to allow specifying an already open file
+   without having the prompt to reload it (just position to specified line)
+ - Command line parameter `-lx` and `-cx` allowed following each file name
+   to specify line and column to position to. Older method also still supported.
+ - Multiple search paths allowed with find and replace in files
+ - __View__ menu includes option to show __Page Breaks__ as line across the screen
+ - Added ability to copy __Function List__ contents to clipboard
+ - __Find__ and __Replace in Files__ now allows multiple directories to be specified
+ - Other minor changes
+
+---
+### 8.20a
+
+ - __Find in Files__ sometimes listed the wrong line number for Unix files
+ - __Function List__ sometimes positioned to the wrong line for the function
+ - Improvements to Unix style regular expressions
+ - File changed notification dialog corrected to show longer file names
+ - Unix UTF-8 files now converted correctly
+ - Unicode column justify corrected
+ - Corrected print/print preview with syntax highlighting in Windows 95
+ - Line selection sometimes selected too much text for copy/paste
+ - Corrected auto-correct
+ - Full screen mode toolbar now remembers it's position
+ - Corrected input processing from IME2000
+ - Other minor changes
+
+---
+### 8.20
+
+ - __Full Screen__ mode
+ - Improved Unicode support on all Win32 platforms
+ - Support for UTF-8 and conversions to/from UTF-8
+ - Support for the new `WM_UNICHAR` message
+ - Rename of files supported
+ - Column mode justify (__Left__, __Right__, __Center__) to justify text just in the specified columns
+ - __Find in Files__ and __Replace in Files__ option for Unicode searches
+ - Command line option to ignore file delete detection just for the files loaded from the command line
+ - File change notification dialog now allow all or none options for reloading changed files
+ - Search string not found dialog now has option to search from other end of file
+ - Increased recent project list to 12 entries
+ - INI setting for file compare EXE to use in place of UltraEdit's compare
+ - INI option to ignore file delete detection
+ - Macro support to clear clipboard
+ - Macro support to close file with option to save file, or not to save file without prompt
+ - Other minor changes
+
+---
+### 8.10b
+
+ - Bugfixes
+     * Spanish version spell checker fixed
+     * Column mode functions in macros on large files corrected
+     * Fix for page up positioning in some instances with wide files
+     * Fix for scrolling issues with hidden lines
+     * Tab indent of lines corrected to use indent value as appropriate
+     * Conversion of files to fixed column with null fields corrected
+     * Other minor issues
+
+---
+### 8.10a
+
+ - Bugfixes
+     * On some systems the tag list and templates were not initially loaded
+     * __Column Markers__ lost when loaded
+     * __Function List__ would not position to function for Unix non converted files
+     * Once a tool captured wrote the output to the active file, all tools wrote output to file
+     * Double byte systems did not show cursor position correctly for double byte characters
+     * Some fonts show problems with cursor positioning under certain conditions
+     * Other minor issues
+
+---
+### 8.10
+
+ - Ability to hide and unhide selected portions of text
+ - Edit Unix/Mac files without any conversion required (`^n`/`^r` used in find/replace for LF/CR)
+ - Line numbers now based on real lines not wrapped lines
+ - Conversion of character delimited files to fixed column
+ - Conversion of fixed column file to character delimited
+ - User bitmaps for user and project tools
+ - User/project tools can have output go directly to the active document
+ - Separate indent and tab stop setting
+ - Commands to position active line at top, middle or bottom of screen
+ - Cache INI file for quicker load/shutdown
+ - Functions strings can recognize multiple lines
+ - __Replace in Files__ option to list changed files and number of occurrences
+ - Output window double click will look for file in project directory if not fully qualified and not found in active file directory
+ - Word count will count only selected text if selection exists
+ - Line comments up to 5 characters now supported
+ - *Unix Regular Expressions* setting can be changed in macros
+ - INI option to delete existing file before saving
+ - INI option to edit in text mode files containing nulls (hex 00)
+ - Other minor changes
+
+---
+### 8.00b
+
+ - Bugfixes
+     * Problem with some find in files results showing incorrect line number
+     * Replace in all open files ignored read-only status of file
+     * When using __View As File Type__, the function list was not updated
+     * Various corrections for Unicode file types
+     * Fix for hanging indent with reformat file
+     * Minor fixes for regular expressions
+     * Problem with selection in some macros
+     * Other minor mixes
+
+---
+### 8.00a
+
+ - Bugfixes
+     * Error created when function list selected to search project files but no project active
+     * Focus now goes (again) to __Function List__ when invoked
+     * __Find in Files__ fixed for Mac files (returned wrong line number)
+     * __Make Copy/Backup__ now works for FTP files (local copy)
+     * Fixed cursor jumping in hex mode in some configurations
+     * HTML Tidy now updates original file automatically if the HTML Tidy configuration is set to do so
+     * Fixed hotkeys for templates 10-19
+     * Fixed delay on some systems after double click to open file from Windows Explorer then going back to Windows Explorer
+     * Fixed running tool from within macro
+     * Other minor fixes
+
+---
+### 8.00
+
+ - Function list support for searching for functions in all project files
+ - Multiple function strings per language (3)
+ - HTML Tidy support (integrated) see http://www.w3.org/People/Raggett/tidy/
+ - Project specific user tools (as well as standard set)
+ - Option to sort (or not) the function list
+ - Group support added for projects, allowing files to be grouped together
+ - Option to open file without temp file now has threshold size to allow only large files to use this option
+ - __Copy & Append__, allows the user to copy the selection and append it to the clipboard
+ - __Cut & Append__, allows the user to cut the selection and append it to the clipboard
+ - Color selector added to allow user to select a color and insert the value into a file
+ - Delete next and previous word changed to act more like other applications
+ - Number of templates increased to 50
+ - Filter for __File Tree__ view
+ - All macro lists are now sorted alphabetically
+ - The <kbd>ESC</kbd> key will now abort a macro.
+ - The <kbd>ESC</kbd> key will now abort a large file being loaded.
+ - Changes to the automatic Unix detection to cater for mixed Unix/DOS and for Unix files with ^M's
+ - FTP - Added OS9000 support
+     * Option not to display directories
