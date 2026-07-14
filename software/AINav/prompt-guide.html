@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="site-mobile.css">
+<title>提示词编写指南 — 写好Prompt的完整方法论 — AI第一思考 — AINav</title>
+<meta name="description" content="提示词编写完整指南：6大原则、CRISPE框架、5步迭代法、8个实战模板。从入门到精通，让AI输出质量翻倍。">
+<link rel="canonical" href="https://aiv123.com/prompt-guide.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="提示词编写指南 — 写好Prompt的完整方法论">
+<meta property="og:description" content="6大原则、CRISPE框架、5步迭代法、8个实战模板。让AI输出质量翻倍。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%237c3aed'/><text x='50' y='68' font-size='42' text-anchor='middle' fill='white' font-family='system-ui' font-weight='700'>Prompt</text></svg>">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2B8FBWRX4N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2B8FBWRX4N');
+</script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6321431447511882" crossorigin="anonymous"></script>
+<style>
+:root,html[data-theme="dark"]{--bg:#0f1419;--panel:#151b23;--card:#1c2430;--border:#2d3848;--text:#e6edf3;--muted:#8b9cb3;--accent:#58a6ff;--accent2:#3fb950;--warn:#d29922;--danger:#f85149;--af:#f97316;--af3:#a78bfa;--prompt:#7c3aed}
+html[data-theme="light"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;--text:#1f2328;--muted:#59636e;--accent:#0969da;--accent2:#1a7f37;--warn:#9a6700;--danger:#cf222e;--af:#ea580c;--af3:#7c3aed;--prompt:#7c3aed}
+@media(prefers-color-scheme:light){html[data-theme="system"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;--text:#1f2328;--muted:#59636e;--accent:#0969da;--accent2:#1a7f37;--warn:#9a6700;--danger:#cf222e;--af:#ea580c;--af3:#7c3aed;--prompt:#7c3aed}}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.cp-top{padding:.75rem 1rem;border-bottom:1px solid var(--border);background:var(--panel);position:sticky;top:0;z-index:10}
+.cp-top-inner{max-width:76rem;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;justify-content:space-between}
+.cp-nav a{font-weight:600;margin-right:1rem;font-size:.88rem}
+.cp-toolbar{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center}
+.theme-btn{font-size:.72rem;padding:.2rem .5rem;border-radius:5px;border:1px solid var(--border);background:var(--card);color:var(--muted);cursor:pointer;font-family:inherit}
+.theme-btn.is-active{color:var(--accent);border-color:var(--accent);font-weight:600}
+.cp-wrap{max-width:76rem;margin:0 auto;padding:1rem}h1{font-size:1.35rem;margin:0 0 .3rem}
+.cp-subtitle{font-size:.88rem;color:var(--muted);margin-bottom:1rem}
+.cp-section-hd{font-size:1.1rem;font-weight:700;margin:1.8rem 0 .8rem;padding-bottom:.3rem;border-bottom:2px solid var(--border);display:flex;align-items:center;gap:.5rem}
+.cp-section-hd .cp-flag{font-size:1.15rem}
+.af-grid{display:grid;grid-template-columns:1fr;gap:1rem}
+@media(min-width:52rem){.af-grid{grid-template-columns:1fr 1fr}}
+.af-tool{border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden;transition:border-color .15s}
+.af-tool:hover{border-color:var(--prompt)}
+.af-tool-head{padding:.7rem 1rem;border-bottom:1px solid var(--border);display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .6rem}
+.af-tool-name{font-size:1rem;font-weight:700;flex:1 1 auto}
+.af-tool-body{padding:.7rem 1rem;font-size:.82rem;line-height:1.7}
+.af-tool-body ul{padding-left:1.1rem;margin:.3rem 0}.af-tool-body li{margin-bottom:.25rem}.af-tool-body strong{color:var(--text)}
+.highlight-box{padding:.6rem 1rem;border-radius:6px;font-size:.82rem;line-height:1.7;margin:.5rem 0}
+.tf-nav{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.5rem 0}
+.tf-nav a{padding:.5rem 1rem;border-radius:8px;border:1px solid var(--border);background:var(--card);font-size:.85rem;font-weight:600;transition:border-color .15s}
+.tf-nav a:hover{text-decoration:none;border-color:var(--accent)}
+.tf-nav a.is-active{border-color:var(--prompt);color:var(--prompt);background:rgba(124,58,237,.06)}
+.prompt-box{border:1px solid rgba(124,58,237,.2);border-radius:8px;background:rgba(124,58,237,.04);padding:.7rem 1rem;margin:.5rem 0;font-size:.82rem;line-height:1.7}
+.prompt-box::before{content:"📝 Prompt";display:block;font-size:.7rem;font-weight:700;color:var(--prompt);margin-bottom:.3rem;letter-spacing:.02em}
+.bad-box{border-color:rgba(248,81,73,.2);background:rgba(248,81,73,.04)}
+.bad-box::before{content:"❌ 差的提示词";color:var(--danger)}
+.good-box{border-color:rgba(63,185,80,.2);background:rgba(63,185,80,.04)}
+.good-box::before{content:"✅ 好的提示词";color:var(--accent2)}
+.step-num{display:inline-flex;align-items:center;justify-content:center;width:1.6rem;height:1.6rem;border-radius:50%;background:var(--prompt);color:#fff;font-size:.82rem;font-weight:700;margin-right:.4rem;flex-shrink:0}
+.cp-footer{max-width:76rem;margin:2rem auto 1rem;padding:0 1rem;font-size:.76rem;color:var(--muted);text-align:center}
+.cp-footer a{color:var(--muted)}
+.tip-tag{display:inline-block;font-size:.68rem;padding:.1rem .45rem;border-radius:4px;font-weight:600;margin-right:.3rem;vertical-align:middle}
+.tag-principle{background:rgba(88,166,255,.1);color:var(--accent);border:1px solid rgba(88,166,255,.2)}
+.tag-anti{background:rgba(248,81,73,.1);color:var(--danger);border:1px solid rgba(248,81,73,.2)}
+.tag-pro{background:rgba(63,185,80,.1);color:var(--accent2);border:1px solid rgba(63,185,80,.2)}
+</style>
+</head>
+<body>
+
+<div class="cp-top">
+<div class="cp-top-inner">
+  <div class="cp-nav"><a href="index.html">AINav</a><a href="thinking-framework.html">AI第一思考</a><a href="prompt-guide.html" style="color:var(--prompt)">提示词指南</a></div>
+  <div class="cp-toolbar">
+    <button class="theme-btn" data-theme-set="system">System</button>
+    <button class="theme-btn" data-theme-set="light">Light</button>
+    <button class="theme-btn is-active" data-theme-set="dark">Dark</button>
+  </div>
+</div>
+</div>
+
+<div class="cp-wrap">
+
+<h1>📝 提示词编写指南 — 写好Prompt，AI输出质量翻倍</h1>
+<div class="cp-subtitle">提示词是你和AI之间的接口协议。写得好，AI是超能力；写得差，AI是废话机。</div>
+
+<!-- 导航 -->
+<div class="tf-nav">
+  <a href="ask.html">💬 Ask</a>
+  <a href="plan.html">🗺️ Plan</a>
+  <a href="debug.html">🔧 Debug</a>
+  <a href="agent.html">🤖 Agent</a>
+  <a href="prompt-guide.html" class="is-active">📝 提示词指南</a>
+</div>
+
+<!-- ==================== 核心认知 ==================== -->
+<div class="cp-section-hd"><span class="cp-flag">🎯</span> 核心认知 — Prompt的本质是什么</div>
+
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">Prompt不是聊天，是编程</div></div>
+  <div class="af-tool-body">
+    <strong>误区：</strong>很多人把AI当聊天对象，想到什么说什么，然后抱怨AI不懂自己。<br><br>
+    <strong>真相：</strong>提示词本质是一种<strong>半结构化编程语言</strong>。你输入的是规格说明，AI输出的是执行结果。<br><br>
+    <div class="highlight-box" style="background:rgba(124,58,237,.04);border:1px solid rgba(124,58,237,.15)">
+    <strong>核心公式：</strong>好的Prompt = 角色设定 + 任务描述 + 约束条件 + 输出格式 + 示例（可选）
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">AI不是人，它不会"猜你意思"</div></div>
+  <div class="af-tool-body">
+    <strong>人类对话：</strong>我说一半，你懂另一半（靠共同语境、肢体语言、历史经验）。<br><br>
+    <strong>AI对话：</strong>它只有你输入的文字。模糊 = 随机，精确 = 确定性。<br><br>
+    <div class="highlight-box" style="background:rgba(248,81,73,.04);border:1px solid rgba(248,81,73,.12)">
+    <strong>铁律：</strong>你对AI说的每一句模糊的话，都会在输出中变成一个随机变量。减少模糊 = 提升质量。
+    </div>
+  </div></div>
+</div>
+
+<!-- ==================== 6大原则 ==================== -->
+<div class="cp-section-hd"><span class="cp-flag">📐</span> 6大原则 — 写好Prompt的底层逻辑</div>
+
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name"><span class="step-num">1</span>具体胜过笼统</div></div>
+  <div class="af-tool-body">
+    每个限定词都在缩小AI的搜索空间，让输出更精准。<br><br>
+    <div class="prompt-box bad-box">写一篇文章</div>
+    <div class="prompt-box good-box">写一篇800字的Python入门教程，面向零编程基础的文科生，用日常比喻解释变量和函数，风格轻松幽默，结尾给一个5行代码的小项目</div>
+    <ul>
+      <li><strong>字数</strong>限定 → 不长不短刚刚好</li>
+      <li><strong>受众</strong>限定 → 术语深度可控</li>
+      <li><strong>风格</strong>限定 → 不千人一面</li>
+      <li><strong>结尾</strong>限定 → 有落地的交付物</li>
+    </ul>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name"><span class="step-num">2</span>给角色，给上下文</div></div>
+  <div class="af-tool-body">
+    AI没有"默认人格"。你不说它是谁，它就默认是通用助手。<br><br>
+    <div class="prompt-box good-box">你是一位有10年经验的资深前端架构师，擅长性能优化和组件设计。请review以下React代码……</div>
+    <ul>
+      <li><strong>角色设定</strong> → AI调用对应领域的知识权重</li>
+      <li><strong>经验年限</strong> → 控制回答的深度和语气</li>
+      <li><strong>擅长方向</strong> → 聚焦特定子领域</li>
+    </ul>
+    <div class="highlight-box" style="background:rgba(88,166,255,.04);border:1px solid rgba(88,166,255,.12)">
+    <strong>技巧：</strong>"你是一个…"开头是最高效的角色设定方式。
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name"><span class="step-num">3</span>说清输出格式</div></div>
+  <div class="af-tool-body">
+    不指定格式 → AI自己选 → 可能是段落、可能是列表、可能是代码。<br><br>
+    <div class="prompt-box bad-box">分析一下Python和JavaScript的区别</div>
+    <div class="prompt-box good-box">用表格对比Python和JavaScript，维度包括：类型系统、运行环境、包管理、适用场景、学习曲线。每行一个维度，结论列用🟢/🟡/🔴标注推荐度</div>
+    <ul>
+      <li><strong>表格格式</strong> → 信息密度高、一目了然</li>
+      <li><strong>维度限定</strong> → 不遗漏、不跑题</li>
+      <li><strong>符号标注</strong> → 快速扫读</li>
+    </ul>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name"><span class="step-num">4</span>给示例（Few-shot）</div></div>
+  <div class="af-tool-body">
+    示例是最高效的沟通方式。一个示例胜过千字描述。<br><br>
+    <div class="prompt-box good-box">将产品描述转为卖点列表。示例：<br>
+    输入："这款耳机降噪效果很好，续航30小时"<br>
+    输出："✅ 主动降噪 · 30小时超长续航"<br><br>
+    现在处理："这台笔记本16寸屏幕，重量1.2kg，支持雷电4"</div>
+    <div class="highlight-box" style="background:rgba(63,185,80,.04);border:1px solid rgba(63,185,80,.12)">
+    <strong>规则：</strong>1-3个示例就够了。太多反而降低效果（AI会过度拟合示例风格）。
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name"><span class="step-num">5</span>拆解复杂任务</div></div>
+  <div class="af-tool-body">
+    AI的注意力有上限。一个复杂任务拆成3-5步，每步更精准。<br><br>
+    <div class="prompt-box bad-box">帮我做一个完整的电商网站</div>
+    <div class="prompt-box good-box">第一步：先设计数据库表结构（用户、商品、订单）<br>第二步：再设计API接口列表<br>第三步：然后写核心业务逻辑<br>第四步：最后写前端页面<br><br>现在先做第一步。</div>
+    <ul>
+      <li><strong>Chain-of-Thought</strong> → 让AI一步步推理</li>
+      <li><strong>分步执行</strong> → 每步可验证、可回退</li>
+      <li><strong>聚焦当前步</strong> → "现在先做第X步"</li>
+    </ul>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name"><span class="step-num">6</span>约束边界，排除干扰</div></div>
+  <div class="af-tool-body">
+    告诉AI"不要做什么"和"要做什么"一样重要。<br><br>
+    <div class="prompt-box good-box">写一篇产品文案。要求：<br>• 不要用"赋能""底层逻辑""抓手"等互联网黑话<br>• 不要超过200字<br>• 不要编造不存在的功能<br>• 不要用感叹号</div>
+    <div class="highlight-box" style="background:rgba(210,153,34,.04);border:1px solid rgba(210,153,34,.12)">
+    <strong>黑名单比白名单更容易写：</strong>"不要做X"比"只做Y"边界更清晰。
+    </div>
+  </div></div>
+</div>
+
+<!-- ==================== CRISPE框架 ==================== -->
+<div class="cp-section-hd"><span class="cp-flag">🧩</span> CRISPE框架 — 万能提示词模板</div>
+
+<div class="af-tool" style="margin-bottom:1rem"><div class="af-tool-head"><div class="af-tool-name">CRISPE 六要素</div></div>
+<div class="af-tool-body">
+
+<table style="width:100%;border-collapse:collapse;font-size:.82rem">
+<thead><tr style="background:var(--panel)"><th style="padding:.4rem .6rem;text-align:left;border:1px solid var(--border);color:var(--muted)">字母</th><th style="padding:.4rem .6rem;text-align:left;border:1px solid var(--border);color:var(--muted)">含义</th><th style="padding:.4rem .6rem;text-align:left;border:1px solid var(--border);color:var(--muted)">示例</th><th style="padding:.4rem .6rem;text-align:left;border:1px solid var(--border);color:var(--muted)">必填？</th></tr></thead>
+<tbody>
+<tr><td style="padding:.4rem .6rem;border:1px solid var(--border);font-weight:700;color:var(--prompt)">C</td><td style="padding:.4rem .6rem;border:1px solid var(--border)"><strong>Capacity</strong> 角色</td><td style="padding:.4rem .6rem;border:1px solid var(--border)">你是一位资深技术面试官</td><td style="padding:.4rem .6rem;border:1px solid var(--border)">推荐</td></tr>
+<tr><td style="padding:.4rem .6rem;border:1px solid var(--border);font-weight:700;color:var(--prompt)">R</td><td style="padding:.4rem .6rem;border:1px solid var(--border)"><strong>Request</strong> 任务</td><td style="padding:.4rem .6rem;border:1px solid var(--border)">出5道React高级面试题</td><td style="padding:.4rem .6rem;border:1px solid var(--border)"><strong>必填</strong></td></tr>
+<tr><td style="padding:.4rem .6rem;border:1px solid var(--border);font-weight:700;color:var(--prompt)">I</td><td style="padding:.4rem .6rem;border:1px solid var(--border)"><strong>Insight</strong> 背景信息</td><td style="padding:.4rem .6rem;border:1px solid var(--border)">候选人3年经验，要考察架构设计能力</td><td style="padding:.4rem .6rem;border:1px solid var(--border)">推荐</td></tr>
+<tr><td style="padding:.4rem .6rem;border:1px solid var(--border);font-weight:700;color:var(--prompt)">S</td><td style="padding:.4rem .6rem;border:1px solid var(--border)"><strong>Specifics</strong> 细节约束</td><td style="padding:.4rem .6rem;border:1px solid var(--border)">每题附标准答案和评分要点</td><td style="padding:.4rem .6rem;border:1px solid var(--border)">可选</td></tr>
+<tr><td style="padding:.4rem .6rem;border:1px solid var(--border);font-weight:700;color:var(--prompt)">P</td><td style="padding:.4rem .6rem;border:1px solid var(--border)"><strong>Personality</strong> 风格语气</td><td style="padding:.4rem .6rem;border:1px solid var(--border)">专业但友好，避免过于学术</td><td style="padding:.4rem .6rem;border:1px solid var(--border)">可选</td></tr>
+<tr><td style="padding:.4rem .6rem;border:1px solid var(--border);font-weight:700;color:var(--prompt)">E</td><td style="padding:.4rem .6rem;border:1px solid var(--border)"><strong>Experiment</strong> 输出格式</td><td style="padding:.4rem .6rem;border:1px solid var(--border)">Markdown表格，难度1-5标注</td><td style="padding:.4rem .6rem;border:1px solid var(--border)">推荐</td></tr>
+</tbody>
+</table>
+
+<br>
+
+<div class="prompt-box good-box">
+<strong>完整示例：</strong><br><br>
+[Capacity] 你是一位有8年前端架构经验的资深技术面试官。<br><br>
+[Request] 请出5道React高级面试题。<br><br>
+[Insight] 候选人有3年React经验，需要考察架构设计、性能优化和状态管理能力，而非基础语法。<br><br>
+[Specifics] 每道题需包含：题目、考察点、标准答案、评分要点（0-5分）。难度从3星到5星递进。<br><br>
+[Personality] 专业严谨但引导性强，像一位愿意帮助候选人成长的面试官。<br><br>
+[Experiment] 用Markdown输出，每题一个二级标题，末尾附总评维度表。
+</div>
+
+</div></div>
+
+<!-- ==================== 5步迭代法 ==================== -->
+<div class="cp-section-hd"><span class="cp-flag">🔄</span> 5步迭代法 — 从能用到好用</div>
+
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name"><span class="step-num">1</span> 先跑一版（V0）</div></div>
+  <div class="af-tool-body">
+    不要追求一次完美。先用最简单的描述跑一次，看看AI默认输出什么样。<br><br>
+    <div class="highlight-box" style="background:rgba(88,166,255,.04);border:1px solid rgba(88,166,255,.12)">
+    <strong>目的：</strong>用V0的输出来诊断——缺什么补什么。这比空想"怎么写"效率高10倍。
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name"><span class="step-num">2</span> 诊断差距</div></div>
+  <div class="af-tool-body">
+    拿V0输出和你的期望对比，问自己：<br>
+    <ul>
+      <li>❓ <strong>太泛？</strong> → 加约束、加受众、加场景</li>
+      <li>❓ <strong>太长/太短？</strong> → 加字数限定</li>
+      <li>❓ <strong>格式不对？</strong> → 明确输出格式</li>
+      <li>❓ <strong>风格不对？</strong> → 加角色设定和语气要求</li>
+      <li>❓ <strong>跑题？</strong> → 加否定约束</li>
+    </ul>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name"><span class="step-num">3</span> 追加指令（V1-V3）</div></div>
+  <div class="af-tool-body">
+    在对话中逐步追加，不要重写整个prompt：<br><br>
+    <div class="prompt-box good-box">V0：写一篇Python入门<br>
+    V1追加：请面向零基础，用日常比喻解释概念<br>
+    V2追加：每节加一个小练习<br>
+    V3追加：结尾给一个完整小项目</div>
+    <div class="highlight-box" style="background:rgba(63,185,80,.04);border:1px solid rgba(63,185,80,.12)">
+    <strong>技巧：</strong>对话式追加比一次性写完长prompt更高效，因为你可以在每一步看到效果。
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name"><span class="step-num">4</span> 锁定最终版</div></div>
+  <div class="af-tool-body">
+    迭代3-5轮后，把效果最好的完整prompt提取出来，作为你的<strong>模板</strong>保存。<br><br>
+    <div class="highlight-box" style="background:rgba(210,153,34,.04);border:1px solid rgba(210,153,34,.12)">
+    <strong>为什么：</strong>好的prompt是可以复用的资产。今天花10分钟打磨的模板，未来省100次重复调试。
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name"><span class="step-num">5</span> 参数化复用</div></div>
+  <div class="af-tool-body">
+    把固定部分和可变部分分离，做成模板：<br><br>
+    <div class="prompt-box good-box">
+你是一位{{角色}}，有{{年限}}年{{领域}}经验。<br>
+请{{任务}}。<br>
+要求：<br>
+- {{约束1}}<br>
+- {{约束2}}<br>
+- 输出格式：{{格式}}<br>
+- 不要：{{否定约束}}
+    </div>
+    <div class="highlight-box" style="background:rgba(124,58,237,.04);border:1px solid rgba(124,58,237,.12)">
+    <strong>进阶：</strong>把常用模板存成快捷短语/代码片段，一键调用。
+    </div>
+  </div></div>
+</div>
+
+<!-- ==================== 实战模板 ==================== -->
+<div class="cp-section-hd"><span class="cp-flag">🛠️</span> 8个实战模板 — 拿来就用</div>
+
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">📋 代码生成</div></div>
+  <div class="af-tool-body">
+    <div class="prompt-box good-box">
+你是一位{{语言}}专家，代码风格：清晰优先于简短。<br>
+请实现：{{功能描述}}<br>
+要求：<br>
+- 输入：{{输入格式}}<br>
+- 输出：{{输出格式}}<br>
+- 性能要求：{{时间/空间复杂度}}<br>
+- 包含错误处理和边界情况<br>
+- 每个函数加注释说明用途<br>
+- 最后给出3个测试用例
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">🔍 代码Review</div></div>
+  <div class="af-tool-body">
+    <div class="prompt-box good-box">
+你是一位严格的代码审查员，关注：bug风险、性能、可维护性。<br>
+请review以下代码，按维度打分（1-5）并给改进建议：<br>
+1. 正确性<br>2. 性能<br>3. 可读性<br>4. 安全性<br>5. 可扩展性<br><br>
+代码：<br>{{代码}}
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">📝 文案写作</div></div>
+  <div class="af-tool-body">
+    <div class="prompt-box good-box">
+你是一位{{行业}}的资深文案。<br>
+任务：写{{类型}}文案<br>
+产品：{{产品名}}，核心卖点：{{卖点}}<br>
+受众：{{目标人群}}<br>
+语气：{{风格}}，不要用{{禁忌词}}<br>
+长度：{{字数}}字以内<br>
+CTA：{{行动号召}}<br>
+输出：标题（3个选项）+ 正文
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">📊 数据分析</div></div>
+  <div class="af-tool-body">
+    <div class="prompt-box good-box">
+你是一位数据分析师。<br>
+请分析以下数据，输出：<br>
+1. 关键发现（不超过5条，按重要性排序）<br>
+2. 异常值标注<br>
+3. 趋势判断（上升/下降/平稳）<br>
+4. 行动建议（3条，可落地）<br><br>
+数据：<br>{{数据}}
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">🎓 学习辅导</div></div>
+  <div class="af-tool-body">
+    <div class="prompt-box good-box">
+你是一位耐心的{{学科}}老师，擅长用类比解释复杂概念。<br>
+学生背景：{{当前水平}}<br>
+请解释：{{概念}}<br>
+要求：<br>
+1. 先用日常生活的比喻（不超过2句）<br>
+2. 再给正式定义<br>
+3. 给1个最简单的例子<br>
+4. 给1个进阶的例子<br>
+5. 最后出1道检验理解的小题（附答案）
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">🔧 Debug助手</div></div>
+  <div class="af-tool-body">
+    <div class="prompt-box good-box">
+你是一位Debug专家。<br>
+语言/框架：{{技术栈}}<br>
+报错信息：{{错误信息}}<br>
+相关代码：<br>{{代码片段}}<br><br>
+请按以下格式输出：<br>
+1. 🔍 根因分析（一句话）<br>
+2. 📝 解释为什么会出现这个错误<br>
+3. ✅ 修复方案（附代码）<br>
+4. 🛡️ 如何避免同类问题
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">💬 邮件/沟通</div></div>
+  <div class="af-tool-body">
+    <div class="prompt-box good-box">
+请帮我写一封{{类型}}邮件。<br>
+收件人：{{关系/职位}}<br>
+目的：{{核心诉求}}<br>
+语气：{{正式/友好/委婉}}<br>
+要点：<br>
+- {{要点1}}<br>
+- {{要点2}}<br>
+不要：{{禁忌}}<br>
+长度：{{字数}}字左右
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">🤖 系统提示词</div></div>
+  <div class="af-tool-body">
+    <div class="prompt-box good-box">
+你是{{角色名}}，{{角色描述}}。<br><br>
+你的能力：<br>
+- {{能力1}}<br>
+- {{能力2}}<br><br>
+你的限制：<br>
+- 只回答{{领域}}相关问题<br>
+- 不{{禁止行为}}<br><br>
+回复风格：{{风格描述}}<br>
+输出格式：{{格式要求}}<br><br>
+当用户提问超出你的范围时，礼貌说明并引导回你的专业领域。
+    </div>
+  </div></div>
+</div>
+
+<!-- ==================== 高级技巧 ==================== -->
+<div class="cp-section-hd"><span class="cp-flag">🚀</span> 高级技巧 — 从好到卓越</div>
+
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">Chain-of-Thought（思维链）</div></div>
+  <div class="af-tool-body">
+    让AI展示推理过程，而不是直接给答案。<br><br>
+    <div class="prompt-box good-box">请一步步推理以下问题，展示你的思考过程：<br>{{问题}}<br><br>要求：先列出已知条件，再列出需要求解的，然后逐步推导。</div>
+    <div class="highlight-box" style="background:rgba(63,185,80,.04);border:1px solid rgba(63,185,80,.12)">
+    <strong>效果：</strong>数学/逻辑/复杂推理任务的准确率提升30-50%。关键是"一步步"这个触发词。
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">Self-Consistency（自洽校验）</div></div>
+  <div class="af-tool-body">
+    让AI从多个角度回答同一问题，然后取共识。<br><br>
+    <div class="prompt-box good-box">请用3种不同的方法解决这个问题，然后比较3个答案是否一致。如果不一致，分析哪个更可能正确并说明原因。<br><br>问题：{{问题}}</div>
+    <div class="highlight-box" style="background:rgba(88,166,255,.04);border:1px solid rgba(88,166,255,.12)">
+    <strong>适用：</strong>重要决策、技术方案选型、有争议的问题。
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">Meta-Prompting（元提示）</div></div>
+  <div class="af-tool-body">
+    让AI帮你写prompt。<br><br>
+    <div class="prompt-box good-box">我想让你帮我写一个高质量的Prompt。我的需求是：{{模糊需求}}<br><br>请你：<br>1. 先问我3个澄清问题<br>2. 然后根据我的回答，帮我写一个CRISPE格式的完整Prompt<br>3. 最后解释你为什么这样设计这个Prompt</div>
+    <div class="highlight-box" style="background:rgba(124,58,237,.04);border:1px solid rgba(124,58,237,.12)">
+    <strong>妙处：</strong>当你自己都说不清需求时，让AI通过提问帮你理清。
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">结构化输出（JSON/XML）</div></div>
+  <div class="af-tool-body">
+    让AI输出机器可解析的格式，方便下游处理。<br><br>
+    <div class="prompt-box good-box">请以JSON格式输出，schema如下：<br>
+{<br>
+&nbsp;&nbsp;"summary": "一句话总结",<br>
+&nbsp;&nbsp;"points": [{"title": "要点", "detail": "详情"}],<br>
+&nbsp;&nbsp;"confidence": 0.0-1.0<br>
+}<br><br>
+只输出JSON，不要任何其他文字。</div>
+    <div class="highlight-box" style="background:rgba(210,153,34,.04);border:1px solid rgba(210,153,34,.12)">
+    <strong>关键：</strong>"只输出JSON，不要任何其他文字"这句不可省略，否则AI喜欢加开头解释。
+    </div>
+  </div></div>
+</div>
+
+<!-- ==================== 避坑清单 ==================== -->
+<div class="cp-section-hd"><span class="cp-flag">⚠️</span> 避坑清单 — 常见错误Top 8</div>
+
+<div class="af-tool" style="margin-bottom:1rem"><div class="af-tool-body">
+<table style="width:100%;border-collapse:collapse;font-size:.82rem">
+<thead><tr style="background:var(--panel)"><th style="padding:.4rem .6rem;text-align:left;border:1px solid var(--border);color:var(--muted)">#</th><th style="padding:.4rem .6rem;text-align:left;border:1px solid var(--border);color:var(--muted)">错误做法</th><th style="padding:.4rem .6rem;text-align:left;border:1px solid var(--border);color:var(--muted)">正确做法</th></tr></thead>
+<tbody>
+<tr><td style="padding:.4rem .6rem;border:1px solid var(--border)">1</td><td style="padding:.4rem .6rem;border:1px solid var(--border)">"帮我写一个好的…"（"好的"是空话）</td><td style="padding:.4rem .6rem;border:1px solid var(--border)">定义"好"的标准：清晰/简洁/专业/幽默</td></tr>
+<tr><td style="padding:.4rem .6rem;border:1px solid var(--border)">2</td><td style="padding:.4rem .6rem;border:1px solid var(--border)">一次塞10个需求</td><td style="padding:.4rem .6rem;border:1px solid var(--border)">拆成多步，每步1-2个核心需求</td></tr>
+<tr><td style="padding:.4rem .6rem;border:1px solid var(--border)">3</td><td style="padding:.4rem .6rem;border:1px solid var(--border)">不说受众 → 输出太浅或太深</td><td style="padding:.4rem .6rem;border:1px solid var(--border)">"面向初学者/专家/高管"</td></tr>
+<tr><td style="padding:.4rem .6rem;border:1px solid var(--border)">4</td><td style="padding:.4rem .6rem;border:1px solid var(--border)">不说输出格式 → 段落/列表/代码混搭</td><td style="padding:.4rem .6rem;border:1px solid var(--border)">"用Markdown表格/JSON/编号列表"</td></tr>
+<tr><td style="padding:.4rem .6rem;border:1px solid var(--border)">5</td><td style="padding:.4rem .6rem;border:1px solid var(--border)">只说"要什么"不说"不要什么"</td><td style="padding:.4rem .6rem;border:1px solid var(--border)">"不要用专业术语/不要超过200字"</td></tr>
+<tr><td style="padding:.4rem .6rem;border:1px solid var(--border)">6</td><td style="padding:.4rem .6rem;border:1px solid var(--border)">"请尽量详细" → 输出冗长</td><td style="padding:.4rem .6rem;border:1px solid var(--border)">"控制在X字以内，每个要点不超过Y字"</td></tr>
+<tr><td style="padding:.4rem .6rem;border:1px solid var(--border)">7</td><td style="padding:.4rem .6rem;border:1px solid var(--border)">不加示例 → AI猜你想要的格式</td><td style="padding:.4rem .6rem;border:1px solid var(--border)">给1-2个输入输出示例</td></tr>
+<tr><td style="padding:.4rem .6rem;border:1px solid var(--border)">8</td><td style="padding:.4rem .6rem;border:1px solid var(--border)">不满意就重写整个prompt</td><td style="padding:.4rem .6rem;border:1px solid var(--border)">在对话中追加指令微调</td></tr>
+</tbody>
+</table>
+</div></div>
+
+<!-- ==================== 速查卡片 ==================== -->
+<div class="cp-section-hd"><span class="cp-flag">⚡</span> 速查卡片 — 一页纸总结</div>
+
+<div class="af-tool" style="margin-bottom:1rem"><div class="af-tool-body">
+<div style="font-size:.88rem;line-height:1.8">
+<strong style="color:var(--prompt);font-size:1rem">📝 提示词速查清单</strong><br><br>
+<span style="color:var(--accent);font-weight:700">写之前问自己：</span><br>
+□ 我要AI扮演谁？<br>
+□ 具体任务是什么？<br>
+□ 输出给谁看？<br>
+□ 输出什么格式？<br>
+□ 有什么限制/禁忌？<br>
+□ 能给个示例吗？<br><br>
+<span style="color:var(--accent2);font-weight:700">核心公式：</span><br>
+好的Prompt = <strong>角色</strong> + <strong>任务</strong> + <strong>约束</strong> + <strong>格式</strong> + <strong>示例</strong><br><br>
+<span style="color:var(--warn);font-weight:700">迭代口诀：</span><br>
+先跑 → 看差距 → 追加指令 → 锁定模板 → 参数化复用<br><br>
+<span style="color:var(--prompt);font-weight:700">一句话心法：</span><br>
+<strong>模糊是敌人，具体是朋友。一个限定词，就是一次质量提升。</strong>
+</div>
+</div></div>
+
+<div style="text-align:center;margin:2rem 0">
+  <a href="https://docs.bigmodel.cn/cn/coding-plan/best-practice/prompt-engineering" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:.6rem 1.5rem;border-radius:8px;background:var(--prompt);color:#fff;font-weight:700;font-size:.92rem;text-decoration:none;transition:opacity .15s">📖 深度阅读：智谱 Prompt Engineering 官方文档 →</a>
+</div>
+
+<div class="cp-footer">
+  <p><a href="index.html">AINav 首页</a> · <a href="free-tier.html">🆓 免费额度</a> · <a href="token-optimization.html">Token优化</a> · <a href="thinking-framework.html">AI第一思考</a> · <a href="ask.html">Ask</a> · <a href="plan.html">Plan</a> · <a href="debug.html">Debug</a> · <a href="agent.html">Agent</a> · <a href="privacy.html">隐私政策</a></p>
+</div>
+
+</div>
+
+<script>
+(function () {
+  var THEME_KEY = "ainav-theme";
+  function setTheme(mode) {
+    if (mode !== "light" && mode !== "dark" && mode !== "system") mode = "system";
+    document.documentElement.setAttribute("data-theme", mode);
+    try { localStorage.setItem(THEME_KEY, mode); } catch (e) {}
+    document.querySelectorAll(".theme-btn[data-theme-set]").forEach(function (b) {
+      var m = b.getAttribute("data-theme-set");
+      b.classList.toggle("is-active", m === mode);
+      b.setAttribute("aria-pressed", m === mode ? "true" : "false");
+    });
+  }
+  var cur = "system";
+  try { var s = localStorage.getItem(THEME_KEY); if (s === "light" || s === "dark" || s === "system") cur = s; } catch (e) {}
+  setTheme(cur);
+  document.querySelectorAll(".theme-btn[data-theme-set]").forEach(function (b) {
+    b.addEventListener("click", function () { setTheme(b.getAttribute("data-theme-set")); });
+  });
+})();
+</script>
+<script src="thinking-framework.js"></script>
+</body>
+</html>

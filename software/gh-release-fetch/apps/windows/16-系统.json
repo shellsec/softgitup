@@ -393,22 +393,36 @@
   },
   {
     "id": "sucrose_wallpaper_engine",
-    "简介": "强大的开源动态壁纸引擎 Sucrose Wallpaper Engine 26.6.4.0 中文版（来源：dayanzai）",
+    "简介": "Sucrose Wallpaper Engine（开源动态壁纸引擎；Windows x64 安装包，需 .NET Framework 4.8）",
     "分类": "系统",
     "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
     "releases_url": "https://bgithub.xyz/Taiizor/Sucrose/releases",
     "repo_path": "Taiizor/Sucrose",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Sucrose_Bundle",
+      "x64",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "ARM64",
+      "x86",
+      ".7z"
+    ],
     "windows_installer": true,
     "installer_extensions": [
-      ".exe",
-      ".msi"
+      ".exe"
+    ],
+    "use_download_filename": true,
+    "aliases": [
+      "Sucrose",
+      "sucrose"
     ],
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false,
-    "url_hint": "sucrose_wallpaper_engine"
+    "run_installer": true
   },
   {
     "id": "fan_control",
@@ -1283,6 +1297,71 @@
     "windows_installer": true,
     "process_name": "VirtualBox.exe",
     "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "seelen_ui",
+    "简介": "Seelen UI（Windows 自定义桌面/任务栏/开始菜单；x64 安装包 fixed 版）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/eythaann/Seelen-UI/releases",
+    "repo_path": "eythaann/Seelen-UI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Seelen.UI",
+      "x64-setup-fixed",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "Msix",
+      "latest.json",
+      "x64-setup.exe"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "use_download_filename": true,
+    "aliases": [
+      "Seelen UI",
+      "Seelen-UI",
+      "seelen"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "seelen_ui_arm64",
+    "简介": "Seelen UI（Windows ARM64 安装包 fixed 版）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/eythaann/Seelen-UI/releases",
+    "repo_path": "eythaann/Seelen-UI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Seelen.UI",
+      "arm64-setup-fixed",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "x64",
+      "Msix",
+      "latest.json",
+      "arm64-setup.exe"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "use_download_filename": true,
+    "process_name": "",
+    "kill_before_install": false,
     "run_installer": true
   }
 ]

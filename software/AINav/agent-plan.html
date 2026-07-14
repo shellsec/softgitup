@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Agent 横评 — Coding Agent 对比 — AINav</title>
+  <meta name="description" content="AI Coding Agent 横向对比：Hermes（2026 开源首选）、Claude Code（Fable 5/Opus 4.8）、Cursor、OpenClaw、Cline、Codex CLI 等；搭配 GLM-5.2、DeepSeek-V4-Pro 选型指南。">
+  <link rel="canonical" href="https://aiv123.com/agent-plan.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI Agent 横评 — Coding Agent 对比">
+  <meta property="og:description" content="国内外 AI Coding Agent 功能、价格、兼容性对比，场景推荐，趋势分析。">
+  <meta property="og:url" content="https://aiv123.com/agent-plan.html">
+  <meta property="og:site_name" content="AINav">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%230969da'/><text x='50' y='72' font-size='60' text-anchor='middle' fill='white' font-family='system-ui' font-weight='700'>AI</text></svg>">
+  <style>
+    :root, html[data-theme="dark"] {
+      --bg: #0f1419; --panel: #151b23; --card: #1c2430; --border: #2d3848;
+      --text: #e6edf3; --muted: #8b9cb3; --accent: #58a6ff; --accent2: #3fb950;
+      --warn: #d29922; --danger: #f85149; --hot: #ff6b6b; --overseas: #a78bfa;
+      --oss: #f0883e;
+    }
+    html[data-theme="light"] {
+      --bg: #f6f8fa; --panel: #fff; --card: #fff; --border: #d0d7de;
+      --text: #1f2328; --muted: #59636e; --accent: #0969da; --accent2: #1a7f37;
+      --warn: #9a6700; --danger: #cf222e; --hot: #e53935; --overseas: #7c3aed;
+      --oss: #bc4c00;
+    }
+    @media (prefers-color-scheme: light) {
+      html[data-theme="system"] {
+        --bg: #f6f8fa; --panel: #fff; --card: #fff; --border: #d0d7de;
+        --text: #1f2328; --muted: #59636e; --accent: #0969da; --accent2: #1a7f37;
+        --warn: #9a6700; --danger: #cf222e; --hot: #e53935; --overseas: #7c3aed;
+        --oss: #bc4c00;
+      }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Segoe UI", system-ui, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.6; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ---- Top bar ---- */
+    .cp-top { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); background: var(--panel); position: sticky; top: 0; z-index: 10; }
+    .cp-top-inner { max-width: 76rem; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; justify-content: space-between; }
+    .cp-nav a { font-weight: 600; margin-right: 1rem; font-size: 0.88rem; }
+    .cp-toolbar { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; }
+    .theme-btn { font-size: 0.72rem; padding: 0.2rem 0.5rem; border-radius: 5px; border: 1px solid var(--border);
+      background: var(--card); color: var(--muted); cursor: pointer; font-family: inherit; }
+    .theme-btn.is-active { color: var(--accent); border-color: var(--accent); font-weight: 600; }
+    .lang-btn { margin-left: 0.35rem; }
+
+    /* ---- Main ---- */
+    .cp-wrap { max-width: 76rem; margin: 0 auto; padding: 1rem; }
+    h1 { font-size: 1.35rem; margin: 0 0 0.3rem; }
+    .cp-subtitle { font-size: 0.88rem; color: var(--muted); margin-bottom: 1rem; }
+    .cp-updated { font-size: 0.76rem; color: var(--muted); margin-bottom: 1.2rem; }
+
+    /* ---- Section heading ---- */
+    .cp-section-hd { font-size: 1.1rem; font-weight: 700; margin: 1.8rem 0 0.8rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--border); display: flex; align-items: center; gap: 0.5rem; }
+    .cp-section-hd .cp-flag { font-size: 1.15rem; }
+    .cp-section-hd.overseas-hd { border-bottom-color: var(--overseas); }
+    .cp-section-hd.oss-hd { border-bottom-color: var(--oss); }
+
+    /* ---- Legend ---- */
+    .cp-legend { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 1.2rem; font-size: 0.82rem; }
+    .cp-legend-item { display: flex; align-items: center; gap: 0.3rem; }
+    .cp-badge { display: inline-block; padding: 0.1rem 0.45rem; border-radius: 4px; font-size: 0.72rem; font-weight: 600; }
+    .badge-hot { background: rgba(255,107,107,0.15); color: var(--hot); border: 1px solid rgba(255,107,107,0.3); }
+    .badge-rush { background: rgba(210,153,34,0.15); color: var(--warn); border: 1px solid rgba(210,153,34,0.3); }
+    .badge-new { background: rgba(63,185,80,0.15); color: var(--accent2); border: 1px solid rgba(63,185,80,0.3); }
+    .badge-rec { background: rgba(88,166,255,0.15); color: var(--accent); border: 1px solid rgba(88,166,255,0.3); }
+    .badge-overseas { background: rgba(167,139,250,0.15); color: var(--overseas); border: 1px solid rgba(167,139,250,0.3); }
+    .badge-oss { background: rgba(240,136,62,0.15); color: var(--oss); border: 1px solid rgba(240,136,62,0.3); }
+    .badge-free { background: rgba(63,185,80,0.15); color: var(--accent2); border: 1px solid rgba(63,185,80,0.3); }
+
+    /* ---- Platform cards ---- */
+    .cp-platforms { display: grid; grid-template-columns: 1fr; gap: 1.2rem; }
+    @media (min-width: 52rem) { .cp-platforms { grid-template-columns: 1fr 1fr; } }
+
+    .cp-platform { border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .cp-platform.overseas { border-color: rgba(167,139,250,0.3); }
+    .cp-platform.oss { border-color: rgba(240,136,62,0.3); }
+    .cp-platform-head { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+    .cp-platform.overseas .cp-platform-head { border-bottom-color: rgba(167,139,250,0.2); }
+    .cp-platform.oss .cp-platform-head { border-bottom-color: rgba(240,136,62,0.2); }
+    .cp-platform-name { font-size: 1.05rem; font-weight: 700; }
+    .cp-platform-name a { color: var(--text); }
+    .cp-platform-name a:hover { color: var(--accent); text-decoration: none; }
+    .cp-platform-link { font-size: 0.76rem; color: var(--muted); }
+    .cp-platform-body { padding: 0.75rem 1rem; }
+
+    /* ---- Plan table inside card ---- */
+    .cp-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+    .cp-table th { text-align: left; font-weight: 600; color: var(--muted); padding: 0.3rem 0.5rem; border-bottom: 1px solid var(--border); font-size: 0.76rem; white-space: nowrap; }
+    .cp-table td { padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .cp-table tr:last-child td { border-bottom: none; }
+    .cp-table .plan-name { font-weight: 600; white-space: nowrap; }
+    .cp-table .plan-price { white-space: nowrap; color: var(--accent2); font-weight: 600; }
+    .cp-table .plan-price-orig { text-decoration: line-through; color: var(--muted); font-size: 0.76rem; margin-left: 0.3rem; }
+    .cp-table .plan-models { font-size: 0.76rem; line-height: 1.5; }
+    .cp-table .plan-models a { color: var(--accent); font-weight: 500; }
+    .cp-table .plan-limit { font-size: 0.76rem; color: var(--muted); }
+
+    /* ---- Feature tags ---- */
+    .feat-tags { display: flex; flex-wrap: wrap; gap: 0.25rem; margin-top: 0.4rem; }
+    .feat-tag { font-size: 0.68rem; padding: 0.1rem 0.35rem; border-radius: 3px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); color: var(--accent); font-weight: 500; }
+    .feat-tag.yes { background: rgba(63,185,80,0.1); border-color: rgba(63,185,80,0.2); color: var(--accent2); }
+    .feat-tag.no { background: transparent; border-color: rgba(139,156,179,0.15); color: var(--muted); opacity: 0.5; }
+
+    /* ---- Tools matrix ---- */
+    .cp-matrix-section { margin-top: 2rem; }
+    .cp-matrix-section h2 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+    .cp-matrix-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; background: var(--card); }
+    .cp-matrix { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+    .cp-matrix th, .cp-matrix td { padding: 0.35rem 0.55rem; border: 1px solid var(--border); text-align: center; white-space: nowrap; }
+    .cp-matrix th { background: var(--panel); font-weight: 600; color: var(--muted); font-size: 0.74rem; position: sticky; top: 0; }
+    .cp-matrix th:first-child, .cp-matrix td:first-child { text-align: left; position: sticky; left: 0; background: var(--card); z-index: 1; font-weight: 600; }
+    .cp-matrix th:first-child { z-index: 2; background: var(--panel); }
+    .cp-matrix .yes { color: var(--accent2); font-weight: 700; }
+    .cp-matrix .no { color: var(--muted); opacity: 0.4; }
+
+    /* ---- Bar chart ---- */
+    .cp-bar-chart { margin-top: 0.5rem; }
+    .cp-bar-row { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem; font-size: 0.78rem; }
+    .cp-bar-label { width: 5.5rem; text-align: right; color: var(--muted); flex-shrink: 0; }
+    .cp-bar-track { flex: 1; height: 1.1rem; background: var(--border); border-radius: 4px; overflow: hidden; position: relative; }
+    .cp-bar-fill { height: 100%; border-radius: 4px; display: flex; align-items: center; padding-left: 0.4rem; font-size: 0.7rem; font-weight: 600; color: #fff; white-space: nowrap; }
+    .cp-bar-fill.bar-domestic { background: linear-gradient(90deg, #3fb950, #2ea043); }
+    .cp-bar-fill.bar-overseas { background: linear-gradient(90deg, #a78bfa, #7c3aed); }
+    .cp-bar-fill.bar-oss { background: linear-gradient(90deg, #f0883e, #bc4c00); }
+    .cp-bar-fill.bar-hot { background: linear-gradient(90deg, #ff6b6b, #e53935); }
+
+    /* ---- Notice card ---- */
+    .cp-notice { margin-top: 2rem; padding: 0; border: 1px solid rgba(210,153,34,0.35); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .cp-notice-head { padding: 0.65rem 1rem; border-bottom: 1px solid rgba(210,153,34,0.2); font-weight: 700; font-size: 1rem; background: rgba(210,153,34,0.06); }
+    .cp-notice-body { padding: 0.75rem 1rem; font-size: 0.82rem; line-height: 1.75; }
+    .cp-notice-body ul { padding-left: 1.2rem; margin: 0.5rem 0 0; }
+    .cp-notice-body li { margin-bottom: 0.45rem; }
+    .cp-notice-body strong { color: var(--warn); }
+    .cp-notice-body code { font-size: 0.78rem; padding: 0.1rem 0.35rem; border-radius: 4px; background: rgba(210,153,34,0.1); border: 1px solid rgba(210,153,34,0.2); color: var(--warn); font-family: inherit; }
+
+    /* ---- FAQ accordion ---- */
+    .cp-faq { margin-top: 2rem; border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .cp-faq-head { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); font-weight: 700; font-size: 1rem; }
+    .cp-faq-item { border-bottom: 1px solid var(--border); }
+    .cp-faq-item:last-child { border-bottom: none; }
+    .cp-faq-q { padding: 0.6rem 1rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 0.88rem; user-select: none; transition: background 0.15s; }
+    .cp-faq-q:hover { background: rgba(88,166,255,0.04); }
+    .cp-faq-q .cp-faq-arrow { font-size: 0.72rem; color: var(--muted); transition: transform 0.2s; flex-shrink: 0; margin-left: 0.5rem; }
+    .cp-faq-item.is-open .cp-faq-q .cp-faq-arrow { transform: rotate(180deg); }
+    .cp-faq-a { padding: 0 1rem; max-height: 0; overflow: hidden; transition: max-height 0.25s ease, padding 0.25s ease; font-size: 0.82rem; line-height: 1.7; color: var(--muted); }
+    .cp-faq-item.is-open .cp-faq-a { max-height: 20rem; padding: 0 1rem 0.75rem; }
+    .cp-faq-a strong { color: var(--text); }
+
+    /* ---- Value rank ---- */
+    .cp-value-rank { margin-top: 2rem; border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .cp-value-rank-head { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); font-weight: 700; font-size: 1rem; }
+    .cp-value-rank-body { padding: 0.75rem 1rem; }
+    .cp-value-rank .cp-table .val-high { color: var(--accent2); font-weight: 700; }
+    .cp-value-rank .cp-table .val-mid { color: var(--accent); font-weight: 600; }
+    .cp-value-rank .cp-table .val-low { color: var(--muted); }
+
+    /* ---- Tips / Scene rec ---- */
+    .cp-tips { margin-top: 2rem; padding: 0; border: 1px solid var(--border); border-radius: 8px; background: var(--card); overflow: hidden; }
+    .cp-tips h2 { font-size: 1rem; margin: 0; }
+    .cp-tips ul { padding-left: 1.2rem; margin: 0; }
+    .cp-tips li { margin-bottom: 0.3rem; }
+
+    /* ---- Trend section ---- */
+    .cp-trend-section { margin-top: 2.5rem; }
+    .cp-trend-section h2 { font-size: 1.1rem; margin-bottom: 0.3rem; }
+    .cp-trend-sub { font-size: 0.82rem; color: var(--muted); margin-bottom: 1rem; }
+
+    /* ---- Footer ---- */
+    .cp-footer { max-width: 76rem; margin: 2rem auto 1rem; padding: 0 1rem; font-size: 0.76rem; color: var(--muted); text-align: center; }
+    .cp-footer a { color: var(--muted); }
+  </style>
+  <!-- Google Analytics (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2B8FBWRX4N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2B8FBWRX4N');
+</script>
+<!-- End Google Analytics -->
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2d49f38b39c743ac80b6d6b9ff99494d"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body>
+  <!-- Top bar -->
+  <div class="cp-top">
+    <div class="cp-top-inner">
+      <div class="cp-nav" data-plan-nav></div>
+      <div class="cp-toolbar">
+        <button type="button" class="theme-btn" data-theme-set="system">跟随系统</button>
+        <button type="button" class="theme-btn" data-theme-set="light">浅色</button>
+        <button type="button" class="theme-btn" data-theme-set="dark">深色</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="cp-wrap">
+    <div style="margin-bottom:1rem;padding:.55rem .85rem;border-radius:8px;border:1px solid var(--border);background:var(--card);display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.35rem .6rem;font-size:.84rem;line-height:1.5;">
+      <span style="color:var(--muted)"><strong style="color:var(--text)">OpenAI: GPT-5</strong> <span style="color:var(--muted)">·</span> <strong style="color:var(--text)">Anthropic: Claude Opus 4.8</strong> <span style="color:var(--muted)">·</span> <strong style="color:var(--text)">Google: Gemini 3.1 Pro</strong> <span style="color:var(--muted)">· 国内直连免梯</span> <span class="plan-promo-code" data-code="AFF_BB0FNC" style="color:var(--accent2);font-weight:600;cursor:pointer" title="点击复制优惠码">$2优惠码 AFF_BB0FNC</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">立即注册</a>
+    </div>
+    <h1 data-i18n="title">🤖 AI Agent 横评</h1>
+    <p class="cp-subtitle" data-i18n="subtitle">国内外 AI Coding Agent 一站式对比：2026 年开源首选 Hermes，模型底座推荐 GLM-5.2 / DeepSeek-V4-Pro / Claude Opus 4.8。</p>
+    <p class="cp-updated-line"><span class="cp-updated">最后更新：2026-07-07</span> · <a href="#loop-engineering">Loop Engineering</a> · <a href="token-optimization.html">Token 优化指南</a> · <a href="coding-plan.html">编程套餐横评</a></p>
+
+    <!-- Legend -->
+    <div class="cp-legend">
+      <div class="cp-legend-item"><span class="cp-badge badge-hot">🔥 热门</span> 高人气</div>
+      <div class="cp-legend-item"><span class="cp-badge badge-new">✨ 新品</span> 新上线</div>
+      <div class="cp-legend-item"><span class="cp-badge badge-rec">👍 推荐</span> 综合推荐</div>
+      <div class="cp-legend-item"><span class="cp-badge badge-overseas">🌍 海外</span> 需国际网络</div>
+      <div class="cp-legend-item"><span class="cp-badge badge-oss">🔓 开源</span> 可自托管</div>
+      <div class="cp-legend-item"><span class="cp-badge badge-free">🆓 免费</span> 零成本可用</div>
+    </div>
+
+    <!-- ==================== 国内 Coding Agent ==================== -->
+    <div class="cp-section-hd"><span class="cp-flag">🇨🇳</span> 国内 Coding Agent</div>
+
+    <div class="cp-platforms">
+
+      <!-- 1. ArkClaw (字节) -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://www.volcengine.com/activity/codingplan" target="_blank" rel="noopener noreferrer">ArkClaw（字节跳动）</a></span>
+          <span class="cp-badge badge-hot">🔥 热门</span>
+          <span class="cp-badge badge-new">✨ 新品</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>类型</th><th>价格</th><th>接入方式</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">IDE 内置</td>
+                <td class="plan-price">含在火山方舟套餐内</td>
+                <td class="plan-models">TRAE IDE 内置</td>
+                <td class="plan-limit">Pro 套餐¥200/月起</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">IDE内置</span>
+            <span class="feat-tag yes">多模型</span>
+            <span class="feat-tag">MCP</span>
+            <span class="feat-tag">多模态</span>
+            <span class="feat-tag">自托管</span>
+          </div>
+          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">字节跳动出品的 IDE 内置 Agent，通过 TRAE 编辑器使用，深度集成火山方舟多模型</div>
+        </div>
+      </div>
+
+      <!-- 2. ZCode (智谱) -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://zcode.z.ai/cn" target="_blank" rel="noopener noreferrer">ZCode（智谱 AI）</a> <a href="https://zcode.z.ai/cn/docs/welcome" target="_blank" rel="noopener noreferrer" style="font-size:0.7em;color:var(--accent);opacity:0.8;text-decoration:none;" title="ZCode 文档">文档</a></span>
+          <span class="cp-badge badge-hot">🔥 官方 IDE</span>
+          <span class="cp-badge badge-new">✨ 3.0</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>类型</th><th>价格</th><th>接入方式</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">ADE + Agent</td>
+                <td class="plan-price">客户端免费 + GLM Coding Plan</td>
+                <td class="plan-models">独立桌面 IDE</td>
+                <td class="plan-limit">Lite ¥49 / Pro ¥149 起</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">IDE内置</span>
+            <span class="feat-tag yes">GLM-5.2</span>
+            <span class="feat-tag yes">MCP</span>
+            <span class="feat-tag">Agent</span>
+            <span class="feat-tag">Skills</span>
+          </div>
+          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">智谱 AI 编程 ADE，ZCode 3.0 自研 Agent 内核，深度适配 GLM-5.2，GLM Coding Plan 官方 Harness</div>
+        </div>
+      </div>
+
+      <!-- 3. CoPaw (阿里) -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://www.aliyun.com/benefit/scene/codingplan" target="_blank" rel="noopener noreferrer">CoPaw / WorkBuddy（阿里/腾讯）</a></span>
+          <span class="cp-badge badge-new">✨ 新品</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>类型</th><th>价格</th><th>接入方式</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">企业 Agent</td>
+                <td class="plan-price">含在百炼/腾讯云套餐内</td>
+                <td class="plan-models">通义灵码 / 腾讯云IDE</td>
+                <td class="plan-limit">需对应平台订阅</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">IDE内置</span>
+            <span class="feat-tag yes">多模型</span>
+            <span class="feat-tag yes">多模态</span>
+            <span class="feat-tag">MCP</span>
+            <span class="feat-tag">自托管</span>
+          </div>
+          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">阿里 CoPaw + 腾讯 WorkBuddy，企业级 Agent，支持多模态（图片/语音），通过 IDE 插件使用</div>
+        </div>
+      </div>
+
+      <!-- 3. Trae (字节) -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://www.trae.ai/" target="_blank" rel="noopener noreferrer">Trae（字节跳动）</a></span>
+          <span class="cp-badge badge-free">🆓 免费</span>
+          <span class="cp-badge badge-hot">🔥 热门</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>类型</th><th>价格</th><th>接入方式</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">IDE + Agent</td>
+                <td class="plan-price">¥0（目前免费）</td>
+                <td class="plan-models">独立 IDE / VS Code 风格</td>
+                <td class="plan-limit">国内免费，含 Doubao 模型</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">IDE内置</span>
+            <span class="feat-tag yes">免费</span>
+            <span class="feat-tag">MCP</span>
+            <span class="feat-tag">多模态</span>
+          </div>
+          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">字节出品免费 AI IDE，内置 Agent 模式，国内用户零门槛上手，含 Doubao-Seed 模型</div>
+        </div>
+      </div>
+
+      <!-- 4. 扣子 Coze -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://www.coze.cn/" target="_blank" rel="noopener noreferrer">扣子 Coze（字节系）</a></span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>类型</th><th>价格</th><th>接入方式</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">通用 Agent 平台</td>
+                <td class="plan-price">免费额度 + 按量付费</td>
+                <td class="plan-models">网页 / API</td>
+                <td class="plan-limit">非编程专用，偏通用Agent</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">可视化编排</span>
+            <span class="feat-tag yes">插件生态</span>
+            <span class="feat-tag yes">API</span>
+            <span class="feat-tag">IDE内置</span>
+          </div>
+          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">字节系 Agent 开发平台，可视化编排工作流，适合非编程场景的 Agent 搭建</div>
+        </div>
+      </div>
+
+      <!-- 5. Kimi CLI -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://www.kimi.com/" target="_blank" rel="noopener noreferrer">Kimi CLI（月之暗面）</a></span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>类型</th><th>价格</th><th>接入方式</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">CLI Agent</td>
+                <td class="plan-price">需 Kimi 订阅</td>
+                <td class="plan-models">命令行终端</td>
+                <td class="plan-limit">Andante ¥49 起</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">CLI</span>
+            <span class="feat-tag">IDE内置</span>
+            <span class="feat-tag">MCP</span>
+            <span class="feat-tag">多模态</span>
+          </div>
+          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">月之暗面推出的命令行编程 Agent，基于 Kimi K2.6 模型</div>
+        </div>
+      </div>
+
+      <!-- 6. Qwen Code -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://tongyi.aliyun.com/" target="_blank" rel="noopener noreferrer">Qwen Code（通义灵码）</a></span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>类型</th><th>价格</th><th>接入方式</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">IDE 插件 + Agent</td>
+                <td class="plan-price">含在百炼套餐内</td>
+                <td class="plan-models">VS Code / JetBrains 插件</td>
+                <td class="plan-limit">Lite ¥40 / Pro ¥200 起</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">IDE插件</span>
+            <span class="feat-tag yes">多模型</span>
+            <span class="feat-tag">MCP</span>
+          </div>
+          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">阿里通义灵码 IDE 插件，支持 Qwen3-Coder 等模型，深度集成百炼平台</div>
+        </div>
+      </div>
+
+    </div><!-- /cp-platforms (国内) -->
+
+    <!-- ==================== 海外 Coding Agent ==================== -->
+    <div class="cp-section-hd overseas-hd"><span class="cp-flag">🌍</span> 海外 Coding Agent</div>
+
+    <div class="cp-platforms">
+
+      <!-- 1. Claude Code -->
+      <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">Claude Code（Anthropic）</a></span>
+          <span class="cp-badge badge-overseas">🌍</span>
+          <span class="cp-badge badge-hot">🔥 热门</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>核心模型</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">Pro</td>
+                <td class="plan-price">$20/月</td>
+                <td class="plan-models"><a href="https://www.anthropic.com/" target="_blank" rel="noopener noreferrer">Claude Sonnet 4.6</a></td>
+                <td class="plan-limit">中度使用，约30-45分钟/天</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Max 1× <span class="cp-badge badge-rec">👍</span></td>
+                <td class="plan-price">$100/月</td>
+                <td class="plan-models"><a href="https://www.anthropic.com/claude/fable" target="_blank" rel="noopener noreferrer">Claude Fable 5</a>（暂停）, <a href="https://www.anthropic.com/" target="_blank" rel="noopener noreferrer">Opus 4.8</a>, Sonnet 4.6</td>
+                <td class="plan-limit">长程 Agent；Fable 5 于 6/12 起全球暂停，自动回落 Opus 4.8</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Max 2×</td>
+                <td class="plan-price">$200/月</td>
+                <td class="plan-models">Opus 4.8, Sonnet 4.6, Fable 5（恢复后）</td>
+                <td class="plan-limit">并行 AI 会话，重度长程开发</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">CLI</span>
+            <span class="feat-tag yes">MCP</span>
+            <span class="feat-tag">IDE内置</span>
+            <span class="feat-tag">多模态</span>
+            <span class="feat-tag">自托管</span>
+          </div>
+          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">终端 CLI Agent，Anthropic 官方出品；Fable 5 为 1M 上下文长程旗舰（2026/6/9 发布，6/12 起暂停访问），日常主力仍为 Opus 4.8 / Sonnet 4.6</div>
+        </div>
+      </div>
+
+      <!-- 2. Cursor Agent Mode -->
+      <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://cursor.com/" target="_blank" rel="noopener noreferrer">Cursor Agent Mode</a></span>
+          <span class="cp-badge badge-overseas">🌍</span>
+          <span class="cp-badge badge-hot">🔥 热门</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>说明</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">Pro <span class="cp-badge badge-rec">👍</span></td>
+                <td class="plan-price">$20/月</td>
+                <td class="plan-models">Agent Mode + 含 Agent 用量池（$20 档，Tab 无限）</td>
+                <td class="plan-limit">主流选择</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Ultra</td>
+                <td class="plan-price">$200/月</td>
+                <td class="plan-models">移除大部分限制</td>
+                <td class="plan-limit">重度用户</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">IDE内置</span>
+            <span class="feat-tag yes">MCP</span>
+            <span class="feat-tag">CLI</span>
+            <span class="feat-tag">多模态</span>
+            <span class="feat-tag">自托管</span>
+          </div>
+          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">基于 VS Code 的 AI IDE，Agent 模式可自动执行多步编辑/终端命令；支持 MCP 与 Agent Skills（<code>npx skills add</code> / Marketplace）</div>
+        </div>
+      </div>
+
+      <!-- 3. GitHub Copilot Workspace -->
+      <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer">GitHub Copilot Workspace</a></span>
+          <span class="cp-badge badge-overseas">🌍</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>说明</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">Pro <span class="cp-badge badge-rec">👍</span></td>
+                <td class="plan-price">$10/月</td>
+                <td class="plan-models">无限补全 + Chat + 基础Agent</td>
+                <td class="plan-limit">性价比最高</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Pro+</td>
+                <td class="plan-price">$39/月</td>
+                <td class="plan-models">Workspace + Agent模式 + 更强模型</td>
+                <td class="plan-limit"></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">IDE插件</span>
+            <span class="feat-tag yes">浏览器</span>
+            <span class="feat-tag yes">GitHub集成</span>
+            <span class="feat-tag">MCP</span>
+          </div>
+          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">GitHub 原生 Agent，从 Issue 到 PR 的全流程自动化，深度集成 GitHub 生态</div>
+        </div>
+      </div>
+
+      <!-- 4. OpenAI Codex CLI -->
+      <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://developers.openai.com/codex/cli" target="_blank" rel="noopener noreferrer">OpenAI Codex CLI</a></span>
+          <span class="cp-badge badge-overseas">🌍</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>核心模型</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">ChatGPT Plus</td>
+                <td class="plan-price">$20/月</td>
+                <td class="plan-models"><a href="https://openai.com/" target="_blank" rel="noopener noreferrer">GPT-5</a>, o4-mini</td>
+                <td class="plan-limit">含限额 Codex 访问</td>
+              </tr>
+              <tr>
+                <td class="plan-name">ChatGPT Pro</td>
+                <td class="plan-price">$200/月</td>
+                <td class="plan-models">GPT-5, o3-pro</td>
+                <td class="plan-limit">更高 Codex 额度</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">CLI</span>
+            <span class="feat-tag yes">浏览器</span>
+            <span class="feat-tag">IDE内置</span>
+            <span class="feat-tag">MCP</span>
+          </div>
+          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">OpenAI 官方 CLI + 云端沙箱 Agent，异步执行任务，支持 GPT-5 / Codex 系列模型</div>
+        </div>
+      </div>
+
+      <!-- 5. Devin -->
+      <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://www.cognition.ai/" target="_blank" rel="noopener noreferrer">Devin（Cognition）</a></span>
+          <span class="cp-badge badge-overseas">🌍</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>说明</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">Team</td>
+                <td class="plan-price">$500/月</td>
+                <td class="plan-models">全自主 AI 软件工程师</td>
+                <td class="plan-limit">企业级，含 ACU 额度</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">全自主</span>
+            <span class="feat-tag yes">浏览器</span>
+            <span class="feat-tag yes">终端</span>
+            <span class="feat-tag">IDE内置</span>
+          </div>
+          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">全球首个全自主 AI 软件工程师，可独立完成从需求到部署的全流程，价格昂贵</div>
+        </div>
+      </div>
+
+      <!-- 6. Windsurf Cascade -->
+      <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://codeium.com/windsurf" target="_blank" rel="noopener noreferrer">Windsurf Cascade（Codeium）</a></span>
+          <span class="cp-badge badge-overseas">🌍</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>说明</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">Free</td>
+                <td class="plan-price">$0</td>
+                <td class="plan-models">基础 Agent 功能</td>
+                <td class="plan-limit"></td>
+              </tr>
+              <tr>
+                <td class="plan-name">Pro <span class="cp-badge badge-rec">👍</span></td>
+                <td class="plan-price">$15/月</td>
+                <td class="plan-models">Cascade Agent + 高级模型</td>
+                <td class="plan-limit">主流选择</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Ultimate</td>
+                <td class="plan-price">$60/月</td>
+                <td class="plan-models">更多请求 + 优先级</td>
+                <td class="plan-limit"></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">IDE内置</span>
+            <span class="feat-tag yes">MCP</span>
+            <span class="feat-tag yes">免费版</span>
+            <span class="feat-tag">CLI</span>
+          </div>
+          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">Codeium 出品的 AI IDE，Cascade 模式实现多步自主编辑，免费版即可体验</div>
+        </div>
+      </div>
+
+    </div><!-- /cp-platforms (海外) -->
+
+    <!-- ==================== 开源 / 自托管 Agent ==================== -->
+    <div class="cp-section-hd oss-hd"><span class="cp-flag">🔓</span> 开源 / 自托管 Agent</div>
+
+    <div class="cp-platforms">
+
+      <!-- 1. Hermes Agent -->
+      <div class="cp-platform oss">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener noreferrer">Hermes Agent</a></span>
+          <span class="cp-badge badge-oss">🔓 开源</span>
+          <span class="cp-badge badge-hot">🔥 热门</span>
+          <span class="cp-badge badge-rec">👍 首选</span>
+          <span class="cp-badge badge-free">🆓 免费</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>类型</th><th>价格</th><th>接入方式</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">开源自托管 <span class="cp-badge badge-rec">👍</span></td>
+                <td class="plan-price">免费（按 API 用量）</td>
+                <td class="plan-models">CLI / IM 网关 / API，兼容 8+ 平台</td>
+                <td class="plan-limit">55K+ ⭐ · 2026 社区首选</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">CLI</span>
+            <span class="feat-tag yes">MCP</span>
+            <span class="feat-tag yes">多模型</span>
+            <span class="feat-tag yes">记忆</span>
+            <span class="feat-tag yes">多模态</span>
+            <span class="feat-tag yes">自托管</span>
+            <span class="feat-tag yes">技能自进化</span>
+          </div>
+          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">2026 年开源 Agent 实战首选：跨会话记忆、技能自动创建、IM 集成完善；大量 OpenClaw 用户已迁移至 Hermes。推荐搭配 <strong>GLM-5.2</strong> / <strong>DeepSeek-V4-Pro</strong> Coding Plan</div>
+        </div>
+      </div>
+
+      <!-- 2. OpenClaw -->
+      <div class="cp-platform oss">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener noreferrer">OpenClaw</a></span>
+          <span class="cp-badge badge-oss">🔓 开源</span>
+          <span class="cp-badge badge-hot">🔥 热门</span>
+          <span class="cp-badge badge-free">🆓 免费</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>类型</th><th>价格</th><th>接入方式</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">开源自托管</td>
+                <td class="plan-price">免费（按 API 用量）</td>
+                <td class="plan-models">CLI / API，兼容 8+ 平台</td>
+                <td class="plan-limit">75K+ ⭐ GitHub</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">CLI</span>
+            <span class="feat-tag yes">MCP</span>
+            <span class="feat-tag yes">多模型</span>
+            <span class="feat-tag yes">记忆</span>
+            <span class="feat-tag yes">自托管</span>
+            <span class="feat-tag">IDE内置</span>
+          </div>
+          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">早期爆款开源 Agent，Stars 仍高；插件生态成熟，但 2026 年活跃开发者更多转向 Hermes（记忆/技能/IM 体验更完整）。新用户建议优先 Hermes</div>
+        </div>
+      </div>
+
+      <!-- 3. Cline / Roo Code -->
+      <div class="cp-platform oss">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://github.com/cline/cline" target="_blank" rel="noopener noreferrer">Cline / Roo Code</a></span>
+          <span class="cp-badge badge-oss">🔓 开源</span>
+          <span class="cp-badge badge-hot">🔥 热门</span>
+          <span class="cp-badge badge-free">🆓 免费</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>类型</th><th>价格</th><th>接入方式</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">VS Code 插件 <span class="cp-badge badge-rec">👍</span></td>
+                <td class="plan-price">免费（按 API 用量）</td>
+                <td class="plan-models">VS Code 扩展</td>
+                <td class="plan-limit">兼容 5+ 国内平台</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">IDE插件</span>
+            <span class="feat-tag yes">MCP</span>
+            <span class="feat-tag yes">多模型</span>
+            <span class="feat-tag">CLI</span>
+            <span class="feat-tag">多模态</span>
+          </div>
+          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">最流行的 VS Code Agent 插件，自动执行编辑/终端/浏览器，Roo Code 是其社区分支，兼容多平台 API</div>
+        </div>
+      </div>
+
+      <!-- 4. Aider -->
+      <div class="cp-platform oss">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://github.com/Aider-AI/aider" target="_blank" rel="noopener noreferrer">Aider</a></span>
+          <span class="cp-badge badge-oss">🔓 开源</span>
+          <span class="cp-badge badge-free">🆓 免费</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>类型</th><th>价格</th><th>接入方式</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">CLI Agent</td>
+                <td class="plan-price">免费（按 API 用量）</td>
+                <td class="plan-models">终端 CLI</td>
+                <td class="plan-limit">兼容 OpenAI/Anthropic/Ollama</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">CLI</span>
+            <span class="feat-tag yes">Git集成</span>
+            <span class="feat-tag yes">多模型</span>
+            <span class="feat-tag">IDE内置</span>
+            <span class="feat-tag">MCP</span>
+          </div>
+          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">轻量级 CLI Agent，强项在 Git 集成和多文件编辑，支持本地模型 (Ollama)，代码老兵最爱</div>
+        </div>
+      </div>
+
+      <!-- 5. OpenHands -->
+      <div class="cp-platform oss">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://github.com/All-Hands-AI/OpenHands" target="_blank" rel="noopener noreferrer">OpenHands（原 OpenDevin）</a></span>
+          <span class="cp-badge badge-oss">🔓 开源</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>类型</th><th>价格</th><th>接入方式</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">开源全自主 Agent</td>
+                <td class="plan-price">免费（按 API 用量）</td>
+                <td class="plan-models">Web UI / CLI</td>
+                <td class="plan-limit">类 Devin 开源替代</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">全自主</span>
+            <span class="feat-tag yes">Web UI</span>
+            <span class="feat-tag yes">多模型</span>
+            <span class="feat-tag">IDE内置</span>
+          </div>
+          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">开源版 Devin，支持浏览器/终端/文件系统操作，Web UI 可视化管理，社区活跃</div>
+        </div>
+      </div>
+
+      <!-- 6. Kilo Code -->
+      <div class="cp-platform oss">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://github.com/kilocode/kilocode" target="_blank" rel="noopener noreferrer">Kilo Code</a></span>
+          <span class="cp-badge badge-oss">🔓 开源</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>类型</th><th>价格</th><th>接入方式</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">VS Code 插件</td>
+                <td class="plan-price">免费（按 API 用量）</td>
+                <td class="plan-models">VS Code 扩展</td>
+                <td class="plan-limit">兼容 3+ 国内平台</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">IDE插件</span>
+            <span class="feat-tag yes">多模型</span>
+            <span class="feat-tag">CLI</span>
+            <span class="feat-tag">MCP</span>
+          </div>
+          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">国产开源 VS Code Agent 插件，对国内平台兼容性较好，轻量易用</div>
+        </div>
+      </div>
+
+      <!-- 7. Goose -->
+      <div class="cp-platform oss">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://github.com/block/goose" target="_blank" rel="noopener noreferrer">Goose（Block/Square）</a></span>
+          <span class="cp-badge badge-oss">🔓 开源</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>类型</th><th>价格</th><th>接入方式</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">桌面 Agent</td>
+                <td class="plan-price">免费（按 API 用量）</td>
+                <td class="plan-models">桌面应用 / CLI</td>
+                <td class="plan-limit">兼容智谱GLM等</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">桌面应用</span>
+            <span class="feat-tag yes">CLI</span>
+            <span class="feat-tag yes">插件扩展</span>
+            <span class="feat-tag">IDE内置</span>
+          </div>
+          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">Block (Square) 出品的开源桌面 Agent，可扩展插件系统，支持浏览器/终端操作</div>
+        </div>
+      </div>
+
+    </div><!-- /cp-platforms (开源) -->
+
+    <!-- ==================== Agent 功能对比矩阵 ==================== -->
+    <div class="cp-matrix-section">
+      <h2>🔧 Agent 功能对比矩阵</h2>
+      <div class="cp-matrix-wrap">
+        <table class="cp-matrix">
+          <thead>
+            <tr>
+              <th>Agent</th>
+              <th>自托管</th>
+              <th>IDE 内</th>
+              <th>CLI</th>
+              <th>浏览器</th>
+              <th>多模态</th>
+              <th>MCP</th>
+              <th>记忆</th>
+              <th>开源</th>
+              <th>国内平台</th>
+              <th>价格</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Hermes 🔥👍</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">8+</td><td>按API</td></tr>
+            <tr><td>OpenClaw 🔥</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td>—</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">8+</td><td>按API</td></tr>
+            <tr><td>Cline / Roo</td><td>—</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td>5+</td><td>按API</td></tr>
+            <tr><td>Claude Code</td><td>—</td><td>—</td><td class="yes">✓</td><td>—</td><td>—</td><td class="yes">✓</td><td>—</td><td>—</td><td>5+</td><td>$20/月</td></tr>
+            <tr><td>Cursor</td><td>—</td><td class="yes">✓</td><td>—</td><td>—</td><td>—</td><td class="yes">✓</td><td>—</td><td>—</td><td>5+</td><td>$20/月</td></tr>
+            <tr><td>Copilot WS</td><td>—</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$10/月</td></tr>
+            <tr><td>Codex CLI</td><td>—</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td>—</td><td>—</td><td>—</td><td>2+</td><td>$20/月</td></tr>
+            <tr><td>Devin</td><td>—</td><td>—</td><td>—</td><td class="yes">✓</td><td>—</td><td>—</td><td class="yes">✓</td><td>—</td><td>—</td><td>$500/月</td></tr>
+            <tr><td>Windsurf</td><td>—</td><td class="yes">✓</td><td>—</td><td>—</td><td>—</td><td class="yes">✓</td><td>—</td><td>—</td><td>—</td><td>$0起</td></tr>
+            <tr><td>Aider</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="yes">✓</td><td>3+</td><td>按API</td></tr>
+            <tr><td>OpenHands</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td>—</td><td>—</td><td class="yes">✓</td><td>3+</td><td>按API</td></tr>
+            <tr><td>ZCode <span class="cp-badge badge-new" style="font-size:0.58rem">官方</span></td><td>—</td><td class="yes">✓</td><td>—</td><td>—</td><td>—</td><td class="yes">✓</td><td>—</td><td>—</td><td class="yes">1</td><td>¥49/月</td></tr>
+            <tr><td>ArkClaw</td><td>—</td><td class="yes">✓</td><td>—</td><td>—</td><td>—</td><td class="yes">✓</td><td>—</td><td>—</td><td class="yes">1</td><td>¥200/月</td></tr>
+            <tr><td>CoPaw</td><td>—</td><td class="yes">✓</td><td>—</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td>—</td><td class="yes">1</td><td>¥200/月</td></tr>
+            <tr><td>Trae</td><td>—</td><td class="yes">✓</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="yes">1</td><td>免费</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="font-size:0.76rem;color:var(--muted);margin-top:0.5rem;">
+        国内平台 = 兼容国内 Coding Plan 平台数量（智谱/MiniMax/火山/百炼/Kimi/腾讯/DeepSeek/小米）&nbsp;·&nbsp;
+        🔥 = 热门 &nbsp;·&nbsp; ✨ = 新品 &nbsp;·&nbsp; 价格为最低付费档
+      </div>
+    </div>
+
+    <!-- ==================== Agent 热度排行 ==================== -->
+    <div class="cp-matrix-section" style="margin-top:1rem;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;">
+        <!-- GitHub Stars -->
+        <div style="border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden;">
+          <div style="padding:0.55rem 1rem;border-bottom:1px solid var(--border);font-weight:700;font-size:0.88rem;">⭐ 开源 Agent 热度（Stars + 实战活跃）</div>
+          <div style="padding:0.75rem 1rem;">
+            <div class="cp-bar-chart">
+              <div class="cp-bar-row"><span class="cp-bar-label">Hermes 👍</span><div class="cp-bar-track"><div class="cp-bar-fill bar-oss" style="width:100%">55K+ · 实战首选</div></div></div>
+              <div class="cp-bar-row"><span class="cp-bar-label">OpenClaw</span><div class="cp-bar-track"><div class="cp-bar-fill bar-oss" style="width:100%">75K+</div></div></div>
+              <div class="cp-bar-row"><span class="cp-bar-label">Cline</span><div class="cp-bar-track"><div class="cp-bar-fill bar-domestic" style="width:42%">22K+</div></div></div>
+              <div class="cp-bar-row"><span class="cp-bar-label">Aider</span><div class="cp-bar-track"><div class="cp-bar-fill bar-domestic" style="width:38%">20K+</div></div></div>
+              <div class="cp-bar-row"><span class="cp-bar-label">OpenHands</span><div class="cp-bar-track"><div class="cp-bar-fill bar-domestic" style="width:72%">38K+</div></div></div>
+              <div class="cp-bar-row"><span class="cp-bar-label">Kilo Code</span><div class="cp-bar-track"><div class="cp-bar-fill bar-overseas" style="width:8%">4K+</div></div></div>
+              <div class="cp-bar-row"><span class="cp-bar-label">Goose</span><div class="cp-bar-track"><div class="cp-bar-fill bar-overseas" style="width:16%">8K+</div></div></div>
+            </div>
+            <div style="font-size:0.72rem;color:var(--muted);margin-top:0.4rem;">数据截至 2026 年 6 月：Stars 仅供参考，Hermes 在社区讨论量、IM 集成与迁移热度上已超过 OpenClaw</div>
+          </div>
+        </div>
+        <!-- 价格区间 -->
+        <div style="border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden;">
+          <div style="padding:0.55rem 1rem;border-bottom:1px solid var(--border);font-weight:700;font-size:0.88rem;">💰 月费区间对比</div>
+          <div style="padding:0.75rem 1rem;">
+            <table class="cp-table" style="font-size:0.78rem;">
+              <thead><tr><th>价格档</th><th>Agent</th><th>适合</th></tr></thead>
+              <tbody>
+                <tr><td class="plan-name" style="color:var(--accent2)">🆓 ¥0</td><td>Hermes, OpenClaw, Cline, Aider, Trae</td><td>个人/入门</td></tr>
+                <tr><td class="plan-name" style="color:var(--accent)">$10-20/月</td><td>Copilot Pro, Claude Pro, Cursor Pro, Windsurf Pro</td><td>主流开发者</td></tr>
+                <tr><td class="plan-name" style="color:var(--warn)">$100-200/月</td><td>Claude Max, Cursor Ultra, Codex Pro</td><td>重度用户</td></tr>
+                <tr><td class="plan-name" style="color:var(--hot)">$500+/月</td><td>Devin</td><td>企业级</td></tr>
+              </tbody>
+            </table>
+            <div style="font-size:0.72rem;color:var(--muted);margin-top:0.4rem;">开源 Agent 需另付 API 调用费（可用国内低价平台）</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== 场景推荐 ==================== -->
+    <div class="cp-tips" style="margin-top:2rem;">
+      <div style="padding:0.75rem 1rem;border-bottom:1px solid var(--border);">
+        <h2>🎯 场景推荐 — 按需求选最适合的 Agent</h2>
+      </div>
+      <div style="padding:0.75rem 1rem;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+
+          <!-- 场景1: 个人开发者 -->
+          <div style="padding:0.75rem;border-radius:8px;border:1px solid rgba(63,185,80,0.25);background:rgba(63,185,80,0.04);">
+            <div style="font-weight:700;font-size:0.88rem;margin-bottom:0.5rem;">👤 个人开发者（预算有限）</div>
+            <div style="font-size:0.8rem;line-height:1.7;">
+              <div>🏆 <strong>首选：</strong><a href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener noreferrer">Hermes Agent</a> + <a href="https://www.bigmodel.cn/glm-coding?ic=H2G5GCAOFT" target="_blank" rel="noopener noreferrer">智谱 GLM-5.2 Pro</a> — 2026 开源 Agent 最佳组合</div>
+              <div>💰 <strong>零成本：</strong><a href="https://github.com/cline/cline" target="_blank" rel="noopener noreferrer">Cline</a> + <a href="https://www.deepseek.com/" target="_blank" rel="noopener noreferrer">DeepSeek-V4-Flash Free</a> — ¥0 开始</div>
+              <div>⚡ <strong>国内最省：</strong><a href="https://www.trae.ai/" target="_blank" rel="noopener noreferrer">Trae</a> 免费IDE — 零配置上手</div>
+            </div>
+          </div>
+
+          <!-- 场景2: 重度编程 -->
+          <div style="padding:0.75rem;border-radius:8px;border:1px solid rgba(255,107,107,0.25);background:rgba(255,107,107,0.04);">
+            <div style="font-weight:700;font-size:0.88rem;margin-bottom:0.5rem;">🔥 重度 AI 编程（每日6h+）</div>
+            <div style="font-size:0.8rem;line-height:1.7;">
+              <div>🏆 <strong>首选：</strong><a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">Claude Code Max</a> $100/月 — Opus 4.8 / Fable 5（恢复后）长程最强</div>
+              <div>⚡ <strong>双修：</strong>Claude Max + <a href="https://cursor.com/" target="_blank" rel="noopener noreferrer">Cursor Pro</a> — CLI + IDE 双 Agent</div>
+              <div>💡 <strong>开源重装：</strong><a href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener noreferrer">Hermes</a> + 智谱 GLM-5.2 Max ¥469/月 — 国产长程顶配</div>
+            </div>
+          </div>
+
+          <!-- 场景3: 企业团队 -->
+          <div style="padding:0.75rem;border-radius:8px;border:1px solid rgba(88,166,255,0.25);background:rgba(88,166,255,0.04);">
+            <div style="font-weight:700;font-size:0.88rem;margin-bottom:0.5rem;">🏢 企业 / 团队</div>
+            <div style="font-size:0.8rem;line-height:1.7;">
+              <div>🏆 <strong>首选：</strong><a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer">Copilot Workspace</a> $39/月 — GitHub 原生集成</div>
+              <div>🇨🇳 <strong>国内：</strong><a href="https://zcode.z.ai/cn" target="_blank" rel="noopener noreferrer">ZCode</a> + GLM Coding Plan — 智谱官方 ADE；<a href="https://www.volcengine.com/activity/codingplan" target="_blank" rel="noopener noreferrer">ArkClaw</a> — 字节企业级 Agent</div>
+              <div>🔒 <strong>私有化：</strong><a href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener noreferrer">Hermes</a> / OpenHands 自托管 — 数据不出内网</div>
+            </div>
+          </div>
+
+          <!-- 场景4: 开源控 -->
+          <div style="padding:0.75rem;border-radius:8px;border:1px solid rgba(240,136,62,0.25);background:rgba(240,136,62,0.04);">
+            <div style="font-weight:700;font-size:0.88rem;margin-bottom:0.5rem;">🔓 开源控 / 自托管</div>
+            <div style="font-size:0.8rem;line-height:1.7;">
+              <div>🏆 <strong>首选：</strong><a href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener noreferrer">Hermes Agent</a> — 记忆 + 技能自进化 + IM + MCP，社区最活跃</div>
+              <div>📦 <strong>备选：</strong><a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener noreferrer">OpenClaw</a> — 插件生态成熟，适合已有技能库用户</div>
+              <div>⚡ <strong>全自主：</strong><a href="https://github.com/All-Hands-AI/OpenHands" target="_blank" rel="noopener noreferrer">OpenHands</a> — Web UI，类 Devin</div>
+              <div>🛠 <strong>极简：</strong><a href="https://github.com/Aider-AI/aider" target="_blank" rel="noopener noreferrer">Aider</a> — CLI 最轻量，本地模型友好</div>
+            </div>
+          </div>
+
+          <!-- 场景5: 零成本 -->
+          <div style="padding:0.75rem;border-radius:8px;border:1px solid rgba(210,153,34,0.25);background:rgba(210,153,34,0.04);">
+            <div style="font-weight:700;font-size:0.88rem;margin-bottom:0.5rem;">🆓 零成本白嫖</div>
+            <div style="font-size:0.8rem;line-height:1.7;">
+              <div>🏆 <strong>最佳组合：</strong>Cline + DeepSeek Free — ¥0 完整体验</div>
+              <div>💻 <strong>IDE 免费党：</strong>Trae（免费AI IDE）+ Windsurf Free — 零配置</div>
+              <div>🔑 <strong>API 白嫖：</strong>各平台免费额度轮着用（DeepSeek/Kimi/MiniMax）</div>
+            </div>
+          </div>
+
+          <!-- 场景6: 多模型切换 -->
+          <div style="padding:0.75rem;border-radius:8px;border:1px solid rgba(167,139,250,0.25);background:rgba(167,139,250,0.04);">
+            <div style="font-weight:700;font-size:0.88rem;margin-bottom:0.5rem;">🔀 多模型 / 不想被绑死</div>
+            <div style="font-size:0.8rem;line-height:1.7;">
+              <div>🏆 <strong>首选：</strong><a href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener noreferrer">Hermes Agent</a> — 8+ 平台自由切换，2026 迁移首选</div>
+              <div>🌍 <strong>海外多模型：</strong><a href="https://codeium.com/windsurf" target="_blank" rel="noopener noreferrer">Windsurf</a> — 支持 20+ 模型</div>
+              <div>💡 <strong>原则：</strong>开源 Agent + 按量 API = 最灵活，随时换模型不浪费订阅</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 底部提醒 -->
+        <div style="margin-top:1rem;padding:0.6rem 0.8rem;border-radius:6px;background:var(--panel);font-size:0.78rem;line-height:1.7;">
+          <strong style="color:var(--warn)">⚠️ 选购提醒：</strong>
+          ① 开源 Agent 免费但需自备 API 额度 — 推荐搭配国内 Coding Plan（见<a href="coding-plan.html">编程套餐横评</a>）&nbsp;
+          ② Agent 效果 80% 取决于底层模型 — 选对模型比选对 Agent 更重要 &nbsp;
+          ③ MCP 生态正在统一工具调用 — 选支持 MCP 的 Agent 更有未来 &nbsp;
+          ④ 自托管需要一定运维能力 — 新手建议先从 IDE 插件开始 &nbsp;
+          ⑤ Agent 领域变化极快 — 月付比年付更灵活
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== 注意事项 ==================== -->
+    <div class="cp-notice">
+      <div class="cp-notice-head">⚠️ 注意事项 — Agent 选购必读</div>
+      <div class="cp-notice-body">
+        <ul>
+          <li><strong>开源 Agent 免费但需自备 API：</strong>Hermes/OpenClaw/Cline 等开源 Agent 本身免费，但底层模型调用需自行购买 API 额度或订阅 Coding Plan，实际成本 ≠ ¥0。2026 年推荐 Hermes + GLM-5.2 或 DeepSeek-V4。</li>
+          <li><strong>Agent 效果 80% 取决于底层模型：</strong>同一 Agent 换不同模型效果天差地别。长程任务优先 GLM-5.2 / DeepSeek-V4-Pro / Claude Opus 4.8；Fable 5 暂停期间由 Opus 4.8 承接。</li>
+          <li><strong>自主执行 = 自主犯错：</strong>Agent 能自动改代码，也能自动引入 Bug。生产环境务必开启<strong>人工确认</strong>模式，不要给 Agent 无限权限。</li>
+          <li><strong>MCP 生态仍在早期：</strong>2026年各 Agent 的 MCP 工具支持参差不齐，同一工具在不同 Agent 上体验差异大，选型前确认目标工具兼容性。</li>
+          <li><strong>闭源 Agent 绑定平台：</strong>Cursor/Copilot/Devin 等闭源 Agent 只能用自家模型和工具，无法自由切换，长期成本和灵活性受限。</li>
+          <li><strong>Agent 领域变化极快：</strong>每月都有新 Agent 发布/更新，当前"最佳"可能3个月后就被超越，月付比年付更灵活。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ==================== Loop Engineering ==================== -->
+    <div class="cp-tips" id="loop-engineering" style="margin-top:2rem;">
+      <div style="padding:0.75rem 1rem;border-bottom:1px solid var(--border);">
+        <h2>🔄 Loop Engineering — 写循环，而不是写 prompt</h2>
+        <p style="margin:0.35rem 0 0;font-size:0.8rem;color:var(--muted);">2026 年 Agent 工作流共识：从「每次手写 prompt 盯 Agent」转向「设计可复用 <strong style="color:var(--text)">loop</strong>」—— 想 → 做 → 验证 → 再想做，直到达标或触顶。</p>
+      </div>
+      <div style="padding:0.75rem 1rem;font-size:0.82rem;line-height:1.75;">
+        <p style="margin:0 0 0.75rem;"><strong>谁在讲：</strong>Boris Cherny（Claude Code）、Peter Steinberger（OpenClaw）、Addy Osmani、Karpathy（<a href="https://karpathy.bearblog.dev/sequoia-ascent-2026/" target="_blank" rel="noopener noreferrer">Sequoia Ascent 2026</a>）。核心句：<em>「我不再 prompt Agent，我写 loops 去 prompt Agent。」</em></p>
+
+        <table class="cp-table" style="font-size:0.78rem;margin-bottom:0.85rem;">
+          <thead><tr><th>Loop 类型</th><th>做什么</th><th>典型落地</th></tr></thead>
+          <tbody>
+            <tr><td class="plan-name">Agent loop</td><td>LLM 调工具 → 结果写回上下文 → 重复直到完成</td><td>所有 Coding Agent 底座</td></tr>
+            <tr><td class="plan-name">Verification loop</td><td>跑测试 / rubric 打分，不过则带反馈重试</td><td>Cursor <code>stop</code> hook、CI + Agent</td></tr>
+            <tr><td class="plan-name">Event loop</td><td>cron / Webhook 触发自动跑</td><td>Claude <code>/loop</code>、GitHub Actions、OpenClaw Gateway</td></tr>
+            <tr><td class="plan-name">Hill-climbing loop</td><td>用 trace 分析改 prompt / 工具配置</td><td>LangSmith、<a href="https://github.com/microsoft/SkillOpt" target="_blank" rel="noopener noreferrer">SkillOpt</a></td></tr>
+          </tbody>
+        </table>
+
+        <table class="cp-table" style="font-size:0.78rem;margin-bottom:0.85rem;">
+          <thead><tr><th>工具</th><th>怎么写 loop</th><th>备注</th></tr></thead>
+          <tbody>
+            <tr><td class="plan-name"><a href="https://docs.anthropic.com/en/docs/claude-code" target="_blank" rel="noopener noreferrer">Claude Code</a></td><td><code>/loop</code>、cron、hooks</td><td>长程 CLI Agent 标杆</td></tr>
+            <tr><td class="plan-name"><a href="https://cursor.com/docs/agent/hooks" target="_blank" rel="noopener noreferrer">Cursor</a></td><td><code>.cursor/hooks.json</code> → <code>stop</code> 返回 <code>followup_message</code>（约最多 5 轮）</td><td>见 <a href="token-optimization.html">Token 优化</a></td></tr>
+            <tr><td class="plan-name">Ralph Loop</td><td><code>.cursor/agents/</code> 子代理 + <code>/ralph-loop</code>，状态外置 <code>prd.json</code></td><td>多轮故事迭代，隔离上下文</td></tr>
+            <tr><td class="plan-name"><a href="https://github.com/openai/symphony" target="_blank" rel="noopener noreferrer">OpenAI Symphony</a></td><td>工单 → 隔离 Codex run，团队管 work 而非盯 Agent</td><td>Harness Engineering 下一步</td></tr>
+            <tr><td class="plan-name"><a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener noreferrer">OpenClaw</a></td><td>常驻 Gateway + Skills + 定时/IM 触发</td><td>个人长期 loop，注意凭证安全</td></tr>
+            <tr><td class="plan-name"><a href="https://cursor.com/blog/typescript-sdk" target="_blank" rel="noopener noreferrer">Cursor SDK</a></td><td>CI/CD 里程序化起 Cloud Agent</td><td>失败修 PR、根因分析</td></tr>
+          </tbody>
+        </table>
+
+        <div style="padding:0.6rem 0.8rem;border-radius:6px;background:var(--panel);font-size:0.78rem;line-height:1.7;">
+          <strong style="color:var(--warn)">写 loop 必做：</strong>
+          ① 硬上限（<code>MAX_ITERATIONS</code> / 超时）防 token 烧穿 &nbsp;
+          ② 可验证出口（测试绿、<code>DONE</code> 标记、rubric）&nbsp;
+          ③ 不可逆操作 HITL（删库、付款、发 prod）&nbsp;
+          ④ 状态写文件（<code>progress.md</code>），别只靠对话记忆 &nbsp;
+          ⑤ 与 Vibe Coding 区分：loop 要保专业软件质量栏（Karpathy：<strong>Agentic Engineering</strong>）
+        </div>
+        <p style="margin:0.75rem 0 0;font-size:0.76rem;color:var(--muted);">延伸阅读：<a href="https://addyosmani.com/blog/loop-engineering/" target="_blank" rel="noopener noreferrer">Addy Osmani — Loop Engineering</a> · <a href="https://www.langchain.com/blog/the-art-of-loop-engineering" target="_blank" rel="noopener noreferrer">LangChain — Loopcraft</a></p>
+      </div>
+    </div>
+
+    <!-- ==================== FAQ ==================== -->
+    <div class="cp-faq">
+      <div class="cp-faq-head">❓ 常见问题 FAQ</div>
+
+      <div class="cp-faq-item is-open">
+        <div class="cp-faq-q">什么是 Loop Engineering？和 Agent 有什么关系？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>Loop Engineering</strong> 指设计「想→做→验证→重复」的自动化循环，而不是每次手写 prompt。Agent 本身就是一个 loop；生产里还要叠验证 loop（测不过继续改）、事件 loop（cron 触发）等。详见上文 <a href="#loop-engineering">Loop Engineering</a> 一节。</div>
+      </div>
+
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">AI Agent 和 IDE 插件（Copilot）有什么区别？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>IDE 插件</strong>是"被动建议"——你写代码它补全；<strong>Agent</strong>是"主动执行"——你描述需求，它自动读取文件、分析代码、生成修改、写入文件。Agent 能完成多步骤任务，插件只能做单步建议。类比：插件是副驾驶，Agent 是自动驾驶。</div>
+      </div>
+
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">开源 Agent 和闭源 Agent 怎么选？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>开源优势：</strong>免费、可自托管、数据不出本机、支持多模型切换。<strong>闭源优势：</strong>开箱即用、无需运维、体验更流畅。如果你是个人开发者且在意成本，选开源+国内 API；如果是团队且追求效率，选闭源（Cursor/Copilot）。</div>
+      </div>
+
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">Agent 会不会自动删除/覆盖我的代码？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>有可能，但可以防范。</strong>大多数 Agent 默认开启"自动应用修改"，这意味着它改的代码会直接写入文件。建议：①始终使用 Git，出问题可回滚；②生产环境关闭自动应用，改为手动确认；③限制 Agent 的文件访问范围（沙箱模式）。</div>
+      </div>
+
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">Devin 值得 $500/月吗？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>对大多数人不值得。</strong>Devin 定位是全自主 AI 软件工程师，$500/月约为 Cursor Pro $20 的 25 倍。Codex（ChatGPT Pro $200/月）是另一档产品。除非你的时薪 &gt; $50 且经常需要处理大量重复性编程任务，否则 Hermes/Cline + GLM-5.2 或 DeepSeek-V4 API 的组合更划算。</div>
+      </div>
+
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">MCP 是什么？为什么重要？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>MCP（Model Context Protocol）</strong>是 Anthropic 提出的统一工具调用协议，让 Agent 能连接数据库、浏览器、文件系统等外部工具。重要性：MCP 正在成为行业标准，选支持 MCP 的 Agent 意味着未来可以接入更多工具，不会被生态锁定。</div>
+      </div>
+
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">哪个 Agent 写代码最强？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>取决于底层模型。</strong>用 Claude Opus 时，Claude Code 最强；用 GPT-5 时，Copilot Workspace 最强。目前 SWE-bench 得分排名：Claude Code > Cursor Agent > OpenClaw > Cline。但差距在缩小，开源 Agent 配合强模型已能达到闭源 80-90% 的效果。</div>
+      </div>
+    </div>
+
+    <!-- ==================== 性价比排行 ==================== -->
+    <div class="cp-value-rank">
+      <div class="cp-value-rank-head">📊 性价比排行 — Agent 每月成本对比</div>
+      <div class="cp-value-rank-body">
+        <div style="font-size:0.78rem;color:var(--muted);margin-bottom:0.6rem;">公式：月均可用任务数 ÷ 月总成本 = 每元任务数（开源 Agent 需另加 API 成本）。数值越高性价比越好。</div>
+        <table class="cp-table" style="font-size:0.8rem;">
+          <thead><tr><th>排名</th><th>Agent</th><th>月成本</th><th>底层模型</th><th>月均任务数(估)</th><th>每元任务数</th><th>性价比</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>🥇</td>
+              <td class="plan-name">Cline + DeepSeek Free</td>
+              <td class="plan-price">¥0</td>
+              <td>DeepSeek</td>
+              <td>~600</td>
+              <td class="val-high">∞</td>
+              <td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:100%;height:100%;border-radius:4px;background:linear-gradient(90deg,#3fb950,#2ea043);"></div></div></td>
+            </tr>
+            <tr>
+              <td>🥈</td>
+              <td class="plan-name">OpenClaw + 智谱GLM Pro</td>
+              <td class="plan-price">¥149</td>
+              <td>GLM-5.2</td>
+              <td>~8,000</td>
+              <td class="val-high">54</td>
+              <td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:78%;height:100%;border-radius:4px;background:linear-gradient(90deg,#3fb950,#2ea043);"></div></div></td>
+            </tr>
+            <tr>
+              <td>🥉</td>
+              <td class="plan-name">Trae Free</td>
+              <td class="plan-price">¥0</td>
+              <td>混元/DeepSeek</td>
+              <td>Agent 池</td>
+              <td class="val-high">∞</td>
+              <td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:100%;height:100%;border-radius:4px;background:linear-gradient(90deg,#3fb950,#2ea043);"></div></div></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td class="plan-name">Cursor Pro</td>
+              <td class="plan-price">$20</td>
+              <td>Claude/GPT-5</td>
+              <td>Agent 池</td>
+              <td class="val-mid">~11</td>
+              <td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:15%;height:100%;border-radius:4px;background:linear-gradient(90deg,#58a6ff,#388bfd);"></div></div></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td class="plan-name">Copilot Pro</td>
+              <td class="plan-price">$10</td>
+              <td>GPT-5</td>
+              <td>~800</td>
+              <td class="val-mid">~11</td>
+              <td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:15%;height:100%;border-radius:4px;background:linear-gradient(90deg,#58a6ff,#388bfd);"></div></div></td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td class="plan-name">Windsurf Pro</td>
+              <td class="plan-price">$15</td>
+              <td>多模型</td>
+              <td>~1,000</td>
+              <td class="val-mid">~10</td>
+              <td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:14%;height:100%;border-radius:4px;background:linear-gradient(90deg,#d29922,#bb8009);"></div></div></td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td class="plan-name">Claude Code Max</td>
+              <td class="plan-price">$100</td>
+              <td>Claude Opus</td>
+              <td>~5,000</td>
+              <td class="val-low">~7</td>
+              <td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:10%;height:100%;border-radius:4px;background:linear-gradient(90deg,#8b9cb3,#6e7681);"></div></div></td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td class="plan-name">Devin</td>
+              <td class="plan-price">$500</td>
+              <td>自研</td>
+              <td>~3,000</td>
+              <td class="val-low">~1</td>
+              <td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:2%;height:100%;border-radius:4px;background:linear-gradient(90deg,#8b9cb3,#6e7681);"></div></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ==================== Agent 趋势分析 ==================== -->
+    <div class="cp-trend-section">
+      <h2>📈 Agent 趋势分析</h2>
+      <p class="cp-trend-sub">从"对话助手"到"自主执行"，AI Agent 正在重塑编程方式。</p>
+
+      <div style="border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden;">
+        <div style="padding:0.8rem 1rem;font-size:0.85rem;line-height:1.8;">
+
+          <div style="margin-bottom:1rem;">
+            <div style="font-weight:700;color:var(--accent2);margin-bottom:0.3rem;">1️⃣ 从"辅助"到"自主" — Agent 演进三阶段</div>
+            <div style="padding-left:0.6rem;">
+              <div>• <strong>阶段一（2023）：</strong>代码补全 — Copilot 模式，一行一行建议</div>
+              <div>• <strong>阶段二（2024-2025）：</strong>对话式编程 — Chat 模式，多文件编辑</div>
+              <div>• <strong>阶段三（2026）：</strong>自主执行 — Agent 模式，理解需求→拆解任务→执行→验证→提交</div>
+              <div style="color:var(--muted);font-size:0.8rem;margin-top:0.3rem;">→ 现在正处于阶段三的爆发期，Hermes / Claude Code / Cursor Agent 代表了这个方向</div>
+            </div>
+          </div>
+
+          <div style="margin-bottom:1rem;">
+            <div style="font-weight:700;color:var(--accent);margin-bottom:0.3rem;">2️⃣ MCP 协议 — 统一 Agent 工具调用</div>
+            <div style="padding-left:0.6rem;">
+              <div>• <strong>什么是 MCP：</strong>Model Context Protocol，Anthropic 推出的开放协议，让 Agent 统一调用外部工具</div>
+              <div>• <strong>为什么重要：</strong>之前每个 Agent 自己造轮子连接数据库/API/文件系统，MCP 统一后工具生态共享</div>
+              <div>• <strong>现状：</strong>Hermes/OpenClaw/Cline/Cursor/Claude Code 已支持，IDE Agent 纷纷接入</div>
+              <div style="color:var(--muted);font-size:0.8rem;margin-top:0.3rem;">→ 选 Agent 优先选支持 MCP 的，生态红利才刚开始</div>
+            </div>
+          </div>
+
+          <div style="margin-bottom:1rem;">
+            <div style="font-weight:700;color:var(--warn);margin-bottom:0.3rem;">3️⃣ 开源 Agent 生态爆发</div>
+            <div style="padding-left:0.6rem;">
+              <div>• <strong>趋势：</strong>Hermes 已成 2026 开源 Agent 实战首选（记忆/技能/IM 完整度领先）；OpenClaw Stars 仍高但新增用户更多选 Hermes</div>
+              <div>• <strong>模型侧：</strong>GLM-5.2、DeepSeek-V4-Pro 全量开放后，开源 Agent + 国产 Coding Plan 月成本 &lt; ¥50</div>
+              <div>• <strong>风险：</strong>开源项目维护靠社区，稳定性不如商业产品，生产环境需谨慎</div>
+            </div>
+          </div>
+
+          <div>
+            <div style="font-weight:700;color:var(--hot);margin-bottom:0.3rem;">4️⃣ 安全与权限 — Agent 的达摩克利斯之剑</div>
+            <div style="padding-left:0.6rem;">
+              <div>• <strong>核心矛盾：</strong>Agent 越自主，权限越大，风险越高 — 可以帮你写代码，也可以帮你删库</div>
+              <div>• <strong>安全实践：</strong>沙箱执行 → 人工确认 → 分级授权 → 审计日志</div>
+              <div>• <strong>行业趋势：</strong>企业级 Agent（Copilot Workspace/ArkClaw）内置权限管控，开源 Agent 需自行配置</div>
+              <div style="color:var(--muted);font-size:0.8rem;margin-top:0.3rem;">→ 永远不要给 Agent 无限权限，即使它说"我能搞定"</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="cp-footer">
+    <p>数据来源：各平台官网 · GitHub · 价格以官网为准</p>
+    <p><a href="index.html">← 返回 AINav 首页</a> · <a href="free-tier.html">🆓 免费额度</a> · <a href="token-optimization.html">Token优化</a> · <a href="coding-plan.html">编程套餐横评</a> · <a href="video-plan.html">视频套餐横评</a> · <a href="image-plan.html">图像套餐横评</a></p>
+  </div>
+
+  <!-- FAQ accordion -->
+  <script>
+    document.querySelectorAll('.cp-faq-q').forEach(function(q){
+      q.addEventListener('click',function(){q.parentElement.classList.toggle('is-open');});
+    });
+  </script>
+
+  <!-- Theme toggle -->
+  <script>
+    (function(){
+      var btns = document.querySelectorAll('.theme-btn:not(.lang-btn)');
+      var html = document.documentElement;
+      function apply(t){
+        html.setAttribute('data-theme', t);
+        localStorage.setItem('cp-theme', t);
+        btns.forEach(function(b){ b.classList.toggle('is-active', b.getAttribute('data-theme-set')===t); });
+      }
+      var saved = localStorage.getItem('cp-theme') || 'system';
+      apply(saved);
+      btns.forEach(function(b){ b.addEventListener('click', function(){ apply(b.getAttribute('data-theme-set')); }); });
+    })();
+  </script>
+
+  <!-- i18n -->
+  <script>
+    (function(){
+      var i18n = {
+        zh: {
+          pageTitle: 'AI Agent 横评 — AINav',
+          pageDesc: '国内外 AI Coding Agent 一站式对比：功能、价格、兼容性、场景推荐，帮你找到最适合的 AI 编程智能体。',
+          title: '🤖 AI Agent 横评',
+          subtitle: '国内外 AI Coding Agent 一站式对比：2026 年开源首选 Hermes，模型底座推荐 GLM-5.2 / DeepSeek-V4-Pro / Claude Opus 4.8。',
+          navHome: '← AINav 首页', navCoding: '编程套餐横评', navAgent: 'Agent横评',
+          navVideo: '视频套餐横评', navImage: '图像套餐横评', navEncyclopedia: 'AI百科',
+          themeSystem: '跟随系统', themeLight: '浅色', themeDark: '深色',
+          sectionDomestic: '国内 Coding Agent', sectionOverseas: '海外 Coding Agent',
+          sectionOss: '开源 / 自托管 Agent',
+          sectionMatrix: '🔧 Agent 功能对比矩阵',
+          sectionStars: '⭐ GitHub Stars 排行（开源 Agent）',
+          sectionPrice: '💰 月费区间对比',
+          sectionRec: '🎯 场景推荐 — 按需求选最适合的 Agent',
+          sectionTrend: '📈 Agent 趋势分析',
+          trendSub: '从"对话助手"到"自主执行"，AI Agent 正在重塑编程方式。',
+          thType: '类型', thPrice: '价格', thAccess: '接入方式', thNote: '备注',
+          thPlan: '套餐', thModel: '核心模型',
+          footer: '数据来源：各平台官网 · GitHub · 价格以官网为准',
+          footerHome: '← 返回 AINav 首页',
+          promoText: '想用', promoOr: '/', promoNoNet: '却没海外网络？',
+          promoDesc: '一个 API Key 调用 100+ 顶级模型，国内直连低延迟，兼容 OpenAI 格式零改造',
+          promoCta: '立即注册 →',
+          badgeRush: '⚡ 需抢', badgeHot: '🔥 热门', badgeNew: '✨ 特惠', badgeRec: '👍 推荐',
+          legendRush: '⚡ 需抢', legendRushDesc: '限时/抢购',
+          legendHot: '🔥 热门', legendHotDesc: '高性价比',
+          legendNew: '✨ 特惠', legendNewDesc: '首月低价',
+          legendRec: '👍 推荐', legendRecDesc: '综合推荐',
+          legendOverseas: '🌍 海外', legendOverseasDesc: '需国际网络',
+        },
+        en: {
+          pageTitle: 'AI Agent Comparison — AINav',
+          pageDesc: 'One-stop comparison of AI Coding Agents worldwide: features, pricing, compatibility, and scenario recommendations.',
+          title: '🤖 AI Agent Comparison',
+          subtitle: 'One-stop comparison of AI Coding Agents worldwide: features, pricing, compatibility, and scenario recommendations.',
+          navHome: '← AINav Home', navCoding: 'Coding Plans', navAgent: 'Agents',
+          navVideo: 'Video Plans', navImage: 'Image Plans', navEncyclopedia: 'AI Encyclopedia',
+          themeSystem: 'System', themeLight: 'Light', themeDark: 'Dark',
+          sectionDomestic: 'Domestic Coding Agents', sectionOverseas: 'Overseas Coding Agents',
+          sectionOss: 'Open-Source / Self-Hosted Agents',
+          sectionMatrix: '🔧 Agent Feature Comparison Matrix',
+          sectionStars: '⭐ GitHub Stars Ranking (Open-Source Agents)',
+          sectionPrice: '💰 Monthly Price Tier Comparison',
+          sectionRec: '🎯 Recommendations — Find the Best Agent for Your Needs',
+          sectionTrend: '📈 Agent Trend Analysis',
+          trendSub: 'From "chat assistants" to "autonomous execution" — AI Agents are reshaping how we code.',
+          thType: 'Type', thPrice: 'Price', thAccess: 'Access', thNote: 'Note',
+          thPlan: 'Plan', thModel: 'Core Model',
+          footer: 'Data sources: Official websites · GitHub · Prices subject to change',
+          footerHome: '← Back to AINav Home',
+          promoText: 'Want', promoOr: '/', promoNoNet: 'but no VPN?',
+          promoDesc: 'One API Key for 100+ top models, direct access in China, low latency, OpenAI-compatible format',
+          promoCta: 'Sign Up →',
+          badgeRush: '⚡ Rush', badgeHot: '🔥 Hot', badgeNew: '✨ Deal', badgeRec: '👍 Pick',
+          legendRush: '⚡ Rush', legendRushDesc: 'Limited/Flash',
+          legendHot: '🔥 Hot', legendHotDesc: 'Best Value',
+          legendNew: '✨ Deal', legendNewDesc: '1st Month Deal',
+          legendRec: '👍 Pick', legendRecDesc: 'Recommended',
+          legendOverseas: '🌍 OS', legendOverseasDesc: 'Needs VPN',
+        }
+      };
+      var LANG_KEY = 'ainav-lang', currentLang = localStorage.getItem(LANG_KEY) || 'zh';
+      function applyLang(lang) {
+        if (lang !== 'zh' && lang !== 'en') lang = 'zh';
+        currentLang = lang;
+        document.documentElement.setAttribute('lang', lang === 'en' ? 'en' : 'zh-CN');
+        try { localStorage.setItem(LANG_KEY, lang); } catch(e){}
+        var dict = i18n[lang];
+        document.title = dict.pageTitle;
+        var metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.setAttribute('content', dict.pageDesc);
+        document.querySelectorAll('[data-i18n]').forEach(function(el) {
+          var key = el.getAttribute('data-i18n');
+          if (dict[key] !== undefined) el.textContent = dict[key];
+        });
+        var nl = document.querySelectorAll('.cp-nav a');
+        if (nl[0]) nl[0].textContent = dict.navHome; if (nl[1]) nl[1].textContent = dict.navCoding;
+        if (nl[2]) nl[2].textContent = dict.navAgent; if (nl[3]) nl[3].textContent = dict.navVideo;
+        if (nl[4]) nl[4].textContent = dict.navImage; if (nl[5]) nl[5].textContent = dict.navEncyclopedia;
+        document.querySelectorAll('.theme-btn:not(.lang-btn)').forEach(function(b) {
+          var s = b.getAttribute('data-theme-set');
+          if (s === 'system') b.textContent = dict.themeSystem;
+          else if (s === 'light') b.textContent = dict.themeLight;
+          else if (s === 'dark') b.textContent = dict.themeDark;
+        });
+        // Legend
+        var legendItems = document.querySelectorAll('.cp-legend-item');
+        var legendKeys = [
+          { badge: 'badge-rush', key: 'legendRush', descKey: 'legendRushDesc' },
+          { badge: 'badge-hot', key: 'legendHot', descKey: 'legendHotDesc' },
+          { badge: 'badge-new', key: 'legendNew', descKey: 'legendNewDesc' },
+          { badge: 'badge-rec', key: 'legendRec', descKey: 'legendRecDesc' },
+          { badge: 'badge-overseas', key: 'legendOverseas', descKey: 'legendOverseasDesc' },
+        ];
+        legendItems.forEach(function(el, idx) {
+          if (legendKeys[idx]) {
+            var k = legendKeys[idx];
+            el.innerHTML = '<span class="cp-badge ' + k.badge + '">' + dict[k.key] + '</span> ' + dict[k.descKey];
+          }
+        });
+        // Section headings
+        document.querySelectorAll('.cp-section-hd').forEach(function(el) {
+          var txt = el.textContent.trim();
+          if (txt.indexOf('国内') !== -1) el.innerHTML = '<span class="cp-flag">🇨🇳</span> ' + dict.sectionDomestic;
+          else if (txt.indexOf('海外') !== -1) el.innerHTML = '<span class="cp-flag">🌍</span> ' + dict.sectionOverseas;
+          else if (txt.indexOf('开源') !== -1 || txt.indexOf('Open') !== -1) el.innerHTML = '<span class="cp-flag">🔓</span> ' + dict.sectionOss;
+        });
+        // Table headers
+        document.querySelectorAll('.cp-table thead th').forEach(function(th) {
+          var t = th.textContent.trim();
+          if (t === '类型') th.textContent = dict.thType;
+          else if (t === '价格') th.textContent = dict.thPrice;
+          else if (t === '接入方式') th.textContent = dict.thAccess;
+          else if (t === '备注') th.textContent = dict.thNote;
+          else if (t === '套餐') th.textContent = dict.thPlan;
+          else if (t === '核心模型') th.textContent = dict.thModel;
+        });
+        // H2s
+        document.querySelectorAll('.cp-matrix-section h2, .cp-trend-section h2').forEach(function(el) {
+          var t = el.textContent.trim();
+          if (t.indexOf('功能对比矩阵') !== -1) el.textContent = dict.sectionMatrix;
+          else if (t.indexOf('趋势分析') !== -1) el.textContent = dict.sectionTrend;
+          else if (t.indexOf('Stars') !== -1) el.textContent = dict.sectionStars;
+          else if (t.indexOf('月费') !== -1) el.textContent = dict.sectionPrice;
+        });
+        document.querySelectorAll('.cp-tips h2').forEach(function(el) {
+          if (el.textContent.indexOf('场景推荐') !== -1) el.textContent = dict.sectionRec;
+        });
+        var trendSub = document.querySelector('.cp-trend-sub');
+        if (trendSub) trendSub.textContent = dict.trendSub;
+        // Inline badges
+        document.querySelectorAll('.cp-badge.badge-rush').forEach(function(el) { el.textContent = dict.badgeRush; });
+        document.querySelectorAll('.cp-badge.badge-hot').forEach(function(el) { el.textContent = dict.badgeHot; });
+        document.querySelectorAll('.cp-badge.badge-new').forEach(function(el) { el.textContent = dict.badgeNew; });
+        document.querySelectorAll('.cp-badge.badge-rec').forEach(function(el) { el.textContent = dict.badgeRec; });
+        // Footer
+        var fp = document.querySelectorAll('.cp-footer p');
+        if (fp[1]) fp[1].textContent = dict.footer;
+        if (fp[1]) fp[1].innerHTML = '<a href="index.html">' + dict.footerHome + '</a>';
+        // Promo
+        var pb = document.querySelector('.cp-wrap > div:first-child');
+        if (pb) {
+          pb.innerHTML = '<span style="color:var(--muted)">' + dict.promoText + '</span> <strong style="color:var(--text)">GPT-5</strong> <span style="color:var(--muted)">' + dict.promoOr + '</span> <strong style="color:var(--text)">Claude Opus 4.8</strong> <span style="color:var(--muted)">' + dict.promoOr + '</span> <strong style="color:var(--text)">Gemini 3.1 Pro</strong> <span style="color:var(--muted)">' + dict.promoNoNet + '</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--accent2);font-weight:600;text-decoration:none;">OfoxAI</a> <span style="color:var(--muted)">' + dict.promoDesc + '</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">' + dict.promoCta + '</a>';
+        }
+        document.querySelectorAll('.lang-btn').forEach(function(b) {
+          b.classList.toggle('is-active', b.getAttribute('data-lang-set') === lang);
+        });
+      }
+      applyLang(currentLang);
+      document.querySelectorAll('.lang-btn').forEach(function(b) {
+        b.addEventListener('click', function() { applyLang(b.getAttribute('data-lang-set')); });
+      });
+    })();
+  </script>
+<script src="plan-nav.js" data-active="agent-plan.html"></script>
+<script src="thinking-framework.js"></script><script>document.addEventListener("click",function(e){var c=e.target.closest(".plan-promo-code");if(!c)return;e.preventDefault();var code=c.getAttribute("data-code")||c.textContent.trim();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(code).then(function(){c.textContent=code+" 已复制";setTimeout(function(){c.textContent=code},1500)})}else{var ta=document.createElement("textarea");ta.value=code;ta.style.cssText="position:fixed;left:-9999px";document.body.appendChild(ta);ta.select();try{document.execCommand("copy");c.textContent=code+" 已复制";setTimeout(function(){c.textContent=code},1500)}catch(ex){}document.body.removeChild(ta)}});</script>
+</body>
+</html>

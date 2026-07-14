@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Music Plan 音乐套餐横评 — AINav</title>
+  <meta name="description" content="AI音乐生成套餐横向对比：Suno、Udio、Mureka、Stable Audio、Krea Music等价格功能对比。">
+  <link rel="canonical" href="https://aiv123.com/music-plan.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI Music Plan 音乐套餐横评">
+  <meta property="og:description" content="国内外AI音乐生成套餐价格功能对比，场景推荐与趋势分析。">
+  <meta property="og:url" content="https://aiv123.com/music-plan.html">
+  <meta property="og:site_name" content="AINav">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%230969da'/><text x='50' y='72' font-size='60' text-anchor='middle' fill='white' font-family='system-ui' font-weight='700'>AI</text></svg>">
+  <style>
+    :root,html[data-theme="dark"]{--bg:#0f1419;--panel:#151b23;--card:#1c2430;--border:#2d3848;--text:#e6edf3;--muted:#8b9cb3;--accent:#58a6ff;--accent2:#3fb950;--warn:#d29922;--danger:#f85149;--hot:#ff6b6b;--overseas:#a78bfa}
+    html[data-theme="light"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;--text:#1f2328;--muted:#59636e;--accent:#0969da;--accent2:#1a7f37;--warn:#9a6700;--danger:#cf222e;--hot:#e53935;--overseas:#7c3aed}
+    @media(prefers-color-scheme:light){html[data-theme="system"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;--text:#1f2328;--muted:#59636e;--accent:#0969da;--accent2:#1a7f37;--warn:#9a6700;--danger:#cf222e;--hot:#e53935;--overseas:#7c3aed}}
+    *{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+    .cp-top{padding:.75rem 1rem;border-bottom:1px solid var(--border);background:var(--panel);position:sticky;top:0;z-index:10}
+    .cp-top-inner{max-width:76rem;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;justify-content:space-between}
+    .cp-nav a{font-weight:600;margin-right:1rem;font-size:.88rem}
+    .cp-toolbar{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center}
+    .theme-btn{font-size:.72rem;padding:.2rem .5rem;border-radius:5px;border:1px solid var(--border);background:var(--card);color:var(--muted);cursor:pointer;font-family:inherit}
+    .theme-btn.is-active{color:var(--accent);border-color:var(--accent);font-weight:600}.lang-btn{margin-left:.35rem}
+    .cp-wrap{max-width:76rem;margin:0 auto;padding:1rem}h1{font-size:1.35rem;margin:0 0 .3rem}
+    .cp-subtitle{font-size:.88rem;color:var(--muted);margin-bottom:1rem}
+    .cp-section-hd{font-size:1.1rem;font-weight:700;margin:1.8rem 0 .8rem;padding-bottom:.3rem;border-bottom:2px solid var(--border);display:flex;align-items:center;gap:.5rem}
+    .cp-section-hd .cp-flag{font-size:1.15rem}.cp-section-hd.overseas-hd{border-bottom-color:var(--overseas)}
+    .cp-legend{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:1.2rem;font-size:.82rem}
+    .cp-legend-item{display:flex;align-items:center;gap:.3rem}
+    .cp-badge{display:inline-block;padding:.1rem .45rem;border-radius:4px;font-size:.72rem;font-weight:600}
+    .badge-hot{background:rgba(255,107,107,.15);color:var(--hot);border:1px solid rgba(255,107,107,.3)}
+    .badge-new{background:rgba(63,185,80,.15);color:var(--accent2);border:1px solid rgba(63,185,80,.3)}
+    .badge-rec{background:rgba(88,166,255,.15);color:var(--accent);border:1px solid rgba(88,166,255,.3)}
+    .badge-overseas{background:rgba(167,139,250,.15);color:var(--overseas);border:1px solid rgba(167,139,250,.3)}
+    .badge-free{background:rgba(63,185,80,.15);color:var(--accent2);border:1px solid rgba(63,185,80,.3)}
+    .badge-digital{background:rgba(240,136,62,.15);color:#f0883e;border:1px solid rgba(240,136,62,.3)}
+    .cp-platforms{display:grid;grid-template-columns:1fr;gap:1.2rem}
+    @media(min-width:52rem){.cp-platforms{grid-template-columns:1fr 1fr}}
+    .cp-platform{border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden}
+    .cp-platform.overseas{border-color:rgba(167,139,250,.3)}
+    .cp-platform-head{padding:.75rem 1rem;border-bottom:1px solid var(--border);display:flex;flex-wrap:wrap;align-items:center;gap:.5rem}
+    .cp-platform.overseas .cp-platform-head{border-bottom-color:rgba(167,139,250,.2)}
+    .cp-platform-name{font-size:1.05rem;font-weight:700}.cp-platform-name a{color:var(--text)}
+    .cp-platform-name a:hover{color:var(--accent);text-decoration:none}
+    .cp-platform-body{padding:.75rem 1rem}
+    .cp-table{width:100%;border-collapse:collapse;font-size:.82rem}
+    .cp-table th{text-align:left;font-weight:600;color:var(--muted);padding:.3rem .5rem;border-bottom:1px solid var(--border);font-size:.76rem;white-space:nowrap}
+    .cp-table td{padding:.4rem .5rem;border-bottom:1px solid var(--border);vertical-align:top}
+    .cp-table tr:last-child td{border-bottom:none}
+    .cp-table .plan-name{font-weight:600;white-space:nowrap}
+    .cp-table .plan-price{white-space:nowrap;color:var(--accent2);font-weight:600}
+    .cp-table .plan-limit{font-size:.76rem;color:var(--muted)}
+    .feat-tags{display:flex;flex-wrap:wrap;gap:.25rem;margin-top:.4rem}
+    .feat-tag{font-size:.68rem;padding:.1rem .35rem;border-radius:3px;background:rgba(88,166,255,.08);border:1px solid rgba(88,166,255,.15);color:var(--accent);font-weight:500}
+    .feat-tag.yes{background:rgba(63,185,80,.1);border-color:rgba(63,185,80,.2);color:var(--accent2)}
+    .feat-tag.no{background:transparent;border-color:rgba(139,156,179,.15);color:var(--muted);opacity:.5}
+    .cp-matrix-section{margin-top:2rem}.cp-matrix-section h2{font-size:1.1rem;margin-bottom:.5rem}
+    .cp-matrix-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:8px;background:var(--card)}
+    .cp-matrix{width:100%;border-collapse:collapse;font-size:.8rem}
+    .cp-matrix th,.cp-matrix td{padding:.35rem .55rem;border:1px solid var(--border);text-align:center;white-space:nowrap}
+    .cp-matrix th{background:var(--panel);font-weight:600;color:var(--muted);font-size:.74rem;position:sticky;top:0}
+    .cp-matrix th:first-child,.cp-matrix td:first-child{text-align:left;position:sticky;left:0;background:var(--card);z-index:1;font-weight:600}
+    .cp-matrix th:first-child{z-index:2;background:var(--panel)}
+    .cp-matrix .yes{color:var(--accent2);font-weight:700}.cp-matrix .no{color:var(--muted);opacity:.4}
+    .cp-bar-chart{margin-top:.5rem}
+    .cp-bar-row{display:flex;align-items:center;gap:.5rem;margin-bottom:.35rem;font-size:.78rem}
+    .cp-bar-label{width:6.5rem;text-align:right;color:var(--muted);flex-shrink:0}
+    .cp-bar-track{flex:1;height:1.1rem;background:var(--border);border-radius:4px;overflow:hidden}
+    .cp-bar-fill{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:.4rem;font-size:.7rem;font-weight:600;color:#fff;white-space:nowrap}
+    .cp-bar-fill.bar-domestic{background:linear-gradient(90deg,#3fb950,#2ea043)}
+    .cp-bar-fill.bar-overseas{background:linear-gradient(90deg,#a78bfa,#7c3aed)}
+    .cp-bar-fill.bar-hot{background:linear-gradient(90deg,#ff6b6b,#e53935)}
+    .cp-bar-fill.bar-warn{background:linear-gradient(90deg,#d29922,#bb8009)}
+    .cp-notice{margin-top:2rem;padding:0;border:1px solid rgba(210,153,34,0.35);border-radius:10px;background:var(--card);overflow:hidden}
+    .cp-notice-head{padding:0.65rem 1rem;border-bottom:1px solid rgba(210,153,34,0.2);font-weight:700;font-size:1rem;background:rgba(210,153,34,0.06)}
+    .cp-notice-body{padding:0.75rem 1rem;font-size:0.82rem;line-height:1.75}
+    .cp-notice-body ul{padding-left:1.2rem;margin:0.5rem 0 0}.cp-notice-body li{margin-bottom:0.45rem}
+    .cp-notice-body strong{color:var(--warn)}.cp-notice-body code{font-size:0.78rem;padding:0.1rem 0.35rem;border-radius:4px;background:rgba(210,153,34,0.1);border:1px solid rgba(210,153,34,0.2);color:var(--warn);font-family:inherit}
+    .cp-faq{margin-top:2rem;border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden}
+    .cp-faq-head{padding:0.65rem 1rem;border-bottom:1px solid var(--border);font-weight:700;font-size:1rem}
+    .cp-faq-item{border-bottom:1px solid var(--border)}.cp-faq-item:last-child{border-bottom:none}
+    .cp-faq-q{padding:0.6rem 1rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:0.88rem;user-select:none;transition:background 0.15s}
+    .cp-faq-q:hover{background:rgba(88,166,255,0.04)}.cp-faq-q .cp-faq-arrow{font-size:0.72rem;color:var(--muted);transition:transform 0.2s;flex-shrink:0;margin-left:0.5rem}
+    .cp-faq-item.is-open .cp-faq-q .cp-faq-arrow{transform:rotate(180deg)}
+    .cp-faq-a{padding:0 1rem;max-height:0;overflow:hidden;transition:max-height 0.25s ease,padding 0.25s ease;font-size:0.82rem;line-height:1.7;color:var(--muted)}
+    .cp-faq-item.is-open .cp-faq-a{max-height:20rem;padding:0 1rem 0.75rem}.cp-faq-a strong{color:var(--text)}
+    .cp-value-rank{margin-top:2rem;border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden}
+    .cp-value-rank-head{padding:0.65rem 1rem;border-bottom:1px solid var(--border);font-weight:700;font-size:1rem}
+    .cp-value-rank-body{padding:0.75rem 1rem}.cp-value-rank .cp-table .val-high{color:var(--accent2);font-weight:700}
+    .cp-value-rank .cp-table .val-mid{color:var(--accent);font-weight:600}.cp-value-rank .cp-table .val-low{color:var(--muted)}
+    .cp-tips{margin-top:2rem;padding:0;border:1px solid var(--border);border-radius:8px;background:var(--card);overflow:hidden}
+    .cp-tips h2{font-size:1rem;margin:0}
+    .cp-updated-line { font-size: 0.76rem; color: var(--muted); margin: 0 0 0.3rem; }
+.cp-footer {max-width:76rem;margin:2rem auto 1rem;padding:0 1rem;font-size:.76rem;color:var(--muted);text-align:center}
+    .cp-footer a{color:var(--muted)}
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2B8FBWRX4N"></script>
+    <script>
+    (function(){
+      var i18n={"zh":{"pageTitle":"AI Music Plan 音乐套餐横评 — AINav","pageDesc":"国内外 AI 音乐生成套餐一站式对比：Suno、Udio、Mureka、Stable Audio 等价格功能对比。","title":"🎵 AI Music Plan 音乐套餐横评","subtitle":"国内外 AI 音乐生成套餐一站式对比：价格、生成次数、商用权、音质，帮你选出最划算的 AI 作曲方案。","navHome":"← AINav 首页","navCoding":"编程套餐横评","navAgent":"Agent横评","navVideo":"视频套餐横评","navImage":"图像套餐横评","navMusic":"音乐套餐横评","navSearch":"搜索套餐横评","navVoice":"语音套餐横评","navLearning":"学习套餐横评","navEncyclopedia":"AI百科","themeSystem":"跟随系统","themeLight":"浅色","themeDark":"深色","sectionDomestic":"国内 AI 音乐平台","sectionOverseas":"海外 AI 音乐平台","sectionMatrix":"📊 功能对比矩阵","sectionPrice":"💰 月费对比（入门付费套餐）","sectionRec":"🎯 场景推荐 — 按需求选最适合的音乐方案","sectionTrend":"📈 AI 音乐生成趋势","thPlan":"套餐","thPrice":"月价","thCredits":"生成次数/月","thDuration":"时长","thNote":"备注","thCommercial":"商用","thType":"类型","footer":"数据来源：各平台官网 · 价格以官网为准","footerHome":"← 返回 AINav 首页","promoCta":"立即注册","legendHot":"🔥 热门","legendHotDesc":"高人气","legendNew":"✨ 新品","legendNewDesc":"新上线","legendRec":"👍 推荐","legendRecDesc":"综合推荐","legendOverseas":"🌍 海外","legendOverseasDesc":"需国际网络","legendFree":"🆓 免费版","legendFreeDesc":"零成本体验"},"en":{"pageTitle":"AI Music Plan Comparison — AINav","pageDesc":"One-stop comparison of AI music generation plans worldwide: Suno, Udio, Mureka, Stable Audio pricing and features.","title":"🎵 AI Music Plan Comparison","subtitle":"One-stop comparison of AI music generation plans worldwide: pricing, credits, commercial rights, and quality.","navHome":"← AINav Home","navCoding":"Coding Plans","navAgent":"Agents","navVideo":"Video Plans","navImage":"Image Plans","navMusic":"Music Plans","navSearch":"Search Plans","navVoice":"Voice Plans","navLearning":"Learning Plans","navEncyclopedia":"AI Encyclopedia","themeSystem":"System","themeLight":"Light","themeDark":"Dark","sectionDomestic":"Domestic AI Music Platforms","sectionOverseas":"Overseas AI Music Platforms","sectionMatrix":"📊 Feature Comparison Matrix","sectionPrice":"💰 Monthly Price Comparison (Entry Plans)","sectionRec":"🎯 Recommendations — Find the Best Music Plan for Your Needs","sectionTrend":"📈 AI Music Generation Trends","thPlan":"Plan","thPrice":"Price","thCredits":"Generations/Mo","thDuration":"Duration","thNote":"Note","thCommercial":"Commercial","thType":"Type","footer":"Data sources: Official websites · Prices subject to change","footerHome":"← Back to AINav Home","promoText":"Want","promoOr":"/","promoNoNet":"but no VPN?","promoDesc":"One API Key for 100+ top models, direct access in China, low latency, OpenAI-compatible format","promoCta":"Sign Up →","legendHot":"🔥 Hot","legendHotDesc":"Popular","legendNew":"✨ New","legendNewDesc":"Recently launched","legendRec":"👍 Pick","legendRecDesc":"Recommended","legendOverseas":"🌍 OS","legendOverseasDesc":"Needs VPN","legendFree":"🆓 Free","legendFreeDesc":"Zero cost"}};
+      var LANG_KEY='ainav-lang',currentLang=localStorage.getItem(LANG_KEY)||'zh';
+      function applyLang(lang){
+        if(lang!=='zh'&&lang!=='en')lang='zh';currentLang=lang;
+        document.documentElement.setAttribute('lang',lang==='en'?'en':'zh-CN');
+        try{localStorage.setItem(LANG_KEY,lang)}catch(e){}
+        var dict=i18n[lang];
+        document.title=dict.pageTitle;
+        var metaDesc=document.querySelector('meta[name="description"]');
+        if(metaDesc)metaDesc.setAttribute('content',dict.pageDesc);
+        document.querySelectorAll('[data-i18n]').forEach(function(el){var key=el.getAttribute('data-i18n');if(dict[key]!==undefined)el.textContent=dict[key]});
+        var nl=document.querySelectorAll('.cp-nav a');
+        if(nl[0])nl[0].textContent=dict.navHome;if(nl[1])nl[1].textContent=dict.navCoding;
+        if(nl[2])nl[2].textContent=dict.navAgent;if(nl[3])nl[3].textContent=dict.navVideo;
+        if(nl[4])nl[4].textContent=dict.navImage;if(nl[5])nl[5].textContent=dict.navMusic;
+        if(nl[6])nl[6].textContent=dict.navSearch;if(nl[7])nl[7].textContent=dict.navVoice;
+        if(nl[8])nl[8].textContent=dict.navLearning;if(nl[9])nl[9].textContent=dict.navEncyclopedia;
+        document.querySelectorAll('.theme-btn:not(.lang-btn)').forEach(function(b){
+          var s=b.getAttribute('data-theme-set');
+          if(s==='system')b.textContent=dict.themeSystem;
+          else if(s==='light')b.textContent=dict.themeLight;
+          else if(s==='dark')b.textContent=dict.themeDark;
+        });
+        // Legend
+        var legendItems=document.querySelectorAll('.cp-legend-item');
+        var lk=[
+          {badge:'badge-hot',key:'legendHot',descKey:'legendHotDesc'},
+          {badge:'badge-new',key:'legendNew',descKey:'legendNewDesc'},
+          {badge:'badge-rec',key:'legendRec',descKey:'legendRecDesc'},
+          {badge:'badge-overseas',key:'legendOverseas',descKey:'legendOverseasDesc'},
+          {badge:'badge-free',key:'legendFree',descKey:'legendFreeDesc'},
+        ];
+        legendItems.forEach(function(el,idx){
+          if(lk[idx]){var k=lk[idx];el.innerHTML='<span class="cp-badge '+k.badge+'">'+dict[k.key]+'</span> '+dict[k.descKey]}
+        });
+        // Section headings
+        document.querySelectorAll('.cp-section-hd').forEach(function(el){
+          var t=el.textContent.trim();
+          if(t.indexOf('国内')!==-1)el.innerHTML='<span class="cp-flag">🇨🇳</span> '+dict.sectionDomestic;
+          else if(t.indexOf('海外')!==-1)el.innerHTML='<span class="cp-flag">🌍</span> '+dict.sectionOverseas;
+        });
+        // Table headers
+        document.querySelectorAll('.cp-table thead th').forEach(function(th){
+          var t=th.textContent.trim();if(t==='跟随系统')th.textContent=dict.themeSystem;if(t==='浅色')th.textContent=dict.themeLight;if(t==='深色')th.textContent=dict.themeDark;if(t==='套餐')th.textContent=dict.thPlan;if(t==='月价')th.textContent=dict.thPrice;if(t==='生成次数/月')th.textContent=dict.thCredits;if(t==='时长')th.textContent=dict.thDuration;if(t==='备注')th.textContent=dict.thNote;if(t==='商用')th.textContent=dict.thCommercial;if(t==='类型')th.textContent=dict.thType;
+        });
+        // H2s
+        document.querySelectorAll('.cp-matrix-section h2,.cp-trend-section h2').forEach(function(el){
+          var t=el.textContent.trim();
+          if(t.indexOf('功能对比')!==-1||t.indexOf('Feature')!==-1)el.textContent=dict.sectionMatrix;
+          else if(t.indexOf('月费对比')!==-1||t.indexOf('Price')!==-1)el.textContent=dict.sectionPrice;
+          else if(t.indexOf('趋势')!==-1||t.indexOf('Trends')!==-1)el.textContent=dict.sectionTrend;
+        });
+        document.querySelectorAll('.cp-tips h2').forEach(function(el){
+          if(el.textContent.indexOf('场景推荐')!==-1||el.textContent.indexOf('Recommendations')!==-1)el.textContent=dict.sectionRec;
+        });
+        var fp=document.querySelectorAll('.cp-footer p');
+        if (fp[1]) fp[1].textContent = dict.footer;
+        var pb=document.querySelector('.cp-wrap > div:first-child');
+        if(pb){pb.innerHTML='<span style="color:var(--muted)">'+dict.promoText+'</span> <strong style="color:var(--text)">GPT-5</strong> <span style="color:var(--muted)">'+dict.promoOr+'</span> <strong style="color:var(--text)">Claude Opus 4.8</strong> <span style="color:var(--muted)">'+dict.promoOr+'</span> <strong style="color:var(--text)">Gemini 3.1 Pro</strong> <span style="color:var(--muted)">'+dict.promoNoNet+'</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--accent2);font-weight:600;text-decoration:none;">OfoxAI</a> <span style="color:var(--muted)">'+dict.promoDesc+'</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">'+dict.promoCta+'</a>'}
+        document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('is-active',b.getAttribute('data-lang-set')===lang)});
+      }
+      applyLang(currentLang);document.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){applyLang(b.getAttribute('data-lang-set'))})});
+    })();
+  </script>
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2d49f38b39c743ac80b6d6b9ff99494d"}'></script>
+</head>
+<body>
+  <div class="cp-top"><div class="cp-top-inner">
+    <div class="cp-nav" data-plan-nav></div>
+    <div class="cp-toolbar">
+      <button type="button" class="theme-btn" data-theme-set="system">跟随系统</button>
+      <button type="button" class="theme-btn" data-theme-set="light">浅色</button>
+      <button type="button" class="theme-btn" data-theme-set="dark">深色</button>
+      <button type="button" class="theme-btn lang-btn" data-lang-set="zh">中</button>
+      <button type="button" class="theme-btn lang-btn" data-lang-set="en">EN</button>
+    </div>
+  </div></div>
+
+  <div class="cp-wrap">
+    <div style="margin-bottom:1rem;padding:.55rem .85rem;border-radius:8px;border:1px solid var(--border);background:var(--card);display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.35rem .6rem;font-size:.84rem;line-height:1.5;">
+      <span style="color:var(--muted)"><strong style="color:var(--text)">OpenAI: GPT-5</strong> <span style="color:var(--muted)">·</span> <strong style="color:var(--text)">Anthropic: Claude Opus 4.8</strong> <span style="color:var(--muted)">·</span> <strong style="color:var(--text)">Google: Gemini 3.1 Pro</strong> <span style="color:var(--muted)">· 国内直连免梯</span> <span class="plan-promo-code" data-code="AFF_BB0FNC" style="color:var(--accent2);font-weight:600;cursor:pointer" title="点击复制优惠码">$2优惠码 AFF_BB0FNC</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">立即注册</a>
+    </div>
+    <h1 data-i18n="title">🎵 AI Music Plan 音乐套餐横评</h1>
+    <p class="cp-subtitle" data-i18n="subtitle">国内外 AI 音乐生成套餐一站式对比：价格、生成次数、商用权、音质，帮你选出最划算的 AI 作曲方案。</p>
+
+    
+    <p class="cp-updated-line"><span class="cp-updated">最后更新：2026-06-26</span></p>
+    <div class="cp-legend">
+      <div class="cp-legend-item"><span class="cp-badge badge-hot">🔥 热门</span> 高人气</div>
+      <div class="cp-legend-item"><span class="cp-badge badge-new">✨ 新品</span> 新上线</div>
+      <div class="cp-legend-item"><span class="cp-badge badge-rec">👍 推荐</span> 综合推荐</div>
+      <div class="cp-legend-item"><span class="cp-badge badge-overseas">🌍 海外</span> 需国际网络</div>
+      <div class="cp-legend-item"><span class="cp-badge badge-free">🆓 免费版</span> 零成本体验</div>
+    </div>
+
+    <!-- ==================== 国内 AI 音乐平台 ==================== -->
+    <div class="cp-section-hd"><span class="cp-flag">🇨🇳</span> 国内 AI 音乐平台</div>
+    <div class="cp-platforms">
+
+            <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://y.qq.com/tianqin/" target="_blank" rel="noopener noreferrer">腾讯天琴</a></span>
+          <span class="cp-badge badge-new">✨ 新品</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>说明</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">免费版</td><td class="plan-price">¥0</td><td>有限次数</td><td>QQ音乐内体验</td></tr>
+              <tr><td class="plan-name">会员版</td><td class="plan-price">含QQ音乐会员</td><td>更多生成次数</td><td>18元/月起</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+<span class="feat-tag yes">中文优化</span><span class="feat-tag yes">人声</span><span class="feat-tag no">商用</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">腾讯QQ音乐旗下，中文歌曲生成优化，人声质量不错，需在QQ音乐App内使用</div>
+        </div>
+      </div>
+
+            <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://tianyin.163.com/" target="_blank" rel="noopener noreferrer">网易天音</a></span>
+          
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>说明</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">免费版</td><td class="plan-price">¥0</td><td>有限次数</td><td>带水印</td></tr>
+              <tr><td class="plan-name">会员版</td><td class="plan-price">含网易云音乐会员</td><td>更多生成次数</td><td>8元/月起</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+<span class="feat-tag yes">中文优化</span><span class="feat-tag yes">配乐</span><span class="feat-tag no">商用</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">网易云音乐旗下，适合中文流行歌曲生成，与网易云生态深度整合</div>
+        </div>
+      </div>
+
+            <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://www.tiangong.cn/" target="_blank" rel="noopener noreferrer">昆仑万维天工SkyMusic</a></span>
+          <span class="cp-badge badge-hot">🔥 热门</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>说明</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">免费版</td><td class="plan-price">¥0</td><td>有限次数/日</td><td>每日刷新</td></tr>
+              <tr><td class="plan-name">会员版</td><td class="plan-price">¥30/月</td><td>更多生成次数</td><td>去除水印</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+<span class="feat-tag yes">中文优化</span><span class="feat-tag yes">多种风格</span><span class="feat-tag yes">商用</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">天工AI旗下音乐生成，中文歌词+旋律一体化，支持多种音乐风格</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ==================== 海外 AI 音乐平台 ==================== -->
+    <div class="cp-section-hd overseas-hd"><span class="cp-flag">🌍</span> 海外 AI 音乐平台</div>
+    <div class="cp-platforms">
+
+            <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://suno.com/" target="_blank" rel="noopener noreferrer">Suno</a></span>
+          <span class="cp-badge badge-hot">🔥 热门</span> <span class="cp-badge badge-rec">👍 推荐</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>生成次数/月</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">Free</td><td class="plan-price">$0</td><td>10首/日</td><td>非商用+署名</td></tr>
+              <tr><td class="plan-name">Pro <span class="cp-badge badge-rec">👍</span></td><td class="plan-price">$10/月</td><td>~500 credits</td><td>商用权</td></tr>
+              <tr><td class="plan-name">Premier</td><td class="plan-price">$30/月</td><td>2000首</td><td>商用权+优先</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+<span class="feat-tag yes">人声</span><span class="feat-tag yes">纯音乐</span><span class="feat-tag yes">歌词生成</span><span class="feat-tag yes">商用</span><span class="feat-tag yes">API</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">AI音乐生成领域标杆，v4.5 模型人声自然度领先，支持歌词自动生成+多风格（额度以 credits 计）</div>
+        </div>
+      </div>
+
+            <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://www.udio.com/" target="_blank" rel="noopener noreferrer">Udio</a></span>
+          <span class="cp-badge badge-hot">🔥 热门</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>生成次数/月</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">Free</td><td class="plan-price">$0</td><td>10首/日</td><td>非商用</td></tr>
+              <tr><td class="plan-name">Standard</td><td class="plan-price">$10/月</td><td>400首</td><td>商用权</td></tr>
+              <tr><td class="plan-name">Pro</td><td class="plan-price">$30/月</td><td>~1,500 credits</td><td>商用权+优先</td></tr>
+              <tr><td class="plan-name">Ultra</td><td class="plan-price">$60/月</td><td>3000首</td><td>商用权+最优先</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+<span class="feat-tag yes">人声</span><span class="feat-tag yes">纯音乐</span><span class="feat-tag yes">音质</span><span class="feat-tag yes">商用</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">音质天花板，人声细节和混音水准最高，适合专业音乐制作</div>
+        </div>
+      </div>
+
+            <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://www.mureka.ai/" target="_blank" rel="noopener noreferrer">Mureka</a></span>
+          <span class="cp-badge badge-new">✨ 新品</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>生成次数/月</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">Free</td><td class="plan-price">$0</td><td>有限次数</td><td>带水印</td></tr>
+              <tr><td class="plan-name">Creator</td><td class="plan-price">$10/月</td><td>200首</td><td>商用权</td></tr>
+              <tr><td class="plan-name">Pro</td><td class="plan-price">$30/月</td><td>800首</td><td>商用+优先</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+<span class="feat-tag yes">人声</span><span class="feat-tag yes">纯音乐</span><span class="feat-tag yes">商用</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">新兴AI音乐平台，生成质量快速追赶Suno/Udio，价格有竞争力</div>
+        </div>
+      </div>
+
+            <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://stableaudio.com/" target="_blank" rel="noopener noreferrer">Stable Audio</a></span>
+          <span class="cp-badge badge-overseas">🌍</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>生成次数/月</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">Free</td><td class="plan-price">$0</td><td>20首/月</td><td>非商用+30秒上限</td></tr>
+              <tr><td class="plan-name">Professional</td><td class="plan-price">$12/月</td><td>500首</td><td>商用+3分钟上限</td></tr>
+              <tr><td class="plan-name">Enterprise</td><td class="plan-price">定制</td><td>无限</td><td>API接入</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+<span class="feat-tag yes">纯音乐</span><span class="feat-tag yes">音效</span><span class="feat-tag yes">商用</span><span class="feat-tag yes">API</span><span class="feat-tag no">人声</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">StabilityAI出品，纯音乐和音效生成见长，适合配乐和背景音乐</div>
+        </div>
+      </div>
+
+            <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://www.krea.ai/" target="_blank" rel="noopener noreferrer">Krea Music</a></span>
+          <span class="cp-badge badge-new">✨ 新品</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>说明</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">Free</td><td class="plan-price">$0</td><td>有限次数</td><td>带水印</td></tr>
+              <tr><td class="plan-name">Pro</td><td class="plan-price">$18/月</td><td>更多生成+去水印</td><td>含图像/视频功能</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+<span class="feat-tag yes">人声</span><span class="feat-tag yes">纯音乐</span><span class="feat-tag yes">多模态</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">Krea旗下音乐生成功能，与图像/视频生成一体化，多模态创作平台</div>
+        </div>
+      </div>
+
+            <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://www.aiva.ai/" target="_blank" rel="noopener noreferrer">AIVA</a></span>
+          
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>说明</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">Free</td><td class="plan-price">$0</td><td>3首/月</td><td>非商用</td></tr>
+              <tr><td class="plan-name">Standard</td><td class="plan-price">$11/月</td><td>15首/月</td><td>商用权</td></tr>
+              <tr><td class="plan-name">Pro</td><td class="plan-price">$33/月</td><td>无限</td><td>商用+API</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+<span class="feat-tag yes">纯音乐</span><span class="feat-tag yes">配乐</span><span class="feat-tag yes">商用</span><span class="feat-tag yes">API</span><span class="feat-tag no">人声</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">专注配乐/纯音乐生成，影视/游戏配乐首选，不支持人声歌词</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ==================== 功能对比矩阵 ==================== -->
+    <div class="cp-matrix-section">
+      <h2>📊 功能对比矩阵</h2>
+      <div class="cp-matrix-wrap">
+        <table class="cp-matrix">
+          <thead><tr><th>平台</th><th>人声歌词</th><th>纯音乐</th><th>音效</th><th>中文优化</th><th>商用权</th><th>API</th><th>免费版</th><th>最长时长</th></tr></thead>
+          <tbody>
+            <tr><td>腾讯天琴</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td>—</td><td>—</td><td class="yes">✓</td><td>~3min</td></tr>
+            <tr><td>网易天音</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td>—</td><td>—</td><td class="yes">✓</td><td>~3min</td></tr>
+            <tr><td>天工SkyMusic</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td>~3min</td></tr>
+            <tr><td>Suno</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td>4min</td></tr>
+            <tr><td>Udio</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td>—</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td>4min</td></tr>
+            <tr><td>Mureka</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td>—</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td>~3min</td></tr>
+            <tr><td>Stable Audio</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td>3min</td></tr>
+            <tr><td>Krea Music</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td>—</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td>~3min</td></tr>
+            <tr><td>AIVA</td><td>—</td><td class="yes">✓</td><td>—</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td>3min</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ==================== 月费对比 ==================== -->
+    <div class="cp-matrix-section">
+      <h2>💰 月费对比（入门付费套餐）</h2>
+      <div style="border:1px solid var(--border);border-radius:10px;background:var(--card);padding:1rem;">
+        <div style="font-weight:700;font-size:.88rem;margin-bottom:.6rem">入门付费套餐月费对比</div>
+        <div class="cp-bar-chart">
+          <div class="cp-bar-row"><span class="cp-bar-label">天工SkyMusic</span><div class="cp-bar-track"><div class="cp-bar-fill bar-domestic" style="width:15%">¥30</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">Suno Pro</span><div class="cp-bar-track"><div class="cp-bar-fill bar-overseas" style="width:17%">$10</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">Udio Standard</span><div class="cp-bar-track"><div class="cp-bar-fill bar-overseas" style="width:17%">$10</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">Mureka Creator</span><div class="cp-bar-track"><div class="cp-bar-fill bar-overseas" style="width:17%">$10</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">AIVA Standard</span><div class="cp-bar-track"><div class="cp-bar-fill bar-overseas" style="width:18%">$11</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">Stable Audio Pro</span><div class="cp-bar-track"><div class="cp-bar-fill bar-overseas" style="width:20%">$12</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">Krea Pro</span><div class="cp-bar-track"><div class="cp-bar-fill bar-overseas" style="width:30%">$18</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">Suno Premier</span><div class="cp-bar-track"><div class="cp-bar-fill bar-hot" style="width:50%">$30</div></div></div>
+        </div>
+        <div style="font-size:.72rem;color:var(--muted);margin-top:.5rem">🟢 国内 &nbsp; 🟣 海外 &nbsp; 🔴 重度使用 &nbsp;· Suno Pro $10/月500首为性价比之王</div>
+      </div>
+    </div>
+
+    <!-- ==================== 场景推荐 ==================== -->
+    <div class="cp-tips" style="margin-top:2rem;">
+      <div style="padding:.75rem 1rem;border-bottom:1px solid var(--border);">
+        <h2>🎯 场景推荐 — 按需求选最适合的音乐方案</h2>
+      </div>
+      <div style="padding:.75rem 1rem;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div style="padding:.75rem;border-radius:8px;border:1px solid rgba(63,185,80,.25);background:rgba(63,185,80,.04);">
+            <div style="font-weight:700;font-size:.88rem;margin-bottom:.5rem;">🎤 歌曲创作 / 社交分享</div>
+            <div style="font-size:.8rem;line-height:1.7;">
+              <div>🏆 <strong>首选：</strong><a href="https://suno.com/" target="_blank" rel="noopener noreferrer">Suno Pro</a> $10/月 — ~500 credits + 商用权</div>
+              <div>💰 <strong>省钱：</strong>Udio Standard $10/月 — 音质更好</div>
+              <div>🇨🇳 <strong>国内：</strong>天工SkyMusic ¥30/月 — 中文优化</div>
+            </div>
+          </div>
+          <div style="padding:.75rem;border-radius:8px;border:1px solid rgba(88,166,255,.25);background:rgba(88,166,255,.04);">
+            <div style="font-weight:700;font-size:.88rem;margin-bottom:.5rem;">🎬 影视/游戏配乐</div>
+            <div style="font-size:.8rem;line-height:1.7;">
+              <div>🏆 <strong>首选：</strong><a href="https://www.aiva.ai/" target="_blank" rel="noopener noreferrer">AIVA Pro</a> $33/月 — 无限+API</div>
+              <div>💰 <strong>省钱：</strong>Stable Audio Pro $12/月 — 纯音乐+音效</div>
+              <div>🔧 <strong>API：</strong>AIVA / Stable Audio — 适合集成</div>
+            </div>
+          </div>
+          <div style="padding:.75rem;border-radius:8px;border:1px solid rgba(210,153,34,.25);background:rgba(210,153,34,.04);">
+            <div style="font-weight:700;font-size:.88rem;margin-bottom:.5rem;">🆓 免费体验 / 试水</div>
+            <div style="font-size:.8rem;line-height:1.7;">
+              <div>🏆 <strong>首选：</strong>Suno Free — 10首/日，最慷慨</div>
+              <div>🎵 <strong>音质：</strong>Udio Free — 听听天花板</div>
+              <div>🇨🇳 <strong>国内：</strong>天工SkyMusic 免费版 — 中文歌曲</div>
+            </div>
+          </div>
+          <div style="padding:.75rem;border-radius:8px;border:1px solid rgba(167,139,250,.25);background:rgba(167,139,250,.04);">
+            <div style="font-weight:700;font-size:.88rem;margin-bottom:.5rem;">📦 商用 / 内容创作者</div>
+            <div style="font-size:.8rem;line-height:1.7;">
+              <div>🏆 <strong>首选：</strong>Suno Pro $10/月 — 商用权 + ~500 credits</div>
+              <div>🎬 <strong>配乐：</strong>Stable Audio Pro $12/月 — 商用+音效</div>
+              <div>⚠️ <strong>注意：</strong>免费版通常不可商用，必须订阅</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== 注意事项 ==================== -->
+    <div class="cp-notice">
+      <div class="cp-notice-head">⚠️ 注意事项 — 音乐套餐买前必读</div>
+      <div class="cp-notice-body">
+        <ul>
+          <li><strong>免费版通常不可商用：</strong>Suno/Udio免费版生成的音乐仅限个人欣赏，商用必须订阅付费版。</li>
+          <li><strong>"生成次数"指完整歌曲：</strong>大多数平台1次=1首完整歌曲(2-4分钟)，不是1次=1段音频。</li>
+          <li><strong>中文歌词质量仍不如英文：</strong>Suno/Udio的中文歌词生成常有语法不通，天工SkyMusic中文更自然。</li>
+          <li><strong>版权争议未定：</strong>美国版权局裁定AI生成音乐不受版权保护，商用需选有明确授权的平台。</li>
+          <li><strong>音质差异大：</strong>免费版通常输出MP3 128kbps，付费版才有320kbps/WAV，制作级用户注意。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ==================== FAQ ==================== -->
+    <div class="cp-faq">
+      <div class="cp-faq-head">❓ 常见问题 FAQ</div>
+      <div class="cp-faq-item is-open">
+        <div class="cp-faq-q">Suno 和 Udio 哪个好？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>Suno 综合更强，Udio 音质更好。</strong>Suno优势：~500 credits/月、商用权、支持更长歌曲；Udio优势：人声音质更自然、音乐细节更丰富。两者都是$10/月，建议先试免费版再决定。</div>
+      </div>
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">AI生成音乐能商用吗？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>付费版可以，免费版不行。</strong>Suno Pro/Udio Standard的付费版附带商用授权，可发布到Spotify/网易云等平台。免费版仅限个人欣赏。注意保留订阅记录作为授权证明。</div>
+      </div>
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">国内音乐平台和海外差距大吗？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>中文歌曲国内更强，英文歌曲海外领先。</strong>天工SkyMusic对中文歌词和旋律理解更自然，但整体功能不如Suno丰富。如果主要做中文歌曲，天工¥30/月性价比很高。</div>
+      </div>
+    </div>
+
+    <!-- ==================== 性价比排行 ==================== -->
+    <div class="cp-value-rank">
+      <div class="cp-value-rank-head">📊 性价比排行 — 每元歌曲数对比</div>
+      <div class="cp-value-rank-body">
+        <div style="font-size:0.78rem;color:var(--muted);margin-bottom:0.6rem;">公式：月均可生成歌曲数 ÷ 月价 = 每元歌曲数。数值越高性价比越好。</div>
+        <table class="cp-table" style="font-size:0.8rem;">
+          <thead><tr><th>排名</th><th>平台</th><th>套餐</th><th>月价</th><th>月均歌曲数(估)</th><th>每元歌曲数</th><th>性价比</th></tr></thead>
+          <tbody>
+            <tr><td>🥇</td><td class="plan-name">Suno</td><td>免费版</td><td class="plan-price">¥0</td><td>~300</td><td class="val-high">∞</td><td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:100%;height:100%;border-radius:4px;background:linear-gradient(90deg,#3fb950,#2ea043);"></div></div></td></tr>
+            <tr><td>🥈</td><td class="plan-name">天工SkyMusic</td><td>会员</td><td class="plan-price">¥30</td><td>~600</td><td class="val-high">20</td><td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:70%;height:100%;border-radius:4px;background:linear-gradient(90deg,#3fb950,#2ea043);"></div></div></td></tr>
+            <tr><td>🥉</td><td class="plan-name">Suno</td><td>Pro</td><td class="plan-price">$10</td><td>~500</td><td class="val-high">~7.2</td><td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:25%;height:100%;border-radius:4px;background:linear-gradient(90deg,#58a6ff,#388bfd);"></div></div></td></tr>
+            <tr><td>4</td><td class="plan-name">Udio</td><td>Standard</td><td class="plan-price">$10</td><td>~400</td><td class="val-mid">~5.8</td><td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:20%;height:100%;border-radius:4px;background:linear-gradient(90deg,#58a6ff,#388bfd);"></div></div></td></tr>
+            <tr><td>5</td><td class="plan-name">Stable Audio</td><td>Pro</td><td class="plan-price">$12</td><td>~500</td><td class="val-mid">~6</td><td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:21%;height:100%;border-radius:4px;background:linear-gradient(90deg,#d29922,#bb8009);"></div></div></td></tr>
+            <tr><td>6</td><td class="plan-name">AIVA</td><td>Pro</td><td class="plan-price">$33</td><td>~∞(无限)</td><td class="val-low">~∞</td><td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:50%;height:100%;border-radius:4px;background:linear-gradient(90deg,#8b9cb3,#6e7681);"></div></div></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ==================== 趋势分析 ==================== -->
+    <div class="cp-trend-section" style="margin-top:2.5rem;">
+      <h2>📈 AI 音乐生成趋势</h2>
+      <div style="border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden;">
+        <div style="padding:.8rem 1rem;font-size:.85rem;line-height:1.8;">
+          <div style="margin-bottom:1rem;">
+            <div style="font-weight:700;color:var(--accent2);margin-bottom:.3rem;">1️⃣ AI音乐从玩具到工具</div>
+            <div style="padding-left:.6rem;">
+              <div>• 2023年：AI音乐还像"电子铃声"，Suno v1只能生成30秒片段</div>
+              <div>• 2024年：Suno v3/Udio 推出完整歌曲，人声接近真人</div>
+              <div>• 2025年：Suno v4 人声自然度大幅提升，4分钟完整歌曲成为标配</div>
+              <div>• 2026年：AI音乐进入专业制作流程，商用需求爆发</div>
+            </div>
+          </div>
+          <div style="margin-bottom:1rem;">
+            <div style="font-weight:700;color:var(--danger);margin-bottom:.3rem;">2️⃣ 版权争议与合规化</div>
+            <div style="padding-left:.6rem;">
+              <div>• 美国版权局裁定AI生成音乐不受版权保护，引发行业震动</div>
+              <div>• 各大平台开始提供"商用权"订阅，明确授权范围</div>
+              <div>• 训练数据版权诉讼仍在进行中，建议商用用户选择有明确授权的平台</div>
+            </div>
+          </div>
+          <div>
+            <div style="font-weight:700;color:var(--accent);margin-bottom:.3rem;">3️⃣ 中文音乐生成崛起</div>
+            <div style="padding-left:.6rem;">
+              <div>• 海外模型（Suno/Udio）中文歌词生成质量仍不如英文</div>
+              <div>• 国内平台（天工SkyMusic/腾讯天琴）专注中文优化，歌词和旋律更自然</div>
+              <div>• 预测：2026下半年中文AI音乐质量将追平英文</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cp-footer">
+      <p>数据来源：各平台官网 · 价格以官网为准</p>
+    <p><a href="index.html">← 返回 AINav 首页</a> · <a href="free-tier.html">🆓 免费额度</a> · <a href="token-optimization.html">Token优化</a> · <a href="coding-plan.html">编程套餐横评</a> · <a href="agent-plan.html">Agent横评</a> · <a href="model-plan.html">模型选型</a></p>
+  </div>
+
+  <script>document.querySelectorAll('.cp-faq-q').forEach(function(q){q.addEventListener('click',function(){q.parentElement.classList.toggle('is-open');});});</script>
+  <script>
+    (function(){
+      var btns=document.querySelectorAll('.theme-btn:not(.lang-btn)'),html=document.documentElement;
+      function apply(t){html.setAttribute('data-theme',t);localStorage.setItem('cp-theme',t);btns.forEach(function(b){b.classList.toggle('is-active',b.getAttribute('data-theme-set')===t)})}
+      var saved=localStorage.getItem('cp-theme')||'system';apply(saved);
+      btns.forEach(function(b){b.addEventListener('click',function(){apply(b.getAttribute('data-theme-set'))})});
+    })();
+  </script>
+  <script>
+    (function(){
+      var i18n={"zh":{"pageTitle":"AI Music Plan 音乐套餐横评 — AINav","pageDesc":"国内外 AI 音乐生成套餐一站式对比：Suno、Udio、Mureka、Stable Audio 等价格功能对比。","title":"🎵 AI Music Plan 音乐套餐横评","subtitle":"国内外 AI 音乐生成套餐一站式对比：价格、生成次数、商用权、音质，帮你选出最划算的 AI 作曲方案。","navHome":"← AINav 首页","navCoding":"编程套餐横评","navAgent":"Agent横评","navVideo":"视频套餐横评","navImage":"图像套餐横评","navMusic":"音乐套餐横评","navSearch":"搜索套餐横评","navVoice":"语音套餐横评","navLearning":"学习套餐横评","navEncyclopedia":"AI百科","themeSystem":"跟随系统","themeLight":"浅色","themeDark":"深色","sectionDomestic":"国内 AI 音乐平台","sectionOverseas":"海外 AI 音乐平台","sectionMatrix":"📊 功能对比矩阵","sectionPrice":"💰 月费对比（入门付费套餐）","sectionRec":"🎯 场景推荐 — 按需求选最适合的音乐方案","sectionTrend":"📈 AI 音乐生成趋势","thPlan":"套餐","thPrice":"月价","thCredits":"生成次数/月","thDuration":"时长","thNote":"备注","thCommercial":"商用","thType":"类型","footer":"数据来源：各平台官网 · 价格以官网为准","footerHome":"← 返回 AINav 首页","promoCta":"立即注册","legendHot":"🔥 热门","legendHotDesc":"高人气","legendNew":"✨ 新品","legendNewDesc":"新上线","legendRec":"👍 推荐","legendRecDesc":"综合推荐","legendOverseas":"🌍 海外","legendOverseasDesc":"需国际网络","legendFree":"🆓 免费版","legendFreeDesc":"零成本体验"},"en":{"pageTitle":"AI Music Plan Comparison — AINav","pageDesc":"One-stop comparison of AI music generation plans worldwide: Suno, Udio, Mureka, Stable Audio pricing and features.","title":"🎵 AI Music Plan Comparison","subtitle":"One-stop comparison of AI music generation plans worldwide: pricing, credits, commercial rights, and quality.","navHome":"← AINav Home","navCoding":"Coding Plans","navAgent":"Agents","navVideo":"Video Plans","navImage":"Image Plans","navMusic":"Music Plans","navSearch":"Search Plans","navVoice":"Voice Plans","navLearning":"Learning Plans","navEncyclopedia":"AI Encyclopedia","themeSystem":"System","themeLight":"Light","themeDark":"Dark","sectionDomestic":"Domestic AI Music Platforms","sectionOverseas":"Overseas AI Music Platforms","sectionMatrix":"📊 Feature Comparison Matrix","sectionPrice":"💰 Monthly Price Comparison (Entry Plans)","sectionRec":"🎯 Recommendations — Find the Best Music Plan for Your Needs","sectionTrend":"📈 AI Music Generation Trends","thPlan":"Plan","thPrice":"Price","thCredits":"Generations/Mo","thDuration":"Duration","thNote":"Note","thCommercial":"Commercial","thType":"Type","footer":"Data sources: Official websites · Prices subject to change","footerHome":"← Back to AINav Home","promoText":"Want","promoOr":"/","promoNoNet":"but no VPN?","promoDesc":"One API Key for 100+ top models, direct access in China, low latency, OpenAI-compatible format","promoCta":"Sign Up →","legendHot":"🔥 Hot","legendHotDesc":"Popular","legendNew":"✨ New","legendNewDesc":"Recently launched","legendRec":"👍 Pick","legendRecDesc":"Recommended","legendOverseas":"🌍 OS","legendOverseasDesc":"Needs VPN","legendFree":"🆓 Free","legendFreeDesc":"Zero cost"}};
+      var LANG_KEY='ainav-lang',currentLang=localStorage.getItem(LANG_KEY)||'zh';
+      function applyLang(lang){
+        if(lang!=='zh'&&lang!=='en')lang='zh';currentLang=lang;
+        document.documentElement.setAttribute('lang',lang==='en'?'en':'zh-CN');
+        try{localStorage.setItem(LANG_KEY,lang)}catch(e){}
+        var dict=i18n[lang];
+        document.title=dict.pageTitle;
+        var metaDesc=document.querySelector('meta[name="description"]');
+        if(metaDesc)metaDesc.setAttribute('content',dict.pageDesc);
+        document.querySelectorAll('[data-i18n]').forEach(function(el){var key=el.getAttribute('data-i18n');if(dict[key]!==undefined)el.textContent=dict[key]});
+        var nl=document.querySelectorAll('.cp-nav a');
+        if(nl[0])nl[0].textContent=dict.navHome;if(nl[1])nl[1].textContent=dict.navCoding;
+        if(nl[2])nl[2].textContent=dict.navAgent;if(nl[3])nl[3].textContent=dict.navVideo;
+        if(nl[4])nl[4].textContent=dict.navImage;if(nl[5])nl[5].textContent=dict.navMusic;
+        if(nl[6])nl[6].textContent=dict.navSearch;if(nl[7])nl[7].textContent=dict.navVoice;
+        if(nl[8])nl[8].textContent=dict.navLearning;if(nl[9])nl[9].textContent=dict.navEncyclopedia;
+        document.querySelectorAll('.theme-btn:not(.lang-btn)').forEach(function(b){
+          var s=b.getAttribute('data-theme-set');
+          if(s==='system')b.textContent=dict.themeSystem;
+          else if(s==='light')b.textContent=dict.themeLight;
+          else if(s==='dark')b.textContent=dict.themeDark;
+        });
+        // Legend
+        var legendItems=document.querySelectorAll('.cp-legend-item');
+        var lk=[
+          {badge:'badge-hot',key:'legendHot',descKey:'legendHotDesc'},
+          {badge:'badge-new',key:'legendNew',descKey:'legendNewDesc'},
+          {badge:'badge-rec',key:'legendRec',descKey:'legendRecDesc'},
+          {badge:'badge-overseas',key:'legendOverseas',descKey:'legendOverseasDesc'},
+          {badge:'badge-free',key:'legendFree',descKey:'legendFreeDesc'},
+        ];
+        legendItems.forEach(function(el,idx){
+          if(lk[idx]){var k=lk[idx];el.innerHTML='<span class="cp-badge '+k.badge+'">'+dict[k.key]+'</span> '+dict[k.descKey]}
+        });
+        // Section headings
+        document.querySelectorAll('.cp-section-hd').forEach(function(el){
+          var t=el.textContent.trim();
+          if(t.indexOf('国内')!==-1)el.innerHTML='<span class="cp-flag">🇨🇳</span> '+dict.sectionDomestic;
+          else if(t.indexOf('海外')!==-1)el.innerHTML='<span class="cp-flag">🌍</span> '+dict.sectionOverseas;
+        });
+        // Table headers
+        document.querySelectorAll('.cp-table thead th').forEach(function(th){
+          var t=th.textContent.trim();if(t==='跟随系统')th.textContent=dict.themeSystem;if(t==='浅色')th.textContent=dict.themeLight;if(t==='深色')th.textContent=dict.themeDark;if(t==='套餐')th.textContent=dict.thPlan;if(t==='月价')th.textContent=dict.thPrice;if(t==='生成次数/月')th.textContent=dict.thCredits;if(t==='时长')th.textContent=dict.thDuration;if(t==='备注')th.textContent=dict.thNote;if(t==='商用')th.textContent=dict.thCommercial;if(t==='类型')th.textContent=dict.thType;
+        });
+        // H2s
+        document.querySelectorAll('.cp-matrix-section h2,.cp-trend-section h2').forEach(function(el){
+          var t=el.textContent.trim();
+          if(t.indexOf('功能对比')!==-1||t.indexOf('Feature')!==-1)el.textContent=dict.sectionMatrix;
+          else if(t.indexOf('月费对比')!==-1||t.indexOf('Price')!==-1)el.textContent=dict.sectionPrice;
+          else if(t.indexOf('趋势')!==-1||t.indexOf('Trends')!==-1)el.textContent=dict.sectionTrend;
+        });
+        document.querySelectorAll('.cp-tips h2').forEach(function(el){
+          if(el.textContent.indexOf('场景推荐')!==-1||el.textContent.indexOf('Recommendations')!==-1)el.textContent=dict.sectionRec;
+        });
+        var fp=document.querySelectorAll('.cp-footer p');
+        if (fp[1]) fp[1].textContent = dict.footer;
+        var pb=document.querySelector('.cp-wrap > div:first-child');
+        if(pb){pb.innerHTML='<span style="color:var(--muted)">'+dict.promoText+'</span> <strong style="color:var(--text)">GPT-5</strong> <span style="color:var(--muted)">'+dict.promoOr+'</span> <strong style="color:var(--text)">Claude Opus 4.8</strong> <span style="color:var(--muted)">'+dict.promoOr+'</span> <strong style="color:var(--text)">Gemini 3.1 Pro</strong> <span style="color:var(--muted)">'+dict.promoNoNet+'</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--accent2);font-weight:600;text-decoration:none;">OfoxAI</a> <span style="color:var(--muted)">'+dict.promoDesc+'</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">'+dict.promoCta+'</a>'}
+        document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('is-active',b.getAttribute('data-lang-set')===lang)});
+      }
+      applyLang(currentLang);document.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){applyLang(b.getAttribute('data-lang-set'))})});
+    })();
+  </script>
+<script src="plan-nav.js" data-active="music-plan.html"></script>
+<script src="thinking-framework.js"></script>
+<script>document.addEventListener("click",function(e){var c=e.target.closest(".plan-promo-code");if(!c)return;e.preventDefault();var code=c.getAttribute("data-code")||c.textContent.trim();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(code).then(function(){c.textContent=code+" 已复制";setTimeout(function(){c.textContent=code},1500)})}else{var ta=document.createElement("textarea");ta.value=code;ta.style.cssText="position:fixed;left:-9999px";document.body.appendChild(ta);ta.select();try{document.execCommand("copy");c.textContent=code+" 已复制";setTimeout(function(){c.textContent=code},1500)}catch(ex){}document.body.removeChild(ta)}});</script>
+</body>
+</html>

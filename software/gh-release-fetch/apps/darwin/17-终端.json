@@ -272,5 +272,26 @@
     ],
     "releases_url": "https://bgithub.xyz/TermoraDev/termora/releases",
     "repo_path": "TermoraDev/termora"
+  },
+  {
+    "id": "termius",
+    "简介": "Termius 跨平台 SSH/SFTP 终端（官网 autoupdate.termius.com）",
+    "分类": "终端",
+    "aliases": [
+      "termius",
+      "ssh终端",
+      "ssh 终端"
+    ],
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "termius",
+    "releases_url": "https://termius.com/download/macos",
+    "url_hint": "termius ssh",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

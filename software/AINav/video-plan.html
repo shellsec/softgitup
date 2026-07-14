@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Video Plan 视频套餐横评 — AINav</title>
+  <meta name="description" content="AI视频生成套餐横向对比：可灵AI、即梦Seedance、海螺AI、Vidu、Runway、Pika、Google Veo 3、Luma、HeyGen价格功能积分对比。">
+  <link rel="canonical" href="https://aiv123.com/video-plan.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI Video Plan 视频套餐横评">
+  <meta property="og:description" content="国内外AI视频生成套餐价格功能积分对比，场景推荐与趋势分析。">
+  <meta property="og:url" content="https://aiv123.com/video-plan.html">
+  <meta property="og:site_name" content="AINav">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%230969da'/><text x='50' y='72' font-size='60' text-anchor='middle' fill='white' font-family='system-ui' font-weight='700'>AI</text></svg>">
+  <style>
+    :root,html[data-theme="dark"]{--bg:#0f1419;--panel:#151b23;--card:#1c2430;--border:#2d3848;--text:#e6edf3;--muted:#8b9cb3;--accent:#58a6ff;--accent2:#3fb950;--warn:#d29922;--danger:#f85149;--hot:#ff6b6b;--overseas:#a78bfa}
+    html[data-theme="light"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;--text:#1f2328;--muted:#59636e;--accent:#0969da;--accent2:#1a7f37;--warn:#9a6700;--danger:#cf222e;--hot:#e53935;--overseas:#7c3aed}
+    @media(prefers-color-scheme:light){html[data-theme="system"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;--text:#1f2328;--muted:#59636e;--accent:#0969da;--accent2:#1a7f37;--warn:#9a6700;--danger:#cf222e;--hot:#e53935;--overseas:#7c3aed}}
+    *{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+    .cp-top{padding:.75rem 1rem;border-bottom:1px solid var(--border);background:var(--panel);position:sticky;top:0;z-index:10}
+    .cp-top-inner{max-width:76rem;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;justify-content:space-between}
+    .cp-nav a{font-weight:600;margin-right:1rem;font-size:.88rem}
+    .cp-toolbar{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center}
+    .theme-btn{font-size:.72rem;padding:.2rem .5rem;border-radius:5px;border:1px solid var(--border);background:var(--card);color:var(--muted);cursor:pointer;font-family:inherit}
+    .theme-btn.is-active{color:var(--accent);border-color:var(--accent);font-weight:600}.lang-btn{margin-left:.35rem}
+    .cp-wrap{max-width:76rem;margin:0 auto;padding:1rem}h1{font-size:1.35rem;margin:0 0 .3rem}
+    .cp-subtitle{font-size:.88rem;color:var(--muted);margin-bottom:1rem}
+    .cp-section-hd{font-size:1.1rem;font-weight:700;margin:1.8rem 0 .8rem;padding-bottom:.3rem;border-bottom:2px solid var(--border);display:flex;align-items:center;gap:.5rem}
+    .cp-section-hd .cp-flag{font-size:1.15rem}.cp-section-hd.overseas-hd{border-bottom-color:var(--overseas)}
+    .cp-legend{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:1.2rem;font-size:.82rem}
+    .cp-legend-item{display:flex;align-items:center;gap:.3rem}
+    .cp-badge{display:inline-block;padding:.1rem .45rem;border-radius:4px;font-size:.72rem;font-weight:600}
+    .badge-hot{background:rgba(255,107,107,.15);color:var(--hot);border:1px solid rgba(255,107,107,.3)}
+    .badge-new{background:rgba(63,185,80,.15);color:var(--accent2);border:1px solid rgba(63,185,80,.3)}
+    .badge-rec{background:rgba(88,166,255,.15);color:var(--accent);border:1px solid rgba(88,166,255,.3)}
+    .badge-overseas{background:rgba(167,139,250,.15);color:var(--overseas);border:1px solid rgba(167,139,250,.3)}
+    .badge-free{background:rgba(63,185,80,.15);color:var(--accent2);border:1px solid rgba(63,185,80,.3)}
+    .badge-digital{background:rgba(240,136,62,.15);color:#f0883e;border:1px solid rgba(240,136,62,.3)}
+    .cp-platforms{display:grid;grid-template-columns:1fr;gap:1.2rem}
+    @media(min-width:52rem){.cp-platforms{grid-template-columns:1fr 1fr}}
+    .cp-platform{border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden}
+    .cp-platform.overseas{border-color:rgba(167,139,250,.3)}
+    .cp-platform-head{padding:.75rem 1rem;border-bottom:1px solid var(--border);display:flex;flex-wrap:wrap;align-items:center;gap:.5rem}
+    .cp-platform.overseas .cp-platform-head{border-bottom-color:rgba(167,139,250,.2)}
+    .cp-platform-name{font-size:1.05rem;font-weight:700}.cp-platform-name a{color:var(--text)}
+    .cp-platform-name a:hover{color:var(--accent);text-decoration:none}
+    .cp-platform-body{padding:.75rem 1rem}
+    .cp-table{width:100%;border-collapse:collapse;font-size:.82rem}
+    .cp-table th{text-align:left;font-weight:600;color:var(--muted);padding:.3rem .5rem;border-bottom:1px solid var(--border);font-size:.76rem;white-space:nowrap}
+    .cp-table td{padding:.4rem .5rem;border-bottom:1px solid var(--border);vertical-align:top}
+    .cp-table tr:last-child td{border-bottom:none}
+    .cp-table .plan-name{font-weight:600;white-space:nowrap}
+    .cp-table .plan-price{white-space:nowrap;color:var(--accent2);font-weight:600}
+    .cp-table .plan-limit{font-size:.76rem;color:var(--muted)}
+    .feat-tags{display:flex;flex-wrap:wrap;gap:.25rem;margin-top:.4rem}
+    .feat-tag{font-size:.68rem;padding:.1rem .35rem;border-radius:3px;background:rgba(88,166,255,.08);border:1px solid rgba(88,166,255,.15);color:var(--accent);font-weight:500}
+    .feat-tag.yes{background:rgba(63,185,80,.1);border-color:rgba(63,185,80,.2);color:var(--accent2)}
+    .feat-tag.no{background:transparent;border-color:rgba(139,156,179,.15);color:var(--muted);opacity:.5}
+    .cp-matrix-section{margin-top:2rem}.cp-matrix-section h2{font-size:1.1rem;margin-bottom:.5rem}
+    .cp-matrix-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:8px;background:var(--card)}
+    .cp-matrix{width:100%;border-collapse:collapse;font-size:.8rem}
+    .cp-matrix th,.cp-matrix td{padding:.35rem .55rem;border:1px solid var(--border);text-align:center;white-space:nowrap}
+    .cp-matrix th{background:var(--panel);font-weight:600;color:var(--muted);font-size:.74rem;position:sticky;top:0}
+    .cp-matrix th:first-child,.cp-matrix td:first-child{text-align:left;position:sticky;left:0;background:var(--card);z-index:1;font-weight:600}
+    .cp-matrix th:first-child{z-index:2;background:var(--panel)}
+    .cp-matrix .yes{color:var(--accent2);font-weight:700}.cp-matrix .no{color:var(--muted);opacity:.4}
+    .cp-bar-chart{margin-top:.5rem}
+    .cp-bar-row{display:flex;align-items:center;gap:.5rem;margin-bottom:.35rem;font-size:.78rem}
+    .cp-bar-label{width:6.5rem;text-align:right;color:var(--muted);flex-shrink:0}
+    .cp-bar-track{flex:1;height:1.1rem;background:var(--border);border-radius:4px;overflow:hidden}
+    .cp-bar-fill{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:.4rem;font-size:.7rem;font-weight:600;color:#fff;white-space:nowrap}
+    .cp-bar-fill.bar-domestic{background:linear-gradient(90deg,#3fb950,#2ea043)}
+    .cp-bar-fill.bar-overseas{background:linear-gradient(90deg,#a78bfa,#7c3aed)}
+    .cp-bar-fill.bar-hot{background:linear-gradient(90deg,#ff6b6b,#e53935)}
+    .cp-bar-fill.bar-warn{background:linear-gradient(90deg,#d29922,#bb8009)}
+    .cp-notice{margin-top:2rem;padding:0;border:1px solid rgba(210,153,34,0.35);border-radius:10px;background:var(--card);overflow:hidden}
+    .cp-notice-head{padding:0.65rem 1rem;border-bottom:1px solid rgba(210,153,34,0.2);font-weight:700;font-size:1rem;background:rgba(210,153,34,0.06)}
+    .cp-notice-body{padding:0.75rem 1rem;font-size:0.82rem;line-height:1.75}
+    .cp-notice-body ul{padding-left:1.2rem;margin:0.5rem 0 0}.cp-notice-body li{margin-bottom:0.45rem}
+    .cp-notice-body strong{color:var(--warn)}.cp-notice-body code{font-size:0.78rem;padding:0.1rem 0.35rem;border-radius:4px;background:rgba(210,153,34,0.1);border:1px solid rgba(210,153,34,0.2);color:var(--warn);font-family:inherit}
+    .cp-faq{margin-top:2rem;border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden}
+    .cp-faq-head{padding:0.65rem 1rem;border-bottom:1px solid var(--border);font-weight:700;font-size:1rem}
+    .cp-faq-item{border-bottom:1px solid var(--border)}.cp-faq-item:last-child{border-bottom:none}
+    .cp-faq-q{padding:0.6rem 1rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:0.88rem;user-select:none;transition:background 0.15s}
+    .cp-faq-q:hover{background:rgba(88,166,255,0.04)}.cp-faq-q .cp-faq-arrow{font-size:0.72rem;color:var(--muted);transition:transform 0.2s;flex-shrink:0;margin-left:0.5rem}
+    .cp-faq-item.is-open .cp-faq-q .cp-faq-arrow{transform:rotate(180deg)}
+    .cp-faq-a{padding:0 1rem;max-height:0;overflow:hidden;transition:max-height 0.25s ease,padding 0.25s ease;font-size:0.82rem;line-height:1.7;color:var(--muted)}
+    .cp-faq-item.is-open .cp-faq-a{max-height:20rem;padding:0 1rem 0.75rem}.cp-faq-a strong{color:var(--text)}
+    .cp-value-rank{margin-top:2rem;border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden}
+    .cp-value-rank-head{padding:0.65rem 1rem;border-bottom:1px solid var(--border);font-weight:700;font-size:1rem}
+    .cp-value-rank-body{padding:0.75rem 1rem}.cp-value-rank .cp-table .val-high{color:var(--accent2);font-weight:700}
+    .cp-value-rank .cp-table .val-mid{color:var(--accent);font-weight:600}.cp-value-rank .cp-table .val-low{color:var(--muted)}
+    .cp-tips{margin-top:2rem;padding:0;border:1px solid var(--border);border-radius:8px;background:var(--card);overflow:hidden}
+    .cp-tips h2{font-size:1rem;margin:0}
+    .cp-updated-line { font-size: 0.76rem; color: var(--muted); margin: 0 0 0.3rem; }
+.cp-footer {max-width:76rem;margin:2rem auto 1rem;padding:0 1rem;font-size:.76rem;color:var(--muted);text-align:center}
+    .cp-footer a{color:var(--muted)}
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2B8FBWRX4N"></script>
+    <script>
+    (function(){
+      var i18n = {
+        zh: {
+          pageTitle: 'AI Video Plan 视频套餐横评 — AINav',
+          pageDesc: '国内外 AI 视频生成套餐一站式对比：价格、积分、功能、场景推荐。',
+          title: '🎬 AI Video Plan 视频套餐横评',
+          subtitle: '国内外 AI 视频生成套餐一站式对比：价格、积分、功能、场景推荐，帮你选出最划算的视频生成方案。',
+          navHome: '← AINav 首页', navCoding: '编程套餐横评', navAgent: 'Agent横评',
+          navVideo: '视频套餐横评', navImage: '图像套餐横评', navEncyclopedia: 'AI百科',
+          themeSystem: '跟随系统', themeLight: '浅色', themeDark: '深色',
+          sectionDomestic: '国内 AI 视频平台', sectionOverseas: '海外 AI 视频平台',
+          sectionMatrix: '📊 功能对比矩阵', sectionPrice: '💰 月费对比（主流套餐）',
+          sectionRec: '🎯 场景推荐 — 按需求选最适合的视频方案',
+          sectionTrend: '📈 AI 视频生成趋势',
+          thPlan: '套餐', thPrice: '月价', thCredits: '积分/月', thDuration: '视频时长',
+          thNote: '备注', thType: '类型', thDesc: '说明',
+          footer: '数据来源：各平台官网 · 价格以官网为准',
+          footerHome: '← 返回 AINav 首页',
+          promoText: '想用', promoOr: '/', promoNoNet: '却没海外网络？',
+          promoDesc: '一个 API Key 调用 100+ 顶级模型，国内直连低延迟，兼容 OpenAI 格式零改造',
+          promoCta: '立即注册 →',
+          legendRush: '⚡ 需抢', legendRushDesc: '限时/抢购',
+          legendHot: '🔥 热门', legendHotDesc: '高性价比',
+          legendNew: '✨ 特惠', legendNewDesc: '首月低价',
+          legendRec: '👍 推荐', legendRecDesc: '综合推荐',
+          legendOverseas: '🌍 海外', legendOverseasDesc: '需国际网络',
+        },
+        en: {
+          pageTitle: 'AI Video Plan Comparison — AINav',
+          pageDesc: 'One-stop comparison of AI video generation plans worldwide: pricing, credits, features, and scenario recommendations.',
+          title: '🎬 AI Video Plan Comparison',
+          subtitle: 'One-stop comparison of AI video generation plans worldwide: pricing, credits, features, and scenario recommendations.',
+          navHome: '← AINav Home', navCoding: 'Coding Plans', navAgent: 'Agents',
+          navVideo: 'Video Plans', navImage: 'Image Plans', navEncyclopedia: 'AI Encyclopedia',
+          themeSystem: 'System', themeLight: 'Light', themeDark: 'Dark',
+          sectionDomestic: 'Domestic AI Video Platforms', sectionOverseas: 'Overseas AI Video Platforms',
+          sectionMatrix: '📊 Feature Comparison Matrix', sectionPrice: '💰 Monthly Price Comparison (Popular Plans)',
+          sectionRec: '🎯 Recommendations — Find the Best Video Plan for Your Needs',
+          sectionTrend: '📈 AI Video Generation Trends',
+          thPlan: 'Plan', thPrice: 'Price', thCredits: 'Credits/Mo', thDuration: 'Video Duration',
+          thNote: 'Note', thType: 'Type', thDesc: 'Description',
+          footer: 'Data sources: Official websites · Prices subject to change',
+          footerHome: '← Back to AINav Home',
+          promoText: 'Want', promoOr: '/', promoNoNet: 'but no VPN?',
+          promoDesc: 'One API Key for 100+ top models, direct access in China, low latency, OpenAI-compatible format',
+          promoCta: 'Sign Up →',
+          legendRush: '⚡ Rush', legendRushDesc: 'Limited/Flash',
+          legendHot: '🔥 Hot', legendHotDesc: 'Best Value',
+          legendNew: '✨ Deal', legendNewDesc: '1st Month Deal',
+          legendRec: '👍 Pick', legendRecDesc: 'Recommended',
+          legendOverseas: '🌍 OS', legendOverseasDesc: 'Needs VPN',
+        }
+      };
+      var LANG_KEY='ainav-lang',currentLang=localStorage.getItem(LANG_KEY)||'zh';
+      function applyLang(lang){
+        if(lang!=='zh'&&lang!=='en')lang='zh';currentLang=lang;
+        document.documentElement.setAttribute('lang',lang==='en'?'en':'zh-CN');
+        try{localStorage.setItem(LANG_KEY,lang)}catch(e){}
+        var dict=i18n[lang];
+        document.title=dict.pageTitle;
+        var metaDesc=document.querySelector('meta[name="description"]');
+        if(metaDesc)metaDesc.setAttribute('content',dict.pageDesc);
+        document.querySelectorAll('[data-i18n]').forEach(function(el){var key=el.getAttribute('data-i18n');if(dict[key]!==undefined)el.textContent=dict[key]});
+        var nl=document.querySelectorAll('.cp-nav a');
+        if(nl[0])nl[0].textContent=dict.navHome;if(nl[1])nl[1].textContent=dict.navCoding;
+        if(nl[2])nl[2].textContent=dict.navAgent;if(nl[3])nl[3].textContent=dict.navVideo;
+        if(nl[4])nl[4].textContent=dict.navImage;if(nl[5])nl[5].textContent=dict.navEncyclopedia;
+        document.querySelectorAll('.theme-btn:not(.lang-btn)').forEach(function(b){
+          var s=b.getAttribute('data-theme-set');
+          if(s==='system')b.textContent=dict.themeSystem;
+          else if(s==='light')b.textContent=dict.themeLight;
+          else if(s==='dark')b.textContent=dict.themeDark;
+        });
+        // Legend
+        var legendItems=document.querySelectorAll('.cp-legend-item');
+        var legendKeys=[
+          {badge:'badge-rush',key:'legendRush',descKey:'legendRushDesc'},
+          {badge:'badge-hot',key:'legendHot',descKey:'legendHotDesc'},
+          {badge:'badge-new',key:'legendNew',descKey:'legendNewDesc'},
+          {badge:'badge-rec',key:'legendRec',descKey:'legendRecDesc'},
+          {badge:'badge-overseas',key:'legendOverseas',descKey:'legendOverseasDesc'},
+        ];
+        legendItems.forEach(function(el,idx){
+          if(legendKeys[idx]){var k=legendKeys[idx];el.innerHTML='<span class="cp-badge '+k.badge+'">'+dict[k.key]+'</span> '+dict[k.descKey]}
+        });
+        document.querySelectorAll('.cp-section-hd').forEach(function(el){
+          var t=el.textContent.trim();
+          if(t.indexOf('国内')!==-1)el.innerHTML='<span class="cp-flag">🇨🇳</span> '+dict.sectionDomestic;
+          else if(t.indexOf('海外')!==-1)el.innerHTML='<span class="cp-flag">🌍</span> '+dict.sectionOverseas;
+        });
+        document.querySelectorAll('.cp-table thead th').forEach(function(th){
+          var t=th.textContent.trim();
+          if(t==='套餐')th.textContent=dict.thPlan;else if(t==='月价')th.textContent=dict.thPrice;
+          else if(t==='积分/月')th.textContent=dict.thCredits;else if(t==='视频时长')th.textContent=dict.thDuration;
+          else if(t==='备注')th.textContent=dict.thNote;else if(t==='类型')th.textContent=dict.thType;
+          else if(t==='说明')th.textContent=dict.thDesc;
+        });
+        var h2s=document.querySelectorAll('.cp-matrix-section h2,.cp-trend-section h2');
+        h2s.forEach(function(el){
+          var t=el.textContent.trim();
+          if(t.indexOf('功能对比')!==-1)el.textContent=dict.sectionMatrix;
+          else if(t.indexOf('月费对比')!==-1)el.textContent=dict.sectionPrice;
+          else if(t.indexOf('趋势')!==-1)el.textContent=dict.sectionTrend;
+        });
+        document.querySelectorAll('.cp-tips h2').forEach(function(el){
+          if(el.textContent.indexOf('场景推荐')!==-1)el.textContent=dict.sectionRec;
+        });
+        var fp=document.querySelectorAll('.cp-footer p');
+        if (fp[1]) fp[1].textContent = dict.footer;
+        if(fp[1])fp[1].innerHTML='<a href="index.html">'+dict.footerHome+'</a>';
+        var pb=document.querySelector('.cp-wrap > div:first-child');
+        if(pb){pb.innerHTML='<span style="color:var(--muted)">'+dict.promoText+'</span> <strong style="color:var(--text)">GPT-5</strong> <span style="color:var(--muted)">'+dict.promoOr+'</span> <strong style="color:var(--text)">Claude Opus 4.8</strong> <span style="color:var(--muted)">'+dict.promoOr+'</span> <strong style="color:var(--text)">Gemini 3.1 Pro</strong> <span style="color:var(--muted)">'+dict.promoNoNet+'</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--accent2);font-weight:600;text-decoration:none;">OfoxAI</a> <span style="color:var(--muted)">'+dict.promoDesc+'</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">'+dict.promoCta+'</a>'}
+        document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('is-active',b.getAttribute('data-lang-set')===lang)});
+      }
+      applyLang(currentLang);document.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){applyLang(b.getAttribute('data-lang-set'))})});
+    })();
+  </script>
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2d49f38b39c743ac80b6d6b9ff99494d"}'></script>
+</head>
+<body>
+  <div class="cp-top"><div class="cp-top-inner">
+    <div class="cp-nav" data-plan-nav></div>
+    <div class="cp-toolbar">
+      <button type="button" class="theme-btn" data-theme-set="system">跟随系统</button>
+      <button type="button" class="theme-btn" data-theme-set="light">浅色</button>
+      <button type="button" class="theme-btn" data-theme-set="dark">深色</button>
+      <button type="button" class="theme-btn lang-btn" data-lang-set="zh">中</button>
+      <button type="button" class="theme-btn lang-btn" data-lang-set="en">EN</button>
+    </div>
+  </div></div>
+
+  <div class="cp-wrap">
+    <div style="margin-bottom:1rem;padding:.55rem .85rem;border-radius:8px;border:1px solid var(--border);background:var(--card);display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.35rem .6rem;font-size:.84rem;line-height:1.5;">
+      <span style="color:var(--muted)"><strong style="color:var(--text)">OpenAI: GPT-5</strong> <span style="color:var(--muted)">·</span> <strong style="color:var(--text)">Anthropic: Claude Opus 4.8</strong> <span style="color:var(--muted)">·</span> <strong style="color:var(--text)">Google: Gemini 3.1 Pro</strong> <span style="color:var(--muted)">· 国内直连免梯</span> <span class="plan-promo-code" data-code="AFF_BB0FNC" style="color:var(--accent2);font-weight:600;cursor:pointer" title="点击复制优惠码">$2优惠码 AFF_BB0FNC</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">立即注册</a>
+    </div>
+    <h1 data-i18n="title">🎬 AI Video Plan 视频套餐横评</h1>
+    <p class="cp-subtitle" data-i18n="subtitle">国内外 AI 视频生成套餐一站式对比：价格、积分、功能、场景推荐，帮你选出最划算的视频生成方案。</p>
+
+    
+    <p class="cp-updated-line"><span class="cp-updated">最后更新：2026-06-26</span> · <a href="image-plan.html">图像套餐横评</a></p>
+    <div class="cp-legend">
+      <div class="cp-legend-item"><span class="cp-badge badge-hot">🔥 热门</span> 高人气</div>
+      <div class="cp-legend-item"><span class="cp-badge badge-new">✨ 新品</span> 新上线</div>
+      <div class="cp-legend-item"><span class="cp-badge badge-rec">👍 推荐</span> 综合推荐</div>
+      <div class="cp-legend-item"><span class="cp-badge badge-overseas">🌍 海外</span> 需国际网络</div>
+      <div class="cp-legend-item"><span class="cp-badge badge-free">🆓 免费版</span> 零成本体验</div>
+      <div class="cp-legend-item"><span class="cp-badge badge-digital">🧑‍💼 数字人</span> 含数字人功能</div>
+    </div>
+
+    <!-- ==================== 国内 AI 视频平台 ==================== -->
+    <div class="cp-section-hd"><span class="cp-flag">🇨🇳</span> 国内 AI 视频平台</div>
+
+    <div class="cp-platforms">
+
+      <!-- 1. 可灵 AI -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://klingai.kuaishou.com/" target="_blank" rel="noopener noreferrer">可灵 AI（快手）</a></span>
+          <span class="cp-badge badge-hot">🔥 热门</span>
+          <span class="cp-badge badge-rec">👍 推荐</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>积分/月</th><th>视频时长</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">免费版</td><td class="plan-price">¥0</td><td>66灵感值/日</td><td class="plan-limit">约6个5s视频/日</td><td>带水印</td></tr>
+              <tr><td class="plan-name">标准版</td><td class="plan-price">¥58/月</td><td>660积分</td><td class="plan-limit">~60个5s视频</td><td></td></tr>
+              <tr><td class="plan-name">专业版 <span class="cp-badge badge-rec">👍</span></td><td class="plan-price">¥238/月</td><td>3000积分</td><td class="plan-limit">~270个5s视频</td><td>4K+水印移除</td></tr>
+              <tr><td class="plan-name">旗舰版</td><td class="plan-price">¥668/月</td><td>8000+积分</td><td class="plan-limit">~720个5s视频</td><td>优先出队</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">文生视频</span><span class="feat-tag yes">图生视频</span><span class="feat-tag yes">视频编辑</span>
+            <span class="feat-tag yes">长视频</span><span class="feat-tag yes">4K</span><span class="feat-tag yes">API</span>
+            <span class="feat-tag no">数字人</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">国内视频生成标杆，可灵3.0模型画质领先，API ¥0.6-1.2/秒为国内最便宜</div>
+        </div>
+      </div>
+
+      <!-- 2. 即梦 AI / Seedance -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://jimeng.jianying.com/" target="_blank" rel="noopener noreferrer">即梦 AI / Seedance（字节）</a></span>
+          <span class="cp-badge badge-hot">🔥 热门</span>
+          </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>积分/月</th><th>视频时长</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">免费版</td><td class="plan-price">¥0</td><td>注册送260积分</td><td class="plan-limit">~26个5s视频</td><td></td></tr>
+              <tr><td class="plan-name">标准版</td><td class="plan-price">¥69/月</td><td>约800积分</td><td class="plan-limit">~80个5s视频</td><td></td></tr>
+              <tr><td class="plan-name">Pro版</td><td class="plan-price">¥239/月</td><td>约3000积分</td><td class="plan-limit">~300个5s视频</td><td></td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">文生视频</span><span class="feat-tag yes">图生视频</span><span class="feat-tag yes">音频同步</span>
+            <span class="feat-tag no">数字人</span><span class="feat-tag no">4K</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">字节出品，Seedance 2.0+ 视频模块特色为原生音视频同步，画面配乐自动生成</div>
+        </div>
+      </div>
+
+      <!-- 3. 海螺 AI -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://hailuoai.video/" target="_blank" rel="noopener noreferrer">海螺 AI 视频（MiniMax）</a></span>
+          <span class="cp-badge badge-hot">🔥</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>说明</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">免费版</td><td class="plan-price">¥0</td><td>有限额度，带水印</td><td class="plan-limit">每日刷新</td></tr>
+              <tr><td class="plan-name">付费版</td><td class="plan-price">$9.99-29.99/月</td><td>更多积分+去水印</td><td class="plan-limit">国际版定价</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">文生视频</span><span class="feat-tag yes">图生视频</span><span class="feat-tag yes">音频同步</span>
+            <span class="feat-tag no">数字人</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">MiniMax 旗下，Hailuo Video 模型质量不错，支持原生音频同步</div>
+        </div>
+      </div>
+
+      <!-- 4. Vidu -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://www.vidu.cn/" target="_blank" rel="noopener noreferrer">Vidu（生数科技）</a></span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>积分/月</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">免费版</td><td class="plan-price">¥0</td><td>每日免费额度</td><td class="plan-limit">带水印</td></tr>
+              <tr><td class="plan-name">标准版</td><td class="plan-price">¥68/月</td><td>约800积分</td><td class="plan-limit"></td></tr>
+              <tr><td class="plan-name">专业版</td><td class="plan-price">¥238/月</td><td>约3000积分</td><td class="plan-limit"></td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">文生视频</span><span class="feat-tag yes">图生视频</span><span class="feat-tag yes">对口型</span>
+            <span class="feat-tag yes">短剧工具</span><span class="feat-tag no">数字人</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">特色功能：对口型、多镜头连贯、短剧制作工具，适合剧情类视频创作</div>
+        </div>
+      </div>
+
+      <!-- 5. 腾讯智影 -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://zenvideo.qq.com/" target="_blank" rel="noopener noreferrer">腾讯智影</a></span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>类型</th><th>价格</th><th>说明</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">数字人 + 视频生成</td><td class="plan-price">按量/套餐</td><td>数字人+视频编辑</td><td class="plan-limit">企业级方案</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">数字人</span><span class="feat-tag yes">视频编辑</span><span class="feat-tag yes">配音</span>
+            <span class="feat-tag no">4K</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">腾讯出品，偏企业级数字人+视频编辑，适合商业演示和培训</div>
+        </div>
+      </div>
+
+      <!-- 6. 万兴播爆 -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://boabao.wondershare.cn/" target="_blank" rel="noopener noreferrer">万兴播爆</a></span>
+          <span class="cp-badge badge-digital">🧑‍💼 数字人</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>类型</th><th>价格</th><th>说明</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">数字人口播</td><td class="plan-price">¥99-399/月</td><td>100+数字人模板</td><td class="plan-limit">电商/营销场景</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">数字人</span><span class="feat-tag yes">多语言</span><span class="feat-tag yes">模板库</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">数字人口播视频生成，100+数字人模板+多语言配音，适合电商和营销</div>
+        </div>
+      </div>
+
+      <!-- 7. LibTV (LiblibAI) -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://www.liblib.art/" target="_blank" rel="noopener noreferrer">LibTV（LiblibAI·哩布哩布）</a></span>
+          <span class="cp-badge badge-new">✨ 新品</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>算力/月</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">免费版</td><td class="plan-price">¥0</td><td>300点/日</td><td class="plan-limit">约30–60个5s视频/日</td></tr>
+              <tr><td class="plan-name">基础版VIP</td><td class="plan-price">¥35/月</td><td>15,000点</td><td class="plan-limit">20GB云存储+加速</td></tr>
+              <tr><td class="plan-name">专业版VIP</td><td class="plan-price">¥70/月</td><td>35,000点</td><td class="plan-limit">50GB+批量渲染+高清修复</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">文生视频</span><span class="feat-tag yes">图生视频</span><span class="feat-tag yes">分镜剧本</span>
+            <span class="feat-tag yes">模型训练</span><span class="feat-tag no">数字人</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">LiblibAI旗下视频创作平台，无限画布+剧本分镜+成片全流程，10万+模型生态，国内最便宜的创作平台</div>
+        </div>
+      </div>
+
+    </div><!-- /cp-platforms (国内) -->
+
+    <!-- ==================== 海外 AI 视频平台 ==================== -->
+    <div class="cp-section-hd overseas-hd"><span class="cp-flag">🌍</span> 海外 AI 视频平台</div>
+
+    <div class="cp-platforms">
+
+      <!-- 1. Runway -->
+      <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://runwayml.com/" target="_blank" rel="noopener noreferrer">Runway Gen-4</a></span>
+          <span class="cp-badge badge-overseas">🌍</span>
+          <span class="cp-badge badge-hot">🔥 热门</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>积分/月</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">Free</td><td class="plan-price">$0</td><td>125积分</td><td class="plan-limit">~5个5s视频</td></tr>
+              <tr><td class="plan-name">Standard</td><td class="plan-price">$12/月</td><td>625积分</td><td class="plan-limit">~25个5s视频</td></tr>
+              <tr><td class="plan-name">Pro <span class="cp-badge badge-rec">👍</span></td><td class="plan-price">$28/月</td><td>2250积分</td><td class="plan-limit">~90个5s视频</td></tr>
+              <tr><td class="plan-name">Unlimited</td><td class="plan-price">$76/月</td><td>无限(排队)</td><td class="plan-limit">可能等较久</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">文生视频</span><span class="feat-tag yes">图生视频</span><span class="feat-tag yes">视频编辑</span>
+            <span class="feat-tag yes">4K</span><span class="feat-tag yes">API</span><span class="feat-tag no">数字人</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">AI视频领域老牌标杆，Gen-4模型画质稳定，视频编辑功能最强</div>
+        </div>
+      </div>
+
+      <!-- 2. Pika -->
+      <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://pika.art/" target="_blank" rel="noopener noreferrer">Pika</a></span>
+          <span class="cp-badge badge-overseas">🌍</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>积分/月</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">Free</td><td class="plan-price">$0</td><td>有限次数</td><td class="plan-limit">带水印</td></tr>
+              <tr><td class="plan-name">Standard</td><td class="plan-price">$8/月</td><td>500积分</td><td class="plan-limit">~20个5s视频</td></tr>
+              <tr><td class="plan-name">Pro <span class="cp-badge badge-rec">👍</span></td><td class="plan-price">$28/月</td><td>2000积分</td><td class="plan-limit">~80个5s视频</td></tr>
+              <tr><td class="plan-name">Unlimited</td><td class="plan-price">$76/月</td><td>无限(排队)</td><td class="plan-limit"></td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">文生视频</span><span class="feat-tag yes">图生视频</span><span class="feat-tag yes">视频编辑</span>
+            <span class="feat-tag yes">API</span><span class="feat-tag no">数字人</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">创意视频生成利器，特效丰富（爆炸/融化/膨胀等），价格和Runway相当</div>
+        </div>
+      </div>
+
+
+      <!-- 2b. Google Veo 3 -->
+      <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://deepmind.google/models/veo/" target="_blank" rel="noopener noreferrer">Google Veo 3</a></span>
+          <span class="cp-badge badge-overseas">🌍</span>
+          <span class="cp-badge badge-hot">🔥 热门</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>说明</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">Gemini Free</td><td class="plan-price">$0</td><td>有限 Veo 3 Fast 预览</td><td class="plan-limit">需 Google 账号</td></tr>
+              <tr><td class="plan-name">Google AI Pro</td><td class="plan-price">$19.99/月</td><td>含 Flow / Veo 3 创作额度</td><td class="plan-limit">消费级</td></tr>
+              <tr><td class="plan-name">Google AI Ultra</td><td class="plan-price">$249.99/月</td><td>更高 Veo 3 额度</td><td class="plan-limit">含 Gemini 3.1 Pro</td></tr>
+              <tr><td class="plan-name">Vertex API</td><td class="plan-price">按秒</td><td>Veo 3 / Veo 3 Fast</td><td class="plan-limit">约 $0.40–0.75/秒（以官网为准）</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">文生视频</span><span class="feat-tag yes">图生视频</span><span class="feat-tag yes">音频同步</span>
+            <span class="feat-tag yes">4K</span><span class="feat-tag yes">API</span><span class="feat-tag no">数字人</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">Google DeepMind 旗舰视频模型，2026 年通过 Gemini / Flow / Vertex 提供；API 按秒计费偏贵但画质顶级</div>
+        </div>
+      </div>
+
+      <!-- 3. Sora (OpenAI) -->
+      <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://openai.com/sora" target="_blank" rel="noopener noreferrer">Sora（OpenAI）</a></span>
+          <span class="cp-badge badge-overseas">🌍</span>
+          <span style="font-size:.72rem;padding:.1rem .4rem;border-radius:3px;background:rgba(248,81,73,.12);border:1px solid rgba(248,81,73,.25);color:var(--danger);font-weight:600">⚠️ 已停服</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>说明</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name" colspan="4" style="color:var(--muted)">已停服（2026-04-26）— 历史曾随 ChatGPT Plus/Pro 提供，勿新购</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">文生视频</span><span class="feat-tag yes">图生视频</span><span class="feat-tag yes">视频编辑</span>
+            <span class="feat-tag no">数字人</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--danger);margin-top:.4rem">⚠️ Sora 已于 2026年4月26日停服，含在 ChatGPT 订阅内，无独立套餐</div>
+        </div>
+      </div>
+
+      <!-- 4. Luma Dream Machine -->
+      <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://lumalabs.ai/dream-machine" target="_blank" rel="noopener noreferrer">Luma Dream Machine</a></span>
+          <span class="cp-badge badge-overseas">🌍</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>说明</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">Free</td><td class="plan-price">$0</td><td>30次/月</td><td class="plan-limit">~6个5s视频</td></tr>
+              <tr><td class="plan-name">Standard</td><td class="plan-price">$24/月</td><td>120次生成</td><td class="plan-limit">~24个5s视频</td></tr>
+              <tr><td class="plan-name">Plus</td><td class="plan-price">$60/月</td><td>350次生成</td><td class="plan-limit">~70个5s视频</td></tr>
+              <tr><td class="plan-name">Pro</td><td class="plan-price">$120/月</td><td>800次生成</td><td class="plan-limit">~160个5s视频</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">文生视频</span><span class="feat-tag yes">图生视频</span><span class="feat-tag yes">API</span>
+            <span class="feat-tag no">数字人</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">3D视频生成见长，Dream Machine 模型速度较快，免费版可体验</div>
+        </div>
+      </div>
+
+      <!-- 5. HeyGen -->
+      <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://www.heygen.com/" target="_blank" rel="noopener noreferrer">HeyGen</a></span>
+          <span class="cp-badge badge-overseas">🌍</span>
+          <span class="cp-badge badge-digital">🧑‍💼 数字人</span>
+          <span class="cp-badge badge-hot">🔥 热门</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>说明</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">Free</td><td class="plan-price">$0</td><td>3视频/月 720p</td><td class="plan-limit">1分钟上限</td></tr>
+              <tr><td class="plan-name">Creator <span class="cp-badge badge-rec">👍</span></td><td class="plan-price">$29/月</td><td>无限视频 1080p</td><td class="plan-limit">10分钟/视频</td></tr>
+              <tr><td class="plan-name">Business</td><td class="plan-price">$99/月</td><td>4K+API+团队</td><td class="plan-limit">30分钟/视频</td></tr>
+              <tr><td class="plan-name">Enterprise</td><td class="plan-price">$149/月</td><td>自定义数字人+SSO</td><td class="plan-limit">企业定制</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">数字人</span><span class="feat-tag yes">口播</span><span class="feat-tag yes">多语言</span>
+            <span class="feat-tag yes">4K</span><span class="feat-tag yes">API</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">数字人口播视频第一名，自定义数字人+40+语言配音，商业视频首选</div>
+        </div>
+      </div>
+
+      <!-- 6. Synthesia -->
+      <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://www.synthesia.io/" target="_blank" rel="noopener noreferrer">Synthesia</a></span>
+          <span class="cp-badge badge-overseas">🌍</span>
+          <span class="cp-badge badge-digital">🧑‍💼 数字人</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>说明</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">Starter</td><td class="plan-price">$22/月</td><td>10视频/月 720p</td><td class="plan-limit">70+数字人</td></tr>
+              <tr><td class="plan-name">Creator</td><td class="plan-price">$67/月</td><td>30视频/月 1080p</td><td class="plan-limit">140+数字人</td></tr>
+              <tr><td class="plan-name">Enterprise</td><td class="plan-price">定制</td><td>自定义数字人+API</td><td class="plan-limit">企业级</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">数字人</span><span class="feat-tag yes">多语言</span><span class="feat-tag yes">模板库</span>
+            <span class="feat-tag yes">API</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">企业培训视频标杆，140+数字人+130+语言，偏B端培训场景</div>
+        </div>
+      </div>
+
+      <!-- 7. Kling 国际版 -->
+      <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://klingai.com/" target="_blank" rel="noopener noreferrer">Kling 国际版</a></span>
+          <span class="cp-badge badge-overseas">🌍</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>积分/月</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">Free</td><td class="plan-price">$0</td><td>66/日</td><td class="plan-limit">同国内免费版</td></tr>
+              <tr><td class="plan-name">Standard</td><td class="plan-price">$6.99/月</td><td>660积分</td><td class="plan-limit">海外最便宜</td></tr>
+              <tr><td class="plan-name">Pro</td><td class="plan-price">$22/月</td><td>2400积分</td><td class="plan-limit"></td></tr>
+              <tr><td class="plan-name">Premier</td><td class="plan-price">$56/月</td><td>6600积分</td><td class="plan-limit"></td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">文生视频</span><span class="feat-tag yes">图生视频</span><span class="feat-tag yes">API</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">可灵AI国际版，功能相同，$6.99/月起为海外最便宜的视频生成套餐</div>
+        </div>
+      </div>
+
+    </div><!-- /cp-platforms (海外) -->
+
+    <!-- ==================== 功能对比矩阵 ==================== -->
+    <div class="cp-matrix-section">
+      <h2>📊 功能对比矩阵</h2>
+      <div class="cp-matrix-wrap">
+        <table class="cp-matrix">
+          <thead>
+            <tr>
+              <th>平台</th><th>文生视频</th><th>图生视频</th><th>视频编辑</th>
+              <th>数字人</th><th>长视频</th><th>4K</th><th>音频同步</th>
+              <th>API</th><th>商用</th><th>免费版</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>可灵 AI</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>即梦 Seedance</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>海螺 AI</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Vidu</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>LibTV</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td>—</td><td>—</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Runway</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td>—</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Pika</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Veo 3</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Sora ⚠️</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="yes">✓</td><td>—</td></tr>
+            <tr><td>Luma</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>HeyGen</td><td>—</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Synthesia</td><td>—</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td></tr>
+            <tr><td>Kling 国际版</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="font-size:.76rem;color:var(--muted);margin-top:.5rem">
+        ⚠️ Sora 已于 4/26 停服 · "长视频"指支持>30秒连续生成 · 数据截至2026-06-26
+      </div>
+    </div>
+
+    <!-- ==================== 价格对比（条形图） ==================== -->
+    <div class="cp-matrix-section">
+      <h2>💰 月费对比（主流套餐）</h2>
+      <div style="border:1px solid var(--border);border-radius:10px;background:var(--card);padding:1rem;">
+        <div style="font-weight:700;font-size:.88rem;margin-bottom:.6rem">入门付费套餐月费对比</div>
+        <div class="cp-bar-chart">
+          <div class="cp-bar-row"><span class="cp-bar-label">Kling国际版</span><div class="cp-bar-track"><div class="cp-bar-fill bar-domestic" style="width:6%">$6.99</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">可灵标准版</span><div class="cp-bar-track"><div class="cp-bar-fill bar-domestic" style="width:8%">¥58</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">Pika Standard</span><div class="cp-bar-track"><div class="cp-bar-fill bar-overseas" style="width:11%">$8</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">即梦标准版</span><div class="cp-bar-track"><div class="cp-bar-fill bar-domestic" style="width:9%">¥69</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">Runway Std</span><div class="cp-bar-track"><div class="cp-bar-fill bar-overseas" style="width:16%">$12</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">Vidu标准版</span><div class="cp-bar-track"><div class="cp-bar-fill bar-domestic" style="width:9%">¥68</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">Synthesia</span><div class="cp-bar-track"><div class="cp-bar-fill bar-overseas" style="width:29%">$22</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">Luma Std</span><div class="cp-bar-track"><div class="cp-bar-fill bar-overseas" style="width:32%">$24</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">可灵Pro</span><div class="cp-bar-track"><div class="cp-bar-fill bar-domestic" style="width:27%">¥238/月</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">HeyGen Creator</span><div class="cp-bar-track"><div class="cp-bar-fill bar-hot" style="width:39%">$29</div></div></div>
+        </div>
+        <div style="font-size:.72rem;color:var(--muted);margin-top:.5rem">🟢 国内 &nbsp; 🟣 海外 &nbsp; 🔴 数字人（溢价）&nbsp;· 可灵国内版¥58为性价比之王</div>
+      </div>
+    </div>
+
+    <!-- ==================== 场景推荐 ==================== -->
+    <div class="cp-tips" style="margin-top:2rem;">
+      <div style="padding:.75rem 1rem;border-bottom:1px solid var(--border);">
+        <h2>🎯 场景推荐 — 按需求选最适合的视频方案</h2>
+      </div>
+      <div style="padding:.75rem 1rem;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+
+          <!-- 短视频/自媒体 -->
+          <div style="padding:.75rem;border-radius:8px;border:1px solid rgba(63,185,80,.25);background:rgba(63,185,80,.04);">
+            <div style="font-weight:700;font-size:.88rem;margin-bottom:.5rem;">📱 短视频 / 自媒体</div>
+            <div style="font-size:.8rem;line-height:1.7;">
+              <div>🏆 <strong>首选：</strong><a href="https://klingai.kuaishou.com/" target="_blank" rel="noopener noreferrer">可灵AI专业版</a> ¥238/月 — 画质+量都够</div>
+              <div>💰 <strong>省钱：</strong>可灵免费版 + Pika Free — 每日白嫖</div>
+              <div>🎵 <strong>音视频同步：</strong><a href="https://jimeng.jianying.com/" target="_blank" rel="noopener noreferrer">即梦Seedance</a> — 原生配乐</div>
+            </div>
+          </div>
+
+          <!-- 专业影视 -->
+          <div style="padding:.75rem;border-radius:8px;border:1px solid rgba(255,107,107,.25);background:rgba(255,107,107,.04);">
+            <div style="font-weight:700;font-size:.88rem;margin-bottom:.5rem;">🎬 专业影视级</div>
+            <div style="font-size:.8rem;line-height:1.7;">
+              <div>🏆 <strong>首选：</strong><a href="https://runwayml.com/" target="_blank" rel="noopener noreferrer">Runway Pro</a> $28/月 — 编辑+4K最强</div>
+              <div>🇨🇳 <strong>国内：</strong>可灵专业版 ¥238/月 — 4K+API</div>
+              <div>🎥 <strong>剧情：</strong><a href="https://www.vidu.cn/" target="_blank" rel="noopener noreferrer">Vidu</a> — 对口型+多镜头连贯</div>
+            </div>
+          </div>
+
+          <!-- 数字人/口播 -->
+          <div style="padding:.75rem;border-radius:8px;border:1px solid rgba(240,136,62,.25);background:rgba(240,136,62,.04);">
+            <div style="font-weight:700;font-size:.88rem;margin-bottom:.5rem;">🧑‍💼 数字人 / 口播视频</div>
+            <div style="font-size:.8rem;line-height:1.7;">
+              <div>🏆 <strong>首选：</strong><a href="https://www.heygen.com/" target="_blank" rel="noopener noreferrer">HeyGen Creator</a> $29/月 — 数字人第一</div>
+              <div>🇨🇳 <strong>国内：</strong><a href="https://boabao.wondershare.cn/" target="_blank" rel="noopener noreferrer">万兴播爆</a> ¥99/月 — 电商/营销</div>
+              <div>🏫 <strong>培训：</strong><a href="https://www.synthesia.io/" target="_blank" rel="noopener noreferrer">Synthesia</a> $22/月 — 企业培训专用</div>
+            </div>
+          </div>
+
+          <!-- 免费体验 -->
+          <div style="padding:.75rem;border-radius:8px;border:1px solid rgba(210,153,34,.25);background:rgba(210,153,34,.04);">
+            <div style="font-weight:700;font-size:.88rem;margin-bottom:.5rem;">🆓 免费体验 / 试水</div>
+            <div style="font-size:.8rem;line-height:1.7;">
+              <div>🏆 <strong>首选：</strong>可灵AI免费版 — 每日66积分，最慷慨</div>
+              <div>🌍 <strong>海外：</strong>Luma Free 30次/月 + Pika Free</div>
+              <div>🧑‍💼 <strong>数字人：</strong>HeyGen Free — 3视频/月体验</div>
+            </div>
+          </div>
+
+          <!-- API开发者 -->
+          <div style="padding:.75rem;border-radius:8px;border:1px solid rgba(88,166,255,.25);background:rgba(88,166,255,.04);">
+            <div style="font-weight:700;font-size:.88rem;margin-bottom:.5rem;">🔧 API 开发者</div>
+            <div style="font-size:.8rem;line-height:1.7;">
+              <div>🏆 <strong>最便宜：</strong>可灵API ¥0.6/秒 — 国内最低</div>
+              <div>🌍 <strong>海外：</strong>Runway API / Pika API — 功能最全</div>
+              <div>🌍 <strong>海外旗舰：</strong><a href="https://deepmind.google/models/veo/" target="_blank" rel="noopener noreferrer">Google Veo 3</a> — Gemini Ultra / Vertex API</div>
+              <div>⚠️ <strong>注意：</strong>Veo API 约 $0.40–0.75/秒；Sora 已停服无独立 API</div>
+            </div>
+          </div>
+
+          <!-- 创意/广告 -->
+          <div style="padding:.75rem;border-radius:8px;border:1px solid rgba(167,139,250,.25);background:rgba(167,139,250,.04);">
+            <div style="font-weight:700;font-size:.88rem;margin-bottom:.5rem;">🎨 创意 / 广告</div>
+            <div style="font-size:.8rem;line-height:1.7;">
+              <div>🏆 <strong>首选：</strong><a href="https://pika.art/" target="_blank" rel="noopener noreferrer">Pika Pro</a> $28/月 — 特效最丰富</div>
+              <div>🇨🇳 <strong>国内：</strong>可灵专业版 — 风格控制+4K</div>
+              <div>🎬 <strong>编辑：</strong>Runway Pro — 视频编辑最强</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="margin-top:1rem;padding:.6rem .8rem;border-radius:6px;background:var(--panel);font-size:.78rem;line-height:1.7;">
+          <strong style="color:var(--warn)">⚠️ 选购提醒：</strong>
+          ① 积分制≠实际视频数 — 不同分辨率/时长消耗积分不同，注意阅读细则 &nbsp;
+          ② 国内平台性价比远超海外 — 可灵¥58 vs Runway $12，功能还更全 &nbsp;
+          ③ Sora 已于 4/26 停服 — 短期内不建议投入 &nbsp;
+          ④ 数字人溢价高 — HeyGen $29/月起，仅为口播场景值得 &nbsp;
+          ⑤ 免费版水印 — 正式商用需付费去水印
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== 注意事项 ==================== -->
+    <div class="cp-notice">
+      <div class="cp-notice-head">⚠️ 注意事项 — 视频套餐买前必读</div>
+      <div class="cp-notice-body">
+        <ul>
+          <li><strong>积分制≠实际视频数：</strong>不同分辨率/时长消耗积分不同，4K视频消耗可能是720p的4倍，务必阅读各平台积分换算细则。</li>
+          <li><strong>生成时长限制：</strong>大多数平台单次生成上限5-10秒，长视频需要多次生成+剪辑拼接，实际耗时远超预期。</li>
+          <li><strong>Sora 已停服：</strong>OpenAI Sora 于2026年4月26日停服，短期内不建议投入该生态。</li>
+          <li><strong>数字人溢价高：</strong>HeyGen/Synthesia 等数字人平台 $22-29/月起，仅为口播场景值得，普通视频生成选可灵/Runway更划算。</li>
+          <li><strong>免费版水印：</strong>几乎所有平台免费版输出带水印，正式商用必须付费去水印，否则有版权风险。</li>
+          <li><strong>国内平台性价比远超海外：</strong>可灵¥58 vs Runway $12（约¥87），功能还更全，优先考虑国内平台。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ==================== FAQ ==================== -->
+    <div class="cp-faq">
+      <div class="cp-faq-head">❓ 常见问题 FAQ</div>
+      <div class="cp-faq-item is-open">
+        <div class="cp-faq-q">视频积分怎么算？一次生成消耗多少？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>每家计算方式不同。</strong>可灵AI：5秒720p约消耗10积分，10秒1080p约30积分，4K约80积分。即梦/海螺类似。Runway按秒计费，每秒消耗不同credits。建议先用免费额度测试，摸清积分消耗再决定买哪档。</div>
+      </div>
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">国内视频平台和海外差距大吗？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>差距很小，部分场景国内更强。</strong>可灵AI在画质和时长上已追平 Runway Gen-4，即梦的音视频同步是独有功能。海外优势主要在编辑工具链（Runway的帧编辑、Pika的特效），纯生成质量差距不大。</div>
+      </div>
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">做短视频自媒体选哪个？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>可灵AI专业版 ¥238/月。</strong>国内最成熟的AI视频平台，画质够用、量也够、API可集成。如果需要音视频同步，选即梦Seedance。零成本先试可灵免费版每日66积分。</div>
+      </div>
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">数字人视频值得付费吗？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>取决于场景。</strong>如果你做电商/培训/营销口播视频，HeyGen/Synthesia省去了拍摄+剪辑成本，$22-29/月很划算。如果你只是做普通AI视频（风景/动画/特效），不需要数字人，选可灵/Runway即可。</div>
+      </div>
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">AI生成视频有版权吗？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>目前法律不明确。</strong>美国版权局裁定AI生成内容不受版权保护，中国尚无定论。但各平台付费版通常附带商用授权许可，建议商用选付费版并保留授权证明。免费版通常不可商用。</div>
+      </div>
+    </div>
+
+    <!-- ==================== 性价比排行 ==================== -->
+    <div class="cp-value-rank">
+      <div class="cp-value-rank-head">📊 性价比排行 — 每元视频秒数对比</div>
+      <div class="cp-value-rank-body">
+        <div style="font-size:0.78rem;color:var(--muted);margin-bottom:0.6rem;">公式：月均可生成视频秒数(1080p) ÷ 月价 = 每元视频秒数。数值越高性价比越好。</div>
+        <table class="cp-table" style="font-size:0.8rem;">
+          <thead><tr><th>排名</th><th>平台</th><th>套餐</th><th>月价</th><th>月均秒数(估)</th><th>每元秒数</th><th>性价比</th></tr></thead>
+          <tbody>
+            <tr><td>🥇</td><td class="plan-name">可灵AI</td><td>免费版</td><td class="plan-price">¥0</td><td>~66</td><td class="val-high">∞</td><td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:100%;height:100%;border-radius:4px;background:linear-gradient(90deg,#3fb950,#2ea043);"></div></div></td></tr>
+            <tr><td>🥈</td><td class="plan-name">可灵AI</td><td>专业版</td><td class="plan-price">¥238</td><td>~3,600</td><td class="val-high">15.1</td><td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:75%;height:100%;border-radius:4px;background:linear-gradient(90deg,#3fb950,#2ea043);"></div></div></td></tr>
+            <tr><td>🥉</td><td class="plan-name">即梦Seedance</td><td>Pro</td><td class="plan-price">¥239</td><td>~300</td><td class="val-high">12.1</td><td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:60%;height:100%;border-radius:4px;background:linear-gradient(90deg,#58a6ff,#388bfd);"></div></div></td></tr>
+            <tr><td>4</td><td class="plan-name">海螺AI</td><td>国际付费</td><td class="plan-price">$9.99起</td><td>~600</td><td class="val-mid">9.1</td><td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:45%;height:100%;border-radius:4px;background:linear-gradient(90deg,#58a6ff,#388bfd);"></div></div></td></tr>
+            <tr><td>5</td><td class="plan-name">Vidu</td><td>专业版</td><td class="plan-price">¥238</td><td>~300</td><td class="val-mid">8.1</td><td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:40%;height:100%;border-radius:4px;background:linear-gradient(90deg,#d29922,#bb8009);"></div></div></td></tr>
+            <tr><td>6</td><td class="plan-name">Runway</td><td>Standard</td><td class="plan-price">$12</td><td>~500</td><td class="val-mid">~6</td><td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:30%;height:100%;border-radius:4px;background:linear-gradient(90deg,#d29922,#bb8009);"></div></div></td></tr>
+            <tr><td>7</td><td class="plan-name">Pika</td><td>Standard</td><td class="plan-price">$8</td><td>~240</td><td class="val-low">~4</td><td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:20%;height:100%;border-radius:4px;background:linear-gradient(90deg,#8b9cb3,#6e7681);"></div></div></td></tr>
+            <tr><td>8</td><td class="plan-name">HeyGen</td><td>Creator</td><td class="plan-price">$29</td><td>~300</td><td class="val-low">~1.5</td><td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:8%;height:100%;border-radius:4px;background:linear-gradient(90deg,#8b9cb3,#6e7681);"></div></div></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ==================== 趋势分析 ==================== -->
+    <div class="cp-trend-section" style="margin-top:2.5rem;">
+      <h2>📈 AI 视频生成趋势</h2>
+      <div style="border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden;">
+        <div style="padding:.8rem 1rem;font-size:.85rem;line-height:1.8;">
+          <div style="margin-bottom:1rem;">
+            <div style="font-weight:700;color:var(--accent2);margin-bottom:.3rem;">1️⃣ 视频生成成本 3 年降 100×</div>
+            <div style="padding-left:.6rem;">
+              <div>• 2023年：AI视频生成$5-10/秒，仅大厂玩得起</div>
+              <div>• 2024年：Runway/Pika 降至$1-3/秒，创作者开始用</div>
+              <div>• 2025年：可灵/Luma 降至$0.01-0.5/秒，全民可用</div>
+              <div>• 2026年：可灵API ¥0.6/秒（~$0.008/秒），国内最便宜</div>
+            </div>
+          </div>
+          <div style="margin-bottom:1rem;">
+            <div style="font-weight:700;color:var(--danger);margin-bottom:.3rem;">2️⃣ Sora 停服与国产崛起</div>
+            <div style="padding-left:.6rem;">
+              <div>• Sora 4/26 停服标志 OpenAI 视频战略收缩，烧钱换市场的模式难持续</div>
+              <div>• 国产平台（可灵/即梦/Vidu）以1/5-1/3的价格提供同级画质</div>
+              <div>• 中国 AI 视频调用量 2026 Q1 首超美国，短视频生态是天然优势</div>
+            </div>
+          </div>
+          <div style="margin-bottom:1rem;">
+            <div style="font-weight:700;color:var(--warn);margin-bottom:.3rem;">3️⃣ 数字人从 PPT 到真人口播</div>
+            <div style="padding-left:.6rem;">
+              <div>• 2024年数字人还像"念稿机器"，2026年 HeyGen/Synthesia 已接近真人</div>
+              <div>• 自定义数字人（克隆自己的脸+声音）成为新需求，HeyGen Business $99/月</div>
+              <div>• AI 漫剧/短剧成为新赛道：Vidu 短剧工具 + 可灵长视频 = 自动生成连续剧</div>
+            </div>
+          </div>
+          <div>
+            <div style="font-weight:700;color:var(--accent);margin-bottom:.3rem;">4️⃣ 音视频原生同步</div>
+            <div style="padding-left:.6rem;">
+              <div>• 传统流程：先生成视频→后期配音→手动同步，耗时数小时</div>
+              <div>• 新趋势：即梦Seedance/海螺AI 原生音视频同步，画面配乐一步到位</div>
+              <div>• 2026 下半年预测：AI 视频+AI 配音+AI 剪辑全链路一体化</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cp-footer">
+      <p>数据来源：各平台官网 · 价格以官网为准</p>
+    <p><a href="index.html">← 返回 AINav 首页</a> · <a href="free-tier.html">🆓 免费额度</a> · <a href="token-optimization.html">Token优化</a> · <a href="coding-plan.html">编程套餐横评</a> · <a href="agent-plan.html">Agent横评</a> · <a href="model-plan.html">模型选型</a></p>
+  </div>
+
+  <script>document.querySelectorAll('.cp-faq-q').forEach(function(q){q.addEventListener('click',function(){q.parentElement.classList.toggle('is-open');});});</script>
+  <script>
+    (function(){
+      var btns=document.querySelectorAll('.theme-btn:not(.lang-btn)'),html=document.documentElement;
+      function apply(t){html.setAttribute('data-theme',t);localStorage.setItem('cp-theme',t);btns.forEach(function(b){b.classList.toggle('is-active',b.getAttribute('data-theme-set')===t)})}
+      var saved=localStorage.getItem('cp-theme')||'system';apply(saved);
+      btns.forEach(function(b){b.addEventListener('click',function(){apply(b.getAttribute('data-theme-set'))})});
+    })();
+  </script>
+
+  <script>
+    (function(){
+      var i18n={zh:{title:'🎬 AI Video Plan 视频套餐横评',subtitle:'国内外 AI 视频生成套餐一站式对比：价格、积分、功能、场景推荐，帮你选出最划算的视频生成方案。',navHome:'← AINav 首页',navCoding:'编程套餐横评',navAgent:'Agent横评',navVideo:'视频套餐横评',navImage:'图像套餐横评',navEncyclopedia:'AI百科',sectionDomestic:'国内 AI 视频平台',sectionOverseas:'海外 AI 视频平台',sectionMatrix:'📊 功能对比矩阵',sectionPrice:'💰 月费对比（主流套餐）',sectionRec:'🎯 场景推荐 — 按需求选最适合的视频方案',sectionTrend:'📈 AI 视频生成趋势',footer:'数据来源：各平台官网 · 价格以官网为准',footerHome:'← 返回 AINav 首页',thPlan:'套餐',thPrice:'月价',thCredits:'积分/月',thDuration:'视频时长',thNote:'备注',thType:'类型',thDesc:'说明',themeSystem:'跟随系统',themeLight:'浅色',themeDark:'深色',promoText:'想用',promoOr:'/',promoNoNet:'却没海外网络？',promoDesc:'一个 API Key 调用 100+ 顶级模型，国内直连低延迟，兼容 OpenAI 格式零改造',promoCta:'立即注册 →'},en:{title:'🎬 AI Video Plan Comparison',subtitle:'One-stop comparison of AI video generation plans worldwide: pricing, credits, features, and scenario recommendations.',navHome:'← AINav Home',navCoding:'Coding Plans',navAgent:'Agents',navVideo:'Video Plans',navImage:'Image Plans',navEncyclopedia:'AI Encyclopedia',sectionDomestic:'Domestic AI Video Platforms',sectionOverseas:'Overseas AI Video Platforms',sectionMatrix:'📊 Feature Comparison Matrix',sectionPrice:'💰 Monthly Price Comparison (Popular Plans)',sectionRec:'🎯 Recommendations — Find the Best Video Plan for Your Needs',sectionTrend:'📈 AI Video Generation Trends',footer:'Data sources: Official websites · Prices subject to change',footerHome:'← Back to AINav Home',thPlan:'Plan',thPrice:'Price',thCredits:'Credits/Mo',thDuration:'Video Duration',thNote:'Note',thType:'Type',thDesc:'Description',themeSystem:'System',themeLight:'Light',themeDark:'Dark',promoText:'Want',promoOr:'/',promoNoNet:'but no VPN?',promoDesc:'One API Key for 100+ top models, direct access in China, low latency, OpenAI-compatible format',promoCta:'Sign Up →'}};
+      var LANG_KEY='ainav-lang',currentLang=localStorage.getItem(LANG_KEY)||'zh';
+      function applyLang(lang){if(lang!=='zh'&&lang!=='en')lang='zh';currentLang=lang;document.documentElement.setAttribute('lang',lang==='en'?'en':'zh-CN');try{localStorage.setItem(LANG_KEY,lang)}catch(e){}var dict=i18n[lang];
+        document.querySelectorAll('[data-i18n]').forEach(function(el){var key=el.getAttribute('data-i18n');if(dict[key]!==undefined)el.textContent=dict[key]});
+        var nl=document.querySelectorAll('.cp-nav a');if(nl[0])nl[0].textContent=dict.navHome;if(nl[1])nl[1].textContent=dict.navCoding;if(nl[2])nl[2].textContent=dict.navAgent;if(nl[3])nl[3].textContent=dict.navVideo;if(nl[4])nl[4].textContent=dict.navImage;if(nl[5])nl[5].textContent=dict.navEncyclopedia;
+        document.querySelectorAll('.cp-section-hd').forEach(function(el){var t=el.textContent.trim();if(t.indexOf('国内')!==-1)el.innerHTML='<span class="cp-flag">🇨🇳</span> '+dict.sectionDomestic;else if(t.indexOf('海外')!==-1)el.innerHTML='<span class="cp-flag">🌍</span> '+dict.sectionOverseas});
+        document.querySelectorAll('.cp-table thead th').forEach(function(th){var t=th.textContent.trim();if(t==='套餐')th.textContent=dict.thPlan;else if(t==='月价')th.textContent=dict.thPrice;else if(t==='积分/月')th.textContent=dict.thCredits;else if(t==='视频时长')th.textContent=dict.thDuration;else if(t==='备注')th.textContent=dict.thNote;else if(t==='类型')th.textContent=dict.thType;else if(t==='说明')th.textContent=dict.thDesc});
+        var h2s=document.querySelectorAll('.cp-matrix-section h2,.cp-trend-section h2');h2s.forEach(function(el){var t=el.textContent.trim();if(t.indexOf('功能对比')!==-1)el.textContent=dict.sectionMatrix;else if(t.indexOf('月费对比')!==-1)el.textContent=dict.sectionPrice;else if(t.indexOf('趋势')!==-1)el.textContent=dict.sectionTrend});
+        document.querySelectorAll('.cp-tips h2').forEach(function(el){if(el.textContent.indexOf('场景推荐')!==-1)el.textContent=dict.sectionRec});
+        document.querySelectorAll('.theme-btn:not(.lang-btn)').forEach(function(b){var s=b.getAttribute('data-theme-set');if(s==='system')b.textContent=dict.themeSystem;else if(s==='light')b.textContent=dict.themeLight;else if(s==='dark')b.textContent=dict.themeDark});
+        var fp=document.querySelectorAll('.cp-footer p');if (fp[1]) fp[1].textContent = dict.footer;
+        var pb=document.querySelector('.cp-wrap > div:first-child');if(pb){pb.innerHTML='<span style="color:var(--muted)">'+dict.promoText+'</span> <strong style="color:var(--text)">GPT-5</strong> <span style="color:var(--muted)">'+dict.promoOr+'</span> <strong style="color:var(--text)">Claude Opus 4.8</strong> <span style="color:var(--muted)">'+dict.promoOr+'</span> <strong style="color:var(--text)">Gemini 3.1 Pro</strong> <span style="color:var(--muted)">'+dict.promoNoNet+'</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--accent2);font-weight:600;text-decoration:none;">OfoxAI</a> <span style="color:var(--muted)">'+dict.promoDesc+'</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">'+dict.promoCta+'</a>'}
+        document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('is-active',b.getAttribute('data-lang-set')===lang)});
+      }
+      applyLang(currentLang);document.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){applyLang(b.getAttribute('data-lang-set'))})});
+    })();
+  </script>
+<script src="plan-nav.js" data-active="video-plan.html"></script>
+<script src="thinking-framework.js"></script>
+<script>document.addEventListener("click",function(e){var c=e.target.closest(".plan-promo-code");if(!c)return;e.preventDefault();var code=c.getAttribute("data-code")||c.textContent.trim();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(code).then(function(){c.textContent=code+" 已复制";setTimeout(function(){c.textContent=code},1500)})}else{var ta=document.createElement("textarea");ta.value=code;ta.style.cssText="position:fixed;left:-9999px";document.body.appendChild(ta);ta.select();try{document.execCommand("copy");c.textContent=code+" 已复制";setTimeout(function(){c.textContent=code},1500)}catch(ex){}document.body.removeChild(ta)}});</script>
+</body>
+</html>

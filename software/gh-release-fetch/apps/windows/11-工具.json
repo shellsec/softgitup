@@ -847,29 +847,20 @@
   },
   {
     "id": "bee_count",
-    "简介": "BeeCount",
+    "简介": "BeeCount（本地优先跨端记账；仅 Android/iOS Release，无 Windows 桌面版；请用 apps-mobile 或 --open）",
     "分类": "工具",
     "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/TNT-Likely/BeeCount/releases",
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
     "windows_installer": false,
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false,
-    "use_download_filename": true,
-    "href_exclude_substrings": [
-      "source",
-      "src.",
-      "-src",
-      "symbols",
-      "debug",
-      "pdb",
-      "sha256",
-      ".sig",
-      ".json",
-      ".txt",
-      ".md",
-      "checksum"
+    "aliases": [
+      "BeeCount",
+      "beecount"
     ],
     "releases_url": "https://bgithub.xyz/TNT-Likely/BeeCount/releases",
     "repo_path": "TNT-Likely/BeeCount"

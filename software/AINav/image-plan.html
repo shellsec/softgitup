@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Image Plan 图像生成套餐横评 — AINav</title>
+  <meta name="description" content="AI图像生成套餐横向对比：Midjourney、GPT Image、Leonardo.AI、LiblibAI、通义万相、即梦AI价格功能积分对比。">
+  <link rel="canonical" href="https://aiv123.com/image-plan.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI Image Plan 图像生成套餐横评">
+  <meta property="og:description" content="国内外AI图像生成套餐价格功能积分对比，场景推荐与趋势分析。">
+  <meta property="og:url" content="https://aiv123.com/image-plan.html">
+  <meta property="og:site_name" content="AINav">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%230969da'/><text x='50' y='72' font-size='60' text-anchor='middle' fill='white' font-family='system-ui' font-weight='700'>AI</text></svg>">
+  <style>
+    :root,html[data-theme="dark"]{--bg:#0f1419;--panel:#151b23;--card:#1c2430;--border:#2d3848;--text:#e6edf3;--muted:#8b9cb3;--accent:#58a6ff;--accent2:#3fb950;--warn:#d29922;--danger:#f85149;--hot:#ff6b6b;--overseas:#a78bfa}
+    html[data-theme="light"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;--text:#1f2328;--muted:#59636e;--accent:#0969da;--accent2:#1a7f37;--warn:#9a6700;--danger:#cf222e;--hot:#e53935;--overseas:#7c3aed}
+    @media(prefers-color-scheme:light){html[data-theme="system"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;--text:#1f2328;--muted:#59636e;--accent:#0969da;--accent2:#1a7f37;--warn:#9a6700;--danger:#cf222e;--hot:#e53935;--overseas:#7c3aed}}
+    *{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+    .cp-top{padding:.75rem 1rem;border-bottom:1px solid var(--border);background:var(--panel);position:sticky;top:0;z-index:10}
+    .cp-top-inner{max-width:76rem;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;justify-content:space-between}
+    .cp-nav a{font-weight:600;margin-right:1rem;font-size:.88rem}
+    .cp-toolbar{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center}
+    .theme-btn{font-size:.72rem;padding:.2rem .5rem;border-radius:5px;border:1px solid var(--border);background:var(--card);color:var(--muted);cursor:pointer;font-family:inherit}
+    .theme-btn.is-active{color:var(--accent);border-color:var(--accent);font-weight:600}.lang-btn{margin-left:.35rem}
+    .cp-wrap{max-width:76rem;margin:0 auto;padding:1rem}h1{font-size:1.35rem;margin:0 0 .3rem}
+    .cp-subtitle{font-size:.88rem;color:var(--muted);margin-bottom:1rem}
+    .cp-section-hd{font-size:1.1rem;font-weight:700;margin:1.8rem 0 .8rem;padding-bottom:.3rem;border-bottom:2px solid var(--border);display:flex;align-items:center;gap:.5rem}
+    .cp-section-hd .cp-flag{font-size:1.15rem}.cp-section-hd.overseas-hd{border-bottom-color:var(--overseas)}
+    .cp-legend{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:1.2rem;font-size:.82rem}
+    .cp-legend-item{display:flex;align-items:center;gap:.3rem}
+    .cp-badge{display:inline-block;padding:.1rem .45rem;border-radius:4px;font-size:.72rem;font-weight:600}
+    .badge-hot{background:rgba(255,107,107,.15);color:var(--hot);border:1px solid rgba(255,107,107,.3)}
+    .badge-new{background:rgba(63,185,80,.15);color:var(--accent2);border:1px solid rgba(63,185,80,.3)}
+    .badge-rec{background:rgba(88,166,255,.15);color:var(--accent);border:1px solid rgba(88,166,255,.3)}
+    .badge-overseas{background:rgba(167,139,250,.15);color:var(--overseas);border:1px solid rgba(167,139,250,.3)}
+    .badge-free{background:rgba(63,185,80,.15);color:var(--accent2);border:1px solid rgba(63,185,80,.3)}
+    .badge-model{background:rgba(240,136,62,.15);color:#f0883e;border:1px solid rgba(240,136,62,.3)}
+    .cp-platforms{display:grid;grid-template-columns:1fr;gap:1.2rem}
+    @media(min-width:52rem){.cp-platforms{grid-template-columns:1fr 1fr}}
+    .cp-platform{border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden}
+    .cp-platform.overseas{border-color:rgba(167,139,250,.3)}
+    .cp-platform-head{padding:.75rem 1rem;border-bottom:1px solid var(--border);display:flex;flex-wrap:wrap;align-items:center;gap:.5rem}
+    .cp-platform.overseas .cp-platform-head{border-bottom-color:rgba(167,139,250,.2)}
+    .cp-platform-name{font-size:1.05rem;font-weight:700}.cp-platform-name a{color:var(--text)}
+    .cp-platform-name a:hover{color:var(--accent);text-decoration:none}
+    .cp-platform-body{padding:.75rem 1rem}
+    .cp-table{width:100%;border-collapse:collapse;font-size:.82rem}
+    .cp-table th{text-align:left;font-weight:600;color:var(--muted);padding:.3rem .5rem;border-bottom:1px solid var(--border);font-size:.76rem;white-space:nowrap}
+    .cp-table td{padding:.4rem .5rem;border-bottom:1px solid var(--border);vertical-align:top}
+    .cp-table tr:last-child td{border-bottom:none}
+    .cp-table .plan-name{font-weight:600;white-space:nowrap}
+    .cp-table .plan-price{white-space:nowrap;color:var(--accent2);font-weight:600}
+    .cp-table .plan-limit{font-size:.76rem;color:var(--muted)}
+    .feat-tags{display:flex;flex-wrap:wrap;gap:.25rem;margin-top:.4rem}
+    .feat-tag{font-size:.68rem;padding:.1rem .35rem;border-radius:3px;background:rgba(88,166,255,.08);border:1px solid rgba(88,166,255,.15);color:var(--accent);font-weight:500}
+    .feat-tag.yes{background:rgba(63,185,80,.1);border-color:rgba(63,185,80,.2);color:var(--accent2)}
+    .feat-tag.no{background:transparent;border-color:rgba(139,156,179,.15);color:var(--muted);opacity:.5}
+    .cp-matrix-section{margin-top:2rem}.cp-matrix-section h2{font-size:1.1rem;margin-bottom:.5rem}
+    .cp-matrix-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:8px;background:var(--card)}
+    .cp-matrix{width:100%;border-collapse:collapse;font-size:.8rem}
+    .cp-matrix th,.cp-matrix td{padding:.35rem .55rem;border:1px solid var(--border);text-align:center;white-space:nowrap}
+    .cp-matrix th{background:var(--panel);font-weight:600;color:var(--muted);font-size:.74rem;position:sticky;top:0}
+    .cp-matrix th:first-child,.cp-matrix td:first-child{text-align:left;position:sticky;left:0;background:var(--card);z-index:1;font-weight:600}
+    .cp-matrix th:first-child{z-index:2;background:var(--panel)}
+    .cp-matrix .yes{color:var(--accent2);font-weight:700}.cp-matrix .no{color:var(--muted);opacity:.4}
+    .cp-bar-chart{margin-top:.5rem}
+    .cp-bar-row{display:flex;align-items:center;gap:.5rem;margin-bottom:.35rem;font-size:.78rem}
+    .cp-bar-label{width:8rem;text-align:right;color:var(--muted);flex-shrink:0}
+    .cp-bar-track{flex:1;height:1.1rem;background:var(--border);border-radius:4px;overflow:hidden}
+    .cp-bar-fill{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:.4rem;font-size:.7rem;font-weight:600;color:#fff;white-space:nowrap}
+    .cp-bar-fill.bar-domestic{background:linear-gradient(90deg,#3fb950,#2ea043)}
+    .cp-bar-fill.bar-overseas{background:linear-gradient(90deg,#a78bfa,#7c3aed)}
+    .cp-bar-fill.bar-hot{background:linear-gradient(90deg,#ff6b6b,#e53935)}
+    .cp-bar-fill.bar-warn{background:linear-gradient(90deg,#d29922,#bb8009)}
+    .cp-notice{margin-top:2rem;padding:0;border:1px solid rgba(210,153,34,0.35);border-radius:10px;background:var(--card);overflow:hidden}
+    .cp-notice-head{padding:0.65rem 1rem;border-bottom:1px solid rgba(210,153,34,0.2);font-weight:700;font-size:1rem;background:rgba(210,153,34,0.06)}
+    .cp-notice-body{padding:0.75rem 1rem;font-size:0.82rem;line-height:1.75}
+    .cp-notice-body ul{padding-left:1.2rem;margin:0.5rem 0 0}.cp-notice-body li{margin-bottom:0.45rem}
+    .cp-notice-body strong{color:var(--warn)}.cp-notice-body code{font-size:0.78rem;padding:0.1rem 0.35rem;border-radius:4px;background:rgba(210,153,34,0.1);border:1px solid rgba(210,153,34,0.2);color:var(--warn);font-family:inherit}
+    .cp-faq{margin-top:2rem;border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden}
+    .cp-faq-head{padding:0.65rem 1rem;border-bottom:1px solid var(--border);font-weight:700;font-size:1rem}
+    .cp-faq-item{border-bottom:1px solid var(--border)}.cp-faq-item:last-child{border-bottom:none}
+    .cp-faq-q{padding:0.6rem 1rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:0.88rem;user-select:none;transition:background 0.15s}
+    .cp-faq-q:hover{background:rgba(88,166,255,0.04)}.cp-faq-q .cp-faq-arrow{font-size:0.72rem;color:var(--muted);transition:transform 0.2s;flex-shrink:0;margin-left:0.5rem}
+    .cp-faq-item.is-open .cp-faq-q .cp-faq-arrow{transform:rotate(180deg)}
+    .cp-faq-a{padding:0 1rem;max-height:0;overflow:hidden;transition:max-height 0.25s ease,padding 0.25s ease;font-size:0.82rem;line-height:1.7;color:var(--muted)}
+    .cp-faq-item.is-open .cp-faq-a{max-height:20rem;padding:0 1rem 0.75rem}.cp-faq-a strong{color:var(--text)}
+    .cp-value-rank{margin-top:2rem;border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden}
+    .cp-value-rank-head{padding:0.65rem 1rem;border-bottom:1px solid var(--border);font-weight:700;font-size:1rem}
+    .cp-value-rank-body{padding:0.75rem 1rem}.cp-value-rank .cp-table .val-high{color:var(--accent2);font-weight:700}
+    .cp-value-rank .cp-table .val-mid{color:var(--accent);font-weight:600}.cp-value-rank .cp-table .val-low{color:var(--muted)}
+    .cp-tips{margin-top:2rem;padding:0;border:1px solid var(--border);border-radius:8px;background:var(--card);overflow:hidden}
+    .cp-tips h2{font-size:1rem;margin:0}
+    .cp-updated-line { font-size: 0.76rem; color: var(--muted); margin: 0 0 0.3rem; }
+.cp-footer {max-width:76rem;margin:2rem auto 1rem;padding:0 1rem;font-size:.76rem;color:var(--muted);text-align:center}
+    .cp-footer a{color:var(--muted)}
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2B8FBWRX4N"></script>
+    <script>
+    (function(){
+      var i18n = {
+        zh: {
+          pageTitle: 'AI Image Plan 图像生成套餐横评 — AINav',
+          pageDesc: '国内外 AI 图像生成套餐一站式对比：价格、积分、功能、场景推荐。',
+          title: '🎨 AI Image Plan 图像生成套餐横评',
+          subtitle: '国内外 AI 图像生成套餐一站式对比：价格、积分、功能、场景推荐，帮你选出最划算的 AI 绘画方案。',
+          navHome: '← AINav 首页', navCoding: '编程套餐横评', navAgent: 'Agent横评',
+          navVideo: '视频套餐横评', navImage: '图像套餐横评', navEncyclopedia: 'AI百科',
+          themeSystem: '跟随系统', themeLight: '浅色', themeDark: '深色',
+          sectionDomestic: '国内 AI 图像生成平台', sectionOverseas: '海外 AI 图像生成平台',
+          sectionMatrix: '📊 功能对比矩阵', sectionPrice: '💰 月费对比（入门付费套餐）',
+          sectionRec: '🎯 场景推荐 — 按需求选最适合的图像方案',
+          sectionTrend: '📈 AI 图像生成趋势',
+          thPlan: '套餐', thPrice: '月价', thCredits: '额度', thCompute: '算力/月', thNote: '备注',
+          footer: '数据来源：各平台官网 · 价格以官网为准',
+          footerHome: '← 返回 AINav 首页',
+          promoText: '想用', promoOr: '/', promoNoNet: '却没海外网络？',
+          promoDesc: '一个 API Key 调用 100+ 顶级模型，国内直连低延迟，兼容 OpenAI 格式零改造',
+          promoCta: '立即注册 →',
+          legendRush: '⚡ 需抢', legendRushDesc: '限时/抢购',
+          legendHot: '🔥 热门', legendHotDesc: '高性价比',
+          legendNew: '✨ 特惠', legendNewDesc: '首月低价',
+          legendRec: '👍 推荐', legendRecDesc: '综合推荐',
+          legendOverseas: '🌍 海外', legendOverseasDesc: '需国际网络',
+        },
+        en: {
+          pageTitle: 'AI Image Plan Comparison — AINav',
+          pageDesc: 'One-stop comparison of AI image generation plans worldwide: pricing, credits, features, and scenario recommendations.',
+          title: '🎨 AI Image Plan Comparison',
+          subtitle: 'One-stop comparison of AI image generation plans worldwide: pricing, credits, features, and scenario recommendations.',
+          navHome: '← AINav Home', navCoding: 'Coding Plans', navAgent: 'Agents',
+          navVideo: 'Video Plans', navImage: 'Image Plans', navEncyclopedia: 'AI Encyclopedia',
+          themeSystem: 'System', themeLight: 'Light', themeDark: 'Dark',
+          sectionDomestic: 'Domestic AI Image Platforms', sectionOverseas: 'Overseas AI Image Platforms',
+          sectionMatrix: '📊 Feature Comparison Matrix', sectionPrice: '💰 Monthly Price Comparison (Entry Plans)',
+          sectionRec: '🎯 Recommendations — Find the Best Image Plan for Your Needs',
+          sectionTrend: '📈 AI Image Generation Trends',
+          thPlan: 'Plan', thPrice: 'Price', thCredits: 'Quota', thCompute: 'Compute/Mo', thNote: 'Note',
+          footer: 'Data sources: Official websites · Prices subject to change',
+          footerHome: '← Back to AINav Home',
+          promoText: 'Want', promoOr: '/', promoNoNet: 'but no VPN?',
+          promoDesc: 'One API Key for 100+ top models, direct access in China, low latency, OpenAI-compatible format',
+          promoCta: 'Sign Up →',
+          legendRush: '⚡ Rush', legendRushDesc: 'Limited/Flash',
+          legendHot: '🔥 Hot', legendHotDesc: 'Best Value',
+          legendNew: '✨ Deal', legendNewDesc: '1st Month Deal',
+          legendRec: '👍 Pick', legendRecDesc: 'Recommended',
+          legendOverseas: '🌍 OS', legendOverseasDesc: 'Needs VPN',
+        }
+      };
+      var LANG_KEY='ainav-lang',currentLang=localStorage.getItem(LANG_KEY)||'zh';
+      function applyLang(lang){
+        if(lang!=='zh'&&lang!=='en')lang='zh';currentLang=lang;
+        document.documentElement.setAttribute('lang',lang==='en'?'en':'zh-CN');
+        try{localStorage.setItem(LANG_KEY,lang)}catch(e){}
+        var dict=i18n[lang];
+        document.title=dict.pageTitle;
+        var metaDesc=document.querySelector('meta[name="description"]');
+        if(metaDesc)metaDesc.setAttribute('content',dict.pageDesc);
+        document.querySelectorAll('[data-i18n]').forEach(function(el){var key=el.getAttribute('data-i18n');if(dict[key]!==undefined)el.textContent=dict[key]});
+        var nl=document.querySelectorAll('.cp-nav a');
+        if(nl[0])nl[0].textContent=dict.navHome;if(nl[1])nl[1].textContent=dict.navCoding;
+        if(nl[2])nl[2].textContent=dict.navAgent;if(nl[3])nl[3].textContent=dict.navVideo;
+        if(nl[4])nl[4].textContent=dict.navImage;if(nl[5])nl[5].textContent=dict.navEncyclopedia;
+        document.querySelectorAll('.theme-btn:not(.lang-btn)').forEach(function(b){
+          var s=b.getAttribute('data-theme-set');
+          if(s==='system')b.textContent=dict.themeSystem;
+          else if(s==='light')b.textContent=dict.themeLight;
+          else if(s==='dark')b.textContent=dict.themeDark;
+        });
+        // Legend
+        var legendItems=document.querySelectorAll('.cp-legend-item');
+        var legendKeys=[
+          {badge:'badge-rush',key:'legendRush',descKey:'legendRushDesc'},
+          {badge:'badge-hot',key:'legendHot',descKey:'legendHotDesc'},
+          {badge:'badge-new',key:'legendNew',descKey:'legendNewDesc'},
+          {badge:'badge-rec',key:'legendRec',descKey:'legendRecDesc'},
+          {badge:'badge-overseas',key:'legendOverseas',descKey:'legendOverseasDesc'},
+        ];
+        legendItems.forEach(function(el,idx){
+          if(legendKeys[idx]){var k=legendKeys[idx];el.innerHTML='<span class="cp-badge '+k.badge+'">'+dict[k.key]+'</span> '+dict[k.descKey]}
+        });
+        document.querySelectorAll('.cp-section-hd').forEach(function(el){
+          var t=el.textContent.trim();
+          if(t.indexOf('国内')!==-1)el.innerHTML='<span class="cp-flag">🇨🇳</span> '+dict.sectionDomestic;
+          else if(t.indexOf('海外')!==-1)el.innerHTML='<span class="cp-flag">🌍</span> '+dict.sectionOverseas;
+        });
+        document.querySelectorAll('.cp-table thead th').forEach(function(th){
+          var t=th.textContent.trim();
+          if(t==='套餐')th.textContent=dict.thPlan;else if(t==='月价')th.textContent=dict.thPrice;
+          else if(t==='额度')th.textContent=dict.thCredits;else if(t==='算力/月')th.textContent=dict.thCompute;
+          else if(t==='备注')th.textContent=dict.thNote;
+        });
+        var h2s=document.querySelectorAll('.cp-matrix-section h2');
+        h2s.forEach(function(el){
+          var t=el.textContent.trim();
+          if(t.indexOf('功能对比')!==-1)el.textContent=dict.sectionMatrix;
+          else if(t.indexOf('月费对比')!==-1)el.textContent=dict.sectionPrice;
+        });
+        document.querySelectorAll('.cp-tips h2').forEach(function(el){
+          if(el.textContent.indexOf('场景推荐')!==-1)el.textContent=dict.sectionRec;
+        });
+        document.querySelectorAll('h2').forEach(function(el){
+          if(el.textContent.indexOf('图像生成趋势')!==-1||el.textContent.indexOf('Image Generation Trends')!==-1)el.textContent=dict.sectionTrend;
+        });
+        var fp=document.querySelectorAll('.cp-footer p');
+        if (fp[1]) fp[1].textContent = dict.footer;
+        if(fp[1])fp[1].innerHTML='<a href="index.html">'+dict.footerHome+'</a>';
+        var pb=document.querySelector('.cp-wrap > div:first-child');
+        if(pb){pb.innerHTML='<span style="color:var(--muted)">'+dict.promoText+'</span> <strong style="color:var(--text)">GPT-5</strong> <span style="color:var(--muted)">'+dict.promoOr+'</span> <strong style="color:var(--text)">Claude Opus 4.8</strong> <span style="color:var(--muted)">'+dict.promoOr+'</span> <strong style="color:var(--text)">Gemini 3.1 Pro</strong> <span style="color:var(--muted)">'+dict.promoNoNet+'</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--accent2);font-weight:600;text-decoration:none;">OfoxAI</a> <span style="color:var(--muted)">'+dict.promoDesc+'</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">'+dict.promoCta+'</a>'}
+        document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('is-active',b.getAttribute('data-lang-set')===lang)});
+      }
+      applyLang(currentLang);document.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){applyLang(b.getAttribute('data-lang-set'))})});
+    })();
+  </script>
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2d49f38b39c743ac80b6d6b9ff99494d"}'></script>
+</head>
+<body>
+  <div class="cp-top"><div class="cp-top-inner">
+    <div class="cp-nav" data-plan-nav></div>
+    <div class="cp-toolbar">
+      <button type="button" class="theme-btn" data-theme-set="system">跟随系统</button>
+      <button type="button" class="theme-btn" data-theme-set="light">浅色</button>
+      <button type="button" class="theme-btn" data-theme-set="dark">深色</button>
+      <button type="button" class="theme-btn lang-btn" data-lang-set="zh">中</button>
+      <button type="button" class="theme-btn lang-btn" data-lang-set="en">EN</button>
+    </div>
+  </div></div>
+
+  <div class="cp-wrap">
+    <div style="margin-bottom:1rem;padding:.55rem .85rem;border-radius:8px;border:1px solid var(--border);background:var(--card);display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.35rem .6rem;font-size:.84rem;line-height:1.5;">
+      <span style="color:var(--muted)"><strong style="color:var(--text)">OpenAI: GPT-5</strong> <span style="color:var(--muted)">·</span> <strong style="color:var(--text)">Anthropic: Claude Opus 4.8</strong> <span style="color:var(--muted)">·</span> <strong style="color:var(--text)">Google: Gemini 3.1 Pro</strong> <span style="color:var(--muted)">· 国内直连免梯</span> <span class="plan-promo-code" data-code="AFF_BB0FNC" style="color:var(--accent2);font-weight:600;cursor:pointer" title="点击复制优惠码">$2优惠码 AFF_BB0FNC</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">立即注册</a>
+    </div>
+    <h1 data-i18n="title">🎨 AI Image Plan 图像生成套餐横评</h1>
+    <p class="cp-subtitle" data-i18n="subtitle">国内外 AI 图像生成套餐一站式对比：价格、积分、功能、场景推荐，帮你选出最划算的 AI 绘画方案。</p>
+
+    
+    <p class="cp-updated-line"><span class="cp-updated">最后更新：2026-06-26</span> · <a href="video-plan.html">视频套餐横评</a></p>
+    <div class="cp-legend">
+      <div class="cp-legend-item"><span class="cp-badge badge-hot">🔥 热门</span> 高人气</div>
+      <div class="cp-legend-item"><span class="cp-badge badge-new">✨ 新品</span> 新上线</div>
+      <div class="cp-legend-item"><span class="cp-badge badge-rec">👍 推荐</span> 综合推荐</div>
+      <div class="cp-legend-item"><span class="cp-badge badge-overseas">🌍 海外</span> 需国际网络</div>
+      <div class="cp-legend-item"><span class="cp-badge badge-free">🆓 免费版</span> 零成本体验</div>
+      <div class="cp-legend-item"><span class="cp-badge badge-model">🧠 模型</span> 支持自选模型</div>
+    </div>
+
+    <!-- ==================== 国内 AI 图像生成平台 ==================== -->
+    <div class="cp-section-hd"><span class="cp-flag">🇨🇳</span> 国内 AI 图像生成平台</div>
+
+    <div class="cp-platforms">
+
+      <!-- 1. 通义万相 -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://tongyi.aliyun.com/wanxiang/" target="_blank" rel="noopener noreferrer">通义万相（阿里）</a></span>
+          <span class="cp-badge badge-hot">🔥 热门</span>
+          <span class="cp-badge badge-free">🆓 免费版</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>额度</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">免费版</td><td class="plan-price">¥0</td><td>80灵感值/日</td><td class="plan-limit">约80张图/天</td></tr>
+              <tr><td class="plan-name">会员版</td><td class="plan-price">¥39/月</td><td>500灵感值</td><td class="plan-limit">高清修复+加速</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">文生图</span><span class="feat-tag yes">图生图</span><span class="feat-tag yes">涂鸦生图</span>
+            <span class="feat-tag yes">写真</span><span class="feat-tag yes">API</span><span class="feat-tag no">模型训练</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">阿里出品，每日免费80张为国内最慷慨，通义万相2.5模型质量优秀，API ¥0.04/张起</div>
+        </div>
+      </div>
+
+      <!-- 2. 即梦AI（图像） -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://jimeng.jianying.com/" target="_blank" rel="noopener noreferrer">即梦AI（字节）</a></span>
+          <span class="cp-badge badge-hot">🔥 热门</span>
+          <span class="cp-badge badge-new">✨ 新品</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>额度</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">免费版</td><td class="plan-price">¥0</td><td>注册送260积分</td><td class="plan-limit">约260张图</td></tr>
+              <tr><td class="plan-name">标准版</td><td class="plan-price">¥69/月</td><td>约800积分</td><td class="plan-limit">图+视频通用</td></tr>
+              <tr><td class="plan-name">Pro版</td><td class="plan-price">¥239/月</td><td>约3000积分</td><td class="plan-limit">图+视频通用</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">文生图</span><span class="feat-tag yes">图生图</span><span class="feat-tag yes">写真</span>
+            <span class="feat-tag yes">视频生成</span><span class="feat-tag no">模型训练</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">字节出品，图+视频积分通用，Seedance 3.0 图像模型质量好，一站式创作首选</div>
+        </div>
+      </div>
+
+      <!-- 3. LiblibAI（哩布哩布） -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://www.liblib.art/" target="_blank" rel="noopener noreferrer">LiblibAI（哩布哩布）</a></span>
+          <span class="cp-badge badge-rec">👍 推荐</span>
+          <span class="cp-badge badge-model">🧠 模型</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>算力/月</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">免费版</td><td class="plan-price">¥0</td><td>300点/日</td><td class="plan-limit">约300张图/天</td></tr>
+              <tr><td class="plan-name">基础版VIP</td><td class="plan-price">¥35/月</td><td>15,000点</td><td class="plan-limit">20GB云存储</td></tr>
+              <tr><td class="plan-name">专业版VIP <span class="cp-badge badge-rec">👍</span></td><td class="plan-price">¥70/月</td><td>35,000点</td><td class="plan-limit">50GB+批量渲染</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">文生图</span><span class="feat-tag yes">图生图</span><span class="feat-tag yes">模型训练</span>
+            <span class="feat-tag yes">LoRA训练</span><span class="feat-tag yes">ControlNet</span><span class="feat-tag yes">10万+模型</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">国内最大AI绘画社区，10万+模型免费使用，¥35/月为最便宜的付费套餐，支持SD/FLUX全系列</div>
+        </div>
+      </div>
+
+      <!-- 4. 文心一格 -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://yige.baidu.com/" target="_blank" rel="noopener noreferrer">文心一格（百度）</a></span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>额度</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">免费版</td><td class="plan-price">¥0</td><td>有限次数</td><td class="plan-limit">每日刷新</td></tr>
+              <tr><td class="plan-name">会员版</td><td class="plan-price">¥30/月</td><td>更多额度</td><td class="plan-limit">高清+去水印</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">文生图</span><span class="feat-tag yes">图生图</span><span class="feat-tag yes">涂鸦</span>
+            <span class="feat-tag no">模型训练</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">百度出品，文心大模型驱动，简单易用，适合轻量级需求</div>
+        </div>
+      </div>
+
+      <!-- 5. 吐司Tiamat -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://tiamat.world/" target="_blank" rel="noopener noreferrer">吐司Tiamat</a></span>
+          <span class="cp-badge badge-model">🧠 模型</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>额度</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">免费版</td><td class="plan-price">¥0</td><td>有限次数</td><td class="plan-limit">排队较慢</td></tr>
+              <tr><td class="plan-name">基础版</td><td class="plan-price">¥49/月</td><td>约2000积分</td><td class="plan-limit">加速渲染</td></tr>
+              <tr><td class="plan-name">专业版</td><td class="plan-price">¥99/月</td><td>约5000积分</td><td class="plan-limit">+模型训练</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">文生图</span><span class="feat-tag yes">图生图</span><span class="feat-tag yes">模型训练</span>
+            <span class="feat-tag yes">LoRA训练</span><span class="feat-tag yes">API</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">国内专业AI绘画平台，支持SD/FLUX全系列+LoRA训练，适合进阶创作者</div>
+        </div>
+      </div>
+
+      <!-- 6. 6pen -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://6pen.art/" target="_blank" rel="noopener noreferrer">6pen</a></span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>额度</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">免费版</td><td class="plan-price">¥0</td><td>有限次数</td><td class="plan-limit">排队+带水印</td></tr>
+              <tr><td class="plan-name">Pro</td><td class="plan-price">¥30/月</td><td>约1000点</td><td class="plan-limit">去水印+加速</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">文生图</span><span class="feat-tag yes">图生图</span><span class="feat-tag yes">Disco Diffusion</span>
+            <span class="feat-tag no">模型训练</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">国内最早的AI绘画平台之一，支持多种模型，¥30/月入门门槛低</div>
+        </div>
+      </div>
+
+      <!-- 7. 海艺AI -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://www.haiyiai.com/" target="_blank" rel="noopener noreferrer">海艺AI</a></span>
+          <span class="cp-badge badge-free">🆓 免费版</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>额度</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">免费版</td><td class="plan-price">¥0</td><td>50次/日</td><td class="plan-limit">每日刷新</td></tr>
+              <tr><td class="plan-name">基础版</td><td class="plan-price">¥29/月</td><td>3000算力</td><td class="plan-limit">加速+高清</td></tr>
+              <tr><td class="plan-name">专业版</td><td class="plan-price">¥59/月</td><td>8000算力</td><td class="plan-limit">+批量生成</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">文生图</span><span class="feat-tag yes">图生图</span><span class="feat-tag yes">模板库</span>
+            <span class="feat-tag no">模型训练</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">模板化AI绘画，大量预设风格模板，适合设计小白快速出图</div>
+        </div>
+      </div>
+
+    </div><!-- /cp-platforms (国内) -->
+
+    <!-- ==================== 海外 AI 图像生成平台 ==================== -->
+    <div class="cp-section-hd overseas-hd"><span class="cp-flag">🌍</span> 海外 AI 图像生成平台</div>
+
+    <div class="cp-platforms">
+
+      <!-- 1. Midjourney -->
+      <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://www.midjourney.com/" target="_blank" rel="noopener noreferrer">Midjourney</a></span>
+          <span class="cp-badge badge-overseas">🌍</span>
+          <span class="cp-badge badge-hot">🔥 热门</span>
+          <span class="cp-badge badge-rec">👍 推荐</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>快时/月</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">Basic</td><td class="plan-price">$10/月</td><td>约200张</td><td class="plan-limit">无慢速模式</td></tr>
+              <tr><td class="plan-name">Standard <span class="cp-badge badge-rec">👍</span></td><td class="plan-price">$30/月</td><td>约900张快+无限慢</td><td class="plan-limit">15h快时+无限慢速</td></tr>
+              <tr><td class="plan-name">Pro</td><td class="plan-price">$60/月</td><td>约1800张快+无限慢</td><td class="plan-limit">30h快时+Stealth模式</td></tr>
+              <tr><td class="plan-name">Mega</td><td class="plan-price">$120/月</td><td>约3600张快+无限慢</td><td class="plan-limit">60h快时</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">文生图</span><span class="feat-tag yes">图生图</span><span class="feat-tag yes">风格调参</span>
+            <span class="feat-tag yes">V7模型</span><span class="feat-tag no">模型训练</span><span class="feat-tag yes">API</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">AI绘画画质天花板，V7模型艺术表现力最强，$30/月Standard版最划算，慢速模式无限用</div>
+        </div>
+      </div>
+
+      <!-- 2. GPT Image / ChatGPT -->
+      <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://openai.com/index/image-generation-api/" target="_blank" rel="noopener noreferrer">GPT Image（ChatGPT）</a></span>
+          <span class="cp-badge badge-overseas">🌍</span>
+          <span class="cp-badge badge-hot">🔥 热门</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>说明</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">ChatGPT Free</td><td class="plan-price">$0</td><td>有限次数/日</td><td class="plan-limit">GPT Image 基础额度</td></tr>
+              <tr><td class="plan-name">ChatGPT Plus</td><td class="plan-price">$20/月</td><td>更多 GPT Image 额度</td><td class="plan-limit">含 GPT Image / DALL·E 等</td></tr>
+              <tr><td class="plan-name">ChatGPT Pro</td><td class="plan-price">$200/月</td><td>GPT Image 高配额</td><td class="plan-limit">含所有OpenAI功能</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">文生图</span><span class="feat-tag yes">图生图</span><span class="feat-tag yes">对话式创作</span>
+            <span class="feat-tag yes">gpt-image-1</span><span class="feat-tag yes">API</span><span class="feat-tag no">模型训练</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">最智能的AI绘画——自然语言描述即可生成，gpt-image-1模型精准理解提示词，API $0.04/张起</div>
+        </div>
+      </div>
+
+      <!-- 3. Leonardo.AI -->
+      <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://leonardo.ai/" target="_blank" rel="noopener noreferrer">Leonardo.AI</a></span>
+          <span class="cp-badge badge-overseas">🌍</span>
+          <span class="cp-badge badge-rec">👍 推荐</span>
+          <span class="cp-badge badge-model">🧠 模型</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>Token/月</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">Free</td><td class="plan-price">$0</td><td>150 token/日</td><td class="plan-limit">约150张/天</td></tr>
+              <tr><td class="plan-name">Apprentice</td><td class="plan-price">$12/月</td><td>8,500 token</td><td class="plan-limit">模型训练</td></tr>
+              <tr><td class="plan-name">Artisan <span class="cp-badge badge-rec">👍</span></td><td class="plan-price">$30/月</td><td>25,000 token</td><td class="plan-limit">+视频生成</td></tr>
+              <tr><td class="plan-name">Maestro</td><td class="plan-price">$48/月</td><td>60,000 token</td><td class="plan-limit">优先渲染+API</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">文生图</span><span class="feat-tag yes">图生图</span><span class="feat-tag yes">模型训练</span>
+            <span class="feat-tag yes">实时画布</span><span class="feat-tag yes">视频生成</span><span class="feat-tag yes">API</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">Midjourney最强替代！免费版150 token/日超慷慨，支持FLUX+SD全系列+自训练模型，图+视频一体化</div>
+        </div>
+      </div>
+
+      <!-- 4. Ideogram -->
+      <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://ideogram.ai/" target="_blank" rel="noopener noreferrer">Ideogram</a></span>
+          <span class="cp-badge badge-overseas">🌍</span>
+          <span class="cp-badge badge-new">✨ 新品</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>额度</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">Free</td><td class="plan-price">$0</td><td>~25张/日</td><td class="plan-limit">慢速模式</td></tr>
+              <tr><td class="plan-name">Basic</td><td class="plan-price">$8/月</td><td>400张</td><td class="plan-limit">标准速度</td></tr>
+              <tr><td class="plan-name">Plus</td><td class="plan-price">$20/月</td><td>1000张</td><td class="plan-limit">优先+上传</td></tr>
+              <tr><td class="plan-name">Pro</td><td class="plan-price">$48/月</td><td>3000张</td><td class="plan-limit">商用+API</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">文生图</span><span class="feat-tag yes">图生图</span><span class="feat-tag yes">文字渲染</span>
+            <span class="feat-tag yes">3.0模型</span><span class="feat-tag no">模型训练</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">文字渲染最强！Logo、海报、T恤文字完美嵌入，3.0模型画质大幅提升，$8/月入门超值</div>
+        </div>
+      </div>
+
+      <!-- 5. NightCafe -->
+      <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://nightcafe.studio/" target="_blank" rel="noopener noreferrer">NightCafe</a></span>
+          <span class="cp-badge badge-overseas">🌍</span>
+          <span class="cp-badge badge-model">🧠 模型</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>积分/月</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">Free</td><td class="plan-price">$0</td><td>5积分/日</td><td class="plan-limit">约5张/天</td></tr>
+              <tr><td class="plan-name">AI Beginner</td><td class="plan-price">$6/月</td><td>100积分</td><td class="plan-limit">约100张</td></tr>
+              <tr><td class="plan-name">AI Hobbyist</td><td class="plan-price">$10/月</td><td>200积分</td><td class="plan-limit">约200张</td></tr>
+              <tr><td class="plan-name">AI Enthusiast</td><td class="plan-price">$20/月</td><td>500积分</td><td class="plan-limit">约500张</td></tr>
+              <tr><td class="plan-name">AI Artist</td><td class="plan-price">$50/月</td><td>1400积分</td><td class="plan-limit">约1400张</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">文生图</span><span class="feat-tag yes">图生图</span><span class="feat-tag yes">多模型</span>
+            <span class="feat-tag yes">社区</span><span class="feat-tag no">模型训练</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">老牌多模型平台，支持SD/FLUX/DALL-E等，社区活跃，$6/月入门最便宜</div>
+        </div>
+      </div>
+
+      <!-- 6. Adobe Firefly -->
+      <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://firefly.adobe.com/" target="_blank" rel="noopener noreferrer">Adobe Firefly</a></span>
+          <span class="cp-badge badge-overseas">🌍</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>积分/月</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">Free</td><td class="plan-price">$0</td><td>25积分/月</td><td class="plan-limit">约25张</td></tr>
+              <tr><td class="plan-name">Premium</td><td class="plan-price">$5/月</td><td>2,000积分</td><td class="plan-limit">Firefly独立版</td></tr>
+              <tr><td class="plan-name">Creative Cloud</td><td class="plan-price">$23/月起</td><td>含Firefly</td><td class="plan-limit">PS/AI内集成</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">文生图</span><span class="feat-tag yes">图生图</span><span class="feat-tag yes">PS集成</span>
+            <span class="feat-tag yes">商用版权</span><span class="feat-tag no">模型训练</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">Adobe出品，商用版权最安全，PS/AI原生集成，$5/月Firefly独立版超便宜</div>
+        </div>
+      </div>
+
+      <!-- 7. FLUX（Black Forest Labs） -->
+      <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://blackforestlabs.ai/" target="_blank" rel="noopener noreferrer">FLUX（Black Forest Labs）</a></span>
+          <span class="cp-badge badge-overseas">🌍</span>
+          <span class="cp-badge badge-new">✨ 新品</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>说明</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">API按量</td><td class="plan-price">$0.025/张起</td><td>FLUX.1[schnell]</td><td class="plan-limit">最快</td></tr>
+              <tr><td class="plan-name">API按量</td><td class="plan-price">$0.05/张</td><td>FLUX.1[pro]</td><td class="plan-limit">最高画质</td></tr>
+              <tr><td class="plan-name">Replicate等托管</td><td class="plan-price">按量付费</td><td>第三方推理</td><td class="plan-limit">如Replicate/Fal.ai</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+            <span class="feat-tag yes">文生图</span><span class="feat-tag yes">图生图</span><span class="feat-tag yes">开源</span>
+            <span class="feat-tag yes">API</span><span class="feat-tag yes">本地部署</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">Stable Diffusion原班人马新作，FLUX.1为开源最强模型，通过API或第三方平台使用，本地部署免费</div>
+        </div>
+      </div>
+
+    </div><!-- /cp-platforms (海外) -->
+
+    <!-- ==================== 功能对比矩阵 ==================== -->
+    <div class="cp-matrix-section">
+      <h2>📊 功能对比矩阵</h2>
+      <div class="cp-matrix-wrap">
+        <table class="cp-matrix">
+          <thead>
+            <tr>
+              <th>平台</th><th>文生图</th><th>图生图</th><th>模型训练</th>
+              <th>文字渲染</th><th>高清4K</th><th>API</th><th>视频生成</th>
+              <th>商用版权</th><th>免费版</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>通义万相</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>即梦AI</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td>—</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>LiblibAI</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>文心一格</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>吐司Tiamat</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Midjourney</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td>—</td><td class="yes">✓</td><td>—</td></tr>
+            <tr><td>GPT Image</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Leonardo.AI</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Ideogram</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>NightCafe</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="yes">✓</td></tr>
+            <tr><td>Adobe Firefly</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>FLUX (API)</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td>—</td><td class="yes">✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="font-size:.76rem;color:var(--muted);margin-top:.5rem">
+        "文字渲染"指生成图中嵌入文字（Logo/海报等）· "模型训练"指支持 LoRA/微调 · 数据截至2026-06-26
+      </div>
+    </div>
+
+    <!-- ==================== 价格对比（条形图） ==================== -->
+    <div class="cp-matrix-section">
+      <h2>💰 月费对比（入门付费套餐）</h2>
+      <div style="border:1px solid var(--border);border-radius:10px;background:var(--card);padding:1rem;">
+        <div style="font-weight:700;font-size:.88rem;margin-bottom:.6rem">入门付费套餐月费对比</div>
+        <div class="cp-bar-chart">
+          <div class="cp-bar-row"><span class="cp-bar-label">Adobe Firefly</span><div class="cp-bar-track"><div class="cp-bar-fill bar-overseas" style="width:5%">$5</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">NightCafe</span><div class="cp-bar-track"><div class="cp-bar-fill bar-overseas" style="width:6%">$6</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">Ideogram Basic</span><div class="cp-bar-track"><div class="cp-bar-fill bar-overseas" style="width:8%">$8</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">Midjourney Basic</span><div class="cp-bar-track"><div class="cp-bar-fill bar-overseas" style="width:10%">$10</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">Leonardo Apprentice</span><div class="cp-bar-track"><div class="cp-bar-fill bar-overseas" style="width:12%">$12</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">6pen Pro</span><div class="cp-bar-track"><div class="cp-bar-fill bar-domestic" style="width:4%">¥30</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">文心一格会员</span><div class="cp-bar-track"><div class="cp-bar-fill bar-domestic" style="width:4%">¥30</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">LiblibAI基础版</span><div class="cp-bar-track"><div class="cp-bar-fill bar-domestic" style="width:5%">¥35</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">通义万相会员</span><div class="cp-bar-track"><div class="cp-bar-fill bar-domestic" style="width:5%">¥39</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">Midjourney Std</span><div class="cp-bar-track"><div class="cp-bar-fill bar-overseas" style="width:30%">$30</div></div></div>
+        </div>
+        <div style="font-size:.72rem;color:var(--muted);margin-top:.5rem">🟢 国内 &nbsp; 🟣 海外 &nbsp; · 国内¥30-39 vs 海外$10-30，国内性价比碾压</div>
+      </div>
+    </div>
+
+    <!-- ==================== 场景推荐 ==================== -->
+    <div class="cp-tips" style="margin-top:2rem;">
+      <div style="padding:.75rem 1rem;border-bottom:1px solid var(--border);">
+        <h2>🎯 场景推荐 — 按需求选最适合的图像方案</h2>
+      </div>
+      <div style="padding:.75rem 1rem;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+
+          <!-- 设计师/专业创作 -->
+          <div style="padding:.75rem;border-radius:8px;border:1px solid rgba(167,139,250,.25);background:rgba(167,139,250,.04);">
+            <div style="font-weight:700;font-size:.88rem;margin-bottom:.5rem;">🎨 设计师 / 专业创作</div>
+            <div style="font-size:.8rem;line-height:1.7;">
+              <div>🏆 <strong>首选：</strong><a href="https://www.midjourney.com/" target="_blank" rel="noopener noreferrer">Midjourney Standard</a> $30/月 — 画质天花板</div>
+              <div>🇨🇳 <strong>国内：</strong><a href="https://www.liblib.art/" target="_blank" rel="noopener noreferrer">LiblibAI专业版</a> ¥70/月 — 10万+模型</div>
+              <div>🧠 <strong>训练：</strong><a href="https://leonardo.ai/" target="_blank" rel="noopener noreferrer">Leonardo.AI</a> — 自训练LoRA</div>
+            </div>
+          </div>
+
+          <!-- 电商/营销 -->
+          <div style="padding:.75rem;border-radius:8px;border:1px solid rgba(63,185,80,.25);background:rgba(63,185,80,.04);">
+            <div style="font-weight:700;font-size:.88rem;margin-bottom:.5rem;">🛒 电商 / 营销素材</div>
+            <div style="font-size:.8rem;line-height:1.7;">
+              <div>🏆 <strong>首选：</strong><a href="https://tongyi.aliyun.com/wanxiang/" target="_blank" rel="noopener noreferrer">通义万相会员</a> ¥39/月 — 最便宜</div>
+              <div>🆓 <strong>免费：</strong>通义万相免费版 — 每日80张够用</div>
+              <div>📋 <strong>版权安全：</strong><a href="https://firefly.adobe.com/" target="_blank" rel="noopener noreferrer">Adobe Firefly</a> $5/月</div>
+            </div>
+          </div>
+
+          <!-- Logo/海报文字 -->
+          <div style="padding:.75rem;border-radius:8px;border:1px solid rgba(255,107,107,.25);background:rgba(255,107,107,.04);">
+            <div style="font-weight:700;font-size:.88rem;margin-bottom:.5rem;">🔤 Logo / 海报文字渲染</div>
+            <div style="font-size:.8rem;line-height:1.7;">
+              <div>🏆 <strong>首选：</strong><a href="https://ideogram.ai/" target="_blank" rel="noopener noreferrer">Ideogram Plus</a> $20/月 — 文字最强</div>
+              <div>💰 <strong>省钱：</strong>Ideogram Basic $8/月 — 400张够用</div>
+              <div>🤖 <strong>对话式：</strong>GPT Image（ChatGPT Plus）— 自然语言描述</div>
+            </div>
+          </div>
+
+          <!-- 免费体验 -->
+          <div style="padding:.75rem;border-radius:8px;border:1px solid rgba(210,153,34,.25);background:rgba(210,153,34,.04);">
+            <div style="font-weight:700;font-size:.88rem;margin-bottom:.5rem;">🆓 免费体验 / 零成本</div>
+            <div style="font-size:.8rem;line-height:1.7;">
+              <div>🏆 <strong>最慷慨：</strong>通义万相 — 80张/日免费</div>
+              <div>🧠 <strong>多模型：</strong>Leonardo.AI — 150 token/日</div>
+              <div>📦 <strong>社区：</strong>LiblibAI — 300点/日+10万模型</div>
+            </div>
+          </div>
+
+          <!-- AI绘画进阶 -->
+          <div style="padding:.75rem;border-radius:8px;border:1px solid rgba(88,166,255,.25);background:rgba(88,166,255,.04);">
+            <div style="font-weight:700;font-size:.88rem;margin-bottom:.5rem;">🔧 AI绘画进阶 / 模型训练</div>
+            <div style="font-size:.8rem;line-height:1.7;">
+              <div>🏆 <strong>首选：</strong><a href="https://www.liblib.art/" target="_blank" rel="noopener noreferrer">LiblibAI专业版</a> ¥70/月 — LoRA训练+10万模型</div>
+              <div>🌍 <strong>海外：</strong><a href="https://leonardo.ai/" target="_blank" rel="noopener noreferrer">Leonardo.AI Artisan</a> $30/月 — FLUX+训练</div>
+              <div>💻 <strong>本地：</strong>FLUX.1[schnell] + ComfyUI — 免费，需显卡</div>
+            </div>
+          </div>
+
+          <!-- API开发者 -->
+          <div style="padding:.75rem;border-radius:8px;border:1px solid rgba(240,136,62,.25);background:rgba(240,136,62,.04);">
+            <div style="font-weight:700;font-size:.88rem;margin-bottom:.5rem;">⚙️ API 开发者</div>
+            <div style="font-size:.8rem;line-height:1.7;">
+              <div>🏆 <strong>最便宜：</strong>通义万相API ¥0.04/张 — 国内最低</div>
+              <div>🌍 <strong>海外：</strong>FLUX API $0.025/张起 — 开源最便宜</div>
+              <div>🤖 <strong>最智能：</strong>DALL-E API — gpt-image-1理解力最强</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="margin-top:1rem;padding:.6rem .8rem;border-radius:6px;background:var(--panel);font-size:.78rem;line-height:1.7;">
+          <strong style="color:var(--warn)">⚠️ 选购提醒：</strong>
+          ① 国内平台免费额度远超海外 — 通义万相80张/日 vs Midjourney无免费版 &nbsp;
+          ② 模型训练需选LiblibAI/Leonardo — 其他平台不支持自定义LoRA &nbsp;
+          ③ 文字渲染选Ideogram — Logo/海报/T恤文字嵌入最准确 &nbsp;
+          ④ 商用版权最安全是Adobe Firefly — 基于Adobe Stock训练，无版权风险 &nbsp;
+          ⑤ 本地部署选FLUX+ComfyUI — 完全免费，但需要8GB+显存
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== 注意事项 ==================== -->
+    <div class="cp-notice">
+      <div class="cp-notice-head">⚠️ 注意事项 — 图像套餐买前必读</div>
+      <div class="cp-notice-body">
+        <ul>
+          <li><strong>"额度"≠张数：</strong>多数平台用"算力点/Token"计费，高分辨率/复杂Prompt消耗更多点数，1张4K图可能消耗10张普通图的额度。</li>
+          <li><strong>国内免费额度远超海外：</strong>通义万相80张/日免费 vs Midjourney无免费版，先白嫖再付费。</li>
+          <li><strong>模型训练需选LiblibAI/Leonardo：</strong>其他平台不支持自定义LoRA训练，进阶用户注意。</li>
+          <li><strong>文字渲染选Ideogram：</strong>Logo/海报/T恤上的文字嵌入，Ideogram准确率远超其他平台。</li>
+          <li><strong>商用版权最安全是Adobe Firefly：</strong>基于Adobe Stock训练，无版权风险，$5/月最便宜。其他平台训练数据来源不透明。</li>
+          <li><strong>本地部署免费但需显卡：</strong>FLUX+ComfyUI完全免费，但至少需要8GB显存，4060即可入门。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ==================== FAQ ==================== -->
+    <div class="cp-faq">
+      <div class="cp-faq-head">❓ 常见问题 FAQ</div>
+      <div class="cp-faq-item is-open">
+        <div class="cp-faq-q">Midjourney 值得 $30/月吗？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>画质天花板，但价格偏高。</strong>如果你是专业设计师追求极致画质，$30/月值得。如果你是普通用户/电商，通义万相¥39/月或免费版已够用。差距在细节（手部/光影），不在基础画面。</div>
+      </div>
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">GPT Image 和 Midjourney 怎么选？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>GPT Image 强在理解力，Midjourney 强在美感。</strong>GPT Image 通过 ChatGPT Plus $20/月使用，自然语言描述即可生成，适合非专业用户。Midjourney 需要学习Prompt语法，但出图质量更高。两者不冲突，ChatGPT Plus还包含对话功能。</div>
+      </div>
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">AI生成图片有版权吗？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>法律尚不明确，但平台有授权。</strong>美国版权局裁定AI生成内容不受版权保护。但Adobe Firefly基于合法素材训练，提供商用授权。其他平台付费版也附带商用许可，建议保留授权证明。</div>
+      </div>
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">想做LoRA训练选哪个？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>国内选LiblibAI ¥70/月，海外选Leonardo $30/月。</strong>两者都支持在线训练自定义LoRA模型。本地训练可选FLUX+Kohya_ss，完全免费但需技术能力。</div>
+      </div>
+    </div>
+
+    <!-- ==================== 性价比排行 ==================== -->
+    <div class="cp-value-rank">
+      <div class="cp-value-rank-head">📊 性价比排行 — 每元图片数对比</div>
+      <div class="cp-value-rank-body">
+        <div style="font-size:0.78rem;color:var(--muted);margin-bottom:0.6rem;">公式：月均可生成图片数(1024px) ÷ 月价 = 每元图片数。数值越高性价比越好。</div>
+        <table class="cp-table" style="font-size:0.8rem;">
+          <thead><tr><th>排名</th><th>平台</th><th>套餐</th><th>月价</th><th>月均图片数(估)</th><th>每元图片数</th><th>性价比</th></tr></thead>
+          <tbody>
+            <tr><td>🥇</td><td class="plan-name">通义万相</td><td>免费版</td><td class="plan-price">¥0</td><td>~2,400</td><td class="val-high">∞</td><td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:100%;height:100%;border-radius:4px;background:linear-gradient(90deg,#3fb950,#2ea043);"></div></div></td></tr>
+            <tr><td>🥈</td><td class="plan-name">LiblibAI</td><td>专业版</td><td class="plan-price">¥70</td><td>~9,000</td><td class="val-high">129</td><td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:85%;height:100%;border-radius:4px;background:linear-gradient(90deg,#3fb950,#2ea043);"></div></div></td></tr>
+            <tr><td>🥉</td><td class="plan-name">通义万相</td><td>会员</td><td class="plan-price">¥39</td><td>~4,800</td><td class="val-high">123</td><td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:82%;height:100%;border-radius:4px;background:linear-gradient(90deg,#58a6ff,#388bfd);"></div></div></td></tr>
+            <tr><td>4</td><td class="plan-name">Leonardo.AI</td><td>Artisan</td><td class="plan-price">$30</td><td>~8,500</td><td class="val-mid">~40</td><td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:27%;height:100%;border-radius:4px;background:linear-gradient(90deg,#58a6ff,#388bfd);"></div></div></td></tr>
+            <tr><td>5</td><td class="plan-name">Ideogram</td><td>Plus</td><td class="plan-price">$20</td><td>~1,000</td><td class="val-mid">~29</td><td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:19%;height:100%;border-radius:4px;background:linear-gradient(90deg,#d29922,#bb8009);"></div></div></td></tr>
+            <tr><td>6</td><td class="plan-name">Midjourney</td><td>Standard</td><td class="plan-price">$30</td><td>~900</td><td class="val-low">~4.3</td><td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:3%;height:100%;border-radius:4px;background:linear-gradient(90deg,#8b9cb3,#6e7681);"></div></div></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ==================== 趋势分析 ==================== -->
+    <div class="cp-trend-section" style="margin-top:2.5rem;">
+      <h2>📈 AI 图像生成趋势</h2>
+      <div style="border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden;">
+        <div style="padding:.8rem 1rem;font-size:.85rem;line-height:1.8;">
+          <div style="margin-bottom:1rem;">
+            <div style="font-weight:700;color:var(--accent2);margin-bottom:.3rem;">1️⃣ 开源模型追平闭源</div>
+            <div style="padding-left:.6rem;">
+              <div>• 2023年：Midjourney V5 碾压一切开源模型</div>
+              <div>• 2024年：FLUX.1 发布，开源首次接近闭源水平</div>
+              <div>• 2025年：FLUX Pro 接近 MJ V6，SD3 修复手部问题</div>
+              <div>• 2026年：开源与闭源差距几乎消失，选择更多取决于生态和工具链</div>
+            </div>
+          </div>
+          <div style="margin-bottom:1rem;">
+            <div style="font-weight:700;color:var(--accent);margin-bottom:.3rem;">2️⃣ 从"画图"到"创作工作流"</div>
+            <div style="padding-left:.6rem;">
+              <div>• 单纯文生图已不够——用户需要：图生图 → 局部修改 → 高清修复 → 批量出图</div>
+              <div>• Leonardo.AI 实时画布 + LiblibAI 无限画布 = AI辅助设计工作台</div>
+              <div>• Adobe Firefly + PS 集成 = 无缝融入设计师现有工作流</div>
+            </div>
+          </div>
+          <div style="margin-bottom:1rem;">
+            <div style="font-weight:700;color:var(--danger);margin-bottom:.3rem;">3️⃣ 文字渲染突破</div>
+            <div style="padding-left:.6rem;">
+              <div>• 2024年及以前：AI画图中的文字都是"鬼画符"</div>
+              <div>• 2025年：Ideogram 2.0 突破文字渲染，Midjourney V6 跟进</div>
+              <div>• 2026年：Ideogram 3.0 + DALL-E gpt-image-1 文字渲染几乎完美</div>
+              <div>• 意义：AI终于能直接生成可用Logo/海报/T恤设计，商业价值暴增</div>
+            </div>
+          </div>
+          <div>
+            <div style="font-weight:700;color:var(--warn);margin-bottom:.3rem;">4️⃣ 国内免费策略碾压</div>
+            <div style="padding-left:.6rem;">
+              <div>• 通义万相 80张/日免费 = 海外平台付费版的量</div>
+              <div>• LiblibAI 300点/日 + 10万模型 = 国内最大AI绘画社区</div>
+              <div>• 对比：Midjourney 无免费版，$10/月起；国内¥0即可开始创作</div>
+              <div>• 趋势：国内平台靠免费获客→付费增值，海外靠订阅制，两种模式继续分化</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cp-footer">
+      <p>数据来源：各平台官网 · 价格以官网为准</p>
+    <p><a href="index.html">← 返回 AINav 首页</a> · <a href="free-tier.html">🆓 免费额度</a> · <a href="token-optimization.html">Token优化</a> · <a href="coding-plan.html">编程套餐横评</a> · <a href="agent-plan.html">Agent横评</a> · <a href="model-plan.html">模型选型</a> · <a href="video-plan.html">视频套餐横评</a></p>
+  </div>
+
+  <script>document.querySelectorAll('.cp-faq-q').forEach(function(q){q.addEventListener('click',function(){q.parentElement.classList.toggle('is-open');});});</script>
+  <script>
+    (function(){
+      var btns=document.querySelectorAll('.theme-btn:not(.lang-btn)'),html=document.documentElement;
+      function apply(t){html.setAttribute('data-theme',t);localStorage.setItem('cp-theme',t);btns.forEach(function(b){b.classList.toggle('is-active',b.getAttribute('data-theme-set')===t)})}
+      var saved=localStorage.getItem('cp-theme')||'system';apply(saved);
+      btns.forEach(function(b){b.addEventListener('click',function(){apply(b.getAttribute('data-theme-set'))})});
+    })();
+  </script>
+
+  <script>
+    (function(){
+      var i18n={zh:{title:'🎨 AI Image Plan 图像生成套餐横评',subtitle:'国内外 AI 图像生成套餐一站式对比：价格、积分、功能、场景推荐，帮你选出最划算的 AI 绘画方案。',navHome:'← AINav 首页',navCoding:'编程套餐横评',navAgent:'Agent横评',navVideo:'视频套餐横评',navImage:'图像套餐横评',navEncyclopedia:'AI百科',sectionDomestic:'国内 AI 图像生成平台',sectionOverseas:'海外 AI 图像生成平台',sectionMatrix:'📊 功能对比矩阵',sectionPrice:'💰 月费对比（入门付费套餐）',sectionRec:'🎯 场景推荐 — 按需求选最适合的图像方案',sectionTrend:'📈 AI 图像生成趋势',footer:'数据来源：各平台官网 · 价格以官网为准',footerHome:'← 返回 AINav 首页',thPlan:'套餐',thPrice:'月价',thCredits:'额度',thCompute:'算力/月',thNote:'备注',themeSystem:'跟随系统',themeLight:'浅色',themeDark:'深色',promoText:'想用',promoOr:'/',promoNoNet:'却没海外网络？',promoDesc:'一个 API Key 调用 100+ 顶级模型，国内直连低延迟，兼容 OpenAI 格式零改造',promoCta:'立即注册 →'},en:{title:'🎨 AI Image Plan Comparison',subtitle:'One-stop comparison of AI image generation plans worldwide: pricing, credits, features, and scenario recommendations.',navHome:'← AINav Home',navCoding:'Coding Plans',navAgent:'Agents',navVideo:'Video Plans',navImage:'Image Plans',navEncyclopedia:'AI Encyclopedia',sectionDomestic:'Domestic AI Image Platforms',sectionOverseas:'Overseas AI Image Platforms',sectionMatrix:'📊 Feature Comparison Matrix',sectionPrice:'💰 Monthly Price Comparison (Entry Plans)',sectionRec:'🎯 Recommendations — Find the Best Image Plan for Your Needs',sectionTrend:'📈 AI Image Generation Trends',footer:'Data sources: Official websites · Prices subject to change',footerHome:'← Back to AINav Home',thPlan:'Plan',thPrice:'Price',thCredits:'Quota',thCompute:'Compute/Mo',thNote:'Note',themeSystem:'System',themeLight:'Light',themeDark:'Dark',promoText:'Want',promoOr:'/',promoNoNet:'but no VPN?',promoDesc:'One API Key for 100+ top models, direct access in China, low latency, OpenAI-compatible format',promoCta:'Sign Up →'}};
+      var LANG_KEY='ainav-lang',currentLang=localStorage.getItem(LANG_KEY)||'zh';
+      function applyLang(lang){if(lang!=='zh'&&lang!=='en')lang='zh';currentLang=lang;document.documentElement.setAttribute('lang',lang==='en'?'en':'zh-CN');try{localStorage.setItem(LANG_KEY,lang)}catch(e){}var dict=i18n[lang];
+        document.querySelectorAll('[data-i18n]').forEach(function(el){var key=el.getAttribute('data-i18n');if(dict[key]!==undefined)el.textContent=dict[key]});
+        var nl=document.querySelectorAll('.cp-nav a');if(nl[0])nl[0].textContent=dict.navHome;if(nl[1])nl[1].textContent=dict.navCoding;if(nl[2])nl[2].textContent=dict.navAgent;if(nl[3])nl[3].textContent=dict.navVideo;if(nl[4])nl[4].textContent=dict.navImage;if(nl[5])nl[5].textContent=dict.navEncyclopedia;
+        document.querySelectorAll('.cp-section-hd').forEach(function(el){var t=el.textContent.trim();if(t.indexOf('国内')!==-1)el.innerHTML='<span class="cp-flag">🇨🇳</span> '+dict.sectionDomestic;else if(t.indexOf('海外')!==-1)el.innerHTML='<span class="cp-flag">🌍</span> '+dict.sectionOverseas});
+        document.querySelectorAll('.cp-table thead th').forEach(function(th){var t=th.textContent.trim();if(t==='套餐')th.textContent=dict.thPlan;else if(t==='月价')th.textContent=dict.thPrice;else if(t==='额度')th.textContent=dict.thCredits;else if(t==='算力/月')th.textContent=dict.thCompute;else if(t==='备注')th.textContent=dict.thNote});
+        var h2s=document.querySelectorAll('.cp-matrix-section h2');h2s.forEach(function(el){var t=el.textContent.trim();if(t.indexOf('功能对比')!==-1)el.textContent=dict.sectionMatrix;else if(t.indexOf('月费对比')!==-1)el.textContent=dict.sectionPrice});
+        document.querySelectorAll('.cp-tips h2').forEach(function(el){if(el.textContent.indexOf('场景推荐')!==-1)el.textContent=dict.sectionRec});
+        document.querySelectorAll('h2').forEach(function(el){if(el.textContent.indexOf('图像生成趋势')!==-1||el.textContent.indexOf('Image Generation Trends')!==-1)el.textContent=dict.sectionTrend});
+        document.querySelectorAll('.theme-btn:not(.lang-btn)').forEach(function(b){var s=b.getAttribute('data-theme-set');if(s==='system')b.textContent=dict.themeSystem;else if(s==='light')b.textContent=dict.themeLight;else if(s==='dark')b.textContent=dict.themeDark});
+        var fp=document.querySelectorAll('.cp-footer p');if (fp[1]) fp[1].textContent = dict.footer;
+        var pb=document.querySelector('.cp-wrap > div:first-child');if(pb){pb.innerHTML='<span style="color:var(--muted)">'+dict.promoText+'</span> <strong style="color:var(--text)">GPT-5</strong> <span style="color:var(--muted)">'+dict.promoOr+'</span> <strong style="color:var(--text)">Claude Opus 4.8</strong> <span style="color:var(--muted)">'+dict.promoOr+'</span> <strong style="color:var(--text)">Gemini 3.1 Pro</strong> <span style="color:var(--muted)">'+dict.promoNoNet+'</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--accent2);font-weight:600;text-decoration:none;">OfoxAI</a> <span style="color:var(--muted)">'+dict.promoDesc+'</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">'+dict.promoCta+'</a>'}
+        document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('is-active',b.getAttribute('data-lang-set')===lang)});
+      }
+      applyLang(currentLang);document.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){applyLang(b.getAttribute('data-lang-set'))})});
+    })();
+  </script>
+<script src="plan-nav.js" data-active="image-plan.html"></script>
+<script src="thinking-framework.js"></script>
+<script>document.addEventListener("click",function(e){var c=e.target.closest(".plan-promo-code");if(!c)return;e.preventDefault();var code=c.getAttribute("data-code")||c.textContent.trim();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(code).then(function(){c.textContent=code+" 已复制";setTimeout(function(){c.textContent=code},1500)})}else{var ta=document.createElement("textarea");ta.value=code;ta.style.cssText="position:fixed;left:-9999px";document.body.appendChild(ta);ta.select();try{document.execCommand("copy");c.textContent=code+" 已复制";setTimeout(function(){c.textContent=code},1500)}catch(ex){}document.body.removeChild(ta)}});</script>
+</body>
+</html>

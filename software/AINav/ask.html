@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="site-mobile.css">
+<title>Ask — 问对问题比得到答案更重要 — AI第一思考 — AINav</title>
+<meta name="description" content="Ask是AI时代最重要的能力：痛点诊断、真实案例、落地模板、闭环迭代。5个层级从笼统问到精准问，万能公式+避坑指南。">
+<link rel="canonical" href="https://aiv123.com/ask.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ask — 问对问题比得到答案更重要">
+<meta property="og:description" content="AI时代最重要的能力：5个层级、万能公式、避坑指南、真实案例。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%2358a6ff'/><text x='50' y='72' font-size='55' text-anchor='middle' fill='white' font-family='system-ui' font-weight='700'>Ask</text></svg>">
+<style>
+::root,html[data-theme="dark"]{--bg:#0f1419;--panel:#151b23;--card:#1c2430;--border:#2d3848;--text:#e6edf3;--muted:#8b9cb3;--accent:#58a6ff;--accent2:#3fb950;--warn:#d29922;--danger:#f85149;--hot:#ff6b6b;--af:#f97316;--af2:#06b6d4;--af3:#a78bfa}
+html[data-theme="light"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;--text:#1f2328;--muted:#59636e;--accent:#0969da;--accent2:#1a7f37;--warn:#9a6700;--danger:#cf222e;--hot:#e53935;--af:#ea580c;--af2:#0891b2;--af3:#7c3aed}
+@media(prefers-color-scheme:light){html[data-theme="system"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;--text:#1f2328;--muted:#59636e;--accent:#0969da;--accent2:#1a7f37;--warn:#9a6700;--danger:#cf222e;--hot:#e53935;--af:#ea580c;--af2:#0891b2;--af3:#7c3aed}}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.cp-top{padding:.75rem 1rem;border-bottom:1px solid var(--border);background:var(--panel);position:sticky;top:0;z-index:10}
+.cp-top-inner{max-width:76rem;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;justify-content:space-between}
+.cp-nav a{font-weight:600;margin-right:1rem;font-size:.88rem}
+.cp-toolbar{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center}
+.theme-btn{font-size:.72rem;padding:.2rem .5rem;border-radius:5px;border:1px solid var(--border);background:var(--card);color:var(--muted);cursor:pointer;font-family:inherit}
+.theme-btn.is-active{color:var(--accent);border-color:var(--accent);font-weight:600}
+.cp-wrap{max-width:76rem;margin:0 auto;padding:1rem}h1{font-size:1.35rem;margin:0 0 .3rem}
+.cp-subtitle{font-size:.88rem;color:var(--muted);margin-bottom:1rem}
+.cp-section-hd{font-size:1.1rem;font-weight:700;margin:1.8rem 0 .8rem;padding-bottom:.3rem;border-bottom:2px solid var(--border);display:flex;align-items:center;gap:.5rem}
+.cp-section-hd .cp-flag{font-size:1.15rem}
+.af-grid{display:grid;grid-template-columns:1fr;gap:1rem}
+@media(min-width:52rem){.af-grid{grid-template-columns:1fr 1fr}}
+.af-tool{border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden;transition:border-color .15s}
+.af-tool:hover{border-color:var(--accent)}
+.af-tool-head{padding:.7rem 1rem;border-bottom:1px solid var(--border);display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .6rem}
+.af-tool-name{font-size:1rem;font-weight:700;flex:1 1 auto}
+.af-tool-price{font-size:.88rem;font-weight:700;white-space:nowrap}
+.af-tool-body{padding:.7rem 1rem;font-size:.82rem;line-height:1.7}
+.af-tool-body ul{padding-left:1.1rem;margin:.3rem 0}.af-tool-body li{margin-bottom:.25rem}.af-tool-body strong{color:var(--text)}
+.af-profit-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:8px;background:var(--card);margin-bottom:1.5rem}
+.af-profit{width:100%;border-collapse:collapse;font-size:.78rem}
+.af-profit th,.af-profit td{padding:.4rem .55rem;border:1px solid var(--border);text-align:left;white-space:nowrap}
+.af-profit th{background:var(--panel);font-weight:600;color:var(--muted);font-size:.72rem}
+.cp-updated-line { font-size: 0.76rem; color: var(--muted); margin: 0 0 0.3rem; }
+.cp-footer {max-width:76rem;margin:2rem auto 1rem;padding:0 1rem;font-size:.76rem;color:var(--muted);text-align:center}
+.cp-footer a{color:var(--muted)}
+.case-card{border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden;margin-bottom:1rem}
+.case-card-head{padding:.7rem 1rem;border-bottom:1px solid var(--border);font-weight:700;font-size:.95rem;display:flex;align-items:center;gap:.5rem}
+.case-card-body{padding:.7rem 1rem;font-size:.82rem;line-height:1.7}
+.case-card-body ul{padding-left:1.1rem;margin:.3rem 0}.case-card-body li{margin-bottom:.3rem}.case-card-body strong{color:var(--text)}
+.case-metric{display:inline-flex;align-items:center;gap:.3rem;padding:.25rem .6rem;border-radius:6px;background:rgba(88,166,255,.06);border:1px solid rgba(88,166,255,.15);font-size:.78rem;font-weight:600;color:var(--accent);margin:.2rem .3rem .2rem 0}
+.tf-nav{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.5rem 0}
+.tf-nav a{padding:.5rem 1rem;border-radius:8px;border:1px solid var(--border);background:var(--card);font-size:.85rem;font-weight:600;transition:border-color .15s}
+.tf-nav a:hover{text-decoration:none;border-color:var(--accent)}
+.tf-nav a.is-active{border-color:var(--accent);color:var(--accent);background:rgba(88,166,255,.06)}
+.highlight-box{padding:.6rem 1rem;border-radius:6px;font-size:.78rem;line-height:1.7;margin:.5rem 0}
+</style>
+</head>
+<body>
+
+<div class="cp-top">
+<div class="cp-top-inner">
+  <div class="cp-nav"><a href="index.html">AINav</a><a href="thinking-framework.html">AI第一思考</a><a href="ask.html" style="color:var(--accent)">Ask</a></div>
+  <div class="cp-toolbar">
+    <button class="theme-btn is-active" data-theme-set="dark">Dark</button>
+    <button class="theme-btn" data-theme-set="light">Light</button>
+    <button class="theme-btn" data-theme-set="system">System</button>
+  </div>
+</div>
+</div>
+
+<div class="cp-wrap">
+
+<h1>💬 Ask — 问对问题，比得到答案更重要</h1>
+<div class="cp-subtitle">AI时代最重要的能力。不是AI不行，是你没问对。</div>
+
+<!-- 导航 -->
+<div class="tf-nav">
+  <a href="ask.html" class="is-active">💬 Ask</a>
+  <a href="plan.html">🗺️ Plan</a>
+  <a href="debug.html">🔧 Debug</a>
+  <a href="agent.html">🤖 Agent</a>
+</div>
+
+<!-- ==================== 痛点 ==================== -->
+<div class="cp-section-hd"><span class="cp-flag">🔥</span> 痛点 — 为什么你用AI总是不满意</div>
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">痛点1：模糊提问 → 废话输出</div></div>
+  <div class="af-tool-body">
+    <strong>症状：</strong>你输入"帮我写个网站"，AI给你一堆泛泛的模板和建议。<br><br>
+    <strong>真相：</strong>不是AI能力差，是你没说清楚要什么。就像你对装修师傅说"帮我装修"，他能做什么？<br><br>
+    <div class="highlight-box" style="background:rgba(248,81,73,.04);border:1px solid rgba(248,81,73,.12)">
+    <strong>核心问题：</strong>模糊的想法产生模糊的输出。AI不会猜你的心思——它只会精确执行你说的每一句话。
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">痛点2：一次问太多 → AI也乱</div></div>
+  <div class="af-tool-body">
+    <strong>症状：</strong>"帮我从零做一个电商App，要有用户注册、商品列表、购物车、支付、后台管理……" → AI东一块西一块，什么都做了什么都不好。<br><br>
+    <strong>真相：</strong>AI的注意力是有限的。一次塞10个需求，等于没有重点。<br><br>
+    <div class="highlight-box" style="background:rgba(210,153,34,.04);border:1px solid rgba(210,153,34,.12)">
+    <strong>核心问题：</strong>人脑一次也只能处理3-5个概念，AI也一样。拆分是效率的前提。
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">痛点3：不给上下文 → AI瞎猜</div></div>
+  <div class="af-tool-body">
+    <strong>症状：</strong>"帮我写个文案" → AI写出来的跟你的产品完全无关。<br><br>
+    <strong>真相：</strong>AI不知道你是谁、卖什么、给谁看。它只能从"文案"二字出发，写一个最"平均"的结果。<br><br>
+    <div class="highlight-box" style="background:rgba(88,166,255,.04);border:1px solid rgba(88,166,255,.12)">
+    <strong>核心问题：</strong>没有上下文的提问，等于让AI在无限可能中随机选一个。概率上，它选的不会是你想要的。
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">痛点4：不会追问 → 换AI重来</div></div>
+  <div class="af-tool-body">
+    <strong>症状：</strong>AI第一次回答不满意，你就换个AI重新问，结果更差。<br><br>
+    <strong>真相：</strong>追问比换工具有效10倍。AI第一次回答已经理解了你的一部分意图，追问是在这个基础上优化。换AI是从零开始。<br><br>
+    <div class="highlight-box" style="background:rgba(63,185,80,.04);border:1px solid rgba(63,185,80,.12)">
+    <strong>核心问题：</strong>把AI当搜索引擎用 → 一次性。把AI当协作者用 → 迭代式。后者效率高5-10倍。
+    </div>
+  </div></div>
+</div>
+
+<!-- ==================== 案例 ==================== -->
+<div class="cp-section-hd"><span class="cp-flag">📋</span> 案例 — 同一个需求，不同的问法</div>
+
+<div class="case-card">
+  <div class="case-card-head">📄 案例1：做产品宣传视频</div>
+  <div class="case-card-body">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem;font-size:.78rem">
+      <div style="padding:.6rem;border-radius:6px;background:rgba(248,81,73,.04);border:1px solid rgba(248,81,73,.12)">
+        <strong style="color:var(--danger)">❌ 笼统问（Lv.1）</strong><br>
+        "帮我做个产品宣传视频"<br><br>
+        <strong>AI输出：</strong>"好的，以下是制作产品宣传视频的步骤：1.确定目标受众 2.编写脚本 3.拍摄素材 4.后期剪辑……"<br>
+        <span style="color:var(--muted)">→ 废话，毫无可用输出</span>
+      </div>
+      <div style="padding:.6rem;border-radius:6px;background:rgba(63,185,80,.04);border:1px solid rgba(63,185,80,.12)">
+        <strong style="color:var(--accent2)">✅ 精准问（Lv.5）</strong><br>
+        "你是一个短视频导演。我的产品是AI编程助手'CodeBuddy'，目标用户是1-3年经验的前端开发者，核心卖点是'AI自动补全+Agent模式自动写代码'。请写一个30秒TikTok风格的分镜脚本，要求：前3秒用'还在手动写代码？'抓眼球，中间15秒展示AI自动补全+Agent执行，结尾CTA'免费试用'。输出格式：秒数+画面+旁白。"<br>
+        <span style="color:var(--muted)">→ 直接可用的分镜脚本</span>
+      </div>
+    </div>
+    <div style="margin-top:.6rem">
+      <span class="case-metric">提效倍率：5x</span>
+      <span class="case-metric">可用性：从0% → 80%</span>
+      <span class="case-metric">修改轮次：从5轮 → 1轮</span>
+    </div>
+  </div>
+</div>
+
+<div class="case-card">
+  <div class="case-card-head">💻 案例2：写代码功能</div>
+  <div class="case-card-body">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem;font-size:.78rem">
+      <div style="padding:.6rem;border-radius:6px;background:rgba(248,81,73,.04);border:1px solid rgba(248,81,73,.12)">
+        <strong style="color:var(--danger)">❌ 笼统问（Lv.1）</strong><br>
+        "帮我写个登录功能"<br><br>
+        <strong>AI输出：</strong>给你一个最基础的HTML表单+PHP后端，跟你的项目完全无关。<br>
+        <span style="color:var(--muted)">→ 代码不可用，重新来</span>
+      </div>
+      <div style="padding:.6rem;border-radius:6px;background:rgba(63,185,80,.04);border:1px solid rgba(63,185,80,.12)">
+        <strong style="color:var(--accent2)">✅ 精准问（Lv.5）</strong><br>
+        "我的项目是Next.js 14 + Prisma + NextAuth。请在 app/api/auth/ 下添加 Google OAuth 登录，使用 Prisma Adapter，用户表已有 email/name/image 字段。要求：1.只改必要的文件 2.加上环境变量示例 3.不用写测试。"<br>
+        <span style="color:var(--muted)">→ 直接复制粘贴可用</span>
+      </div>
+    </div>
+    <div style="margin-top:.6rem">
+      <span class="case-metric">提效倍率：10x</span>
+      <span class="case-metric">一次通过率：从20% → 85%</span>
+    </div>
+  </div>
+</div>
+
+<div class="case-card">
+  <div class="case-card-head">🎨 案例3：AI出图</div>
+  <div class="case-card-body">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem;font-size:.78rem">
+      <div style="padding:.6rem;border-radius:6px;background:rgba(248,81,73,.04);border:1px solid rgba(248,81,73,.12)">
+        <strong style="color:var(--danger)">❌ 笼统问（Lv.1）</strong><br>
+        "画一个科技感的封面"<br><br>
+        <strong>AI输出：</strong>一张蓝色渐变+几个圆形光斑的通用图，跟"科技感"最俗的刻板印象一样。<br>
+        <span style="color:var(--muted)">→ 看着像模板</span>
+      </div>
+      <div style="padding:.6rem;border-radius:6px;background:rgba(63,185,80,.04);border:1px solid rgba(63,185,80,.12)">
+        <strong style="color:var(--accent2)">✅ 精准问（Lv.5）</strong><br>
+        "16:9横版封面，深色背景(#0a0a0a)，左侧放产品截图(带轻微3D旋转)，右侧留出标题区域，底部加一行小字副标题。风格参考 Linear.app 官网的极简设计——线条、渐变光带、玻璃质感。不要出现人物。"<br>
+        <span style="color:var(--muted)">→ 一次出图接近终稿</span>
+      </div>
+    </div>
+    <div style="margin-top:.6rem">
+      <span class="case-metric">提效倍率：8x</span>
+      <span class="case-metric">重出次数：从5次 → 1-2次</span>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 落地 ==================== -->
+<div class="cp-section-hd"><span class="cp-flag">🛠️</span> 落地 — Ask的5个层级 + 万能模板</div>
+
+<div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">Ask的5个层级</div></div>
+<div class="af-tool-body">
+  <div class="af-profit-wrap" style="margin:0">
+  <table class="af-profit">
+  <tr><th>层级</th><th>你说的</th><th>AI给的</th><th>可用性</th><th>适用场景</th></tr>
+  <tr><td><strong>Lv.1</strong></td><td>"帮我做个视频"</td><td>泛泛建议/步骤</td><td>❌ 0-10%</td><td>探索阶段，还不知道要什么</td></tr>
+  <tr><td><strong>Lv.2</strong></td><td>"做个30秒产品视频，科技感"</td><td>有框架的输出</td><td>⚠️ 20-30%</td><td>有方向但缺细节</td></tr>
+  <tr><td><strong>Lv.3</strong></td><td>"参考这个视频的风格，做类似的"</td><td>近似结果</td><td>✅ 40-60%</td><td>有参考物</td></tr>
+  <tr><td><strong>Lv.4</strong></td><td>"先分镜→再文案→再画面→再配音"</td><td>可控流程+每步输出</td><td>✅ 60-80%</td><td>复杂任务拆步骤</td></tr>
+  <tr><td><strong>Lv.5</strong></td><td>角色+任务+约束+示例+格式</td><td>精准可用结果</td><td>🎯 80-95%</td><td>任何需要AI输出的场景</td></tr>
+  </table>
+  </div>
+  <br><strong>每升一级，AI输出的可用性提升3-5倍。从Lv.1到Lv.5的差距不是5倍，是50倍。</strong>
+</div></div>
+
+<div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">万能Ask公式</div></div>
+<div class="af-tool-body">
+  <div style="padding:.8rem;border-radius:8px;background:rgba(88,166,255,.04);border:1px solid rgba(88,166,255,.12);font-size:.82rem;line-height:1.8">
+    <strong style="color:var(--accent);font-size:.95rem">角色 + 任务 + 约束 + 示例 + 格式</strong><br><br>
+    你是一个<strong>[角色]</strong>。<br>
+    请帮我<strong>[任务]</strong>。<br>
+    要求：<strong>[约束1]，[约束2]，[约束3]</strong>。<br>
+    参考风格：<strong>[示例/链接/截图]</strong>。<br>
+    输出格式：<strong>[JSON / Markdown / 代码 / 分镜脚本 / 表格]</strong>。
+  </div>
+</div></div>
+
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">编程场景模板</div></div>
+  <div class="af-tool-body">
+    <div style="padding:.6rem;border-radius:6px;background:rgba(88,166,255,.04);border:1px solid rgba(88,166,255,.1);font-size:.78rem;line-height:1.7">
+      你是一个<strong>高级全栈工程师</strong>。<br>
+      请在 <strong>app/api/users/</strong> 下新增一个 <strong>GET 接口</strong>，返回分页用户列表。<br>
+      技术栈：<strong>Next.js 14 + Prisma + PostgreSQL</strong>。<br>
+      要求：<strong>1.支持 page/size 参数 2.返回 total+data 3.加 Zod 校验</strong>。<br>
+      参考：<strong>现有 app/api/auth/ 的写法风格</strong>。<br>
+      输出：<strong>只输出新增的 route.ts 文件，不用解释</strong>。
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">文案场景模板</div></div>
+  <div class="af-tool-body">
+    <div style="padding:.6rem;border-radius:6px;background:rgba(249,115,22,.04);border:1px solid rgba(249,115,22,.1);font-size:.78rem;line-height:1.7">
+      你是一个<strong>科技产品文案专家</strong>。<br>
+      请帮我写 <strong>3条小红书种草文案</strong>。<br>
+      产品：<strong>AI编程助手CodeBuddy，核心卖点：Agent模式自动写代码</strong>。<br>
+      要求：<strong>1.每条200字内 2.开头用痛点抓眼球 3.结尾加CTA 4.语气轻松不说教</strong>。<br>
+      参考：<strong>Apple产品文案的简洁风格</strong>。<br>
+      输出：<strong>3条文案，每条单独标号</strong>。
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">视频场景模板</div></div>
+  <div class="af-tool-body">
+    <div style="padding:.6rem;border-radius:6px;background:rgba(63,185,80,.04);border:1px solid rgba(63,185,80,.1);font-size:.78rem;line-height:1.7">
+      你是一个<strong>短视频导演</strong>。<br>
+      请帮我写 <strong>30秒TikTok风格的分镜脚本</strong>。<br>
+      产品：<strong>XX，目标用户XX，核心卖点XX</strong>。<br>
+      要求：<strong>1.前3秒用XX抓眼球 2.中间展示核心功能 3.结尾CTA</strong>。<br>
+      参考：<strong>XX品牌TikTok账号的风格</strong>。<br>
+      输出：<strong>秒数 + 画面描述 + 旁白文案 + BGM建议</strong>。
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">分析场景模板</div></div>
+  <div class="af-tool-body">
+    <div style="padding:.6rem;border-radius:6px;background:rgba(167,139,250,.04);border:1px solid rgba(167,139,250,.1);font-size:.78rem;line-height:1.7">
+      你是一个<strong>行业分析师</strong>。<br>
+      请帮我分析 <strong>2026年AI编程工具市场</strong>。<br>
+      关注：<strong>1.市场规模与增速 2.头部玩家及份额 3.技术趋势 4.投资机会</strong>。<br>
+      要求：<strong>1.数据标注来源 2.有争议的标明 3.结论要可操作</strong>。<br>
+      输出：<strong>Markdown，含数据表格+结论摘要</strong>。
+    </div>
+  </div></div>
+</div>
+
+<!-- ==================== 闭环 ==================== -->
+<div class="cp-section-hd"><span class="cp-flag">🔄</span> 闭环 — Ask不是一次性的，是迭代的</div>
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">Ask的闭环流程</div></div>
+  <div class="af-tool-body">
+    <div style="display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;justify-content:center;font-size:.82rem;font-weight:600;margin:.5rem 0">
+      <span style="padding:.3rem .6rem;border-radius:6px;background:rgba(88,166,255,.08);border:1px solid rgba(88,166,255,.18);color:var(--accent)">① 初次Ask</span>
+      <span style="color:var(--muted)">→</span>
+      <span style="padding:.3rem .6rem;border-radius:6px;background:rgba(210,153,34,.08);border:1px solid rgba(210,153,34,.18);color:var(--warn)">② 审阅输出</span>
+      <span style="color:var(--muted)">→</span>
+      <span style="padding:.3rem .6rem;border-radius:6px;background:rgba(249,115,22,.08);border:1px solid rgba(249,115,22,.18);color:var(--af)">③ 标注问题</span>
+      <span style="color:var(--muted)">→</span>
+      <span style="padding:.3rem .6rem;border-radius:6px;background:rgba(63,185,80,.08);border:1px solid rgba(63,185,80,.18);color:var(--accent2)">④ 追问修正</span>
+      <span style="color:var(--muted)">→</span>
+      <span style="padding:.3rem .6rem;border-radius:6px;background:rgba(88,166,255,.08);border:1px solid rgba(88,166,255,.18);color:var(--accent)">①' 迭代Ask</span>
+    </div>
+    <br>
+    <strong>关键原则：3轮对话内得到满意结果 = 合格。</strong><br>
+    超过3轮还没满意 → 不是Ask的问题，是你在Lv.1级问Lv.5级的问题。回去补充上下文。
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">追问的3种方式</div></div>
+  <div class="af-tool-body">
+    <ul>
+      <li><strong>补充式：</strong>"这个方向对，但请加上[缺少的部分]"。→ 最常用，解决60%的情况</li>
+      <li><strong>修正式：</strong>"第2段语气太正式了，请改成[轻松/专业/口语]风格"。→ 定向修改，解决30%</li>
+      <li><strong>转向式：</strong>"这个方案不合适，换一种思路：[新方向]"。→ 3次修不好就转向，解决10%</li>
+    </ul>
+    <strong>追问 ≠ 从头问。每次追问都带上前文的上下文。</strong>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">闭环的验收标准</div></div>
+  <div class="af-tool-body">
+    <div class="af-profit-wrap" style="margin:0">
+    <table class="af-profit">
+    <tr><th>场景</th><th>合格标准</th><th>不合格信号</th></tr>
+    <tr><td>代码</td><td>复制粘贴→跑起来→功能正确</td><td>还需要改3处以上才能跑</td></tr>
+    <tr><td>文案</td><td>只需微调措辞即可发布</td><td>需要重写超过50%</td></tr>
+    <tr><td>分镜</td><td>可以直接按脚本拍摄/制作</td><td>缺少关键画面或时长不对</td></tr>
+    <tr><td>出图</td><td>一次出图接近终稿</td><td>需要重出3次以上</td></tr>
+    <tr><td>分析</td><td>结论可直接用于决策</td><td>数据存疑或结论太泛</td></tr>
+    </table>
+    </div>
+    <br><strong>如果你3轮Ask都达不到合格标准 → 回到模板，从Lv.5重新问。</strong>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">⚠️ 3次修不好就换方案</div></div>
+  <div class="af-tool-body">
+    <strong>死磕是最大的浪费。</strong><br><br>
+    如果你追问了3次AI还是给不出满意结果，问题可能不在AI的能力，而是：<br>
+    <ul>
+      <li>你的需求本身就矛盾（"要简单又要功能全"）</li>
+      <li>你问的方案不是最优解（换个思路可能3秒搞定）</li>
+      <li>这个任务AI确实做不了（该人做的就人做）</li>
+    </ul>
+    <strong>Ask的终极智慧：知道什么该问AI，什么不该问。</strong>
+  </div></div>
+</div>
+
+<!-- 底部导航 -->
+<div style="margin-top:2rem;padding:1rem;border-radius:10px;background:var(--card);border:1px solid var(--border);text-align:center">
+  <div style="font-size:.82rem;color:var(--muted);margin-bottom:.5rem">AI第一思考 — 四大根基能力</div>
+  <div style="display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap">
+    <a href="ask.html" style="padding:.4rem .8rem;border-radius:6px;background:rgba(88,166,255,.1);color:var(--accent);font-weight:600;font-size:.85rem;text-decoration:none;border:1px solid rgba(88,166,255,.2)">💬 Ask</a>
+    <a href="plan.html" style="padding:.4rem .8rem;border-radius:6px;background:rgba(249,115,22,.1);color:var(--af);font-weight:600;font-size:.85rem;text-decoration:none;border:1px solid rgba(249,115,22,.2)">🗺️ Plan</a>
+    <a href="debug.html" style="padding:.4rem .8rem;border-radius:6px;background:rgba(210,153,34,.1);color:var(--warn);font-weight:600;font-size:.85rem;text-decoration:none;border:1px solid rgba(210,153,34,.2)">🔧 Debug</a>
+    <a href="agent.html" style="padding:.4rem .8rem;border-radius:6px;background:rgba(63,185,80,.1);color:var(--accent2);font-weight:600;font-size:.85rem;text-decoration:none;border:1px solid rgba(63,185,80,.2)">🤖 Agent</a>
+  </div>
+</div>
+
+<div class="cp-footer">
+      <p class="cp-updated-line"><span class="cp-updated">最后更新：2026-06-22</span></p>
+  <p>Ask — 问对问题比得到答案更重要 · AI第一思考</p>
+  <p><a href="index.html">← AINav 首页</a> · <a href="free-tier.html">🆓 免费额度</a> · <a href="token-optimization.html">Token优化</a> · <a href="thinking-framework.html">AI第一思考总览</a></p>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var saved=localStorage.getItem('theme')||'dark';
+  document.documentElement.setAttribute('data-theme',saved);
+  document.querySelectorAll('.theme-btn').forEach(function(b){
+    b.classList.toggle('is-active',b.getAttribute('data-theme-set')===saved);
+  });
+  document.querySelectorAll('.theme-btn').forEach(function(b){
+    b.addEventListener('click',function(){
+      var t=b.getAttribute('data-theme-set');
+      document.documentElement.setAttribute('data-theme',t);
+      localStorage.setItem('theme',t);
+      document.querySelectorAll('.theme-btn').forEach(function(x){x.classList.toggle('is-active',x.getAttribute('data-theme-set')===t)});
+    });
+  });
+})();
+</script>
+</body>
+</html>

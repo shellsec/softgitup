@@ -811,5 +811,82 @@
     ],
     "releases_url": "https://bgithub.xyz/koel/player/releases",
     "repo_path": "koel/player"
+  },
+  {
+    "releases_url": "https://bgithub.xyz/MoeKoeMusic/MoeKoeMusic/releases",
+    "repo_path": "MoeKoeMusic/MoeKoeMusic",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "enabled": false,
+    "aliases": [
+      "MoeKoeMusic",
+      "MoeKoe Music",
+      "moekoe",
+      "萌音"
+    ],
+    "id": "moekoe_music",
+    "简介": "MoeKoe Music（酷狗音乐第三方桌面客户端；macOS Intel x64 dmg）",
+    "分类": "多媒体",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "MoeKoe_Music",
+      "-x64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "blockmap",
+      ".yml",
+      ".deb",
+      ".exe",
+      ".zip",
+      "AppImage",
+      "ia32"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "windows_installer": false,
+    "use_download_filename": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "releases_url": "https://bgithub.xyz/MoeKoeMusic/MoeKoeMusic/releases",
+    "repo_path": "MoeKoeMusic/MoeKoeMusic",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "enabled": false,
+    "aliases": [
+      "MoeKoeMusic",
+      "MoeKoe Music",
+      "moekoe",
+      "萌音"
+    ],
+    "id": "moekoe_music_arm64",
+    "简介": "MoeKoe Music（酷狗音乐第三方桌面客户端；macOS Apple Silicon dmg）",
+    "分类": "多媒体",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "MoeKoe_Music",
+      "-arm64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "-x64",
+      "blockmap",
+      ".yml",
+      ".deb",
+      ".exe",
+      ".zip",
+      "AppImage"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "windows_installer": false,
+    "use_download_filename": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

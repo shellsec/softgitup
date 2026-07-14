@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>隐私政策 — AINav</title>
+  <meta name="description" content="AINav 隐私政策与 Cookie 使用说明">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%230969da'/><text x='50' y='72' font-size='60' text-anchor='middle' fill='white' font-family='system-ui' font-weight='700'>AI</text></svg>">
+  <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2B8FBWRX4N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2B8FBWRX4N');
+</script>
+  <script>
+  (function () {
+    try {
+      var t = localStorage.getItem("ainav-theme");
+      if (t === "light" || t === "dark" || t === "system") document.documentElement.setAttribute("data-theme", t);
+      else document.documentElement.setAttribute("data-theme", "system");
+    } catch (e) { document.documentElement.setAttribute("data-theme", "system"); }
+  })();
+  </script>
+  <style>
+    :root, html[data-theme="dark"] {
+      --bg: #0f1419; --panel: #151b23; --card: #1c2430; --border: #2d3848;
+      --text: #e6edf3; --muted: #8b9cb3; --accent: #58a6ff; --accent2: #3fb950;
+    }
+    html[data-theme="light"] {
+      --bg: #f6f8fa; --panel: #fff; --card: #fff; --border: #d0d7de;
+      --text: #1f2328; --muted: #59636e; --accent: #0969da; --accent2: #1a7f37;
+    }
+    @media (prefers-color-scheme: light) {
+      html[data-theme="system"] {
+        --bg: #f6f8fa; --panel: #fff; --card: #fff; --border: #d0d7de;
+        --text: #1f2328; --muted: #59636e; --accent: #0969da; --accent2: #1a7f37;
+      }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Segoe UI", system-ui, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.7; }
+    a { color: var(--accent); }
+    .pp-top { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); background: var(--panel); }
+    .pp-top-inner { max-width: 48rem; margin: 0 auto; display: flex; align-items: center; gap: 1rem; }
+    .pp-top a { font-weight: 600; font-size: 0.88rem; text-decoration: none; color: var(--accent); }
+    .pp-top a:hover { text-decoration: underline; }
+    .pp-wrap { max-width: 48rem; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    .pp-wrap h1 { font-size: 1.5rem; margin: 0 0 0.5rem; }
+    .pp-wrap h2 { font-size: 1.1rem; margin: 2rem 0 0.5rem; color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
+    .pp-wrap p { margin: 0.5rem 0; color: var(--text); }
+    .pp-wrap ul { margin: 0.4rem 0; padding-left: 1.5rem; }
+    .pp-wrap li { margin: 0.25rem 0; color: var(--muted); }
+    .pp-wrap li strong { color: var(--text); }
+    .pp-updated { font-size: 0.82rem; color: var(--muted); margin-bottom: 1.5rem; }
+    .pp-footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--muted); text-align: center; }
+    .pp-footer a { color: var(--accent); }
+    @media (max-width: 640px) {
+      .pp-wrap { padding: 1.25rem 1rem 3rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="pp-top">
+    <div class="pp-top-inner">
+      <a href="index.html">← 返回 AINav 首页</a>
+    </div>
+  </header>
+  <div class="pp-wrap">
+    <h1>隐私政策</h1>
+    <p class="pp-updated">最后更新：2026 年 4 月 28 日</p>
+
+    <h2>概述</h2>
+    <p>AINav（aiv123.com）是一个 AI 工具导航网站。我们尊重您的隐私，本政策说明我们在您访问网站时收集、使用和保护信息的方式。</p>
+
+    <h2>我们收集的信息</h2>
+    <ul>
+      <li><strong>访问数据</strong>：我们使用 Google Analytics 收集匿名访问统计（页面浏览量、访问时长、地区等），用于改善网站体验。这些数据已做匿名化处理，不包含个人身份信息。</li>
+      <li><strong>Cloudflare Analytics</strong>：我们使用 Cloudflare Web Analytics 收集匿名性能与访问数据。</li>
+      <li><strong>本地存储</strong>：您的收藏夹数据和主题偏好保存在浏览器本地（localStorage），不会发送到我们的服务器。</li>
+    </ul>
+
+    <h2>我们不收集的信息</h2>
+    <ul>
+      <li>我们不要求您注册账号</li>
+      <li>我们不收集姓名、邮箱、电话等个人信息</li>
+      <li>我们不在服务器端存储您的浏览历史或收藏数据</li>
+    </ul>
+
+    <h2>Cookie 使用说明</h2>
+    <ul>
+      <li><strong>Google Analytics Cookie</strong>：用于区分用户会话，属于分析型 Cookie，有效期最长 2 年。您可通过 <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics 停用插件</a> 选择退出。</li>
+      <li><strong>Cloudflare Cookie</strong>：用于安全验证与性能分析。</li>
+      <li><strong>本地存储（localStorage）</strong>：保存主题偏好和收藏数据，非传统 Cookie，不随请求发送。</li>
+    </ul>
+
+    <h2>第三方广告 — Google AdSense</h2>
+    <ul>
+      <li>我们使用 Google AdSense 展示广告，Google 可能通过 Cookie 和 Web Beacon 收集您的访问信息以展示相关广告。</li>
+      <li>Google 及其合作伙伴可能使用 Cookie 根据您过往对本站或其它网站的访问记录来展示广告。</li>
+      <li>您可以通过 <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google 广告设置</a> 管理个性化广告偏好，或访问 <a href="https://www.youronlinechoices.com/" target="_blank" rel="noopener">www.youronlinechoices.com</a> 退出个性化广告。</li>
+      <li>第三方广告商的隐私政策不在本站控制范围内，建议您阅读相关第三方的隐私政策。</li>
+    </ul>
+
+    <h2>外部链接</h2>
+    <p>本站是一个导航索引，包含大量指向第三方网站的链接。点击这些链接后，您将离开本站，我们不对第三方网站的隐私做法或内容负责。建议您阅读各第三方网站的隐私政策。</p>
+
+    <h2>数据安全</h2>
+    <ul>
+      <li>本站通过 HTTPS 加密传输数据</li>
+      <li>用户收藏数据仅存储在您的浏览器本地，不会上传到任何服务器</li>
+      <li>我们不存储任何可识别个人身份的信息</li>
+    </ul>
+
+    <h2>儿童隐私</h2>
+    <p>本站不面向 13 岁以下儿童，我们不会故意收集儿童的个人信息。如果您发现我们无意中收集了儿童的数据，请联系我们，我们将及时删除。</p>
+
+    <h2>政策变更</h2>
+    <p>我们可能会不时更新本隐私政策。变更后，我们会在本页面更新"最后更新"日期。建议您定期查看本政策以了解最新信息。</p>
+
+    <h2>联系我们</h2>
+    <p>如果您对本隐私政策有任何问题或建议，请通过以下方式联系我们：</p>
+    <ul>
+      <li>邮箱：privacy@aiv123.com</li>
+      <li>网站：<a href="index.html">aiv123.com</a></li>
+    </ul>
+
+    <div class="pp-footer">
+      <p><a href="index.html">返回 AINav 首页</a></p>
+    </div>
+  </div>
+</body>
+</html>

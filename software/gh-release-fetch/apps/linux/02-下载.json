@@ -531,5 +531,69 @@
     "save_name": "gallery-dl.bin",
     "releases_url": "https://bgithub.xyz/mikf/gallery-dl/releases",
     "repo_path": "mikf/gallery-dl"
+  },
+  {
+    "releases_url": "https://bgithub.xyz/happycola233/tchMaterial-parser/releases",
+    "repo_path": "happycola233/tchMaterial-parser",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "enabled": false,
+    "分类": "下载",
+    "aliases": [
+      "tchMaterial-parser",
+      "tchMaterial",
+      "智慧教育平台",
+      "电子课本"
+    ],
+    "id": "tchmaterial_parser",
+    "简介": "tchMaterial-parser（Linux x64 裸二进制）",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "tchMaterial-parser-linux-x64"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "windows",
+      "mac",
+      ".exe",
+      ".zip"
+    ],
+    "windows_installer": false,
+    "use_download_filename": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "releases_url": "https://bgithub.xyz/happycola233/tchMaterial-parser/releases",
+    "repo_path": "happycola233/tchMaterial-parser",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "enabled": false,
+    "分类": "下载",
+    "aliases": [
+      "tchMaterial-parser",
+      "tchMaterial",
+      "智慧教育平台",
+      "电子课本"
+    ],
+    "id": "tchmaterial_parser_arm64",
+    "简介": "tchMaterial-parser（Linux ARM64 裸二进制）",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "tchMaterial-parser-linux-arm64"
+    ],
+    "href_exclude_substrings": [
+      "x64",
+      "windows",
+      "mac",
+      ".exe",
+      ".zip"
+    ],
+    "windows_installer": false,
+    "use_download_filename": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

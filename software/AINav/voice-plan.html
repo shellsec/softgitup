@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Voice Plan 语音套餐横评 — AINav</title>
+  <meta name="description" content="AI语音/TTS套餐横向对比：ElevenLabs、Azure Speech、OpenAI TTS、Fish Audio、讯飞等价格功能对比。">
+  <link rel="canonical" href="https://aiv123.com/voice-plan.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI Voice Plan 语音套餐横评">
+  <meta property="og:description" content="国内外AI语音/TTS套餐价格功能对比，场景推荐与趋势分析。">
+  <meta property="og:url" content="https://aiv123.com/voice-plan.html">
+  <meta property="og:site_name" content="AINav">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%230969da'/><text x='50' y='72' font-size='60' text-anchor='middle' fill='white' font-family='system-ui' font-weight='700'>AI</text></svg>">
+  <style>
+    :root,html[data-theme="dark"]{--bg:#0f1419;--panel:#151b23;--card:#1c2430;--border:#2d3848;--text:#e6edf3;--muted:#8b9cb3;--accent:#58a6ff;--accent2:#3fb950;--warn:#d29922;--danger:#f85149;--hot:#ff6b6b;--overseas:#a78bfa}
+    html[data-theme="light"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;--text:#1f2328;--muted:#59636e;--accent:#0969da;--accent2:#1a7f37;--warn:#9a6700;--danger:#cf222e;--hot:#e53935;--overseas:#7c3aed}
+    @media(prefers-color-scheme:light){html[data-theme="system"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;--text:#1f2328;--muted:#59636e;--accent:#0969da;--accent2:#1a7f37;--warn:#9a6700;--danger:#cf222e;--hot:#e53935;--overseas:#7c3aed}}
+    *{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+    .cp-top{padding:.75rem 1rem;border-bottom:1px solid var(--border);background:var(--panel);position:sticky;top:0;z-index:10}
+    .cp-top-inner{max-width:76rem;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;justify-content:space-between}
+    .cp-nav a{font-weight:600;margin-right:1rem;font-size:.88rem}
+    .cp-toolbar{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center}
+    .theme-btn{font-size:.72rem;padding:.2rem .5rem;border-radius:5px;border:1px solid var(--border);background:var(--card);color:var(--muted);cursor:pointer;font-family:inherit}
+    .theme-btn.is-active{color:var(--accent);border-color:var(--accent);font-weight:600}.lang-btn{margin-left:.35rem}
+    .cp-wrap{max-width:76rem;margin:0 auto;padding:1rem}h1{font-size:1.35rem;margin:0 0 .3rem}
+    .cp-subtitle{font-size:.88rem;color:var(--muted);margin-bottom:1rem}
+    .cp-section-hd{font-size:1.1rem;font-weight:700;margin:1.8rem 0 .8rem;padding-bottom:.3rem;border-bottom:2px solid var(--border);display:flex;align-items:center;gap:.5rem}
+    .cp-section-hd .cp-flag{font-size:1.15rem}.cp-section-hd.overseas-hd{border-bottom-color:var(--overseas)}
+    .cp-legend{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:1.2rem;font-size:.82rem}
+    .cp-legend-item{display:flex;align-items:center;gap:.3rem}
+    .cp-badge{display:inline-block;padding:.1rem .45rem;border-radius:4px;font-size:.72rem;font-weight:600}
+    .badge-hot{background:rgba(255,107,107,.15);color:var(--hot);border:1px solid rgba(255,107,107,.3)}
+    .badge-new{background:rgba(63,185,80,.15);color:var(--accent2);border:1px solid rgba(63,185,80,.3)}
+    .badge-rec{background:rgba(88,166,255,.15);color:var(--accent);border:1px solid rgba(88,166,255,.3)}
+    .badge-overseas{background:rgba(167,139,250,.15);color:var(--overseas);border:1px solid rgba(167,139,250,.3)}
+    .badge-free{background:rgba(63,185,80,.15);color:var(--accent2);border:1px solid rgba(63,185,80,.3)}
+    .badge-digital{background:rgba(240,136,62,.15);color:#f0883e;border:1px solid rgba(240,136,62,.3)}
+    .cp-platforms{display:grid;grid-template-columns:1fr;gap:1.2rem}
+    @media(min-width:52rem){.cp-platforms{grid-template-columns:1fr 1fr}}
+    .cp-platform{border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden}
+    .cp-platform.overseas{border-color:rgba(167,139,250,.3)}
+    .cp-platform-head{padding:.75rem 1rem;border-bottom:1px solid var(--border);display:flex;flex-wrap:wrap;align-items:center;gap:.5rem}
+    .cp-platform.overseas .cp-platform-head{border-bottom-color:rgba(167,139,250,.2)}
+    .cp-platform-name{font-size:1.05rem;font-weight:700}.cp-platform-name a{color:var(--text)}
+    .cp-platform-name a:hover{color:var(--accent);text-decoration:none}
+    .cp-platform-body{padding:.75rem 1rem}
+    .cp-table{width:100%;border-collapse:collapse;font-size:.82rem}
+    .cp-table th{text-align:left;font-weight:600;color:var(--muted);padding:.3rem .5rem;border-bottom:1px solid var(--border);font-size:.76rem;white-space:nowrap}
+    .cp-table td{padding:.4rem .5rem;border-bottom:1px solid var(--border);vertical-align:top}
+    .cp-table tr:last-child td{border-bottom:none}
+    .cp-table .plan-name{font-weight:600;white-space:nowrap}
+    .cp-table .plan-price{white-space:nowrap;color:var(--accent2);font-weight:600}
+    .cp-table .plan-limit{font-size:.76rem;color:var(--muted)}
+    .feat-tags{display:flex;flex-wrap:wrap;gap:.25rem;margin-top:.4rem}
+    .feat-tag{font-size:.68rem;padding:.1rem .35rem;border-radius:3px;background:rgba(88,166,255,.08);border:1px solid rgba(88,166,255,.15);color:var(--accent);font-weight:500}
+    .feat-tag.yes{background:rgba(63,185,80,.1);border-color:rgba(63,185,80,.2);color:var(--accent2)}
+    .feat-tag.no{background:transparent;border-color:rgba(139,156,179,.15);color:var(--muted);opacity:.5}
+    .cp-matrix-section{margin-top:2rem}.cp-matrix-section h2{font-size:1.1rem;margin-bottom:.5rem}
+    .cp-matrix-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:8px;background:var(--card)}
+    .cp-matrix{width:100%;border-collapse:collapse;font-size:.8rem}
+    .cp-matrix th,.cp-matrix td{padding:.35rem .55rem;border:1px solid var(--border);text-align:center;white-space:nowrap}
+    .cp-matrix th{background:var(--panel);font-weight:600;color:var(--muted);font-size:.74rem;position:sticky;top:0}
+    .cp-matrix th:first-child,.cp-matrix td:first-child{text-align:left;position:sticky;left:0;background:var(--card);z-index:1;font-weight:600}
+    .cp-matrix th:first-child{z-index:2;background:var(--panel)}
+    .cp-matrix .yes{color:var(--accent2);font-weight:700}.cp-matrix .no{color:var(--muted);opacity:.4}
+    .cp-bar-chart{margin-top:.5rem}
+    .cp-bar-row{display:flex;align-items:center;gap:.5rem;margin-bottom:.35rem;font-size:.78rem}
+    .cp-bar-label{width:6.5rem;text-align:right;color:var(--muted);flex-shrink:0}
+    .cp-bar-track{flex:1;height:1.1rem;background:var(--border);border-radius:4px;overflow:hidden}
+    .cp-bar-fill{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:.4rem;font-size:.7rem;font-weight:600;color:#fff;white-space:nowrap}
+    .cp-bar-fill.bar-domestic{background:linear-gradient(90deg,#3fb950,#2ea043)}
+    .cp-bar-fill.bar-overseas{background:linear-gradient(90deg,#a78bfa,#7c3aed)}
+    .cp-bar-fill.bar-hot{background:linear-gradient(90deg,#ff6b6b,#e53935)}
+    .cp-bar-fill.bar-warn{background:linear-gradient(90deg,#d29922,#bb8009)}
+    .cp-notice{margin-top:2rem;padding:0;border:1px solid rgba(210,153,34,0.35);border-radius:10px;background:var(--card);overflow:hidden}
+    .cp-notice-head{padding:0.65rem 1rem;border-bottom:1px solid rgba(210,153,34,0.2);font-weight:700;font-size:1rem;background:rgba(210,153,34,0.06)}
+    .cp-notice-body{padding:0.75rem 1rem;font-size:0.82rem;line-height:1.75}
+    .cp-notice-body ul{padding-left:1.2rem;margin:0.5rem 0 0}.cp-notice-body li{margin-bottom:0.45rem}
+    .cp-notice-body strong{color:var(--warn)}.cp-notice-body code{font-size:0.78rem;padding:0.1rem 0.35rem;border-radius:4px;background:rgba(210,153,34,0.1);border:1px solid rgba(210,153,34,0.2);color:var(--warn);font-family:inherit}
+    .cp-faq{margin-top:2rem;border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden}
+    .cp-faq-head{padding:0.65rem 1rem;border-bottom:1px solid var(--border);font-weight:700;font-size:1rem}
+    .cp-faq-item{border-bottom:1px solid var(--border)}.cp-faq-item:last-child{border-bottom:none}
+    .cp-faq-q{padding:0.6rem 1rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:0.88rem;user-select:none;transition:background 0.15s}
+    .cp-faq-q:hover{background:rgba(88,166,255,0.04)}.cp-faq-q .cp-faq-arrow{font-size:0.72rem;color:var(--muted);transition:transform 0.2s;flex-shrink:0;margin-left:0.5rem}
+    .cp-faq-item.is-open .cp-faq-q .cp-faq-arrow{transform:rotate(180deg)}
+    .cp-faq-a{padding:0 1rem;max-height:0;overflow:hidden;transition:max-height 0.25s ease,padding 0.25s ease;font-size:0.82rem;line-height:1.7;color:var(--muted)}
+    .cp-faq-item.is-open .cp-faq-a{max-height:20rem;padding:0 1rem 0.75rem}.cp-faq-a strong{color:var(--text)}
+    .cp-value-rank{margin-top:2rem;border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden}
+    .cp-value-rank-head{padding:0.65rem 1rem;border-bottom:1px solid var(--border);font-weight:700;font-size:1rem}
+    .cp-value-rank-body{padding:0.75rem 1rem}.cp-value-rank .cp-table .val-high{color:var(--accent2);font-weight:700}
+    .cp-value-rank .cp-table .val-mid{color:var(--accent);font-weight:600}.cp-value-rank .cp-table .val-low{color:var(--muted)}
+    .cp-tips{margin-top:2rem;padding:0;border:1px solid var(--border);border-radius:8px;background:var(--card);overflow:hidden}
+    .cp-tips h2{font-size:1rem;margin:0}
+    .cp-updated-line { font-size: 0.76rem; color: var(--muted); margin: 0 0 0.3rem; }
+.cp-footer {max-width:76rem;margin:2rem auto 1rem;padding:0 1rem;font-size:.76rem;color:var(--muted);text-align:center}
+    .cp-footer a{color:var(--muted)}
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2B8FBWRX4N"></script>
+    <script>
+    (function(){
+      var i18n={"zh":{"pageTitle":"AI Voice Plan 语音套餐横评 — AINav","pageDesc":"国内外 AI 语音/TTS 套餐一站式对比：ElevenLabs、Azure Speech、Fish Audio 等价格功能对比。","title":"🔊 AI Voice Plan 语音套餐横评","subtitle":"国内外 AI 语音/TTS 套餐一站式对比：价格、字符数、音色克隆、API，帮你选出最划算的语音方案。","navHome":"← AINav 首页","navCoding":"编程套餐横评","navAgent":"Agent横评","navVideo":"视频套餐横评","navImage":"图像套餐横评","navMusic":"音乐套餐横评","navSearch":"搜索套餐横评","navVoice":"语音套餐横评","navLearning":"学习套餐横评","navEncyclopedia":"AI百科","themeSystem":"跟随系统","themeLight":"浅色","themeDark":"深色","sectionDomestic":"国内 AI 语音平台","sectionOverseas":"海外 AI 语音平台","sectionMatrix":"📊 功能对比矩阵","sectionPrice":"💰 月费对比（入门付费套餐）","sectionRec":"🎯 场景推荐 — 按需求选最适合的语音方案","sectionTrend":"📈 AI 语音趋势","thPlan":"套餐","thPrice":"月价","thChars":"字符数/月","thClone":"音色克隆","thNote":"备注","thType":"类型","footer":"数据来源：各平台官网 · 价格以官网为准","footerHome":"← 返回 AINav 首页","promoCta":"立即注册","legendHot":"🔥 热门","legendHotDesc":"高人气","legendNew":"✨ 新品","legendNewDesc":"新上线","legendRec":"👍 推荐","legendRecDesc":"综合推荐","legendOverseas":"🌍 海外","legendOverseasDesc":"需国际网络","legendFree":"🆓 免费版","legendFreeDesc":"零成本体验"},"en":{"pageTitle":"AI Voice Plan Comparison — AINav","pageDesc":"One-stop comparison of AI voice/TTS plans worldwide: ElevenLabs, Azure Speech, Fish Audio pricing and features.","title":"🔊 AI Voice Plan Comparison","subtitle":"One-stop comparison of AI voice/TTS plans worldwide: pricing, characters, voice cloning, and API access.","navHome":"← AINav Home","navCoding":"Coding Plans","navAgent":"Agents","navVideo":"Video Plans","navImage":"Image Plans","navMusic":"Music Plans","navSearch":"Search Plans","navVoice":"Voice Plans","navLearning":"Learning Plans","navEncyclopedia":"AI Encyclopedia","themeSystem":"System","themeLight":"Light","themeDark":"Dark","sectionDomestic":"Domestic AI Voice Platforms","sectionOverseas":"Overseas AI Voice Platforms","sectionMatrix":"📊 Feature Comparison Matrix","sectionPrice":"💰 Monthly Price Comparison (Entry Plans)","sectionRec":"🎯 Recommendations — Find the Best Voice Plan for Your Needs","sectionTrend":"📈 AI Voice Trends","thPlan":"Plan","thPrice":"Price","thChars":"Chars/Mo","thClone":"Voice Clone","thNote":"Note","thType":"Type","footer":"Data sources: Official websites · Prices subject to change","footerHome":"← Back to AINav Home","promoText":"Want","promoOr":"/","promoNoNet":"but no VPN?","promoDesc":"One API Key for 100+ top models, direct access in China, low latency, OpenAI-compatible format","promoCta":"Sign Up →","legendHot":"🔥 Hot","legendHotDesc":"Popular","legendNew":"✨ New","legendNewDesc":"Recently launched","legendRec":"👍 Pick","legendRecDesc":"Recommended","legendOverseas":"🌍 OS","legendOverseasDesc":"Needs VPN","legendFree":"🆓 Free","legendFreeDesc":"Zero cost"}};
+      var LANG_KEY='ainav-lang',currentLang=localStorage.getItem(LANG_KEY)||'zh';
+      function applyLang(lang){
+        if(lang!=='zh'&&lang!=='en')lang='zh';currentLang=lang;
+        document.documentElement.setAttribute('lang',lang==='en'?'en':'zh-CN');
+        try{localStorage.setItem(LANG_KEY,lang)}catch(e){}
+        var dict=i18n[lang];
+        document.title=dict.pageTitle;
+        var metaDesc=document.querySelector('meta[name="description"]');
+        if(metaDesc)metaDesc.setAttribute('content',dict.pageDesc);
+        document.querySelectorAll('[data-i18n]').forEach(function(el){var key=el.getAttribute('data-i18n');if(dict[key]!==undefined)el.textContent=dict[key]});
+        var nl=document.querySelectorAll('.cp-nav a');
+        if(nl[0])nl[0].textContent=dict.navHome;if(nl[1])nl[1].textContent=dict.navCoding;
+        if(nl[2])nl[2].textContent=dict.navAgent;if(nl[3])nl[3].textContent=dict.navVideo;
+        if(nl[4])nl[4].textContent=dict.navImage;if(nl[5])nl[5].textContent=dict.navMusic;
+        if(nl[6])nl[6].textContent=dict.navSearch;if(nl[7])nl[7].textContent=dict.navVoice;
+        if(nl[8])nl[8].textContent=dict.navLearning;if(nl[9])nl[9].textContent=dict.navEncyclopedia;
+        document.querySelectorAll('.theme-btn:not(.lang-btn)').forEach(function(b){
+          var s=b.getAttribute('data-theme-set');
+          if(s==='system')b.textContent=dict.themeSystem;
+          else if(s==='light')b.textContent=dict.themeLight;
+          else if(s==='dark')b.textContent=dict.themeDark;
+        });
+        // Legend
+        var legendItems=document.querySelectorAll('.cp-legend-item');
+        var lk=[
+          {badge:'badge-hot',key:'legendHot',descKey:'legendHotDesc'},
+          {badge:'badge-new',key:'legendNew',descKey:'legendNewDesc'},
+          {badge:'badge-rec',key:'legendRec',descKey:'legendRecDesc'},
+          {badge:'badge-overseas',key:'legendOverseas',descKey:'legendOverseasDesc'},
+          {badge:'badge-free',key:'legendFree',descKey:'legendFreeDesc'},
+        ];
+        legendItems.forEach(function(el,idx){
+          if(lk[idx]){var k=lk[idx];el.innerHTML='<span class="cp-badge '+k.badge+'">'+dict[k.key]+'</span> '+dict[k.descKey]}
+        });
+        // Section headings
+        document.querySelectorAll('.cp-section-hd').forEach(function(el){
+          var t=el.textContent.trim();
+          if(t.indexOf('国内')!==-1)el.innerHTML='<span class="cp-flag">🇨🇳</span> '+dict.sectionDomestic;
+          else if(t.indexOf('海外')!==-1)el.innerHTML='<span class="cp-flag">🌍</span> '+dict.sectionOverseas;
+        });
+        // Table headers
+        document.querySelectorAll('.cp-table thead th').forEach(function(th){
+          var t=th.textContent.trim();if(t==='跟随系统')th.textContent=dict.themeSystem;if(t==='浅色')th.textContent=dict.themeLight;if(t==='深色')th.textContent=dict.themeDark;if(t==='套餐')th.textContent=dict.thPlan;if(t==='月价')th.textContent=dict.thPrice;if(t==='字符数/月')th.textContent=dict.thChars;if(t==='音色克隆')th.textContent=dict.thClone;if(t==='备注')th.textContent=dict.thNote;if(t==='类型')th.textContent=dict.thType;
+        });
+        // H2s
+        document.querySelectorAll('.cp-matrix-section h2,.cp-trend-section h2').forEach(function(el){
+          var t=el.textContent.trim();
+          if(t.indexOf('功能对比')!==-1||t.indexOf('Feature')!==-1)el.textContent=dict.sectionMatrix;
+          else if(t.indexOf('月费对比')!==-1||t.indexOf('Price')!==-1)el.textContent=dict.sectionPrice;
+          else if(t.indexOf('趋势')!==-1||t.indexOf('Trends')!==-1)el.textContent=dict.sectionTrend;
+        });
+        document.querySelectorAll('.cp-tips h2').forEach(function(el){
+          if(el.textContent.indexOf('场景推荐')!==-1||el.textContent.indexOf('Recommendations')!==-1)el.textContent=dict.sectionRec;
+        });
+        var fp=document.querySelectorAll('.cp-footer p');
+        if (fp[1]) fp[1].textContent = dict.footer;
+        var pb=document.querySelector('.cp-wrap > div:first-child');
+        if(pb){pb.innerHTML='<span style="color:var(--muted)">'+dict.promoText+'</span> <strong style="color:var(--text)">GPT-5</strong> <span style="color:var(--muted)">'+dict.promoOr+'</span> <strong style="color:var(--text)">Claude Opus 4.8</strong> <span style="color:var(--muted)">'+dict.promoOr+'</span> <strong style="color:var(--text)">Gemini 3.1 Pro</strong> <span style="color:var(--muted)">'+dict.promoNoNet+'</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--accent2);font-weight:600;text-decoration:none;">OfoxAI</a> <span style="color:var(--muted)">'+dict.promoDesc+'</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">'+dict.promoCta+'</a>'}
+        document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('is-active',b.getAttribute('data-lang-set')===lang)});
+      }
+      applyLang(currentLang);document.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){applyLang(b.getAttribute('data-lang-set'))})});
+    })();
+  </script>
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2d49f38b39c743ac80b6d6b9ff99494d"}'></script>
+</head>
+<body>
+  <div class="cp-top"><div class="cp-top-inner">
+    <div class="cp-nav" data-plan-nav></div>
+    <div class="cp-toolbar">
+      <button type="button" class="theme-btn" data-theme-set="system">跟随系统</button>
+      <button type="button" class="theme-btn" data-theme-set="light">浅色</button>
+      <button type="button" class="theme-btn" data-theme-set="dark">深色</button>
+      <button type="button" class="theme-btn lang-btn" data-lang-set="zh">中</button>
+      <button type="button" class="theme-btn lang-btn" data-lang-set="en">EN</button>
+    </div>
+  </div></div>
+
+  <div class="cp-wrap">
+    <div style="margin-bottom:1rem;padding:.55rem .85rem;border-radius:8px;border:1px solid var(--border);background:var(--card);display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.35rem .6rem;font-size:.84rem;line-height:1.5;">
+      <span style="color:var(--muted)"><strong style="color:var(--text)">OpenAI: GPT-5</strong> <span style="color:var(--muted)">·</span> <strong style="color:var(--text)">Anthropic: Claude Opus 4.8</strong> <span style="color:var(--muted)">·</span> <strong style="color:var(--text)">Google: Gemini 3.1 Pro</strong> <span style="color:var(--muted)">· 国内直连免梯</span> <span class="plan-promo-code" data-code="AFF_BB0FNC" style="color:var(--accent2);font-weight:600;cursor:pointer" title="点击复制优惠码">$2优惠码 AFF_BB0FNC</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">立即注册</a>
+    </div>
+    <h1 data-i18n="title">🔊 AI Voice Plan 语音套餐横评</h1>
+    <p class="cp-subtitle" data-i18n="subtitle">国内外 AI 语音/TTS 套餐一站式对比：价格、字符数、音色克隆、API，帮你选出最划算的语音方案。</p>
+
+    
+    <p class="cp-updated-line"><span class="cp-updated">最后更新：2026-06-26</span></p>
+    <div class="cp-legend">
+      <div class="cp-legend-item"><span class="cp-badge badge-hot">🔥 热门</span> 高人气</div>
+      <div class="cp-legend-item"><span class="cp-badge badge-new">✨ 新品</span> 新上线</div>
+      <div class="cp-legend-item"><span class="cp-badge badge-rec">👍 推荐</span> 综合推荐</div>
+      <div class="cp-legend-item"><span class="cp-badge badge-overseas">🌍 海外</span> 需国际网络</div>
+      <div class="cp-legend-item"><span class="cp-badge badge-free">🆓 免费版</span> 零成本体验</div>
+    </div>
+
+    <!-- ==================== 国内 AI 语音平台 ==================== -->
+    <div class="cp-section-hd"><span class="cp-flag">🇨🇳</span> 国内 AI 语音平台</div>
+    <div class="cp-platforms">
+
+            <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://www.xfyun.cn/" target="_blank" rel="noopener noreferrer">讯飞语音</a></span>
+          <span class="cp-badge badge-hot">🔥 热门</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>字符数/月</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">免费版</td><td class="plan-price">¥0</td><td>有限次数</td><td>每日刷新</td></tr>
+              <tr><td class="plan-name">专业版</td><td class="plan-price">¥29/月</td><td>200万字符</td><td>中文TTS最成熟</td></tr>
+              <tr><td class="plan-name">旗舰版</td><td class="plan-price">¥99/月</td><td>1000万字符</td><td>多音色+方言</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+<span class="feat-tag yes">中文</span><span class="feat-tag yes">方言</span><span class="feat-tag yes">音色克隆</span><span class="feat-tag yes">API</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">中文TTS老牌标杆，方言支持最全，API生态成熟，适合国内项目</div>
+        </div>
+      </div>
+
+            <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://www.minimaxi.com/" target="_blank" rel="noopener noreferrer">MiniMax TTS</a></span>
+          <span class="cp-badge badge-new">✨ 新品</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>字符数/月</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">免费版</td><td class="plan-price">¥0</td><td>有限次数</td><td>每日刷新</td></tr>
+              <tr><td class="plan-name">会员版</td><td class="plan-price">¥30/月</td><td>500万字符</td><td>中文人声自然</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+<span class="feat-tag yes">中文</span><span class="feat-tag yes">音色克隆</span><span class="feat-tag yes">API</span><span class="feat-tag yes">多语言</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">Minimax旗下TTS，中文人声自然度高，与海螺AI视频联动</div>
+        </div>
+      </div>
+
+            <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://fish.audio/" target="_blank" rel="noopener noreferrer">Fish Audio</a></span>
+          <span class="cp-badge badge-rec">👍 推荐</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>字符数/月</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">免费版</td><td class="plan-price">¥0</td><td>有限次数</td><td>开源生态</td></tr>
+              <tr><td class="plan-name">付费版</td><td class="plan-price">按量计费</td><td>¥0.1/千字符</td><td>音色克隆+API</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+<span class="feat-tag yes">音色克隆</span><span class="feat-tag yes">开源</span><span class="feat-tag yes">API</span><span class="feat-tag yes">多语言</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">开源语音克隆项目，15秒音频即可克隆音色，API按量计费灵活</div>
+        </div>
+      </div>
+
+            <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://www.volcengine.com/" target="_blank" rel="noopener noreferrer">火山引擎 TTS</a></span>
+          
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>字符数/月</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">免费版</td><td class="plan-price">¥0</td><td>有限次数</td><td>字节旗下</td></tr>
+              <tr><td class="plan-name">付费版</td><td class="plan-price">按量计费</td><td>弹性扩缩</td><td>企业级SLA</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+<span class="feat-tag yes">中文</span><span class="feat-tag yes">API</span><span class="feat-tag yes">多语言</span><span class="feat-tag yes">企业级</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">字节跳动旗下，弹性扩缩+企业级SLA，适合大规模集成</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ==================== 海外 AI 语音平台 ==================== -->
+    <div class="cp-section-hd overseas-hd"><span class="cp-flag">🌍</span> 海外 AI 语音平台</div>
+    <div class="cp-platforms">
+
+            <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://elevenlabs.io/" target="_blank" rel="noopener noreferrer">ElevenLabs</a></span>
+          <span class="cp-badge badge-hot">🔥 热门</span> <span class="cp-badge badge-rec">👍 推荐</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>字符数/月</th><th>音色克隆</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">Free</td><td class="plan-price">$0</td><td>1万</td><td>—</td></tr>
+              <tr><td class="plan-name">Starter</td><td class="plan-price">$5/月</td><td>3万</td><td>即时克隆</td></tr>
+              <tr><td class="plan-name">Creator <span class="cp-badge badge-rec">👍</span></td><td class="plan-price">$22/月</td><td>10万</td><td>专业克隆</td></tr>
+              <tr><td class="plan-name">Pro</td><td class="plan-price">$99/月</td><td>50万</td><td>自定义模型</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+<span class="feat-tag yes">音色克隆</span><span class="feat-tag yes">多语言</span><span class="feat-tag yes">API</span><span class="feat-tag yes">项目库</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">AI语音克隆领域标杆，音色克隆最自然，29+语言支持</div>
+        </div>
+      </div>
+
+            <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://platform.openai.com/" target="_blank" rel="noopener noreferrer">OpenAI TTS</a></span>
+          <span class="cp-badge badge-hot">🔥 热门</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>说明</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">API</td><td class="plan-price">按量计费</td><td>$15/百万字符</td><td>6种预设音色</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+<span class="feat-tag yes">API</span><span class="feat-tag yes">多语言</span><span class="feat-tag yes">HD音质</span><span class="feat-tag no">音色克隆</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">OpenAI TTS API，6种预设音色，音质自然，无订阅制纯按量</div>
+        </div>
+      </div>
+
+            <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://azure.microsoft.com/products/ai-services/text-to-speech" target="_blank" rel="noopener noreferrer">Azure AI Speech</a></span>
+          
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>字符数/月</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">Free</td><td class="plan-price">$0</td><td>50万/月</td><td>标准音色</td></tr>
+              <tr><td class="plan-name">Standard</td><td class="plan-price">按量</td><td>$16/百万字符</td><td>神经音色</td></tr>
+              <tr><td class="plan-name">Custom</td><td class="plan-price">定制</td><td>自定义音色</td><td>企业级</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+<span class="feat-tag yes">多语言</span><span class="feat-tag yes">API</span><span class="feat-tag yes">SSML</span><span class="feat-tag yes">企业级</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">微软Azure语音服务，语言覆盖最广(140+)，企业级稳定性</div>
+        </div>
+      </div>
+
+            <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://cloud.google.com/text-to-speech" target="_blank" rel="noopener noreferrer">Google Cloud TTS</a></span>
+          
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>字符数/月</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">Free</td><td class="plan-price">$0</td><td>100万/月</td><td>标准音色</td></tr>
+              <tr><td class="plan-name">Standard</td><td class="plan-price">按量</td><td>$4/百万字符</td><td>WaveNet音色</td></tr>
+              <tr><td class="plan-name">Studio</td><td class="plan-price">按量</td><td>$16/百万字符</td><td>Studio音色</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+<span class="feat-tag yes">多语言</span><span class="feat-tag yes">API</span><span class="feat-tag yes">WaveNet</span><span class="feat-tag yes">企业级</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">Google Cloud TTS，100万/月免费额度最慷慨，WaveNet音质优秀</div>
+        </div>
+      </div>
+
+            <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://play.ht/" target="_blank" rel="noopener noreferrer">PlayHT</a></span>
+          <span class="cp-badge badge-new">✨ 新品</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>字符数/月</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">Free</td><td class="plan-price">$0</td><td>1.2万</td><td>有限音色</td></tr>
+              <tr><td class="plan-name">Creator</td><td class="plan-price">$31/月</td><td>200万</td><td>音色克隆</td></tr>
+              <tr><td class="plan-name">Business</td><td class="plan-price">$99/月</td><td>600万</td><td>API+白标</td></tr>
+            </tbody>
+          </table>
+          <div class="feat-tags">
+<span class="feat-tag yes">音色克隆</span><span class="feat-tag yes">多语言</span><span class="feat-tag yes">API</span>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">新兴AI语音平台，克隆质量不错，200万字符/月$31性价比好</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ==================== 功能对比矩阵 ==================== -->
+    <div class="cp-matrix-section">
+      <h2>📊 功能对比矩阵</h2>
+      <div class="cp-matrix-wrap">
+        <table class="cp-matrix">
+          <thead><tr><th>平台</th><th>免费版</th><th>中文</th><th>音色克隆</th><th>多语言</th><th>API</th><th>方言</th><th>SSML</th><th>实时流式</th></tr></thead>
+          <tbody>
+            <tr><td>讯飞语音</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>MiniMax TTS</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td>—</td><td class="yes">✓</td></tr>
+            <tr><td>Fish Audio</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td>—</td><td class="yes">✓</td></tr>
+            <tr><td>火山引擎</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>ElevenLabs</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td>—</td><td class="yes">✓</td></tr>
+            <tr><td>OpenAI TTS</td><td>—</td><td>—</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td>—</td><td class="yes">✓</td></tr>
+            <tr><td>Azure Speech</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>Google TTS</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><td>PlayHT</td><td class="yes">✓</td><td>—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td>—</td><td>—</td><td class="yes">✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ==================== 月费对比 ==================== -->
+    <div class="cp-matrix-section">
+      <h2>💰 月费对比（入门付费套餐）</h2>
+      <div style="border:1px solid var(--border);border-radius:10px;background:var(--card);padding:1rem;">
+        <div style="font-weight:700;font-size:.88rem;margin-bottom:.6rem">入门付费套餐月费对比</div>
+        <div class="cp-bar-chart">
+          <div class="cp-bar-row"><span class="cp-bar-label">讯飞专业版</span><div class="cp-bar-track"><div class="cp-bar-fill bar-domestic" style="width:19%">¥29</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">MiniMax会员</span><div class="cp-bar-track"><div class="cp-bar-fill bar-domestic" style="width:20%">¥30</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">ElevenLabs Starter</span><div class="cp-bar-track"><div class="cp-bar-fill bar-overseas" style="width:8%">$5</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">ElevenLabs Creator</span><div class="cp-bar-track"><div class="cp-bar-fill bar-overseas" style="width:37%">$22</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">PlayHT Creator</span><div class="cp-bar-track"><div class="cp-bar-fill bar-overseas" style="width:52%">$31</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">ElevenLabs Pro</span><div class="cp-bar-track"><div class="cp-bar-fill bar-hot" style="width:100%">$99</div></div></div>
+        </div>
+        <div style="font-size:.72rem;color:var(--muted);margin-top:.5rem">🟢 国内 &nbsp; 🟣 海外 &nbsp; 🔴 高端 &nbsp;· 国内平台性价比远超海外，讯飞¥29/月200万字符 vs ElevenLabs $22/月仅10万字符</div>
+      </div>
+    </div>
+
+    <!-- ==================== 场景推荐 ==================== -->
+    <div class="cp-tips" style="margin-top:2rem;">
+      <div style="padding:.75rem 1rem;border-bottom:1px solid var(--border);">
+        <h2>🎯 场景推荐 — 按需求选最适合的语音方案</h2>
+      </div>
+      <div style="padding:.75rem 1rem;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div style="padding:.75rem;border-radius:8px;border:1px solid rgba(63,185,80,.25);background:rgba(63,185,80,.04);">
+            <div style="font-weight:700;font-size:.88rem;margin-bottom:.5rem;">🎙️ 音色克隆 / 虚拟人</div>
+            <div style="font-size:.8rem;line-height:1.7;">
+              <div>🏆 <strong>首选：</strong><a href="https://elevenlabs.io/" target="_blank" rel="noopener noreferrer">ElevenLabs Creator</a> $22/月 — 克隆最自然</div>
+              <div>🇨🇳 <strong>国内：</strong><a href="https://fish.audio/" target="_blank" rel="noopener noreferrer">Fish Audio</a> — 开源+按量计费</div>
+              <div>💰 <strong>省钱：</strong>MiniMax会员 ¥30/月 — 500万字符</div>
+            </div>
+          </div>
+          <div style="padding:.75rem;border-radius:8px;border:1px solid rgba(88,166,255,.25);background:rgba(88,166,255,.04);">
+            <div style="font-weight:700;font-size:.88rem;margin-bottom:.5rem;">🔧 API 集成 / 开发者</div>
+            <div style="font-size:.8rem;line-height:1.7;">
+              <div>🏆 <strong>最便宜：</strong>Google TTS — 100万/月免费+$4/百万</div>
+              <div>🇨🇳 <strong>国内：</strong>讯飞API — 中文最成熟</div>
+              <div>🎨 <strong>灵活：</strong>Fish Audio / OpenAI TTS — 按量计费</div>
+            </div>
+          </div>
+          <div style="padding:.75rem;border-radius:8px;border:1px solid rgba(210,153,34,.25);background:rgba(210,153,34,.04);">
+            <div style="font-weight:700;font-size:.88rem;margin-bottom:.5rem;">🇨🇳 中文场景 / 有声书</div>
+            <div style="font-size:.8rem;line-height:1.7;">
+              <div>🏆 <strong>首选：</strong>讯飞专业版 ¥29/月 — 方言+中文最优</div>
+              <div>💰 <strong>量大：</strong>MiniMax ¥30/月 — 500万字符</div>
+              <div>🐟 <strong>克隆：</strong>Fish Audio — 15秒克隆中文音色</div>
+            </div>
+          </div>
+          <div style="padding:.75rem;border-radius:8px;border:1px solid rgba(167,139,250,.25);background:rgba(167,139,250,.04);">
+            <div style="font-weight:700;font-size:.88rem;margin-bottom:.5rem;">🌍 多语言 / 全球化</div>
+            <div style="font-size:.8rem;line-height:1.7;">
+              <div>🏆 <strong>首选：</strong>ElevenLabs — 29+语言+克隆</div>
+              <div>🏢 <strong>企业：</strong>Azure Speech — 140+语言+SLA</div>
+              <div>💰 <strong>省钱：</strong>Google TTS — 免费额度最大</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== 注意事项 ==================== -->
+    <div class="cp-notice">
+      <div class="cp-notice-head">⚠️ 注意事项 — 语音套餐买前必读</div>
+      <div class="cp-notice-body">
+        <ul>
+          <li><strong>字符数≠时长：</strong>TTS按字符计费，1分钟语音约消耗300-500字符（中文），英文约800-1200字符，差距2-3倍。</li>
+          <li><strong>音色克隆需本人授权：</strong>ElevenLabs/Fish Audio等平台要求克隆音色须获得本人同意，违规使用可能被封号。</li>
+          <li><strong>中文TTS选讯飞：</strong>讯飞在中文方言、多角色方面最优，ElevenLabs中文质量不如英文。</li>
+          <li><strong>AI生成语音必须标注：</strong>中国《深度合成管理规定》要求AI生成语音必须标注，商用务必合规。</li>
+          <li><strong>免费额度差异大：</strong>Google TTS 100万字符/月免费 vs ElevenLabs仅1万字符/月免费。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ==================== FAQ ==================== -->
+    <div class="cp-faq">
+      <div class="cp-faq-head">❓ 常见问题 FAQ</div>
+      <div class="cp-faq-item is-open">
+        <div class="cp-faq-q">ElevenLabs 和 Fish Audio 怎么选？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>英文/多语言选ElevenLabs，中文/开源选Fish Audio。</strong>ElevenLabs是TTS标杆，29+语言+克隆+API，但$22/月起且中文一般。Fish Audio开源+按量计费，15秒克隆中文音色更自然，性价比更高。</div>
+      </div>
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">语音克隆会被滥用吗？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>确实有风险，各平台已加强管控。</strong>ElevenLabs引入"语音安全验证"，需本人授权才能克隆。中国法规要求AI生成语音必须标注。建议只克隆自己的声音，避免法律风险。</div>
+      </div>
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">做有声书/播客选哪个？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>中文有声书选讯飞专业版 ¥29/月</strong>，方言和中文韵律最优。英文有声书选ElevenLabs Creator $22/月，长文本朗读最自然。如果想多角色配音，两者都支持多音色切换。</div>
+      </div>
+    </div>
+
+    <!-- ==================== 性价比排行 ==================== -->
+    <div class="cp-value-rank">
+      <div class="cp-value-rank-head">📊 性价比排行 — 每元字符数对比</div>
+      <div class="cp-value-rank-body">
+        <div style="font-size:0.78rem;color:var(--muted);margin-bottom:0.6rem;">公式：月均字符数 ÷ 月价 = 每元字符数。数值越高性价比越好。</div>
+        <table class="cp-table" style="font-size:0.8rem;">
+          <thead><tr><th>排名</th><th>平台</th><th>套餐</th><th>月价</th><th>月均字符数(估)</th><th>每元字符数</th><th>性价比</th></tr></thead>
+          <tbody>
+            <tr><td>🥇</td><td class="plan-name">Google TTS</td><td>免费版</td><td class="plan-price">¥0</td><td>100万</td><td class="val-high">∞</td><td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:100%;height:100%;border-radius:4px;background:linear-gradient(90deg,#3fb950,#2ea043);"></div></div></td></tr>
+            <tr><td>🥈</td><td class="plan-name">MiniMax</td><td>会员</td><td class="plan-price">¥30</td><td>500万</td><td class="val-high">167万</td><td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:80%;height:100%;border-radius:4px;background:linear-gradient(90deg,#3fb950,#2ea043);"></div></div></td></tr>
+            <tr><td>🥉</td><td class="plan-name">讯飞</td><td>专业版</td><td class="plan-price">¥29</td><td>~200万</td><td class="val-high">69万</td><td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:70%;height:100%;border-radius:4px;background:linear-gradient(90deg,#58a6ff,#388bfd);"></div></div></td></tr>
+            <tr><td>4</td><td class="plan-name">Fish Audio</td><td>按量</td><td class="plan-price">按量</td><td>按量</td><td class="val-mid">~50万/¥1</td><td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:35%;height:100%;border-radius:4px;background:linear-gradient(90deg,#d29922,#bb8009);"></div></div></td></tr>
+            <tr><td>5</td><td class="plan-name">ElevenLabs</td><td>Creator</td><td class="plan-price">$22</td><td>10万</td><td class="val-low">~0.65万/美元</td><td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:4%;height:100%;border-radius:4px;background:linear-gradient(90deg,#8b9cb3,#6e7681);"></div></div></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ==================== 趋势分析 ==================== -->
+    <div class="cp-trend-section" style="margin-top:2.5rem;">
+      <h2>📈 AI 语音趋势</h2>
+      <div style="border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden;">
+        <div style="padding:.8rem 1rem;font-size:.85rem;line-height:1.8;">
+          <div style="margin-bottom:1rem;">
+            <div style="font-weight:700;color:var(--accent2);margin-bottom:.3rem;">1️⃣ 语音克隆从秒级到即时</div>
+            <div style="padding-left:.6rem;">
+              <div>• 2023年：需要30分钟以上音频才能克隆一个音色</div>
+              <div>• 2024年：ElevenLabs/Fish Audio 15秒即可克隆</div>
+              <div>• 2025年：实时语音克隆，说话的同时生成克隆语音</div>
+              <div>• 2026年：Zero-shot克隆，零样本即可模仿任意音色</div>
+            </div>
+          </div>
+          <div style="margin-bottom:1rem;">
+            <div style="font-weight:700;color:var(--danger);margin-bottom:.3rem;">2️⃣ 实时语音对话爆发</div>
+            <div style="padding-left:.6rem;">
+              <div>• OpenAI Realtime API 开启低延迟语音对话时代</div>
+              <div>• TTS+ASR+LLM一体化，延迟从秒级降到毫秒级</div>
+              <div>• 语音助手/客服/陪伴场景快速增长</div>
+            </div>
+          </div>
+          <div>
+            <div style="font-weight:700;color:var(--accent);margin-bottom:.3rem;">3️⃣ 深伪造风险与合规</div>
+            <div style="padding-left:.6rem;">
+              <div>• 语音克隆技术被滥用进行电信诈骗，各国加强监管</div>
+              <div>• ElevenLabs引入"语音安全验证"，需本人授权才能克隆</div>
+              <div>• 中国《深度合成管理规定》要求AI生成语音必须标注</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cp-footer">
+      <p>数据来源：各平台官网 · 价格以官网为准</p>
+    <p><a href="index.html">← 返回 AINav 首页</a> · <a href="free-tier.html">🆓 免费额度</a> · <a href="token-optimization.html">Token优化</a> · <a href="coding-plan.html">编程套餐横评</a> · <a href="agent-plan.html">Agent横评</a> · <a href="model-plan.html">模型选型</a></p>
+  </div>
+
+  <script>document.querySelectorAll('.cp-faq-q').forEach(function(q){q.addEventListener('click',function(){q.parentElement.classList.toggle('is-open');});});</script>
+  <script>
+    (function(){
+      var btns=document.querySelectorAll('.theme-btn:not(.lang-btn)'),html=document.documentElement;
+      function apply(t){html.setAttribute('data-theme',t);localStorage.setItem('cp-theme',t);btns.forEach(function(b){b.classList.toggle('is-active',b.getAttribute('data-theme-set')===t)})}
+      var saved=localStorage.getItem('cp-theme')||'system';apply(saved);
+      btns.forEach(function(b){b.addEventListener('click',function(){apply(b.getAttribute('data-theme-set'))})});
+    })();
+  </script>
+  <script>
+    (function(){
+      var i18n={"zh":{"pageTitle":"AI Voice Plan 语音套餐横评 — AINav","pageDesc":"国内外 AI 语音/TTS 套餐一站式对比：ElevenLabs、Azure Speech、Fish Audio 等价格功能对比。","title":"🔊 AI Voice Plan 语音套餐横评","subtitle":"国内外 AI 语音/TTS 套餐一站式对比：价格、字符数、音色克隆、API，帮你选出最划算的语音方案。","navHome":"← AINav 首页","navCoding":"编程套餐横评","navAgent":"Agent横评","navVideo":"视频套餐横评","navImage":"图像套餐横评","navMusic":"音乐套餐横评","navSearch":"搜索套餐横评","navVoice":"语音套餐横评","navLearning":"学习套餐横评","navEncyclopedia":"AI百科","themeSystem":"跟随系统","themeLight":"浅色","themeDark":"深色","sectionDomestic":"国内 AI 语音平台","sectionOverseas":"海外 AI 语音平台","sectionMatrix":"📊 功能对比矩阵","sectionPrice":"💰 月费对比（入门付费套餐）","sectionRec":"🎯 场景推荐 — 按需求选最适合的语音方案","sectionTrend":"📈 AI 语音趋势","thPlan":"套餐","thPrice":"月价","thChars":"字符数/月","thClone":"音色克隆","thNote":"备注","thType":"类型","footer":"数据来源：各平台官网 · 价格以官网为准","footerHome":"← 返回 AINav 首页","promoCta":"立即注册","legendHot":"🔥 热门","legendHotDesc":"高人气","legendNew":"✨ 新品","legendNewDesc":"新上线","legendRec":"👍 推荐","legendRecDesc":"综合推荐","legendOverseas":"🌍 海外","legendOverseasDesc":"需国际网络","legendFree":"🆓 免费版","legendFreeDesc":"零成本体验"},"en":{"pageTitle":"AI Voice Plan Comparison — AINav","pageDesc":"One-stop comparison of AI voice/TTS plans worldwide: ElevenLabs, Azure Speech, Fish Audio pricing and features.","title":"🔊 AI Voice Plan Comparison","subtitle":"One-stop comparison of AI voice/TTS plans worldwide: pricing, characters, voice cloning, and API access.","navHome":"← AINav Home","navCoding":"Coding Plans","navAgent":"Agents","navVideo":"Video Plans","navImage":"Image Plans","navMusic":"Music Plans","navSearch":"Search Plans","navVoice":"Voice Plans","navLearning":"Learning Plans","navEncyclopedia":"AI Encyclopedia","themeSystem":"System","themeLight":"Light","themeDark":"Dark","sectionDomestic":"Domestic AI Voice Platforms","sectionOverseas":"Overseas AI Voice Platforms","sectionMatrix":"📊 Feature Comparison Matrix","sectionPrice":"💰 Monthly Price Comparison (Entry Plans)","sectionRec":"🎯 Recommendations — Find the Best Voice Plan for Your Needs","sectionTrend":"📈 AI Voice Trends","thPlan":"Plan","thPrice":"Price","thChars":"Chars/Mo","thClone":"Voice Clone","thNote":"Note","thType":"Type","footer":"Data sources: Official websites · Prices subject to change","footerHome":"← Back to AINav Home","promoText":"Want","promoOr":"/","promoNoNet":"but no VPN?","promoDesc":"One API Key for 100+ top models, direct access in China, low latency, OpenAI-compatible format","promoCta":"Sign Up →","legendHot":"🔥 Hot","legendHotDesc":"Popular","legendNew":"✨ New","legendNewDesc":"Recently launched","legendRec":"👍 Pick","legendRecDesc":"Recommended","legendOverseas":"🌍 OS","legendOverseasDesc":"Needs VPN","legendFree":"🆓 Free","legendFreeDesc":"Zero cost"}};
+      var LANG_KEY='ainav-lang',currentLang=localStorage.getItem(LANG_KEY)||'zh';
+      function applyLang(lang){
+        if(lang!=='zh'&&lang!=='en')lang='zh';currentLang=lang;
+        document.documentElement.setAttribute('lang',lang==='en'?'en':'zh-CN');
+        try{localStorage.setItem(LANG_KEY,lang)}catch(e){}
+        var dict=i18n[lang];
+        document.title=dict.pageTitle;
+        var metaDesc=document.querySelector('meta[name="description"]');
+        if(metaDesc)metaDesc.setAttribute('content',dict.pageDesc);
+        document.querySelectorAll('[data-i18n]').forEach(function(el){var key=el.getAttribute('data-i18n');if(dict[key]!==undefined)el.textContent=dict[key]});
+        var nl=document.querySelectorAll('.cp-nav a');
+        if(nl[0])nl[0].textContent=dict.navHome;if(nl[1])nl[1].textContent=dict.navCoding;
+        if(nl[2])nl[2].textContent=dict.navAgent;if(nl[3])nl[3].textContent=dict.navVideo;
+        if(nl[4])nl[4].textContent=dict.navImage;if(nl[5])nl[5].textContent=dict.navMusic;
+        if(nl[6])nl[6].textContent=dict.navSearch;if(nl[7])nl[7].textContent=dict.navVoice;
+        if(nl[8])nl[8].textContent=dict.navLearning;if(nl[9])nl[9].textContent=dict.navEncyclopedia;
+        document.querySelectorAll('.theme-btn:not(.lang-btn)').forEach(function(b){
+          var s=b.getAttribute('data-theme-set');
+          if(s==='system')b.textContent=dict.themeSystem;
+          else if(s==='light')b.textContent=dict.themeLight;
+          else if(s==='dark')b.textContent=dict.themeDark;
+        });
+        // Legend
+        var legendItems=document.querySelectorAll('.cp-legend-item');
+        var lk=[
+          {badge:'badge-hot',key:'legendHot',descKey:'legendHotDesc'},
+          {badge:'badge-new',key:'legendNew',descKey:'legendNewDesc'},
+          {badge:'badge-rec',key:'legendRec',descKey:'legendRecDesc'},
+          {badge:'badge-overseas',key:'legendOverseas',descKey:'legendOverseasDesc'},
+          {badge:'badge-free',key:'legendFree',descKey:'legendFreeDesc'},
+        ];
+        legendItems.forEach(function(el,idx){
+          if(lk[idx]){var k=lk[idx];el.innerHTML='<span class="cp-badge '+k.badge+'">'+dict[k.key]+'</span> '+dict[k.descKey]}
+        });
+        // Section headings
+        document.querySelectorAll('.cp-section-hd').forEach(function(el){
+          var t=el.textContent.trim();
+          if(t.indexOf('国内')!==-1)el.innerHTML='<span class="cp-flag">🇨🇳</span> '+dict.sectionDomestic;
+          else if(t.indexOf('海外')!==-1)el.innerHTML='<span class="cp-flag">🌍</span> '+dict.sectionOverseas;
+        });
+        // Table headers
+        document.querySelectorAll('.cp-table thead th').forEach(function(th){
+          var t=th.textContent.trim();if(t==='跟随系统')th.textContent=dict.themeSystem;if(t==='浅色')th.textContent=dict.themeLight;if(t==='深色')th.textContent=dict.themeDark;if(t==='套餐')th.textContent=dict.thPlan;if(t==='月价')th.textContent=dict.thPrice;if(t==='字符数/月')th.textContent=dict.thChars;if(t==='音色克隆')th.textContent=dict.thClone;if(t==='备注')th.textContent=dict.thNote;if(t==='类型')th.textContent=dict.thType;
+        });
+        // H2s
+        document.querySelectorAll('.cp-matrix-section h2,.cp-trend-section h2').forEach(function(el){
+          var t=el.textContent.trim();
+          if(t.indexOf('功能对比')!==-1||t.indexOf('Feature')!==-1)el.textContent=dict.sectionMatrix;
+          else if(t.indexOf('月费对比')!==-1||t.indexOf('Price')!==-1)el.textContent=dict.sectionPrice;
+          else if(t.indexOf('趋势')!==-1||t.indexOf('Trends')!==-1)el.textContent=dict.sectionTrend;
+        });
+        document.querySelectorAll('.cp-tips h2').forEach(function(el){
+          if(el.textContent.indexOf('场景推荐')!==-1||el.textContent.indexOf('Recommendations')!==-1)el.textContent=dict.sectionRec;
+        });
+        var fp=document.querySelectorAll('.cp-footer p');
+        if (fp[1]) fp[1].textContent = dict.footer;
+        var pb=document.querySelector('.cp-wrap > div:first-child');
+        if(pb){pb.innerHTML='<span style="color:var(--muted)">'+dict.promoText+'</span> <strong style="color:var(--text)">GPT-5</strong> <span style="color:var(--muted)">'+dict.promoOr+'</span> <strong style="color:var(--text)">Claude Opus 4.8</strong> <span style="color:var(--muted)">'+dict.promoOr+'</span> <strong style="color:var(--text)">Gemini 3.1 Pro</strong> <span style="color:var(--muted)">'+dict.promoNoNet+'</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--accent2);font-weight:600;text-decoration:none;">OfoxAI</a> <span style="color:var(--muted)">'+dict.promoDesc+'</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">'+dict.promoCta+'</a>'}
+        document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('is-active',b.getAttribute('data-lang-set')===lang)});
+      }
+      applyLang(currentLang);document.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){applyLang(b.getAttribute('data-lang-set'))})});
+    })();
+  </script>
+<script src="plan-nav.js" data-active="voice-plan.html"></script>
+<script src="thinking-framework.js"></script>
+<script>document.addEventListener("click",function(e){var c=e.target.closest(".plan-promo-code");if(!c)return;e.preventDefault();var code=c.getAttribute("data-code")||c.textContent.trim();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(code).then(function(){c.textContent=code+" 已复制";setTimeout(function(){c.textContent=code},1500)})}else{var ta=document.createElement("textarea");ta.value=code;ta.style.cssText="position:fixed;left:-9999px";document.body.appendChild(ta);ta.select();try{document.execCommand("copy");c.textContent=code+" 已复制";setTimeout(function(){c.textContent=code},1500)}catch(ex){}document.body.removeChild(ta)}});</script>
+</body>
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>一人公司出海 · 全链路拆解 — AINav</title>
+  <meta name="description" content="一人公司出海完整指南：选品→建站→内容→营销→客服→收款→合规，7步全链路拆解，含AI工具、真实案例、避坑指南。">
+  <link rel="canonical" href="https://aiv123.com/opc-global.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="一人公司出海 · 全链路拆解">
+  <meta property="og:description" content="OPC出海7步全链路：选品、建站、内容、营销、客服、收款、合规。">
+  <meta property="og:url" content="https://aiv123.com/opc-global.html">
+  <meta property="og:site_name" content="AINav">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%230969da'/><text x='50' y='72' font-size='60' text-anchor='middle' fill='white' font-family='system-ui' font-weight='700'>AI</text></svg>">
+  <style>
+    :root, html[data-theme="dark"] {
+      --bg: #0f1419; --panel: #151b23; --card: #1c2430; --border: #2d3848;
+      --text: #e6edf3; --muted: #8b9cb3; --accent: #58a6ff; --accent2: #3fb950;
+      --warn: #d29922; --danger: #f85149; --hot: #ff6b6b; --overseas: #a78bfa;
+      --opc: #f59e0b; --opc2: #10b981; --step1: #58a6ff; --step2: #3fb950;
+      --step3: #f59e0b; --step4: #f85149; --step5: #a78bfa; --step6: #10b981;
+      --step7: #d29922;
+    }
+    html[data-theme="light"] {
+      --bg: #f6f8fa; --panel: #fff; --card: #fff; --border: #d0d7de;
+      --text: #1f2328; --muted: #59636e; --accent: #0969da; --accent2: #1a7f37;
+      --warn: #9a6700; --danger: #cf222e; --hot: #e53935; --overseas: #7c3aed;
+      --opc: #d97706; --opc2: #059669;
+    }
+    @media (prefers-color-scheme: light) {
+      html[data-theme="system"] {
+        --bg: #f6f8fa; --panel: #fff; --card: #fff; --border: #d0d7de;
+        --text: #1f2328; --muted: #59636e; --accent: #0969da; --accent2: #1a7f37;
+        --warn: #9a6700; --danger: #cf222e; --hot: #e53935; --overseas: #7c3aed;
+        --opc: #d97706; --opc2: #059669;
+      }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Segoe UI", system-ui, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.6; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .cp-top { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); background: var(--panel); position: sticky; top: 0; z-index: 10; }
+    .cp-top-inner { max-width: 76rem; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; justify-content: space-between; }
+    .cp-nav a { font-weight: 600; margin-right: 1rem; font-size: 0.88rem; }
+    .cp-toolbar { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; }
+    .theme-btn { font-size: 0.72rem; padding: 0.2rem 0.5rem; border-radius: 5px; border: 1px solid var(--border);
+      background: var(--card); color: var(--muted); cursor: pointer; font-family: inherit; }
+    .theme-btn.is-active { color: var(--accent); border-color: var(--accent); font-weight: 600; }
+
+    .cp-wrap { max-width: 76rem; margin: 0 auto; padding: 1rem; }
+    h1 { font-size: 1.35rem; margin: 0 0 0.3rem; }
+    .cp-subtitle { font-size: 0.88rem; color: var(--muted); margin-bottom: 1rem; }
+    .cp-updated { font-size: 0.76rem; color: var(--muted); margin-bottom: 1.2rem; }
+
+    .cp-section-hd { font-size: 1.1rem; font-weight: 700; margin: 1.8rem 0 0.8rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--border); display: flex; align-items: center; gap: 0.5rem; }
+    .cp-section-hd .cp-flag { font-size: 1.15rem; }
+    .cp-section-hd.global-hd { border-bottom-color: var(--overseas); }
+
+    .cp-badge { display: inline-block; padding: 0.1rem 0.45rem; border-radius: 4px; font-size: 0.72rem; font-weight: 600; }
+    .badge-hot { background: rgba(255,107,107,0.15); color: var(--hot); border: 1px solid rgba(255,107,107,0.3); }
+    .badge-new { background: rgba(63,185,80,0.15); color: var(--accent2); border: 1px solid rgba(63,185,80,0.3); }
+
+    /* Pipeline flow */
+    .pipeline-flow { display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem; margin: 1rem 0; padding: 0.8rem; border-radius: 10px; border: 1px solid var(--border); background: var(--card); justify-content: center; }
+    .pipeline-step { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; padding: 0.4rem 0.6rem; border-radius: 8px; font-size: 0.78rem; font-weight: 600; min-width: 4rem; }
+    .pipeline-step .step-icon { font-size: 1.2rem; }
+    .pipeline-step .step-label { font-size: 0.72rem; color: var(--muted); }
+    .pipeline-arrow { font-size: 1rem; color: var(--muted); }
+
+    /* Step detail card */
+    .step-card { border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; margin-bottom: 1.2rem; }
+    .step-card-head { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); font-weight: 700; font-size: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+    .step-card-body { padding: 0.75rem 1rem; font-size: 0.85rem; line-height: 1.8; }
+    .step-card-body ul { padding-left: 1.2rem; margin: 0.5rem 0; }
+    .step-card-body li { margin-bottom: 0.3rem; }
+    .step-card-body strong { color: var(--overseas); }
+
+    /* Tool mini-table */
+    .tool-mini { width: 100%; border-collapse: collapse; font-size: 0.82rem; margin: 0.5rem 0; }
+    .tool-mini th { text-align: left; font-weight: 600; color: var(--muted); padding: 0.3rem 0.5rem; border-bottom: 1px solid var(--border); font-size: 0.76rem; }
+    .tool-mini td { padding: 0.35rem 0.5rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .tool-mini tr:last-child td { border-bottom: none; }
+    .tool-mini .t-name { font-weight: 600; }
+    .tool-mini .t-price { color: var(--accent2); font-weight: 600; white-space: nowrap; }
+    .tool-mini .t-desc { color: var(--muted); font-size: 0.76rem; }
+
+    /* Case box */
+    .case-box { padding: 0.65rem 0.8rem; border-radius: 8px; border: 1px solid rgba(63,185,80,0.2); background: rgba(63,185,80,0.04); margin: 0.8rem 0; font-size: 0.82rem; line-height: 1.7; }
+    .case-box .case-label { font-weight: 700; color: var(--accent2); margin-bottom: 0.2rem; }
+
+    /* Cost card */
+    .cost-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin: 1rem 0; }
+    @media (max-width: 48rem) { .cost-grid { grid-template-columns: 1fr; } }
+    .cost-card { padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border); background: var(--card); text-align: center; }
+    .cost-card h4 { margin: 0 0 0.3rem; font-size: 0.92rem; }
+    .cost-card .cost-amount { font-size: 1.3rem; font-weight: 700; color: var(--overseas); }
+    .cost-card .cost-desc { font-size: 0.76rem; color: var(--muted); margin-top: 0.3rem; }
+
+    /* Pitfall */
+    .pitfall-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin: 1rem 0; }
+    @media (max-width: 48rem) { .pitfall-grid { grid-template-columns: 1fr; } }
+    .pitfall-card { padding: 0.65rem; border-radius: 8px; border: 1px solid rgba(248,81,73,0.2); background: rgba(248,81,73,0.03); font-size: 0.82rem; line-height: 1.6; }
+    .pitfall-card strong { color: var(--danger); }
+
+    /* Roadmap */
+    .opc-phase { padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid var(--border); background: var(--card); margin-bottom: 0.8rem; }
+    .opc-phase h4 { margin: 0 0 0.3rem; font-size: 0.92rem; }
+    .opc-phase h4 .phase-time { font-size: 0.76rem; color: var(--muted); font-weight: 400; }
+    .opc-phase ul { padding-left: 1rem; margin: 0.3rem 0 0; font-size: 0.8rem; line-height: 1.7; }
+
+    /* Cross-link */
+    .opc-cross { margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 40rem) { .opc-cross { grid-template-columns: 1fr; } }
+    .opc-cross-card { padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border); background: var(--card); display: block; text-decoration: none; color: var(--text); transition: border-color 0.15s; }
+    .opc-cross-card:hover { border-color: var(--overseas); text-decoration: none; }
+    .opc-cross-card h4 { margin: 0 0 0.2rem; font-size: 0.95rem; color: var(--overseas); }
+    .opc-cross-card p { margin: 0; font-size: 0.8rem; color: var(--muted); }
+
+    .cp-footer { max-width: 76rem; margin: 2rem auto 1rem; padding: 0 1rem; font-size: 0.76rem; color: var(--muted); text-align: center; }
+    .cp-footer a { color: var(--muted); }
+
+    /* Data stats */
+    .data-stats { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1rem 0; }
+    .data-stat { padding: 0.5rem 0.8rem; border-radius: 8px; border: 1px solid var(--border); background: var(--card); font-size: 0.82rem; }
+    .data-stat .stat-num { font-size: 1.1rem; font-weight: 700; color: var(--overseas); }
+    .data-stat .stat-label { font-size: 0.72rem; color: var(--muted); }
+  </style>
+  <!-- Google Analytics (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2B8FBWRX4N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2B8FBWRX4N');
+</script>
+<!-- End Google Analytics -->
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2d49f38b39c743ac80b6d6b9ff99494d"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body>
+  <div class="cp-top">
+    <div class="cp-top-inner">
+      <div class="cp-nav" data-plan-nav>
+      </div>
+      <div class="cp-toolbar">
+        <button type="button" class="theme-btn" data-theme-set="system">系统</button>
+        <button type="button" class="theme-btn" data-theme-set="light">浅</button>
+        <button type="button" class="theme-btn" data-theme-set="dark">深</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cp-wrap">
+    <h1>🌍 一人公司出海 · 全链路拆解</h1>
+    <p class="cp-subtitle">一个人把生意做到全球的完整链路：选品→建站→内容→营销→客服→收款→合规</p>
+    <p class="cp-updated">更新于 2026年6月</p>
+
+    <!-- 为什么出海 -->
+    <div class="cp-section-hd global-hd"><span class="cp-flag">📊</span> 为什么出海？— 数据说话</div>
+    <div class="data-stats">
+      <div class="data-stat"><span class="stat-num">16.49%</span><br><span class="stat-label">OPC中电商占比第一</span></div>
+      <div class="data-stat"><span class="stat-num">&lt;$500</span><br><span class="stat-label">90%OPC启动资金</span></div>
+      <div class="data-stat"><span class="stat-num">78%</span><br><span class="stat-label">跨境电商AI渗透率</span></div>
+      <div class="data-stat"><span class="stat-num">-70%</span><br><span class="stat-label">人力成本下降</span></div>
+      <div class="data-stat"><span class="stat-num">+300%</span><br><span class="stat-label">销售额增长</span></div>
+    </div>
+
+    <!-- 全链路总览 -->
+    <div class="cp-section-hd global-hd"><span class="cp-flag">🔗</span> 全链路总览</div>
+    <div class="pipeline-flow">
+      <div class="pipeline-step" style="background:rgba(88,166,255,0.1);border:1px solid rgba(88,166,255,0.3);"><span class="step-icon">🔍</span>选品<span class="step-label">Step 1</span></div>
+      <span class="pipeline-arrow">→</span>
+      <div class="pipeline-step" style="background:rgba(63,185,80,0.1);border:1px solid rgba(63,185,80,0.3);"><span class="step-icon">🏪</span>建站<span class="step-label">Step 2</span></div>
+      <span class="pipeline-arrow">→</span>
+      <div class="pipeline-step" style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.3);"><span class="step-icon">🎬</span>内容<span class="step-label">Step 3</span></div>
+      <span class="pipeline-arrow">→</span>
+      <div class="pipeline-step" style="background:rgba(248,81,73,0.1);border:1px solid rgba(248,81,73,0.3);"><span class="step-icon">📣</span>营销<span class="step-label">Step 4</span></div>
+      <span class="pipeline-arrow">→</span>
+      <div class="pipeline-step" style="background:rgba(167,139,250,0.1);border:1px solid rgba(167,139,250,0.3);"><span class="step-icon">💬</span>客服<span class="step-label">Step 5</span></div>
+      <span class="pipeline-arrow">→</span>
+      <div class="pipeline-step" style="background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);"><span class="step-icon">💳</span>收款<span class="step-label">Step 6</span></div>
+      <span class="pipeline-arrow">→</span>
+      <div class="pipeline-step" style="background:rgba(210,153,34,0.1);border:1px solid rgba(210,153,34,0.3);"><span class="step-icon">⚖️</span>合规<span class="step-label">Step 7</span></div>
+    </div>
+
+    <!-- Step 1: 选品 -->
+    <div class="step-card" style="border-left:3px solid var(--step1);">
+      <div class="step-card-head"><span style="font-size:1.2rem;">🔍</span> Step 1: 选品 — 决定80%的成败</div>
+      <div class="step-card-body">
+        <p><strong>痛点：</strong>不知道卖什么，靠猜→压库存→亏钱</p>
+        <p><strong>AI突破：</strong>差评挖掘→痛点→选品，数据驱动决策</p>
+        <table class="tool-mini">
+          <thead><tr><th>工具</th><th>月价</th><th>用途</th></tr></thead>
+          <tbody>
+            <tr><td class="t-name"><a href="https://perplexity.ai/" target="_blank" rel="noopener noreferrer">Perplexity</a></td><td class="t-price">免费</td><td class="t-desc">市场调研+竞品分析</td></tr>
+            <tr><td class="t-name"><a href="https://trends.google.com/" target="_blank" rel="noopener noreferrer">谷歌趋势</a></td><td class="t-price">免费</td><td class="t-desc">趋势发现+热度判断</td></tr>
+            <tr><td class="t-name"><a href="https://ai.linkfox.com/" target="_blank" rel="noopener noreferrer">Linkfox</a></td><td class="t-price">按需</td><td class="t-desc">AI选品/竞品分析/Listing优化</td></tr>
+            <tr><td class="t-name"><a href="https://junglescout.com/" target="_blank" rel="noopener noreferrer">Jungle Scout</a></td><td class="t-price">$49</td><td class="t-desc">亚马逊专业选品</td></tr>
+            <tr><td class="t-name"><a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT</a></td><td class="t-price">$20</td><td class="t-desc">差评分析+选品建议</td></tr>
+          </tbody>
+        </table>
+        <div class="case-box">
+          <div class="case-label">📋 真实案例</div>
+          AI爬取俄罗斯站"保暖"品类5000条差评→发现核心痛点：手指灵活度+电池续航→联系工厂升级手指部分→一个冬季卖出<strong>7000单</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 2: 建站 -->
+    <div class="step-card" style="border-left:3px solid var(--step2);">
+      <div class="step-card-head"><span style="font-size:1.2rem;">🏪</span> Step 2: 建站 — 你的全球店面</div>
+      <div class="step-card-body">
+        <p><strong>痛点：</strong>不会代码，外包贵，不懂海外审美</p>
+        <p><strong>AI突破：</strong>AI对话生成独立站，1天上线</p>
+        <table class="tool-mini">
+          <thead><tr><th>工具</th><th>月价</th><th>用途</th></tr></thead>
+          <tbody>
+            <tr><td class="t-name"><a href="https://shopify.com/" target="_blank" rel="noopener noreferrer">Shopify</a></td><td class="t-price">$29</td><td class="t-desc">全球电商标配，生态最全</td></tr>
+            <tr><td class="t-name"><a href="https://www.shoplazza.cn/" target="_blank" rel="noopener noreferrer">店匠 Shoplazza</a></td><td class="t-price">¥199</td><td class="t-desc">中文AI对话生成独立站，跨境首选</td></tr>
+            <tr><td class="t-name">WordPress + WooCommerce</td><td class="t-price">免费</td><td class="t-desc">开源自建，灵活度高</td></tr>
+            <tr><td class="t-name"><a href="https://framer.com/" target="_blank" rel="noopener noreferrer">Framer</a></td><td class="t-price">$15</td><td class="t-desc">设计感品牌站+AI生成</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Step 3: 内容/视频 -->
+    <div class="step-card" style="border-left:3px solid var(--step3);">
+      <div class="step-card-head"><span style="font-size:1.2rem;">🎬</span> Step 3: 内容/视频 — 吸粉核心 <span class="cp-badge badge-hot">🔥 关键</span></div>
+      <div class="step-card-body">
+        <p><strong>痛点：</strong>不会外语、没钱拍视频、没人出镜</p>
+        <p><strong>AI突破：</strong>AI视频+数字人多语言口播，成本≈0</p>
+        <table class="tool-mini">
+          <thead><tr><th>工具</th><th>月价</th><th>用途</th></tr></thead>
+          <tbody>
+            <tr><td class="t-name"><a href="https://www.volcengine.com/product/seedance" target="_blank" rel="noopener noreferrer">Seedance 2.0</a></td><td class="t-price">免费/¥200</td><td class="t-desc">🔥字节出品，文生视频1元/秒</td></tr>
+            <tr><td class="t-name"><a href="https://klingai.com/" target="_blank" rel="noopener noreferrer">可灵AI</a></td><td class="t-price">免费起</td><td class="t-desc">国产视频生成</td></tr>
+            <tr><td class="t-name"><a href="https://yuanjing.zeelin.cn/" target="_blank" rel="noopener noreferrer">元镜</a></td><td class="t-price">免费起</td><td class="t-desc">一句话生成爆款视频</td></tr>
+            <tr><td class="t-name"><a href="https://www.heygen.com/" target="_blank" rel="noopener noreferrer">HeyGen</a></td><td class="t-price">$24</td><td class="t-desc">数字人多语言口播</td></tr>
+            <tr><td class="t-name"><a href="https://www.capcut.cn/" target="_blank" rel="noopener noreferrer">剪映/CapCut</a></td><td class="t-price">免费</td><td class="t-desc">剪辑+自动字幕+翻译</td></tr>
+            <tr><td class="t-name"><a href="https://midjourney.com/" target="_blank" rel="noopener noreferrer">Midjourney</a></td><td class="t-price">$10</td><td class="t-desc">产品图/素材生成</td></tr>
+          </tbody>
+        </table>
+        <div class="case-box">
+          <div class="case-label">📋 真实案例</div>
+          中文脚本→AI数字人用俄语口播，口型同步→成本≈0，效果优于人工翻译。TikTok一条视频引流500+订单。
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 4: 营销/获客 -->
+    <div class="step-card" style="border-left:3px solid var(--step4);">
+      <div class="step-card-head"><span style="font-size:1.2rem;">📣</span> Step 4: 营销/获客 — 流量从哪来</div>
+      <div class="step-card-body">
+        <p><strong>痛点：</strong>投流烧钱无底洞，ROI不可控</p>
+        <p><strong>AI突破：</strong>Agent自动投放+SEO+内容营销闭环</p>
+        <table class="tool-mini">
+          <thead><tr><th>工具</th><th>月价</th><th>用途</th></tr></thead>
+          <tbody>
+            <tr><td class="t-name">TikTok GMV Max</td><td class="t-price">按佣金</td><td class="t-desc">AI自动化广告投放（全球）</td></tr>
+            <tr><td class="t-name"><a href="https://www.openclaw.com/" target="_blank" rel="noopener noreferrer">OpenClaw（龙虾）</a></td><td class="t-price">¥200起</td><td class="t-desc">全链路Agent：抓趋势→拆竞品→生视频→投广告</td></tr>
+            <tr><td class="t-name"><a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT</a></td><td class="t-price">$20</td><td class="t-desc">SEO文案+多语言内容</td></tr>
+            <tr><td class="t-name"><a href="https://n8n.io/" target="_blank" rel="noopener noreferrer">n8n</a></td><td class="t-price">免费自建</td><td class="t-desc">自动分发+工作流</td></tr>
+            <tr><td class="t-name"><a href="https://perplexity.ai/" target="_blank" rel="noopener noreferrer">Perplexity</a></td><td class="t-price">免费</td><td class="t-desc">竞品分析+市场洞察</td></tr>
+          </tbody>
+        </table>
+        <div class="case-box">
+          <div class="case-label">📋 真实案例</div>
+          龙虾Agent全自动闭环：定时抓TikTok趋势→拆解竞品视频策略→向Seedance发起视频制作→进入店铺后台发布GMV Max广告→自动投放优化。覆盖：数据分析、竞品分析、listing优化、广告投放。
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 5: 客服 -->
+    <div class="step-card" style="border-left:3px solid var(--step5);">
+      <div class="step-card-head"><span style="font-size:1.2rem;">💬</span> Step 5: 客服/支持 — 多语言7×24h</div>
+      <div class="step-card-body">
+        <p><strong>痛点：</strong>时差+多语言+回复不过来→丢单</p>
+        <p><strong>AI突破：</strong>AI客服多语言自动应答，7×24h在线</p>
+        <table class="tool-mini">
+          <thead><tr><th>工具</th><th>月价</th><th>用途</th></tr></thead>
+          <tbody>
+            <tr><td class="t-name"><a href="https://dify.ai/" target="_blank" rel="noopener noreferrer">Dify</a></td><td class="t-price">免费起</td><td class="t-desc">AI客服+知识库搭建</td></tr>
+            <tr><td class="t-name"><a href="https://chatwoot.com/" target="_blank" rel="noopener noreferrer">Chatwoot</a></td><td class="t-price">免费自建</td><td class="t-desc">多渠道客服聚合</td></tr>
+            <tr><td class="t-name"><a href="https://fastgpt.in/" target="_blank" rel="noopener noreferrer">FastGPT</a></td><td class="t-price">免费起</td><td class="t-desc">国产AI客服+工作流</td></tr>
+            <tr><td class="t-name"><a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT翻译</a></td><td class="t-price">$20</td><td class="t-desc">多语言实时翻译</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Step 6: 收款 -->
+    <div class="step-card" style="border-left:3px solid var(--step6);">
+      <div class="step-card-head"><span style="font-size:1.2rem;">💳</span> Step 6: 收款 — 钱怎么回来</div>
+      <div class="step-card-body">
+        <p><strong>痛点：</strong>国内开不了Stripe，个人收款→封号→冻结180天</p>
+        <p><strong>注意：</strong>这是合规问题，AI帮不了，必须走正规通道</p>
+        <table class="tool-mini">
+          <thead><tr><th>方案</th><th>费用</th><th>说明</th></tr></thead>
+          <tbody>
+            <tr><td class="t-name"><a href="https://stripe.com/" target="_blank" rel="noopener noreferrer">Stripe + 美国LLC</a></td><td class="t-price">~$500注册</td><td class="t-desc">SaaS首选，合规收款无封号风险</td></tr>
+            <tr><td class="t-name"><a href="https://lemonsqueezy.com/" target="_blank" rel="noopener noreferrer">LemonSqueezy</a></td><td class="t-price">5%+50¢</td><td class="t-desc">无需注册公司，Merchant of Record</td></tr>
+            <tr><td class="t-name"><a href="https://paddle.com/" target="_blank" rel="noopener noreferrer">Paddle</a></td><td class="t-price">5%/笔</td><td class="t-desc">SaaS代收，处理全球税务</td></tr>
+            <tr><td class="t-name"><a href="https://paypal.com/" target="_blank" rel="noopener noreferrer">PayPal Business</a></td><td class="t-price">4.4%+固定</td><td class="t-desc">通用但风控严，别用个人账户</td></tr>
+          </tbody>
+        </table>
+        <div style="padding:0.5rem 0.7rem;border-radius:6px;border:1px solid rgba(248,81,73,0.2);background:rgba(248,81,73,0.04);font-size:0.8rem;margin-top:0.5rem;">
+          <strong style="color:var(--danger)">⚠️ 避坑：</strong>个人PayPal/微信收美元→触发风控→冻结180天。必须注册海外LLC走正规收款通道。
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 7: 合规 -->
+    <div class="step-card" style="border-left:3px solid var(--step7);">
+      <div class="step-card-head"><span style="font-size:1.2rem;">⚖️</span> Step 7: 合规/法务 — 别踩红线</div>
+      <div class="step-card-body">
+        <p><strong>痛点：</strong>不懂海外法规，一罚就死</p>
+        <p><strong>注意：</strong>AI可辅助检索法规但<strong>无法提供法律建议</strong></p>
+        <table class="tool-mini">
+          <thead><tr><th>方案</th><th>费用</th><th>说明</th></tr></thead>
+          <tbody>
+            <tr><td class="t-name">注册美国LLC</td><td class="t-price">~$500</td><td class="t-desc">合规主体，可开Stripe</td></tr>
+            <tr><td class="t-name">Stripe Tax</td><td class="t-price">自动</td><td class="t-desc">自动计算和代收销售税</td></tr>
+            <tr><td class="t-name">ChatGPT法规检索</td><td class="t-price">$20</td><td class="t-desc">辅助参考，不替代律师</td></tr>
+          </tbody>
+        </table>
+        <ul>
+          <li><strong>财产混同：</strong>一人公司≠个人账户，务必分离否则连带责任</li>
+          <li><strong>数据隐私：</strong>GDPR/CCPA合规，用户数据保护不可忽视</li>
+          <li><strong>知识产权：</strong>商标/专利提前注册，避免被抢注</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 月度成本估算 -->
+    <div class="cp-section-hd global-hd"><span class="cp-flag">💰</span> 出海月度成本估算</div>
+    <div class="cost-grid">
+      <div class="cost-card" style="border-top:3px solid var(--accent);">
+        <h4>🟢 极简起步</h4>
+        <div class="cost-amount">$80/月</div>
+        <div class="cost-desc">Shopify $29 + 免费AI工具<br>+ 谷歌趋势选品<br>适合：验证期</div>
+      </div>
+      <div class="cost-card" style="border-top:3px solid var(--opc);">
+        <h4>🟡 标准配置</h4>
+        <div class="cost-amount">$250/月</div>
+        <div class="cost-desc">+ ChatGPT + Midjourney<br>+ 付费选品工具<br>适合：增长期</div>
+      </div>
+      <div class="cost-card" style="border-top:3px solid var(--hot);">
+        <h4>🔴 Agent冲刺</h4>
+        <div class="cost-amount">$600/月</div>
+        <div class="cost-desc">+ OpenClaw + Seedance Pro<br>+ HeyGen + 自动化<br>适合：规模期</div>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:0.82rem;color:var(--muted);margin-top:0.5rem;">一次性成本：注册美国LLC ~$500 | vs 传统跨境团队 ¥5万+/月</p>
+
+    <!-- 避坑指南 -->
+    <div class="cp-section-hd global-hd"><span class="cp-flag">⚠️</span> 出海避坑指南</div>
+    <div class="pitfall-grid">
+      <div class="pitfall-card"><strong>💸 Token成本失控</strong><br>有卖家使用"龙虾"一周，Token消耗8000万+，费用近¥5000，远超预期。务必监控Agent调用量。</div>
+      <div class="pitfall-card"><strong>🚫 收款封号</strong><br>个人PayPal收美元→触发风控→冻结180天。必须走Stripe+LLC正规通道。</div>
+      <div class="pitfall-card"><strong>⚖️ 财产混同</strong><br>一人公司≠个人账户混用。财产混同=连带责任，一旦出事倾家荡产。</div>
+      <div class="pitfall-card"><strong>⏰ AI红利窗口短</strong><br>述信科技CEO预测视频营销AI红利窗口仅约半年，先发优势很关键。</div>
+      <div class="pitfall-card"><strong>🤖 Agent淘汰风险</strong><br>Gartner预测2027年底超40%的Agentic AI可能被取消，别把赌注全压在一个Agent上。</div>
+      <div class="pitfall-card"><strong>🌍 本地化不只是翻译</strong><br>文案、视觉、客服话术都需要本地化，机器翻译只是起点不是终点。</div>
+    </div>
+
+    <!-- 出海路线图 -->
+    <div class="cp-section-hd global-hd"><span class="cp-flag">🛤️</span> 出海路线图</div>
+    <div class="opc-phase" style="border-left:3px solid var(--accent);">
+      <h4>🔍 Phase 1: 选品验证 <span class="phase-time">（1-2周）</span></h4>
+      <ul>
+        <li>用Linkfox/Perplexity做市场调研，找蓝海品类</li>
+        <li>ChatGPT分析5000条差评，挖掘用户痛点</li>
+        <li>确定1-2个候选产品，小批量测试</li>
+      </ul>
+    </div>
+    <div class="opc-phase" style="border-left:3px solid var(--accent2);">
+      <h4>🏪 Phase 2: 建站+内容 <span class="phase-time">（3-4周）</span></h4>
+      <ul>
+        <li>Shopify/店匠AI一键建站</li>
+        <li>Midjourney做产品图，Seedance/元镜做视频</li>
+        <li>HeyGen/数字人做多语言口播视频</li>
+        <li>准备10+条内容素材</li>
+      </ul>
+    </div>
+    <div class="opc-phase" style="border-left:3px solid var(--opc);">
+      <h4>📣 Phase 3: 投放+获客 <span class="phase-time">（5-8周）</span></h4>
+      <ul>
+        <li>TikTok GMV Max / OpenClaw自动投放</li>
+        <li>SEO+内容营销持续引流</li>
+        <li>根据数据优化ROI</li>
+      </ul>
+    </div>
+    <div class="opc-phase" style="border-left:3px solid var(--overseas);">
+      <h4>📈 Phase 4: 优化+扩品 <span class="phase-time">（9周+）</span></h4>
+      <ul>
+        <li>数据驱动选品扩展，从1个SKU到5-10个</li>
+        <li>多平台矩阵（亚马逊+TikTok+独立站）</li>
+        <li>注册LLC+Stripe，正规化运营</li>
+        <li>考虑自动化程度能否再提升</li>
+      </ul>
+    </div>
+
+    <!-- Cross links -->
+    <div class="opc-cross">
+      <a class="opc-cross-card" href="opc.html">
+        <h4 style="color:var(--opc);">🏠 一人公司全景与落地 →</h4>
+        <p>概念、变现模式、痛点突破、AI员工、工具栈、路线图</p>
+      </a>
+      <a class="opc-cross-card" href="opc-resources.html">
+        <h4 style="color:var(--overseas);">🗺️ 一人公司资源导航 →</h4>
+        <p>社区、案例、想法站、课程、博客，精选外链资源</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="cp-footer">
+    <p>AINav · 一人公司出海全链路 · 数据仅供参考，价格以官网为准</p>
+    <p><a href="index.html">返回首页</a> · <a href="free-tier.html">🆓 免费额度</a> · <a href="token-optimization.html">Token优化</a> · <a href="ai-roi/">AI 接入自查</a> · <a href="skill-plan.html">Skill 最佳实践</a> · <a href="opc.html">一人公司</a> · <a href="opc-resources.html">资源导航</a> · <a href="coding-plan.html">编程套餐</a></p>
+  </div>
+
+  <script>
+    (function(){
+      var saved = localStorage.getItem('cp-theme') || 'system';
+      document.documentElement.setAttribute('data-theme', saved);
+      document.querySelectorAll('.theme-btn').forEach(function(b){
+        if(b.getAttribute('data-theme-set')===saved) b.classList.add('is-active');
+        b.addEventListener('click',function(){
+          var t=this.getAttribute('data-theme-set');
+          document.documentElement.setAttribute('data-theme',t);
+          localStorage.setItem('cp-theme',t);
+          document.querySelectorAll('.theme-btn').forEach(function(x){x.classList.remove('is-active');});
+          this.classList.add('is-active');
+        });
+      });
+    })();
+  </script>
+<script src="plan-nav.js" data-active="opc-global.html"></script>
+</body>
+</html>

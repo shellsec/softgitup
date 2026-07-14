@@ -15,6 +15,7 @@
 | `7xiazai_system` | 系统 | `7xiazai_list_urls_system.txt` | 442 | ✅ |
 | `7xiazai_mobile` | 移动 | `7xiazai_list_urls_mobile.txt` | 226 | ✅ |
 | `gamer520` | 游戏 | `gamer520_urls.txt` + `gamer520_list.txt` | 首页 **50 页**（月检默认） | 可选；`search_games` 本地无匹配时 **站内搜索** |
+| `macwk` | Mac | `macwk_urls.txt` + `macwk_list.txt` | **全部软件** `/soft/all` 翻页（约 174 条） | 可选 |
 
 合并版（仅人工查阅，**快检不用**）：
 
@@ -30,6 +31,7 @@
 | `monthly_check_site.bat dayanzai` | dayanzai 系统 + 移动 |
 | `monthly_check_site.bat down66` | down66 系统 + 移动 |
 | `monthly_check_site.bat gamer520` | gamer520 近期文章 |
+| `monthly_check_site.bat macwk` | macwk Mac 软件全量 |
 | `monthly_check_list.bat` | 7xiazai + 上述三站连跑 |
 | `open_changed_site.bat <站点>` | 打开该系统/移动变化 URL |
 

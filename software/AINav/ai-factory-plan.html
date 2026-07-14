@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI造物流水线 & 提效实战 — 从创意到商品+10x/100x/1000x提效方法 — AINav</title>
+<meta name="description" content="AI造物全链路+AI提效倍率方法论：10x辅助→100x自动化→1000x流水线。AI剪辑视频、内容批量生成、AI客服等高ROI场景，真实案例+工具+成本+变现路径。">
+<link rel="canonical" href="https://aiv123.com/ai-factory-plan.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI造物 & 提效实战 — 10x/100x/1000x方法论">
+<meta property="og:description" content="AI造物全链路+提效倍率方法论+高ROI场景，真实案例+工具+变现路径。">
+<meta property="og:url" content="https://aiv123.com/ai-factory-plan.html">
+<meta property="og:site_name" content="AINav">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%230969da'/><text x='50' y='72' font-size='60' text-anchor='middle' fill='white' font-family='system-ui' font-weight='700'>AI</text></svg>">
+<style>
+:root,html[data-theme="dark"]{--bg:#0f1419;--panel:#151b23;--card:#1c2430;--border:#2d3848;--text:#e6edf3;--muted:#8b9cb3;--accent:#58a6ff;--accent2:#3fb950;--warn:#d29922;--danger:#f85149;--hot:#ff6b6b;--overseas:#a78bfa;--af:#f97316;--af2:#06b6d4;--af3:#a78bfa}
+html[data-theme="light"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;--text:#1f2328;--muted:#59636e;--accent:#0969da;--accent2:#1a7f37;--warn:#9a6700;--danger:#cf222e;--hot:#e53935;--overseas:#7c3aed;--af:#ea580c;--af2:#0891b2;--af3:#7c3aed}
+@media(prefers-color-scheme:light){html[data-theme="system"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;--text:#1f2328;--muted:#59636e;--accent:#0969da;--accent2:#1a7f37;--warn:#9a6700;--danger:#cf222e;--hot:#e53935;--overseas:#7c3aed;--af:#ea580c;--af2:#0891b2;--af3:#7c3aed}}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.cp-top{padding:.75rem 1rem;border-bottom:1px solid var(--border);background:var(--panel);position:sticky;top:0;z-index:10}
+.cp-top-inner{max-width:76rem;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;justify-content:space-between}
+.cp-nav a{font-weight:600;margin-right:1rem;font-size:.88rem}
+.cp-toolbar{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center}
+.theme-btn{font-size:.72rem;padding:.2rem .5rem;border-radius:5px;border:1px solid var(--border);background:var(--card);color:var(--muted);cursor:pointer;font-family:inherit}
+.theme-btn.is-active{color:var(--accent);border-color:var(--accent);font-weight:600}
+.cp-wrap{max-width:76rem;margin:0 auto;padding:1rem}h1{font-size:1.35rem;margin:0 0 .3rem}
+.cp-subtitle{font-size:.88rem;color:var(--muted);margin-bottom:1rem}
+.cp-updated{font-size:.76rem;color:var(--muted);margin-bottom:1.2rem}
+.cp-section-hd{font-size:1.1rem;font-weight:700;margin:1.8rem 0 .8rem;padding-bottom:.3rem;border-bottom:2px solid var(--border);display:flex;align-items:center;gap:.5rem}
+.cp-section-hd .cp-flag{font-size:1.15rem}.cp-section-hd.af-hd{border-bottom-color:var(--af)}
+
+/* Pipeline flow */
+.af-flow{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;margin:1rem 0 1.5rem;justify-content:center}
+.af-flow-step{padding:.4rem .7rem;border-radius:8px;font-size:.82rem;font-weight:600;border:1.5px solid var(--border);background:var(--card);text-align:center;min-width:5.5rem;position:relative}
+.af-flow-step .af-flow-num{display:block;font-size:.65rem;color:var(--muted);font-weight:400;margin-top:.1rem}
+.af-flow-arrow{font-size:1rem;color:var(--muted);font-weight:700}
+
+/* Cards grid */
+.af-grid{display:grid;grid-template-columns:1fr;gap:1rem}
+@media(min-width:52rem){.af-grid{grid-template-columns:1fr 1fr}}
+
+/* Tool card */
+.af-tool{border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden;transition:border-color .15s}
+.af-tool:hover{border-color:var(--af)}
+.af-tool-head{padding:.7rem 1rem;border-bottom:1px solid var(--border);display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .6rem}
+.af-tool-name{font-size:1rem;font-weight:700;flex:1 1 auto}.af-tool-name a{color:var(--text)}.af-tool-name a:hover{color:var(--af);text-decoration:none}
+.af-tool-price{font-size:.88rem;font-weight:700;color:var(--af);white-space:nowrap}
+.af-tool-body{padding:.7rem 1rem;font-size:.82rem;line-height:1.7}
+.af-tool-body ul{padding-left:1.1rem;margin:.3rem 0}.af-tool-body li{margin-bottom:.25rem}.af-tool-body strong{color:var(--af)}
+.af-tool-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.5rem}
+.af-tag{font-size:.7rem;padding:.12rem .4rem;border-radius:3px;font-weight:500}
+.af-tag.t-good{background:rgba(63,185,80,.08);border:1px solid rgba(63,185,80,.2);color:var(--accent2)}
+.af-tag.t-warn{background:rgba(210,153,34,.08);border:1px solid rgba(210,153,34,.2);color:var(--warn)}
+.af-tag.t-bad{background:rgba(248,81,73,.06);border:1px solid rgba(248,81,73,.15);color:var(--danger);opacity:.8}
+.af-tag.t-info{background:rgba(6,182,212,.08);border:1px solid rgba(6,182,212,.18);color:var(--af2)}
+.af-tag.t-ai{background:rgba(167,139,250,.08);border:1px solid rgba(167,139,250,.2);color:var(--af3)}
+.af-tool-foot{padding:.4rem 1rem .6rem;font-size:.76rem;color:var(--muted);border-top:1px solid var(--border)}
+
+/* Badge */
+.cp-badge{display:inline-block;padding:.1rem .45rem;border-radius:4px;font-size:.72rem;font-weight:600}
+.badge-hot{background:rgba(255,107,107,.15);color:var(--hot);border:1px solid rgba(255,107,107,.3)}
+.badge-new{background:rgba(63,185,80,.15);color:var(--accent2);border:1px solid rgba(63,185,80,.3)}
+.badge-rec{background:rgba(88,166,255,.15);color:var(--accent);border:1px solid rgba(88,166,255,.3)}
+.badge-cn{background:rgba(249,115,22,.12);color:var(--af);border:1px solid rgba(249,115,22,.25)}
+.badge-overseas{background:rgba(167,139,250,.15);color:var(--overseas);border:1px solid rgba(167,139,250,.3)}
+.badge-free{background:rgba(63,185,80,.12);color:var(--accent2);border:1px solid rgba(63,185,80,.25)}
+
+/* Pipeline detail */
+.af-pipe{display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0;align-items:stretch}
+@media(max-width:50rem){.af-pipe{flex-direction:column}}
+.af-pipe-step{flex:1;min-width:8rem;border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden;position:relative}
+.af-pipe-step-num{position:absolute;top:.5rem;right:.6rem;font-size:1.8rem;font-weight:900;color:var(--border);line-height:1;z-index:0}
+.af-pipe-step-head{padding:.6rem .8rem .3rem;font-weight:700;font-size:.92rem;border-bottom:1px solid var(--border);position:relative;z-index:1}
+.af-pipe-step-body{padding:.5rem .8rem .7rem;font-size:.78rem;color:var(--muted);line-height:1.7;position:relative;z-index:1}
+.af-pipe-step-body strong{color:var(--af)}
+
+/* Case card */
+.af-case{border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden}
+.af-case-head{padding:.7rem 1rem;border-bottom:1px solid var(--border);font-weight:700;font-size:.95rem;display:flex;align-items:center;gap:.5rem}
+.af-case-body{padding:.7rem 1rem;font-size:.82rem;line-height:1.7}
+.af-case-body ul{padding-left:1.1rem;margin:.3rem 0}.af-case-body li{margin-bottom:.3rem}.af-case-body strong{color:var(--af)}
+.af-case-result{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.6rem}
+.af-case-metric{padding:.35rem .6rem;border-radius:6px;background:rgba(249,115,22,.06);border:1px solid rgba(249,115,22,.15);font-size:.78rem;font-weight:600;color:var(--af)}
+
+/* Reality check */
+.af-reality{border:1px solid rgba(210,153,34,.35);border-radius:10px;background:var(--card);overflow:hidden;margin-top:1.5rem}
+.af-reality-head{padding:.65rem 1rem;border-bottom:1px solid rgba(210,153,34,.2);font-weight:700;font-size:1rem;background:rgba(210,153,34,.06)}
+.af-reality-body{padding:.75rem 1rem;font-size:.82rem;line-height:1.75}
+.af-reality-body ul{padding-left:1.2rem;margin:.5rem 0 0}.af-reality-body li{margin-bottom:.45rem}.af-reality-body strong{color:var(--warn)}
+
+/* Profit table */
+.af-profit-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:8px;background:var(--card);margin-bottom:1.5rem}
+.af-profit{width:100%;border-collapse:collapse;font-size:.78rem}
+.af-profit th,.af-profit td{padding:.4rem .55rem;border:1px solid var(--border);text-align:center;white-space:nowrap}
+.af-profit th{background:var(--panel);font-weight:600;color:var(--muted);font-size:.72rem}
+.af-profit th:first-child,.af-profit td:first-child{text-align:left;font-weight:600}
+.af-profit .p-high{color:var(--accent2);font-weight:700}
+.af-profit .p-mid{color:var(--warn);font-weight:600}
+.af-profit .p-low{color:var(--danger)}
+
+/* FAQ */
+.cp-faq{margin-top:2rem;border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden}
+.cp-faq-head{padding:.65rem 1rem;border-bottom:1px solid var(--border);font-weight:700;font-size:1rem}
+.cp-faq-item{border-bottom:1px solid var(--border)}.cp-faq-item:last-child{border-bottom:none}
+.cp-faq-q{padding:.6rem 1rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:.88rem;user-select:none;transition:background .15s}
+.cp-faq-q:hover{background:rgba(249,115,22,.04)}.cp-faq-q .cp-faq-arrow{font-size:.72rem;color:var(--muted);transition:transform .2s;flex-shrink:0;margin-left:.5rem}
+.cp-faq-item.is-open .cp-faq-q .cp-faq-arrow{transform:rotate(180deg)}
+.cp-faq-a{padding:0 1rem;max-height:0;overflow:hidden;transition:max-height .25s ease,padding .25s ease;font-size:.82rem;line-height:1.7;color:var(--muted)}
+.cp-faq-item.is-open .cp-faq-a{max-height:30rem;padding:0 1rem .75rem}.cp-faq-a strong{color:var(--text)}
+
+.cp-footer{max-width:76rem;margin:2rem auto 1rem;padding:0 1rem;font-size:.76rem;color:var(--muted);text-align:center}.cp-footer a{color:var(--muted)}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2B8FBWRX4N"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-2B8FBWRX4N');</script>
+</head>
+<body>
+<div class="cp-top"><div class="cp-top-inner">
+  <div class="cp-nav" data-plan-nav></div>
+  <div class="cp-toolbar">
+    <button class="theme-btn" data-theme-set="system">跟随系统</button><button class="theme-btn" data-theme-set="light">浅色</button><button class="theme-btn is-active" data-theme-set="dark">深色</button>
+  </div>
+</div></div>
+
+<div class="cp-wrap">
+<h1>🏭 AI造物流水线 & 提效实战</h1>
+<p class="cp-subtitle">从创意到商品的全链路指南 + AI提效10x/100x/1000x落地方法 + 高ROI场景（AI剪辑/内容批量/客服/出图/播客）。一人即可跑通。</p>
+<p class="cp-updated">更新于 2026-06-26 · 工具与流程经实测；价格以官网为准</p>
+
+<!-- ===== 完整链路全景 ===== -->
+<div class="cp-section-hd af-hd"><span class="cp-flag">🔗</span> 完整链路全景</div>
+<div class="af-flow">
+  <div class="af-flow-step" style="border-color:var(--af3);background:rgba(167,139,250,.06)">💡 创意/需求<span class="af-flow-num">起点</span></div>
+  <span class="af-flow-arrow">→</span>
+  <div class="af-flow-step" style="border-color:var(--accent2);background:rgba(63,185,80,.04)">🎨 AI文生图<span class="af-flow-num">30秒</span></div>
+  <span class="af-flow-arrow">→</span>
+  <div class="af-flow-step" style="border-color:var(--accent2);background:rgba(63,185,80,.04)">🧊 图生3D模型<span class="af-flow-num">10秒</span></div>
+  <span class="af-flow-arrow">→</span>
+  <div class="af-flow-step" style="border-color:var(--warn);background:rgba(210,153,34,.04)">🔧 修结构/水密<span class="af-flow-num">2-4h 人工</span></div>
+  <span class="af-flow-arrow">→</span>
+  <div class="af-flow-step" style="border-color:var(--af);background:rgba(249,115,22,.04)">🖨️ 3D打印实物<span class="af-flow-num">2-12h</span></div>
+  <span class="af-flow-arrow">→</span>
+  <div class="af-flow-step" style="border-color:var(--af2);background:rgba(6,182,212,.04)">⚡ 编程开发功能<span class="af-flow-num">AI写代码</span></div>
+  <span class="af-flow-arrow">→</span>
+  <div class="af-flow-step" style="border-color:var(--af);background:rgba(249,115,22,.04)">🧩 组装成品<span class="af-flow-num">30min/件</span></div>
+  <span class="af-flow-arrow">→</span>
+  <div class="af-flow-step" style="border-color:var(--hot);background:rgba(255,107,107,.04)">💰 上架销售<span class="af-flow-num">终点</span></div>
+</div>
+
+<!-- ===== 逐环详解 ===== -->
+<div class="cp-section-hd af-hd"><span class="cp-flag">🔍</span> 逐环详解 — 每个环节的工具、成本、要点</div>
+
+<!-- Step 1: AI文生图 -->
+<div class="cp-section-hd af-hd" style="font-size:.95rem;margin-top:1rem"><span class="cp-flag">1</span> AI文生图 — 30秒出设计图 <span style="font-size:.76rem;font-weight:400;color:var(--muted);margin-left:.5rem">完整对比见 <a href="image-plan.html">图像套餐横评</a></span></div>
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name"><a href="https://midjourney.com/" target="_blank" rel="noopener noreferrer">Midjourney V7</a> <span class="cp-badge badge-hot">🔥</span> <span class="cp-badge badge-overseas">🌍</span></div><div class="af-tool-price">$10/月</div></div>
+  <div class="af-tool-body"><ul><li><strong>质量：</strong>文生图天花板，设计感和细节最强</li><li><strong>用法：</strong>描述产品外观→出4张方案→选最佳→放大</li><li><strong>3D友好：</strong>适合生成产品概念图，给图生3D用</li><li><strong>技巧：</strong>加 "product photography, white background, 3D render" 出图更适合转3D</li></ul>
+  <div class="af-tool-tags"><span class="af-tag t-good">质量最高</span><span class="af-tag t-info">3D友好</span><span class="af-tag t-warn">需VPN</span></div></div>
+  <div class="af-tool-foot">造物链路首选出图工具</div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name"><a href="https://blackforestlabs.ai/" target="_blank" rel="noopener noreferrer">FLUX.1（BFL）</a> <span class="cp-badge badge-rec">👍</span> <span class="cp-badge badge-free">免费</span></div><div class="af-tool-price">免费/按量</div></div>
+  <div class="af-tool-body"><ul><li><strong>质量：</strong>开源最强，接近MJ水平</li><li><strong>优势：</strong>可本地部署，无限出图，零成本</li><li><strong>3D友好：</strong>支持ControlNet精确控制姿态</li><li><strong>硬件：</strong>本地跑需8GB+显存GPU</li></ul>
+  <div class="af-tool-tags"><span class="af-tag t-good">免费</span><span class="af-tag t-good">本地部署</span><span class="af-tag t-info">ControlNet</span><span class="af-tag t-warn">需GPU</span></div></div>
+  <div class="af-tool-foot">零成本首选，本地部署无限出图</div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name"><a href="https://www.doubao.com/" target="_blank" rel="noopener noreferrer">即梦 AI</a> <span class="cp-badge badge-cn">🇨🇳</span> <span class="cp-badge badge-free">免费</span></div><div class="af-tool-price">免费/¥68月</div></div>
+  <div class="af-tool-body"><ul><li><strong>质量：</strong>中文Prompt友好，出图质量不错</li><li><strong>优势：</strong>国内直接用，无需VPN</li><li><strong>3D友好：</strong>支持"产品白底图"预设模板</li></ul>
+  <div class="af-tool-tags"><span class="af-tag t-good">国内直用</span><span class="af-tag t-good">中文友好</span><span class="af-tag t-good">免费额度</span></div></div>
+  <div class="af-tool-foot">国内用户零门槛出图</div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name"><a href="https://chatglm.cn/" target="_blank" rel="noopener noreferrer">智谱清言 · CogView</a> <span class="cp-badge badge-cn">🇨🇳</span></div><div class="af-tool-price">免费</div></div>
+  <div class="af-tool-body"><ul><li><strong>质量：</strong>中文理解好，产品图够用</li><li><strong>优势：</strong>对话式出图，迭代方便</li><li><strong>特点：</strong>可直接在对话中修改优化</li></ul>
+  <div class="af-tool-tags"><span class="af-tag t-good">对话式</span><span class="af-tag t-good">免费</span><span class="af-tag t-warn">精细度一般</span></div></div>
+  <div class="af-tool-foot">快速迭代概念图</div></div>
+</div>
+
+<!-- Step 2: 图生3D -->
+<div class="cp-section-hd af-hd" style="font-size:.95rem;margin-top:1rem"><span class="cp-flag">2</span> 图生3D模型 — 10秒出模型</div>
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name"><a href="https://www.tripo3d.ai/" target="_blank" rel="noopener noreferrer">Tripo V3</a> <span class="cp-badge badge-hot">🔥</span> <span class="cp-badge badge-rec">👍</span></div><div class="af-tool-price">免费8次/月 ¥68月</div></div>
+  <div class="af-tool-body"><ul><li><strong>速度：</strong>单图→3D模型约10秒，行业最快</li><li><strong>质量：</strong>PBR材质自动生成，纹理还原度高</li><li><strong>3D打印：</strong>一键修复水密性，导出OBJ直接打印</li><li><strong>格式：</strong>OBJ/FBX/GLB/STL全支持</li></ul>
+  <div class="af-tool-tags"><span class="af-tag t-good">10秒出模</span><span class="af-tag t-good">水密修复</span><span class="af-tag t-good">STL导出</span><span class="af-tag t-ai">AI最强</span></div></div>
+  <div class="af-tool-foot">造物链路核心工具，图生3D首选</div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name"><a href="https://www.meshy.ai/" target="_blank" rel="noopener noreferrer">Meshy V3</a> <span class="cp-badge badge-rec">👍</span></div><div class="af-tool-price">免费5次/月 ¥58月</div></div>
+  <div class="af-tool-body"><ul><li><strong>速度：</strong>文生3D约60秒，图生3D约30秒</li><li><strong>质量：</strong>几何细节比Tripo更精细</li><li><strong>3D打印：</strong>支持水密检查，但需手动修复部分</li><li><strong>特点：</strong>支持文生3D，不一定要先出图</li></ul>
+  <div class="af-tool-tags"><span class="af-tag t-good">几何精细</span><span class="af-tag t-good">文生3D</span><span class="af-tag t-warn">速度稍慢</span></div></div>
+  <div class="af-tool-foot">Tripo互补，几何细节更好</div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name"><a href="https://www.csm.ai/" target="_blank" rel="noopener noreferrer">CSM (Common Sense Machines)</a> <span class="cp-badge badge-overseas">🌍</span></div><div class="af-tool-price">免费额度/按量</div></div>
+  <div class="af-tool-body"><ul><li><strong>速度：</strong>约30-60秒</li><li><strong>质量：</strong>适合有机形态（人物/动物/手办）</li><li><strong>3D打印：</strong>需外部修复水密性</li><li><strong>特点：</strong>视频转3D，多角度重建</li></ul>
+  <div class="af-tool-tags"><span class="af-tag t-good">有机形态强</span><span class="af-tag t-info">视频转3D</span><span class="af-tag t-warn">需修水密</span></div></div>
+  <div class="af-tool-foot">手办/人物类首选</div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name"><a href="https://3d.hunyuan.tencent.com/" target="_blank" rel="noopener noreferrer">混元3D</a> <span class="cp-badge badge-cn">🇨🇳</span> <span class="cp-badge badge-new">✨</span></div><div class="af-tool-price">免费</div></div>
+  <div class="af-tool-body"><ul><li><strong>速度：</strong>约15秒</li><li><strong>质量：</strong>中文Prompt理解最好</li><li><strong>优势：</strong>腾讯出品，国内免VPN</li><li><strong>3D打印：</strong>支持STL导出，水密性一般</li></ul>
+  <div class="af-tool-tags"><span class="af-tag t-good">国内免VPN</span><span class="af-tag t-good">中文友好</span><span class="af-tag t-good">免费</span><span class="af-tag t-warn">质量待提升</span></div></div>
+  <div class="af-tool-foot">国内最便捷，免费额度充足</div></div>
+</div>
+
+<!-- Step 3: 3D打印 -->
+<div class="cp-section-hd af-hd" style="font-size:.95rem;margin-top:1rem"><span class="cp-flag">3</span> 3D打印实物 — 从数字到实体</div>
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name"><a href="https://www.bambulab.com/" target="_blank" rel="noopener noreferrer">拓竹 Bambu Lab A1 Mini</a> <span class="cp-badge badge-hot">🔥</span> <span class="cp-badge badge-rec">👍</span></div><div class="af-tool-price">¥1,299起</div></div>
+  <div class="af-tool-body"><ul><li><strong>类型：</strong>FDM熔融沉积，PLA/PETG/ABS</li><li><strong>精度：</strong>0.1mm层高，产品级够用</li><li><strong>速度：</strong>比传统FDM快3-5倍</li><li><strong>多色：</strong>AMS Lite支持4色打印</li><li><strong>耗材：</strong>PLA约¥60/卷（1kg），打印小件约¥1-5</li></ul>
+  <div class="af-tool-tags"><span class="af-tag t-good">性价比最高</span><span class="af-tag t-good">多色打印</span><span class="af-tag t-good">即插即用</span></div></div>
+  <div class="af-tool-foot">入门首选，小件成本¥1-5</div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name"><a href="https://www.creality.com/" target="_blank" rel="noopener noreferrer">创想三维 Ender-3 V3</a> <span class="cp-badge badge-cn">🇨🇳</span></div><div class="af-tool-price">¥999</div></div>
+  <div class="af-tool-body"><ul><li><strong>类型：</strong>FDM，Klipper固件</li><li><strong>精度：</strong>0.1mm层高</li><li><strong>速度：</strong>最高500mm/s</li><li><strong>耗材：</strong>同上，约¥60/卷</li></ul>
+  <div class="af-tool-tags"><span class="af-tag t-good">¥999最低</span><span class="af-tag t-good">开源社区</span><span class="af-tag t-warn">需调机</span></div></div>
+  <div class="af-tool-foot">预算最低之选</div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">代打服务（嘉立创/云工厂）<span class="cp-badge badge-free">零门槛</span></div><div class="af-tool-price">按件计费</div></div>
+  <div class="af-tool-body"><ul><li><strong>FDM：</strong>小件¥5-30，大件¥50-200</li><li><strong>SLA光固化：</strong>精度0.05mm，¥10-50/件</li><li><strong>优势：</strong>零设备投入，上传STL即可</li><li><strong>交期：</strong>1-3天出货</li></ul>
+  <div class="af-tool-tags"><span class="af-tag t-good">零门槛</span><span class="af-tag t-good">SLA高精度</span><span class="af-tag t-warn">单件成本高</span></div></div>
+  <div class="af-tool-foot">不想买打印机用代打，验证期首选</div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">切片软件<span class="cp-badge badge-free">免费</span></div><div class="af-tool-price">免费</div></div>
+  <div class="af-tool-body"><ul><li><strong>Bambu Studio：</strong>拓竹官方，最易上手</li><li><strong>Cura：</strong>开源通用，插件丰富</li><li><strong>PrusaSlicer：</strong>专业级，支撑生成最智能</li><li><strong>流程：</strong>导入STL → 设置参数 → 生成G-code → 打印</li></ul>
+  <div class="af-tool-tags"><span class="af-tag t-good">全免费</span><span class="af-tag t-info">STL→G-code</span></div></div>
+  <div class="af-tool-foot">切片是3D打印的必经步骤，AI暂不能替代</div></div>
+</div>
+
+<!-- Step 4: 编程开发 -->
+<div class="cp-section-hd af-hd" style="font-size:.95rem;margin-top:1rem"><span class="cp-flag">4</span> 编程开发功能 — AI写嵌入式代码</div>
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name"><a href="https://www.cursor.com/" target="_blank" rel="noopener noreferrer">Cursor</a> <span class="cp-badge badge-hot">🔥</span> <span class="cp-badge badge-rec">👍</span></div><div class="af-tool-price">$20/月 Pro</div></div>
+  <div class="af-tool-body"><ul><li><strong>能力：</strong>写ESP32/Arduino固件代码，实测可用</li><li><strong>语言：</strong>C/C++/MicroPython全支持</li><li><strong>案例：</strong>从零写一个ESP32语音助手，约2小时</li><li><strong>技巧：</strong>先给芯片型号+需求，再迭代</li><li><strong>硬件：</strong>选型见 <a href="hardware-plan.html">硬件横评</a></li></ul>
+  <div class="af-tool-tags"><span class="af-tag t-good">AI编程最强</span><span class="af-tag t-good">嵌入式实测</span><span class="af-tag t-ai">AI写代码</span></div></div>
+  <div class="af-tool-foot">编程环节核心工具（Agent 用量池另计）</div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name"><a href="https://www.espressif.com/zh-hans" target="_blank" rel="noopener noreferrer">ESP32 开发板</a> <span class="cp-badge badge-rec">👍</span> <span class="cp-badge badge-cn">🇨🇳</span></div><div class="af-tool-price">¥15-35</div></div>
+  <div class="af-tool-body"><ul><li><strong>芯片：</strong>WiFi+蓝牙双模，240MHz双核</li><li><strong>AI能力：</strong>可跑轻量端侧模型，接云端大模型</li><li><strong>生态：</strong>Arduino/ESP-IDF/MicroPython</li><li><strong>传感器：</strong>温湿度/光照/陀螺仪/麦克风，¥2-10/个</li></ul>
+  <div class="af-tool-tags"><span class="af-tag t-good">¥15起步</span><span class="af-tag t-good">WiFi+BT</span><span class="af-tag t-good">AI友好</span></div></div>
+  <div class="af-tool-foot">智能硬件标配芯片，¥15即可起步</div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name"><a href="https://github.com/78/esp-ai" target="_blank" rel="noopener noreferrer">ESP-AI</a> <span class="cp-badge badge-new">✨</span> <span class="cp-badge badge-free">开源</span></div><div class="af-tool-price">免费</div></div>
+  <div class="af-tool-body"><ul><li><strong>功能：</strong>ESP32完整AI对话方案</li><li><strong>链路：</strong>ASR(语音识别) → LLM(大模型) → TTS(语音合成)</li><li><strong>模型：</strong>支持豆包/通义/ChatGPT等</li><li><strong>延迟：</strong>端到端约1-2秒</li></ul>
+  <div class="af-tool-tags"><span class="af-tag t-good">开源免费</span><span class="af-tag t-good">ASR+LLM+TTS</span><span class="af-tag t-good">多模型</span></div></div>
+  <div class="af-tool-foot">AI语音硬件开箱即用方案</div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name"><a href="https://www.arduino.cc/" target="_blank" rel="noopener noreferrer">Arduino</a> <span class="cp-badge badge-free">开源</span></div><div class="af-tool-price">¥25起</div></div>
+  <div class="af-tool-body"><ul><li><strong>优势：</strong>最简单的硬件开发方式</li><li><strong>AI辅助：</strong>Cursor可直接写Arduino代码</li><li><strong>适用：</strong>简单功能（灯光控制/传感器读取）</li><li><strong>对比：</strong>无WiFi，不如ESP32适合AI场景</li></ul>
+  <div class="af-tool-tags"><span class="af-tag t-good">最简单</span><span class="af-tag t-good">社区最大</span><span class="af-tag t-warn">无WiFi</span></div></div>
+  <div class="af-tool-foot">简单功能用Arduino，AI功能用ESP32</div></div>
+</div>
+
+<!-- Step 5: 组装 -->
+<div class="cp-section-hd af-hd" style="font-size:.95rem;margin-top:1rem"><span class="cp-flag">5</span> 组装成品 — 壳+芯合体</div>
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">结构设计（必做）</div></div>
+  <div class="af-tool-body"><ul><li><strong>问题：</strong>AI生成的3D模型通常<strong>没有</strong>卡扣、螺丝孔、走线槽</li><li><strong>工具：</strong>Blender（免费）或 Tinkercad（在线免费）</li><li><strong>操作：</strong>导入AI模型 → 挖空内部 → 加卡扣/螺丝孔 → 加走线槽</li><li><strong>时间：</strong>2-4小时（这是AI暂时无法自动化的环节）</li></ul>
+  <div class="af-tool-tags"><span class="af-tag t-warn">人工必做</span><span class="af-tag t-info">Blender/Tinkercad</span></div></div>
+  <div class="af-tool-foot">最耗人工的环节，2-4h/款</div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">PCB电路板（可选）</div></div>
+  <div class="af-tool-body"><ul><li><strong>简单方案：</strong>ESP32开发板直插，¥15，无需PCB</li><li><strong>专业方案：</strong>立创EDA设计 → 嘉立创打样，5片¥20</li><li><strong>AI辅助：</strong>Cursor可帮写KiCad脚本，但全自动还做不到</li><li><strong>建议：</strong>先不用PCB，验证后再定制</li></ul>
+  <div class="af-tool-tags"><span class="af-tag t-good">ESP32免PCB</span><span class="af-tag t-info">嘉立创5片¥20</span></div></div>
+  <div class="af-tool-foot">初期用ESP32开发板直插，后期再定制PCB</div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">组装工艺</div></div>
+  <div class="af-tool-body"><ul><li><strong>焊接：</strong>ESP32+传感器，3-5个焊点，约5分钟</li><li><strong>固定：</strong>热熔胶/螺丝/卡扣</li><li><strong>走线：</strong>USB-C供电或锂电池（¥10-20）</li><li><strong>质检：</strong>功能测试+外观检查</li><li><strong>时间：</strong>约30分钟/件</li></ul>
+  <div class="af-tool-tags"><span class="af-tag t-warn">需焊接</span><span class="af-tag t-info">30min/件</span></div></div>
+  <div class="af-tool-foot">批量时可外包焊接，¥5-10/件</div></div>
+</div>
+
+<!-- Step 6: 销售 -->
+<div class="cp-section-hd af-hd" style="font-size:.95rem;margin-top:1rem"><span class="cp-flag">6</span> 上架销售 — 从成品到收入</div>
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">闲鱼/小红书<span class="cp-badge badge-hot">🔥</span> <span class="cp-badge badge-cn">🇨🇳</span></div><div class="af-tool-price">0门槛</div></div>
+  <div class="af-tool-body"><ul><li><strong>优势：</strong>零开店成本，拍图发帖即卖</li><li><strong>适合：</strong>手作/定制/限量款</li><li><strong>小红书：</strong>内容种草→私域成交</li><li><strong>技巧：</strong>拍AI生成过程视频，"从创意到实物"故事性极强</li></ul>
+  <div class="af-tool-tags"><span class="af-tag t-good">零成本</span><span class="af-tag t-good">故事性强</span><span class="af-tag t-good">定制友好</span></div></div>
+  <div class="af-tool-foot">最适合AI造物的销售渠道</div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">淘宝/拼多多<span class="cp-badge badge-cn">🇨🇳</span></div><div class="af-tool-price">保证金¥1,000起</div></div>
+  <div class="af-tool-body"><ul><li><strong>优势：</strong>搜索流量，适合标准化产品</li><li><strong>适合：</strong>批量生产、有稳定SKU</li><li><strong>门槛：</strong>需开店、保证金、客服</li><li><strong>建议：</strong>闲鱼验证后转淘宝</li></ul>
+  <div class="af-tool-tags"><span class="af-tag t-good">搜索流量</span><span class="af-tag t-warn">需保证金</span><span class="af-tag t-warn">需客服</span></div></div>
+  <div class="af-tool-foot">规模化后转淘宝</div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name"><a href="https://www.etsy.com/" target="_blank" rel="noopener noreferrer">Etsy</a> <span class="cp-badge badge-overseas">🌍</span></div><div class="af-tool-price">$0.20/Listing</div></div>
+  <div class="af-tool-body"><ul><li><strong>优势：</strong>全球手作/创意市场，溢价空间大</li><li><strong>适合：</strong>创意手办/桌面摆件/3D打印品</li><li><strong>价格：</strong>海外用户愿意付$30-100+ for 3D打印品</li><li><strong>物流：</strong>云途/递四方，小件¥20-40</li></ul>
+  <div class="af-tool-tags"><span class="af-tag t-good">高溢价</span><span class="af-tag t-good">全球市场</span><span class="af-tag t-warn">需英文</span><span class="af-tag t-warn">物流成本</span></div></div>
+  <div class="af-tool-foot">海外溢价2-5倍，但需英文+物流</div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">众筹平台<span class="cp-badge badge-new">✨</span></div><div class="af-tool-price">5-8%佣金</div></div>
+  <div class="af-tool-body"><ul><li><strong>国内：</strong>摩点/小米有品众筹，验证需求+预售</li><li><strong>海外：</strong>Kickstarter/Indiegogo</li><li><strong>优势：</strong>先收钱再做，零库存风险</li><li><strong>案例：</strong>KOKONI在小米有品20分钟达成100%</li></ul>
+  <div class="af-tool-tags"><span class="af-tag t-good">零库存</span><span class="af-tag t-good">预售验证</span><span class="af-tag t-warn">需故事包装</span></div></div>
+  <div class="af-tool-foot">有完整故事的产品适合众筹首发</div></div>
+</div>
+
+<!-- ===== 真实案例 ===== -->
+<div class="cp-section-hd af-hd" style="margin-top:2rem"><span class="cp-flag">📋</span> 真实案例 — 已跑通的AI造物项目</div>
+
+<div class="af-grid">
+  <div class="af-case"><div class="af-case-head">🎁 案例一：AI语音陪伴小夜灯</div>
+  <div class="af-case-body">
+    <ul>
+      <li><strong>创意：</strong>用AI生成小怪兽造型夜灯，ESP32语音交互</li>
+      <li><strong>工具链：</strong>Midjourney出图 → Tripo生3D → Blender挖空 → 拓竹打印 → ESP32+ESP-AI</li>
+      <li><strong>成本：</strong>外壳¥8（PLA）+ ESP32¥15 + 麦克风¥3 + 喇叭¥5 + USB线¥2 = <strong>¥33/件</strong></li>
+      <li><strong>售价：</strong>闲鱼¥149-199，小红书种草引流</li>
+      <li><strong>周期：</strong>从创意到上架<strong>3天</strong>，后续每件组装30分钟</li>
+    </ul>
+    <div class="af-case-result">
+      <span class="af-case-metric">成本 ¥33</span>
+      <span class="af-case-metric">售价 ¥149-199</span>
+      <span class="af-case-metric">利润率 78%</span>
+      <span class="af-case-metric">3天上架</span>
+    </div>
+  </div></div>
+
+  <div class="af-case"><div class="af-case-head">🎭 案例二：定制IP手办/盲盒</div>
+  <div class="af-case-body">
+    <ul>
+      <li><strong>创意：</strong>用户发照片/描述 → AI生成形象 → 3D打印手办</li>
+      <li><strong>工具链：</strong>FLUX出角色图 → CSM生3D → Blender修细节 → 代打SLA打印 → 手工上色</li>
+      <li><strong>成本：</strong>代打¥15-30 + 上色¥10-20 + 包装¥5 = <strong>¥30-55/件</strong></li>
+      <li><strong>售价：</strong>定制¥99-299，批量盲盒¥49-69</li>
+      <li><strong>周期：</strong>定制款<strong>2天交付</strong>，批量款1周出货</li>
+    </ul>
+    <div class="af-case-result">
+      <span class="af-case-metric">成本 ¥30-55</span>
+      <span class="af-case-metric">售价 ¥49-299</span>
+      <span class="af-case-metric">利润率 55-82%</span>
+      <span class="af-case-metric">2天交付</span>
+    </div>
+  </div></div>
+
+  <div class="af-case"><div class="af-case-head">🏠 案例三：智能桌面助手（带AI对话）</div>
+  <div class="af-case-body">
+    <ul>
+      <li><strong>创意：</strong>桌面摆件+AI语音助手，可问天气/讲笑话/设提醒</li>
+      <li><strong>工具链：</strong>即梦AI出图 → 混元3D生模型 → Blender加卡扣 → 拓竹打印 → ESP32+ESP-AI</li>
+      <li><strong>成本：</strong>外壳¥12 + ESP32¥15 + I2S麦克风¥5 + 喇叭¥5 + 锂电池¥12 = <strong>¥49/件</strong></li>
+      <li><strong>售价：</strong>闲鱼¥199-299</li>
+      <li><strong>周期：</strong>首件<strong>5天</strong>（含调试），后续每件45分钟</li>
+    </ul>
+    <div class="af-case-result">
+      <span class="af-case-metric">成本 ¥49</span>
+      <span class="af-case-metric">售价 ¥199-299</span>
+      <span class="af-case-metric">利润率 75%</span>
+      <span class="af-case-metric">5天首件</span>
+    </div>
+  </div></div>
+
+  <div class="af-case"><div class="af-case-head">💡 案例四：AI灯控/氛围灯（无编程版）</div>
+  <div class="af-case-body">
+    <ul>
+      <li><strong>创意：</strong>3D打印灯罩+WS2812灯带+ESP32，AI控制颜色/模式</li>
+      <li><strong>工具链：</strong>AI出图 → 图生3D → 打印 → ESP32+WS2812（AI写控制代码）</li>
+      <li><strong>成本：</strong>外壳¥6 + ESP32¥15 + WS2812灯带¥8 + 电源¥5 = <strong>¥34/件</strong></li>
+      <li><strong>售价：</strong>闲鱼¥99-149</li>
+      <li><strong>优势：</strong>无需焊接，插线即用，AI参与度<strong>95%</strong></li>
+    </ul>
+    <div class="af-case-result">
+      <span class="af-case-metric">成本 ¥34</span>
+      <span class="af-case-metric">售价 ¥99-149</span>
+      <span class="af-case-metric">利润率 66%</span>
+      <span class="af-case-metric">AI参与95%</span>
+    </div>
+  </div></div>
+
+  <div class="af-case"><div class="af-case-head">🌍 案例五：Etsy出海3D打印品</div>
+  <div class="af-case-body">
+    <ul>
+      <li><strong>创意：</strong>中世纪幻想摆件/科幻手办，面向海外Geek市场</li>
+      <li><strong>工具链：</strong>MJ出图 → Tripo生3D → Blender修细节 → 代打SLA → Etsy上架</li>
+      <li><strong>成本：</strong>代打¥20 + 物流¥30 + Etsy费¥8 = <strong>¥58/件</strong></li>
+      <li><strong>售价：</strong>Etsy $39-79（¥280-570）</li>
+      <li><strong>关键：</strong>英文Listing+海外趋势关键词+高质量渲染图</li>
+    </ul>
+    <div class="af-case-result">
+      <span class="af-case-metric">成本 ¥58</span>
+      <span class="af-case-metric">售价 $39-79</span>
+      <span class="af-case-metric">利润率 79%</span>
+      <span class="af-case-metric">溢价2-5x</span>
+    </div>
+  </div></div>
+</div>
+
+<!-- ===== AI提效倍率 ===== -->
+<div class="cp-section-hd af-hd" style="margin-top:2rem"><span class="cp-flag">🚀</span> AI提效倍率 — 10x / 100x / 1000x 的真实路径</div>
+<p style="font-size:.82rem;color:var(--muted);margin:.5rem 0 1rem;line-height:1.7">AI提效不是玄学，而是<strong style="color:var(--af)">可量化的阶梯</strong>。关键不在"用不用AI"，而在<strong style="color:var(--af)">AI介入的深度和自动化程度</strong>。三级倍率对应三种工作模式：</p>
+
+<div class="af-flow" style="margin:1rem 0 1.5rem">
+  <div class="af-flow-step" style="border-color:var(--accent2);background:rgba(63,185,80,.04);min-width:8rem">10x AI辅助<span class="af-flow-num">人做+AI加速</span></div>
+  <span class="af-flow-arrow" style="font-size:1.3rem">⇒</span>
+  <div class="af-flow-step" style="border-color:var(--af);background:rgba(249,115,22,.04);min-width:8rem">100x AI自动化<span class="af-flow-num">AI做+人审核</span></div>
+  <span class="af-flow-arrow" style="font-size:1.3rem">⇒</span>
+  <div class="af-flow-step" style="border-color:var(--hot);background:rgba(255,107,107,.04);min-width:8rem">1000x AI流水线<span class="af-flow-num">无人值守</span></div>
+</div>
+
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">10x — AI辅助模式</div><div class="af-tool-price" style="color:var(--accent2)">人人可达</div></div>
+  <div class="af-tool-body">
+    <strong>定义：</strong>你做主，AI加速。你和AI是"1对1协作"。<br>
+    <strong>核心动作：</strong>用ChatGPT写文案、用Cursor写代码、用MJ出图<br>
+    <strong>提效来源：</strong>原本1小时的工作，AI帮你10-30分钟搞定<br>
+    <strong>局限：</strong>你离了AI就不会做，AI离了你就不干活<br>
+    <strong>典型场景：</strong><br>
+    <ul>
+      <li>程序员用Cursor写代码 → 产出速度5-10x</li>
+      <li>设计师用MJ出方案 → 选图效率10x</li>
+      <li>运营用ChatGPT写文案 → 内容产出5x</li>
+    </ul>
+    <div class="af-tool-tags"><span class="af-tag t-good">零门槛</span><span class="af-tag t-good">1天见效</span><span class="af-tag t-warn">依赖人</span></div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">100x — AI自动化模式</div><div class="af-tool-price" style="color:var(--af)">进阶必达</div></div>
+  <div class="af-tool-body">
+    <strong>定义：</strong>AI做主，你审核。你设计流程，AI 7×24执行。<br>
+    <strong>核心动作：</strong>搭Agent工作流、设触发条件、配审核节点<br>
+    <strong>提效来源：</strong>1个Agent = 1个7×24h不休息的员工<br>
+    <strong>质变点：</strong>产出不再受限于你的时间，而受限于Agent数量<br>
+    <strong>典型场景：</strong><br>
+    <ul>
+      <li>AI资讯监控（ainews）→ 自动采集+关键词分析+推送</li>
+      <li>AI剪辑视频 → 批量生成短视频，1人=1个视频团队</li>
+      <li>AI客服 → 自动应答80%常见问题，人只处理20%</li>
+    </ul>
+    <div class="af-tool-tags"><span class="af-tag t-good">7×24h</span><span class="af-tag t-good">规模化</span><span class="af-tag t-info">需搭工作流</span></div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">1000x — AI流水线模式</div><div class="af-tool-price" style="color:var(--hot)">极少数人到达</div></div>
+  <div class="af-tool-body">
+    <strong>定义：</strong>多个Agent协同，端到端无人值守。你只定义目标。<br>
+    <strong>核心动作：</strong>设计Agent间通信协议、编排多步流程、异常自愈<br>
+    <strong>提效来源：</strong>1条流水线 = 1个完整部门（采集→分析→生成→分发）<br>
+    <strong>质变点：</strong>你从"执行者"变成"系统设计师"<br>
+    <strong>典型场景：</strong><br>
+    <ul>
+      <li>AI内容工厂 → 自动选题→写稿→配图→排版→分发</li>
+      <li>AI电商闭环 → 选品→Listing→广告→客服→复盘</li>
+      <li>AI造物流水线 → 创意→3D模型→打印→上架（本文主题）</li>
+    </ul>
+    <div class="af-tool-tags"><span class="af-tag t-good">无人值守</span><span class="af-tag t-ai">多Agent协同</span><span class="af-tag t-warn">门槛高</span></div>
+  </div></div>
+</div>
+
+<!-- 提效方法论 -->
+<div class="cp-section-hd af-hd" style="font-size:.92rem;margin-top:1.2rem"><span class="cp-flag">⚡</span> 从10x到1000x的落地方法论</div>
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">第一步：找到你的10x点</div></div>
+  <div class="af-tool-body">
+    <strong>方法：</strong>列出你每天花时间最多的3件事，逐一问"AI能做吗？"<br>
+    <strong>判断标准：</strong>如果这件事有明确的输入和输出 → AI可以做<br>
+    <strong>常见10x点：</strong><br>
+    <ul>
+      <li>写代码 → Cursor / Claude Code / Codex CLI</li>
+      <li>写文案 → ChatGPT / GLM</li>
+      <li>做图 → MJ / FLUX / 即梦AI · <a href="image-plan.html">图像横评</a></li>
+      <li>剪视频 → CapCut / Runway / Veo 3 · <a href="video-plan.html">视频横评</a></li>
+      <li>做PPT → Gamma / 讯飞智文</li>
+    </ul>
+    <strong>关键：</strong>先在一个点上跑通10x，不要同时铺开
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">第二步：把10x变成100x</div></div>
+  <div class="af-tool-body">
+    <strong>方法：</strong>把你手动触发AI的过程，变成自动触发<br>
+    <strong>操作：</strong><br>
+    <ul>
+      <li>手动剪视频 → 写脚本批量剪（FFmpeg + AI字幕）</li>
+      <li>手动写文案 → 定时触发API批量生成</li>
+      <li>手动出图 → API批量调用，一次出100张</li>
+    </ul>
+    <strong>工具：</strong>n8n / Dify / Coze / 自写脚本<br>
+    <strong>关键：</strong>10x是人点按钮，100x是机器点按钮
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">第三步：把100x变成1000x</div></div>
+  <div class="af-tool-body">
+    <strong>方法：</strong>把多个自动化流程串联成端到端流水线<br>
+    <strong>操作：</strong><br>
+    <ul>
+      <li>内容工厂 = 选题Agent → 写稿Agent → 配图Agent → 排版Agent → 发布Agent</li>
+      <li>电商闭环 = 选品Agent → ListingAgent → 广告Agent → 客服Agent</li>
+    </ul>
+    <strong>核心挑战：</strong>Agent之间的数据传递和异常处理<br>
+    <strong>关键：</strong>100x是一条线，1000x是一张网
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">⚠️ 三个常见误区</div></div>
+  <div class="af-tool-body">
+    <ul>
+      <li><strong>误区1：</strong>以为用AI就是提效 → <strong>真相：不加思考地用AI反而更慢</strong>（反复改Prompt比自己做还久）</li>
+      <li><strong>误区2：</strong>一上来就想做100x → <strong>真相：必须先跑通10x再升级</strong>，否则你不知道自动化什么</li>
+      <li><strong>误区3：</strong>追求全自动化 → <strong>真相：80%自动化+20%人工审核</strong>是最优解，100%自动化成本极高且不可靠</li>
+    </ul>
+  </div></div>
+</div>
+
+<!-- ===== 高ROI场景 ===== -->
+<div class="cp-section-hd af-hd" style="margin-top:2rem"><span class="cp-flag">📊</span> 高ROI场景 — AI提效最猛的8个领域</div>
+<p style="font-size:.82rem;color:var(--muted);margin:.5rem 0 1rem;line-height:1.7">不是所有领域AI都能提效。以下是<strong style="color:var(--af)">真实ROI最高</strong>的场景——特征是<strong style="color:var(--af)">重复性高+标准化程度高+人工成本高</strong>，三高叠加的地方AI提效最狠。</p>
+
+<div class="af-profit-wrap">
+<table class="af-profit">
+<tr><th>场景</th><th>AI提效倍率</th><th>传统耗时</th><th>AI耗时</th><th>工具</th><th>入门难度</th><th>变现路径</th></tr>
+<tr><td><strong>🎬 AI剪辑视频</strong></td><td class="p-high">50-200x</td><td>4-8h/条</td><td>5-30min/条</td><td>剪映AI/CapCut/Runway</td><td>⭐⭐</td><td>短视频矩阵/带货</td></tr>
+<tr><td><strong>📝 AI内容批量生成</strong></td><td class="p-high">100-500x</td><td>2-4h/篇</td><td>1-5min/篇</td><td>GLM/ChatGPT API</td><td>⭐</td><td>SEO矩阵/公众号</td></tr>
+<tr><td><strong>🎨 AI出图/设计</strong></td><td class="p-high">50-100x</td><td>2-8h/张</td><td>10-60s/张</td><td>MJ/FLUX/即梦AI</td><td>⭐⭐</td><td>电商主图/定制头像</td></tr>
+<tr><td><strong>🤖 AI客服/咨询</strong></td><td class="p-high">80-200x</td><td>1v1人工</td><td>1v无限</td><td>Dify/Coze/FastGPT</td><td>⭐⭐⭐</td><td>企业降本/知识库</td></tr>
+<tr><td><strong>🏭 AI造物/3D打印</strong></td><td class="p-mid">10-30x</td><td>1-3月</td><td>3-7天</td><td>Tripo/Meshy/拓竹</td><td>⭐⭐⭐</td><td>闲鱼/Etsy/定制</td></tr>
+<tr><td><strong>💻 AI编程开发</strong></td><td class="p-mid">5-10x</td><td>1-4周</td><td>1-3天</td><td>Cursor/Claude Code</td><td>⭐⭐</td><td>SaaS/接单/工具</td></tr>
+<tr><td><strong>📊 AI数据分析</strong></td><td class="p-mid">10-30x</td><td>1-2天</td><td>10-30min</td><td>ChatGPT Code/Julius</td><td>⭐⭐</td><td>报告/决策支持</td></tr>
+<tr><td><strong>🎙️ AI语音/播客</strong></td><td class="p-mid">20-50x</td><td>4-8h/期</td><td>10-30min</td><td>FishAudio/ElevenLabs</td><td>⭐⭐</td><td>播客/有声书</td></tr>
+</table>
+</div>
+
+<!-- AI剪辑视频 详解 -->
+<div class="cp-section-hd af-hd" style="font-size:.92rem;margin-top:1.2rem"><span class="cp-flag">🎬</span> 重点展开：AI剪辑视频 — ROI最高的场景</div>
+<p style="font-size:.82rem;color:var(--muted);margin:.5rem 0 1rem;line-height:1.7">AI剪辑是目前<strong style="color:var(--af)">普通人最容易跑通100x提效</strong>的场景。原因：视频需求爆炸式增长，但剪辑人力极度短缺，AI恰好补上这个缺口。</p>
+
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name"><a href="https://www.capcut.com/" target="_blank" rel="noopener noreferrer">剪映 AI / CapCut</a> <span class="cp-badge badge-hot">🔥</span> <span class="cp-badge badge-cn">🇨🇳</span></div><div class="af-tool-price">免费/¥30月</div></div>
+  <div class="af-tool-body">
+    <ul>
+      <li><strong>自动剪辑：</strong>导入素材→AI一键成片，自动配乐+转场+字幕</li>
+      <li><strong>图文成片：</strong>输入文案→自动匹配素材+配音+字幕，零拍摄</li>
+      <li><strong>智能抠图：</strong>一键去除背景，换场景</li>
+      <li><strong>批量：</strong>模板化批量生产，1人日产50-100条</li>
+    </ul>
+    <div class="af-tool-tags"><span class="af-tag t-good">零门槛</span><span class="af-tag t-good">中文最强</span><span class="af-tag t-ai">一键成片</span></div>
+  </div>
+  <div class="af-tool-foot">短视频矩阵首选，中文生态最完善</div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name"><a href="https://runwayml.com/" target="_blank" rel="noopener noreferrer">Runway Gen-4</a> <span class="cp-badge badge-overseas">🌍</span> <span class="cp-badge badge-new">✨</span></div><div class="af-tool-price">$12/月</div></div>
+  <div class="af-tool-body">
+    <ul>
+      <li><strong>文生视频：</strong>文字描述直接生成视频片段</li>
+      <li><strong>图生视频：</strong>静态图变动态，控制镜头运动</li>
+      <li><strong>视频编辑：</strong>AI擦除物体/换背景/风格迁移</li>
+      <li><strong>专业级：</strong>电影/广告级画质，适合高预算项目</li>
+    </ul>
+    <div class="af-tool-tags"><span class="af-tag t-good">画质最高</span><span class="af-tag t-ai">文生视频</span><span class="af-tag t-warn">需VPN</span></div>
+  </div>
+  <div class="af-tool-foot">创意视频首选 · 对比 <a href="video-plan.html">视频套餐横评</a></div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name"><a href="https://www.heygen.com/" target="_blank" rel="noopener noreferrer">HeyGen</a> <span class="cp-badge badge-rec">👍</span> <span class="cp-badge badge-overseas">🌍</span></div><div class="af-tool-price">$24/月</div></div>
+  <div class="af-tool-body">
+    <ul>
+      <li><strong>数字人：</strong>AI虚拟主播，输入文案自动播报</li>
+      <li><strong>视频翻译：</strong>一键翻译+克隆声音+口型同步</li>
+      <li><strong>批量：</strong>一套模板出多语言版本，1条→50条</li>
+      <li><strong>场景：</strong>企业宣传/培训/跨境电商</li>
+    </ul>
+    <div class="af-tool-tags"><span class="af-tag t-good">数字人</span><span class="af-tag t-good">视频翻译</span><span class="af-tag t-info">跨境电商</span></div>
+  </div>
+  <div class="af-tool-foot">企业视频+出海首选</div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">批量剪辑工作流（自搭）</div><div class="af-tool-price">免费</div></div>
+  <div class="af-tool-body">
+    <ul>
+      <li><strong>方案：</strong>FFmpeg + Whisper（字幕） + ChatGPT（文案）</li>
+      <li><strong>流程：</strong>AI写脚本 → TTS配音 → FFmpeg自动剪 → 批量加水印</li>
+      <li><strong>产出：</strong>1人1天可出100-300条短视频</li>
+      <li><strong>变现：</strong>抖音/小红书矩阵号→广告分成/带货</li>
+      <li><strong>成本：</strong>API费用约¥0.5-2/条，人力几乎为零</li>
+    </ul>
+    <div class="af-tool-tags"><span class="af-tag t-good">100x提效</span><span class="af-tag t-good">¥1/条</span><span class="af-tag t-warn">需编程</span></div>
+  </div>
+  <div class="af-tool-foot">技术型创作者的终极武器</div></div>
+</div>
+
+<!-- AI剪辑真实案例 -->
+<div style="margin-top:1rem">
+<div class="af-grid">
+  <div class="af-case"><div class="af-case-head">🎬 案例A：知识博主短视频矩阵</div>
+  <div class="af-case-body">
+    <ul>
+      <li><strong>方法：</strong>ChatGPT写50条知识科普文案 → 剪映图文成片批量生成 → 5个账号分发</li>
+      <li><strong>产出：</strong>日更10条/号，50条/天，月1500条</li>
+      <li><strong>成本：</strong>ChatGPT Plus ~$20/月（约 ¥145） + 剪映 ¥30/月 = ¥170/月</li>
+      <li><strong>收入：</strong>5个号月广告分成¥3,000-8,000</li>
+      <li><strong>提效：</strong>传统1条/天 → AI 50条/天 = <strong>50x</strong></li>
+    </ul>
+    <div class="af-case-result">
+      <span class="af-case-metric">50x 提效</span>
+      <span class="af-case-metric">¥170/月成本</span>
+      <span class="af-case-metric">ROI 18-47x</span>
+      <span class="af-case-metric">1人运营</span>
+    </div>
+  </div></div>
+
+  <div class="af-case"><div class="af-case-head">🎬 案例B：跨境电商产品视频</div>
+  <div class="af-case-body">
+    <ul>
+      <li><strong>方法：</strong>产品图→HeyGen数字人介绍→Runway Gen-4加特效→多语言版本</li>
+      <li><strong>产出：</strong>1个产品→10种语言版本，日产5-10个产品视频</li>
+      <li><strong>成本：</strong>HeyGen $24 + Runway $12 = ¥260/月</li>
+      <li><strong>效果：</strong>有视频的Listing转化率提升35-80%</li>
+      <li><strong>提效：</strong>传统1条/天→AI 50条/天 = <strong>50x</strong></li>
+    </ul>
+    <div class="af-case-result">
+      <span class="af-case-metric">50x 提效</span>
+      <span class="af-case-metric">¥260/月成本</span>
+      <span class="af-case-metric">转化率+80%</span>
+      <span class="af-case-metric">10语言版本</span>
+    </div>
+  </div></div>
+
+  <div class="af-case"><div class="af-case-head">🎬 案例C：自媒体批量剪辑工作流</div>
+  <div class="af-case-body">
+    <ul>
+      <li><strong>方法：</strong>Python脚本→Whisper提取字幕→ChatGPT改写→TTS配音→FFmpeg自动混剪</li>
+      <li><strong>产出：</strong>1人日产200+条短视频，分发10个平台</li>
+      <li><strong>成本：</strong>API ¥3-5/天 + 服务器 ¥2/天 = ¥150-200/月</li>
+      <li><strong>收入：</strong>矩阵号广告+带货月¥5,000-15,000</li>
+      <li><strong>提效：</strong>传统1人5条/天 → AI 200条/天 = <strong>40x</strong></li>
+    </ul>
+    <div class="af-case-result">
+      <span class="af-case-metric">200条/天</span>
+      <span class="af-case-metric">¥200/月成本</span>
+      <span class="af-case-metric">ROI 25-75x</span>
+      <span class="af-case-metric">全自动化</span>
+    </div>
+  </div></div>
+</div>
+</div>
+
+<!-- 其他高ROI场景速览 -->
+<div class="cp-section-hd af-hd" style="font-size:.92rem;margin-top:1.2rem"><span class="cp-flag">💡</span> 其他高ROI场景速览</div>
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">📝 AI内容批量生成</div><div class="af-tool-price" style="color:var(--accent2)">100-500x</div></div>
+  <div class="af-tool-body">
+    <strong>场景：</strong>SEO文章/公众号/小红书笔记<br>
+    <strong>方法：</strong>关键词列表→API批量生成→自动排版→定时发布<br>
+    <strong>案例：</strong>1人运营50个站点的SEO内容，月产5000篇<br>
+    <strong>工具：</strong>GLM API + WordPress API + 自动化脚本<br>
+    <strong>成本：</strong>API ¥500/月 → 广告收入¥10,000+/月
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">🤖 AI客服/知识库</div><div class="af-tool-price" style="color:var(--af)">80-200x</div></div>
+  <div class="af-tool-body">
+    <strong>场景：</strong>企业客服/技术咨询/售后支持<br>
+    <strong>方法：</strong>导入产品文档→RAG知识库→自动应答→人审核<br>
+    <strong>案例：</strong>1个AI客服=10个人工客服，覆盖80%问题<br>
+    <strong>工具：</strong>Dify / FastGPT / Coze<br>
+    <strong>成本：</strong>API ¥300/月 → 替代3个客服¥15,000/月
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">🎨 AI出图/设计服务</div><div class="af-tool-price" style="color:var(--af2)">50-100x</div></div>
+  <div class="af-tool-body">
+    <strong>场景：</strong>电商主图/定制头像/Logo/插画<br>
+    <strong>方法：</strong>批量出图→客户选→精修→交付<br>
+    <strong>案例：</strong>定制AI头像，日接50单，每单¥9.9<br>
+    <strong>工具：</strong>FLUX API / ComfyUI / MJ<br>
+    <strong>成本：</strong>API ¥0.3/张 → 售价¥9.9/张 = 33x利润
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">🎙️ AI播客/有声内容</div><div class="af-tool-price" style="color:var(--af3)">20-50x</div></div>
+  <div class="af-tool-body">
+    <strong>场景：</strong>知识播客/有声书/课程配音<br>
+    <strong>方法：</strong>AI写稿→TTS配音→AI配乐→自动分发<br>
+    <strong>案例：</strong>1人日产3-5期播客，传统需1周/期<br>
+    <strong>工具：</strong>FishAudio / ElevenLabs / Suno<br>
+    <strong>成本：</strong>API ¥200/月 → 播客广告+付费¥3,000+/月
+  </div></div>
+</div>
+
+<!-- ===== 利润对比 ===== -->
+<div class="cp-section-hd af-hd" style="margin-top:2rem"><span class="cp-flag">💰</span> 利润模型对比 — 哪个品最赚钱？</div>
+<div class="af-profit-wrap">
+<table class="af-profit">
+<tr><th>品类</th><th>单件成本</th><th>国内售价</th><th>海外售价</th><th>国内利润率</th><th>海外利润率</th><th>AI参与度</th><th>难度</th></tr>
+<tr><td>定制手办</td><td>¥30-55</td><td>¥99-299</td><td>$30-80</td><td class="p-high">70-82%</td><td class="p-high">80%+</td><td class="p-high">95%</td><td>⭐⭐</td></tr>
+<tr><td>AI灯控/氛围灯</td><td>¥34</td><td>¥99-149</td><td>$25-50</td><td class="p-high">66%</td><td class="p-high">75%</td><td class="p-high">95%</td><td>⭐⭐</td></tr>
+<tr><td>AI语音小夜灯</td><td>¥33</td><td>¥149-199</td><td>$35-60</td><td class="p-high">78%</td><td class="p-high">82%</td><td class="p-mid">85%</td><td>⭐⭐⭐</td></tr>
+<tr><td>AI桌面助手</td><td>¥49</td><td>¥199-299</td><td>$45-80</td><td class="p-high">75%</td><td class="p-high">80%</td><td class="p-mid">80%</td><td>⭐⭐⭐</td></tr>
+<tr><td>AI翻译/录音设备</td><td>¥60-80</td><td>¥199-399</td><td>$50-100</td><td class="p-mid">60%</td><td class="p-high">75%</td><td class="p-mid">75%</td><td>⭐⭐⭐⭐</td></tr>
+</table>
+</div>
+
+<!-- ===== AI参与度 ===== -->
+<div class="cp-section-hd af-hd"><span class="cp-flag">🤖</span> AI参与度 — 哪些环节AI能做？哪些必须人工？</div>
+<div class="af-profit-wrap">
+<table class="af-profit">
+<tr><th>环节</th><th>AI能力</th><th>人工必要度</th><th>耗时</th><th>替代方案</th></tr>
+<tr><td>创意生成</td><td class="p-high">95% AI</td><td class="p-low">5%</td><td>5分钟</td><td>ChatGPT头脑风暴</td></tr>
+<tr><td>文生图</td><td class="p-high">98% AI</td><td class="p-low">2%</td><td>30秒</td><td>MJ/FLUX/即梦</td></tr>
+<tr><td>图生3D</td><td class="p-high">90% AI</td><td class="p-mid">10%</td><td>10秒</td><td>Tripo/Meshy/混元3D</td></tr>
+<tr><td>结构修改</td><td class="p-mid">20% AI</td><td class="p-high">80%</td><td>2-4小时</td><td>⚠️ 必须人工，暂无AI替代</td></tr>
+<tr><td>3D打印</td><td class="p-low">5% AI</td><td class="p-high">95%</td><td>2-12小时</td><td>打印机自动，人需监控</td></tr>
+<tr><td>嵌入式编程</td><td class="p-high">85% AI</td><td class="p-mid">15%</td><td>2-4小时</td><td>Cursor写代码，人调Bug</td></tr>
+<tr><td>PCB设计</td><td class="p-mid">30% AI</td><td class="p-high">70%</td><td>2-6小时</td><td>初期跳过，用开发板</td></tr>
+<tr><td>组装</td><td class="p-low">0% AI</td><td class="p-high">100%</td><td>30min/件</td><td>批量时外包焊接</td></tr>
+<tr><td>销售上架</td><td class="p-high">70% AI</td><td class="p-mid">30%</td><td>30分钟</td><td>AI写文案/拍图，人定价</td></tr>
+</table>
+</div>
+
+<!-- ===== 现实落差 -->
+<div class="af-reality">
+<div class="af-reality-head">⚠️ 理想 vs 现实 — AI造物的6个真相</div>
+<div class="af-reality-body">
+<ul>
+  <li><strong>真相1：</strong>AI生成的3D模型<strong>没有结构设计</strong>（卡扣/螺丝孔/走线槽），必须人工修改2-4小时——这是当前最大的时间瓶颈</li>
+  <li><strong>真相2：</strong>3D打印不是"按一下就出"，需要调支撑/温度/速度，首件失败率约30%</li>
+  <li><strong>真相3：</strong>"带功能的智能硬件"需要<strong>焊接</strong>，这是纯软件人最大的门槛</li>
+  <li><strong>真相4：</strong>AI写的嵌入式代码<strong>80%可用</strong>，但调试/适配传感器需要耐心</li>
+  <li><strong>真相5：</strong>纯3D打印品（手办/摆件/灯罩）AI参与度95%，是最容易跑通的品</li>
+  <li><strong>真相6：</strong>带电子功能的智能硬件，AI参与度约75-85%，需要<strong>1-2周</strong>完整跑通</li>
+</ul>
+</div>
+</div>
+
+<!-- ===== 避坑指南 -->
+<div class="cp-section-hd af-hd" style="margin-top:2rem"><span class="cp-flag">🚫</span> 避坑指南 — 10个常见错误</div>
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">🚫 坑1：直接拿AI模型去打印</div></div>
+  <div class="af-tool-body"><strong>结果：</strong>80%会失败——非水密、无支撑面、壁厚不均匀<br><strong>正确：</strong>先用Tripo水密修复→Blender检查→切片软件预览→再打印</div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">🚫 坑2：一上来就买3D打印机</div></div>
+  <div class="af-tool-body"><strong>结果：</strong>买回来吃灰，调机2周还不成功<br><strong>正确：</strong>先用代打服务验证3-5款→确认有销量再买打印机</div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">🚫 坑3：做太复杂的功能</div></div>
+  <div class="af-tool-body"><strong>结果：</strong>调试1个月还出不来<br><strong>正确：</strong>从"灯控"开始（最简单），再到"语音助手"，最后到"多传感器"</div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">🚫 坑4：忽略3C认证</div></div>
+  <div class="af-tool-body"><strong>结果：</strong>批量卖需要3C认证，违规罚款<br><strong>正确：</strong>闲鱼手作/限量款无需认证；批量上架淘宝/京东必须认证</div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">🚫 坑5：不会焊也要做带电产品</div></div>
+  <div class="af-tool-body"><strong>结果：</strong>焊接不牢，售后率30%+<br><strong>正确：</strong>先用"免焊方案"（ESP32+杜邦线+热熔胶），确认可行再学焊接</div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">🚫 坑6：盲目追求多色打印</div></div>
+  <div class="af-tool-body"><strong>结果：</strong>AMS多色系统贵且换色废料<br><strong>正确：</strong>先用单色+后期上色（丙烯/喷漆），效果更好成本更低</div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">🚫 坑7：Etsy随便上</div></div>
+  <div class="af-tool-body"><strong>结果：</strong>Listing费扣了不少，一个没卖<br><strong>正确：</strong>先在小红书/闲鱼验证→确定爆款→优化英文Listing→再上海外</div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">🚫 坑8：AI代码不测试就烧录</div></div>
+  <div class="af-tool-body"><strong>结果：</strong>ESP32变砖/传感器烧毁<br><strong>正确：</strong>先在Wokwi模拟器测试→串口监控调通→再接真实硬件</div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">🚫 坑9：量产定价太低</div></div>
+  <div class="af-tool-body"><strong>结果：</strong>忙活一天赚几十块<br><strong>正确：</strong>手作/定制必须高溢价（成本3-5倍），否则不如卖时间</div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">🚫 坑10：不做市场验证就大量备货</div></div>
+  <div class="af-tool-body"><strong>结果：</strong>家里堆满卖不掉的货<br><strong>正确：</strong>先预售/众筹→确认需求→再小批量（10-20件）→有复购再量产</div></div>
+</div>
+
+<!-- ===== 从零开始路线图 ===== -->
+<div class="cp-section-hd af-hd" style="margin-top:2rem"><span class="cp-flag">🗺️</span> 从零开始路线图 — 4周跑通</div>
+<div class="af-profit-wrap">
+<table class="af-profit">
+<tr><th>阶段</th><th>时间</th><th>目标</th><th>关键动作</th><th>预期花费</th></tr>
+<tr><td><strong>第1周</strong><br>验证</td><td>7天</td><td>出第一件成品</td><td>① MJ/即梦出3张设计图<br>② Tripo生3D模型<br>③ Blender挖空+加卡扣<br>④ 代打1件SLA样品</td><td>¥30-50<br>（代打费）</td></tr>
+<tr><td><strong>第2周</strong><br>迭代</td><td>7天</td><td>优化设计+验证销售</td><td>① 修改打印问题<br>② 闲鱼发5个帖子测试<br>③ 加ESP32（如果带功能）<br>④ Cursor写代码+调试</td><td>¥100-200<br>（ESP32+传感器）</td></tr>
+<tr><td><strong>第3周</strong><br>量产</td><td>7天</td><td>小批量10-20件</td><td>① 买拓竹A1 Mini（或继续代打）<br>② 批量打印外壳<br>③ 组装+质检<br>④ 多渠道上架</td><td>¥1,600-2,000<br>（打印机）或<br>¥300-600（代打）</td></tr>
+<tr><td><strong>第4周</strong><br>放大</td><td>7天</td><td>月入3000+</td><td>① 优化爆款Listing<br>② 小红书种草内容<br>③ 接定制单<br>④ 考虑Etsy出海</td><td>¥0-300<br>（营销费）</td></tr>
+</table>
+</div>
+
+<!-- ===== 总成本清单 -->
+<div class="cp-section-hd af-hd"><span class="cp-flag">💸</span> 总启动成本 — 三档方案</div>
+<div class="af-profit-wrap">
+<table class="af-profit">
+<tr><th>方案</th><th>适合</th><th>3D打印</th><th>工具订阅</th><th>电子元件</th><th>总计</th></tr>
+<tr><td><strong>零成本验证</strong></td><td>纯3D打印品（手办/摆件）</td><td>代打 ¥50</td><td>免费额度</td><td>无</td><td class="p-high">¥50</td></tr>
+<tr><td><strong>低配入门</strong></td><td>带功能智能硬件</td><td>代打 ¥100</td><td>MJ ¥70/月</td><td>ESP32+传感器 ¥50</td><td class="p-mid">¥220</td></tr>
+<tr><td><strong>完整配置</strong></td><td>批量生产</td><td>拓竹A1 Mini ¥1,599</td><td>MJ+Cursor ¥210/月</td><td>元件批量 ¥200</td><td class="p-low">¥2,009</td></tr>
+</table>
+</div>
+
+<!-- ===== FAQ -->
+<div class="cp-faq">
+<div class="cp-faq-head">❓ 常见问题</div>
+<div class="cp-faq-item"><div class="cp-faq-q">我不会3D建模，能做AI造物吗？<span class="cp-faq-arrow">▼</span></div>
+<div class="cp-faq-a"><strong>能。</strong>AI图生3D解决90%的建模工作。你只需要学<strong>Blender基础操作</strong>（挖空+加卡扣），B站有1小时入门教程。纯3D打印品（手办/摆件/灯罩）甚至不需要Blender——Tripo的一键水密修复+切片软件预览就够了。</div></div>
+<div class="cp-faq-item"><div class="cp-faq-q">我不会编程/焊接，能做带功能的智能硬件吗？<span class="cp-faq-arrow">▼</span></div>
+<div class="cp-faq-a"><strong>能，但有条件。</strong>Cursor可以写ESP32代码，你只需要按教程烧录。焊接可以用<strong>免焊方案</strong>：ESP32+杜邦线+热熔胶固定。初期不需要PCB，开发板直插就行。等你卖到月入5000+再考虑学焊接或外包。</div></div>
+<div class="cp-faq-item"><div class="cp-faq-q">AI生成的3D模型质量够打印吗？<span class="cp-faq-arrow">▼</span></div>
+<div class="cp-faq-a"><strong>2026年已经够用了。</strong>Tripo V3/Meshy V3的输出质量可以满足FDM打印。但<strong>SLA高精度打印</strong>（0.05mm层高）仍需人工修细节。建议：FDM用AI直出，SLA用AI初版+人工精修。</div></div>
+<div class="cp-faq-item"><div class="cp-faq-q">做3D打印品卖，有版权风险吗？<span class="cp-faq-arrow">▼</span></div>
+<div class="cp-faq-a"><strong>有风险也有方法。</strong>用AI生成原创设计→没有版权问题。但如果你打印<strong>迪士尼/漫威等IP形象</strong>出售，就是侵权。建议：① 用AI生成原创IP；② 只做定制（客户自备图）；③ 避免直接复刻知名IP。</div></div>
+<div class="cp-faq-item"><div class="cp-faq-q">月入3000+真的能做到吗？<span class="cp-faq-arrow">▼</span></div>
+<div class="cp-faq-a"><strong>能，但要选对品。</strong>按利润率70%算，月入3000需要卖出¥4,286。以¥149/件算，需月销29件≈1件/天。闲鱼+小红书双渠道，1件/天完全可行。关键是选<strong>利润率高+复购率高</strong>的品（定制手办/智能小夜灯）。</div></div>
+<div class="cp-faq-item"><div class="cp-faq-q">AI造物和传统硬件创业有什么区别？<span class="cp-faq-arrow">▼</span></div>
+<div class="cp-faq-a"><strong>核心区别：零库存+快迭代。</strong>传统硬件：开模¥5万+，周期3个月，起订量1000件。AI造物：零开模，3天出首件，1件起卖。代价是单件成本高（3D打印 vs 注塑），但利润率反而更高（定制溢价）。</div></div>
+</div>
+
+<!-- ===== 角色定位·点线面 ===== -->
+<div class="cp-section-hd af-hd" style="margin-top:2rem"><span class="cp-flag">🧭</span> 角色定位 · 点·线·面 — 你是谁？怎么走？和谁组队？</div>
+
+<div class="cp-section-hd af-hd" style="font-size:.92rem;margin-top:.8rem"><span class="cp-flag">●</span> 点 · 你是谁？6种角色，6种AI用法</div>
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">🎨 设计师/创作者</div></div>
+  <div class="af-tool-body"><strong>AI是放大器</strong> — 10倍速出方案<br>核心价值：审美、创意、品味<br>重点看：文生图 → 图生3D → 打印<br>你只管"挑最好的"，AI负责"出100个变体"</div></div>
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">💻 程序员/工程师</div></div>
+  <div class="af-tool-body"><strong>AI是协作者</strong> — 补齐硬件/建模短板<br>核心价值：逻辑、调试、系统集成<br>重点看：编程开发 → 组装 → 联调<br>从纯软件进入软硬结合，核心价值还在代码</div></div>
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">💼 创业者/生意人</div></div>
+  <div class="af-tool-body"><strong>AI是降本工具</strong> — 砍掉外包和团队<br>核心价值：选品、定价、渠道、流量<br>重点看：利润模型 → 销售渠道 → 避坑指南<br>过去3个月验证需求，现在3天</div></div>
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">📖 教育者/分享者</div></div>
+  <div class="af-tool-body"><strong>AI是内容素材</strong> — 过程即产品<br>核心价值：表达、拆解、教学设计<br>重点看：完整链路 → 真实案例 → 从零路线图<br>"我怎么用AI从零做出一个智能音箱"比音箱本身值钱</div></div>
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">🎮 爱好者/玩家</div></div>
+  <div class="af-tool-body"><strong>AI是乐趣加速器</strong> — 不用学就能做<br>核心价值：好奇心、动手意愿<br>重点看：文生图 → 打印 → 闲鱼<br>不需要学3年建模也不需要学2年编程，就能做出像样的东西</div></div>
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">🏗️ 平台/生态方</div></div>
+  <div class="af-tool-body"><strong>AI是产品能力</strong> — 降低用户门槛<br>核心价值：产品设计、生态运营<br>重点看：全链路痛点 → AI参与度 → 趋势<br>你要做的不是"造物"，而是"让造物变简单"的工具</div></div>
+</div>
+
+<div class="cp-section-hd af-hd" style="font-size:.92rem;margin-top:1.2rem"><span class="cp-flag">━</span> 线 · 你的专属链路 — 同一条流水线，6种走法</div>
+<div class="af-profit-wrap">
+<table class="af-profit">
+<tr><th>角色</th><th>核心链路</th><th>关键环节</th><th>可跳过</th><th>第一步</th></tr>
+<tr><td><strong>设计师</strong></td><td>创意 → [AI出100变体] → 挑选 → 打印</td><td>文生图、图生3D</td><td>编程、PCB</td><td>出3张概念图</td></tr>
+<tr><td><strong>程序员</strong></td><td>需求 → [AI建模帮] → 写固件 → 联调</td><td>编程开发、组装</td><td>销售运营</td><td>买ESP32写Hello World</td></tr>
+<tr><td><strong>创业者</strong></td><td>痛点 → [AI快验证] → 试卖 → 放大</td><td>利润模型、销售</td><td>结构修改细节</td><td>闲鱼发5帖测需求</td></tr>
+<tr><td><strong>教育者</strong></td><td>跑通 → [拆解每步] → 教程 → 变现</td><td>全链路拆解</td><td>量产优化</td><td>录一个AI造物过程视频</td></tr>
+<tr><td><strong>爱好者</strong></td><td>看到 → [跟着做] → 改改 → 晒圈</td><td>文生图、打印</td><td>编程、PCB</td><td>用即梦AI出一张设计图</td></tr>
+<tr><td><strong>平台方</strong></td><td>观察 → [抽象需求] → SaaS → 收费</td><td>AI参与度、痛点</td><td>具体造物</td><td>梳理链路中的自动化机会</td></tr>
+</table>
+</div>
+
+<div class="cp-section-hd af-hd" style="font-size:.92rem;margin-top:1.2rem"><span class="cp-flag">◮</span> 面 · 角色间的生态协同 — 1+1&gt;2</div>
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">🤝 互补组队</div></div>
+  <div class="af-tool-body"><strong>设计师 + 程序员 = 出壳+出芯</strong><br>设计师负责外观和审美，程序员负责功能和代码。一个人做壳一个人做芯，产品完整度远超单打独斗。<br><strong>创业者 + 教育者 = 做完+教人做</strong><br>做出来的东西卖一遍，做的过程再卖一遍。产品+内容双变现。</div></div>
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">🚀 升级路径</div></div>
+  <div class="af-tool-body"><strong>爱好者 → 创作者 → 创业者</strong>的进化线：<br>① 爱好者跟着做，发现比想象中简单<br>② 开始加自己的想法，变成创作者<br>③ 有人想买，开始定价、上架，变成创业者<br><strong>平台方 = 所有人脚下的基础设施</strong></div></div>
+</div>
+
+<!-- ===== AI全能升级路线 ===== -->
+<div class="cp-section-hd af-hd" style="margin-top:2.5rem"><span class="cp-flag">⬆️</span> AI全能升级路线 — 从觉醒到造局的10级成长</div>
+<p style="font-size:.82rem;color:var(--muted);margin:.5rem 0 1rem;line-height:1.7">AI造物的本质不是"做个产品"，而是<strong style="color:var(--af)">AI让一个人的能力边界从1维变成N维</strong>。以下是从"完全不懂AI"到"AI就是你的外挂"的完整路线。</p>
+
+<div style="padding:.6rem .8rem;border-radius:8px;background:rgba(167,139,250,.06);border:1px solid rgba(167,139,250,.15);margin-bottom:1rem"><div style="font-weight:700;font-size:.92rem;color:var(--af3)">🌙 第一阶段：觉醒（Lv.1-3）— 从"AI是什么"到"离不开AI"</div></div>
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">Lv.1 🥚 觉醒·初见</div><div class="af-tool-price">1-3天</div></div>
+  <div class="af-tool-body"><strong>你能做什么：</strong>用过ChatGPT聊天<br><strong>内心OS：</strong>"哦，就这？"<br><strong>验证标准：</strong>你跟AI说过第一句话<br><strong>卡住的人：</strong>很多人试了一次就不用了——"回答很泛，没什么用"</div></div>
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">Lv.2 🌱 觉醒·日常</div><div class="af-tool-price">1-2周</div></div>
+  <div class="af-tool-body"><strong>你能做什么：</strong>日常用AI辅助工作（翻译/润色/总结）<br><strong>内心OS：</strong>"嗯，挺方便的"<br><strong>验证标准：</strong>一周内有5天以上主动打开AI<br><strong>卡住的人：</strong>永远把AI当"搜索+润色"用，觉得这就够了</div></div>
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">Lv.3 🌿 觉醒·掌控</div><div class="af-tool-price">2-4周</div></div>
+  <div class="af-tool-body"><strong>你能做什么：</strong>能写精准Prompt控输出<br><strong>内心OS：</strong>"原来要这么问才行"<br><strong>验证标准：</strong>同一需求，3轮对话内得到满意结果<br><strong>突破：</strong>从"AI对我说话"变成"我对AI说话"</div></div>
+</div>
+
+<div style="padding:.6rem .8rem;border-radius:8px;background:rgba(63,185,80,.06);border:1px solid rgba(63,185,80,.15);margin:1.2rem 0 1rem"><div style="font-weight:700;font-size:.92rem;color:var(--accent2)">⚡ 第二阶段：倍增（Lv.4-5）— 本专业起飞，然后撞墙</div></div>
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">Lv.4 🌳 倍增·起飞</div><div class="af-tool-price">1-3月</div></div>
+  <div class="af-tool-body"><strong>你能做什么：</strong>本专业效率翻5倍+<br><strong>内心OS：</strong>"我在本专业无敌了！"<br><strong>验证标准：</strong>用AI完成过去1周的工作量，1天内搞定<br><strong>⚠️ 危险：</strong>你只在自己会的事情上加速，没有变强，只是变快了</div></div>
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">Lv.5 🔀 倍增·撞墙 <span class="cp-badge badge-hot" style="font-size:.65rem">死亡谷</span></div><div class="af-tool-price">关键跨越</div></div>
+  <div class="af-tool-body"><strong>你能做什么：</strong>第一次用AI做一件你<strong>完全不会</strong>的事<br><strong>内心OS：</strong>"我…好像什么都不会"<br><strong>验证标准：</strong>用AI完成第一个本专业之外的作品<br><strong>为什么难：</strong>你发现不会描述想要什么——不是AI不行，是审美/认知/表达还不够指挥AI<br><strong style="color:var(--danger)">⬇️ 80%的人停在这里</strong>——因为Lv.4已经够舒服了</div></div>
+</div>
+
+<div style="padding:.6rem .8rem;border-radius:8px;background:rgba(249,115,22,.06);border:1px solid rgba(249,115,22,.15);margin:1.2rem 0 1rem"><div style="font-weight:700;font-size:.92rem;color:var(--af)">🌉 第三阶段：跨界（Lv.6-7）— 从"只会一招"到"什么都会一点"</div></div>
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">Lv.6 🌉 跨界·站稳</div><div class="af-tool-price">3-6月</div></div>
+  <div class="af-tool-body"><strong>你能做什么：</strong>跨了第一次界之后，第二第三次越来越快<br><strong>内心OS：</strong>"原来跨界能力可以迁移"<br><strong>验证标准：</strong>独立完成1个跨2个领域的项目<br><strong>规律：</strong>第1次跨界2周结果很差 → 第4次跨界1天直接能用</div></div>
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">Lv.7 ⚡ 跨界·全栈</div><div class="af-tool-price">6-12月</div></div>
+  <div class="af-tool-body"><strong>你能做什么：</strong>一个人跑通完整链路（创意→成品→销售）<br><strong>内心OS：</strong>"一个人=一个团队"<br><strong>验证标准：</strong>从创意到成品到销售，自己+AI全部搞定，至少2个品类<br><strong>新焦虑：</strong>"我能做的太多了，时间不够用…"</div></div>
+</div>
+
+<div style="padding:.6rem .8rem;border-radius:8px;background:rgba(88,166,255,.06);border:1px solid rgba(88,166,255,.15);margin:1.2rem 0 1rem"><div style="font-weight:700;font-size:.92rem;color:var(--accent)">🤖 第四阶段：指挥（Lv.8-9）— 从"自己做事"到"让AI做事"</div></div>
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">Lv.8 🤖 指挥·调度</div><div class="af-tool-price">12-18月</div></div>
+  <div class="af-tool-body"><strong>你能做什么：</strong>用Agent/自动化工作流让AI自动运转<br><strong>内心OS：</strong>"让AI帮我做事"<br><strong>验证标准：</strong>有3个以上AI Agent在帮你自动做事<br><strong>本质变化：</strong>以前产出=你的时间×AI加速；现在产出=Agent数量×7×24h<br>你只做3件事：<strong>方向、决策、品味</strong></div></div>
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">Lv.9 🎯 指挥·定义</div><div class="af-tool-price">1年+</div></div>
+  <div class="af-tool-body"><strong>你能做什么：</strong>创造别人没见过的AI用法/工作流<br><strong>内心OS：</strong>"别人按我的方式用AI"<br><strong>验证标准：</strong>你的AI方法被10+人参考或复刻<br><strong>你不再只是"AI用户"，你成了"AI方法的创造者"</strong></div></div>
+</div>
+
+<div style="padding:.6rem .8rem;border-radius:8px;background:rgba(255,107,107,.06);border:1px solid rgba(255,107,107,.15);margin:1.2rem 0 1rem"><div style="font-weight:700;font-size:.92rem;color:var(--hot)">🏛️ 第五阶段：生态（Lv.10）— 从"用AI"到"造AI的土壤"</div></div>
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">Lv.10 🏛️ 生态·造局</div><div class="af-tool-price">天花板</div></div>
+  <div class="af-tool-body"><strong>你能做什么：</strong>建立让别人用AI的系统<br><strong>你做的工具</strong>让1000个Lv.7的人效率翻倍<br><strong>你做的课程</strong>让10000个Lv.1的人加速到Lv.5<br><strong>你做的平台</strong>让100个Lv.9的人互相协作<br><strong>验证标准：</strong>你的工具/平台/课程被1000+人使用</div></div>
+</div>
+
+<!-- 升级全景+三道墙 -->
+<div class="af-reality" style="margin-top:1.5rem">
+<div class="af-reality-head">🗺️ 升级全景 — 三道墙，五段人生</div>
+<div class="af-reality-body">
+<div style="display:flex;flex-wrap:wrap;gap:.4rem .8rem;margin-bottom:.8rem;font-size:.82rem;font-weight:600">
+  <span style="color:var(--af3)">Lv.1 🥚 初见</span> →
+  <span style="color:var(--af3)">Lv.2 🌱 日常</span> →
+  <span style="color:var(--af3)">Lv.3 🌿 掌控</span>
+  <span style="color:var(--warn);font-size:.75rem">┃ 第1道墙 ┃</span>
+  <span style="color:var(--accent2)">Lv.4 🌳 起飞</span> →
+  <span style="color:var(--danger)">Lv.5 🔀 撞墙 ⚠️</span>
+  <span style="color:var(--warn);font-size:.75rem">┃ 死亡谷 ┃</span>
+  <span style="color:var(--af)">Lv.6 🌉 站稳</span> →
+  <span style="color:var(--af)">Lv.7 ⚡ 全栈</span>
+  <span style="color:var(--warn);font-size:.75rem">┃ 第3道墙 ┃</span>
+  <span style="color:var(--accent)">Lv.8 🤖 指挥</span> →
+  <span style="color:var(--accent)">Lv.9 🎯 定义</span> →
+  <span style="color:var(--hot)">Lv.10 🏛️ 造局</span>
+</div>
+<ul>
+  <li><strong>第1道墙（Lv.3→4）：</strong>从"用AI"到"AI是器官"——需要深度依赖，让AI渗透工作每个环节</li>
+  <li><strong>第2道墙（Lv.4→5）：</strong>从"舒适区"到"跨界区"——<strong style="color:var(--danger)">死亡谷！80%的人停在这里</strong>。必须受挫一次，用AI做自己"不会"的事</li>
+  <li><strong>第3道墙（Lv.7→8）：</strong>从"自己做"到"让AI做"——需要信任和放手，不再亲自做每件事</li>
+</ul>
+<div style="margin-top:.8rem;padding:.6rem .8rem;border-radius:6px;background:rgba(249,115,22,.06);border:1px solid rgba(249,115,22,.15);font-size:.85rem;line-height:1.7">
+  <strong style="color:var(--af)">跨越死亡谷的方法很简单：硬做一次。</strong><br>
+  程序员+MJ = 你不需要审美，AI出100个方案你挑最不丑的<br>
+  设计师+Cursor = 你不需要学编程，描述需求AI帮你写<br>
+  文科生+ESP-AI = 你不需要懂电路，按教程插线AI帮你跑<br>
+  做完第一个跨界项目，你就永远回不去了。
+</div>
+<div style="margin-top:.8rem;padding:.6rem .8rem;border-radius:6px;background:rgba(88,166,255,.06);border:1px solid rgba(88,166,255,.15);font-size:.85rem;line-height:1.7;text-align:center">
+  <strong style="color:var(--accent)">AI不会替你改变世界，但会让你发现——原来你就可以。</strong>
+</div>
+</div>
+</div>
+
+<!-- ===== 趋势 ===== -->
+<div class="cp-section-hd af-hd" style="margin-top:2rem"><span class="cp-flag">📈</span> AI造物趋势 — 2026-2027</div>
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">🔮 结构设计自动化</div></div>
+  <div class="af-tool-body">当前最大瓶颈是"修结构"，2026下半年有望由AI解决。Blender插件已能半自动挖空+加卡扣，全自动预计2027年。</div></div>
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">🔮 AI PCB设计</div></div>
+  <div class="af-tool-body">立创EDA已集成AI辅助布线。2027年预计能从需求描述直接生成完整PCB，省去手工设计环节。</div></div>
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">🔮 4D打印</div></div>
+  <div class="af-tool-body">形状记忆材料+3D打印，打印出来的东西能"变形"。2026年实验室阶段，2028年可能家用化。</div></div>
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">🔮 AI造物平台化</div></div>
+  <div class="af-tool-body">类似"AI版富士康"：上传创意→AI全自动设计+打印+组装→发货。2026年已有雏形（Maker3D等），2027年可能成熟。</div></div>
+</div>
+
+<!-- ===== 四大根基 ===== -->
+<div style="margin-top:3rem;padding:1.5rem;border-radius:12px;background:linear-gradient(135deg,rgba(249,115,22,.06),rgba(88,166,255,.06));border:1px solid rgba(249,115,22,.2)">
+<div style="text-align:center;margin-bottom:1rem">
+<div style="font-size:1.3rem;font-weight:800;color:var(--af)">一切提效，都离不开这四件事</div>
+<div style="font-size:.85rem;color:var(--muted);margin-top:.3rem">Ask · Plan · Debug · Agent — AI时代的四大根基能力</div>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;text-align:center;font-size:.85rem">
+  <div style="padding:.8rem;border-radius:8px;background:rgba(88,166,255,.06);border:1px solid rgba(88,166,255,.15)">
+    <div style="font-size:1.5rem;margin-bottom:.3rem">💬</div>
+    <div style="font-weight:700;color:var(--accent)">Ask</div>
+    <div style="font-size:.72rem;color:var(--muted);margin-top:.2rem">问对问题<br>是一切的起点</div>
+  </div>
+  <div style="padding:.8rem;border-radius:8px;background:rgba(249,115,22,.06);border:1px solid rgba(249,115,22,.15)">
+    <div style="font-size:1.5rem;margin-bottom:.3rem">🗺️</div>
+    <div style="font-weight:700;color:var(--af)">Plan</div>
+    <div style="font-size:.72rem;color:var(--muted);margin-top:.2rem">想清楚再做<br>省10倍返工</div>
+  </div>
+  <div style="padding:.8rem;border-radius:8px;background:rgba(210,153,34,.06);border:1px solid rgba(210,153,34,.15)">
+    <div style="font-size:1.5rem;margin-bottom:.3rem">🔧</div>
+    <div style="font-weight:700;color:var(--warn)">Debug</div>
+    <div style="font-size:.72rem;color:var(--muted);margin-top:.2rem">修得快比不出错<br>更重要</div>
+  </div>
+  <div style="padding:.8rem;border-radius:8px;background:rgba(63,185,80,.06);border:1px solid rgba(63,185,80,.15)">
+    <div style="font-size:1.5rem;margin-bottom:.3rem">🤖</div>
+    <div style="font-weight:700;color:var(--accent2)">Agent</div>
+    <div style="font-size:.72rem;color:var(--muted);margin-top:.2rem">从你做到AI做<br>到AI自己跑</div>
+  </div>
+</div>
+<div style="text-align:center;margin-top:.8rem;font-size:.82rem;color:var(--muted);line-height:1.8">
+  <strong style="color:var(--text)">Ask是输入，Plan是蓝图，Debug是保障，Agent是放大器。</strong><br>
+  <a href="thinking-framework.html" style="color:var(--accent);font-weight:600;font-size:.88rem">→ 查看完整深度解读：Ask的5个层级、Plan模板、Debug 3层方法、Agent化3阶段 →</a>
+</div>
+</div>
+
+<div class="cp-footer">
+  <p>AI造物流水线 · 从创意到商品 · 一人即可跑通</p>
+  <p><a href="index.html">← 返回 AINav 首页</a> · <a href="free-tier.html">🆓 免费额度</a> · <a href="token-optimization.html">Token优化</a> · <a href="hardware-plan.html">硬件横评</a> · <a href="image-plan.html">图像套餐横评</a> · <a href="video-plan.html">视频套餐横评</a> · <a href="coding-plan.html">编程套餐横评</a> · <a href="thinking-framework.html">AI第一思考</a></p>
+</div>
+</div>
+
+<script>
+// Theme switcher
+(function(){
+  var saved=localStorage.getItem('ainav-theme')||'dark';
+  document.documentElement.setAttribute('data-theme',saved);
+  document.querySelectorAll('.theme-btn').forEach(function(b){
+    b.classList.toggle('is-active',b.getAttribute('data-theme-set')===saved);
+  });
+  document.querySelectorAll('.theme-btn').forEach(function(b){
+    b.addEventListener('click',function(){
+      var t=b.getAttribute('data-theme-set');
+      document.documentElement.setAttribute('data-theme',t);
+      localStorage.setItem('ainav-theme',t);
+      document.querySelectorAll('.theme-btn').forEach(function(x){x.classList.toggle('is-active',x.getAttribute('data-theme-set')===t)});
+    });
+  });
+})();
+
+// FAQ accordion
+document.querySelectorAll('.cp-faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    var item=q.parentElement;
+    var wasOpen=item.classList.contains('is-open');
+    document.querySelectorAll('.cp-faq-item.is-open').forEach(function(x){x.classList.remove('is-open')});
+    if(!wasOpen) item.classList.add('is-open');
+  });
+});
+</script>
+<script src="plan-nav.js" data-active="ai-factory-plan.html"></script>
+<script src="plan-meta-i18n.js"></script>
+<script src="thinking-framework.js"></script>
+</body>
+</html>

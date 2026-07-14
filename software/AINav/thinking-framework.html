@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="site-mobile.css">
+<title>AI第一思考 — Ask·Plan·Debug·Agent — AINav</title>
+<meta name="description" content="AI时代的四大根基能力：Ask问对问题、Plan先想清楚、Debug修得快、Agent让它自己跑。一切提效的底层逻辑。">
+<link rel="canonical" href="https://aiv123.com/thinking-framework.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI第一思考 — Ask·Plan·Debug·Agent">
+<meta property="og:description" content="AI时代四大根基能力：问对问题→想清楚路径→修好错误→让它自己跑。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%230969da'/><text x='50' y='72' font-size='60' text-anchor='middle' fill='white' font-family='system-ui' font-weight='700'>AI</text></svg>">
+<style>
+::root,html[data-theme="dark"]{--bg:#0f1419;--panel:#151b23;--card:#1c2430;--border:#2d3848;--text:#e6edf3;--muted:#8b9cb3;--accent:#58a6ff;--accent2:#3fb950;--warn:#d29922;--danger:#f85149;--hot:#ff6b6b;--af:#f97316;--af2:#06b6d2;--af3:#a78bfa}
+html[data-theme="light"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;--text:#1f2328;--muted:#59636e;--accent:#0969da;--accent2:#1a7f37;--warn:#9a6700;--danger:#cf222e;--hot:#e53935;--af:#ea580c;--af2:#0891b2;--af3:#7c3aed}
+@media(prefers-color-scheme:light){html[data-theme="system"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;--text:#1f2328;--muted:#59636e;--accent:#0969da;--accent2:#1a7f37;--warn:#9a6700;--danger:#cf222e;--hot:#e53935;--af:#ea580c;--af2:#0891b2;--af3:#7c3aed}}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.cp-top{padding:.75rem 1rem;border-bottom:1px solid var(--border);background:var(--panel);position:sticky;top:0;z-index:10}
+.cp-top-inner{max-width:76rem;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;justify-content:space-between}
+.cp-nav a{font-weight:600;margin-right:1rem;font-size:.88rem}
+.cp-toolbar{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center}
+.theme-btn{font-size:.72rem;padding:.2rem .5rem;border-radius:5px;border:1px solid var(--border);background:var(--card);color:var(--muted);cursor:pointer;font-family:inherit}
+.theme-btn.is-active{color:var(--accent);border-color:var(--accent);font-weight:600}
+.cp-wrap{max-width:76rem;margin:0 auto;padding:1rem}h1{font-size:1.35rem;margin:0 0 .3rem}
+.cp-subtitle{font-size:.88rem;color:var(--muted);margin-bottom:1rem}
+.cp-updated-line { font-size: 0.76rem; color: var(--muted); margin: 0 0 0.3rem; }
+.cp-footer {max-width:76rem;margin:2rem auto 1rem;padding:0 1rem;font-size:.76rem;color:var(--muted);text-align:center}
+.cp-footer a{color:var(--muted)}
+.tf-hero{text-align:center;padding:2rem 1rem 1rem}
+.tf-hero-icons{display:flex;justify-content:center;gap:1.2rem;margin-bottom:1.2rem;flex-wrap:wrap}
+.tf-hero-icon{padding:.8rem 1.2rem;border-radius:12px;font-size:1.1rem;font-weight:700;display:flex;flex-direction:column;align-items:center;gap:.3rem;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.tf-hero-icon:hover{text-decoration:none;transform:translateY(-3px);box-shadow:0 4px 16px rgba(0,0,0,.2)}
+.tf-hero-icon span:first-child{font-size:2.2rem}
+.tf-hero-subtitle{font-size:.92rem;color:var(--muted);max-width:42rem;margin:0 auto;line-height:1.8}
+.tf-flow{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;justify-content:center;margin:1.5rem 0;font-size:.85rem;font-weight:600}
+.tf-flow-step{padding:.4rem .8rem;border-radius:8px;border:1.5px solid var(--border);background:var(--card);text-align:center}
+.tf-flow-arrow{color:var(--muted);font-size:1rem}
+.tf-card{padding:1.2rem;border-radius:12px;border:1px solid var(--border);background:var(--card);margin-bottom:1rem;transition:border-color .15s}
+.tf-card:hover{border-color:var(--accent)}
+.tf-card a{text-decoration:none;color:inherit}
+.tf-card-hd{display:flex;align-items:center;gap:.5rem;margin-bottom:.5rem}
+.tf-card-icon{font-size:1.4rem}
+.tf-card-name{font-weight:700;font-size:1.1rem}
+.tf-card-tag{font-size:.7rem;padding:.15rem .4rem;border-radius:3px;margin-left:auto;font-weight:600}
+.tf-card p{font-size:.85rem;color:var(--muted);line-height:1.7;margin:0 0 .6rem}
+.tf-card-points{display:flex;flex-wrap:wrap;gap:.3rem;margin-bottom:.6rem}
+.tf-card-point{font-size:.72rem;padding:.2rem .5rem;border-radius:4px;border:1px solid var(--border);color:var(--muted);background:var(--panel)}
+.tf-card-link{font-size:.82rem;font-weight:600}
+.tf-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:1.5rem 0}
+@media(max-width:640px){.tf-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="cp-top">
+<div class="cp-top-inner">
+  <div class="cp-nav"><a href="index.html">AINav</a><a href="thinking-framework.html" style="color:var(--accent)">AI第一思考</a></div>
+  <div class="cp-toolbar">
+    <button class="theme-btn is-active" data-theme-set="dark">Dark</button>
+    <button class="theme-btn" data-theme-set="light">Light</button>
+    <button class="theme-btn" data-theme-set="system">System</button>
+  </div>
+</div>
+</div>
+
+<div class="cp-wrap">
+
+<!-- Hero -->
+<div class="tf-hero">
+  <div class="tf-hero-icons">
+    <a href="ask.html" class="tf-hero-icon" style="background:rgba(88,166,255,.08);border:1px solid rgba(88,166,255,.2);color:var(--accent)"><span>💬</span><span>Ask</span></a>
+    <a href="plan.html" class="tf-hero-icon" style="background:rgba(249,115,22,.08);border:1px solid rgba(249,115,22,.2);color:var(--af)"><span>🗺️</span><span>Plan</span></a>
+    <a href="debug.html" class="tf-hero-icon" style="background:rgba(210,153,34,.08);border:1px solid rgba(210,153,34,.2);color:var(--warn)"><span>🔧</span><span>Debug</span></a>
+    <a href="agent.html" class="tf-hero-icon" style="background:rgba(63,185,80,.08);border:1px solid rgba(63,185,80,.2);color:var(--accent2)"><span>🤖</span><span>Agent</span></a>
+  </div>
+  <h1>AI第一思考</h1>
+  <div class="tf-hero-subtitle">
+    不管你是做AI编程、AI剪辑、AI客服、AI造物……提效的底层逻辑永远只有四步：<br>
+    <strong style="color:var(--text)">问对问题 → 想清楚路径 → 修好错误 → 让它自己跑</strong><br>
+    这四个能力是AI时代的"识字率"——不具备这四项能力的人无法真正用好AI。
+  </div>
+</div>
+
+<!-- 循环图 -->
+<div class="tf-flow">
+  <div class="tf-flow-step" style="border-color:rgba(88,166,255,.3);color:var(--accent)">💬 你Ask</div>
+  <span class="tf-flow-arrow">→</span>
+  <div class="tf-flow-step" style="border-color:rgba(249,115,22,.3);color:var(--af)">🗺️ AI Plan</div>
+  <span class="tf-flow-arrow">→</span>
+  <div class="tf-flow-step" style="border-color:var(--accent2,.3);color:var(--accent2)">⚡ AI Execute</div>
+  <span class="tf-flow-arrow">→</span>
+  <div class="tf-flow-step" style="border-color:rgba(210,153,34,.3);color:var(--warn)">🔧 你Debug</div>
+  <span class="tf-flow-arrow">→</span>
+  <div class="tf-flow-step" style="border-color:rgba(63,185,80,.3);color:var(--accent2)">🤖 Agent循环</div>
+</div>
+
+<!-- 四大卡片 -->
+<div class="tf-grid">
+
+  <div class="tf-card">
+    <a href="ask.html">
+    <div class="tf-card-hd">
+      <span class="tf-card-icon">💬</span>
+      <span class="tf-card-name" style="color:var(--accent)">Ask</span>
+      <span class="tf-card-tag" style="background:rgba(88,166,255,.1);color:var(--accent)">起点</span>
+    </div>
+    <p><strong>问对问题，比得到答案更重要。</strong>AI不是不行，是你没问对。同一需求，笼统问得废话，精准问直接可用。</p>
+    <div class="tf-card-points">
+      <span class="tf-card-point">5个层级</span>
+      <span class="tf-card-point">万能公式</span>
+      <span class="tf-card-point">4个痛点</span>
+      <span class="tf-card-point">3个案例</span>
+      <span class="tf-card-point">闭环迭代</span>
+    </div>
+    <div class="tf-card-link" style="color:var(--accent)">查看详细解读 →</div>
+    </a>
+  </div>
+
+  <div class="tf-card">
+    <a href="plan.html">
+    <div class="tf-card-hd">
+      <span class="tf-card-icon">🗺️</span>
+      <span class="tf-card-name" style="color:var(--af)">Plan</span>
+      <span class="tf-card-tag" style="background:rgba(249,115,22,.1);color:var(--af)">蓝图</span>
+    </div>
+    <p><strong>先想清楚，再让AI动手。</strong>没有Plan的AI = 高速公路上蒙着眼开车。5分钟Plan省2小时返工。</p>
+    <div class="tf-card-points">
+      <span class="tf-card-point">5个必答题</span>
+      <span class="tf-card-point">Plan模板</span>
+      <span class="tf-card-point">4个痛点</span>
+      <span class="tf-card-point">对比案例</span>
+      <span class="tf-card-point">闭环验收</span>
+    </div>
+    <div class="tf-card-link" style="color:var(--af)">查看详细解读 →</div>
+    </a>
+  </div>
+
+  <div class="tf-card">
+    <a href="debug.html">
+    <div class="tf-card-hd">
+      <span class="tf-card-icon">🔧</span>
+      <span class="tf-card-name" style="color:var(--warn)">Debug</span>
+      <span class="tf-card-tag" style="background:rgba(210,153,34,.1);color:var(--warn)">保障</span>
+    </div>
+    <p><strong>AI一定会出错，关键是修得快。</strong>会不会Debug，决定你用AI是"提效"还是"添堵"。3层方法解决100%问题。</p>
+    <div class="tf-card-points">
+      <span class="tf-card-point">3层方法</span>
+      <span class="tf-card-point">场景速查</span>
+      <span class="tf-card-point">4个痛点</span>
+      <span class="tf-card-point">3个案例</span>
+      <span class="tf-card-point">模板防复发</span>
+    </div>
+    <div class="tf-card-link" style="color:var(--warn)">查看详细解读 →</div>
+    </a>
+  </div>
+
+  <div class="tf-card">
+    <a href="agent.html">
+    <div class="tf-card-hd">
+      <span class="tf-card-icon">🤖</span>
+      <span class="tf-card-name" style="color:var(--accent2)">Agent</span>
+      <span class="tf-card-tag" style="background:rgba(63,185,80,.1);color:var(--accent2)">放大器</span>
+    </div>
+    <p><strong>从你做，到AI做，到AI自己跑。</strong>10x→100x→1000x的底层逻辑：把"人必须参与"的环节越来越少。</p>
+    <div class="tf-card-points">
+      <span class="tf-card-point">3个阶段</span>
+      <span class="tf-card-point">工具矩阵</span>
+      <span class="tf-card-point">5大原则</span>
+      <span class="tf-card-point">演进案例</span>
+      <span class="tf-card-point">人审设置</span>
+    </div>
+    <div class="tf-card-link" style="color:var(--accent2)">查看详细解读 →</div>
+    </a>
+  </div>
+
+</div>
+
+<!-- 总结 -->
+<div style="margin-top:1rem;padding:1rem;border-radius:10px;background:var(--card);border:1px solid var(--border);text-align:center">
+  <div style="font-size:.92rem;color:var(--text);font-weight:700;margin-bottom:.3rem">Ask是输入，Plan是蓝图，Debug是保障，Agent是放大器</div>
+  <div style="font-size:.82rem;color:var(--muted);line-height:1.8">
+    四者循环：你Ask → AI Plan → AI Execute → 你Debug → Agent自动循环<br>
+    每多掌握一项，AI提效倍率就翻一番
+  </div>
+  <div style="font-size:.76rem;color:var(--muted);margin-top:.65rem;line-height:1.7;opacity:.9">
+    熟悉 PDCA？对照一下：<strong style="color:var(--text);font-weight:600">Plan</strong>≈P · <strong style="color:var(--text);font-weight:600">Execute/Agent</strong>≈D · <strong style="color:var(--text);font-weight:600">Debug/验收</strong>≈C · <strong style="color:var(--text);font-weight:600">闭环迭代</strong>≈A — Ask 是 AI 时代多出来的「定问题」起点。
+  </div>
+</div>
+
+<div class="cp-footer">
+      <p class="cp-updated-line"><span class="cp-updated">最后更新：2026-06-22</span></p>
+  <p>AI第一思考 · Ask·Plan·Debug·Agent · 一切提效的底层逻辑</p>
+  <p><a href="index.html">← 返回 AINav 首页</a> · <a href="free-tier.html">🆓 免费额度</a> · <a href="token-optimization.html">Token优化</a> · <a href="ai-factory-plan.html">AI造物流水线</a> · <a href="coding-plan.html">编程套餐横评</a></p>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var saved=localStorage.getItem('theme')||'dark';
+  document.documentElement.setAttribute('data-theme',saved);
+  document.querySelectorAll('.theme-btn').forEach(function(b){
+    b.classList.toggle('is-active',b.getAttribute('data-theme-set')===saved);
+  });
+  document.querySelectorAll('.theme-btn').forEach(function(b){
+    b.addEventListener('click',function(){
+      var t=b.getAttribute('data-theme-set');
+      document.documentElement.setAttribute('data-theme',t);
+      localStorage.setItem('theme',t);
+      document.querySelectorAll('.theme-btn').forEach(function(x){x.classList.toggle('is-active',x.getAttribute('data-theme-set')===t)});
+    });
+  });
+})();
+</script>
+</body>
+</html>

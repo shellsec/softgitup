@@ -37,9 +37,11 @@
   },
   {
     "id": "sucrose_wallpaper_engine",
-    "简介": "强大的开源动态壁纸引擎 Sucrose Wallpaper Engine 26.6.4.0 中文版",
+    "简介": "Sucrose Wallpaper Engine（仅 Windows Release；Linux 请打开 Releases 页）",
     "分类": "系统",
     "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/Taiizor/Sucrose/releases",
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
     "releases_url": "https://bgithub.xyz/Taiizor/Sucrose/releases",
@@ -48,24 +50,9 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false,
-    "url_hint": "sucrose_wallpaper_engine",
-    "installer_extensions": [
-      ".AppImage",
-      ".tar.gz",
-      ".deb",
-      ".rpm",
-      ".zip"
-    ],
-    "href_exclude_substrings": [
-      "windows",
-      "win64",
-      "win32",
-      "darwin",
-      "macos",
-      ".dmg",
-      ".pkg",
-      ".exe",
-      ".msi"
+    "aliases": [
+      "Sucrose",
+      "sucrose"
     ]
   },
   {
@@ -789,5 +776,20 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "seelen_ui",
+    "简介": "Seelen UI（仅 Windows；Linux 请打开 Releases 页）",
+    "分类": "系统",
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/eythaann/Seelen-UI/releases",
+    "releases_url": "https://bgithub.xyz/eythaann/Seelen-UI/releases",
+    "repo_path": "eythaann/Seelen-UI",
+    "aliases": [
+      "Seelen UI",
+      "Seelen-UI",
+      "seelen"
+    ]
   }
 ]

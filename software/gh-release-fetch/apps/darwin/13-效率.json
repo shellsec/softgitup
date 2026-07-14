@@ -938,5 +938,83 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "esearch_macos_aarch64",
+    "简介": "eSearch（macOS Apple Silicon dmg，xushengfeng）",
+    "分类": "效率",
+    "aliases": [
+      "esearch",
+      "e search",
+      "截图搜索"
+    ],
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": false,
+    "use_download_filename": true,
+    "releases_url": "https://bgithub.xyz/xushengfeng/eSearch/releases",
+    "repo_path": "xushengfeng/eSearch",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "eSearch-",
+      "darwin-arm64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "darwin-x64",
+      ".zip",
+      "win32",
+      "linux"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "eSearch-{ver_plain}-darwin-arm64.dmg"
+    ],
+    "save_name": "eSearch-{ver_plain}-darwin-arm64.dmg",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "eSearch"
+  },
+  {
+    "id": "esearch_macos_x64",
+    "简介": "eSearch（macOS Intel dmg，xushengfeng）",
+    "分类": "效率",
+    "aliases": [
+      "esearch",
+      "e search",
+      "截图搜索"
+    ],
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": false,
+    "use_download_filename": true,
+    "releases_url": "https://bgithub.xyz/xushengfeng/eSearch/releases",
+    "repo_path": "xushengfeng/eSearch",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "eSearch-",
+      "darwin-x64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "darwin-arm64",
+      ".zip",
+      "win32",
+      "linux"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "eSearch-{ver_plain}-darwin-x64.dmg"
+    ],
+    "save_name": "eSearch-{ver_plain}-darwin-x64.dmg",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "eSearch"
   }
 ]

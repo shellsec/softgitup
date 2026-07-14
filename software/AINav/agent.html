@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="site-mobile.css">
+<title>Agent — 从你做到AI自己跑 — AI第一思考 — AINav</title>
+<meta name="description" content="Agent是AI时代的终极形态：痛点诊断、真实案例、3个阶段、工具矩阵、5大原则、闭环演进。10x→100x→1000x的底层逻辑。">
+<link rel="canonical" href="https://aiv123.com/agent.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Agent — 从你做到AI自己跑">
+<meta property="og:description" content="AI时代终极形态：3个阶段、工具矩阵、5大原则、闭环演进。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%233fb950'/><text x='50' y='72' font-size='40' text-anchor='middle' fill='white' font-family='system-ui' font-weight='700'>Agent</text></svg>">
+<style>
+::root,html[data-theme="dark"]{--bg:#0f1419;--panel:#151b23;--card:#1c2430;--border:#2d3848;--text:#e6edf3;--muted:#8b9cb3;--accent:#58a6ff;--accent2:#3fb950;--warn:#d29922;--danger:#f85149;--hot:#ff6b6b;--af:#f97316;--af2:#06b6d2;--af3:#a78bfa}
+html[data-theme="light"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;--text:#1f2328;--muted:#59636e;--accent:#0969da;--accent2:#1a7f37;--warn:#9a6700;--danger:#cf222e;--hot:#e53935;--af:#ea580c;--af2:#0891b2;--af3:#7c3aed}
+@media(prefers-color-scheme:light){html[data-theme="system"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;--text:#1f2328;--muted:#59636e;--accent:#0969da;--accent2:#1a7f37;--warn:#9a6700;--danger:#cf222e;--hot:#e53935;--af:#ea580c;--af2:#0891b2;--af3:#7c3aed}}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.cp-top{padding:.75rem 1rem;border-bottom:1px solid var(--border);background:var(--panel);position:sticky;top:0;z-index:10}
+.cp-top-inner{max-width:76rem;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;justify-content:space-between}
+.cp-nav a{font-weight:600;margin-right:1rem;font-size:.88rem}
+.cp-toolbar{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center}
+.theme-btn{font-size:.72rem;padding:.2rem .5rem;border-radius:5px;border:1px solid var(--border);background:var(--card);color:var(--muted);cursor:pointer;font-family:inherit}
+.theme-btn.is-active{color:var(--accent);border-color:var(--accent);font-weight:600}
+.cp-wrap{max-width:76rem;margin:0 auto;padding:1rem}h1{font-size:1.35rem;margin:0 0 .3rem}
+.cp-subtitle{font-size:.88rem;color:var(--muted);margin-bottom:1rem}
+.cp-section-hd{font-size:1.1rem;font-weight:700;margin:1.8rem 0 .8rem;padding-bottom:.3rem;border-bottom:2px solid var(--border);display:flex;align-items:center;gap:.5rem}
+.cp-section-hd .cp-flag{font-size:1.15rem}
+.af-grid{display:grid;grid-template-columns:1fr;gap:1rem}
+@media(min-width:52rem){.af-grid{grid-template-columns:1fr 1fr}}
+.af-tool{border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden;transition:border-color .15s}
+.af-tool:hover{border-color:var(--accent2)}
+.af-tool-head{padding:.7rem 1rem;border-bottom:1px solid var(--border);display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .6rem}
+.af-tool-name{font-size:1rem;font-weight:700;flex:1 1 auto}
+.af-tool-price{font-size:.88rem;font-weight:700;white-space:nowrap}
+.af-tool-body{padding:.7rem 1rem;font-size:.82rem;line-height:1.7}
+.af-tool-body ul{padding-left:1.1rem;margin:.3rem 0}.af-tool-body li{margin-bottom:.25rem}.af-tool-body strong{color:var(--text)}
+.af-profit-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:8px;background:var(--card);margin-bottom:1.5rem}
+.af-profit{width:100%;border-collapse:collapse;font-size:.78rem}
+.af-profit th,.af-profit td{padding:.4rem .55rem;border:1px solid var(--border);text-align:left;white-space:nowrap}
+.af-profit th{background:var(--panel);font-weight:600;color:var(--muted);font-size:.72rem}
+.cp-updated-line { font-size: 0.76rem; color: var(--muted); margin: 0 0 0.3rem; }
+.cp-footer {max-width:76rem;margin:2rem auto 1rem;padding:0 1rem;font-size:.76rem;color:var(--muted);text-align:center}
+.cp-footer a{color:var(--muted)}
+.case-card{border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden;margin-bottom:1rem}
+.case-card-head{padding:.7rem 1rem;border-bottom:1px solid var(--border);font-weight:700;font-size:.95rem;display:flex;align-items:center;gap:.5rem}
+.case-card-body{padding:.7rem 1rem;font-size:.82rem;line-height:1.7}
+.case-card-body ul{padding-left:1.1rem;margin:.3rem 0}.case-card-body li{margin-bottom:.3rem}.case-card-body strong{color:var(--text)}
+.case-metric{display:inline-flex;align-items:center;gap:.3rem;padding:.25rem .6rem;border-radius:6px;background:rgba(63,185,80,.06);border:1px solid rgba(63,185,80,.15);font-size:.78rem;font-weight:600;color:var(--accent2);margin:.2rem .3rem .2rem 0}
+.tf-nav{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.5rem 0}
+.tf-nav a{padding:.5rem 1rem;border-radius:8px;border:1px solid var(--border);background:var(--card);font-size:.85rem;font-weight:600;transition:border-color .15s}
+.tf-nav a:hover{text-decoration:none;border-color:var(--accent2)}
+.tf-nav a.is-active{border-color:var(--accent2);color:var(--accent2);background:rgba(63,185,80,.06)}
+.highlight-box{padding:.6rem 1rem;border-radius:6px;font-size:.78rem;line-height:1.7;margin:.5rem 0}
+</style>
+</head>
+<body>
+
+<div class="cp-top">
+<div class="cp-top-inner">
+  <div class="cp-nav"><a href="index.html">AINav</a><a href="thinking-framework.html">AI第一思考</a><a href="agent.html" style="color:var(--accent2)">Agent</a></div>
+  <div class="cp-toolbar">
+    <button class="theme-btn is-active" data-theme-set="dark">Dark</button>
+    <button class="theme-btn" data-theme-set="light">Light</button>
+    <button class="theme-btn" data-theme-set="system">System</button>
+  </div>
+</div>
+</div>
+
+<div class="cp-wrap">
+
+<h1>🤖 Agent — 从你做，到AI做，到AI自己跑</h1>
+<div class="cp-subtitle">AI时代的终极形态。10x→100x→1000x的底层逻辑：把"人必须参与"的环节越来越少。</div>
+
+<div class="tf-nav">
+  <a href="ask.html">💬 Ask</a>
+  <a href="plan.html">🗺️ Plan</a>
+  <a href="debug.html">🔧 Debug</a>
+  <a href="agent.html" class="is-active">🤖 Agent</a>
+</div>
+
+<!-- ==================== 痛点 ==================== -->
+<div class="cp-section-hd"><span class="cp-flag">🔥</span> 痛点 — 为什么你的AI始终停在"辅助"阶段</div>
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">痛点1：永远在手动点按钮</div></div>
+  <div class="af-tool-body">
+    <strong>症状：</strong>每天重复同样的操作——打开网站→复制内容→粘贴→让AI处理→复制结果→粘贴到别处。每个步骤都很快，但加起来每天浪费2小时。<br><br>
+    <strong>真相：</strong>你在当AI的"快递员"——搬数据进去、搬结果出来。这些搬运工作完全可以自动化。<br><br>
+    <div class="highlight-box" style="background:rgba(248,81,73,.04);border:1px solid rgba(248,81,73,.12)">
+    <strong>核心问题：</strong>AI只是你的"计算器"而不是"助手"。你手动输入、手动搬结果、手动点下一步——AI只是在你指挥下执行单步操作。
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">痛点2：自动化了但出了错没人管</div></div>
+  <div class="af-tool-body">
+    <strong>症状：</strong>写了个脚本自动跑，结果某天API变了/数据格式变了→脚本默默输出了错误结果→你用了3天才发现。<br><br>
+    <strong>真相：</strong>自动化 ≠ Agent化。没有监控、没有纠错、没有回退的自动化，比手动操作更危险——因为错误会被"高效地放大"。<br><br>
+    <div class="highlight-box" style="background:rgba(210,153,34,.04);border:1px solid rgba(210,153,34,.12)">
+    <strong>核心问题：</strong>从"手动操作"跳到"全自动"，跳过了中间的"半自动+人审"阶段。没有护栏的高速公路比泥路更危险。
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">痛点3：追求100%自动化</div></div>
+  <div class="af-tool-body">
+    <strong>症状：</strong>花3周把整个流程自动化→某个环节始终做不好→又花1周→还是不满意→放弃了。<br><br>
+    <strong>真相：</strong>最后20%的自动化需要80%的精力。而且有些事AI就是做不了——硬自动化只会产生脆弱的系统。<br><br>
+    <div class="highlight-box" style="background:rgba(88,166,255,.04);border:1px solid rgba(88,166,255,.12)">
+    <strong>核心问题：</strong>过度工程。80%自动化+20%人工审核 = 最优解。追求100%是性价比最低的事。
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">痛点4：不知道从哪开始Agent化</div></div>
+  <div class="af-tool-body">
+    <strong>症状：</strong>知道Agent是未来，但不知道自己的哪个工作流适合、用什么工具、怎么开始。<br><br>
+    <strong>真相：</strong>Agent化是渐进的，不是一步到位的。从最稳定、最重复的20%开始，而不是从最复杂的开始。<br><br>
+    <div class="highlight-box" style="background:rgba(63,185,80,.04);border:1px solid rgba(63,185,80,.12)">
+    <strong>核心问题：</strong>没有"先手动跑通→再脚本化→再规则化→最后自主化"的路径意识。想一步跳到AI全自主。
+    </div>
+  </div></div>
+</div>
+
+<!-- ==================== 案例 ==================== -->
+<div class="cp-section-hd"><span class="cp-flag">📋</span> 案例 — 3个阶段的真实演进</div>
+
+<div class="case-card">
+  <div class="case-card-head">📰 案例1：每日AI新闻采集</div>
+  <div class="case-card-body">
+    <div style="font-size:.82rem;line-height:1.8">
+      <strong style="color:var(--hot)">阶段0：手动（1小时/天）</strong><br>
+      每天打开10个网站→复制标题和链接→粘贴到文档→让AI写摘要→复制摘要到博客→发布<br><br>
+
+      <strong style="color:var(--accent2)">阶段1：脚本化（15分钟/天）</strong><br>
+      写Python脚本自动爬10个网站→输出到文件→手动让AI写摘要→手动发布<br>
+      <span style="color:var(--muted)">省了：45分钟。你还在指挥每一步，但不用手动爬了</span><br><br>
+
+      <strong style="color:var(--af)">阶段2：规则化（5分钟/天）</strong><br>
+      关键词评分自动排序→高分新闻自动让AI写摘要→摘要自动生成Markdown→你只审阅+发布<br>
+      <span style="color:var(--muted)">省了：55分钟。AI开始自己做小决策了</span><br><br>
+
+      <strong style="color:var(--accent)">阶段3：自主化（2分钟/天）</strong><br>
+      Agent自动采集→分析→生成→推送到GitHub→自动部署。你只看日报摘要，有问题再介入<br>
+      <span style="color:var(--muted)">省了：58分钟。AI自己Plan+Debug了，你只做Review</span>
+    </div>
+    <div style="margin-top:.6rem">
+      <span class="case-metric">提效：30x</span>
+      <span class="case-metric">耗时：60min → 2min</span>
+      <span class="case-metric">演进周期：3个月</span>
+    </div>
+  </div>
+</div>
+
+<div class="case-card">
+  <div class="case-card-head">💻 案例2：代码开发流程</div>
+  <div class="case-card-body">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem;font-size:.78rem">
+      <div style="padding:.6rem;border-radius:6px;background:rgba(248,81,73,.04);border:1px solid rgba(248,81,73,.12)">
+        <strong style="color:var(--danger)">❌ 没Agent化</strong><br>
+        1. 你想需求<br>
+        2. 你写代码（AI补全）<br>
+        3. 你跑测试<br>
+        4. 你修Bug<br>
+        5. 你提交代码<br>
+        <strong>每个环节你都要参与</strong>
+      </div>
+      <div style="padding:.6rem;border-radius:6px;background:rgba(63,185,80,.04);border:1px solid rgba(63,185,80,.12)">
+        <strong style="color:var(--accent2)">✅ Cursor Agent模式</strong><br>
+        1. 你说"加个登录功能"<br>
+        2. Agent自己读代码→Plan<br>
+        3. Agent自己写代码<br>
+        4. Agent自己跑测试<br>
+        5. Agent自己修Bug<br>
+        6. <strong>你只Review结果</strong>
+      </div>
+    </div>
+    <div style="margin-top:.6rem">
+      <span class="case-metric">提效：5-10x</span>
+      <span class="case-metric">你参与度：100% → 20%</span>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 落地 ==================== -->
+<div class="cp-section-hd"><span class="cp-flag">🛠️</span> 落地 — Agent化的3个阶段 + 工具矩阵</div>
+
+<div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">Agent化的3个阶段</div></div>
+<div class="af-tool-body">
+  <div class="af-profit-wrap" style="margin:0">
+  <table class="af-profit">
+  <tr><th>阶段</th><th>做什么</th><th>你参与度</th><th>典型工具</th><th>提效倍率</th></tr>
+  <tr><td><strong>脚本化</strong></td><td>把重复操作录下来，用脚本自动跑</td><td>80%</td><td>Python/Shell/浏览器插件</td><td>3-5x</td></tr>
+  <tr><td><strong>规则化</strong></td><td>设if-else规则，AI根据条件自动决策</td><td>40%</td><td>Dify/Coze/n8n/Zapier</td><td>10-50x</td></tr>
+  <tr><td><strong>自主化</strong></td><td>给Agent目标+工具，它自己Plan+Debug</td><td>15-20%</td><td>Cursor Agent/Claude Code/自搭</td><td>50-1000x</td></tr>
+  </table>
+  </div>
+  <br><strong>关键：从脚本化开始，不要直接跳到自主化。每个阶段跑稳了再进阶。</strong>
+</div></div>
+
+<div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">当前可用的Agent工具矩阵</div></div>
+<div class="af-tool-body">
+  <div class="af-profit-wrap" style="margin:0">
+  <table class="af-profit">
+  <tr><th>工具</th><th>类型</th><th>能力</th><th>适合</th><th>上手难度</th></tr>
+  <tr><td><strong>Cursor Agent</strong></td><td>编程Agent</td><td>读代码→Plan→写→Debug→测试</td><td>软件开发</td><td>⭐ 低</td></tr>
+  <tr><td><strong>Claude Code</strong></td><td>编程Agent</td><td>终端Agent，多文件改写</td><td>全栈项目</td><td>⭐⭐ 中</td></tr>
+  <tr><td><strong>Dify</strong></td><td>工作流Agent</td><td>可视化编排AI流程</td><td>业务自动化</td><td>⭐ 低</td></tr>
+  <tr><td><strong>Coze</strong></td><td>工作流Agent</td><td>字节出品，插件丰富</td><td>内容/客服</td><td>⭐ 低</td></tr>
+  <tr><td><strong>n8n</strong></td><td>通用Agent</td><td>连接200+服务的自动化</td><td>跨系统联动</td><td>⭐⭐ 中</td></tr>
+  <tr><td><strong>自搭脚本</strong></td><td>定制Agent</td><td>Python+API，完全自由</td><td>任意场景</td><td>⭐⭐⭐ 高</td></tr>
+  </table>
+  </div>
+</div></div>
+
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">哪些工作适合Agent化</div></div>
+  <div class="af-tool-body">
+    <div class="af-profit-wrap" style="margin:0">
+    <table class="af-profit">
+    <tr><th>适合Agent化 ✅</th><th>不适合Agent化 ❌</th></tr>
+    <tr><td>重复性高（每天/每周做同样的）</td><td>一次性任务（只做一次的）</td></tr>
+    <tr><td>规则明确（有if-else可描述的）</td><td>需要创意判断（审美、策略）</td></tr>
+    <tr><td>输入输出明确（有格式的数据）</td><td>模糊需求（"做得好看一点"）</td></tr>
+    <tr><td>出错可回滚（可撤销的操作）</td><td>不可逆操作（删除、发送、发布）</td></tr>
+    <tr><td>量大但单次简单（批量处理）</td><td>量少但单次复杂（关键决策）</td></tr>
+    </table>
+    </div>
+    <br><strong>原则：先Agent化最重复、最简单、最稳定的20%，再逐步扩展。</strong>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">Agent化的起步Checklist</div></div>
+  <div class="af-tool-body">
+    <ul>
+      <li><strong>1. 手动跑通了吗？</strong>你自己都没跑通的事，Agent也跑不通</li>
+      <li><strong>2. 步骤写下来了吗？</strong>写出每一步操作→才能变成脚本</li>
+      <li><strong>3. 哪些步骤最重复？</strong>从最重复的开始自动化</li>
+      <li><strong>4. 出错了怎么办？</strong>定义错误处理：重试？跳过？通知人？</li>
+      <li><strong>5. 怎么知道它跑对了？</strong>定义验收：每日抽查？自动检测？</li>
+    </ul>
+    <strong>5个问题都能回答 → 可以开始Agent化。答不上来 → 先手动跑稳。</strong>
+  </div></div>
+</div>
+
+<!-- ==================== 闭环 ==================== -->
+<div class="cp-section-hd"><span class="cp-flag">🔄</span> 闭环 — Agent化的5大原则 + 演进路线</div>
+
+<div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">Agent化的5大原则</div></div>
+<div class="af-tool-body">
+  <div class="af-profit-wrap" style="margin:0">
+  <table class="af-profit">
+  <tr><th>#</th><th>原则</th><th>为什么</th><th>违反的后果</th></tr>
+  <tr><td><strong>1</strong></td><td>先手动跑通，再自动化</td><td>你自己没跑通=规则不确定</td><td>Agent按错误规则跑→错误被放大</td></tr>
+  <tr><td><strong>2</strong></td><td>保留人审节点</td><td>100%自动=100%可能出错没人管</td><td>错误积累数天才发现</td></tr>
+  <tr><td><strong>3</strong></td><td>可观测性</td><td>出了问题要能追溯</td><td>Agent默默输出错误结果</td></tr>
+  <tr><td><strong>4</strong></td><td>优雅降级</td><td>Agent出错时自动回退安全状态</td><td>Agent崩溃→整个流程停摆</td></tr>
+  <tr><td><strong>5</strong></td><td>渐进式</td><td>先稳20%→再扩50%→最后80%</td><td>一步到位→处处不稳→全盘放弃</td></tr>
+  </table>
+  </div>
+  <br><strong>80%自动化+20%人工审核 = 最优解。追求100%自动化是过度工程。</strong>
+</div></div>
+
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">Agent化的演进闭环</div></div>
+  <div class="af-tool-body">
+    <div style="display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;justify-content:center;font-size:.82rem;font-weight:600;margin:.5rem 0">
+      <span style="padding:.3rem .6rem;border-radius:6px;background:rgba(63,185,80,.08);border:1px solid rgba(63,185,80,.18);color:var(--accent2)">① 手动跑通</span>
+      <span style="color:var(--muted)">→</span>
+      <span style="padding:.3rem .6rem;border-radius:6px;background:rgba(88,166,255,.08);border:1px solid rgba(88,166,255,.18);color:var(--accent)">② 脚本化最重复的</span>
+      <span style="color:var(--muted)">→</span>
+      <span style="padding:.3rem .6rem;border-radius:6px;background:rgba(249,115,22,.08);border:1px solid rgba(249,115,22,.18);color:var(--af)">③ 加规则自动决策</span>
+      <span style="color:var(--muted)">→</span>
+      <span style="padding:.3rem .6rem;border-radius:6px;background:rgba(167,139,250,.08);border:1px solid rgba(167,139,250,.18);color:var(--af3)">④ Agent自主执行</span>
+      <span style="color:var(--muted)">→</span>
+      <span style="padding:.3rem .6rem;border-radius:6px;background:rgba(210,153,34,.08);border:1px solid rgba(210,153,34,.18);color:var(--warn)">⑤ 监控+人审</span>
+    </div>
+    <br>
+    <strong>每个阶段跑稳1-2周再进阶。</strong>急不得。Agent化的失败90%是因为跳阶段。
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">Agent化的里程碑</div></div>
+  <div class="af-tool-body">
+    <div class="af-profit-wrap" style="margin:0">
+    <table class="af-profit">
+    <tr><th>阶段</th><th>里程碑</th><th>验收标准</th><th>典型时长</th></tr>
+    <tr><td>脚本化</td><td>最重复的3个操作自动化</td><td>脚本跑7天无错误</td><td>1-2周</td></tr>
+    <tr><td>规则化</td><td>关键决策点AI自动判断</td><td>AI决策准确率>85%</td><td>2-4周</td></tr>
+    <tr><td>自主化</td><td>Agent端到端自动执行</td><td>人审通过率>90%</td><td>1-3月</td></tr>
+    </table>
+    </div>
+    <br><strong>不要对标大公司的Agent系统。你的目标是：自己1个人的效率 > 别人5个人的团队。</strong>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">人审节点的设置原则</div></div>
+  <div class="af-tool-body">
+    <strong>不是每个环节都需要人审，但这些必须：</strong><br>
+    <ul>
+      <li><strong>对外发布前：</strong>发出去改不了的内容（文章、视频、邮件）必须人审</li>
+      <li><strong>金额相关：</strong>涉及支付、退款的操作必须人审</li>
+      <li><strong>数据删除：</strong>不可逆操作必须人审</li>
+      <li><strong>首次运行：</strong>新Agent前3次运行必须人审，确认无系统性错误</li>
+    </ul>
+    <strong>其余环节可以自动，但必须可观测——出了问题能在1小时内发现。</strong>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">Agent化的3个层级（组织版）</div></div>
+  <div class="af-tool-body">
+    <ul>
+      <li><strong>Lv.1 个人Agent：</strong>自动化你自己的重复工作。→ 1人效率 = 3人</li>
+      <li><strong>Lv.2 团队Agent：</strong>打通团队成员间的数据流转。→ 3人效率 = 10人</li>
+      <li><strong>Lv.3 产品Agent：</strong>Agent本身就是产品，服务外部用户。→ 1人做出1个产品</li>
+    </ul>
+    <strong>先从Lv.1开始。能把自己的效率提3倍，再去想团队和产品。</strong>
+  </div></div>
+</div>
+
+<!-- 底部导航 -->
+<div style="margin-top:2rem;padding:1rem;border-radius:10px;background:var(--card);border:1px solid var(--border);text-align:center">
+  <div style="font-size:.82rem;color:var(--muted);margin-bottom:.5rem">AI第一思考 — 四大根基能力</div>
+  <div style="display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap">
+    <a href="ask.html" style="padding:.4rem .8rem;border-radius:6px;background:rgba(88,166,255,.1);color:var(--accent);font-weight:600;font-size:.85rem;text-decoration:none;border:1px solid rgba(88,166,255,.2)">💬 Ask</a>
+    <a href="plan.html" style="padding:.4rem .8rem;border-radius:6px;background:rgba(249,115,22,.1);color:var(--af);font-weight:600;font-size:.85rem;text-decoration:none;border:1px solid rgba(249,115,22,.2)">🗺️ Plan</a>
+    <a href="debug.html" style="padding:.4rem .8rem;border-radius:6px;background:rgba(210,153,34,.1);color:var(--warn);font-weight:600;font-size:.85rem;text-decoration:none;border:1px solid rgba(210,153,34,.2)">🔧 Debug</a>
+    <a href="agent.html" style="padding:.4rem .8rem;border-radius:6px;background:rgba(63,185,80,.1);color:var(--accent2);font-weight:600;font-size:.85rem;text-decoration:none;border:1px solid rgba(63,185,80,.2)">🤖 Agent</a>
+  </div>
+</div>
+
+<div class="cp-footer">
+      <p class="cp-updated-line"><span class="cp-updated">最后更新：2026-06-22</span></p>
+  <p>Agent — 从你做到AI自己跑 · AI第一思考</p>
+  <p><a href="index.html">← AINav 首页</a> · <a href="free-tier.html">🆓 免费额度</a> · <a href="token-optimization.html">Token优化</a> · <a href="thinking-framework.html">AI第一思考总览</a></p>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var saved=localStorage.getItem('theme')||'dark';
+  document.documentElement.setAttribute('data-theme',saved);
+  document.querySelectorAll('.theme-btn').forEach(function(b){
+    b.classList.toggle('is-active',b.getAttribute('data-theme-set')===saved);
+  });
+  document.querySelectorAll('.theme-btn').forEach(function(b){
+    b.addEventListener('click',function(){
+      var t=b.getAttribute('data-theme-set');
+      document.documentElement.setAttribute('data-theme',t);
+      localStorage.setItem('theme',t);
+      document.querySelectorAll('.theme-btn').forEach(function(x){x.classList.toggle('is-active',x.getAttribute('data-theme-set')===t)});
+    });
+  });
+})();
+</script>
+</body>
+</html>

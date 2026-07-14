@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Hardware Plan 硬件横评 — AINav</title>
+<meta name="description" content="AI硬件产品横向对比：AI眼镜、AI手机、AI PC、AI耳机、AI穿戴、AI陪伴，价格功能特性对比与选购指南。">
+<link rel="canonical" href="https://aiv123.com/hardware-plan.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI Hardware Plan 硬件横评">
+<meta property="og:description" content="AI硬件产品横向对比：价格、功能、特性，场景推荐与趋势分析。">
+<meta property="og:url" content="https://aiv123.com/hardware-plan.html">
+<meta property="og:site_name" content="AINav">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%230969da'/><text x='50' y='72' font-size='60' text-anchor='middle' fill='white' font-family='system-ui' font-weight='700'>AI</text></svg>">
+<style>
+:root,html[data-theme="dark"]{--bg:#0f1419;--panel:#151b23;--card:#1c2430;--border:#2d3848;--text:#e6edf3;--muted:#8b9cb3;--accent:#58a6ff;--accent2:#3fb950;--warn:#d29922;--danger:#f85149;--hot:#ff6b6b;--overseas:#a78bfa;--hw:#f97316;--hw2:#06b6d4}
+html[data-theme="light"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;--text:#1f2328;--muted:#59636e;--accent:#0969da;--accent2:#1a7f37;--warn:#9a6700;--danger:#cf222e;--hot:#e53935;--overseas:#7c3aed;--hw:#ea580c;--hw2:#0891b2}
+@media(prefers-color-scheme:light){html[data-theme="system"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;--text:#1f2328;--muted:#59636e;--accent:#0969da;--accent2:#1a7f37;--warn:#9a6700;--danger:#cf222e;--hot:#e53935;--overseas:#7c3aed;--hw:#ea580c;--hw2:#0891b2}}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.cp-top{padding:.75rem 1rem;border-bottom:1px solid var(--border);background:var(--panel);position:sticky;top:0;z-index:10}
+.cp-top-inner{max-width:76rem;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;justify-content:space-between}
+.cp-nav a{font-weight:600;margin-right:1rem;font-size:.88rem}
+.cp-toolbar{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center}
+.theme-btn{font-size:.72rem;padding:.2rem .5rem;border-radius:5px;border:1px solid var(--border);background:var(--card);color:var(--muted);cursor:pointer;font-family:inherit}
+.theme-btn.is-active{color:var(--accent);border-color:var(--accent);font-weight:600}
+.cp-wrap{max-width:76rem;margin:0 auto;padding:1rem}h1{font-size:1.35rem;margin:0 0 .3rem}
+.cp-subtitle{font-size:.88rem;color:var(--muted);margin-bottom:1rem}
+.cp-updated{font-size:.76rem;color:var(--muted);margin-bottom:1.2rem}
+.cp-section-hd{font-size:1.1rem;font-weight:700;margin:1.8rem 0 .8rem;padding-bottom:.3rem;border-bottom:2px solid var(--border);display:flex;align-items:center;gap:.5rem}
+.cp-section-hd .cp-flag{font-size:1.15rem}.cp-section-hd.hw-hd{border-bottom-color:var(--hw)}
+.cp-legend{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:1.2rem;font-size:.82rem}
+.cp-legend-item{display:flex;align-items:center;gap:.3rem}
+.cp-badge{display:inline-block;padding:.1rem .45rem;border-radius:4px;font-size:.72rem;font-weight:600}
+.badge-hot{background:rgba(255,107,107,.15);color:var(--hot);border:1px solid rgba(255,107,107,.3)}
+.badge-new{background:rgba(63,185,80,.15);color:var(--accent2);border:1px solid rgba(63,185,80,.3)}
+.badge-rec{background:rgba(88,166,255,.15);color:var(--accent);border:1px solid rgba(88,166,255,.3)}
+.badge-overseas{background:rgba(167,139,250,.15);color:var(--overseas);border:1px solid rgba(167,139,250,.3)}
+.badge-cn{background:rgba(249,115,22,.12);color:var(--hw);border:1px solid rgba(249,115,22,.25)}
+.hw-tabs{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.2rem}
+.hw-tab{padding:.35rem .75rem;border-radius:6px;border:1px solid var(--border);background:var(--card);color:var(--muted);font-size:.82rem;font-weight:600;cursor:pointer;font-family:inherit;transition:all .15s}
+.hw-tab:hover{border-color:var(--hw);color:var(--hw)}
+.hw-tab.is-active{background:rgba(249,115,22,.1);border-color:var(--hw);color:var(--hw)}
+.hw-products{display:grid;grid-template-columns:1fr;gap:1rem}
+@media(min-width:52rem){.hw-products{grid-template-columns:1fr 1fr}}
+.hw-card{border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden;transition:border-color .15s}
+.hw-card:hover{border-color:var(--hw)}
+.hw-card-head{padding:.7rem 1rem;border-bottom:1px solid var(--border);display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .6rem}
+.hw-card-name{font-size:1rem;font-weight:700;flex:1 1 auto}.hw-card-name a{color:var(--text)}.hw-card-name a:hover{color:var(--hw);text-decoration:none}
+.hw-card-price{font-size:.92rem;font-weight:700;color:var(--hw);white-space:nowrap}
+.hw-card-body{padding:.7rem 1rem;font-size:.82rem;line-height:1.7}
+.hw-card-body ul{padding-left:1.1rem;margin:.3rem 0}.hw-card-body li{margin-bottom:.25rem}.hw-card-body strong{color:var(--hw)}
+.hw-specs{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.5rem}
+.hw-spec{font-size:.7rem;padding:.12rem .4rem;border-radius:3px;background:rgba(6,182,212,.08);border:1px solid rgba(6,182,212,.18);color:var(--hw2);font-weight:500}
+.hw-spec.s-good{background:rgba(63,185,80,.08);border-color:rgba(63,185,80,.2);color:var(--accent2)}
+.hw-spec.s-warn{background:rgba(210,153,34,.08);border-color:rgba(210,153,34,.2);color:var(--warn)}
+.hw-spec.s-bad{background:rgba(248,81,73,.06);border-color:rgba(248,81,73,.15);color:var(--danger);opacity:.8}
+.hw-card-foot{padding:.4rem 1rem .6rem;font-size:.76rem;color:var(--muted);border-top:1px solid var(--border)}
+.cp-matrix-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:8px;background:var(--card);margin-bottom:1.5rem}
+.cp-matrix{width:100%;border-collapse:collapse;font-size:.78rem}
+.cp-matrix th,.cp-matrix td{padding:.35rem .5rem;border:1px solid var(--border);text-align:center;white-space:nowrap}
+.cp-matrix th{background:var(--panel);font-weight:600;color:var(--muted);font-size:.72rem;position:sticky;top:0}
+.cp-matrix th:first-child,.cp-matrix td:first-child{text-align:left;position:sticky;left:0;background:var(--card);z-index:1;font-weight:600}
+.cp-matrix th:first-child{z-index:2;background:var(--panel)}
+.cp-matrix .yes{color:var(--accent2);font-weight:700}.cp-matrix .no{color:var(--muted);opacity:.4}.cp-matrix .partial{color:var(--warn);font-weight:600}
+.cp-bar-chart{margin-bottom:1.5rem}
+.cp-bar-row{display:flex;align-items:center;gap:.5rem;margin-bottom:.35rem;font-size:.78rem}
+.cp-bar-label{width:8rem;text-align:right;color:var(--muted);flex-shrink:0;font-size:.76rem}
+.cp-bar-track{flex:1;height:1.1rem;background:var(--border);border-radius:4px;overflow:hidden}
+.cp-bar-fill{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:.4rem;font-size:.7rem;font-weight:600;color:#fff;white-space:nowrap}
+.cp-bar-fill.bar-hw{background:linear-gradient(90deg,#f97316,#ea580c)}
+.cp-bar-fill.bar-hw2{background:linear-gradient(90deg,#06b6d4,#0891b2)}
+.cp-bar-fill.bar-hot{background:linear-gradient(90deg,#ff6b6b,#e53935)}
+.cp-notice{margin-top:2rem;padding:0;border:1px solid rgba(210,153,34,.35);border-radius:10px;background:var(--card);overflow:hidden}
+.cp-notice-head{padding:.65rem 1rem;border-bottom:1px solid rgba(210,153,34,.2);font-weight:700;font-size:1rem;background:rgba(210,153,34,.06)}
+.cp-notice-body{padding:.75rem 1rem;font-size:.82rem;line-height:1.75}
+.cp-notice-body ul{padding-left:1.2rem;margin:.5rem 0 0}.cp-notice-body li{margin-bottom:.45rem}.cp-notice-body strong{color:var(--warn)}
+.cp-faq{margin-top:2rem;border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden}
+.cp-faq-head{padding:.65rem 1rem;border-bottom:1px solid var(--border);font-weight:700;font-size:1rem}
+.cp-faq-item{border-bottom:1px solid var(--border)}.cp-faq-item:last-child{border-bottom:none}
+.cp-faq-q{padding:.6rem 1rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:.88rem;user-select:none;transition:background .15s}
+.cp-faq-q:hover{background:rgba(249,115,22,.04)}.cp-faq-q .cp-faq-arrow{font-size:.72rem;color:var(--muted);transition:transform .2s;flex-shrink:0;margin-left:.5rem}
+.cp-faq-item.is-open .cp-faq-q .cp-faq-arrow{transform:rotate(180deg)}
+.cp-faq-a{padding:0 1rem;max-height:0;overflow:hidden;transition:max-height .25s ease,padding .25s ease;font-size:.82rem;line-height:1.7;color:var(--muted)}
+.cp-faq-item.is-open .cp-faq-a{max-height:20rem;padding:0 1rem .75rem}.cp-faq-a strong{color:var(--text)}
+.hw-section{display:none}.hw-section.is-active{display:block}
+.cp-footer{max-width:76rem;margin:2rem auto 1rem;padding:0 1rem;font-size:.76rem;color:var(--muted);text-align:center}.cp-footer a{color:var(--muted)}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2B8FBWRX4N"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-2B8FBWRX4N');</script>
+</head>
+<body>
+<div class="cp-top"><div class="cp-top-inner">
+  <div class="cp-nav" data-plan-nav></div>
+  <div class="cp-toolbar">
+    <button class="theme-btn" data-theme-set="system">跟随系统</button><button class="theme-btn" data-theme-set="light">浅色</button><button class="theme-btn is-active" data-theme-set="dark">深色</button>
+  </div>
+</div></div>
+
+<div class="cp-wrap">
+<h1>🕶️ AI Hardware Plan 硬件横评</h1>
+<p class="cp-subtitle">AI硬件产品一站式对比：价格、功能、特性、场景推荐，帮你选出最值得入手的AI硬件。</p>
+<p class="cp-updated">最后更新：2026-06-26 · 价格以官网/电商实时为准</p>
+<div class="cp-legend">
+  <div class="cp-legend-item"><span class="cp-badge badge-hot">🔥 热门</span></div>
+  <div class="cp-legend-item"><span class="cp-badge badge-new">✨ 新品</span></div>
+  <div class="cp-legend-item"><span class="cp-badge badge-rec">👍 推荐</span></div>
+  <div class="cp-legend-item"><span class="cp-badge badge-cn">🇨🇳 国产</span></div>
+  <div class="cp-legend-item"><span class="cp-badge badge-overseas">🌍 海外</span></div>
+</div>
+<div class="hw-tabs">
+  <button class="hw-tab is-active" data-section="glasses">👓 AI眼镜</button>
+  <button class="hw-tab" data-section="phone">📱 AI手机</button>
+  <button class="hw-tab" data-section="pc">💻 AI PC</button>
+  <button class="hw-tab" data-section="earbuds">🎧 AI耳机</button>
+  <button class="hw-tab" data-section="wearable">💍 AI穿戴</button>
+  <button class="hw-tab" data-section="companion">🤖 AI陪伴</button>
+</div>
+
+<!-- ===== 1. AI眼镜 ===== -->
+<div class="hw-section is-active" id="sec-glasses">
+<div class="cp-section-hd hw-hd"><span class="cp-flag">👓</span> AI眼镜 — 2026最火硬件赛道</div>
+<div class="hw-products">
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name"><a href="https://www.meta.com/smart-glasses/" target="_blank" rel="noopener noreferrer">Ray-Ban Meta</a> <span class="cp-badge badge-hot">🔥</span> <span class="cp-badge badge-overseas">🌍</span></div><div class="hw-card-price">¥2,299起</div></div>
+  <div class="hw-card-body"><ul><li><strong>AI：</strong>Meta AI语音助手，"Hey Meta"随时提问</li><li><strong>拍摄：</strong>1200万像素第一视角拍照/录像，直播推流</li><li><strong>音频：</strong>开放式扬声器+5麦克风阵列</li><li><strong>识别：</strong>实时物体/文字/翻译识别</li><li><strong>续航：</strong>约4小时，充电盒充8次</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-good">AI语音</span><span class="hw-spec s-good">多模态</span><span class="hw-spec s-good">直播</span><span class="hw-spec s-warn">国内AI受限</span><span class="hw-spec s-warn">无AR显示</span></div></div>
+  <div class="hw-card-foot">⚠️ 国内需VPN用Meta AI，基础拍摄/音频正常。全球销量700万+</div></div>
+
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name"><a href="https://www.rokid.com/" target="_blank" rel="noopener noreferrer">Rokid Glasses</a> <span class="cp-badge badge-hot">🔥</span> <span class="cp-badge badge-cn">🇨🇳</span></div><div class="hw-card-price">¥2,299起</div></div>
+  <div class="hw-card-body"><ul><li><strong>AI：</strong>通义千问大模型，中文AI原生支持</li><li><strong>显示：</strong>Micro-LED+衍射光波导AR显示</li><li><strong>交互：</strong>语音+触控+手势，中文自然语言操控</li><li><strong>拍摄：</strong>第一视角摄像头，AI实时识别翻译</li><li><strong>续航：</strong>约3-4小时</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-good">AR显示</span><span class="hw-spec s-good">中文AI原生</span><span class="hw-spec s-good">手势交互</span><span class="hw-spec s-warn">重量略重</span></div></div>
+  <div class="hw-card-foot">✅ 国内最推荐的AI眼镜，中文体验领先</div></div>
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name"><a href="https://www.inmoxr.com/" target="_blank" rel="noopener noreferrer">INMO GO3</a> <span class="cp-badge badge-hot">🔥</span> <span class="cp-badge badge-cn">🇨🇳</span></div><div class="hw-card-price">¥2,699起</div></div>
+  <div class="hw-card-body"><ul><li><strong>AI：</strong>通义千问 + INMO AI 助手，轻量 AR 信息提示</li><li><strong>显示：</strong>单色/全彩光波导，日常信息叠加</li><li><strong>拍摄：</strong>第一视角拍照，AI 识物问答</li><li><strong>续航：</strong>约 4–5 小时</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-good">轻薄</span><span class="hw-spec s-good">中文AI</span><span class="hw-spec s-good">性价比</span><span class="hw-spec s-warn">生态较新</span></div></div>
+  <div class="hw-card-foot">2026 国产 AI 眼镜热门款，适合日常佩戴尝鲜</div></div>
+
+
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name"><a href="https://www.xreal.com/" target="_blank" rel="noopener noreferrer">XREAL Air 2 Ultra</a> <span class="cp-badge badge-cn">🇨🇳</span></div><div class="hw-card-price">¥3,999起</div></div>
+  <div class="hw-card-body"><ul><li><strong>AI：</strong>6DoF空间计算+AI空间感知</li><li><strong>显示：</strong>Sony Micro-OLED，130寸虚拟屏，120Hz</li><li><strong>交互：</strong>眼动+手势+语音三模</li><li><strong>连接：</strong>USB-C直连手机/PC</li><li><strong>续航：</strong>约3小时，需外接供电</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-good">空间显示顶级</span><span class="hw-spec s-good">6DoF</span><span class="hw-spec s-warn">独立APP少</span><span class="hw-spec s-warn">需外接设备</span></div></div>
+  <div class="hw-card-foot">AR/VR体验优先，独立AI能力偏弱</div></div>
+
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name"><a href="https://dueros.baidu.com/" target="_blank" rel="noopener noreferrer">小度AI眼镜</a> <span class="cp-badge badge-new">✨</span> <span class="cp-badge badge-cn">🇨🇳</span></div><div class="hw-card-price">¥1,999起（预估）</div></div>
+  <div class="hw-card-body"><ul><li><strong>AI：</strong>文心大模型，全球首款中文大模型原生AI眼镜</li><li><strong>拍摄：</strong>第一视角高清拍摄，边走边问</li><li><strong>识别：</strong>物体/植物/菜品卡路里识别</li><li><strong>续航：</strong>约5小时</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-good">文心大模型</span><span class="hw-spec s-good">中文AI最强</span><span class="hw-spec s-good">续航长</span><span class="hw-spec s-warn">新品待验证</span></div></div>
+  <div class="hw-card-foot">百度回归硬件，中文AI突出，¥1,999最低门槛</div></div>
+
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name"><a href="https://www.tcl.com/" target="_blank" rel="noopener noreferrer">雷鸟 X3 Pro</a> <span class="cp-badge badge-cn">🇨🇳</span></div><div class="hw-card-price">¥2,599起</div></div>
+  <div class="hw-card-body"><ul><li><strong>AI：</strong>通义千问+自研AI助手</li><li><strong>显示：</strong>全彩Micro-LED光波导，AR信息叠加</li><li><strong>拍摄：</strong>AI拍摄+实时字幕翻译</li><li><strong>续航：</strong>约4小时</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-good">AR全彩</span><span class="hw-spec s-good">实时翻译</span><span class="hw-spec s-warn">生态偏少</span></div></div>
+  <div class="hw-card-foot">TCL旗下，性价比不错，AR显示尝鲜之选</div></div>
+
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name"><a href="https://www.meta.com/smart-glasses/" target="_blank" rel="noopener noreferrer">Ray-Ban Meta Display</a> <span class="cp-badge badge-new">✨</span> <span class="cp-badge badge-overseas">🌍</span></div><div class="hw-card-price">¥4,999起（预估）</div></div>
+  <div class="hw-card-body"><ul><li><strong>AI：</strong>Meta AI + Llama多模态，实时AR信息叠加</li><li><strong>显示：</strong>全新AR光学，通知/导航/翻译实时叠加</li><li><strong>交互：</strong>语音+手势，神经腕带可选</li><li><strong>续航：</strong>约3-4小时</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-good">AR+AI融合</span><span class="hw-spec s-good">Meta生态</span><span class="hw-spec s-warn">国内受限</span><span class="hw-spec s-bad">价格高</span></div></div>
+  <div class="hw-card-foot">2026新发布，Ray-Ban Meta的AR升级版</div></div>
+</div>
+</div>
+
+<!-- ===== 2. AI手机 ===== -->
+<div class="hw-section" id="sec-phone">
+<div class="cp-section-hd hw-hd"><span class="cp-flag">📱</span> AI手机 — AI能力成为核心卖点</div>
+<div class="hw-products">
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name"><a href="https://www.oppo.com/" target="_blank" rel="noopener noreferrer">OPPO Find X8 Pro</a> <span class="cp-badge badge-rec">👍</span> <span class="cp-badge badge-cn">🇨🇳</span></div><div class="hw-card-price">¥4,999起</div></div>
+  <div class="hw-card-body"><ul><li><strong>AI消除：</strong>极光引擎，消除+光影一步到位，⭐5/5</li><li><strong>AI助手：</strong>一键闪记（30分钟视频→3-5要点），⭐5/5</li><li><strong>系统：</strong>ColorOS 16，6年流畅保障</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-good">AI消除最强</span><span class="hw-spec s-good">闪记功能</span><span class="hw-spec s-good">综合AI最优</span></div></div>
+  <div class="hw-card-foot">2026 AI综合最优解</div></div>
+
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name"><a href="https://www.huawei.com/" target="_blank" rel="noopener noreferrer">华为 Mate 70 Pro+</a> <span class="cp-badge badge-hot">🔥</span> <span class="cp-badge badge-cn">🇨🇳</span></div><div class="hw-card-price">¥6,499起</div></div>
+  <div class="hw-card-body"><ul><li><strong>AI消除：</strong>原生弱，需第三方APP，⭐2.5/5</li><li><strong>AI助手：</strong>小艺智能体，跨设备协同最强，⭐4/5</li><li><strong>生态：</strong>鸿蒙全场景：手机+平板+手表+PC+车机</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-good">生态协同最强</span><span class="hw-spec s-good">隐私保护</span><span class="hw-spec s-bad">AI消除弱</span></div></div>
+  <div class="hw-card-foot">生态王者，需接受AI消除短板</div></div>
+
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name"><a href="https://www.mi.com/" target="_blank" rel="noopener noreferrer">小米 15 Ultra</a> <span class="cp-badge badge-cn">🇨🇳</span></div><div class="hw-card-price">¥4,999起</div></div>
+  <div class="hw-card-body"><ul><li><strong>AI助手：</strong>超级小爱"一步直达"，上下文+跨应用跳转，⭐4.5/5</li><li><strong>AI消除：</strong>较好，距ColorOS有差距，⭐3.5/5</li><li><strong>系统：</strong>HyperOS 3，米家生态</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-good">跨应用AI</span><span class="hw-spec s-good">小爱进化大</span><span class="hw-spec s-warn">消除非顶级</span></div></div>
+  <div class="hw-card-foot">AI助手进步最大，跨应用体验领先</div></div>
+
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name"><a href="https://www.apple.com/iphone/" target="_blank" rel="noopener noreferrer">iPhone 17 Pro Max</a> <span class="cp-badge badge-new">✨</span> <span class="cp-badge badge-overseas">🌍</span></div><div class="hw-card-price">¥9,999起（预估）</div></div>
+  <div class="hw-card-body"><ul><li><strong>AI：</strong>Apple Intelligence，端侧优先+Private Cloud Compute</li><li><strong>功能：</strong>Writing Tools、Genmoji、Image Playground、Siri升级</li><li><strong>隐私：</strong>端侧计算优先，行业标杆</li><li>⚠️国行：Apple Intelligence功能阉割明显</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-good">隐私架构</span><span class="hw-spec s-good">端侧AI</span><span class="hw-spec s-bad">国行阉割</span><span class="hw-spec s-bad">价格高</span></div></div>
+  <div class="hw-card-foot">⚠️ 国行AI功能缩水严重，海外版体验完整</div></div>
+
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name"><a href="https://www.samsung.com/" target="_blank" rel="noopener noreferrer">三星 Galaxy S26 Ultra</a> <span class="cp-badge badge-overseas">🌍</span></div><div class="hw-card-price">¥8,999起</div></div>
+  <div class="hw-card-body"><ul><li><strong>AI：</strong>即圈即搜、实时翻译、通话翻译，⭐4/5</li><li><strong>商务：</strong>实时翻译优秀，适合跨国沟通</li><li>⚠️国行：部分与谷歌绑定功能受限</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-good">实时翻译</span><span class="hw-spec s-good">即圈即搜</span><span class="hw-spec s-warn">国行部分受限</span></div></div>
+  <div class="hw-card-foot">商务/出国场景首选</div></div>
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name"><a href="https://store.google.com/" target="_blank" rel="noopener noreferrer">Google Pixel 10 Pro</a> <span class="cp-badge badge-new">✨</span> <span class="cp-badge badge-overseas">🌍</span></div><div class="hw-card-price">¥7,999起（参考）</div></div>
+  <div class="hw-card-body"><ul><li><strong>AI：</strong>Gemini Nano 端侧 + 云端 Gemini 3.1，Call Screen / 圈选搜索</li><li><strong>拍照：</strong>AI 最佳取景、魔术橡皮擦、视频增强</li><li><strong>优势：</strong>原生 Android AI 体验最完整</li><li>⚠️国行：需海淘/港版，国内服务受限</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-good">Gemini原生</span><span class="hw-spec s-good">端侧AI</span><span class="hw-spec s-good">拍照AI</span><span class="hw-spec s-warn">国内难买</span></div></div>
+  <div class="hw-card-foot">海外 Android AI 标杆，与矩阵「Pixel」行对应</div></div>
+
+
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name"><a href="https://www.honor.com/" target="_blank" rel="noopener noreferrer">荣耀 Magic8 Pro</a> <span class="cp-badge badge-cn">🇨🇳</span></div><div class="hw-card-price">¥4,699起</div></div>
+  <div class="hw-card-body"><ul><li><strong>AI：</strong>Magic Live场景感知，隐私计算继承华为</li><li><strong>系统：</strong>MagicOS 10，华为生态外的高质量替代</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-good">隐私计算</span><span class="hw-spec s-good">长期更新</span><span class="hw-spec s-warn">场景识别不稳</span></div></div>
+  <div class="hw-card-foot">华为生态外的优质替代</div></div>
+</div>
+</div>
+
+<!-- ===== 3. AI PC ===== -->
+<div class="hw-section" id="sec-pc">
+<div class="cp-section-hd hw-hd"><span class="cp-flag">💻</span> AI PC — NPU成为标配</div>
+<div class="hw-products">
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name"><a href="https://www.apple.com/macbook-pro/" target="_blank" rel="noopener noreferrer">MacBook Pro M4 Max</a> <span class="cp-badge badge-rec">👍</span> <span class="cp-badge badge-overseas">🌍</span></div><div class="hw-card-price">¥19,999起</div></div>
+  <div class="hw-card-body"><ul><li><strong>NPU：</strong>Apple Neural Engine 16核，38 TOPS</li><li><strong>AI：</strong>Apple Intelligence全功能、Writing Tools、Image Playground</li><li><strong>开发：</strong>MLX框架+Core ML，本地7B模型推理最快</li><li><strong>续航：</strong>22小时+，AI场景约15小时</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-good">端侧AI最强</span><span class="hw-spec s-good">续航顶</span><span class="hw-spec s-good">开发体验</span><span class="hw-spec s-bad">价格高</span></div></div>
+  <div class="hw-card-foot">开发者+AI创作者首选</div></div>
+
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name"><a href="https://www.microsoft.com/en-us/windows/copilot-ai-pcs" target="_blank" rel="noopener noreferrer">Copilot+ PC</a> <span class="cp-badge badge-new">✨</span> <span class="cp-badge badge-overseas">🌍</span></div><div class="hw-card-price">¥6,999起</div></div>
+  <div class="hw-card-body"><ul><li><strong>NPU：</strong>40+ TOPS（骁龙X Elite / AMD Ryzen AI 300）</li><li><strong>AI：</strong>Cocreator 文生图、Live Captions 实时字幕、Click to Do（视地区）</li><li><strong>Copilot：</strong>深度集成系统级AI助手</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-good">NPU算力高</span><span class="hw-spec s-good">Click to Do</span><span class="hw-spec s-good">Windows生态</span><span class="hw-spec s-warn">隐私功能视地区</span></div></div>
+  <div class="hw-card-foot">Windows AI PC标杆，性价比高</div></div>
+
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name"><a href="https://aipc.lenovo.com.cn/" target="_blank" rel="noopener noreferrer">联想 小新Pro 16 AI</a> <span class="cp-badge badge-cn">🇨🇳</span></div><div class="hw-card-price">¥5,999起</div></div>
+  <div class="hw-card-body"><ul><li><strong>NPU：</strong>AMD Ryzen AI 9 H 465，50 TOPS</li><li><strong>AI：</strong>联想小天智能体、AI PPT、AI文档摘要</li><li><strong>端侧：</strong>本地运行轻量大模型，离线可用</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-good">50 TOPS NPU</span><span class="hw-spec s-good">性价比高</span><span class="hw-spec s-good">中文AI</span><span class="hw-spec s-warn">品牌AI生态待成熟</span></div></div>
+  <div class="hw-card-foot">国产AI PC性价比之选，NPU算力领先</div></div>
+
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name"><a href="https://www.thinkpad.com/" target="_blank" rel="noopener noreferrer">ThinkPad T16 Gen 7 AI</a> <span class="cp-badge badge-new">✨</span> <span class="cp-badge badge-cn">🇨🇳</span></div><div class="hw-card-price">¥8,999起</div></div>
+  <div class="hw-card-body"><ul><li><strong>NPU：</strong>50 TOPS（AMD Ryzen AI 300）</li><li><strong>AI：</strong>企业级AI合规、智能会议摘要、AI安全</li><li><strong>安全：</strong>企业级数据隔离，AI推理不出域</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-good">企业安全</span><span class="hw-spec s-good">合规AI</span><span class="hw-spec s-warn">偏商务</span></div></div>
+  <div class="hw-card-foot">企业/商务场景首选</div></div>
+</div>
+</div>
+
+<!-- ===== 4. AI耳机 ===== -->
+<div class="hw-section" id="sec-earbuds">
+<div class="cp-section-hd hw-hd"><span class="cp-flag">🎧</span> AI耳机 — 开放式AI音频新赛道</div>
+<div class="hw-products">
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name"><a href="https://www.olafriend.com/" target="_blank" rel="noopener noreferrer">Ola Friend</a> <span class="cp-badge badge-hot">🔥</span> <span class="cp-badge badge-cn">🇨🇳</span></div><div class="hw-card-price">¥1,199</div></div>
+  <div class="hw-card-body"><ul><li><strong>AI：</strong>豆包大模型，随时语音对话</li><li><strong>形态：</strong>开放式耳挂，长时间无感佩戴</li><li><strong>功能：</strong>AI翻译、英语陪练、知识问答、情感陪伴</li><li><strong>续航：</strong>约8小时+充电盒</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-good">豆包AI</span><span class="hw-spec s-good">开放式舒适</span><span class="hw-spec s-good">翻译陪练</span></div></div>
+  <div class="hw-card-foot">字节出品，AI对话+音频结合最好</div></div>
+
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name"><a href="https://www.iflytek.com/" target="_blank" rel="noopener noreferrer">科大讯飞 AI耳机</a> <span class="cp-badge badge-cn">🇨🇳</span></div><div class="hw-card-price">¥899起</div></div>
+  <div class="hw-card-body"><ul><li><strong>AI：</strong>星火大模型，同传翻译最强</li><li><strong>功能：</strong>实时同传翻译（83种语言）、会议录音摘要</li><li><strong>续航：</strong>约6小时+充电盒</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-good">同传翻译最强</span><span class="hw-spec s-good">会议场景</span><span class="hw-spec s-good">性价比</span></div></div>
+  <div class="hw-card-foot">翻译/会议场景首选</div></div>
+
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name"><a href="https://www.huawei.com/" target="_blank" rel="noopener noreferrer">华为 FreeBuds Pro 4</a> <span class="cp-badge badge-cn">🇨🇳</span></div><div class="hw-card-price">¥1,299</div></div>
+  <div class="hw-card-body"><ul><li><strong>AI：</strong>盘古大模型+小艺语音助手</li><li><strong>功能：</strong>AI通话降噪、实时翻译、会议纪要</li><li><strong>降噪：</strong>智慧动态降噪3.0，业界顶级</li><li><strong>生态：</strong>鸿蒙设备无缝切换</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-good">降噪顶级</span><span class="hw-spec s-good">鸿蒙生态</span><span class="hw-spec s-good">翻译</span></div></div>
+  <div class="hw-card-foot">华为用户首选</div></div>
+
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name"><a href="https://www.apple.com/airpods-pro/" target="_blank" rel="noopener noreferrer">AirPods Pro 3</a> <span class="cp-badge badge-overseas">🌍</span></div><div class="hw-card-price">¥1,899</div></div>
+  <div class="hw-card-body"><ul><li><strong>AI：</strong>Apple Intelligence + H3芯片</li><li><strong>功能：</strong>AI降噪、实时翻译、Siri升级、听力健康</li><li><strong>生态：</strong>苹果全家桶无缝切换</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-good">降噪标杆</span><span class="hw-spec s-good">苹果生态</span><span class="hw-spec s-warn">AI需Apple Intelligence</span></div></div>
+  <div class="hw-card-foot">苹果用户首选，国行AI功能需确认</div></div>
+</div>
+</div>
+
+<!-- ===== 5. AI穿戴 ===== -->
+<div class="hw-section" id="sec-wearable">
+<div class="cp-section-hd hw-hd"><span class="cp-flag">💍</span> AI穿戴 — 戒指/手表/胸针</div>
+<div class="hw-products">
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name"><a href="https://ouraring.com/" target="_blank" rel="noopener noreferrer">Oura Ring 4</a> <span class="cp-badge badge-rec">👍</span> <span class="cp-badge badge-overseas">🌍</span></div><div class="hw-card-price">$349 + $5.99/月订阅</div></div>
+  <div class="hw-card-body"><ul><li><strong>AI：</strong>AI健康洞察，睡眠分析行业最精准</li><li><strong>监测：</strong>心率、血氧、体温、睡眠阶段、HRV</li><li><strong>AI功能：</strong>每日准备度评分、个性化健康建议</li><li><strong>续航：</strong>7天+，无线充电</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-good">睡眠最准</span><span class="hw-spec s-good">无感佩戴</span><span class="hw-spec s-good">7天续航</span><span class="hw-spec s-bad">需月费订阅</span></div></div>
+  <div class="hw-card-foot">健康监测最专业，需海淘</div></div>
+
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name"><a href="https://www.samsung.com/" target="_blank" rel="noopener noreferrer">Samsung Galaxy Ring 2</a> <span class="cp-badge badge-overseas">🌍</span></div><div class="hw-card-price">$299（无订阅费）</div></div>
+  <div class="hw-card-body"><ul><li><strong>AI：</strong>Galaxy AI健康助手，能量评分</li><li><strong>监测：</strong>心率、睡眠、压力、女性健康</li><li><strong>AI：</strong>趋势分析，与Galaxy手机/手表联动</li><li><strong>续航：</strong>7天+</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-good">无订阅费</span><span class="hw-spec s-good">Galaxy生态</span><span class="hw-spec s-good">7天续航</span><span class="hw-spec s-warn">需三星手机</span></div></div>
+  <div class="hw-card-foot">Oura最佳替代，无需订阅</div></div>
+
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name"><a href="https://www.ringconn.com/" target="_blank" rel="noopener noreferrer">RingConn Gen 2</a> <span class="cp-badge badge-cn">🇨🇳</span></div><div class="hw-card-price">¥1,699</div></div>
+  <div class="hw-card-body"><ul><li><strong>AI：</strong>AI健康洞察，无创血糖趋势（首发）</li><li><strong>监测：</strong>心率、血氧、血糖趋势、睡眠、HRV</li><li><strong>续航：</strong>10天+，行业最长</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-good">无创血糖</span><span class="hw-spec s-good">10天续航</span><span class="hw-spec s-good">无订阅费</span><span class="hw-spec s-good">性价比最高</span></div></div>
+  <div class="hw-card-foot">国产黑马，无创血糖+超长续航+无订阅</div></div>
+
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name"><a href="https://www.apple.com/watch/" target="_blank" rel="noopener noreferrer">Apple Watch Ultra 3</a> <span class="cp-badge badge-overseas">🌍</span></div><div class="hw-card-price">¥5,999起</div></div>
+  <div class="hw-card-body"><ul><li><strong>AI：</strong>Apple Intelligence + 双指互触</li><li><strong>AI功能：</strong>AI健康预警、智能通知摘要、Siri离线</li><li><strong>监测：</strong>心电图、血氧、体温、跌倒/车祸检测</li><li><strong>续航：</strong>约36小时/72小时低功耗</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-good">健康监测全面</span><span class="hw-spec s-good">苹果生态</span><span class="hw-spec s-bad">续航短</span><span class="hw-spec s-bad">价格高</span></div></div>
+  <div class="hw-card-foot">苹果生态最佳AI手表</div></div>
+</div>
+</div>
+
+<!-- ===== 6. AI陪伴 ===== -->
+<div class="hw-section" id="sec-companion">
+<div class="cp-section-hd hw-hd"><span class="cp-flag">🤖</span> AI陪伴/玩具 — 千亿新赛道</div>
+<div class="hw-products">
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name"><a href="https://www.doubao.com/" target="_blank" rel="noopener noreferrer">字节 显眼包</a> <span class="cp-badge badge-hot">🔥</span> <span class="cp-badge badge-cn">🇨🇳</span></div><div class="hw-card-price">¥199</div></div>
+  <div class="hw-card-body"><ul><li><strong>AI：</strong>豆包大模型，支持角色定制</li><li><strong>功能：</strong>语音对话、角色扮演、讲故事、回答问题</li><li><strong>交互：</strong>触摸+语音，表情反馈</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-good">¥199极低门槛</span><span class="hw-spec s-good">豆包AI</span><span class="hw-spec s-good">角色定制</span></div></div>
+  <div class="hw-card-foot">入门级AI陪伴，字节出品</div></div>
+
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name">AI桌面宠物 <span class="cp-badge badge-cn">🇨🇳</span></div><div class="hw-card-price">¥699-1,299</div></div>
+  <div class="hw-card-body"><ul><li><strong>AI：</strong>多模态大模型，视觉+语音+触觉融合</li><li><strong>功能：</strong>情绪识别、主动互动、养成型AI</li><li><strong>交互：</strong>触摸+语音+视觉，越用越懂你</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-good">多模态</span><span class="hw-spec s-good">养成型</span><span class="hw-spec s-warn">生态初期</span></div></div>
+  <div class="hw-card-foot">AI宠物类，陪伴感强，桌面解压</div></div>
+
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name"><a href="https://www.unitree.com/" target="_blank" rel="noopener noreferrer">宇树 Go2</a> <span class="cp-badge badge-new">✨</span> <span class="cp-badge badge-cn">🇨🇳</span></div><div class="hw-card-price">¥9,999起</div></div>
+  <div class="hw-card-body"><ul><li><strong>AI：</strong>具身智能+大模型，自主决策</li><li><strong>功能：</strong>巡逻、搬运、语音交互、编程教学</li><li><strong>形态：</strong>四足/人形可选，运动能力强</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-good">具身智能</span><span class="hw-spec s-good">运动能力强</span><span class="hw-spec s-bad">价格高</span><span class="hw-spec s-warn">偏极客</span></div></div>
+  <div class="hw-card-foot">最便宜的具身智能机器人</div></div>
+
+  <div class="hw-card" style="opacity:.7"><div class="hw-card-head"><div class="hw-card-name">Rabbit R1 / AI Pin <span class="cp-badge badge-overseas">🌍</span> <span style="font-size:.72rem;color:var(--danger);font-weight:600">⚠️ 已失败</span></div><div class="hw-card-price" style="text-decoration:line-through">$199 / $699</div></div>
+  <div class="hw-card-body"><ul><li><strong>Rabbit R1：</strong>LAM操作代理，实际套壳Android</li><li><strong>AI Pin：</strong>激光投影+语音，续航4h，发热严重</li><li><strong>失败原因：</strong>手机可替代、续航差、AI慢、生态缺</li></ul>
+  <div class="hw-specs"><span class="hw-spec s-bad">手机可替代</span><span class="hw-spec s-bad">续航差</span><span class="hw-spec s-bad">已停产</span></div></div>
+  <div class="hw-card-foot">反面教材：AI硬件不能只是"少了个屏幕的手机"</div></div>
+</div>
+</div>
+
+<!-- ===== 对比矩阵 ===== -->
+<div class="cp-section-hd hw-hd" style="margin-top:2rem"><span class="cp-flag">📊</span> AI眼镜功能对比矩阵</div>
+<div class="cp-matrix-wrap">
+<table class="cp-matrix">
+<tr><th>产品</th><th>AI语音</th><th>AR显示</th><th>第一视角拍摄</th><th>实时翻译</th><th>物体识别</th><th>中文AI</th><th>国内可用</th></tr>
+<tr><td>Ray-Ban Meta</td><td class="yes">✓</td><td class="no">✗</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">✗</td><td class="partial">受限</td></tr>
+<tr><td>Ray-Ban Meta Display</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">✗</td><td class="partial">受限</td></tr>
+<tr><td>INMO GO3</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+<tr><td>Rokid</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+<tr><td>XREAL Air 2 Ultra</td><td class="partial">有限</td><td class="yes">✓</td><td class="no">✗</td><td class="partial">投屏</td><td class="no">✗</td><td class="partial">投屏</td><td class="yes">✓</td></tr>
+<tr><td>小度AI眼镜</td><td class="yes">✓</td><td class="no">✗</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+<tr><td>雷鸟 X3 Pro</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="partial">有限</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+</table>
+</div>
+
+<div class="cp-section-hd hw-hd"><span class="cp-flag">📊</span> AI手机AI能力对比</div>
+<div class="cp-matrix-wrap">
+<table class="cp-matrix">
+<tr><th>品牌</th><th>AI消除</th><th>AI助手</th><th>实时翻译</th><th>跨设备协同</th><th>端侧模型</th><th>国行完整度</th></tr>
+<tr><td>OPPO</td><td class="yes">⭐5</td><td class="yes">⭐5</td><td class="yes">✓</td><td class="partial">一般</td><td class="yes">✓</td><td class="yes">完整</td></tr>
+<tr><td>华为</td><td class="no">⭐2.5</td><td class="yes">⭐4</td><td class="yes">✓</td><td class="yes">⭐5</td><td class="yes">✓</td><td class="yes">完整</td></tr>
+<tr><td>小米</td><td class="partial">⭐3.5</td><td class="yes">⭐4.5</td><td class="yes">✓</td><td class="partial">较好</td><td class="yes">✓</td><td class="yes">完整</td></tr>
+<tr><td>荣耀</td><td class="partial">⭐3</td><td class="partial">⭐3.5</td><td class="yes">✓</td><td class="partial">较好</td><td class="yes">✓</td><td class="yes">完整</td></tr>
+<tr><td>苹果</td><td class="partial">⭐3</td><td class="yes">⭐4</td><td class="yes">✓</td><td class="yes">⭐5</td><td class="yes">✓</td><td class="partial">⚠️阉割</td></tr>
+<tr><td>三星</td><td class="partial">⭐4</td><td class="partial">⭐3</td><td class="yes">⭐5</td><td class="partial">较好</td><td class="partial">有限</td><td class="partial">部分受限</td></tr>
+<tr><td>Pixel</td><td class="partial">⭐3.5</td><td class="yes">⭐4.5</td><td class="yes">✓</td><td class="partial">一般</td><td class="yes">⭐5</td><td class="no">不可用</td></tr>
+</table>
+</div>
+
+<!-- ===== 价格区间 ===== -->
+<div class="cp-section-hd hw-hd"><span class="cp-flag">💰</span> 价格区间一览</div>
+<div class="cp-bar-chart">
+<div class="cp-bar-row"><div class="cp-bar-label">AI陪伴/玩具</div><div class="cp-bar-track"><div class="cp-bar-fill bar-hw" style="width:10%">¥199-1,299</div></div></div>
+<div class="cp-bar-row"><div class="cp-bar-label">AI耳机</div><div class="cp-bar-track"><div class="cp-bar-fill bar-hw" style="width:12%">¥899-1,899</div></div></div>
+<div class="cp-bar-row"><div class="cp-bar-label">AI戒指</div><div class="cp-bar-track"><div class="cp-bar-fill bar-hw2" style="width:17%">¥1,699-3,499</div></div></div>
+<div class="cp-bar-row"><div class="cp-bar-label">AI眼镜</div><div class="cp-bar-track"><div class="cp-bar-fill bar-hw" style="width:40%">¥1,999-5,999</div></div></div>
+<div class="cp-bar-row"><div class="cp-bar-label">AI手机</div><div class="cp-bar-track"><div class="cp-bar-fill bar-hot" style="width:70%">¥3,000-10,000</div></div></div>
+<div class="cp-bar-row"><div class="cp-bar-label">AI PC</div><div class="cp-bar-track"><div class="cp-bar-fill bar-hot" style="width:90%">¥5,999-20,000</div></div></div>
+<div class="cp-bar-row"><div class="cp-bar-label">AI机器人</div><div class="cp-bar-track"><div class="cp-bar-fill bar-hot" style="width:50%">¥9,999+</div></div></div>
+</div>
+
+<!-- ===== 场景推荐 ===== -->
+<div class="cp-section-hd hw-hd"><span class="cp-flag">🎯</span> 场景推荐 — 按需求选</div>
+<div class="hw-products">
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name">👨‍💻 开发者/创作者</div></div>
+  <div class="hw-card-body"><ul><li><strong>必买：</strong>MacBook Pro M4 Max（端侧AI最强）</li><li><strong>加购：</strong>Rokid Glasses（开发AR辅助）</li><li><strong>手机：</strong>OPPO Find X8 Pro（闪记效率高）</li></ul></div></div>
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name">✈️ 商务/跨国</div></div>
+  <div class="hw-card-body"><ul><li><strong>手机：</strong>三星Galaxy S26 Ultra（实时翻译最强）</li><li><strong>耳机：</strong>科大讯飞AI耳机（同传83种语言）</li><li><strong>PC：</strong>ThinkPad AI PC（企业合规）</li></ul></div></div>
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name">🏠 健康/生活</div></div>
+  <div class="hw-card-body"><ul><li><strong>戒指：</strong>RingConn Gen 2（无创血糖+10天续航+无订阅）</li><li><strong>手表：</strong>Apple Watch Ultra 3（全面监测）</li><li><strong>耳机：</strong>Ola Friend（日常AI对话）</li></ul></div></div>
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name">🎮 尝鲜/极客</div></div>
+  <div class="hw-card-body"><ul><li><strong>眼镜：</strong>小度AI眼镜（¥1,999最低门槛）</li><li><strong>陪伴：</strong>字节显眼包（¥199极低门槛）</li><li><strong>机器人：</strong>宇树Go2（最便宜具身智能）</li></ul></div></div>
+</div>
+
+<!-- ===== 避坑 ===== -->
+<div class="cp-notice">
+<div class="cp-notice-head">⚠️ AI硬件选购避坑指南</div>
+<div class="cp-notice-body">
+<ul>
+<li><strong>国行iPhone/三星：</strong>Apple Intelligence和Galaxy AI均有功能阉割，下单前确认功能列表</li>
+<li><strong>海外AI眼镜：</strong>Ray-Ban Meta基础功能国内可用，AI语音/翻译需VPN</li>
+<li><strong>子品牌手机：</strong>不要默认子品牌能用母品牌所有AI功能</li>
+<li><strong>AI戒指订阅：</strong>Oura需月费$5.99，RingConn/Samsung无订阅，长期成本差3倍+</li>
+<li><strong>"AI专用设备"陷阱：</strong>Rabbit R1/AI Pin已证明，手机可替代的独立AI设备没有未来</li>
+<li><strong>NPU算力：</strong>AI PC选购核心，40 TOPS是Copilot+门槛，50 TOPS是2026主流</li>
+</ul>
+</div>
+</div>
+
+<!-- ===== FAQ ===== -->
+<div class="cp-faq">
+<div class="cp-faq-head">❓ 常见问题</div>
+<div class="cp-faq-item"><div class="cp-faq-q">AI眼镜和AI耳机有什么区别？<span class="cp-faq-arrow">▼</span></div>
+<div class="cp-faq-a"><strong>AI眼镜</strong>有视觉能力（拍摄+识别+AR），适合需要"看见"的场景；<strong>AI耳机</strong>更轻便续航更长，适合纯语音交互。需要翻译路牌/识别物体选眼镜，只需AI语音助手选耳机。</div></div>
+<div class="cp-faq-item"><div class="cp-faq-q">AI PC的NPU到底有什么用？<span class="cp-faq-arrow">▼</span></div>
+<div class="cp-faq-a">NPU专门加速AI推理，让AI任务<strong>不占CPU/GPU</strong>。好处：本地模型更快更省电、AI降噪不卡、离线可用。<strong>40 TOPS以上</strong>才能流畅运行端侧大模型。</div></div>
+<div class="cp-faq-item"><div class="cp-faq-q">AI戒指 vs AI手表，哪个更值得？<span class="cp-faq-arrow">▼</span></div>
+<div class="cp-faq-a"><strong>戒指</strong>：无感佩戴、睡眠更准、7-10天续航；无屏幕功能单一。<strong>手表</strong>：功能全面有屏幕、独立通话；充电频繁。两者互补不互斥。</div></div>
+<div class="cp-faq-item"><div class="cp-faq-q">国产AI眼镜和Ray-Ban Meta哪个好？<span class="cp-faq-arrow">▼</span></div>
+<div class="cp-faq-a"><strong>国内用户强烈建议选国产</strong>。Rokid/小度/雷鸟中文AI体验远超Ray-Ban Meta（国内需VPN）。Meta优势在海外生态，不在海外用Instagram/Meta AI的选国产更实用。</div></div>
+</div>
+
+<!-- ===== 趋势 ===== -->
+<div class="cp-section-hd hw-hd" style="margin-top:2rem"><span class="cp-flag">📈</span> AI硬件趋势</div>
+<div class="hw-products">
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name">👓 AI眼镜</div></div>
+  <div class="hw-card-body"><ul><li>2026出货量预计<strong>500万+</strong>台，市场<strong>100亿元</strong></li><li>国产占比将达<strong>45%</strong>，Rokid/小度/雷鸟三强</li><li>从"AI拍摄"→"AI+AR融合"进化</li><li>2026下半年可能出<strong>¥999</strong>入门款</li></ul></div></div>
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name">📱 AI手机</div></div>
+  <div class="hw-card-body"><ul><li>AI从卖点变成<strong>"默认能力"</strong></li><li><strong>端侧8B模型</strong>成为旗舰标配</li><li>AI消除/翻译向<strong>中端下放</strong></li><li>国产中文AI持续领先</li></ul></div></div>
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name">💻 AI PC</div></div>
+  <div class="hw-card-body"><ul><li>NPU <strong>50+ TOPS</strong>成新PC标配</li><li>端侧模型从7B→14B</li><li>Copilot+ / Apple Intelligence双阵营</li><li>价格下探至<strong>¥4,000</strong></li></ul></div></div>
+  <div class="hw-card"><div class="hw-card-head"><div class="hw-card-name">🤖 AI陪伴</div></div>
+  <div class="hw-card-body"><ul><li>2025全球市场<strong>千亿级</strong>，2026翻倍</li><li>从"对话玩具"→<strong>具身智能</strong>演进</li><li><strong>¥99-299</strong>入门款爆发</li><li>儿童隐私安全争议持续</li></ul></div></div>
+</div>
+
+</div>
+
+<!-- JS -->
+<script>
+(function(){
+  // Theme
+  var KEY='ainav-theme';
+  var cur=localStorage.getItem(KEY)||'dark';
+  function setTheme(t){
+    cur=t;try{localStorage.setItem(KEY,t)}catch(e){}
+    document.documentElement.setAttribute('data-theme',t);
+    document.querySelectorAll('.theme-btn').forEach(function(b){b.classList.toggle('is-active',b.getAttribute('data-theme-set')===t)});
+  }
+  setTheme(cur);
+  document.querySelectorAll('.theme-btn').forEach(function(b){b.addEventListener('click',function(){setTheme(b.getAttribute('data-theme-set'))})});
+
+  // Section tabs
+  document.querySelectorAll('.hw-tab').forEach(function(tab){
+    tab.addEventListener('click',function(){
+      document.querySelectorAll('.hw-tab').forEach(function(t){t.classList.remove('is-active')});
+      tab.classList.add('is-active');
+      var sec=tab.getAttribute('data-section');
+      document.querySelectorAll('.hw-section').forEach(function(s){s.classList.toggle('is-active',s.id==='sec-'+sec)});
+    });
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.cp-faq-q').forEach(function(q){
+    q.addEventListener('click',function(){q.parentElement.classList.toggle('is-open')});
+  });
+})();
+</script>
+<div class="cp-footer">
+    <p class="cp-updated-line"><span class="cp-updated">最后更新：2026-06-26</span></p>
+    <p>数据来源：各品牌官网、电商实时价格、行业报告 · 价格以官网为准</p>
+    <p><a href="index.html">← 返回 AINav 首页</a> · <a href="free-tier.html">🆓 免费额度</a> · <a href="token-optimization.html">Token优化</a> · <a href="coding-plan.html">编程套餐横评</a> · <a href="agent-plan.html">Agent横评</a> · <a href="model-plan.html">模型选型</a> · <a href="ai-factory-plan.html">AI造物</a> · <a href="image-plan.html">图像套餐横评</a> · <a href="video-plan.html">视频套餐横评</a></p>
+  </div>
+<script src="plan-nav.js" data-active="hardware-plan.html"></script>
+<script src="plan-meta-i18n.js"></script>
+<script src="thinking-framework.js"></script>
+</body>
+</html>

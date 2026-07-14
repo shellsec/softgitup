@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="site-mobile.css">
+<title>Token 优化指南 — Cursor / Claude Code / Codex 安装配置 — AINav</title>
+<meta name="description" content="整合 GitHub token-optimization 生态与 AINav 精选工具：五层省 token 框架、Cursor / Claude Code / Codex 分端安装配置、MCP 剪枝与可复制 Rules 模板。">
+<link rel="canonical" href="https://aiv123.com/token-optimization.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Token 优化指南 — Cursor / Claude Code / Codex">
+<meta property="og:description" content="安装配置 + 最佳实践：CLI 压缩、规约瘦身、浏览器 MCP 剪枝、用量追踪。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%2306b6d4'/><text x='50' y='72' font-size='44' text-anchor='middle' fill='white' font-family='system-ui' font-weight='700'>Tk</text></svg>">
+<style>
+:root,html[data-theme="dark"]{--bg:#0f1419;--panel:#151b23;--card:#1c2430;--border:#2d3848;--text:#e6edf3;--muted:#8b9cb3;--accent:#58a6ff;--accent2:#3fb950;--warn:#d29922;--danger:#f85149;--tok:#06b6d4;--tok2:#22d3ee}
+html[data-theme="light"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;--text:#1f2328;--muted:#59636e;--accent:#0969da;--accent2:#1a7f37;--warn:#9a6700;--danger:#cf222e;--tok:#0891b2;--tok2:#0e7490}
+@media(prefers-color-scheme:light){html[data-theme="system"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;--text:#1f2328;--muted:#59636e;--accent:#0969da;--accent2:#1a7f37;--warn:#9a6700;--danger:#cf222e;--tok:#0891b2;--tok2:#0e7490}}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.65}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.cp-top{padding:.75rem 1rem;border-bottom:1px solid var(--border);background:var(--panel);position:sticky;top:0;z-index:10}
+.cp-top-inner{max-width:76rem;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;justify-content:space-between}
+.cp-nav a{font-weight:600;margin-right:1rem;font-size:.88rem}
+.cp-toolbar{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center}
+.theme-btn{font-size:.72rem;padding:.2rem .5rem;border-radius:5px;border:1px solid var(--border);background:var(--card);color:var(--muted);cursor:pointer;font-family:inherit}
+.theme-btn.is-active{color:var(--tok);border-color:var(--tok);font-weight:600}
+.cp-wrap{max-width:76rem;margin:0 auto;padding:1rem}
+h1{font-size:1.35rem;margin:0 0 .3rem}
+.cp-subtitle{font-size:.88rem;color:var(--muted);margin-bottom:.8rem}
+.cp-updated{font-size:.76rem;color:var(--muted);margin-bottom:1rem}
+.cp-section-hd{font-size:1.05rem;font-weight:700;margin:1.6rem 0 .65rem;padding-bottom:.3rem;border-bottom:2px solid var(--border);display:flex;align-items:center;gap:.5rem;scroll-margin-top:4.5rem}
+.cp-section-hd.tok-hd{border-bottom-color:rgba(6,182,212,.35)}
+.cp-section-hd .cp-flag{font-size:1.1rem}
+.tok-pill{display:inline-block;font-size:.68rem;padding:.12rem .45rem;border-radius:4px;font-weight:600;margin-right:.25rem;vertical-align:middle;border:1px solid}
+.pill-cursor{background:rgba(88,166,255,.1);color:var(--accent);border-color:rgba(88,166,255,.25)}
+.pill-claude{background:rgba(210,153,34,.1);color:var(--warn);border-color:rgba(210,153,34,.25)}
+.pill-codex{background:rgba(63,185,80,.1);color:var(--accent2);border-color:rgba(63,185,80,.25)}
+.pill-all{background:rgba(6,182,212,.1);color:var(--tok);border-color:rgba(6,182,212,.25)}
+.tok-nav{display:flex;flex-wrap:wrap;gap:.4rem;margin:1rem 0 1.2rem}
+.tok-nav a{padding:.35rem .75rem;border-radius:999px;border:1px solid var(--border);background:var(--card);font-size:.78rem;font-weight:600}
+.tok-nav a:hover{text-decoration:none;border-color:var(--tok);color:var(--tok)}
+.tok-flow{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center;justify-content:center;margin:1rem 0 1.2rem;font-size:.78rem;font-weight:600}
+.tok-flow span{padding:.3rem .65rem;border-radius:6px;border:1px solid var(--border);background:var(--card)}
+.tok-flow .arr{color:var(--muted)}
+.tok-grid{display:grid;grid-template-columns:1fr;gap:.85rem}
+@media(min-width:52rem){.tok-grid.cols-2{grid-template-columns:1fr 1fr}.tok-grid.cols-3{grid-template-columns:repeat(3,1fr)}}
+.tok-card{border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden}
+.tok-card-hd{padding:.65rem .9rem;border-bottom:1px solid var(--border);font-weight:700;font-size:.92rem;display:flex;align-items:center;gap:.4rem;flex-wrap:wrap}
+.tok-card-bd{padding:.75rem .9rem;font-size:.82rem}
+.tok-card-bd p{margin:.35rem 0}
+.tok-card-bd ul,.tok-card-bd ol{margin:.35rem 0;padding-left:1.15rem}
+.tok-card-bd li{margin-bottom:.3rem}
+.tok-card-bd strong{color:var(--text)}
+pre,code{font-family:ui-monospace,"Cascadia Code",Consolas,monospace;font-size:.76rem}
+pre{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:.65rem .8rem;overflow-x:auto;margin:.5rem 0;line-height:1.5}
+.tok-table{width:100%;border-collapse:collapse;font-size:.78rem;margin:.5rem 0}
+.tok-table th,.tok-table td{padding:.4rem .5rem;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
+.tok-table th{color:var(--muted);font-weight:600;white-space:nowrap}
+.tok-table .col-level{white-space:nowrap;font-weight:600;color:var(--tok)}
+.tok-table .col-warn{color:var(--warn)}
+.highlight{padding:.55rem .8rem;border-radius:8px;font-size:.8rem;margin:.5rem 0;border:1px solid rgba(6,182,212,.25);background:rgba(6,182,212,.06)}
+.warn-box{border-color:rgba(210,153,34,.3);background:rgba(210,153,34,.06)}
+.stack-row{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.4rem}
+.stack-tag{font-size:.7rem;padding:.15rem .45rem;border-radius:4px;background:var(--panel);border:1px solid var(--border);color:var(--muted)}
+.cp-footer{max-width:76rem;margin:2rem auto 1rem;padding:0 1rem;font-size:.76rem;color:var(--muted);text-align:center}
+.cp-footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+
+<div class="cp-top">
+<div class="cp-top-inner">
+  <nav class="cp-nav" data-plan-nav></nav>
+  <div class="cp-toolbar">
+    <button class="theme-btn" data-theme-set="system">System</button>
+    <button class="theme-btn" data-theme-set="light">Light</button>
+    <button class="theme-btn is-active" data-theme-set="dark">Dark</button>
+  </div>
+</div>
+</div>
+
+<div class="cp-wrap">
+
+<h1>Token 优化指南</h1>
+<p class="cp-subtitle">面向 <strong>Cursor · Claude Code · Codex</strong>。已用 GitHub API 扫描 <a href="https://github.com/topics/token-optimization" target="_blank" rel="noopener noreferrer"><code>token-optimization</code> 专题</a>（<strong>802</strong> 仓，按 stars 排序，2026-06），见 <a href="#ecosystem">专题分析</a>；安装配置见各章节。</p>
+<p class="cp-updated">专题 #1 <a href="https://github.com/rtk-ai/rtk">RTK</a>（66K★）· #2 <a href="https://github.com/headroomlabs-ai/headroom">Headroom</a>（51K★）· #3 <a href="https://github.com/yvgude/lean-ctx">LeanCTX</a>（2.9K★）· <a href="index.html#ext-token-optimize">AINav 工具卡片</a></p>
+
+<nav class="tok-nav" aria-label="页内导航">
+  <a href="#headroom">Headroom</a>
+  <a href="#leanctx">LeanCTX</a>
+  <a href="#headroom-practice">Headroom 最佳实践</a>
+  <a href="#framework">五层框架</a>
+  <a href="#stacks">推荐组合</a>
+  <a href="#cursor">Cursor 配置</a>
+  <a href="#claude">Claude Code 配置</a>
+  <a href="#codex">Codex 配置</a>
+  <a href="#mcp">MCP / 浏览器</a>
+  <a href="#rules">Rules 模板</a>
+  <a href="#ecosystem">专题分析</a>
+</nav>
+
+<div class="tok-flow" aria-hidden="true">
+  <span style="border-color:rgba(6,182,212,.3);color:var(--tok)">Headroom 全栈层</span><span class="arr">或</span>
+  <span>规约瘦身</span><span class="arr">→</span>
+  <span>CLI 输入</span><span class="arr">→</span>
+  <span>Agent 输出</span><span class="arr">→</span>
+  <span>浏览器页</span><span class="arr">→</span>
+  <span>MCP 负载</span><span class="arr">→</span>
+  <span style="color:var(--accent2)">Tokscale 观测</span>
+</div>
+
+<h2 class="cp-section-hd tok-hd" id="headroom"><span class="cp-flag">🚀</span> Headroom — 专题旗舰（全栈压缩）</h2>
+<p class="cp-subtitle" style="margin-top:0"><a href="https://github.com/headroomlabs-ai/headroom" target="_blank" rel="noopener">headroomlabs-ai/headroom</a> — 专题 <strong>#2</strong>（51K★）：全栈压缩<strong>工具输出、日志、RAG、文件与历史</strong>，CCR 可逆。适合重度编码 / 长任务 / RAG / 团队控本 → <a href="#headroom-practice">最佳实践</a>。</p>
+
+<div class="tok-grid cols-3" style="margin-bottom:.85rem">
+  <div class="tok-card">
+    <div class="tok-card-hd">四种接入</div>
+    <div class="tok-card-bd">
+      <ul>
+        <li><strong>Library</strong> — Python/TS <code>compress()</code></li>
+        <li><strong>Proxy</strong> — <code>headroom proxy --port 8787</code></li>
+        <li><strong>Wrap</strong> — <code>headroom wrap claude|codex</code></li>
+        <li><strong>MCP</strong> — <code>headroom mcp install</code></li>
+      </ul>
+    </div>
+  </div>
+  <div class="tok-card">
+    <div class="tok-card-hd">Agent 兼容</div>
+    <div class="tok-card-bd">
+      <p><span class="tok-pill pill-claude">Claude Code</span> <span class="tok-pill pill-codex">Codex</span> wrap ✅</p>
+      <p><span class="tok-pill pill-cursor">Cursor</span> 手动代理 URL（见下）</p>
+      <p>跨 Agent 共享 memory · <code>headroom learn</code> 写规约</p>
+    </div>
+  </div>
+  <div class="tok-card">
+    <div class="tok-card-hd">实测节省（官方）</div>
+    <div class="tok-card-bd">
+      <p>代码搜索 92% · SRE 排障 92% · Issue 分拣 73%</p>
+      <p>输出侧：<code>HEADROOM_OUTPUT_SHAPER=1</code> 减废话/thinking</p>
+    </div>
+  </div>
+</div>
+
+<div class="tok-card" style="margin-bottom:.85rem">
+  <div class="tok-card-hd">安装（60 秒）</div>
+  <div class="tok-card-bd">
+<pre>pip install "headroom-ai[all]"    # Python 3.10+，推荐
+# 或 npm install headroom-ai
+
+headroom perf                     # 查看节省
+headroom dashboard                # 代理运行时开面板</pre>
+    <p>企业网络 SSL 拦截见 <a href="https://github.com/headroomlabs-ai/headroom#corporate--ssl-inspection-environments" target="_blank" rel="noopener">Corporate / SSL</a> 章节。</p>
+  </div>
+</div>
+
+<div class="tok-grid cols-3">
+  <div class="tok-card">
+    <div class="tok-card-hd"><span class="tok-pill pill-claude">Claude Code</span></div>
+    <div class="tok-card-bd">
+<pre>headroom wrap claude
+# 可选：--memory --code-graph --1m</pre>
+      <p>一键起代理并启动 Claude Code；压缩经代理管道进入模型。</p>
+    </div>
+  </div>
+  <div class="tok-card">
+    <div class="tok-card-hd"><span class="tok-pill pill-codex">Codex</span></div>
+    <div class="tok-card-bd">
+<pre>headroom wrap codex</pre>
+      <p>与 Claude 共享 memory 存储；<code>headroom learn</code> 可写 <code>AGENTS.md</code>。</p>
+    </div>
+  </div>
+  <div class="tok-card">
+    <div class="tok-card-hd"><span class="tok-pill pill-cursor">Cursor</span></div>
+    <div class="tok-card-bd">
+<pre>headroom wrap cursor
+# 或先起代理：
+headroom proxy --port 8787</pre>
+      <p>Cursor <strong>无自动 wrap</strong>：命令会打印需在 Cursor Settings 里粘贴的 <strong>Override OpenAI Base URL</strong>（及 Anthropic 等价项）。按终端提示填入即可。</p>
+    </div>
+  </div>
+</div>
+
+<div class="tok-card" style="margin-top:.85rem;margin-bottom:.85rem">
+  <div class="tok-card-hd">MCP 与输出压缩</div>
+  <div class="tok-card-bd">
+<pre>headroom mcp install
+# 工具：headroom_compress / headroom_retrieve / headroom_stats</pre>
+<pre>export HEADROOM_OUTPUT_SHAPER=1
+headroom proxy --port 8787</pre>
+    <p>输出塑形：减少模型寒暄与 routine 步骤上的深度 thinking（代理侧，无需改业务代码）。</p>
+  </div>
+</div>
+
+<h2 class="cp-section-hd tok-hd" id="leanctx"><span class="cp-flag">🎯</span> LeanCTX — 上下文门控（专题 #3）</h2>
+<p class="cp-subtitle" style="margin-top:0"><a href="https://github.com/yvgude/lean-ctx" target="_blank" rel="noopener">yvgude/lean-ctx</a> — 与 Headroom「压体积」互补：控制 Agent <strong>能看见什么</strong>，减少无关文件、工具结果与 RAG 垃圾注入。适合长任务、多 MCP、大仓扫库。</p>
+<div class="tok-card" style="margin-bottom:.85rem">
+  <div class="tok-card-hd">与 Headroom / RTK 怎么配</div>
+  <div class="tok-card-bd">
+    <ul>
+      <li><strong>LeanCTX</strong> — 门控注入源（哪些进上下文）</li>
+      <li><strong>Headroom / RTK</strong> — 压缩已进入上下文的内容</li>
+      <li><strong>Tokscale</strong> — 观测三者叠加后的真实用量</li>
+    </ul>
+    <p>三省接入：作为 Agent 中间件或上下文层，与 Cursor Rules / Claude Code / Codex 的 MCP 工具链并列部署；详见仓库 README 与 <code>examples/</code>。</p>
+  </div>
+</div>
+
+<h2 class="cp-section-hd tok-hd" id="headroom-practice"><span class="cp-flag">📐</span> Headroom 最佳实践：分层策略 + 基线量化 + 动态调控</h2>
+<p class="cp-subtitle" style="margin-top:0">核心原则：<strong>不要无脑开最高压缩</strong>。唯一判断标准——<em>总成本 = 省下的 Token 费 &lt; 返工多花的 Token 费</em>。ContentRouter 会按 JSON / 代码 AST / 文本自动选压缩器；你要做的是按场景设力度，并用 holdout 对照。</p>
+
+<h3 class="cp-section-hd" style="font-size:.95rem;margin-top:1rem" id="headroom-baseline">一、前置：先算清「基准账」（必做）</h3>
+<div class="tok-card" style="margin-bottom:.85rem">
+  <div class="tok-card-bd">
+    <p>所有 Agent 统一走 Headroom 代理 <strong>1–2 周</strong>后再调参，不要上来就拉满压缩。</p>
+<pre># 代理运行中或 wrap 会话结束后
+headroom perf              # 汇总节省与近期趋势
+headroom stats             # 更细的统计（亦可 MCP：headroom_stats）
+headroom output-savings    # 输出侧节省（含置信区间）
+headroom dashboard         # 可视化面板（需 proxy 在跑）</pre>
+    <p><strong>重点盯 3 个指标</strong>（可用 Tokscale 交叉验证账单）：</p>
+    <ul>
+      <li><strong>单任务平均 Token 成本</strong></li>
+      <li><strong>任务首次成功率</strong>（无需返工的比例）</li>
+      <li><strong>返工率</strong>（修偏方向、重跑测试/检索的次数）</li>
+    </ul>
+    <div class="highlight warn-box">成功率掉 <strong>5%+</strong> 时，先降压缩力度或加大 holdout，再谈继续省 Token。</div>
+  </div>
+</div>
+
+<h3 class="cp-section-hd" style="font-size:.95rem" id="headroom-layers">二、按内容类型分层压缩（最关键）</h3>
+<table class="tok-table">
+  <thead>
+    <tr><th>内容类型</th><th>建议力度</th><th>场景</th><th>落地方式</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>日志 / 测试输出 / 工具返回<br><small>pytest、<code>ls -R</code>、JSON 列表</small></td>
+      <td class="col-level">80–95%</td>
+      <td>跑测试、读日志、修 bug；重复高、语义密度低</td>
+      <td>代理默认 <strong>ContentRouter → SmartCrusher</strong> 自动识别，一般无需额外配置</td>
+    </tr>
+    <tr>
+      <td>RAG 检索片段 / 企业文档 chunks</td>
+      <td class="col-level">70–90%</td>
+      <td>内部 Agent、知识库问答；压重复与低相关段落</td>
+      <td>检索后<strong>先压缩再拼 Prompt</strong>（见下方 RAG 示例）；保留标题/来源等元数据行</td>
+    </tr>
+    <tr>
+      <td>大型仓库文件 / 非核心代码</td>
+      <td class="col-level">50–70%</td>
+      <td>Cursor 改大仓、扫引用；压空行/注释，留签名与核心逻辑</td>
+      <td>Claude/Codex：<code>headroom wrap … --code-graph</code>；压后可用 <code>headroom_retrieve</code> 回查原文</td>
+    </tr>
+    <tr>
+      <td>异常堆栈 / 权限 JSON / 安全逻辑</td>
+      <td class="col-level col-warn">≤30% 或 bypass</td>
+      <td>线上事故、权限校验、金融/医疗</td>
+      <td>敏感任务走代理 <strong>bypass</strong> 或临时不用 wrap；可用 <code>.contextignore</code> 硬排除路径</td>
+    </tr>
+    <tr>
+      <td>核心业务逻辑 / 安全审计</td>
+      <td class="col-level col-warn">不建议压</td>
+      <td>架构设计、审计；缺上下文易漏风险</td>
+      <td>该任务直连模型或 bypass；宁可多 Token 也不误判</td>
+    </tr>
+  </tbody>
+</table>
+<div class="highlight" style="margin-top:.65rem">
+  <strong>经验边界：</strong>官方 benchmark 显示日志/工具类压到 90%+ 准确率几乎不降；<strong>代码语义类压过 70% 可能丢关键信息</strong>，不要迷信 95%。压过头用 CCR <code>headroom_retrieve</code> 拉回原文。
+</div>
+
+<h3 class="cp-section-hd" style="font-size:.95rem" id="headroom-scenarios">三、分场景落地（Codex / Claude Code / Cursor）</h3>
+<div class="tok-grid cols-2">
+  <div class="tok-card">
+    <div class="tok-card-hd">1. AI 编码日常（三省）</div>
+    <div class="tok-card-bd">
+<pre># Claude Code / Codex：代码图 + 跨 Agent 记忆
+headroom wrap claude --code-graph --memory
+headroom wrap codex --code-graph --memory
+
+# Cursor：统一出口代理（Settings 贴 Base URL）
+headroom proxy --port 8787
+export HEADROOM_OUTPUT_SHAPER=1
+export HEADROOM_OUTPUT_HOLDOUT=0.1   # 10% 对照组，dashboard 标 measured</pre>
+      <p>改大仓、长测试：常见 <strong>50–70%</strong> 输入节省；<code>--code-graph</code> 帮助 CodeCompressor 少压断引用。</p>
+      <p class="highlight warn-box" style="margin:.5rem 0 0"><small>注意：环境变量名是 <code>HOLDOUT</code> 不是 HOLDOFF；对已在跑的共享 proxy，Headroom 支持 loopback 热同步 runtime-env。</small></p>
+    </div>
+  </div>
+  <div class="tok-card">
+    <div class="tok-card-hd">2. RAG / 企业内部 Agent</div>
+    <div class="tok-card-bd">
+<pre>from headroom import compress
+
+def retrieve_and_compress(query):
+    chunks = rag_retrieve(query)
+    msgs = [{"role": "user", "content": c.text} for c in chunks]
+    return compress(msgs, model="claude-sonnet-4-20250514")</pre>
+      <p>多文档检索常省 <strong>60–90%</strong> 输入 Token；无关片段被压掉，模型更少「读偏」。</p>
+    </div>
+  </div>
+  <div class="tok-card">
+    <div class="tok-card-hd">3. 团队成本管控</div>
+    <div class="tok-card-bd">
+      <ul>
+        <li>全员统一 <code>headroom proxy --port 8787</code> 出口，Dashboard 看总账</li>
+        <li>日常开发：默认代理 + 输出塑形；核心评审/事故：成员自行 bypass 或不用 wrap</li>
+        <li>定期：<code>headroom learn --verbosity --apply</code> 从会话学简洁偏好</li>
+        <li>与 <a href="https://github.com/junhoyeo/tokscale">Tokscale</a> 并用：Headroom 看压缩率，Tokscale 对账真实账单</li>
+      </ul>
+    </div>
+  </div>
+  <div class="tok-card">
+    <div class="tok-card-hd">4. 输出 Token（常被忽略）</div>
+    <div class="tok-card-bd">
+<pre>export HEADROOM_OUTPUT_SHAPER=1
+export HEADROOM_OUTPUT_HOLDOUT=0.1
+headroom proxy --port 8787
+
+headroom learn --verbosity          # 预览从会话学到的简洁度
+headroom learn --verbosity --apply  # 写入配置，proxy 沿用</pre>
+      <p>Opus 档输出单价可达输入 <strong>5×</strong>；塑形减寒暄与 routine 步骤上的 deep thinking。</p>
+    </div>
+  </div>
+</div>
+
+<h3 class="cp-section-hd" style="font-size:.95rem" id="headroom-redlines">四、三条红线</h3>
+<div class="tok-grid cols-3">
+  <div class="tok-card">
+    <div class="tok-card-hd">① 永远留 holdout</div>
+    <div class="tok-card-bd"><p>至少 <code>HEADROOM_OUTPUT_HOLDOUT=0.05</code>–<code>0.1</code>。成功率掉 5%+ 立刻降力度或加大对照比例。</p></div>
+  </div>
+  <div class="tok-card">
+    <div class="tok-card-hd">② 三类不激进压</div>
+    <div class="tok-card-bd"><p>线上事故排查、安全审计、金融/医疗——bypass 或直连，宁多花 Token 不误判。</p></div>
+  </div>
+  <div class="tok-card">
+    <div class="tok-card-hd">③ 返工 &gt; 节省</div>
+    <div class="tok-card-bd"><p>模型因上下文被压而修错方向，返工 Token 常为省下的 <strong>2–3 倍</strong>。</p></div>
+  </div>
+</div>
+
+<h3 class="cp-section-hd" style="font-size:.95rem" id="headroom-advanced">五、进阶：当 AI 工程基础设施</h3>
+<div class="tok-card">
+  <div class="tok-card-bd">
+    <ul>
+      <li><strong>CI/CD / Agent 巡检</strong>：流水线默认高压缩（日志/测试输出为主）</li>
+      <li><strong>人工核心开发</strong>：临时 bypass 或关 <code>OUTPUT_SHAPER</code></li>
+      <li><strong>Mac 加速</strong>：<code>export HEADROOM_EMBEDDER_RUNTIME=pytorch_mps</code>，压缩嵌入几乎不拖慢代理</li>
+      <li><strong>敏感路径</strong>：项目 <code>.contextignore</code> / 全局 <code>~/.claude/.contextignore</code> 硬排除审计文件</li>
+    </ul>
+    <p>按此跑 2–4 周，编码账单常见降 <strong>40–60%</strong>，且返工率不应明显上升。若某栈（Go 微服务调试、Java 大仓重构）要更细参数，以 <code>headroom perf</code> + holdout 实测为准，再微调。</p>
+  </div>
+</div>
+
+<h2 class="cp-section-hd tok-hd" id="framework"><span class="cp-flag">🧱</span> 五层框架（单工具 vs 组合）</h2>
+<div class="highlight" style="margin-bottom:.85rem"><strong>路径 A（一站式）：</strong>Headroom（见 <a href="#headroom-practice">最佳实践</a>）wrap/proxy/MCP。<strong>路径 B（组合）：</strong>RTK + Caveman + mcprune + Tokscale — 更细、可混搭。</div>
+<div class="tok-grid cols-2">
+  <div class="tok-card">
+    <div class="tok-card-hd">① 规约层 <span class="tok-pill pill-all">每轮固定成本</span></div>
+    <div class="tok-card-bd">
+      <p>压缩 <code>AGENTS.md</code>、<code>.cursor/rules</code>、<code>CLAUDE.md</code>。Power User 常在开聊前就烧掉 5–7 万 token。</p>
+      <p><strong>工具：</strong><a href="https://github.com/LuckyKuang/codex-tokens-compress" target="_blank" rel="noopener">codex-tokens-compress</a>、Caveman <code>/caveman-compress</code></p>
+    </div>
+  </div>
+  <div class="tok-card">
+    <div class="tok-card-hd">② CLI 输入层 <span class="tok-pill pill-all">最大隐性开销</span></div>
+    <div class="tok-card-bd">
+      <p><code>git status</code>、测试日志、<code>rg</code> 输出经代理压缩后再进上下文，通常省 <strong>60–90%</strong>。</p>
+      <p><strong>工具：</strong><a href="https://github.com/rtk-ai/rtk" target="_blank" rel="noopener">RTK</a>、<a href="https://github.com/claudioemmanuel/squeez" target="_blank" rel="noopener">squeez</a>（专题热门）</p>
+    </div>
+  </div>
+  <div class="tok-card">
+    <div class="tok-card-hd">③ Agent 输出层</div>
+    <div class="tok-card-bd">
+      <p>去掉寒暄与重复解释，保留技术结论与完整代码块。</p>
+      <p><strong>工具：</strong><a href="https://github.com/JuliusBrussee/caveman" target="_blank" rel="noopener">Caveman</a> Skill（约 65–87% 输出 token）</p>
+    </div>
+  </div>
+  <div class="tok-card">
+    <div class="tok-card-hd">④ 浏览器 / 单页层</div>
+    <div class="tok-card-bd">
+      <p>默认<strong>无障碍树</strong>，禁止先截图。首屏全量 snapshot，之后用 ref 操作或 diff。</p>
+      <p><strong>工具：</strong><a href="https://github.com/hamr0/mcprune" target="_blank" rel="noopener">mcprune</a>、<a href="https://github.com/malovnik/agent-browser" target="_blank" rel="noopener">agent-browser</a></p>
+    </div>
+  </div>
+  <div class="tok-card">
+    <div class="tok-card-hd">⑤ MCP 层</div>
+    <div class="tok-card-bd">
+      <p>压工具 <code>description</code> 与大块 JSON 返回。</p>
+      <p><strong>工具：</strong><a href="https://www.npmjs.com/package/caveman-shrink" target="_blank" rel="noopener">caveman-shrink</a>、<a href="https://tokentamer.app/" target="_blank" rel="noopener">Token Tamer</a>、<a href="https://github.com/ooples/token-optimizer-mcp" target="_blank" rel="noopener">token-optimizer-mcp</a></p>
+    </div>
+  </div>
+  <div class="tok-card">
+    <div class="tok-card-hd">⑥ 观测层</div>
+    <div class="tok-card-bd">
+      <p>先量化再优化：按日/模型/任务类型看账单。</p>
+      <p><strong>工具：</strong><a href="https://github.com/junhoyeo/tokscale" target="_blank" rel="noopener">Tokscale</a>（三端均支持）</p>
+    </div>
+  </div>
+</div>
+
+<h2 class="cp-section-hd tok-hd" id="stacks"><span class="cp-flag">📦</span> 三套推荐组合</h2>
+<div class="tok-grid cols-3">
+  <div class="tok-card">
+    <div class="tok-card-hd">一站式（1 个）</div>
+    <div class="tok-card-bd">
+      <p><strong>Headroom</strong> — 按 <a href="#headroom-practice">分层最佳实践</a> 配 wrap/proxy；Claude/Codex 一键，Cursor 配代理 + holdout。</p>
+      <div class="stack-row"><span class="stack-tag">Headroom</span><span class="stack-tag">HOLDOUT</span><span class="stack-tag">+Tokscale</span></div>
+    </div>
+  </div>
+  <div class="tok-card">
+    <div class="tok-card-hd">极简组合（2 个）</div>
+    <div class="tok-card-bd">
+      <p><strong>RTK + Caveman</strong> — 不装 Headroom 时的最小 CLI + 输出覆盖。</p>
+      <div class="stack-row"><span class="stack-tag">RTK</span><span class="stack-tag">Caveman</span></div>
+    </div>
+  </div>
+  <div class="tok-card">
+    <div class="tok-card-hd">重度浏览器</div>
+    <div class="tok-card-bd">
+      <p>任一路径 + <strong>mcprune</strong>（页面快照仍建议专用剪枝）。</p>
+      <div class="stack-row"><span class="stack-tag">+mcprune</span></div>
+    </div>
+  </div>
+</div>
+
+<h2 class="cp-section-hd tok-hd" id="cursor"><span class="cp-flag">⌨️</span> Cursor 安装配置</h2>
+
+<div class="tok-card" style="margin-bottom:.85rem">
+  <div class="tok-card-hd"><span class="tok-pill pill-cursor">Cursor</span> RTK — CLI 输出压缩</div>
+  <div class="tok-card-bd">
+    <ol>
+      <li>安装 RTK（见 <a href="https://github.com/rtk-ai/rtk#installation" target="_blank" rel="noopener">官方安装</a>，Rust 单二进制）。</li>
+      <li>初始化 Cursor hook：</li>
+    </ol>
+<pre>rtk init -g --agent cursor</pre>
+    <p>重启 Cursor。Hook 通过 <code>preToolUse</code> 自动把 <code>git status</code> 改写为 <code>rtk git status</code>。</p>
+    <div class="highlight warn-box"><strong>Windows 注意：</strong>若 bash hook 不可用，在 <strong>Cursor Settings → Rules</strong> 中写明：终端命令一律加 <code>rtk</code> 前缀（<code>rtk git</code>、<code>rtk rg</code>、<code>rtk test</code> 等）。</div>
+    <p><strong>局限：</strong>内置 <code>Read</code>/<code>Grep</code> 工具不走 shell hook；大文件请用 <code>rtk read</code> / <code>rtk grep</code> 或 shell 等价命令。</p>
+  </div>
+</div>
+
+<div class="tok-card" style="margin-bottom:.85rem">
+  <div class="tok-card-hd"><span class="tok-pill pill-cursor">Cursor</span> Caveman — 输出 + 规约压缩</div>
+  <div class="tok-card-bd">
+<pre># macOS / Linux / WSL / Git Bash
+curl -fsSL https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.sh | bash
+
+# Windows PowerShell
+irm https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.ps1 | iex</pre>
+    <p>安装器会写入 Cursor Rules，实现会话级简洁输出。手动触发：<code>/caveman</code>；压规约：<code>/caveman-compress CLAUDE.md</code>（对 <code>.cursor/rules</code> 同理）。</p>
+  </div>
+</div>
+
+<div class="tok-card" style="margin-bottom:.85rem">
+  <div class="tok-card-hd"><span class="tok-pill pill-cursor">Cursor</span> Tokscale — 用量统计</div>
+  <div class="tok-card-bd">
+<pre>npx tokscale@latest
+# 或 npm i -g tokscale</pre>
+    <p>Cursor 需从浏览器导出会话 Cookie 后登录（非解析 <code>~/.cursor</code> 本地库）：</p>
+<pre>tokscale cursor login
+tokscale cursor sync</pre>
+    <p>在 <code>cursor.com</code> 开发者工具 → Cookies 复制 <code>WorkosCursorSessionToken</code>。详见 <a href="https://github.com/junhoyeo/tokscale#cursor-ide-commands" target="_blank" rel="noopener">Tokscale Cursor 文档</a>。</p>
+  </div>
+</div>
+
+<div class="tok-card">
+  <div class="tok-card-hd"><span class="tok-pill pill-cursor">Cursor</span> MCP 配置路径</div>
+  <div class="tok-card-bd">
+    <p>项目级：<code>.cursor/mcp.json</code> · 全局：<code>~/.cursor/mcp.json</code>（版本不同可能为 Settings → MCP）。浏览器与 mcprune 示例见下文 <a href="#mcp">MCP 章节</a>。</p>
+  </div>
+</div>
+
+<h2 class="cp-section-hd tok-hd" id="claude"><span class="cp-flag">🟠</span> Claude Code 安装配置</h2>
+
+<div class="tok-card" style="margin-bottom:.85rem">
+  <div class="tok-card-hd"><span class="tok-pill pill-claude">Claude Code</span> RTK</div>
+  <div class="tok-card-bd">
+<pre>rtk init -g
+# 重启 Claude Code</pre>
+    <p>自动安装 <code>PreToolUse</code> hook，Bash 命令透明改写。与 Cursor 相同：<code>Read</code>/<code>Grep</code>/<code>Glob</code> 内置工具不经过 hook。</p>
+  </div>
+</div>
+
+<div class="tok-card" style="margin-bottom:.85rem">
+  <div class="tok-card-hd"><span class="tok-pill pill-claude">Claude Code</span> Caveman</div>
+  <div class="tok-card-bd">
+<pre>curl -fsSL https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.sh | bash</pre>
+    <p>支持 hook 自动激活；<code>/caveman-stats</code> 看本会话节省量；<code>/caveman-compress</code> 压缩 <code>CLAUDE.md</code> / 项目记忆文件。</p>
+  </div>
+</div>
+
+<div class="tok-card" style="margin-bottom:.85rem">
+  <div class="tok-card-hd"><span class="tok-pill pill-claude">Claude Code</span> 专题插件：Token Optimizer</div>
+  <div class="tok-card-bd">
+    <p><a href="https://github.com/alexgreensh/token-optimizer" target="_blank" rel="noopener">alexgreensh/token-optimizer</a>（专题高星）— 上下文工程插件：智能压缩、Dashboard、MCP/技能瘦身等。</p>
+<pre>/plugin marketplace add alexgreensh/token-optimizer
+/plugin install token-optimizer@alexgreensh-token-optimizer
+# 会话内：/token-optimizer</pre>
+    <p>安装后建议在 <code>/plugin</code> 中对该 Marketplace <strong>开启 auto-update</strong>。</p>
+  </div>
+</div>
+
+<div class="tok-card">
+  <div class="tok-card-hd"><span class="tok-pill pill-claude">Claude Code</span> MCP</div>
+  <div class="tok-card-bd">
+    <p>编辑 <code>~/.claude.json</code> 或项目 <code>.mcp.json</code> 的 <code>mcpServers</code>。mcprune / caveman-shrink 配置见 <a href="#mcp">#mcp</a>。</p>
+  </div>
+</div>
+
+<h2 class="cp-section-hd tok-hd" id="codex"><span class="cp-flag">🟢</span> Codex 安装配置</h2>
+
+<div class="highlight warn-box" style="margin-bottom:.85rem">
+  <strong>Codex 特点：</strong>部分能力靠 <code>AGENTS.md</code> 软约束，hook 覆盖不如 Claude Code/Cursor 完整；Read/Grep 硬注入限制在演进中（见 <a href="https://github.com/openai/codex/issues/18491" target="_blank" rel="noopener">codex#18491</a>）。规约写清楚收益最大。
+</div>
+
+<div class="tok-card" style="margin-bottom:.85rem">
+  <div class="tok-card-hd"><span class="tok-pill pill-codex">Codex</span> RTK</div>
+  <div class="tok-card-bd">
+<pre>rtk init -g --codex          # 项目级 AGENTS.md
+rtk init -g --global --codex # 用户级 ~/.codex/AGENTS.md</pre>
+    <p>依赖模型遵循 AGENTS.md 中的 RTK 指令（规则级集成，非 guaranteed hook）。</p>
+  </div>
+</div>
+
+<div class="tok-card" style="margin-bottom:.85rem">
+  <div class="tok-card-hd"><span class="tok-pill pill-codex">Codex</span> Caveman + 规约压缩</div>
+  <div class="tok-card-bd">
+<pre>curl -fsSL https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.sh | bash -s -- --only codex</pre>
+    <p>或全量安装后写入 <code>AGENTS.md</code>。用 <a href="https://github.com/LuckyKuang/codex-tokens-compress" target="_blank" rel="noopener">codex-tokens-compress</a> 生成高密度 <code>AGENTS.md</code> 规则段。</p>
+  </div>
+</div>
+
+<div class="tok-card" style="margin-bottom:.85rem">
+  <div class="tok-card-hd"><span class="tok-pill pill-codex">Codex</span> squeez（专题 · 含 Codex CLI）</div>
+  <div class="tok-card-bd">
+    <p><a href="https://github.com/claudioemmanuel/squeez" target="_blank" rel="noopener">squeez</a> — Rust 零依赖，支持 Claude Code / Codex CLI / Copilot CLI 等，Bash 最高约 95% 压缩 + MCP。</p>
+<pre># 见仓库 README 按宿主安装 hook；Codex 侧重 ~/.codex/AGENTS.md 软约束 + bash 管道</pre>
+  </div>
+</div>
+
+<div class="tok-card">
+  <div class="tok-card-hd"><span class="tok-pill pill-codex">Codex</span> Token Optimizer 插件</div>
+  <div class="tok-card-bd">
+    <p>同 <a href="https://github.com/alexgreensh/token-optimizer" target="_blank" rel="noopener">token-optimizer</a> 的 Codex 原生插件，TUI 内 <code>/plugins</code> 安装。Dashboard 默认 <code>http://localhost:24843/token-optimizer</code>。</p>
+  </div>
+</div>
+
+<h2 class="cp-section-hd tok-hd" id="mcp"><span class="cp-flag">🌐</span> MCP / 浏览器（三端通用配置）</h2>
+
+<div class="tok-card" style="margin-bottom:.85rem">
+  <div class="tok-card-hd">mcprune — 剪枝 Playwright 页面快照</div>
+  <div class="tok-card-bd">
+    <ol>
+      <li>克隆并安装：</li>
+    </ol>
+<pre>git clone https://github.com/hamr0/mcprune.git
+cd mcprune && npm install && npx playwright install chromium</pre>
+    <p>写入 MCP 配置（路径换成你的绝对路径）：</p>
+<pre>{
+  "mcpServers": {
+    "browser": {
+      "command": "node",
+      "args": ["/path/to/mcprune/mcp-server.js", "--mode", "auto"]
+    }
+  }
+}</pre>
+    <p>可选 <code>--headless</code>；模式 <code>act</code>（操作）/ <code>browse</code>（读文档）/ <code>auto</code>。</p>
+  </div>
+</div>
+
+<div class="tok-card" style="margin-bottom:.85rem">
+  <div class="tok-card-hd">caveman-shrink — 压缩 MCP 工具描述</div>
+  <div class="tok-card-bd">
+<pre>{
+  "mcpServers": {
+    "fs-compact": {
+      "command": "npx",
+      "args": [
+        "caveman-shrink",
+        "npx", "-y", "@modelcontextprotocol/server-filesystem", "/your/project"
+      ]
+    }
+  }
+}</pre>
+    <p>将任意上游 MCP 包一层；压缩 <code>description</code> 等 prose 字段，工具语义不变。</p>
+  </div>
+</div>
+
+<div class="tok-card">
+  <div class="tok-card-hd">单页浏览 checklist（Agent 侧）</div>
+  <div class="tok-card-bd">
+    <ul>
+      <li>默认无障碍树，<strong>禁止</strong>为读文字先截图（画布/验证码除外）</li>
+      <li>每任务 ≤1 次全量 <code>browser_snapshot</code>，之后用 <code>ref</code> 点击</li>
+      <li>电商/表单用 mcprune <code>act</code>；文档站用 <code>browse</code></li>
+      <li>单步页面感知预算建议 ≤ 6000 tokens</li>
+      <li>能 API / <code>fetch</code> 就不开浏览器</li>
+    </ul>
+  </div>
+</div>
+
+<h2 class="cp-section-hd tok-hd" id="rules"><span class="cp-flag">📋</span> 可复制 Rules 模板</h2>
+<p class="cp-subtitle" style="margin-top:0">粘贴到 Cursor Rules、<code>CLAUDE.md</code> 或 <code>AGENTS.md</code>。</p>
+<pre>## Token 优化
+
+### CLI（必须）
+- 终端命令经 RTK：rtk git / rtk rg / rtk test / rtk read
+- 不用内置 Read/Grep 读大文件；用 rtk 或 head/tail
+
+### 浏览器
+- 默认无障碍树；禁止为读正文先截图
+- 每任务最多 1 次全量 snapshot；之后只用 ref 或增量
+- Playwright MCP 经 mcprune；模式 act=操作 browse=读文档
+
+### 输出
+- 技术回复：结论先行，无寒暄；代码块保持完整可运行
+
+### MCP
+- 大 JSON 返回先精简；工具列表可用 caveman-shrink 包装
+
+### 预算
+- 单步页面感知 ≤ 6000 tokens；超限则剪枝或换 API/深链</pre>
+
+<h2 class="cp-section-hd tok-hd" id="ecosystem"><span class="cp-flag">🔗</span> GitHub <code>token-optimization</code> 专题分析</h2>
+<p class="cp-subtitle" style="margin-top:0">共 <strong>802</strong> 个公开仓库打该 topic（GitHub Search API，2026-06-26）。下表为 Top 项目按<strong>能力分档</strong>，星标随社区变化，以专题页为准。</p>
+
+<h3 class="cp-section-hd" style="font-size:.92rem;margin-top:1rem">第一梯队：CLI / 全栈代理（编码助手主战场）</h3>
+<table class="tok-table">
+  <thead><tr><th>#</th><th>项目</th><th>★</th><th>定位</th><th>AINav</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td><a href="https://github.com/rtk-ai/rtk" target="_blank" rel="noopener">rtk-ai/rtk</a></td><td>66K</td><td>CLI 命令输出代理，Rust，三端 hook/规约</td><td>✅ 收录</td></tr>
+    <tr><td>2</td><td><a href="https://github.com/headroomlabs-ai/headroom" target="_blank" rel="noopener">headroomlabs-ai/headroom</a></td><td>51K</td><td>全栈上下文压缩：库·代理·MCP·wrap·CCR</td><td>✅ 收录</td></tr>
+    <tr><td>3</td><td><a href="https://github.com/yvgude/lean-ctx" target="_blank" rel="noopener">yvgude/lean-ctx</a></td><td>2.9K</td><td>上下文门控：控制 Agent 可见信息</td><td>✅ 收录</td></tr>
+    <tr><td>—</td><td><a href="https://github.com/edouard-claude/snip" target="_blank" rel="noopener">edouard-claude/snip</a></td><td>347</td><td>声明式 YAML 的 RTK 类 CLI 代理</td><td>—</td></tr>
+    <tr><td>—</td><td><a href="https://github.com/zdk/lowfat" target="_blank" rel="noopener">zdk/lowfat</a></td><td>543</td><td>精简命令行输出噪音</td><td>—</td></tr>
+    <tr><td>—</td><td><a href="https://github.com/juyterman1000/entroly" target="_blank" rel="noopener">entroly</a></td><td>416</td><td>本地代理，多模型账单 70–95% 宣称</td><td>—</td></tr>
+  </tbody>
+</table>
+
+<h3 class="cp-section-hd" style="font-size:.92rem">第二梯队：Claude Code / Codex 插件与中间件</h3>
+<table class="tok-table">
+  <thead><tr><th>#</th><th>项目</th><th>★</th><th>定位</th><th>AINav</th></tr></thead>
+  <tbody>
+    <tr><td>6</td><td><a href="https://github.com/alexgreensh/token-optimizer" target="_blank" rel="noopener">alexgreensh/token-optimizer</a></td><td>1.4K</td><td>上下文工程插件，Dashboard，ghost token</td><td>✅ 收录</td></tr>
+    <tr><td>4</td><td><a href="https://github.com/cytostack/openwolf" target="_blank" rel="noopener">cytostack/openwolf</a></td><td>2.0K</td><td>Claude Code 开源中间件，削上下文</td><td>—</td></tr>
+    <tr><td>9</td><td><a href="https://github.com/nadimtuhin/claude-token-optimizer" target="_blank" rel="noopener">nadimtuhin/claude-token-optimizer</a></td><td>480</td><td>Claude 文档/规约压缩模板</td><td>—</td></tr>
+    <tr><td>12</td><td><a href="https://github.com/ooples/token-optimizer-mcp" target="_blank" rel="noopener">ooples/token-optimizer-mcp</a></td><td>415</td><td>MCP 缓存+压缩，偏 Claude Code</td><td>—</td></tr>
+    <tr><td>13</td><td><a href="https://github.com/IyadhKhalfallah/clauditor" target="_blank" rel="noopener">IyadhKhalfallah/clauditor</a></td><td>408</td><td>配额监控与自动限流</td><td>—</td></tr>
+  </tbody>
+</table>
+
+<h3 class="cp-section-hd" style="font-size:.92rem">第三梯队：MCP · 代码探索 · 浏览器</h3>
+<table class="tok-table">
+  <thead><tr><th>#</th><th>项目</th><th>★</th><th>定位</th><th>AINav</th></tr></thead>
+  <tbody>
+    <tr><td>5</td><td><a href="https://github.com/jgravelle/jcodemunch-mcp" target="_blank" rel="noopener">jgravelle/jcodemunch-mcp</a></td><td>1.9K</td><td>MCP 代码探索，宣称 95%+ 省 Token</td><td>✅ 收录</td></tr>
+    <tr><td>—</td><td><a href="https://github.com/hamr0/mcprune" target="_blank" rel="noopener">hamr0/mcprune</a></td><td>—</td><td>Playwright 快照剪枝（未进 Top50 但三省常用）</td><td>✅ 收录</td></tr>
+    <tr><td>—</td><td><a href="https://github.com/malovnik/agent-browser" target="_blank" rel="noopener">malovnik/agent-browser</a></td><td>—</td><td>无障碍树浏览器 MCP</td><td>✅ 收录</td></tr>
+  </tbody>
+</table>
+
+<h3 class="cp-section-hd" style="font-size:.92rem">第四梯队：上下文控制 · 记忆 · 编码格式</h3>
+<table class="tok-table">
+  <thead><tr><th>#</th><th>项目</th><th>★</th><th>定位</th></tr></thead>
+  <tbody>
+    <tr><td>3</td><td><a href="https://github.com/yvgude/lean-ctx" target="_blank" rel="noopener">yvgude/lean-ctx</a></td><td>2.9K</td><td>控制 Agent「能看见什么」的上下文注入（见第一梯队）</td></tr>
+    <tr><td>7</td><td><a href="https://github.com/lucasrosati/claude-code-memory-setup" target="_blank" rel="noopener">lucasrosati/claude-code-memory-setup</a></td><td>803</td><td>Obsidian + Graph 降 Claude 会话 Token</td></tr>
+    <tr><td>—</td><td><a href="https://github.com/flightlesstux/prompt-caching" target="_blank" rel="noopener">flightlesstux/prompt-caching</a></td><td>127</td><td>Claude Code 自动 prompt cache</td></tr>
+    <tr><td>—</td><td><a href="https://github.com/skibidiskib/ai-codex" target="_blank" rel="noopener">skibidiskib/ai-codex</a></td><td>273</td><td>紧凑代码库索引，省 50K+ 宣称</td></tr>
+  </tbody>
+</table>
+
+<h3 class="cp-section-hd" style="font-size:.92rem">不在专题内但三省常用（高星未打 topic）</h3>
+<div class="highlight warn-box">
+  <strong>Caveman</strong>（77K★）未广泛打 <code>token-optimization</code> topic，但在社区与 <a href="https://github.com/HoangP8/tokless">tokless</a> 安装器中与 RTK 并列推荐 → AINav 仍收录为<strong>输出层</strong>首选 Skill。
+</div>
+
+<h3 class="cp-section-hd" style="font-size:.92rem">选型速查（Cursor / Claude Code / Codex）</h3>
+<table class="tok-table">
+  <thead><tr><th>诉求</th><th>专题首选</th><th>组合建议</th></tr></thead>
+  <tbody>
+    <tr><td>只压 CLI 测试/git 输出</td><td>RTK (#1)</td><td>+ Caveman 压输出；Tokscale 观测</td></tr>
+    <tr><td>全栈 + RAG + 团队代理</td><td>Headroom (#2)</td><td>见 <a href="#headroom-practice">分层最佳实践</a> + holdout</td></tr>
+    <tr><td>Claude 插件一站式</td><td>token-optimizer (#6)</td><td>与 RTK 二选一或叠加需实测</td></tr>
+    <tr><td>大仓 MCP 探代码</td><td>jcodemunch-mcp (#5)</td><td>+ mcprune 处理浏览器页</td></tr>
+    <tr><td>一键装多个插件</td><td><a href="https://github.com/HoangP8/tokless">tokless</a> (#42)</td><td>聚合 RTK / Caveman 等</td></tr>
+  </tbody>
+</table>
+
+<div class="highlight" style="margin-top:1rem">
+  <strong>说明：</strong>此前页面曾链到 <code>chopratejas/headroom</code>，官方主仓已迁至 <code>headroomlabs-ai/headroom</code>。专题页为 JS 渲染，完整列表请用 <a href="https://github.com/topics/token-optimization" target="_blank" rel="noopener">GitHub 专题</a> 或 API <code>search/repositories?q=topic:token-optimization</code>。
+</div>
+
+</div>
+
+<footer class="cp-footer">
+  <a href="index.html">AINav 首页</a> ·
+  <a href="free-tier.html">🆓 免费额度</a> ·
+  <a href="index.html#ext-token-optimize">Token 工具</a> ·
+  <a href="coding-plan.html">编程套餐</a> ·
+  <a href="https://github.com/topics/token-optimization" target="_blank" rel="noopener noreferrer">GitHub 专题</a>
+</footer>
+
+<script>
+(function () {
+  var THEME_KEY = "ainav-theme";
+  function setTheme(mode) {
+    if (mode !== "light" && mode !== "dark" && mode !== "system") mode = "system";
+    document.documentElement.setAttribute("data-theme", mode);
+    try { localStorage.setItem(THEME_KEY, mode); } catch (e) {}
+    document.querySelectorAll(".theme-btn[data-theme-set]").forEach(function (b) {
+      b.classList.toggle("is-active", b.getAttribute("data-theme-set") === mode);
+    });
+  }
+  var cur = "dark";
+  try { var s = localStorage.getItem(THEME_KEY); if (s) cur = s; } catch (e) {}
+  setTheme(cur);
+  document.querySelectorAll(".theme-btn[data-theme-set]").forEach(function (b) {
+    b.addEventListener("click", function () { setTheme(b.getAttribute("data-theme-set")); });
+  });
+})();
+</script>
+<script src="plan-nav.js" data-active="token-optimization.html"></script>
+</body>
+</html>

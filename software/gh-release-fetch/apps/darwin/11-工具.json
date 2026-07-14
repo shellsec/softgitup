@@ -418,5 +418,32 @@
     ],
     "releases_url": "https://bgithub.xyz/crosspaste/crosspaste-desktop/releases",
     "repo_path": "crosspaste/crosspaste-desktop"
+  },
+  {
+    "id": "applite",
+    "简介": "Applite（macOS 图形化 Homebrew Cask 管理器）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Applite.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "Applite.dmg",
+    "aliases": [
+      "Applite",
+      "Homebrew GUI"
+    ],
+    "releases_url": "https://bgithub.xyz/milanvarady/Applite/releases",
+    "repo_path": "milanvarady/Applite"
   }
 ]

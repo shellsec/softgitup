@@ -67,5 +67,42 @@
     "save_name": "green_wallet.apk",
     "releases_url": "https://bgithub.xyz/Blockstream/green_android/releases",
     "repo_path": "Blockstream/green_android"
+  },
+  {
+    "id": "bee_count",
+    "简介": "BeeCount（本地优先跨端记账；Android universal APK）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "beecount-",
+      "universal.apk"
+    ],
+    "href_exclude_substrings": [
+      ".aab",
+      "armeabi",
+      "x86_64",
+      "unsigned",
+      ".ipa",
+      "iphone",
+      "simulator",
+      "source"
+    ],
+    "use_download_filename": true,
+    "aliases": [
+      "BeeCount",
+      "beecount"
+    ],
+    "releases_url": "https://bgithub.xyz/TNT-Likely/BeeCount/releases",
+    "repo_path": "TNT-Likely/BeeCount"
   }
 ]

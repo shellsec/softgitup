@@ -1,15 +1,15 @@
 {
   "schema": 1,
-  "generated_at": "2026-07-06T03:09:11Z",
+  "generated_at": "2026-07-08T03:52:28Z",
   "items": [
     {
       "id": "cursor",
-      "version": "3.10.17",
-      "version_tag": "v3.10.17",
+      "version": "3.10.20",
+      "version_tag": "v3.10.20",
       "downloads": {
         "windows": {
-          "url": "https://downloads.cursor.com/production/c89f45b831621cdc5e951694db44fecd8fab1150/win32/x64/user-setup/CursorUserSetup-x64-3.10.17.exe",
-          "filename": "CursorUserSetup-x64-3.10.17.exe"
+          "url": "https://downloads.cursor.com/production/23b9fb205fe595ea2be29da7214e19762d037fc3/win32/x64/user-setup/CursorUserSetup-x64-3.10.20.exe",
+          "filename": "CursorUserSetup-x64-3.10.20.exe"
         },
         "darwin": null,
         "linux": null
@@ -38,39 +38,39 @@
     },
     {
       "id": "vscodium",
-      "version": "1.121.03429",
-      "version_tag": "v1.121.03429",
+      "version": "1.126.04524",
+      "version_tag": "v1.126.04524",
       "downloads": {
         "windows": {
-          "url": "https://github.com/VSCodium/vscodium/releases/download/1.121.03429/VSCodiumUserSetup-x64-1.121.03429.exe",
-          "filename": "VSCodiumUserSetup-x64-1.121.03429.exe"
+          "url": "https://github.com/VSCodium/vscodium/releases/download/1.126.04524/VSCodiumUserSetup-x64-1.126.04524.exe",
+          "filename": "VSCodiumUserSetup-x64-1.126.04524.exe"
         },
         "darwin": {
-          "url": "https://github.com/VSCodium/vscodium/releases/download/1.121.03429/VSCodium-darwin-arm64-1.121.03429.zip",
-          "filename": "VSCodium-darwin-arm64-1.121.03429.zip"
+          "url": "https://github.com/VSCodium/vscodium/releases/download/1.126.04524/VSCodium-darwin-arm64-1.126.04524.zip",
+          "filename": "VSCodium-darwin-arm64-1.126.04524.zip"
         },
         "linux": {
-          "url": "https://github.com/VSCodium/vscodium/releases/download/1.121.03429/VSCodium-linux-x64-1.121.03429.tar.gz",
-          "filename": "VSCodium-linux-x64-1.121.03429.tar.gz"
+          "url": "https://github.com/VSCodium/vscodium/releases/download/1.126.04524/VSCodium-linux-x64-1.126.04524.tar.gz",
+          "filename": "VSCodium-linux-x64-1.126.04524.tar.gz"
         }
       },
       "notes": "GitHub API latest assets。"
     },
     {
       "id": "trae",
-      "version": "2.3.49027",
-      "version_tag": "v2.3.49027",
+      "version": "2.3.50210",
+      "version_tag": "v2.3.50210",
       "downloads": {
         "windows": {
-          "url": "https://lf-cdn.trae.ai/obj/trae-ai-us/pkg/app/releases/stable/2.3.49027/win32/Trae-Setup-x64.exe",
+          "url": "https://lf-cdn.trae.ai/obj/trae-ai-us/pkg/app/releases/stable/2.3.50210/win32/Trae-Setup-x64.exe",
           "filename": "Trae-Setup-x64.exe"
         },
         "darwin": {
-          "url": "https://lf-cdn.trae.ai/obj/trae-ai-us/pkg/app/releases/stable/2.3.49027/darwin/Trae-darwin-arm64.dmg",
+          "url": "https://lf-cdn.trae.ai/obj/trae-ai-us/pkg/app/releases/stable/2.3.50210/darwin/Trae-darwin-arm64.dmg",
           "filename": "Trae-darwin-arm64.dmg"
         },
         "linux": {
-          "url": "https://lf-cdn.trae.ai/obj/trae-ai-us/pkg/app/releases/stable/2.3.49027/linux/Trae-linux-x64.tar.gz",
+          "url": "https://lf-cdn.trae.ai/obj/trae-ai-us/pkg/app/releases/stable/2.3.50210/linux/Trae-linux-x64.tar.gz",
           "filename": "Trae-linux-x64.tar.gz"
         }
       },
@@ -95,15 +95,15 @@
     },
     {
       "id": "trae_solo",
-      "version": "2.3.50082",
-      "version_tag": "v2.3.50082",
+      "version": "2.3.50207",
+      "version_tag": "v2.3.50207",
       "downloads": {
         "windows": {
-          "url": "https://lf-cdn.trae.ai/obj/trae-ai-us/pkg/app/releases/stable/2.3.50082/win32/TRAE_Work-Setup-x64.exe",
+          "url": "https://lf-cdn.trae.ai/obj/trae-ai-us/pkg/app/releases/stable/2.3.50207/win32/TRAE_Work-Setup-x64.exe",
           "filename": "TRAE_Work-Setup-x64.exe"
         },
         "darwin": {
-          "url": "https://lf-cdn.trae.ai/obj/trae-ai-us/pkg/app/releases/stable/2.3.50082/darwin/TRAE_Work-darwin-arm64.dmg",
+          "url": "https://lf-cdn.trae.ai/obj/trae-ai-us/pkg/app/releases/stable/2.3.50207/darwin/TRAE_Work-darwin-arm64.dmg",
           "filename": "TRAE_Work-darwin-arm64.dmg"
         },
         "linux": null
@@ -149,60 +149,60 @@
     },
     {
       "id": "zcode",
-      "version": "3.2.5",
-      "version_tag": "v3.2.5",
+      "version": "3.3.0",
+      "version_tag": "v3.3.0",
       "downloads": {
         "windows": {
-          "url": "https://cdn-zcode.z.ai/zcode/electron/releases/3.2.5/ZCode-3.2.5-win-x64.exe",
-          "filename": "ZCode-3.2.5-win-x64.exe"
+          "url": "https://cdn-zcode.z.ai/zcode/electron/releases/3.3.0/ZCode-3.3.0-win-x64.exe",
+          "filename": "ZCode-3.3.0-win-x64.exe"
         },
         "darwin": {
-          "url": "https://cdn-zcode.z.ai/zcode/electron/releases/3.2.5/ZCode-3.2.5-mac-arm64.dmg",
-          "filename": "ZCode-3.2.5-mac-arm64.dmg"
+          "url": "https://cdn-zcode.z.ai/zcode/electron/releases/3.3.0/ZCode-3.3.0-mac-arm64.dmg",
+          "filename": "ZCode-3.3.0-mac-arm64.dmg"
         },
         "linux": {
-          "url": "https://cdn-zcode.z.ai/zcode/electron/releases/3.2.5/ZCode-3.2.5-linux-x64.AppImage",
-          "filename": "ZCode-3.2.5-linux-x64.AppImage"
+          "url": "https://cdn-zcode.z.ai/zcode/electron/releases/3.3.0/ZCode-3.3.0-linux-x64.AppImage",
+          "filename": "ZCode-3.3.0-linux-x64.AppImage"
         }
       },
       "notes": "自 zcode.z.ai 首页 CDN（cdn-zcode.z.ai）解析；Intel Mac 可用 mac-x64.dmg。"
     },
     {
       "id": "windsurf",
-      "version": "3.4.22",
-      "version_tag": "v3.4.22",
+      "version": "3.4.27",
+      "version_tag": "v3.4.27",
       "downloads": {
         "windows": {
-          "url": "https://windsurf-stable.codeiumdata.com/win32-x64/stable/0c84d3332806347c90e571331f48dd13a957d880/DevinSetup-x64-3.4.22.exe",
-          "filename": "DevinSetup-x64-3.4.22.exe"
+          "url": "https://windsurf-stable.codeiumdata.com/win32-x64/stable/0d4bf12ed4a7597cb8ae9016fe8474468aad98a2/DevinSetup-x64-3.4.27.exe",
+          "filename": "DevinSetup-x64-3.4.27.exe"
         },
         "darwin": {
-          "url": "https://windsurf-stable.codeiumdata.com/darwin-arm64/stable/0c84d3332806347c90e571331f48dd13a957d880/Devin-darwin-arm64-3.4.22.zip",
-          "filename": "Devin-darwin-arm64-3.4.22.zip"
+          "url": "https://windsurf-stable.codeiumdata.com/darwin-arm64/stable/0d4bf12ed4a7597cb8ae9016fe8474468aad98a2/Devin-darwin-arm64-3.4.27.zip",
+          "filename": "Devin-darwin-arm64-3.4.27.zip"
         },
         "linux": {
-          "url": "https://windsurf-stable.codeiumdata.com/linux-x64/stable/0c84d3332806347c90e571331f48dd13a957d880/Devin-linux-x64-3.4.22.tar.gz",
-          "filename": "Devin-linux-x64-3.4.22.tar.gz"
+          "url": "https://windsurf-stable.codeiumdata.com/linux-x64/stable/0d4bf12ed4a7597cb8ae9016fe8474468aad98a2/Devin-linux-x64-3.4.27.tar.gz",
+          "filename": "Devin-linux-x64-3.4.27.tar.gz"
         }
       },
       "notes": "官方 update API（包名现为 Devin*，产品 Windsurf/Devin Desktop）。 Windows 为 DevinSetup-x64（系统安装包）；亦可用 win32-x64-user 得 DevinUserSetup。"
     },
     {
       "id": "lmstudio",
-      "version": "0.4.18",
-      "version_tag": "v0.4.18",
+      "version": "0.4.19",
+      "version_tag": "v0.4.19",
       "downloads": {
         "windows": {
-          "url": "https://installers.lmstudio.ai/win32/x64/0.4.18-1/LM-Studio-0.4.18-1-x64.exe",
-          "filename": "LM-Studio-0.4.18-1-x64.exe"
+          "url": "https://installers.lmstudio.ai/win32/x64/0.4.19-2/LM-Studio-0.4.19-2-x64.exe",
+          "filename": "LM-Studio-0.4.19-2-x64.exe"
         },
         "darwin": {
-          "url": "https://installers.lmstudio.ai/darwin/arm64/0.4.18-1/LM-Studio-0.4.18-1-arm64.dmg",
-          "filename": "LM-Studio-0.4.18-1-arm64.dmg"
+          "url": "https://installers.lmstudio.ai/darwin/arm64/0.4.19-2/LM-Studio-0.4.19-2-arm64.dmg",
+          "filename": "LM-Studio-0.4.19-2-arm64.dmg"
         },
         "linux": {
-          "url": "https://installers.lmstudio.ai/linux/x64/0.4.18-1/LM-Studio-0.4.18-1-x64.AppImage",
-          "filename": "LM-Studio-0.4.18-1-x64.AppImage"
+          "url": "https://installers.lmstudio.ai/linux/x64/0.4.19-2/LM-Studio-0.4.19-2-x64.AppImage",
+          "filename": "LM-Studio-0.4.19-2-x64.AppImage"
         }
       },
       "notes": "自 lmstudio.ai/download/latest 重定向链；Intel Mac 可用 darwin/x64。"
@@ -243,16 +243,16 @@
     },
     {
       "id": "workbuddy",
-      "version": "5.1.7.31711488",
-      "version_tag": "v5.1.7.31711488",
+      "version": "5.2.3.32357678",
+      "version_tag": "v5.2.3.32357678",
       "downloads": {
         "windows": {
-          "url": "https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.1.7.31711488-dc01bf2f.exe",
-          "filename": "WorkBuddy-win32-x64-user-5.1.7.31711488-dc01bf2f.exe"
+          "url": "https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.2.3.32357678-3865830d.exe",
+          "filename": "WorkBuddy-win32-x64-user-5.2.3.32357678-3865830d.exe"
         },
         "darwin": {
-          "url": "https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.1.7.31711488-dc01bf2f.zip",
-          "filename": "WorkBuddy-darwin-arm64-5.1.7.31711488-dc01bf2f.zip"
+          "url": "https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.2.3.32357678-3865830d.zip",
+          "filename": "WorkBuddy-darwin-arm64-5.2.3.32357678-3865830d.zip"
         },
         "linux": null
       },
@@ -280,8 +280,8 @@
     },
     {
       "id": "kiro",
-      "version": "2.10.0",
-      "version_tag": "v2.10.0",
+      "version": "2.11.1",
+      "version_tag": "v2.11.1",
       "downloads": {
         "windows": {
           "url": "https://prod.download.cli.kiro.dev/stable/latest/kiro-cli-x86_64-pc-windows-msvc.msi",
@@ -351,6 +351,46 @@
         "linux": null
       },
       "notes": "Oracle VirtualBox；安装包来自 download.virtualbox.org（非 GitHub Release）。 macOS 优先 Apple Silicon dmg；Linux 为通用 tar.bz2，各发行版 deb/rpm 见官网。"
+    },
+    {
+      "id": "sunlogin",
+      "version": "16.5.2.31214",
+      "version_tag": "v16.5.2.31214",
+      "downloads": {
+        "windows": {
+          "url": "https://d-cdn.oray.com/sl/windows/AweSun_16.5.2.31214_x64.exe",
+          "filename": "AweSun_16.5.2.31214_x64.exe"
+        },
+        "darwin": {
+          "url": "https://dw.oray.com/sl/mac/AweSun_16.5.2.31214_arm64.dmg",
+          "filename": "AweSun_16.5.2.31214_arm64.dmg"
+        },
+        "linux": {
+          "url": "https://dw.oray.com/sl/linux/awesun-16.5.2.31214-x86_64.deb",
+          "filename": "awesun-16.5.2.31214-x86_64.deb"
+        }
+      },
+      "notes": "贝锐向日葵个人版（AweSun）；版本与直链来自 client-api.oray.com。 下载 oray CDN 时需 Referer（auto_update 已自动附加 sunlogin.oray.com）。 macOS 优先 arm64 dmg；Linux 为 deb（Ubuntu/Deepin）。"
+    },
+    {
+      "id": "termius",
+      "version": "9.40.1",
+      "version_tag": "v9.40.1",
+      "downloads": {
+        "windows": {
+          "url": "https://autoupdate.termius.com/windows/Install%20Termius.exe",
+          "filename": "Install Termius.exe"
+        },
+        "darwin": {
+          "url": "https://autoupdate.termius.com/mac-arm64/Termius.dmg",
+          "filename": "Termius.dmg"
+        },
+        "linux": {
+          "url": "https://download.termius.com/linux/Termius.deb",
+          "filename": "Termius.deb"
+        }
+      },
+      "notes": "Termius 跨平台 SSH 终端；版本来自 autoupdate.termius.com electron-builder yml。 macOS 优先 arm64 dmg；Linux 为官方 Termius.deb（download.termius.com）。"
     },
     {
       "id": "cutter",

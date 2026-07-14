@@ -627,7 +627,9 @@
     "windows_installer": false,
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://chatboxai.app"
   },
   {
     "id": "nextchat",
@@ -639,7 +641,9 @@
     "windows_installer": false,
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/ChatGPTNextWeb/NextChat"
   },
   {
     "id": "opencat",
@@ -651,7 +655,9 @@
     "windows_installer": false,
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://opencat.app"
   },
   {
     "id": "open_claude_cowork",
@@ -663,7 +669,9 @@
     "windows_installer": false,
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/ComposioHQ/open-claude-cowork"
   },
   {
     "id": "github_copilot_cli",
@@ -706,7 +714,9 @@
     "windows_installer": false,
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://python.langchain.com/docs/get_started/installation"
   },
   {
     "id": "llamaindex_note",
@@ -718,7 +728,9 @@
     "windows_installer": false,
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://docs.llamaindex.ai/en/stable/getting_started/installation/"
   },
   {
     "id": "deepseek_cli",
@@ -1268,5 +1280,146 @@
     "releases_url": "https://bgithub.xyz/aws/amazon-q-developer-cli/releases",
     "repo_path": "aws/amazon-q-developer-cli",
     "url_hint": "amazon-q"
+  },
+  {
+    "id": "comfyui",
+    "简介": "ComfyUI（本地 AI 图像工作流；Windows NVIDIA 便携版 7z，解压即用）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ComfyUI_windows_portable_nvidia",
+      ".7z"
+    ],
+    "href_exclude_substrings": [
+      "cu126",
+      "intel",
+      "amd"
+    ],
+    "installer_extensions": [
+      ".7z"
+    ],
+    "use_download_filename": true,
+    "aliases": [
+      "ComfyUI",
+      "comfy ui"
+    ],
+    "releases_url": "https://bgithub.xyz/comfyanonymous/ComfyUI/releases",
+    "repo_path": "comfyanonymous/ComfyUI"
+  },
+  {
+    "id": "textgen_webui",
+    "简介": "text-generation-webui / oobabooga（本地 LLM WebUI；Windows CPU 便携 zip）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "textgen-portable",
+      "windows",
+      "cpu"
+    ],
+    "href_exclude_substrings": [
+      "cuda",
+      "rocm",
+      "vulkan",
+      "linux",
+      "macos",
+      "arm64",
+      "-ik-"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "aliases": [
+      "oobabooga",
+      "text-generation-webui",
+      "textgen"
+    ],
+    "releases_url": "https://bgithub.xyz/oobabooga/text-generation-webui/releases",
+    "repo_path": "oobabooga/text-generation-webui"
+  },
+  {
+    "id": "ccometixline",
+    "简介": "CCometixLine（Claude Code 状态栏 ccline；Rust 构建）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ccline-windows-x64",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "macos",
+      "arm64"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "aliases": [
+      "CCometixLine",
+      "ccline",
+      "CometixLine"
+    ],
+    "releases_url": "https://bgithub.xyz/Haleclipse/CCometixLine/releases",
+    "repo_path": "Haleclipse/CCometixLine"
+  },
+  {
+    "id": "picoclaw",
+    "简介": "PicoClaw（超轻量 AI 助手；Windows x86_64 zip）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "picoclaw_Windows_x86_64",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "Darwin",
+      "Linux",
+      "arm64",
+      "checksums",
+      "deb",
+      "rpm",
+      "android",
+      "Freebsd",
+      "Netbsd"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "aliases": [
+      "PicoClaw",
+      "pico claw"
+    ],
+    "releases_url": "https://bgithub.xyz/sipeed/picoclaw/releases",
+    "repo_path": "sipeed/picoclaw"
   }
 ]

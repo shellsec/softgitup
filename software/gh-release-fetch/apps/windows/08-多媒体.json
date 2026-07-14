@@ -972,7 +972,9 @@
       "_win_x64",
       ".exe"
     ],
-    "installer_extensions": [".exe"],
+    "installer_extensions": [
+      ".exe"
+    ],
     "releases_url": "https://bgithub.xyz/listen1/listen1_desktop/releases",
     "repo_path": "listen1/listen1_desktop"
   },
@@ -1128,5 +1130,44 @@
     ],
     "releases_url": "https://bgithub.xyz/sjshb57/NewLcgR/releases",
     "repo_path": "sjshb57/NewLcgR"
+  },
+  {
+    "releases_url": "https://bgithub.xyz/MoeKoeMusic/MoeKoeMusic/releases",
+    "repo_path": "MoeKoeMusic/MoeKoeMusic",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "enabled": false,
+    "aliases": [
+      "MoeKoeMusic",
+      "MoeKoe Music",
+      "moekoe",
+      "萌音"
+    ],
+    "id": "moekoe_music",
+    "简介": "MoeKoe Music（酷狗音乐第三方桌面客户端；Windows x64 安装包）",
+    "分类": "多媒体",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "MoeKoe_Music_Setup",
+      "-x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "ia32",
+      "blockmap",
+      ".yml",
+      ".deb",
+      ".dmg",
+      ".zip",
+      "AppImage",
+      "arm64"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "windows_installer": true,
+    "use_download_filename": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
   }
 ]

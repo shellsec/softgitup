@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Skill 最佳实践 — 从用到写一站式指南 — AINav</title>
+  <meta name="description" content="AI Agent Skill 最佳实践：npx skills add 一键安装、三大必装合集、实战梯队排名、Slash 命令速查、跨工具目录结构，覆盖 Claude Code / Cursor / Codex / Windsurf，帮你先跑起来再写好。">
+  <link rel="canonical" href="https://aiv123.com/skill-plan.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI Skill 最佳实践 — 从用到写一站式指南">
+  <meta property="og:description" content="先用再写！npx skills add 一键安装三大必装合集、实战梯队排名、Slash 命令速查，覆盖主流 AI 编程工具。">
+  <meta property="og:url" content="https://aiv123.com/skill-plan.html">
+  <meta property="og:site_name" content="AINav">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%230969da'/><text x='50' y='72' font-size='60' text-anchor='middle' fill='white' font-family='system-ui' font-weight='700'>AI</text></svg>">
+  <style>
+    :root, html[data-theme="dark"] {
+      --bg: #0f1419; --panel: #151b23; --card: #1c2430; --border: #2d3848;
+      --text: #e6edf3; --muted: #8b9cb3; --accent: #58a6ff; --accent2: #3fb950;
+      --warn: #d29922; --danger: #f85149; --hot: #ff6b6b; --overseas: #a78bfa;
+      --oss: #f0883e; --step1: #58a6ff; --step2: #a78bfa; --step3: #f0883e;
+      --t1: #3fb950; --t2: #58a6ff; --t3: #f0883e;
+    }
+    html[data-theme="light"] {
+      --bg: #f6f8fa; --panel: #fff; --card: #fff; --border: #d0d7de;
+      --text: #1f2328; --muted: #59636e; --accent: #0969da; --accent2: #1a7f37;
+      --warn: #9a6700; --danger: #cf222e; --hot: #e53935; --overseas: #7c3aed;
+      --oss: #bc4c00; --step1: #0969da; --step2: #7c3aed; --step3: #bc4c00;
+      --t1: #1a7f37; --t2: #0969da; --t3: #bc4c00;
+    }
+    @media (prefers-color-scheme: light) {
+      html[data-theme="system"] {
+        --bg: #f6f8fa; --panel: #fff; --card: #fff; --border: #d0d7de;
+        --text: #1f2328; --muted: #59636e; --accent: #0969da; --accent2: #1a7f37;
+        --warn: #9a6700; --danger: #cf222e; --hot: #e53935; --overseas: #7c3aed;
+        --oss: #bc4c00; --step1: #0969da; --step2: #7c3aed; --step3: #bc4c00;
+        --t1: #1a7f37; --t2: #0969da; --t3: #bc4c00;
+      }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Segoe UI", system-ui, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.6; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .cp-top { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); background: var(--panel); position: sticky; top: 0; z-index: 10; }
+    .cp-top-inner { max-width: 76rem; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; justify-content: space-between; }
+    .cp-nav a { font-weight: 600; margin-right: 1rem; font-size: 0.88rem; }
+    .cp-toolbar { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; }
+    .theme-btn { font-size: 0.72rem; padding: 0.2rem 0.5rem; border-radius: 5px; border: 1px solid var(--border);
+      background: var(--card); color: var(--muted); cursor: pointer; font-family: inherit; }
+    .theme-btn.is-active { color: var(--accent); border-color: var(--accent); font-weight: 600; }
+
+    .cp-wrap { max-width: 76rem; margin: 0 auto; padding: 1rem; }
+    h1 { font-size: 1.35rem; margin: 0 0 0.3rem; }
+    .cp-subtitle { font-size: 0.88rem; color: var(--muted); margin-bottom: 1rem; }
+    .cp-updated { font-size: 0.76rem; color: var(--muted); margin-bottom: 1.2rem; }
+
+    .cp-section-hd { font-size: 1.1rem; font-weight: 700; margin: 1.8rem 0 0.8rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--border); display: flex; align-items: center; gap: 0.5rem; }
+    .cp-section-hd .cp-flag { font-size: 1.15rem; }
+    .cp-section-hd.step1-hd { border-bottom-color: var(--step1); }
+    .cp-section-hd.step2-hd { border-bottom-color: var(--step2); }
+    .cp-section-hd.step3-hd { border-bottom-color: var(--step3); }
+    .cp-section-hd.t1-hd { border-bottom-color: var(--t1); }
+    .cp-section-hd.t2-hd { border-bottom-color: var(--t2); }
+    .cp-section-hd.t3-hd { border-bottom-color: var(--t3); }
+
+    .cp-legend { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 1.2rem; font-size: 0.82rem; }
+    .cp-legend-item { display: flex; align-items: center; gap: 0.3rem; }
+    .cp-badge { display: inline-block; padding: 0.1rem 0.45rem; border-radius: 4px; font-size: 0.72rem; font-weight: 600; }
+    .badge-hot { background: rgba(255,107,107,0.15); color: var(--hot); border: 1px solid rgba(255,107,107,0.3); }
+    .badge-new { background: rgba(63,185,80,0.15); color: var(--accent2); border: 1px solid rgba(63,185,80,0.3); }
+    .badge-rec { background: rgba(88,166,255,0.15); color: var(--accent); border: 1px solid rgba(88,166,255,0.3); }
+    .badge-overseas { background: rgba(167,139,250,0.15); color: var(--overseas); border: 1px solid rgba(167,139,250,0.3); }
+    .badge-oss { background: rgba(240,136,62,0.15); color: var(--oss); border: 1px solid rgba(240,136,62,0.3); }
+    .badge-free { background: rgba(63,185,80,0.15); color: var(--accent2); border: 1px solid rgba(63,185,80,0.3); }
+    .badge-cn { background: rgba(88,166,255,0.15); color: var(--accent); border: 1px solid rgba(88,166,255,0.3); }
+    .badge-t1 { background: rgba(63,185,80,0.15); color: var(--t1); border: 1px solid rgba(63,185,80,0.3); }
+    .badge-t2 { background: rgba(88,166,255,0.15); color: var(--t2); border: 1px solid rgba(88,166,255,0.3); }
+    .badge-t3 { background: rgba(240,136,62,0.15); color: var(--t3); border: 1px solid rgba(240,136,62,0.3); }
+
+    .cp-pathway { display: grid; grid-template-columns: 1fr; gap: 1rem; margin: 1rem 0; }
+    @media (min-width: 52rem) { .cp-pathway { grid-template-columns: 1fr 1fr 1fr; } }
+    .cp-path { border: 2px solid var(--border); border-radius: 12px; background: var(--card); overflow: hidden; text-align: center; transition: border-color 0.2s; }
+    .cp-path:hover { border-color: var(--accent); }
+    .cp-path-num { font-size: 2.5rem; font-weight: 800; padding: 0.6rem 0 0; line-height: 1; }
+    .cp-path.step1 .cp-path-num { color: var(--step1); }
+    .cp-path.step2 .cp-path-num { color: var(--step2); }
+    .cp-path.step3 .cp-path-num { color: var(--step3); }
+    .cp-path-title { font-size: 1rem; font-weight: 700; padding: 0.3rem 0.8rem; }
+    .cp-path-desc { font-size: 0.82rem; color: var(--muted); padding: 0 0.8rem 0.8rem; line-height: 1.6; }
+
+    .cp-platforms { display: grid; grid-template-columns: 1fr; gap: 1.2rem; }
+    @media (min-width: 52rem) { .cp-platforms { grid-template-columns: 1fr 1fr; } }
+    .cp-platform { border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .cp-platform.overseas { border-color: rgba(167,139,250,0.3); }
+    .cp-platform.oss { border-color: rgba(240,136,62,0.3); }
+    .cp-platform.rec { border-color: rgba(88,166,255,0.3); }
+    .cp-platform.t1 { border-color: rgba(63,185,80,0.4); }
+    .cp-platform.t2 { border-color: rgba(88,166,255,0.3); }
+    .cp-platform.t3 { border-color: rgba(240,136,62,0.3); }
+    .cp-platform-head { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+    .cp-platform.t1 .cp-platform-head { border-bottom-color: rgba(63,185,80,0.2); }
+    .cp-platform.t2 .cp-platform-head { border-bottom-color: rgba(88,166,255,0.2); }
+    .cp-platform.t3 .cp-platform-head { border-bottom-color: rgba(240,136,62,0.2); }
+    .cp-platform-name { font-size: 1.05rem; font-weight: 700; }
+    .cp-platform-name a { color: var(--text); }
+    .cp-platform-name a:hover { color: var(--accent); text-decoration: none; }
+    .cp-platform-body { padding: 0.75rem 1rem; font-size: 0.85rem; line-height: 1.7; }
+    .cp-platform-body .good { color: var(--accent2); font-weight: 600; }
+    .cp-platform-body .bad { color: var(--danger); opacity: 0.7; }
+
+    .feat-tags { display: flex; flex-wrap: wrap; gap: 0.25rem; margin-top: 0.4rem; }
+    .feat-tag { font-size: 0.68rem; padding: 0.1rem 0.35rem; border-radius: 3px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); color: var(--accent); font-weight: 500; }
+    .feat-tag.yes { background: rgba(63,185,80,0.1); border-color: rgba(63,185,80,0.2); color: var(--accent2); }
+    .feat-tag.no { background: transparent; border-color: rgba(139,156,179,0.15); color: var(--muted); opacity: 0.5; }
+
+    .cp-matrix-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; background: var(--card); margin-top: 1rem; }
+    .cp-matrix { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+    .cp-matrix th, .cp-matrix td { padding: 0.4rem 0.6rem; border: 1px solid var(--border); text-align: center; white-space: nowrap; }
+    .cp-matrix th { background: var(--panel); font-weight: 600; color: var(--muted); font-size: 0.74rem; position: sticky; top: 0; }
+    .cp-matrix th:first-child, .cp-matrix td:first-child { text-align: left; font-weight: 600; }
+    .cp-matrix .yes { color: var(--accent2); font-weight: 700; }
+    .cp-matrix .no { color: var(--muted); opacity: 0.4; }
+    .cp-matrix .partial { color: var(--warn); font-weight: 500; }
+
+    .cp-code { margin: 0.8rem 0; border: 1px solid var(--border); border-radius: 8px; background: var(--panel); overflow: hidden; }
+    .cp-code-head { padding: 0.4rem 0.8rem; border-bottom: 1px solid var(--border); font-size: 0.76rem; font-weight: 600; color: var(--muted); display: flex; justify-content: space-between; align-items: center; }
+    .cp-code pre { margin: 0; padding: 0.75rem 1rem; font-size: 0.82rem; line-height: 1.6; overflow-x: auto; font-family: "Cascadia Code", "Fira Code", Consolas, monospace; color: var(--text); }
+    .cp-code .copy-btn { font-size: 0.72rem; padding: 0.15rem 0.45rem; border-radius: 4px; border: 1px solid var(--border); background: var(--card); color: var(--muted); cursor: pointer; font-family: inherit; }
+    .cp-code .copy-btn:hover { color: var(--accent); border-color: var(--accent); }
+    .cp-code code { font-size: 0.82rem; }
+    .cp-code .kw { color: var(--accent); }
+    .cp-code .str { color: var(--accent2); }
+    .cp-code .cmt { color: var(--muted); font-style: italic; }
+
+    .cp-faq { margin-top: 2rem; border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .cp-faq-head { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); font-weight: 700; font-size: 1rem; }
+    .cp-faq-item { border-bottom: 1px solid var(--border); }
+    .cp-faq-item:last-child { border-bottom: none; }
+    .cp-faq-q { padding: 0.6rem 1rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 0.88rem; user-select: none; transition: background 0.15s; }
+    .cp-faq-q:hover { background: rgba(88,166,255,0.04); }
+    .cp-faq-q .cp-faq-arrow { font-size: 0.72rem; color: var(--muted); transition: transform 0.2s; flex-shrink: 0; margin-left: 0.5rem; }
+    .cp-faq-item.is-open .cp-faq-q .cp-faq-arrow { transform: rotate(180deg); }
+    .cp-faq-a { padding: 0 1rem; max-height: 0; overflow: hidden; transition: max-height 0.25s ease, padding 0.25s ease; font-size: 0.82rem; line-height: 1.7; color: var(--muted); }
+    .cp-faq-item.is-open .cp-faq-a { max-height: 30rem; padding: 0 1rem 0.75rem; }
+    .cp-faq-a strong { color: var(--text); }
+    .cp-faq-a code { font-size: 0.78rem; padding: 0.1rem 0.35rem; border-radius: 4px; background: rgba(88,166,255,0.1); border: 1px solid rgba(88,166,255,0.2); color: var(--accent); font-family: inherit; }
+
+    .cp-notice { margin-top: 2rem; padding: 0; border: 1px solid rgba(210,153,34,0.35); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .cp-notice-head { padding: 0.65rem 1rem; border-bottom: 1px solid rgba(210,153,34,0.2); font-weight: 700; font-size: 1rem; background: rgba(210,153,34,0.06); }
+    .cp-notice-body { padding: 0.75rem 1rem; font-size: 0.82rem; line-height: 1.75; }
+    .cp-notice-body ul, .cp-notice-body ol { padding-left: 1.2rem; margin: 0.5rem 0 0; }
+    .cp-notice-body li { margin-bottom: 0.45rem; }
+    .cp-notice-body strong { color: var(--warn); }
+    .cp-notice-body code { font-size: 0.78rem; padding: 0.1rem 0.35rem; border-radius: 4px; background: rgba(210,153,34,0.1); border: 1px solid rgba(210,153,34,0.2); color: var(--warn); font-family: inherit; }
+
+    .cp-summary { margin-top: 2rem; padding: 1rem 1.2rem; border: 2px solid var(--accent); border-radius: 10px; background: rgba(88,166,255,0.04); }
+    .cp-summary h2 { font-size: 1.05rem; margin: 0 0 0.8rem; }
+    .cp-summary-grid { display: grid; grid-template-columns: 1fr; gap: 0.5rem; font-size: 0.88rem; }
+    @media (min-width: 40rem) { .cp-summary-grid { grid-template-columns: 1fr 1fr; } }
+    .cp-summary-item { display: flex; align-items: flex-start; gap: 0.5rem; padding: 0.5rem 0.7rem; border-radius: 6px; background: var(--card); border: 1px solid var(--border); line-height: 1.6; }
+    .cp-summary-item .arrow { color: var(--accent2); font-weight: 700; flex-shrink: 0; }
+
+    .cp-tool-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 0.6rem; margin: 1rem 0; }
+    .cp-tool-card { padding: 0.6rem 0.8rem; border: 1px solid var(--border); border-radius: 8px; background: var(--card); display: flex; flex-direction: column; gap: 0.15rem; transition: border-color 0.15s; }
+    .cp-tool-card:hover { border-color: var(--accent); }
+    .cp-tool-card a { font-weight: 600; font-size: 0.88rem; }
+    .cp-tool-card .cp-tool-desc { font-size: 0.76rem; color: var(--muted); line-height: 1.5; }
+
+    .cp-slash-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); gap: 0.5rem; margin: 1rem 0; }
+    .cp-slash-card { padding: 0.5rem 0.7rem; border: 1px solid var(--border); border-radius: 6px; background: var(--card); }
+    .cp-slash-cmd { font-weight: 700; font-size: 0.9rem; font-family: "Cascadia Code", "Fira Code", Consolas, monospace; color: var(--accent2); }
+    .cp-slash-desc { font-size: 0.76rem; color: var(--muted); margin-top: 0.15rem; }
+
+    .cp-footer { max-width: 76rem; margin: 2rem auto 1rem; padding: 0 1rem; font-size: 0.76rem; color: var(--muted); text-align: center; }
+    .cp-footer a { color: var(--muted); }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2B8FBWRX4N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2B8FBWRX4N');
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2d49f38b39c743ac80b6d6b9ff99494d"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body>
+  <div class="cp-top">
+    <div class="cp-top-inner">
+      <nav class="cp-nav" data-plan-nav></nav>
+      <div class="cp-toolbar">
+        <button type="button" class="theme-btn" data-theme-set="system">跟随系统</button>
+        <button type="button" class="theme-btn" data-theme-set="light">浅色</button>
+        <button type="button" class="theme-btn" data-theme-set="dark">深色</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cp-wrap">
+    <h1>⚡ AI Skill 最佳实践</h1>
+    <p class="cp-subtitle">先用起来 &gt; 再选好 &gt; 最后才写 — 一条命令装完三大必装合集，立刻享受生产级 AI 编程</p>
+    <p class="cp-updated">更新于 2026-06-26 · 实战验证 · <a href="skill/" style="color:var(--accent)">AI Skill 动态监控</a>（334+ 项目）· <a href="token-optimization.html" style="color:var(--accent)">Token 优化指南</a> · npx skills add 一键安装</p>
+
+    <div class="cp-legend">
+      <span class="cp-legend-item"><span class="cp-badge badge-t1">第一梯队</span> 必装</span>
+      <span class="cp-legend-item"><span class="cp-badge badge-t2">第二梯队</span> 场景必选</span>
+      <span class="cp-legend-item"><span class="cp-badge badge-t3">第三梯队</span> 轻量高效</span>
+      <span class="cp-legend-item"><span class="cp-badge badge-free">免费</span> 全部免费开源</span>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- 路线图 -->
+    <!-- ============================================================ -->
+    <div class="cp-section-hd step1-hd"><span class="cp-flag">🛤️</span> 三步路线图：先用 &gt; 再选 &gt; 再写</div>
+
+    <div class="cp-pathway">
+      <div class="cp-path step1">
+        <div class="cp-path-num">1</div>
+        <div class="cp-path-title">🚀 一键装起来</div>
+        <div class="cp-path-desc">小白最快路径：<code>npx skills add</code> 一条命令装完三大必装合集，立刻享受生产级 AI 编程。别急着学写，先享受效果。</div>
+      </div>
+      <div class="cp-path step2">
+        <div class="cp-path-num">2</div>
+        <div class="cp-path-title">🎯 按场景选装</div>
+        <div class="cp-path-desc">用起来之后，根据你的场景选装更多。产品管理、前端优化、调试排错……各有所长。</div>
+      </div>
+      <div class="cp-path step3">
+        <div class="cp-path-num">3</div>
+        <div class="cp-path-title">✍️ 编写自己的</div>
+        <div class="cp-path-desc">进阶：现成的不够用，开始定制。掌握 SKILL.md 规范和 Slash 命令，跨工具适配。</div>
+      </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- 第一步：一键安装 -->
+    <!-- ============================================================ -->
+    <div class="cp-section-hd step1-hd"><span class="cp-flag">🚀</span> 第一步：一条命令装完三大必装合集</div>
+
+    <div class="cp-notice">
+      <div class="cp-notice-head">💡 核心原则：先用效果说话，再学原理</div>
+      <div class="cp-notice-body">
+        <ul>
+          <li><strong>别从零开始写</strong> — 直接装现成合集，感受 AI 编程效率的质变</li>
+          <li><strong>三大必装各有侧重</strong> — Addy 管工程流程、Matt 管 TS/前端、Karpathy 管极简思维，互补覆盖 100% 编程需求</li>
+          <li><strong>选默认 Symlink</strong> — 安装时选 Symlink（不要选 Copy），方便后续 <code>git pull</code> 更新</li>
+          <li><strong>用好了再迭代</strong> — 发现哪些 Skill 最有用，再精简或定制</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 三大必装对比 -->
+    <div class="cp-section-hd t1-hd"><span class="cp-flag">🏆</span> 三大必装合集 — 为什么要全装？</div>
+
+    <div class="cp-platforms">
+
+      <!-- Addy -->
+      <div class="cp-platform t1">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://github.com/addyosmani/agent-skills" target="_blank" rel="noopener noreferrer">addyosmani/agent-skills</a></span>
+          <span class="cp-badge badge-t1">综合第一</span>
+          <span class="cp-badge badge-hot">25k+ ★</span>
+        </div>
+        <div class="cp-platform-body">
+          <strong>主打：</strong>团队级工程规范、流程管控<br>
+          <strong>作用：</strong>写方案、架构评审、安全审计、交付规范、大型项目兜底<br>
+          <strong class="good">✅ 适合：</strong>正经业务、后端/架构、交付质量要求高的场景<br>
+          <strong>作者：</strong>Addy Osmani（Google Chrome 工程总监），融入《Software Engineering at Google》工程实践<br>
+          <div class="feat-tags">
+            <span class="feat-tag yes">Hyrum's Law</span>
+            <span class="feat-tag yes">测试金字塔</span>
+            <span class="feat-tag yes">Trunk-based Development</span>
+            <span class="feat-tag yes">7 条 Slash 命令</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Matt -->
+      <div class="cp-platform t1">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener noreferrer">mattpocock/skills</a></span>
+          <span class="cp-badge badge-t1">TS/前端之王</span>
+        </div>
+        <div class="cp-platform-body">
+          <strong>主打：</strong>TS / 前端 / 现代 JS 实操细节、语法最佳实践<br>
+          <strong>作用：</strong>类型体操、写法优化、坑点规避、代码精简<br>
+          <strong class="good">✅ 适合：</strong>日常写代码、类型纠错、前端/TS 项目提速<br>
+          <strong>场景：</strong>写 TS、前端、类型、语法优化 → 用 Matt
+          <div class="feat-tags">
+            <span class="feat-tag yes">TypeScript 深度</span>
+            <span class="feat-tag yes">前端最佳实践</span>
+            <span class="feat-tag yes">语法优化</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Karpathy -->
+      <div class="cp-platform t1">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://github.com/forrestchang/andrej-karpathy-skills" target="_blank" rel="noopener noreferrer">karpathy-skills</a></span>
+          <span class="cp-badge badge-t1">极简思维</span>
+        </div>
+        <div class="cp-platform-body">
+          <strong>主打：</strong>极简思维、克制设计、通用编程哲学<br>
+          <strong>作用：</strong>避免过度设计、做减法、逻辑清晰、AI 少写垃圾冗余代码<br>
+          <strong class="good">✅ 适合：</strong>所有项目，全局提升 AI 写代码的「简洁度 &amp; 合理性」<br>
+          <strong>场景：</strong>嫌 AI 代码啰嗦、过度设计、逻辑混乱 → 加 Karpathy
+          <div class="feat-tags">
+            <span class="feat-tag yes">极简设计</span>
+            <span class="feat-tag yes">做减法</span>
+            <span class="feat-tag yes">抗过度工程</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 一键安装命令 -->
+    <div class="cp-section-hd step1-hd" style="margin-top:1.5rem;"><span class="cp-flag">⌨️</span> 一键安装命令（复制即用）</div>
+
+    <div class="cp-code">
+      <div class="cp-code-head"><span>🟢 三大必装 — 全局安装</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+      <pre><code><span class="cmt"># 1. Addy 工程全流程规范（综合第一，必装）</span>
+npx skills add addyosmani/agent-skills --global
+<span class="cmt"># 国内加速：</span>
+<span class="cmt"># npx skills add https://gh-proxy.com/github.com/addyosmani/agent-skills --global</span>
+
+<span class="cmt"># 2. Matt TS/前端最佳实践</span>
+npx skills add mattpocock/skills --global
+<span class="cmt"># 国内加速：</span>
+<span class="cmt"># npx skills add https://gh-proxy.com/github.com/mattpocock/skills --global</span>
+
+<span class="cmt"># 3. Karpathy 极简编程思维</span>
+npx skills add https://github.com/forrestchang/andrej-karpathy-skills --global
+<span class="cmt"># 国内加速：</span>
+<span class="cmt"># npx skills add https://gh-proxy.com/github.com/forrestchang/andrej-karpathy-skills --global</span></code></pre>
+    </div>
+
+    <div class="cp-notice" style="margin-top:0.8rem;">
+      <div class="cp-notice-head">⚡ 安装时注意</div>
+      <div class="cp-notice-body">
+        <ul>
+          <li><strong>选 Symlink（推荐）</strong>，不要选 Copy — 方便后续 <code>git pull</code> 更新</li>
+          <li><strong>国内网络慢？</strong> — 用 <code>https://gh-proxy.com/github.com/</code> 前缀加速</li>
+          <li><strong><code>--global</code></strong> 表示全局安装，所有项目都能用；去掉则只装到当前项目</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 更新维护 -->
+    <div class="cp-code" style="margin-top:0.8rem;">
+      <div class="cp-code-head"><span>🔄 更新所有 AI Skills</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+      <pre><code><span class="cmt"># 1. 进入全局 Skills 目录</span>
+cd ~/.agents/skills   <span class="cmt"># Windows: C:\Users\你的用户名\.agents\skills</span>
+
+<span class="cmt"># 2. 拉取最新更新</span>
+git pull
+
+<span class="cmt"># 3. Cursor 用户执行 Reload Skills</span>
+<span class="cmt"># Claude Code 用户重启 claude 即可</span></code></pre>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- Slash 命令速查 -->
+    <!-- ============================================================ -->
+    <div class="cp-section-hd step1-hd"><span class="cp-flag">⌨️</span> Slash 命令速查（Addy 合集核心）</div>
+
+    <p style="font-size:0.88rem;color:var(--muted);margin-bottom:0.8rem;">安装 Addy 合集后，7 条与开发生命周期对应的 Slash 命令即可使用。此外，各种技能也会根据你所从事的任务自动激活——比如设计 API 时会触发 <code>api-and-interface-design</code>，开发 UI 时会触发 <code>frontend-ui-engineering</code>。</p>
+
+    <div class="cp-slash-grid">
+      <div class="cp-slash-card"><span class="cp-slash-cmd">/spec</span><div class="cp-slash-desc">确定要建造什么 — 代码之前的规格说明</div></div>
+      <div class="cp-slash-card"><span class="cp-slash-cmd">/plan</span><div class="cp-slash-desc">规划如何建造 — 小型、独立的原子任务</div></div>
+      <div class="cp-slash-card"><span class="cp-slash-cmd">/build</span><div class="cp-slash-desc">逐步构建/分阶段实现 — 一次切一片就好</div></div>
+      <div class="cp-slash-card"><span class="cp-slash-cmd">/test</span><div class="cp-slash-desc">证明其确实可行 — 测试就是证明</div></div>
+      <div class="cp-slash-card"><span class="cp-slash-cmd">/review</span><div class="cp-slash-desc">合并前先审查 — 提升代码质量</div></div>
+      <div class="cp-slash-card"><span class="cp-slash-cmd">/code-simplify</span><div class="cp-slash-desc">简化代码 — 聪明不如清晰明了</div></div>
+      <div class="cp-slash-card"><span class="cp-slash-cmd">/ship</span><div class="cp-slash-desc">投入生产 — 更快则更安全</div></div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- 各工具 Skills 目录 -->
+    <!-- ============================================================ -->
+    <div class="cp-section-hd step1-hd"><span class="cp-flag">📂</span> 各工具 Skills 目录结构</div>
+
+    <p style="font-size:0.88rem;color:var(--muted);margin-bottom:0.8rem;"><code>npx skills add</code> 安装后，Skill 文件会放到对应目录。了解目录结构有助于手动管理。</p>
+
+    <div class="cp-matrix-wrap">
+      <table class="cp-matrix">
+        <thead>
+          <tr><th>工具</th><th>全局目录</th><th>项目目录</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Cursor</td><td><code>~/.cursor/skills/</code></td><td><code>.cursor/skills/</code></td></tr>
+          <tr><td>Claude Code</td><td><code>~/.claude/skills/</code></td><td><code>.claude/skills/</code></td></tr>
+          <tr><td>Copilot</td><td><code>~/.copilot/skills/</code></td><td><code>.github/skills/</code></td></tr>
+          <tr><td>Windsurf</td><td><code>~/.windsurf/skills/</code></td><td><code>.windsurf/skills/</code></td></tr>
+          <tr><td>Codex</td><td><code>~/.codex/skills/</code></td><td><code>.codex/skills/</code></td></tr>
+          <tr><td>OpenCode</td><td><code>~/.config/opencode/skills/</code></td><td><code>.opencode/skills/</code></td></tr>
+          <tr><td>OpenClaw</td><td><code>~/.openclaw/skills/</code></td><td><code>skills/</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="cp-notice" style="margin-top:0.8rem;">
+      <div class="cp-notice-head">💡 目录小贴士</div>
+      <div class="cp-notice-body">
+        <ul>
+          <li><strong>全局目录</strong> — 所有项目共享的通用 Skill（如 Karpathy 极简思维、Addy 工程规范）</li>
+          <li><strong>项目目录</strong> — 项目特定的 Skill（如某个 React 项目的组件规范）</li>
+          <li><strong>优先级</strong> — 项目级 &gt; 全局级；同类 Skill 只保留一个，避免冲突</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- 第二步：按场景选装 -->
+    <!-- ============================================================ -->
+    <div class="cp-section-hd step2-hd"><span class="cp-flag">🎯</span> 第二步：按场景选装 — 实战梯队排名</div>
+
+    <p style="font-size:0.88rem;color:var(--muted);margin-bottom:0.8rem;">三大必装搞定后，根据你的场景选装更多。以下是实战验证的梯队排名。</p>
+
+    <!-- 第一梯队 -->
+    <div class="cp-section-hd t1-hd"><span class="cp-flag">🏆</span> 第一梯队 — 和必装同级，互补最强</div>
+
+    <div class="cp-platforms">
+      <div class="cp-platform t1">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://github.com/TashanGKD/tashan-cursor-skills" target="_blank" rel="noopener noreferrer">TashanGKD/tashan-cursor-skills</a></span>
+          <span class="cp-badge badge-t1">执行能力最强</span>
+        </div>
+        <div class="cp-platform-body">
+          <strong>定位：</strong>复杂项目、自主执行、自进化 AI 编程<br>
+          <strong>优势：</strong>95 个实战技能 + 32 条强制规则，支持 AI 自主拆解任务、自动调试、批量修改<br>
+          <strong class="good">✅ Addy 偏规范，Tashan 偏「动手干活」</strong><br>
+          <div class="cp-code" style="margin-top:0.4rem;">
+            <div class="cp-code-head"><span>安装</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+            <pre><code>npx skills add TashanGKD/tashan-cursor-skills --global</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="cp-platform t1">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://github.com/ComposioHQ/awesome-codex-skills" target="_blank" rel="noopener noreferrer">ComposioHQ/awesome-codex-skills</a></span>
+          <span class="cp-badge badge-t1">工具调用最强</span>
+        </div>
+        <div class="cp-platform-body">
+          <strong>定位：</strong>Codex Skills 精选集，工具调用、API 对接、工作流自动化<br>
+          <strong>优势：</strong>联网搜索、调用接口、操作数据库等实战技能，模块化 SKILL.md 结构<br>
+          <strong class="good">✅ 补齐必装合集没有的「对外调用」能力</strong><br>
+          <div class="cp-code" style="margin-top:0.4rem;">
+            <div class="cp-code-head"><span>安装</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+            <pre><code>npx skills add ComposioHQ/awesome-codex-skills --global</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 第二梯队 -->
+    <div class="cp-section-hd t2-hd"><span class="cp-flag">📌</span> 第二梯队 — 专精场景，刚需必选</div>
+
+    <div class="cp-platforms">
+      <div class="cp-platform t2">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://github.com/JackyST0/awesome-agent-skills" target="_blank" rel="noopener noreferrer">JackyST0/awesome-agent-skills</a></span>
+          <span class="cp-badge badge-t2">精选列表</span>
+          <span class="cp-badge badge-cn">国内</span>
+        </div>
+        <div class="cp-platform-body">
+          <strong>定位：</strong>精选的 AI Agent Skills 列表，适用于 Cursor、Claude Code、Copilot 等<br>
+          <strong>包含：</strong>api-doc-generator、code-review、debug-helper、git-commit、unit-test-generator<br>
+          <strong class="good">✅ 开发生命周期全覆盖，含中文 README</strong>
+          <div class="cp-code" style="margin-top:0.4rem;">
+            <div class="cp-code-head"><span>安装</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+            <pre><code>npx skills add JackyST0/awesome-agent-skills --global
+<span class="cmt"># 国内加速：</span>
+<span class="cmt"># npx skills add https://gh-proxy.com/github.com/JackyST0/awesome-agent-skills --global</span></code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="cp-platform t2">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://github.com/shanraisshan/claude-code-best-practice" target="_blank" rel="noopener noreferrer">shanraisshan/claude-code-best-practice</a></span>
+          <span class="cp-badge badge-t2">Claude Code 最佳实践</span>
+          <span class="cp-badge badge-hot">46k+ ★</span>
+        </div>
+        <div class="cp-platform-body">
+          <strong>定位：</strong>Claude Code 从「氛围编程」到「智能体工程」的完整指南<br>
+          <strong>包含：</strong>Agents、Commands、Skills、Hooks、MCP 等 86+ 实战技巧<br>
+          <strong class="good">✅ Claude Code 深度用户必装</strong>
+          <div class="cp-code" style="margin-top:0.4rem;">
+            <div class="cp-code-head"><span>安装</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+            <pre><code>npx skills add shanraisshan/claude-code-best-practice --global
+<span class="cmt"># 国内加速：</span>
+<span class="cmt"># npx skills add https://gh-proxy.com/github.com/shanraisshan/claude-code-best-practice --global</span></code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="cp-platform t2">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://github.com/yunshu0909/yunshu_skillshub" target="_blank" rel="noopener noreferrer">yunshu0909/yunshu_skillshub</a></span>
+          <span class="cp-badge badge-t2">产品需求管理</span>
+          <span class="cp-badge badge-cn">国内</span>
+        </div>
+        <div class="cp-platform-body">
+          <strong>定位：</strong>产品需求全流程管理，云舒出品<br>
+          <strong>必装技能：</strong>backlog-manager、priority-judge、version-planner、req-change-workflow、prd-doc-writer<br>
+          <strong>推荐装：</strong>multi-perspective-analysis、product-naming、project-map-builder、thinking-partner<br>
+          <strong class="good">✅ 产品经理 / 需求管理必装</strong>
+          <div class="cp-code" style="margin-top:0.4rem;">
+            <div class="cp-code-head"><span>安装</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+            <pre><code>npx skills add yunshu0909/yunshu_skillshub --global
+<span class="cmt"># 国内加速：</span>
+<span class="cmt"># npx skills add https://gh-proxy.com/github.com/yunshu0909/yunshu_skillshub --global</span></code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="cp-platform t2">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://github.com/JuliusBrussee/caveman" target="_blank" rel="noopener noreferrer">JuliusBrussee/caveman</a></span>
+          <span class="cp-badge badge-t2">省 Token</span>
+          <span class="cp-badge badge-hot">77k+ ★</span>
+        </div>
+        <div class="cp-platform-body">
+          <strong>定位：</strong>压缩 Agent 废话输出，三省通用 Skill（Cursor / Claude Code / Codex）<br>
+          <strong>作用：</strong>输出层约 65–87% 压缩；含 <code>/caveman-compress</code> 压规约文件<br>
+          <strong class="good">✅ 长会话、Token 成本高时必装</strong> — 与 <a href="token-optimization.html">RTK / Headroom 等见 Token 优化指南</a><br>
+          <div class="cp-code" style="margin-top:0.4rem;">
+            <div class="cp-code-head"><span>安装</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+            <pre><code>npx skills add JuliusBrussee/caveman --global
+<span class="cmt"># 或 Tokless 一键：npx tokless</span></code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 第三梯队 -->
+    <div class="cp-section-hd t3-hd"><span class="cp-flag">🪶</span> 第三梯队 — 轻量化、极简高效</div>
+
+    <div class="cp-platforms">
+      <div class="cp-platform t3">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://officialskills.sh/" target="_blank" rel="noopener noreferrer">Official Skills</a></span>
+          <span class="cp-badge badge-t3">1000+ 官方精选</span>
+        </div>
+        <div class="cp-platform-body">
+          <strong>定位：</strong>官方 + 社区精选技能集，兼容 Claude Code/Codex/Gemini CLI/Cursor<br>
+          <strong class="good">✅ 想多工具通用？这个覆盖面最广</strong>
+        </div>
+      </div>
+
+      <div class="cp-platform t3">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://github.com/girijashankarj/cursor-handbook" target="_blank" rel="noopener noreferrer">cursor-handbook</a></span>
+          <span class="cp-badge badge-t3">平民王者</span>
+        </div>
+        <div class="cp-platform-body">
+          <strong>定位：</strong>日常编码、高频小技能、开箱即用<br>
+          <strong>110+ 条规则/技能：</strong>注释、格式化、代码审查、Bug 修复，零学习成本
+        </div>
+      </div>
+    </div>
+
+    <!-- 场景速选 -->
+    <div class="cp-summary" style="margin-top:1.2rem;">
+      <h2>🎯 场景速选 — 你该装什么？</h2>
+      <div class="cp-summary-grid">
+        <div class="cp-summary-item"><span class="arrow">→</span><div><strong>通用开发 / 生产级代码：</strong>死守 <code>addyosmani/agent-skills</code>（永远第一）</div></div>
+        <div class="cp-summary-item"><span class="arrow">→</span><div><strong>TS / 前端 / 类型优化：</strong>搭配 <code>mattpocock/skills</code></div></div>
+        <div class="cp-summary-item"><span class="arrow">→</span><div><strong>嫌 AI 代码啰嗦 / 过度设计：</strong>加 <code>karpathy-skills</code></div></div>
+        <div class="cp-summary-item"><span class="arrow">→</span><div><strong>AI 自主干活 / 复杂项目：</strong>搭配 <code>tashan-cursor-skills</code></div></div>
+        <div class="cp-summary-item"><span class="arrow">→</span><div><strong>AI 联网 / 调用接口 / 工作流：</strong>搭配 <code>ComposioHQ/awesome-codex-skills</code></div></div>
+        <div class="cp-summary-item"><span class="arrow">→</span><div><strong>产品需求管理：</strong>搭配 <code>yunshu_skillshub</code></div></div>
+        <div class="cp-summary-item"><span class="arrow">→</span><div><strong>中文开发 / 精选合集：</strong>搭配 <code>awesome-agent-skills</code>（含中文 README）</div></div>
+        <div class="cp-summary-item"><span class="arrow">→</span><div><strong>Token 成本高 / 长会话：</strong>装 <code>caveman</code>，CLI 层配 <a href="token-optimization.html">RTK · Headroom</a></div></div>
+        <div class="cp-summary-item"><span class="arrow">→</span><div><strong>最佳实战组合：</strong>必装三件套 + 任一场景方案 = 完美</div></div>
+      </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- Skill 市场完整列表 -->
+    <!-- ============================================================ -->
+    <div class="cp-section-hd step2-hd"><span class="cp-flag">🏪</span> Skill 市场与商店完整列表</div>
+
+    <div class="cp-tool-grid">
+      <div class="cp-tool-card"><a href="skill/">AI Skill Monitor</a><span class="cp-tool-desc">AINav 收录：GitHub AI 项目/Skill 自动追踪（334+）</span></div>
+      <div class="cp-tool-card"><a href="https://skills.sh/" target="_blank" rel="noopener noreferrer">Skills.sh</a><span class="cp-tool-desc">Agent 技能发现与分享平台，社区驱动</span></div>
+      <div class="cp-tool-card"><a href="https://skills-rank.com/" target="_blank" rel="noopener noreferrer">Skills Rank</a><span class="cp-tool-desc">AI Agent 技能排行榜，发现最热门技能</span></div>
+      <div class="cp-tool-card"><a href="https://linskills.qiniu.com/" target="_blank" rel="noopener noreferrer">LinSkills</a><span class="cp-tool-desc">AI Agent 技能导航与分发，七牛云出品，国内直连</span></div>
+      <div class="cp-tool-card"><a href="https://clawskills.sh/" target="_blank" rel="noopener noreferrer">ClawSkills.sh</a><span class="cp-tool-desc">Agent 技能市场，快速发现可用工具与插件</span></div>
+      <div class="cp-tool-card"><a href="https://skillsmp.com/zh" target="_blank" rel="noopener noreferrer">SkillsMP</a><span class="cp-tool-desc">Agent 技能市场，中文社区技能分享与分发</span></div>
+      <div class="cp-tool-card"><a href="https://www.skill-cn.com/" target="_blank" rel="noopener noreferrer">Skill-CN</a><span class="cp-tool-desc">中文 Agent 技能社区，工具与 Prompt 分享</span></div>
+      <div class="cp-tool-card"><a href="https://claudemarketplaces.com/" target="_blank" rel="noopener noreferrer">Claude Code Marketplace</a><span class="cp-tool-desc">Claude Code 插件/技能市场，原生兼容 Cursor/TRAE</span></div>
+      <div class="cp-tool-card"><a href="https://skillhub.tencent.com/" target="_blank" rel="noopener noreferrer">腾讯 SkillHub</a><span class="cp-tool-desc">腾讯 AI 技能市场，Agent 工具与能力注册中心</span></div>
+      <div class="cp-tool-card"><a href="https://agentskillshub.top/" target="_blank" rel="noopener noreferrer">AgentSkillsHub</a><span class="cp-tool-desc">Agent 技能聚合平台，多框架工具注册与发现</span></div>
+      <div class="cp-tool-card"><a href="https://agentskills.io/" target="_blank" rel="noopener noreferrer">Agent Skills 开放标准</a><span class="cp-tool-desc">SKILL.md 开放标准，26+ 工具兼容</span></div>
+      <div class="cp-tool-card"><a href="https://mcpmarket.com/tools/skills" target="_blank" rel="noopener noreferrer">MCP Market Skills</a><span class="cp-tool-desc">Agent Skills 目录与发现</span></div>
+      <div class="cp-tool-card"><a href="https://hub.cocoloop.cn/" target="_blank" rel="noopener noreferrer">Cocoloop</a><span class="cp-tool-desc">AI Agent 协作与技能共享平台</span></div>
+      <div class="cp-tool-card"><a href="https://agent.minimaxi.com/skills" target="_blank" rel="noopener noreferrer">MiniMax Skills</a><span class="cp-tool-desc">MiniMax 智能体技能市场，海螺AI工具分发</span></div>
+      <div class="cp-tool-card"><a href="https://cryptoskills.dev/" target="_blank" rel="noopener noreferrer">CryptoSkills</a><span class="cp-tool-desc">Web3 + AI Agent 技能市场，链上自动化工具</span></div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- 第三步：编写自己的 Skill -->
+    <!-- ============================================================ -->
+    <div class="cp-section-hd step3-hd"><span class="cp-flag">✍️</span> 第三步：编写自己的 Skill（进阶）</div>
+
+    <p style="font-size:0.88rem;color:var(--muted);margin-bottom:0.8rem;">当现成的 Skill 无法满足你的需求，是时候写自己的了。核心是理解不同工具的配置文件格式。</p>
+
+    <div class="cp-matrix-wrap">
+      <table class="cp-matrix">
+        <thead>
+          <tr><th>工具</th><th>配置文件</th><th>作用域</th><th>格式</th><th>自动加载</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Claude Code</td><td><code>SKILL.md</code> / <code>.claude/skills/</code></td><td>项目级 / 全局级</td><td>Markdown</td><td class="yes">✓</td></tr>
+          <tr><td>Cursor</td><td><code>.cursor/rules/*.mdc</code>（推荐）/ <code>.cursorrules</code></td><td>项目级 / 用户级</td><td>Markdown / MDC</td><td class="yes">✓</td></tr>
+          <tr><td>Codex CLI</td><td><code>AGENTS.md</code></td><td>项目级</td><td>Markdown</td><td class="yes">✓</td></tr>
+          <tr><td>Gemini CLI</td><td><code>GEMINI.md</code></td><td>项目级 / 全局级</td><td>Markdown</td><td class="yes">✓</td></tr>
+          <tr><td>Windsurf</td><td><code>.windsurfrules</code></td><td>项目级 / 用户级</td><td>纯文本 / Markdown</td><td class="yes">✓</td></tr>
+          <tr><td>Copilot</td><td><code>.github/copilot-instructions.md</code></td><td>仓库级</td><td>Markdown</td><td class="yes">✓</td></tr>
+          <tr><td>TRAE</td><td><code>.trae/rules/</code></td><td>项目级</td><td>Markdown</td><td class="yes">✓</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 通用模板 -->
+    <div class="cp-section-hd" style="margin-top:1.5rem;"><span class="cp-flag">📝</span> 通用 Skill 模板</div>
+
+    <div class="cp-code">
+      <div class="cp-code-head"><span>通用 SKILL.md 模板 — 直接复制修改</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+      <pre><code><span class="cmt"># 项目名称 Skill</span>
+
+## 角色定义
+你是一个专业的 [技术栈] 开发者，擅长 [核心能力]。
+
+## 编码规范
+- 使用 [语言] 的最新稳定特性
+- 遵循 [风格指南] 命名规范
+- 优先使用 [库/框架] 解决问题
+
+## 工作流程
+1. 需求分析：理解用户意图，确认边界条件
+2. 方案设计：先描述方案，确认后再编码
+3. 编码实现：按模块逐步实现，每步验证
+4. 测试验证：编写对应测试，确保覆盖
+
+## 约束条件
+- 不使用已弃用的 API
+- 必须处理错误和边界情况
+- 代码必须有类型注解（如适用）
+
+## 输出格式
+- 修改时只输出变更部分
+- 附带简要修改说明
+- 标注可能的风险点</code></pre>
+    </div>
+
+    <!-- 编写技巧 -->
+    <div class="cp-notice" style="margin-top:1rem;">
+      <div class="cp-notice-head">🔑 编写 Skill 的 5 个关键技巧</div>
+      <div class="cp-notice-body">
+        <ul>
+          <li><strong>先定角色</strong> — 告诉 AI "你是谁"，比"你要做什么"更有效</li>
+          <li><strong>约束比指令更重要</strong> — 明确"不能做什么"比"能做什么"更能控制质量</li>
+          <li><strong>用示例代替描述</strong> — 给 1 个好代码示例 &gt; 写 10 行规范说明</li>
+          <li><strong>分步优于一次性</strong> — 复杂任务拆成步骤，AI 每步确认再继续</li>
+          <li><strong>保持精简</strong> — Skill 不是文档，300-500 行以内效果最好</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 跨工具适配 -->
+    <div class="cp-section-hd" style="margin-top:1.5rem;"><span class="cp-flag">🔄</span> 跨工具适配：一份 Skill 多处使用</div>
+
+    <div class="cp-code">
+      <div class="cp-code-head"><span>一键生成多工具配置文件</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+      <pre><code><span class="cmt"># 以 SKILL.md 为蓝本，生成其他工具的配置</span>
+
+<span class="cmt"># Cursor</span>
+cp SKILL.md .cursorrules
+
+<span class="cmt"># Codex CLI</span>
+cp SKILL.md AGENTS.md
+
+<span class="cmt"># Gemini CLI</span>
+cp SKILL.md GEMINI.md
+
+<span class="cmt"># Windsurf</span>
+cp SKILL.md .windsurfrules
+
+<span class="cmt"># Copilot</span>
+mkdir -p .github && cp SKILL.md .github/copilot-instructions.md</code></pre>
+    </div>
+
+    <div class="cp-notice" style="margin-top:0.8rem;">
+      <div class="cp-notice-head">💡 跨工具兼容性提示</div>
+      <div class="cp-notice-body">
+        <ul>
+          <li><strong>Markdown 格式通用性最好</strong> — 所有工具都支持 Markdown，纯文本次之</li>
+          <li><strong>Cursor 的 Type 字段</strong> — <code>.cursor/rules/</code> 下支持 <code>type: always</code>（自动加载）和 <code>type: agent_requested</code>（AI 按需读取）</li>
+          <li><strong>全局 vs 项目</strong> — 通用规范放全局级（如 Karpathy 极简思维），项目特定放项目级</li>
+          <li><strong>agentskills.io 标准</strong> — 想让 Skill 被更多人用，遵循 <a href="https://agentskills.io/" target="_blank" rel="noopener noreferrer">SKILL.md 开放标准</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- FAQ -->
+    <!-- ============================================================ -->
+    <div class="cp-faq">
+      <div class="cp-faq-head">❓ 常见问题</div>
+
+      <div class="cp-faq-item">
+        <div class="cp-faq-q" onclick="toggleFaq(this)">Skill 和 Prompt 有什么区别？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>Skill 是结构化的持久化 Prompt</strong>。Prompt 是一次性的对话指令，Skill 是保存在文件中、AI 每次启动都会自动加载的行为规范。可以理解为"Prompt 的高级版"——它有角色定义、工作流程、约束条件，而且跨会话生效。</div>
+      </div>
+
+      <div class="cp-faq-item">
+        <div class="cp-faq-q" onclick="toggleFaq(this)">npx skills add 和 git clone 有什么区别？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong><code>npx skills add</code> 是推荐的统一安装方式</strong>，它会自动识别你用的工具（Cursor/Claude Code/Codex 等），把 Skill 放到正确的目录，还支持交互式选择要装哪些。<code>git clone</code> 是手动方式，需要自己管理文件位置。建议优先用 <code>npx skills add</code>。</div>
+      </div>
+
+      <div class="cp-faq-item">
+        <div class="cp-faq-q" onclick="toggleFaq(this)">我该从哪个工具开始用 Skill？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>推荐从 Claude Code 或 Cursor 开始</strong>。这两个工具的 Skill 生态最成熟、社区资源最多。Claude Code 的 <code>SKILL.md</code> 格式最简洁，Cursor 的 <code>.cursorrules</code> 用户量最大。选择你日常用的那个即可。</div>
+      </div>
+
+      <div class="cp-faq-item">
+        <div class="cp-faq-q" onclick="toggleFaq(this)">多个 Skill 会冲突吗？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>可能会</strong>。如果两个 Skill 的指令矛盾（如一个要求用 TypeScript，一个要求用 Python），AI 会困惑。建议：通用规范放全局级，项目特定放项目级；同类 Skill 只保留一个。三大必装合集（Addy/Matt/Karpathy）互补不冲突，可以放心全装。</div>
+      </div>
+
+      <div class="cp-faq-item">
+        <div class="cp-faq-q" onclick="toggleFaq(this)">国内 GitHub 克隆慢怎么办？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>用 gh-proxy 加速</strong>。在 GitHub 仓库 URL 前加 <code>https://gh-proxy.com/</code> 前缀即可。例如：<code>npx skills add https://gh-proxy.com/github.com/addyosmani/agent-skills --global</code>。也可以用 <a href="https://linskills.qiniu.com/" target="_blank" rel="noopener noreferrer">LinSkills</a> 等国内市场。</div>
+      </div>
+
+      <div class="cp-faq-item">
+        <div class="cp-faq-q" onclick="toggleFaq(this)">Skill 装多了 Token 爆炸怎么办？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>三层处理：</strong>① 精简全局 Skill，项目级只留必要的；② 装 <code>caveman</code> 压 Agent 输出；③ CLI/MCP 层用 <a href="token-optimization.html">RTK、Headroom、mcprune</a> 等（见 Token 优化指南）。Skill 本身是规约文本，也会占上下文——不是装越多越好。</div>
+      </div>
+
+      <div class="cp-faq-item">
+        <div class="cp-faq-q" onclick="toggleFaq(this)">怎么更新已安装的 Skill？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>三步搞定</strong>：① <code>cd ~/.agents/skills</code>（Windows: <code>C:\Users\用户名\.agents\skills</code>）② <code>git pull</code> ③ Cursor 用户执行 Reload Skills，Claude Code 用户重启 claude 即可。前提是安装时选了 Symlink 而非 Copy。</div>
+      </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- 底部 -->
+    <!-- ============================================================ -->
+    <div class="cp-footer">
+      <p>AINav · AI Skill 最佳实践 · <a href="index.html">返回首页</a> · <a href="free-tier.html">🆓 免费额度</a> · <a href="token-optimization.html">Token优化</a> · <a href="agent-plan.html">Agent横评</a> · <a href="coding-plan.html">编程套餐横评</a></p>
+      <p>数据仅供参考，以各平台官网为准。如有错误欢迎反馈。</p>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var saved = localStorage.getItem('ainav-theme') || localStorage.getItem('cp-theme') || 'system';
+      document.documentElement.setAttribute('data-theme', saved);
+      document.querySelectorAll('.theme-btn').forEach(function(btn) {
+        if (btn.getAttribute('data-theme-set') === saved) btn.classList.add('is-active');
+        btn.addEventListener('click', function() {
+          var t = this.getAttribute('data-theme-set');
+          document.documentElement.setAttribute('data-theme', t);
+          try { localStorage.setItem('ainav-theme', t); } catch (e) {}
+          localStorage.setItem('cp-theme', t);
+          document.querySelectorAll('.theme-btn').forEach(function(b) { b.classList.remove('is-active'); });
+          this.classList.add('is-active');
+        });
+      });
+    })();
+
+    function toggleFaq(el) { el.parentElement.classList.toggle('is-open'); }
+
+    function copyCode(btn) {
+      var pre = btn.closest('.cp-code').querySelector('pre');
+      navigator.clipboard.writeText(pre.textContent).then(function() {
+        btn.textContent = '已复制';
+        setTimeout(function() { btn.textContent = '复制'; }, 1500);
+      });
+    }
+  </script>
+<script src="plan-nav.js" data-active="skill-plan.html"></script>
+<script src="plan-meta-i18n.js"></script>
+</body>
+</html>

@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>一人公司 · AI工具全景与落地拆解 — AINav</title>
+  <meta name="description" content="一人公司(OPC)完整指南：概念、变现模式、痛点突破、AI工具栈、落地路线图、成本计算器。一个人+AI=一家公司的可能性。">
+  <link rel="canonical" href="https://aiv123.com/opc.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="一人公司 · AI工具全景与落地拆解">
+  <meta property="og:description" content="OPC完整指南：概念、变现、工具、路线图，一个人+AI撬动一家公司。">
+  <meta property="og:url" content="https://aiv123.com/opc.html">
+  <meta property="og:site_name" content="AINav">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%230969da'/><text x='50' y='72' font-size='60' text-anchor='middle' fill='white' font-family='system-ui' font-weight='700'>AI</text></svg>">
+  <style>
+    :root, html[data-theme="dark"] {
+      --bg: #0f1419; --panel: #151b23; --card: #1c2430; --border: #2d3848;
+      --text: #e6edf3; --muted: #8b9cb3; --accent: #58a6ff; --accent2: #3fb950;
+      --warn: #d29922; --danger: #f85149; --hot: #ff6b6b; --overseas: #a78bfa;
+      --opc: #f59e0b; --opc2: #10b981;
+    }
+    html[data-theme="light"] {
+      --bg: #f6f8fa; --panel: #fff; --card: #fff; --border: #d0d7de;
+      --text: #1f2328; --muted: #59636e; --accent: #0969da; --accent2: #1a7f37;
+      --warn: #9a6700; --danger: #cf222e; --hot: #e53935; --overseas: #7c3aed;
+      --opc: #d97706; --opc2: #059669;
+    }
+    @media (prefers-color-scheme: light) {
+      html[data-theme="system"] {
+        --bg: #f6f8fa; --panel: #fff; --card: #fff; --border: #d0d7de;
+        --text: #1f2328; --muted: #59636e; --accent: #0969da; --accent2: #1a7f37;
+        --warn: #9a6700; --danger: #cf222e; --hot: #e53935; --overseas: #7c3aed;
+        --opc: #d97706; --opc2: #059669;
+      }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Segoe UI", system-ui, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.6; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ---- Top bar ---- */
+    .cp-top { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); background: var(--panel); position: sticky; top: 0; z-index: 10; }
+    .cp-top-inner { max-width: 76rem; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; justify-content: space-between; }
+    .cp-nav a { font-weight: 600; margin-right: 1rem; font-size: 0.88rem; }
+    .cp-toolbar { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; }
+    .theme-btn { font-size: 0.72rem; padding: 0.2rem 0.5rem; border-radius: 5px; border: 1px solid var(--border);
+      background: var(--card); color: var(--muted); cursor: pointer; font-family: inherit; }
+    .theme-btn.is-active { color: var(--accent); border-color: var(--accent); font-weight: 600; }
+
+    /* ---- Main ---- */
+    .cp-wrap { max-width: 76rem; margin: 0 auto; padding: 1rem; }
+    h1 { font-size: 1.35rem; margin: 0 0 0.3rem; }
+    .cp-subtitle { font-size: 0.88rem; color: var(--muted); margin-bottom: 1rem; }
+    .cp-updated { font-size: 0.76rem; color: var(--muted); margin-bottom: 1.2rem; }
+
+    /* ---- Section heading ---- */
+    .cp-section-hd { font-size: 1.1rem; font-weight: 700; margin: 1.8rem 0 0.8rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--border); display: flex; align-items: center; gap: 0.5rem; }
+    .cp-section-hd .cp-flag { font-size: 1.15rem; }
+    .cp-section-hd.opc-hd { border-bottom-color: var(--opc); }
+
+    /* ---- Legend ---- */
+    .cp-badge { display: inline-block; padding: 0.1rem 0.45rem; border-radius: 4px; font-size: 0.72rem; font-weight: 600; }
+    .badge-hot { background: rgba(255,107,107,0.15); color: var(--hot); border: 1px solid rgba(255,107,107,0.3); }
+    .badge-new { background: rgba(63,185,80,0.15); color: var(--accent2); border: 1px solid rgba(63,185,80,0.3); }
+    .badge-rec { background: rgba(88,166,255,0.15); color: var(--accent); border: 1px solid rgba(88,166,255,0.3); }
+    .badge-opc { background: rgba(245,158,11,0.15); color: var(--opc); border: 1px solid rgba(245,158,11,0.3); }
+
+    /* ---- Concept card ---- */
+    .opc-concept { border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; margin-bottom: 1.2rem; }
+    .opc-concept-head { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); font-weight: 700; font-size: 1rem; background: rgba(245,158,11,0.06); }
+    .opc-concept-body { padding: 0.75rem 1rem; font-size: 0.85rem; line-height: 1.8; }
+    .opc-concept-body ul { padding-left: 1.2rem; margin: 0.5rem 0; }
+    .opc-concept-body li { margin-bottom: 0.35rem; }
+    .opc-concept-body strong { color: var(--opc); }
+
+    /* ---- Not-list ---- */
+    .opc-not { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin: 1rem 0; }
+    @media (max-width: 40rem) { .opc-not { grid-template-columns: 1fr; } }
+    .opc-not-item { padding: 0.6rem 0.8rem; border-radius: 8px; border: 1px solid rgba(248,81,73,0.2); background: rgba(248,81,73,0.04); font-size: 0.82rem; line-height: 1.6; }
+    .opc-not-item strong { color: var(--danger); }
+
+    /* ---- Compare table ---- */
+    .opc-compare-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; background: var(--card); margin: 1rem 0; }
+    .opc-compare { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+    .opc-compare th, .opc-compare td { padding: 0.45rem 0.6rem; border: 1px solid var(--border); text-align: left; }
+    .opc-compare th { background: var(--panel); font-weight: 600; color: var(--muted); font-size: 0.76rem; white-space: nowrap; }
+    .opc-compare td:first-child { font-weight: 600; white-space: nowrap; }
+    .opc-compare .tag-yes { color: var(--accent2); font-weight: 600; }
+    .opc-compare .tag-no { color: var(--danger); font-weight: 600; }
+    .opc-compare .tag-mid { color: var(--warn); font-weight: 600; }
+
+    /* ---- 6 differences ---- */
+    .opc-diff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
+    @media (max-width: 48rem) { .opc-diff-grid { grid-template-columns: 1fr; } }
+    .opc-diff-card { padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border); background: var(--card); }
+    .opc-diff-card h4 { margin: 0 0 0.4rem; font-size: 0.92rem; color: var(--opc); }
+    .opc-diff-card .diff-row { display: flex; gap: 0.5rem; font-size: 0.8rem; margin-bottom: 0.3rem; }
+    .diff-tag-old { padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(248,81,73,0.1); color: var(--danger); font-size: 0.72rem; font-weight: 600; white-space: nowrap; }
+    .diff-tag-new { padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(63,185,80,0.1); color: var(--accent2); font-size: 0.72rem; font-weight: 600; white-space: nowrap; }
+
+    /* ---- Monetize ---- */
+    .opc-monetize-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
+    @media (max-width: 48rem) { .opc-monetize-grid { grid-template-columns: 1fr; } }
+    .opc-monetize-card { padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border); background: var(--card); }
+    .opc-monetize-card h4 { margin: 0 0 0.4rem; font-size: 0.92rem; }
+    .opc-monetize-card .mz-income { font-size: 0.78rem; color: var(--accent2); font-weight: 600; }
+    .opc-monetize-card ul { padding-left: 1rem; margin: 0.3rem 0; font-size: 0.8rem; line-height: 1.6; }
+    .opc-monetize-card li { margin-bottom: 0.2rem; }
+
+    /* ---- Platform matrix (4-quadrant) ---- */
+    .opc-quadrant { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin: 1rem 0; }
+    @media (max-width: 40rem) { .opc-quadrant { grid-template-columns: 1fr; } }
+    .opc-q-cell { padding: 0.65rem; border-radius: 8px; border: 1px solid var(--border); background: var(--card); }
+    .opc-q-cell h5 { margin: 0 0 0.3rem; font-size: 0.85rem; }
+    .opc-q-cell .q-platforms { font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+
+    /* ---- Pain points ---- */
+    .opc-pain-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
+    @media (max-width: 48rem) { .opc-pain-grid { grid-template-columns: 1fr; } }
+    .opc-pain-card { padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border); background: var(--card); overflow: hidden; }
+    .opc-pain-card .pain-q { font-weight: 700; font-size: 0.9rem; color: var(--danger); margin-bottom: 0.3rem; }
+    .opc-pain-card .pain-old { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.3rem; }
+    .opc-pain-card .pain-arrow { font-size: 0.8rem; color: var(--opc); font-weight: 600; margin-bottom: 0.3rem; }
+    .opc-pain-card .pain-new { font-size: 0.82rem; color: var(--accent2); font-weight: 600; }
+    .opc-pain-card .pain-tools { font-size: 0.76rem; color: var(--muted); margin-top: 0.3rem; }
+
+    /* ---- AI Employee ---- */
+    .opc-emp-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.8rem; margin: 1rem 0; }
+    @media (max-width: 52rem) { .opc-emp-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 36rem) { .opc-emp-grid { grid-template-columns: 1fr; } }
+    .opc-emp-card { padding: 0.65rem; border-radius: 8px; border: 1px solid var(--border); background: var(--card); text-align: center; }
+    .opc-emp-card .emp-icon { font-size: 1.6rem; margin-bottom: 0.2rem; }
+    .opc-emp-card .emp-role { font-weight: 700; font-size: 0.88rem; color: var(--opc); }
+    .opc-emp-card .emp-ai { font-size: 0.78rem; color: var(--accent); margin: 0.2rem 0; }
+    .opc-emp-card .emp-cost { font-size: 0.72rem; color: var(--accent2); font-weight: 600; }
+    .opc-emp-card .emp-boss { font-size: 0.7rem; color: var(--muted); margin-top: 0.2rem; }
+
+    /* ---- Tool stack cards ---- */
+    .cp-platforms { display: grid; grid-template-columns: 1fr; gap: 1.2rem; }
+    @media (min-width: 52rem) { .cp-platforms { grid-template-columns: 1fr 1fr; } }
+    .cp-platform { border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .cp-platform-head { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+    .cp-platform-name { font-size: 1.05rem; font-weight: 700; }
+    .cp-platform-name a { color: var(--text); }
+    .cp-platform-name a:hover { color: var(--accent); text-decoration: none; }
+    .cp-platform-body { padding: 0.75rem 1rem; }
+    .cp-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+    .cp-table th { text-align: left; font-weight: 600; color: var(--muted); padding: 0.3rem 0.5rem; border-bottom: 1px solid var(--border); font-size: 0.76rem; white-space: nowrap; }
+    .cp-table td { padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .cp-table tr:last-child td { border-bottom: none; }
+    .cp-table .plan-name { font-weight: 600; white-space: nowrap; }
+    .cp-table .plan-price { white-space: nowrap; color: var(--accent2); font-weight: 600; }
+    .cp-table .plan-limit { font-size: 0.76rem; color: var(--muted); }
+
+    /* ---- Roadmap ---- */
+    .opc-roadmap { margin: 1rem 0; }
+    .opc-phase { padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid var(--border); background: var(--card); margin-bottom: 0.8rem; position: relative; }
+    .opc-phase::before { content: ''; position: absolute; left: 1.5rem; top: -0.8rem; width: 2px; height: 0.8rem; background: var(--border); }
+    .opc-phase:first-child::before { display: none; }
+    .opc-phase h4 { margin: 0 0 0.3rem; font-size: 0.92rem; }
+    .opc-phase h4 .phase-time { font-size: 0.76rem; color: var(--muted); font-weight: 400; }
+    .opc-phase ul { padding-left: 1rem; margin: 0.3rem 0 0; font-size: 0.8rem; line-height: 1.7; }
+    .phase-1 { border-left: 3px solid var(--accent); }
+    .phase-2 { border-left: 3px solid var(--opc); }
+    .phase-3 { border-left: 3px solid var(--accent2); }
+    .phase-4 { border-left: 3px solid var(--overseas); }
+
+    /* ---- Failure modes ---- */
+    .opc-fail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin: 1rem 0; }
+    @media (max-width: 48rem) { .opc-fail-grid { grid-template-columns: 1fr; } }
+    .opc-fail-card { padding: 0.65rem; border-radius: 8px; border: 1px solid rgba(248,81,73,0.2); background: rgba(248,81,73,0.03); }
+    .opc-fail-card h5 { margin: 0 0 0.25rem; font-size: 0.85rem; color: var(--danger); }
+    .opc-fail-card .fail-symptom { font-size: 0.78rem; color: var(--muted); margin-bottom: 0.2rem; }
+    .opc-fail-card .fail-fix { font-size: 0.8rem; color: var(--accent2); font-weight: 600; }
+
+    /* ---- Cost calculator ---- */
+    .opc-calc { border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; margin: 1rem 0; }
+    .opc-calc-head { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); font-weight: 700; font-size: 1rem; background: rgba(245,158,11,0.06); }
+    .opc-calc-body { padding: 0.75rem 1rem; }
+    .opc-calc-item { display: flex; align-items: center; gap: 0.5rem; padding: 0.3rem 0; font-size: 0.82rem; border-bottom: 1px solid var(--border); }
+    .opc-calc-item:last-child { border-bottom: none; }
+    .opc-calc-item input[type="checkbox"] { width: 1rem; height: 1rem; accent-color: var(--opc); }
+    .opc-calc-item .calc-name { flex: 1; }
+    .opc-calc-item .calc-price { font-weight: 600; color: var(--accent2); white-space: nowrap; }
+    .opc-calc-total { display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 1rem; border-top: 2px solid var(--opc); background: rgba(245,158,11,0.04); font-weight: 700; font-size: 0.95rem; margin-top: 0.5rem; border-radius: 0 0 10px 10px; }
+    .opc-calc-total .calc-sum { color: var(--opc); font-size: 1.1rem; }
+    .opc-calc-total .calc-vs { font-size: 0.76rem; color: var(--muted); font-weight: 400; }
+
+    /* ---- Notice ---- */
+    .cp-notice { margin-top: 2rem; padding: 0; border: 1px solid rgba(210,153,34,0.35); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .cp-notice-head { padding: 0.65rem 1rem; border-bottom: 1px solid rgba(210,153,34,0.2); font-weight: 700; font-size: 1rem; background: rgba(210,153,34,0.06); }
+    .cp-notice-body { padding: 0.75rem 1rem; font-size: 0.82rem; line-height: 1.75; }
+    .cp-notice-body ul { padding-left: 1.2rem; margin: 0.5rem 0 0; }
+    .cp-notice-body li { margin-bottom: 0.45rem; }
+    .cp-notice-body strong { color: var(--warn); }
+
+    /* ---- FAQ ---- */
+    .cp-faq { margin-top: 2rem; border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .cp-faq-head { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); font-weight: 700; font-size: 1rem; }
+    .cp-faq-item { border-bottom: 1px solid var(--border); }
+    .cp-faq-item:last-child { border-bottom: none; }
+    .cp-faq-q { padding: 0.6rem 1rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 0.88rem; user-select: none; }
+    .cp-faq-q:hover { background: rgba(88,166,255,0.04); }
+    .cp-faq-q .cp-faq-arrow { font-size: 0.72rem; color: var(--muted); transition: transform 0.2s; flex-shrink: 0; margin-left: 0.5rem; }
+    .cp-faq-item.is-open .cp-faq-q .cp-faq-arrow { transform: rotate(180deg); }
+    .cp-faq-a { padding: 0 1rem; max-height: 0; overflow: hidden; transition: max-height 0.25s ease, padding 0.25s ease; font-size: 0.82rem; line-height: 1.7; color: var(--muted); }
+    .cp-faq-item.is-open .cp-faq-a { max-height: 20rem; padding: 0 1rem 0.75rem; }
+    .cp-faq-a strong { color: var(--text); }
+
+    /* ---- Trend ---- */
+    .opc-trend-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
+    @media (max-width: 48rem) { .opc-trend-grid { grid-template-columns: 1fr; } }
+    .opc-trend-card { padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border); background: var(--card); }
+    .opc-trend-card h4 { margin: 0 0 0.4rem; font-size: 0.9rem; }
+    .opc-trend-card ul { padding-left: 1rem; margin: 0.2rem 0; font-size: 0.8rem; line-height: 1.7; }
+
+    /* ---- Cross-link ---- */
+    .opc-cross { margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 40rem) { .opc-cross { grid-template-columns: 1fr; } }
+    .opc-cross-card { padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border); background: var(--card); display: block; text-decoration: none; color: var(--text); transition: border-color 0.15s; }
+    .opc-cross-card:hover { border-color: var(--opc); text-decoration: none; }
+    .opc-cross-card h4 { margin: 0 0 0.2rem; font-size: 0.95rem; color: var(--opc); }
+    .opc-cross-card p { margin: 0; font-size: 0.8rem; color: var(--muted); }
+
+    /* ---- Footer ---- */
+    .cp-footer { max-width: 76rem; margin: 2rem auto 1rem; padding: 0 1rem; font-size: 0.76rem; color: var(--muted); text-align: center; }
+    .cp-footer a { color: var(--muted); }
+
+    /* ---- Who适合 ---- */
+    .opc-who-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)); gap: 0.6rem; margin: 1rem 0; }
+    .opc-who-item { padding: 0.5rem 0.7rem; border-radius: 6px; border: 1px solid rgba(63,185,80,0.2); background: rgba(63,185,80,0.04); font-size: 0.82rem; }
+    .opc-who-item strong { color: var(--accent2); }
+
+    /* ---- Quick Start ---- */
+    .opc-qs { border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; margin-bottom: 1.2rem; }
+    .opc-qs-head { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); font-weight: 700; font-size: 1rem; background: rgba(245,158,11,0.08); }
+    .opc-qs-body { padding: 0.75rem 1rem; }
+    .opc-qs-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; margin: 0.6rem 0; }
+    @media (max-width: 40rem) { .opc-qs-steps { grid-template-columns: 1fr; } }
+    .opc-qs-step { padding: 0.7rem 0.8rem; border-radius: 8px; border: 1px solid var(--border); background: rgba(245,158,11,0.03); }
+    .opc-qs-step-num { font-size: 1.6rem; font-weight: 800; color: var(--opc); line-height: 1; }
+    .opc-qs-step-q { font-weight: 700; font-size: 0.88rem; margin: 0.3rem 0 0.2rem; }
+    .opc-qs-step-a { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+    .opc-qs-step-a strong { color: var(--opc); font-weight: 600; }
+    .opc-qs-tip { font-size: 0.78rem; color: var(--muted); margin-top: 0.5rem; padding: 0.4rem 0.6rem; border-radius: 6px; background: rgba(88,166,255,0.05); border: 1px solid rgba(88,166,255,0.12); }
+
+    /* ---- Role Cards (点) ---- */
+    .opc-role-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; margin: 1rem 0; }
+    @media (max-width: 52rem) { .opc-role-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 36rem) { .opc-role-grid { grid-template-columns: 1fr; } }
+    .opc-role-card { padding: 0.75rem; border-radius: 10px; border: 1px solid var(--border); background: var(--card); position: relative; overflow: hidden; }
+    .opc-role-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+    .opc-role-card.rc-design::before { background: linear-gradient(90deg, #f472b6, #c084fc); }
+    .opc-role-card.rc-code::before { background: linear-gradient(90deg, #58a6ff, #3fb950); }
+    .opc-role-card.rc-biz::before { background: linear-gradient(90deg, #f59e0b, #ef4444); }
+    .opc-role-card.rc-edu::before { background: linear-gradient(90deg, #3fb950, #06b6d4); }
+    .opc-role-card.rc-hobby::before { background: linear-gradient(90deg, #a78bfa, #f472b6); }
+    .opc-role-card.rc-platform::before { background: linear-gradient(90deg, #06b6d4, #58a6ff); }
+    .opc-role-icon { font-size: 1.5rem; margin-bottom: 0.2rem; }
+    .opc-role-name { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.3rem; }
+    .opc-role-ai { font-size: 0.78rem; color: var(--accent); margin-bottom: 0.3rem; line-height: 1.5; }
+    .opc-role-ai strong { color: var(--accent); }
+    .opc-role-focus { font-size: 0.76rem; color: var(--muted); line-height: 1.6; }
+    .opc-role-focus .focus-tag { display: inline-block; padding: 0.05rem 0.3rem; border-radius: 3px; background: rgba(245,158,11,0.1); color: var(--opc); font-size: 0.7rem; font-weight: 600; margin: 0.1rem 0.15rem; }
+
+    /* ---- Path Table (线) ---- */
+    .opc-path-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; background: var(--card); margin: 1rem 0; }
+    .opc-path { width: 100%; border-collapse: collapse; font-size: 0.78rem; }
+    .opc-path th, .opc-path td { padding: 0.5rem 0.6rem; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+    .opc-path th { background: var(--panel); font-weight: 600; color: var(--muted); font-size: 0.72rem; white-space: nowrap; }
+    .opc-path td:first-child { font-weight: 700; white-space: nowrap; }
+    .opc-path .path-key { color: var(--accent2); font-weight: 600; }
+    .opc-path .path-skip { color: var(--muted); text-decoration: line-through; opacity: 0.6; }
+    .opc-path .path-first { color: var(--opc); font-weight: 700; }
+
+    /* ---- Team & Upgrade (面) ---- */
+    .opc-team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
+    @media (max-width: 48rem) { .opc-team-grid { grid-template-columns: 1fr; } }
+    .opc-team-card { padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border); background: var(--card); }
+    .opc-team-card h4 { margin: 0 0 0.4rem; font-size: 0.92rem; }
+    .opc-team-card .team-pair { font-size: 0.82rem; line-height: 1.7; margin-bottom: 0.3rem; }
+    .opc-team-card .team-pair strong { color: var(--opc); }
+    .opc-upgrade-flow { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.5rem; }
+    .opc-upgrade-step { padding: 0.3rem 0.6rem; border-radius: 6px; font-size: 0.78rem; font-weight: 600; border: 1px solid var(--border); }
+    .opc-upgrade-arrow { font-size: 0.85rem; color: var(--muted); }
+
+    /* ---- Level System (10级成长) ---- */
+    .opc-level-phases { margin: 1rem 0; }
+    .opc-level-phase { border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; margin-bottom: 0.8rem; }
+    .opc-level-phase-head { padding: 0.6rem 1rem; font-weight: 700; font-size: 0.92rem; display: flex; align-items: center; gap: 0.5rem; }
+    .opc-level-phase-body { padding: 0; }
+    .opc-level-row { display: grid; grid-template-columns: 3.5rem 1fr 1fr 1fr 1fr; gap: 0; border-top: 1px solid var(--border); font-size: 0.78rem; }
+    .opc-level-row:first-child { border-top: none; }
+    .opc-level-cell { padding: 0.5rem 0.6rem; border-right: 1px solid var(--border); }
+    .opc-level-cell:last-child { border-right: none; }
+    .opc-level-cell.lvl-num { font-weight: 800; color: var(--opc); display: flex; align-items: center; justify-content: center; font-size: 1rem; background: rgba(245,158,11,0.03); }
+    .opc-level-cell.lvl-can { color: var(--text); line-height: 1.5; }
+    .opc-level-cell.lvl-os { color: var(--muted); font-style: italic; line-height: 1.5; }
+    .opc-level-cell.lvl-check { color: var(--accent2); line-height: 1.5; }
+    .opc-level-cell.lvl-stuck { color: var(--danger); line-height: 1.5; font-size: 0.74rem; }
+    @media (max-width: 48rem) {
+      .opc-level-row { grid-template-columns: 2.8rem 1fr; }
+      .opc-level-cell { border-right: none; border-bottom: 1px solid var(--border); }
+      .opc-level-cell:last-child { border-bottom: none; }
+      .opc-level-cell.lvl-num { grid-row: span 4; }
+      .opc-level-cell:not(.lvl-num)::before { content: attr(data-label); font-weight: 700; color: var(--muted); margin-right: 0.4rem; font-size: 0.7rem; }
+    }
+
+    /* Three Walls */
+    .opc-wall-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.8rem; margin: 1.2rem 0; }
+    @media (max-width: 48rem) { .opc-wall-grid { grid-template-columns: 1fr; } }
+    .opc-wall-card { padding: 0.75rem; border-radius: 10px; position: relative; overflow: hidden; }
+    .opc-wall-card.wall-1 { border: 1px solid rgba(245,158,11,0.3); background: rgba(245,158,11,0.04); }
+    .opc-wall-card.wall-2 { border: 1px solid rgba(248,81,73,0.3); background: rgba(248,81,73,0.04); }
+    .opc-wall-card.wall-3 { border: 1px solid rgba(167,139,250,0.3); background: rgba(167,139,250,0.04); }
+    .opc-wall-num { font-size: 2rem; font-weight: 900; position: absolute; top: 0.3rem; right: 0.6rem; opacity: 0.1; line-height: 1; }
+    .opc-wall-card h5 { margin: 0 0 0.3rem; font-size: 0.92rem; }
+    .opc-wall-card.wall-1 h5 { color: var(--opc); }
+    .opc-wall-card.wall-2 h5 { color: var(--danger); }
+    .opc-wall-card.wall-3 h5 { color: var(--overseas); }
+    .opc-wall-card .wall-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+    .opc-wall-card .wall-desc strong { color: var(--text); }
+
+    /* Closing quote */
+    .opc-quote { text-align: center; padding: 1.5rem 1rem; margin: 1.5rem 0; border-radius: 10px; border: 1px solid var(--border); background: var(--card); }
+    .opc-quote-text { font-size: 1.05rem; font-weight: 700; color: var(--opc); line-height: 1.7; }
+    .opc-quote-sub { font-size: 0.78rem; color: var(--muted); margin-top: 0.5rem; }
+  </style>
+  <!-- Google Analytics (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2B8FBWRX4N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2B8FBWRX4N');
+</script>
+<!-- End Google Analytics -->
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2d49f38b39c743ac80b6d6b9ff99494d"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body>
+  <!-- Top bar -->
+  <div class="cp-top">
+    <div class="cp-top-inner">
+      <div class="cp-nav" data-plan-nav>
+      <div class="cp-toolbar">
+        <button type="button" class="theme-btn" data-theme-set="system">系统</button>
+        <button type="button" class="theme-btn" data-theme-set="light">浅</button>
+        <button type="button" class="theme-btn" data-theme-set="dark">深</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cp-wrap">
+    <h1>🏢 一人公司 · AI工具全景与落地拆解</h1>
+    <p class="cp-subtitle">一个人 + AI = 一家公司的可能性。从概念到变现，从工具到路线图，OPC完整指南。</p>
+    <p class="cp-updated">更新于 2026年6月 · 数据持续更新中</p>
+
+    <!-- ==================== 1. 概念 ==================== -->
+    <div class="cp-section-hd opc-hd"><span class="cp-flag">📖</span> 什么是一人公司（OPC）</div>
+
+    <div class="opc-concept">
+      <div class="opc-concept-head">OPC = One Person Company（一人公司）</div>
+      <div class="opc-concept-body">
+        <p>不是"单打独斗的自由职业者"，而是<strong>一个人运营的完整商业体</strong>。一个真正的OPC，虽然只有一个人，但具备：</p>
+        <ul>
+          <li>✅ <strong>产品/服务交付能力</strong> — AI是你的CTO和设计师</li>
+          <li>✅ <strong>获客与营销能力</strong> — AI是你的市场团队</li>
+          <li>✅ <strong>运营与客服能力</strong> — AI是你的运营和客服</li>
+          <li>✅ <strong>财务与法务能力</strong> — AI辅助决策+工具托管</li>
+          <li>✅ <strong>持续迭代与增长能力</strong> — 数据驱动+AI加速</li>
+        </ul>
+        <p style="margin-top:0.5rem;font-weight:600;">核心区别：自由职业者是"接活"，OPC是<strong>"做生意"</strong>。</p>
+      </div>
+    </div>
+
+    <!-- OPC不是什么 -->
+    <div class="opc-not">
+      <div class="opc-not-item"><strong>❌ 不是自由职业者</strong> — 自由职业是"时间换钱"，OPC是"系统赚钱"</div>
+      <div class="opc-not-item"><strong>❌ 不是副业</strong> — OPC可以是主业，可以全身心投入</div>
+      <div class="opc-not-item"><strong>❌ 不是微商</strong> — OPC有真实产品/服务，不是靠拉人头</div>
+      <div class="opc-not-item"><strong>❌ 不等于孤独</strong> — 可以有协作伙伴，只是不雇人</div>
+    </div>
+
+    <!-- OPC vs 传统公司 6大区别 -->
+    <div class="opc-diff-grid">
+      <div class="opc-diff-card">
+        <h4>1. 组织结构</h4>
+        <div class="diff-row"><span class="diff-tag-old">传统</span>多层级、沟通成本高</div>
+        <div class="diff-row"><span class="diff-tag-new">OPC</span>一个人一支队伍，说干就干</div>
+      </div>
+      <div class="opc-diff-card">
+        <h4>2. 成本结构</h4>
+        <div class="diff-row"><span class="diff-tag-old">传统</span>办公室+工资+社保，固定成本高</div>
+        <div class="diff-row"><span class="diff-tag-new">OPC</span>在家办公+按需买工具，固定成本极低</div>
+      </div>
+      <div class="opc-diff-card">
+        <h4>3. 风险与收益</h4>
+        <div class="diff-row"><span class="diff-tag-old">传统</span>downside大，负债风险</div>
+        <div class="diff-row"><span class="diff-tag-new">OPC</span>downside有限，upside可观，最适合普通人</div>
+      </div>
+      <div class="opc-diff-card">
+        <h4>4. 时间自由度</h4>
+        <div class="diff-row"><span class="diff-tag-old">传统</span>表面老板，实际被公司"绑架"</div>
+        <div class="diff-row"><span class="diff-tag-new">OPC</span>自主选择节奏，真正的自由</div>
+      </div>
+      <div class="opc-diff-card">
+        <h4>5. 规模化路径</h4>
+        <div class="diff-row"><span class="diff-tag-old">传统</span>必须"做大"才能"做强"</div>
+        <div class="diff-row"><span class="diff-tag-new">OPC</span>"做强"比"做大"重要，利润率更高</div>
+      </div>
+      <div class="opc-diff-card">
+        <h4>6. 生命周期</h4>
+        <div class="diff-row"><span class="diff-tag-old">传统</span>平均2-3年，多死于现金流断裂</div>
+        <div class="diff-row"><span class="diff-tag-new">OPC</span>灵活调整，很多OPC存活10年+</div>
+      </div>
+    </div>
+
+    <!-- OPC vs 其他选择 -->
+    <div class="opc-compare-wrap">
+      <table class="opc-compare">
+        <thead><tr><th></th><th>一人公司OPC</th><th>自由职业</th><th>独立开发</th><th>小团队Startup</th></tr></thead>
+        <tbody>
+          <tr><td>人数</td><td>1人+AI</td><td>1人</td><td>1-2人</td><td>3-10人</td></tr>
+          <tr><td>核心驱动</td><td class="tag-yes">AI杠杆</td><td>技能换钱</td><td>产品思维</td><td>融资+增长</td></tr>
+          <tr><td>收入上限</td><td class="tag-yes">高（可复制）</td><td class="tag-no">低（时间换钱）</td><td class="tag-mid">中</td><td class="tag-yes">高</td></tr>
+          <tr><td>启动成本</td><td>¥300-2000/月</td><td>¥0</td><td>¥500-3000</td><td>¥5万+/月</td></tr>
+          <tr><td>适合人群</td><td>全能型+管理AI</td><td>有一技之长</td><td>技术背景</td><td>找合伙人</td></tr>
+          <tr><td>风险</td><td class="tag-mid">中</td><td class="tag-yes">低</td><td class="tag-mid">中</td><td class="tag-no">高</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 谁适合做OPC -->
+    <div class="opc-who-grid">
+      <div class="opc-who-item"><strong>✅ 有一技之长</strong> 编程、设计、写作、营销</div>
+      <div class="opc-who-item"><strong>✅ 追求自由</strong> 不想被上班束缚</div>
+      <div class="opc-who-item"><strong>✅ 自我驱动</strong> 能自己管理自己</div>
+      <div class="opc-who-item"><strong>✅ 抗风险弱</strong> 没巨额资金创业</div>
+      <div class="opc-who-item"><strong>✅ 想低成本试错</strong> 先验证再投入</div>
+    </div>
+
+    <!-- ==================== 1.3 角色定位·点线面 ==================== -->
+    <div class="cp-section-hd opc-hd"><span class="cp-flag">🧭</span> 角色定位 · 点·线·面</div>
+
+    <!-- 点：6种角色卡片 -->
+    <p style="font-size:0.85rem;color:var(--muted);margin-bottom:0.8rem;">你是哪种人？找到你的角色，AI对你意味着什么，重点看哪些环节。</p>
+    <div class="opc-role-grid">
+      <div class="opc-role-card rc-design">
+        <div class="opc-role-icon">🎨</div>
+        <div class="opc-role-name">设计师</div>
+        <div class="opc-role-ai"><strong>AI = 无限产出力的画笔</strong>，你的审美是壁垒，AI是你的执行团队</div>
+        <div class="opc-role-focus">重点看：<span class="focus-tag">设计/品牌工具栈</span> <span class="focus-tag">痛点·做不了设计</span> <span class="focus-tag">变现·知识付费</span></div>
+      </div>
+      <div class="opc-role-card rc-code">
+        <div class="opc-role-icon">👨‍💻</div>
+        <div class="opc-role-name">程序员</div>
+        <div class="opc-role-ai"><strong>AI = 10倍速的搭档</strong>，你的架构能力是核心，AI帮你从1到100</div>
+        <div class="opc-role-focus">重点看：<span class="focus-tag">产品/研发工具栈</span> <span class="focus-tag">AI员工CTO</span> <span class="focus-tag">路线图Phase 1-2</span></div>
+      </div>
+      <div class="opc-role-card rc-biz">
+        <div class="opc-role-icon">🚀</div>
+        <div class="opc-role-name">创业者</div>
+        <div class="opc-role-ai"><strong>AI = 零成本的全栈团队</strong>，你的商业嗅觉是关键，AI补齐执行力短板</div>
+        <div class="opc-role-focus">重点看：<span class="focus-tag">四大变现模式</span> <span class="focus-tag">AI员工花名册</span> <span class="focus-tag">成本计算器</span></div>
+      </div>
+      <div class="opc-role-card rc-edu">
+        <div class="opc-role-icon">🎓</div>
+        <div class="opc-role-name">教育者</div>
+        <div class="opc-role-ai"><strong>AI = 永不疲倦的助教</strong>，你的知识深度是护城河，AI帮你规模交付</div>
+        <div class="opc-role-focus">重点看：<span class="focus-tag">内容/写作工具栈</span> <span class="focus-tag">变现·知识付费</span> <span class="focus-tag">自动化运营</span></div>
+      </div>
+      <div class="opc-role-card rc-hobby">
+        <div class="opc-role-icon">🌟</div>
+        <div class="opc-role-name">爱好者</div>
+        <div class="opc-role-ai"><strong>AI = 入场券</strong>，你不需要精通一切，AI让兴趣变成产品</div>
+        <div class="opc-role-focus">重点看：<span class="focus-tag">5分钟上手指南</span> <span class="focus-tag">零代码工具</span> <span class="focus-tag">升级路线Lv1-3</span></div>
+      </div>
+      <div class="opc-role-card rc-platform">
+        <div class="opc-role-icon">🏗️</div>
+        <div class="opc-role-name">平台方</div>
+        <div class="opc-role-ai"><strong>AI = 生态加速器</strong>，你的连接能力是杠杆，AI帮你服务更多OPC</div>
+        <div class="opc-role-focus">重点看：<span class="focus-tag">自动化/运营工具栈</span> <span class="focus-tag">客服搭建</span> <span class="focus-tag">趋势分析</span></div>
+      </div>
+    </div>
+
+    <!-- 线：6种专属链路对比表 -->
+    <p style="font-size:0.85rem;color:var(--muted);margin:1rem 0 0.5rem;">你的专属链路 — 关键环节、可跳过环节、第一步做什么：</p>
+    <div class="opc-path-wrap">
+      <table class="opc-path">
+        <thead><tr><th>角色</th><th>关键环节</th><th>可跳过</th><th>第一步</th></tr></thead>
+        <tbody>
+          <tr><td>🎨 设计师</td><td><span class="path-key">品牌视觉 → 内容创作 → 知识付费</span></td><td><span class="path-skip">编程开发</span></td><td><span class="path-first">Midjourney出品牌素材包</span></td></tr>
+          <tr><td>👨‍💻 程序员</td><td><span class="path-key">产品开发 → Landing Page → 付费验证</span></td><td><span class="path-skip">视频制作</span></td><td><span class="path-first">Cursor写MVP上线</span></td></tr>
+          <tr><td>🚀 创业者</td><td><span class="path-key">选品验证 → 自动化获客 → 规模复制</span></td><td><span class="path-skip">手动客服</span></td><td><span class="path-first">ChatGPT写商业画布</span></td></tr>
+          <tr><td>🎓 教育者</td><td><span class="path-key">知识体系 → 内容矩阵 → 付费社群</span></td><td><span class="path-skip">电商卖货</span></td><td><span class="path-first">Claude整理课程大纲</span></td></tr>
+          <tr><td>🌟 爱好者</td><td><span class="path-key">兴趣探索 → AI辅助产出 → 小规模变现</span></td><td><span class="path-skip">融资/扩张</span></td><td><span class="path-first">用v0做个小工具试水</span></td></tr>
+          <tr><td>🏗️ 平台方</td><td><span class="path-key">工具整合 → 社区运营 → 生态变现</span></td><td><span class="path-skip">单品开发</span></td><td><span class="path-first">n8n搭自动化服务流</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 面：互补组队 + 升级路径 -->
+    <div class="opc-team-grid">
+      <div class="opc-team-card" style="border-left:3px solid var(--accent2);">
+        <h4>🤝 互补组队 — 1+1 &gt; 2</h4>
+        <div class="team-pair"><strong>设计师 + 程序员</strong> = 出壳出芯，产品即品牌</div>
+        <div class="team-pair"><strong>创业者 + 教育者</strong> = 做出来+教出去，双重变现</div>
+        <div class="team-pair"><strong>爱好者 + 平台方</strong> = 先用再搭，从用户变供给</div>
+      </div>
+      <div class="opc-team-card" style="border-left:3px solid var(--opc);">
+        <h4>📈 升级路径 — 从0到1的跃迁</h4>
+        <div class="opc-upgrade-flow">
+          <span class="opc-upgrade-step" style="border-color:var(--muted);color:var(--muted);">🌟 爱好者</span>
+          <span class="opc-upgrade-arrow">→</span>
+          <span class="opc-upgrade-step" style="border-color:var(--accent);color:var(--accent);">✍️ 创作者</span>
+          <span class="opc-upgrade-arrow">→</span>
+          <span class="opc-upgrade-step" style="border-color:var(--opc);color:var(--opc);">🚀 创业者</span>
+        </div>
+        <p style="font-size:0.78rem;color:var(--muted);margin-top:0.5rem;line-height:1.6;">爱好者用AI探索兴趣 → 创作者用AI稳定产出 → 创业者用AI系统赚钱。每一级都是认知+工具+行动的升级。</p>
+      </div>
+    </div>
+
+    <!-- ==================== 1.4 AI全能升级路线 ==================== -->
+    <div class="cp-section-hd opc-hd"><span class="cp-flag">⬆️</span> AI全能升级路线 — 10级成长</div>
+    <p style="font-size:0.85rem;color:var(--muted);margin-bottom:0.8rem;">5个阶段、10个等级，你在哪一级？找到你的位置，看下一步怎么走。</p>
+
+    <!-- 阶段1：觉醒期 -->
+    <div class="opc-level-phases">
+      <div class="opc-level-phase">
+        <div class="opc-level-phase-head" style="border-left:3px solid var(--muted);">🌱 阶段一：觉醒期（Lv 1-2）— "原来AI能干这个"</div>
+        <div class="opc-level-phase-body">
+          <div class="opc-level-row">
+            <div class="opc-level-cell lvl-num">Lv1</div>
+            <div class="opc-level-cell lvl-can" data-label="你能做什么：">用ChatGPT聊天、问问题、翻译</div>
+            <div class="opc-level-cell lvl-os" data-label="内心OS：">"这玩意挺好玩"</div>
+            <div class="opc-level-cell lvl-check" data-label="验证标准：">每天主动打开AI对话≥3次</div>
+            <div class="opc-level-cell lvl-stuck" data-label="卡住的人：">觉得AI就是高级搜索，从不当回事</div>
+          </div>
+          <div class="opc-level-row">
+            <div class="opc-level-cell lvl-num">Lv2</div>
+            <div class="opc-level-cell lvl-can" data-label="你能做什么：">用AI写文案、出方案、做调研</div>
+            <div class="opc-level-cell lvl-os" data-label="内心OS：">"比我写得快，但不如我写得好"</div>
+            <div class="opc-level-cell lvl-check" data-label="验证标准：">工作中≥30%内容由AI初稿</div>
+            <div class="opc-level-cell lvl-stuck" data-label="卡住的人：">觉得AI输出不够好就放弃，不肯迭代提示词</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 阶段2：融合期 -->
+      <div class="opc-level-phase">
+        <div class="opc-level-phase-head" style="border-left:3px solid var(--accent);">⚡ 阶段二：融合期（Lv 3-4）— "AI是我的器官"</div>
+        <div class="opc-level-phase-body">
+          <div class="opc-level-row">
+            <div class="opc-level-cell lvl-num">Lv3</div>
+            <div class="opc-level-cell lvl-can" data-label="你能做什么：">Cursor写代码、Midjourney出图，AI是生产力工具</div>
+            <div class="opc-level-cell lvl-os" data-label="内心OS：">"没AI我活不了了"</div>
+            <div class="opc-level-cell lvl-check" data-label="验证标准：">离开AI工作效率下降≥50%</div>
+            <div class="opc-level-cell lvl-stuck" data-label="卡住的人：">只会用一个AI工具，没有建立工具链</div>
+          </div>
+          <div class="opc-level-row">
+            <div class="opc-level-cell lvl-num">Lv4</div>
+            <div class="opc-level-cell lvl-can" data-label="你能做什么：">AI客服、自动化流程，开始让AI替你干活</div>
+            <div class="opc-level-cell lvl-os" data-label="内心OS：">"我在管AI而不是在用AI"</div>
+            <div class="opc-level-cell lvl-check" data-label="验证标准：">有≥1个自动化流程在跑</div>
+            <div class="opc-level-cell lvl-stuck" data-label="卡住的人：">总想自己干完再让AI优化，永远在优化不出发</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 阶段3：死亡谷 -->
+      <div class="opc-level-phase">
+        <div class="opc-level-phase-head" style="border-left:3px solid var(--danger);">🔥 阶段三：死亡谷（Lv 5-6）— 80%的人停在这里</div>
+        <div class="opc-level-phase-body">
+          <div class="opc-level-row">
+            <div class="opc-level-cell lvl-num">Lv5</div>
+            <div class="opc-level-cell lvl-can" data-label="你能做什么：">一个人+AI做出完整产品，但不知道怎么卖</div>
+            <div class="opc-level-cell lvl-os" data-label="内心OS：">"做出来了，然后呢？"</div>
+            <div class="opc-level-cell lvl-check" data-label="验证标准：">产品上线，但月收入&lt;¥1000</div>
+            <div class="opc-level-cell lvl-stuck" data-label="卡住的人：">沉迷做产品，不验证需求，永远在做下个功能</div>
+          </div>
+          <div class="opc-level-row">
+            <div class="opc-level-cell lvl-num">Lv6</div>
+            <div class="opc-level-cell lvl-can" data-label="你能做什么：">开始获客，有人付费，但不稳定</div>
+            <div class="opc-level-cell lvl-os" data-label="内心OS：">"有人买了！但下个月呢？"</div>
+            <div class="opc-level-cell lvl-check" data-label="验证标准：">月收入¥1000-5000，但不稳定</div>
+            <div class="opc-level-cell lvl-stuck" data-label="卡住的人：">获客靠运气，没有可持续的流量来源</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 阶段4：破壁期 -->
+      <div class="opc-level-phase">
+        <div class="opc-level-phase-head" style="border-left:3px solid var(--opc);">🏆 阶段四：破壁期（Lv 7-8）— "让AI做"</div>
+        <div class="opc-level-phase-body">
+          <div class="opc-level-row">
+            <div class="opc-level-cell lvl-num">Lv7</div>
+            <div class="opc-level-cell lvl-can" data-label="你能做什么：">稳定月入过万，AI自动化覆盖≥60%业务</div>
+            <div class="opc-level-cell lvl-os" data-label="内心OS：">"我终于不用事事自己来了"</div>
+            <div class="opc-level-cell lvl-check" data-label="验证标准：">月收入¥1万+，自动化流程≥5个</div>
+            <div class="opc-level-cell lvl-stuck" data-label="卡住的人：">不敢放权给AI，总觉得不如自己来</div>
+          </div>
+          <div class="opc-level-row">
+            <div class="opc-level-cell lvl-num">Lv8</div>
+            <div class="opc-level-cell lvl-can" data-label="你能做什么：">多产品矩阵，同一套系统复制到新赛道</div>
+            <div class="opc-level-cell lvl-os" data-label="内心OS：">"我在经营系统，不是在做产品"</div>
+            <div class="opc-level-cell lvl-check" data-label="验证标准：">≥2个产品/渠道在跑，月收入¥3万+</div>
+            <div class="opc-level-cell lvl-stuck" data-label="卡住的人：">单产品舒适区，不敢试新方向</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 阶段5：自由期 -->
+      <div class="opc-level-phase">
+        <div class="opc-level-phase-head" style="border-left:3px solid var(--accent2);">🌈 阶段五：自由期（Lv 9-10）— "AI是空气"</div>
+        <div class="opc-level-phase-body">
+          <div class="opc-level-row">
+            <div class="opc-level-cell lvl-num">Lv9</div>
+            <div class="opc-level-cell lvl-can" data-label="你能做什么：">AI Agent自主运行，你只做战略决策</div>
+            <div class="opc-level-cell lvl-os" data-label="内心OS：">"我的时间终于自由了"</div>
+            <div class="opc-level-cell lvl-check" data-label="验证标准：">每日主动工作&lt;4h，月收入¥5万+</div>
+            <div class="opc-level-cell lvl-stuck" data-label="卡住的人：">不信任Agent，还在微操每个环节</div>
+          </div>
+          <div class="opc-level-row">
+            <div class="opc-level-cell lvl-num">Lv10</div>
+            <div class="opc-level-cell lvl-can" data-label="你能做什么：">AI公司自动运转，你专注于创造新可能</div>
+            <div class="opc-level-cell lvl-os" data-label="内心OS：">"AI不会替我改变世界，但让我发现——原来我就可以"</div>
+            <div class="opc-level-cell lvl-check" data-label="验证标准：">被动收入≥80%，可持续≥6个月</div>
+            <div class="opc-level-cell lvl-stuck" data-label="卡住的人：">到这一级反而迷茫——自由之后做什么？</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 三道墙 -->
+    <div class="cp-section-hd opc-hd"><span class="cp-flag">🧱</span> 三道墙 — 大多数人卡在哪</div>
+    <div class="opc-wall-grid">
+      <div class="opc-wall-card wall-1">
+        <div class="opc-wall-num">1</div>
+        <h5>第1道墙：用AI → AI是器官</h5>
+        <div class="wall-desc"><strong>卡在Lv 2-3之间。</strong>知道AI有用，但没有融入日常。觉得"AI是工具"而非"AI是我的一部分"。<br><strong>突破方式：</strong>强迫自己用AI完成80%的初稿工作，持续2周形成肌肉记忆。</div>
+      </div>
+      <div class="opc-wall-card wall-2">
+        <div class="opc-wall-num">2</div>
+        <h5>第2道墙：死亡谷 — 80%的人停在这里</h5>
+        <div class="wall-desc"><strong>卡在Lv 5-6之间。</strong>能做出东西，但卖不出去/卖不稳定。这是最痛苦的阶段——能力够了，变现没通。<br><strong>突破方式：</strong>停止做产品，先找5个真实付费用户。需求验证 &gt; 产品完美。</div>
+      </div>
+      <div class="opc-wall-card wall-3">
+        <div class="opc-wall-num">3</div>
+        <h5>第3道墙：自己做 → 让AI做</h5>
+        <div class="wall-desc"><strong>卡在Lv 7-8之间。</strong>已经能赚钱，但事事亲力亲为。知道该放权给AI，但控制欲太强。<br><strong>突破方式：</strong>每周选1个环节完全交给AI/Agent，只看结果不看过程。</div>
+      </div>
+    </div>
+
+    <!-- 收尾金句 -->
+    <div class="opc-quote">
+      <div class="opc-quote-text">"AI不会替你改变世界，但会让你发现——原来你就可以。"</div>
+      <div class="opc-quote-sub">从Lv1到Lv10，每一级的突破不是AI更强了，而是你更敢了。</div>
+    </div>
+
+    <!-- ==================== 1.5 快速上手 ==================== -->
+    <div class="cp-section-hd opc-hd"><span class="cp-flag">⚡</span> 5分钟上手指南</div>
+
+    <div class="opc-qs">
+      <div class="opc-qs-head">不确定从哪开始？三个问题，一个答案</div>
+      <div class="opc-qs-body">
+        <div class="opc-qs-steps">
+          <div class="opc-qs-step">
+            <div class="opc-qs-step-num">1</div>
+            <div class="opc-qs-step-q">先用哪个？</div>
+            <div class="opc-qs-step-a"><strong>Cursor + ChatGPT</strong>，搞定80%的事。Cursor写代码/建站，ChatGPT做内容/调研。两个工具就够起步。</div>
+          </div>
+          <div class="opc-qs-step">
+            <div class="opc-qs-step-num">2</div>
+            <div class="opc-qs-step-q">怎么开始？</div>
+            <div class="opc-qs-step-a"><strong>2周验证法</strong>：今天注册工具 → 明天出MVP → 后天找5个用户收反馈。别完美主义，先跑起来。</div>
+          </div>
+          <div class="opc-qs-step">
+            <div class="opc-qs-step-num">3</div>
+            <div class="opc-qs-step-q">钱怎么花？</div>
+            <div class="opc-qs-step-a">月工具费 <strong>≤ 月收入10%</strong>。先用免费版，确认有用再升级。前期 ¥0-200/月完全够。</div>
+          </div>
+        </div>
+        <div class="opc-qs-tip">💡 每个工具的官网都有详细教程，不需要额外学习——直接用，遇到问题再搜。下方工具栈按角色精选，挑你当下需要的即可。</div>
+      </div>
+    </div>
+
+    <!-- ==================== 2. 变现模式 ==================== -->
+    <div class="cp-section-hd opc-hd"><span class="cp-flag">💰</span> 四大变现模式</div>
+
+    <div class="opc-monetize-grid">
+      <div class="opc-monetize-card" style="border-left:3px solid var(--hot);">
+        <h4>📺 流量变现</h4>
+        <div class="mz-income">月入 ¥3,000 - 10万+</div>
+        <ul>
+          <li><strong>核心：</strong>注意力→广告/打赏/分成</li>
+          <li><strong>平台：</strong>抖音、TikTok、小红书、YouTube</li>
+          <li><strong>方式：</strong>数字分身运营、中视频计划、广告分成、直播打赏</li>
+          <li><strong>关键：</strong>内容垂直+稳定更新+互动运营</li>
+        </ul>
+      </div>
+      <div class="opc-monetize-card" style="border-left:3px solid var(--opc);">
+        <h4>🛒 电商卖货</h4>
+        <div class="mz-income">月入 ¥5,000 - 20万+</div>
+        <ul>
+          <li><strong>核心：</strong>商品差价/一件代发</li>
+          <li><strong>平台：</strong>淘宝、亚马逊、TikTok Shop</li>
+          <li><strong>方式：</strong>AI辅助选品、FBA跨境、AI客服</li>
+          <li><strong>关键：</strong>选品能力+差异化定位</li>
+        </ul>
+      </div>
+      <div class="opc-monetize-card" style="border-left:3px solid var(--accent2);">
+        <h4>🎓 知识/服务付费</h4>
+        <div class="mz-income">月入 ¥1万 - 10万+</div>
+        <ul>
+          <li><strong>核心：</strong>专业认知→课程/咨询</li>
+          <li><strong>平台：</strong>微信、知识星球、小报童</li>
+          <li><strong>方式：</strong>付费课程、会员社群、专家咨询</li>
+          <li><strong>关键：</strong>专业深度+体系化内容</li>
+        </ul>
+      </div>
+      <div class="opc-monetize-card" style="border-left:3px solid var(--accent);">
+        <h4>🔗 分销/带货</h4>
+        <div class="mz-income">月入 ¥3,000 - 5万+</div>
+        <ul>
+          <li><strong>核心：</strong>渠道分发→佣金</li>
+          <li><strong>平台：</strong>抖音橱窗、Amazon联盟、闲鱼</li>
+          <li><strong>方式：</strong>无货源佣金、CPS分成、好物推荐</li>
+          <li><strong>关键：</strong>选品眼光+信任背书</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 平台矩阵四象限 -->
+    <div class="opc-concept" style="margin-top:1rem;">
+      <div class="opc-concept-head">🎯 平台矩阵四象限 — 精准选择你的主战场</div>
+      <div class="opc-concept-body">
+        <div class="opc-quadrant">
+          <div class="opc-q-cell" style="border-top:3px solid var(--hot);">
+            <h5>📡 公域 + 内容主导</h5>
+            <div class="q-platforms"><strong>抖音 / TikTok / 小红书</strong><br>爆发性流量获取，品牌冷启动</div>
+          </div>
+          <div class="opc-q-cell" style="border-top:3px solid var(--accent);">
+            <h5>📰 公域 + 影响力</h5>
+            <div class="q-platforms"><strong>微信公众号 / 知乎 / X</strong><br>影响力塑造，信任建立</div>
+          </div>
+          <div class="opc-q-cell" style="border-top:3px solid var(--opc);">
+            <h5>🛒 私域 + 交易转化</h5>
+            <div class="q-platforms"><strong>淘宝 / 亚马逊 / TikTok Shop</strong><br>直接销售，即时转化</div>
+          </div>
+          <div class="opc-q-cell" style="border-top:3px solid var(--accent2);">
+            <h5>💬 私域 + 长期运营</h5>
+            <div class="q-platforms"><strong>微信小程序 / 私域社群</strong><br>长周期价值，高频复购</div>
+          </div>
+        </div>
+        <p style="font-size:0.82rem;color:var(--muted);margin-top:0.5rem;">💡 策略：聚焦1-2个核心平台深耕，公域获客→私域转化，形成闭环</p>
+      </div>
+    </div>
+
+    <!-- ==================== 3. 痛点突破 ==================== -->
+    <div class="cp-section-hd opc-hd"><span class="cp-flag">💥</span> 痛点突破 — AI如何解决OPC核心难题</div>
+
+    <div class="opc-pain-grid">
+      <div class="opc-pain-card">
+        <div class="pain-q">😰 不会写代码</div>
+        <div class="pain-old">雇开发者月付2万+</div>
+        <div class="pain-arrow">→ AI突破：</div>
+        <div class="pain-new">自然语言→可运行产品</div>
+        <div class="pain-tools">Cursor + Claude Code / MiMo</div>
+      </div>
+      <div class="opc-pain-card">
+        <div class="pain-q">🎨 做不了设计</div>
+        <div class="pain-old">外包一个Logo 500起</div>
+        <div class="pain-arrow">→ AI突破：</div>
+        <div class="pain-new">一句话出图+品牌全案</div>
+        <div class="pain-tools">Midjourney + Canva AI</div>
+      </div>
+      <div class="opc-pain-card">
+        <div class="pain-q">💬 客服回复不过来</div>
+        <div class="pain-old">漏回=丢单</div>
+        <div class="pain-arrow">→ AI突破：</div>
+        <div class="pain-new">7×24h AI自动应答</div>
+        <div class="pain-tools">Dify / FastGPT</div>
+      </div>
+      <div class="opc-pain-card">
+        <div class="pain-q">📣 没钱打广告</div>
+        <div class="pain-old">投流烧钱无底洞</div>
+        <div class="pain-arrow">→ AI突破：</div>
+        <div class="pain-new">SEO+内容批量生产</div>
+        <div class="pain-tools">ChatGPT + AI写作 + Perplexity</div>
+      </div>
+      <div class="opc-pain-card">
+        <div class="pain-q">🎬 不会做视频</div>
+        <div class="pain-old">拍剪1条1天</div>
+        <div class="pain-arrow">→ AI突破：</div>
+        <div class="pain-new">文生视频3分钟出片</div>
+        <div class="pain-tools">Seedance 2.0 + 剪映AI / 元镜</div>
+      </div>
+      <div class="opc-pain-card">
+        <div class="pain-q">👤 没人出镜</div>
+        <div class="pain-old">不想露脸/普通话不好</div>
+        <div class="pain-arrow">→ AI突破：</div>
+        <div class="pain-new">数字人替你出镜</div>
+        <div class="pain-tools">HeyGen / 有言AI / 元娲</div>
+      </div>
+      <div class="opc-pain-card">
+        <div class="pain-q">📝 内容不够发</div>
+        <div class="pain-old">日更1条就头秃</div>
+        <div class="pain-arrow">→ AI突破：</div>
+        <div class="pain-new">AI批量生成+排期</div>
+        <div class="pain-tools">ChatGPT + n8n 自动化</div>
+      </div>
+      <div class="opc-pain-card">
+        <div class="pain-q">⚖️ 合同法务看不懂</div>
+        <div class="pain-old">律师咨询500/小时</div>
+        <div class="pain-arrow">→ AI突破：</div>
+        <div class="pain-new">AI审查+模板生成</div>
+        <div class="pain-tools">ChatGPT + 法务AI</div>
+      </div>
+    </div>
+
+    <!-- ==================== 4. AI员工花名册 ==================== -->
+    <div class="cp-section-hd opc-hd"><span class="cp-flag">🤖</span> AI员工花名册 — 你的虚拟团队</div>
+    <p style="font-size:0.85rem;color:var(--muted);margin-bottom:0.8rem;">把AI当员工来管理，你是CEO，他们是你的团队。总人力成本 ¥0-518/月 vs 传统团队 ¥5万+/月。</p>
+
+    <div class="opc-emp-grid">
+      <div class="opc-emp-card"><div class="emp-icon">👨‍💻</div><div class="emp-role">CTO</div><div class="emp-ai">Cursor + Claude Code</div><div class="emp-cost">¥0-99/月</div><div class="emp-boss">你定技术方向，Review代码</div></div>
+      <div class="opc-emp-card"><div class="emp-icon">🎨</div><div class="emp-role">设计师</div><div class="emp-ai">Midjourney + Canva</div><div class="emp-cost">¥0-70/月</div><div class="emp-boss">你定品牌调性，选方案</div></div>
+      <div class="opc-emp-card"><div class="emp-icon">✍️</div><div class="emp-role">内容总监</div><div class="emp-ai">ChatGPT + 秘塔</div><div class="emp-cost">¥0-140/月</div><div class="emp-boss">你定内容策略，审核发布</div></div>
+      <div class="opc-emp-card"><div class="emp-icon">🎬</div><div class="emp-role">视频团队</div><div class="emp-ai">Seedance + 剪映</div><div class="emp-cost">¥0-200/月</div><div class="emp-boss">你定风格，选题</div></div>
+      <div class="opc-emp-card"><div class="emp-icon">⚙️</div><div class="emp-role">运营经理</div><div class="emp-ai">n8n + Notion AI</div><div class="emp-cost">¥0-9/月</div><div class="emp-boss">你搭流程，定规则</div></div>
+      <div class="opc-emp-card"><div class="emp-icon">💬</div><div class="emp-role">客服主管</div><div class="emp-ai">Dify + Chatwoot</div><div class="emp-cost">¥0/月</div><div class="emp-boss">你写FAQ，定边界</div></div>
+      <div class="opc-emp-card"><div class="emp-icon">📊</div><div class="emp-role">市场分析师</div><div class="emp-ai">Perplexity</div><div class="emp-cost">¥0/月</div><div class="emp-boss">你做决策</div></div>
+      <div class="opc-emp-card"><div class="emp-icon">💰</div><div class="emp-role">财务</div><div class="emp-ai">飞书多维 + Wise</div><div class="emp-cost">¥0/月</div><div class="emp-boss">你管钱，AI记账</div></div>
+      <div class="opc-emp-card"><div class="emp-icon">🔍</div><div class="emp-role">选品专员</div><div class="emp-ai">Linkfox + ChatGPT</div><div class="emp-cost">¥0-200/月</div><div class="emp-boss">你定品类，AI挖痛点</div></div>
+    </div>
+
+    <!-- ==================== 5. 工具栈卡片 ==================== -->
+    <div class="cp-section-hd opc-hd"><span class="cp-flag">🛠️</span> OPC工具栈 — 按角色精选（含月价）</div>
+
+    <div class="cp-platforms">
+
+      <!-- 产品/研发 -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name">💻 产品 / 研发</span>
+          <span class="cp-badge badge-hot">🔥 核心</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>工具</th><th>月价</th><th>用途</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name"><a href="https://cursor.com/" target="_blank" rel="noopener noreferrer">Cursor Pro</a></td><td class="plan-price">$20</td><td>AI编程IDE，OPC标配</td></tr>
+              <tr><td class="plan-name"><a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">Claude Code</a></td><td class="plan-price">$20</td><td>终端AI编程，Agent级</td></tr>
+              <tr><td class="plan-name"><a href="https://platform.xiaomimimo.com/token-plan" target="_blank" rel="noopener noreferrer">MiMo Token Plan</a></td><td class="plan-price">¥39起</td><td>国产Coding Plan，性价比高</td></tr>
+              <tr><td class="plan-name"><a href="https://v0.dev/" target="_blank" rel="noopener noreferrer">v0 / Bolt</a></td><td class="plan-price">免费起</td><td>零代码快速原型</td></tr>
+              <tr><td class="plan-name"><a href="https://replit.com/" target="_blank" rel="noopener noreferrer">Replit Agent</a></td><td class="plan-price">$25</td><td>云端开发+一键部署</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 设计/品牌 -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name">🎨 设计 / 品牌</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>工具</th><th>月价</th><th>用途</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name"><a href="https://midjourney.com/" target="_blank" rel="noopener noreferrer">Midjourney</a></td><td class="plan-price">$10起</td><td>产图+品牌视觉</td></tr>
+              <tr><td class="plan-name"><a href="https://canva.com/" target="_blank" rel="noopener noreferrer">Canva Pro</a></td><td class="plan-price">¥100</td><td>快速出海报/社媒图</td></tr>
+              <tr><td class="plan-name"><a href="https://js.design/" target="_blank" rel="noopener noreferrer">即时设计AI</a></td><td class="plan-price">免费</td><td>国产AI设计，中文友好</td></tr>
+              <tr><td class="plan-name"><a href="https://figma.com/" target="_blank" rel="noopener noreferrer">Figma AI</a></td><td class="plan-price">免费起</td><td>UI/原型设计</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 视频/吸粉 -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name">🎬 视频 / 吸粉</span>
+          <span class="cp-badge badge-hot">🔥 赛道</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>工具</th><th>月价</th><th>用途</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name"><a href="https://www.volcengine.com/product/seedance" target="_blank" rel="noopener noreferrer">Seedance 2.0</a></td><td class="plan-price">免费/¥200</td><td>🔥字节出品，文生视频1元/秒</td></tr>
+              <tr><td class="plan-name"><a href="https://klingai.com/" target="_blank" rel="noopener noreferrer">可灵AI</a></td><td class="plan-price">免费起</td><td>国产视频生成</td></tr>
+              <tr><td class="plan-name"><a href="https://yuanjing.zeelin.cn/" target="_blank" rel="noopener noreferrer">元镜</a></td><td class="plan-price">免费起</td><td>一句话生成爆款视频</td></tr>
+              <tr><td class="plan-name"><a href="https://jumu.zeelin.cn/" target="_blank" rel="noopener noreferrer">剧幕</a></td><td class="plan-price">免费起</td><td>AI剧本创作，短剧赛道</td></tr>
+              <tr><td class="plan-name"><a href="https://www.capcut.cn/" target="_blank" rel="noopener noreferrer">剪映AI / CapCut</a></td><td class="plan-price">免费</td><td>剪辑+自动字幕</td></tr>
+              <tr><td class="plan-name"><a href="https://runwayml.com/" target="_blank" rel="noopener noreferrer">Runway Gen-4</a></td><td class="plan-price">$12起</td><td>专业级视频生成</td></tr>
+              <tr><td class="plan-name"><a href="https://www.heygen.com/" target="_blank" rel="noopener noreferrer">HeyGen</a></td><td class="plan-price">$24</td><td>数字人出镜，多语言</td></tr>
+              <tr><td class="plan-name"><a href="https://wa.zeelin.cn/" target="_blank" rel="noopener noreferrer">元娲</a></td><td class="plan-price">按需</td><td>虚拟人生产平台</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 内容/写作 -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name">✍️ 内容 / 写作</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>工具</th><th>月价</th><th>用途</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name"><a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT Plus</a></td><td class="plan-price">$20</td><td>万能写作+推理</td></tr>
+              <tr><td class="plan-name"><a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">Claude Pro</a></td><td class="plan-price">$20</td><td>深度写作+长文</td></tr>
+              <tr><td class="plan-name"><a href="https://xiezuocat.com/" target="_blank" rel="noopener noreferrer">秘塔写作猫</a></td><td class="plan-price">¥30</td><td>中文写作优化</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 营销/获客 -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name">📣 营销 / 获客</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>工具</th><th>月价</th><th>用途</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name"><a href="https://perplexity.ai/" target="_blank" rel="noopener noreferrer">Perplexity</a></td><td class="plan-price">免费起</td><td>市场调研+信息聚合</td></tr>
+              <tr><td class="plan-name"><a href="https://metaso.cn/" target="_blank" rel="noopener noreferrer">秘塔AI搜索</a></td><td class="plan-price">免费</td><td>国内市场调研</td></tr>
+              <tr><td class="plan-name"><a href="https://ai.linkfox.com/" target="_blank" rel="noopener noreferrer">Linkfox</a></td><td class="plan-price">按需</td><td>AI选品/Listing优化/竞品分析</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 自动化/运营 -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name">⚙️ 自动化 / 运营</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>工具</th><th>月价</th><th>用途</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name"><a href="https://n8n.io/" target="_blank" rel="noopener noreferrer">n8n</a></td><td class="plan-price">免费自建</td><td>工作流自动化，OPC核心</td></tr>
+              <tr><td class="plan-name"><a href="https://make.com/" target="_blank" rel="noopener noreferrer">Make</a></td><td class="plan-price">$9</td><td>可视化自动化</td></tr>
+              <tr><td class="plan-name"><a href="https://notion.so/" target="_blank" rel="noopener noreferrer">Notion AI</a></td><td class="plan-price">$10</td><td>知识库+项目管理</td></tr>
+              <tr><td class="plan-name"><a href="https://feishu.cn/" target="_blank" rel="noopener noreferrer">飞书多维</a></td><td class="plan-price">免费</td><td>国产多维表格+自动化</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 客服/支持 -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name">💬 客服 / 支持</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>工具</th><th>月价</th><th>用途</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name"><a href="https://dify.ai/" target="_blank" rel="noopener noreferrer">Dify</a></td><td class="plan-price">免费起</td><td>AI客服+知识库搭建</td></tr>
+              <tr><td class="plan-name"><a href="https://fastgpt.in/" target="_blank" rel="noopener noreferrer">FastGPT</a></td><td class="plan-price">免费起</td><td>国产AI客服+工作流</td></tr>
+              <tr><td class="plan-name"><a href="https://chatwoot.com/" target="_blank" rel="noopener noreferrer">Chatwoot</a></td><td class="plan-price">免费自建</td><td>多渠道客服聚合</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 财务/法务 -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name">💰 财务 / 法务</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>工具</th><th>月价</th><th>用途</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name"><a href="https://wise.com/" target="_blank" rel="noopener noreferrer">Wise</a></td><td class="plan-price">免费</td><td>跨境收款+多币种</td></tr>
+              <tr><td class="plan-name"><a href="https://stripe.com/" target="_blank" rel="noopener noreferrer">Stripe</a></td><td class="plan-price">0.4%/笔</td><td>SaaS收款标配</td></tr>
+              <tr><td class="plan-name">飞书记账</td><td class="plan-price">免费</td><td>AI记账+自动对账</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ==================== 6. 落地路线图 ==================== -->
+    <div class="cp-section-hd opc-hd"><span class="cp-flag">🗺️</span> 落地路线图 — 从0到1四阶段</div>
+
+    <div class="opc-roadmap">
+      <div class="opc-phase phase-1">
+        <h4>🚀 Phase 1: 验证期 <span class="phase-time">（第1-2周）</span></h4>
+        <ul>
+          <li>用 ChatGPT/Claude 验证商业想法，写商业画布</li>
+          <li>用 Perplexity/秘塔 做市场调研，找竞品</li>
+          <li>用 v0/Cursor 做MVP原型或Landing Page</li>
+          <li>收集10个真实用户反馈，验证付费意愿</li>
+        </ul>
+      </div>
+      <div class="opc-phase phase-2">
+        <h4>🔧 Phase 2: 搭建期 <span class="phase-time">（第3-4周）</span></h4>
+        <ul>
+          <li>Cursor/Claude Code 开发核心产品功能</li>
+          <li>Midjourney/Canva 做品牌视觉+素材</li>
+          <li>n8n/Make 搭建自动化流程（发帖、回复、通知）</li>
+          <li>Dify/FastGPT 搭建AI客服知识库</li>
+        </ul>
+      </div>
+      <div class="opc-phase phase-3">
+        <h4>📈 Phase 3: 增长期 <span class="phase-time">（第5-8周）</span></h4>
+        <ul>
+          <li>Seedance/元镜 批量生产视频内容，多平台吸粉</li>
+          <li>AI内容营销+SEO，持续输出引流内容</li>
+          <li>AI客服自动应答，释放人力</li>
+          <li>数据分析+AB测试，优化转化率</li>
+        </ul>
+      </div>
+      <div class="opc-phase phase-4">
+        <h4>🏆 Phase 4: 规模期 <span class="phase-time">（第9周+）</span></h4>
+        <ul>
+          <li>多产品矩阵，同一套工具栈复制</li>
+          <li>订阅制/复购模式，建立稳定现金流</li>
+          <li>考虑外包低价值环节，保持核心精简</li>
+          <li>考虑是否雇第一个人（如果值得的话）</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ==================== 7. 常见失败模式 ==================== -->
+    <div class="cp-section-hd opc-hd"><span class="cp-flag">❌</span> 常见失败模式</div>
+
+    <div class="opc-fail-grid">
+      <div class="opc-fail-card">
+        <h5>🔧 工具依赖症</h5>
+        <div class="fail-symptom">订阅10+工具却没产出</div>
+        <div class="fail-fix">→ 先有需求再买工具，月工具费 ≤ 月收入10%</div>
+      </div>
+      <div class="opc-fail-card">
+        <h5>✨ 完美主义陷阱</h5>
+        <div class="fail-symptom">磨产品3个月不上线</div>
+        <div class="fail-fix">→ 2周内上线MVP，用数据说话</div>
+      </div>
+      <div class="opc-fail-card">
+        <h5>🤐 一个人闷头干</h5>
+        <div class="fail-symptom">不验证需求做出来没人要</div>
+        <div class="fail-fix">→ 先做Landing Page收集意向，再开发</div>
+      </div>
+      <div class="opc-fail-card">
+        <h5>⏳ 时间黑洞</h5>
+        <div class="fail-symptom">80%时间调AI，20%做业务</div>
+        <div class="fail-fix">→ 固定AI使用时间，设定output标准</div>
+      </div>
+      <div class="opc-fail-card">
+        <h5>⚖️ 合规踩雷</h5>
+        <div class="fail-symptom">财产混同/税务问题</div>
+        <div class="fail-fix">→ 开设独立账户，AI辅助但找真人会计师</div>
+      </div>
+      <div class="opc-fail-card">
+        <h5>🔥 Burnout</h5>
+        <div class="fail-symptom">一个人扛所有，身心崩溃</div>
+        <div class="fail-fix">→ 用自动化释放80%重复工作，留时间休息</div>
+      </div>
+    </div>
+
+    <!-- ==================== 8. 成本计算器 ==================== -->
+    <div class="cp-section-hd opc-hd"><span class="cp-flag">🧮</span> 月度成本计算器</div>
+    <p style="font-size:0.85rem;color:var(--muted);">勾选你需要的工具，实时计算月度成本。vs 传统5人团队 ¥50,000+/月。</p>
+
+    <div class="opc-calc">
+      <div class="opc-calc-body" id="calcBody">
+        <div class="opc-calc-item"><input type="checkbox" data-price="145" checked><span class="calc-name">Cursor Pro $20 + MiMO Standard ¥99</span><span class="calc-price">¥145</span></div>
+        <div class="opc-calc-item"><input type="checkbox" data-price="70" checked><span class="calc-name">Midjourney $10 + Canva ¥0</span><span class="calc-price">¥70</span></div>
+        <div class="opc-calc-item"><input type="checkbox" data-price="140" checked><span class="calc-name">ChatGPT Plus $20 + Claude Pro $20</span><span class="calc-price">¥140</span></div>
+        <div class="opc-calc-item"><input type="checkbox" data-price="0"><span class="calc-name">Seedance 免费版 + 剪映免费</span><span class="calc-price">¥0</span></div>
+        <div class="opc-calc-item"><input type="checkbox" data-price="0" checked><span class="calc-name">n8n 自建 + 飞书多维</span><span class="calc-price">¥0</span></div>
+        <div class="opc-calc-item"><input type="checkbox" data-price="0" checked><span class="calc-name">Dify 免费版 + Chatwoot 自建</span><span class="calc-price">¥0</span></div>
+        <div class="opc-calc-item"><input type="checkbox" data-price="0"><span class="calc-name">Wise 免费账户</span><span class="calc-price">¥0</span></div>
+        <div class="opc-calc-item"><input type="checkbox" data-price="200"><span class="calc-name">Seedance Pro（视频重度）</span><span class="calc-price">¥200</span></div>
+        <div class="opc-calc-item"><input type="checkbox" data-price="170"><span class="calc-name">HeyGen $24（数字人）</span><span class="calc-price">¥170</span></div>
+        <div class="opc-calc-item"><input type="checkbox" data-price="29"><span class="calc-name">Shopify $29（电商出海）</span><span class="calc-price">¥210</span></div>
+      </div>
+      <div class="opc-calc-total">
+        <span>OPC 月度总成本</span>
+        <span><span class="calc-sum" id="calcSum">¥355</span> <span class="calc-vs" id="calcVs">（节省 99.3%）</span></span>
+      </div>
+    </div>
+
+    <!-- ==================== 9. 注意事项 + FAQ ==================== -->
+    <div class="cp-notice">
+      <div class="cp-notice-head">⚠️ 注意事项 — OPC新手必读</div>
+      <div class="cp-notice-body">
+        <ul>
+          <li><strong>工具费 ≤ 月收入10%：</strong>先赚钱再买工具，别陷入"买工具=在做事业"的幻觉。</li>
+          <li><strong>2周验证法：</strong>任何想法2周内验证，没人付费就换方向，别浪费时间。</li>
+          <li><strong>AI是员工不是老板：</strong>你负责决策和收敛，AI负责发散和执行。搞反了就是AI在用你。</li>
+          <li><strong>财产必须分离：</strong>个人账户和公司账户务必分开，否则连带责任让你倾家荡产。</li>
+          <li><strong>先做减法：</strong>1个产品+1个渠道+1个变现方式起步，别贪多。</li>
+          <li><strong>可持续 &gt; 规模：</strong>月入1万稳定3年 &gt; 月入10万只撑3个月。活得久比跑得快重要。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cp-faq">
+      <div class="cp-faq-head">❓ 常见问题</div>
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">OPC需要注册公司吗？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a">看业务类型。国内知识付费/内容创作可以先以个人身份经营，月收入超3万建议注册个体户或一人有限公司。出海需要注册海外LLC才能开Stripe。</div>
+      </div>
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">OPC一个月能赚多少？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a">差异极大。新手3-6月内月入3000-1万很常见；跑通模式后1-5万；头部OPC月入10万+。关键在于选对变现模式和坚持迭代。</div>
+      </div>
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">AI工具会不会被淘汰？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a">工具会变，但"用AI杠杆做一人公司"的模式不会。Gartner预测2027年40%的Agent可能被淘汰，但新的会替代上来。重要的是建立"AI工具驾驭能力"而非绑定单一工具。</div>
+      </div>
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">OPC和副业有什么区别？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a">副业是业余时间赚外快，OPC是系统化的个人商业体。OPC可以有副业起步，但目标是建立可复制的收入系统，而非用时间换钱。</div>
+      </div>
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">不会编程能做OPC吗？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a">可以。Cursor+v0让非程序员也能开发产品；电商、内容创作、知识付费等赛道完全不需要写代码。AI就是你的CTO。</div>
+      </div>
+    </div>
+
+    <!-- ==================== 10. 趋势分析 ==================== -->
+    <div class="cp-section-hd opc-hd"><span class="cp-flag">📈</span> 趋势分析</div>
+
+    <div class="opc-trend-grid">
+      <div class="opc-trend-card">
+        <h4>📊 OPC增长趋势</h4>
+        <ul>
+          <li>独立创始人比例从2019年23.7% → 2025年36.3%，增长53%</li>
+          <li>一人有限公司中，电子商务为第一大细分赛道，占比16.49%</li>
+          <li>90% OPC启动资金低于$500</li>
+          <li>AI渗透率：跨境电商从2020年&lt;10% → 2026年78%</li>
+        </ul>
+      </div>
+      <div class="opc-trend-card">
+        <h4>🤖 AI替代率加速</h4>
+        <ul>
+          <li>人力成本下降70%，销售额增长300%</li>
+          <li>麦肯锡预测：未来典型团队仅2-5人，同时管理50-100个AI智能体</li>
+          <li>视频营销AI红利窗口期约半年，先发优势很关键</li>
+          <li>Gartner预测2027年底40%+ Agent可能被取消</li>
+        </ul>
+      </div>
+      <div class="opc-trend-card">
+        <h4>💰 工具成本趋势</h4>
+        <ul>
+          <li>Token价格3年降1000×，AI调用越来越便宜</li>
+          <li>Coding Plan ¥39起，一人公司的技术成本新低</li>
+          <li>但订阅制工具(Cursor/Claude)大概率只涨不降</li>
+          <li>开源工具(n8n/FastGPT)让零成本启动成为可能</li>
+        </ul>
+      </div>
+      <div class="opc-trend-card">
+        <h4>🌍 全球化成为标配</h4>
+        <ul>
+          <li>AI翻译+数字人让语言不再是壁垒</li>
+          <li>Stripe+LLC让个人也能全球收款</li>
+          <li>跨境电商OPC增速远超国内电商</li>
+          <li>全球化不是选项，而是OPC的天然优势</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ==================== Cross links ==================== -->
+    <div class="opc-cross">
+      <a class="opc-cross-card" href="opc-global.html">
+        <h4>🌍 一人公司出海 · 全链路拆解 →</h4>
+        <p>选品→建站→内容→营销→客服→收款→合规，出海完整7步指南</p>
+      </a>
+      <a class="opc-cross-card" href="opc-resources.html">
+        <h4>🗺️ 一人公司资源导航 →</h4>
+        <p>社区、案例、想法站、课程、博客，精选外链资源合集</p>
+      </a>
+    </div>
+
+  </div>
+
+  <div class="cp-footer">
+    <p>AINav · 一人公司(OPC)指南 · 数据仅供参考，价格以官网为准</p>
+    <p><a href="index.html">返回首页</a> · <a href="free-tier.html">🆓 免费额度</a> · <a href="token-optimization.html">Token优化</a> · <a href="ai-roi/">AI 接入自查</a> · <a href="skill-plan.html">Skill 最佳实践</a> · <a href="opc-global.html">出海全链路</a> · <a href="opc-resources.html">资源导航</a> · <a href="coding-plan.html">编程套餐横评</a></p>
+  </div>
+
+  <script>
+    // Theme
+    (function(){
+      var saved = localStorage.getItem('cp-theme') || 'system';
+      document.documentElement.setAttribute('data-theme', saved);
+      document.querySelectorAll('.theme-btn').forEach(function(b){
+        if(b.getAttribute('data-theme-set')===saved) b.classList.add('is-active');
+        b.addEventListener('click',function(){
+          var t=this.getAttribute('data-theme-set');
+          document.documentElement.setAttribute('data-theme',t);
+          localStorage.setItem('cp-theme',t);
+          document.querySelectorAll('.theme-btn').forEach(function(x){x.classList.remove('is-active');});
+          this.classList.add('is-active');
+        });
+      });
+    })();
+
+    // FAQ accordion
+    document.querySelectorAll('.cp-faq-q').forEach(function(q){
+      q.addEventListener('click',function(){
+        var item=this.parentElement;
+        var wasOpen=item.classList.contains('is-open');
+        document.querySelectorAll('.cp-faq-item').forEach(function(i){i.classList.remove('is-open');});
+        if(!wasOpen) item.classList.add('is-open');
+      });
+    });
+
+    // Cost calculator
+    function updateCalc(){
+      var total=0;
+      document.querySelectorAll('#calcBody input[type="checkbox"]').forEach(function(cb){
+        if(cb.checked) total+=parseInt(cb.getAttribute('data-price'))||0;
+      });
+      document.getElementById('calcSum').textContent='¥'+total.toLocaleString();
+      var traditional=50000;
+      var pct=((traditional-total)/traditional*100).toFixed(1);
+      document.getElementById('calcVs').textContent='（节省 '+pct+'%，vs 传统5人团队¥50,000/月）';
+    }
+    document.querySelectorAll('#calcBody input[type="checkbox"]').forEach(function(cb){
+      cb.addEventListener('change',updateCalc);
+    });
+    updateCalc();
+  </script>
+<script src="plan-nav.js" data-active="opc.html"></script>
+</body>
+</html>

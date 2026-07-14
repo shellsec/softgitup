@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>一人公司资源导航 — AINav</title>
+  <meta name="description" content="一人公司(OPC)精选资源导航：社区、案例、想法站、课程、博客、变现工具，一个人也能撬动一家公司的精选资源。">
+  <link rel="canonical" href="https://aiv123.com/opc-resources.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="一人公司资源导航">
+  <meta property="og:description" content="OPC精选资源：社区、案例、想法站、课程、博客、变现工具。">
+  <meta property="og:url" content="https://aiv123.com/opc-resources.html">
+  <meta property="og:site_name" content="AINav">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%230969da'/><text x='50' y='72' font-size='60' text-anchor='middle' fill='white' font-family='system-ui' font-weight='700'>AI</text></svg>">
+  <style>
+    :root, html[data-theme="dark"] {
+      --bg: #0f1419; --panel: #151b23; --card: #1c2430; --border: #2d3848;
+      --text: #e6edf3; --muted: #8b9cb3; --accent: #58a6ff; --accent2: #3fb950;
+      --warn: #d29922; --danger: #f85149; --hot: #ff6b6b; --overseas: #a78bfa;
+      --opc: #f59e0b; --opc2: #10b981;
+    }
+    html[data-theme="light"] {
+      --bg: #f6f8fa; --panel: #fff; --card: #fff; --border: #d0d7de;
+      --text: #1f2328; --muted: #59636e; --accent: #0969da; --accent2: #1a7f37;
+      --warn: #9a6700; --danger: #cf222e; --hot: #e53935; --overseas: #7c3aed;
+      --opc: #d97706; --opc2: #059669;
+    }
+    @media (prefers-color-scheme: light) {
+      html[data-theme="system"] {
+        --bg: #f6f8fa; --panel: #fff; --card: #fff; --border: #d0d7de;
+        --text: #1f2328; --muted: #59636e; --accent: #0969da; --accent2: #1a7f37;
+        --warn: #9a6700; --danger: #cf222e; --hot: #e53935; --overseas: #7c3aed;
+        --opc: #d97706; --opc2: #059669;
+      }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Segoe UI", system-ui, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.6; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .cp-top { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); background: var(--panel); position: sticky; top: 0; z-index: 10; }
+    .cp-top-inner { max-width: 76rem; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; justify-content: space-between; }
+    .cp-nav a { font-weight: 600; margin-right: 1rem; font-size: 0.88rem; }
+    .cp-toolbar { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; }
+    .theme-btn { font-size: 0.72rem; padding: 0.2rem 0.5rem; border-radius: 5px; border: 1px solid var(--border);
+      background: var(--card); color: var(--muted); cursor: pointer; font-family: inherit; }
+    .theme-btn.is-active { color: var(--accent); border-color: var(--accent); font-weight: 600; }
+
+    .cp-wrap { max-width: 76rem; margin: 0 auto; padding: 1rem; }
+    h1 { font-size: 1.35rem; margin: 0 0 0.3rem; }
+    .cp-subtitle { font-size: 0.88rem; color: var(--muted); margin-bottom: 1rem; }
+
+    .cp-section-hd { font-size: 1.1rem; font-weight: 700; margin: 1.8rem 0 0.8rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--border); display: flex; align-items: center; gap: 0.5rem; }
+
+    /* Resource grid */
+    .res-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin: 1rem 0; }
+    @media (max-width: 48rem) { .res-grid { grid-template-columns: 1fr; } }
+    .res-card { padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border); background: var(--card); transition: border-color 0.15s; display: block; text-decoration: none; color: var(--text); }
+    .res-card:hover { border-color: var(--accent); text-decoration: none; }
+    .res-card .res-name { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.2rem; }
+    .res-card .res-name:hover { color: var(--accent); }
+    .res-card .res-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+    .res-card .res-tag { display: inline-block; padding: 0.05rem 0.35rem; border-radius: 3px; font-size: 0.68rem; font-weight: 600; margin-right: 0.3rem; }
+    .tag-cn { background: rgba(248,81,73,0.1); color: var(--hot); border: 1px solid rgba(248,81,73,0.2); }
+    .tag-global { background: rgba(167,139,250,0.1); color: var(--overseas); border: 1px solid rgba(167,139,250,0.2); }
+    .tag-free { background: rgba(63,185,80,0.1); color: var(--accent2); border: 1px solid rgba(63,185,80,0.2); }
+
+    /* Submit box */
+    .submit-box { padding: 1rem; border-radius: 10px; border: 1px dashed var(--border); background: var(--card); text-align: center; margin: 2rem 0; }
+    .submit-box p { margin: 0; font-size: 0.88rem; color: var(--muted); }
+
+    /* Cross-link */
+    .opc-cross { margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 40rem) { .opc-cross { grid-template-columns: 1fr; } }
+    .opc-cross-card { padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border); background: var(--card); display: block; text-decoration: none; color: var(--text); transition: border-color 0.15s; }
+    .opc-cross-card:hover { border-color: var(--opc); text-decoration: none; }
+    .opc-cross-card h4 { margin: 0 0 0.2rem; font-size: 0.95rem; }
+    .opc-cross-card p { margin: 0; font-size: 0.8rem; color: var(--muted); }
+
+    .cp-updated-line { font-size: 0.76rem; color: var(--muted); margin: 0 0 0.3rem; }
+.cp-footer { max-width: 76rem; margin: 2rem auto 1rem; padding: 0 1rem; font-size: 0.76rem; color: var(--muted); text-align: center; }
+    .cp-footer a { color: var(--muted); }
+  </style>
+  <!-- Google Analytics (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2B8FBWRX4N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2B8FBWRX4N');
+</script>
+<!-- End Google Analytics -->
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2d49f38b39c743ac80b6d6b9ff99494d"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body>
+  <div class="cp-top">
+    <div class="cp-top-inner">
+      <div class="cp-nav" data-plan-nav>
+      </div>
+      <div class="cp-toolbar">
+        <button type="button" class="theme-btn" data-theme-set="system">系统</button>
+        <button type="button" class="theme-btn" data-theme-set="light">浅</button>
+        <button type="button" class="theme-btn" data-theme-set="dark">深</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cp-wrap">
+    <h1>🗺️ 一人公司资源导航</h1>
+    <p class="cp-subtitle">一个人也能撬动一家公司的精选资源 — 社区、案例、想法站、课程、博客、变现工具</p>
+
+    <!-- 社区 -->
+    <div class="cp-section-hd"><span style="font-size:1.15rem;">🌐</span> 社区</div>
+    <div class="res-grid">
+      <a class="res-card" href="https://www.indiehackers.com/" target="_blank" rel="noopener noreferrer">
+        <div class="res-name">Indie Hackers <span class="res-tag tag-global">全球</span></div>
+        <div class="res-desc">独立开发者第一社区，收入透明分享，40000+创业者</div>
+      </a>
+      <a class="res-card" href="https://m.okjike.com/" target="_blank" rel="noopener noreferrer">
+        <div class="res-name">即刻 · 一人公司圈 <span class="res-tag tag-cn">国内</span></div>
+        <div class="res-desc">国内最大OPC话题圈，同路人分享实战经验</div>
+      </a>
+      <a class="res-card" href="https://www.reddit.com/r/SoloFounders/" target="_blank" rel="noopener noreferrer">
+        <div class="res-name">r/SoloFounders <span class="res-tag tag-global">全球</span></div>
+        <div class="res-desc">Reddit单人创业版块，英文社区</div>
+      </a>
+      <a class="res-card" href="https://www.v2ex.com/go/create" target="_blank" rel="noopener noreferrer">
+        <div class="res-name">V2EX 创造者 <span class="res-tag tag-cn">国内</span></div>
+        <div class="res-desc">V2EX独立开发/创造者板块，技术人为主</div>
+      </a>
+      <a class="res-card" href="https://chuhai.quansemei.com/" target="_blank" rel="noopener noreferrer">
+        <div class="res-name">出海去 <span class="res-tag tag-cn">国内</span></div>
+        <div class="res-desc">中国独立开发者出海社区</div>
+      </a>
+    </div>
+
+    <!-- 案例/故事 -->
+    <div class="cp-section-hd"><span style="font-size:1.15rem;">🏆</span> 案例 / 故事</div>
+    <div class="res-grid">
+      <a class="res-card" href="https://www.starterstory.com/" target="_blank" rel="noopener noreferrer">
+        <div class="res-name">Starter Story <span class="res-tag tag-global">全球</span></div>
+        <div class="res-desc">4000+创业案例访谈，含收入数据和工具栈</div>
+      </a>
+      <a class="res-card" href="https://levels.io/" target="_blank" rel="noopener noreferrer">
+        <div class="res-name">levels.io <span class="res-tag tag-global">全球</span></div>
+        <div class="res-desc">Pieter Levels个人站，OPC标杆，$2.2M/年</div>
+      </a>
+      <a class="res-card" href="https://www.producthunt.com/" target="_blank" rel="noopener noreferrer">
+        <div class="res-name">Product Hunt <span class="res-tag tag-global">全球</span></div>
+        <div class="res-desc">全球最大新产品发布平台，获客利器</div>
+      </a>
+      <a class="res-card" href="https://sideidea.com/" target="_blank" rel="noopener noreferrer">
+        <div class="res-name">SideIdea <span class="res-tag tag-cn">国内</span></div>
+        <div class="res-desc">独立开发者/远程工作者盈利产品案例分享</div>
+      </a>
+    </div>
+
+    <!-- 想法站/产品展示 -->
+    <div class="cp-section-hd"><span style="font-size:1.15rem;">🚀</span> 想法站 / 产品展示</div>
+    <div class="res-grid">
+      <a class="res-card" href="https://opchunt.com/" target="_blank" rel="noopener noreferrer">
+        <div class="res-name">OpcHunt <span class="res-tag tag-cn">国内</span> <span class="res-tag tag-free">免费</span></div>
+        <div class="res-desc">专注一人公司/独立开发者的产品展示平台</div>
+      </a>
+      <a class="res-card" href="https://www.producthunt.com/" target="_blank" rel="noopener noreferrer">
+        <div class="res-name">Product Hunt <span class="res-tag tag-global">全球</span></div>
+        <div class="res-desc">全球产品发布+展示+获客一站式平台</div>
+      </a>
+      <a class="res-card" href="https://markermarket.cn/" target="_blank" rel="noopener noreferrer">
+        <div class="res-name">Marker集市 <span class="res-tag tag-cn">国内</span> <span class="res-tag tag-free">免费</span></div>
+        <div class="res-desc">国内独立开发者产品展示市集，开摊即展示</div>
+      </a>
+      <a class="res-card" href="https://sideprojector.com/" target="_blank" rel="noopener noreferrer">
+        <div class="res-name">SideProjector <span class="res-tag tag-global">全球</span></div>
+        <div class="res-desc">个人项目展示与发现平台，搜索+筛选</div>
+      </a>
+      <a class="res-card" href="https://github.com/1c7/chinese-independent-developer" target="_blank" rel="noopener noreferrer">
+        <div class="res-name">中国独立开发者项目列表 <span class="res-tag tag-cn">国内</span> <span class="res-tag tag-free">开源</span></div>
+        <div class="res-desc">GitHub开源项目，收录中国独立开发者作品</div>
+      </a>
+      <a class="res-card" href="https://huntscreens.com/" target="_blank" rel="noopener noreferrer">
+        <div class="res-name">HuntScreens <span class="res-tag tag-global">全球</span></div>
+        <div class="res-desc">独立产品发现与截图展示</div>
+      </a>
+      <a class="res-card" href="https://m.okjike.com/" target="_blank" rel="noopener noreferrer">
+        <div class="res-name">即刻 · 产品圈 <span class="res-tag tag-cn">国内</span></div>
+        <div class="res-desc">国内产品人社区，分享产品灵感和进度</div>
+      </a>
+    </div>
+
+    <!-- 课程/方法论 -->
+    <div class="cp-section-hd"><span style="font-size:1.15rem;">📚</span> 课程 / 方法论</div>
+    <div class="res-grid">
+      <a class="res-card" href="https://www.indiehackers.com/products" target="_blank" rel="noopener noreferrer">
+        <div class="res-name">Indie Hackers 课程 <span class="res-tag tag-global">全球</span></div>
+        <div class="res-desc">独立开发者实战教程，从0到营收</div>
+      </a>
+      <a class="res-card" href="https://30x500.com/" target="_blank" rel="noopener noreferrer">
+        <div class="res-name">30×500 <span class="res-tag tag-global">全球</span></div>
+        <div class="res-desc">Amy Hoy的独立产品营收课，经典方法论</div>
+      </a>
+      <a class="res-card" href="https://www.microconf.com/" target="_blank" rel="noopener noreferrer">
+        <div class="res-name">MicroConf <span class="res-tag tag-global">全球</span></div>
+        <div class="res-desc">微型创业大会+SaaS增长课程</div>
+      </a>
+      <a class="res-card" href="https://time.geekbang.org/" target="_blank" rel="noopener noreferrer">
+        <div class="res-name">极客时间 · 一人公司 <span class="res-tag tag-cn">国内</span></div>
+        <div class="res-desc">国内OPC实战课，AI+创业方法论</div>
+      </a>
+    </div>
+
+    <!-- 博客/媒体 -->
+    <div class="cp-section-hd"><span style="font-size:1.15rem;">✍️</span> 博客 / 媒体</div>
+    <div class="res-grid">
+      <a class="res-card" href="https://www.36kr.com/" target="_blank" rel="noopener noreferrer">
+        <div class="res-name">36氪 · 独立站 <span class="res-tag tag-cn">国内</span></div>
+        <div class="res-desc">国内独立站/一人公司报道，实战案例</div>
+      </a>
+      <a class="res-card" href="https://sspai.com/" target="_blank" rel="noopener noreferrer">
+        <div class="res-name">少数派 · 独立开发 <span class="res-tag tag-cn">国内</span></div>
+        <div class="res-desc">独立开发工具与经验分享</div>
+      </a>
+      <a class="res-card" href="https://www.indiehackers.com/podcasts" target="_blank" rel="noopener noreferrer">
+        <div class="res-name">Indie Hackers 播客 <span class="res-tag tag-global">全球</span></div>
+        <div class="res-desc">创业者深度访谈播客，含收入数据</div>
+      </a>
+      <a class="res-card" href="https://www.huxiu.com/" target="_blank" rel="noopener noreferrer">
+        <div class="res-name">虎嗅 · OPC专题 <span class="res-tag tag-cn">国内</span></div>
+        <div class="res-desc">一人公司出海案例与分析</div>
+      </a>
+    </div>
+
+    <!-- 变现/收款工具 -->
+    <div class="cp-section-hd"><span style="font-size:1.15rem;">💡</span> 变现 / 收款工具</div>
+    <div class="res-grid">
+      <a class="res-card" href="https://stripe.com/atlas" target="_blank" rel="noopener noreferrer">
+        <div class="res-name">Stripe Atlas <span class="res-tag tag-global">全球</span></div>
+        <div class="res-desc">一键注册美国LLC+开Stripe，OPC出海收款标配</div>
+      </a>
+      <a class="res-card" href="https://lemonsqueezy.com/" target="_blank" rel="noopener noreferrer">
+        <div class="res-name">LemonSqueezy <span class="res-tag tag-global">全球</span></div>
+        <div class="res-desc">无需注册公司即可全球收款，SaaS/数字产品友好</div>
+      </a>
+      <a class="res-card" href="https://gumroad.com/" target="_blank" rel="noopener noreferrer">
+        <div class="res-name">Gumroad <span class="res-tag tag-global">全球</span></div>
+        <div class="res-desc">创作者卖数字产品+课程，10分钟开店</div>
+      </a>
+      <a class="res-card" href="https://xiaobot.net/" target="_blank" rel="noopener noreferrer">
+        <div class="res-name">小报童 <span class="res-tag tag-cn">国内</span></div>
+        <div class="res-desc">国内创作者付费专栏，知识付费入门</div>
+      </a>
+    </div>
+
+    <!-- 提交入口 -->
+    <div class="submit-box">
+      <p>📮 发现好的OPC资源？欢迎推荐给我们！</p>
+      <p style="margin-top:0.5rem;font-size:0.82rem;">通过 <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub Issue</a> 或 社区留言 提交推荐</p>
+    </div>
+
+    <!-- Cross links -->
+    <div class="opc-cross">
+      <a class="opc-cross-card" href="opc.html">
+        <h4 style="color:var(--opc);">🏠 一人公司全景与落地 →</h4>
+        <p>概念、变现模式、痛点突破、AI员工、工具栈、路线图</p>
+      </a>
+      <a class="opc-cross-card" href="opc-global.html">
+        <h4 style="color:var(--overseas);">🌍 一人公司出海全链路 →</h4>
+        <p>选品→建站→内容→营销→客服→收款→合规</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="cp-footer">
+      <p class="cp-updated-line"><span class="cp-updated">最后更新：2026-06-22</span></p>
+    <p>AINav · 一人公司资源导航 · 链接收录仅供参考</p>
+    <p><a href="index.html">返回首页</a> · <a href="free-tier.html">🆓 免费额度</a> · <a href="token-optimization.html">Token优化</a> · <a href="ai-roi/">AI 接入自查</a> · <a href="skill-plan.html">Skill 最佳实践</a> · <a href="opc.html">一人公司</a> · <a href="opc-global.html">出海全链路</a> · <a href="coding-plan.html">编程套餐</a></p>
+  </div>
+
+  <script>
+    (function(){
+      var saved = localStorage.getItem('cp-theme') || 'system';
+      document.documentElement.setAttribute('data-theme', saved);
+      document.querySelectorAll('.theme-btn').forEach(function(b){
+        if(b.getAttribute('data-theme-set')===saved) b.classList.add('is-active');
+        b.addEventListener('click',function(){
+          var t=this.getAttribute('data-theme-set');
+          document.documentElement.setAttribute('data-theme',t);
+          localStorage.setItem('cp-theme',t);
+          document.querySelectorAll('.theme-btn').forEach(function(x){x.classList.remove('is-active');});
+          this.classList.add('is-active');
+        });
+      });
+    })();
+  </script>
+<script src="plan-nav.js" data-active="opc-resources.html"></script>
+</body>
+</html>

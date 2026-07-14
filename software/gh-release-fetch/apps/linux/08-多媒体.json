@@ -767,5 +767,44 @@
     ],
     "releases_url": "https://bgithub.xyz/koel/player/releases",
     "repo_path": "koel/player"
+  },
+  {
+    "releases_url": "https://bgithub.xyz/MoeKoeMusic/MoeKoeMusic/releases",
+    "repo_path": "MoeKoeMusic/MoeKoeMusic",
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "enabled": false,
+    "aliases": [
+      "MoeKoeMusic",
+      "MoeKoe Music",
+      "moekoe",
+      "萌音"
+    ],
+    "id": "moekoe_music",
+    "简介": "MoeKoe Music（酷狗音乐第三方桌面客户端；Linux x86_64 AppImage）",
+    "分类": "多媒体",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "MoeKoe_Music",
+      "x86_64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "blockmap",
+      ".yml",
+      ".deb",
+      ".exe",
+      ".dmg",
+      ".zip",
+      "amd64.deb"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "windows_installer": false,
+    "use_download_filename": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

@@ -1,0 +1,36 @@
+[
+  {
+    "id": "bee_count",
+    "简介": "BeeCount（本地优先跨端记账；iOS signed IPA，需自行侧载/签名安装）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".ipa"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "beecount-",
+      "signed.ipa"
+    ],
+    "href_exclude_substrings": [
+      "unsigned",
+      "simulator",
+      ".apk",
+      ".aab",
+      "iphoneos.app"
+    ],
+    "use_download_filename": true,
+    "aliases": [
+      "BeeCount",
+      "beecount"
+    ],
+    "releases_url": "https://bgithub.xyz/TNT-Likely/BeeCount/releases",
+    "repo_path": "TNT-Likely/BeeCount"
+  }
+]

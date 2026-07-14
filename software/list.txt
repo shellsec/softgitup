@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-13T11:56:51.065894",
+  "generated_at": "2026-07-14T15:25:00.312009",
   "total_software": 21,
-  "total_files": 4802,
-  "total_size": 1768250531,
+  "total_files": 4161,
+  "total_size": 1729311405,
   "software": {
     "WinMemoryCleaner": {
       "version": "20260515_144655",
@@ -23799,25 +23799,13 @@
       "last_updated": "2026-07-03T18:07:25.007158"
     },
     "gh-release-fetch": {
-      "version": "20260706_174028",
+      "version": "20260714_152500",
       "files": [
         {
-          "path": "apply_enabled_snapshot.bat",
-          "size": 353,
-          "hash": "63300fdadef606b4d8be65a9abb5f84c",
-          "modified": "2026-05-28T09:51:46.471220"
-        },
-        {
           "path": "auto_update.exe",
-          "size": 17871482,
-          "hash": "29ba16b8791f40ea1e2c9465febccc13",
-          "modified": "2026-07-06T17:24:16"
-        },
-        {
-          "path": "auto_update.py",
-          "size": 44255,
-          "hash": "8d93eac7859f265db8740ffc050313a3",
-          "modified": "2026-06-27T17:24:19.571128"
+          "size": 17871743,
+          "hash": "fedfba97a0d61734a5841b22f33e21c6",
+          "modified": "2026-07-14T15:20:10"
         },
         {
           "path": "CATALOG.md",
@@ -23839,63 +23827,15 @@
         },
         {
           "path": "lookup_app.exe",
-          "size": 6576352,
-          "hash": "73dc9fb3e0e80a872c065678e5b4ba3c",
-          "modified": "2026-07-06T17:24:28"
-        },
-        {
-          "path": "lookup_app.py",
-          "size": 19427,
-          "hash": "38f1fcbae8882566db69f5a5fa433d52",
-          "modified": "2026-06-27T20:23:11.081640"
-        },
-        {
-          "path": "pack_windows_release.bat",
-          "size": 1529,
-          "hash": "5697dd6d927af4fb3191156509d8e740",
-          "modified": "2026-06-28T11:55:53.259669"
-        },
-        {
-          "path": "README.md",
-          "size": 27020,
-          "hash": "c90bd2b95fb653b603547d118b79594e",
-          "modified": "2026-06-28T15:02:58.780129"
+          "size": 6600117,
+          "hash": "6dd0365c1825f4d094927f920c365f39",
+          "modified": "2026-07-14T15:20:22"
         },
         {
           "path": "README.txt",
           "size": 1706,
           "hash": "7375fdcae35ef2ee508dda75f52d10e0",
           "modified": "2026-06-28T15:02:56"
-        },
-        {
-          "path": "README.zh-CN.md",
-          "size": 37579,
-          "hash": "018792b9ac2b0150282a493a391c3b1e",
-          "modified": "2026-06-28T15:02:57.817482"
-        },
-        {
-          "path": "RECOMMENDED.darwin.md",
-          "size": 44122,
-          "hash": "e0b5af6727f4ed315039d621dca1ee7b",
-          "modified": "2026-06-27T16:03:25.015607"
-        },
-        {
-          "path": "RECOMMENDED.darwin.zh-CN.md",
-          "size": 152768,
-          "hash": "1c584527c006afd875a482ab84b48383",
-          "modified": "2026-06-27T16:03:25.001881"
-        },
-        {
-          "path": "RECOMMENDED.linux.md",
-          "size": 43814,
-          "hash": "ffc25d2d8f8482448922ed53209efc2b",
-          "modified": "2026-06-27T16:03:25.049068"
-        },
-        {
-          "path": "RECOMMENDED.linux.zh-CN.md",
-          "size": 151412,
-          "hash": "e2c2bd5ea57d34f7e8651f01843980c8",
-          "modified": "2026-06-27T16:03:25.035040"
         },
         {
           "path": "RECOMMENDED.md",
@@ -23910,18 +23850,6 @@
           "modified": "2026-06-27T16:03:24"
         },
         {
-          "path": "requirements.txt",
-          "size": 39,
-          "hash": "6c7b74cce85458ba2467632f41871d2e",
-          "modified": "2026-04-07T09:31:35.445946"
-        },
-        {
-          "path": "reset_enabled_json.bat",
-          "size": 349,
-          "hash": "0d23bcbd94a2c483fe5970084a36cdd1",
-          "modified": "2026-05-28T09:51:46.471220"
-        },
-        {
           "path": "run_saved_apps.bat",
           "size": 626,
           "hash": "e87e1a104360739cea7c8dea7ab03517",
@@ -23929,9 +23857,9 @@
         },
         {
           "path": "run_saved_apps.exe",
-          "size": 6570911,
-          "hash": "a3c3599246d0b3f2304555d1cdfed6e3",
-          "modified": "2026-07-06T17:24:40"
+          "size": 6570870,
+          "hash": "e5b25d7c347edcd889cff0a580e8bf23",
+          "modified": "2026-07-14T15:20:34"
         },
         {
           "path": "run_update.bat",
@@ -23953,9 +23881,9 @@
         },
         {
           "path": "search_games.exe",
-          "size": 7053717,
-          "hash": "f833126463c13464c4e95fed4bd46fc2",
-          "modified": "2026-07-06T17:25:04"
+          "size": 7054275,
+          "hash": "ee49afdb7c0d0dff279459758a9b6e66",
+          "modified": "2026-07-14T15:21:02"
         },
         {
           "path": "search_soft_pages.bat",
@@ -23965,15 +23893,15 @@
         },
         {
           "path": "search_soft_pages.exe",
-          "size": 7052191,
-          "hash": "c3363ef2aaa6147e658fe972180bcca9",
-          "modified": "2026-07-06T17:24:52"
+          "size": 7053215,
+          "hash": "767699e93f64acf03ee76eb599aff6a0",
+          "modified": "2026-07-14T15:20:48"
         },
         {
           "path": "VERSION.txt",
           "size": 12,
-          "hash": "8f5852052e581c222a960a3eb5e32d4e",
-          "modified": "2026-07-06T17:25:06"
+          "hash": "e67863c6adaf4cf25fc4bcdf6af1a4a9",
+          "modified": "2026-07-14T15:21:02"
         },
         {
           "path": "apps\\darwin.json.bak",
@@ -23995,15 +23923,15 @@
         },
         {
           "path": "apps\\darwin\\01-AI.json",
-          "size": 39090,
-          "hash": "33aa1754c9df2cc2f88d00d18fcabae5",
-          "modified": "2026-07-06T09:34:34"
+          "size": 44926,
+          "hash": "e3bfc3920300cba663131e4e91016150",
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\darwin\\02-下载.json",
-          "size": 13824,
-          "hash": "a0b658be84230dc4493dfe7b5b6a6830",
-          "modified": "2026-07-06T17:21:38"
+          "size": 15710,
+          "hash": "3237dfddc6fd91b5a78cb4eb536c2d66",
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\darwin\\03-写作.json",
@@ -24027,19 +23955,19 @@
           "path": "apps\\darwin\\06-命令行.json",
           "size": 9867,
           "hash": "4dce77a20e745d9105b6511d92fc472f",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\darwin\\07-备份.json",
           "size": 4186,
           "hash": "7a2c590a2e72bda13affb0ed5b52cb7f",
-          "modified": "2026-07-06T17:21:36"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\darwin\\08-多媒体.json",
-          "size": 20765,
-          "hash": "8bba640f6c355eba3c9b40179dc7c407",
-          "modified": "2026-07-06T17:21:38"
+          "size": 22721,
+          "hash": "a6814cfcec7fee582b7c6096eb8778cb",
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\darwin\\09-多媒体与设计.json",
@@ -24051,55 +23979,55 @@
           "path": "apps\\darwin\\10-安全.json",
           "size": 23575,
           "hash": "aa220bbef998bfe5ee1025cdaa26bb83",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\darwin\\11-工具.json",
-          "size": 10535,
-          "hash": "23263c1f9346aa05e949a05755d76656",
-          "modified": "2026-07-06T17:21:38"
+          "size": 11280,
+          "hash": "a60e5e1585336349a09a236951ca10f9",
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\darwin\\12-开发.json",
           "size": 23246,
           "hash": "a07d490ba0de2a66c83a76c39e74d3ca",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\darwin\\13-效率.json",
-          "size": 24568,
-          "hash": "7c3b32579353c0a89e9fb7e67b9ebcda",
-          "modified": "2026-07-06T17:21:38"
+          "size": 26636,
+          "hash": "3c99d8112f9c84041983e08439c88aec",
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\darwin\\14-游戏.json",
           "size": 15201,
           "hash": "f4bfc2c499a2d4fe8d52c3f2703b905b",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\darwin\\15-笔记.json",
           "size": 13409,
           "hash": "c9b38ec2c7ca4d71f97ab62639b46b47",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\darwin\\16-系统.json",
-          "size": 20853,
-          "hash": "0026fcdbe24ae8ef443c261a6fb9bd2a",
-          "modified": "2026-07-06T17:21:38"
+          "size": 21122,
+          "hash": "f76f73ce066d68dc5518e24fb99f3edc",
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\darwin\\17-终端.json",
-          "size": 7090,
-          "hash": "bdd79ef16a4d481cee5b4089a9e6d129",
-          "modified": "2026-07-06T17:21:38"
+          "size": 7710,
+          "hash": "b91ec1c1da2c77b31fac5759ebe10cbf",
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\darwin\\18-网络.json",
           "size": 10104,
           "hash": "ecaf27a43d815a0e6398042221f68d80",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\darwin\\19-网络与协作.json",
@@ -24115,9 +24043,9 @@
         },
         {
           "path": "apps\\darwin\\21-远程与协作.json",
-          "size": 3128,
-          "hash": "b7b25dab32a9bb04dbcb3ed4ab2b8a42",
-          "modified": "2026-06-28T09:43:00"
+          "size": 3860,
+          "hash": "0f300259de4f5e4a82b77d3ba5a42ebf",
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\darwin\\22-音视频.json",
@@ -24129,13 +24057,13 @@
           "path": "apps\\darwin\\23-数据库.json",
           "size": 7140,
           "hash": "4b75149d4a861952b49f2effe97df697",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\darwin\\24-云原生.json",
           "size": 12367,
           "hash": "121836dd0e782eefc3a037fa943b814d",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\darwin\\25-可观测.json",
@@ -24147,49 +24075,49 @@
           "path": "apps\\darwin\\26-编辑器.json",
           "size": 18016,
           "hash": "6f461cac057b75c8b21fbd24d4aa36ff",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\darwin\\27-金融与股票.json",
           "size": 6059,
           "hash": "302a981039757f1056969a03e5f00a3b",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\darwin\\28-加密货币.json",
           "size": 13671,
           "hash": "5026753e65fe0f9d193f7050f5ebfdd7",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\darwin\\29-局域网文件共享.json",
           "size": 6583,
           "hash": "fc695d8e632f56d43dca6e9a94e5ae57",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\darwin\\30-代理与隧道.json",
           "size": 13102,
           "hash": "c6a8cc4788383c4fa70325be44b74645",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\darwin\\99-未匹配-windows分片.json",
           "size": 3655,
           "hash": "e898b8cb55ef717c3e3f46cb43650668",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\linux\\01-AI.json",
-          "size": 38134,
-          "hash": "53173c9a1c95fd280de0261c3b479839",
-          "modified": "2026-07-06T09:34:34"
+          "size": 41605,
+          "hash": "99e56dfae47fe66afe0b93377ab8eb62",
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\linux\\02-下载.json",
-          "size": 14030,
-          "hash": "c06498e43b510d7d141754b57d01b16e",
-          "modified": "2026-07-06T17:21:38"
+          "size": 15810,
+          "hash": "fec1661ea74f5b80bdb730a96948d934",
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\linux\\03-写作.json",
@@ -24211,21 +24139,21 @@
         },
         {
           "path": "apps\\linux\\06-命令行.json",
-          "size": 8248,
-          "hash": "07c2ba8a1435f926eb8683a99c53e442",
-          "modified": "2026-07-06T17:21:38"
+          "size": 9107,
+          "hash": "edcd87c9da346491aa0ed81e25188c57",
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\linux\\07-备份.json",
           "size": 4220,
           "hash": "7912e3d419c06fd6d554120917ea32b9",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\linux\\08-多媒体.json",
-          "size": 19918,
-          "hash": "a10f50d9395b8ae1e49db13114704477",
-          "modified": "2026-06-28T09:43:00"
+          "size": 20913,
+          "hash": "9eb377388cfbb7cd3d7cf7c200aeba02",
+          "modified": "2026-07-13T14:59:56"
         },
         {
           "path": "apps\\linux\\09-多媒体与设计.json",
@@ -24237,25 +24165,25 @@
           "path": "apps\\linux\\10-安全.json",
           "size": 24293,
           "hash": "d53aba7ce57c709b476c82c2799b9dc5",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\linux\\11-工具.json",
           "size": 10124,
           "hash": "207cf1e1c10c340d0ccfb2946a04b0ef",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\linux\\12-开发.json",
           "size": 22555,
           "hash": "a28d663475d331d05a9ad1e1c4693b0e",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\linux\\13-效率.json",
-          "size": 19110,
-          "hash": "61e3cc089873e0fd85ddeb0afbff74e2",
-          "modified": "2026-07-06T17:21:38"
+          "size": 20160,
+          "hash": "f5a7b98f3a92e557212dca5169e0d5cf",
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\linux\\14-游戏.json",
@@ -24267,25 +24195,25 @@
           "path": "apps\\linux\\15-笔记.json",
           "size": 13428,
           "hash": "e3dbbbc992fbca8d956fd21b431bcab6",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\linux\\16-系统.json",
-          "size": 20195,
-          "hash": "fbd2bef5e0377fe81bbb0f910b15c210",
-          "modified": "2026-07-06T17:21:38"
+          "size": 20460,
+          "hash": "ad34029a8fce17a7b93de19673747346",
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\linux\\17-终端.json",
-          "size": 6919,
-          "hash": "625a9c682db6bd1853954603587b4632",
-          "modified": "2026-07-06T17:21:38"
+          "size": 7528,
+          "hash": "0ea17125aa8ac96915b8e5c6a51d4e5c",
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\linux\\18-网络.json",
           "size": 11993,
           "hash": "62396aacf7188bd10ac0ab9196240750",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\linux\\19-网络与协作.json",
@@ -24301,9 +24229,9 @@
         },
         {
           "path": "apps\\linux\\21-远程与协作.json",
-          "size": 3131,
-          "hash": "04d2208b303f1099746d7bab5fbd5145",
-          "modified": "2026-06-28T09:43:00"
+          "size": 3863,
+          "hash": "eedc587de527073a22a84baabf7f7d8e",
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\linux\\22-音视频.json",
@@ -24315,13 +24243,13 @@
           "path": "apps\\linux\\23-数据库.json",
           "size": 7344,
           "hash": "334adf7e107b6c3fa12e9bac53e7d314",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\linux\\24-云原生.json",
           "size": 11641,
           "hash": "457a135b073e42f6a7200c8ec659df0f",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\linux\\25-可观测.json",
@@ -24333,151 +24261,151 @@
           "path": "apps\\linux\\26-编辑器.json",
           "size": 17487,
           "hash": "ba68a3caece351ff43623d6e9aa1e64e",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\linux\\27-金融与股票.json",
           "size": 6071,
           "hash": "2c988c537a3909cbfd89f8bfa249eb6b",
-          "modified": "2026-07-06T17:21:36"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\linux\\28-加密货币.json",
           "size": 14366,
           "hash": "26fc52c4c554f15be8d2100ce4c64f19",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\linux\\29-局域网文件共享.json",
           "size": 6590,
           "hash": "ea6cc275d22e1801d844959ecea0abeb",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\linux\\30-代理与隧道.json",
           "size": 11450,
           "hash": "018bc447b0d7dcd3233d79f3f2981f9f",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\linux\\99-未匹配-windows分片.json",
           "size": 3655,
           "hash": "e898b8cb55ef717c3e3f46cb43650668",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\01-AI.json",
-          "size": 36706,
-          "hash": "c4b0507379e3d6d62f2d87906a4c9e20",
-          "modified": "2026-07-06T09:34:34"
+          "size": 40914,
+          "hash": "e2f35765d3680fe3684df6a99fe7b89a",
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\02-下载.json",
-          "size": 12559,
-          "hash": "f2ad9a4e0ff12032dc62cf0c472ef799",
-          "modified": "2026-07-06T17:21:38"
+          "size": 14434,
+          "hash": "42e92dd178de07347670d6a75d2efa27",
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\03-写作.json",
           "size": 7357,
           "hash": "72c2515a4434e4e0fbd4070a203f7f64",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\04-办公.json",
           "size": 7252,
           "hash": "975bd03640aedc691fb76818c9ae5e0d",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\05-办公与设计.json",
           "size": 2446,
           "hash": "6f9090a91343346405d90890275d40ce",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\06-命令行.json",
-          "size": 19321,
-          "hash": "3ada298712a88973895ec30f2e16f2fc",
-          "modified": "2026-07-06T17:21:38"
+          "size": 20183,
+          "hash": "f5d7c3f62a092a426d3ce0bda8799a16",
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\07-备份.json",
           "size": 3355,
           "hash": "0e12a88f646fcbf4ae659e70ee0e37d1",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\08-多媒体.json",
-          "size": 31286,
-          "hash": "316f56174f3ead62af14ff7b8519147a",
-          "modified": "2026-07-06T17:21:36"
+          "size": 32286,
+          "hash": "4ce13c6a1ce1e28cd50ce3f381aaeba2",
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\09-多媒体与设计.json",
           "size": 11276,
           "hash": "176c23cdade51f1b98e0f0867dd059c2",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\10-安全.json",
           "size": 40433,
           "hash": "85241da546bbd2c522b6a50dd86d1e22",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\11-工具.json",
-          "size": 24004,
-          "hash": "f4b7bae014e4a0ae35b58fe444a24e05",
-          "modified": "2026-07-06T17:21:36"
+          "size": 24013,
+          "hash": "a5d0447f4fafc1420605e456f87d08dd",
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\12-开发.json",
           "size": 49206,
           "hash": "12f8e1902f91f71d22d058da5f79c1e0",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\13-效率.json",
-          "size": 25524,
-          "hash": "04f69e3cfa9c686ab522a9e83c00370e",
-          "modified": "2026-07-06T17:21:38"
+          "size": 26495,
+          "hash": "7625c1d11d90b2e233dd5b4ce6e42a8d",
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\14-游戏.json",
           "size": 21542,
           "hash": "a0d49699120866c160287be243d9276a",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\15-笔记.json",
           "size": 18774,
           "hash": "edd04760ad638c5605971c3c2346f8e2",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\16-系统.json",
-          "size": 36057,
-          "hash": "58ac6c2b208dcc23c4ae9b141c52d7d7",
-          "modified": "2026-07-06T17:21:38"
+          "size": 38035,
+          "hash": "e473fd931b672b7fc588cb5b2fe6d5b7",
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\17-终端.json",
-          "size": 10141,
-          "hash": "803a9986ac5560611f0e0f53770ffed1",
-          "modified": "2026-07-06T17:21:38"
+          "size": 10771,
+          "hash": "a9aec4dc425c9c5744740cd839313d42",
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\18-网络.json",
           "size": 19306,
           "hash": "37656134dba7f1bfaa83cbced8d56f5e",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\19-网络与协作.json",
           "size": 3228,
           "hash": "a3f6d5d502dfbe493e107a99e5e598f3",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\20-网络与通讯.json",
@@ -24487,63 +24415,63 @@
         },
         {
           "path": "apps\\windows\\21-远程与协作.json",
-          "size": 8267,
-          "hash": "e550d0cf72fcdb189c9bb0eda7984e00",
-          "modified": "2026-07-06T17:21:38"
+          "size": 8937,
+          "hash": "91c0cc616a8bc39d408fb9c1b1236caa",
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\22-音视频.json",
           "size": 6074,
           "hash": "365db0f571452b46296ace51f58b2417",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\23-数据库.json",
           "size": 14532,
           "hash": "0d570b6c9b2759230020e79b4e20761b",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\24-云原生.json",
           "size": 16949,
           "hash": "0cc653e942e305f36958013aa7768250",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\25-可观测.json",
           "size": 6320,
           "hash": "97c5a7dd2acb8417643864e2bd982d8f",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\26-编辑器.json",
           "size": 25032,
           "hash": "1596583806ec7e0138d66ca28154bed6",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\27-金融与股票.json",
           "size": 4424,
           "hash": "e0d884f390b01daf417a016b0cc475ad",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\28-加密货币.json",
           "size": 7944,
           "hash": "3e8f2ab611da5d49555943386d64045a",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\29-局域网文件共享.json",
           "size": 9900,
           "hash": "aeb5e72e71e7ec606689b33d736109d4",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\30-代理与隧道.json",
           "size": 7751,
           "hash": "f4c0982c08d5ac910a82657994516a88",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps\\windows\\99-未匹配-windows分片.json",
@@ -24633,7 +24561,7 @@
           "path": "apps-mobile\\android\\08-多媒体.json",
           "size": 12908,
           "hash": "7cf3a91fc98fd311d54eee951e6db8dd",
-          "modified": "2026-07-06T17:21:38"
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps-mobile\\android\\08-输入.json",
@@ -24769,9 +24697,9 @@
         },
         {
           "path": "apps-mobile\\android\\27-金融与股票.json",
-          "size": 1866,
-          "hash": "84f3e0364cb739814be5290629b40f80",
-          "modified": "2026-06-27T17:07:46"
+          "size": 2797,
+          "hash": "138f599616f901dc9e4b95355707518c",
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "apps-mobile\\android\\28-加密货币.json",
@@ -24792,3268 +24720,16 @@
           "modified": "2026-06-27T17:07:46"
         },
         {
+          "path": "apps-mobile\\ios\\27-金融与股票.json",
+          "size": 911,
+          "hash": "57a58fb4ac917ef2c91eb062c3af519d",
+          "modified": "2026-07-14T15:18:42"
+        },
+        {
           "path": "apps-mobile\\ios\\99-占位-AppStore.json",
           "size": 19897,
           "hash": "4563b9467ef825c6a087dccdf3b8a979",
           "modified": "2026-06-27T17:07:46"
-        },
-        {
-          "path": "GiteeExploreHot\\README.md",
-          "size": 2957,
-          "hash": "c430c8a9aabafe634278157b9560fb41",
-          "modified": "2026-04-20T14:14:44.643061"
-        },
-        {
-          "path": "GiteeExploreHot\\root.json",
-          "size": 570,
-          "hash": "4b87a286320dd6590465874cf5cb345d",
-          "modified": "2026-04-20T14:14:44.615057"
-        },
-        {
-          "path": "GiteeExploreHot\\run_sync_gitee.bat",
-          "size": 1568,
-          "hash": "2ac52cc7887b7b907d6d9bc8f06ff9dc",
-          "modified": "2026-04-20T14:14:44.597863"
-        },
-        {
-          "path": "GiteeExploreHot\\catalog\\01-数据库与中间件.json",
-          "size": 401,
-          "hash": "30c4460f512d0cc939968d69108d631d",
-          "modified": "2026-06-26T15:50:47.526314"
-        },
-        {
-          "path": "GiteeExploreHot\\catalog\\02-AI与深度学习.json",
-          "size": 342,
-          "hash": "c056c773817155a3faeab8955a8dc360",
-          "modified": "2026-06-26T15:50:47.530520"
-        },
-        {
-          "path": "GiteeExploreHot\\catalog\\03-操作系统与内核.json",
-          "size": 666,
-          "hash": "41d7bd9d1d7a95ba85edd87a95690102",
-          "modified": "2026-06-26T15:50:47.540316"
-        },
-        {
-          "path": "GiteeExploreHot\\catalog\\04-云原生与中间件.json",
-          "size": 1028,
-          "hash": "6d7e735ee922f0951753a2826150ee0e",
-          "modified": "2026-06-26T15:50:47.523143"
-        },
-        {
-          "path": "GiteeExploreHot\\catalog\\05-前端与应用模板.json",
-          "size": 944,
-          "hash": "e58e3649e8612fd4c6c9deb3accdec2e",
-          "modified": "2026-06-26T15:50:47.523143"
-        },
-        {
-          "path": "GiteeExploreHot\\catalog\\06-工具与类库.json",
-          "size": 146,
-          "hash": "632edbdb03ec3e71eb060b47ee40e1b6",
-          "modified": "2026-06-26T15:50:47.535028"
-        },
-        {
-          "path": "GiteeExploreHot\\catalog\\README.md",
-          "size": 1408,
-          "hash": "93d5cea0cf2478ef47e0a415030481b2",
-          "modified": "2026-04-20T14:14:44.639961"
-        },
-        {
-          "path": "GiteeExploreHot\\data\\curated_paths.txt",
-          "size": 239,
-          "hash": "8e4c08c197ac37b1c58de9e6cc55678c",
-          "modified": "2026-04-20T14:14:44.588981"
-        },
-        {
-          "path": "GiteeExploreHot\\data\\gitee_downloads.json",
-          "size": 10820,
-          "hash": "bf1cf8b513b253eb80a335e695553d09",
-          "modified": "2026-04-20T12:55:01.885326"
-        },
-        {
-          "path": "GiteeExploreHot\\data\\hot_repos.json",
-          "size": 9211,
-          "hash": "59de9553ca43eab8512f5788f2c836cf",
-          "modified": "2026-04-20T12:55:01.883187"
-        },
-        {
-          "path": "GiteeExploreHot\\scripts\\fetch_explore_hot.py",
-          "size": 15955,
-          "hash": "428769e18942fd1d28de3e651671f0ae",
-          "modified": "2026-04-20T14:14:44.631378"
-        },
-        {
-          "path": "GiteeExploreHot\\scripts\\gitee_download.py",
-          "size": 3790,
-          "hash": "f935e27f1f3e07c6903a7f33e1525482",
-          "modified": "2026-04-20T14:14:44.638939"
-        },
-        {
-          "path": "tools\\append_catalog_batch10.py",
-          "size": 18323,
-          "hash": "a6ab06b4020609167fbc571aaabcd209",
-          "modified": "2026-06-27T15:20:05.877725"
-        },
-        {
-          "path": "tools\\append_catalog_batch11.py",
-          "size": 4643,
-          "hash": "f4cb60ab224dd2d88ceb6805c1745d3a",
-          "modified": "2026-06-27T15:20:46.898913"
-        },
-        {
-          "path": "tools\\append_catalog_batch12.py",
-          "size": 6379,
-          "hash": "23fc31853cb8f8e7ac44a03087477780",
-          "modified": "2026-06-27T16:51:00.377172"
-        },
-        {
-          "path": "tools\\append_catalog_batch13.py",
-          "size": 20899,
-          "hash": "a35a9eae1c1f1dd041210b881caa6f99",
-          "modified": "2026-06-28T09:42:53.281268"
-        },
-        {
-          "path": "tools\\append_catalog_batch2.py",
-          "size": 32590,
-          "hash": "687f9fd2d504e7019a24210e05f63e04",
-          "modified": "2026-05-28T09:51:46.470204"
-        },
-        {
-          "path": "tools\\append_catalog_batch3.py",
-          "size": 20706,
-          "hash": "5428c024d58b92a75dd3137676606629",
-          "modified": "2026-05-28T09:51:46.391322"
-        },
-        {
-          "path": "tools\\append_catalog_batch4.py",
-          "size": 9986,
-          "hash": "523fbc0cefc68024d1b0b0778e39a51b",
-          "modified": "2026-05-28T09:51:46.391322"
-        },
-        {
-          "path": "tools\\append_catalog_batch5.py",
-          "size": 22053,
-          "hash": "bb4215af94feea1332e98d1bee8b959f",
-          "modified": "2026-06-23T08:16:55.937308"
-        },
-        {
-          "path": "tools\\append_catalog_batch6.py",
-          "size": 13466,
-          "hash": "702da0e185152b84ff47e1c57d5fa1ac",
-          "modified": "2026-06-26T16:46:28.588856"
-        },
-        {
-          "path": "tools\\append_catalog_batch7.py",
-          "size": 17180,
-          "hash": "3840fa251d0797d779331d8bb0d7bf5a",
-          "modified": "2026-06-27T14:32:46.784509"
-        },
-        {
-          "path": "tools\\append_catalog_batch8.py",
-          "size": 24506,
-          "hash": "3ee68f13c4104eeea9558fb98bf31590",
-          "modified": "2026-06-27T15:16:42.827890"
-        },
-        {
-          "path": "tools\\append_catalog_batch9.py",
-          "size": 41060,
-          "hash": "2c1410c59c77f3211643ecdba636a6fd",
-          "modified": "2026-06-27T15:19:33.939255"
-        },
-        {
-          "path": "tools\\append_mobile_catalog_batch1.py",
-          "size": 7446,
-          "hash": "109508a40771437cff1407003ac11cfd",
-          "modified": "2026-06-27T16:30:24.911855"
-        },
-        {
-          "path": "tools\\append_mobile_catalog_batch2.py",
-          "size": 3045,
-          "hash": "d5c111ec54a2ae7e645fba486124bc3c",
-          "modified": "2026-06-27T16:36:33.472166"
-        },
-        {
-          "path": "tools\\append_mobile_catalog_batch3.py",
-          "size": 15772,
-          "hash": "5779ba6287148884a8f996d9ddc23832",
-          "modified": "2026-06-27T16:44:38.432274"
-        },
-        {
-          "path": "tools\\append_mobile_catalog_batch4.py",
-          "size": 3604,
-          "hash": "75f11e8642383b04db8f2eafa090096e",
-          "modified": "2026-06-27T16:51:01.375574"
-        },
-        {
-          "path": "tools\\append_mobile_catalog_batch5.py",
-          "size": 10146,
-          "hash": "3a10a73a29b8d69f70271dfac30284cb",
-          "modified": "2026-06-27T17:02:15.580872"
-        },
-        {
-          "path": "tools\\append_mobile_catalog_batch6.py",
-          "size": 16587,
-          "hash": "9e2a34259710a07582ba4a253c48d276",
-          "modified": "2026-06-27T17:07:39.027726"
-        },
-        {
-          "path": "tools\\apply_enabled_snapshot.bat",
-          "size": 63,
-          "hash": "0a18183a9f0134fdf0a63fb404c1f8a9",
-          "modified": "2026-04-11T19:03:20.381668"
-        },
-        {
-          "path": "tools\\apply_enabled_snapshot.py",
-          "size": 7063,
-          "hash": "9c9e01972ecf04181ddcc952019c46f8",
-          "modified": "2026-04-14T12:57:13.601012"
-        },
-        {
-          "path": "tools\\app_list.py",
-          "size": 6036,
-          "hash": "e7f8f244856d6dd43393009e177ae6fe",
-          "modified": "2026-06-27T16:31:01.395320"
-        },
-        {
-          "path": "tools\\build_exe.ps1",
-          "size": 1864,
-          "hash": "304dd1846a4bcd9aa0b5ad3ae4a42aeb",
-          "modified": "2026-06-28T15:03:14.403644"
-        },
-        {
-          "path": "tools\\check_catalog_ids.py",
-          "size": 4120,
-          "hash": "b932ddf5e83caafcb341b354d903e457",
-          "modified": "2026-06-28T09:46:33.661662"
-        },
-        {
-          "path": "tools\\generate_catalog_index.py",
-          "size": 5789,
-          "hash": "e269a257b2aa47eee7277c7c5b3d3f40",
-          "modified": "2026-06-27T16:03:10.957518"
-        },
-        {
-          "path": "tools\\generate_mobile_catalog_index.py",
-          "size": 4529,
-          "hash": "d0eb4202f1110ea25eb441ce49fad919",
-          "modified": "2026-06-27T17:08:03.570286"
-        },
-        {
-          "path": "tools\\generate_recommended_md.py",
-          "size": 7704,
-          "hash": "042862416b4597785fb759d221658ff2",
-          "modified": "2026-06-23T08:16:55.853188"
-        },
-        {
-          "path": "tools\\ghrf_runtime.py",
-          "size": 3318,
-          "hash": "8f4347bc08cb3764b7825fababe4ae05",
-          "modified": "2026-06-27T20:22:53.353150"
-        },
-        {
-          "path": "tools\\import_dayanzai_windows.py",
-          "size": 14531,
-          "hash": "b39a804be5b81eb73f09ac3197952d18",
-          "modified": "2026-06-08T16:54:36.365005"
-        },
-        {
-          "path": "tools\\last_enabled_before_reset.json",
-          "size": 176,
-          "hash": "c35f645429d3189a3f1d4250d8ded951",
-          "modified": "2026-06-27T17:59:28.752182"
-        },
-        {
-          "path": "tools\\pack_windows_release.ps1",
-          "size": 3960,
-          "hash": "64d55d76007e98932b82f40aae41c4bd",
-          "modified": "2026-06-28T11:27:59.872401"
-        },
-        {
-          "path": "tools\\rebalance_dev_categories.py",
-          "size": 2525,
-          "hash": "2632ce1c641b4c83cbfdc8b0a3a7b4a9",
-          "modified": "2026-04-10T20:53:46.449219"
-        },
-        {
-          "path": "tools\\reset_enabled_json.bat",
-          "size": 203,
-          "hash": "e657241aa4980a68baac3aa8e2f243e2",
-          "modified": "2026-05-28T09:51:46.470204"
-        },
-        {
-          "path": "tools\\reset_enabled_json.py",
-          "size": 10829,
-          "hash": "daa472148f89290d8d7d983ed0b07a71",
-          "modified": "2026-06-27T16:31:28.219126"
-        },
-        {
-          "path": "tools\\run_saved_apps.py",
-          "size": 5856,
-          "hash": "262d2432918675d5d1112b8be9439e83",
-          "modified": "2026-06-27T17:19:40.534872"
-        },
-        {
-          "path": "tools\\split_apps_to_apps_dir.py",
-          "size": 2790,
-          "hash": "ec86928871a58b571e3c7ba509e7a148",
-          "modified": "2026-04-10T20:53:46.449219"
-        },
-        {
-          "path": "tools\\split_darwin_linux_to_dirs.py",
-          "size": 3680,
-          "hash": "16784e0719062cd1e6be993d72bf74c1",
-          "modified": "2026-04-10T20:59:31.557274"
-        },
-        {
-          "path": "tools\\split_dayanzai_unmatched.py",
-          "size": 8626,
-          "hash": "2db5c6a998adb59c45a4367237a4a39b",
-          "modified": "2026-06-08T15:30:54.553602"
-        },
-        {
-          "path": "tools\\sync_dayanzai_to_darwin_linux.py",
-          "size": 5617,
-          "hash": "78d26ec41cf1f9ba48efcc3feb8ff49f",
-          "modified": "2026-06-08T16:05:27.795633"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\import_report.json",
-          "size": 78138,
-          "hash": "5759d6334c43203b6096856b12bc6acf",
-          "modified": "2026-06-08T12:36:03.556636"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\7-taskbar-tweaker.html",
-          "size": 65829,
-          "hash": "1247420fdb1a4f08fd78ec4471c0face",
-          "modified": "2026-06-08T12:33:43.999212"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\7-zip-zs.html",
-          "size": 64048,
-          "hash": "8c6d0f17c798ab4aec14991ccb352bc7",
-          "modified": "2026-06-08T12:35:32.745450"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\ab-download-manager.html",
-          "size": 69316,
-          "hash": "f3ad755b6ef98aa561ccf35f8f7905bf",
-          "modified": "2026-06-08T12:31:41.149179"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\advanced-passgen.html",
-          "size": 65312,
-          "hash": "a243caa47e5421380dd24420a280137e",
-          "modified": "2026-06-08T12:31:34.949781"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\aegisub.html",
-          "size": 66120,
-          "hash": "648246023e15e7bcce22c64857e0802e",
-          "modified": "2026-06-08T12:34:27.084865"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\aio-boot.html",
-          "size": 65532,
-          "hash": "320c668c6ea9b6501544ca4fcb79a16c",
-          "modified": "2026-06-08T12:35:17.796079"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\akelpad.html",
-          "size": 67512,
-          "hash": "9b7756458b0d735c35c6315743393a6a",
-          "modified": "2026-06-08T12:32:48.684512"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\animeeffects.html",
-          "size": 62758,
-          "hash": "568af5e1300fd6f03dc8091068d25453",
-          "modified": "2026-06-08T12:35:07.258900"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\apk-editor-studio.html",
-          "size": 63936,
-          "hash": "0ef3d33c6f45ac266c0e8c3af1bee41a",
-          "modified": "2026-06-08T12:34:26.576607"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\arduino.html",
-          "size": 66763,
-          "hash": "435071e3d42cb9591bfbe08c58459d15",
-          "modified": "2026-06-08T12:35:28.602615"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\atom-editor.html",
-          "size": 63348,
-          "hash": "b701dbb4e0930898be2e0373f62eff0e",
-          "modified": "2026-06-08T12:35:21.894684"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\audacity.html",
-          "size": 65448,
-          "hash": "7bd73a73e009e621ba630739225ed563",
-          "modified": "2026-06-08T12:33:46.821006"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\auto-dark-mode.html",
-          "size": 70510,
-          "hash": "039620f446147e4576a9429849044d22",
-          "modified": "2026-06-08T12:33:56.852719"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\avidemux.html",
-          "size": 64692,
-          "hash": "ccb9423adc17348de7be2c323569d1e9",
-          "modified": "2026-06-08T12:34:32.413270"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\azahar-emulator.html",
-          "size": 63605,
-          "hash": "f3617ad95605c3b7576d578266a32c75",
-          "modified": "2026-06-08T12:33:33.059781"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\baijia-xing-magnetic-converter.html",
-          "size": 63331,
-          "hash": "be221aaae03e06deb1c3622deb86abde",
-          "modified": "2026-06-08T12:32:57.941429"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\balenaetcher.html",
-          "size": 63221,
-          "hash": "bb2f0d6ba3842efed265e59812e2cb3b",
-          "modified": "2026-06-08T12:30:40.422443"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\batchencoder.html",
-          "size": 62983,
-          "hash": "bcbb39a7bcc9fb5b998cd190579b941d",
-          "modified": "2026-06-08T12:35:41.094873"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\beaver-notes.html",
-          "size": 66037,
-          "hash": "5bdef03f753981f74a7e3e716447b9d0",
-          "modified": "2026-06-08T12:32:02.537618"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\bforartists.html",
-          "size": 71474,
-          "hash": "36836b576a0dda177b6f7c26158bca30",
-          "modified": "2026-06-08T12:29:39.197393"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\biglybt.html",
-          "size": 76262,
-          "hash": "73f09ed8397e190930f161a405a0cd3b",
-          "modified": "2026-06-08T12:30:23.807529"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\bleachbit.html",
-          "size": 74678,
-          "hash": "12b5d2a6210434dcc53a2f1fe86ee4b1",
-          "modified": "2026-06-08T12:31:33.616399"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\blender.html",
-          "size": 68119,
-          "hash": "658f5df8f48141ef752f50725eb15c06",
-          "modified": "2026-06-08T12:30:28.671158"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\blinkmind.html",
-          "size": 68883,
-          "hash": "066a87fc0f347b9be93807315a99e345",
-          "modified": "2026-06-08T12:35:44.758594"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\bluefish.html",
-          "size": 67995,
-          "hash": "2dc8c6afab35253e92f21414e92ef424",
-          "modified": "2026-06-08T12:32:49.236871"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\boostnote.html",
-          "size": 64876,
-          "hash": "d86238f7017fc0dda3eba684dceb5ea7",
-          "modified": "2026-06-08T12:35:42.308899"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\bowpad.html",
-          "size": 68446,
-          "hash": "46a7ae6065b4d57abe0fe5be6da6ba86",
-          "modified": "2026-06-08T12:34:06.415069"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\bulk-crap-uninstaller.html",
-          "size": 73264,
-          "hash": "c391ad63c9c1d6c00988b74a25c20619",
-          "modified": "2026-06-08T12:33:04.296304"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\buttercup.html",
-          "size": 65061,
-          "hash": "0e495cf0ac8039eca495ad313a4c1792",
-          "modified": "2026-06-08T12:35:40.417242"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\caesium-image-compressor.html",
-          "size": 66171,
-          "hash": "75fd027f0047f63730b77adc8cca9dca",
-          "modified": "2026-06-08T12:34:18.195494"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\calibre.html",
-          "size": 73158,
-          "hash": "2e939c25ad4369d9cb79f70547c79c8d",
-          "modified": "2026-06-08T12:29:59.057751"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\captura.html",
-          "size": 63522,
-          "hash": "113ed13abb8299050224a1a0d03615f1",
-          "modified": "2026-06-08T12:35:45.868235"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\chasys-draw-ies.html",
-          "size": 68092,
-          "hash": "13941a1d18f88e48065cfb0bdeb8ed7c",
-          "modified": "2026-06-08T12:29:04.067429"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\cheat-engine.html",
-          "size": 78025,
-          "hash": "1c88ea89ed26398210c1804eca99993b",
-          "modified": "2026-06-08T12:29:40.796164"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\cherrytree.html",
-          "size": 72542,
-          "hash": "3798a246b39a4b9f282c57b86dc5c2ae",
-          "modified": "2026-06-08T12:30:15.488426"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\cine-encoder.html",
-          "size": 63220,
-          "hash": "51678a13da39b879d78fd1928cec9657",
-          "modified": "2026-06-08T12:35:14.279220"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\citra.html",
-          "size": 64837,
-          "hash": "36712ab0ffa1075f60e725cdca310192",
-          "modified": "2026-06-08T12:35:22.541211"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\clcl.html",
-          "size": 68048,
-          "hash": "aeb0ef63cce2698c71617c557b8b8ec3",
-          "modified": "2026-06-08T12:35:21.434238"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\codeblocks.html",
-          "size": 64518,
-          "hash": "0687ada2c646b60cc80487f5ba71b975",
-          "modified": "2026-06-08T12:35:04.126760"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\colorpicker.html",
-          "size": 62128,
-          "hash": "e5574f505335c42a6317c451f96a6bf8",
-          "modified": "2026-06-08T12:33:19.497147"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\compresso.html",
-          "size": 71087,
-          "hash": "247ab1f663aa8aeb6cb4b236230005f2",
-          "modified": "2026-06-08T12:32:15.090946"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\context-menu-manager.html",
-          "size": 70663,
-          "hash": "4ae6c575eff3aaf3597648bce60bce7c",
-          "modified": "2026-06-08T12:35:24.864430"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\converseen.html",
-          "size": 64111,
-          "hash": "4fddc8fa88ea4ff378af05f904f737ef",
-          "modified": "2026-06-08T12:29:56.602878"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\coolluckwallpaper.html",
-          "size": 62382,
-          "hash": "3369fe5ae8f7ac3ebc73d47f14a3f45e",
-          "modified": "2026-06-08T12:35:24.295003"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\copicseal.html",
-          "size": 64993,
-          "hash": "0fe26a34b61078a6d53af6823a287a8b",
-          "modified": "2026-06-08T12:30:49.178648"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\copy-handler.html",
-          "size": 64434,
-          "hash": "a53a943850327c513754b0585389f761",
-          "modified": "2026-06-08T12:35:37.955834"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\copyq.html",
-          "size": 66565,
-          "hash": "4a4f1a70bbc020f04d467ba692832c34",
-          "modified": "2026-06-08T12:29:54.032403"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\copytranslator.html",
-          "size": 74853,
-          "hash": "a0fac3e22dd6eb163bdea29c31bb4c88",
-          "modified": "2026-06-08T12:32:56.801258"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\crow-translate.html",
-          "size": 65313,
-          "hash": "cf51e5ca91818797bfff30da9d78b679",
-          "modified": "2026-06-08T12:35:07.757919"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\crypto-notepad.html",
-          "size": 64456,
-          "hash": "ad40da51f841b956a3c67297549dc65d",
-          "modified": "2026-06-08T12:35:23.655597"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\cubepdf-utility.html",
-          "size": 68504,
-          "hash": "838099ec54164ffd2d78c9f5c36b28b1",
-          "modified": "2026-06-08T12:31:20.052344"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\cudatext.html",
-          "size": 67655,
-          "hash": "b296a19c81e81554fdfe0c8364314420",
-          "modified": "2026-06-08T12:34:23.457711"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\cutter.html",
-          "size": 63826,
-          "hash": "4b2f432d1d979fb7a00d5426ee380e15",
-          "modified": "2026-06-08T12:34:18.764720"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\cyberduck.html",
-          "size": 65962,
-          "hash": "39ac2ecca6440d90bb6f551a382b1a71",
-          "modified": "2026-06-08T12:33:02.836638"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\czkawka.html",
-          "size": 71007,
-          "hash": "6c3b83fbef474a0832693510b278620e",
-          "modified": "2026-06-08T12:33:18.015840"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\darktable.html",
-          "size": 80299,
-          "hash": "1fe7b3fc126a894e8fa93befdae2ed90",
-          "modified": "2026-06-08T12:33:45.168817"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\db-browser-for-sqlite.html",
-          "size": 66224,
-          "hash": "43234a4c42857d6669e522b01f359123",
-          "modified": "2026-06-08T12:34:19.364608"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\dbeaver.html",
-          "size": 72168,
-          "hash": "1ce6a35a81db4e9c25586a4ed96dacb6",
-          "modified": "2026-06-08T12:29:52.167774"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\dc.html",
-          "size": 65496,
-          "hash": "5a866e66990b154d25bc55f46939aa40",
-          "modified": "2026-06-08T12:34:02.052913"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\deskreen.html",
-          "size": 64607,
-          "hash": "989d44ca95d98f23861007b9f0caf0ab",
-          "modified": "2026-06-08T12:31:02.800657"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\desktopnote.html",
-          "size": 64195,
-          "hash": "9d82328ff7e3de9e842212286d5e2951",
-          "modified": "2026-06-08T12:34:12.039796"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\dev-c.html",
-          "size": 65887,
-          "hash": "20c5913b7d71b10e949d059dedccbb09",
-          "modified": "2026-06-08T12:35:50.000300"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\digikam.html",
-          "size": 64488,
-          "hash": "9d29ca53df806c4006d5889e06fc7b94",
-          "modified": "2026-06-08T12:32:55.424063"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\digital-clock.html",
-          "size": 64957,
-          "hash": "208c72ed01ae7f2131be9a7e0aba1291",
-          "modified": "2026-06-08T12:35:39.376637"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\ditto.html",
-          "size": 66103,
-          "hash": "d4a1086f9c7c61bfae07d6da29cfe38a",
-          "modified": "2026-06-08T12:33:58.855331"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\dnspy.html",
-          "size": 69870,
-          "hash": "5445e523893e7c886c8bc3dfb9111bda",
-          "modified": "2026-06-08T12:34:34.515063"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\dosbox-x.html",
-          "size": 81360,
-          "hash": "b502eaacc34a091b0653b7b968de7cd3",
-          "modified": "2026-06-08T12:29:28.135288"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\double-commander.html",
-          "size": 68480,
-          "hash": "c5a0b6523cdf9775f04ebc3e0d2409dd",
-          "modified": "2026-06-08T12:33:39.665075"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\downzemall.html",
-          "size": 66831,
-          "hash": "c41e63b9eb751a7b35a04dcf7f5eb2fa",
-          "modified": "2026-06-08T12:34:21.410027"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\draw-io-desktop.html",
-          "size": 70924,
-          "hash": "651bc4d95687262abf1c8d2d554dbbef",
-          "modified": "2026-06-08T12:29:57.948731"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\drawpile.html",
-          "size": 101441,
-          "hash": "8003415a4f231eb882912777af30eb89",
-          "modified": "2026-06-08T12:33:48.963609"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\dreamscene2.html",
-          "size": 61646,
-          "hash": "a5f938e7dd26809241e22654c4415389",
-          "modified": "2026-06-08T12:35:29.110574"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\duckstation.html",
-          "size": 75016,
-          "hash": "d445611cf78b8fa4fb1d2b17f1f38355",
-          "modified": "2026-06-08T12:29:54.575348"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\efi-boot-editor.html",
-          "size": 63278,
-          "hash": "fcd0f4f7f912025d6ca2a40f79687ad8",
-          "modified": "2026-06-08T12:31:19.481194"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\electerm.html",
-          "size": 65217,
-          "hash": "2f049dae9f74bcc59c2ae7293903b3c4",
-          "modified": "2026-06-08T12:29:21.827161"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\equalizer-apo.html",
-          "size": 64012,
-          "hash": "982ea64089650feb4e866819cf59ca04",
-          "modified": "2026-06-08T12:34:21.976674"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\escrcpy.html",
-          "size": 71402,
-          "hash": "b150587ddd1dd58f25f3443073ae061b",
-          "modified": "2026-06-08T12:30:26.391606"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\esearch.html",
-          "size": 65416,
-          "hash": "189b9ab67581a4daaf088660b503812e",
-          "modified": "2026-06-08T12:33:40.265965"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\famistudio.html",
-          "size": 65405,
-          "hash": "9ece94de88d0b2bbbce2aad4e8567838",
-          "modified": "2026-06-08T12:30:44.392234"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\fan-control.html",
-          "size": 65344,
-          "hash": "787c844bea9a4128b7407a054040392d",
-          "modified": "2026-06-08T12:29:23.568415"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\fastflix.html",
-          "size": 66628,
-          "hash": "969c304a702127928591667530cef451",
-          "modified": "2026-06-08T12:32:41.326127"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\fedora-media-writer.html",
-          "size": 64431,
-          "hash": "8d7f18b18a4d60fc3a593bfc73f10f8f",
-          "modified": "2026-06-08T12:32:09.554327"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\ffmpeg-batch-av-converter.html",
-          "size": 67465,
-          "hash": "c4a166babcfdeb80049088ed21218b98",
-          "modified": "2026-06-08T12:30:09.238419"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\file-centipede.html",
-          "size": 67236,
-          "hash": "08d0381760025de5d272ba48f49fad58",
-          "modified": "2026-06-08T12:35:20.295726"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\file-converter.html",
-          "size": 67153,
-          "hash": "90c44e094ac64b89ce94607363483f79",
-          "modified": "2026-06-08T12:34:24.458816"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\fileoptimizer.html",
-          "size": 70568,
-          "hash": "c54d284c756a92687ee02c47f1777127",
-          "modified": "2026-06-08T12:34:04.292356"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\filesuwp.html",
-          "size": 68085,
-          "hash": "893a4c01266229c42a5c53a9606b70ac",
-          "modified": "2026-06-08T12:34:05.843758"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\filezilla.html",
-          "size": 69276,
-          "hash": "5807a16c1712f0555a0cec671fd3936c",
-          "modified": "2026-06-08T12:30:42.990500"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\flameshot.html",
-          "size": 67470,
-          "hash": "835d7f3dad1c2beb68c16afea71cac02",
-          "modified": "2026-06-08T12:33:53.170664"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\flow-launcher.html",
-          "size": 70417,
-          "hash": "3a845b4d6673d3ee4e02887a811788cf",
-          "modified": "2026-06-08T12:30:54.557835"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\fluent-reader.html",
-          "size": 63874,
-          "hash": "29384582168fd8ca36f70666331599ec",
-          "modified": "2026-06-08T12:31:27.433401"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\flyphotos.html",
-          "size": 70596,
-          "hash": "f95a5004b6597f33c0f6401f50ddb753",
-          "modified": "2026-06-08T12:29:22.990857"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\fontforge.html",
-          "size": 76283,
-          "hash": "090bba44242cdd6fa5e1723be196956a",
-          "modified": "2026-06-08T12:33:47.343036"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\fooyin.html",
-          "size": 69151,
-          "hash": "509fb2d3720f27a5a8a6eea2cf9f4b3c",
-          "modified": "2026-06-08T12:32:03.188205"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\fort-firewall.html",
-          "size": 71369,
-          "hash": "b410818a4eb12f874ade25ad79a3d238",
-          "modified": "2026-06-08T12:33:57.394168"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\freac.html",
-          "size": 68977,
-          "hash": "472fac32676ab4b43b800de9f35f8fa0",
-          "modified": "2026-06-08T12:35:18.371085"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\free-download-manager.html",
-          "size": 69167,
-          "hash": "f702bda2062072ed6952800c115d0dc0",
-          "modified": "2026-06-08T12:29:32.529350"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\freearc.html",
-          "size": 62779,
-          "hash": "be4c25709b819f91c317d5bcd570b097",
-          "modified": "2026-06-08T12:35:50.476591"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\freecad.html",
-          "size": 67977,
-          "hash": "f5a515530f170f51394c0694437dfb96",
-          "modified": "2026-06-08T12:32:04.734596"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\freefilesync.html",
-          "size": 70963,
-          "hash": "b80c684e4b8f9770a24d1c767e00d196",
-          "modified": "2026-06-08T12:32:21.772044"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\freeplane.html",
-          "size": 70421,
-          "hash": "bba0b90744adb55e81cca05b6ec1d49a",
-          "modified": "2026-06-08T12:33:22.202263"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\ftpgetter.html",
-          "size": 65165,
-          "hash": "8e594310aa941e514cb5f11ab29297a5",
-          "modified": "2026-06-08T12:35:47.701627"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\gb-studio.html",
-          "size": 66023,
-          "hash": "5e29b5013d6134a2f8d6272d232158b3",
-          "modified": "2026-06-08T12:33:09.094861"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\gimp.html",
-          "size": 69699,
-          "hash": "b62dca80b64a1f4d46bd4926269494b7",
-          "modified": "2026-06-08T12:32:00.889558"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\gnucash.html",
-          "size": 70150,
-          "hash": "9c2640e664a55dde018250f83d8b1653",
-          "modified": "2026-06-08T12:32:25.526797"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\godot-engine.html",
-          "size": 69381,
-          "hash": "0a74190dd0d3d2a334c7bb1ab9b76839",
-          "modified": "2026-06-08T12:33:56.302785"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\greenshot.html",
-          "size": 66360,
-          "hash": "bec59a6dc5de932a3ba5c8010f471b64",
-          "modified": "2026-06-08T12:33:40.839246"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\grepwin.html",
-          "size": 65628,
-          "hash": "40e50de7a62c27489c4be4b5bd6fcf88",
-          "modified": "2026-06-08T12:33:52.625368"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\handbrake.html",
-          "size": 67787,
-          "hash": "a3719c0e67bd39e9606cc76529646218",
-          "modified": "2026-06-08T12:29:00.116643"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\harmonoid.html",
-          "size": 65981,
-          "hash": "65b7b99e7e24ab0afb25792f5bec5a20",
-          "modified": "2026-06-08T12:33:38.012270"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\hashing.html",
-          "size": 63037,
-          "hash": "761eb90eb4766bd247df69c63d27598c",
-          "modified": "2026-06-08T12:35:20.872404"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\heidisql.html",
-          "size": 76519,
-          "hash": "2a717906eefabfbc605fd9cf94b8e218",
-          "modified": "2026-06-08T12:32:08.157431"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\hitomi-downloader.html",
-          "size": 61384,
-          "hash": "70a07d333950a9e127e714a27802f787",
-          "modified": "2026-06-08T12:34:30.140246"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\homebank.html",
-          "size": 67974,
-          "hash": "05163f8295a3f3aedb270466a2742d14",
-          "modified": "2026-06-08T12:32:54.066891"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\hoptodesk.html",
-          "size": 65608,
-          "hash": "844bf29f365b8d7f381466a319971566",
-          "modified": "2026-06-08T12:31:05.672890"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\http-downloader.html",
-          "size": 68046,
-          "hash": "df114abf55097168d0067616406691e7",
-          "modified": "2026-06-08T12:33:47.879569"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\imageglass.html",
-          "size": 67713,
-          "hash": "6572344fe84042afe9de131d433d488d",
-          "modified": "2026-06-08T12:30:42.413068"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\imagine-compression.html",
-          "size": 62236,
-          "hash": "b4b56d1a5b144c9d5d0546f0a8c15a7c",
-          "modified": "2026-06-08T12:35:10.625379"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\inkscape.html",
-          "size": 78781,
-          "hash": "984490c08e22f01f206de5e6f2c21014",
-          "modified": "2026-06-08T12:31:01.386646"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\internettest.html",
-          "size": 65326,
-          "hash": "a9259d2f25233b464c9f30143238437f",
-          "modified": "2026-06-08T12:33:21.525525"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\jedit.html",
-          "size": 63065,
-          "hash": "4faa8ee71ad4f956c469d31d78ad2043",
-          "modified": "2026-06-08T12:34:25.532834"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\joplin.html",
-          "size": 65993,
-          "hash": "05980d6a6e19074e25cfecc351ba36ec",
-          "modified": "2026-06-08T12:30:22.426126"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\jpegview.html",
-          "size": 63049,
-          "hash": "aa52884dd9f98469c3aeae0bb0e6570a",
-          "modified": "2026-06-08T12:35:41.748824"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\jpexs-flash-decompiler.html",
-          "size": 75429,
-          "hash": "788bcba8eaae6c79f13e1c80cb9387aa",
-          "modified": "2026-06-08T12:30:14.985987"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\kate.html",
-          "size": 66123,
-          "hash": "72b3c888b47909ae4be51e2c2d53b507",
-          "modified": "2026-06-08T12:32:52.618473"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\kdenlive.html",
-          "size": 69583,
-          "hash": "a6eb7dadccfbfdefb3f3f87d051d72a8",
-          "modified": "2026-06-08T12:29:09.563647"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\keepassxc.html",
-          "size": 73084,
-          "hash": "d81c5d2325c2786eeb590924e3dce999",
-          "modified": "2026-06-08T12:32:51.193447"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\keeweb.html",
-          "size": 64776,
-          "hash": "4adbe6a2818172052c61dd7a02278b08",
-          "modified": "2026-06-08T12:35:35.381912"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\kid3.html",
-          "size": 63610,
-          "hash": "72a6e3f4c7ac44e6545172adbab8dba6",
-          "modified": "2026-06-08T12:35:05.779227"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\kodi.html",
-          "size": 69664,
-          "hash": "d13f5982f3e4ac8f1693f74f26e87e06",
-          "modified": "2026-06-08T12:33:48.425475"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\koodo-reader.html",
-          "size": 67894,
-          "hash": "2831d0d59de989ac27d61519ff932dcc",
-          "modified": "2026-06-08T12:30:25.217791"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\krita.html",
-          "size": 67485,
-          "hash": "a70b67639cef2eb6d6f78efdb2935544",
-          "modified": "2026-06-08T12:30:07.835684"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\ksnip.html",
-          "size": 64346,
-          "hash": "cd96e0ccd29686c747b9d298a88c6cf3",
-          "modified": "2026-06-08T12:35:17.159568"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\lamexp.html",
-          "size": 65361,
-          "hash": "e1228bfd05c4a86e869ca61321b092bd",
-          "modified": "2026-06-08T12:35:08.877554"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\lazarus.html",
-          "size": 63872,
-          "hash": "eaf51002a5444d621183fab307b64554",
-          "modified": "2026-06-08T12:33:15.275585"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\lazpaint.html",
-          "size": 64830,
-          "hash": "6f8630464e771568f68b81ec9692f665",
-          "modified": "2026-06-08T12:34:17.561142"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\lessmsi.html",
-          "size": 63324,
-          "hash": "8011b0d4ae9d817c76819ea8a77dc26f",
-          "modified": "2026-06-08T12:30:16.617443"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\librecad.html",
-          "size": 66097,
-          "hash": "3d987cb4c8cba393989200d9746deef1",
-          "modified": "2026-06-08T12:31:07.068187"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\librettooffice.html",
-          "size": 70354,
-          "hash": "324b6316a881f2218d453d9eda691900",
-          "modified": "2026-06-08T12:31:32.221415"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\licecap.html",
-          "size": 69414,
-          "hash": "5406aa3b5da47c9b026d2028734a2cb7",
-          "modified": "2026-06-08T12:35:25.907653"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\lightbulb.html",
-          "size": 66606,
-          "hash": "d52a25dbb77094c2a6c89338e85d449e",
-          "modified": "2026-06-08T12:30:26.948400"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\liii-bittorrent-client.html",
-          "size": 64015,
-          "hash": "25494a18dff015b503181fd6787e7822",
-          "modified": "2026-06-08T12:35:12.161396"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\listen1.html",
-          "size": 67587,
-          "hash": "68cacc1c6b42f2bfc2ef70c903c54792",
-          "modified": "2026-06-08T12:34:12.663777"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\lively-wallpaper.html",
-          "size": 70136,
-          "hash": "f9a8e93759f71828f66bc10151484d37",
-          "modified": "2026-06-08T12:34:00.298365"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\localsend.html",
-          "size": 67048,
-          "hash": "19341264c180af51311f58dc37e66ed9",
-          "modified": "2026-06-08T12:34:26.049462"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\losslesscut.html",
-          "size": 71893,
-          "hash": "f1d8688cbc7de384f24100dfec18c812",
-          "modified": "2026-06-08T12:29:22.418686"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\lucas-chess-r.html",
-          "size": 74061,
-          "hash": "3ced6bd9c761d978d2c3773df347422b",
-          "modified": "2026-06-08T12:34:29.604227"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\m3u8-downloader.html",
-          "size": 70802,
-          "hash": "912c5e9f327c3b6cf8cc60e454c2bd84",
-          "modified": "2026-06-08T12:35:26.442313"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\makehuman.html",
-          "size": 66467,
-          "hash": "f6593d09aa473a98f5810b0635c18495",
-          "modified": "2026-06-08T12:34:35.017353"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\material-maker.html",
-          "size": 71824,
-          "hash": "3e8ec1cd31de68b62d529e84627b515f",
-          "modified": "2026-06-08T12:31:56.094855"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\mattercontrol.html",
-          "size": 64342,
-          "hash": "31455bf4c56af1debf00543eb377d8d1",
-          "modified": "2026-06-08T12:35:29.781534"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\maye.html",
-          "size": 69723,
-          "hash": "138a42d23bc805a4f7912c5d3f95cae8",
-          "modified": "2026-06-08T12:31:54.043159"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\media-player-classic.html",
-          "size": 72105,
-          "hash": "5108524ce50ad0748290d86a453022c9",
-          "modified": "2026-06-08T12:29:18.890301"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\mgba.html",
-          "size": 65793,
-          "hash": "c7aea560941b9f4850075d332f56f1df",
-          "modified": "2026-06-08T12:34:23.966322"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\mitcalc.html",
-          "size": 69614,
-          "hash": "13bc57ae798db4e2769b45f4a657cb83",
-          "modified": "2026-06-08T12:35:48.912942"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\mixxx.html",
-          "size": 68816,
-          "hash": "e6c603b30589f91fbf3548b96db6f526",
-          "modified": "2026-06-08T12:34:14.069874"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\money-manager-ex.html",
-          "size": 72557,
-          "hash": "d44bd0d6354bbf7e6bc8bbbf6aa5f0f0",
-          "modified": "2026-06-08T12:33:36.991371"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\motrix-next.html",
-          "size": 65288,
-          "hash": "06d4248ef71bcde39c74cc4ba95006f8",
-          "modified": "2026-06-08T12:31:49.009544"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\motrix.html",
-          "size": 72122,
-          "hash": "072204ebd3c796eec8022fda537eba56",
-          "modified": "2026-06-08T12:35:10.077616"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\mpc-be.html",
-          "size": 72853,
-          "hash": "467c9c3a6fb6043864ead6cbb4678d7a",
-          "modified": "2026-06-08T12:34:01.508578"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\mpv-net.html",
-          "size": 64751,
-          "hash": "94811dfc2ac424a3c932cbb3efb56aa5",
-          "modified": "2026-06-08T12:35:06.293477"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\mpv-player.html",
-          "size": 78994,
-          "hash": "f6336ce75e1de317e6ed45e1a33d0451",
-          "modified": "2026-06-08T12:33:28.256012"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\mremoteng.html",
-          "size": 62823,
-          "hash": "9a258610a3864f6688c9223a12300fdf",
-          "modified": "2026-06-08T12:34:05.320662"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\mrv2.html",
-          "size": 66717,
-          "hash": "32d95a9037ae037ac18ca5a0ec965723",
-          "modified": "2026-06-08T12:32:33.910884"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\mucommander.html",
-          "size": 66727,
-          "hash": "398bc793dc18cb2273430589b0527168",
-          "modified": "2026-06-08T12:30:38.886540"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\musescore.html",
-          "size": 66522,
-          "hash": "78c729207cc435075b35f8f62c0b6444",
-          "modified": "2026-06-08T12:30:06.435283"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\musicplayer2.html",
-          "size": 64478,
-          "hash": "8cb6b7ccb8d56346248a0174d72c16ca",
-          "modified": "2026-06-08T12:35:13.679876"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\my-nes.html",
-          "size": 70924,
-          "hash": "04293dc4b636c7fce6af7cb34c8c442b",
-          "modified": "2026-06-08T12:35:26.996629"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\mypaint.html",
-          "size": 63384,
-          "hash": "4c9492c538e6426adbc6d5ebde1fb65c",
-          "modified": "2026-06-08T12:35:44.109248"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\nanazip.html",
-          "size": 68914,
-          "hash": "dce59fa16df6d629c0c7f43fa9b9c3d2",
-          "modified": "2026-06-08T12:30:53.453917"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\naps2.html",
-          "size": 65391,
-          "hash": "e2e32e64f034f1a11b5e8684f7a813e5",
-          "modified": "2026-06-08T12:34:04.815050"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\net-reactor-slayer.html",
-          "size": 63896,
-          "hash": "9044d936f3b9581b5d0925f51fca48b2",
-          "modified": "2026-06-08T12:35:15.492190"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\nettime.html",
-          "size": 65120,
-          "hash": "a31ba35fec617d979a82d128a501d883",
-          "modified": "2026-06-08T12:35:38.683894"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\networkmanager.html",
-          "size": 77849,
-          "hash": "02afc25a4cb4fa5a2835e118afa17577",
-          "modified": "2026-06-08T12:33:16.627651"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\nocab-desktop.html",
-          "size": 62613,
-          "hash": "b40c72dcefe3045883afc5400cc116f7",
-          "modified": "2026-06-08T12:35:18.852510"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\nomacs.html",
-          "size": 64942,
-          "hash": "5eaefcfc2780355941713e84dc5e9353",
-          "modified": "2026-06-08T12:30:45.811988"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\notenoughav1encodes.html",
-          "size": 66576,
-          "hash": "a2b2dfde91fb511f0337c1e491420303",
-          "modified": "2026-06-08T12:34:36.147701"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\notepad-next.html",
-          "size": 63321,
-          "hash": "b0c6bcf288c7d14e5a26c4149dd3a81a",
-          "modified": "2026-06-08T12:31:25.527902"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\notepads.html",
-          "size": 68885,
-          "hash": "12611a8759d40394fcaa2b4b74b35a9a",
-          "modified": "2026-06-08T12:34:20.349133"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\notesnook.html",
-          "size": 71659,
-          "hash": "bb0802a483bf103e605bfff2832ccfbd",
-          "modified": "2026-06-08T12:30:37.730787"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\novelwriter.html",
-          "size": 69734,
-          "hash": "76770aad888a27732d7d752439089a8d",
-          "modified": "2026-06-08T12:31:39.815602"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\nsudo.html",
-          "size": 66968,
-          "hash": "43bfb64abc304455b50436dbe8919198",
-          "modified": "2026-06-08T12:35:34.221873"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\nvda.html",
-          "size": 65580,
-          "hash": "43eccb73736a4651e66772a2b6f91ed6",
-          "modified": "2026-06-08T12:31:04.185568"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\nwinfo.html",
-          "size": 70533,
-          "hash": "aa4ab7e8e09b1148cc7b37f4663a5b46",
-          "modified": "2026-06-08T12:29:28.676688"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\nxshell.html",
-          "size": 62885,
-          "hash": "5f18dbf45a5d5cd079a1c861fac8a1b2",
-          "modified": "2026-06-08T12:35:16.088366"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\obs-studio.html",
-          "size": 66306,
-          "hash": "60f901802e2fd1f8f6612700846de62c",
-          "modified": "2026-06-08T12:31:48.006516"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\office-tool-plus.html",
-          "size": 65382,
-          "hash": "63d1fa25296ce115794f608bafd31899",
-          "modified": "2026-06-08T12:29:58.504544"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\okular.html",
-          "size": 64619,
-          "hash": "cc8418e87ff3585dbb0a19db4129122d",
-          "modified": "2026-06-08T12:34:03.694917"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\oncepower.html",
-          "size": 62262,
-          "hash": "934bc266eb79d6b5d947127ca81fde3b",
-          "modified": "2026-06-08T12:30:20.414754"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\onekeytools.html",
-          "size": 71651,
-          "hash": "a008345f53f8904616d3b2ab9b48cd68",
-          "modified": "2026-06-08T12:35:42.913016"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\onlyoffice.html",
-          "size": 72381,
-          "hash": "9bb9158a6bef43f781c4c8e2a2c37ae3",
-          "modified": "2026-06-08T12:30:28.068017"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\open-server-panel.html",
-          "size": 67980,
-          "hash": "69331ab261f9f5595ba4dc2c43868ea7",
-          "modified": "2026-06-08T12:32:42.020777"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\open-sound-meter.html",
-          "size": 65990,
-          "hash": "24e7c14a25a1d098563f29e76a955772",
-          "modified": "2026-06-08T12:34:20.881908"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\openboard.html",
-          "size": 63045,
-          "hash": "072b9b232c1397551bf49435bf76e322",
-          "modified": "2026-06-08T12:32:23.102951"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\openhashtab.html",
-          "size": 62458,
-          "hash": "c073c6ef3dafe889dda7c63735f66ea5",
-          "modified": "2026-06-08T12:35:11.627060"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\openoffice.html",
-          "size": 66954,
-          "hash": "1bae2ca2fac247aca810a044e6aa2893",
-          "modified": "2026-06-08T12:33:50.492243"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\openscreen.html",
-          "size": 64785,
-          "hash": "ebae4fb5e10d60441142badf3dd3b1e2",
-          "modified": "2026-06-08T12:29:02.544676"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\openshot-video-editor.html",
-          "size": 64548,
-          "hash": "23a29aaeed3559a0adace97d53db312e",
-          "modified": "2026-06-08T12:32:10.144804"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\opentoonz.html",
-          "size": 70498,
-          "hash": "da330702a9834bfac1a2ef88380c88a0",
-          "modified": "2026-06-08T12:29:55.127302"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\opentrace.html",
-          "size": 65733,
-          "hash": "c553db960e6d99c08c7c23cd6e1742c7",
-          "modified": "2026-06-08T12:33:43.014983"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\opera.html",
-          "size": 67586,
-          "hash": "bc9431d3fe602c1c57b45f2eebc22d1c",
-          "modified": "2026-06-08T12:30:21.021736"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\optimizer.html",
-          "size": 65833,
-          "hash": "b284e57dc068cd5320855b8bd7a6f8a9",
-          "modified": "2026-06-08T12:34:32.920079"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\optimizerduck.html",
-          "size": 66153,
-          "hash": "4df93649b10ca7696852c5f7ed90c175",
-          "modified": "2026-06-08T12:29:25.692916"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\passliss.html",
-          "size": 63137,
-          "hash": "4136a5ef3070850849c71a9e8a456995",
-          "modified": "2026-06-08T12:35:19.819055"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\password-safe.html",
-          "size": 64964,
-          "hash": "43df1c1abfd1c52dcbc6f235c0ad149c",
-          "modified": "2026-06-08T12:32:34.460458"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\pcsx2.html",
-          "size": 72702,
-          "hash": "7bf0e3af060c151c63ee94707216801e",
-          "modified": "2026-06-08T12:33:24.717203"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\pdf-arranger.html",
-          "size": 65546,
-          "hash": "416fd1413be467dd7aefee216a4f5a11",
-          "modified": "2026-06-08T12:30:16.067541"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\pdfsam-basic.html",
-          "size": 69599,
-          "hash": "719cf79403dee21d666dccc9f971d25d",
-          "modified": "2026-06-08T12:31:09.933578"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\pe-bear.html",
-          "size": 63082,
-          "hash": "869eb502cc8dda02772328fa90f07d87",
-          "modified": "2026-06-08T12:34:19.835813"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\persepolis-download-manager.html",
-          "size": 63845,
-          "hash": "3af23163a9dfbe497ae8844863a18495",
-          "modified": "2026-06-08T12:35:37.412498"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\pgadmin.html",
-          "size": 74555,
-          "hash": "30716a869c6756ab70bccccc5d5d5d90",
-          "modified": "2026-06-08T12:30:50.713785"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\photodemon.html",
-          "size": 68495,
-          "hash": "db39e46a2b574bfe1f7d74faa90424ef",
-          "modified": "2026-06-08T12:33:46.245942"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\phoxosee.html",
-          "size": 64312,
-          "hash": "10f280119cacdc0f22e7998ee2b9c987",
-          "modified": "2026-06-08T12:30:32.472983"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\picview.html",
-          "size": 70778,
-          "hash": "2c7721fb4548d4d459334fcb394a67f1",
-          "modified": "2026-06-08T12:32:26.954465"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\pid-key-checker.html",
-          "size": 62409,
-          "hash": "4858c1f94c4ebf4b4934721f666c8f40",
-          "modified": "2026-06-08T12:35:33.769168"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\pineapple-picture.html",
-          "size": 65559,
-          "hash": "6715a8b3dae4c69e2842409d5edeca1d",
-          "modified": "2026-06-08T12:32:16.510972"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\pinny-notes.html",
-          "size": 66076,
-          "hash": "4441c1263f4748d3e547ebe049606e8f",
-          "modified": "2026-06-08T12:34:08.647065"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\pinta.html",
-          "size": 67165,
-          "hash": "c1cf5679eb8de9118acb8699566c036c",
-          "modified": "2026-06-08T12:32:20.400956"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\pixelorama.html",
-          "size": 70433,
-          "hash": "3cdb74f9589d34798d67942b8763469e",
-          "modified": "2026-06-08T12:31:26.067342"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\pixieditor.html",
-          "size": 64260,
-          "hash": "c76bd1c7c6aac16cb0fce362d8a5d0f8",
-          "modified": "2026-06-08T12:29:48.848412"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\playstation-2-emulator.html",
-          "size": 62703,
-          "hash": "678d59ce988e471d5f1437c407a71c3e",
-          "modified": "2026-06-08T12:35:35.973418"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\pngyu.html",
-          "size": 63862,
-          "hash": "43689114693b3d4a55f0e78ddd887f3a",
-          "modified": "2026-06-08T12:33:26.882699"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\postgresql.html",
-          "size": 66689,
-          "hash": "3f1bae084738a58b9a42e2f4c4d033aa",
-          "modified": "2026-06-08T12:30:35.816834"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\powertoys.html",
-          "size": 72244,
-          "hash": "487eb34c1c6d57dbef702ad00df8f7c8",
-          "modified": "2026-06-08T12:31:24.957745"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\privatezilla.html",
-          "size": 63513,
-          "hash": "ada7507eeaea6e6e07efe1538eed9a28",
-          "modified": "2026-06-08T12:35:25.406887"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\pulovers-macro-creator.html",
-          "size": 68949,
-          "hash": "c9570a02d71dd04232c0360a26cacbb2",
-          "modified": "2026-06-08T12:35:30.796036"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\punes.html",
-          "size": 69131,
-          "hash": "e8916270c6c413e156ccdfc99ee10edb",
-          "modified": "2026-06-08T12:34:35.624997"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\putty.html",
-          "size": 67707,
-          "hash": "3ce6415e812457bd08d597e448968dd5",
-          "modified": "2026-06-08T12:30:13.898564"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\pydebloatx.html",
-          "size": 64704,
-          "hash": "e9d676413a01596a658c30a626164e7e",
-          "modified": "2026-06-08T12:35:31.393446"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\python.html",
-          "size": 72581,
-          "hash": "759f2515f1920f300b68d56baada0b8a",
-          "modified": "2026-06-08T12:30:52.116203"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\qalculate.html",
-          "size": 70595,
-          "hash": "a05f874f1d015f04119aff4d246ddeb9",
-          "modified": "2026-06-08T12:30:11.218372"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\qbittorrent-enhanced-edition.html",
-          "size": 66736,
-          "hash": "6c84140b1e38ee0599d109f78206042c",
-          "modified": "2026-06-08T12:29:51.633345"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\qcad.html",
-          "size": 71641,
-          "hash": "d9834c75d302df2b0f8d4a3620183432",
-          "modified": "2026-06-08T12:34:03.130536"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\qmmp.html",
-          "size": 64384,
-          "hash": "1dbae03c3f615a92b8dc2a75affc12f0",
-          "modified": "2026-06-08T12:29:17.342909"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\qmplay2.html",
-          "size": 62777,
-          "hash": "3b2f2efe1a87401054a3c7196be9e487",
-          "modified": "2026-06-08T12:34:02.622577"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\qownnotes.html",
-          "size": 68488,
-          "hash": "03172794b7e9b55b93276c48fca01151",
-          "modified": "2026-06-08T12:30:47.677318"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\qtscrcpy.html",
-          "size": 64578,
-          "hash": "04017339d4581c9893137db2ffb775d1",
-          "modified": "2026-06-08T12:33:51.583943"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\quick-picture-viewer.html",
-          "size": 67067,
-          "hash": "537fea9a2b1c9b64f887e6f09ad3ac48",
-          "modified": "2026-06-08T12:35:34.838657"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\quickclipboard.html",
-          "size": 66129,
-          "hash": "1791b59f112acc3fd2b13105a281f2b5",
-          "modified": "2026-06-08T12:33:41.628361"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\quickcut.html",
-          "size": 65562,
-          "hash": "6cea87734cf8b30276dfa20788d01222",
-          "modified": "2026-06-08T12:35:39.923481"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\quicklook.html",
-          "size": 67513,
-          "hash": "a32c177c9aaf9cd070f9163eb648823d",
-          "modified": "2026-06-08T12:32:06.735126"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\quiterss.html",
-          "size": 66752,
-          "hash": "0b866db0a0cf2232cbd83e5ef5788314",
-          "modified": "2026-06-08T12:35:46.484212"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\readest.html",
-          "size": 72401,
-          "hash": "af1fd46ea89af0a30436bc209a525c37",
-          "modified": "2026-06-08T12:29:24.209543"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\recordly.html",
-          "size": 65211,
-          "hash": "3263051815689228e8eb4d32e9d0042d",
-          "modified": "2026-06-08T12:30:09.717696"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\retroarch.html",
-          "size": 65643,
-          "hash": "a846f7bb0c7d499bcaa196b79f8ae5fb",
-          "modified": "2026-06-08T12:33:49.958597"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\rpcs3.html",
-          "size": 67207,
-          "hash": "2cea5517a7be5b0b35d18fc445b1b553",
-          "modified": "2026-06-08T12:29:19.810972"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\ruffle.html",
-          "size": 66354,
-          "hash": "f9fd25ee623fea931e4be1e70e6a94b5",
-          "modified": "2026-06-08T12:30:54.040926"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\rustdesk.html",
-          "size": 71788,
-          "hash": "75dd84a5bf3cd19ce36c0bf8c5e284b0",
-          "modified": "2026-06-08T12:29:38.603440"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\ryubing.html",
-          "size": 67353,
-          "hash": "ccd8659e26c27e53364dc6ce02f03858",
-          "modified": "2026-06-08T12:33:52.086213"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\ryujinx.html",
-          "size": 67682,
-          "hash": "940397e4bbe00808d33dfc1a7424b844",
-          "modified": "2026-06-08T12:34:31.214231"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\sandboxie-plus.html",
-          "size": 81739,
-          "hash": "9d33a4a7224e739f4473b0e6592d3f39",
-          "modified": "2026-06-08T12:32:28.409527"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\screen-to-gif.html",
-          "size": 69360,
-          "hash": "9226112bc9347d1513bb73d7cb567bfd",
-          "modified": "2026-06-08T12:32:40.755039"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\screenote.html",
-          "size": 62198,
-          "hash": "563220417cae63309ec6fa1707586a00",
-          "modified": "2026-06-08T12:35:43.564439"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\scribus.html",
-          "size": 65621,
-          "hash": "1d46573592d5006e1975fb7339316e50",
-          "modified": "2026-06-08T12:32:05.348641"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\seamonkey.html",
-          "size": 66691,
-          "hash": "eb879da982dc5a9a199529d215eb7b24",
-          "modified": "2026-06-08T12:33:42.345816"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\shadps4.html",
-          "size": 67683,
-          "hash": "4781126628e88e6e7e0cccf615153fcb",
-          "modified": "2026-06-08T12:32:47.241657"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\sharex.html",
-          "size": 66568,
-          "hash": "753dea8f5828a39461856799de88f8b1",
-          "modified": "2026-06-08T12:30:12.579502"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\sharpcut.html",
-          "size": 64994,
-          "hash": "ff96d9bc457ae77687361bb0ef8f5adf",
-          "modified": "2026-06-08T12:34:29.100921"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\shotcut.html",
-          "size": 77934,
-          "hash": "b4a89a4b97ee938cada0053ee8d640a8",
-          "modified": "2026-06-08T12:31:08.485453"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\sigil.html",
-          "size": 68637,
-          "hash": "d7c67c18226094ed992b2be7a0aff31d",
-          "modified": "2026-06-08T12:29:01.446863"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\silentnotes.html",
-          "size": 64427,
-          "hash": "7a52fff02a123e7ae23b6731233f0e5f",
-          "modified": "2026-06-08T12:29:50.259966"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\simple-screen-recorder.html",
-          "size": 71527,
-          "hash": "b52e581db32833af1ef68a0b3b57a409",
-          "modified": "2026-06-08T12:34:28.601966"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\skylark.html",
-          "size": 66296,
-          "hash": "a2a64e4b12ab37d1f1e6c687ed9a5b1f",
-          "modified": "2026-06-08T12:32:46.699913"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\smplayer.html",
-          "size": 69289,
-          "hash": "b968914b1ca1659803d7955d0380d2dc",
-          "modified": "2026-06-08T12:34:14.692074"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\sonobus.html",
-          "size": 64189,
-          "hash": "2a6a59860f350abcdc08ffa932b3932c",
-          "modified": "2026-06-08T12:35:09.383910"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\sophiapp.html",
-          "size": 63736,
-          "hash": "89d73d4a9c24d0f852a6ae2a17b82d37",
-          "modified": "2026-06-08T12:35:11.094219"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\speedcrunch.html",
-          "size": 62581,
-          "hash": "bf9839caf29e567e81e759574c1dbb92",
-          "modified": "2026-06-08T12:35:33.282170"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\spek.html",
-          "size": 65062,
-          "hash": "244771655a4f7d4d1a5daf8d2eb90fac",
-          "modified": "2026-06-08T12:33:49.451450"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\spleetergui.html",
-          "size": 64631,
-          "hash": "3af816d806f7f696fe758ccd90c30fc2",
-          "modified": "2026-06-08T12:34:33.530765"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\spyder.html",
-          "size": 69181,
-          "hash": "d68fc5c24c8c8a49b0075ec954ea0baf",
-          "modified": "2026-06-08T12:33:45.710479"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\sqlitestudio.html",
-          "size": 65676,
-          "hash": "9e5cde0995c108e256b39bb2f454b1c7",
-          "modified": "2026-06-08T12:33:26.251823"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\squirrel-sql-client.html",
-          "size": 66255,
-          "hash": "9f3e21df0e9aa9671c62cbdd9098633f",
-          "modified": "2026-06-08T12:33:59.386358"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\stellarium.html",
-          "size": 77594,
-          "hash": "83a2b455af5280a198560a6969528627",
-          "modified": "2026-06-08T12:32:17.110787"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\subtitle-edit.html",
-          "size": 66112,
-          "hash": "6319266abf732ea3bec85a3daaa915b4",
-          "modified": "2026-06-08T12:29:29.197787"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\subtitle-workshop.html",
-          "size": 74441,
-          "hash": "aeace80a22fe50faed7fc9d0d045d24a",
-          "modified": "2026-06-08T12:34:25.011274"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\sucrose-wallpaper-engine.html",
-          "size": 68522,
-          "hash": "695a00e59461df24c0c4704c3cd817cf",
-          "modified": "2026-06-08T12:29:21.219510"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\sudokusolver.html",
-          "size": 67775,
-          "hash": "fac7149279dae15f47708890fb3dc57c",
-          "modified": "2026-06-08T12:33:44.618080"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\sunnycapturer.html",
-          "size": 63799,
-          "hash": "eb181824d17d0164d4ce61e5ec15dbbf",
-          "modified": "2026-06-08T12:32:19.002627"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\superimage.html",
-          "size": 63322,
-          "hash": "75af8924b8315854750f1606d02f3f6e",
-          "modified": "2026-06-08T12:34:34.016422"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\superpng.html",
-          "size": 63038,
-          "hash": "a9b15ee94aa3ab2632364e4bfd0c773c",
-          "modified": "2026-06-08T12:35:49.474989"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\sweet-home-3d.html",
-          "size": 68810,
-          "hash": "2869662a6c6d9ee815a1c0fbf15684b9",
-          "modified": "2026-06-08T12:31:14.686151"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\syncthing.html",
-          "size": 65148,
-          "hash": "6d7bb2d3754cf350a09da24faa2bdf23",
-          "modified": "2026-06-08T12:29:42.166602"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\synctrayzor.html",
-          "size": 63829,
-          "hash": "78ae66a75d8eb410db36dfc6cbb5b1af",
-          "modified": "2026-06-08T12:35:32.218136"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\synwrite.html",
-          "size": 63151,
-          "hash": "befca32d2d4c3e6a59fc991935442895",
-          "modified": "2026-06-08T12:35:36.806287"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\tabby.html",
-          "size": 68648,
-          "hash": "27956bb9c31f8b1d3419870cd275f5a0",
-          "modified": "2026-06-08T12:30:31.955865"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\tag-editor.html",
-          "size": 67114,
-          "hash": "0161e744a0f0e004cb961ac681e7fbb7",
-          "modified": "2026-06-08T12:30:35.260015"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\taskbarx.html",
-          "size": 65569,
-          "hash": "302ce0b099bddc244946ba3664fe6299",
-          "modified": "2026-06-08T12:35:23.117502"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\tenacity.html",
-          "size": 69167,
-          "hash": "1720b8e412a1dd79cc82d189690cdc92",
-          "modified": "2026-06-08T12:34:27.633278"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\thorium-reader.html",
-          "size": 62391,
-          "hash": "6a7390350e6bec5ba77732a82ac3d499",
-          "modified": "2026-06-08T12:35:19.331558"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\thunderbird.html",
-          "size": 69572,
-          "hash": "f571bf62ad86e6d9785bf98c6e6f867f",
-          "modified": "2026-06-08T12:30:27.499539"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\tigervnc.html",
-          "size": 63623,
-          "hash": "882e037deb1c5dbcc2a6e4fe96efa004",
-          "modified": "2026-06-08T12:33:51.027184"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\tinywall.html",
-          "size": 65118,
-          "hash": "c696b2832dca6aeb65e2abb07d7d1238",
-          "modified": "2026-06-08T12:29:02.017731"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\todolist.html",
-          "size": 74625,
-          "hash": "c011e7055865a2675c596dcbafdcb0a1",
-          "modified": "2026-06-08T12:33:13.857675"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\torrent-editor.html",
-          "size": 64439,
-          "hash": "f502536379f6c7f170d42ad96ac19b86",
-          "modified": "2026-06-08T12:29:11.023986"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\total-registry.html",
-          "size": 63720,
-          "hash": "5d23ea2e489c2c25d07892c991a735d1",
-          "modified": "2026-06-08T12:34:30.655416"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\trafficmonitor.html",
-          "size": 66586,
-          "hash": "aeca343843524abe4605296019337a69",
-          "modified": "2026-06-08T12:32:33.246364"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\transmission.html",
-          "size": 68894,
-          "hash": "3834e4da4b1dd048b5b3a0e071bead4c",
-          "modified": "2026-06-08T12:29:26.276382"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\trilium-notes.html",
-          "size": 64862,
-          "hash": "b9f7ea589062d3a1faedc24e94d87f40",
-          "modified": "2026-06-08T12:30:37.171579"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\tux-paint.html",
-          "size": 63212,
-          "hash": "62108678e7c85a18938d133f701a20f7",
-          "modified": "2026-06-08T12:34:16.981121"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\tuxguitar.html",
-          "size": 63696,
-          "hash": "c88c0cb34064dd35dccec41d803b2b82",
-          "modified": "2026-06-08T12:35:27.748606"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\ultimaker-cura.html",
-          "size": 67896,
-          "hash": "2d7cde4b2ad0c7b90b2ac95c00b920b9",
-          "modified": "2026-06-08T12:29:43.587258"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\ultimate-packer-for-executables.html",
-          "size": 63798,
-          "hash": "7697094a0a9eb5ffaf636a8bc6404e3e",
-          "modified": "2026-06-08T12:32:57.343772"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\ultradefrag.html",
-          "size": 61964,
-          "hash": "3f644c54380179b1cc99dd8c223e7baf",
-          "modified": "2026-06-08T12:35:48.367734"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\ultravnc.html",
-          "size": 68620,
-          "hash": "b4626f39161ba4f533faa128856a0265",
-          "modified": "2026-06-08T12:34:08.004892"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\upscayl.html",
-          "size": 80103,
-          "hash": "070a6fa6186c4f3dd24e9a2c1e227a11",
-          "modified": "2026-06-08T12:34:28.132479"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\ventoy.html",
-          "size": 66806,
-          "hash": "dcf74a5769a04118e810ac00dc3539fc",
-          "modified": "2026-06-08T12:31:46.093588"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\veracrypt.html",
-          "size": 69069,
-          "hash": "6940fd2291f4324d8d2ab4aa56256726",
-          "modified": "2026-06-08T12:34:16.315398"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\veyon.html",
-          "size": 68039,
-          "hash": "fcf91a7383232d433f99c12bd1cd4463",
-          "modified": "2026-06-08T12:34:15.701899"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\vidcoder.html",
-          "size": 67265,
-          "hash": "50f533adc1e0b160026cc90b3d8178e4",
-          "modified": "2026-06-08T12:30:30.055919"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\virtualbox.html",
-          "size": 72259,
-          "hash": "274ee06d710e5e7843592a25a49c707a",
-          "modified": "2026-06-08T12:31:54.705599"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\visual-studio-code.html",
-          "size": 68164,
-          "hash": "c38c66cf466f446916c66501b8607456",
-          "modified": "2026-06-08T12:30:00.489783"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\visualboyadvance-m.html",
-          "size": 74437,
-          "hash": "db51357243b12236404de54ed6e9d47c",
-          "modified": "2026-06-08T12:33:54.175388"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\visualcppredist-aio.html",
-          "size": 70389,
-          "hash": "f0f1f61f2df3faa2e54abd5ee186a7b3",
-          "modified": "2026-06-08T12:28:54.949274"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\vita3k.html",
-          "size": 66775,
-          "hash": "f9f8d514c2fc12df0765536562c7d52a",
-          "modified": "2026-06-08T12:30:33.881099"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\vnote.html",
-          "size": 66268,
-          "hash": "5b9229e9b3155d993d0ffa1fc1fcbb34",
-          "modified": "2026-06-08T12:33:55.721036"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\volumey.html",
-          "size": 64286,
-          "hash": "ebae49e8ae24d4540b65b172900aca6f",
-          "modified": "2026-06-08T12:35:12.739729"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\vscodium.html",
-          "size": 65591,
-          "hash": "072e89a1153dccc722dc7bfc8a31ed8b",
-          "modified": "2026-06-08T12:30:18.946896"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\waifu2x-extension-gui.html",
-          "size": 68009,
-          "hash": "9da676b73bd415327540b0a07fb02827",
-          "modified": "2026-06-08T12:35:05.252839"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\waifu2x-gui.html",
-          "size": 62467,
-          "hash": "7c56d5442d7e4ebe232e5ca55c730969",
-          "modified": "2026-06-08T12:35:04.695688"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\webtorrent.html",
-          "size": 69465,
-          "hash": "baaf0c38c925340f9cef6421f5de26c1",
-          "modified": "2026-06-08T12:35:47.222417"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\whynotwin11.html",
-          "size": 64627,
-          "hash": "6f376ab599c544a67372309b7c1d12d1",
-          "modified": "2026-06-08T12:33:57.914784"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\windows-terminal.html",
-          "size": 66114,
-          "hash": "91cb20bfd11964dbea890ca86c1f554b",
-          "modified": "2026-06-08T12:30:41.862646"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\windterm.html",
-          "size": 78893,
-          "hash": "d20f43679fa3255a4129d6012bb23237",
-          "modified": "2026-06-08T12:34:22.460032"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\windynamicdesktop.html",
-          "size": 64513,
-          "hash": "d4869dd2aa74a6ad8ea7659c1a7d8804",
-          "modified": "2026-06-08T12:34:22.964303"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\wingetui.html",
-          "size": 65084,
-          "hash": "1f3f18f1f257e3d565a9527e8fab7940",
-          "modified": "2026-06-08T12:29:27.576818"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\winmerge.html",
-          "size": 66902,
-          "hash": "4dd7079f74fc5b6923471c0e6352282e",
-          "modified": "2026-06-08T12:30:05.136856"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\winscp.html",
-          "size": 65239,
-          "hash": "8bd39eb29f4d4a82a8f90088faba2f1d",
-          "modified": "2026-06-08T12:32:39.321365"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\winslop.html",
-          "size": 64159,
-          "hash": "e8c9a72401864e112f6d07c772cc2175",
-          "modified": "2026-06-08T12:32:50.642228"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\wox-launcher.html",
-          "size": 63383,
-          "hash": "7abc1a6862a6462dcf6924410e05c8bd",
-          "modified": "2026-06-08T12:34:31.766562"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\wsl-manager.html",
-          "size": 67079,
-          "hash": "dac4aaa0152cd48a91d835dc872ce832",
-          "modified": "2026-06-08T12:32:18.460233"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\xmanager.html",
-          "size": 65311,
-          "hash": "375d49dd9d920745d3e5f50b558e297f",
-          "modified": "2026-06-08T12:29:53.527927"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\xournal.html",
-          "size": 70181,
-          "hash": "366c65d5e30e8e1e4712515f4b50838a",
-          "modified": "2026-06-08T12:32:24.928786"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\xterminal.html",
-          "size": 63498,
-          "hash": "8f904d7f06a3887cc02917912bbeeb6e",
-          "modified": "2026-06-08T12:30:31.394882"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\xtreme-download-manager.html",
-          "size": 69775,
-          "hash": "6c8919a3159ac3d87432ed120ea348fe",
-          "modified": "2026-06-08T12:35:45.327482"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\ydl-ui.html",
-          "size": 64208,
-          "hash": "4c2cd8dae308859deaded64f80d09917",
-          "modified": "2026-06-08T12:35:08.352153"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\youtube-downloader-gui.html",
-          "size": 67794,
-          "hash": "22732ad02d88e849e19bc201296392cf",
-          "modified": "2026-06-08T12:35:30.292555"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\yuzu-emu.html",
-          "size": 65183,
-          "hash": "a3c850584aff66ddd720796344fcfb23",
-          "modified": "2026-06-08T12:35:14.893917"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\articles\\zettlr.html",
-          "size": 68417,
-          "hash": "38d99511a74a9ca1822050147a173924",
-          "modified": "2026-06-08T12:30:59.913618"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_1.html",
-          "size": 58943,
-          "hash": "816b4cc3e6b0084209a18ad969c67126",
-          "modified": "2026-06-08T12:35:56.019332"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_10.html",
-          "size": 59733,
-          "hash": "08a3554bbf4b75907a888f2ae9dd98c6",
-          "modified": "2026-06-08T12:32:08.618421"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_100.html",
-          "size": 59419,
-          "hash": "ea30d1786faa1d185846b5a8f12d4418",
-          "modified": "2026-06-08T12:33:02.613276"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_101.html",
-          "size": 58987,
-          "hash": "a38d67b8c2f00482b327acd62e460124",
-          "modified": "2026-06-08T12:33:03.173094"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_102.html",
-          "size": 58669,
-          "hash": "7a78bc8f63e8e9f7c0b0ba1eaa8824d7",
-          "modified": "2026-06-08T12:33:03.726780"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_103.html",
-          "size": 60074,
-          "hash": "af9df6497d75b7e9e05fd1caab2ba9e0",
-          "modified": "2026-06-08T12:33:04.296304"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_104.html",
-          "size": 58930,
-          "hash": "7ee43d1380310eb320bc1f6574ea5667",
-          "modified": "2026-06-08T12:33:04.874067"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_105.html",
-          "size": 58489,
-          "hash": "dd26f1248b9b11c720d89173557e27cb",
-          "modified": "2026-06-08T12:33:05.469514"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_106.html",
-          "size": 59453,
-          "hash": "4ac413dc90535adfbf6c84de92ecb6e5",
-          "modified": "2026-06-08T12:33:06.055576"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_107.html",
-          "size": 59725,
-          "hash": "ccdae1f80e9f936076ce2628d00e78db",
-          "modified": "2026-06-08T12:33:06.615025"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_108.html",
-          "size": 58846,
-          "hash": "ca6b8f718a886a097673aa75c1ef737c",
-          "modified": "2026-06-08T12:33:07.286772"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_109.html",
-          "size": 59205,
-          "hash": "94f93eb4b881c3e0272636d760a0cafd",
-          "modified": "2026-06-08T12:33:07.819826"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_11.html",
-          "size": 60060,
-          "hash": "f073efd66b1b38f030462f685c4a75a8",
-          "modified": "2026-06-08T12:32:09.186278"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_110.html",
-          "size": 59366,
-          "hash": "edfb0c34e502aeae9a5a4bfc43aec18a",
-          "modified": "2026-06-08T12:33:08.411500"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_111.html",
-          "size": 58348,
-          "hash": "81404ba87d5c7046447f37514165e170",
-          "modified": "2026-06-08T12:33:09.035063"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_112.html",
-          "size": 60033,
-          "hash": "47aedddec6d203179274747dbe9beb0c",
-          "modified": "2026-06-08T12:33:09.585119"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_113.html",
-          "size": 59175,
-          "hash": "e2e3ab8fd336f87a7aa7f4d82f5bf2f9",
-          "modified": "2026-06-08T12:33:10.162560"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_114.html",
-          "size": 59880,
-          "hash": "7453fc5336e8317b76e3bad95bb5b316",
-          "modified": "2026-06-08T12:33:10.698654"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_115.html",
-          "size": 59538,
-          "hash": "eb2f761a0bb60ddc6497852f1226d08f",
-          "modified": "2026-06-08T12:33:11.312620"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_116.html",
-          "size": 59837,
-          "hash": "9d73eae4654c0f0f3a1333edb7fe8f75",
-          "modified": "2026-06-08T12:33:11.948725"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_117.html",
-          "size": 59715,
-          "hash": "1fc56abaeb2bf5ad56ca25620723d6ca",
-          "modified": "2026-06-08T12:33:12.510671"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_118.html",
-          "size": 59197,
-          "hash": "aa4f985eec657914c71c1bd802528250",
-          "modified": "2026-06-08T12:33:13.518061"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_119.html",
-          "size": 59485,
-          "hash": "d328cc6cdf98f34eb2368537e0755b8c",
-          "modified": "2026-06-08T12:33:14.063611"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_12.html",
-          "size": 59726,
-          "hash": "2e58ad8f2deca37c959b48431ace1a66",
-          "modified": "2026-06-08T12:32:10.226247"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_120.html",
-          "size": 59895,
-          "hash": "02c9bc30e8165455f53743b5d04a9bcf",
-          "modified": "2026-06-08T12:33:14.636894"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_121.html",
-          "size": 58946,
-          "hash": "4a67c6e2a84383d07f24581020c681ab",
-          "modified": "2026-06-08T12:33:15.203541"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_122.html",
-          "size": 59136,
-          "hash": "ec7c5137e96a3e6a6b07ed7c00652305",
-          "modified": "2026-06-08T12:33:16.262252"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_123.html",
-          "size": 58510,
-          "hash": "5b612cbbef98888eb355669d6a0b193a",
-          "modified": "2026-06-08T12:33:16.799320"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_124.html",
-          "size": 59545,
-          "hash": "93ca0675f08566f45eea5cee45a34231",
-          "modified": "2026-06-08T12:33:17.355758"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_125.html",
-          "size": 58797,
-          "hash": "cc3018bff98fa8e94db863f2199b6bcb",
-          "modified": "2026-06-08T12:33:17.887365"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_126.html",
-          "size": 58779,
-          "hash": "792c597823a0f0e9973aa2c52340001f",
-          "modified": "2026-06-08T12:33:18.432200"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_127.html",
-          "size": 58965,
-          "hash": "f0b33f0f3b7b099ccca656bd3b1e5ff9",
-          "modified": "2026-06-08T12:33:19.002503"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_128.html",
-          "size": 58538,
-          "hash": "0cdc70efe74520cb09e0d588ac573ea0",
-          "modified": "2026-06-08T12:33:19.671548"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_129.html",
-          "size": 57787,
-          "hash": "66fa927fd2391be31b964ab8907335cc",
-          "modified": "2026-06-08T12:33:20.273633"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_13.html",
-          "size": 59587,
-          "hash": "a49673520199ba3b37765773c5dd1aa8",
-          "modified": "2026-06-08T12:32:10.837640"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_130.html",
-          "size": 58515,
-          "hash": "ab10b604e80cdf6b6a6119c8e88d6c2c",
-          "modified": "2026-06-08T12:33:20.868643"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_131.html",
-          "size": 57953,
-          "hash": "992aeee3de02fb8ca92cbb9a03271714",
-          "modified": "2026-06-08T12:33:21.970006"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_132.html",
-          "size": 57215,
-          "hash": "8940526b1f3709e75779b3a89b31893a",
-          "modified": "2026-06-08T12:33:22.587442"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_133.html",
-          "size": 58231,
-          "hash": "f04909712ca6fb997af0c33d09c1b02e",
-          "modified": "2026-06-08T12:33:23.664780"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_134.html",
-          "size": 57666,
-          "hash": "91a524c20e4c807c8c291f10f62c1f21",
-          "modified": "2026-06-08T12:33:24.238804"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_135.html",
-          "size": 57317,
-          "hash": "df63bcf60c7cf4b4bcf0abca03e1826f",
-          "modified": "2026-06-08T12:33:25.325316"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_136.html",
-          "size": 58305,
-          "hash": "1f9507e2dbe75b544c85c877e5906370",
-          "modified": "2026-06-08T12:33:25.929623"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_137.html",
-          "size": 58064,
-          "hash": "f51a802a15ae9019eae82e3c195843fe",
-          "modified": "2026-06-08T12:33:26.487004"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_138.html",
-          "size": 58188,
-          "hash": "d518e5b021d789b9fe50cf8a3faa0fa4",
-          "modified": "2026-06-08T12:33:27.322859"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_139.html",
-          "size": 57894,
-          "hash": "0fbf772c4436a06325af5393f2b98d07",
-          "modified": "2026-06-08T12:33:28.444664"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_14.html",
-          "size": 59936,
-          "hash": "9aa187a73c1096bee2f0469b29413b3e",
-          "modified": "2026-06-08T12:32:11.450951"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_140.html",
-          "size": 58306,
-          "hash": "1f4a996c347e9ebd54d158f63f7ef0d8",
-          "modified": "2026-06-08T12:33:29.148093"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_141.html",
-          "size": 57855,
-          "hash": "7e51d14a1368a095813489341dcaeaa9",
-          "modified": "2026-06-08T12:33:29.729570"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_142.html",
-          "size": 57645,
-          "hash": "7bab3723c4809eda0d14167367d90064",
-          "modified": "2026-06-08T12:33:30.306093"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_143.html",
-          "size": 57333,
-          "hash": "5ba6280c42bcbe9d66359b4d8bf67c9a",
-          "modified": "2026-06-08T12:33:31.350192"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_144.html",
-          "size": 57344,
-          "hash": "0cbf390fffebab3835ee0a5a4824da8e",
-          "modified": "2026-06-08T12:33:31.915699"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_145.html",
-          "size": 57610,
-          "hash": "e724b9c3285a3dded849fe4d1f3548a6",
-          "modified": "2026-06-08T12:33:32.498893"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_146.html",
-          "size": 56748,
-          "hash": "1e5e94d49bdf431a073a90e90df77204",
-          "modified": "2026-06-08T12:33:33.163746"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_147.html",
-          "size": 57637,
-          "hash": "7cce9455ce0c680a719c8a207634acc0",
-          "modified": "2026-06-08T12:33:33.761369"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_148.html",
-          "size": 57084,
-          "hash": "42abf407ff3598e601edb3a8a8895659",
-          "modified": "2026-06-08T12:33:34.369284"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_149.html",
-          "size": 57044,
-          "hash": "72dc3ef726cfd5ace19f861c32736b3c",
-          "modified": "2026-06-08T12:33:34.874684"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_15.html",
-          "size": 59224,
-          "hash": "e78a7546eef165539885443b762773c9",
-          "modified": "2026-06-08T12:32:12.037680"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_150.html",
-          "size": 56015,
-          "hash": "12a316ed0b9cf0b3330b874a207ca900",
-          "modified": "2026-06-08T12:33:35.437767"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_151.html",
-          "size": 36171,
-          "hash": "94c313560d6c36c653786e516b0e9e7c",
-          "modified": "2026-06-08T12:33:36.087628"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_16.html",
-          "size": 59781,
-          "hash": "df18db7b81b31adb31539c5719454d5f",
-          "modified": "2026-06-08T12:32:12.592296"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_17.html",
-          "size": 59541,
-          "hash": "f565bf12407407c9b8f5b9664aa9c87d",
-          "modified": "2026-06-08T12:32:13.181267"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_18.html",
-          "size": 59486,
-          "hash": "4f06ea95adf33b0fe15f7490a17c1ad0",
-          "modified": "2026-06-08T12:32:13.744708"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_19.html",
-          "size": 59948,
-          "hash": "0ae1ffaf6f39a132cda7e7233d82b20c",
-          "modified": "2026-06-08T12:32:14.272336"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_2.html",
-          "size": 59287,
-          "hash": "68d2b10c03d5337af7cbec42d4709b8a",
-          "modified": "2026-06-08T12:32:04.058167"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_20.html",
-          "size": 59889,
-          "hash": "f2ec73630c06fca08757d8736e0d0a8c",
-          "modified": "2026-06-08T12:32:14.787771"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_21.html",
-          "size": 59942,
-          "hash": "d46d084ac9aa56e3f2b262d66976cdf8",
-          "modified": "2026-06-08T12:32:15.382191"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_22.html",
-          "size": 60078,
-          "hash": "31bcefa75e64083a94e55fd76879af28",
-          "modified": "2026-06-08T12:32:15.939464"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_23.html",
-          "size": 59910,
-          "hash": "63ca9637c1eea08576bc9f22ca979ed9",
-          "modified": "2026-06-08T12:32:16.494696"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_24.html",
-          "size": 60396,
-          "hash": "eb5ceeabdeab3b4808076f38dce042cd",
-          "modified": "2026-06-08T12:32:17.090597"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_25.html",
-          "size": 59085,
-          "hash": "a195d93f6cf3d730bad67224df9cff58",
-          "modified": "2026-06-08T12:32:18.127430"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_26.html",
-          "size": 59451,
-          "hash": "8105bbfdd535e9f20d99e516e3ebca4d",
-          "modified": "2026-06-08T12:32:18.766834"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_27.html",
-          "size": 59195,
-          "hash": "37f63230c88675efe8d8b7e6564e764b",
-          "modified": "2026-06-08T12:32:19.344338"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_28.html",
-          "size": 59388,
-          "hash": "0bbd479d5fb574104264474742f6f627",
-          "modified": "2026-06-08T12:32:19.919647"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_29.html",
-          "size": 59371,
-          "hash": "5091f7eae7b1116f694d9fe87aa773b1",
-          "modified": "2026-06-08T12:32:20.437984"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_3.html",
-          "size": 59598,
-          "hash": "d8a188aa050677f08677bc52845fcae0",
-          "modified": "2026-06-08T12:32:04.640510"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_30.html",
-          "size": 59331,
-          "hash": "a57359a80c018bae925fb1da32e9b58c",
-          "modified": "2026-06-08T12:32:20.979796"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_31.html",
-          "size": 59628,
-          "hash": "80129f1d458eac096b07034054d0b46b",
-          "modified": "2026-06-08T12:32:21.543388"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_32.html",
-          "size": 58990,
-          "hash": "d549ff0282875b29cc0ea1f930d8d4c9",
-          "modified": "2026-06-08T12:32:22.087404"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_33.html",
-          "size": 60141,
-          "hash": "3fde67ffec614fe6d230e1b343a34de9",
-          "modified": "2026-06-08T12:32:22.715958"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_34.html",
-          "size": 59584,
-          "hash": "5a95257aa488a75148bbb0d80ec7dacd",
-          "modified": "2026-06-08T12:32:23.748497"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_35.html",
-          "size": 59948,
-          "hash": "9d50b107e3b6f449a18a92389886517f",
-          "modified": "2026-06-08T12:32:24.355597"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_36.html",
-          "size": 60220,
-          "hash": "a1e66815929b27c221bf65f088407ad0",
-          "modified": "2026-06-08T12:32:25.385750"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_37.html",
-          "size": 59903,
-          "hash": "6ef11dc942aa638fffa208d934c9cb73",
-          "modified": "2026-06-08T12:32:26.015873"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_38.html",
-          "size": 59265,
-          "hash": "c9c736ceaba3b73fa22c72682c0d6d9d",
-          "modified": "2026-06-08T12:32:26.592398"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_39.html",
-          "size": 59304,
-          "hash": "a0abe14aa59866e3d1c2c8ab10f35c96",
-          "modified": "2026-06-08T12:32:27.134036"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_4.html",
-          "size": 59482,
-          "hash": "b2a1dca012754c9129de51cd54ae387c",
-          "modified": "2026-06-08T12:32:05.280538"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_40.html",
-          "size": 58992,
-          "hash": "035d4d7eccd92da619592230b0f84996",
-          "modified": "2026-06-08T12:32:27.692173"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_41.html",
-          "size": 60044,
-          "hash": "0145315865c29a58282c8f410ec81619",
-          "modified": "2026-06-08T12:32:28.344545"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_42.html",
-          "size": 59221,
-          "hash": "61ca8e82289b8cc9c584bae61aa7b898",
-          "modified": "2026-06-08T12:32:28.914172"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_43.html",
-          "size": 59214,
-          "hash": "ac8f44f167d9763d27ea84c1c458f53e",
-          "modified": "2026-06-08T12:32:29.479186"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_44.html",
-          "size": 59751,
-          "hash": "674afd26a96d65ff47b8a14c325f8eb9",
-          "modified": "2026-06-08T12:32:30.099108"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_45.html",
-          "size": 59959,
-          "hash": "95e065b2762c96af0d16703e67173463",
-          "modified": "2026-06-08T12:32:30.704433"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_46.html",
-          "size": 59162,
-          "hash": "e4c59e29b19af94e72663d8689884aa0",
-          "modified": "2026-06-08T12:32:31.259433"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_47.html",
-          "size": 60340,
-          "hash": "3c7ab8a9a3fef065fa193a74cd7b1255",
-          "modified": "2026-06-08T12:32:31.884397"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_48.html",
-          "size": 59827,
-          "hash": "77b4da7d7d1ec83955dfb166bb6143c2",
-          "modified": "2026-06-08T12:32:32.972631"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_49.html",
-          "size": 59435,
-          "hash": "a8d998112478011f8dac8d8f8e4984c6",
-          "modified": "2026-06-08T12:32:33.585015"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_5.html",
-          "size": 59166,
-          "hash": "1846ca2e898a5927a587a1fdd61694d6",
-          "modified": "2026-06-08T12:32:05.852398"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_50.html",
-          "size": 58945,
-          "hash": "103b86b30b1476cc81e31fd7cd23bce0",
-          "modified": "2026-06-08T12:32:34.662810"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_51.html",
-          "size": 59332,
-          "hash": "08686f67b2e8570b994b939925e3f569",
-          "modified": "2026-06-08T12:32:35.344698"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_52.html",
-          "size": 58987,
-          "hash": "a2a7195a9dd2e9be5254c8d03a2e18fa",
-          "modified": "2026-06-08T12:32:35.871610"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_53.html",
-          "size": 60252,
-          "hash": "0fd4f9caaa9031ed251d87c78a9b281b",
-          "modified": "2026-06-08T12:32:36.436949"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_54.html",
-          "size": 60285,
-          "hash": "3e977e2c6839db640322c4cae07de1c6",
-          "modified": "2026-06-08T12:32:37.004983"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_55.html",
-          "size": 59797,
-          "hash": "65d49fb52f6c7fa1d0e9d38520e66651",
-          "modified": "2026-06-08T12:32:37.560427"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_56.html",
-          "size": 60237,
-          "hash": "c4e0630e23c85ee2fb148db97b09353a",
-          "modified": "2026-06-08T12:32:38.176670"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_57.html",
-          "size": 59055,
-          "hash": "461b6a2ad7393f2182a53f1a15c36ff5",
-          "modified": "2026-06-08T12:32:38.742319"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_58.html",
-          "size": 59196,
-          "hash": "b1b5a52d2d50b24005998469c4213e08",
-          "modified": "2026-06-08T12:32:39.261075"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_59.html",
-          "size": 59433,
-          "hash": "811ca58b20e0645416198b0e389618a4",
-          "modified": "2026-06-08T12:32:39.818777"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_6.html",
-          "size": 60264,
-          "hash": "d1e1fc8e883e2f6166c436b1eb7caea5",
-          "modified": "2026-06-08T12:32:06.432624"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_60.html",
-          "size": 60206,
-          "hash": "8f7dbc777ba103ab97b80aa55c7d1ff2",
-          "modified": "2026-06-08T12:32:40.354878"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_61.html",
-          "size": 60085,
-          "hash": "c436fa385da6527ded567c1c321ba617",
-          "modified": "2026-06-08T12:32:40.948115"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_62.html",
-          "size": 59582,
-          "hash": "87660da2916e9ef5a07693e8cad23109",
-          "modified": "2026-06-08T12:32:41.473656"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_63.html",
-          "size": 59668,
-          "hash": "16054409faa5b7ecc613a616ccfa27f3",
-          "modified": "2026-06-08T12:32:41.995067"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_64.html",
-          "size": 59124,
-          "hash": "14456f37ebe095cb77082cb915680830",
-          "modified": "2026-06-08T12:32:42.555092"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_65.html",
-          "size": 59346,
-          "hash": "485eeedfc3d9476d2e594713805a935f",
-          "modified": "2026-06-08T12:32:43.099622"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_66.html",
-          "size": 60152,
-          "hash": "f776c810cab50cd8a2a629de30954be2",
-          "modified": "2026-06-08T12:32:43.689548"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_67.html",
-          "size": 60037,
-          "hash": "3929437fa402033a417136b1243fc008",
-          "modified": "2026-06-08T12:32:44.245352"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_68.html",
-          "size": 59918,
-          "hash": "f67b2d9c1c0f1b6c5c1c030f8ef7dc9e",
-          "modified": "2026-06-08T12:32:44.828047"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_69.html",
-          "size": 59452,
-          "hash": "3a7b10e3b344740c038c62fe9c12d316",
-          "modified": "2026-06-08T12:32:45.371464"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_7.html",
-          "size": 59851,
-          "hash": "a7e351911cb8ae51381095742a3dc6cc",
-          "modified": "2026-06-08T12:32:07.015332"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_70.html",
-          "size": 60213,
-          "hash": "f8793ebb0fb29568bea8c9f451f63427",
-          "modified": "2026-06-08T12:32:45.908494"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_71.html",
-          "size": 59554,
-          "hash": "3b720d7443e49806fa49ed77ed1a82b3",
-          "modified": "2026-06-08T12:32:46.438958"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_72.html",
-          "size": 59308,
-          "hash": "8e473310ced1f6321a78f04d14c6a700",
-          "modified": "2026-06-08T12:32:47.014638"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_73.html",
-          "size": 59411,
-          "hash": "39cb5a27629c876c9ce2ac7e873bd398",
-          "modified": "2026-06-08T12:32:47.576728"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_74.html",
-          "size": 59642,
-          "hash": "c7da1b11429979e2782aee93b863382e",
-          "modified": "2026-06-08T12:32:48.116780"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_75.html",
-          "size": 59634,
-          "hash": "6bc8677dbbcc857b1bd18ae8bcc5661c",
-          "modified": "2026-06-08T12:32:48.658573"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_76.html",
-          "size": 59190,
-          "hash": "a232e6e938a6f07d5368655057d79737",
-          "modified": "2026-06-08T12:32:49.245326"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_77.html",
-          "size": 59897,
-          "hash": "5ea4b6f4088bf57ebbcd9efa63c5fdbd",
-          "modified": "2026-06-08T12:32:49.825141"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_78.html",
-          "size": 59266,
-          "hash": "4a2b69c98502c028313c87477b4a9a85",
-          "modified": "2026-06-08T12:32:50.377808"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_79.html",
-          "size": 59748,
-          "hash": "a803927ea8c54a3f8cf583327a62c7e8",
-          "modified": "2026-06-08T12:32:50.920979"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_8.html",
-          "size": 60170,
-          "hash": "ec4979c1b9318902286847b5bacc24df",
-          "modified": "2026-06-08T12:32:07.542945"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_80.html",
-          "size": 58858,
-          "hash": "4999d2d6033e6a9e992e2286167a7c1a",
-          "modified": "2026-06-08T12:32:51.469942"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_81.html",
-          "size": 59973,
-          "hash": "867d9ab7a66d4099890a843ef85da022",
-          "modified": "2026-06-08T12:32:52.049082"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_82.html",
-          "size": 59490,
-          "hash": "9a7dfaf7930cdcd235b6c2c2a5174c54",
-          "modified": "2026-06-08T12:32:52.629058"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_83.html",
-          "size": 60156,
-          "hash": "ead2bfb558c61832349df22682ed05a0",
-          "modified": "2026-06-08T12:32:53.167142"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_84.html",
-          "size": 59776,
-          "hash": "e068bf4630162194a88ac1ba385fc721",
-          "modified": "2026-06-08T12:32:53.706469"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_85.html",
-          "size": 59295,
-          "hash": "dee6a141cbf2b8ff1c659edaaa0279a3",
-          "modified": "2026-06-08T12:32:54.323225"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_86.html",
-          "size": 58792,
-          "hash": "3f649d1838f21c28074e8c256a412f95",
-          "modified": "2026-06-08T12:32:54.868837"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_87.html",
-          "size": 59303,
-          "hash": "b9db5aaab48338dd131cd47131bc7b40",
-          "modified": "2026-06-08T12:32:55.404792"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_88.html",
-          "size": 58726,
-          "hash": "24de4d267f7225520176b6e94f6c4707",
-          "modified": "2026-06-08T12:32:55.978665"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_89.html",
-          "size": 59443,
-          "hash": "374fe4903198c3177a7d33ead2a541a7",
-          "modified": "2026-06-08T12:32:56.543875"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_9.html",
-          "size": 60515,
-          "hash": "ffb96f1f11d8e1651c12c811296bb629",
-          "modified": "2026-06-08T12:32:08.069617"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_90.html",
-          "size": 59320,
-          "hash": "ec5330377d447245e335f80815a7f1c0",
-          "modified": "2026-06-08T12:32:57.066981"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_91.html",
-          "size": 58943,
-          "hash": "bd2ea50fa6880f5b84cf208af2089f25",
-          "modified": "2026-06-08T12:32:57.640967"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_92.html",
-          "size": 58617,
-          "hash": "c3509b3aef143676a75bb69dbdb75d2c",
-          "modified": "2026-06-08T12:32:58.189157"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_93.html",
-          "size": 59807,
-          "hash": "dfc6323ab5212129ef832dad29031585",
-          "modified": "2026-06-08T12:32:58.740718"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_94.html",
-          "size": 59635,
-          "hash": "98b8f5b85e717fda1dee15667c3c0409",
-          "modified": "2026-06-08T12:32:59.293135"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_95.html",
-          "size": 59292,
-          "hash": "f7545d88717485c52237a6cc3f9bab7d",
-          "modified": "2026-06-08T12:32:59.868273"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_96.html",
-          "size": 59067,
-          "hash": "f97eb1c9fc3cf79e9dca4bab5ca009cd",
-          "modified": "2026-06-08T12:33:00.434431"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_97.html",
-          "size": 58927,
-          "hash": "5871f27e85fbc37a92507cee58139d64",
-          "modified": "2026-06-08T12:33:01.007474"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_98.html",
-          "size": 59374,
-          "hash": "6a17cad5b115a05aedb92ba05da808f5",
-          "modified": "2026-06-08T12:33:01.535711"
-        },
-        {
-          "path": "tools\\dayanzai_cache\\lists\\page_99.html",
-          "size": 59250,
-          "hash": "0368df3a82d385308fc8f79820cff38e",
-          "modified": "2026-06-08T12:33:02.082560"
         },
         {
           "path": "tools\\soft_page_check\\423down_digest_urls.txt",
@@ -28062,274 +24738,16 @@
           "modified": "2026-05-26T14:16:42"
         },
         {
-          "path": "tools\\soft_page_check\\7xiazai_config.json",
-          "size": 465,
-          "hash": "8dadccb03c158f94933d08461de83844",
-          "modified": "2026-06-23T11:32:45.947624"
-        },
-        {
-          "path": "tools\\soft_page_check\\7xiazai_list_urls.txt",
-          "size": 24900,
-          "hash": "13f2392ba00764d3381f87d65f835c78",
-          "modified": "2026-06-27T17:32:19.227422"
-        },
-        {
-          "path": "tools\\soft_page_check\\all_urls.txt",
-          "size": 6594,
-          "hash": "1971118895d0d6d2b2534ec4fc717cf3",
-          "modified": "2026-05-26T14:14:43.567305"
-        },
-        {
-          "path": "tools\\soft_page_check\\build_watchlist.py",
-          "size": 6686,
-          "hash": "9db133a971495dcafda5b72c0f01d653",
-          "modified": "2026-06-23T11:32:45.949917"
-        },
-        {
-          "path": "tools\\soft_page_check\\changed_7xiazai_mobile_urls.txt",
-          "size": 702,
-          "hash": "d2c0539c148d674687831511f81969fc",
-          "modified": "2026-06-27T17:39:19.872898"
-        },
-        {
-          "path": "tools\\soft_page_check\\changed_7xiazai_system_urls.txt",
-          "size": 1317,
-          "hash": "cd06574966a7e89345b1edf3e14ff375",
-          "modified": "2026-06-27T17:37:22.159043"
-        },
-        {
-          "path": "tools\\soft_page_check\\changed_dayanzai_mobile_urls.txt",
-          "size": 291,
-          "hash": "423308bc99dc7d346700f41bf2a20815",
-          "modified": "2026-06-27T17:53:19.085626"
-        },
-        {
-          "path": "tools\\soft_page_check\\changed_dayanzai_system_urls.txt",
-          "size": 1530,
-          "hash": "8e7e7b66edbe3791e262a889e6255178",
-          "modified": "2026-06-27T17:52:19.125141"
-        },
-        {
-          "path": "tools\\soft_page_check\\changed_down66_mobile_urls.txt",
-          "size": 512,
-          "hash": "2c1c519f837f238a348f09432fe3a98f",
-          "modified": "2026-06-27T17:58:03.835576"
-        },
-        {
-          "path": "tools\\soft_page_check\\changed_down66_system_urls.txt",
-          "size": 826,
-          "hash": "1691a79385d9a9df534476b394ade4da",
-          "modified": "2026-06-27T17:55:47.951960"
-        },
-        {
-          "path": "tools\\soft_page_check\\changed_pages_urls.txt",
-          "size": 358,
-          "hash": "5be7c404ff3c12c9375711b2fe7300df",
-          "modified": "2026-06-27T17:33:07.886223"
-        },
-        {
-          "path": "tools\\soft_page_check\\changed_tier_a_urls.txt",
-          "size": 220,
-          "hash": "8bd8cb5fe6fe18922e622f2faffadc0e",
-          "modified": "2026-06-27T17:32:42.736777"
-        },
-        {
-          "path": "tools\\soft_page_check\\extract_423down_digest.py",
-          "size": 1549,
-          "hash": "ad69cd8ae01c666eebc6eb975f288a8d",
-          "modified": "2026-06-23T11:32:45.949917"
-        },
-        {
-          "path": "tools\\soft_page_check\\extract_7xiazai_pages.py",
-          "size": 5992,
-          "hash": "37ea1a7dbc93d02d36f5b0c73bba10f3",
-          "modified": "2026-06-23T11:32:45.949917"
-        },
-        {
-          "path": "tools\\soft_page_check\\extract_gamer520_urls.py",
-          "size": 5128,
-          "hash": "00c24969ebcfa8f79b7e7579586f6dfd",
-          "modified": "2026-06-28T11:39:59.388986"
-        },
-        {
-          "path": "tools\\soft_page_check\\extract_list_system_urls.py",
-          "size": 5971,
-          "hash": "b5ca77b15a1c2cbce833459cfeda1bff",
-          "modified": "2026-06-01T14:50:40.605649"
-        },
-        {
-          "path": "tools\\soft_page_check\\extract_pages.py",
-          "size": 2497,
-          "hash": "0f1f095ae1032018135012bb0d4d8e65",
-          "modified": "2026-06-23T11:32:45.948874"
-        },
-        {
-          "path": "tools\\soft_page_check\\fetch_github_on_changes.bat",
-          "size": 651,
-          "hash": "78b55680ce505018824dc75708c6196f",
-          "modified": "2026-06-23T11:32:45.949917"
-        },
-        {
-          "path": "tools\\soft_page_check\\fetch_titles.bat",
-          "size": 94,
-          "hash": "9c7dbb201e6e5350246b172161be3bdb",
-          "modified": "2026-05-26T17:38:52.633224"
-        },
-        {
-          "path": "tools\\soft_page_check\\fetch_titles.py",
-          "size": 18854,
-          "hash": "02fe0d2f1c92c4b09160a16521081c66",
-          "modified": "2026-06-28T11:32:24.064448"
-        },
-        {
-          "path": "tools\\soft_page_check\\full_check_intro.txt",
-          "size": 772,
-          "hash": "99afb332465b6f8d02aa7e3b35631b5e",
-          "modified": "2026-06-01T14:50:40.599650"
-        },
-        {
-          "path": "tools\\soft_page_check\\gamer520_live_search.py",
-          "size": 2341,
-          "hash": "ed217a396e1eaedd4695f8e560d6b3f7",
-          "modified": "2026-06-28T14:59:59.736192"
-        },
-        {
-          "path": "tools\\soft_page_check\\github_fetch_on_changes.py",
-          "size": 8154,
-          "hash": "e28e54cfc38e2ed4395346a194846e10",
-          "modified": "2026-06-23T11:32:45.935077"
-        },
-        {
           "path": "tools\\soft_page_check\\list_scopes.py",
           "size": 5739,
           "hash": "9e43f78ea4e59b318ed5478b3bd633c2",
           "modified": "2026-06-01T14:50:40"
         },
         {
-          "path": "tools\\soft_page_check\\monthly_check.bat",
-          "size": 1572,
-          "hash": "00b8acd5e55aa21d8d6990e118ed414d",
-          "modified": "2026-06-23T11:32:45.948874"
-        },
-        {
-          "path": "tools\\soft_page_check\\monthly_check_full.bat",
-          "size": 3713,
-          "hash": "aff2fee99f5393fe309c84b82fa8e480",
-          "modified": "2026-06-23T11:32:45.935077"
-        },
-        {
-          "path": "tools\\soft_page_check\\monthly_check_list.bat",
-          "size": 799,
-          "hash": "89cc53fd67ee859c21bdd62cdc8acaa1",
-          "modified": "2026-06-23T11:32:45.898081"
-        },
-        {
-          "path": "tools\\soft_page_check\\monthly_check_site.bat",
-          "size": 3437,
-          "hash": "bd89984ac983607e4ad4c8666027407c",
-          "modified": "2026-06-28T11:27:49.521251"
-        },
-        {
-          "path": "tools\\soft_page_check\\monthly_sop.bat",
-          "size": 7825,
-          "hash": "b77e0ca7ea0a7968556ec394cc6896bf",
-          "modified": "2026-06-23T11:32:45.898081"
-        },
-        {
-          "path": "tools\\soft_page_check\\open_changed_pages.bat",
-          "size": 1222,
-          "hash": "2e0ef4a2f27696b7d2458fdc355901a1",
-          "modified": "2026-05-26T17:38:52.660229"
-        },
-        {
-          "path": "tools\\soft_page_check\\open_changed_site.bat",
-          "size": 1928,
-          "hash": "7769bc9008a8466fd762619351d856b9",
-          "modified": "2026-06-28T11:27:49.521251"
-        },
-        {
-          "path": "tools\\soft_page_check\\open_report.bat",
-          "size": 102,
-          "hash": "81bb5c29d3b96242293aafd5e3194908",
-          "modified": "2026-05-26T17:38:52.633224"
-        },
-        {
-          "path": "tools\\soft_page_check\\open_soft_pages.bat",
-          "size": 690,
-          "hash": "7df1c5c20a70973e2488cae75cb13eea",
-          "modified": "2026-06-23T11:32:45.951201"
-        },
-        {
-          "path": "tools\\soft_page_check\\paths.py",
-          "size": 1866,
-          "hash": "ffb67f10135e68235928cc7dab94ba17",
-          "modified": "2026-06-23T11:32:45.898081"
-        },
-        {
-          "path": "tools\\soft_page_check\\prune_artifacts.bat",
-          "size": 154,
-          "hash": "295bd099918cda255faeb9f55acb2461",
-          "modified": "2026-06-23T11:32:45.947624"
-        },
-        {
-          "path": "tools\\soft_page_check\\prune_artifacts.py",
-          "size": 1585,
-          "hash": "66cd1d89fadd41e24a37b07f16d4698f",
-          "modified": "2026-06-23T11:32:45.949917"
-        },
-        {
-          "path": "tools\\soft_page_check\\README.md",
-          "size": 19589,
-          "hash": "000fd4f0ab0260d23a4f1a103f873e55",
-          "modified": "2026-06-27T17:46:22.531711"
-        },
-        {
-          "path": "tools\\soft_page_check\\refresh_urls.bat",
-          "size": 2159,
-          "hash": "b29139430ae92403dee65abbaf554545",
-          "modified": "2026-06-28T11:39:58.362969"
-        },
-        {
-          "path": "tools\\soft_page_check\\report_html.py",
-          "size": 25871,
-          "hash": "815f919c91086bd1ba1f7cd4b21e0acb",
-          "modified": "2026-06-28T11:40:12.595169"
-        },
-        {
-          "path": "tools\\soft_page_check\\search_games.py",
-          "size": 1891,
-          "hash": "bb5816d39a267ed429c3041bc2b2e8c7",
-          "modified": "2026-06-28T11:26:25.859385"
-        },
-        {
-          "path": "tools\\soft_page_check\\search_pages.py",
-          "size": 14211,
-          "hash": "bd4bee71a36269d5b96cc1b2bfb026a7",
-          "modified": "2026-06-28T15:00:50.932911"
-        },
-        {
           "path": "tools\\soft_page_check\\soft_pages_urls.txt",
           "size": 4618,
           "hash": "73ac0b24431e0fe4b0f99c1474ba1fcd",
           "modified": "2026-05-26T14:14:42"
-        },
-        {
-          "path": "tools\\soft_page_check\\split_7xiazai_urls.py",
-          "size": 5575,
-          "hash": "4fd6ea614b2c847105a18c5ff73fff73",
-          "modified": "2026-06-01T14:50:40.605649"
-        },
-        {
-          "path": "tools\\soft_page_check\\url_meta.json",
-          "size": 15007,
-          "hash": "2655eebfc05b230092107e9e8ef2ee76",
-          "modified": "2026-06-27T17:31:49.916562"
-        },
-        {
-          "path": "tools\\soft_page_check\\watchlist.json",
-          "size": 21279,
-          "hash": "28e57adda2750272a1259417bc768c52",
-          "modified": "2026-06-27T17:31:49.914320"
         },
         {
           "path": "tools\\soft_page_check\\watch_tier_a_urls.txt",
@@ -28470,6 +24888,12 @@
           "modified": "2026-06-27T17:40:34"
         },
         {
+          "path": "tools\\soft_page_check\\history\\titles_HYBASE_MOBILE_2026-07-08_120423.json",
+          "size": 81895,
+          "hash": "a487a679b1f7547ab8df4b50442775f0",
+          "modified": "2026-07-08T12:04:22"
+        },
+        {
           "path": "tools\\soft_page_check\\history\\titles_HYBASE_SYSTEM_2026-06-23_111018.json",
           "size": 121557,
           "hash": "39c13864d9c1586c388807bd6cf10989",
@@ -28480,6 +24904,12 @@
           "size": 121613,
           "hash": "cbd5dcb637d2ef56d20e51dfc86ca191",
           "modified": "2026-06-27T17:40:04"
+        },
+        {
+          "path": "tools\\soft_page_check\\history\\titles_HYBASE_SYSTEM_2026-07-08_120358.json",
+          "size": 121610,
+          "hash": "21870889bc2bcebee58f90ec72f2c310",
+          "modified": "2026-07-08T12:03:58"
         },
         {
           "path": "tools\\soft_page_check\\history\\titles_latest_423DOWN.json",
@@ -28556,14 +24986,26 @@
         {
           "path": "tools\\soft_page_check\\history\\titles_latest_HYBASE_MOBILE.json",
           "size": 81895,
-          "hash": "5da0da605f2703548a7020e76850226f",
-          "modified": "2026-06-27T17:40:34"
+          "hash": "a487a679b1f7547ab8df4b50442775f0",
+          "modified": "2026-07-08T12:04:22"
         },
         {
           "path": "tools\\soft_page_check\\history\\titles_latest_HYBASE_SYSTEM.json",
-          "size": 121613,
-          "hash": "cbd5dcb637d2ef56d20e51dfc86ca191",
-          "modified": "2026-06-27T17:40:04"
+          "size": 121610,
+          "hash": "21870889bc2bcebee58f90ec72f2c310",
+          "modified": "2026-07-08T12:03:58"
+        },
+        {
+          "path": "tools\\soft_page_check\\history\\titles_latest_MACWK.json",
+          "size": 49418,
+          "hash": "4b466d0abea4f9f734ab514dcb825369",
+          "modified": "2026-07-13T15:48:18"
+        },
+        {
+          "path": "tools\\soft_page_check\\history\\titles_MACWK_2026-07-13_154818.json",
+          "size": 49418,
+          "hash": "4b466d0abea4f9f734ab514dcb825369",
+          "modified": "2026-07-13T15:48:18"
         },
         {
           "path": "tools\\soft_page_check\\list\\7xiazai_list_urls.txt",
@@ -28668,321 +25110,33 @@
           "modified": "2026-05-28T10:15:14"
         },
         {
+          "path": "tools\\soft_page_check\\list\\macwk_list.txt",
+          "size": 9056,
+          "hash": "f8def73e56717d644d2442e6e341beb1",
+          "modified": "2026-07-13T15:47:48"
+        },
+        {
+          "path": "tools\\soft_page_check\\list\\macwk_urls.txt",
+          "size": 7065,
+          "hash": "7e16a2ef59ac5a114a16a69b68ad9c7d",
+          "modified": "2026-07-13T15:47:48"
+        },
+        {
           "path": "tools\\soft_page_check\\list\\README.md",
-          "size": 2648,
-          "hash": "4eb17eba8b0635c3470a321ac16b18c8",
-          "modified": "2026-06-28T15:05:06"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\index.html",
-          "size": 5648621,
-          "hash": "6aa098cb6eab094b849de4cae7031656",
-          "modified": "2026-06-28T11:31:19.520798"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\last_diff_423down.json",
-          "size": 82876,
-          "hash": "b780799e557aa0ea6690f545b8ff175b",
-          "modified": "2026-06-27T17:34:16.243835"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\last_diff_7xiazai.json",
-          "size": 15080,
-          "hash": "5d4003674cdaeb9682e02b3b8cdd9945",
-          "modified": "2026-05-28T14:21:42.308231"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\last_diff_7xiazai_mobile.json",
-          "size": 8294,
-          "hash": "575bd84c16219c4487a27255a4cd66b6",
-          "modified": "2026-06-27T17:39:19.872898"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\last_diff_7xiazai_system.json",
-          "size": 13990,
-          "hash": "e426bcd65a4a39fdd70b2678717f3f87",
-          "modified": "2026-06-27T17:37:22.153053"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\last_diff_a.json",
-          "size": 4130,
-          "hash": "88812d4c2e10cb885025026da3a8ac7a",
-          "modified": "2026-06-27T17:32:42.735714"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\last_diff_all.json",
-          "size": 11146,
-          "hash": "26f7684bf3efa7638f4de3b6ab8d2769",
-          "modified": "2026-06-27T17:33:07.886223"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\last_diff_dayanzai_mobile.json",
-          "size": 3216,
-          "hash": "8de61f7931876fd7ad32e282fce630b2",
-          "modified": "2026-06-27T17:53:19.085021"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\last_diff_dayanzai_system.json",
-          "size": 19296,
-          "hash": "fc3fb56e6d1d574db54ff1995745a193",
-          "modified": "2026-06-27T17:52:19.125141"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\last_diff_down66_mobile.json",
-          "size": 6983,
-          "hash": "ab68609aa272e2765eb4e12bbab04adb",
-          "modified": "2026-06-27T17:58:03.835576"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\last_diff_down66_system.json",
-          "size": 10386,
-          "hash": "c6546817c7d3c0ecc2d619c7248a4191",
-          "modified": "2026-06-27T17:55:47.950893"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\last_diff_hybase_mobile.json",
-          "size": 102628,
-          "hash": "2c24bd5c9177841880865b6a61d05cba",
-          "modified": "2026-06-27T17:40:35.972742"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\last_diff_hybase_system.json",
-          "size": 152206,
-          "hash": "5782c06007817f241336cde953daf48a",
-          "modified": "2026-06-27T17:40:04.627328"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\report_423DOWN_2026-06-23_110510.txt",
-          "size": 4518,
-          "hash": "b1fe2a3c21c2257c611422a93c871dc9",
-          "modified": "2026-06-23T11:05:10.899968"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\report_423DOWN_2026-06-27_173416.txt",
-          "size": 5000,
-          "hash": "ab4d54cf46535c3dac2a0b394050a8ea",
-          "modified": "2026-06-27T17:34:16.233243"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\report_7XIAZAI_MOBILE_2026-06-23_110943.txt",
-          "size": 5773,
-          "hash": "60c816e9954a850819d1267b339f06ec",
-          "modified": "2026-06-23T11:09:43.692933"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\report_7XIAZAI_MOBILE_2026-06-27_173919.txt",
-          "size": 4911,
-          "hash": "74b584fa3a9906734d698996698cbb09",
-          "modified": "2026-06-27T17:39:19.870690"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\report_7XIAZAI_SYSTEM_2026-06-23_110808.txt",
-          "size": 8951,
-          "hash": "025ac798aad13ae6141091f47206bd05",
-          "modified": "2026-06-23T11:08:08.565154"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\report_7XIAZAI_SYSTEM_2026-06-27_173722.txt",
-          "size": 7868,
-          "hash": "ac13da2d2b0c3353fb8474ba61658211",
-          "modified": "2026-06-27T17:37:22.149937"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\report_ALL_2026-06-23_110347.txt",
-          "size": 5829,
-          "hash": "b1d16f71c455f5fb64b2ae6f75f392eb",
-          "modified": "2026-06-23T11:03:47.416236"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\report_ALL_2026-06-27_173307.txt",
-          "size": 6863,
-          "hash": "d5b67d786cad8f4e7e2dc43319782ddc",
-          "modified": "2026-06-27T17:33:07.884032"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\report_A_2026-06-23_110027.txt",
-          "size": 4504,
-          "hash": "e0e9c1dd9c62c0c42823b94868ced0a2",
-          "modified": "2026-06-23T11:00:27.448375"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\report_A_2026-06-23_110259.txt",
-          "size": 1673,
-          "hash": "d12df7dec48fad27ef105530a939355f",
-          "modified": "2026-06-23T11:02:59.676317"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\report_A_2026-06-27_173242.txt",
-          "size": 2437,
-          "hash": "ba69aeecef98bc6e03d9a455730baa33",
-          "modified": "2026-06-27T17:32:42.733608"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\report_DAYANZAI_MOBILE_2026-06-23_112515.txt",
-          "size": 6306,
-          "hash": "96da17f7e62a7b7253eceb7711b4c270",
-          "modified": "2026-06-23T11:25:15.126624"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\report_DAYANZAI_MOBILE_2026-06-27_175319.txt",
-          "size": 1965,
-          "hash": "489589b49b62c8fb5b71f270483098d9",
-          "modified": "2026-06-27T17:53:19.083132"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\report_DAYANZAI_SYSTEM_2026-06-23_112407.txt",
-          "size": 50821,
-          "hash": "fb538636fa565e7fe0995b32d1e04113",
-          "modified": "2026-06-23T11:24:07.642730"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\report_DAYANZAI_SYSTEM_2026-06-27_175219.txt",
-          "size": 11144,
-          "hash": "b13c586e962f32078e42dc094d1ed01e",
-          "modified": "2026-06-27T17:52:19.122584"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\report_DOWN66_MOBILE_2026-06-23_112852.txt",
-          "size": 5596,
-          "hash": "3de75a8c0e1ec77e4861a14b8f3fe9f5",
-          "modified": "2026-06-23T11:28:52.557436"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\report_DOWN66_MOBILE_2026-06-27_175803.txt",
-          "size": 4263,
-          "hash": "d80d977cb768cfd9835b4e1594f198d8",
-          "modified": "2026-06-27T17:58:03.833154"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\report_DOWN66_SYSTEM_2026-06-23_112732.txt",
-          "size": 7716,
-          "hash": "c33394132435fbf88177b2015e382d2d",
-          "modified": "2026-06-23T11:27:32.681510"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\report_DOWN66_SYSTEM_2026-06-27_175547.txt",
-          "size": 6163,
-          "hash": "6fba82207291d204d643d4ab45db67a3",
-          "modified": "2026-06-27T17:55:47.949847"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\report_HYBASE_MOBILE_2026-06-23_111030.txt",
-          "size": 5477,
-          "hash": "0f39ac0b1a019622e3beeade0c7bd46a",
-          "modified": "2026-06-23T11:10:30.348773"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\report_HYBASE_MOBILE_2026-06-27_174035.txt",
-          "size": 6252,
-          "hash": "1717758198c8b9abef2262b352ab9aa6",
-          "modified": "2026-06-27T17:40:35.962743"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\report_HYBASE_SYSTEM_2026-06-23_111018.txt",
-          "size": 5340,
-          "hash": "4fe3dee8399486d8a2f181ba7354e997",
-          "modified": "2026-06-23T11:10:18.171297"
-        },
-        {
-          "path": "tools\\soft_page_check\\reports\\report_HYBASE_SYSTEM_2026-06-27_174004.txt",
-          "size": 6184,
-          "hash": "233d330f9485de6c2831181e157d0b8e",
-          "modified": "2026-06-27T17:40:04.613589"
-        },
-        {
-          "path": "VibeCodingToolsDown\\.gitignore",
-          "size": 94,
-          "hash": "51767e7ff5f6007f461e6a6b805182a1",
-          "modified": "2026-04-14T12:57:15.779022"
-        },
-        {
-          "path": "VibeCodingToolsDown\\README.md",
-          "size": 2896,
-          "hash": "ed4d2ecf6a3d15dae876f43f32b13780",
-          "modified": "2026-04-20T14:53:43.242490"
-        },
-        {
-          "path": "VibeCodingToolsDown\\requirements.txt",
-          "size": 119,
-          "hash": "e12745b7ae5b180cb9df016c859c7f02",
-          "modified": "2026-04-14T12:17:32.297787"
-        },
-        {
-          "path": "VibeCodingToolsDown\\root.json",
-          "size": 1996,
-          "hash": "a9f4a94efc6ef3a75cdc290f210561e0",
-          "modified": "2026-04-20T15:38:03.785362"
-        },
-        {
-          "path": "VibeCodingToolsDown\\run_update_VibeCodingToolsDown.bat",
-          "size": 922,
-          "hash": "9b8214da20eb9130bd3b79ed390a03b1",
-          "modified": "2026-04-20T14:53:44.242563"
-        },
-        {
-          "path": "VibeCodingToolsDown\\vibe_update.py",
-          "size": 1473,
-          "hash": "e3361e2e866d30c5d5fb472e313ef2a3",
-          "modified": "2026-04-14T12:16:14.893952"
-        },
-        {
-          "path": "VibeCodingToolsDown\\ci\\gh-pages-standalone-repo.example.yml",
-          "size": 1707,
-          "hash": "77ae1f2bc5ad052e36ff36c673852a6b",
-          "modified": "2026-04-14T12:17:36.683482"
-        },
-        {
-          "path": "VibeCodingToolsDown\\ci\\vibecodingtoolsdown-pages.monorepo.example.yml",
-          "size": 2351,
-          "hash": "800707663344ff404ef0784b74180535",
-          "modified": "2026-04-14T13:05:43.916703"
-        },
-        {
-          "path": "VibeCodingToolsDown\\darwin\\01-VibeCodingToolsDown.json",
-          "size": 8942,
-          "hash": "f0be7fa76bf3ec287190c198015cfdc2",
-          "modified": "2026-04-28T10:52:19.254824"
+          "size": 2830,
+          "hash": "8803e5b9bfc004429e75652d77f7b45f",
+          "modified": "2026-07-14T15:18:42"
         },
         {
           "path": "VibeCodingToolsDown\\dist\\vibecoding\\manifest.json",
-          "size": 20557,
-          "hash": "94e71954be70586a048fc7e4f7388d13",
-          "modified": "2026-07-06T11:09:10"
-        },
-        {
-          "path": "VibeCodingToolsDown\\linux\\01-VibeCodingToolsDown.json",
-          "size": 8243,
-          "hash": "80f3e638a33a0ebbf612145f961e1d99",
-          "modified": "2026-04-28T10:52:21.234470"
-        },
-        {
-          "path": "VibeCodingToolsDown\\scripts\\build_manifest.py",
-          "size": 38219,
-          "hash": "d38f457910c40e8a18a6e0fe91a9da64",
-          "modified": "2026-04-28T10:52:01.915115"
-        },
-        {
-          "path": "VibeCodingToolsDown\\tools\\apply_enabled_snapshot.bat",
-          "size": 176,
-          "hash": "242fd8a74035e3866d5cf8081725d593",
-          "modified": "2026-04-14T12:57:24.135386"
-        },
-        {
-          "path": "VibeCodingToolsDown\\tools\\reset_enabled_json.bat",
-          "size": 210,
-          "hash": "880b183c715632a14e2d1a7e2ef47ac9",
-          "modified": "2026-04-14T12:57:23.366044"
-        },
-        {
-          "path": "VibeCodingToolsDown\\windows\\01-VibeCodingToolsDown.json",
-          "size": 10214,
-          "hash": "5df1d65d0ab4d4db1791f209d6bfd7ab",
-          "modified": "2026-04-28T10:52:16.244682"
+          "size": 22218,
+          "hash": "acc9db3e718dbfc95d917fecd7994732",
+          "modified": "2026-07-08T11:52:28"
         }
       ],
-      "total_files": 863,
-      "total_size": 92528255,
-      "last_updated": "2026-07-06T17:40:28.288290"
+      "total_files": 222,
+      "total_size": 53589129,
+      "last_updated": "2026-07-14T15:25:00.312009"
     }
   }
 }

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="site-mobile.css">
+<title>Plan — 先想清楚再让AI动手 — AI第一思考 — AINav</title>
+<meta name="description" content="Plan是AI时代最被低估的能力：痛点诊断、真实案例、落地模板、闭环验收。没有Plan的AI=高速公路上蒙着眼开车。">
+<link rel="canonical" href="https://aiv123.com/plan.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Plan — 先想清楚再让AI动手">
+<meta property="og:description" content="AI时代最被低估的能力：5个必答题、Plan模板、对比案例、闭环验收。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%23f97316'/><text x='50' y='72' font-size='48' text-anchor='middle' fill='white' font-family='system-ui' font-weight='700'>Plan</text></svg>">
+<style>
+::root,html[data-theme="dark"]{--bg:#0f1419;--panel:#151b23;--card:#1c2430;--border:#2d3848;--text:#e6edf3;--muted:#8b9cb3;--accent:#58a6ff;--accent2:#3fb950;--warn:#d29922;--danger:#f85149;--hot:#ff6b6b;--af:#f97316;--af2:#06b6d2;--af3:#a78bfa}
+html[data-theme="light"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;--text:#1f2328;--muted:#59636e;--accent:#0969da;--accent2:#1a7f37;--warn:#9a6700;--danger:#cf222e;--hot:#e53935;--af:#ea580c;--af2:#0891b2;--af3:#7c3aed}
+@media(prefers-color-scheme:light){html[data-theme="system"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;--text:#1f2328;--muted:#59636e;--accent:#0969da;--accent2:#1a7f37;--warn:#9a6700;--danger:#cf222e;--hot:#e53935;--af:#ea580c;--af2:#0891b2;--af3:#7c3aed}}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.cp-top{padding:.75rem 1rem;border-bottom:1px solid var(--border);background:var(--panel);position:sticky;top:0;z-index:10}
+.cp-top-inner{max-width:76rem;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;justify-content:space-between}
+.cp-nav a{font-weight:600;margin-right:1rem;font-size:.88rem}
+.cp-toolbar{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center}
+.theme-btn{font-size:.72rem;padding:.2rem .5rem;border-radius:5px;border:1px solid var(--border);background:var(--card);color:var(--muted);cursor:pointer;font-family:inherit}
+.theme-btn.is-active{color:var(--accent);border-color:var(--accent);font-weight:600}
+.cp-wrap{max-width:76rem;margin:0 auto;padding:1rem}h1{font-size:1.35rem;margin:0 0 .3rem}
+.cp-subtitle{font-size:.88rem;color:var(--muted);margin-bottom:1rem}
+.cp-section-hd{font-size:1.1rem;font-weight:700;margin:1.8rem 0 .8rem;padding-bottom:.3rem;border-bottom:2px solid var(--border);display:flex;align-items:center;gap:.5rem}
+.cp-section-hd .cp-flag{font-size:1.15rem}
+.af-grid{display:grid;grid-template-columns:1fr;gap:1rem}
+@media(min-width:52rem){.af-grid{grid-template-columns:1fr 1fr}}
+.af-tool{border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden;transition:border-color .15s}
+.af-tool:hover{border-color:var(--af)}
+.af-tool-head{padding:.7rem 1rem;border-bottom:1px solid var(--border);display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .6rem}
+.af-tool-name{font-size:1rem;font-weight:700;flex:1 1 auto}
+.af-tool-price{font-size:.88rem;font-weight:700;white-space:nowrap}
+.af-tool-body{padding:.7rem 1rem;font-size:.82rem;line-height:1.7}
+.af-tool-body ul{padding-left:1.1rem;margin:.3rem 0}.af-tool-body li{margin-bottom:.25rem}.af-tool-body strong{color:var(--text)}
+.af-profit-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:8px;background:var(--card);margin-bottom:1.5rem}
+.af-profit{width:100%;border-collapse:collapse;font-size:.78rem}
+.af-profit th,.af-profit td{padding:.4rem .55rem;border:1px solid var(--border);text-align:left;white-space:nowrap}
+.af-profit th{background:var(--panel);font-weight:600;color:var(--muted);font-size:.72rem}
+.cp-updated-line { font-size: 0.76rem; color: var(--muted); margin: 0 0 0.3rem; }
+.cp-footer {max-width:76rem;margin:2rem auto 1rem;padding:0 1rem;font-size:.76rem;color:var(--muted);text-align:center}
+.cp-footer a{color:var(--muted)}
+.case-card{border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden;margin-bottom:1rem}
+.case-card-head{padding:.7rem 1rem;border-bottom:1px solid var(--border);font-weight:700;font-size:.95rem;display:flex;align-items:center;gap:.5rem}
+.case-card-body{padding:.7rem 1rem;font-size:.82rem;line-height:1.7}
+.case-card-body ul{padding-left:1.1rem;margin:.3rem 0}.case-card-body li{margin-bottom:.3rem}.case-card-body strong{color:var(--text)}
+.case-metric{display:inline-flex;align-items:center;gap:.3rem;padding:.25rem .6rem;border-radius:6px;background:rgba(249,115,22,.06);border:1px solid rgba(249,115,22,.15);font-size:.78rem;font-weight:600;color:var(--af);margin:.2rem .3rem .2rem 0}
+.tf-nav{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.5rem 0}
+.tf-nav a{padding:.5rem 1rem;border-radius:8px;border:1px solid var(--border);background:var(--card);font-size:.85rem;font-weight:600;transition:border-color .15s}
+.tf-nav a:hover{text-decoration:none;border-color:var(--af)}
+.tf-nav a.is-active{border-color:var(--af);color:var(--af);background:rgba(249,115,22,.06)}
+.highlight-box{padding:.6rem 1rem;border-radius:6px;font-size:.78rem;line-height:1.7;margin:.5rem 0}
+</style>
+</head>
+<body>
+
+<div class="cp-top">
+<div class="cp-top-inner">
+  <div class="cp-nav"><a href="index.html">AINav</a><a href="thinking-framework.html">AI第一思考</a><a href="plan.html" style="color:var(--af)">Plan</a></div>
+  <div class="cp-toolbar">
+    <button class="theme-btn is-active" data-theme-set="dark">Dark</button>
+    <button class="theme-btn" data-theme-set="light">Light</button>
+    <button class="theme-btn" data-theme-set="system">System</button>
+  </div>
+</div>
+</div>
+
+<div class="cp-wrap">
+
+<h1>🗺️ Plan — 先想清楚，再让AI动手</h1>
+<div class="cp-subtitle">AI时代最被低估的能力。没有Plan的AI = 高速公路上蒙着眼开车。</div>
+
+<div class="tf-nav">
+  <a href="ask.html">💬 Ask</a>
+  <a href="plan.html" class="is-active">🗺️ Plan</a>
+  <a href="debug.html">🔧 Debug</a>
+  <a href="agent.html">🤖 Agent</a>
+</div>
+
+<!-- ==================== 痛点 ==================== -->
+<div class="cp-section-hd"><span class="cp-flag">🔥</span> 痛点 — 为什么不Plan一定翻车</div>
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">痛点1：AI太快 → 错得更远</div></div>
+  <div class="af-tool-body">
+    <strong>症状：</strong>让AI直接写代码/做视频/出方案，1分钟出结果，但方向完全错了。<br><br>
+    <strong>真相：</strong>AI执行速度是人的100倍，但思考时间是0。人写代码1小时思考30分钟（33%），AI写代码1分钟思考0分钟（0%）。<br><br>
+    <div class="highlight-box" style="background:rgba(248,81,73,.04);border:1px solid rgba(248,81,73,.12)">
+    <strong>核心问题：</strong>跑得越快，偏得越远。AI 1分钟走错方向 = 你手动写1小时走错方向，但更快、更难回头。
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">痛点2：边做边改 → 越改越乱</div></div>
+  <div class="af-tool-body">
+    <strong>症状：</strong>AI出了第一版，你发现不对→让AI改→又不对→再改→改到最后架构都变了→还不如重写。<br><br>
+    <strong>真相：</strong>没有Plan的修改是在打补丁。补丁之上打补丁，代码/方案会变成"意大利面条"——能跑但没人敢动。<br><br>
+    <div class="highlight-box" style="background:rgba(210,153,34,.04);border:1px solid rgba(210,153,34,.12)">
+    <strong>核心问题：</strong>没有蓝图的施工 = 想到哪建到哪。改到第5版时，第1版的代码已经成了累赘。
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">痛点3：范围蔓延 → 永远做不完</div></div>
+  <div class="af-tool-body">
+    <strong>症状：</strong>本来做个登录页，做着做着加了注册、加了个人中心、加了社交功能……3天了登录还没做完。<br><br>
+    <strong>真相：</strong>AI不会说"这不在我范围内"。你让它做，它就做。没有边界定义，项目必然失控。<br><br>
+    <div class="highlight-box" style="background:rgba(88,166,255,.04);border:1px solid rgba(88,166,255,.12)">
+    <strong>核心问题：</strong>没有边界的项目 = 无限的需求。AI的"执行力"在这里反而成了危害。
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">痛点4：没有回退方案 → 卡住了</div></div>
+  <div class="af-tool-body">
+    <strong>症状：</strong>AI做了80%突然卡住了（API限制/能力不足/格式问题），你不知道怎么接手，只能从头来。<br><br>
+    <strong>真相：</strong>好的Plan会提前定义"如果AI做不到，人怎么接手"。没有这个准备，AI一旦翻车就是100%返工。<br><br>
+    <div class="highlight-box" style="background:rgba(63,185,80,.04);border:1px solid rgba(63,185,80,.12)">
+    <strong>核心问题：</strong>没有回退方案 = 把100%的赌注押在AI上。这不是提效，是冒险。
+    </div>
+  </div></div>
+</div>
+
+<!-- ==================== 案例 ==================== -->
+<div class="cp-section-hd"><span class="cp-flag">📋</span> 案例 — Plan vs 不Plan 的真实对比</div>
+
+<div class="case-card">
+  <div class="case-card-head">💻 案例1：开发AI导航站新功能</div>
+  <div class="case-card-body">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem;font-size:.78rem">
+      <div style="padding:.6rem;border-radius:6px;background:rgba(248,81,73,.04);border:1px solid rgba(248,81,73,.12)">
+        <strong style="color:var(--danger)">❌ 不Plan</strong><br>
+        1. "帮我加个搜索功能" → AI写了一个基础搜索<br>
+        2. 发现要模糊搜索 → 让AI改<br>
+        3. 发现要分类筛选 → 让AI再加<br>
+        4. 发现要拼音搜索 → 让AI再改<br>
+        5. 发现性能不行 → 重写搜索逻辑<br>
+        6. 发现移动端适配问题 → 再改UI<br>
+        <strong>总耗时：6小时，改了8版</strong>
+      </div>
+      <div style="padding:.6rem;border-radius:6px;background:rgba(63,185,80,.04);border:1px solid rgba(63,185,80,.12)">
+        <strong style="color:var(--accent2)">✅ 先Plan</strong><br>
+        1. 5分钟写计划：<br>
+        &nbsp;&nbsp;· 目标：支持模糊+分类+拼音搜索<br>
+        &nbsp;&nbsp;· 技术：Fuse.js，前端筛选<br>
+        &nbsp;&nbsp;· 步骤：数据准备→组件→样式→测试<br>
+        &nbsp;&nbsp;· 边界：不做后端搜索<br>
+        2. AI按计划执行，一次通过<br>
+        3. 微调2处样式<br>
+        <strong>总耗时：1.5小时，改了2版</strong>
+      </div>
+    </div>
+    <div style="margin-top:.6rem">
+      <span class="case-metric">省时：4x</span>
+      <span class="case-metric">修改版次：8次 → 2次</span>
+      <span class="case-metric">Plan用时：5分钟</span>
+    </div>
+  </div>
+</div>
+
+<div class="case-card">
+  <div class="case-card-head">🎬 案例2：制作AI产品宣传视频</div>
+  <div class="case-card-body">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem;font-size:.78rem">
+      <div style="padding:.6rem;border-radius:6px;background:rgba(248,81,73,.04);border:1px solid rgba(248,81,73,.12)">
+        <strong style="color:var(--danger)">❌ 不Plan</strong><br>
+        1. 让AI写脚本 → 太长了<br>
+        2. 让AI缩短 → 没重点了<br>
+        3. 自己改脚本 → 1小时<br>
+        4. 用剪映做视频 → 素材不够<br>
+        5. 用AI出图当素材 → 风格不统一<br>
+        6. 重做素材 → 2小时<br>
+        <strong>总耗时：2天</strong>
+      </div>
+      <div style="padding:.6rem;border-radius:6px;background:rgba(63,185,80,.04);border:1px solid rgba(63,185,80,.12)">
+        <strong style="color:var(--accent2)">✅ 先Plan</strong><br>
+        1. 10分钟写计划：<br>
+        &nbsp;&nbsp;· 目标：30秒TikTok风宣传片<br>
+        &nbsp;&nbsp;· 步骤：脚本→配音→素材→剪辑<br>
+        &nbsp;&nbsp;· 风格：深色+科技感，统一prompt<br>
+        &nbsp;&nbsp;· 回退：AI素材不行用屏幕录制<br>
+        2. AI写脚本 → 1轮修改<br>
+        3. 用统一风格出图 → 1次通过<br>
+        4. 剪映拼装 → 2小时<br>
+        <strong>总耗时：4小时</strong>
+      </div>
+    </div>
+    <div style="margin-top:.6rem">
+      <span class="case-metric">省时：4x</span>
+      <span class="case-metric">返工次数：6次 → 1次</span>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 落地 ==================== -->
+<div class="cp-section-hd"><span class="cp-flag">🛠️</span> 落地 — Plan的5个必答题 + 模板</div>
+
+<div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">做任何AI项目前，先回答这5个问题</div></div>
+<div class="af-tool-body">
+  <div class="af-profit-wrap" style="margin:0">
+  <table class="af-profit">
+  <tr><th>#</th><th>问题</th><th>为什么重要</th><th>不回答的后果</th></tr>
+  <tr><td><strong>1</strong></td><td>目标：最终要产出什么？</td><td>AI需要明确的终点</td><td>做了一半发现不是想要的</td></tr>
+  <tr><td><strong>2</strong></td><td>里程碑：分几步？每步验收标准？</td><td>大任务必须拆小</td><td>一次塞太多→AI也乱</td></tr>
+  <tr><td><strong>3</strong></td><td>依赖：每步需要什么输入？</td><td>AI不能凭空产出</td><td>做到某步发现缺素材/数据</td></tr>
+  <tr><td><strong>4</strong></td><td>回退：AI不满意时人能接手吗？</td><td>不是所有事AI都能做</td><td>AI卡住→100%返工</td></tr>
+  <tr><td><strong>5</strong></td><td>边界：哪些环节必须人工？</td><td>防止范围蔓延</td><td>越做越多→永远做不完</td></tr>
+  </table>
+  </div>
+  <br><strong>5分钟回答完这5个问题，省2-4小时返工。ROI = 30:1。</strong>
+</div></div>
+
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">万能Plan模板</div></div>
+  <div class="af-tool-body">
+    <div style="padding:.8rem;border-radius:8px;background:rgba(249,115,22,.04);border:1px solid rgba(249,115,22,.12);font-size:.82rem;line-height:1.8">
+      <strong style="color:var(--af);font-size:.95rem">AI项目Plan模板</strong><br><br>
+      <strong>🎯 目标：</strong>[1句话描述最终产出]<br>
+      <strong>📐 范围：</strong>[包含什么 / 不包含什么]<br><br>
+      <strong>📋 步骤：</strong><br>
+      &nbsp;&nbsp;Step 1：[做什么] → 验收：[标准] → 需要：[输入]<br>
+      &nbsp;&nbsp;Step 2：[做什么] → 验收：[标准] → 需要：[输入]<br>
+      &nbsp;&nbsp;Step 3：[做什么] → 验收：[标准] → 需要：[输入]<br><br>
+      <strong>🔄 回退方案：</strong>[如果AI输出不满意，人怎么接管]<br>
+      <strong>🚫 边界：</strong>[明确不做的事]<br>
+      <strong>⏱ 预估时间：</strong>[总时长]
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">用AI帮你想Plan（元技巧）</div></div>
+  <div class="af-tool-body">
+    <div style="padding:.6rem;border-radius:6px;background:rgba(88,166,255,.04);border:1px solid rgba(88,166,255,.1);font-size:.78rem;line-height:1.7">
+      "我想做<strong>[XX项目]</strong>。请先帮我制定一个分步计划，包括：每步目标、所需工具/素材、验收标准、预估时间。<strong>不要开始执行，只输出计划。</strong>"
+    </div>
+    <br>
+    <strong>操作流程：</strong><br>
+    1. 让AI生成Plan → 2. 你审阅修改 → 3. 确认后逐步执行<br><br>
+    <strong>这就是Cursor Agent模式的核心：</strong>Think before you act。先Plan再Execute，人也一样。
+  </div></div>
+</div>
+
+<!-- ==================== 闭环 ==================== -->
+<div class="cp-section-hd"><span class="cp-flag">🔄</span> 闭环 — Plan不是一次性文档，是活文档</div>
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">Plan的闭环流程</div></div>
+  <div class="af-tool-body">
+    <div style="display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;justify-content:center;font-size:.82rem;font-weight:600;margin:.5rem 0">
+      <span style="padding:.3rem .6rem;border-radius:6px;background:rgba(249,115,22,.08);border:1px solid rgba(249,115,22,.18);color:var(--af)">① 写Plan</span>
+      <span style="color:var(--muted)">→</span>
+      <span style="padding:.3rem .6rem;border-radius:6px;background:rgba(88,166,255,.08);border:1px solid rgba(88,166,255,.18);color:var(--accent)">② 按步执行</span>
+      <span style="color:var(--muted)">→</span>
+      <span style="padding:.3rem .6rem;border-radius:6px;background:rgba(210,153,34,.08);border:1px solid rgba(210,153,34,.18);color:var(--warn)">③ 每步验收</span>
+      <span style="color:var(--muted)">→</span>
+      <span style="padding:.3rem .6rem;border-radius:6px;background:rgba(248,81,73,.08);border:1px solid rgba(248,81,73,.18);color:var(--danger)">④ 偏差修正</span>
+      <span style="color:var(--muted)">→</span>
+      <span style="padding:.3rem .6rem;border-radius:6px;background:rgba(249,115,22,.08);border:1px solid rgba(249,115,22,.18);color:var(--af)">①' 更新Plan</span>
+    </div>
+    <br>
+    <strong>关键原则：每完成一步就验收。不通过就更新Plan，不继续往下走。</strong>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">什么时候必须更新Plan</div></div>
+  <div class="af-tool-body">
+    <ul>
+      <li><strong>发现新需求：</strong>做到一半发现还需要XX功能 → 更新步骤，不要直接加</li>
+      <li><strong>某步做不了：</strong>AI输出质量不够 → 触发回退方案或换技术路线</li>
+      <li><strong>顺序依赖变化：</strong>Step 3需要Step 5的产出 → 调整步骤顺序</li>
+      <li><strong>时间超预期：</strong>某步用了预估的3倍时间 → 重新评估剩余步骤</li>
+    </ul>
+    <strong>Plan不是合同，是地图。地图要根据实际路况更新。</strong>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">验收Checklist</div></div>
+  <div class="af-tool-body">
+    <div class="af-profit-wrap" style="margin:0">
+    <table class="af-profit">
+    <tr><th>步骤</th><th>验收标准</th><th>常见坑</th></tr>
+    <tr><td>Plan阶段</td><td>5个必答题都有答案</td><td>跳过"边界"和"回退"</td></tr>
+    <tr><td>每步执行后</td><td>产出符合验收标准</td><td>差不多就行→后面越偏越多</td></tr>
+    <tr><td>整体完成后</td><td>目标达成+没超边界</td><td>加了Plan里没有的功能</td></tr>
+    <tr><td>交付前</td><td>可独立运行/使用</td><td>还需要"再改一下"才能用</td></tr>
+    </table>
+    </div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">Plan的3个层级</div></div>
+  <div class="af-tool-body">
+    <ul>
+      <li><strong>Lv.1 脑中Plan：</strong>想一下就开干。→ 适合5分钟的小任务</li>
+      <li><strong>Lv.2 写下来：</strong>用模板写5个必答题。→ 适合1小时以上的任务</li>
+      <li><strong>Lv.3 让AI审：</strong>写完后让AI审阅你的Plan，找漏洞。→ 适合1天以上的项目</li>
+    </ul>
+    <strong>任务越大，Plan越要正式。5分钟的任务不需要Plan，1天的任务不Plan就是在赌博。</strong>
+  </div></div>
+</div>
+
+<!-- 底部导航 -->
+<div style="margin-top:2rem;padding:1rem;border-radius:10px;background:var(--card);border:1px solid var(--border);text-align:center">
+  <div style="font-size:.82rem;color:var(--muted);margin-bottom:.5rem">AI第一思考 — 四大根基能力</div>
+  <div style="display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap">
+    <a href="ask.html" style="padding:.4rem .8rem;border-radius:6px;background:rgba(88,166,255,.1);color:var(--accent);font-weight:600;font-size:.85rem;text-decoration:none;border:1px solid rgba(88,166,255,.2)">💬 Ask</a>
+    <a href="plan.html" style="padding:.4rem .8rem;border-radius:6px;background:rgba(249,115,22,.1);color:var(--af);font-weight:600;font-size:.85rem;text-decoration:none;border:1px solid rgba(249,115,22,.2)">🗺️ Plan</a>
+    <a href="debug.html" style="padding:.4rem .8rem;border-radius:6px;background:rgba(210,153,34,.1);color:var(--warn);font-weight:600;font-size:.85rem;text-decoration:none;border:1px solid rgba(210,153,34,.2)">🔧 Debug</a>
+    <a href="agent.html" style="padding:.4rem .8rem;border-radius:6px;background:rgba(63,185,80,.1);color:var(--accent2);font-weight:600;font-size:.85rem;text-decoration:none;border:1px solid rgba(63,185,80,.2)">🤖 Agent</a>
+  </div>
+</div>
+
+<div class="cp-footer">
+      <p class="cp-updated-line"><span class="cp-updated">最后更新：2026-06-22</span></p>
+  <p>Plan — 先想清楚再让AI动手 · AI第一思考</p>
+  <p><a href="index.html">← AINav 首页</a> · <a href="free-tier.html">🆓 免费额度</a> · <a href="token-optimization.html">Token优化</a> · <a href="thinking-framework.html">AI第一思考总览</a></p>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var saved=localStorage.getItem('theme')||'dark';
+  document.documentElement.setAttribute('data-theme',saved);
+  document.querySelectorAll('.theme-btn').forEach(function(b){
+    b.classList.toggle('is-active',b.getAttribute('data-theme-set')===saved);
+  });
+  document.querySelectorAll('.theme-btn').forEach(function(b){
+    b.addEventListener('click',function(){
+      var t=b.getAttribute('data-theme-set');
+      document.documentElement.setAttribute('data-theme',t);
+      localStorage.setItem('theme',t);
+      document.querySelectorAll('.theme-btn').forEach(function(x){x.classList.toggle('is-active',x.getAttribute('data-theme-set')===t)});
+    });
+  });
+})();
+</script>
+</body>
+</html>

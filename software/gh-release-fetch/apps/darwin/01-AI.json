@@ -592,7 +592,9 @@
     "windows_installer": false,
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://chatboxai.app"
   },
   {
     "id": "nextchat",
@@ -604,7 +606,9 @@
     "windows_installer": false,
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/ChatGPTNextWeb/NextChat"
   },
   {
     "id": "opencat",
@@ -616,7 +620,9 @@
     "windows_installer": false,
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://opencat.app"
   },
   {
     "id": "open_claude_cowork",
@@ -628,7 +634,9 @@
     "windows_installer": false,
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/ComposioHQ/open-claude-cowork"
   },
   {
     "id": "github_copilot_cli",
@@ -670,7 +678,9 @@
     "windows_installer": false,
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://python.langchain.com/docs/get_started/installation"
   },
   {
     "id": "llamaindex_note",
@@ -682,7 +692,9 @@
     "windows_installer": false,
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://docs.llamaindex.ai/en/stable/getting_started/installation/"
   },
   {
     "id": "deepseek_cli",
@@ -1391,5 +1403,199 @@
     "save_name": "Goose-darwin-x64.zip",
     "releases_url": "https://bgithub.xyz/block/goose/releases",
     "repo_path": "block/goose"
+  },
+  {
+    "id": "textgen_webui",
+    "简介": "text-generation-webui / oobabooga（本地 LLM WebUI；macOS Apple Silicon 便携 tar.gz）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "textgen-portable",
+      "macos-arm64",
+      ".tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "-ik-",
+      "linux",
+      "windows",
+      "x86_64"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "aliases": [
+      "oobabooga",
+      "text-generation-webui",
+      "textgen"
+    ],
+    "releases_url": "https://bgithub.xyz/oobabooga/text-generation-webui/releases",
+    "repo_path": "oobabooga/text-generation-webui"
+  },
+  {
+    "id": "textgen_webui_intel",
+    "简介": "text-generation-webui / oobabooga（本地 LLM WebUI；macOS Intel x86_64 便携 tar.gz）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "textgen-portable",
+      "macos-x86_64",
+      ".tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "-ik-",
+      "linux",
+      "windows",
+      "arm64"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "releases_url": "https://bgithub.xyz/oobabooga/text-generation-webui/releases",
+    "repo_path": "oobabooga/text-generation-webui"
+  },
+  {
+    "id": "ccometixline",
+    "简介": "CCometixLine（Claude Code 状态栏 ccline；macOS Apple Silicon tar.gz）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ccline-macos-arm64",
+      ".tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "x64.tar"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "aliases": [
+      "CCometixLine",
+      "ccline",
+      "CometixLine"
+    ],
+    "releases_url": "https://bgithub.xyz/Haleclipse/CCometixLine/releases",
+    "repo_path": "Haleclipse/CCometixLine"
+  },
+  {
+    "id": "ccometixline_intel",
+    "简介": "CCometixLine（Claude Code 状态栏 ccline；macOS Intel x64 tar.gz）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ccline-macos-x64",
+      ".tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "windows",
+      "linux",
+      "arm64"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "releases_url": "https://bgithub.xyz/Haleclipse/CCometixLine/releases",
+    "repo_path": "Haleclipse/CCometixLine"
+  },
+  {
+    "id": "picoclaw",
+    "简介": "PicoClaw（超轻量 AI 助手；macOS Apple Silicon tar.gz）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "picoclaw_Darwin_arm64",
+      ".tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "Windows",
+      "Linux",
+      "x86_64",
+      "checksums",
+      "deb",
+      "rpm",
+      "android"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "aliases": [
+      "PicoClaw",
+      "pico claw"
+    ],
+    "releases_url": "https://bgithub.xyz/sipeed/picoclaw/releases",
+    "repo_path": "sipeed/picoclaw"
+  },
+  {
+    "id": "picoclaw_intel",
+    "简介": "PicoClaw（超轻量 AI 助手；macOS Intel x86_64 tar.gz）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "picoclaw_Darwin_x86_64",
+      ".tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "Windows",
+      "Linux",
+      "arm64",
+      "checksums",
+      "deb",
+      "rpm",
+      "android"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "releases_url": "https://bgithub.xyz/sipeed/picoclaw/releases",
+    "repo_path": "sipeed/picoclaw"
   }
 ]

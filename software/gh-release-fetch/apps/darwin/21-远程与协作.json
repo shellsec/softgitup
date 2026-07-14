@@ -117,5 +117,29 @@
     ],
     "releases_url": "https://bgithub.xyz/rustdesk/rustdesk-server/releases",
     "repo_path": "rustdesk/rustdesk-server"
+  },
+  {
+    "id": "sunlogin",
+    "简介": "向日葵远程控制个人版（贝锐 Oray Sunlogin / AweSun）",
+    "分类": "远程与协作",
+    "aliases": [
+      "向日葵",
+      "oray",
+      "sunlogin",
+      "贝锐",
+      "awesun"
+    ],
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "sunlogin",
+    "releases_url": "https://sunlogin.oray.com/download",
+    "url_hint": "sunlogin oray 向日葵",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "download_referer": "https://sunlogin.oray.com/download",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

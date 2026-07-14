@@ -910,5 +910,41 @@
     ],
     "releases_url": "https://bgithub.xyz/Snouzy/workout-cool/releases",
     "repo_path": "Snouzy/workout-cool"
+  },
+  {
+    "id": "esearch",
+    "简介": "eSearch（截图/OCR/贴图/搜索，xushengfeng）",
+    "分类": "效率",
+    "aliases": [
+      "esearch",
+      "e search",
+      "截图搜索"
+    ],
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": false,
+    "use_download_filename": true,
+    "releases_url": "https://bgithub.xyz/xushengfeng/eSearch/releases",
+    "repo_path": "xushengfeng/eSearch",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "eSearch-",
+      "win32-x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      ".zip",
+      "darwin",
+      "linux"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "eSearch-{ver_plain}-win32-x64.exe"
+    ],
+    "save_name": "eSearch-{ver_plain}-win32-x64.exe",
+    "process_name": "eSearch.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "url_hint": "eSearch"
   }
 ]

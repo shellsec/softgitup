@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Coding Plan 横评对比 — 国内+海外 — AINav</title>
+  <meta name="description" content="国内 AI 厂商 Coding Plan 套餐横评：智谱 GLM、MiniMax、火山引擎、月之暗面 Kimi、腾讯混元、DeepSeek、小米等 vs Cursor、Claude Code、GitHub Copilot、Windsurf；含兼容性矩阵、Token 降价趋势与选购建议。">
+  <link rel="canonical" href="https://aiv123.com/coding-plan.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI Coding Plan 横评对比 — 国内+海外">
+  <meta property="og:description" content="国内 AI 厂商 Coding Plan 套餐横评与海外 IDE Agent 对比，含兼容性矩阵与 Token 降价趋势。">
+  <meta property="og:url" content="https://aiv123.com/coding-plan.html">
+  <meta property="og:site_name" content="AINav">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%230969da'/><text x='50' y='72' font-size='60' text-anchor='middle' fill='white' font-family='system-ui' font-weight='700'>AI</text></svg>">
+  <style>
+    :root, html[data-theme="dark"] {
+      --bg: #0f1419; --panel: #151b23; --card: #1c2430; --border: #2d3848;
+      --text: #e6edf3; --muted: #8b9cb3; --accent: #58a6ff; --accent2: #3fb950;
+      --warn: #d29922; --danger: #f85149; --hot: #ff6b6b; --overseas: #a78bfa;
+    }
+    html[data-theme="light"] {
+      --bg: #f6f8fa; --panel: #fff; --card: #fff; --border: #d0d7de;
+      --text: #1f2328; --muted: #59636e; --accent: #0969da; --accent2: #1a7f37;
+      --warn: #9a6700; --danger: #cf222e; --hot: #e53935; --overseas: #7c3aed;
+    }
+    @media (prefers-color-scheme: light) {
+      html[data-theme="system"] {
+        --bg: #f6f8fa; --panel: #fff; --card: #fff; --border: #d0d7de;
+        --text: #1f2328; --muted: #59636e; --accent: #0969da; --accent2: #1a7f37;
+        --warn: #9a6700; --danger: #cf222e; --hot: #e53935; --overseas: #7c3aed;
+      }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Segoe UI", system-ui, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.6; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ---- Top bar ---- */
+    .cp-top { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); background: var(--panel); position: sticky; top: 0; z-index: 10; }
+    .cp-top-inner { max-width: 76rem; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; justify-content: space-between; }
+    .cp-nav a { font-weight: 600; margin-right: 1rem; font-size: 0.88rem; }
+    .cp-toolbar { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; }
+    .theme-btn { font-size: 0.72rem; padding: 0.2rem 0.5rem; border-radius: 5px; border: 1px solid var(--border);
+      background: var(--card); color: var(--muted); cursor: pointer; font-family: inherit; }
+    .theme-btn.is-active { color: var(--accent); border-color: var(--accent); font-weight: 600; }
+    .lang-btn { margin-left: 0.35rem; }
+
+    /* ---- Main ---- */
+    .cp-wrap { max-width: 76rem; margin: 0 auto; padding: 1rem; }
+    h1 { font-size: 1.35rem; margin: 0 0 0.3rem; }
+    .cp-subtitle { font-size: 0.88rem; color: var(--muted); margin-bottom: 1rem; }
+    .cp-updated { font-size: 0.76rem; color: var(--muted); margin-bottom: 1.2rem; }
+    .cp-updated a { color: var(--accent); }
+
+    /* ---- Section heading ---- */
+    .cp-section-hd { font-size: 1.1rem; font-weight: 700; margin: 1.8rem 0 0.8rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--border); display: flex; align-items: center; gap: 0.5rem; }
+    .cp-section-hd .cp-flag { font-size: 1.15rem; }
+    .cp-section-hd.overseas-hd { border-bottom-color: var(--overseas); }
+    .cp-section-hd .cp-sponsor { margin-left:auto; font-size:0.72rem; font-weight:400; color:var(--muted); display:flex; align-items:center; gap:0.3rem; text-decoration:none; cursor:pointer; }
+    .cp-section-hd .cp-sponsor:hover { text-decoration:none; color:var(--overseas); }
+    .cp-section-hd .cp-sponsor .sp-tag { font-size:0.6rem; padding:0.05rem 0.3rem; border-radius:3px; background:rgba(167,139,250,0.1); border:1px solid rgba(167,139,250,0.2); color:var(--overseas); font-weight:500; }
+
+    /* ---- Legend ---- */
+    .cp-legend { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 1.2rem; font-size: 0.82rem; }
+    .cp-legend-item { display: flex; align-items: center; gap: 0.3rem; }
+    .cp-badge { display: inline-block; padding: 0.1rem 0.45rem; border-radius: 4px; font-size: 0.72rem; font-weight: 600; }
+    .badge-hot { background: rgba(255,107,107,0.15); color: var(--hot); border: 1px solid rgba(255,107,107,0.3); }
+    .badge-rush { background: rgba(210,153,34,0.15); color: var(--warn); border: 1px solid rgba(210,153,34,0.3); }
+    .badge-new { background: rgba(63,185,80,0.15); color: var(--accent2); border: 1px solid rgba(63,185,80,0.3); }
+    .badge-rec { background: rgba(88,166,255,0.15); color: var(--accent); border: 1px solid rgba(88,166,255,0.3); }
+    .badge-overseas { background: rgba(167,139,250,0.15); color: var(--overseas); border: 1px solid rgba(167,139,250,0.3); }
+
+    /* ---- Platform cards ---- */
+    .cp-platforms { display: grid; grid-template-columns: 1fr; gap: 1.2rem; }
+    @media (min-width: 52rem) { .cp-platforms { grid-template-columns: 1fr 1fr; } }
+
+    .cp-platform { border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .cp-platform.overseas { border-color: rgba(167,139,250,0.3); }
+    .cp-platform-head { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+    .cp-platform.overseas .cp-platform-head { border-bottom-color: rgba(167,139,250,0.2); }
+    .cp-platform-name { font-size: 1.05rem; font-weight: 700; }
+    .cp-platform-name a { color: var(--text); }
+    .cp-platform-name a:hover { color: var(--accent); text-decoration: none; }
+    .cp-platform-link { font-size: 0.76rem; color: var(--muted); }
+    .cp-platform-body { padding: 0.75rem 1rem; }
+
+    /* ---- Plan table inside card ---- */
+    .cp-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+    .cp-table th { text-align: left; font-weight: 600; color: var(--muted); padding: 0.3rem 0.5rem; border-bottom: 1px solid var(--border); font-size: 0.76rem; white-space: nowrap; }
+    .cp-table td { padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .cp-table tr:last-child td { border-bottom: none; }
+    .cp-table .plan-name { font-weight: 600; white-space: nowrap; }
+    .cp-table .plan-price { white-space: nowrap; color: var(--accent2); font-weight: 600; }
+    .cp-table .plan-price-orig { text-decoration: line-through; color: var(--muted); font-size: 0.76rem; margin-left: 0.3rem; }
+    .cp-table .plan-models { font-size: 0.76rem; line-height: 1.5; }
+    .cp-table .plan-models a { color: var(--accent); font-weight: 500; }
+    .cp-table .plan-limit { font-size: 0.76rem; color: var(--muted); }
+
+    /* ---- Tools matrix ---- */
+    .cp-matrix-section { margin-top: 2rem; }
+    .cp-matrix-section h2 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+    .cp-matrix-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; background: var(--card); }
+    .cp-matrix { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+    .cp-matrix th, .cp-matrix td { padding: 0.35rem 0.55rem; border: 1px solid var(--border); text-align: center; white-space: nowrap; }
+    .cp-matrix th { background: var(--panel); font-weight: 600; color: var(--muted); font-size: 0.74rem; position: sticky; top: 0; }
+    .cp-matrix th:first-child, .cp-matrix td:first-child { text-align: left; position: sticky; left: 0; background: var(--card); z-index: 1; font-weight: 600; }
+    .cp-matrix th:first-child { z-index: 2; background: var(--panel); }
+    .cp-matrix .yes { color: var(--accent2); font-weight: 700; }
+    .cp-matrix .no { color: var(--muted); opacity: 0.4; }
+
+    /* ---- Token price trend ---- */
+    .cp-trend-section { margin-top: 2.5rem; }
+    .cp-trend-section h2 { font-size: 1.1rem; margin-bottom: 0.3rem; }
+    .cp-trend-sub { font-size: 0.82rem; color: var(--muted); margin-bottom: 1rem; }
+    .cp-trend-grid { display: grid; grid-template-columns: 1fr; gap: 1.2rem; }
+    @media (min-width: 52rem) { .cp-trend-grid { grid-template-columns: 1fr 1fr; } }
+    .cp-trend-card { border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .cp-trend-card-head { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); font-weight: 700; font-size: 0.92rem; }
+    .cp-trend-card-body { padding: 0.75rem 1rem; }
+    .cp-trend-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+    .cp-trend-table th { text-align: left; font-weight: 600; color: var(--muted); padding: 0.3rem 0.5rem; border-bottom: 1px solid var(--border); font-size: 0.76rem; }
+    .cp-trend-table td { padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .cp-trend-table tr:last-child td { border-bottom: none; }
+    .cp-trend-table .price-old { color: var(--muted); text-decoration: line-through; font-size: 0.76rem; }
+    .cp-trend-table .price-new { color: var(--accent2); font-weight: 600; }
+    .cp-trend-table .price-drop { color: var(--hot); font-weight: 600; font-size: 0.76rem; }
+
+    /* ---- Visual bar chart ---- */
+    .cp-bar-chart { margin-top: 0.5rem; }
+    .cp-bar-row { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem; font-size: 0.78rem; }
+    .cp-bar-label { width: 5.5rem; text-align: right; color: var(--muted); flex-shrink: 0; }
+    .cp-bar-track { flex: 1; height: 1.1rem; background: var(--border); border-radius: 4px; overflow: hidden; position: relative; }
+    .cp-bar-fill { height: 100%; border-radius: 4px; display: flex; align-items: center; padding-left: 0.4rem; font-size: 0.7rem; font-weight: 600; color: #fff; white-space: nowrap; }
+    .cp-bar-fill.bar-2022 { background: linear-gradient(90deg, #f85149, #da3633); }
+    .cp-bar-fill.bar-2023 { background: linear-gradient(90deg, #d29922, #bb8009); }
+    .cp-bar-fill.bar-2024 { background: linear-gradient(90deg, #58a6ff, #388bfd); }
+    .cp-bar-fill.bar-2025 { background: linear-gradient(90deg, #3fb950, #2ea043); }
+    .cp-bar-fill.bar-2026 { background: linear-gradient(90deg, #a78bfa, #7c3aed); }
+
+    /* ---- Notice card ---- */
+    .cp-notice { margin-top: 2rem; padding: 0; border: 1px solid rgba(210,153,34,0.35); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .cp-notice-head { padding: 0.65rem 1rem; border-bottom: 1px solid rgba(210,153,34,0.2); font-weight: 700; font-size: 1rem; background: rgba(210,153,34,0.06); }
+    .cp-notice-body { padding: 0.75rem 1rem; font-size: 0.82rem; line-height: 1.75; }
+    .cp-notice-body ul { padding-left: 1.2rem; margin: 0.5rem 0 0; }
+    .cp-notice-body li { margin-bottom: 0.45rem; }
+    .cp-notice-body strong { color: var(--warn); }
+    .cp-notice-body code { font-size: 0.78rem; padding: 0.1rem 0.35rem; border-radius: 4px; background: rgba(210,153,34,0.1); border: 1px solid rgba(210,153,34,0.2); color: var(--warn); font-family: inherit; }
+
+    /* ---- FAQ accordion ---- */
+    .cp-faq { margin-top: 2rem; border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .cp-faq-head { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); font-weight: 700; font-size: 1rem; }
+    .cp-faq-item { border-bottom: 1px solid var(--border); }
+    .cp-faq-item:last-child { border-bottom: none; }
+    .cp-faq-q { padding: 0.6rem 1rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 0.88rem; user-select: none; transition: background 0.15s; }
+    .cp-faq-q:hover { background: rgba(88,166,255,0.04); }
+    .cp-faq-q .cp-faq-arrow { font-size: 0.72rem; color: var(--muted); transition: transform 0.2s; flex-shrink: 0; margin-left: 0.5rem; }
+    .cp-faq-item.is-open .cp-faq-q .cp-faq-arrow { transform: rotate(180deg); }
+    .cp-faq-a { padding: 0 1rem; max-height: 0; overflow: hidden; transition: max-height 0.25s ease, padding 0.25s ease; font-size: 0.82rem; line-height: 1.7; color: var(--muted); }
+    .cp-faq-item.is-open .cp-faq-a { max-height: 20rem; padding: 0 1rem 0.75rem; }
+    .cp-faq-a strong { color: var(--text); }
+
+    /* ---- Value rank ---- */
+    .cp-value-rank { margin-top: 2rem; border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .cp-value-rank-head { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); font-weight: 700; font-size: 1rem; }
+    .cp-value-rank-body { padding: 0.75rem 1rem; }
+    .cp-value-rank .cp-table .val-high { color: var(--accent2); font-weight: 700; }
+    .cp-value-rank .cp-table .val-mid { color: var(--accent); font-weight: 600; }
+    .cp-value-rank .cp-table .val-low { color: var(--muted); }
+
+    /* ---- Tips ---- */
+    .cp-tips { margin-top: 2rem; padding: 0.75rem 1rem; border: 1px solid var(--border); border-radius: 8px; background: var(--card); font-size: 0.82rem; }
+    .cp-tips h2 { font-size: 1rem; margin: 0 0 0.5rem; }
+    .cp-tips ul { padding-left: 1.2rem; margin: 0; }
+    .cp-tips li { margin-bottom: 0.3rem; }
+    .cp-tips strong { color: var(--warn); }
+
+    /* ---- Countdown ---- */
+    .cp-title-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.8rem 1.5rem; }
+    .cp-title-row h1 { margin: 0; }
+    .cp-countdown-box { display: inline-flex; flex-direction: column; gap: 0.25rem; padding: 0.45rem 0.85rem; border-radius: 8px; background: rgba(255,107,107,0.08); border: 1px solid rgba(255,107,107,0.25); font-size: 0.82rem; }
+    .cd-row { display: flex; align-items: center; gap: 0.4rem; white-space: nowrap; }
+    .cd-row .cd-label { color: var(--hot); font-weight: 700; font-size: 0.72rem; }
+    .cd-row .cd-name { color: var(--text); font-weight: 600; font-size: 0.78rem; }
+    .cd-row .cd-time { color: var(--hot); font-weight: 700; font-size: 0.92rem; font-variant-numeric: tabular-nums; letter-spacing: 0.02em; }
+    .cd-row .cd-clock { color: var(--warn); font-size: 0.72rem; font-weight: 600; }
+    .cd-row a { color: var(--accent); font-size: 0.7rem; font-weight: 600; padding: 0.1rem 0.35rem; border-radius: 4px; background: rgba(88,166,255,0.1); border: 1px solid rgba(88,166,255,0.25); }
+    .cd-row a:hover { text-decoration: none; background: rgba(88,166,255,0.2); }
+    .cd-row-next { opacity: 0.7; }
+    .cd-row-next .cd-label { color: var(--warn); }
+    .cd-row-next .cd-time { color: var(--warn); font-size: 0.78rem; }
+    .cp-rush-time { display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(210,153,34,0.12); border: 1px solid rgba(210,153,34,0.25); font-size: 0.72rem; color: var(--warn); font-weight: 600; }
+
+    /* ---- Footer ---- */
+    .cp-footer { max-width: 76rem; margin: 2rem auto 1rem; padding: 0 1rem; font-size: 0.76rem; color: var(--muted); text-align: center; }
+    .cp-footer a { color: var(--muted); }
+  </style>
+  <!-- Google Analytics (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2B8FBWRX4N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2B8FBWRX4N');
+</script>
+<!-- End Google Analytics -->
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2d49f38b39c743ac80b6d6b9ff99494d"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body>
+  <!-- Top bar -->
+  <div class="cp-top">
+    <div class="cp-top-inner">
+      <div class="cp-nav" data-plan-nav></div>
+      <div class="cp-toolbar">
+        <button type="button" class="theme-btn" data-theme-set="system">跟随系统</button>
+        <button type="button" class="theme-btn" data-theme-set="light">浅色</button>
+        <button type="button" class="theme-btn" data-theme-set="dark">深色</button>
+        <button type="button" class="theme-btn lang-btn" data-lang-set="zh">中</button>
+        <button type="button" class="theme-btn lang-btn" data-lang-set="en">EN</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="cp-wrap">
+    <div style="margin-bottom:1rem;padding:.55rem .85rem;border-radius:8px;border:1px solid var(--border);background:var(--card);display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.35rem .6rem;font-size:.84rem;line-height:1.5;">
+      <span style="color:var(--muted)"><strong style="color:var(--text)">OpenAI: GPT-5</strong> <span style="color:var(--muted)">/</span> <strong style="color:var(--text)">Anthropic: Claude Opus 4.8</strong> <span style="color:var(--muted)">/</span> <strong style="color:var(--text)">Google: Gemini 3.1 Pro</strong> <span style="color:var(--muted)">· 国内直连免梯</span> <span class="plan-promo-code" data-code="AFF_BB0FNC" style="color:var(--accent2);font-weight:600;cursor:pointer" title="点击复制优惠码">$2 试用 AFF_BB0FNC</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">立即注册</a>
+    </div>
+        <div class="cp-title-row">
+      <h1 data-i18n="title">💰 AI Coding Plan 横评</h1>
+      <div class="cp-countdown-box" id="countdownBox">
+        <div class="cd-row">
+          <span class="cd-label">⏰ 抢购中</span>
+          <span class="cd-name" id="cdName">阿里云 Pro</span>
+          <span class="cd-clock" id="cdClock">每日 9:30</span>
+          <span class="cd-time" id="cdTime">--:--:--</span>
+          <a id="cdLink" href="https://www.aliyun.com/benefit/scene/codingplan" target="_blank" rel="noopener noreferrer">去抢</a>
+        </div>
+        <div class="cd-row cd-row-next">
+          <span class="cd-label">⏰ 下一场</span>
+          <span class="cd-name" id="cdNext">—</span>
+        </div>
+      </div>
+    </div>
+    <p class="cp-updated-line"><span class="cp-updated">最后更新：2026-06-26</span> · <a href="token-optimization.html">Token 优化指南</a></p>
+    <p class="cp-subtitle" data-i18n="subtitle">国内 AI 厂商 Coding Plan 套餐横评：价格、模型、额度、兼容性一站式对比，帮你选对 Coding Plan。</p>
+
+
+    <!-- Legend -->
+    <div class="cp-legend">
+      <div class="cp-legend-item"><span class="cp-badge badge-rush">⏰ 抢购</span> 限时/秒杀</div>
+      <div class="cp-legend-item"><span class="cp-badge badge-hot">🔥 性价比</span> 高性价比</div>
+      <div class="cp-legend-item"><span class="cp-badge badge-new">🆕 新品</span> 首月特惠</div>
+      <div class="cp-legend-item"><span class="cp-badge badge-rec">推荐</span> 编辑推荐</div>
+      <div class="cp-legend-item"><span class="cp-badge badge-overseas">海外</span> 需科学上网</div>
+    </div>
+
+    <!-- ==================== 国内 Coding Plan ==================== -->
+    <div class="cp-section-hd"><span class="cp-flag">🇨🇳</span> 国内 Coding Plan</div>
+
+    <div class="cp-platforms">
+
+      <!-- 1. 智谱 GLM -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://www.bigmodel.cn/glm-coding?ic=H2G5GCAOFT" target="_blank" rel="noopener noreferrer">智谱 GLM</a> <a href="https://zcode.z.ai/cn" target="_blank" rel="noopener noreferrer" style="font-size:0.7em;color:var(--accent);opacity:0.8;text-decoration:none;" title="智谱官方编程 ADE">ZCode</a> <a href="https://github.com/vectorstone/glm-coding-plan" target="_blank" rel="noopener noreferrer" style="font-size:0.7em;color:var(--accent);opacity:0.8;text-decoration:none;" title="GLM Coding Plan 开源工具">开源工具集</a></span>
+          <span class="cp-badge badge-hot">🔥 性价比</span>
+          <span class="cp-badge badge-rush">⏰ 抢购</span>
+          <span class="cp-rush-time">⏰ 每日10:00开抢</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>核心模型</th><th>用量参考</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">Lite</td>
+                <td class="plan-price">¥49<span class="plan-price-orig">/首7折</span></td>
+                <td class="plan-models"><a href="https://www.bigmodel.cn/" target="_blank" rel="noopener noreferrer">GLM-5.2</a>, <a href="https://www.bigmodel.cn/" target="_blank" rel="noopener noreferrer">GLM-5.1</a></td>
+                <td class="plan-limit">≈3×Claude Pro</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="plan-name">Pro <span class="cp-badge badge-rec">推荐</span></td>
+                <td class="plan-price">¥149<span class="plan-price-orig">/首7折</span></td>
+                <td class="plan-models"><a href="https://www.bigmodel.cn/" target="_blank" rel="noopener noreferrer">GLM-5.2</a>, <a href="https://www.bigmodel.cn/" target="_blank" rel="noopener noreferrer">GLM-5.1</a></td>
+                <td class="plan-limit">≈5×Lite</td>
+                <td>MCP深度集成</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Max</td>
+                <td class="plan-price">¥469<span class="plan-price-orig">/首7折</span></td>
+                <td class="plan-models"><a href="https://www.bigmodel.cn/" target="_blank" rel="noopener noreferrer">GLM-5.2</a>, <a href="https://www.bigmodel.cn/" target="_blank" rel="noopener noreferrer">GLM-5.1</a></td>
+                <td class="plan-limit">≈4×Pro</td>
+                <td>长程任务+优先队列</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 2. 智谱 GLM 国际版 (Z.AI) -->
+      <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://z.ai/subscribe" target="_blank" rel="noopener noreferrer">智谱 GLM 国际版 (Z.AI)</a></span>
+          <span class="cp-badge badge-overseas">海外</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>核心模型</th><th>用量参考</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">Lite</td>
+                <td class="plan-price">$18<span class="plan-price-orig">/首8折</span></td>
+                <td class="plan-models"><a href="https://z.ai/" target="_blank" rel="noopener noreferrer">GLM-5.2</a>, <a href="https://z.ai/" target="_blank" rel="noopener noreferrer">GLM-5-Turbo</a></td>
+                <td class="plan-limit">≈3×Claude Pro</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="plan-name">Pro <span class="cp-badge badge-rec">推荐</span></td>
+                <td class="plan-price">$72<span class="plan-price-orig">/首8折</span></td>
+                <td class="plan-models"><a href="https://z.ai/" target="_blank" rel="noopener noreferrer">GLM-5.2</a>, <a href="https://z.ai/" target="_blank" rel="noopener noreferrer">GLM-5-Turbo</a>, <a href="https://z.ai/" target="_blank" rel="noopener noreferrer">GLM-5</a></td>
+                <td class="plan-limit">≈5×Lite</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="plan-name">Max</td>
+                <td class="plan-price">$160<span class="plan-price-orig">/首8折</span></td>
+                <td class="plan-models"><a href="https://z.ai/" target="_blank" rel="noopener noreferrer">GLM-5.2</a>, <a href="https://z.ai/" target="_blank" rel="noopener noreferrer">GLM-5-Turbo</a>, <a href="https://z.ai/" target="_blank" rel="noopener noreferrer">GLM-5</a></td>
+                <td class="plan-limit">≈4×Pro</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 3. MiniMax -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://platform.minimaxi.com/subscribe/token-plan" target="_blank" rel="noopener noreferrer">MiniMax</a></span>
+          <span class="cp-badge badge-hot">🔥 性价比</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>核心模型</th><th>用量/5h</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">Starter</td>
+                <td class="plan-price">¥29<span class="plan-price-orig">/首9折</span></td>
+                <td class="plan-models"><a href="https://www.minimaxi.com/" target="_blank" rel="noopener noreferrer">M2.7</a>, <a href="https://www.minimaxi.com/" target="_blank" rel="noopener noreferrer">M2.7-highspeed</a></td>
+                <td class="plan-limit">600次</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="plan-name">Plus</td>
+                <td class="plan-price">¥49<span class="plan-price-orig">/首9折</span></td>
+                <td class="plan-models"><a href="https://www.minimaxi.com/" target="_blank" rel="noopener noreferrer">M2.7</a>, <a href="https://www.minimaxi.com/" target="_blank" rel="noopener noreferrer">M2.7-highspeed</a></td>
+                <td class="plan-limit">1500次</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="plan-name">Max</td>
+                <td class="plan-price">¥119<span class="plan-price-orig">/首9折</span></td>
+                <td class="plan-models"><a href="https://www.minimaxi.com/" target="_blank" rel="noopener noreferrer">M2.7</a>, <a href="https://www.minimaxi.com/" target="_blank" rel="noopener noreferrer">M2.7-highspeed</a></td>
+                <td class="plan-limit">4500次</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="plan-name">Plus 高速版</td>
+                <td class="plan-price">¥98<span class="plan-price-orig">/首9折</span></td>
+                <td class="plan-models"><a href="https://www.minimaxi.com/" target="_blank" rel="noopener noreferrer">M2.7 高速版</a></td>
+                <td class="plan-limit">1500次</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="plan-name">Max 高速版 <span class="cp-badge badge-rec">推荐</span></td>
+                <td class="plan-price">¥199<span class="plan-price-orig">/首9折</span></td>
+                <td class="plan-models"><a href="https://www.minimaxi.com/" target="_blank" rel="noopener noreferrer">M2.7 高速版</a></td>
+                <td class="plan-limit">4500次</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="plan-name">Ultra 高速版</td>
+                <td class="plan-price">¥899<span class="plan-price-orig">/首9折</span></td>
+                <td class="plan-models"><a href="https://www.minimaxi.com/" target="_blank" rel="noopener noreferrer">M2.7 高速版</a></td>
+                <td class="plan-limit">30000次</td>
+                <td>全模型(补全/对话/Agent)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 4. 火山方舟 -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://www.volcengine.com/activity/codingplan" target="_blank" rel="noopener noreferrer">火山方舟</a></span>
+          <span class="cp-badge badge-hot">🔥 性价比</span>
+        </div>
+        <div class="cp-platform-body">
+          <div style="font-size:.78rem;color:var(--muted);margin-bottom:.5rem;line-height:1.6">
+            火山方舟 Coding Plan 聚合多家模型：<strong>Doubao-Seed-2.0-pro/lite/Code</strong>、<strong>Doubao-Seed-Code</strong>、<strong>GLM-5.2</strong>、<strong>MiniMax-M2.7</strong>、<strong>Kimi-K2.6</strong>、<strong>DeepSeek-V4-Pro</strong>、<strong>DeepSeek-V4-Flash</strong> 等；支持多工具接入与 Auto 路由，兼容 Claude Code、Cursor 等主流工具。
+          </div>
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>核心模型</th><th>用量参考</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">Lite</td>
+                <td class="plan-price">¥40<span class="plan-price-orig">/首9折</span></td>
+                <td class="plan-models"><a href="https://www.volcengine.com/" target="_blank" rel="noopener noreferrer">Doubao-Seed-2.0-Code</a>, <a href="https://www.volcengine.com/" target="_blank" rel="noopener noreferrer">Kimi-K2.6</a>, <a href="https://www.volcengine.com/" target="_blank" rel="noopener noreferrer">GLM-5.1</a>, <a href="https://www.volcengine.com/" target="_blank" rel="noopener noreferrer">DeepSeek-V3.2</a>, <a href="https://www.volcengine.com/" target="_blank" rel="noopener noreferrer">MiniMax-M2.7</a></td>
+                <td class="plan-limit">≈Claude Pro</td>
+                <td>多模型聚合 / Auto路由</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Pro <span class="cp-badge badge-rec">推荐</span></td>
+                <td class="plan-price">¥200<span class="plan-price-orig">/首9折</span></td>
+                <td class="plan-models">同Lite + Doubao-Seed-2.0-pro + 旗舰模型</td>
+                <td class="plan-limit">5×Lite / ≈Claude Max</td>
+                <td>含ArkClaw等 · 长程任务+优先队列</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 5. 阿里云百炼 -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://www.aliyun.com/benefit/scene/codingplan" target="_blank" rel="noopener noreferrer">阿里云百炼</a></span>
+          <span class="cp-badge badge-new">🆕 首月特惠</span>
+          <span class="cp-badge badge-rush">⏰ 抢购</span>
+          <span class="cp-rush-time">⏰ 每日9:30开抢</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>核心模型</th><th>用量/5h</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">Lite <span class="cp-badge badge-new">首月¥7.9</span> <span class="cp-badge badge-rush">⏰</span></td>
+                <td class="plan-price">¥40</td>
+                <td class="plan-models"><a href="https://tongyi.aliyun.com/" target="_blank" rel="noopener noreferrer">qwen3.5-plus</a>, <a href="https://tongyi.aliyun.com/" target="_blank" rel="noopener noreferrer">qwen3-coder-plus</a>, <a href="https://www.bigmodel.cn/" target="_blank" rel="noopener noreferrer">GLM-5.2</a>, <a href="https://www.bigmodel.cn/" target="_blank" rel="noopener noreferrer">GLM-5.1</a>, <a href="https://www.kimi.com/" target="_blank" rel="noopener noreferrer">Kimi-K2.6</a>, <a href="https://www.minimaxi.com/" target="_blank" rel="noopener noreferrer">MiniMax-M2.7</a></td>
+                <td class="plan-limit">1200次</td>
+                <td>首月¥7.9 · Lite尝鲜价</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Pro <span class="cp-badge badge-rec">推荐</span> <span class="cp-badge badge-new">秒杀¥39.9 ·</span> <span class="cp-badge badge-rush">⏰</span></td>
+                <td class="plan-price">¥200</td>
+                <td class="plan-models"><a href="https://tongyi.aliyun.com/" target="_blank" rel="noopener noreferrer">qwen3-max</a>, <a href="https://tongyi.aliyun.com/" target="_blank" rel="noopener noreferrer">qwen3-coder-next</a>, <a href="https://www.bigmodel.cn/" target="_blank" rel="noopener noreferrer">GLM-5.2</a>, <a href="https://www.kimi.com/" target="_blank" rel="noopener noreferrer">Kimi-K2.6</a>, <a href="https://www.minimaxi.com/" target="_blank" rel="noopener noreferrer">MiniMax-M2.7</a></td>
+                <td class="plan-limit">6000次</td>
+                <td>秒杀¥39.9 · <span class="cp-rush-time">⏰ 每日9:30开抢</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 6. Kimi -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://www.kimi.com/code" target="_blank" rel="noopener noreferrer">Kimi Coding Plan</a></span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>核心模型</th><th>用量</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">Andante</td>
+                <td class="plan-price">¥49<span class="plan-price-orig">/首8折</span></td>
+                <td class="plan-models"><a href="https://www.kimi.com/" target="_blank" rel="noopener noreferrer">Kimi K2.6</a></td>
+                <td class="plan-limit">轻度用量</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="plan-name">Moderato <span class="cp-badge badge-rec">推荐</span></td>
+                <td class="plan-price">¥99<span class="plan-price-orig">/首8折</span></td>
+                <td class="plan-models"><a href="https://www.kimi.com/" target="_blank" rel="noopener noreferrer">Kimi K2.6</a></td>
+                <td class="plan-limit">中度用量</td>
+                <td>优先队列</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Allegretto</td>
+                <td class="plan-price">¥199<span class="plan-price-orig">/首8折</span></td>
+                <td class="plan-models"><a href="https://www.kimi.com/" target="_blank" rel="noopener noreferrer">Kimi K2.6</a></td>
+                <td class="plan-limit">重度用量</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="plan-name">Allegro</td>
+                <td class="plan-price">¥699<span class="plan-price-orig">/首8折</span></td>
+                <td class="plan-models"><a href="https://www.kimi.com/" target="_blank" rel="noopener noreferrer">Kimi K2.6</a></td>
+                <td class="plan-limit">高额度 Cascade（以官网 credits 为准）</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 7. 腾讯云 -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://cloud.tencent.com/act/pro/codingplan" target="_blank" rel="noopener noreferrer">腾讯云</a></span>
+          <span class="cp-badge badge-new">🆕 新品</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>核心模型</th><th>用量/5h</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">Lite</td>
+                <td class="plan-price">¥40</td>
+                <td class="plan-models"><a href="https://cloud.tencent.com/" target="_blank" rel="noopener noreferrer">Hunyuan 2.0</a>, <a href="https://www.bigmodel.cn/" target="_blank" rel="noopener noreferrer">GLM-5.2</a>, <a href="https://www.kimi.com/" target="_blank" rel="noopener noreferrer">Kimi-K2.6</a>, <a href="https://www.minimaxi.com/" target="_blank" rel="noopener noreferrer">MiniMax-M2.7</a></td>
+                <td class="plan-limit">1200次</td>
+                <td>≈9000/≈18000</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Pro <span class="cp-badge badge-rec">推荐</span></td>
+                <td class="plan-price">¥200</td>
+                <td class="plan-models">同Lite</td>
+                <td class="plan-limit">6000次</td>
+                <td>≈45000/≈90000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 8. DeepSeek -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://www.deepseek.com/" target="_blank" rel="noopener noreferrer">DeepSeek（API按量）</a></span>
+          <span class="cp-badge badge-hot">🔥 性价比</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>核心模型</th><th>用量</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">Free</td>
+                <td class="plan-price">¥0</td>
+                <td class="plan-models"><a href="https://www.deepseek.com/" target="_blank" rel="noopener noreferrer">DeepSeek-V4-Pro</a>, <a href="https://www.deepseek.com/" target="_blank" rel="noopener noreferrer">DeepSeek-V4-Flash</a>, <a href="https://www.deepseek.com/" target="_blank" rel="noopener noreferrer">DeepSeek-V3.2</a>, <a href="https://www.deepseek.com/" target="_blank" rel="noopener noreferrer">DeepSeek-R1</a></td>
+                <td class="plan-limit">免费额度</td>
+                <td>开源模型全家桶</td>
+              </tr>
+              <tr>
+                <td class="plan-name">API 按量 <span class="cp-badge badge-rec">推荐</span></td>
+                <td class="plan-price">按Token</td>
+                <td class="plan-models" style="font-size:.74rem;line-height:1.6">
+                  <a href="https://www.deepseek.com/" target="_blank" rel="noopener noreferrer">V4-Pro</a> 输入¥1(缓存命中)/¥12 · 输出¥24 · 1M上下文<br>
+                  <a href="https://www.deepseek.com/" target="_blank" rel="noopener noreferrer">V4-Flash</a> 输入¥0.2(缓存命中)/¥1 · 输出¥2<br>
+                  <a href="https://www.deepseek.com/" target="_blank" rel="noopener noreferrer">V3.2</a> 输入¥0.5 · 输出¥2 · <a href="https://www.deepseek.com/" target="_blank" rel="noopener noreferrer">R1</a> 输入¥1 · 输出¥4 (均百万Token)
+                </td>
+                <td class="plan-limit">按量计费</td>
+                <td>V4-Pro 长程旗舰；Think Max 约 950 万 Token 等效</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 9. 小米 MiMo -->
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://platform.xiaomimimo.com/token-plan" target="_blank" rel="noopener noreferrer">小米 MiMo</a></span>
+          <span class="cp-badge badge-hot">🔥 性价比</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>核心模型</th><th>Credits / 月</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">Lite</td>
+                <td class="plan-price">¥39<span class="plan-price-orig">/首88折¥34.3</span></td>
+                <td class="plan-models"><a href="https://platform.xiaomimimo.com/" target="_blank" rel="noopener noreferrer">MiMo-V2-Pro</a>, <a href="https://platform.xiaomimimo.com/" target="_blank" rel="noopener noreferrer">MiMo-V2-Omni</a>, <a href="https://platform.xiaomimimo.com/" target="_blank" rel="noopener noreferrer">MiMo-V2-TTS</a></td>
+                <td class="plan-limit">0.6亿 (~120万次)</td>
+                <td>Credit 按量；5h 窗口</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Standard</td>
+                <td class="plan-price">¥99<span class="plan-price-orig">/首88折¥87.1</span></td>
+                <td class="plan-models"><a href="https://platform.xiaomimimo.com/" target="_blank" rel="noopener noreferrer">MiMo-V2-Pro</a>, <a href="https://platform.xiaomimimo.com/" target="_blank" rel="noopener noreferrer">MiMo-V2-Omni</a>, <a href="https://platform.xiaomimimo.com/" target="_blank" rel="noopener noreferrer">MiMo-V2-TTS</a></td>
+                <td class="plan-limit">2亿 (~400万次)</td>
+                <td>含 Omni/TTS 多模态</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Pro</td>
+                <td class="plan-price">¥329<span class="plan-price-orig">/首88折¥289.5</span></td>
+                <td class="plan-models"><a href="https://platform.xiaomimimo.com/" target="_blank" rel="noopener noreferrer">MiMo-V2-Pro</a>, <a href="https://platform.xiaomimimo.com/" target="_blank" rel="noopener noreferrer">MiMo-V2-Omni</a>, <a href="https://platform.xiaomimimo.com/" target="_blank" rel="noopener noreferrer">MiMo-V2-TTS</a></td>
+                <td class="plan-limit">7亿 (~1,400万次)</td>
+                <td>Pro 256k为2x，1M为4x</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Max</td>
+                <td class="plan-price">¥659<span class="plan-price-orig">/首88折¥579.9</span></td>
+                <td class="plan-models"><a href="https://platform.xiaomimimo.com/" target="_blank" rel="noopener noreferrer">MiMo-V2-Pro</a>, <a href="https://platform.xiaomimimo.com/" target="_blank" rel="noopener noreferrer">MiMo-V2-Omni</a>, <a href="https://platform.xiaomimimo.com/" target="_blank" rel="noopener noreferrer">MiMo-V2-TTS</a></td>
+                <td class="plan-limit">16亿 (~3,200万次)</td>
+                <td>约合海外 $100/月</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div><!-- /cp-platforms (国内) -->
+
+    <!-- ==================== 海外 Coding Plan ==================== -->
+    <div class="cp-section-hd overseas-hd"><span class="cp-flag">🌍</span> 海外 Coding Plan <a class="cp-sponsor" href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer"><span class="sp-tag">赞助</span> 想用 GPT-5/Claude Opus/Gemini Pro 但无梯？OfoxAI 一个 API Key 直连 100+ 模型，OpenAI 兼容格式 →</a></div>
+
+    <div class="cp-platforms">
+
+      <!-- Cursor -->
+      <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://cursor.com/" target="_blank" rel="noopener noreferrer">Cursor</a></span>
+          <span class="cp-badge badge-overseas">海外</span>
+          <span class="cp-badge badge-hot">🔥 性价比</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>说明</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">Free</td>
+                <td class="plan-price">$0</td>
+                <td class="plan-models">有限补全</td>
+                <td class="plan-limit"></td>
+              </tr>
+              <tr>
+                <td class="plan-name">Pro <span class="cp-badge badge-rec">推荐</span></td>
+                <td class="plan-price">$20/月</td>
+                <td class="plan-models">无限 Tab 补全 + Agent 用量池（含 Claude/GPT 等旗舰）</td>
+                <td class="plan-limit">个人版</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Business</td>
+                <td class="plan-price">$40/人/月</td>
+                <td class="plan-models">团队管理 + 策略管控</td>
+                <td class="plan-limit">团队版</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Ultra</td>
+                <td class="plan-price">$200/月</td>
+                <td class="plan-models">20倍 Pro 额度</td>
+                <td class="plan-limit">重度用户</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Claude Code -->
+      <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">Claude Code (Anthropic)</a></span>
+          <span class="cp-badge badge-overseas">海外</span>
+          <span class="cp-badge badge-hot">🔥 性价比</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>核心模型</th><th>说明</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">Pro</td>
+                <td class="plan-price">$20/月</td>
+                <td class="plan-models"><a href="https://www.anthropic.com/" target="_blank" rel="noopener noreferrer">Claude Sonnet 4.6</a></td>
+                <td class="plan-limit">日常编码；约 30–45 分钟/天</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Max 1× <span class="cp-badge badge-rec">推荐</span></td>
+                <td class="plan-price">$100/月</td>
+                <td class="plan-models"><a href="https://www.anthropic.com/" target="_blank" rel="noopener noreferrer">Opus 4.8</a>, <a href="https://www.anthropic.com/claude/fable" target="_blank" rel="noopener noreferrer">Fable 5</a>（暂停）, Sonnet 4.6</td>
+                <td class="plan-limit">长程 Agent；Fable 5 于 6/12 起全球暂停，回落 Opus 4.8</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Max 2×</td>
+                <td class="plan-price">$200/月</td>
+                <td class="plan-models"><a href="https://www.anthropic.com/" target="_blank" rel="noopener noreferrer">Opus 4.8</a>, Sonnet 4.6, Fable 5（恢复后）</td>
+                <td class="plan-limit">重度 AI 编程用户首选</td>
+              </tr>
+              <tr>
+                <td class="plan-name">API 按量</td>
+                <td class="plan-price">按Token</td>
+                <td class="plan-models"><a href="https://www.anthropic.com/" target="_blank" rel="noopener noreferrer">Opus 4.8</a> ~$15/$75 (输入/输出百万Token)</td>
+                <td class="plan-limit">15-20倍于 $0.5-2 档套餐</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- GitHub Copilot -->
+      <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer">GitHub Copilot</a></span>
+          <span class="cp-badge badge-overseas">海外</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>说明</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">Free</td>
+                <td class="plan-price">$0</td>
+                <td class="plan-models">有限补全与 Agent试用</td>
+                <td class="plan-limit"></td>
+              </tr>
+              <tr>
+                <td class="plan-name">Pro <span class="cp-badge badge-rec">推荐</span></td>
+                <td class="plan-price">$10/月</td>
+                <td class="plan-models">无限补全 + Chat + 代码Agent</td>
+                <td class="plan-limit">个人版</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Pro+</td>
+                <td class="plan-price">$39/月</td>
+                <td class="plan-models">Copilot Workspace + Agent模式 + 优先队列</td>
+                <td class="plan-limit"></td>
+              </tr>
+              <tr>
+                <td class="plan-name">Business</td>
+                <td class="plan-price">$19/人/月</td>
+                <td class="plan-models">团队管理 + 策略管控</td>
+                <td class="plan-limit"></td>
+              </tr>
+              <tr>
+                <td class="plan-name">Enterprise</td>
+                <td class="plan-price">$39/人/月</td>
+                <td class="plan-models">知识库索引 + 审计合规</td>
+                <td class="plan-limit"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- OpenAI Codex -->
+      <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://developers.openai.com/codex/cli" target="_blank" rel="noopener noreferrer">OpenAI Codex CLI</a></span>
+          <span class="cp-badge badge-overseas">海外</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>核心模型</th><th>说明</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">ChatGPT Plus</td>
+                <td class="plan-price">$20/月</td>
+                <td class="plan-models"><a href="https://openai.com/" target="_blank" rel="noopener noreferrer">GPT-5</a>, <a href="https://openai.com/" target="_blank" rel="noopener noreferrer">o4-mini</a></td>
+                <td class="plan-limit">有限 Codex 额度</td>
+              </tr>
+              <tr>
+                <td class="plan-name">ChatGPT Pro</td>
+                <td class="plan-price">$200/月</td>
+                <td class="plan-models"><a href="https://openai.com/" target="_blank" rel="noopener noreferrer">GPT-5</a>, <a href="https://openai.com/" target="_blank" rel="noopener noreferrer">o3-pro</a></td>
+                <td class="plan-limit">无限 Codex 额度</td>
+              </tr>
+              <tr>
+                <td class="plan-name">API 按量</td>
+                <td class="plan-price">按Token</td>
+                <td class="plan-models"><a href="https://openai.com/" target="_blank" rel="noopener noreferrer">GPT-4.1</a> ~$2/$8 (输入/输出百万Token)</td>
+                <td class="plan-limit"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Windsurf -->
+      <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://codeium.com/windsurf" target="_blank" rel="noopener noreferrer">Windsurf (Codeium)</a></span>
+          <span class="cp-badge badge-overseas">海外</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>说明</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">Free</td>
+                <td class="plan-price">$0</td>
+                <td class="plan-models">有限 Cascade</td>
+                <td class="plan-limit"></td>
+              </tr>
+              <tr>
+                <td class="plan-name">Pro <span class="cp-badge badge-rec">推荐</span></td>
+                <td class="plan-price">$15/月</td>
+                <td class="plan-models">无限补全 + Cascade Agent</td>
+                <td class="plan-limit">高额度 Cascade（以官网 credits 为准）</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Ultimate</td>
+                <td class="plan-price">$60/月</td>
+                <td class="plan-models">高额度 Cascade + 优先队列</td>
+                <td class="plan-limit">重度用户</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Google -->
+      <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://cloud.google.com/gemini" target="_blank" rel="noopener noreferrer">Google Gemini / Jules</a></span>
+          <span class="cp-badge badge-overseas">海外</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>核心模型</th><th>说明</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">Free</td>
+                <td class="plan-price">$0</td>
+                <td class="plan-models"><a href="https://cloud.google.com/gemini" target="_blank" rel="noopener noreferrer">Gemini 2.5 Flash</a></td>
+                <td class="plan-limit">有限额度</td>
+              </tr>
+              <tr>
+                <td class="plan-name">AI Ultra</td>
+                <td class="plan-price">$249.99/月</td>
+                <td class="plan-models"><a href="https://cloud.google.com/gemini" target="_blank" rel="noopener noreferrer">Gemini 3.1 Pro</a> + DeepThink</td>
+                <td class="plan-limit">含 YouTube/Storage 等</td>
+              </tr>
+              <tr>
+                <td class="plan-name">API 按量</td>
+                <td class="plan-price">按Token</td>
+                <td class="plan-models"><a href="https://cloud.google.com/gemini" target="_blank" rel="noopener noreferrer">Gemini 3.1 Pro</a> ~$1.25/$10 (输入/输出百万Token)</td>
+                <td class="plan-limit">200万 Token 免费层</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div><!-- /cp-platforms (国内) -->
+
+    <!-- ==================== 兼容矩阵 ==================== -->
+    <div class="cp-matrix-section">
+      <h2>📊 编程工具 × Coding Plan 兼容矩阵</h2>
+      <div class="cp-matrix-wrap">
+        <table class="cp-matrix">
+          <thead>
+            <tr>
+              <th>工具</th>
+              <th>智谱GLM</th>
+              <th>MiniMax</th>
+              <th>火山方舟</th>
+              <th>阿里云百炼</th>
+              <th>Kimi</th>
+              <th>腾讯云</th>
+              <th>DeepSeek</th>
+              <th>小米</th>
+              <th>海外</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Claude Code</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">—</td><td class="yes">✓</td><td class="no">—</td><td class="yes">✓</td><td class="no">—</td></tr>
+            <tr><td>Cursor</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">—</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+            <tr><td>Cline / Roo Code</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">—</td></tr>
+            <tr><td>Hermes Agent 🔥👍 <span class="cp-badge badge-hot" style="font-size:0.6rem">新</span></td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">实战首选</td></tr>
+            <tr><td>OpenClaw <span class="cp-badge badge-new" style="font-size:0.6rem">开源</span></td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">—</td></tr>
+            <tr><td>CoPaw / WorkBuddy <span class="cp-badge badge-new" style="font-size:0.6rem">阿里</span></td><td class="yes">✓</td><td class="yes">✓</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td><td class="yes">国内优选</td></tr>
+            <tr><td>ZCode <span class="cp-badge badge-new" style="font-size:0.6rem">官方</span></td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+            <tr><td>ArkClaw</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+            <tr><td>Kilo Code</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">—</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+            <tr><td>Codex CLI</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+            <tr><td>TRAE</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+            <tr><td>Kimi CLI</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+            <tr><td>Qwen Code</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+            <tr><td>Goose</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+            <tr><td>Crush / Droid</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+            <tr><td>Grok CLI</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="font-size:0.76rem;color:var(--muted);margin-top:0.5rem;">
+        ✓ = 官方支持 &nbsp; — = 不支持 &nbsp; <span class="cp-badge badge-hot" style="font-size:0.6rem">🔥</span> = 热门 &nbsp; <span class="cp-badge badge-new" style="font-size:0.6rem">新</span> = 新工具 &nbsp; · Hermes Agent 为 2026 开源实战首选，兼容 OpenAI 格式 API &nbsp; · CoPaw/WorkBuddy 为国内大厂推出的开源 Agent &nbsp; · ZCode 为智谱 GLM Coding Plan 官方 IDE &nbsp; · ArkClaw 为火山方舟专属 IDE 内 Agent
+      </div>
+    </div>
+
+    <!-- ==================== 兼容性排名 ==================== -->
+    <div class="cp-matrix-section" style="margin-top:1rem;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;">
+        <!-- 排名表 -->
+        <div style="border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden;">
+          <div style="padding:0.55rem 1rem;border-bottom:1px solid var(--border);font-weight:700;font-size:0.88rem;">📊 套餐兼容性排名</div>
+          <div style="padding:0.75rem 1rem;">
+            <table class="cp-table" style="font-size:0.78rem;">
+              <thead><tr><th>平台</th><th>兼容工具数</th><th>覆盖率</th></tr></thead>
+              <tbody>
+                <tr><td class="plan-name">智谱GLM</td><td style="color:var(--accent2);font-weight:700">8</td><td><div style="background:var(--border);border-radius:4px;height:0.8rem;overflow:hidden;"><div style="width:89%;height:100%;border-radius:4px;background:linear-gradient(90deg,#3fb950,#2ea043);"></div></div></td></tr>
+                <tr><td class="plan-name">火山方舟</td><td style="color:var(--accent2);font-weight:700">8</td><td><div style="background:var(--border);border-radius:4px;height:0.8rem;overflow:hidden;"><div style="width:89%;height:100%;border-radius:4px;background:linear-gradient(90deg,#3fb950,#2ea043);"></div></div></td></tr>
+                <tr><td class="plan-name">阿里云百炼</td><td style="color:var(--accent2);font-weight:700">6</td><td><div style="background:var(--border);border-radius:4px;height:0.8rem;overflow:hidden;"><div style="width:67%;height:100%;border-radius:4px;background:linear-gradient(90deg,#58a6ff,#388bfd);"></div></div></td></tr>
+                <tr><td class="plan-name">MiniMax</td><td style="font-weight:600">5</td><td><div style="background:var(--border);border-radius:4px;height:0.8rem;overflow:hidden;"><div style="width:56%;height:100%;border-radius:4px;background:linear-gradient(90deg,#58a6ff,#388bfd);"></div></div></td></tr>
+                <tr><td class="plan-name">Kimi</td><td style="font-weight:600">3</td><td><div style="background:var(--border);border-radius:4px;height:0.8rem;overflow:hidden;"><div style="width:33%;height:100%;border-radius:4px;background:linear-gradient(90deg,#d29922,#bb8009);"></div></div></td></tr>
+                <tr><td class="plan-name">腾讯云</td><td style="font-weight:600">3</td><td><div style="background:var(--border);border-radius:4px;height:0.8rem;overflow:hidden;"><div style="width:33%;height:100%;border-radius:4px;background:linear-gradient(90deg,#d29922,#bb8009);"></div></div></td></tr>
+                <tr><td class="plan-name">DeepSeek</td><td style="font-weight:600">3</td><td><div style="background:var(--border);border-radius:4px;height:0.8rem;overflow:hidden;"><div style="width:33%;height:100%;border-radius:4px;background:linear-gradient(90deg,#d29922,#bb8009);"></div></div></td></tr>
+                <tr><td class="plan-name">小米</td><td style="font-weight:600">5</td><td><div style="background:var(--border);border-radius:4px;height:0.8rem;overflow:hidden;"><div style="width:56%;height:100%;border-radius:4px;background:linear-gradient(90deg,#58a6ff,#388bfd);"></div></div></td></tr>
+              </tbody>
+            </table>
+            <div style="font-size:0.72rem;color:var(--muted);margin-top:0.4rem;">共 9 家国内 Coding Plan</div>
+          </div>
+        </div>
+        <!-- 排名表 -->
+        <div style="border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden;">
+          <div style="padding:0.55rem 1rem;border-bottom:1px solid var(--border);font-weight:700;font-size:0.88rem;">📊 工具兼容性排名</div>
+          <div style="padding:0.75rem 1rem;">
+            <table class="cp-table" style="font-size:0.78rem;">
+              <thead><tr><th>工具</th><th>兼容套餐数</th><th>覆盖率</th></tr></thead>
+              <tbody>
+                <tr><td class="plan-name">Hermes Agent <span class="cp-badge badge-hot" style="font-size:0.58rem">🔥</span></td><td style="color:var(--accent2);font-weight:700">8</td><td><div style="background:var(--border);border-radius:4px;height:0.8rem;overflow:hidden;"><div style="width:100%;height:100%;border-radius:4px;background:linear-gradient(90deg,#3fb950,#2ea043);"></div></div></td></tr>
+                <tr><td class="plan-name">OpenClaw <span class="cp-badge badge-rec" style="font-size:0.58rem">热</span></td><td style="color:var(--accent2);font-weight:700">8</td><td><div style="background:var(--border);border-radius:4px;height:0.8rem;overflow:hidden;"><div style="width:100%;height:100%;border-radius:4px;background:linear-gradient(90deg,#3fb950,#2ea043);"></div></div></td></tr>
+                <tr><td class="plan-name">Claude Code</td><td style="font-weight:700">5</td><td><div style="background:var(--border);border-radius:4px;height:0.8rem;overflow:hidden;"><div style="width:63%;height:100%;border-radius:4px;background:linear-gradient(90deg,#58a6ff,#388bfd);"></div></div></td></tr>
+                <tr><td class="plan-name">Cursor</td><td style="font-weight:700">5</td><td><div style="background:var(--border);border-radius:4px;height:0.8rem;overflow:hidden;"><div style="width:63%;height:100%;border-radius:4px;background:linear-gradient(90deg,#58a6ff,#388bfd);"></div></div></td></tr>
+                <tr><td class="plan-name">CoPaw / WorkBuddy</td><td style="font-weight:600">5</td><td><div style="background:var(--border);border-radius:4px;height:0.8rem;overflow:hidden;"><div style="width:63%;height:100%;border-radius:4px;background:linear-gradient(90deg,#58a6ff,#388bfd);"></div></div></td></tr>
+                <tr><td class="plan-name">Cline / Roo Code</td><td style="font-weight:600">5</td><td><div style="background:var(--border);border-radius:4px;height:0.8rem;overflow:hidden;"><div style="width:63%;height:100%;border-radius:4px;background:linear-gradient(90deg,#58a6ff,#388bfd);"></div></div></td></tr>
+                <tr><td class="plan-name">Kilo Code</td><td style="font-weight:600">3</td><td><div style="background:var(--border);border-radius:4px;height:0.8rem;overflow:hidden;"><div style="width:38%;height:100%;border-radius:4px;background:linear-gradient(90deg,#d29922,#bb8009);"></div></div></td></tr>
+                <tr><td class="plan-name">国产 (TRAE/Kimi CLI/Qwen Code/Goose/Crush/Grok)</td><td style="color:var(--muted)">1-2</td><td><div style="background:var(--border);border-radius:4px;height:0.8rem;overflow:hidden;"><div style="width:13%;height:100%;border-radius:4px;background:linear-gradient(90deg,#8b9cb3,#6e7681);"></div></div></td></tr>
+              </tbody>
+            </table>
+            <div style="font-size:0.72rem;color:var(--muted);margin-top:0.4rem;">共 8 款主流编程工具</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== 选购提醒 ==================== -->
+    <div class="cp-notice">
+      <div class="cp-notice-head">⚠️ 选购提醒 · 必读</div>
+      <div class="cp-notice-body">
+        <ul>
+          <li><strong>1元 ≠ 15-20元 API 等价</strong>：国内 Coding Plan 的"次"多为 Agent 对话轮次或工具调用次数，与 Token 按量计费不同；Agent 重度使用约 15-20 倍于同等 API 费用，请按场景选型。</li>
+          <li><strong>5小时滑动窗口</strong>：MiniMax、阿里云等套餐标注"用量/5h"，<strong>滑动计算</strong>：任意连续 5 小时内消耗计入当期额度，耗尽后需等待窗口滑动恢复，非自然日重置。</li>
+          <li><strong>API按量 vs 套餐制</strong>：标注"API按量"指 HTTP 按 Token 计费；标注"Agent次"指套餐内固定轮次，1 次对话约等于 10-20 万 Token 等效，请勿直接对比单价。</li>
+          <li><strong>首月特惠 ≠ 长期价</strong>：阿里云首月 ¥39.9、智谱首月 7 折等促销到期恢复原价，续费前请确认长期月价。</li>
+          <li><strong>抢购时段</strong>：智谱 GLM 每日 10:00、阿里云 9:30 等限时秒杀，热门套餐秒空，建议提前登录并设闹钟。</li>
+          <li><strong>续费与涨价</strong>：2026 Q1 多家厂商 Coding Plan 涨价幅度达 463%，新用户首月优惠后 6-12 个月可能调价，关注官方公告。</li>
+          <li><strong>小米 Credit 计费</strong>：小米 MiMo Token Plan 用 Credit 计量；MiMo-V2-Pro 256k 为 2x（1 Token = 2 Credits），1M 上下文为 4x；Omni 256k 为 1x。Pro 档性价比最高，注意上下文长度倍率。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ==================== FAQ ==================== -->
+    <div class="cp-faq">
+      <div class="cp-faq-head">❓ 常见问题 FAQ</div>
+
+      <div class="cp-faq-item is-open">
+        <div class="cp-faq-q">Coding Plan 和直接买 API 有什么区别？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a">Coding Plan 是<strong>面向 AI 编程场景的包月套餐</strong>，通常含 Agent 额度、优先队列与工具集成，价格比裸 API 按 Token 更划算。<strong>适合日常编码</strong>；若需批量推理、自建服务或精确 Token 控制，API 按量更灵活。两者可组合使用。</div>
+      </div>
+
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">API 按量和 Agent 套餐额度怎么换算？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>API按量</strong> = 按 HTTP 请求 Token 计费，Agent 一轮对话可能消耗数万 Token。<strong>约 15-20 倍于套餐"次"</strong>的等效成本。 <strong>Agent次</strong> = 套餐内固定轮次，如"1200次/5h"，与 API 不可直接比价；Agent 重度用户建议选 Max 档或 API 按量。轻度用户套餐更省。</div>
+      </div>
+
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">5 小时滑动窗口是什么意思？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a">例如标注"1200次/5h"，指<strong>任意连续 5 小时</strong>内最多 1200 次。若 1 小时内用完 1200 次，需等 2-5 小时窗口滑动后恢复，非每日 0 点重置。<strong>长时间连续编码</strong>请关注峰值用量，必要时升档或搭配 API 按量。</div>
+      </div>
+
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">国内 Coding Plan 能比 Cursor/Claude 省多少？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>约省 3-5 倍</strong>：国内 ¥40-200/月 vs 海外 $20-200/月，且<strong>免梯、低延迟</strong>。若需<strong>顶级模型 Claude Opus/GPT-5 长程能力</strong>，海外仍领先；日常编码国内 GLM-5.2 / DeepSeek-V4 已足够。可搭配 <a href="https://z.ai/subscribe" target="_blank" rel="noopener noreferrer">Z.AI</a> 或 <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer">OfoxAI</a> 中转海外模型。</div>
+      </div>
+
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">Token 降价趋势下还要买套餐吗？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>看使用模式</strong>：若已是重度用户，套餐含优先队列与工具集成，仍比裸 API 省心。Token 单价持续下降（如 DeepSeek API 输入 ¥1/百万 Token），轻度用户 API 更省。建议先用免费档试算 1-3 个月用量再决定。勿囤积 API Key 余额。</div>
+      </div>
+
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">现在买还是等降价？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>刚需就上</strong>：Token 三年降 1000 倍趋势不变，但<strong>早用早提效</strong>。新用户可抢首月优惠（智谱 7 折、阿里云 ¥39.9 等），老用户关注 6-12 月续费价。Fable 5 恢复后 Claude Max 长程能力将再升级。</div>
+      </div>
+    </div>
+
+    <!-- ==================== 性价比排名 ==================== -->
+    <div class="cp-value-rank">
+      <div class="cp-value-rank-head">💎 性价比排名 · 谁最划算</div>
+      <div class="cp-value-rank-body">
+        <div style="font-size:0.78rem;color:var(--muted);margin-bottom:0.6rem;">按估算 Token 总量与月价计算 · ★ = 估算性价比指数（仅供参考，各平台计量口径不同）</div>
+        <table class="cp-table" style="font-size:0.8rem;">
+          <thead><tr><th>排名</th><th>平台</th><th>套餐</th><th>月价</th><th>估算Token(万)</th><th>性价比指数</th><th>相对值</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>—</td>
+              <td class="plan-name">DeepSeek</td>
+              <td>Free</td>
+              <td class="plan-price">¥0</td>
+              <td>~1,800</td>
+              <td class="val-high">∞</td>
+              <td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:100%;height:100%;border-radius:4px;background:linear-gradient(90deg,#3fb950,#2ea043);"></div></div></td>
+            </tr>
+            <tr>
+              <td>—</td>
+              <td class="plan-name">MiniMax</td>
+              <td>Max</td>
+              <td class="plan-price">¥119</td>
+              <td>~162,000</td>
+              <td class="val-high">1,361</td>
+              <td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:92%;height:100%;border-radius:4px;background:linear-gradient(90deg,#3fb950,#2ea043);"></div></div></td>
+            </tr>
+            <tr>
+              <td>—</td>
+              <td class="plan-name">MiniMax</td>
+              <td>Plus</td>
+              <td class="plan-price">¥49</td>
+              <td>~54,000</td>
+              <td class="val-high">1,102</td>
+              <td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:74%;height:100%;border-radius:4px;background:linear-gradient(90deg,#58a6ff,#388bfd);"></div></div></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td class="plan-name">腾讯云</td>
+              <td>Pro</td>
+              <td class="plan-price">¥200</td>
+              <td>~90,000</td>
+              <td class="val-mid">450</td>
+              <td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:30%;height:100%;border-radius:4px;background:linear-gradient(90deg,#58a6ff,#388bfd);"></div></div></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td class="plan-name">火山方舟</td>
+              <td>Pro</td>
+              <td class="plan-price">¥200</td>
+              <td>~72,000</td>
+              <td class="val-mid">360</td>
+              <td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:24%;height:100%;border-radius:4px;background:linear-gradient(90deg,#d29922,#bb8009);"></div></div></td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td class="plan-name">小米</td>
+              <td>Standard</td>
+              <td class="plan-price">¥99</td>
+              <td>~7,200</td>
+              <td class="val-mid">73</td>
+              <td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:5%;height:100%;border-radius:4px;background:linear-gradient(90deg,#8b9cb3,#6e7681);"></div></div></td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td class="plan-name">MiniMax</td>
+              <td>Starter</td>
+              <td class="plan-price">¥29</td>
+              <td>~5,400</td>
+              <td class="val-mid">186</td>
+              <td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:12%;height:100%;border-radius:4px;background:linear-gradient(90deg,#d29922,#bb8009);"></div></div></td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td class="plan-name">智谱GLM</td>
+              <td>Pro</td>
+              <td class="plan-price">¥149</td>
+              <td>~18,000</td>
+              <td class="val-low">121</td>
+              <td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:8%;height:100%;border-radius:4px;background:linear-gradient(90deg,#8b9cb3,#6e7681);"></div></div></td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td class="plan-name">GitHub Copilot</td>
+              <td>Pro</td>
+              <td class="plan-price">$10</td>
+              <td>~3,000</td>
+              <td class="val-low">~43</td>
+              <td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:3%;height:100%;border-radius:4px;background:linear-gradient(90deg,#8b9cb3,#6e7681);"></div></div></td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td class="plan-name">Cursor</td>
+              <td>Pro</td>
+              <td class="plan-price">$20</td>
+              <td>Agent 用量池（$20 档）</td>
+              <td class="val-low">~25</td>
+              <td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:2%;height:100%;border-radius:4px;background:linear-gradient(90deg,#8b9cb3,#6e7681);"></div></div></td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="font-size:0.72rem;color:var(--muted);margin-top:0.5rem;">* 估算仅供参考：各平台「次」与 Token 计量口径不同；按 ¥30/百万 Token、1$≈¥7.2 折算。DeepSeek Free 因免费额度极高排名第一，Agent 重度用户仍需 Coding Plan 优先队列。</div>
+      </div>
+    </div>
+
+    <!-- ==================== Token 价格趋势 ==================== -->
+    <div class="cp-trend-section">
+      <h2>📉 Token 价格趋势：3 年降 1000 倍 </h2>
+      <p class="cp-trend-sub">自 GPT-4 发布以来，主流模型 Token 单价持续断崖式下降；国内 AI 厂商跟进更快，Coding Plan 性价比逐年提升。</p>
+
+      <!-- Visual bar chart -->
+      <div style="border:1px solid var(--border);border-radius:10px;background:var(--card);padding:1rem;margin-bottom:1.2rem;">
+        <div style="font-weight:700;font-size:0.88rem;margin-bottom:0.6rem;">GPT-4 输入价 · 每百万 Token 价 (USD)</div>
+        <div class="cp-bar-chart">
+          <div class="cp-bar-row"><span class="cp-bar-label">2022 初</span><div class="cp-bar-track"><div class="cp-bar-fill bar-2022" style="width:100%">$20.00</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">2023</span><div class="cp-bar-track"><div class="cp-bar-fill bar-2023" style="width:25%">$5.00</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">2024</span><div class="cp-bar-track"><div class="cp-bar-fill bar-2024" style="width:5%">$1.00</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">2025</span><div class="cp-bar-track"><div class="cp-bar-fill bar-2025" style="width:2%">$0.40</div></div></div>
+          <div class="cp-bar-row"><span class="cp-bar-label">2026</span><div class="cp-bar-track"><div class="cp-bar-fill bar-2026" style="width:0.5%">$0.10</div></div></div>
+        </div>
+        <div style="font-size:0.76rem;color:var(--muted);margin-top:0.5rem;">数据来源：<a href="https://www.gpunex.com/blog/ai-inference-economics-2026/" target="_blank" rel="noopener noreferrer">GPUnex Research</a></div>
+      </div>
+
+      <!-- Model generation price comparison -->
+      <div class="cp-trend-grid">
+        <div class="cp-trend-card">
+          <div class="cp-trend-card-head">OpenAI 历代定价</div>
+          <div class="cp-trend-card-body">
+            <table class="cp-trend-table">
+              <thead><tr><th>模型</th><th>输入 / 输出 (百万Token)</th><th>降幅</th></tr></thead>
+              <tbody>
+                <tr><td>GPT-4 (2023)</td><td><span class="price-old">$30 / $60</span></td><td></td></tr>
+                <tr><td>GPT-4 Turbo (2024)</td><td><span class="price-old">$10 / $30</span></td><td class="price-drop">↓50%</td></tr>
+                <tr><td>GPT-4o (2024)</td><td><span class="price-old">$2.50 / $10</span></td><td class="price-drop">↓67%</td></tr>
+                <tr><td>GPT-4.1 (2025)</td><td class="price-new">$2 / $8</td><td class="price-drop">↓20%</td></tr>
+                <tr><td>GPT-4.1 Mini (2025)</td><td class="price-new">$0.40 / $1.60</td><td class="price-drop">↓80%</td></tr>
+                <tr><td>GPT-5 (2026)</td><td class="price-new">$2 / $8</td><td class="price-drop">旗舰档</td></tr>
+                <tr><td>GPT-4.1 Nano (2026)</td><td class="price-new">$0.10 / $0.40</td><td class="price-drop">↓75%</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="cp-trend-card">
+          <div class="cp-trend-card-head">Anthropic 历代定价</div>
+          <div class="cp-trend-card-body">
+            <table class="cp-trend-table">
+              <thead><tr><th>模型</th><th>输入 / 输出 (百万Token)</th><th>降幅</th></tr></thead>
+              <tbody>
+                <tr><td>Claude 3 Opus (2024)</td><td><span class="price-old">$15 / $75</span></td><td></td></tr>
+                <tr><td>Claude 3.5 Sonnet (2024)</td><td><span class="price-old">$3 / $15</span></td><td class="price-drop">↓80%</td></tr>
+                <tr><td>Claude 4 Sonnet (2025)</td><td class="price-new">$3 / $15</td><td>持平</td></tr>
+                <tr><td>Claude 4 Opus (2025)</td><td class="price-new">$15 / $75</td><td>持平</td></tr>
+                <tr><td>Claude Haiku 4 (2025)</td><td class="price-new">$0.80 / $4</td><td class="price-drop">↓73%</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="cp-trend-card">
+          <div class="cp-trend-card-head">国内主流模型</div>
+          <div class="cp-trend-card-body">
+            <table class="cp-trend-table">
+              <thead><tr><th>模型</th><th>输入 / 输出 (百万Token)</th><th>降幅</th></tr></thead>
+              <tbody>
+                <tr><td>GLM-4 (2024)</td><td><span class="price-old">¥100 / ¥100</span></td><td></td></tr>
+                <tr><td>GLM-4.7 (2025)</td><td class="price-new">¥5 / ¥5</td><td class="price-drop">↓95%</td></tr>
+                <tr><td>GLM-5.2 (2026)</td><td class="price-new">¥4 / ¥16</td><td>开源标杆</td></tr>
+                <tr><td>Qwen2.5-72B (2024)</td><td><span class="price-old">¥4 / ¥8</span></td><td></td></tr>
+                <tr><td>Qwen3-Coder (2026)</td><td class="price-new">¥2 / ¥6</td><td class="price-drop">↓50%</td></tr>
+                <tr><td>DeepSeek-V3 (2025)</td><td class="price-new">¥1 / ¥2</td><td class="price-drop">极致低价</td></tr>
+                <tr><td>DeepSeek-V4-Pro (2026)</td><td class="price-new">¥1~12 / ¥24</td><td class="price-drop">低至¥1/1M输入</td></tr>
+                <tr><td>DeepSeek-V4-Flash (2026)</td><td class="price-new">¥0.2~1 / ¥2</td><td class="price-drop">轻量极速</td></tr>
+                <tr><td>Kimi-K2.6 (2026)</td><td class="price-new">¥4 / ¥16</td><td>长程旗舰</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="cp-trend-card">
+          <div class="cp-trend-card-head">2026 主流价位区间</div>
+          <div class="cp-trend-card-body">
+            <table class="cp-trend-table">
+              <thead><tr><th>能力档位</th><th>输入 (百万)</th><th>输出 (百万)</th></tr></thead>
+              <tbody>
+                <tr><td>海外 旗舰档 (GPT-5, Opus 4.8)</td><td>$2 – $15</td><td>$8 – $75</td></tr>
+                <tr><td>海外 均衡档 (GPT-4.1, Sonnet 4.6)</td><td>$0.50 – $3</td><td>$1 – $15</td></tr>
+                <tr><td>海外 轻量档 (GPT-4.1 Nano, Haiku)</td><td>$0.10 – $0.25</td><td>$0.30 – $1</td></tr>
+                <tr><td>开源 旗舰档 (Llama, DeepSeek)</td><td>$0.05 – $0.30</td><td>$0.10 – $0.60</td></tr>
+                <tr><td>开源 轻量/蒸馏</td><td>$0.01 – $0.10</td><td>$0.03 – $0.20</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- 海外 vs 国内 定价逻辑对比 -->
+      <div style="margin-top:1.5rem;border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden;">
+        <div style="padding:0.65rem 1rem;border-bottom:1px solid var(--border);font-weight:700;font-size:0.95rem;">🌍 海外 vs 国内：定价逻辑为何不同？</div>
+        <div style="padding:1rem;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;">
+            <div style="padding:0.8rem;border-radius:8px;border:1px solid rgba(167,139,250,0.2);background:rgba(167,139,250,0.04);">
+              <div style="font-weight:700;font-size:0.88rem;color:var(--overseas);margin-bottom:0.5rem;">海外：按能力分档溢价</div>
+              <div style="font-size:0.82rem;line-height:1.8;">
+                <div><strong style="color:var(--accent2)">✓ 旗舰档</strong> Opus/GPT-5 约 $15-75/M，长程 Agent 溢价明显</div>
+                <div><strong style="color:var(--accent2)">✓ 均衡档</strong> Sonnet/GPT-4.1 约 $3-8/M，年降 20-30%</div>
+                <div><strong style="color:var(--accent2)">✓ 轻量档</strong> Nano/Haiku $0.1-1/M，适合补全</div>
+                <div><strong style="color:var(--warn)">✗ 注意</strong> 需梯子；Claude Fable 5 暂停中，回落 Opus 4.8</div>
+              </div>
+              <div style="margin-top:0.6rem;">
+                <div class="cp-bar-chart">
+                  <div class="cp-bar-row"><span class="cp-bar-label" style="width:4.5rem">2023初</span><div class="cp-bar-track"><div class="cp-bar-fill bar-2022" style="width:100%">$60/M</div></div></div>
+                  <div class="cp-bar-row"><span class="cp-bar-label" style="width:4.5rem">2024中</span><div class="cp-bar-track"><div class="cp-bar-fill bar-2023" style="width:50%">$30/M</div></div></div>
+                  <div class="cp-bar-row"><span class="cp-bar-label" style="width:4.5rem">2025中</span><div class="cp-bar-track"><div class="cp-bar-fill bar-2024" style="width:25%">$15/M</div></div></div>
+                  <div class="cp-bar-row"><span class="cp-bar-label" style="width:4.5rem">2026中</span><div class="cp-bar-track"><div class="cp-bar-fill bar-2025" style="width:25%">$15/M →</div></div></div>
+                </div>
+              </div>
+            </div>
+            <div style="padding:0.8rem;border-radius:8px;border:1px solid rgba(63,185,80,0.2);background:rgba(63,185,80,0.04);">
+              <div style="font-weight:700;font-size:0.88rem;color:var(--accent2);margin-bottom:0.5rem;">国内：套餐制 + 极致低价</div>
+              <div style="font-size:0.82rem;line-height:1.8;">
+                <div><strong style="color:var(--accent2)">✓ 旗舰档</strong> GLM-5.2/Kimi-K2.6 ¥4-16/M，约为海外 1/5-1/3</div>
+                <div><strong style="color:var(--accent2)">✓ 均衡档</strong> Qwen3-Coder ¥2-6/M，年降 50%+</div>
+                <div><strong style="color:var(--accent2)">✓ 开源/轻量</strong> DeepSeek-V4-Flash ¥0.2-2/M，V4-Pro ¥1-24/M</div>
+                <div><strong style="color:var(--danger)">✗ 注意</strong> 「次」≠ Token；Agent 重度约 15-20 倍 API 等效成本</div>
+              </div>
+              <div style="margin-top:0.6rem;">
+                <div class="cp-bar-chart">
+                  <div class="cp-bar-row"><span class="cp-bar-label" style="width:4.5rem">2024初</span><div class="cp-bar-track"><div class="cp-bar-fill bar-2022" style="width:100%">¥100/M</div></div></div>
+                  <div class="cp-bar-row"><span class="cp-bar-label" style="width:4.5rem">2025初</span><div class="cp-bar-track"><div class="cp-bar-fill bar-2023" style="width:5%">¥5/M</div></div></div>
+                  <div class="cp-bar-row"><span class="cp-bar-label" style="width:4.5rem">2025末</span><div class="cp-bar-track"><div class="cp-bar-fill bar-2024" style="width:2%">¥1-2/M</div></div></div>
+                  <div class="cp-bar-row"><span class="cp-bar-label" style="width:4.5rem">2026中</span><div class="cp-bar-track"><div class="cp-bar-fill bar-2026" style="width:4%">¥4-16/M</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:1rem;padding:0.6rem 0.8rem;border-radius:6px;background:var(--panel);font-size:0.8rem;line-height:1.7;">
+            <strong style="color:var(--warn)">💡 核心结论</strong>
+            海外按「能力溢价」卖 → 旗舰 $15-75 仍贵；国内按「套餐+Agent次」卖 → 同档约 1/3-1/5。
+            <strong style="color:var(--accent2)">国内 Token 均价 2026 年已约为海外 1/2 且仍在降</strong>，Coding Plan 性价比持续提升。
+          </div>
+          <div style="margin-top:1.2rem;border:1px solid var(--border);border-radius:8px;overflow:hidden;">
+            <div style="padding:0.55rem 0.8rem;border-bottom:1px solid var(--border);font-weight:700;font-size:0.88rem;background:var(--panel);">📈 行业趋势：为何 Coding Plan 越来越香？</div>
+            <div style="padding:0.8rem;font-size:0.8rem;line-height:1.75;">
+              <div style="margin-bottom:0.8rem;">
+                <div style="font-weight:700;color:var(--hot);margin-bottom:0.3rem;">① 供给侧 · 算力成本持续下降</div>
+                <div style="padding-left:0.6rem;">
+                  <div>· <strong>推理优化</strong>：蒸馏+投机解码，同等质量 Token 成本年降 40%+</div>
+                  <div>· <strong>芯片迭代</strong>：H100 供给增、Blackwell 推理效率再提 10 倍量级</div>
+                  <div>· <strong>开源冲击</strong>：DeepSeek/GLM/Qwen 拉低 API 底价至 ¥1-5/M</div>
+                </div>
+              </div>
+              <div style="margin-bottom:0.8rem;">
+                <div style="font-weight:700;color:var(--warn);margin-bottom:0.3rem;">② 需求侧 · Agent 化推高用量</div>
+                <div style="padding-left:0.6rem;">
+                  <div>· <strong>套餐涨价</strong>：2026 Q1 部分厂商调价 463%，但首月优惠仍诱人</div>
+                  <div>· <strong>Agent 迁移</strong>：Hermes 等开源 Agent 普及，OpenClaw 用户持续迁移</div>
+                  <div>· <strong>商业模式</strong>：从「卖 Token」转向「Coding Plan + Agent 次 + 工具集成」</div>
+                </div>
+              </div>
+              <div>
+                <div style="font-weight:700;color:var(--accent2);margin-bottom:0.3rem;">③ 用户侧 · 怎么选最划算？</div>
+                <div style="padding-left:0.6rem;">
+                  <div>· <strong>轻度用户</strong>：DeepSeek Free + Windsurf Free = ¥0 起步</div>
+                  <div>· <strong>日常编码</strong>：智谱 GLM Pro ¥149 或火山 Lite ¥40 性价比最高</div>
+                  <div>· <strong>重度 Agent</strong>：GLM Max / Claude Max 2×，关注 5h 滑动窗口峰值</div>
+                  <div>· <strong>长期策略</strong>：Token 降价趋势下，<strong style="color:var(--hot)">刚需就上、抢首月优惠</strong>，不必囤积余额</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== 场景推荐 ==================== -->
+    <!-- ==================== 场景推荐 ==================== -->
+    <div class="cp-tips" style="padding:0;">
+      <div style="padding:0.75rem 1rem;border-bottom:1px solid var(--border);">
+        <h2 style="margin:0;">🎯 场景推荐 · 按需求选 Coding Plan</h2>
+      </div>
+      <div style="padding:0.75rem 1rem;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div style="padding:0.75rem;border-radius:8px;border:1px solid rgba(63,185,80,0.25);background:rgba(63,185,80,0.04);">
+            <div style="font-weight:700;font-size:0.88rem;margin-bottom:0.5rem;">💚 个人开发 / 学生</div>
+            <div style="font-size:0.8rem;line-height:1.7;">
+              <div>🏆 <strong>首选</strong> <a href="https://www.bigmodel.cn/glm-coding?ic=H2G5GCAOFT" target="_blank" rel="noopener noreferrer">智谱GLM Pro</a> ¥149/月 · MCP深度集成</div>
+              <div>💰 <strong>省钱</strong> <a href="https://www.volcengine.com/activity/codingplan" target="_blank" rel="noopener noreferrer">火山方舟Lite</a> ¥40/月 + <a href="https://www.deepseek.com/" target="_blank" rel="noopener noreferrer">DeepSeek</a> ¥0 白嫖组合</div>
+              <div>⏰ <strong>抢购</strong> <a href="https://www.aliyun.com/benefit/scene/codingplan" target="_blank" rel="noopener noreferrer">阿里云百炼Pro</a> 首月¥39.9 每日9:30秒杀</div>
+            </div>
+          </div>
+          <div style="padding:0.75rem;border-radius:8px;border:1px solid rgba(255,107,107,0.25);background:rgba(255,107,107,0.04);">
+            <div style="font-weight:700;font-size:0.88rem;margin-bottom:0.5rem;">🔥 重度 AI 编程（6h+）</div>
+            <div style="font-size:0.8rem;line-height:1.7;">
+              <div>🏆 <strong>国内</strong> <a href="https://www.bigmodel.cn/glm-coding?ic=H2G5GCAOFT" target="_blank" rel="noopener noreferrer">智谱GLM Max</a> ¥469/月 · 长程任务+优先队列</div>
+              <div>🌍 <strong>海外</strong> <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">Claude Max 2×</a> $200/月 + <a href="https://cursor.com/" target="_blank" rel="noopener noreferrer">Cursor Ultra</a> $200/月</div>
+              <div>💡 <strong>提示</strong> 5小时滑动窗口 · 峰值用量请选 Max 档</div>
+            </div>
+          </div>
+          <div style="padding:0.75rem;border-radius:8px;border:1px solid rgba(88,166,255,0.25);background:rgba(88,166,255,0.04);">
+            <div style="font-weight:700;font-size:0.88rem;margin-bottom:0.5rem;">🏢 团队 / 企业</div>
+            <div style="font-size:0.8rem;line-height:1.7;">
+              <div>🇨🇳 <strong>国内</strong> <a href="https://www.volcengine.com/activity/codingplan" target="_blank" rel="noopener noreferrer">火山方舟Pro</a> ¥200/月 · 含ArkClaw等Agent</div>
+              <div>🌍 <strong>海外</strong> <a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer">Copilot Business</a> $19/人/月 · 团队管理+审计</div>
+            </div>
+          </div>
+          <div style="padding:0.75rem;border-radius:8px;border:1px solid rgba(210,153,34,0.25);background:rgba(210,153,34,0.04);">
+            <div style="font-weight:700;font-size:0.88rem;margin-bottom:0.5rem;">🆓 白嫖 / 试水</div>
+            <div style="font-size:0.8rem;line-height:1.7;">
+              <div>🥇 <strong>零成本</strong> <a href="https://www.deepseek.com/" target="_blank" rel="noopener noreferrer">DeepSeek Free</a> ¥0 · 开源模型全家桶</div>
+              <div>🆓 <strong>组合</strong> DeepSeek + <a href="https://codeium.com/windsurf" target="_blank" rel="noopener noreferrer">Windsurf Free</a> = ¥0 完整AI编程</div>
+            </div>
+          </div>
+          <div style="padding:0.75rem;border-radius:8px;border:1px solid rgba(167,139,250,0.25);background:rgba(167,139,250,0.04);">
+            <div style="font-weight:700;font-size:0.88rem;margin-bottom:0.5rem;">🌐 多模型聚合 / 中转</div>
+            <div style="font-size:0.8rem;line-height:1.7;">
+              <div>🔌 <strong>国内</strong> 火山方舟 / 阿里云百炼 / 腾讯云 · 多模型一账号</div>
+              <div>🌍 <strong>海外</strong> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer">OfoxAI</a> · 一个API Key 100+模型</div>
+            </div>
+          </div>
+          <div style="padding:0.75rem;border-radius:8px;border:1px solid rgba(167,139,250,0.25);background:rgba(167,139,250,0.04);">
+            <div style="font-weight:700;font-size:0.88rem;margin-bottom:0.5rem;">💰 海外对比 / 替代方案</div>
+            <div style="font-size:0.8rem;line-height:1.7;">
+              <div>📊 Cursor Pro $20 + Claude Pro $20 = $40/月</div>
+              <div>🇨🇳 替代 <a href="https://z.ai/subscribe" target="_blank" rel="noopener noreferrer">Z.AI</a> 国际版智谱GLM 约省 60%</div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:1rem;padding:0.6rem 0.8rem;border-radius:6px;background:var(--panel);font-size:0.78rem;line-height:1.7;">
+          <strong style="color:var(--warn)">💡 选购提示</strong>
+          抢购阿里云 Pro 9:30 秒杀 · 5小时滑动窗口注意峰值 · Token 三年降 1000 倍 · 续费关注 6-12 月调价
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="cp-footer">
+    <p>数据来源各平台官网 · 价格以官网为准</p>
+    <p><a href="index.html">← 返回 AINav 首页</a> · <a href="free-tier.html">🆓 免费额度</a> · <a href="token-optimization.html">Token优化</a> · <a href="agent-plan.html">Agent横评</a> · <a href="model-plan.html">模型选型</a></p>
+  </div>
+
+  <!-- FAQ accordion -->
+  <script>
+    (function(){
+      document.querySelectorAll('.cp-faq-q').forEach(function(q){
+        q.addEventListener('click', function(){
+          var item = q.parentElement;
+          item.classList.toggle('is-open');
+        });
+      });
+    })();
+  </script>
+
+  <!-- Theme toggle -->
+  <script>
+    (function(){
+      var btns = document.querySelectorAll('.theme-btn:not(.lang-btn)');
+      var html = document.documentElement;
+      function apply(t){
+        html.setAttribute('data-theme', t);
+        localStorage.setItem('cp-theme', t);
+        btns.forEach(function(b){ b.classList.toggle('is-active', b.getAttribute('data-theme-set')===t); });
+      }
+      var saved = localStorage.getItem('cp-theme') || 'system';
+      apply(saved);
+      btns.forEach(function(b){ b.addEventListener('click', function(){ apply(b.getAttribute('data-theme-set')); }); });
+    })();
+  </script>
+
+  <!-- i18n -->
+  <script>
+    (function(){
+      var i18n = {
+        zh: {
+          pageTitle: 'AI Coding Plan 横评对比 — 国内+海外 — AINav',
+          pageDesc: '国内 AI 厂商 Coding Plan 套餐横评：智谱 GLM、MiniMax、火山引擎、月之暗面 Kimi、腾讯混元、DeepSeek、小米等 vs Cursor、Claude Code、GitHub Copilot、Windsurf；含兼容性矩阵、Token 降价趋势与选购建议。',
+          title: '💰 AI Coding Plan 横评',
+          subtitle: '国内 AI 厂商 Coding Plan 套餐横评：价格、模型、额度、兼容性一站式对比，帮你选对 Coding Plan。',
+          navHome: '← AINav 首页', navCoding: '编程套餐横评', navAgent: 'Agent横评',
+          navVideo: '视频套餐横评', navImage: '图像套餐横评', navEncyclopedia: 'AI百科',
+          themeSystem: '跟随系统', themeLight: '浅色', themeDark: '深色',
+          cdLabel: '⏰ 抢购中', cdNext: '⏭ 下一场', cdGo: '去抢',
+          legendRush: '⏰ 抢购', legendRushDesc: '限时/秒杀',
+          legendHot: '🔥 性价比', legendHotDesc: '高性价比',
+          legendNew: '🆕 新品', legendNewDesc: '首月特惠',
+          legendRec: '推荐', legendRecDesc: '编辑推荐',
+          legendOverseas: '海外', legendOverseasDesc: '需科学上网',
+          sectionDomestic: '国内 Coding Plan',
+          sectionOverseas: '海外 Coding Plan',
+          sectionMatrix: '🔧 编程工具 × Coding Plan 兼容矩阵',
+          sectionTrend: '📉 Token 价格趋势：3 年降 1000 倍',
+          sectionRec: '🎯 场景推荐 · 按需求选 Coding Plan',
+          thPlan: '套餐', thPrice: '月价', thModel: '核心模型', thUsage: '用量参考', thNote: '备注',
+          thUsage5h: '用量/5h', thUsage2: '用量', thDesc: '说明',
+          footer: '数据来源各平台官网 · 价格以官网为准',
+          footerHome: '← 返回 AINav 首页',
+          promoText: '想用', promoOr: '/', promoNoNet: '但无梯？',
+          promoDesc: '一个 API Key 直连 100+ 模型，OpenAI 兼容格式',
+          promoCta: '立即注册 →',
+          badgeRush: '⏰ 抢购', badgeHot: '🔥 性价比', badgeNew: '🆕 新品', badgeRec: '推荐',
+        },
+        en: {
+          pageTitle: 'AI Coding Plan Comparison (Domestic + Overseas) — AINav',
+          pageDesc: 'Side-by-side comparison of AI coding subscription plans worldwide: Zhipu GLM, MiniMax, Volcengine, Alibaba Bailian, Kimi, Tencent Cloud, Cursor, Claude Code, GitHub Copilot, Windsurf, and more. Pricing, models, usage, and limited offers.',
+          title: '💰 AI Coding Plan Comparison',
+          subtitle: 'One-stop comparison of AI coding subscriptions worldwide: pricing, models, usage, limited offers — find the best Coding Plan for you.',
+          navHome: '← AINav Home', navCoding: 'Coding Plans', navAgent: 'Agents',
+          navVideo: 'Video Plans', navImage: 'Image Plans', navEncyclopedia: 'AI Encyclopedia',
+          themeSystem: 'System', themeLight: 'Light', themeDark: 'Dark',
+          cdLabel: '⚡ Flash Sale:', cdNext: '⏭ Next Sale:', cdGo: 'Grab →',
+          legendRush: '⚡ Rush', legendRushDesc: 'Limited/Flash',
+          legendHot: '🔥 Hot', legendHotDesc: 'Best Value',
+          legendNew: '✨ Deal', legendNewDesc: '1st Month Deal',
+          legendRec: '👍 Pick', legendRecDesc: 'Recommended',
+          legendOverseas: '🌐 OS', legendOverseasDesc: 'Needs VPN',
+          sectionDomestic: 'Domestic Coding Plans',
+          sectionOverseas: 'Overseas Coding Plans',
+          sectionMatrix: '📊 Coding Tool Compatibility Matrix',
+          sectionTrend: '📉 Token Price Trend: 1000× Drop in 3 Years',
+          sectionRec: '🎯 Recommendations — Find the Best Coding Plan for Your Scenario',
+          thPlan: 'Plan', thPrice: 'Price', thModel: 'Core Model', thUsage: 'Usage Ref', thNote: 'Note',
+          thUsage5h: 'Usage/5h', thUsage2: 'Usage', thDesc: 'Description',
+          footer: 'Data sources: Official websites · Prices subject to change',
+          footerHome: '← Back to AINav Home',
+          promoText: 'Want', promoOr: '/', promoNoNet: 'but no VPN?',
+          promoDesc: 'One API Key for 100+ top models, direct access in China, low latency, OpenAI-compatible format',
+          promoCta: 'Sign Up →',
+          badgeRush: '⚡ Rush', badgeHot: '🔥 Hot', badgeNew: '✨ Deal', badgeRec: '👍 Pick',
+        }
+      };
+
+      var LANG_KEY = 'ainav-lang';
+      var currentLang = localStorage.getItem(LANG_KEY) || 'zh';
+
+      function applyLang(lang) {
+        if (lang !== 'zh' && lang !== 'en') lang = 'zh';
+        currentLang = lang;
+        document.documentElement.setAttribute('lang', lang === 'en' ? 'en' : 'zh-CN');
+        try { localStorage.setItem(LANG_KEY, lang); } catch(e){}
+        var dict = i18n[lang];
+
+        // Page meta
+        document.title = dict.pageTitle;
+        var metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.setAttribute('content', dict.pageDesc);
+        var ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute('content', dict.pageTitle);
+        var ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute('content', dict.pageDesc);
+
+        // data-i18n elements
+        document.querySelectorAll('[data-i18n]').forEach(function(el) {
+          var key = el.getAttribute('data-i18n');
+          if (dict[key] !== undefined) el.textContent = dict[key];
+        });
+
+
+        // Theme buttons
+        document.querySelectorAll('.theme-btn:not(.lang-btn)').forEach(function(b) {
+          var s = b.getAttribute('data-theme-set');
+          if (s === 'system') b.textContent = dict.themeSystem;
+          else if (s === 'light') b.textContent = dict.themeLight;
+          else if (s === 'dark') b.textContent = dict.themeDark;
+        });
+
+        // Countdown labels
+        var cdLabels = document.querySelectorAll('.cd-label');
+        cdLabels.forEach(function(el) {
+          var t = el.textContent;
+          if (t.indexOf('抢购') !== -1 || t.indexOf('Flash') !== -1) el.textContent = dict.cdLabel;
+          else if (t.indexOf('下一场') !== -1 || t.indexOf('Next') !== -1) el.textContent = dict.cdNext;
+        });
+        var cdLink = document.getElementById('cdLink');
+        if (cdLink) cdLink.textContent = dict.cdGo;
+
+        // Legend items
+        var legendItems = document.querySelectorAll('.cp-legend-item');
+        var legendKeys = [
+          { badge: 'badge-rush', key: 'legendRush', descKey: 'legendRushDesc' },
+          { badge: 'badge-hot', key: 'legendHot', descKey: 'legendHotDesc' },
+          { badge: 'badge-new', key: 'legendNew', descKey: 'legendNewDesc' },
+          { badge: 'badge-rec', key: 'legendRec', descKey: 'legendRecDesc' },
+          { badge: 'badge-overseas', key: 'legendOverseas', descKey: 'legendOverseasDesc' },
+        ];
+        legendItems.forEach(function(el, idx) {
+          if (legendKeys[idx]) {
+            var k = legendKeys[idx];
+            el.innerHTML = '<span class="cp-badge ' + k.badge + '">' + dict[k.key] + '</span> ' + dict[k.descKey];
+          }
+        });
+
+        // Section headings
+        document.querySelectorAll('.cp-section-hd').forEach(function(el) {
+          var txt = el.textContent.trim();
+          if (txt.indexOf('??') !== -1 || txt.indexOf('Domestic') !== -1) {
+            var sponsorLink = el.querySelector('.cp-sponsor');
+            el.innerHTML = '<span class="cp-flag">🇨🇳</span> ' + dict.sectionDomestic;
+            if (sponsorLink) el.appendChild(sponsorLink);
+          } else if (txt.indexOf('??') !== -1 || txt.indexOf('Overseas') !== -1) {
+            var sponsorLink2 = el.querySelector('.cp-sponsor');
+            el.innerHTML = '<span class="cp-flag">🌍</span> ' + dict.sectionOverseas;
+            if (sponsorLink2) el.appendChild(sponsorLink2);
+          }
+        });
+
+        // Table headers
+        document.querySelectorAll('.cp-table thead th').forEach(function(th) {
+          var t = th.textContent.trim();
+          if (t === '??') th.textContent = dict.thPlan;
+          else if (t === '??') th.textContent = dict.thPrice;
+          else if (t === '核心模型') th.textContent = dict.thModel;
+          else if (t === '用量参考') th.textContent = dict.thUsage;
+          else if (t === '??/5h') th.textContent = dict.thUsage5h;
+          else if (t === '??') th.textContent = dict.thUsage2;
+          else if (t === '??') th.textContent = dict.thNote;
+          else if (t === '??') th.textContent = dict.thDesc;
+        });
+
+        // Matrix & trend section h2s
+        var h2s = document.querySelectorAll('.cp-matrix-section h2, .cp-trend-section h2');
+        h2s.forEach(function(el) {
+          var t = el.textContent.trim();
+          if (t.indexOf('兼容矩阵') !== -1 || t.indexOf('Compatibility') !== -1) el.textContent = dict.sectionMatrix;
+          if (t.indexOf('Token 价格') !== -1 || t.indexOf('Token Price') !== -1) el.textContent = dict.sectionTrend;
+        });
+
+        // Tips/recommendations section heading
+        document.querySelectorAll('.cp-tips h2').forEach(function(el) {
+          if (el.textContent.indexOf('场景推荐') !== -1 || el.textContent.indexOf('Recommendations') !== -1) {
+            el.textContent = dict.sectionRec;
+          }
+        });
+
+        // Inline badges in table rows
+        document.querySelectorAll('.cp-badge.badge-rush').forEach(function(el) { el.textContent = dict.badgeRush; });
+        document.querySelectorAll('.cp-badge.badge-hot').forEach(function(el) { el.textContent = dict.badgeHot; });
+        document.querySelectorAll('.cp-badge.badge-new').forEach(function(el) { el.textContent = dict.badgeNew; });
+        document.querySelectorAll('.cp-badge.badge-rec:not(.cp-legend .cp-badge)').forEach(function(el) {
+          if (el.textContent.indexOf('??') !== -1 || el.textContent.indexOf('Pick') !== -1) el.textContent = dict.badgeRec;
+        });
+
+        // Footer
+        var footerPs = document.querySelectorAll('.cp-footer p');
+        if (footerPs[1]) footerPs[1].textContent = dict.footer;
+        if (footerPs[2]) footerPs[2].innerHTML = '<a href="index.html">' + dict.footerHome + '</a>';
+
+        // Promo bar
+        var promoBar = document.querySelector('.cp-wrap > div:first-child');
+        if (promoBar) {
+          var promoHtml = '<span style="color:var(--muted)">' + dict.promoText + '</span> ' +
+            '<strong style="color:var(--text)">GPT-5</strong> ' +
+            '<span style="color:var(--muted)">' + dict.promoOr + '</span> ' +
+            '<strong style="color:var(--text)">Claude Opus 4.8</strong> ' +
+            '<span style="color:var(--muted)">' + dict.promoOr + '</span> ' +
+            '<strong style="color:var(--text)">Gemini 3.1 Pro</strong> ' +
+            '<span style="color:var(--muted)">' + dict.promoNoNet + '</span> ' +
+            '<a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--accent2);font-weight:600;text-decoration:none;">OfoxAI</a> ' +
+            '<span style="color:var(--muted)">' + dict.promoDesc + '</span> ' +
+            '<a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">' + dict.promoCta + '</a>';
+          promoBar.innerHTML = promoHtml;
+        }
+
+        try { localStorage.setItem('ainav-lang', lang); } catch (e) {}
+        document.dispatchEvent(new CustomEvent('ainav-lang-change', { detail: { lang: lang } }));
+
+        // Lang button active state
+        document.querySelectorAll('.lang-btn').forEach(function(b) {
+          b.classList.toggle('is-active', b.getAttribute('data-lang-set') === lang);
+        });
+      }
+
+      applyLang(currentLang);
+      document.querySelectorAll('.lang-btn').forEach(function(b) {
+        b.addEventListener('click', function() { applyLang(b.getAttribute('data-lang-set')); });
+      });
+    })();
+  </script>
+<script src="plan-nav.js" data-active="coding-plan.html"></script>
+<script src="thinking-framework.js"></script><script>document.addEventListener("click",function(e){var c=e.target.closest(".plan-promo-code");if(!c)return;e.preventDefault();var code=c.getAttribute("data-code")||c.textContent.trim();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(code).then(function(){c.textContent=code+" 已复制";setTimeout(function(){c.textContent=code},1500)})}else{var ta=document.createElement("textarea");ta.value=code;ta.style.cssText="position:fixed;left:-9999px";document.body.appendChild(ta);ta.select();try{document.execCommand("copy");c.textContent=code+" 已复制";setTimeout(function(){c.textContent=code},1500)}catch(ex){}document.body.removeChild(ta)}});</script>
+</body>
+</html>
