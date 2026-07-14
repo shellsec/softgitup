@@ -5,7 +5,7 @@ Translation note:
 2. All the comments are for explanation, they are not for translation.
 -->
 <NotepadPlus>
-	<Native-Langue name="Français" filename="french.xml" version="8.9.6.2">
+	<Native-Langue name="Français" filename="french.xml" version="8.9.6.4">
 		<Menu>
 			<Main>
 				<!-- Main Menu Entries -->
@@ -534,6 +534,7 @@ Translation note:
 				<Item id="1681" name="Rechercher :"/>
 				<Item id="1685" name="Sensible à la casse"/>
 				<Item id="1690" name="Surligner tout"/>
+				<Item id="1691" name="Conter"/>
 			</IncrementalFind>
 
 			<FindCharsInRange title="Rechercher des caractères dans une plage">
@@ -1861,7 +1862,6 @@ Le texte collé dans ce champ contient des caractères invisibles (peut-être de
 			<tab-untitled-string value="nouveau "/>
 			<file-save-assign-type value="Conc&amp;aténer extension"/>
 			<close-panel-tip value="Fermer"/>
-			<IncrementalFind-FSFound value="$INT_REPLACE$ correspondances"/>
 			<IncrementalFind-FSNotFound value="Expression introuvable"/>
 			<IncrementalFind-FSTopReached value="Haut de page atteint, continuer en partant du bas"/>
 			<IncrementalFind-FSEndReached value="Fin de page atteinte, continuer en partant du haut"/>

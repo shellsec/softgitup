@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <NotepadPlus>
-	<Native-Langue name="台灣繁體" filename="taiwaneseMandarin.xml" version="8.9.6.2">
+	<Native-Langue name="台灣繁體" filename="taiwaneseMandarin.xml" version="8.9.6.4">
 		<Menu>
 			<Main>
 				<!-- Main Menu Entries -->
@@ -486,6 +486,7 @@
 				<Item id="1681" name="搜尋："/>
 				<Item id="1685" name="區分大小寫"/>
 				<Item id="1690" name="醒目提示所有"/>
+				<Item id="1691" name="計算總數"/>
 			</IncrementalFind>
 			<FindCharsInRange title="以字元編號搜尋字元">
 				<Item id="2" name="關閉"/>
@@ -1706,7 +1707,6 @@
 			<find-regex-zero-length-match value="零長度的字元相符"/>
 			<session-save-folder-as-workspace value="包含「資料夾工作區」"/>
 			<tab-untitled-string value="新文件 "/>
-			<IncrementalFind-FSFound value="$INT_REPLACE$ 相符"/>
 			<IncrementalFind-FSNotFound value="找不到相符字串"/>
 			<IncrementalFind-FSTopReached value="到達頁面頂部，從底部繼續"/>
 			<IncrementalFind-FSEndReached value="到達頁面末尾，從頂部繼續 "/>
