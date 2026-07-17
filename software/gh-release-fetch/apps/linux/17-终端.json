@@ -285,5 +285,34 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "contour",
+    "简介": "Contour（现代 GPU 加速终端；Ubuntu deb）",
+    "分类": "终端",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "dbgsym",
+      "win",
+      ".msi",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "contour-",
+      "ubuntu24.04-amd64.deb"
+    ],
+    "installer_extensions": [
+      ".deb"
+    ],
+    "releases_url": "https://bgithub.xyz/contour-terminal/contour/releases",
+    "repo_path": "contour-terminal/contour"
   }
 ]

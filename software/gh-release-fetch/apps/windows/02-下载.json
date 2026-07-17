@@ -498,5 +498,32 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "nicotine_plus",
+    "简介": "Nicotine+（Soulseek 图形客户端）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "package",
+      ".sha256",
+      "linux",
+      "macos"
+    ],
+    "installer_markers": [
+      "windows-x86_64-installer.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "releases_url": "https://bgithub.xyz/nicotine-plus/nicotine-plus/releases",
+    "repo_path": "nicotine-plus/nicotine-plus"
   }
 ]

@@ -332,5 +332,57 @@
     "windows_installer": true,
     "download_referer": "https://sunlogin.oray.com/download",
     "run_installer": true
+  },
+  {
+    "id": "deskflow",
+    "简介": "Deskflow（跨机键鼠共享，Barrier/Input Leap 继任）",
+    "分类": "远程与协作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "portable",
+      "arm64",
+      ".7z",
+      ".dmg",
+      ".deb",
+      ".rpm",
+      "flatpak"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "deskflow-",
+      "win-x64.msi"
+    ],
+    "installer_extensions": [
+      ".msi"
+    ],
+    "releases_url": "https://bgithub.xyz/deskflow/deskflow/releases",
+    "repo_path": "deskflow/deskflow"
+  },
+  {
+    "id": "tigervnc",
+    "简介": "TigerVNC（开源 VNC；GitHub 无 Assets，请打开 Releases/官网）",
+    "分类": "远程与协作",
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/TigerVNC/tigervnc/releases",
+    "releases_url": "https://bgithub.xyz/TigerVNC/tigervnc/releases",
+    "repo_path": "TigerVNC/tigervnc"
+  },
+  {
+    "id": "input_leap",
+    "简介": "Input Leap（Barrier 分支；当前多为调试包，请打开 Releases 页）",
+    "分类": "远程与协作",
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/input-leap/input-leap/releases",
+    "releases_url": "https://bgithub.xyz/input-leap/input-leap/releases",
+    "repo_path": "input-leap/input-leap"
   }
 ]

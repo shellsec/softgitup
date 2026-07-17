@@ -233,5 +233,94 @@
     "save_name": "uptime-kuma-dist.tar.gz",
     "releases_url": "https://bgithub.xyz/louislam/uptime-kuma/releases",
     "repo_path": "louislam/uptime-kuma"
+  },
+  {
+    "id": "victoria_metrics",
+    "简介": "VictoriaMetrics（高性能 Prometheus 兼容时序库；单机 Windows）",
+    "分类": "可观测",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "cluster",
+      "enterprise",
+      "checksum",
+      "vmutils"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "victoria-metrics-windows-amd64-",
+      ".zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "releases_url": "https://bgithub.xyz/VictoriaMetrics/VictoriaMetrics/releases",
+    "repo_path": "VictoriaMetrics/VictoriaMetrics"
+  },
+  {
+    "id": "otelcol",
+    "简介": "OpenTelemetry Collector（otelcol 官方发行）",
+    "分类": "可观测",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "contrib",
+      "k8s",
+      "otlp",
+      "checksum",
+      ".pem",
+      ".sig",
+      ".sbom",
+      "386"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "otelcol_",
+      "windows_amd64.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "releases_url": "https://bgithub.xyz/open-telemetry/opentelemetry-collector-releases/releases",
+    "repo_path": "open-telemetry/opentelemetry-collector-releases"
+  },
+  {
+    "id": "netdata",
+    "简介": "Netdata（实时系统监控 Agent；Windows MSI）",
+    "分类": "可观测",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".deb",
+      ".rpm",
+      "linux",
+      "checksum"
+    ],
+    "installer_markers": [
+      "netdata-x64.msi"
+    ],
+    "installer_extensions": [
+      ".msi"
+    ],
+    "releases_url": "https://bgithub.xyz/netdata/netdata/releases",
+    "repo_path": "netdata/netdata"
   }
 ]

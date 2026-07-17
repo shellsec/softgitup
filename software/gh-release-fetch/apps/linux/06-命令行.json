@@ -108,6 +108,79 @@
     "repo_path": "zellij-org/zellij"
   },
   {
+    "id": "rmux",
+    "简介": "rmux（跨平台 Rust 多路复用器，可用代码驱动 CLI/TUI；Linux x86_64 tar.gz）",
+    "分类": "命令行",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Helvesec/rmux/releases",
+    "repo_path": "Helvesec/rmux",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "rmux-",
+      "linux-x86_64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "macos",
+      "windows",
+      "aarch64",
+      "arm64",
+      ".deb",
+      ".rpm",
+      ".snap",
+      "SHA256",
+      "sigstore"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "rmux-{ver}-linux-x86_64.tar.gz",
+    "aliases": [
+      "rmux",
+      "Helvesec rmux"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "rmux_linux_arm64",
+    "简介": "rmux（Linux aarch64 tar.gz）",
+    "分类": "命令行",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Helvesec/rmux/releases",
+    "repo_path": "Helvesec/rmux",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "rmux-",
+      "linux-aarch64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "macos",
+      "windows",
+      "x86_64",
+      ".deb",
+      ".rpm",
+      ".snap",
+      "SHA256",
+      "sigstore"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "rmux-{ver}-linux-aarch64.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
     "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
@@ -337,5 +410,32 @@
     ],
     "releases_url": "https://bgithub.xyz/ggml-org/whisper.cpp/releases",
     "repo_path": "ggml-org/whisper.cpp"
+  },
+  {
+    "id": "lf",
+    "简介": "lf（终端文件管理器；Linux amd64）",
+    "分类": "命令行",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm",
+      "windows",
+      "darwin",
+      "freebsd"
+    ],
+    "installer_markers": [
+      "lf-linux-amd64.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "releases_url": "https://bgithub.xyz/gokcehan/lf/releases",
+    "repo_path": "gokcehan/lf"
   }
 ]

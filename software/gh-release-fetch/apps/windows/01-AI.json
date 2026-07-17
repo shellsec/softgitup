@@ -393,6 +393,47 @@
     "run_installer": false
   },
   {
+    "id": "codex_app",
+    "简介": "OpenAI Codex 桌面应用（官方 Msix 镜像；ChatGPT 编程智能体；见 openai.com/codex）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Wangnov/codex-app-mirror/releases",
+    "repo_path": "Wangnov/codex-app-mirror",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "OpenAI.Codex_",
+      "_x64__",
+      ".Msix"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      ".delta",
+      "darwin",
+      "mac-",
+      ".dmg",
+      ".zip",
+      "status.png",
+      "SHA256",
+      "manifest"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msix"
+    ],
+    "use_download_filename": true,
+    "aliases": [
+      "Codex App",
+      "OpenAI Codex",
+      "Codex 桌面"
+    ],
+    "open_page_url": "https://openai.com/zh-Hans-CN/codex/",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
     "id": "gemini_cli",
     "简介": "Gemini CLI（Google 官方；Release 多为 gemini-cli-bundle.zip 通用包）",
     "分类": "AI",
@@ -1421,5 +1462,83 @@
     ],
     "releases_url": "https://bgithub.xyz/sipeed/picoclaw/releases",
     "repo_path": "sipeed/picoclaw"
+  },
+  {
+    "id": "voxtrans",
+    "简介": "VoxTrans（桌面转写/翻译/字幕编辑；Windows CPU 版）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/eclipse005/VoxTrans/releases",
+    "repo_path": "eclipse005/VoxTrans",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "VoxTrans_",
+      "_cpu.exe"
+    ],
+    "href_exclude_substrings": [
+      "cuda",
+      ".zip",
+      ".msi"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "download_names": [
+      "VoxTrans_{ver_plain}_cpu.exe"
+    ],
+    "download_url_templates": [
+      "https://github.com/eclipse005/VoxTrans/releases/download/{ver}/VoxTrans_{ver_plain}_cpu.exe"
+    ],
+    "use_download_filename": true,
+    "save_name": "VoxTrans_{ver_plain}_cpu.exe",
+    "aliases": [
+      "VoxTrans",
+      "Vox Trans"
+    ],
+    "process_name": "VoxTrans.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "voxtrans_cuda",
+    "简介": "VoxTrans（桌面转写/翻译/字幕编辑；Windows CUDA 版）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/eclipse005/VoxTrans/releases",
+    "repo_path": "eclipse005/VoxTrans",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "VoxTrans_",
+      "_cuda.exe"
+    ],
+    "href_exclude_substrings": [
+      "cpu",
+      ".zip",
+      ".msi"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "download_names": [
+      "VoxTrans_{ver_plain}_cuda.exe"
+    ],
+    "download_url_templates": [
+      "https://github.com/eclipse005/VoxTrans/releases/download/{ver}/VoxTrans_{ver_plain}_cuda.exe"
+    ],
+    "use_download_filename": true,
+    "save_name": "VoxTrans_{ver_plain}_cuda.exe",
+    "aliases": [
+      "VoxTrans CUDA",
+      "VoxTrans GPU"
+    ],
+    "process_name": "VoxTrans.exe",
+    "kill_before_install": true,
+    "run_installer": true
   }
 ]

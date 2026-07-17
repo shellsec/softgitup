@@ -333,6 +333,87 @@
     ]
   },
   {
+    "id": "freeplane",
+    "简介": "Freeplane（开源思维导图；macOS Apple Silicon dmg；tag 形如 release-x.y.z）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/freeplane/freeplane/releases",
+    "repo_path": "freeplane/freeplane",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Freeplane-",
+      "-apple.dmg"
+    ],
+    "href_exclude_substrings": [
+      "intel",
+      ".exe",
+      ".deb",
+      ".zip",
+      "Setup",
+      "Portable"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "Freeplane-{ver_plain}-apple.dmg"
+    ],
+    "download_url_templates": [
+      "https://github.com/freeplane/freeplane/releases/download/{ver}/Freeplane-{ver_plain}-apple.dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "Freeplane-{ver_plain}-apple.dmg",
+    "aliases": [
+      "Freeplane",
+      "FreeMind",
+      "思维导图"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "freeplane_darwin_intel",
+    "简介": "Freeplane（macOS Intel dmg）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/freeplane/freeplane/releases",
+    "repo_path": "freeplane/freeplane",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Freeplane-",
+      "-intel.dmg"
+    ],
+    "href_exclude_substrings": [
+      "apple",
+      ".exe",
+      ".deb",
+      ".zip",
+      "Setup",
+      "Portable"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "Freeplane-{ver_plain}-intel.dmg"
+    ],
+    "download_url_templates": [
+      "https://github.com/freeplane/freeplane/releases/download/{ver}/Freeplane-{ver_plain}-intel.dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "Freeplane-{ver_plain}-intel.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
     "id": "uniclipboard",
     "简介": "UniClipboard（跨平台剪贴板同步与管理；macOS Apple Silicon dmg）",
     "分类": "效率",
@@ -1016,5 +1097,232 @@
     "kill_before_install": false,
     "run_installer": false,
     "url_hint": "eSearch"
+  },
+  {
+    "id": "rectangle",
+    "简介": "Rectangle（macOS 窗口吸附/快捷键分屏，Spectacle 继任）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/rxhanson/Rectangle/releases",
+    "repo_path": "rxhanson/Rectangle",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Rectangle",
+      ".dmg"
+    ],
+    "href_exclude_substrings": [
+      ".delta",
+      "Pro"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "Rectangle{ver_plain}.dmg",
+    "aliases": [
+      "Rectangle",
+      "Spectacle"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "alt_tab_macos",
+    "简介": "AltTab（macOS 上 Windows 风格 Alt+Tab 窗口切换）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/lwouis/alt-tab-macos/releases",
+    "repo_path": "lwouis/alt-tab-macos",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "AltTab-",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "dSYM",
+      "Sparkle",
+      "framework"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "AltTab-{ver_plain}.zip",
+    "aliases": [
+      "AltTab",
+      "Alt-Tab",
+      "alt-tab-macos"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "easy_move_resize",
+    "简介": "Easy Move+Resize（macOS 按住修饰键拖动/缩放窗口，类似 AltSnap）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/dmarcotte/easy-move-resize/releases",
+    "repo_path": "dmarcotte/easy-move-resize",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "EasyMoveResize",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "src",
+      "Source"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "EasyMoveResize-signed.zip",
+    "aliases": [
+      "Easy Move+Resize",
+      "EasyMoveResize",
+      "AltSnap mac"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "aerospace",
+    "简介": "AeroSpace（macOS i3 风格平铺窗口管理；当前多为 Beta zip）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": false,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/nikitabobko/AeroSpace/releases",
+    "repo_path": "nikitabobko/AeroSpace",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "AeroSpace-",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "dSYM",
+      "Source"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "AeroSpace-{ver}.zip",
+    "aliases": [
+      "AeroSpace",
+      "Aerospace"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "karabiner_elements",
+    "简介": "Karabiner-Elements（macOS 键盘改键与复杂修饰键规则）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/pqrs-org/Karabiner-Elements/releases",
+    "repo_path": "pqrs-org/Karabiner-Elements",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Karabiner-Elements-",
+      ".dmg"
+    ],
+    "href_exclude_substrings": [
+      "beta",
+      "DriverKit",
+      ".pkg"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "Karabiner-Elements-{ver_plain}.dmg",
+    "aliases": [
+      "Karabiner",
+      "Karabiner-Elements"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "hammerspoon",
+    "简介": "Hammerspoon（macOS 自动化：Lua 脚本控制窗口/键鼠/系统）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Hammerspoon/hammerspoon/releases",
+    "repo_path": "Hammerspoon/hammerspoon",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Hammerspoon-",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "dSYM",
+      "Source",
+      "docs"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "Hammerspoon-{ver_plain}.zip",
+    "aliases": [
+      "Hammerspoon"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "yabai",
+    "简介": "yabai（macOS 平铺窗口管理，需配合 skhd 等；二进制 tar.gz）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/asmvik/yabai/releases",
+    "repo_path": "asmvik/yabai",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "yabai-",
+      ".tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "Source",
+      ".zip"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "yabai-{ver}.tar.gz",
+    "aliases": [
+      "yabai"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

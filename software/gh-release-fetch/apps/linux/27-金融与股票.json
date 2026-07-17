@@ -220,5 +220,50 @@
     "save_name": "ta-lib-linux.tar.gz",
     "releases_url": "https://bgithub.xyz/ta-lib/ta-lib/releases",
     "repo_path": "ta-lib/ta-lib"
+  },
+  {
+    "id": "gnucash",
+    "简介": "GnuCash（Linux 请用发行版包或打开 Releases 页）（请打开 Releases 页）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/Gnucash/gnucash/releases",
+    "releases_url": "https://bgithub.xyz/Gnucash/gnucash/releases",
+    "repo_path": "Gnucash/gnucash"
+  },
+  {
+    "id": "hledger",
+    "简介": "hledger（纯文本复式记账 CLI；Linux x64）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "mac",
+      "windows"
+    ],
+    "installer_markers": [
+      "hledger-linux-x64.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "releases_url": "https://bgithub.xyz/simonmichael/hledger/releases",
+    "repo_path": "simonmichael/hledger"
+  },
+  {
+    "id": "freqtrade",
+    "简介": "Freqtrade（量化交易机器人；以 Docker/源码为主，请打开 Releases 页）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/freqtrade/freqtrade/releases",
+    "releases_url": "https://bgithub.xyz/freqtrade/freqtrade/releases",
+    "repo_path": "freqtrade/freqtrade"
   }
 ]

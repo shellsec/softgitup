@@ -888,5 +888,31 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "7zip_zstd",
+    "简介": "7-Zip ZS（带 Zstd 等额外算法的 7-Zip）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm64",
+      "x86",
+      "-ndm"
+    ],
+    "installer_markers": [
+      "7z26.02-zstd-x64.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "releases_url": "https://bgithub.xyz/mcmilk/7-Zip-zstd/releases",
+    "repo_path": "mcmilk/7-Zip-zstd"
   }
 ]

@@ -625,6 +625,45 @@
     "run_installer": false
   },
   {
+    "id": "rmux",
+    "简介": "rmux（跨平台 Rust 多路复用器，可用代码驱动 CLI/TUI；Windows x64 zip）",
+    "分类": "命令行",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Helvesec/rmux/releases",
+    "repo_path": "Helvesec/rmux",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "rmux-",
+      "windows-x86_64.zip"
+    ],
+    "href_exclude_substrings": [
+      "linux",
+      "macos",
+      "aarch64",
+      "arm64",
+      ".deb",
+      ".rpm",
+      ".snap",
+      "SHA256",
+      "sigstore"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "rmux-{ver}-windows-x86_64.zip",
+    "aliases": [
+      "rmux",
+      "Helvesec rmux"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
     "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
@@ -757,5 +796,32 @@
     ],
     "releases_url": "https://bgithub.xyz/ggml-org/whisper.cpp/releases",
     "repo_path": "ggml-org/whisper.cpp"
+  },
+  {
+    "id": "lf",
+    "简介": "lf（终端文件管理器）",
+    "分类": "命令行",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "386",
+      "darwin",
+      "linux",
+      "freebsd"
+    ],
+    "installer_markers": [
+      "lf-windows-amd64.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "releases_url": "https://bgithub.xyz/gokcehan/lf/releases",
+    "repo_path": "gokcehan/lf"
   }
 ]

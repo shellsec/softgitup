@@ -158,5 +158,63 @@
     "save_name": "rustic-linux-gnu.tar.gz",
     "releases_url": "https://bgithub.xyz/rustic-rs/rustic/releases",
     "repo_path": "rustic-rs/rustic"
+  },
+  {
+    "id": "urbackup_server",
+    "简介": "UrBackup Server（Linux amd64 deb）",
+    "分类": "备份",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "dbg",
+      "arm",
+      ".exe",
+      ".msi",
+      ".tar.gz"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "urbackup-server_",
+      "amd64.deb"
+    ],
+    "installer_extensions": [
+      ".deb"
+    ],
+    "releases_url": "https://bgithub.xyz/uroni/urbackup_backend/releases",
+    "repo_path": "uroni/urbackup_backend"
+  },
+  {
+    "id": "borg",
+    "简介": "BorgBackup（去重加密备份；Linux 独立二进制）",
+    "分类": "备份",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".asc",
+      ".tgz",
+      "freebsd",
+      "macos",
+      ".tar.gz",
+      "README"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "borg-linux-glibc236"
+    ],
+    "installer_extensions": [],
+    "releases_url": "https://bgithub.xyz/borgbackup/borg/releases",
+    "repo_path": "borgbackup/borg"
   }
 ]

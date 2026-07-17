@@ -83,5 +83,35 @@
     "save_name": "Thunderbird.dmg",
     "releases_url": "https://bgithub.xyz/thunderbird/thunderbird/releases",
     "repo_path": "thunderbird/thunderbird"
+  },
+  {
+    "id": "session_desktop",
+    "简介": "Session Desktop（去中心化隐私即时通讯；macOS Apple Silicon）",
+    "分类": "网络与通讯",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".blockmap",
+      ".zip",
+      "x64",
+      "win",
+      "linux"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "session-desktop-mac-arm64-",
+      ".dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "releases_url": "https://bgithub.xyz/session-foundation/session-desktop/releases",
+    "repo_path": "session-foundation/session-desktop"
   }
 ]

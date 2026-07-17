@@ -430,5 +430,154 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "xray_core",
+    "简介": "Xray-core（代理内核；Linux 64）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".dgst",
+      "arm",
+      "32",
+      "android",
+      "windows",
+      "macos",
+      "freebsd",
+      "riscv",
+      "loong"
+    ],
+    "installer_markers": [
+      "Xray-linux-64.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "releases_url": "https://bgithub.xyz/XTLS/Xray-core/releases",
+    "repo_path": "XTLS/Xray-core"
+  },
+  {
+    "id": "nekoray",
+    "简介": "NekoRay/NekoBox（Linux AppImage）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "windows",
+      ".deb",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "nekoray-",
+      "linux-x64.AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "releases_url": "https://bgithub.xyz/MatsuriDayo/nekoray/releases",
+    "repo_path": "MatsuriDayo/nekoray"
+  },
+  {
+    "id": "frp",
+    "简介": "frp（内网穿透；Linux amd64）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm",
+      "darwin",
+      "windows",
+      "checksum",
+      "mips",
+      "riscv",
+      "loong"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "frp_",
+      "linux_amd64.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "releases_url": "https://bgithub.xyz/fatedier/frp/releases",
+    "repo_path": "fatedier/frp"
+  },
+  {
+    "id": "shadowsocks_rust",
+    "简介": "shadowsocks-rust（Linux x86_64 musl）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".sha256",
+      "gnu",
+      "android",
+      "windows",
+      "apple",
+      "arm"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "shadowsocks-",
+      "x86_64-unknown-linux-musl.tar.xz"
+    ],
+    "installer_extensions": [
+      ".tar.xz"
+    ],
+    "releases_url": "https://bgithub.xyz/shadowsocks/shadowsocks-rust/releases",
+    "repo_path": "shadowsocks/shadowsocks-rust"
+  },
+  {
+    "id": "gui_for_singbox",
+    "简介": "GUI.for.SingBox（sing-box 图形前端；Linux）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "windows",
+      "darwin",
+      "arm64"
+    ],
+    "installer_markers": [
+      "GUI.for.SingBox-linux-amd64.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "releases_url": "https://bgithub.xyz/GUI-for-Cores/GUI.for.SingBox/releases",
+    "repo_path": "GUI-for-Cores/GUI.for.SingBox"
   }
 ]

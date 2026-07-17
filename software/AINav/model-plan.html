@@ -2,13 +2,14 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="stylesheet" href="site-mobile.css">
   <title>AI 模型旗舰横评对比 — 国内+海外 — AINav</title>
-  <meta name="description" content="10 款 AI 旗舰模型横评对比：DeepSeek-V4-Pro/Flash、GLM-5.2、Kimi K2.6、Qwen 3.6、MiniMax M2.7、Gemma 4、GPT-5、Claude Fable 5/Opus 4.8、Gemini 3.1 Pro；含技术亮点、场景矩阵与选型建议。">
+  <meta name="description" content="11 款 AI 旗舰模型横评对比：DeepSeek-V4-Pro/Flash、GLM-5.2、Kimi K2.6、Qwen 3.6、MiniMax M2.7、Gemma 4、GPT-5、Claude Fable 5/Opus 4.8、Gemini 3.1 Pro、Grok 4.5；含技术亮点、场景矩阵与选型建议。">
   <link rel="canonical" href="https://aiv123.com/model-plan.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="AI 模型旗舰横评对比 — 国内+海外">
-  <meta property="og:description" content="10 款 AI 旗舰模型横评 · 国内 vs 海外 · 技术亮点与场景矩阵，帮你精准选型大模型。">
+  <meta property="og:description" content="11 款 AI 旗舰模型横评 · 国内 vs 海外 · 含 Grok 4.5 · 技术亮点与场景矩阵。">
   <meta property="og:url" content="https://aiv123.com/model-plan.html">
   <meta property="og:site_name" content="AINav">
   <meta name="twitter:card" content="summary">
@@ -117,8 +118,8 @@
       <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">立即注册</a>
     </div>
     <h1>🧠 AI 模型选型横评</h1>
-    <p class="cp-subtitle">10 款 AI 旗舰模型技术特性 × 适用场景映射：DeepSeek-V4-Pro、GLM-5.2、Kimi K2.6、Qwen 3.6、MiniMax M2.7、Gemma 4、GPT-5、Claude Fable 5/Opus 4.8、Gemini 3.1 Pro。</p>
-    <p class="cp-updated-line"><span class="cp-updated">最后更新：2026-06-26</span></p>
+    <p class="cp-subtitle">11 款 AI 旗舰模型技术特性 × 适用场景映射：DeepSeek-V4-Pro、GLM-5.2、Kimi K2.6、Qwen 3.6、MiniMax M2.7、Gemma 4、GPT-5、Claude Fable 5/Opus 4.8、Gemini 3.1 Pro、Grok 4.5。</p>
+    <p class="cp-updated-line"><span class="cp-updated">最后更新：2026-07-15</span></p>
 
     <div class="cp-legend">
       <span class="cp-legend-item"><span class="cp-badge badge-deepseek">DeepSeek</span> 长上下文</span>
@@ -127,7 +128,7 @@
       <span class="cp-legend-item"><span class="cp-badge badge-qwen">Qwen</span> 性价比</span>
       <span class="cp-legend-item"><span class="cp-badge badge-minimax">MiniMax</span> 速度</span>
       <span class="cp-legend-item"><span class="cp-badge badge-gemma">Gemma</span> 端侧</span>
-      <span class="cp-legend-item"><span class="cp-badge badge-overseas">GPT/Claude/Gemini</span> 海外旗舰</span>
+      <span class="cp-legend-item"><span class="cp-badge badge-overseas">GPT/Claude/Gemini/Grok</span> 海外旗舰</span>
     </div>
 
     <div class="cp-section-hd"><span class="cp-flag">🇨🇳</span> 国内旗舰模型</div>
@@ -271,6 +272,20 @@
           <strong>设计理念：</strong>多模态优先 &gt; 纯文本；AI 融入 Google 工作流
         </div>
       </div>
+
+      <div class="cp-platform overseas">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://x.ai/news/grok-4-5" target="_blank" rel="noopener noreferrer">Grok 4.5 (xAI)</a></span>
+          <span class="cp-badge badge-overseas">海外</span>
+          <span class="cp-badge badge-hot">🆕 2026-07</span>
+        </div>
+        <div class="cp-platform-body">
+          <strong>核心技术：</strong><span class="tech-tag">编程/Agent</span><span class="tech-tag">可调 reasoning</span><span class="tech-tag">工具调用</span><span class="tech-tag">高性价比 API</span><br>
+          <strong class="good">✓ 天然适合：</strong>写代码、agentic 任务、知识工作；Cursor 全套餐与 Grok Build 可用<br>
+          <strong class="bad">✗ 天然不适合：</strong>欧盟可用性可能滞后；需对照官网区域限制<br>
+          <strong>设计理念：</strong>与 Cursor 联合训练向；API 约 $2/$6 每百万 token，强调单位成本智能密度
+        </div>
+      </div>
     </div>
 
     <div class="cp-section-hd"><span class="cp-flag">📊</span> 技术特性 × 场景速查表</div>
@@ -290,6 +305,7 @@
           <tr><td class="model-name" style="color:var(--overseas)">Claude Fable 5</td><td>1M · 长程 Agent · 6/12 全球暂停</td><td class="good">发布时最强长程 GA（已暂停）</td><td class="bad">当前不可用</td></tr>
           <tr><td class="model-name" style="color:var(--overseas)">Claude Opus 4.8</td><td>Constitutional AI · 200K+ · 代码旗舰</td><td class="good">复杂代码、长文档、Fable 回落主力</td><td class="bad">中文、梯子</td></tr>
           <tr><td class="model-name" style="color:var(--overseas)">Gemini 3.1 Pro</td><td>1M · 多模态 · Google 生态</td><td class="good">多模态、搜索、Workspace</td><td class="bad">中文代码弱于 GLM/Claude</td></tr>
+          <tr><td class="model-name" style="color:var(--overseas)">Grok 4.5</td><td>Coding/Agent · 可调推理 · API $2/$6</td><td class="good">工程编码、Agent、Cursor/Grok Build</td><td class="bad">欧盟滞后、非中文生态首选</td></tr>
         </tbody>
       </table>
     </div>
@@ -311,11 +327,12 @@
     <div class="cp-scenario">
       <div class="cp-scenario-head">💻 场景 2：AI 写完整 Web 应用（前端+后端+部署）</div>
       <div class="cp-scenario-body">
-        <span class="candidate">候选：GLM-5.2、Kimi K2.6、Claude Opus 4.8</span><br>
-        <span class="recommend">👉 推荐：GLM-5.2（国内）/ Claude Opus 4.8（海外）</span>
+        <span class="candidate">候选：GLM-5.2、Kimi K2.6、Claude Opus 4.8、<strong>Grok 4.5</strong></span><br>
+        <span class="recommend">👉 推荐：GLM-5.2（国内）/ Grok 4.5 或 Claude Opus 4.8（海外）</span>
         <ul class="reason">
-          <li>GLM-5.2 Solid 1M 已验证 85 万 token 连续工程任务，Coding Plan 全量开放</li>
-          <li>Fable 5 暂停期间，Opus 4.8 为海外长程 Coding 主力</li>
+          <li>GLM-5.2 Solid 1M 已验证长程工程任务，Coding Plan 全量开放</li>
+          <li>Grok 4.5（2026-07）主打 coding/agent，Cursor 全套餐可用，API 单价低</li>
+          <li>Fable 5 暂停期间，Opus 4.8 仍为 Anthropic 侧长程 Coding 主力</li>
         </ul>
       </div>
     </div>
@@ -368,6 +385,7 @@
         <div class="cp-summary-item"><span class="cp-badge badge-gpt">通用</span> 生态最广 <span class="arrow">→</span> GPT-5</div>
         <div class="cp-summary-item"><span class="cp-badge badge-claude">深度</span> 代码/推理 <span class="arrow">→</span> Opus 4.8</div>
         <div class="cp-summary-item"><span class="cp-badge badge-gemini">多模态</span> 视频/搜索 <span class="arrow">→</span> Gemini 3.1 Pro</div>
+        <div class="cp-summary-item"><span class="cp-badge badge-overseas">Coding/Agent</span> 工程编码 <span class="arrow">→</span> Grok 4.5 / Claude Opus 4.8</div>
       </div>
       <p style="margin-top:1rem;font-size:0.88rem;color:var(--muted);text-align:center;">没有「最好的模型」，只有「最适合你场景的模型」。</p>
     </div>
@@ -391,5 +409,6 @@
   <script src="plan-nav.js" data-active="model-plan.html"></script>
   <script src="plan-meta-i18n.js"></script>
   <script src="thinking-framework.js"></script>
+<script src="./back-to-top.js"></script>
 </body>
 </html>

@@ -293,5 +293,15 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "contour",
+    "简介": "Contour（macOS 请打开 Releases 页）",
+    "分类": "终端",
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/contour-terminal/contour/releases",
+    "releases_url": "https://bgithub.xyz/contour-terminal/contour/releases",
+    "repo_path": "contour-terminal/contour"
   }
 ]

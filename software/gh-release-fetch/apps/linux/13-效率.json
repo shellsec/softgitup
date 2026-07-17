@@ -303,6 +303,50 @@
     ]
   },
   {
+    "id": "freeplane",
+    "简介": "Freeplane（开源思维导图；Linux deb；tag 形如 release-x.y.z）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/freeplane/freeplane/releases",
+    "repo_path": "freeplane/freeplane",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "freeplane_",
+      "_all.deb"
+    ],
+    "href_exclude_substrings": [
+      ".exe",
+      ".dmg",
+      ".zip",
+      "Setup",
+      "Portable",
+      "apple",
+      "intel"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".deb"
+    ],
+    "download_names": [
+      "freeplane_{ver_plain}.upstream-1_all.deb"
+    ],
+    "download_url_templates": [
+      "https://github.com/freeplane/freeplane/releases/download/{ver}/freeplane_{ver_plain}.upstream-1_all.deb"
+    ],
+    "use_download_filename": true,
+    "save_name": "freeplane_{ver_plain}.upstream-1_all.deb",
+    "aliases": [
+      "Freeplane",
+      "FreeMind",
+      "思维导图"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
     "id": "uniclipboard",
     "简介": "UniClipboard（跨平台剪贴板同步与管理；Linux amd64 AppImage）",
     "分类": "效率",

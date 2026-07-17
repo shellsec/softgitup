@@ -105,5 +105,34 @@
     "save_name": "typst-darwin-arm64",
     "releases_url": "https://bgithub.xyz/typst/typst/releases",
     "repo_path": "typst/typst"
+  },
+  {
+    "id": "pdfcpu",
+    "简介": "pdfcpu（PDF 工具箱；macOS Apple Silicon）",
+    "分类": "办公",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "x86_64",
+      "Windows",
+      "Linux",
+      "checksum"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "pdfcpu_",
+      "Darwin_arm64.tar.xz"
+    ],
+    "installer_extensions": [
+      ".tar.xz"
+    ],
+    "releases_url": "https://bgithub.xyz/pdfcpu/pdfcpu/releases",
+    "repo_path": "pdfcpu/pdfcpu"
   }
 ]

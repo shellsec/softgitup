@@ -236,5 +236,67 @@
     ],
     "releases_url": "https://bgithub.xyz/TC999/WeChatMsg/releases",
     "repo_path": "TC999/WeChatMsg"
+  },
+  {
+    "id": "session_desktop",
+    "简介": "Session Desktop（去中心化隐私即时通讯）",
+    "分类": "网络与通讯",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".blockmap",
+      ".yml",
+      ".asc",
+      "mac",
+      "linux"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "session-desktop-win-x64-",
+      ".exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "releases_url": "https://bgithub.xyz/session-foundation/session-desktop/releases",
+    "repo_path": "session-foundation/session-desktop"
+  },
+  {
+    "id": "deltachat_desktop",
+    "简介": "Delta Chat（基于邮件协议的加密聊天）",
+    "分类": "网络与通讯",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "Portable",
+      "tauri",
+      "AppImage",
+      ".dmg",
+      ".deb",
+      ".rpm",
+      ".msi"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "DeltaChat-",
+      "Setup.x64.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "releases_url": "https://bgithub.xyz/deltachat/deltachat-desktop/releases",
+    "repo_path": "deltachat/deltachat-desktop"
   }
 ]

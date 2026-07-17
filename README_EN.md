@@ -13,8 +13,8 @@ For the latest curated software list and notes, see [`Lastb_soft_version.txt`](L
 
 <!-- SOFTWARE_SIZE_START -->
 > 📦 **`software/` size stats** (auto-refreshed by `generate_and_push.bat`):
-> **21** packages, **4,161** files, **1.61 GB** total; generated at 2026-07-14 17:28.
-> Top 5 by size: system_good (689.7 MB), PotPlayer (252.4 MB), UltraEdit (202.3 MB), WiseCare365 (74.3 MB), notepad++ (73.6 MB).
+> **21** packages, **4,162** files, **1.61 GB** total; generated at 2026-07-17 16:15.
+> Top 5 by size: system_good (689.9 MB), PotPlayer (252.4 MB), UltraEdit (202.3 MB), WiseCare365 (74.3 MB), notepad++ (73.6 MB).
 <!-- SOFTWARE_SIZE_END -->
 
 **Maintainer page check** (optional — `software/` works fine without updates): see [`soft_page_check/`](soft_page_check/README.md). Run `monthly_sop.bat` to compare page titles; update and publish only when you confirm changes.

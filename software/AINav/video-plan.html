@@ -2,7 +2,8 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="stylesheet" href="site-mobile.css">
   <title>AI Video Plan 视频套餐横评 — AINav</title>
   <meta name="description" content="AI视频生成套餐横向对比：可灵AI、即梦Seedance、海螺AI、Vidu、Runway、Pika、Google Veo 3、Luma、HeyGen价格功能积分对比。">
   <link rel="canonical" href="https://aiv123.com/video-plan.html">
@@ -248,8 +249,16 @@
       <div class="cp-legend-item"><span class="cp-badge badge-digital">🧑‍💼 数字人</span> 含数字人功能</div>
     </div>
 
+    <nav class="page-toc" aria-label="本页目录">
+      <div class="page-toc-hd">📑 本页目录</div>
+      <ul class="page-toc-list">
+        <li><a href="#domestic">国内视频</a></li>
+        <li><a href="#overseas">海外视频</a></li>
+      </ul>
+    </nav>
+
     <!-- ==================== 国内 AI 视频平台 ==================== -->
-    <div class="cp-section-hd"><span class="cp-flag">🇨🇳</span> 国内 AI 视频平台</div>
+    <div class="cp-section-hd" id="domestic"><span class="cp-flag">🇨🇳</span> 国内 AI 视频平台</div>
 
     <div class="cp-platforms">
 
@@ -412,7 +421,7 @@
     </div><!-- /cp-platforms (国内) -->
 
     <!-- ==================== 海外 AI 视频平台 ==================== -->
-    <div class="cp-section-hd overseas-hd"><span class="cp-flag">🌍</span> 海外 AI 视频平台</div>
+    <div class="cp-section-hd overseas-hd" id="overseas"><span class="cp-flag">🌍</span> 海外 AI 视频平台</div>
 
     <div class="cp-platforms">
 
@@ -891,5 +900,6 @@
 <script src="plan-nav.js" data-active="video-plan.html"></script>
 <script src="thinking-framework.js"></script>
 <script>document.addEventListener("click",function(e){var c=e.target.closest(".plan-promo-code");if(!c)return;e.preventDefault();var code=c.getAttribute("data-code")||c.textContent.trim();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(code).then(function(){c.textContent=code+" 已复制";setTimeout(function(){c.textContent=code},1500)})}else{var ta=document.createElement("textarea");ta.value=code;ta.style.cssText="position:fixed;left:-9999px";document.body.appendChild(ta);ta.select();try{document.execCommand("copy");c.textContent=code+" 已复制";setTimeout(function(){c.textContent=code},1500)}catch(ex){}document.body.removeChild(ta)}});</script>
+<script src="./back-to-top.js"></script>
 </body>
 </html>

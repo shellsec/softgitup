@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>关于 AINav — AI 工具导航与选型站</title>
+  <meta name="description" content="AINav（aiv123.com）是什么：本地可构建的 AI 工具导航、免费额度对照、编程/Agent/模型横评与工具详情页。说明数据来源、更新方式与站点定位。">
+  <link rel="canonical" href="https://aiv123.com/about.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="关于 AINav">
+  <meta property="og:description" content="AI 工具导航 + 免费额度 + 横评选型，帮助开发者快速找到合适工具。">
+  <meta property="og:url" content="https://aiv123.com/about.html">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%230969da'/><text x='50' y='72' font-size='60' text-anchor='middle' fill='white' font-family='system-ui' font-weight='700'>AI</text></svg>">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2B8FBWRX4N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2B8FBWRX4N');
+  </script>
+  <script>
+  (function () {
+    try {
+      var t = localStorage.getItem("ainav-theme");
+      if (t === "light" || t === "dark" || t === "system") document.documentElement.setAttribute("data-theme", t);
+      else document.documentElement.setAttribute("data-theme", "system");
+    } catch (e) { document.documentElement.setAttribute("data-theme", "system"); }
+  })();
+  </script>
+  <style>
+    :root, html[data-theme="dark"] {
+      --bg: #0f1419; --panel: #151b23; --card: #1c2430; --border: #2d3848;
+      --text: #e6edf3; --muted: #8b9cb3; --accent: #58a6ff; --accent2: #3fb950;
+    }
+    html[data-theme="light"] {
+      --bg: #f6f8fa; --panel: #fff; --card: #fff; --border: #d0d7de;
+      --text: #1f2328; --muted: #59636e; --accent: #0969da; --accent2: #1a7f37;
+    }
+    @media (prefers-color-scheme: light) {
+      html[data-theme="system"] {
+        --bg: #f6f8fa; --panel: #fff; --card: #fff; --border: #d0d7de;
+        --text: #1f2328; --muted: #59636e; --accent: #0969da; --accent2: #1a7f37;
+      }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Segoe UI", system-ui, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.7; }
+    a { color: var(--accent); }
+    .pp-top { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); background: var(--panel); }
+    .pp-top-inner { max-width: 48rem; margin: 0 auto; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+    .pp-top a { font-weight: 600; font-size: 0.88rem; text-decoration: none; color: var(--accent); }
+    .pp-top a:hover { text-decoration: underline; }
+    .pp-wrap { max-width: 48rem; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    .pp-wrap h1 { font-size: 1.5rem; margin: 0 0 0.5rem; }
+    .pp-wrap h2 { font-size: 1.1rem; margin: 2rem 0 0.5rem; color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
+    .pp-wrap p { margin: 0.5rem 0; }
+    .pp-wrap ul { margin: 0.4rem 0; padding-left: 1.5rem; }
+    .pp-wrap li { margin: 0.25rem 0; color: var(--muted); }
+    .pp-wrap li strong { color: var(--text); }
+    .pp-updated { font-size: 0.82rem; color: var(--muted); margin-bottom: 1.5rem; }
+    .pp-footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--muted); text-align: center; }
+    .pp-footer a { color: var(--accent); }
+    .cardish { border: 1px solid var(--border); border-radius: 10px; background: var(--card); padding: 0.85rem 1rem; margin: 1rem 0; }
+    .cardish a { font-weight: 600; text-decoration: none; }
+    .cardish a:hover { text-decoration: underline; }
+    @media (max-width: 640px) { .pp-wrap { padding: 1.25rem 1rem 3rem; } }
+  </style>
+</head>
+<body>
+  <header class="pp-top">
+    <div class="pp-top-inner">
+      <a href="index.html">← 返回 AINav 首页</a>
+      <a href="tools/index.html">工具详情</a>
+      <a href="contact.html">联系</a>
+    </div>
+  </header>
+  <div class="pp-wrap">
+    <h1>关于 AINav</h1>
+    <p class="pp-updated">最后更新：2026 年 7 月 15 日 · 站点：<a href="https://aiv123.com/">aiv123.com</a></p>
+
+    <h2>我们是谁</h2>
+    <p>AINav 是一个面向开发者与 AI 从业者的<strong>工具导航与选型站</strong>。我们整理国内外常见大模型、编程 IDE、Agent、搜索、多媒体与 API 聚合等入口，并补充免费额度、套餐横评与工具详情，帮助你在「找得到」之外，更快判断「适不适合用」。</p>
+    <p>站点代码开源维护，页面由本地数据构建生成，便于持续校对链接、分类与说明。</p>
+
+    <h2>站点提供什么</h2>
+    <ul>
+      <li><strong>首页导航</strong>：按场景与分类浏览工具卡片，支持收藏、轻量对比与中英切换。</li>
+      <li><strong>免费额度</strong>：汇总常见产品的免费档、刷新周期与核实状态，见 <a href="free-tier.html">free-tier.html</a>。</li>
+      <li><strong>横评选型</strong>：编程套餐、Agent、模型、搜索、视频等专题对照页。</li>
+      <li><strong>工具百科</strong>：长表形式的产品说明与免费情况，见 <a href="ai-encyclopedia-2026.html">AI 工具百科</a>。</li>
+      <li><strong>工具详情</strong>：头部工具的独立说明页（适合谁、免费与付费、相关横评），见 <a href="tools/index.html">tools/</a>。</li>
+    </ul>
+
+    <h2>数据从哪来、如何更新</h2>
+    <ul>
+      <li>导航与分类主要来自本地维护的 <code>site-data.json</code>、扩展清单与日常热门清单。</li>
+      <li>百科与额度说明来自核实表与手工 hints；价格与配额会随厂商变更，请以官网为准。</li>
+      <li>维护节奏建议：热门层 1～2 周巡检一次；横评页按大版本发布复核。</li>
+    </ul>
+
+    <h2>我们不是什么</h2>
+    <ul>
+      <li>不是各 AI 产品的官方站点，也不代售账号或代充值。</li>
+      <li>不对第三方服务质量、计费或合规结果作担保。</li>
+      <li>收录与排序基于公开信息与编辑判断，可能包含合作推广位，会尽量标明。</li>
+    </ul>
+
+    <div class="cardish">
+      <p style="margin:0 0 0.35rem;"><strong>想反馈纠错或合作？</strong></p>
+      <p style="margin:0;color:var(--muted);">请前往 <a href="contact.html">联系页</a>，或先阅读 <a href="disclaimer.html">免责声明</a> 与 <a href="privacy.html">隐私政策</a>。</p>
+    </div>
+
+    <h2>开源与赞助</h2>
+    <p>项目仓库：<a href="https://github.com/shellsec/AINav" target="_blank" rel="noopener noreferrer">github.com/shellsec/AINav</a>。若本站帮到你，欢迎通过爱发电等方式支持维护：<a href="https://ifdian.net/a/shellsec" target="_blank" rel="noopener noreferrer">ifdian.net/a/shellsec</a>。</p>
+
+    <div class="pp-footer">
+      <p>
+        <a href="index.html">首页</a> ·
+        <a href="tools/index.html">工具详情</a> ·
+        <a href="contact.html">联系我们</a> ·
+        <a href="privacy.html">隐私政策</a> ·
+        <a href="disclaimer.html">免责声明</a>
+      </p>
+    </div>
+  </div>
+<script src="./back-to-top.js"></script>
+</body>
+</html>

@@ -233,5 +233,70 @@
     "save_name": "uptime-kuma-dist.tar.gz",
     "releases_url": "https://bgithub.xyz/louislam/uptime-kuma/releases",
     "repo_path": "louislam/uptime-kuma"
+  },
+  {
+    "id": "victoria_metrics",
+    "简介": "VictoriaMetrics（高性能 Prometheus 兼容时序库；单机 Linux）",
+    "分类": "可观测",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "cluster",
+      "enterprise",
+      "checksum",
+      "vmutils",
+      "arm"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "victoria-metrics-linux-amd64-",
+      ".tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "releases_url": "https://bgithub.xyz/VictoriaMetrics/VictoriaMetrics/releases",
+    "repo_path": "VictoriaMetrics/VictoriaMetrics"
+  },
+  {
+    "id": "otelcol",
+    "简介": "OpenTelemetry Collector（otelcol；Linux amd64）",
+    "分类": "可观测",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "contrib",
+      "k8s",
+      "otlp",
+      "checksum",
+      ".pem",
+      ".sig",
+      ".sbom",
+      ".deb",
+      ".rpm",
+      "arm"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "otelcol_",
+      "linux_amd64.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "releases_url": "https://bgithub.xyz/open-telemetry/opentelemetry-collector-releases/releases",
+    "repo_path": "open-telemetry/opentelemetry-collector-releases"
   }
 ]

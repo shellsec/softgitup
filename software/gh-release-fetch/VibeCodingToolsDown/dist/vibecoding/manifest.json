@@ -1,15 +1,15 @@
 {
   "schema": 1,
-  "generated_at": "2026-07-08T03:52:28Z",
+  "generated_at": "2026-07-15T03:35:20Z",
   "items": [
     {
       "id": "cursor",
-      "version": "3.10.20",
-      "version_tag": "v3.10.20",
+      "version": "3.11.25",
+      "version_tag": "v3.11.25",
       "downloads": {
         "windows": {
-          "url": "https://downloads.cursor.com/production/23b9fb205fe595ea2be29da7214e19762d037fc3/win32/x64/user-setup/CursorUserSetup-x64-3.10.20.exe",
-          "filename": "CursorUserSetup-x64-3.10.20.exe"
+          "url": "https://downloads.cursor.com/production/fc2563ec93d793fc275eef734405a4fdf8b47b26/win32/x64/user-setup/CursorUserSetup-x64-3.11.25.exe",
+          "filename": "CursorUserSetup-x64-3.11.25.exe"
         },
         "darwin": null,
         "linux": null
@@ -18,20 +18,20 @@
     },
     {
       "id": "vscode",
-      "version": "1.127.0",
-      "version_tag": "v1.127.0",
+      "version": "1.128.1",
+      "version_tag": "v1.128.1",
       "downloads": {
         "windows": {
-          "url": "https://vscode.download.prss.microsoft.com/dbazure/download/stable/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/VSCodeSetup-x64-1.127.0.exe",
-          "filename": "VSCodeSetup-x64-1.127.0.exe"
+          "url": "https://vscode.download.prss.microsoft.com/dbazure/download/stable/5264f2156cbcd7aea5fd004d29eaa10209155d66/VSCodeSetup-x64-1.128.1.exe",
+          "filename": "VSCodeSetup-x64-1.128.1.exe"
         },
         "darwin": {
-          "url": "https://vscode.download.prss.microsoft.com/dbazure/download/stable/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/VSCode-darwin-arm64.zip",
+          "url": "https://vscode.download.prss.microsoft.com/dbazure/download/stable/5264f2156cbcd7aea5fd004d29eaa10209155d66/VSCode-darwin-arm64.zip",
           "filename": "VSCode-darwin-arm64.zip"
         },
         "linux": {
-          "url": "https://vscode.download.prss.microsoft.com/dbazure/download/stable/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/code-stable-x64-1782814647.tar.gz",
-          "filename": "code-stable-x64-1782814647.tar.gz"
+          "url": "https://vscode.download.prss.microsoft.com/dbazure/download/stable/5264f2156cbcd7aea5fd004d29eaa10209155d66/code-stable-x64-1784039387.tar.gz",
+          "filename": "code-stable-x64-1784039387.tar.gz"
         }
       },
       "notes": "版本 tag 来自 GitHub API；安装包 URL 来自 update.code.visualstudio.com GET 重定向链末端（微软官方 CDN）。"
@@ -58,19 +58,19 @@
     },
     {
       "id": "trae",
-      "version": "2.3.50210",
-      "version_tag": "v2.3.50210",
+      "version": "2.3.53680",
+      "version_tag": "v2.3.53680",
       "downloads": {
         "windows": {
-          "url": "https://lf-cdn.trae.ai/obj/trae-ai-us/pkg/app/releases/stable/2.3.50210/win32/Trae-Setup-x64.exe",
+          "url": "https://lf-cdn.trae.ai/obj/trae-ai-us/pkg/app/releases/stable/2.3.53680/win32/Trae-Setup-x64.exe",
           "filename": "Trae-Setup-x64.exe"
         },
         "darwin": {
-          "url": "https://lf-cdn.trae.ai/obj/trae-ai-us/pkg/app/releases/stable/2.3.50210/darwin/Trae-darwin-arm64.dmg",
+          "url": "https://lf-cdn.trae.ai/obj/trae-ai-us/pkg/app/releases/stable/2.3.53680/darwin/Trae-darwin-arm64.dmg",
           "filename": "Trae-darwin-arm64.dmg"
         },
         "linux": {
-          "url": "https://lf-cdn.trae.ai/obj/trae-ai-us/pkg/app/releases/stable/2.3.50210/linux/Trae-linux-x64.tar.gz",
+          "url": "https://lf-cdn.trae.ai/obj/trae-ai-us/pkg/app/releases/stable/2.3.53680/linux/Trae-linux-x64.tar.gz",
           "filename": "Trae-linux-x64.tar.gz"
         }
       },
@@ -95,15 +95,15 @@
     },
     {
       "id": "trae_solo",
-      "version": "2.3.50207",
-      "version_tag": "v2.3.50207",
+      "version": "2.3.54057",
+      "version_tag": "v2.3.54057",
       "downloads": {
         "windows": {
-          "url": "https://lf-cdn.trae.ai/obj/trae-ai-us/pkg/app/releases/stable/2.3.50207/win32/TRAE_Work-Setup-x64.exe",
+          "url": "https://lf-cdn.trae.ai/obj/trae-ai-us/pkg/app/releases/stable/2.3.54057/win32/TRAE_Work-Setup-x64.exe",
           "filename": "TRAE_Work-Setup-x64.exe"
         },
         "darwin": {
-          "url": "https://lf-cdn.trae.ai/obj/trae-ai-us/pkg/app/releases/stable/2.3.50207/darwin/TRAE_Work-darwin-arm64.dmg",
+          "url": "https://lf-cdn.trae.ai/obj/trae-ai-us/pkg/app/releases/stable/2.3.54057/darwin/TRAE_Work-darwin-arm64.dmg",
           "filename": "TRAE_Work-darwin-arm64.dmg"
         },
         "linux": null
@@ -149,20 +149,20 @@
     },
     {
       "id": "zcode",
-      "version": "3.3.0",
-      "version_tag": "v3.3.0",
+      "version": "3.3.5",
+      "version_tag": "v3.3.5",
       "downloads": {
         "windows": {
-          "url": "https://cdn-zcode.z.ai/zcode/electron/releases/3.3.0/ZCode-3.3.0-win-x64.exe",
-          "filename": "ZCode-3.3.0-win-x64.exe"
+          "url": "https://cdn-zcode.z.ai/zcode/electron/releases/3.3.5/ZCode-3.3.5-win-x64.exe",
+          "filename": "ZCode-3.3.5-win-x64.exe"
         },
         "darwin": {
-          "url": "https://cdn-zcode.z.ai/zcode/electron/releases/3.3.0/ZCode-3.3.0-mac-arm64.dmg",
-          "filename": "ZCode-3.3.0-mac-arm64.dmg"
+          "url": "https://cdn-zcode.z.ai/zcode/electron/releases/3.3.5/ZCode-3.3.5-mac-arm64.dmg",
+          "filename": "ZCode-3.3.5-mac-arm64.dmg"
         },
         "linux": {
-          "url": "https://cdn-zcode.z.ai/zcode/electron/releases/3.3.0/ZCode-3.3.0-linux-x64.AppImage",
-          "filename": "ZCode-3.3.0-linux-x64.AppImage"
+          "url": "https://cdn-zcode.z.ai/zcode/electron/releases/3.3.5/ZCode-3.3.5-linux-x64.AppImage",
+          "filename": "ZCode-3.3.5-linux-x64.AppImage"
         }
       },
       "notes": "自 zcode.z.ai 首页 CDN（cdn-zcode.z.ai）解析；Intel Mac 可用 mac-x64.dmg。"
@@ -209,16 +209,16 @@
     },
     {
       "id": "codebuddy",
-      "version": "4.9.15.31887257",
-      "version_tag": "v4.9.15.31887257",
+      "version": "4.10.1.33158423",
+      "version_tag": "v4.10.1.33158423",
       "downloads": {
         "windows": {
-          "url": "https://codebuddy-1328495429.cos.accelerate.myqcloud.com/aiide/win32-x64-user/CodeBuddy-win32-x64-user-4.9.15.31887257-cbd94294.exe",
-          "filename": "CodeBuddy-win32-x64-user-4.9.15.31887257-cbd94294.exe"
+          "url": "https://codebuddy-1328495429.cos.accelerate.myqcloud.com/aiide/win32-x64-user/CodeBuddy-win32-x64-user-4.10.1.33158423-3ad58bcb.exe",
+          "filename": "CodeBuddy-win32-x64-user-4.10.1.33158423-3ad58bcb.exe"
         },
         "darwin": {
-          "url": "https://codebuddy-1328495429.cos.accelerate.myqcloud.com/aiide/darwin-arm64/CodeBuddy-darwin-arm64-4.9.15.31887257-cbd94294.zip",
-          "filename": "CodeBuddy-darwin-arm64-4.9.15.31887257-cbd94294.zip"
+          "url": "https://codebuddy-1328495429.cos.accelerate.myqcloud.com/aiide/darwin-arm64/CodeBuddy-darwin-arm64-4.10.1.33158423-3ad58bcb.zip",
+          "filename": "CodeBuddy-darwin-arm64-4.10.1.33158423-3ad58bcb.zip"
         },
         "linux": null
       },
@@ -226,16 +226,16 @@
     },
     {
       "id": "codebuddy_cn",
-      "version": "4.9.15.31887257",
-      "version_tag": "v4.9.15.31887257",
+      "version": "4.10.1.33158423",
+      "version_tag": "v4.10.1.33158423",
       "downloads": {
         "windows": {
-          "url": "https://download.codebuddy.cn/aiide/win32-x64-user/CodeBuddy-win32-x64-user-4.9.15.31887257-cbd94294-cn.exe",
-          "filename": "CodeBuddy-win32-x64-user-4.9.15.31887257-cbd94294-cn.exe"
+          "url": "https://download.codebuddy.cn/aiide/win32-x64-user/CodeBuddy-win32-x64-user-4.10.1.33158423-3ad58bcb-cn.exe",
+          "filename": "CodeBuddy-win32-x64-user-4.10.1.33158423-3ad58bcb-cn.exe"
         },
         "darwin": {
-          "url": "https://download.codebuddy.cn/aiide/darwin-arm64/CodeBuddy-darwin-arm64-4.9.15.31887257-cbd94294-cn.zip",
-          "filename": "CodeBuddy-darwin-arm64-4.9.15.31887257-cbd94294-cn.zip"
+          "url": "https://download.codebuddy.cn/aiide/darwin-arm64/CodeBuddy-darwin-arm64-4.10.1.33158423-3ad58bcb-cn.zip",
+          "filename": "CodeBuddy-darwin-arm64-4.10.1.33158423-3ad58bcb-cn.zip"
         },
         "linux": null
       },
@@ -243,16 +243,16 @@
     },
     {
       "id": "workbuddy",
-      "version": "5.2.3.32357678",
-      "version_tag": "v5.2.3.32357678",
+      "version": "5.2.6.33159827",
+      "version_tag": "v5.2.6.33159827",
       "downloads": {
         "windows": {
-          "url": "https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.2.3.32357678-3865830d.exe",
-          "filename": "WorkBuddy-win32-x64-user-5.2.3.32357678-3865830d.exe"
+          "url": "https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.2.6.33159827-8ee6bc11.exe",
+          "filename": "WorkBuddy-win32-x64-user-5.2.6.33159827-8ee6bc11.exe"
         },
         "darwin": {
-          "url": "https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.2.3.32357678-3865830d.zip",
-          "filename": "WorkBuddy-darwin-arm64-5.2.3.32357678-3865830d.zip"
+          "url": "https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.2.6.33159827-8ee6bc11.zip",
+          "filename": "WorkBuddy-darwin-arm64-5.2.6.33159827-8ee6bc11.zip"
         },
         "linux": null
       },
@@ -276,12 +276,12 @@
           "filename": "Antigravity.tar.gz"
         }
       },
-      "notes": "自 https://antigravity.google/main-C7HXKFZQ.js 解析 Google CDN（edgedl.me.gvt1.com）。"
+      "notes": "自 https://antigravity.google/main-PCFZBR7A.js 解析 Google CDN（edgedl.me.gvt1.com）。"
     },
     {
       "id": "kiro",
-      "version": "2.11.1",
-      "version_tag": "v2.11.1",
+      "version": "2.12.2",
+      "version_tag": "v2.12.2",
       "downloads": {
         "windows": {
           "url": "https://prod.download.cli.kiro.dev/stable/latest/kiro-cli-x86_64-pc-windows-msvc.msi",
@@ -362,11 +362,11 @@
           "filename": "AweSun_16.5.2.31214_x64.exe"
         },
         "darwin": {
-          "url": "https://dw.oray.com/sl/mac/AweSun_16.5.2.31214_arm64.dmg",
+          "url": "https://d-cdn.oray.com/sl/mac/AweSun_16.5.2.31214_arm64.dmg",
           "filename": "AweSun_16.5.2.31214_arm64.dmg"
         },
         "linux": {
-          "url": "https://dw.oray.com/sl/linux/awesun-16.5.2.31214-x86_64.deb",
+          "url": "https://d-cdn.oray.com/sl/linux/awesun-16.5.2.31214-x86_64.deb",
           "filename": "awesun-16.5.2.31214-x86_64.deb"
         }
       },
@@ -374,8 +374,8 @@
     },
     {
       "id": "termius",
-      "version": "9.40.1",
-      "version_tag": "v9.40.1",
+      "version": "9.41.1",
+      "version_tag": "v9.41.1",
       "downloads": {
         "windows": {
           "url": "https://autoupdate.termius.com/windows/Install%20Termius.exe",
@@ -414,20 +414,20 @@
     },
     {
       "id": "syncthing",
-      "version": "2.1.1",
-      "version_tag": "v2.1.1",
+      "version": "2.1.2",
+      "version_tag": "v2.1.2",
       "downloads": {
         "windows": {
-          "url": "https://github.com/syncthing/syncthing/releases/download/v2.1.1/syncthing-windows-amd64-v2.1.1.zip",
-          "filename": "syncthing-windows-amd64-v2.1.1.zip"
+          "url": "https://github.com/syncthing/syncthing/releases/download/v2.1.2/syncthing-windows-amd64-v2.1.2.zip",
+          "filename": "syncthing-windows-amd64-v2.1.2.zip"
         },
         "darwin": {
-          "url": "https://github.com/syncthing/syncthing/releases/download/v2.1.1/syncthing-macos-universal-v2.1.1.zip",
-          "filename": "syncthing-macos-universal-v2.1.1.zip"
+          "url": "https://github.com/syncthing/syncthing/releases/download/v2.1.2/syncthing-macos-universal-v2.1.2.zip",
+          "filename": "syncthing-macos-universal-v2.1.2.zip"
         },
         "linux": {
-          "url": "https://github.com/syncthing/syncthing/releases/download/v2.1.1/syncthing-linux-amd64-v2.1.1.tar.gz",
-          "filename": "syncthing-linux-amd64-v2.1.1.tar.gz"
+          "url": "https://github.com/syncthing/syncthing/releases/download/v2.1.2/syncthing-linux-amd64-v2.1.2.tar.gz",
+          "filename": "syncthing-linux-amd64-v2.1.2.tar.gz"
         }
       },
       "notes": "GitHub syncthing/syncthing latest；仅核心压缩包，不含安装器。"
@@ -485,20 +485,20 @@
     },
     {
       "id": "cc_switch",
-      "version": "3.16.5",
-      "version_tag": "v3.16.5",
+      "version": "3.17.0",
+      "version_tag": "v3.17.0",
       "downloads": {
         "windows": {
-          "url": "https://github.com/farion1231/cc-switch/releases/download/v3.16.5/CC-Switch-v3.16.5-Windows.msi",
-          "filename": "CC-Switch-v3.16.5-Windows.msi"
+          "url": "https://github.com/farion1231/cc-switch/releases/download/v3.17.0/CC-Switch-v3.17.0-Windows.msi",
+          "filename": "CC-Switch-v3.17.0-Windows.msi"
         },
         "darwin": {
-          "url": "https://github.com/farion1231/cc-switch/releases/download/v3.16.5/CC-Switch-v3.16.5-macOS.dmg",
-          "filename": "CC-Switch-v3.16.5-macOS.dmg"
+          "url": "https://github.com/farion1231/cc-switch/releases/download/v3.17.0/CC-Switch-v3.17.0-macOS.dmg",
+          "filename": "CC-Switch-v3.17.0-macOS.dmg"
         },
         "linux": {
-          "url": "https://github.com/farion1231/cc-switch/releases/download/v3.16.5/CC-Switch-v3.16.5-Linux-x86_64.AppImage",
-          "filename": "CC-Switch-v3.16.5-Linux-x86_64.AppImage"
+          "url": "https://github.com/farion1231/cc-switch/releases/download/v3.17.0/CC-Switch-v3.17.0-Linux-x86_64.AppImage",
+          "filename": "CC-Switch-v3.17.0-Linux-x86_64.AppImage"
         }
       },
       "notes": "GitHub farion1231/cc-switch（CC Switch）；Windows MSI、macOS dmg、Linux x86_64 AppImage。"

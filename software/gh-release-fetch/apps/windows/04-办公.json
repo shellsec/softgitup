@@ -262,5 +262,36 @@
     "kill_before_install": false,
     "run_installer": false,
     "url_hint": "office_tool_plus"
+  },
+  {
+    "id": "pdfcpu",
+    "简介": "pdfcpu（PDF 工具箱：合并/拆分/水印/优化）",
+    "分类": "办公",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "win7",
+      "i386",
+      "Darwin",
+      "Linux",
+      "checksum",
+      "Js_wasm"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "pdfcpu_",
+      "Windows_x86_64.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "releases_url": "https://bgithub.xyz/pdfcpu/pdfcpu/releases",
+    "repo_path": "pdfcpu/pdfcpu"
   }
 ]

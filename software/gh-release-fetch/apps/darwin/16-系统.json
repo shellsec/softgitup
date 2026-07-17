@@ -815,5 +815,256 @@
       "Seelen-UI",
       "seelen"
     ]
+  },
+  {
+    "id": "snowdesktop",
+    "简介": "飘雪桌面 SnowDesktop（仅 Windows；macOS 请打开 Releases 页）",
+    "分类": "系统",
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/FreeFallingSnow/SnowDesktop_Release/releases",
+    "releases_url": "https://bgithub.xyz/FreeFallingSnow/SnowDesktop_Release/releases",
+    "repo_path": "FreeFallingSnow/SnowDesktop_Release",
+    "aliases": [
+      "SnowDesktop",
+      "飘雪桌面",
+      "Snow Desktop"
+    ]
+  },
+  {
+    "id": "bing_wallpaper_now",
+    "简介": "Bing Wallpaper Now（必应每日壁纸；macOS Apple Silicon DMG）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/qiyuey/bing-wallpaper-now/releases",
+    "repo_path": "qiyuey/bing-wallpaper-now",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Bing.Wallpaper.Now_",
+      "aarch64.dmg"
+    ],
+    "href_exclude_substrings": [
+      ".msi",
+      ".sig",
+      ".tar.gz",
+      "latest.json"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "aliases": [
+      "Bing Wallpaper Now",
+      "必应壁纸"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "windows_installer": false
+  },
+  {
+    "id": "bing_wallpaper_lib",
+    "简介": "必应每日壁纸库（仅 Windows；macOS 请打开 Releases 页）",
+    "分类": "系统",
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/pandaligx/bing-wallpaper-lib/releases",
+    "releases_url": "https://bgithub.xyz/pandaligx/bing-wallpaper-lib/releases",
+    "repo_path": "pandaligx/bing-wallpaper-lib",
+    "aliases": [
+      "必应壁纸库",
+      "bing-wallpaper-lib"
+    ]
+  },
+  {
+    "id": "jadepeng_bing_wallpaper",
+    "简介": "Bing每日壁纸（仅 Windows；macOS 请打开 Releases 页）",
+    "分类": "系统",
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/jadepeng/bing-wallpaper/releases",
+    "releases_url": "https://bgithub.xyz/jadepeng/bing-wallpaper/releases",
+    "repo_path": "jadepeng/bing-wallpaper",
+    "aliases": [
+      "Bing每日壁纸",
+      "jadepeng bing wallpaper"
+    ]
+  },
+  {
+    "id": "bingwallpaper_windows",
+    "简介": "BingWallpaper.Windows（仅 Windows；macOS 请打开 Releases 页）",
+    "分类": "系统",
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/BingHomepage/BingWallpaper.Windows/releases",
+    "releases_url": "https://bgithub.xyz/BingHomepage/BingWallpaper.Windows/releases",
+    "repo_path": "BingHomepage/BingWallpaper.Windows",
+    "aliases": [
+      "BingWallpaper.Windows"
+    ]
+  },
+  {
+    "id": "unsplash_wallpapers",
+    "简介": "Unsplash Wallpapers（从 Unsplash 自动换壁纸；macOS DMG）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/soroushchehresa/unsplash-wallpapers/releases",
+    "repo_path": "soroushchehresa/unsplash-wallpapers",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Unsplash-Wallpapers-",
+      ".dmg"
+    ],
+    "href_exclude_substrings": [
+      ".blockmap",
+      "mac.zip",
+      ".exe",
+      ".AppImage",
+      ".deb",
+      ".rpm"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "aliases": [
+      "Unsplash Wallpapers",
+      "Unsplash壁纸"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "windows_installer": false
+  },
+  {
+    "id": "splashy",
+    "简介": "Splashy（Unsplash 壁纸自动轮换；需 API Key；macOS Apple Silicon DMG）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Halfaxas/Splashy/releases",
+    "repo_path": "Halfaxas/Splashy",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Splashy_",
+      "aarch64.dmg"
+    ],
+    "href_exclude_substrings": [
+      ".exe",
+      ".msi",
+      ".AppImage",
+      ".deb",
+      ".rpm",
+      ".tar.gz",
+      "x64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "aliases": [
+      "Splashy"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "windows_installer": false
+  },
+  {
+    "id": "wallhaven_desktop",
+    "简介": "wallhaven-desktop（Wallhaven 壁纸客户端；macOS Apple Silicon DMG）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/ErKeLost/wallhaven-desktop/releases",
+    "repo_path": "ErKeLost/wallhaven-desktop",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "wallhaven_",
+      "aarch64.dmg"
+    ],
+    "href_exclude_substrings": [
+      ".exe",
+      ".msi",
+      ".AppImage",
+      ".deb",
+      ".rpm",
+      ".tar.gz",
+      "x64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "aliases": [
+      "wallhaven",
+      "Wallhaven Desktop"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "windows_installer": false
+  },
+  {
+    "id": "flying_bird_wallpaper",
+    "简介": "Flying Bird Wallpaper（多源壁纸自动切换；macOS Intel x64 DMG）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/OXOYO/Flying-Bird-Wallpaper/releases",
+    "repo_path": "OXOYO/Flying-Bird-Wallpaper",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Flying-Bird-Wallpaper-",
+      "x64.dmg"
+    ],
+    "href_exclude_substrings": [
+      ".exe",
+      "arm64",
+      "latest"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "aliases": [
+      "Flying Bird Wallpaper",
+      "飞鸟壁纸"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "windows_installer": false
+  },
+  {
+    "id": "binglish",
+    "简介": "binglish（必应壁纸+学英语；macOS 请打开 Releases 页取 mac 包）",
+    "分类": "系统",
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/klemperer/binglish/releases",
+    "releases_url": "https://bgithub.xyz/klemperer/binglish/releases",
+    "repo_path": "klemperer/binglish",
+    "aliases": [
+      "binglish",
+      "必应英语壁纸"
+    ]
+  },
+  {
+    "id": "libre_hardware_monitor",
+    "简介": "LibreHardwareMonitor（仅 Windows；其他平台请打开 Releases 页）",
+    "分类": "系统",
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/LibreHardwareMonitor/LibreHardwareMonitor/releases",
+    "releases_url": "https://bgithub.xyz/LibreHardwareMonitor/LibreHardwareMonitor/releases",
+    "repo_path": "LibreHardwareMonitor/LibreHardwareMonitor"
   }
 ]

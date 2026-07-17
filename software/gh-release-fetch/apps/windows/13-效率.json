@@ -484,6 +484,51 @@
     "url_hint": "blinkmind"
   },
   {
+    "id": "freeplane",
+    "简介": "Freeplane（开源思维导图，FreeMind 继任；Windows 安装包；tag 形如 release-x.y.z）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/freeplane/freeplane/releases",
+    "repo_path": "freeplane/freeplane",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Freeplane-Setup-",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "touchscreen",
+      "Portable",
+      "paf",
+      ".dmg",
+      ".deb",
+      ".zip",
+      "apple",
+      "intel"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "download_names": [
+      "Freeplane-Setup-{ver_plain}.exe"
+    ],
+    "download_url_templates": [
+      "https://github.com/freeplane/freeplane/releases/download/{ver}/Freeplane-Setup-{ver_plain}.exe"
+    ],
+    "use_download_filename": true,
+    "save_name": "Freeplane-Setup-{ver_plain}.exe",
+    "aliases": [
+      "Freeplane",
+      "FreeMind",
+      "思维导图"
+    ],
+    "process_name": "freeplane.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
     "id": "uniclipboard",
     "简介": "UniClipboard（跨平台剪贴板同步与管理，Rust + Tauri）",
     "分类": "效率",
@@ -946,5 +991,351 @@
     "kill_before_install": true,
     "run_installer": true,
     "url_hint": "eSearch"
+  },
+  {
+    "id": "altsnap",
+    "简介": "AltSnap（AltDrag 继任：按住 Alt 拖动/调整窗口，Windows x64 安装包）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/RamonUnch/AltSnap/releases",
+    "repo_path": "RamonUnch/AltSnap",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "AltSnap",
+      "x64-inst.exe"
+    ],
+    "href_exclude_substrings": [
+      "ARM64",
+      "bin.zip",
+      "bin_",
+      "src.zip",
+      "src."
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "use_download_filename": true,
+    "download_names": [
+      "AltSnap{ver_plain}-x64-inst.exe"
+    ],
+    "save_name": "AltSnap{ver_plain}-x64-inst.exe",
+    "aliases": [
+      "AltSnap",
+      "AltDrag",
+      "Alt Drag"
+    ],
+    "process_name": "AltSnap.exe",
+    "kill_before_install": true,
+    "run_installer": true
+  },
+  {
+    "id": "glazewm",
+    "简介": "GlazeWM（Windows 平铺窗口管理，类似 i3；x64 MSI）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/glzr-io/glazewm/releases",
+    "repo_path": "glzr-io/glazewm",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "standalone-glazewm-",
+      "-x64.msi"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      ".dmg",
+      ".exe",
+      ".deb",
+      "nightly",
+      "preview"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "standalone-glazewm-{ver}-x64.msi"
+    ],
+    "download_url_templates": [
+      "https://github.com/glzr-io/glazewm/releases/download/{ver}/standalone-glazewm-{ver}-x64.msi"
+    ],
+    "use_download_filename": true,
+    "save_name": "standalone-glazewm-{ver}-x64.msi",
+    "aliases": [
+      "GlazeWM",
+      "glaze wm"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "komorebi",
+    "简介": "komorebi（Windows 平铺窗口管理；x64 MSI）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/LGUG2Z/komorebi/releases",
+    "repo_path": "LGUG2Z/komorebi",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "komorebi-",
+      "x86_64.msi"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      ".zip",
+      "checksums",
+      "nightly"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "komorebi-{ver_plain}-x86_64.msi"
+    ],
+    "download_url_templates": [
+      "https://github.com/LGUG2Z/komorebi/releases/download/{ver}/komorebi-{ver_plain}-x86_64.msi"
+    ],
+    "use_download_filename": true,
+    "save_name": "komorebi-{ver_plain}-x86_64.msi",
+    "aliases": [
+      "komorebi",
+      "コモレビ"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "whkd",
+    "简介": "whkd（Windows 热键守护进程，常与 komorebi 搭配；x64 MSI）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/LGUG2Z/whkd/releases",
+    "repo_path": "LGUG2Z/whkd",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "whkd-",
+      "x86_64.msi"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      ".zip",
+      "checksums",
+      "nightly"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "whkd-{ver_plain}-x86_64.msi"
+    ],
+    "download_url_templates": [
+      "https://github.com/LGUG2Z/whkd/releases/download/{ver}/whkd-{ver_plain}-x86_64.msi"
+    ],
+    "use_download_filename": true,
+    "save_name": "whkd-{ver_plain}-x86_64.msi",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "yasb",
+    "简介": "YASB（Yet Another Status Bar，Windows 状态栏；x64 MSI）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/amnweb/yasb/releases",
+    "repo_path": "amnweb/yasb",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "yasb-",
+      "x64.msi"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "checksums",
+      "preview",
+      "nightly"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "yasb-{ver_plain}-x64.msi"
+    ],
+    "download_url_templates": [
+      "https://github.com/amnweb/yasb/releases/download/{ver}/yasb-{ver_plain}-x64.msi"
+    ],
+    "use_download_filename": true,
+    "save_name": "yasb-{ver_plain}-x64.msi",
+    "aliases": [
+      "YASB",
+      "Yet Another Status Bar"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "zebar",
+    "简介": "Zebar（跨平台状态栏，常与 GlazeWM 搭配；Windows x64 MSI）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/glzr-io/zebar/releases",
+    "repo_path": "glzr-io/zebar",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "zebar-",
+      "opt1-x64.msi"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      ".dmg",
+      ".deb",
+      "AppImage",
+      "preview",
+      "nightly"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "zebar-{ver}-opt1-x64.msi"
+    ],
+    "download_url_templates": [
+      "https://github.com/glzr-io/zebar/releases/download/{ver}/zebar-{ver}-opt1-x64.msi"
+    ],
+    "use_download_filename": true,
+    "save_name": "zebar-{ver}-opt1-x64.msi",
+    "aliases": [
+      "Zebar"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "translucenttb",
+    "简介": "TranslucentTB（Windows 任务栏透明/亚克力效果；x64 便携 zip）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/TranslucentTB/TranslucentTB/releases",
+    "repo_path": "TranslucentTB/TranslucentTB",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "TranslucentTB-portable-x64.zip"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "msix",
+      "appx",
+      "appinstaller"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "TranslucentTB-portable-x64.zip",
+    "aliases": [
+      "TranslucentTB",
+      "透明任务栏"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "windhawk",
+    "简介": "Windhawk（Windows 自定义修改平台，任务栏/资源管理器等增强）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/ramensoftware/windhawk/releases",
+    "repo_path": "ramensoftware/windhawk",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "windhawk_setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "offline",
+      "alpha",
+      "beta"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "download_names": [
+      "windhawk_setup.exe"
+    ],
+    "download_url_templates": [
+      "https://github.com/ramensoftware/windhawk/releases/download/{ver}/windhawk_setup.exe"
+    ],
+    "use_download_filename": true,
+    "save_name": "windhawk_setup.exe",
+    "aliases": [
+      "Windhawk"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "smartsystemmenu",
+    "简介": "SmartSystemMenu（为所有窗口系统菜单增加置顶/透明度/优先级等）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/AlexanderPro/SmartSystemMenu/releases",
+    "repo_path": "AlexanderPro/SmartSystemMenu",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "SmartSystemMenu_",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "src",
+      "Source"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "SmartSystemMenu_{ver}.zip"
+    ],
+    "download_url_templates": [
+      "https://github.com/AlexanderPro/SmartSystemMenu/releases/download/{ver}/SmartSystemMenu_{ver}.zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "SmartSystemMenu_{ver}.zip",
+    "aliases": [
+      "SmartSystemMenu",
+      "Smart System Menu"
+    ],
+    "process_name": "SmartSystemMenu.exe",
+    "kill_before_install": true,
+    "run_installer": false
   }
 ]

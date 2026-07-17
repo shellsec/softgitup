@@ -113,5 +113,34 @@
     "process_name": "Ferdium.exe",
     "kill_before_install": true,
     "run_installer": true
+  },
+  {
+    "id": "jitsi_meet_electron",
+    "简介": "Jitsi Meet（开源视频会议桌面端）",
+    "分类": "网络与协作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".blockmap",
+      ".dmg",
+      ".deb",
+      "AppImage",
+      ".yml",
+      ".zip"
+    ],
+    "installer_markers": [
+      "jitsi-meet.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "releases_url": "https://bgithub.xyz/jitsi/jitsi-meet-electron/releases",
+    "repo_path": "jitsi/jitsi-meet-electron"
   }
 ]

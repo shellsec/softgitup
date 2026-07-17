@@ -74,6 +74,7 @@ html[data-theme="light"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;
 
 <!-- 导航 -->
 <div class="tf-nav">
+  <a href="ideate.html">✨ Ideate</a>
   <a href="ask.html" class="is-active">💬 Ask</a>
   <a href="plan.html">🗺️ Plan</a>
   <a href="debug.html">🔧 Debug</a>
@@ -107,6 +108,9 @@ html[data-theme="light"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;
     <strong>真相：</strong>AI不知道你是谁、卖什么、给谁看。它只能从"文案"二字出发，写一个最"平均"的结果。<br><br>
     <div class="highlight-box" style="background:rgba(88,166,255,.04);border:1px solid rgba(88,166,255,.12)">
     <strong>核心问题：</strong>没有上下文的提问，等于让AI在无限可能中随机选一个。概率上，它选的不会是你想要的。
+    </div>
+    <div class="highlight-box" style="margin-top:.55rem;background:rgba(167,139,250,.04);border:1px solid rgba(167,139,250,.14)">
+    <strong>落地技巧：</strong>把赛制、编码约定、禁止事项写进 <code>CLAUDE.md</code> / Cursor Rules / <code>/rules</code>，少每次重复解释。Capybara 把 VibeJam 规则直接丢进规则目录——见 <a href="thinking-framework.html">总览 · 实战案例</a>。
     </div>
   </div></div>
 
@@ -211,16 +215,16 @@ html[data-theme="light"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;
   <br><strong>每升一级，AI输出的可用性提升3-5倍。从Lv.1到Lv.5的差距不是5倍，是50倍。</strong>
 </div></div>
 
-<div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">万能Ask公式</div></div>
+<div class="af-tool" id="prompts"><div class="af-tool-head"><div class="af-tool-name">万能Ask公式（可复制）</div></div>
 <div class="af-tool-body">
-  <div style="padding:.8rem;border-radius:8px;background:rgba(88,166,255,.04);border:1px solid rgba(88,166,255,.12);font-size:.82rem;line-height:1.8">
-    <strong style="color:var(--accent);font-size:.95rem">角色 + 任务 + 约束 + 示例 + 格式</strong><br><br>
-    你是一个<strong>[角色]</strong>。<br>
-    请帮我<strong>[任务]</strong>。<br>
-    要求：<strong>[约束1]，[约束2]，[约束3]</strong>。<br>
-    参考风格：<strong>[示例/链接/截图]</strong>。<br>
-    输出格式：<strong>[JSON / Markdown / 代码 / 分镜脚本 / 表格]</strong>。
-  </div>
+  <div style="padding:.8rem;border-radius:8px;background:rgba(88,166,255,.04);border:1px solid rgba(88,166,255,.12);font-size:.82rem;line-height:1.8;white-space:pre-wrap;font-family:ui-monospace,Consolas,monospace">你是一个[角色]。
+请帮我[任务]。
+要求：[约束1]，[约束2]，[约束3]。
+参考风格：[示例/链接/截图描述]。
+输出格式：[JSON / Markdown / 代码 / 分镜脚本 / 表格]。
+不要：[明确不做的事]。
+不确定时先问我最多 3 个澄清问题，再产出。</div>
+  <p style="font-size:.76rem;color:var(--muted);margin:.55rem 0 0">公式：<strong>角色 + 任务 + 约束 + 示例 + 格式</strong>。下面是填好的场景版，可直接改括号内容。</p>
 </div></div>
 
 <div class="af-grid">
@@ -333,8 +337,9 @@ html[data-theme="light"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;
 
 <!-- 底部导航 -->
 <div style="margin-top:2rem;padding:1rem;border-radius:10px;background:var(--card);border:1px solid var(--border);text-align:center">
-  <div style="font-size:.82rem;color:var(--muted);margin-bottom:.5rem">AI第一思考 — 四大根基能力</div>
+  <div style="font-size:.82rem;color:var(--muted);margin-bottom:.5rem">AI第一思考 — 五大能力</div>
   <div style="display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap">
+    <a href="ideate.html" style="padding:.4rem .8rem;border-radius:6px;background:rgba(167,139,250,.1);color:#a78bfa;font-weight:600;font-size:.85rem;text-decoration:none;border:1px solid rgba(167,139,250,.25)">✨ Ideate</a>
     <a href="ask.html" style="padding:.4rem .8rem;border-radius:6px;background:rgba(88,166,255,.1);color:var(--accent);font-weight:600;font-size:.85rem;text-decoration:none;border:1px solid rgba(88,166,255,.2)">💬 Ask</a>
     <a href="plan.html" style="padding:.4rem .8rem;border-radius:6px;background:rgba(249,115,22,.1);color:var(--af);font-weight:600;font-size:.85rem;text-decoration:none;border:1px solid rgba(249,115,22,.2)">🗺️ Plan</a>
     <a href="debug.html" style="padding:.4rem .8rem;border-radius:6px;background:rgba(210,153,34,.1);color:var(--warn);font-weight:600;font-size:.85rem;text-decoration:none;border:1px solid rgba(210,153,34,.2)">🔧 Debug</a>
@@ -367,5 +372,6 @@ html[data-theme="light"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;
   });
 })();
 </script>
+<script src="./back-to-top.js"></script>
 </body>
 </html>

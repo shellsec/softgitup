@@ -136,5 +136,35 @@
     "save_name": "pdfarranger-linux.rpm",
     "releases_url": "https://bgithub.xyz/pdfarranger/pdfarranger/releases",
     "repo_path": "pdfarranger/pdfarranger"
+  },
+  {
+    "id": "pdfcpu",
+    "简介": "pdfcpu（PDF 工具箱；Linux x86_64）",
+    "分类": "办公",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm",
+      "i386",
+      "Windows",
+      "Darwin",
+      "checksum"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "pdfcpu_",
+      "Linux_x86_64.tar.xz"
+    ],
+    "installer_extensions": [
+      ".tar.xz"
+    ],
+    "releases_url": "https://bgithub.xyz/pdfcpu/pdfcpu/releases",
+    "repo_path": "pdfcpu/pdfcpu"
   }
 ]

@@ -523,5 +523,32 @@
     ],
     "releases_url": "https://bgithub.xyz/vnotex/vnote/releases",
     "repo_path": "vnotex/vnote"
+  },
+  {
+    "id": "anki",
+    "简介": "Anki（间隔重复记忆卡片；Linux x86_64）",
+    "分类": "笔记",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "aarch64",
+      "win",
+      "mac"
+    ],
+    "installer_markers": [
+      "anki-",
+      "linux-x86_64.tar.zst"
+    ],
+    "installer_extensions": [
+      ".tar.zst"
+    ],
+    "releases_url": "https://bgithub.xyz/ankitects/anki/releases",
+    "repo_path": "ankitects/anki"
   }
 ]

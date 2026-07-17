@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="site-mobile.css">
+<title>Ideate — 创想定方向再动手 — AI第一思考 — AINav</title>
+<meta name="description" content="Ideate 创想：在 Ask 之前先定方向——发现痛点、发散选项、写出差异化一句话，再把选题交给 Ask。">
+<link rel="canonical" href="https://aiv123.com/ideate.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ideate — 创想定方向再动手">
+<meta property="og:description" content="提效之前先想清楚创什么：痛点发现、选项发散、差异化、交给 Ask。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%23a78bfa'/><text x='50' y='68' font-size='42' text-anchor='middle' fill='white' font-family='system-ui' font-weight='700'>Ide</text></svg>">
+<style>
+:root,html[data-theme="dark"]{--bg:#0f1419;--panel:#151b23;--card:#1c2430;--border:#2d3848;--text:#e6edf3;--muted:#8b9cb3;--accent:#58a6ff;--accent2:#3fb950;--warn:#d29922;--danger:#f85149;--af:#f97316;--af3:#a78bfa}
+html[data-theme="light"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;--text:#1f2328;--muted:#59636e;--accent:#0969da;--accent2:#1a7f37;--warn:#9a6700;--danger:#cf222e;--af:#ea580c;--af3:#7c3aed}
+@media(prefers-color-scheme:light){html[data-theme="system"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;--text:#1f2328;--muted:#59636e;--accent:#0969da;--accent2:#1a7f37;--warn:#9a6700;--danger:#cf222e;--af:#ea580c;--af3:#7c3aed}}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.cp-top{padding:.75rem 1rem;border-bottom:1px solid var(--border);background:var(--panel);position:sticky;top:0;z-index:10}
+.cp-top-inner{max-width:76rem;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;justify-content:space-between}
+.cp-nav a{font-weight:600;margin-right:1rem;font-size:.88rem}
+.cp-toolbar{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center}
+.theme-btn{font-size:.72rem;padding:.2rem .5rem;border-radius:5px;border:1px solid var(--border);background:var(--card);color:var(--muted);cursor:pointer;font-family:inherit}
+.theme-btn.is-active{color:var(--af3);border-color:var(--af3);font-weight:600}
+.cp-wrap{max-width:76rem;margin:0 auto;padding:1rem}h1{font-size:1.35rem;margin:0 0 .3rem}
+.cp-subtitle{font-size:.88rem;color:var(--muted);margin-bottom:1rem}
+.cp-section-hd{font-size:1.1rem;font-weight:700;margin:1.8rem 0 .8rem;padding-bottom:.3rem;border-bottom:2px solid var(--border);display:flex;align-items:center;gap:.5rem}
+.af-grid{display:grid;grid-template-columns:1fr;gap:1rem}
+@media(min-width:52rem){.af-grid{grid-template-columns:1fr 1fr}}
+.af-tool{border:1px solid var(--border);border-radius:10px;background:var(--card);overflow:hidden}
+.af-tool-head{padding:.7rem 1rem;border-bottom:1px solid var(--border);font-weight:700}
+.af-tool-body{padding:.7rem 1rem;font-size:.82rem;line-height:1.7}
+.af-tool-body ul{padding-left:1.1rem;margin:.3rem 0}.af-tool-body li{margin-bottom:.25rem}.af-tool-body strong{color:var(--text)}
+.highlight-box{padding:.6rem 1rem;border-radius:6px;font-size:.78rem;line-height:1.7;margin:.5rem 0}
+.tf-nav{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.5rem 0}
+.tf-nav a{padding:.5rem 1rem;border-radius:8px;border:1px solid var(--border);background:var(--card);font-size:.85rem;font-weight:600}
+.tf-nav a:hover{text-decoration:none;border-color:var(--af3)}
+.tf-nav a.is-active{border-color:var(--af3);color:var(--af3);background:rgba(167,139,250,.08)}
+.tpl{border:1px solid var(--border);border-radius:10px;background:var(--panel);padding:.85rem 1rem;font-size:.82rem;line-height:1.75;white-space:pre-wrap;font-family:ui-monospace,Consolas,monospace}
+.cp-updated-line{font-size:.76rem;color:var(--muted);margin:0 0 .3rem}
+.cp-footer{max-width:76rem;margin:2rem auto 1rem;padding:0 1rem;font-size:.76rem;color:var(--muted);text-align:center}
+.cp-footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+
+<div class="cp-top">
+<div class="cp-top-inner">
+  <div class="cp-nav"><a href="index.html">AINav</a><a href="thinking-framework.html">AI第一思考</a><a href="ideate.html" style="color:var(--af3)">Ideate</a></div>
+  <div class="cp-toolbar">
+    <button class="theme-btn is-active" data-theme-set="dark">Dark</button>
+    <button class="theme-btn" data-theme-set="light">Light</button>
+    <button class="theme-btn" data-theme-set="system">System</button>
+  </div>
+</div>
+</div>
+
+<div class="cp-wrap">
+
+<h1>✨ Ideate — 创想定方向，再动手</h1>
+<div class="cp-subtitle">提效之前先想清楚「创什么」。Ideate 解决值不值得做；Ask 解决怎么问清楚。</div>
+
+<div class="tf-nav">
+  <a href="ideate.html" class="is-active">✨ Ideate</a>
+  <a href="ask.html">💬 Ask</a>
+  <a href="plan.html">🗺️ Plan</a>
+  <a href="debug.html">🔧 Debug</a>
+  <a href="agent.html">🤖 Agent</a>
+</div>
+
+<div class="cp-section-hd"><span>🔥</span> 为什么要在 Ask 前面加创想</div>
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head">痛点：问得很准，做的是错题</div>
+  <div class="af-tool-body">
+    你会把提示词写得很细，Plan 也很完整，结果做完才发现：没人需要、和竞品同质、或根本不是你想做的。<br><br>
+    <div class="highlight-box" style="background:rgba(167,139,250,.06);border:1px solid rgba(167,139,250,.2)">
+    <strong>核心：</strong>Ask 优化的是「表达」；Ideate 优化的是「选题」。方向错了，后面倍率越高越浪费。
+    </div>
+  </div></div>
+  <div class="af-tool"><div class="af-tool-head">边界：Ideate ≠ Ask</div>
+  <div class="af-tool-body">
+    <ul>
+      <li><strong>Ideate</strong>：发散选项、找差异、决定做哪一个</li>
+      <li><strong>Ask</strong>：把已定选题翻译成 AI 可执行的精确问题</li>
+      <li><strong>Plan</strong>：拆步骤、定约束、排验收</li>
+    </ul>
+  </div></div>
+</div>
+
+<div class="cp-section-hd"><span>🧭</span> 四步创想（可复制）</div>
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head">1. 痛点 / 空白</div>
+  <div class="af-tool-body">谁在痛？现有方案差在哪？有没有「又贵又慢又丑」的环节可以被 AI 替换？写下 3 条真实观察，不要空口号。</div></div>
+  <div class="af-tool"><div class="af-tool-head">2. 选项发散</div>
+  <div class="af-tool-body">强迫自己列出 8～10 个半成品点子（包括荒唐的）。再用时间、技能、预算筛到 1～2 个。发散不够，筛选也没意义。</div></div>
+  <div class="af-tool"><div class="af-tool-head">3. 差异化一句话</div>
+  <div class="af-tool-body">补全：<em>对【谁】，我提供【什么】，比【替代方案】更好在【一点】。</em>说不清这一句，先别进 Ask。<br><br>
+  <strong>体验原则：</strong>好玩可以压过「物理真实」。例如外卖堆叠故意更容易倒——真实感让位给爽感，这是 Ideate/产品判断，不是调参玄学。</div></div>
+  <div class="af-tool"><div class="af-tool-head">4. 交给 Ask</div>
+  <div class="af-tool-body">把「差异化一句话 + 约束（平台/预算/工期）+ 成功标准」交给 Ask 公式。创想结束的标志：你已经知道要问什么，而不是还在问「有没有 AI 能帮我」。</div></div>
+</div>
+
+<div class="cp-section-hd"><span>📋</span> 创想便签模板</div>
+<div class="tpl">【谁】：
+【痛点】：
+【现有替代】：
+【我的差异化一句话】：
+【本期只做】（砍范围）：
+【成功长什么样】：
+【下一步 Ask 要问的第一句】：</div>
+
+<div class="cp-section-hd" id="prompts"><span>📝</span> 可复制提示词</div>
+<p style="font-size:.8rem;color:var(--muted);margin:0 0 .75rem;line-height:1.6">把括号里的内容换成你的场景，整段复制到 ChatGPT / Claude / Cursor。</p>
+<div class="af-grid">
+  <div class="af-tool"><div class="af-tool-head">① 痛点脑暴</div>
+  <div class="af-tool-body"><div class="tpl">你是产品创想教练。我所处领域是：[领域/职业]。
+请帮我列出 10 个「真实存在、又贵又慢又丑」的痛点或流程空白。
+要求：
+1. 每个痛点一句话描述 + 谁在痛 + 现有替代方案差在哪
+2. 优先可被 AI / 软件 在 2 周内做出 MVP 的
+3. 不要空口号，不要「赋能」「数字化转型」这类词
+输出：编号列表。</div></div></div>
+  <div class="af-tool"><div class="af-tool-head">② 点子发散 → 筛选</div>
+  <div class="af-tool-body"><div class="tpl">基于这个痛点：[粘贴痛点]。
+请先发散 8～10 个半成品点子（允许荒唐），再按「工期≤2周 / 预算≤¥XXX / 我能验收」筛到 2 个。
+对每个入选点子输出：
+- 一句话概念
+- 核心玩法或核心功能（只 1 个）
+- 最大风险
+- 为什么值得做
+不要开始写代码或详细方案。</div></div></div>
+  <div class="af-tool"><div class="af-tool-head">③ 差异化一句话</div>
+  <div class="af-tool-body"><div class="tpl">我的选题是：[点子]。
+请帮我写成一句差异化定位，格式固定：
+「对【谁】，我提供【什么】，比【替代方案】更好在【一点】。」
+再给 3 个备选说法。最后问我 3 个澄清问题，帮我砍范围到「本期只做」。</div></div></div>
+  <div class="af-tool"><div class="af-tool-head">④ 交给 Ask 的交接包</div>
+  <div class="af-tool-body"><div class="tpl">请根据我填好的创想便签，整理成下一段「Ask 第一句」可直接粘贴的需求包：
+【谁】：[ ]
+【痛点】：[ ]
+【差异化一句话】：[ ]
+【本期只做】：[ ]
+【成功标准】：[ ]
+【约束】：平台/预算/工期 = [ ]
+输出：一段完整 Ask 提示词（含角色、任务、约束、输出格式），不要执行任务本身。</div></div></div>
+</div>
+
+<div class="cp-section-hd"><span>🔗</span> 下一步</div>
+<p style="font-size:.88rem;color:var(--muted);line-height:1.8">
+  选题定了 → 去 <a href="ask.html">Ask</a> 把问题问准 → <a href="plan.html">Plan</a> 拆路径。<br>
+  若做的是「从创意到商品」的造物链路，可对照 <a href="ai-factory-plan.html">AI 造物流水线</a>。
+</p>
+
+<div class="cp-footer">
+  <p class="cp-updated-line"><span class="cp-updated">最后更新：2026-07-15</span></p>
+  <p>Ideate — 创想定方向再动手 · AI第一思考</p>
+  <p><a href="index.html">← AINav 首页</a> · <a href="thinking-framework.html">AI第一思考总览</a> · <a href="ask.html">Ask</a> · <a href="ai-factory-plan.html">AI造物流水线</a></p>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var saved=localStorage.getItem('theme')||'dark';
+  document.documentElement.setAttribute('data-theme',saved);
+  document.querySelectorAll('.theme-btn').forEach(function(b){
+    b.classList.toggle('is-active',b.getAttribute('data-theme-set')===saved);
+  });
+  document.querySelectorAll('.theme-btn').forEach(function(b){
+    b.addEventListener('click',function(){
+      var t=b.getAttribute('data-theme-set');
+      document.documentElement.setAttribute('data-theme',t);
+      localStorage.setItem('theme',t);
+      document.querySelectorAll('.theme-btn').forEach(function(x){x.classList.toggle('is-active',x.getAttribute('data-theme-set')===t)});
+    });
+  });
+})();
+</script>
+<script src="thinking-framework.js"></script>
+<script src="./back-to-top.js"></script>
+</body>
+</html>

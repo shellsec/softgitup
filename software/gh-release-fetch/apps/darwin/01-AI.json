@@ -338,6 +338,46 @@
     "run_installer": false
   },
   {
+    "id": "codex_app",
+    "简介": "OpenAI Codex 桌面应用（官方 dmg 镜像；Apple Silicon；见 openai.com/codex）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Wangnov/codex-app-mirror/releases",
+    "repo_path": "Wangnov/codex-app-mirror",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Codex-mac-arm64",
+      ".dmg"
+    ],
+    "href_exclude_substrings": [
+      "mac-x64",
+      "darwin-x64",
+      "windows",
+      "Msix",
+      ".delta",
+      ".zip",
+      "status.png",
+      "SHA256",
+      "manifest"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "aliases": [
+      "Codex App",
+      "OpenAI Codex",
+      "Codex 桌面"
+    ],
+    "open_page_url": "https://openai.com/zh-Hans-CN/codex/",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
     "id": "codex_cli_darwin_intel",
     "简介": "OpenAI Codex CLI（macOS Intel，codex-x86_64-apple-darwin.dmg）",
     "分类": "AI",
@@ -372,6 +412,45 @@
     ],
     "use_download_filename": true,
     "save_name": "codex-x86_64-apple-darwin.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "codex_app_darwin_intel",
+    "简介": "OpenAI Codex 桌面应用（官方 dmg 镜像；macOS Intel；见 openai.com/codex）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Wangnov/codex-app-mirror/releases",
+    "repo_path": "Wangnov/codex-app-mirror",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Codex-mac-x64",
+      ".dmg"
+    ],
+    "href_exclude_substrings": [
+      "mac-arm64",
+      "darwin-arm64",
+      "windows",
+      "Msix",
+      ".delta",
+      ".zip",
+      "status.png",
+      "SHA256",
+      "manifest"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "aliases": [
+      "Codex App Intel",
+      "Codex macOS Intel"
+    ],
+    "open_page_url": "https://openai.com/zh-Hans-CN/codex/",
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false

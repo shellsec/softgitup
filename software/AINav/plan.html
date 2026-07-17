@@ -73,6 +73,7 @@ html[data-theme="light"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;
 <div class="cp-subtitle">AI时代最被低估的能力。没有Plan的AI = 高速公路上蒙着眼开车。</div>
 
 <div class="tf-nav">
+  <a href="ideate.html">✨ Ideate</a>
   <a href="ask.html">💬 Ask</a>
   <a href="plan.html" class="is-active">🗺️ Plan</a>
   <a href="debug.html">🔧 Debug</a>
@@ -225,15 +226,31 @@ html[data-theme="light"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;
     </div>
   </div></div>
 
-  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">用AI帮你想Plan（元技巧）</div></div>
+  <div class="af-tool" id="prompts"><div class="af-tool-head"><div class="af-tool-name">可复制 · 让 AI 只出 Plan</div></div>
   <div class="af-tool-body">
-    <div style="padding:.6rem;border-radius:6px;background:rgba(88,166,255,.04);border:1px solid rgba(88,166,255,.1);font-size:.78rem;line-height:1.7">
-      "我想做<strong>[XX项目]</strong>。请先帮我制定一个分步计划，包括：每步目标、所需工具/素材、验收标准、预估时间。<strong>不要开始执行，只输出计划。</strong>"
-    </div>
+    <div style="padding:.6rem;border-radius:6px;background:rgba(88,166,255,.04);border:1px solid rgba(88,166,255,.1);font-size:.78rem;line-height:1.75;white-space:pre-wrap;font-family:ui-monospace,Consolas,monospace">我想做：[项目一句话]。
+目标用户：[谁]。差异化：[一句]。约束：工期[ ]、预算[ ]、技术栈偏好[ ]。
+
+请先制定分步计划，必须回答这 5 点：
+1. 目标：最终产出是什么
+2. 里程碑：分几步，每步验收标准
+3. 依赖：每步需要什么输入/素材
+4. 回退：AI 不满意时人怎么接手
+5. 边界：明确不做的事
+
+格式用 Markdown。不要开始写代码或执行，只输出计划。
+计划末尾加：「确认后我再说开始 Step 1」。</div>
     <br>
-    <strong>操作流程：</strong><br>
-    1. 让AI生成Plan → 2. 你审阅修改 → 3. 确认后逐步执行<br><br>
-    <strong>这就是Cursor Agent模式的核心：</strong>Think before you act。先Plan再Execute，人也一样。
+    <strong>操作流程：</strong>1. AI 出 Plan → 2. 你审阅改 → 3. 确认后再逐步执行。<br>
+    <strong>核心：</strong>Think before you act。先 Plan 再 Execute。
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">可复制 · 拆模块（防一次塞太多）</div></div>
+  <div class="af-tool-body">
+    <div style="padding:.6rem;border-radius:6px;background:rgba(249,115,22,.04);border:1px solid rgba(249,115,22,.1);font-size:.78rem;line-height:1.75;white-space:pre-wrap;font-family:ui-monospace,Consolas,monospace">这是我的大目标：[目标]。
+请把它拆成最多 5 个可独立验收的小任务。
+每个任务写清：输入、输出、验收标准、预估耗时、是否可并行。
+标出推荐的执行顺序。仍不要开始实现。</div>
   </div></div>
 </div>
 
@@ -294,8 +311,9 @@ html[data-theme="light"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;
 
 <!-- 底部导航 -->
 <div style="margin-top:2rem;padding:1rem;border-radius:10px;background:var(--card);border:1px solid var(--border);text-align:center">
-  <div style="font-size:.82rem;color:var(--muted);margin-bottom:.5rem">AI第一思考 — 四大根基能力</div>
+  <div style="font-size:.82rem;color:var(--muted);margin-bottom:.5rem">AI第一思考 — 五大能力</div>
   <div style="display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap">
+    <a href="ideate.html" style="padding:.4rem .8rem;border-radius:6px;background:rgba(167,139,250,.1);color:#a78bfa;font-weight:600;font-size:.85rem;text-decoration:none;border:1px solid rgba(167,139,250,.25)">✨ Ideate</a>
     <a href="ask.html" style="padding:.4rem .8rem;border-radius:6px;background:rgba(88,166,255,.1);color:var(--accent);font-weight:600;font-size:.85rem;text-decoration:none;border:1px solid rgba(88,166,255,.2)">💬 Ask</a>
     <a href="plan.html" style="padding:.4rem .8rem;border-radius:6px;background:rgba(249,115,22,.1);color:var(--af);font-weight:600;font-size:.85rem;text-decoration:none;border:1px solid rgba(249,115,22,.2)">🗺️ Plan</a>
     <a href="debug.html" style="padding:.4rem .8rem;border-radius:6px;background:rgba(210,153,34,.1);color:var(--warn);font-weight:600;font-size:.85rem;text-decoration:none;border:1px solid rgba(210,153,34,.2)">🔧 Debug</a>
@@ -328,5 +346,6 @@ html[data-theme="light"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;
   });
 })();
 </script>
+<script src="./back-to-top.js"></script>
 </body>
 </html>

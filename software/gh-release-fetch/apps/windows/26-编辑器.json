@@ -28,30 +28,25 @@
   },
   {
     "id": "vscode",
-    "简介": "Visual Studio Code（微软构建）",
+    "简介": "Visual Studio Code（微软构建；GitHub Release 无安装包，走 update.code.visualstudio.com CDN）",
     "分类": "编辑器",
     "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "vscode",
     "releases_url": "https://bgithub.xyz/microsoft/vscode/releases",
     "repo_path": "microsoft/vscode",
-    "installer_markers": [
-      "VSCodeUserSetup-x64-",
-      ".exe"
-    ],
-    "href_exclude_substrings": [
-      "arm64",
-      "system",
-      "cli"
-    ],
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
     "windows_installer": true,
-    "download_names": [
-      "VSCodeUserSetup-x64-{ver}.exe"
-    ],
-    "save_name": "VSCodeUserSetup-x64-{ver}.exe",
+    "save_name": "VSCodeSetup-x64-{ver}.exe",
     "process_name": "Code.exe",
     "kill_before_install": true,
     "run_installer": true,
-    "version_tag_as_on_github": true,
-    "url_hint": "VSCodeUser"
+    "aliases": [
+      "VS Code",
+      "Visual Studio Code",
+      "Code"
+    ]
   },
   {
     "id": "notepadplusplus",

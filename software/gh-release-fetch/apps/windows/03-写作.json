@@ -264,5 +264,76 @@
     ],
     "releases_url": "https://bgithub.xyz/doocs/md/releases",
     "repo_path": "doocs/md"
+  },
+  {
+    "id": "quarto_cli",
+    "简介": "Quarto CLI（科学/技术写作发布：PDF/HTML/Word）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".zip",
+      "checksum",
+      "changelog",
+      "linux",
+      "macos",
+      ".tar.gz"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "quarto-",
+      "-win.msi"
+    ],
+    "installer_extensions": [
+      ".msi"
+    ],
+    "releases_url": "https://bgithub.xyz/quarto-dev/quarto-cli/releases",
+    "repo_path": "quarto-dev/quarto-cli"
+  },
+  {
+    "id": "tectonic",
+    "简介": "Tectonic（现代 TeX 引擎，免装 TeX Live）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "gnu",
+      "linux",
+      "apple",
+      "AppImage",
+      "arm"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "tectonic-",
+      "x86_64-pc-windows-msvc.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "releases_url": "https://bgithub.xyz/tectonic-typesetting/tectonic/releases",
+    "repo_path": "tectonic-typesetting/tectonic"
+  },
+  {
+    "id": "zotero",
+    "简介": "Zotero（文献管理；官方不走 GitHub Assets，请打开 Releases/官网）",
+    "分类": "写作",
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/zotero/zotero/releases",
+    "releases_url": "https://bgithub.xyz/zotero/zotero/releases",
+    "repo_path": "zotero/zotero"
   }
 ]

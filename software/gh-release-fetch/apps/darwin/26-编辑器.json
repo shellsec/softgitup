@@ -576,29 +576,28 @@
   },
   {
     "id": "vscode",
-    "简介": "Visual Studio Code",
+    "简介": "Visual Studio Code（微软构建；GitHub Release 无安装包，走 update.code.visualstudio.com CDN）",
     "分类": "编辑器",
     "enabled": false,
-    "prefer_api_assets": true,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "vscode",
+    "releases_url": "https://bgithub.xyz/microsoft/vscode/releases",
+    "repo_path": "microsoft/vscode",
     "version_tag_as_on_github": true,
+    "use_download_filename": true,
     "windows_installer": false,
-    "process_name": "",
-    "kill_before_install": false,
-    "run_installer": false,
-    "installer_markers": [
-      "VSCode-darwin-universal.zip"
-    ],
-    "href_exclude_substrings": [
-      "linux",
-      "win32"
-    ],
     "installer_extensions": [
       ".zip"
     ],
-    "use_download_filename": true,
-    "save_name": "vscode-darwin-universal.zip",
-    "releases_url": "https://bgithub.xyz/microsoft/vscode/releases",
-    "repo_path": "microsoft/vscode"
+    "save_name": "VSCode-darwin-arm64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "aliases": [
+      "VS Code",
+      "Visual Studio Code",
+      "Code"
+    ]
   },
   {
     "id": "sublime_merge",

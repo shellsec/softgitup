@@ -244,5 +244,35 @@
     "save_name": "ffmpeg-linux64-gpl.tar.xz",
     "releases_url": "https://bgithub.xyz/BtbN/FFmpeg-Builds/releases",
     "repo_path": "BtbN/FFmpeg-Builds"
+  },
+  {
+    "id": "olive",
+    "简介": "Olive（开源非线性视频剪辑；Linux AppImage；钉选 0.2.0-nightly）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "Windows",
+      "macOS",
+      ".exe",
+      ".dmg"
+    ],
+    "pinned_release_tag": "0.2.0-nightly",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Olive-",
+      "Linux-x86_64.AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "releases_url": "https://bgithub.xyz/olive-editor/olive/releases",
+    "repo_path": "olive-editor/olive"
   }
 ]

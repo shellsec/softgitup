@@ -424,5 +424,15 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "multipass",
+    "简介": "Multipass（Linux 请用 snap/发行版或打开 Releases 页）",
+    "分类": "云原生",
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/canonical/multipass/releases",
+    "releases_url": "https://bgithub.xyz/canonical/multipass/releases",
+    "repo_path": "canonical/multipass"
   }
 ]

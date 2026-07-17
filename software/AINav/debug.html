@@ -73,6 +73,7 @@ html[data-theme="light"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;
 <div class="cp-subtitle">AI时代最折磨人的能力。会不会Debug，决定你用AI是"提效"还是"添堵"。</div>
 
 <div class="tf-nav">
+  <a href="ideate.html">✨ Ideate</a>
   <a href="ask.html">💬 Ask</a>
   <a href="plan.html">🗺️ Plan</a>
   <a href="debug.html" class="is-active">🔧 Debug</a>
@@ -301,6 +302,33 @@ html[data-theme="light"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;
     你不会因为实习生犯错就自己重做——你会告诉他哪里错了，让他改。对待AI也一样。
   </div></div>
 
+  <div class="af-tool" id="prompts"><div class="af-tool-head"><div class="af-tool-name">可复制 · 定位根因</div></div>
+  <div class="af-tool-body">
+    <div style="padding:.6rem;border-radius:6px;background:rgba(210,153,34,.04);border:1px solid rgba(210,153,34,.14);font-size:.78rem;line-height:1.75;white-space:pre-wrap;font-family:ui-monospace,Consolas,monospace">你是 Debug 专家。先定位，再动手修。不要立刻大改。
+
+现象：[实际看到什么]
+期望：[应该怎样]
+范围：[相关文件/步骤/时间轴段]
+已尝试：[做过什么，结果如何]
+报错/截图文字：[粘贴]
+
+请按格式输出：
+1. 最可能根因（一句话）
+2. 为什么会这样（2～4 句）
+3. 最小修复方案（只改必要处）
+4. 如何验证修对了
+5. 一条可写入规则/模板的防复发提示</div>
+  </div></div>
+
+  <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">可复制 · 局部修复（禁全盘重做）</div></div>
+  <div class="af-tool-body">
+    <div style="padding:.6rem;border-radius:6px;background:rgba(88,166,255,.04);border:1px solid rgba(88,166,255,.12);font-size:.78rem;line-height:1.75;white-space:pre-wrap;font-family:ui-monospace,Consolas,monospace">只修下面指出的问题，其它保持不动。
+问题位置：[文件/函数/段落/秒数]
+问题描述：[哪里不对]
+约束：不要重构无关代码；不要换技术栈；改动尽量小。
+修好后说明：改了哪些行/哪些点，以及如何自测。</div>
+  </div></div>
+
   <div class="af-tool"><div class="af-tool-head"><div class="af-tool-name">模板化防复发</div></div>
   <div class="af-tool-body">
     <strong>Debug的终极目标不是"修好这一次"，而是"下次不再犯"。</strong><br><br>
@@ -327,8 +355,9 @@ html[data-theme="light"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;
 
 <!-- 底部导航 -->
 <div style="margin-top:2rem;padding:1rem;border-radius:10px;background:var(--card);border:1px solid var(--border);text-align:center">
-  <div style="font-size:.82rem;color:var(--muted);margin-bottom:.5rem">AI第一思考 — 四大根基能力</div>
+  <div style="font-size:.82rem;color:var(--muted);margin-bottom:.5rem">AI第一思考 — 五大能力</div>
   <div style="display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap">
+    <a href="ideate.html" style="padding:.4rem .8rem;border-radius:6px;background:rgba(167,139,250,.1);color:#a78bfa;font-weight:600;font-size:.85rem;text-decoration:none;border:1px solid rgba(167,139,250,.25)">✨ Ideate</a>
     <a href="ask.html" style="padding:.4rem .8rem;border-radius:6px;background:rgba(88,166,255,.1);color:var(--accent);font-weight:600;font-size:.85rem;text-decoration:none;border:1px solid rgba(88,166,255,.2)">💬 Ask</a>
     <a href="plan.html" style="padding:.4rem .8rem;border-radius:6px;background:rgba(249,115,22,.1);color:var(--af);font-weight:600;font-size:.85rem;text-decoration:none;border:1px solid rgba(249,115,22,.2)">🗺️ Plan</a>
     <a href="debug.html" style="padding:.4rem .8rem;border-radius:6px;background:rgba(210,153,34,.1);color:var(--warn);font-weight:600;font-size:.85rem;text-decoration:none;border:1px solid rgba(210,153,34,.2)">🔧 Debug</a>
@@ -361,5 +390,6 @@ html[data-theme="light"]{--bg:#f6f8fa;--panel:#fff;--card:#fff;--border:#d0d7de;
   });
 })();
 </script>
+<script src="./back-to-top.js"></script>
 </body>
 </html>

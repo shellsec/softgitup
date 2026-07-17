@@ -58,5 +58,63 @@
     "save_name": "Stirling-PDF.jar",
     "releases_url": "https://bgithub.xyz/Stirling-Tools/Stirling-PDF/releases",
     "repo_path": "Stirling-Tools/Stirling-PDF"
+  },
+  {
+    "id": "librecad",
+    "简介": "LibreCAD（开源 2D CAD；Linux x86_64 AppImage）",
+    "分类": "办公与设计",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".exe",
+      ".dmg",
+      ".snap",
+      "aarch64"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "LibreCAD-",
+      "x86_64.AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "releases_url": "https://bgithub.xyz/LibreCAD/LibreCAD/releases",
+    "repo_path": "LibreCAD/LibreCAD"
+  },
+  {
+    "id": "pencil2d",
+    "简介": "Pencil2D（开源 2D 手绘动画；Linux AppImage）",
+    "分类": "办公与设计",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "i686",
+      "win",
+      ".dmg",
+      ".zsync"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "pencil2d-linux-amd64-",
+      ".AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "releases_url": "https://bgithub.xyz/pencil2d/pencil/releases",
+    "repo_path": "pencil2d/pencil"
   }
 ]

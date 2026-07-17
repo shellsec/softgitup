@@ -2,7 +2,8 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="stylesheet" href="site-mobile.css">
   <title>AI Search Plan 搜索套餐横评 — AINav</title>
   <meta name="description" content="AI搜索订阅套餐横向对比：Perplexity、ChatGPT Plus、Google One AI、Kimi、秘塔搜索等价格功能对比。">
   <link rel="canonical" href="https://aiv123.com/search-plan.html">
@@ -186,7 +187,7 @@
     <p class="cp-subtitle" data-i18n="subtitle">国内外 AI 搜索订阅套餐一站式对比：价格、查询量、Pro模型、文件上传，帮你选出最划算的 AI 搜索方案。</p>
 
     
-    <p class="cp-updated-line"><span class="cp-updated">最后更新：2026-06-26</span></p>
+    <p class="cp-updated-line"><span class="cp-updated">最后更新：2026-07-15</span></p>
     <div class="cp-legend">
       <div class="cp-legend-item"><span class="cp-badge badge-hot">🔥 热门</span> 高人气</div>
       <div class="cp-legend-item"><span class="cp-badge badge-new">✨ 新品</span> 新上线</div>
@@ -377,8 +378,8 @@
           <table class="cp-table">
             <thead><tr><th>套餐</th><th>月价</th><th>说明</th><th>备注</th></tr></thead>
             <tbody>
-              <tr><td class="plan-name">Free</td><td class="plan-price">$0</td><td>有限次数</td><td>基础Grok</td></tr>
-              <tr><td class="plan-name">Premium+</td><td class="plan-price">$30/月</td><td>无限搜索+Grok 4</td><td>X平台深度集成</td></tr>
+              <tr><td class="plan-name">Free</td><td class="plan-price">$0</td><td>有限次数</td><td>基础 Grok</td></tr>
+              <tr><td class="plan-name">Premium+</td><td class="plan-price">$30/月</td><td>更高搜索额度 + Grok 4.5</td><td>X 平台深度集成</td></tr>
             </tbody>
           </table>
           <div class="feat-tags">
@@ -662,5 +663,6 @@
 <script src="plan-nav.js" data-active="search-plan.html"></script>
 <script src="thinking-framework.js"></script>
 <script>document.addEventListener("click",function(e){var c=e.target.closest(".plan-promo-code");if(!c)return;e.preventDefault();var code=c.getAttribute("data-code")||c.textContent.trim();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(code).then(function(){c.textContent=code+" 已复制";setTimeout(function(){c.textContent=code},1500)})}else{var ta=document.createElement("textarea");ta.value=code;ta.style.cssText="position:fixed;left:-9999px";document.body.appendChild(ta);ta.select();try{document.execCommand("copy");c.textContent=code+" 已复制";setTimeout(function(){c.textContent=code},1500)}catch(ex){}document.body.removeChild(ta)}});</script>
+<script src="./back-to-top.js"></script>
 </body>
 </html>

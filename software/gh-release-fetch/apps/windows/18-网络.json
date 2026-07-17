@@ -700,5 +700,92 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "ungoogled_chromium",
+    "简介": "ungoogled-chromium（去 Google 集成的 Chromium；Windows x64 安装包）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm64",
+      "x86",
+      ".zip",
+      ".mar"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ungoogled-chromium_",
+      "installer_x64.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "releases_url": "https://bgithub.xyz/ungoogled-software/ungoogled-chromium-windows/releases",
+    "repo_path": "ungoogled-software/ungoogled-chromium-windows"
+  },
+  {
+    "id": "floorp",
+    "简介": "Floorp（Firefox 系注重隐私/自定义的浏览器）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "stub",
+      ".mar",
+      "meta.json",
+      "linux",
+      "mac",
+      "noraneko"
+    ],
+    "installer_markers": [
+      "floorp-windows-x86_64.installer.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "releases_url": "https://bgithub.xyz/floorp-Projects/Floorp/releases",
+    "repo_path": "floorp-Projects/Floorp"
+  },
+  {
+    "id": "mullvad_browser",
+    "简介": "Mullvad Browser（隐私浏览器）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".asc",
+      ".deb",
+      "linux",
+      "macos"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "mullvad-browser-windows-x86_64-",
+      ".exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "releases_url": "https://bgithub.xyz/mullvad/mullvad-browser/releases",
+    "repo_path": "mullvad/mullvad-browser"
   }
 ]

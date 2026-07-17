@@ -1169,5 +1169,45 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": true
+  },
+  {
+    "id": "formatmaster",
+    "简介": "FormatMaster（视频/音频/图片/文档一站式格式转换；Windows 安装包）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/2048895034qq/FormatMaster-EN/releases",
+    "repo_path": "2048895034qq/FormatMaster-EN",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "FormatMaster-",
+      "-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "portable",
+      ".zip",
+      ".msi"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "download_names": [
+      "FormatMaster-{ver}-setup.exe"
+    ],
+    "download_url_templates": [
+      "https://github.com/2048895034qq/FormatMaster-EN/releases/download/{ver}/FormatMaster-{ver_plain}-setup.exe"
+    ],
+    "use_download_filename": true,
+    "save_name": "FormatMaster-{ver}-setup.exe",
+    "aliases": [
+      "FormatMaster",
+      "Format Master",
+      "FormatMaster-EN"
+    ],
+    "process_name": "FormatMaster.exe",
+    "kill_before_install": true,
+    "run_installer": true
   }
 ]

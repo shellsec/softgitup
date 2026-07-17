@@ -2,7 +2,8 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="stylesheet" href="site-mobile.css">
   <title>AI Voice Plan 语音套餐横评 — AINav</title>
   <meta name="description" content="AI语音/TTS套餐横向对比：ElevenLabs、Azure Speech、OpenAI TTS、Fish Audio、讯飞等价格功能对比。">
   <link rel="canonical" href="https://aiv123.com/voice-plan.html">
@@ -641,5 +642,6 @@
 <script src="plan-nav.js" data-active="voice-plan.html"></script>
 <script src="thinking-framework.js"></script>
 <script>document.addEventListener("click",function(e){var c=e.target.closest(".plan-promo-code");if(!c)return;e.preventDefault();var code=c.getAttribute("data-code")||c.textContent.trim();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(code).then(function(){c.textContent=code+" 已复制";setTimeout(function(){c.textContent=code},1500)})}else{var ta=document.createElement("textarea");ta.value=code;ta.style.cssText="position:fixed;left:-9999px";document.body.appendChild(ta);ta.select();try{document.execCommand("copy");c.textContent=code+" 已复制";setTimeout(function(){c.textContent=code},1500)}catch(ex){}document.body.removeChild(ta)}});</script>
+<script src="./back-to-top.js"></script>
 </body>
 </html>

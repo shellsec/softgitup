@@ -418,6 +418,25 @@
     "run_installer": false
   },
   {
+    "id": "codex_app",
+    "简介": "OpenAI Codex：官方桌面安装包仅 Windows/macOS（见 Wangnov/codex-app-mirror）；Linux 请用 Codex CLI 或 ChatGPT 网页版。",
+    "分类": "AI",
+    "enabled": false,
+    "releases_url": "https://bgithub.xyz/Wangnov/codex-app-mirror/releases",
+    "repo_path": "Wangnov/codex-app-mirror",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "open_page_only": true,
+    "open_page_url": "https://openai.com/zh-Hans-CN/codex/",
+    "aliases": [
+      "Codex App",
+      "OpenAI Codex",
+      "Codex 桌面"
+    ]
+  },
+  {
     "id": "gemini_cli",
     "简介": "Gemini CLI（Release 多为 gemini-cli-bundle.zip 通用包）",
     "分类": "AI",

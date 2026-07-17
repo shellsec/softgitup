@@ -485,5 +485,128 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "xray_core",
+    "简介": "Xray-core（代理内核；macOS Apple Silicon）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".dgst",
+      "64.zip",
+      "windows",
+      "linux",
+      "android"
+    ],
+    "installer_markers": [
+      "Xray-macos-arm64-v8a.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "releases_url": "https://bgithub.xyz/XTLS/Xray-core/releases",
+    "repo_path": "XTLS/Xray-core"
+  },
+  {
+    "id": "nekoray",
+    "简介": "NekoRay（已不支持旧版 macOS；请打开 Releases 页）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/MatsuriDayo/nekoray/releases",
+    "releases_url": "https://bgithub.xyz/MatsuriDayo/nekoray/releases",
+    "repo_path": "MatsuriDayo/nekoray"
+  },
+  {
+    "id": "frp",
+    "简介": "frp（内网穿透；macOS Apple Silicon）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "amd64",
+      "windows",
+      "linux",
+      "checksum"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "frp_",
+      "darwin_arm64.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "releases_url": "https://bgithub.xyz/fatedier/frp/releases",
+    "repo_path": "fatedier/frp"
+  },
+  {
+    "id": "shadowsocks_rust",
+    "简介": "shadowsocks-rust（macOS Apple Silicon）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".sha256",
+      "x86_64",
+      "linux",
+      "windows",
+      "android"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "shadowsocks-",
+      "aarch64-apple-darwin.tar.xz"
+    ],
+    "installer_extensions": [
+      ".tar.xz"
+    ],
+    "releases_url": "https://bgithub.xyz/shadowsocks/shadowsocks-rust/releases",
+    "repo_path": "shadowsocks/shadowsocks-rust"
+  },
+  {
+    "id": "gui_for_singbox",
+    "简介": "GUI.for.SingBox（sing-box 图形前端；macOS Apple Silicon）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "amd64",
+      "windows",
+      "linux"
+    ],
+    "installer_markers": [
+      "GUI.for.SingBox-darwin-arm64.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "releases_url": "https://bgithub.xyz/GUI-for-Cores/GUI.for.SingBox/releases",
+    "repo_path": "GUI-for-Cores/GUI.for.SingBox"
   }
 ]

@@ -771,6 +771,291 @@
     "url_hint": "dreamscene2"
   },
   {
+    "id": "bing_wallpaper_now",
+    "简介": "Bing Wallpaper Now（必应每日壁纸自动下载/设置；Windows x64 MSI）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/qiyuey/bing-wallpaper-now/releases",
+    "repo_path": "qiyuey/bing-wallpaper-now",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Bing.Wallpaper.Now_",
+      "x64",
+      ".msi"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      ".sig",
+      "latest.json",
+      ".dmg",
+      ".tar.gz"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "use_download_filename": true,
+    "aliases": [
+      "Bing Wallpaper Now",
+      "必应壁纸",
+      "bing wallpaper now"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "bing_wallpaper_lib",
+    "简介": "必应每日壁纸库（历史必应壁纸浏览/下载/每日自动更换；Windows x64 绿色 exe）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/pandaligx/bing-wallpaper-lib/releases",
+    "repo_path": "pandaligx/bing-wallpaper-lib",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "bing-wallpaper-lib-",
+      "x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      ".sig"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "use_download_filename": true,
+    "aliases": [
+      "必应壁纸库",
+      "bing-wallpaper-lib"
+    ],
+    "process_name": "bing-wallpaper-lib.exe",
+    "kill_before_install": true,
+    "run_installer": false
+  },
+  {
+    "id": "jadepeng_bing_wallpaper",
+    "简介": "Bing每日壁纸（jadepeng；自动获取必应图片设为壁纸，支持历史切换；Windows 绿色包）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/jadepeng/bing-wallpaper/releases",
+    "repo_path": "jadepeng/bing-wallpaper",
+    "installer_markers": [
+      ".zip"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "aliases": [
+      "Bing每日壁纸",
+      "jadepeng bing wallpaper"
+    ],
+    "process_name": "BingWallpaper.exe",
+    "kill_before_install": true,
+    "run_installer": false
+  },
+  {
+    "id": "bingwallpaper_windows",
+    "简介": "BingWallpaper.Windows（轻量必应每日壁纸自动应用；Windows 安装包 zip）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/BingHomepage/BingWallpaper.Windows/releases",
+    "repo_path": "BingHomepage/BingWallpaper.Windows",
+    "installer_markers": [
+      "Bing.Wallpaper",
+      ".zip"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "aliases": [
+      "BingWallpaper.Windows",
+      "Bing Homepage Wallpaper"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "unsplash_wallpapers",
+    "简介": "Unsplash Wallpapers（从 Unsplash 自动换壁纸，支持按小时/天/周；Windows 安装包）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/soroushchehresa/unsplash-wallpapers/releases",
+    "repo_path": "soroushchehresa/unsplash-wallpapers",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Unsplash-Wallpapers-Setup-",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      ".blockmap",
+      ".dmg",
+      ".AppImage",
+      ".deb",
+      ".rpm",
+      "mac.zip"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "use_download_filename": true,
+    "aliases": [
+      "Unsplash Wallpapers",
+      "Unsplash壁纸"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "splashy",
+    "简介": "Splashy（Unsplash 壁纸自动轮换；需自备 Unsplash API Key；Windows x64 安装包）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Halfaxas/Splashy/releases",
+    "repo_path": "Halfaxas/Splashy",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Splashy_",
+      "x64-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      ".msi",
+      ".dmg",
+      ".AppImage",
+      ".deb",
+      ".rpm",
+      ".tar.gz"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "use_download_filename": true,
+    "aliases": [
+      "Splashy",
+      "Unsplash Splashy"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "wallhaven_desktop",
+    "简介": "wallhaven-desktop（Wallhaven 壁纸客户端，浏览/下载/设为桌面；Windows x64 安装包）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/ErKeLost/wallhaven-desktop/releases",
+    "repo_path": "ErKeLost/wallhaven-desktop",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "wallhaven_",
+      "x64-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      ".msi",
+      ".dmg",
+      ".AppImage",
+      ".deb",
+      ".rpm",
+      ".tar.gz"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "use_download_filename": true,
+    "aliases": [
+      "wallhaven",
+      "Wallhaven Desktop"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "flying_bird_wallpaper",
+    "简介": "Flying Bird Wallpaper（多源壁纸：Bing/Unsplash/Wallhaven/NASA 等，支持自动切换；Windows x64）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/OXOYO/Flying-Bird-Wallpaper/releases",
+    "repo_path": "OXOYO/Flying-Bird-Wallpaper",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Flying-Bird-Wallpaper-",
+      "x64-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      ".dmg",
+      "latest.yml"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "use_download_filename": true,
+    "aliases": [
+      "Flying Bird Wallpaper",
+      "飞鸟壁纸"
+    ],
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true
+  },
+  {
+    "id": "binglish",
+    "简介": "binglish（必应每日壁纸 + 英语单词学习；Windows 绿色 exe）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/klemperer/binglish/releases",
+    "repo_path": "klemperer/binglish",
+    "installer_markers": [
+      "binglish.exe"
+    ],
+    "href_exclude_substrings": [
+      "mac",
+      ".zip"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "use_download_filename": true,
+    "save_name": "binglish.exe",
+    "aliases": [
+      "binglish",
+      "必应英语壁纸"
+    ],
+    "process_name": "binglish.exe",
+    "kill_before_install": true,
+    "run_installer": false
+  },
+  {
     "id": "pid_key_checker",
     "简介": "Windows 密钥激活次数查询工具 PID Key Checker 4.0.0.0 中文免费版（来源：dayanzai）",
     "分类": "系统",
@@ -1363,5 +1648,56 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": true
+  },
+  {
+    "id": "snowdesktop",
+    "简介": "飘雪桌面 SnowDesktop（开源 Windows 桌面整理美化：网格/集合/分类/Dock/Lua 组件；Release 无 Assets，按 tag 拉仓库 zip）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/FreeFallingSnow/SnowDesktop_Release/releases",
+    "repo_path": "FreeFallingSnow/SnowDesktop_Release",
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_url_templates": [
+      "https://github.com/FreeFallingSnow/SnowDesktop_Release/archive/refs/tags/{ver}.zip"
+    ],
+    "save_name": "SnowDesktop-{ver}.zip",
+    "aliases": [
+      "SnowDesktop",
+      "飘雪桌面",
+      "Snow Desktop"
+    ],
+    "process_name": "SnowDesktop.exe",
+    "kill_before_install": true,
+    "run_installer": false
+  },
+  {
+    "id": "libre_hardware_monitor",
+    "简介": "LibreHardwareMonitor（硬件温度/风扇/负载监控）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".NET.10",
+      "source"
+    ],
+    "installer_markers": [
+      "LibreHardwareMonitor.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "releases_url": "https://bgithub.xyz/LibreHardwareMonitor/LibreHardwareMonitor/releases",
+    "repo_path": "LibreHardwareMonitor/LibreHardwareMonitor"
   }
 ]

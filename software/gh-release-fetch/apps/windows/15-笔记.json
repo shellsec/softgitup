@@ -678,5 +678,34 @@
     ],
     "releases_url": "https://bgithub.xyz/windingwind/zotero-better-notes/releases",
     "repo_path": "windingwind/zotero-better-notes"
+  },
+  {
+    "id": "anki",
+    "简介": "Anki（间隔重复记忆卡片）",
+    "分类": "笔记",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm64",
+      "mac",
+      "linux",
+      ".dmg",
+      ".tar."
+    ],
+    "installer_markers": [
+      "anki-",
+      "win-x64.msi"
+    ],
+    "installer_extensions": [
+      ".msi"
+    ],
+    "releases_url": "https://bgithub.xyz/ankitects/anki/releases",
+    "repo_path": "ankitects/anki"
   }
 ]

@@ -298,5 +298,73 @@
     ],
     "releases_url": "https://bgithub.xyz/KDE/ghostwriter/releases",
     "repo_path": "KDE/ghostwriter"
+  },
+  {
+    "id": "quarto_cli",
+    "简介": "Quarto CLI（科学/技术写作发布；macOS pkg）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".tar.gz",
+      "win",
+      "linux",
+      "checksum"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "quarto-",
+      "-macos.pkg"
+    ],
+    "installer_extensions": [
+      ".pkg"
+    ],
+    "releases_url": "https://bgithub.xyz/quarto-dev/quarto-cli/releases",
+    "repo_path": "quarto-dev/quarto-cli"
+  },
+  {
+    "id": "tectonic",
+    "简介": "Tectonic（现代 TeX 引擎；macOS Apple Silicon）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "x86_64",
+      "linux",
+      "windows",
+      "AppImage"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "tectonic-",
+      "aarch64-apple-darwin.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "releases_url": "https://bgithub.xyz/tectonic-typesetting/tectonic/releases",
+    "repo_path": "tectonic-typesetting/tectonic"
+  },
+  {
+    "id": "zotero",
+    "简介": "Zotero（文献管理；官方不走 GitHub Assets，请打开 Releases/官网）",
+    "分类": "写作",
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/zotero/zotero/releases",
+    "releases_url": "https://bgithub.xyz/zotero/zotero/releases",
+    "repo_path": "zotero/zotero"
   }
 ]

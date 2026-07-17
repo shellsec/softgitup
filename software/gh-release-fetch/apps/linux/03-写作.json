@@ -299,5 +299,78 @@
     ],
     "releases_url": "https://bgithub.xyz/KDE/ghostwriter/releases",
     "repo_path": "KDE/ghostwriter"
+  },
+  {
+    "id": "quarto_cli",
+    "简介": "Quarto CLI（科学/技术写作发布；Linux amd64 tar.gz）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm64",
+      "aarch64",
+      ".deb",
+      ".rpm",
+      "win",
+      "macos",
+      "checksum"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "quarto-",
+      "linux-amd64.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "releases_url": "https://bgithub.xyz/quarto-dev/quarto-cli/releases",
+    "repo_path": "quarto-dev/quarto-cli"
+  },
+  {
+    "id": "tectonic",
+    "简介": "Tectonic（现代 TeX 引擎；Linux x86_64 musl）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "gnu",
+      "apple",
+      "windows",
+      "AppImage",
+      "arm",
+      "i686"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "tectonic-",
+      "x86_64-unknown-linux-musl.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "releases_url": "https://bgithub.xyz/tectonic-typesetting/tectonic/releases",
+    "repo_path": "tectonic-typesetting/tectonic"
+  },
+  {
+    "id": "zotero",
+    "简介": "Zotero（文献管理；官方不走 GitHub Assets，请打开 Releases/官网）",
+    "分类": "写作",
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/zotero/zotero/releases",
+    "releases_url": "https://bgithub.xyz/zotero/zotero/releases",
+    "repo_path": "zotero/zotero"
   }
 ]

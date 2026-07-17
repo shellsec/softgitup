@@ -444,5 +444,32 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "multipass",
+    "简介": "Multipass（Canonical 轻量 Ubuntu VM；macOS）",
+    "分类": "云原生",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "win",
+      ".msi"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "multipass-",
+      "mac-Darwin.pkg"
+    ],
+    "installer_extensions": [
+      ".pkg"
+    ],
+    "releases_url": "https://bgithub.xyz/canonical/multipass/releases",
+    "repo_path": "canonical/multipass"
   }
 ]

@@ -447,5 +447,43 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "ungoogled_chromium",
+    "简介": "ungoogled-chromium（Windows 专用构建；其他平台请打开 Releases 页）",
+    "分类": "网络",
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/ungoogled-software/ungoogled-chromium-windows/releases",
+    "releases_url": "https://bgithub.xyz/ungoogled-software/ungoogled-chromium-windows/releases",
+    "repo_path": "ungoogled-software/ungoogled-chromium-windows"
+  },
+  {
+    "id": "mullvad_browser",
+    "简介": "Mullvad Browser（隐私浏览器；Linux deb）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".asc",
+      "windows",
+      "macos"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "mullvad-browser_",
+      "amd64.deb"
+    ],
+    "installer_extensions": [
+      ".deb"
+    ],
+    "releases_url": "https://bgithub.xyz/mullvad/mullvad-browser/releases",
+    "repo_path": "mullvad/mullvad-browser"
   }
 ]

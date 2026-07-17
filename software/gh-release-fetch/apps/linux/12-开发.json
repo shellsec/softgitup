@@ -861,5 +861,78 @@
     "kill_before_install": false,
     "run_installer": false,
     "windows_installer": false
+  },
+  {
+    "id": "jupyterlab_desktop",
+    "简介": "JupyterLab Desktop（Linux Debian x64）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "Windows",
+      "macOS",
+      "Fedora",
+      ".rpm",
+      ".exe",
+      ".dmg"
+    ],
+    "installer_markers": [
+      "JupyterLab-Setup-Debian-x64.deb"
+    ],
+    "installer_extensions": [
+      ".deb"
+    ],
+    "releases_url": "https://bgithub.xyz/jupyterlab/jupyterlab-desktop/releases",
+    "repo_path": "jupyterlab/jupyterlab-desktop"
+  },
+  {
+    "id": "spyder",
+    "简介": "Spyder（非 Windows 安装包请打开 Releases/conda 页）",
+    "分类": "开发",
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/spyder-ide/spyder/releases",
+    "releases_url": "https://bgithub.xyz/spyder-ide/spyder/releases",
+    "repo_path": "spyder-ide/spyder"
+  },
+  {
+    "id": "wxmaxima",
+    "简介": "wxMaxima（非 Windows 请打开 Releases/发行版包）",
+    "分类": "开发",
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/wxMaxima-developers/wxmaxima/releases",
+    "releases_url": "https://bgithub.xyz/wxMaxima-developers/wxmaxima/releases",
+    "repo_path": "wxMaxima-developers/wxmaxima"
+  },
+  {
+    "id": "mkcert",
+    "简介": "mkcert（本地 HTTPS 开发证书；Linux amd64）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm",
+      "darwin",
+      "windows"
+    ],
+    "installer_markers": [
+      "mkcert-",
+      "linux-amd64"
+    ],
+    "releases_url": "https://bgithub.xyz/FiloSottile/mkcert/releases",
+    "repo_path": "FiloSottile/mkcert"
   }
 ]

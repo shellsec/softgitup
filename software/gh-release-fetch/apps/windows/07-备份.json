@@ -122,5 +122,43 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "urbackup_server",
+    "简介": "UrBackup Server（客户端/服务端镜像与文件备份）",
+    "分类": "备份",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".deb",
+      ".tar.gz",
+      ".exe"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "UrBackup.Server.",
+      "x64.msi"
+    ],
+    "installer_extensions": [
+      ".msi"
+    ],
+    "releases_url": "https://bgithub.xyz/uroni/urbackup_backend/releases",
+    "repo_path": "uroni/urbackup_backend"
+  },
+  {
+    "id": "borg",
+    "简介": "BorgBackup（Windows 支持有限；请打开 Releases 页）",
+    "分类": "备份",
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/borgbackup/borg/releases",
+    "releases_url": "https://bgithub.xyz/borgbackup/borg/releases",
+    "repo_path": "borgbackup/borg"
   }
 ]
