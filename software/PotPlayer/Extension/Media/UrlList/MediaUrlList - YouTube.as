@@ -15,6 +15,8 @@
 // string ServerCheck(string User, string Pass) 		-> server check
 // string ServerLogin(string User, string Pass) 		-> login
 // void ServerLogout() 									-> logout
+// string GetWebAccountUrl()							-> login process by WebBrowser
+// string GetWebAccountDomain()							-> transport cookie domain for login
 //------------------------------------------------------------------------------------------------
 // array<dictionary> GetCategorys()						-> get category list
 // string GetSorts(string Category, string Extra, string PathToken, string Query)									-> get sort option
@@ -22,7 +24,7 @@
 
 string GetTitle()
 {
-return "{$CP949=유튜브$}{$CP0=YouTube$}";
+	return "{$CP949=유튜브$}{$CP0=YouTube$}";
 }
 
 string GetVersion()
@@ -33,6 +35,16 @@ string GetVersion()
 string GetDesc()
 {
 	return "https://www.youtube.com/";
+}
+
+string GetWebAccountUrl()
+{
+	return "https://accounts.google.com/ServiceLogin?service=youtube";
+}
+
+string GetWebAccountDomain()
+{
+	return "www.google.com;www.youtube.com";
 }
 
 array<dictionary> GetCategorys()

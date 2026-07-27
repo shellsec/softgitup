@@ -32,6 +32,10 @@ bool HostIsWin64()
 
 void HostSleep(int ms)
 	win32 API Sleep()
+	If the waiting time is too long, a timeout may occur, 
+	so if you want to wait for a long time, 
+	set the millisecond value to a short value, 
+	and call HostIncTimeOut to increase the timeout time when looping.
 
 uint HostGetTickCount()
 	win32 API GetTickCount()
@@ -302,16 +306,49 @@ void HostSetUrlRefererHTTP(const string &url, const string &referer)
 void HostSetUrlCookieHTTP(const string &url, const string &cookie)
 	Set http cookie for HTTP url
 
-void HostMessageBox(const string& content, const string& title = "", int iconType = 3, int btnType = 1)
+void HostMessageBox(const string& content, const string& title = "", int iconType = 3, int btnType = 1, MessageBoxResult@ callback = null)
 	Show message box
 	iconType : 0->!, 1->?, 2->i, 3->x
-	btnType : 0->OK, 1->Close, 2->Yes
+	btnType : 0->OK, 1->Close, 2->Yes, 3->Ok/Cancel, 4->Yes/No
+	returnFunction : async message box result function ... signature is 'void MessageBoxResult(int result)'
 
 string HostGetPlayingFileName()
 	Get current playing file name
 
 string HostGetPlayingTitle()
 	Get current playing title
+
+int HostCreateThread(ThreadFunction @function, any@ param)
+	Create thread for background working~~
+	You must protect same access resource using Mutex
+	ThreadFunction : signature is 'void ThreadFunction(any@ param) = null'
+	example:
+		void ThreadFunction(any@ param)
+		{
+			if (param != null)
+			{
+				string str;
+				int num;
+
+				if (param.retrieve(str)) HostMessageBox("ThreadFunction " + str);
+				else if (param.retrieve(num)) HostMessageBox("ThreadFunction " + formatInt(num));
+			}
+		}
+		void OnInitialize()
+		{
+			HostCreateThread(ThreadFunction, "test");
+			HostCreateThread(ThreadFunction, 123);
+		}
+
+bool HostWaitThread(int threadID, int ms = 10)
+	Wait thread in ms
+	If the waiting time is too long, a timeout may occur, 
+	so if you want to wait for a long time, 
+	set the millisecond value to a short value, 
+	and call HostIncTimeOut to increase the timeout time when looping.
+	return true is success
+	return false is fail
+
 
 ------------------------PotPlayer's builtin class----------------------------------
 ------------------------string
@@ -467,3 +504,48 @@ string HostGetPlayingTitle()
 	string GetHeaderValue(const string& name)
 	int GetStatus()
 
+------------------------FileIO
+	bool bool Open(const string &in, bool forWrite = false)
+	void Close()
+	int64 Seek(int64 offset, int from)
+	int64 GetLength()
+	int64 SetLength(int64 length)
+	uint8 ReadBYTE()
+	uint16 ReadWORD()
+	uint32 ReadDWORD()
+	uint64 ReadQWORD()
+	string Read(int len)
+	int WriteBYTE(uint8 data)
+	int WriteWORD(uint16 data)
+	int WriteDWORD(uint32 data)
+	int WriteQWORD(uint64 data)
+	int Write(const string &in data)
+
+------------------------Mutex
+	std::mutex
+	void Lock()
+	void Unlock()
+	bool TryLock()
+
+------------------------LockGuard
+	std::lock_guard<std::mutex>
+	LockGuard(Mutex);
+
+------------------------UniqueLock
+	std::unique_lock<std::mutex>
+	void Lock()
+	void Unlock()
+	bool TryLock()
+
+------------------------CondVar
+	std::condition_variable
+	bool WaitFor(UniqueLock &inout, int ms)
+	void NotifyOne()
+	void NotifyAll()
+
+------------------------Event
+	Event(bool ManualReset)
+	void Set()
+	bool Wait(int ms)
+	void Reset()
+	bool Check()

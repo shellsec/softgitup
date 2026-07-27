@@ -123,7 +123,7 @@
     "id": "7zip",
     "简介": "7-Zip（官方 x64 MSI 安装包，ip7z/7zip Release）",
     "分类": "工具",
-    "enabled": false,
+    "enabled": true,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
     "releases_url": "https://bgithub.xyz/ip7z/7zip/releases",
@@ -149,7 +149,7 @@
     "save_name": "7z-x64.msi",
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": true,
+    "run_installer": false,
     "url_hint": "7zip"
   },
   {
@@ -183,7 +183,7 @@
     "id": "ditto",
     "简介": "Ditto（剪贴板历史；Release 资产名带版本号，优先 API 匹配 DittoSetup_64bit）",
     "分类": "工具",
-    "enabled": false,
+    "enabled": true,
     "prefer_api_assets": true,
     "releases_url": "https://bgithub.xyz/sabrogden/Ditto/releases",
     "repo_path": "sabrogden/Ditto",
@@ -204,7 +204,7 @@
     "save_name": "DittoSetup_64bit.exe",
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": true
+    "run_installer": false
   },
   {
     "id": "flyphotos",

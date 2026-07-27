@@ -837,32 +837,40 @@
   },
   {
     "id": "super_productivity",
-    "简介": "Super Productivity（任务/番茄钟）",
+    "简介": "Super Productivity（任务管理/番茄钟/时间追踪；Windows x64 安装包）",
     "分类": "效率",
     "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
-    "windows_installer": false,
+    "releases_url": "https://bgithub.xyz/super-productivity/super-productivity/releases",
+    "repo_path": "super-productivity/super-productivity",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Super-Productivity-Setup-x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      ".blockmap",
+      ".yml",
+      ".apk",
+      ".dmg",
+      ".AppImage",
+      ".deb",
+      ".rpm",
+      ".snap"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "use_download_filename": true,
+    "aliases": [
+      "Super Productivity",
+      "superproductivity"
+    ],
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false,
-    "use_download_filename": true,
-    "href_exclude_substrings": [
-      "source",
-      "src.",
-      "-src",
-      "symbols",
-      "debug",
-      "pdb",
-      "sha256",
-      ".sig",
-      ".json",
-      ".txt",
-      ".md",
-      "checksum"
-    ],
-    "releases_url": "https://bgithub.xyz/super-productivity/super-productivity/releases",
-    "repo_path": "super-productivity/super-productivity"
+    "run_installer": true
   },
   {
     "id": "pomotroid",

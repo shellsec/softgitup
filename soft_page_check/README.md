@@ -2,9 +2,10 @@
 
 从仓库根目录 [`Lastb_soft_version.txt`](../Lastb_soft_version.txt)（**「最终选择指南」之前**）提取页面 URL，抓取网页 `<title>` 并与历史快照比对，快速发现「可能有新版本」的介绍页。
 
-**不更新 `software/` 也完全可用**——本工具只做健康检查，不负责下载。破解 / 423down / 网盘类资源仍需手工下载后再替换目录并执行 [`generate_and_push.bat`](../generate_and_push.bat)。
+**不更新 `software/` 也完全可用**——快检本身不强制下载。  
+开源装机项可在本目录内一键拉 GitHub Release（只读引用 [`gh-release-fetch`](../software/gh-release-fetch/)）；破解 / 423down / 网盘仍须手工下载后替换目录，再执行 [`generate_and_push.bat`](../generate_and_push.bat)。
 
-> **月度更新入口**：双击 **[`monthly_sop.bat`](monthly_sop.bat)**，按步骤引导完成「快检 → 看报告 → 决定是否更新 → 发布」。
+> **月度更新入口**：双击 **[`monthly_sop.bat`](monthly_sop.bat)**，按步骤引导完成「快检 → 看工作台/报告 → 开源直下或手工 → 替换 `software/` → 发布」。
 
 ---
 
@@ -12,20 +13,21 @@
 
 ### 一句话
 
-**每月跑一遍 SOP → 报告里 A 类无变化就收工；有变化再手工下包 → 替换 `software/` → `generate_and_push.bat` → 客户端 `sync_software`。**
+**每月跑一遍 SOP → 看 A 类工作台；装机开源可随时直下；标题有变化再确认 → 替换 `software/` → `generate_and_push.bat` → 客户端 `sync_software`。**
 
 ### 流程图
 
 ```mermaid
 flowchart TD
   Start([双击 monthly_sop.bat]) --> S1[步骤1: A 类快检 ~15s]
-  S1 --> S2[步骤2: 打开 reports/index.html]
-  S2 --> Q{A 类标题有变化?}
-  Q -->|否| EndOK([结束 · 本月不更新])
-  Q -->|是| S3[步骤3: 报告页打开链接人工确认]
+  S1 --> S2[步骤2: 打开 monthly_a.html / index.html]
+  S2 --> Soft[可选: monthly_a_download_soft_github.bat 拉装机开源]
+  Soft --> Q{A 类标题有变化?}
+  Q -->|否| EndOK([结束 · 或只发开源包])
+  Q -->|是| S3[步骤3: 工作台看旧→新 / 点开确认]
   S3 --> Q2{确定要更新?}
   Q2 -->|否| EndOK
-  Q2 -->|是| DL[soft_page_check: fetch_github_on_changes / 其他: 手工]
+  Q2 -->|是| DL[GitHub: fetch_github_on_changes / 其他: 手工]
   DL --> REP[替换 software/ 对应目录]
   REP --> S4[步骤4 可选: 改 Lastb_soft_version.txt]
   S4 --> S5[步骤5: generate_and_push.bat]
@@ -37,10 +39,11 @@ flowchart TD
 | 步骤 | 做什么 | 工具 / 路径 | 可跳过？ |
 |------|--------|-------------|----------|
 | **1 快检** | 抓 A 类 ~42 页标题，与上月快照比对 | `monthly_sop.bat` 或 `monthly_check.bat` | 否（或看旧报告） |
-| **2 看报告** | 关注「A 类 · 同步软件」的**标题变化**数 | [`reports/index.html`](reports/index.html) | 否 |
-| **3 决策** | 变化 = 0 → **直接结束**；有变化 → 点开链接确认 | 报告页「打开 / 依次打开变化页」 | 无变化必跳过后续 |
-| **3 下载** | GitHub 变化 → `soft_page_check\fetch_github_on_changes.bat`；423down/破解 **浏览器手工** | 仅「要更新」时 |
-| **3 替换** | 解压覆盖到 `software\子目录\` | 资源管理器 | 仅「要更新」时 |
+| **2 看工作台** | 旧版本→新版本；装机开源是否可直下 | [`reports/monthly_a.html`](reports/monthly_a.html)、[`reports/index.html`](reports/index.html) | 否 |
+| **2′ 装机开源** | 按 `gh_soft_map.json` 拉最新 Release（不依赖本月有无标题变化） | `monthly_a_download_soft_github.bat` | 可选（建议每月跑） |
+| **3 决策** | 变化 = 0 → 可只发开源包或结束；有变化 → 点开确认 | 工作台 / 报告页 | 无变化可跳过手工项 |
+| **3 下载** | 本月 GitHub 变化 → `fetch_github_on_changes.bat`；423down/破解 **浏览器手工** | 仅「要更新」时 |
+| **3 替换** | 把 `gh-release-fetch/windows/` 包解压覆盖到 `software\子目录\` | 资源管理器 | 仅「要更新」时 |
 | **4 文档** | 改装机区说明、可选 append digest 一行 | `Lastb_soft_version.txt` | 可选 |
 | **5 发布** | 生成 `list.txt` 并 push | 根目录 `generate_and_push.bat` | 未改 software 则跳过 |
 | **6 同步** | 各机器拉新版本 | `sync_software.bat` | 仅发布后 |
@@ -118,7 +121,9 @@ flowchart TD
 | 打开 7xiazai 变化页 | `open_changed_7xiazai.bat` | 7xiazai 快检后有变化时 |
 | 打开 423down 变化页 | `open_changed_423down.bat` | digest 快检后有变化时 |
 | 打开 HTML 报告页 | `open_report.bat` | 随时查看 / 快检后自动打开 |
-| **GitHub 有变化时拉 Release** | `fetch_github_on_changes.bat` | A 类快检后、变化 URL 为 github.com 且 gh 配置已 enabled |
+| **A 类月度工作台** | `open_monthly_a.bat` | 旧→新版本 + 装机开源清单 |
+| **装机开源一键下** | `monthly_a_download_soft_github.bat` | 按 `gh_soft_map.json` 拉最新（建议每月） |
+| **本月 GitHub 变化下** | `fetch_github_on_changes.bat` / `monthly_a_download_github.bat` | 仅标题变化且已 enabled |
 | 全量打开（兜底） | `open_soft_pages.bat` | 很少需要 |
 
 ---
@@ -165,6 +170,10 @@ A 类匹配规则在 [`build_watchlist.py`](build_watchlist.py) 的 `A_PATTERNS`
 | `open_changed_423down.bat` | 打开 `changed_423down_urls.txt` 中的变化页 |
 | `extract_423down_digest.bat` | 仅从 digest 区重新提取 423down 链接 |
 | `open_report.bat` | 生成并打开 `reports/index.html` 报告页 |
+| `open_monthly_a.bat` | 生成并打开 `reports/monthly_a.html`（A 类工作台） |
+| `monthly_a_download_soft_github.bat` | 下载 `gh_soft_map.json` 映射的装机开源（由工作台生成） |
+| `monthly_a_download_github.bat` | 下载本月标题变化中的 GitHub 项（有匹配时生成） |
+| `fetch_github_on_changes.bat` | 按 A 类快检变化拉 GitHub Release |
 | `open_soft_pages.bat` | 打开装机区全部页面 URL（不含直链下载） |
 | `extract_pages.bat` | 仅从 `Lastb_soft_version.txt` 重新提取 URL |
 | `build_watchlist.bat` | 根据 `config.json` 生成 A/B 分级清单 |
@@ -182,6 +191,8 @@ A 类匹配规则在 [`build_watchlist.py`](build_watchlist.py) 的 `A_PATTERNS`
 | `build_watchlist.py` | 将页面 URL 按 `software_dirs` 关键词分为 A/B，输出 `watchlist.json` |
 | `fetch_titles.py` | 并发抓取标题并比对历史 |
 | `report_html.py` | 生成 HTML 报告页 `reports/index.html` |
+| `monthly_a_board.py` | 生成 A 类月度工作台 `reports/monthly_a.html` |
+| `github_fetch_on_changes.py` | 引用 gh-release-fetch 下载 Release（`--soft-map` / 按变化） |
 
 `fetch_titles.py` 每次运行结束会自动刷新报告页。
 
@@ -208,6 +219,10 @@ soft_page_check/
 ├── README.md                    ← 本说明
 ├── monthly_sop.bat              ← 月度更新 SOP（推荐入口）
 ├── monthly_check.bat            ← 仅 A 类快检
+├── open_monthly_a.bat           ← A 类月度工作台
+├── gh_soft_map.json             ← software/ 目录 ↔ gh-release-fetch app id
+├── github_fetch_on_changes.py   ← GitHub Release 下载入口
+├── monthly_a_board.py           ← 生成 monthly_a.html
 ├── soft_pages_urls.txt          ← 全部页面 URL（118，自动生成）
 ├── all_urls.txt                 ← 含直链在内的全部 URL（138，仅供参考）
 ├── watch_tier_a_urls.txt        ← A 类监控 URL（自动生成）
@@ -237,7 +252,9 @@ soft_page_check/
 │   ├── titles_latest_DOWN66.json
 │   └── titles_*_YYYY-MM-DD_*.json
 └── reports/
-    ├── index.html               ← **HTML 报告页（推荐查看方式）**
+    ├── monthly_a.html           ← **A 类月度工作台（旧→新 + 装机开源）**
+    ├── monthly_a.json
+    ├── index.html               ← HTML 完整报告页
     ├── last_diff_a.json         ← 最近一次 A 类比对结果
     ├── last_diff_all.json
     ├── last_diff_423down.json
@@ -268,24 +285,71 @@ soft_page_check/
 
 ---
 
-## GitHub Release 下载（在 soft_page_check 内）
+## A 类月度工作台（旧版本 → 新版本）
 
-快检发现 **github.com** 标题变化后，在 **`soft_page_check`** 里下载对应 Release。  
-**只读引用** `software/gh-release-fetch/apps/` 里的配置与 `auto_update.py`，**不修改 gh-release-fetch 目录下的工具代码**。
-
-**前提**：在 `software/gh-release-fetch/apps/` 对应 JSON 里把应用设为 `"enabled": true`（改配置，不是改脚本）。
-
-**用法**（A 类快检有变化后，在 soft_page_check 目录）：
+月底优先看：
 
 ```bat
-fetch_github_on_changes.bat
-python github_fetch_on_changes.py --dry-run   rem 预览
+open_monthly_a.bat
 ```
 
-- 只处理变化 URL 为 `github.com/owner/repo` 且在 gh 配置中有 `repo_path` 的项  
-- 仅下载 **enabled=true** 的应用  
-- 423down / 7xiazai / list 四站仍浏览器手工  
-- 下载日志与安装包仍落在 `software/gh-release-fetch/`（由引用的 auto_update 写入）
+生成 `reports/monthly_a.html`，页面含两块：
+
+1. **software/ 装机开源**（`gh_soft_map.json` 映射，可随时直下）→ `monthly_a_download_soft_github.bat`
+2. **本月 A 类标题变化**（旧→新；动作：开源·可直下 / 手工打开 / 噪声忽略）→ 有匹配时生成 `monthly_a_download_github.bat`
+
+`monthly_check.bat` / `monthly_sop.bat` 会自动生成并打开该页。
+
+---
+
+## GitHub Release 下载（在 soft_page_check 内）
+
+在 **`soft_page_check`** 里下载 GitHub Release。  
+**只读引用** `software/gh-release-fetch/apps/` 配置，并调用同目录 `auto_update.exe`（或 `auto_update.py`），**不修改 gh-release-fetch 工具代码**。
+
+### 前提
+
+1. `apps/windows/*.json` 里对应项 `"enabled": true`
+2. 装机目录映射写在 [`gh_soft_map.json`](gh_soft_map.json)（工作台展示 + `--soft-map` 下载用）
+
+### 当前装机开源映射（9 项）
+
+| software/ 目录 | gh app id | 仓库 |
+|----------------|-----------|------|
+| `7-Zip` | `7zip` | ip7z/7zip |
+| `everything` | `everything_cli` | voidtools/Everything |
+| `lx-music-desktop` | `lx_music_desktop` | lyswhut/lx-music-desktop |
+| `notepad++` | `notepadplusplus` | notepad-plus-plus/notepad-plus-plus |
+| `notepad--` | `notepad_minusminus` | cxasm/notepad-- |
+| `WinMemoryCleaner` | `win_memory_cleaner` | IgorMundstein/WinMemoryCleaner |
+| `system_good`（内含） | `ditto` | sabrogden/Ditto |
+| `system_good`（内含） | `win11_debloat` | Raphire/Win11Debloat |
+| `system_good`（内含） | `win11_debloat_scavin` | scavin/Win11Debloat |
+
+新增映射：改 `gh_soft_map.json`，并在 apps JSON 设 `enabled: true`，再跑 `python monthly_a_board.py` 刷新工作台。
+
+### 用法
+
+```bat
+cd soft_page_check
+monthly_a_download_soft_github.bat          rem 装机开源（建议每月）
+fetch_github_on_changes.bat                 rem 仅本月标题变化里的 GitHub
+python github_fetch_on_changes.py --soft-map --dry-run
+python github_fetch_on_changes.py --dry-run
+```
+
+| 模式 | 行为 |
+|------|------|
+| `--soft-map` | 按 `gh_soft_map.json` 拉装机开源，**不依赖**本月标题变化 |
+| 默认（无 soft-map） | 只处理变化 URL 为 `github.com/owner/repo` 且有 `repo_path` 匹配的项 |
+| 共通 | 仅下载 **enabled=true**；**只下载不运行安装**（`run_installer: false`） |
+
+- 每次下载前会**清空** `software/gh-release-fetch/windows/`（上次缓存），再写入新包  
+- 该目录与 `update_log.txt` 已在仓库根 [`.gitignore`](../.gitignore) 中，**不上传 git**  
+- 下载后需**手工**把包解压/覆盖到对应 `software/<目录>/`，再 `generate_and_push.bat`  
+- PotPlayer / WinRAR / 423down / 7xiazai / list 四站仍浏览器手工  
+
+部分项可能因上游无 GitHub Release、镜像 403、资产匹配失败而跳过（见本地 `gh-release-fetch/update_log.txt`）；失败不阻断其它项。
 
 `monthly_sop.bat` 步骤 3 会询问是否运行 `fetch_github_on_changes.bat`。
 

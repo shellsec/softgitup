@@ -16,7 +16,7 @@
 > 体积 Top5：system_good (690.0 MB)、PotPlayer (252.4 MB)、UltraEdit (202.3 MB)、WiseCare365 (74.3 MB)、notepad++ (73.6 MB)。
 <!-- SOFTWARE_SIZE_END -->
 
-**维护者月度快检**（可选，不更新 `software/` 也完全可用）：见 [`soft_page_check/`](soft_page_check/README.md) — 双击 `monthly_sop.bat` 检查页面标题变化，有变化再手工更新并发布。
+**维护者月度快检**（可选，不更新 `software/` 也完全可用）：见 [`soft_page_check/`](soft_page_check/README.md) — 双击 `monthly_sop.bat` 检查标题变化；装机开源可 `monthly_a_download_soft_github.bat` 直下，其余手工更新后发布。
 
 本工具集基于**信息安全与数据防泄漏原则**构建，尽可能减少云端上报、行为跟踪与算法数据收割
 
@@ -64,7 +64,7 @@
 - **系统托盘**: 后台运行，支持系统托盘图标和静默更新
 - **跨平台**: 支持Windows、Linux、macOS
 - **工作流程**: 提供便捷的工作流程工具，支持单个软件更新和同步
-- **页面快检（维护者）**: [`soft_page_check/`](soft_page_check/README.md) 抓取装机清单页面标题并与历史比对，月度 A 类约 42 页、季度全量约 2300+ 页（含 list 三站 hybase/dayanzai/down66），有变化再决定是否更新 `software/`
+- **页面快检（维护者）**: [`soft_page_check/`](soft_page_check/README.md) 抓取装机清单页面标题并与历史比对；月度 A 类约 42 页、季度全量约 2300+ 页；开源项可经工作台直下 GitHub Release，有变化再决定是否更新 `software/`
 
 ### 📦 支持的软件
 - **文本编辑器**: Notepad++、notepad-、SublimeText、EditPlus、EmEditor(大文件16T)、UltraEdit
@@ -117,9 +117,11 @@ softgitup/
 ├── sync_software.py        # 完整同步工具（命令行，推荐）
 ├── build_exe.py            # 打包脚本
 ├── generate_and_push.bat   # 一键生成 list.txt 并 push
-├── soft_page_check/        # 页面标题快检（月度/季度，见 README）
+├── soft_page_check/        # 页面标题快检 + A 类工作台（见 README）
 │   ├── monthly_sop.bat     # 月度更新 SOP 主入口（推荐）
 │   ├── monthly_check.bat   # 仅 A 类快检（约 42 页）
+│   ├── open_monthly_a.bat  # 旧→新版本工作台 / 装机开源清单
+│   ├── gh_soft_map.json    # software/ ↔ gh-release-fetch 映射
 │   └── monthly_check_full.bat  # 季度全量（A+装机+423down+7xiazai+list三站）
 ├── software/               # 本地软件目录
 │   ├── CCleaner/
@@ -127,7 +129,7 @@ softgitup/
 │   ├── everything/
 │   ├── notepad++/
 │   ├── SublimeText/
-│   ├── GithubWinDownTools/   # GitHub Releases 按需下载（auto_update.py、apps.json）
+│   ├── gh-release-fetch/   # GitHub Releases 按需下载（auto_update.exe、apps/）
 │   └── ...
 ├── logs/                   # 日志目录
 └── README.md              # 项目说明
@@ -305,10 +307,12 @@ pyinstaller --onefile --name=sync_software --clean --noconfirm sync_software.py
 | 频率 | 操作 | 说明 |
 |------|------|------|
 | **约每月** | [`soft_page_check/monthly_sop.bat`](soft_page_check/monthly_sop.bat) 选 `[1]` | A 类 ~42 页快检 + 步骤引导；或只跑 `monthly_check.bat` |
+| **看工作台** | [`soft_page_check/open_monthly_a.bat`](soft_page_check/open_monthly_a.bat) | `reports/monthly_a.html`：旧→新版本 + 装机开源可直下 |
+| **装机开源** | [`soft_page_check/monthly_a_download_soft_github.bat`](soft_page_check/monthly_a_download_soft_github.bat) | 只下载不安装；先清空再拉到 `gh-release-fetch/windows/`（gitignore，不入库） |
 | **约每季度** | [`soft_page_check/monthly_check_full.bat`](soft_page_check/monthly_check_full.bat) **连跑两次** | A + 装机 + 423down + 7xiazai + list 三站全量；报告七分区均有比对 |
 | **list 三站（可选）** | [`soft_page_check/monthly_check_list.bat`](soft_page_check/monthly_check_list.bat) | 仅 hybase/dayanzai/down66（`list/*_urls.txt`） |
-| **有变化时** | 打开 `soft_page_check/reports/index.html` 人工确认 | 423down / 网盘 / 破解版须浏览器手工下载 |
-| **确定更新** | 替换 `software/` 对应子目录 | GitHub 项可跑 `software/gh-release-fetch/run_update.bat` |
+| **有变化时** | 打开 `soft_page_check/reports/monthly_a.html` / `index.html` 确认 | 423down / 网盘 / 破解版须浏览器手工下载 |
+| **确定更新** | 替换 `software/` 对应子目录 | 开源包在 `software/gh-release-fetch/windows/`；也可跑 `run_update.bat` |
 | **发布** | 根目录 `generate_and_push.bat` | 生成 `list.txt` 并 push |
 | **可选** | 编辑 `Lastb_soft_version.txt` | 改装机说明或 digest 摘要 |
 

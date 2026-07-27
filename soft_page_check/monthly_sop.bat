@@ -145,12 +145,15 @@ echo  ============================================================
 echo.
 echo   报告: soft_page_check\reports\index.html
 echo.
-echo   请看「A 类 · 同步软件」分区:
-echo     - 标题变化 = 0  ^-^>  本月通常无需更新，可直接结束
-echo     - 有变化        ^-^>  点链接或「依次打开变化页」人工确认
+echo   优先打开: reports\monthly_a.html （旧版本 → 新版本）
+echo     - 开源·可直下  ^-^>  monthly_a_download_github.bat / fetch_github_on_changes.bat
+echo     - 需手工        ^-^>  表格里点「打开」
+echo     - 噪声忽略      ^-^>  安全验证页等，勿更新
 echo.
-echo   提示: 标题变化不等于必须更新（423down SEO 也会触发）
+echo   完整报告仍看「A 类 · 同步软件」分区；变化≠必须更新
 echo.
+python monthly_a_board.py >nul 2>&1
+if exist "reports\monthly_a.html" start "" "%~dp0reports\monthly_a.html"
 pause
 
 cls

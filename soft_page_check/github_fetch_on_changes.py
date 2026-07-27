@@ -3,8 +3,9 @@ from __future__ import annotations
 
 import argparse
 import json
-import os
+import platform as py_platform
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -74,29 +75,81 @@ def changed_entries(scope: str, changed_txt: Path | None) -> list[dict]:
     return items
 
 
-def _import_gh_release_fetch():
-    """只读引用 software/gh-release-fetch/auto_update.py，不在该目录写代码。"""
+def detect_platform_key() -> str:
+    sysname = py_platform.system().lower()
+    if sysname.startswith("darwin") or sysname == "mac":
+        return "darwin"
+    if sysname.startswith("linux"):
+        return "linux"
+    return "windows"
+
+
+def load_gh_apps(platform_key: str | None = None):
+    """只读解析 software/gh-release-fetch/apps/<platform>/*.json（不依赖 auto_update.py）。"""
     if not GH_ROOT.is_dir():
         raise FileNotFoundError(f"缺少 gh-release-fetch 目录: {GH_ROOT}")
-    gh_path = str(GH_ROOT)
-    if gh_path not in sys.path:
-        sys.path.insert(0, gh_path)
-    import auto_update
+    platform = platform_key or detect_platform_key()
+    apps_dir = GH_ROOT / "apps" / platform
+    if not apps_dir.is_dir():
+        raise FileNotFoundError(f"缺少应用配置目录: {apps_dir}")
 
-    return auto_update
+    apps: list[dict] = []
+    seen: set[str] = set()
+    for path in sorted(apps_dir.glob("*.json")):
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        if not isinstance(data, list):
+            continue
+        for item in data:
+            if not isinstance(item, dict):
+                continue
+            aid = (item.get("id") or "").strip()
+            if not aid or aid in seen:
+                continue
+            seen.add(aid)
+            apps.append(item)
+    return {"platform": platform}, apps, None
 
 
-def load_gh_apps():
-    auto_update = _import_gh_release_fetch()
-    prev = os.getcwd()
-    try:
-        os.chdir(GH_ROOT)
-        cfg = auto_update.load_config()
-        platform = auto_update.detect_platform_key()
-        apps = auto_update.apps_list_from_config(cfg, platform)
-        return cfg, apps, auto_update
-    finally:
-        os.chdir(prev)
+def resolve_auto_update_cmd() -> list[str]:
+    """优先 Python 源码，否则用便携版 auto_update.exe。"""
+    py_script = GH_ROOT / "auto_update.py"
+    exe = GH_ROOT / "auto_update.exe"
+    if py_script.is_file():
+        return [sys.executable, str(py_script)]
+    if exe.is_file():
+        return [str(exe)]
+    raise FileNotFoundError(
+        f"未找到 auto_update.py 或 auto_update.exe（目录: {GH_ROOT}）"
+    )
+
+
+def download_cache_dir() -> Path:
+    """与 apps/root.json 的 download_subdir_by_platform 一致：默认 gh-release-fetch/<platform>/。"""
+    return GH_ROOT / detect_platform_key()
+
+
+def clear_download_cache() -> Path:
+    """删除上次下载目录内容（目录本身保留），避免旧包混入。"""
+    import shutil
+
+    cache = download_cache_dir()
+    if cache.is_dir():
+        removed = 0
+        for child in cache.iterdir():
+            if child.is_file() or child.is_symlink():
+                child.unlink(missing_ok=True)
+                removed += 1
+            elif child.is_dir():
+                shutil.rmtree(child, ignore_errors=True)
+                removed += 1
+        print(f"[soft_page_check] 已清空上次下载: {cache}（{removed} 项）")
+    else:
+        cache.mkdir(parents=True, exist_ok=True)
+        print(f"[soft_page_check] 下载目录: {cache}")
+    return cache
 
 
 def build_repo_index(apps: list[dict]) -> dict[str, list[dict]]:
@@ -130,46 +183,82 @@ def resolve_apps(entries: list[dict], repo_index: dict[str, list[dict]]) -> tupl
     return list(picked.values()), unmatched_github
 
 
-def download_apps(apps: list[dict], dry_run: bool) -> int:
+def download_apps(apps: list[dict], dry_run: bool, *, clear_cache: bool = True) -> int:
     if not apps:
         return 0
-    auto_update = _import_gh_release_fetch()
-    ids = [a["id"] for a in apps]
+    ids = [a["id"] for a in apps if a.get("id")]
     print(f"[soft_page_check] {'(dry-run) ' if dry_run else ''}GitHub Release 下载: {', '.join(ids)}")
+    print("[soft_page_check] 模式: 只下载不运行安装（依赖 apps 里 run_installer=false）")
     if dry_run:
         return 0
 
-    prev = os.getcwd()
-    os.chdir(GH_ROOT)
-    try:
-        cfg = auto_update.load_config()
-        platform = auto_update.detect_platform_key()
-        download_root = auto_update.resolve_download_root(cfg)
-        verify = auto_update.resolve_tls_verify(cfg, False)
-        auto_update.configure_insecure_requests(verify)
-        auto_update.probe_network(cfg, verify=verify)
+    if clear_cache:
+        clear_download_cache()
 
-        exit_code = 0
-        for app in apps:
-            missing = [k for k in ("id", "releases_url", "repo_path") if k not in app]
-            if missing:
-                print(f"[错误] 应用配置缺少字段 {missing}: {app.get('id')}")
-                exit_code = 1
-                continue
-            try:
-                auto_update.update_one(
-                    app,
-                    download_root,
-                    verify=verify,
-                    platform_key=platform,
-                    cfg=cfg,
-                )
-            except Exception as exc:
-                print(f"[错误] [{app.get('id')}] {exc}")
-                exit_code = 1
-        return exit_code
-    finally:
-        os.chdir(prev)
+    try:
+        base = resolve_auto_update_cmd()
+    except FileNotFoundError as exc:
+        print(f"[错误] {exc}")
+        return 1
+
+    cmd = [*base, *ids]
+    print(f"[soft_page_check] 调用: {' '.join(cmd)}")
+    print(f"[soft_page_check] 下载目录（不入库）: {download_cache_dir()}")
+    completed = subprocess.run(cmd, cwd=str(GH_ROOT))
+    return int(completed.returncode or 0)
+
+
+def load_soft_map_ids() -> list[str]:
+    path = HERE / "gh_soft_map.json"
+    if not path.exists():
+        return []
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return []
+    ids: list[str] = []
+    for item in data.get("apps") or []:
+        gid = (item.get("gh_id") or "").strip()
+        if gid and gid not in ids:
+            ids.append(gid)
+    return ids
+
+
+def run_soft_map(dry_run: bool) -> int:
+    """按 gh_soft_map.json 下载 software/ 装机开源（不依赖本月标题变化）。"""
+    want = set(load_soft_map_ids())
+    if not want:
+        print("[跳过] gh_soft_map.json 为空或不存在")
+        return 0
+    try:
+        _, apps, _ = load_gh_apps()
+    except FileNotFoundError as exc:
+        print(f"[错误] {exc}")
+        return 1
+
+    by_id = {a.get("id", ""): a for a in apps if a.get("id")}
+    matched = [by_id[i] for i in want if i in by_id]
+    missing = sorted(want - set(by_id))
+    if missing:
+        print("[提示] 映射 id 在 gh-release-fetch 中不存在:")
+        for mid in missing:
+            print(f"  - {mid}")
+    if not matched:
+        print("[跳过] 无匹配应用")
+        return 0
+
+    enabled = [a for a in matched if a.get("enabled", True)]
+    disabled = [a for a in matched if not a.get("enabled", True)]
+    print(f"software/ 装机开源映射 {len(want)} → 可下载 {len(enabled)}")
+    for app in matched:
+        flag = "enabled" if app.get("enabled", True) else "disabled"
+        print(f"  - {app['id']} ({app.get('repo_path')}) [{flag}]")
+    if disabled:
+        print()
+        print("[提示] 未 enabled=true，跳过:")
+        for app in disabled:
+            print(f"  - {app['id']}")
+    return download_apps(enabled, dry_run)
 
 
 def main() -> int:
@@ -185,8 +274,16 @@ def main() -> int:
         default="",
         help="额外读取变化 URL 列表（默认 scope=a 时用 changed_tier_a_urls.txt）",
     )
+    parser.add_argument(
+        "--soft-map",
+        action="store_true",
+        help="按 gh_soft_map.json 下载 software/ 装机开源（忽略本月标题变化）",
+    )
     parser.add_argument("--dry-run", action="store_true", help="只列出将下载的 app id，不实际下载")
     args = parser.parse_args()
+
+    if args.soft_map:
+        return run_soft_map(args.dry_run)
 
     changed_txt = Path(args.changed_txt) if args.changed_txt else None
     if changed_txt is None and args.scope == "a":

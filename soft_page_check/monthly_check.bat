@@ -33,11 +33,17 @@ if exist "changed_tier_a_urls.txt" (
 )
 :after_result
 echo.
+echo 月度工作台: open_monthly_a.bat  （旧版本→新版本 · 开源可直下）
 echo 季度全量: monthly_check_full.bat  （A+装机+423down+7xiazai）
 echo 全量打开:   open_soft_pages.bat
 echo 报告页面:   open_report.bat  或  reports\index.html
 echo.
-if exist "reports\index.html" start "" "%~dp0reports\index.html"
+python monthly_a_board.py >nul 2>&1
+if exist "reports\monthly_a.html" (
+    start "" "%~dp0reports\monthly_a.html"
+) else if exist "reports\index.html" (
+    start "" "%~dp0reports\index.html"
+)
 echo.
 pause
 exit /b 0

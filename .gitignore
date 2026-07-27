@@ -20,4 +20,13 @@ Thumbs.db
 
 # Temporary files
 *.tmp
-*.temp 
+*.temp
+
+# gh-release-fetch 本地下载缓存（只下载不入库）
+software/gh-release-fetch/windows/
+software/gh-release-fetch/darwin/
+software/gh-release-fetch/linux/
+software/gh-release-fetch/android/
+software/gh-release-fetch/ios/
+software/gh-release-fetch/update_log.txt
+software/gh-release-fetch/github_page_*.html

@@ -17,7 +17,7 @@ For the latest curated software list and notes, see [`Lastb_soft_version.txt`](L
 > Top 5 by size: system_good (690.0 MB), PotPlayer (252.4 MB), UltraEdit (202.3 MB), WiseCare365 (74.3 MB), notepad++ (73.6 MB).
 <!-- SOFTWARE_SIZE_END -->
 
-**Maintainer page check** (optional — `software/` works fine without updates): see [`soft_page_check/`](soft_page_check/README.md). Run `monthly_sop.bat` to compare page titles; update and publish only when you confirm changes.
+**Maintainer page check** (optional — `software/` works fine without updates): see [`soft_page_check/`](soft_page_check/README.md). Run `monthly_sop.bat` to compare titles; open-source installs can use `monthly_a_download_soft_github.bat`, then publish after replacing under `software/`.
 
 This toolkit is built around **information security and reducing data leakage**, aiming to minimize cloud reporting, behavioral tracking, and algorithmic data harvesting where practical.
 
@@ -120,8 +120,10 @@ softgitup/
 ├── sync_software.py        # Complete sync tool (command line, recommended)
 ├── build_exe.py            # Build script
 ├── generate_and_push.bat   # Generate list.txt and push
-├── soft_page_check/        # Page title health check (see README)
+├── soft_page_check/        # Page title check + monthly A board (see README)
 │   ├── monthly_sop.bat     # Monthly SOP entry (recommended)
+│   ├── open_monthly_a.bat  # Old→new versions + OSS download list
+│   ├── gh_soft_map.json    # software/ ↔ gh-release-fetch mapping
 │   ├── monthly_check.bat   # Tier-A quick check (~42 pages)
 │   └── monthly_check_full.bat  # Quarterly full check
 ├── software/               # Local software directory
@@ -303,10 +305,12 @@ python sync_software.py
 | When | Action | Notes |
 |------|--------|-------|
 | **~Monthly** | [`soft_page_check/monthly_sop.bat`](soft_page_check/monthly_sop.bat) option `[1]` | Tier-A quick check + guided steps; or `monthly_check.bat` only |
+| **Board** | [`soft_page_check/open_monthly_a.bat`](soft_page_check/open_monthly_a.bat) | `reports/monthly_a.html`: old→new + OSS downloadable list |
+| **OSS installs** | [`soft_page_check/monthly_a_download_soft_github.bat`](soft_page_check/monthly_a_download_soft_github.bat) | Download only (no install); clears then writes `gh-release-fetch/windows/` (gitignored) |
 | **~Quarterly** | [`soft_page_check/monthly_check_full.bat`](soft_page_check/monthly_check_full.bat) **twice** | Full report: A + install list + 423down + 7xiazai + list sites |
 | **List sites (optional)** | [`soft_page_check/monthly_check_list.bat`](soft_page_check/monthly_check_list.bat) | hybase / dayanzai / down66 only (`list/*_urls.txt`) |
-| **If changed** | Open `soft_page_check/reports/index.html` | Cracked / mirror / cloud links — download manually |
-| **To update** | Replace under `software/` | GitHub apps: `software/gh-release-fetch/run_update.bat` |
+| **If changed** | Open `soft_page_check/reports/monthly_a.html` / `index.html` | Cracked / mirror / cloud links — download manually |
+| **To update** | Replace under `software/` | Packages land in `software/gh-release-fetch/windows/`; or `run_update.bat` |
 | **Publish** | `generate_and_push.bat` at repo root | Regenerates `list.txt` and pushes |
 | **Optional** | Edit `Lastb_soft_version.txt` | Install notes or digest summary |
 

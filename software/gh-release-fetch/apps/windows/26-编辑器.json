@@ -52,7 +52,7 @@
     "id": "notepadplusplus",
     "简介": "轻量文本编辑器，x64 安装包",
     "分类": "编辑器",
-    "enabled": false,
+    "enabled": true,
     "releases_url": "https://bgithub.xyz/notepad-plus-plus/notepad-plus-plus/releases",
     "repo_path": "notepad-plus-plus/notepad-plus-plus",
     "url_hint": "notepad",
@@ -66,14 +66,14 @@
     ],
     "save_name": "npp.{ver}.Installer.x64.exe",
     "process_name": "notepad++.exe",
-    "kill_before_install": true,
-    "run_installer": true
+    "kill_before_install": false,
+    "run_installer": false
   },
   {
     "id": "notepad_minusminus",
     "简介": "Notepad--（国产轻量跨平台编辑器，GPL，便携 zip）",
     "分类": "编辑器",
-    "enabled": false,
+    "enabled": true,
     "releases_url": "https://bgithub.xyz/cxasm/notepad--/releases",
     "repo_path": "cxasm/notepad--",
     "prefer_api_assets": true,

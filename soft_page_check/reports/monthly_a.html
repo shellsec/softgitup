@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A 类月度工作台 · 旧版本 → 新版本</title>
+  <style>
+    :root { --bg:#f1f5f9; --card:#fff; --text:#0f172a; --muted:#64748b; --line:#e2e8f0;
+      --gh:#166534; --man:#9a3412; --noise:#64748b; --accent:#2563eb; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+      background:var(--bg); color:var(--text); line-height:1.5; }
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 24px 18px 48px; }
+    .hero { background: linear-gradient(135deg,#0f766e,#2563eb); color:#fff;
+      border-radius:14px; padding:22px 26px; margin-bottom:18px; }
+    .hero h1 { margin:0 0 6px; font-size:1.35rem; }
+    .hero p { margin:0; opacity:.92; font-size:.92rem; }
+    .stats { display:flex; flex-wrap:wrap; gap:10px; margin:16px 0; }
+    .stat { background:var(--card); border:1px solid var(--line); border-radius:10px;
+      padding:10px 14px; min-width:100px; }
+    .stat b { display:block; font-size:1.25rem; }
+    .stat span { color:var(--muted); font-size:.8rem; }
+    .cta { background:#ecfdf5; border:1px solid #a7f3d0; color:#065f46;
+      padding:10px 14px; border-radius:10px; }
+    table { width:100%; border-collapse:collapse; background:var(--card);
+      border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+    th, td { padding:10px 12px; border-bottom:1px solid var(--line); text-align:left;
+      vertical-align:top; font-size:.88rem; }
+    th { background:#f8fafc; color:var(--muted); font-weight:600; }
+    tr.noise { opacity:.55; }
+    tr.gh { background:#f0fdf4; }
+    .ver code { background:#f1f5f9; padding:1px 6px; border-radius:4px; }
+    .ver .newv { background:#dcfce7; color:var(--gh); font-weight:700; }
+    .pill { display:inline-block; padding:2px 8px; border-radius:999px; font-size:.75rem; font-weight:600; }
+    .pill.gh { background:#dcfce7; color:var(--gh); }
+    .pill.man { background:#ffedd5; color:var(--man); }
+    .pill.noise { background:#f1f5f9; color:var(--noise); }
+    .btn { display:inline-block; margin-left:6px; padding:2px 8px; border-radius:6px;
+      background:var(--accent); color:#fff; text-decoration:none; font-size:.75rem; }
+    .hint { color:var(--muted); font-size:.72rem; margin-top:4px; }
+    .lab { display:inline-block; font-size:.68rem; font-weight:700; padding:0 5px;
+      border-radius:4px; margin-right:4px; }
+    .lab.old { background:#fee2e2; color:#991b1b; }
+    .lab.new { background:#dcfce7; color:#166534; }
+    .titles { color:#334155; max-width:420px; }
+    .titles .link { display:block; margin-top:4px; font-size:.75rem; word-break:break-all; }
+    .dom { color:var(--muted); font-size:.8rem; }
+    .empty { text-align:center; color:var(--muted); padding:28px; }
+    .muted { color:var(--muted); }
+    .nav a { color:#fff; margin-right:12px; }
+    h2 { font-size:1.05rem; margin:22px 0 10px; }
+    footer { margin-top:18px; color:var(--muted); font-size:.8rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <h1>A 类月度工作台 · 旧版本 → 新版本</h1>
+      <p>只盯 config.json 同步软件。装机开源随时可直下；423down/网盘仍手工。变化≠必须更新。</p>
+      <p class="nav" style="margin-top:10px">
+        <a href="index.html">完整报告</a>
+        <a href="#soft-oss">装机开源</a>
+        <a href="../monthly_check.bat">跑 A 类快检</a>
+      </p>
+    </header>
+
+    <div class="stats">
+      <div class="stat"><b>13</b><span>标题变化</span></div>
+      <div class="stat"><b>12</b><span>待处理</span></div>
+      <div class="stat"><b>1</b><span>本月开源变化</span></div>
+      <div class="stat"><b>9</b><span>装机开源可直下</span></div>
+      <div class="stat"><b>9</b><span>需手工</span></div>
+      <div class="stat"><b>1</b><span>噪声忽略</span></div>
+    </div>
+
+    <p class='cta'>software/ 装机开源已启用 <b>9</b> 项 → 双击 <code>monthly_a_download_soft_github.bat</code>（随时可拉最新 Release）</p>
+    <p class='cta'>本月标题变化中开源可直下 <b>1</b> 项 → <code>monthly_a_download_github.bat</code></p>
+    <p class="muted">比对时间: 2026-07-27 12:18:24 · 页面生成: 2026-07-27 13:02:34</p>
+
+    <h2 id="soft-oss">software/ 装机开源（可随时直下）</h2>
+    <p class="muted">本地版本读 <code>software/</code> 内 exe；最新版查 GitHub Release API。映射见 <code>gh_soft_map.json</code>；下载写入缓存后再手工同步到 software/。</p>
+    <table>
+      <thead>
+        <tr>
+          <th>software/ 目录</th>
+          <th>本地版本</th>
+          <th>最新 Release</th>
+          <th>GitHub</th>
+          <th>状态</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr class="gh">
+          <td><code>WinMemoryCleaner</code>
+            <div class='hint'><code>win_memory_cleaner</code></div></td>
+          <td class="ver"><code>3.0.8</code></td>
+          <td class="ver"><code class="">3.0.8</code></td>
+          <td><a href="https://github.com/IgorMundstein/WinMemoryCleaner" target="_blank" rel="noopener">IgorMundstein/WinMemoryCleaner</a></td>
+          <td><span class='pill gh'>可直下</span> <span class='pill gh'>已是最新</span></td>
+        </tr>
+
+        <tr class="gh">
+          <td><code>everything</code>
+            <div class='hint'><code>everything_cli</code></div></td>
+          <td class="ver"><code>1.5.0.1416</code></td>
+          <td class="ver"><code class="">—</code></td>
+          <td><a href="https://github.com/voidtools/Everything" target="_blank" rel="noopener">voidtools/Everything</a><div class='hint'>官方主站发版；GitHub 可能无 Release</div></td>
+          <td><span class='pill gh'>可直下</span></td>
+        </tr>
+
+        <tr class="gh">
+          <td><code>system_good</code>
+            <div class='hint'><code>ditto</code></div></td>
+          <td class="ver"><code>—</code></td>
+          <td class="ver"><code class="">3.25.113</code></td>
+          <td><a href="https://github.com/sabrogden/Ditto" target="_blank" rel="noopener">sabrogden/Ditto</a><div class='hint'>Ditto 在 system_good 包内</div></td>
+          <td><span class='pill gh'>可直下</span></td>
+        </tr>
+
+        <tr class="gh">
+          <td><code>system_good</code>
+            <div class='hint'><code>win11_debloat</code></div></td>
+          <td class="ver"><code>—</code></td>
+          <td class="ver"><code class="">2026.07.11</code></td>
+          <td><a href="https://github.com/Raphire/Win11Debloat" target="_blank" rel="noopener">Raphire/Win11Debloat</a><div class='hint'>脚本包，本地无 exe 版本号</div></td>
+          <td><span class='pill gh'>可直下</span></td>
+        </tr>
+
+        <tr class="gh">
+          <td><code>system_good</code>
+            <div class='hint'><code>win11_debloat_scavin</code></div></td>
+          <td class="ver"><code>—</code></td>
+          <td class="ver"><code class="">2026.07.07</code></td>
+          <td><a href="https://github.com/scavin/Win11Debloat" target="_blank" rel="noopener">scavin/Win11Debloat</a><div class='hint'>脚本包，本地无 exe 版本号</div></td>
+          <td><span class='pill gh'>可直下</span></td>
+        </tr>
+
+        <tr class="gh">
+          <td><code>lx-music-desktop</code>
+            <div class='hint'><code>lx_music_desktop</code></div></td>
+          <td class="ver"><code>—</code></td>
+          <td class="ver"><code class="">2.12.2</code></td>
+          <td><a href="https://github.com/lyswhut/lx-music-desktop" target="_blank" rel="noopener">lyswhut/lx-music-desktop</a><div class='hint'>目录内可能仅 readme；压缩包也可能在 system_good/</div></td>
+          <td><span class='pill gh'>可直下</span></td>
+        </tr>
+
+        <tr class="gh">
+          <td><code>notepad++</code>
+            <div class='hint'><code>notepadplusplus</code></div></td>
+          <td class="ver"><code>8.9.7</code></td>
+          <td class="ver"><code class="">8.9.7</code></td>
+          <td><a href="https://github.com/notepad-plus-plus/notepad-plus-plus" target="_blank" rel="noopener">notepad-plus-plus/notepad-plus-plus</a></td>
+          <td><span class='pill gh'>可直下</span> <span class='pill gh'>已是最新</span></td>
+        </tr>
+
+        <tr class="gh">
+          <td><code>notepad--</code>
+            <div class='hint'><code>notepad_minusminus</code></div></td>
+          <td class="ver"><code>3.8.2</code></td>
+          <td class="ver"><code class="">3.8.0</code></td>
+          <td><a href="https://github.com/cxasm/notepad--" target="_blank" rel="noopener">cxasm/notepad--</a></td>
+          <td><span class='pill gh'>可直下</span> <span class='pill noise'>本地较新</span></td>
+        </tr>
+
+        <tr class="gh">
+          <td><code>7-Zip</code>
+            <div class='hint'><code>7zip</code></div></td>
+          <td class="ver"><code>26.2</code></td>
+          <td class="ver"><code class="">26.02</code></td>
+          <td><a href="https://github.com/ip7z/7zip" target="_blank" rel="noopener">ip7z/7zip</a></td>
+          <td><span class='pill gh'>可直下</span> <span class='pill gh'>已是最新</span></td>
+        </tr>
+      </tbody>
+    </table>
+    
+
+    <h2>本月 A 类标题变化</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>软件目录</th>
+          <th>旧版本 → 新版本</th>
+          <th>来源</th>
+          <th>动作</th>
+          <th>标题对照</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr class="gh">
+          <td>system_good</td>
+          <td class="ver"><code>—</code> → <code class='newv'>—</code></td>
+          <td><span class="dom">github</span></td>
+          <td class="act"><span class='pill gh'>开源·可直下 (win11_debloat_scavin)</span><div class='hint'>运行 monthly_a_download_github.bat</div></td>
+          <td class="titles">
+            <div><span class="lab old">旧</span> GitHub - scavin/Win11Debloat: A simple, easy to use PowerShell script to remove pre-installed apps, disable telemetry, as well as perform various other changes </div>
+            <div><span class="lab new">新</span> GitHub - scavin/Win11Debloat: 一个简单易用的PowerShell脚本，用于删除预装的应用程序，禁用遥测，以及执行其他各种更改，以自定义、整理和改善您的Windows体验。 Win11Debloat适用于Windows 10和Windows 11。 · GitHub</div>
+            <a class="link" href="https://github.com/scavin/Win11Debloat" target="_blank" rel="noopener">https://github.com/scavin/Win11Debloat</a>
+          </td>
+        </tr>
+
+        <tr class="manual">
+          <td>PotPlayer</td>
+          <td class="ver"><code>1.7.22961</code> → <code class='newv'>1.7.22980</code></td>
+          <td><span class="dom">423down</span></td>
+          <td class="act"><span class='pill man'>手工打开页面</span> <a class='btn' href='https://www.423down.com/3050.html' target='_blank' rel='noopener'>打开</a></td>
+          <td class="titles">
+            <div><span class="lab old">旧</span> PotPlayer播放器 260622(1.7.22961) 绿色版 - 423DownPotPlayer下载_Daum PotPlayer 260622 中文绿色版(2026最新版/精简优化版/视频播放器) - 423Down</div>
+            <div><span class="lab new">新</span> PotPlayer播放器 260630(1.7.22980) 绿色版 - 423DownPotPlayer下载_Daum PotPlayer 2606 中文绿色版(2026最新版/精简优化版/视频播放器) - 423Down</div>
+            <a class="link" href="https://www.423down.com/3050.html" target="_blank" rel="noopener">https://www.423down.com/3050.html</a>
+          </td>
+        </tr>
+
+        <tr class="manual">
+          <td>WiseCare365</td>
+          <td class="ver"><code>—</code> → <code class='newv'>8.0.4.732</code></td>
+          <td><span class="dom">423down</span></td>
+          <td class="act"><span class='pill man'>手工打开页面</span> <a class='btn' href='https://www.423down.com/3471.html' target='_blank' rel='noopener'>打开</a></td>
+          <td class="titles">
+            <div><span class="lab old">旧</span> 安全验证...</div>
+            <div><span class="lab new">新</span> Wise Care 365 Pro (v8.0.4.732) 中文绿色版 - 423DownWiseCare365下载_Wise Care 365 Pro v8.0 中文绿色版 (2026最新版/系统优化/垃圾清理) - 423Down</div>
+            <a class="link" href="https://www.423down.com/3471.html" target="_blank" rel="noopener">https://www.423down.com/3471.html</a>
+          </td>
+        </tr>
+
+        <tr class="manual">
+          <td>CrystalDiskInfo</td>
+          <td class="ver"><code>9.9.1</code> → <code class='newv'>9.9.2</code></td>
+          <td><span class="dom">423down</span></td>
+          <td class="act"><span class='pill man'>手工打开页面</span> <a class='btn' href='https://www.423down.com/5432.html' target='_blank' rel='noopener'>打开</a></td>
+          <td class="titles">
+            <div><span class="lab old">旧</span> 硬盘检测工具 CrystalDiskInfo v9.9.1 中文版 - 423DownCrystalDiskInfo下载_CrystalDiskInfo v9.9.1 中文绿色版 (2026最新版/硬盘检测工具/硬盘健康检测) - 423Down</div>
+            <div><span class="lab new">新</span> 硬盘检测工具 CrystalDiskInfo v9.9.2 中文版 - 423DownCrystalDiskInfo下载_CrystalDiskInfo v9.9.2 中文绿色版 (2026最新版/硬盘检测工具/硬盘健康检测) - 423Down</div>
+            <a class="link" href="https://www.423down.com/5432.html" target="_blank" rel="noopener">https://www.423down.com/5432.html</a>
+          </td>
+        </tr>
+
+        <tr class="manual">
+          <td>EmEditor</td>
+          <td class="ver"><code>—</code> → <code class='newv'>26.2.3</code></td>
+          <td><span class="dom">423down</span></td>
+          <td class="act"><span class='pill man'>手工打开页面</span> <a class='btn' href='https://www.423down.com/7569.html' target='_blank' rel='noopener'>打开</a></td>
+          <td class="titles">
+            <div><span class="lab old">旧</span> 安全验证...</div>
+            <div><span class="lab new">新</span> EmEditor(大文件编辑器) v26.2.3 中文绿色版 - 423DownEmEditor下载_EmEditor Professional v26.2 中文绿色版 (2026最新版/大文件编辑器/文本编辑器) - 423Down</div>
+            <a class="link" href="https://www.423down.com/7569.html" target="_blank" rel="noopener">https://www.423down.com/7569.html</a>
+          </td>
+        </tr>
+
+        <tr class="manual">
+          <td>WinRAR</td>
+          <td class="ver"><code>—</code> → <code class='newv'>7.23</code></td>
+          <td><span class="dom">423down</span></td>
+          <td class="act"><span class='pill man'>手工打开页面</span> <a class='btn' href='https://www.423down.com/778.html' target='_blank' rel='noopener'>打开</a></td>
+          <td class="titles">
+            <div><span class="lab old">旧</span> 安全验证...</div>
+            <div><span class="lab new">新</span> WinRAR(解压缩软件)v7.23 Final 烈火汉化版 - 423DownWinRAR下载_WinRAR v7.23 烈火汉化版 (2026最新版/已注册中文版/压缩解压软件) - 423Down</div>
+            <a class="link" href="https://www.423down.com/778.html" target="_blank" rel="noopener">https://www.423down.com/778.html</a>
+          </td>
+        </tr>
+
+        <tr class="manual">
+          <td>system_good</td>
+          <td class="ver"><code>—</code> → <code class='newv'>14.51.36247.0</code></td>
+          <td><span class="dom">423down</span></td>
+          <td class="act"><span class='pill man'>手工打开页面</span> <a class='btn' href='https://www.423down.com/9655.html' target='_blank' rel='noopener'>打开</a></td>
+          <td class="titles">
+            <div><span class="lab old">旧</span> 安全验证...</div>
+            <div><span class="lab new">新</span> Microsoft Visual C++ 2022 14.51.36247.0 - 423DownVC运行库下载_Microsoft Visual C++ Redistributable 2022 官方中文版 (2026最新版/系统运行库) - 423Down</div>
+            <a class="link" href="https://www.423down.com/9655.html" target="_blank" rel="noopener">https://www.423down.com/9655.html</a>
+          </td>
+        </tr>
+
+        <tr class="manual">
+          <td>PotPlayer</td>
+          <td class="ver"><code>2026.06.06</code> → <code class='newv'>2026.06.30</code></td>
+          <td><span class="dom">ghxi</span></td>
+          <td class="act"><span class='pill man'>手工打开页面</span> <a class='btn' href='https://www.ghxi.com/purecodec.html' target='_blank' rel='noopener'>打开</a></td>
+          <td class="titles">
+            <div><span class="lab old">旧</span> PureCodec (完美解码) v2026.06.06 - 果核剥壳</div>
+            <div><span class="lab new">新</span> PureCodec (完美解码) v2026.06.30 - 果核剥壳</div>
+            <a class="link" href="https://www.ghxi.com/purecodec.html" target="_blank" rel="noopener">https://www.ghxi.com/purecodec.html</a>
+          </td>
+        </tr>
+
+        <tr class="manual">
+          <td>lx-music-desktop</td>
+          <td class="ver"><code>—</code> → <code class='newv'>—</code></td>
+          <td><span class="dom">github</span></td>
+          <td class="act"><span class='pill man'>开源·未配置 gh-release-fetch</span> <a class='btn' href='https://github.com/search?q=lx-music-source&amp;type=repositories&amp;s=updated&amp;o=desc' target='_blank' rel='noopener'>打开</a></td>
+          <td class="titles">
+            <div><span class="lab old">旧</span> (新增)</div>
+            <div><span class="lab new">新</span> Repository search results · GitHub</div>
+            <a class="link" href="https://github.com/search?q=lx-music-source&amp;type=repositories&amp;s=updated&amp;o=desc" target="_blank" rel="noopener">https://github.com/search?q=lx-music-source&amp;type=repositories&amp;s=updated&amp;o=desc</a>
+          </td>
+        </tr>
+
+        <tr class="manual">
+          <td>lx-music-desktop</td>
+          <td class="ver"><code>—</code> → <code class='newv'>—</code></td>
+          <td><span class="dom">github</span></td>
+          <td class="act"><span class='pill man'>开源·未配置 gh-release-fetch</span> <a class='btn' href='https://github.com/yoyodadada/lx-music-source' target='_blank' rel='noopener'>打开</a></td>
+          <td class="titles">
+            <div><span class="lab old">旧</span> (新增)</div>
+            <div><span class="lab new">新</span> GitHub - yoyodadada/lx-music-source: 洛雪音乐在线音源 · GitHub</div>
+            <a class="link" href="https://github.com/yoyodadada/lx-music-source" target="_blank" rel="noopener">https://github.com/yoyodadada/lx-music-source</a>
+          </td>
+        </tr>
+
+        <tr class="manual">
+          <td>system_good</td>
+          <td class="ver"><code>—</code> → <code class='newv'>—</code></td>
+          <td><span class="dom">www.chiark.greenend.org.uk</span></td>
+          <td class="act"><span class='pill man'>手工打开页面</span> <a class='btn' href='https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html' target='_blank' rel='noopener'>打开</a></td>
+          <td class="titles">
+            <div><span class="lab old">旧</span> (新增)</div>
+            <div><span class="lab new">新</span> Download PuTTY: latest release (0.84)</div>
+            <a class="link" href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank" rel="noopener">https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html</a>
+          </td>
+        </tr>
+
+        <tr class="manual">
+          <td>EmEditor</td>
+          <td class="ver"><code>—</code> → <code class='newv'>26.2.3</code></td>
+          <td><span class="dom">ghxi</span></td>
+          <td class="act"><span class='pill man'>手工打开页面</span> <a class='btn' href='https://www.ghxi.com/emeditor.html' target='_blank' rel='noopener'>打开</a></td>
+          <td class="titles">
+            <div><span class="lab old">旧</span> (新增)</div>
+            <div><span class="lab new">新</span> EmEditor v26.2.3 绿色便携版 - 果核剥壳</div>
+            <a class="link" href="https://www.ghxi.com/emeditor.html" target="_blank" rel="noopener">https://www.ghxi.com/emeditor.html</a>
+          </td>
+        </tr>
+
+        <tr class="noise">
+          <td>HiBit Startup Manager</td>
+          <td class="ver"><code>—</code> → <code class='newv'>—</code></td>
+          <td><span class="dom">www.hibitsoft.ir</span></td>
+          <td class="act"><span class='pill noise'>忽略（噪声/验证页）</span></td>
+          <td class="titles">
+            <div><span class="lab old">旧</span> (新增)</div>
+            <div><span class="lab new">新</span> (无 title 标签)</div>
+            <a class="link" href="https://www.hibitsoft.ir/HiBitUninstaller/Changelog.txt" target="_blank" rel="noopener">https://www.hibitsoft.ir/HiBitUninstaller/Changelog.txt</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <footer>soft_page_check/reports/monthly_a.html · 由 monthly_a_board.py / report_html 生成</footer>
+  </div>
+</body>
+</html>

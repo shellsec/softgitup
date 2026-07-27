@@ -1,14 +1,43 @@
 {
-  "compared_at": "2026-06-23 11:02:59",
+  "compared_at": "2026-07-27 12:18:24",
   "scope": "a",
-  "snapshot": "titles_A_2026-06-23_110259.json",
-  "new_urls": [],
-  "removed_urls": [],
+  "snapshot": "titles_A_2026-07-27_121824.json",
+  "new_urls": [
+    "https://github.com/search?q=lx-music-source&type=repositories&s=updated&o=desc",
+    "https://github.com/yoyodadada/lx-music-source",
+    "https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html",
+    "https://www.ghxi.com/emeditor.html",
+    "https://www.hibitsoft.ir/HiBitUninstaller/Changelog.txt"
+  ],
+  "removed_urls": [
+    "https://www.423down.com/1202.html",
+    "https://www.chiark.greenend.org.uk/~sgtatham/putty/"
+  ],
   "title_changed": [
     {
+      "url": "https://github.com/scavin/Win11Debloat",
+      "old": "GitHub - scavin/Win11Debloat: A simple, easy to use PowerShell script to remove pre-installed apps, disable telemetry, as well as perform various other changes to customize, declutter and improve your Windows experience. Win11Debloat works for both Windows 10 and Windows 11. · GitHub",
+      "new": "GitHub - scavin/Win11Debloat: 一个简单易用的PowerShell脚本，用于删除预装的应用程序，禁用遥测，以及执行其他各种更改，以自定义、整理和改善您的Windows体验。 Win11Debloat适用于Windows 10和Windows 11。 · GitHub",
+      "tier": "A",
+      "software": [
+        "system_good"
+      ],
+      "domain": "github"
+    },
+    {
+      "url": "https://www.423down.com/3050.html",
+      "old": "PotPlayer播放器 260622(1.7.22961) 绿色版 - 423DownPotPlayer下载_Daum PotPlayer 260622 中文绿色版(2026最新版/精简优化版/视频播放器) - 423Down",
+      "new": "PotPlayer播放器 260630(1.7.22980) 绿色版 - 423DownPotPlayer下载_Daum PotPlayer 2606 中文绿色版(2026最新版/精简优化版/视频播放器) - 423Down",
+      "tier": "A",
+      "software": [
+        "PotPlayer"
+      ],
+      "domain": "423down"
+    },
+    {
       "url": "https://www.423down.com/3471.html",
-      "old": "Wise Care 365 Pro v8.0.2 Build 731 特别版 - 423DownWiseCare365下载_Wise Care 365 Pro v8.0 中文绿色版 (2026最新版/系统优化/垃圾清理) - 423Down",
-      "new": "安全验证...",
+      "old": "安全验证...",
+      "new": "Wise Care 365 Pro (v8.0.4.732) 中文绿色版 - 423DownWiseCare365下载_Wise Care 365 Pro v8.0 中文绿色版 (2026最新版/系统优化/垃圾清理) - 423Down",
       "tier": "A",
       "software": [
         "WiseCare365"
@@ -16,9 +45,19 @@
       "domain": "423down"
     },
     {
+      "url": "https://www.423down.com/5432.html",
+      "old": "硬盘检测工具 CrystalDiskInfo v9.9.1 中文版 - 423DownCrystalDiskInfo下载_CrystalDiskInfo v9.9.1 中文绿色版 (2026最新版/硬盘检测工具/硬盘健康检测) - 423Down",
+      "new": "硬盘检测工具 CrystalDiskInfo v9.9.2 中文版 - 423DownCrystalDiskInfo下载_CrystalDiskInfo v9.9.2 中文绿色版 (2026最新版/硬盘检测工具/硬盘健康检测) - 423Down",
+      "tier": "A",
+      "software": [
+        "CrystalDiskInfo"
+      ],
+      "domain": "423down"
+    },
+    {
       "url": "https://www.423down.com/7569.html",
-      "old": "EmEditor(大文件编辑器) v26.1.1 中文绿色版 - 423DownEmEditor下载_EmEditor Professional v26.1 中文绿色版 (2026最新版/大文件编辑器/文本编辑器) - 423Down",
-      "new": "安全验证...",
+      "old": "安全验证...",
+      "new": "EmEditor(大文件编辑器) v26.2.3 中文绿色版 - 423DownEmEditor下载_EmEditor Professional v26.2 中文绿色版 (2026最新版/大文件编辑器/文本编辑器) - 423Down",
       "tier": "A",
       "software": [
         "EmEditor"
@@ -27,8 +66,8 @@
     },
     {
       "url": "https://www.423down.com/778.html",
-      "old": "WinRAR(压缩软件) v7.22 Stable 烈火汉化版 - 423DownWinRAR下载_WinRAR 7.22 烈火汉化版 (压缩软件/解压缩工具/装机必备) - 423Down",
-      "new": "安全验证...",
+      "old": "安全验证...",
+      "new": "WinRAR(解压缩软件)v7.23 Final 烈火汉化版 - 423DownWinRAR下载_WinRAR v7.23 烈火汉化版 (2026最新版/已注册中文版/压缩解压软件) - 423Down",
       "tier": "A",
       "software": [
         "WinRAR"
@@ -37,8 +76,8 @@
     },
     {
       "url": "https://www.423down.com/9655.html",
-      "old": "Microsoft Visual C++ 2022 14.51.36247.0 - 423DownVC运行库下载_Microsoft Visual C++ Redistributable 2022 官方中文版 (2026最新版/系统运行库) - 423Down",
-      "new": "安全验证...",
+      "old": "安全验证...",
+      "new": "Microsoft Visual C++ 2022 14.51.36247.0 - 423DownVC运行库下载_Microsoft Visual C++ Redistributable 2022 官方中文版 (2026最新版/系统运行库) - 423Down",
       "tier": "A",
       "software": [
         "system_good"
@@ -46,24 +85,71 @@
       "domain": "423down"
     },
     {
-      "url": "https://www.videohelp.com/software/PotPlayer",
-      "old": "VideoHelp",
-      "new": "PotPlayer 260622 Download Free - VideoHelp",
+      "url": "https://www.ghxi.com/purecodec.html",
+      "old": "PureCodec (完美解码) v2026.06.06 - 果核剥壳",
+      "new": "PureCodec (完美解码) v2026.06.30 - 果核剥壳",
       "tier": "A",
       "software": [
         "PotPlayer"
       ],
-      "domain": "www.videohelp.com"
+      "domain": "ghxi"
+    },
+    {
+      "url": "https://github.com/search?q=lx-music-source&type=repositories&s=updated&o=desc",
+      "old": "(新增)",
+      "new": "Repository search results · GitHub",
+      "tier": "A",
+      "software": [
+        "lx-music-desktop"
+      ],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/yoyodadada/lx-music-source",
+      "old": "(新增)",
+      "new": "GitHub - yoyodadada/lx-music-source: 洛雪音乐在线音源 · GitHub",
+      "tier": "A",
+      "software": [
+        "lx-music-desktop"
+      ],
+      "domain": "github"
+    },
+    {
+      "url": "https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html",
+      "old": "(新增)",
+      "new": "Download PuTTY: latest release (0.84)",
+      "tier": "A",
+      "software": [
+        "system_good"
+      ],
+      "domain": "www.chiark.greenend.org.uk"
+    },
+    {
+      "url": "https://www.ghxi.com/emeditor.html",
+      "old": "(新增)",
+      "new": "EmEditor v26.2.3 绿色便携版 - 果核剥壳",
+      "tier": "A",
+      "software": [
+        "EmEditor"
+      ],
+      "domain": "ghxi"
+    },
+    {
+      "url": "https://www.hibitsoft.ir/HiBitUninstaller/Changelog.txt",
+      "old": "(新增)",
+      "new": "(无 title 标签)",
+      "tier": "A",
+      "software": [
+        "HiBit Startup Manager"
+      ],
+      "domain": "www.hibitsoft.ir"
     }
   ],
-  "recovered": [],
-  "unchanged_count": 35,
-  "failed": [
+  "recovered": [
     {
       "url": "https://www.123pan.com/s/A6cA-e9oJh",
-      "title": "",
-      "status": "error",
-      "error": "The read operation timed out",
+      "old": "The read operation timed out",
+      "new": "(无 title 标签)",
       "tier": "A",
       "software": [
         "CCleaner"
@@ -72,9 +158,8 @@
     },
     {
       "url": "https://www.hybase.com/pc/windows/3471.html",
-      "title": "",
-      "status": "url_error",
-      "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1017)",
+      "old": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1017)",
+      "new": "[Windows] �ų�����ϵͳ�Ż����� Wise Care 365 Pro v8.0.4.732 �⼤��� - �������",
       "tier": "A",
       "software": [
         "WiseCare365"
@@ -82,18 +167,70 @@
       "domain": "hybase"
     }
   ],
+  "unchanged_count": 27,
+  "failed": [
+    {
+      "url": "https://down66.com/startallback",
+      "title": "",
+      "status": "url_error",
+      "error": "[Errno 11001] getaddrinfo failed",
+      "tier": "A",
+      "software": [
+        "system_good"
+      ],
+      "domain": "down66"
+    },
+    {
+      "url": "https://down66.com/uestudio",
+      "title": "",
+      "status": "url_error",
+      "error": "[Errno 11001] getaddrinfo failed",
+      "tier": "A",
+      "software": [
+        "UltraEdit"
+      ],
+      "domain": "down66"
+    },
+    {
+      "url": "https://www.videohelp.com/software/PotPlayer",
+      "title": "",
+      "status": "http_error",
+      "error": "HTTP Error 503: Service Unavailable",
+      "tier": "A",
+      "software": [
+        "PotPlayer"
+      ],
+      "domain": "www.videohelp.com"
+    }
+  ],
   "open_candidates": [
+    "https://github.com/scavin/Win11Debloat",
+    "https://www.423down.com/3050.html",
     "https://www.423down.com/3471.html",
+    "https://www.423down.com/5432.html",
     "https://www.423down.com/7569.html",
     "https://www.423down.com/778.html",
     "https://www.423down.com/9655.html",
-    "https://www.videohelp.com/software/PotPlayer"
+    "https://www.ghxi.com/purecodec.html",
+    "https://github.com/search?q=lx-music-source&type=repositories&s=updated&o=desc",
+    "https://github.com/yoyodadada/lx-music-source",
+    "https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html",
+    "https://www.ghxi.com/emeditor.html",
+    "https://www.hibitsoft.ir/HiBitUninstaller/Changelog.txt"
   ],
   "tier_a_candidates": [
+    "https://github.com/scavin/Win11Debloat",
+    "https://www.423down.com/3050.html",
     "https://www.423down.com/3471.html",
+    "https://www.423down.com/5432.html",
     "https://www.423down.com/7569.html",
     "https://www.423down.com/778.html",
     "https://www.423down.com/9655.html",
-    "https://www.videohelp.com/software/PotPlayer"
+    "https://www.ghxi.com/purecodec.html",
+    "https://github.com/search?q=lx-music-source&type=repositories&s=updated&o=desc",
+    "https://github.com/yoyodadada/lx-music-source",
+    "https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html",
+    "https://www.ghxi.com/emeditor.html",
+    "https://www.hibitsoft.ir/HiBitUninstaller/Changelog.txt"
   ]
 }

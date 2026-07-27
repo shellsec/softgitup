@@ -23,7 +23,8 @@
       "save_subdir": "相对「有效下载根目录」的子目录（可选）；有效根目录在开启 download_subdir_by_platform 时会先包含平台名子目录。",
       "简介": "应用简介，仅给人看，脚本不读取。",
       "分类": "应用分类标签，仅给人看，脚本不读取。",
-      "resolve_via": "特殊解析：github_pages_manifest（VibeCoding manifest）；go_dev_json（Go 官方 https://go.dev/dl/?mode=json，配合 go_dev_os / go_dev_arch / go_dev_kind）；docker_desktop（Docker Desktop 官方 desktop.docker.com 直链，配合 docker_desktop_asset）"
+      "resolve_via": "特殊解析：github_pages_manifest（VibeCoding manifest）；go_dev_json（Go 官方 https://go.dev/dl/?mode=json，配合 go_dev_os / go_dev_arch / go_dev_kind）；docker_desktop（Docker Desktop 官方 desktop.docker.com 直链，配合 docker_desktop_asset）",
+      "refresh_manifest_before_resolve": "条目或根级均可设。对 github_pages_manifest：下载前用 build_manifest.py --only <id> 刷新本地 manifest（默认 true；失败则回退已有快照）。设 false 可跳过联网刷新。"
     },
     "多文件布局": "配置在 apps/ 目录：root.json 放全局项；windows/、darwin/、linux/ 下均可按与 windows 相同的文件名（如 01-AI.json）拆成多个 .json 数组。若某平台目录下无分片，则回退读取该平台单文件 darwin.json / linux.json。auto_update.py 按文件名排序合并各平台分片，且同一平台内 id 不可重复。darwin/linux 分片可由 tools/split_darwin_linux_to_dirs.py 从旧单文件生成。",
     "分类参考": {
@@ -44,5 +45,6 @@
   "download_dir": ".",
   "download_subdir_by_platform": true,
   "vibecoding_manifest_url": "./VibeCodingToolsDown/dist/vibecoding/manifest.json",
+  "refresh_manifest_before_resolve": true,
   "ssl_verify": false
 }

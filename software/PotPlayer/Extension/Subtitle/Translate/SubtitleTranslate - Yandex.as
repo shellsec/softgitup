@@ -13,6 +13,8 @@
 // string GetPasswordText()													-> get password text for login dialog
 // string ServerLogin(string User, string Pass)								-> login
 // string ServerLogout()													-> logout
+// string GetWebAccountUrl()							-> login process by WebBrowser
+// string GetWebAccountDomain()							-> transport cookie domain for login
 //------------------------------------------------------------------------------------------------
 // array<string> GetSrcLangs() 												-> get source language
 // array<string> GetDstLangs() 												-> get target language

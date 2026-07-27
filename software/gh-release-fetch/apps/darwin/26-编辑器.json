@@ -338,7 +338,7 @@
   },
   {
     "id": "cursor",
-    "简介": "Cursor macOS universal zip（manifest）",
+    "简介": "Cursor macOS universal（manifest：官方 CDN .dmg）",
     "分类": "编辑器",
     "enabled": false,
     "resolve_via": "github_pages_manifest",
@@ -350,9 +350,10 @@
     "kill_before_install": false,
     "run_installer": false,
     "installer_extensions": [
+      ".dmg",
       ".zip"
     ],
-    "save_name": "Cursor-darwin-universal.zip"
+    "save_name": "Cursor-darwin-universal.dmg"
   },
   {
     "id": "trae",

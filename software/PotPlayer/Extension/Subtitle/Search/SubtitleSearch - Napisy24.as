@@ -14,6 +14,8 @@
 // string ServerCheck(string User, string Pass) 									-> server check
 // string ServerLogin(string User, string Pass) 									-> login
 // void ServerLogout() 																-> logout
+// string GetWebAccountUrl()							-> login process by WebBrowser
+// string GetWebAccountDomain()							-> transport cookie domain for login
 //------------------------------------------------------------------------------------------------
 // string GetLanguages()															-> get support language
 // string SubtitleWebSearch(string MovieFileName, dictionary MovieMetaData)			-> search subtitle bu web browser

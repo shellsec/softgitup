@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-05-26 14:14:43",
+  "built_at": "2026-07-27 12:18:08",
   "sync_dirs": [
     "WinMemoryCleaner",
     "NetTime",
@@ -24,13 +24,12 @@
     "gh-release-fetch"
   ],
   "stats": {
-    "total_pages": 118,
-    "tier_a_pages": 42,
-    "tier_b_pages": 76,
+    "total_pages": 172,
+    "tier_a_pages": 45,
+    "tier_b_pages": 127,
     "no_url_sync_dirs": [
       "Chrome",
       "notepad--",
-      "HiBit Startup Manager",
       "SublimeText",
       "gh-release-fetch"
     ]
@@ -54,14 +53,13 @@
       "https://github.com/shellsec/WindowsBatchScriptManager",
       "https://github.com/zbezj/HEU_KMS_Activator",
       "https://www.423down.com/10540.html",
-      "https://www.423down.com/1202.html",
       "https://www.423down.com/12420.html",
       "https://www.423down.com/16774.html",
       "https://www.423down.com/16859.html",
       "https://www.423down.com/5573.html",
       "https://www.423down.com/9655.html",
       "https://www.52pojie.cn/thread-965894-1-1.html",
-      "https://www.chiark.greenend.org.uk/~sgtatham/putty/",
+      "https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html",
       "https://www.ghxi.com/defenderui.html",
       "https://www.ghxi.com/iobitsmartdefrag.html"
     ],
@@ -80,7 +78,11 @@
       "https://pan.quark.cn/s/d586d0925b85"
     ],
     "EmEditor": [
-      "https://www.423down.com/7569.html"
+      "https://www.423down.com/7569.html",
+      "https://www.ghxi.com/emeditor.html"
+    ],
+    "HiBit Startup Manager": [
+      "https://www.hibitsoft.ir/HiBitUninstaller/Changelog.txt"
     ],
     "WinRAR": [
       "https://www.423down.com/778.html"
@@ -97,7 +99,9 @@
     "lx-music-desktop": [
       "https://github.com/lyswhut/lx-music-desktop/releases",
       "https://github.com/lyswhut/lx-music-mobile/releases",
-      "https://github.com/search?q=lx-music-source&type=repositories"
+      "https://github.com/search?q=lx-music-source&type=repositories",
+      "https://github.com/search?q=lx-music-source&type=repositories&s=updated&o=desc",
+      "https://github.com/yoyodadada/lx-music-source"
     ],
     "typora": [
       "https://typora.io/releases/all",
@@ -112,6 +116,12 @@
     ]
   },
   "entries": [
+    {
+      "url": "https://423down.lanzout.com/b0f3u4nyf#292a",
+      "tier": "B",
+      "software": [],
+      "domain": "lanzou"
+    },
     {
       "url": "https://7-zip.org/download.html",
       "tier": "A",
@@ -139,10 +149,40 @@
       "domain": "lanzou"
     },
     {
+      "url": "https://accent-rar-password-recovery.apsgo.cn",
+      "tier": "B",
+      "software": [],
+      "domain": "accent-rar-password-recovery.apsgo.cn"
+    },
+    {
+      "url": "https://accent-zip-password-recovery.apsgo.com/zh-cn",
+      "tier": "B",
+      "software": [],
+      "domain": "accent-zip-password-recovery.apsgo.com"
+    },
+    {
+      "url": "https://anytxt.net/download/",
+      "tier": "B",
+      "software": [],
+      "domain": "anytxt.net"
+    },
+    {
       "url": "https://care-eyes.com/",
       "tier": "B",
       "software": [],
       "domain": "care-eyes.com"
+    },
+    {
+      "url": "https://cloud.tencent.cn/developer/article/2646514?policyId=1004",
+      "tier": "B",
+      "software": [],
+      "domain": "cloud.tencent.cn"
+    },
+    {
+      "url": "https://cloud.tencent.cn/developer/article/2662167?policyId=1004",
+      "tier": "B",
+      "software": [],
+      "domain": "cloud.tencent.cn"
     },
     {
       "url": "https://cnb.cool/Mintimate/rime/oh-my-rime",
@@ -169,6 +209,18 @@
       "domain": "developer.microsoft.com"
     },
     {
+      "url": "https://down66.com/diskgenius",
+      "tier": "B",
+      "software": [],
+      "domain": "down66"
+    },
+    {
+      "url": "https://down66.com/duplicatecleaner",
+      "tier": "B",
+      "software": [],
+      "domain": "down66"
+    },
+    {
       "url": "https://down66.com/startallback",
       "tier": "A",
       "software": [
@@ -185,10 +237,34 @@
       "domain": "down66"
     },
     {
+      "url": "https://firpe.cn/",
+      "tier": "B",
+      "software": [],
+      "domain": "firpe.cn"
+    },
+    {
+      "url": "https://firpe.cn/page-196",
+      "tier": "B",
+      "software": [],
+      "domain": "firpe.cn"
+    },
+    {
+      "url": "https://firpe.cn/page-609",
+      "tier": "B",
+      "software": [],
+      "domain": "firpe.cn"
+    },
+    {
       "url": "https://folivora.ai/",
       "tier": "B",
       "software": [],
       "domain": "folivora.ai"
+    },
+    {
+      "url": "https://geekuninstaller.com/download?version=1.5.3.170",
+      "tier": "B",
+      "software": [],
+      "domain": "geekuninstaller.com"
     },
     {
       "url": "https://github.com/233stone/vocotype-cli",
@@ -217,11 +293,35 @@
       "domain": "github"
     },
     {
+      "url": "https://github.com/Macrohard0001/lx-ikun-music-sources",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/RamonUnch/AltSnap",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
       "url": "https://github.com/Raphire/Win11Debloat",
       "tier": "A",
       "software": [
         "system_good"
       ],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/UniClipboard/UniClipboard",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/UniClipboard/UniClipboard/releases",
+      "tier": "B",
+      "software": [],
       "domain": "github"
     },
     {
@@ -277,6 +377,12 @@
       "domain": "github"
     },
     {
+      "url": "https://github.com/hashcat/hashcat",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
       "url": "https://github.com/huanfeng/WindInput",
       "tier": "B",
       "software": [],
@@ -323,6 +429,24 @@
       "domain": "github"
     },
     {
+      "url": "https://github.com/modelscope/FunASR",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/openwall/john",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/openwall/john-packages/releases/latest",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
       "url": "https://github.com/randyrants/sharpkeys",
       "tier": "B",
       "software": [],
@@ -353,11 +477,25 @@
       "domain": "github"
     },
     {
+      "url": "https://github.com/search?q=lx-music-source&type=repositories&s=updated&o=desc",
+      "tier": "A",
+      "software": [
+        "lx-music-desktop"
+      ],
+      "domain": "github"
+    },
+    {
       "url": "https://github.com/shellsec/WindowsBatchScriptManager",
       "tier": "A",
       "software": [
         "system_good"
       ],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/super-productivity/super-productivity",
+      "tier": "B",
+      "software": [],
       "domain": "github"
     },
     {
@@ -370,6 +508,14 @@
       "url": "https://github.com/wzsx150/MobaXterm_CN",
       "tier": "B",
       "software": [],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/yoyodadada/lx-music-source",
+      "tier": "A",
+      "software": [
+        "lx-music-desktop"
+      ],
       "domain": "github"
     },
     {
@@ -387,6 +533,18 @@
       "domain": "github"
     },
     {
+      "url": "https://gndown.lanzoub.com/in0jA3puftud",
+      "tier": "B",
+      "software": [],
+      "domain": "lanzou"
+    },
+    {
+      "url": "https://hashcat.net/hashcat/",
+      "tier": "B",
+      "software": [],
+      "domain": "hashcat.net"
+    },
+    {
       "url": "https://karabiner-elements.pqrs.org/",
       "tier": "B",
       "software": [],
@@ -397,6 +555,12 @@
       "tier": "B",
       "software": [],
       "domain": "masuit.org"
+    },
+    {
+      "url": "https://mcprepository.com/233stone/vocotype-cli",
+      "tier": "B",
+      "software": [],
+      "domain": "mcprepository.com"
     },
     {
       "url": "https://moba-xterm-keygen.vercel.app",
@@ -447,6 +611,18 @@
         "EditPlus"
       ],
       "domain": "quark"
+    },
+    {
+      "url": "https://passcovery.com/products/accentrpr.htm",
+      "tier": "B",
+      "software": [],
+      "domain": "passcovery.com"
+    },
+    {
+      "url": "https://passcovery.com/products/accentzpr.htm",
+      "tier": "B",
+      "software": [],
+      "domain": "passcovery.com"
     },
     {
       "url": "https://pixpin.cn/",
@@ -506,14 +682,6 @@
     },
     {
       "url": "https://www.423down.com/10540.html",
-      "tier": "A",
-      "software": [
-        "system_good"
-      ],
-      "domain": "423down"
-    },
-    {
-      "url": "https://www.423down.com/1202.html",
       "tier": "A",
       "software": [
         "system_good"
@@ -691,7 +859,7 @@
       "domain": "www.binisoft.org"
     },
     {
-      "url": "https://www.chiark.greenend.org.uk/~sgtatham/putty/",
+      "url": "https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html",
       "tier": "A",
       "software": [
         "system_good"
@@ -703,6 +871,12 @@
       "tier": "B",
       "software": [],
       "domain": "www.cnblogs.com"
+    },
+    {
+      "url": "https://www.dayanzai.me/duplicate-cleaner.html",
+      "tier": "B",
+      "software": [],
+      "domain": "www.dayanzai.me"
     },
     {
       "url": "https://www.dayanzai.me/pc-fresh.html",
@@ -717,6 +891,12 @@
       "domain": "www.dayanzai.me"
     },
     {
+      "url": "https://www.digitalvolcano.co.uk/dcchangelog.html",
+      "tier": "B",
+      "software": [],
+      "domain": "www.digitalvolcano.co.uk"
+    },
+    {
       "url": "https://www.ghxi.com/?s=%E8%BF%90%E8%A1%8C",
       "tier": "B",
       "software": [],
@@ -724,6 +904,12 @@
     },
     {
       "url": "https://www.ghxi.com/advancedsystemcareultimate.html",
+      "tier": "B",
+      "software": [],
+      "domain": "ghxi"
+    },
+    {
+      "url": "https://www.ghxi.com/bulkcrapuninstaller.html",
       "tier": "B",
       "software": [],
       "domain": "ghxi"
@@ -740,6 +926,14 @@
       "url": "https://www.ghxi.com/dotnet.html",
       "tier": "B",
       "software": [],
+      "domain": "ghxi"
+    },
+    {
+      "url": "https://www.ghxi.com/emeditor.html",
+      "tier": "A",
+      "software": [
+        "EmEditor"
+      ],
       "domain": "ghxi"
     },
     {
@@ -775,6 +969,12 @@
       "domain": "ghxi"
     },
     {
+      "url": "https://www.ghxi.com/microsoftedge.html",
+      "tier": "B",
+      "software": [],
+      "domain": "ghxi"
+    },
+    {
       "url": "https://www.ghxi.com/purecodec.html",
       "tier": "A",
       "software": [
@@ -795,7 +995,33 @@
       "domain": "ghxi"
     },
     {
+      "url": "https://www.gndown.com/5529.html",
+      "tier": "B",
+      "software": [],
+      "domain": "www.gndown.com"
+    },
+    {
+      "url": "https://www.hibitsoft.ir/HiBitUninstaller/Changelog.txt",
+      "tier": "A",
+      "software": [
+        "HiBit Startup Manager"
+      ],
+      "domain": "www.hibitsoft.ir"
+    },
+    {
+      "url": "https://www.hybase.com/pc/windows/2818.html",
+      "tier": "B",
+      "software": [],
+      "domain": "hybase"
+    },
+    {
       "url": "https://www.hybase.com/pc/windows/2845.html",
+      "tier": "B",
+      "software": [],
+      "domain": "hybase"
+    },
+    {
+      "url": "https://www.hybase.com/pc/windows/341.html",
       "tier": "B",
       "software": [],
       "domain": "hybase"
@@ -813,6 +1039,30 @@
       "tier": "B",
       "software": [],
       "domain": "hybase"
+    },
+    {
+      "url": "https://www.hybase.com/pc/windows/821.html",
+      "tier": "B",
+      "software": [],
+      "domain": "hybase"
+    },
+    {
+      "url": "https://www.hybase.com/pc/windows/927.html",
+      "tier": "B",
+      "software": [],
+      "domain": "hybase"
+    },
+    {
+      "url": "https://www.jam-software.de/treesize",
+      "tier": "B",
+      "software": [],
+      "domain": "www.jam-software.de"
+    },
+    {
+      "url": "https://www.jam-software.de/ultrasearch/changes.shtml",
+      "tier": "B",
+      "software": [],
+      "domain": "www.jam-software.de"
     },
     {
       "url": "https://www.keyboardmaestro.com/",
@@ -833,6 +1083,18 @@
       "domain": "www.kmplayer.com"
     },
     {
+      "url": "https://www.lanzouo.com/b0cvr5gsf",
+      "tier": "B",
+      "software": [],
+      "domain": "lanzou"
+    },
+    {
+      "url": "https://www.lanzout.com/b481240",
+      "tier": "B",
+      "software": [],
+      "domain": "lanzou"
+    },
+    {
       "url": "https://www.lanzout.com/b554791",
       "tier": "B",
       "software": [],
@@ -849,6 +1111,42 @@
       "tier": "B",
       "software": [],
       "domain": "lanzou"
+    },
+    {
+      "url": "https://www.mythicsoft.com/filelocatorlite/download/",
+      "tier": "B",
+      "software": [],
+      "domain": "www.mythicsoft.com"
+    },
+    {
+      "url": "https://www.openwall.com/john/",
+      "tier": "B",
+      "software": [],
+      "domain": "www.openwall.com"
+    },
+    {
+      "url": "https://www.passfab.cn/",
+      "tier": "B",
+      "software": [],
+      "domain": "www.passfab.cn"
+    },
+    {
+      "url": "https://www.passfab.com/products/passfab_for_zip.html",
+      "tier": "B",
+      "software": [],
+      "domain": "www.passfab.com"
+    },
+    {
+      "url": "https://www.passware.com/",
+      "tier": "B",
+      "software": [],
+      "domain": "www.passware.com"
+    },
+    {
+      "url": "https://www.passware.com/kit-forensic/",
+      "tier": "B",
+      "software": [],
+      "domain": "www.passware.com"
     },
     {
       "url": "https://www.python.org/downloads/release/python-31114/",
@@ -877,6 +1175,18 @@
       "domain": "www.timesynctool.com"
     },
     {
+      "url": "https://www.uniclipboard.app/zh",
+      "tier": "B",
+      "software": [],
+      "domain": "www.uniclipboard.app"
+    },
+    {
+      "url": "https://www.uniclipboard.app/zh/download",
+      "tier": "B",
+      "software": [],
+      "domain": "www.uniclipboard.app"
+    },
+    {
       "url": "https://www.videohelp.com/software/PotPlayer",
       "tier": "A",
       "software": [
@@ -897,6 +1207,30 @@
       "tier": "B",
       "software": [],
       "domain": "www.wuleba.com"
+    },
+    {
+      "url": "https://www.yyczxt.com/",
+      "tier": "B",
+      "software": [],
+      "domain": "www.yyczxt.com"
+    },
+    {
+      "url": "https://www.yyczxt.com/original.html#Windows/Windows11/25H2",
+      "tier": "B",
+      "software": [],
+      "domain": "www.yyczxt.com"
+    },
+    {
+      "url": "https://www.yyczxt.com/original.html#Windows/Windows11/26H1",
+      "tier": "B",
+      "software": [],
+      "domain": "www.yyczxt.com"
+    },
+    {
+      "url": "https://www.z2blog.com/",
+      "tier": "B",
+      "software": [],
+      "domain": "www.z2blog.com"
     },
     {
       "url": "https://xnee.wordpress.com/",

@@ -344,6 +344,12 @@ def _render_list_site_group(group: dict) -> str:
 
 def build_index_html() -> Path:
     REPORTS.mkdir(parents=True, exist_ok=True)
+    try:
+        from monthly_a_board import build_monthly_a
+
+        build_monthly_a()
+    except Exception:
+        pass
     core_scopes = [_collect_scope_data(k) for k in ("a", "all", "423down")]
     list_sections = [_render_list_site_group(g) for g in LIST_SITE_GROUPS]
     all_data = core_scopes + [d for g in LIST_SITE_GROUPS for d in [_collect_scope_data(s) for s in g["scopes"]]]
@@ -352,6 +358,7 @@ def build_index_html() -> Path:
     sections = "\n".join(_render_scope_section(s) for s in core_scopes)
     sections += "\n" + "\n".join(list_sections)
     total_changed = sum(s["changed_count"] for s in all_data)
+    a_changed = next((s["changed_count"] for s in core_scopes if s["id"] == "a"), 0)
 
     doc = f"""<!DOCTYPE html>
 <html lang="zh-CN">
@@ -506,8 +513,14 @@ def build_index_html() -> Path:
       <h1>Soft Page Check</h1>
       <p>标题比对报告 · 点击链接或「打开」快速核查 · 变化≠必须更新</p>
       <div class="hero-meta">生成于 {html.escape(generated)} · 合计 {total_changed} 处标题变化</div>
+      <p style="margin:12px 0 0;font-size:.9rem">
+        <a href="monthly_a.html" style="color:#fff;font-weight:700;text-decoration:underline">
+          A 类月度工作台（旧版本→新版本 · 开源可直下）{f" · {a_changed} 条变化" if a_changed else ""}
+        </a>
+      </p>
     </header>
     <nav class="nav">
+      <a href="monthly_a.html">月度 A 类</a>
       <a href="#scope-a">A 类</a>
       <a href="#scope-all">装机全量</a>
       <a href="#scope-423down">423down</a>

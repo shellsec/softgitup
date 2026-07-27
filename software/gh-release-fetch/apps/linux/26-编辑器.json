@@ -366,7 +366,7 @@
   },
   {
     "id": "cursor",
-    "简介": "Cursor（manifest 当前 linux 多为 null，勿盲目启用）",
+    "简介": "Cursor Linux x64 AppImage（manifest：官方 CDN）",
     "分类": "编辑器",
     "enabled": false,
     "resolve_via": "github_pages_manifest",
@@ -376,7 +376,11 @@
     "windows_installer": false,
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false
+    "run_installer": false,
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "save_name": "Cursor-x86_64.AppImage"
   },
   {
     "id": "trae",

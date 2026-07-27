@@ -1,0 +1,62 @@
+{
+  "_comment": "software/ 同步目录 ↔ gh-release-fetch app id；local_exe 相对 software_dir，用于工作台显示本地版本",
+  "apps": [
+    {
+      "software_dir": "WinMemoryCleaner",
+      "gh_id": "win_memory_cleaner",
+      "repo_path": "IgorMundstein/WinMemoryCleaner",
+      "local_exe": "WinMemoryCleaner.exe"
+    },
+    {
+      "software_dir": "everything",
+      "gh_id": "everything_cli",
+      "repo_path": "voidtools/Everything",
+      "local_exe": "Everything.exe",
+      "note": "官方主站发版；GitHub 可能无 Release"
+    },
+    {
+      "software_dir": "system_good",
+      "gh_id": "ditto",
+      "repo_path": "sabrogden/Ditto",
+      "local_exe": "Ditto.exe",
+      "note": "Ditto 在 system_good 包内"
+    },
+    {
+      "software_dir": "system_good",
+      "gh_id": "win11_debloat",
+      "repo_path": "Raphire/Win11Debloat",
+      "note": "脚本包，本地无 exe 版本号"
+    },
+    {
+      "software_dir": "system_good",
+      "gh_id": "win11_debloat_scavin",
+      "repo_path": "scavin/Win11Debloat",
+      "note": "脚本包，本地无 exe 版本号"
+    },
+    {
+      "software_dir": "lx-music-desktop",
+      "gh_id": "lx_music_desktop",
+      "repo_path": "lyswhut/lx-music-desktop",
+      "local_exe": "lx-music-desktop.exe",
+      "note": "目录内可能仅 readme；压缩包也可能在 system_good/"
+    },
+    {
+      "software_dir": "notepad++",
+      "gh_id": "notepadplusplus",
+      "repo_path": "notepad-plus-plus/notepad-plus-plus",
+      "local_exe": "notepad++.exe"
+    },
+    {
+      "software_dir": "notepad--",
+      "gh_id": "notepad_minusminus",
+      "repo_path": "cxasm/notepad--",
+      "local_exe": "Notepad--.exe"
+    },
+    {
+      "software_dir": "7-Zip",
+      "gh_id": "7zip",
+      "repo_path": "ip7z/7zip",
+      "local_exe": "7zFM.exe"
+    }
+  ]
+}

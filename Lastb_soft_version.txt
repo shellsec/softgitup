@@ -50,7 +50,7 @@ EasyRC：本质是PE内核重装。软件内置精简版WinPE环境，类似U盘
 Zen 是一款适用于 Windows、macOS 和 Linux 的开源系统级广告拦截器和隐私保护程序。它的工作原理是设置一个代理，拦截来自所有应用程序的 HTTP 请求，并阻止那些投放广告、跟踪监控您的行为、恶意软件和其他不需要的内容的脚本。通过在系统级别运行，Zen 可以防御浏览器扩展无法防御的威胁，例如嵌入桌面应用程序和操作系统组件中的跟踪器。Zen 附带了许多预装的过滤器，而且还可以轻松添加主机文件和 EasyList 样式的过滤器，能够根据特定需求定制保护。
 PS：为啥不用adguard，adguard卡网
 https://github.com/anfragment/zen
-https://gh-proxy.com/github.com/irbis-sh/zen-desktop/releases/download/v0.24.0/Zen_windows_amd64.zip
+https://gh-proxy.com/github.com/irbis-sh/zen-desktop/releases/download/v0.24.1/Zen_windows_amd64.zip
 Zen.zip解压即可用
 
 其他增强自行下载
@@ -134,13 +134,12 @@ https://github.com/bruderstein/PythonScript/releases/download/v3.0.25/PythonScri
 
 notepad--
 核心特点：体积更小、启动更快，支持语法高亮、代码折叠，低资源占用，操作逻辑贴合中文用户习惯
-https://gitee.com/cxasm/notepad--/releases/download/v3.7.2/Notepad--v3.7.2-win10-portable.zip
-https://gitee.com/cxasm/notepad--/releases/download/v3.8.0/Notepad--v3.8-win10-portable.zip
+https://gitee.com/cxasm/notepad--/releases/download/v3.8.2/Notepad--v3.8.2-win10-portable.zip
 
 EditPlus v6.1.899 汉化注册版
 核心特点：汉化界面易操作，支持多窗口编辑、语法高亮、代码跳转，自带 FTP 上传，适配基础编程与文本处理
 https://pan.quark.cn/s/d586d0925b85
-EmEditor pro Version 21.5.2 注册版
+EmEditor pro Version 21.5.2 注册版    目前最新版 的注册是未注册的EmEditor v26.2.1 绿色便携版 https://www.ghxi.com/emeditor.html
 https://www.423down.com/7569.html
 核心特点：支持超大文件（GB 级）快速打开，多光标编辑、正则表达式功能强大，可自定义界面与快捷键，兼容性强
 SublimeText v4200 注册版
@@ -208,6 +207,7 @@ Anytype ✅开源 本地 P2P  对象 / 数据库  中 P2P 去中心化、无服�
 一句话总结
 写代码、改文本、开日志 → 用上面 文本编辑器（Notepad++、VS Code、EmEditor 等）
 记笔记、建知识库、双链图谱 → 用下面 知识管理工具（Obsidian、Logseq、思源 等）
+
 
 压缩工具7z+Rar就是所有，朴实无华
 7-Zip 26.02 压缩率很牛绕不开的好用
@@ -299,7 +299,7 @@ https://www.423down.com/3471.html
 https://www.hybase.com/pc/windows/3471.html
 核心特点：绿色免装无残留，策略优化能力优异，一站式实现系统清理、垃圾删除、系统提速，功能全面且轻量化
 
-CrystalDiskInfo 硬盘检测工具 CrystalDiskInfo v9.9.1
+CrystalDiskInfo 硬盘检测工具 CrystalDiskInfo v9.9.2
 https://www.423down.com/5432.html
 核心特点：中文界面易操作，绿色免装，实时检测硬盘健康、温度、使用时长等关键数据，及时预警硬盘故障
 
@@ -336,9 +336,9 @@ NetTime v3.2.0.233 时间同步
 https://www.timesynctool.com/
 核心特点：体积小巧、同步速度快，精准校准系统时间，无广告无后台，适配各类网络环境下的时间同步需求
 
-影音播放器 PotPlayer64 260703 Beta  官网版
-https://www.423down.com/3050.html
+影音播放器 PotPlayer64 260716 Beta 64-bit  官网版
 https://www.videohelp.com/software/PotPlayer
+https://www.423down.com/3050.html
 https://potplayer.tv/
 史上最强大电脑多媒体播放器PotPlayer
 已原生支持简体中文，内置强大解码器，启动速度快，播放过程稳定，对付高清大片无任何问题，对外挂字幕的支持很不错，普通用户无需装第三方解码器即可播放主流格式视频，支持BD和MKV等大视频文件流畅播放。
@@ -1096,6 +1096,16 @@ Paste As File 把剪贴板的内容直接粘贴为文件
 AltSnap 能让小白按住键盘 Alt 键 + 鼠标左键​ 随便拖窗口任意地方来移动或自动排成九宫格，不用非得去点最顶上那条细长的标题栏
 AltSnap1.68-x64-inst  190K 非常实用必备
 https://github.com/RamonUnch/AltSnap
+
+todo
+https://github.com/super-productivity/super-productivity
+Super Productivity 是一款开源、免费的高级待办事项工具，集成了时间分配、时间跟踪、番茄钟等功能，支持与 Jira、GitLab、GitHub 等日常工具集成。
+它提供直观的任务管理界面，支持项目分类、标签管理、时间跟踪等核心功能，同时具备 Jira、GitHub 等第三方服务集成能力。
+Super Productivity 支持多平台使用，包括 Windows、Mac、Linux、网页端及移动端，全平台可用。所有功能完全免费无限制，深受用户青睐
+Super Productivity 有 iOS 原生 App，iPhone / iPad / 甚至 Mac（Apple Silicon/Intel 通用）都能装，要求 iOS/iPadOS 14.0+。
+App Store 搜「Super Productivity」，开发者 Johannes Millan，MIT 开源，声明零数据采集
+
+
 
 密码破解工具
 真能吃显卡的压缩包密码恢复工具，主要分两条路：免费开源的命令行派（hashcat 是标杆） 和 Windows GUI 商业派（Accent/PassFab/Passware 这类）。ARCHPR 零售版之所以被嫌弃，就是因为它 GPU 调用浅，下面这几个才是真·GPU 加速。
@@ -2305,3 +2315,76 @@ https://www.423down.com/13996.html
 https://github.com/Genymobile/scrcpy
 使用图形化的 Scrcpy 显示和控制您的 Android 设备，由 Electron 驱动
 https://github.com/Mu-L/escrcpy
+
+
+
+
+本地终端基本跑模型
+PC端有显卡就下载ollama即可
+
+下面给你两条在 iPhone 上跑谷歌 Gemma 的实操路线，路线 A 最省事（官方 App），路线 B 更灵活（自选 GGUF）。都完全离线、不联网、不上传数据。
+路线 A：Google AI Edge Gallery（官方、小白首选）
+适用：iOS 17+，iPhone 12 及更新（E2B 基本都能跑，E4B 建议 15 Pro / 16 系列 8GB RAM）
+1. 下 App
+   App Store 搜 Google AI Edge Gallery，开发者认准 Google LLC，国区没有就切美区 ID。
+2. 选模型
+   打开 App → AI Chat 或 Agent Skills → 模型列表里会有：
+   • Gemma 4 E2B IT（约 2.5GB）——首推，速度快、6GB RAM 机器也能跑
+   - Gemma 4 E4B IT（约 3.6GB）——质量更好，吃内存，旗舰机再选
+3. 下载权重
+   点 Download，连 Wi-Fi，别切后台。E2B 大概 2–4 分钟下完，App 会在本机按芯片（A16/A17/A18）做一次编译优化。
+4. 开聊 + 验离线
+   下完直接进对话，首次加载 10–30 秒。然后开飞行模式再问一句，能答出来就是纯本地跑通了。
+5. 顺手可玩的功能
+   • Thinking Mode（看链式推理）
+   - Ask Image（拍图/选图让模型看）
+   • Audio Scribe（本机语音转写/翻译）
+   • Prompt Lab（调温度、top-p 等参数）
+坑点：iPhone 12 有用户反馈下不动 E4B，老机型一律先 E2B；长时间生成会发热降速，正常现象。
+路线 B：PocketPal AI（开源、可换任意 GGUF）
+适用：想自己挑量化档位、试 Gemma 3 / 4 以外模型（Qwen、Llama 等）的人。
+1. App Store 搜 PocketPal AI（开源，by LLM Ventures / 社区版），装好打开。
+2. 底部 Models → + / Add Model → Download from Hugging Face。
+3. 搜 Gemma 的 GGUF 仓库，常用：
+   • bartowski/google_gemma-4-E2B-it-GGUF → 选 Q4_K_M.gguf（~1.3–2.5GB，均衡档）
+   - 老机型（iPhone 13 及以前 4–6GB RAM）→ 找 gemma-3-1b-it-Q4_K_M.gguf（~700MB）
+4. 点 Download → 下完点 Load → 进 Chat 就能用，同样断网可聊。
+5. 进阶：设置里把 Max Context 调到 2560 左右（Gemma 4 支持 3072，但 A15 别拉满防 OOM），Temperature 做严肃任务降到 0.3 以下。
+PocketPal 内置精选列表可能还没收 Gemma 4，需要手动填 HF 仓库名；如果搜不到就确认拼写或换网络。
+机型 × 模型速查
+机型 RAM 推荐模型
+iPhone 16 / 15 Pro 系列 8GB E4B Q4_K_M 舒服，E2B 更省电
+iPhone 14 Pro / 14 6GB E2B 稳，E4B 偶尔吃紧
+iPhone 13 及更早 4–6GB 只跑 E2B，或退到 Gemma 3 1B Q4
+iPhone 12 及以下 ≤4GB 不建议硬跑，容易 OOM
+存储留 4–6GB 余量，模型删 App 就一起清掉。
+一个判断小技巧
+装完别信“它说离线”，真验一次：飞行模式 + 问“1+1 等于几”，答得快且对，就是本机推理；卡住转圈才是偷偷走网。
+
+安卓上跑谷歌 Gemma 端侧模型，思路和 iPhone 一样分官方 App 派和第三方加载派，但生态比 iOS 还乱一点，给你捋清楚：
+路线 A：Google AI Edge Gallery（安卓版，最省事）
+谷歌把同一个项目也出了 Android 版，目前是早期预览 APK，不在国内商店上架。
+• 去 GitHub 搜 google-ai-edge/gallery → Releases 里下 ai-edge-gallery.apk（ARM64）
+- 手机允许「未知来源安装」装上
+• 打开 → AI Chat → 模型列表里选 Gemma 4 E2B IT（首推）或 E4B IT
+• 点下载权重（E2B 约 2.5GB，E4B 约 3.6GB），走 Wi-Fi
+- 下完断网问一句，能答就是纯本地
+• 支持 Ask Image、Audio Scribe、Prompt Lab，和 iOS 版功能对齐
+机型门槛：骁龙 8 Gen2 / 天玑 9300 / 麒麟 9000S 及以上体验好；骁龙 7+ Gen3、8 Gen1 能跑 E2B 但稍慢；4GB RAM 老机别碰 E4B。
+路线 B：第三方 App 加载 GGUF（最灵活）
+安卓上这类工具比 iOS 多：
+• PocketPal AI：有安卓版（GitHub Releases 或 F-Droid），操作和 iOS 一样，HF 搜 bartowski/google_gemma-4-E2B-it-GGUF 下 Q4_K_M.gguf
+- LM Studio（安卓内测）：官方出了 Android 内测包，界面和桌面版一致，直接搜 Gemma 4 下载
+• Ollama 安卓？ 官方没出，但有 Termux + ollama 野路子（需 root 或高级终端权限，新手不推荐）
+- MLC Chat（APK）：Apache TVM 后端，对高通 NPU 利用更好，但模型库更新慢，Gemma 4 可能要等社区配型
+安卓特有坑（iPhone 没有的）
+1. NNAPI / GPU 委托：AI Edge Gallery 默认走 CPU 也行，但想在骁龙上提速要在设置里开 GPU delegate（部分驱动会崩，崩了退回 CPU）
+2. 厂商后台杀进程：小米/OPPO/vivo 要把 App 加内存锁定/自启动白名单，不然生成到一半被回收，报的不是“文件占用”而是直接闪退
+3. 存储空间：安卓机容易把权重下到内部存储，记得进 App 设置改默认模型目录到 SD 卡（如果支持），E4B 留 5GB 余量
+4. SELinux：极少见，但某些国产 ROM 会拦本机推理引擎 mmap，报类似“user-mapped section”的底层错——这时候反而和你在 Windows 上看到的 Sublime 报错是同一类文件系统锁逻辑（mmap 区域被占）
+安卓 vs iPhone 速选
+• 不想折腾 → AI Edge Gallery APK + Gemma 4 E2B
+• 想换 Qwen/Llama 一起玩 → PocketPal AI
+- 骁龙 8 Gen3 且会调 → MLC Chat 开 NPU 推理最快
+
+
