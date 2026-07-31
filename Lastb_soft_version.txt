@@ -13,9 +13,13 @@ $$$$$$$  |$$ |  $$ |\$$$$$$$\ $$ |$$ |$$$$$$$  |\$$$$$$$\ \$$$$$$$\
 个人数字生存指南
 基于信息安全和数据安全的思想减少上报敏感数据和保护自身避免算法收割
 最好的重装系统方案，无需U盘，无广告，随时想装就装下载系统+重装到C盘即可
+1、下载系统，默认百度网盘
 Windows 11 版本 26H1 更新历史记录
 https://support.microsoft.com/zh-CN/servicing/os/windows-11/2026/02/windows-11-version-26h1-update-history
-1、下载系统，默认百度网盘
+据我了解，目前网上有许多打着精简旗号的系统却夹带 “私货”，像真正做到纯净无第三方软件及OEM信息的寥寥无几。但也不是没有，像不忘初心版，吻妻版，都是较优秀的第三方精简系统！
+不忘初心 精简版
+https://www.hybase.com/search.asp?m=2&word=%B2%BB%CD%FC%B3%F5%D0%C4
+原版
 https://www.yyczxt.com/
 https://www.yyczxt.com/original.html#Windows/Windows11/26H1
 https://www.yyczxt.com/original.html#Windows/Windows11/25H2
@@ -24,10 +28,11 @@ https://www.yyczxt.com/original.html#Windows/Windows11/25H2
 ⚙️ 工具推荐与对比
 工具名称    核心优势    适用场景
 EasyRC  操作简单，界面友好，社区普遍评价纯净。 用户口碑较好，是首选的“纯净版”重装工具。
+EasyRC：本地运行 → 释放内置精简 PE 到硬盘保留区 → 重启进“本地 PE” → 调用 ISO 里的 install.wim 部署。支持你手头这个第三方 ISO（GHO/WIM/ESD/ISO 全吃），能勾选注入 Intel VMD/NVMe 驱动、关 BitLocker、装完永久暂停更新，且标准版 40MB、离线完整版 1GB，无广告无捆绑。
 Hasleo WinToHDD 功能全面，支持“热克隆”系统，内置“创建多安装USB”等高级功能。   功能最全面，除了重装，还能克隆系统、创建多功能启动盘。
 CoolReinstall   绿色版无需安装，可以在线下载系统，下载速度很快。    追求极致简便，或希望软件同时提供系统镜像下载的用户。
 Ventoy  开源免费，兼容性强，支持多ISO并存。 手边有U盘，追求最通用、最灵活安装方式的用户。
-3、EasyRC下载 30MB+，功能丰富，无广告，且可以在线安装系统。都是纯净系统 EasyRC.7z
+3、EasyRC下载 EasyRCV3.8.12.0 30MB+，功能丰富，无广告，且可以在线安装系统。都是纯净系统 EasyRC.7z
 https://firpe.cn/page-196
 更新日志
 https://firpe.cn/page-609
@@ -552,6 +557,10 @@ https://www.wuleba.com/2844.html
 
 小狼毫 (Weasel)+ 雾凇拼音 (rime-ice)
 ！！搜狗输入法有后台常驻修改首页已经放弃改为开源输入法非常好用，搜狗有挖矿广告
+搜狗输入法清理工具-支持任意版本
+https://www.52pojie.cn/thread-2117089-1-1.html
+https://wwbmt.lanzouu.com/b00hrvbmej
+密码:52pj
 小狼毫&雾凇拼音安装部署(Windows) https://www.cnblogs.com/zanxj/p/19103238
 基於這一框架，Rime 開發者與其他開源社區的參與者在 Windows、macOS、Linux、Android 等平臺上創造了不同的輸入法前端實現
 1、weasel.exe 本地化 小狼毫官网：RIME | 中州韻輸入法引擎

@@ -2,10 +2,20 @@
 
 中文 | [English](README_EN.md)
 
+## 🚀 Recommended: [ofox.ai](https://ofox.io/x/aiv123)
+
+> **In short**: One account for GPT-5.5 / Claude 4.8 Opus / Gemini 3.5 Flash and **100+** top models. First top-up gets an extra **$3** credit.
+
+[👉 Sign up](https://ofox.io/x/aiv123) · Global dedicated lines · Enterprise SLA · No conversation retention
+
+| ⚡️ Fast & Stable | 🧠 Full Model Coverage | 🛡️ Privacy |
+|:---:|:---:|:---:|
+| Global dedicated lines, enterprise SLA | 100+ models, one account | No conversation retention |
+
 ## ☕ Buy Me a Coke
 
-Open source is hard — tips are welcome:  
-👉 [Afdian / 爱发电](https://ifdian.net/a/shellsec)
+Open source takes effort — sponsorship is welcome:  
+👉 [爱发电 / Afdian](https://ifdian.net/a/shellsec)
 
 A tool system for managing local software directories and automatically syncing updates, supporting GitHub and GitLab cloud storage, with Git accelerated downloads.
 
@@ -13,8 +23,8 @@ For the latest curated software list and notes, see [`Lastb_soft_version.txt`](L
 
 <!-- SOFTWARE_SIZE_START -->
 > 📦 **`software/` size stats** (auto-refreshed by `generate_and_push.bat`):
-> **21** packages, **4,163** files, **1.61 GB** total; generated at 2026-07-27 19:59.
-> Top 5 by size: system_good (689.9 MB), PotPlayer (249.3 MB), UltraEdit (202.3 MB), WiseCare365 (74.3 MB), notepad++ (73.6 MB).
+> **21** packages, **4,163** files, **1.62 GB** total; generated at 2026-07-31 14:54.
+> Top 5 by size: system_good (697.3 MB), PotPlayer (249.3 MB), UltraEdit (202.3 MB), WiseCare365 (74.3 MB), notepad++ (73.6 MB).
 <!-- SOFTWARE_SIZE_END -->
 
 **Maintainer page check** (optional — `software/` works fine without updates): see [`soft_page_check/`](soft_page_check/README.md). Run `monthly_sop.bat` to compare titles; open-source installs can use `monthly_a_download_soft_github.bat`, then publish after replacing under `software/`.
