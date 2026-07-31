@@ -1,6 +1,6 @@
 # SoftGitUp - Daily Tools Cloud Update Sync System
 
-中文 | [English](README_EN.md)
+[中文](README.md) | **English**
 
 ## 🚀 Recommended: [ofox.ai](https://ofox.io/x/aiv123)
 
@@ -145,7 +145,8 @@ softgitup/
 │   ├── githubwindowntools/   # GitHub Releases on-demand downloader (auto_update.py, apps.json)
 │   └── ...
 ├── logs/                   # Log directory
-└── README.md              # Project documentation
+├── README.md              # Project docs (Chinese)
+└── README_EN.md           # Project docs (English)
 ```
 
 ## Quick Start
@@ -851,6 +852,7 @@ MIT License
 
 ## 📚 Related Documentation
 
+- [中文 README](README.md) — Chinese version of this document
 - [**Page check & monthly SOP**](soft_page_check/README.md) — Maintainer workflow (Chinese)
 - [Configuration Guide](配置说明.md) - Detailed configuration parameters (Chinese)
 - [Local Server Guide](本地服务器使用说明.md) - Local file server setup guide (Chinese)

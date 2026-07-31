@@ -1,6 +1,6 @@
 # SoftGitUp - 日常工具云升级同步系统
 
-[English](README_EN.md) | 中文
+**中文** | [English](README_EN.md)
 
 ## 🚀 推荐使用 [ofox.ai](https://ofox.io/x/aiv123)
 
@@ -142,7 +142,8 @@ softgitup/
 │   ├── gh-release-fetch/   # GitHub Releases 按需下载（auto_update.exe、apps/）
 │   └── ...
 ├── logs/                   # 日志目录
-└── README.md              # 项目说明
+├── README.md              # 项目说明（中文）
+└── README_EN.md           # Project docs (English)
 ```
 
 ## 快速开始
@@ -853,6 +854,7 @@ MIT License
 
 ## 📚 相关文档
 
+- [English README](README_EN.md) — English version of this document
 - [**页面快检与月度 SOP**](soft_page_check/README.md) — 维护者：标题比对、报告页、更新与发布流程
 - [配置说明](配置说明.md) - 详细的配置参数说明
 - [本地服务器使用说明](本地服务器使用说明.md) - 搭建本地文件服务器指南
