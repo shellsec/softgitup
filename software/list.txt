@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-31T14:54:38.543849",
+  "generated_at": "2026-08-04T10:46:18.640429",
   "total_software": 21,
-  "total_files": 4163,
-  "total_size": 1734948901,
+  "total_files": 4164,
+  "total_size": 1736191199,
   "software": {
     "WinMemoryCleaner": {
       "version": "20260515_144655",
@@ -85,7 +85,7 @@
       "last_updated": "2026-06-10T16:55:24.069987"
     },
     "system_good": {
-      "version": "20260731_145437",
+      "version": "20260804_104617",
       "files": [
         {
           "path": "AltSnap.exe",
@@ -172,6 +172,12 @@
           "modified": "2026-07-28T10:30:08.327106"
         },
         {
+          "path": "FastCopy.exe",
+          "size": 1240888,
+          "hash": "376af0703aa7deb8499f92f4b59a546c",
+          "modified": "2026-08-04T10:40:50.622994"
+        },
+        {
           "path": "GeekUninstaller.exe",
           "size": 7534984,
           "hash": "4f64390b8efa312d8ddfed61fab78022",
@@ -197,9 +203,9 @@
         },
         {
           "path": "Lastb_soft_version.txt",
-          "size": 152372,
-          "hash": "ea25a0790a078e83dc29c7dbfa5fd1ef",
-          "modified": "2026-07-29T14:13:03.189035"
+          "size": 153782,
+          "hash": "058cf35f022d077083ca7d1fc625dddb",
+          "modified": "2026-08-04T10:43:16.795974"
         },
         {
           "path": "lx-music-desktop.7z",
@@ -418,9 +424,9 @@
           "modified": "2026-03-11T14:56:47.731452"
         }
       ],
-      "total_files": 55,
-      "total_size": 731206942,
-      "last_updated": "2026-07-31T14:54:37.398175"
+      "total_files": 56,
+      "total_size": 732449240,
+      "last_updated": "2026-08-04T10:46:17.496418"
     },
     "notepad++": {
       "version": "20260714_172858",
@@ -23811,7 +23817,7 @@
       "last_updated": "2026-07-27T14:44:39.720835"
     },
     "gh-release-fetch": {
-      "version": "20260731_145438",
+      "version": "20260804_104618",
       "files": [
         {
           "path": "auto_update.exe",
@@ -24369,7 +24375,7 @@
           "path": "apps\\windows\\11-工具.json",
           "size": 24703,
           "hash": "95faf2e4b50dcd7fd8b521a304d6906f",
-          "modified": "2026-07-31T14:50:59.885915"
+          "modified": "2026-07-31T15:08:39.515307"
         },
         {
           "path": "apps\\windows\\12-开发.json",
@@ -24399,7 +24405,7 @@
           "path": "apps\\windows\\16-系统.json",
           "size": 46077,
           "hash": "c648568aec654220f7a3cb954b1de5a3",
-          "modified": "2026-07-31T14:50:59.889071"
+          "modified": "2026-07-31T15:08:39.527936"
         },
         {
           "path": "apps\\windows\\17-终端.json",
@@ -25148,7 +25154,7 @@
       ],
       "total_files": 222,
       "total_size": 53718593,
-      "last_updated": "2026-07-31T14:54:38.543849"
+      "last_updated": "2026-08-04T10:46:18.640429"
     }
   }
 }

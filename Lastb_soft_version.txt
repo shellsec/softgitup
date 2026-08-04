@@ -844,6 +844,28 @@ https://github.com/UniClipboard/UniClipboard/releases/download/v0.19.0/UniClipbo
 https://www.uniclipboard.app/zh/download
 
 
+FastCopy(文件快速复制备份工具) v5.11.3 pro中文单文件版
+https://fastcopy.net.cn/
+VIP免费版特点描述
+- 翻译所有日语为简体中文
+- 更改程序的显示字体为微软雅黑
+- 免许可证密钥，解除专业版，可用完美验证模式(PRO特权) (5.0)
+- 修复站点许可、汉化乱码，修正原版无法在PE下运行的问题(5.0)
++ 去检测升级提示弹窗、去帮助和设置检查更新，去帮助无用菜单
+因v5.1.1 汉化非标资源会造成复制大文件崩溃，所以仅汉化标准资源
+另外，不汉化非标资源也能解决汉化版默认日志中的文件名乱码问题
+其它说明
+1、不要勾选日志设置使用UTF-8错误日志项，否则日志中出现部分汉字显示乱码的问题
+2、此工具为原生绿色版，将主程序 FastCopy.exe 复制出来直接使用就是免安装绿色版
+3、doc目录是安装程序 setup.exe 依赖的，如果缺少doc中某个文件，将无法安装到系统程序文件夹。如不安装可删doc
+4、用汉化的 v4.22 的 setup.exe 替换了新版的 setup.exe，解决了 v5.0 之后的新版双击 setup.exe 无法进行安装的问题
+更新说明
+v5.11.3
+* 交换源目录 ⇔ 目标目录功能现已支持多文件操作。
+* 修复了在移动文件过程中，若网络驱动器断开可能导致任务无法完成的问题。
+* 多项稳定性改进。
+
+
 crosspaste.com这个网络老是出现问题，放弃，crosspaste 159MB，一个uniclipboard 20MB
 # 局域网 + 注重隐私：选 CrossPaste 或 DecentPaste，P2P 传输无服务器记录
 # 跨网络 + 自建服务器：选 SyncClipboard，Docker 部署便捷
