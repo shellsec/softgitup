@@ -2,10 +2,8 @@
 chcp 65001 > nul
 setlocal enabledelayedexpansion
 
-:: Script title
 title Notepad++ Context Menu Manager
 
-:: Check administrator privileges
 net session >nul 2>&1
 if %errorLevel% neq 0 (
     echo Warning: Please run this script as administrator!
@@ -13,20 +11,26 @@ if %errorLevel% neq 0 (
     exit /b 1
 )
 
-:: Find Notepad++.exe path
-set "exe_path=D:\Program Files\notepad\notepad++.exe"
-
-if not exist "%exe_path%" (
-    echo Error: Notepad++.exe not found
-    echo Expected path: %exe_path%
-    echo Please confirm Notepad++ is installed correctly
-    pause
-    exit /b 1
+set "exe_path="
+for %%P in (
+    "D:\Program Files\notepad++\notepad++.exe"
+    "C:\Program Files\Notepad++\notepad++.exe"
+    "C:\Program Files (x86)\Notepad++\notepad++.exe"
+) do (
+    if exist %%~P (
+        set "exe_path=%%~P"
+        goto :found
+    )
 )
 
+echo Error: notepad++.exe not found in common install paths.
+echo Edit this bat and set exe_path manually if needed.
+pause
+exit /b 1
+
+:found
 echo Found Notepad++.exe: %exe_path%
 
-:: Main menu
 :menu
 cls
 echo ==============================
@@ -43,7 +47,6 @@ if "%choice%"=="2" goto del_menu
 if "%choice%"=="3" exit /b
 goto menu
 
-:: Add context menu
 :add_menu
 reg add "HKCR\*\shell\Notepad++" /ve /d "Open with Notepad++" /f
 reg add "HKCR\*\shell\Notepad++" /v "Icon" /d "\"%exe_path%\"" /f
@@ -52,10 +55,8 @@ echo Context menu added successfully!
 pause
 goto menu
 
-:: Remove context menu
 :del_menu
 reg delete "HKCR\*\shell\Notepad++" /f
 echo Context menu removed successfully!
 pause
 goto menu
-

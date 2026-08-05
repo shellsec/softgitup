@@ -1,0 +1,31 @@
+========================================
+AI 功能配置说明
+========================================
+
+【配置文件】
+同目录 ai_config.json（可用「配置AI.py」向导生成）
+
+【格式示例】
+{
+  "api_type": "openai",
+  "api_key": "your-api-key-here",
+  "api_base": "https://api.deepseek.com/v1",
+  "model": "deepseek-chat",
+  "temperature": 0.7,
+  "max_tokens": 2000
+}
+
+【常用兼容端点】
+- OpenAI：https://api.openai.com/v1
+- DeepSeek：https://api.deepseek.com/v1
+- 通义兼容：https://dashscope.aliyuncs.com/compatible-mode/v1
+
+【注意】
+- api_base 一般写到 /v1，不要带 /chat/completions（脚本会自行拼接或覆盖）
+- 配置含密钥，勿分享；若使用 Git 请加入 .gitignore
+- 也可复制 ai_config.json.example 为 ai_config.json 后手改
+
+【示例文件】
+ai_config.json.example
+
+========================================

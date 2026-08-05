@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""插入英文长串日期（单行；规则见 time_stamp_fmt.format_en）。"""
+"""插入 YYYY-MM-DD HH:mm。"""
 import os
 import sys
 
@@ -18,11 +18,11 @@ for __ in range(10):
 from datetime import datetime
 
 try:
-    from time_stamp_fmt import format_en
+    from time_stamp_fmt import format_ymd_hm
 except ImportError:
-    def format_en(now=None):
+    def format_ymd_hm(now=None):
         n = now if now is not None else datetime.now()
-        return n.strftime("%Y%m%d")
+        return n.strftime("%Y-%m-%d %H:%M")
 
 
-editor.insertText(editor.getCurrentPos(), format_en(datetime.now()))
+editor.insertText(editor.getCurrentPos(), format_ymd_hm())

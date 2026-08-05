@@ -78,8 +78,8 @@ ROOT = Path(__file__).resolve().parent
 MAIN_EXE = ROOT / "WindowsBatchScriptManager.exe"
 MAIN_SCRIPT = ROOT / "main.py"
 API_KEY = os.environ.get("API_KEY", "change-me-in-production")
-# 是否关闭鉴权（--no-auth 时设为 True，默认关闭鉴权方便使用；去掉 --no-auth 即开启鉴权）
-DISABLE_AUTH = True
+# 是否关闭鉴权（默认开启鉴权；仅 --no-auth 时设为 True）
+DISABLE_AUTH = False
 # 是否开启根路径 HTML 文档页面（--docs 时设为 True）
 ENABLE_DOCS = False
 
@@ -829,6 +829,12 @@ def main():
         print("Docs: enabled (--docs), visit / for HTML API docs")
     if ENABLE_GET_CMD_EXEC:
         print("WARNING: GET /exec enabled — remote cmd execution; use strong API_KEY, do not use --no-auth on untrusted networks")
+        if DISABLE_AUTH:
+            print("ERROR: GET /exec cannot run with --no-auth. Remove --no-auth or disable ENABLE_GET_CMD_EXEC.", file=sys.stderr)
+            sys.exit(1)
+        if a.host == "0.0.0.0" and API_KEY == "change-me-in-production":
+            print("ERROR: GET /exec on 0.0.0.0 requires a non-default API_KEY.", file=sys.stderr)
+            sys.exit(1)
     print("Listen:", a.host, "port", a.port)
     print()
     print("=" * 60)

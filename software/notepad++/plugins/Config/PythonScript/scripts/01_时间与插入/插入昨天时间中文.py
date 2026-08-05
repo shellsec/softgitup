@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""插入英文长串日期（单行；规则见 time_stamp_fmt.format_en）。"""
+"""插入昨天的中文长串日期（单行；规则见 time_stamp_fmt.format_cn）。"""
 import os
 import sys
 
@@ -15,14 +15,18 @@ for __ in range(10):
         break
     _d = _p
 
-from datetime import datetime
-
 try:
-    from time_stamp_fmt import format_en
+    from time_stamp_fmt import format_cn, shift_days
 except ImportError:
-    def format_en(now=None):
+    from datetime import datetime, timedelta
+
+    def shift_days(days, now=None):
+        n = now if now is not None else datetime.now()
+        return n + timedelta(days=days)
+
+    def format_cn(now=None):
         n = now if now is not None else datetime.now()
         return n.strftime("%Y%m%d")
 
 
-editor.insertText(editor.getCurrentPos(), format_en(datetime.now()))
+editor.insertText(editor.getCurrentPos(), format_cn(shift_days(-1)))

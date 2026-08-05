@@ -22,8 +22,8 @@
 
 <!-- SOFTWARE_SIZE_START -->
 > 📦 **software/ 体积统计**（`generate_and_push.bat` 自动刷新）：
-> 共 **21** 款软件、**4,164** 个文件，合计 **1.62 GB**；统计时间 2026-08-04 11:01。
-> 体积 Top5：system_good (698.5 MB)、PotPlayer (249.3 MB)、UltraEdit (202.3 MB)、WiseCare365 (74.3 MB)、notepad++ (73.6 MB)。
+> 共 **21** 款软件、**4,206** 个文件，合计 **1.62 GB**；统计时间 2026-08-05 18:01。
+> 体积 Top5：system_good (698.4 MB)、PotPlayer (249.3 MB)、UltraEdit (202.3 MB)、WiseCare365 (74.3 MB)、notepad++ (73.6 MB)。
 <!-- SOFTWARE_SIZE_END -->
 
 **维护者月度快检**（可选，不更新 `software/` 也完全可用）：见 [`soft_page_check/`](soft_page_check/README.md) — 双击 `monthly_sop.bat` 检查标题变化；装机开源可 `monthly_a_download_soft_github.bat` 直下，其余手工更新后发布。
