@@ -4,24 +4,32 @@ PotPlayer 更新履歴
 ※正確な日付は PotPlayer(64).dll のファイル署名タイムスタンプで確認してください
 
 ----------------------------------------------------------
-[260716]
+[260819]
 ----------------------------------------------------------
+* ARM64 Build Released
+  https://t1.kakaocdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetupARM64.exe
 
-----------------------------------------------------------
-[260622]
-----------------------------------------------------------
-* Removed Kakao TV
++ Added the ability to individually configure actions for the left and right areas upon double-clicking
++ Added the ability for users to set the address of the broadcast list
++ Added the ability to sort playlists based on media release date
 
-+ Added pause function when navigating via the navigation bar
-
-- Significantly improved internal stability
-- Fixed an issue where colors appeared strange during RGB24 processing
-- Improved playback for some HTTP streams
-- Improved sync processing for the built-in audio renderer
-- Fixed an issue where certain MP4 files behaved abnormally during playback
+- Fixed an issue where playing very high-resolution videos would fail
+- Fixed an issue where the built-in audio renderer was out of sync in certain situations
+- Modified to allow display of color emojis in subtitles
+- Modified the playlist search function to operate as a filter.
 
 -----------------------------------------------------------------------
-2026/04/01				[260401 / 1.7.22851]
+[260622]				[260622 / 1. 7.22980]
+-----------------------------------------------------------------------
+＊ KakaoTV関連機能を PotPlayer(64).exe から削除
+＋ シークバー上でマウスを押しながらシークする場合、途中で再生を抑止する項目を再生設定に追加
+・ 内部動作の安定性を大幅に改善
+・ 特定のHTTPストリーム再生を改善
+・ 内蔵オーディオレンダラーの同期処理を改善
+・ 特定のMP4再生で異常動作していた問題を修正
+
+-----------------------------------------------------------------------
+2026/04/23				[260422 / 1.7.22859]
 -----------------------------------------------------------------------
 ＋ 字幕設定で（ASS／SSAに限らず）すべての字幕で libass 出力を使用する選択肢を追加
 ＋ 内部ソースフィルターの設定で、HLS／DASH用に FFmpeg と内蔵モジュールの切替設定を追加
@@ -30,9 +38,11 @@ PotPlayer 更新履歴
 ・ 複数のオーディオデバイスがある場合、外部デバイスへの接続ができなかった問題を修正
 ・ 特定のUnicode文字出力の問題を修正
 ・ 再生キュー内で、一つのクリップ再生が完了した後、次の再生位置が常に先頭クリップへ戻っていた動作を修正
+・ スポット文字起こし（即時字幕）の安全性を向上
+・ キャプチャーカードなどで RGB24bit 映像の色処理を修正（23日版）
 
 -----------------------------------------------------------------------
-2026/01/16				[260114 / 1.7.22771]
+2026/01/22				[260114 / 1.7.22775]
 -----------------------------------------------------------------------
 ＋ APV映像のデコードに対応
 ・ 字幕スタイルの文字セット処理を改善
@@ -1319,5 +1329,4 @@ The KMPlayerの後継プレーヤーとしての機能を備える。
 -----------------------------------------------------------------------
 最初に公開されたベータ版。
 Daumのライブ配信用クライアント。
-
 

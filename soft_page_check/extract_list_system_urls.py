@@ -2,31 +2,24 @@
 from __future__ import annotations
 
 import re
-import ssl
 import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
-from urllib.error import HTTPError
 from urllib.parse import urljoin, urlparse
-from urllib.request import Request, urlopen
+
+from http_fetch import FetchError, fetch_html
 
 HERE = Path(__file__).resolve().parent
 LIST = HERE / "list"
 
-USER_AGENT = (
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-)
 TIMEOUT = 25
-WORKERS = 12
+WORKERS = 8
 HREF_PAT = re.compile(r"""href\s*=\s*['"]([^'"]+)['"]""", re.I)
-CTX = ssl.create_default_context()
+PAGES_HINT = re.compile(r"pages:\s*\d+-(\d+)", re.I)
 
 
 def fetch(url: str) -> str:
-    req = Request(url, headers={"User-Agent": USER_AGENT})
-    with urlopen(req, timeout=TIMEOUT, context=CTX) as resp:
-        return resp.read().decode("utf-8", errors="replace")
+    return fetch_html(url, timeout=TIMEOUT, retries=3, max_bytes=768 * 1024)
 
 
 def read_url_lines(path: Path) -> set[str]:
@@ -38,6 +31,16 @@ def read_url_lines(path: Path) -> set[str]:
         if line and not line.startswith("#"):
             out.add(line.split()[0])
     return out
+
+
+def last_page_hint(path: Path, default: int) -> int:
+    if not path.exists():
+        return default
+    for line in path.read_text(encoding="utf-8").splitlines()[:8]:
+        match = PAGES_HINT.search(line)
+        if match:
+            return int(match.group(1))
+    return default
 
 
 def write_url_list(path: Path, urls: list[str], header_lines: list[str]) -> None:
@@ -92,17 +95,18 @@ def down66_pc_urls(html: str) -> set[str]:
     return urls
 
 
-def discover_last_page(first_url: str, page_url_fmt: str, max_probe: int = 400) -> int:
+def discover_last_page(page_url_fmt: str, max_probe: int = 400, fallback: int = 1) -> int:
     lo, hi = 1, 1
     while hi <= max_probe:
         try:
             fetch(page_url_fmt.format(hi))
             lo = hi
             hi *= 2
-        except HTTPError as exc:
-            if exc.code == 404:
+        except FetchError as exc:
+            if exc.status == 404:
                 break
-            raise
+            print(f"  分页探测失败 page {hi}: {exc}，沿用已确认 {lo} / 回退 {fallback}")
+            return max(lo, fallback) if lo > 1 else fallback
     left, right = lo + 1, min(hi - 1, max_probe)
     last = lo
     while left <= right:
@@ -111,34 +115,53 @@ def discover_last_page(first_url: str, page_url_fmt: str, max_probe: int = 400) 
             fetch(page_url_fmt.format(mid))
             last = mid
             left = mid + 1
-        except HTTPError as exc:
-            if exc.code == 404:
+        except FetchError as exc:
+            if exc.status == 404:
                 right = mid - 1
             else:
-                raise
+                print(f"  分页探测失败 page {mid}: {exc}，使用已确认 {last}")
+                return max(last, fallback)
     return last
 
 
-def crawl_pages(page_urls: list[str], parse_fn) -> set[str]:
+def crawl_pages(page_urls: list[str], parse_fn) -> tuple[set[str], list[str]]:
     found: set[str] = set()
+    errors: list[str] = []
+    done = 0
+    total = len(page_urls)
     with ThreadPoolExecutor(max_workers=WORKERS) as pool:
         futures = {pool.submit(fetch, url): url for url in page_urls}
         for fut in as_completed(futures):
-            html = fut.result()
-            found |= parse_fn(html)
-    return found
+            url = futures[fut]
+            done += 1
+            try:
+                html = fut.result()
+            except Exception as exc:  # noqa: BLE001
+                errors.append(f"{url}: {exc}")
+            else:
+                found |= parse_fn(html)
+            if done % 20 == 0 or done == total:
+                print(f"  进度 {done}/{total} · 已发现 {len(found)} · 失败 {len(errors)}")
+    return found, errors
 
 
 def crawl_dayanzai_system() -> tuple[list[str], list[str]]:
+    out_path = LIST / "dayanzai_system_urls.txt"
     mobile = read_url_lines(LIST / "dayanzai_android_urls.txt")
+    existing = read_url_lines(out_path)
+    fallback = last_page_hint(out_path, 271)
     last = discover_last_page(
-        "https://www.dayanzai.me/",
         "https://www.dayanzai.me/page/{}/",
+        fallback=fallback,
     )
     page_urls = ["https://www.dayanzai.me/"] + [
         f"https://www.dayanzai.me/page/{p}/" for p in range(2, last + 1)
     ]
-    found = crawl_pages(page_urls, dayanzai_article_urls)
+    print(f"dayanzai 系统区分页 1-{last}（并发 {WORKERS}）...")
+    found, errors = crawl_pages(page_urls, dayanzai_article_urls)
+    if errors:
+        print(f"  列表页异常 {len(errors)} 个，与已有清单合并以免丢 URL")
+        found |= existing
     system = sorted(found - mobile)
     header = [
         "# dayanzai.me 首页分页（排除 android 清单已有 URL）",
@@ -149,16 +172,23 @@ def crawl_dayanzai_system() -> tuple[list[str], list[str]]:
 
 
 def crawl_down66_system() -> tuple[list[str], list[str]]:
+    out_path = LIST / "down66_system_urls.txt"
     mobile = read_url_lines(LIST / "down66_app_urls.txt")
+    existing = read_url_lines(out_path)
+    fallback = last_page_hint(out_path, 20)
     last = discover_last_page(
-        "https://down66.com/pc",
         "https://down66.com/pc/page/{}/",
         max_probe=80,
+        fallback=fallback,
     )
     page_urls = ["https://down66.com/pc"] + [
         f"https://down66.com/pc/page/{p}/" for p in range(2, last + 1)
     ]
-    found = crawl_pages(page_urls, down66_pc_urls)
+    print(f"down66 系统区分页 1-{last}（并发 {WORKERS}）...")
+    found, errors = crawl_pages(page_urls, down66_pc_urls)
+    if errors:
+        print(f"  列表页异常 {len(errors)} 个，与已有清单合并以免丢 URL")
+        found |= existing
     system = sorted(found - mobile)
     header = [
         "# down66.com/pc 分页（排除 app 清单已有 URL）",
@@ -168,19 +198,26 @@ def crawl_down66_system() -> tuple[list[str], list[str]]:
     return system, header
 
 
+def _write_or_keep(name: str, crawl_fn, out_path: Path) -> None:
+    existing = read_url_lines(out_path)
+    try:
+        urls, header = crawl_fn()
+    except Exception as exc:  # noqa: BLE001
+        print(f"{name}: 抓取中断（{exc}），保留现有 {len(existing)} 条")
+        return
+    if not urls and existing:
+        print(f"{name}: 未发现 URL，保留现有 {len(existing)} 条 -> {out_path.relative_to(HERE)}")
+        return
+    write_url_list(out_path, urls, header)
+    print(f"{name}: {len(urls)} -> {out_path.relative_to(HERE)}")
+
+
 def main() -> None:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
 
-    dayanzai_urls, dayanzai_hdr = crawl_dayanzai_system()
-    out_d = LIST / "dayanzai_system_urls.txt"
-    write_url_list(out_d, dayanzai_urls, dayanzai_hdr)
-    print(f"dayanzai_system: {len(dayanzai_urls)} -> {out_d.relative_to(HERE)}")
-
-    down66_urls, down66_hdr = crawl_down66_system()
-    out_66 = LIST / "down66_system_urls.txt"
-    write_url_list(out_66, down66_urls, down66_hdr)
-    print(f"down66_system: {len(down66_urls)} -> {out_66.relative_to(HERE)}")
+    _write_or_keep("dayanzai_system", crawl_dayanzai_system, LIST / "dayanzai_system_urls.txt")
+    _write_or_keep("down66_system", crawl_down66_system, LIST / "down66_system_urls.txt")
 
 
 if __name__ == "__main__":

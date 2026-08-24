@@ -57,28 +57,30 @@ call :summary changed_hybase_mobile_urls.txt last_diff_hybase_mobile.json hybase
 
 echo.
 echo ========== 8/12 dayanzai 系统 ==========
+echo 刷新 dayanzai / down66 系统区 URL 清单...
 python extract_list_system_urls.py
-if errorlevel 1 goto fail
+if errorlevel 1 echo [警告] 清单刷新失败，继续使用已有 list 文件。
 python fetch_titles.py --scope dayanzai_system --compare
 if errorlevel 1 goto fail
 call :summary changed_dayanzai_system_urls.txt last_diff_dayanzai_system.json dayanzai系统
 
 echo.
-echo ========== 9/10 dayanzai 移动 ==========
+echo ========== 9/12 dayanzai 移动 ==========
 python fetch_titles.py --scope dayanzai_mobile --compare
 if errorlevel 1 goto fail
 call :summary changed_dayanzai_mobile_urls.txt last_diff_dayanzai_mobile.json dayanzai移动
 
 echo.
 echo ========== 10/12 down66 系统 ==========
-python extract_list_system_urls.py
-if errorlevel 1 goto fail
 python fetch_titles.py --scope down66_system --compare
 if errorlevel 1 goto fail
 call :summary changed_down66_system_urls.txt last_diff_down66_system.json down66系统
 
 echo.
-echo ========== 12/12 down66 移动 ==========
+echo ========== 11/12 down66 移动 ==========
+python fetch_titles.py --scope down66_mobile --compare
+if errorlevel 1 goto fail
+call :summary changed_down66_mobile_urls.txt last_diff_down66_mobile.json down66移动
 
 echo.
 echo ============================================================

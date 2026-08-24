@@ -2,8 +2,19 @@
 Історія версій PotPlayer
 
 ----------------------------------------------------------
-[260716]
+[260819]
 ----------------------------------------------------------
+* ARM64 Build Released
+  https://t1.kakaocdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetupARM64.exe
+
++ Added the ability to individually configure actions for the left and right areas upon double-clicking
++ Added the ability for users to set the address of the broadcast list
++ Added the ability to sort playlists based on media release date
+
+- Fixed an issue where playing very high-resolution videos would fail
+- Fixed an issue where the built-in audio renderer was out of sync in certain situations
+- Modified to allow display of color emojis in subtitles
+- Modified the playlist search function to operate as a filter.
 
 ----------------------------------------------------------
 [260622]

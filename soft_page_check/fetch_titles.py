@@ -4,7 +4,6 @@ from __future__ import annotations
 import argparse
 import json
 import re
-import ssl
 import sys
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -12,8 +11,8 @@ from datetime import datetime
 from html import unescape
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.error import HTTPError, URLError
-from urllib.request import Request, urlopen
+
+from http_fetch import FetchError, fetch_html
 
 from build_watchlist import build as build_watchlist_index, domain_label, load_url_meta
 from list_scopes import (
@@ -60,10 +59,6 @@ CHANGED_LIST_FILES: dict[str, str] = {
 for _scope in LIST_SCOPE_DEFS:
     CHANGED_LIST_FILES[_scope] = changed_list_filename(_scope)
 
-USER_AGENT = (
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-)
 TIMEOUT = 20
 WORKERS = 8
 
@@ -96,22 +91,46 @@ def latest_path(scope: str) -> Path:
     return HISTORY_DIR / f"titles_latest_{scope.upper()}.json"
 
 
+def looks_garbled_cjk(title: str) -> bool:
+    return "\ufffd" in (title or "")
+
+
+def ascii_skeleton(title: str) -> str:
+    return re.sub(r"[^A-Za-z0-9.]+", "", title or "")
+
+
+VERSION_TOKEN = re.compile(r"v?\d+(?:\.\d+){1,4}", re.I)
+
+
+def version_tokens(title: str) -> list[str]:
+    return [m.group(0).lower() for m in VERSION_TOKEN.finditer(title or "")]
+
+
+def encoding_only_change(old_title: str, new_title: str) -> bool:
+    if not looks_garbled_cjk(old_title) or looks_garbled_cjk(new_title):
+        return False
+    old_v = version_tokens(old_title)
+    new_v = version_tokens(new_title)
+    if old_v or new_v:
+        return old_v == new_v
+    return True
+
+
+def should_preserve_latest(previous: dict | None, current: dict) -> bool:
+    curr_ok = sum(1 for e in current.get("entries", []) if e.get("status") == "ok")
+    prev_ok = sum(1 for e in (previous or {}).get("entries", []) if e.get("status") == "ok")
+    return curr_ok == 0 and prev_ok > 0
+
+
 def fetch_title(url: str) -> dict:
-    req = Request(url, headers={"User-Agent": USER_AGENT})
-    ctx = ssl.create_default_context()
     try:
-        with urlopen(req, timeout=TIMEOUT, context=ctx) as resp:
-            raw = resp.read(256 * 1024)
-            charset = resp.headers.get_content_charset() or "utf-8"
-        html = raw.decode(charset, errors="replace")
+        html = fetch_html(url, timeout=TIMEOUT, retries=2, max_bytes=256 * 1024)
         parser = TitleParser()
         parser.feed(html)
         title = normalize_title(parser.title) or "(无 title 标签)"
         return {"url": url, "title": title, "status": "ok", "error": ""}
-    except HTTPError as exc:
-        return {"url": url, "title": "", "status": "http_error", "error": str(exc)}
-    except URLError as exc:
-        return {"url": url, "title": "", "status": "url_error", "error": str(exc.reason)}
+    except FetchError as exc:
+        return {"url": url, "title": "", "status": exc.kind, "error": str(exc)}
     except Exception as exc:  # noqa: BLE001
         return {"url": url, "title": "", "status": "error", "error": str(exc)}
 
@@ -187,12 +206,13 @@ def build_snapshot(entries: list[dict], scope: str, source: Path) -> dict:
     }
 
 
-def save_snapshot(snapshot: dict, scope: str) -> Path:
+def save_snapshot(snapshot: dict, scope: str, update_latest: bool = True) -> Path:
     HISTORY_DIR.mkdir(parents=True, exist_ok=True)
     stamp = datetime.now().strftime("%Y-%m-%d_%H%M%S")
     path = HISTORY_DIR / f"titles_{scope.upper()}_{stamp}.json"
     path.write_text(json.dumps(snapshot, ensure_ascii=False, indent=2), encoding="utf-8")
-    latest_path(scope).write_text(json.dumps(snapshot, ensure_ascii=False, indent=2), encoding="utf-8")
+    if update_latest:
+        latest_path(scope).write_text(json.dumps(snapshot, ensure_ascii=False, indent=2), encoding="utf-8")
     return path
 
 
@@ -241,9 +261,21 @@ def compare(previous: dict, current: dict) -> dict:
                 }
             )
         elif normalize_title(prev.get("title", "")) != normalize_title(entry.get("title", "")):
-            title_changed.append(
-                {"url": url, "old": prev.get("title", ""), "new": entry.get("title", ""), **pick_meta(entry)}
-            )
+            old_title = prev.get("title", "")
+            new_title = entry.get("title", "")
+            if encoding_only_change(old_title, new_title):
+                recovered.append(
+                    {
+                        "url": url,
+                        "old": old_title,
+                        "new": new_title,
+                        **pick_meta(entry),
+                    }
+                )
+            else:
+                title_changed.append(
+                    {"url": url, "old": old_title, "new": new_title, **pick_meta(entry)}
+                )
         else:
             unchanged.append(url)
 
@@ -356,7 +388,7 @@ def print_report(scope: str, diff: dict, snapshot_path: Path) -> None:
     print(f"快照: {snapshot_path.name}")
     print(f"标题变化 / 新增: {len(diff['title_changed'])}")
     if diff.get("recovered"):
-        print(f"恢复抓取(不计变化): {len(diff['recovered'])}")
+        print(f"恢复抓取/编码修复(不计变化): {len(diff['recovered'])}")
     if scope == "a":
         print(f"其中 A 类: {len(diff['tier_a_candidates'])}")
     print(f"无变化: {diff['unchanged_count']}")
@@ -437,7 +469,8 @@ def cmd_fetch(scope: str, compare_after: bool, skip_missing: bool = False) -> in
         pass
     print(f"[{scope_label(scope)}] 抓取 {len(urls)} 个页面标题（并发 {WORKERS}）...")
 
-    previous = load_previous(scope) if compare_after else None
+    previous_latest = load_previous(scope)
+    previous = previous_latest if compare_after else None
     entries: list[dict] = []
 
     with ThreadPoolExecutor(max_workers=WORKERS) as pool:
@@ -458,9 +491,13 @@ def cmd_fetch(scope: str, compare_after: bool, skip_missing: bool = False) -> in
 
     entries.sort(key=lambda x: x["url"])
     snapshot = build_snapshot(entries, scope, src)
-    path = save_snapshot(snapshot, scope)
+    preserve = should_preserve_latest(previous_latest, snapshot)
+    path = save_snapshot(snapshot, scope, update_latest=not preserve)
     print(f"已保存: {path}")
-    print(f"最新:   {latest_path(scope)}")
+    if preserve:
+        print("本次全部抓取失败，未覆盖 titles_latest（避免冲掉可用基线）。")
+    else:
+        print(f"最新:   {latest_path(scope)}")
 
     if previous:
         diff = compare(previous, snapshot)

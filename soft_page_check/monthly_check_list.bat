@@ -8,9 +8,9 @@ echo ========================================
 echo.
 echo 刷新 URL 清单（7xiazai + dayanzai/down66 系统区）...
 python extract_7xiazai_pages.py
-if errorlevel 1 goto fail
+if errorlevel 1 echo [警告] 7xiazai 清单刷新失败，继续使用已有文件。
 python extract_list_system_urls.py
-if errorlevel 1 goto fail
+if errorlevel 1 echo [警告] dayanzai/down66 清单刷新失败，继续使用已有文件。
 echo.
 
 for %%S in (hybase_system hybase_mobile dayanzai_system dayanzai_mobile down66_system down66_mobile 7xiazai_system 7xiazai_mobile) do (

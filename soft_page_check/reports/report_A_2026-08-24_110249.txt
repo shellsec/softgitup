@@ -1,0 +1,19 @@
+范围: A 类
+快照: titles_A_2026-08-24_110249.json
+标题变化: 0
+恢复抓取: 1
+无变化: 41
+失败: 3
+
+
+=== 上次失败 · 本次已抓到（通常无需更新） ===
+
+[www.videohelp.com] (1)
+  https://www.videohelp.com/software/PotPlayer
+    旧: HTTP Error 503: Service Unavailable
+    新: PotPlayer 260819 Download Free - VideoHelp
+
+=== 抓取失败 ===
+  https://github.com/search?q=lx-music-source&type=repositories  [http_error] HTTP Error 429: Too Many Requests
+  https://github.com/search?q=lx-music-source&type=repositories&s=updated&o=desc  [http_error] HTTP Error 429: Too Many Requests
+  https://www.7xiazai.com/startallback  [http_error] HTTP Error 403: Forbidden

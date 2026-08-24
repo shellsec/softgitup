@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-07-27 12:18:08",
+  "built_at": "2026-08-24 11:02:39",
   "sync_dirs": [
     "WinMemoryCleaner",
     "NetTime",
@@ -24,9 +24,9 @@
     "gh-release-fetch"
   ],
   "stats": {
-    "total_pages": 172,
+    "total_pages": 178,
     "tier_a_pages": 45,
-    "tier_b_pages": 127,
+    "tier_b_pages": 133,
     "no_url_sync_dirs": [
       "Chrome",
       "notepad--",
@@ -45,7 +45,6 @@
       "https://www.voidtools.com/forum/viewtopic.php?f=12&t=9787"
     ],
     "system_good": [
-      "https://down66.com/startallback",
       "https://github.com/Raphire/Win11Debloat",
       "https://github.com/choyy/VirtualDesktopSwitcher",
       "https://github.com/sabrogden/Ditto",
@@ -59,6 +58,7 @@
       "https://www.423down.com/5573.html",
       "https://www.423down.com/9655.html",
       "https://www.52pojie.cn/thread-965894-1-1.html",
+      "https://www.7xiazai.com/startallback",
       "https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html",
       "https://www.ghxi.com/defenderui.html",
       "https://www.ghxi.com/iobitsmartdefrag.html"
@@ -167,6 +167,12 @@
       "domain": "anytxt.net"
     },
     {
+      "url": "https://appx64.lanzout.com/b546490",
+      "tier": "B",
+      "software": [],
+      "domain": "lanzou"
+    },
+    {
       "url": "https://care-eyes.com/",
       "tier": "B",
       "software": [],
@@ -221,20 +227,18 @@
       "domain": "down66"
     },
     {
-      "url": "https://down66.com/startallback",
-      "tier": "A",
-      "software": [
-        "system_good"
-      ],
-      "domain": "down66"
-    },
-    {
       "url": "https://down66.com/uestudio",
       "tier": "A",
       "software": [
         "UltraEdit"
       ],
       "domain": "down66"
+    },
+    {
+      "url": "https://fastcopy.net.cn/",
+      "tier": "B",
+      "software": [],
+      "domain": "fastcopy.net.cn"
     },
     {
       "url": "https://firpe.cn/",
@@ -645,6 +649,12 @@
       "domain": "rime.im"
     },
     {
+      "url": "https://support.microsoft.com/zh-CN/servicing/os/windows-11/2026/02/windows-11-version-26h1-update-history",
+      "tier": "B",
+      "software": [],
+      "domain": "support.microsoft.com"
+    },
+    {
       "url": "https://typora.io/releases/all",
       "tier": "A",
       "software": [
@@ -657,6 +667,12 @@
       "tier": "B",
       "software": [],
       "domain": "vocotype.com"
+    },
+    {
+      "url": "https://wwbmt.lanzouu.com/b00hrvbmej",
+      "tier": "B",
+      "software": [],
+      "domain": "lanzou"
     },
     {
       "url": "https://wwt.lanzouj.com/b03v5h3sd",
@@ -809,6 +825,12 @@
       "domain": "423down"
     },
     {
+      "url": "https://www.52pojie.cn/thread-2117089-1-1.html",
+      "tier": "B",
+      "software": [],
+      "domain": "www.52pojie.cn"
+    },
+    {
       "url": "https://www.52pojie.cn/thread-965894-1-1.html",
       "tier": "A",
       "software": [
@@ -838,6 +860,14 @@
       "url": "https://www.7xiazai.com/qbittorrent",
       "tier": "B",
       "software": [],
+      "domain": "7xiazai"
+    },
+    {
+      "url": "https://www.7xiazai.com/startallback",
+      "tier": "A",
+      "software": [
+        "system_good"
+      ],
       "domain": "7xiazai"
     },
     {
@@ -1048,6 +1078,12 @@
     },
     {
       "url": "https://www.hybase.com/pc/windows/927.html",
+      "tier": "B",
+      "software": [],
+      "domain": "hybase"
+    },
+    {
+      "url": "https://www.hybase.com/search.asp?m=2&word=%B2%BB%CD%FC%B3%F5%D0%C4",
       "tier": "B",
       "software": [],
       "domain": "hybase"
