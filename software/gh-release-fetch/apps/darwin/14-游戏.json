@@ -587,5 +587,58 @@
     "kill_before_install": false,
     "run_installer": false,
     "windows_installer": false
+  },
+  {
+    "id": "steam",
+    "简介": "Steam（Valve 游戏平台；官网分发，lookup 打开下载页）",
+    "分类": "游戏",
+    "aliases": [
+      "steam",
+      "Steam"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://store.steampowered.com/about/",
+    "url_hint": "steam Steam",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "epic_games",
+    "简介": "Epic Games 启动器（官网分发，lookup 打开下载页）",
+    "分类": "游戏",
+    "aliases": [
+      "epic",
+      "epic games",
+      "Epic",
+      "Epic Games"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://store.epicgames.com/zh-CN/download",
+    "url_hint": "epic epic games Epic Epic Games",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "taptap",
+    "简介": "TapTap（官网；lookup 打开）",
+    "分类": "游戏",
+    "aliases": [
+      "taptap",
+      "TapTap"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.taptap.cn/",
+    "url_hint": "taptap TapTap",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

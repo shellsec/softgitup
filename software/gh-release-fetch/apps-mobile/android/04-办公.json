@@ -103,5 +103,110 @@
     "save_name": "libreoffice_viewer.apk",
     "releases_url": "https://bgithub.xyz/TéléchargementsLibreOffice/libo-android-config/releases",
     "repo_path": "TéléchargementsLibreOffice/libo-android-config"
+  },
+  {
+    "id": "wps_android",
+    "简介": "WPS 办公 Android（lookup 打开官网）",
+    "分类": "办公",
+    "aliases": [
+      "wps",
+      "WPS",
+      "金山办公"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.wps.cn/mobile",
+    "url_hint": "wps WPS 金山办公",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "microsoft_365_android",
+    "简介": "Microsoft 365 Android（lookup 打开商店页）",
+    "分类": "办公",
+    "aliases": [
+      "office",
+      "microsoft 365",
+      "Office"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.microsoft.office.officehubrow",
+    "url_hint": "office microsoft 365 Office",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "google_docs",
+    "简介": "Google 文档 Android（lookup 打开商店页）",
+    "分类": "办公",
+    "aliases": [
+      "google docs",
+      "谷歌文档"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs",
+    "url_hint": "google docs 谷歌文档",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "notion_android",
+    "简介": "Notion Android（lookup 打开商店页）",
+    "分类": "办公",
+    "aliases": [
+      "notion",
+      "Notion"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=notion.id",
+    "url_hint": "notion Notion",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "adobe_reader_android",
+    "简介": "Adobe Acrobat Reader Android（lookup 打开商店页）",
+    "分类": "办公",
+    "aliases": [
+      "adobe reader",
+      "acrobat",
+      "PDF"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.adobe.reader",
+    "url_hint": "adobe reader acrobat PDF",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "canva_android",
+    "简介": "Canva Android（lookup 打开商店页）",
+    "分类": "办公",
+    "aliases": [
+      "canva",
+      "Canva"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.canva.editor",
+    "url_hint": "canva Canva",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
   }
 ]

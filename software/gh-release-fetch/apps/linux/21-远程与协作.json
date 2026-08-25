@@ -191,5 +191,163 @@
     "open_page_url": "https://github.com/input-leap/input-leap/releases",
     "releases_url": "https://bgithub.xyz/input-leap/input-leap/releases",
     "repo_path": "input-leap/input-leap"
+  },
+  {
+    "id": "netcatty",
+    "分类": "远程与协作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "releases_url": "https://bgithub.xyz/binaricat/Netcatty/releases",
+    "repo_path": "binaricat/Netcatty",
+    "简介": "Netcatty（SSH / SFTP / 终端一体工作区；Linux x86_64 AppImage）",
+    "windows_installer": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Netcatty-",
+      "linux-x86_64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      ".deb",
+      ".rpm",
+      ".yml",
+      "arm64",
+      "aarch64"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ]
+  },
+  {
+    "id": "android_dex",
+    "简介": "Android DEX（Linux zip）",
+    "分类": "远程与协作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "Windows",
+      "macOS",
+      "pre_build",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Android_Dex_Linux",
+      ".zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "releases_url": "https://bgithub.xyz/Shrey113/Android-Dex/releases",
+    "repo_path": "Shrey113/Android-Dex"
+  },
+  {
+    "id": "qtscrcpy",
+    "简介": "QtScrcpy（Linux x64 AppImage）",
+    "分类": "远程与协作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "win",
+      "mac",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "QtScrcpy-ubuntu-x64-",
+      ".AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "releases_url": "https://bgithub.xyz/barry-ran/QtScrcpy/releases",
+    "repo_path": "barry-ran/QtScrcpy"
+  },
+  {
+    "id": "todesk",
+    "简介": "ToDesk（远程桌面；闭源官网分发，lookup 打开下载页，不自动下载）",
+    "分类": "远程与协作",
+    "aliases": [
+      "todesk",
+      "ToDesk",
+      "向日葵同类",
+      "远程桌面"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.todesk.com/download.html",
+    "url_hint": "todesk ToDesk 向日葵同类 远程桌面",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "anydesk",
+    "简介": "AnyDesk（远程桌面；闭源官网分发，lookup 打开下载页）",
+    "分类": "远程与协作",
+    "aliases": [
+      "anydesk",
+      "AnyDesk"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://anydesk.com/zhs/downloads",
+    "url_hint": "anydesk AnyDesk",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "teamviewer",
+    "简介": "TeamViewer（远程协助；闭源官网分发，lookup 打开下载页）",
+    "分类": "远程与协作",
+    "aliases": [
+      "teamviewer",
+      "TeamViewer"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.teamviewer.com/zh-cn/download/",
+    "url_hint": "teamviewer TeamViewer",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "zoom",
+    "简介": "Zoom（视频会议；闭源官网分发，lookup 打开下载页）",
+    "分类": "远程与协作",
+    "aliases": [
+      "zoom",
+      "Zoom",
+      "视频会议"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://zoom.us/download",
+    "url_hint": "zoom Zoom 视频会议",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

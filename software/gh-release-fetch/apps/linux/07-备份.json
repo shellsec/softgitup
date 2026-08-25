@@ -216,5 +216,40 @@
     "installer_extensions": [],
     "releases_url": "https://bgithub.xyz/borgbackup/borg/releases",
     "repo_path": "borgbackup/borg"
+  },
+  {
+    "id": "baidunetdisk",
+    "简介": "百度网盘（官网分发，lookup 打开下载页）",
+    "分类": "备份",
+    "aliases": [
+      "baidunetdisk",
+      "百度网盘",
+      "百度云"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://pan.baidu.com/download",
+    "url_hint": "baidunetdisk 百度网盘 百度云",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "dropbox",
+    "简介": "Dropbox（官网分发，lookup 打开下载页）",
+    "分类": "备份",
+    "aliases": [
+      "dropbox",
+      "Dropbox"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.dropbox.com/downloading",
+    "url_hint": "dropbox Dropbox",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

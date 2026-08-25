@@ -104,5 +104,469 @@
     "save_name": "conversations.apk",
     "releases_url": "https://bgithub.xyz/Conversations/Conversations/releases",
     "repo_path": "Conversations/Conversations"
+  },
+  {
+    "id": "facebook",
+    "简介": "Facebook 官方 Android（无 GitHub APK；lookup 打开 Play 商店页）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "facebook",
+      "fb",
+      "脸书"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.facebook.katana",
+    "url_hint": "facebook fb 脸书",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "instagram",
+    "简介": "Instagram 官方 Android（无 GitHub APK；lookup 打开 Play 商店页）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "instagram",
+      "ins",
+      "ig",
+      "Instagram"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.instagram.android",
+    "url_hint": "instagram ins ig Instagram",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "messenger",
+    "简介": "Messenger 官方 Android（无 GitHub APK；lookup 打开 Play 商店页）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "messenger",
+      "facebook messenger",
+      "FB Messenger"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.facebook.orca",
+    "url_hint": "messenger facebook messenger FB Messenger",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "whatsapp",
+    "简介": "WhatsApp 官方 Android（无 GitHub APK；lookup 打开官网下载页）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "whatsapp",
+      "WhatsApp",
+      "wa"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.whatsapp.com/android",
+    "url_hint": "whatsapp WhatsApp wa",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "discord_android",
+    "简介": "Discord 官方 Android（无 GitHub APK；lookup 打开 Play 商店页）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "discord",
+      "Discord"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.discord",
+    "url_hint": "discord Discord",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "twitter",
+    "简介": "X / Twitter 官方 Android（无 GitHub APK；lookup 打开 Play 商店页）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "twitter",
+      "x.com",
+      "推特",
+      "X"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.twitter.android",
+    "url_hint": "twitter x.com 推特 X",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "telegram",
+    "简介": "Telegram 官方 Android（Release 常无 Assets；lookup 打开官网 APK 页）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "telegram",
+      "tg",
+      "电报"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://telegram.org/android",
+    "url_hint": "telegram tg 电报",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "threads",
+    "简介": "Threads 官方 Android（无 GitHub APK；lookup 打开 Play 商店页）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "threads",
+      "Threads"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.instagram.barcelona",
+    "url_hint": "threads Threads",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "line",
+    "简介": "LINE 官方 Android（无 GitHub APK；lookup 打开官网下载页）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "line",
+      "LINE"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://line.me/en/download",
+    "url_hint": "line LINE",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "legacy",
+      "lollipop",
+      "debug",
+      ".aab",
+      "test",
+      "unsigned",
+      "sources"
+    ],
+    "id": "telegram_x",
+    "简介": "Telegram X（开源 Android 客户端；GitHub APK）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "telegram x",
+      "telegramx",
+      "Telegram X",
+      "telegram"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Telegram-X-",
+      ".apk"
+    ],
+    "save_name": "telegram_x.apk",
+    "releases_url": "https://bgithub.xyz/TGX-Android/Telegram-X/releases",
+    "repo_path": "TGX-Android/Telegram-X"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "unsigned",
+      "sources"
+    ],
+    "id": "telegram_foss",
+    "简介": "Telegram-FOSS（去闭源依赖的 Telegram Android；GitHub APK）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "telegram foss",
+      "Telegram-FOSS",
+      "telegram"
+    ],
+    "installer_markers": [
+      ".apk"
+    ],
+    "save_name": "telegram_foss.apk",
+    "releases_url": "https://bgithub.xyz/Telegram-FOSS-Team/Telegram-FOSS/releases",
+    "repo_path": "Telegram-FOSS-Team/Telegram-FOSS"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "id": "twidere",
+    "简介": "Twidere（Twitter/X 开源客户端；GitHub F-Droid APK）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "twidere",
+      "twitter",
+      "推特"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "twidere-fdroid-release",
+      ".apk"
+    ],
+    "save_name": "twidere.apk",
+    "releases_url": "https://bgithub.xyz/TwidereProject/Twidere-Android/releases",
+    "repo_path": "TwidereProject/Twidere-Android"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "huawei",
+      "arm64-v8a",
+      "armeabi",
+      "x86",
+      ".aab",
+      "debug"
+    ],
+    "id": "session_android",
+    "简介": "Session（去中心化私密通讯 Android；universal play APK）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "session",
+      "Session"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "session-",
+      "universal-play-release.apk"
+    ],
+    "save_name": "session_android.apk",
+    "releases_url": "https://bgithub.xyz/session-foundation/session-android/releases",
+    "repo_path": "session-foundation/session-android"
+  },
+  {
+    "id": "wechat_android",
+    "简介": "微信 Android（官方无 GitHub APK；lookup 打开下载页）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "wechat",
+      "weixin",
+      "微信"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://weixin.qq.com/",
+    "url_hint": "wechat weixin 微信",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "qq_android",
+    "简介": "QQ Android（官方无 GitHub APK；lookup 打开下载页）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "qq",
+      "QQ",
+      "手机QQ"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://im.qq.com/mobileqq/",
+    "url_hint": "qq QQ 手机QQ",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "weibo",
+    "简介": "微博 Android（lookup 打开商店页）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "weibo",
+      "微博"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.sina.weibo",
+    "url_hint": "weibo 微博",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "dingtalk_android",
+    "简介": "钉钉 Android（lookup 打开官网下载页）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "dingtalk",
+      "钉钉"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.dingtalk.com/download",
+    "url_hint": "dingtalk 钉钉",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "wecom_android",
+    "简介": "企业微信 Android（lookup 打开官网下载页）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "wecom",
+      "企业微信",
+      "wework"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://work.weixin.qq.com/",
+    "url_hint": "wecom 企业微信 wework",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "feishu_android",
+    "简介": "飞书 Android（lookup 打开官网下载页）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "feishu",
+      "飞书",
+      "lark"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.feishu.cn/download",
+    "url_hint": "feishu 飞书 lark",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "reddit",
+    "简介": "Reddit 官方 Android（lookup 打开商店页）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "reddit",
+      "Reddit"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.reddit.frontpage",
+    "url_hint": "reddit Reddit",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "snapchat",
+    "简介": "Snapchat 官方 Android（lookup 打开商店页）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "snapchat",
+      "Snapchat"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.snapchat.android",
+    "url_hint": "snapchat Snapchat",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "skype",
+    "简介": "Skype 官方 Android（lookup 打开商店页）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "skype",
+      "Skype"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.skype.raider",
+    "url_hint": "skype Skype",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
   }
 ]

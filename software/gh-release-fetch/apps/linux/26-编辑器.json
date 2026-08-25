@@ -654,5 +654,50 @@
     ],
     "releases_url": "https://bgithub.xyz/markdown-it/markdown-it/releases",
     "repo_path": "markdown-it/markdown-it"
+  },
+  {
+    "id": "terax_ai",
+    "简介": "Terax（轻量终端优先 AI 开发工作区；Linux amd64 AppImage）",
+    "分类": "编辑器",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".sig",
+      ".deb",
+      ".rpm"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Terax_",
+      "amd64.AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "releases_url": "https://bgithub.xyz/crynta/terax-ai/releases",
+    "repo_path": "crynta/terax-ai"
+  },
+  {
+    "id": "typora",
+    "简介": "Typora（Markdown 编辑器；官网分发，lookup 打开下载页）",
+    "分类": "编辑器",
+    "aliases": [
+      "typora",
+      "Typora"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://typora.io/",
+    "url_hint": "typora Typora",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

@@ -455,5 +455,261 @@
     "open_page_url": "https://github.com/mcmilk/7-Zip-zstd/releases",
     "releases_url": "https://bgithub.xyz/mcmilk/7-Zip-zstd/releases",
     "repo_path": "mcmilk/7-Zip-zstd"
+  },
+  {
+    "id": "leafview",
+    "简介": "LeafView（macOS Apple Silicon dmg）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".zip",
+      "blockmap",
+      ".yml",
+      "darwin-x64",
+      "win32",
+      "linux"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "LeafView-",
+      "darwin-arm64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "releases_url": "https://bgithub.xyz/sprout2000/leafview/releases",
+    "repo_path": "sprout2000/leafview"
+  },
+  {
+    "id": "bandizip",
+    "简介": "Bandizip（压缩解压；官网分发，lookup 打开下载页）",
+    "分类": "工具",
+    "aliases": [
+      "bandizip",
+      "Bandizip"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.bandisoft.com/bandizip/",
+    "url_hint": "bandizip Bandizip",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "google_maps",
+    "简介": "Google 地图（网页版；lookup 打开。开源客户端见 organicmaps）",
+    "分类": "工具",
+    "aliases": [
+      "google maps",
+      "谷歌地图",
+      "maps"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://maps.google.com/",
+    "url_hint": "google maps 谷歌地图 maps",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "amap",
+    "简介": "高德地图（无官方 Mac 客户端；lookup 打开官网）",
+    "分类": "工具",
+    "aliases": [
+      "amap",
+      "高德",
+      "高德地图"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://mobile.amap.com/",
+    "url_hint": "amap 高德 高德地图",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "baidu_map",
+    "简介": "百度地图（无官方 Mac 客户端；lookup 打开网页）",
+    "分类": "工具",
+    "aliases": [
+      "baidu map",
+      "百度地图"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://map.baidu.com/",
+    "url_hint": "baidu map 百度地图",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "gmail",
+    "简介": "Gmail（网页版；lookup 打开）",
+    "分类": "工具",
+    "aliases": [
+      "gmail",
+      "Gmail"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://mail.google.com/",
+    "url_hint": "gmail Gmail",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "google_keep",
+    "简介": "Google Keep（网页版；lookup 打开）",
+    "分类": "工具",
+    "aliases": [
+      "keep",
+      "google keep"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://keep.google.com/",
+    "url_hint": "keep google keep",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "google_photos",
+    "简介": "Google 相册（网页版；lookup 打开）",
+    "分类": "工具",
+    "aliases": [
+      "google photos",
+      "谷歌相册"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://photos.google.com/",
+    "url_hint": "google photos 谷歌相册",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "taobao",
+    "简介": "淘宝（无官方 Mac 客户端；lookup 打开网页）",
+    "分类": "工具",
+    "aliases": [
+      "taobao",
+      "淘宝"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.taobao.com/",
+    "url_hint": "taobao 淘宝",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "jd",
+    "简介": "京东（无官方 Mac 客户端；lookup 打开网页）",
+    "分类": "工具",
+    "aliases": [
+      "jd",
+      "京东",
+      "jingdong"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.jd.com/",
+    "url_hint": "jd 京东 jingdong",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "pinduoduo",
+    "简介": "拼多多（无官方 Mac 客户端；lookup 打开网页）",
+    "分类": "工具",
+    "aliases": [
+      "pinduoduo",
+      "拼多多",
+      "pdd"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.pinduoduo.com/",
+    "url_hint": "pinduoduo 拼多多 pdd",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "meituan",
+    "简介": "美团（无官方 Mac 客户端；lookup 打开网页）",
+    "分类": "工具",
+    "aliases": [
+      "meituan",
+      "美团"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.meituan.com/",
+    "url_hint": "meituan 美团",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "didi",
+    "简介": "滴滴出行（无官方 Mac 客户端；lookup 打开网页）",
+    "分类": "工具",
+    "aliases": [
+      "didi",
+      "滴滴"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.didiglobal.com/",
+    "url_hint": "didi 滴滴",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "amazon",
+    "简介": "Amazon（网页版；lookup 打开）",
+    "分类": "工具",
+    "aliases": [
+      "amazon",
+      "亚马逊"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.amazon.com/",
+    "url_hint": "amazon 亚马逊",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

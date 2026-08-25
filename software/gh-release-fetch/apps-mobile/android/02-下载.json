@@ -137,5 +137,23 @@
     "save_name": "upgradeall.apk",
     "releases_url": "https://bgithub.xyz/DUpdate/UpgradeAll/releases",
     "repo_path": "DUpdate/UpgradeAll"
+  },
+  {
+    "id": "xunlei_android",
+    "简介": "迅雷 Android（lookup 打开官网）",
+    "分类": "下载",
+    "aliases": [
+      "xunlei",
+      "thunder",
+      "迅雷"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.xunlei.com/",
+    "url_hint": "xunlei thunder 迅雷",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
   }
 ]

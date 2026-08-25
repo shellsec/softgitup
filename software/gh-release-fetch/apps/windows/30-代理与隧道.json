@@ -68,13 +68,13 @@
   },
   {
     "id": "hiddify_next",
-    "简介": "Hiddify Next（跨平台代理客户端，Meta/多协议；Windows 官方 Setup）",
+    "简介": "Hiddify（原 Hiddify Next / hiddify-app）（跨平台代理客户端，Meta/多协议；Windows 官方 Setup）",
     "分类": "代理与隧道",
     "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
-    "releases_url": "https://bgithub.xyz/hiddify/hiddify-next/releases",
-    "repo_path": "hiddify/hiddify-next",
+    "releases_url": "https://bgithub.xyz/hiddify/hiddify-app/releases",
+    "repo_path": "hiddify/hiddify-app",
     "installer_markers_match_all": true,
     "installer_markers": [
       "Hiddify-Windows-Setup-x64",
@@ -431,5 +431,65 @@
     ],
     "releases_url": "https://bgithub.xyz/GUI-for-Cores/GUI.for.SingBox/releases",
     "repo_path": "GUI-for-Cores/GUI.for.SingBox"
+  },
+  {
+    "id": "clash_party",
+    "简介": "Clash Party（原 Mihomo Party；Windows x64 Setup）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "win7",
+      "ia32",
+      "arm64",
+      "mihomo-party",
+      "portable",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "clash-party-windows-",
+      "x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "releases_url": "https://bgithub.xyz/mihomo-party-org/clash-party/releases",
+    "repo_path": "mihomo-party-org/clash-party"
+  },
+  {
+    "id": "v2raya",
+    "简介": "v2rayA（Web UI 管理的代理客户端；Windows x64 Inno 安装包）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm64",
+      "v2raya_core",
+      "v2raya_windows",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "installer_windows_inno_x64_",
+      ".exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "releases_url": "https://bgithub.xyz/v2rayA/v2rayA/releases",
+    "repo_path": "v2rayA/v2rayA"
   }
 ]

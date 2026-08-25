@@ -104,5 +104,39 @@
     ],
     "releases_url": "https://bgithub.xyz/TNT-Likely/BeeCount/releases",
     "repo_path": "TNT-Likely/BeeCount"
+  },
+  {
+    "id": "alipay",
+    "简介": "支付宝 Android（lookup 打开官网）",
+    "分类": "金融与股票",
+    "aliases": [
+      "alipay",
+      "支付宝"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://mobile.alipay.com/",
+    "url_hint": "alipay 支付宝",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "paypal",
+    "简介": "PayPal Android（lookup 打开商店页）",
+    "分类": "金融与股票",
+    "aliases": [
+      "paypal",
+      "PayPal"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.paypal.android.p2pmobile",
+    "url_hint": "paypal PayPal",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
   }
 ]

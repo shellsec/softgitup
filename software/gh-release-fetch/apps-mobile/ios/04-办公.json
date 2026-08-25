@@ -1,0 +1,95 @@
+[
+  {
+    "id": "wps_ios",
+    "简介": "WPS 办公（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "办公",
+    "aliases": [
+      "wps",
+      "WPS",
+      "金山办公"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id599852710",
+    "releases_url": "https://apps.apple.com/app/id599852710",
+    "url_hint": "wps WPS 金山办公",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "microsoft_365_ios",
+    "简介": "Microsoft 365（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "办公",
+    "aliases": [
+      "office",
+      "microsoft 365",
+      "Office"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id541164951",
+    "releases_url": "https://apps.apple.com/app/id541164951",
+    "url_hint": "office microsoft 365 Office",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "google_docs_ios",
+    "简介": "Google 文档（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "办公",
+    "aliases": [
+      "google docs",
+      "谷歌文档"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id842842640",
+    "releases_url": "https://apps.apple.com/app/id842842640",
+    "url_hint": "google docs 谷歌文档",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "adobe_reader_ios",
+    "简介": "Adobe Acrobat Reader（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "办公",
+    "aliases": [
+      "adobe reader",
+      "acrobat",
+      "PDF"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id469337564",
+    "releases_url": "https://apps.apple.com/app/id469337564",
+    "url_hint": "adobe reader acrobat PDF",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "canva_ios",
+    "简介": "Canva（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "办公",
+    "aliases": [
+      "canva",
+      "Canva"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id897446215",
+    "releases_url": "https://apps.apple.com/app/id897446215",
+    "url_hint": "canva Canva",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  }
+]

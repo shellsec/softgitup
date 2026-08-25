@@ -150,7 +150,7 @@
     "id": "everything_cli",
     "简介": "Everything 极速文件名搜索",
     "分类": "系统",
-    "enabled": true,
+    "enabled": false,
     "releases_url": "https://bgithub.xyz/voidtools/Everything/releases",
     "repo_path": "voidtools/Everything",
     "installer_markers": [
@@ -168,8 +168,8 @@
     ],
     "save_name": "Everything-{ver}.x64-Setup.exe",
     "process_name": "Everything.exe",
-    "kill_before_install": false,
-    "run_installer": false,
+    "kill_before_install": true,
+    "run_installer": true,
     "version_tag_as_on_github": true,
     "url_hint": "Everything"
   },
@@ -333,27 +333,29 @@
   },
   {
     "id": "unigetui",
-    "简介": "UniGetUI（Winget / Scoop 等的图形化软件包管理前端，原 WingetUI）",
+    "简介": "UniGetUI（Winget / Scoop 等的图形化软件包管理前端；原 WingetUI，现 Devolutions/UniGetUI）",
     "分类": "系统",
     "enabled": false,
-    "releases_url": "https://bgithub.xyz/marticliment/WingetUI/releases",
-    "repo_path": "marticliment/WingetUI",
+    "releases_url": "https://bgithub.xyz/Devolutions/UniGetUI/releases",
+    "repo_path": "Devolutions/UniGetUI",
     "prefer_api_assets": true,
     "installer_markers_match_all": true,
     "installer_markers": [
-      "UniGetUI.Installer",
+      "UniGetUI.Installer.x64",
       ".exe"
     ],
     "href_exclude_substrings": [
       "WingetUI.Installer",
       ".zip",
-      "blockmap"
+      "blockmap",
+      "arm64"
     ],
     "windows_installer": true,
     "download_names": [
-      "UniGetUI.Installer.exe"
+      "UniGetUI.Installer.x64.exe"
     ],
-    "save_name": "UniGetUI-Setup-{ver}.exe",
+    "save_name": "UniGetUI.Installer.x64.exe",
+    "use_download_filename": true,
     "process_name": "UniGetUI.exe",
     "kill_before_install": true,
     "run_installer": true
@@ -1154,7 +1156,7 @@
     "id": "win_memory_cleaner",
     "简介": "WinMemoryCleaner（内存清理）",
     "分类": "系统",
-    "enabled": true,
+    "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
     "windows_installer": false,
@@ -1256,7 +1258,7 @@
     "id": "win11_debloat",
     "简介": "Win11Debloat（系统精简脚本，Release 为 Get.ps1）",
     "分类": "系统",
-    "enabled": true,
+    "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
     "windows_installer": false,
@@ -1292,7 +1294,7 @@
     "id": "win11_debloat_scavin",
     "简介": "Win11Debloat（scavin  fork）",
     "分类": "系统",
-    "enabled": true,
+    "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
     "windows_installer": false,
@@ -1699,5 +1701,85 @@
     ],
     "releases_url": "https://bgithub.xyz/LibreHardwareMonitor/LibreHardwareMonitor/releases",
     "repo_path": "LibreHardwareMonitor/LibreHardwareMonitor"
+  },
+  {
+    "id": "server_box",
+    "简介": "Server Box（Linux 服务器状态与工具箱；Windows amd64 zip）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".apk",
+      "AppImage",
+      ".dmg",
+      "legacy"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ServerBox_v",
+      "windows_amd64.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "releases_url": "https://bgithub.xyz/lollipopkit/flutter_server_box/releases",
+    "repo_path": "lollipopkit/flutter_server_box"
+  },
+  {
+    "id": "windirstat",
+    "简介": "WinDirStat（磁盘使用统计与清理；Windows x64 MSI）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm64",
+      "x86",
+      "Debug",
+      "Hashes",
+      ".7z",
+      ".zip",
+      ".msix"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "WinDirStat-x64",
+      ".msi"
+    ],
+    "installer_extensions": [
+      ".msi"
+    ],
+    "releases_url": "https://bgithub.xyz/windirstat/windirstat/releases",
+    "repo_path": "windirstat/windirstat"
+  },
+  {
+    "id": "sogou_pinyin",
+    "简介": "搜狗输入法（官网分发，lookup 打开下载页）",
+    "分类": "系统",
+    "aliases": [
+      "sogou",
+      "搜狗",
+      "搜狗输入法",
+      "sogou pinyin"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://pinyin.sogou.com/",
+    "url_hint": "sogou 搜狗 搜狗输入法 sogou pinyin",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

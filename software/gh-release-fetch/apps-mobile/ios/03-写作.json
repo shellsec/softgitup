@@ -1,0 +1,40 @@
+[
+  {
+    "id": "xiaohongshu_ios",
+    "简介": "小红书（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "写作",
+    "aliases": [
+      "xiaohongshu",
+      "小红书",
+      "rednote",
+      "xhs"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id741292507",
+    "releases_url": "https://apps.apple.com/app/id741292507",
+    "url_hint": "xiaohongshu 小红书 rednote xhs",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "zhihu_ios",
+    "简介": "知乎（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "写作",
+    "aliases": [
+      "zhihu",
+      "知乎"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id432274380",
+    "releases_url": "https://apps.apple.com/app/id432274380",
+    "url_hint": "zhihu 知乎",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  }
+]

@@ -108,13 +108,13 @@
   },
   {
     "id": "hiddify_next",
-    "简介": "Hiddify Next（Linux x64 AppImage）",
+    "简介": "Hiddify（原 Hiddify Next / hiddify-app）（Linux x64 AppImage）",
     "分类": "代理与隧道",
     "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
-    "releases_url": "https://bgithub.xyz/hiddify/hiddify-next/releases",
-    "repo_path": "hiddify/hiddify-next",
+    "releases_url": "https://bgithub.xyz/hiddify/hiddify-app/releases",
+    "repo_path": "hiddify/hiddify-app",
     "installer_markers_match_all": true,
     "installer_markers": [
       "Hiddify-Linux-x64-AppImage.AppImage"
@@ -579,5 +579,65 @@
     ],
     "releases_url": "https://bgithub.xyz/GUI-for-Cores/GUI.for.SingBox/releases",
     "repo_path": "GUI-for-Cores/GUI.for.SingBox"
+  },
+  {
+    "id": "clash_party",
+    "简介": "Clash Party（原 Mihomo Party；Linux amd64 deb）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm64",
+      "rpm",
+      "mihomo-party",
+      "AppImage"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "clash-party-linux-",
+      "amd64.deb"
+    ],
+    "installer_extensions": [
+      ".deb"
+    ],
+    "releases_url": "https://bgithub.xyz/mihomo-party-org/clash-party/releases",
+    "repo_path": "mihomo-party-org/clash-party"
+  },
+  {
+    "id": "v2raya",
+    "简介": "v2rayA（Web UI 管理的代理客户端；Debian amd64 deb）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm",
+      "mips",
+      "riscv",
+      "loong",
+      "redhat",
+      "windows"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "installer_debian_x64_",
+      ".deb"
+    ],
+    "installer_extensions": [
+      ".deb"
+    ],
+    "releases_url": "https://bgithub.xyz/v2rayA/v2rayA/releases",
+    "repo_path": "v2rayA/v2rayA"
   }
 ]

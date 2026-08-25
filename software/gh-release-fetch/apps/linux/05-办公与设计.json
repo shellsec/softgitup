@@ -116,5 +116,22 @@
     ],
     "releases_url": "https://bgithub.xyz/pencil2d/pencil/releases",
     "repo_path": "pencil2d/pencil"
+  },
+  {
+    "id": "figma",
+    "简介": "Figma 桌面版（官网分发；Linux 打开网页版）",
+    "分类": "办公与设计",
+    "aliases": [
+      "figma",
+      "Figma"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.figma.com/",
+    "url_hint": "figma Figma",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

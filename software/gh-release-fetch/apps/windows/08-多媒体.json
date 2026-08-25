@@ -909,7 +909,7 @@
     "id": "lx_music_desktop",
     "简介": "洛雪音乐助手（桌面版）",
     "分类": "多媒体",
-    "enabled": true,
+    "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
     "windows_installer": false,
@@ -1209,5 +1209,35 @@
     "process_name": "FormatMaster.exe",
     "kill_before_install": true,
     "run_installer": true
+  },
+  {
+    "id": "converseen",
+    "简介": "Converseen（批量图片格式转换；Windows x64 Setup MSI）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "portable",
+      "win32",
+      "macos",
+      "AppImage",
+      ".zsync"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Converseen-",
+      "win64-setup.msi"
+    ],
+    "installer_extensions": [
+      ".msi"
+    ],
+    "releases_url": "https://bgithub.xyz/Faster3ck/Converseen/releases",
+    "repo_path": "Faster3ck/Converseen"
   }
 ]

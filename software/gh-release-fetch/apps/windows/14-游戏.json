@@ -767,5 +767,69 @@
     ],
     "releases_url": "https://bgithub.xyz/fzxx/NaughtyDamagePack/releases",
     "repo_path": "fzxx/NaughtyDamagePack"
+  },
+  {
+    "id": "open_speedy",
+    "简介": "OpenSpeedy（开源游戏加速工具；Windows x64 MSI）",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "portable",
+      ".zip",
+      ".sig"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "OpenSpeedy_",
+      "x64_zh-CN.msi"
+    ],
+    "installer_extensions": [
+      ".msi"
+    ],
+    "releases_url": "https://bgithub.xyz/game1024/OpenSpeedy/releases",
+    "repo_path": "game1024/OpenSpeedy"
+  },
+  {
+    "id": "steam",
+    "简介": "Steam（Valve 游戏平台；官网分发，lookup 打开下载页）",
+    "分类": "游戏",
+    "aliases": [
+      "steam",
+      "Steam"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://store.steampowered.com/about/",
+    "url_hint": "steam Steam",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "epic_games",
+    "简介": "Epic Games 启动器（官网分发，lookup 打开下载页）",
+    "分类": "游戏",
+    "aliases": [
+      "epic",
+      "epic games",
+      "Epic",
+      "Epic Games"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://store.epicgames.com/zh-CN/download",
+    "url_hint": "epic epic games Epic Epic Games",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

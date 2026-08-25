@@ -51,12 +51,21 @@
   },
   {
     "id": "goland",
-    "简介": "GoLand IDE：仅 jetbrains.com；勿启用。Go 语言搜 go。",
+    "简介": "JetBrains GoLand IDE（商业/试用；lookup 打开官网，不自动下载。Go 语言运行时请搜 id=go）",
     "分类": "开发",
+    "aliases": [
+      "goland",
+      "GoLand",
+      "jetbrains go"
+    ],
     "enabled": false,
-    "releases_url": "https://bgithub.xyz/octocat/Hello-World/releases",
-    "repo_path": "octocat/Hello-World",
-    "url_hint": "goland"
+    "open_page_only": true,
+    "open_page_url": "https://www.jetbrains.com/go/download/",
+    "url_hint": "goland jetbrains",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   },
   {
     "id": "deno",
@@ -962,5 +971,87 @@
     ],
     "releases_url": "https://bgithub.xyz/FiloSottile/mkcert/releases",
     "repo_path": "FiloSottile/mkcert"
+  },
+  {
+    "id": "jj",
+    "简介": "jj / Jujutsu（macOS Apple Silicon tar.gz）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "x86_64",
+      "docs",
+      "linux",
+      "windows"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "jj-v",
+      "aarch64-apple-darwin.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "releases_url": "https://bgithub.xyz/jj-vcs/jj/releases",
+    "repo_path": "jj-vcs/jj"
+  },
+  {
+    "id": "intellij",
+    "简介": "IntelliJ IDEA（JetBrains；lookup 打开官网，不自动下载）",
+    "分类": "开发",
+    "aliases": [
+      "intellij",
+      "idea",
+      "IntelliJ",
+      "IntelliJ IDEA"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.jetbrains.com/idea/download/",
+    "url_hint": "intellij idea IntelliJ IntelliJ IDEA",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "pycharm",
+    "简介": "PyCharm（JetBrains Python IDE；lookup 打开官网）",
+    "分类": "开发",
+    "aliases": [
+      "pycharm",
+      "PyCharm"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.jetbrains.com/pycharm/download/",
+    "url_hint": "pycharm PyCharm",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "webstorm",
+    "简介": "WebStorm（JetBrains 前端 IDE；lookup 打开官网）",
+    "分类": "开发",
+    "aliases": [
+      "webstorm",
+      "WebStorm"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.jetbrains.com/webstorm/download/",
+    "url_hint": "webstorm WebStorm",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

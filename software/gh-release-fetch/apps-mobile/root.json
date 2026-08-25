@@ -6,8 +6,8 @@
   "_说明": {
     "简介": "移动端独立清单（与 apps/ 桌面三平台分离）。Android：GitHub Release APK 下载；iOS：多为 App Store/TestFlight 占位，勿启用 auto_update。",
     "用法": "python auto_update.py --apps-dir apps-mobile --platform android [id ...]",
-    "查找": "python lookup_app.py --apps-dir apps-mobile --platform android <关键词>",
+    "查找": "python lookup_app.py --apps-dir apps-mobile --platform android <关键词>（iOS 用 --platform ios）",
     "索引": "根目录 CATALOG.mobile.md（python tools/generate_mobile_catalog_index.py 刷新）",
-    "iOS": "ios/ 分片为 App Store 占位（约 52 条），无 .ipa 自动安装；与 Android 164 条 APK 清单对照"
+    "iOS": "ios/ 分片为 App Store 占位（约 123 条），lookup 打开商店页，无 .ipa 自动安装；与 Android 清单对照"
   }
 }

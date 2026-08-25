@@ -137,5 +137,162 @@
     "save_name": "skytube.apk",
     "releases_url": "https://bgithub.xyz/SkyTubeApp/SkyTube/releases",
     "repo_path": "SkyTubeApp/SkyTube"
+  },
+  {
+    "id": "youtube",
+    "简介": "YouTube 官方 Android（无 GitHub APK；开源客户端搜 newpipe）",
+    "分类": "音视频",
+    "aliases": [
+      "youtube",
+      "YouTube",
+      "油管"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.google.android.youtube",
+    "url_hint": "youtube YouTube 油管",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "bilibili",
+    "简介": "哔哩哔哩 Android（lookup 打开官网）",
+    "分类": "音视频",
+    "aliases": [
+      "bilibili",
+      "b站",
+      "哔哩哔哩"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://app.bilibili.com/",
+    "url_hint": "bilibili b站 哔哩哔哩",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "netflix",
+    "简介": "Netflix 官方 Android（lookup 打开商店页）",
+    "分类": "音视频",
+    "aliases": [
+      "netflix",
+      "Netflix"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.netflix.mediaclient",
+    "url_hint": "netflix Netflix",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "douyin",
+    "简介": "抖音 Android（lookup 打开官网）",
+    "分类": "音视频",
+    "aliases": [
+      "douyin",
+      "抖音",
+      "tiktok中国"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.douyin.com/downloadpage",
+    "url_hint": "douyin 抖音 tiktok中国",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "tiktok",
+    "简介": "TikTok 官方 Android（lookup 打开商店页）",
+    "分类": "音视频",
+    "aliases": [
+      "tiktok",
+      "TikTok"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.zhiliaoapp.musically",
+    "url_hint": "tiktok TikTok",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "kuaishou",
+    "简介": "快手 Android（lookup 打开商店页）",
+    "分类": "音视频",
+    "aliases": [
+      "kuaishou",
+      "快手"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.smile.gifmaker",
+    "url_hint": "kuaishou 快手",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "youku",
+    "简介": "优酷 Android（lookup 打开商店页）",
+    "分类": "音视频",
+    "aliases": [
+      "youku",
+      "优酷"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.youku.phone",
+    "url_hint": "youku 优酷",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "iqiyi",
+    "简介": "爱奇艺 Android（lookup 打开商店页）",
+    "分类": "音视频",
+    "aliases": [
+      "iqiyi",
+      "爱奇艺"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.qiyi.video",
+    "url_hint": "iqiyi 爱奇艺",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "capcut_android",
+    "简介": "剪映 / CapCut Android（lookup 打开官网）",
+    "分类": "音视频",
+    "aliases": [
+      "capcut",
+      "jianying",
+      "剪映"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.capcut.cn/",
+    "url_hint": "capcut jianying 剪映",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
   }
 ]

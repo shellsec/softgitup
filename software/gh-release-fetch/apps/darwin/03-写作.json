@@ -366,5 +366,41 @@
     "open_page_url": "https://github.com/zotero/zotero/releases",
     "releases_url": "https://bgithub.xyz/zotero/zotero/releases",
     "repo_path": "zotero/zotero"
+  },
+  {
+    "id": "xiaohongshu",
+    "简介": "小红书（无官方 Mac 客户端；lookup 打开网页）",
+    "分类": "写作",
+    "aliases": [
+      "xiaohongshu",
+      "小红书",
+      "rednote",
+      "xhs"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.xiaohongshu.com/",
+    "url_hint": "xiaohongshu 小红书 rednote xhs",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "zhihu",
+    "简介": "知乎（无官方 Mac 客户端；lookup 打开网页）",
+    "分类": "写作",
+    "aliases": [
+      "zhihu",
+      "知乎"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.zhihu.com/",
+    "url_hint": "zhihu 知乎",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

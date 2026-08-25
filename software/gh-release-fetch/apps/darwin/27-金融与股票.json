@@ -278,5 +278,39 @@
     "open_page_url": "https://github.com/freqtrade/freqtrade/releases",
     "releases_url": "https://bgithub.xyz/freqtrade/freqtrade/releases",
     "repo_path": "freqtrade/freqtrade"
+  },
+  {
+    "id": "alipay",
+    "简介": "支付宝（无官方 Mac 客户端；lookup 打开官网）",
+    "分类": "金融与股票",
+    "aliases": [
+      "alipay",
+      "支付宝"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://mobile.alipay.com/",
+    "url_hint": "alipay 支付宝",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "paypal",
+    "简介": "PayPal（网页版；lookup 打开）",
+    "分类": "金融与股票",
+    "aliases": [
+      "paypal",
+      "PayPal"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.paypal.com/",
+    "url_hint": "paypal PayPal",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

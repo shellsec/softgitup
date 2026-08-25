@@ -106,5 +106,126 @@
     "save_name": "unified_remote.apk",
     "releases_url": "https://bgithub.xyz/UnifiedRemote/Droid/releases",
     "repo_path": "UnifiedRemote/Droid"
+  },
+  {
+    "id": "todesk_android",
+    "简介": "ToDesk Android（lookup 打开官网）",
+    "分类": "远程与协作",
+    "aliases": [
+      "todesk",
+      "ToDesk"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.todesk.com/download.html",
+    "url_hint": "todesk ToDesk",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "anydesk_android",
+    "简介": "AnyDesk Android（lookup 打开商店页）",
+    "分类": "远程与协作",
+    "aliases": [
+      "anydesk",
+      "AnyDesk"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.anydesk.anydeskandroid",
+    "url_hint": "anydesk AnyDesk",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "teamviewer_android",
+    "简介": "TeamViewer Android（lookup 打开商店页）",
+    "分类": "远程与协作",
+    "aliases": [
+      "teamviewer",
+      "TeamViewer"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.teamviewer.teamviewer.market.mobile",
+    "url_hint": "teamviewer TeamViewer",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "sunlogin_android",
+    "简介": "向日葵 Android（lookup 打开官网）",
+    "分类": "远程与协作",
+    "aliases": [
+      "sunlogin",
+      "向日葵",
+      "oray"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://sunlogin.oray.com/download",
+    "url_hint": "sunlogin 向日葵 oray",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "zoom_android",
+    "简介": "Zoom Android（lookup 打开商店页）",
+    "分类": "远程与协作",
+    "aliases": [
+      "zoom",
+      "Zoom"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=us.zoom.videomeetings",
+    "url_hint": "zoom Zoom",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "teams_android",
+    "简介": "Microsoft Teams Android（lookup 打开商店页）",
+    "分类": "远程与协作",
+    "aliases": [
+      "teams",
+      "Microsoft Teams"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.microsoft.teams",
+    "url_hint": "teams Microsoft Teams",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "meet_android",
+    "简介": "Google Meet Android（lookup 打开商店页）",
+    "分类": "远程与协作",
+    "aliases": [
+      "google meet",
+      "meet",
+      "谷歌会议"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.google.android.apps.meetings",
+    "url_hint": "google meet meet 谷歌会议",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
   }
 ]

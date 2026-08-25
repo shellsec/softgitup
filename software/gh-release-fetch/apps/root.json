@@ -3,7 +3,7 @@
     "简介": "本文件供 auto_update.py 读取；除 platforms 内条目外，以下划线开头的键仅作说明，脚本不使用。",
     "运行": "默认处理当前系统对应平台列表里 enabled 为 true 的项。命令行：python auto_update.py [应用id ...]；可选 --platform windows|darwin|linux 强制读取某平台块。若镜像 HTTPS 证书过期，可加 --insecure，或根级 ssl_verify 设为 false（有中间人风险，证书修复后建议改回）。",
     "platforms": "windows / darwin / linux 三套列表互不影响；在对应数组里增删应用即可。每条下的「简介」「分类」为可选中文，仅阅读用，脚本不读取。",
-    "每条应用必填": "id、releases_url、repo_path",
+    "每条应用必填": "可下载条目：id、releases_url、repo_path。open_page_only 条目：id、open_page_url（不必填 repo）。",
     "常用字段": {
       "enabled": "true 才会参与批量更新；false 仅配置保留。",
       "releases_url": "GitHub Releases 页（可用镜像域名加速）。",
@@ -16,6 +16,9 @@
       "installer_extensions": "如 [\".msi\"]；与 windows_installer 一起限制链接后缀。",
       "version_tag_as_on_github": "true 时不强行给版本号加 v（适用于 tag 为 2.7.12 这类仓库）。",
       "url_hint": "页面里「兜底搜索」链接时用的关键词（默认同 id）。",
+      "aliases": "查找别名数组（如「向日葵」）。lookup_app 会匹配这些词。",
+      "open_page_only": "true 时不自动下载，lookup 选 1/5 会打开 open_page_url（官网/下载页）。用于闭源必备软件。",
+      "open_page_url": "open_page_only 或无安装包时要打开的页面。",
       "href_exclude_substrings": "链接里出现任一字串则跳过（用于排除 arm64、便携版、校验文件等）。",
       "process_name": "安装前要结束的进程名（Windows）；可留空表示不 taskkill。",
       "kill_before_install": "是否在启动安装包前结束 process_name。",
@@ -38,7 +41,7 @@
     "备份与恢复": "拆分前的完整单文件为仓库根目录 apps.json.monolith.bak。若需恢复单文件模式：删除整个 apps/ 目录（或至少删除 apps/root.json），将 apps.json.monolith.bak 改名为 apps.json。重新拆分可运行：python tools/split_apps_to_apps_dir.py（需先准备好根目录 apps.json）。",
     "重置 enabled": "将所有应用 JSON 里的 enabled 写回 false（改磁盘）：在项目根执行 python tools/reset_enabled_json.py；加 --dry-run 可只预览数量不写文件。独立清单包执行 python tools/reset_enabled_json.py --apps-dir VibeCodingToolsDown（快照默认在该包 tools/ 下）；也可用 VibeCodingToolsDown/tools/reset_enabled_json.bat。",
     "查找应用": "项目根 lookup_app.bat <关键词> 或 python lookup_app.py <关键词>：模糊检索 apps 分片中的 id/简介/repo 等，显示平台、分片路径与分类，并交互询问是否 enabled=true。",
-    "清单索引": "根目录 CATALOG.md 为自动生成的分片/条目概览（不含 99 占位分片）；刷新：python tools/generate_catalog_index.py",
+    "清单索引": "根目录 CATALOG.md 为自动生成的分片/条目概览（不含 99 占位分片）；刷新：python tools/generate_catalog_index.py。分类展示页 catalog.html：python tools/generate_catalog_html.py。Markdown 导读 RECOMMENDED*.md：python tools/generate_recommended_md.py",
     "移动端清单": "独立目录 apps-mobile/（android / ios），索引 CATALOG.mobile.md；刷新：python tools/generate_mobile_catalog_index.py；用法见 apps-mobile/root.json",
     "download_subdir_by_platform": "根级若为 true，下载保存路径为 download_dir/<windows|darwin|linux|android|ios>/...，便于区分系统类型；日志与「开始下载」也会标注平台名。"
   },

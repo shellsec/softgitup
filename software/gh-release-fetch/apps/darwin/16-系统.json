@@ -1066,5 +1066,82 @@
     "open_page_url": "https://github.com/LibreHardwareMonitor/LibreHardwareMonitor/releases",
     "releases_url": "https://bgithub.xyz/LibreHardwareMonitor/LibreHardwareMonitor/releases",
     "repo_path": "LibreHardwareMonitor/LibreHardwareMonitor"
+  },
+  {
+    "id": "unigetui",
+    "简介": "UniGetUI（包管理 GUI；macOS Apple Silicon dmg；原 WingetUI，现 Devolutions/UniGetUI）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "x64",
+      ".tar.gz",
+      ".zip",
+      "checksum"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "UniGetUI.macos-arm64",
+      ".dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "releases_url": "https://bgithub.xyz/Devolutions/UniGetUI/releases",
+    "repo_path": "Devolutions/UniGetUI"
+  },
+  {
+    "id": "server_box",
+    "简介": "Server Box（macOS dmg）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".apk",
+      "AppImage",
+      "windows",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ServerBox-",
+      ".dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "releases_url": "https://bgithub.xyz/lollipopkit/flutter_server_box/releases",
+    "repo_path": "lollipopkit/flutter_server_box"
+  },
+  {
+    "id": "sogou_pinyin",
+    "简介": "搜狗输入法（官网分发，lookup 打开下载页）",
+    "分类": "系统",
+    "aliases": [
+      "sogou",
+      "搜狗",
+      "搜狗输入法",
+      "sogou pinyin"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://pinyin.sogou.com/mac/",
+    "url_hint": "sogou 搜狗 搜狗输入法 sogou pinyin",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

@@ -32,5 +32,41 @@
     ],
     "releases_url": "https://bgithub.xyz/TNT-Likely/BeeCount/releases",
     "repo_path": "TNT-Likely/BeeCount"
+  },
+  {
+    "id": "alipay_ios",
+    "简介": "支付宝（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "金融与股票",
+    "aliases": [
+      "alipay",
+      "支付宝"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id333206289",
+    "releases_url": "https://apps.apple.com/app/id333206289",
+    "url_hint": "alipay 支付宝",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "paypal_ios",
+    "简介": "PayPal（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "金融与股票",
+    "aliases": [
+      "paypal",
+      "PayPal"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id283646709",
+    "releases_url": "https://apps.apple.com/app/id283646709",
+    "url_hint": "paypal PayPal",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
   }
 ]

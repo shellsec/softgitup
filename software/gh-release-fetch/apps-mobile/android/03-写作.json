@@ -135,5 +135,78 @@
     "save_name": "einkbro.apk",
     "releases_url": "https://bgithub.xyz/plateaukao/einkbro/releases",
     "repo_path": "plateaukao/einkbro"
+  },
+  {
+    "id": "xiaohongshu",
+    "简介": "小红书 Android（lookup 打开商店页）",
+    "分类": "写作",
+    "aliases": [
+      "xiaohongshu",
+      "小红书",
+      "rednote",
+      "xhs"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.xingin.xhs",
+    "url_hint": "xiaohongshu 小红书 rednote xhs",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "zhihu",
+    "简介": "知乎 Android（lookup 打开商店页）",
+    "分类": "写作",
+    "aliases": [
+      "zhihu",
+      "知乎"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.zhihu.android",
+    "url_hint": "zhihu 知乎",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "kindle",
+      "kobo",
+      "linux",
+      "x86",
+      "android-arm-",
+      "debug"
+    ],
+    "id": "koreader",
+    "简介": "KOReader（电子书阅读器 Android arm64 APK）",
+    "分类": "写作",
+    "aliases": [
+      "koreader",
+      "KOReader",
+      "电子书"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "koreader-android-arm64",
+      ".apk"
+    ],
+    "save_name": "koreader.apk",
+    "releases_url": "https://bgithub.xyz/koreader/koreader/releases",
+    "repo_path": "koreader/koreader"
   }
 ]

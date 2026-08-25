@@ -236,5 +236,154 @@
     ],
     "releases_url": "https://bgithub.xyz/olive-editor/olive/releases",
     "repo_path": "olive-editor/olive"
+  },
+  {
+    "id": "nipaplay",
+    "简介": "NipaPlay Reload（跨平台本地视频/弹幕播放器；Windows x64 Setup）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".msix",
+      ".zip",
+      "Android",
+      "macOS",
+      "Linux",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "NipaPlay_",
+      "Windows_x64_Setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "releases_url": "https://bgithub.xyz/AimesSoft/NipaPlay-Reload/releases",
+    "repo_path": "AimesSoft/NipaPlay-Reload"
+  },
+  {
+    "id": "fxsound",
+    "简介": "FxSound（开源音频增强；Windows x64 Setup）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm64",
+      ".msi",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "fxsound_setup",
+      ".exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "releases_url": "https://bgithub.xyz/fxsound2/fxsound-app/releases",
+    "repo_path": "fxsound2/fxsound-app"
+  },
+  {
+    "id": "potplayer",
+    "简介": "PotPlayer（本地播放器；官网分发，lookup 打开下载页）",
+    "分类": "音视频",
+    "aliases": [
+      "potplayer",
+      "PotPlayer"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://potplayer.daum.net/",
+    "url_hint": "potplayer PotPlayer",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "spotify",
+    "简介": "Spotify（官方客户端；lookup 打开下载页。开源替代见 spotube）",
+    "分类": "音视频",
+    "aliases": [
+      "spotify",
+      "Spotify"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.spotify.com/download/windows/",
+    "url_hint": "spotify Spotify",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "netease_cloud_music",
+    "简介": "网易云音乐（官网分发，lookup 打开下载页）",
+    "分类": "音视频",
+    "aliases": [
+      "netease",
+      "网易云",
+      "网易云音乐",
+      "cloudmusic"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://music.163.com/#/download",
+    "url_hint": "netease 网易云 网易云音乐 cloudmusic",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "qqmusic",
+    "简介": "QQ 音乐（官网分发，lookup 打开下载页）",
+    "分类": "音视频",
+    "aliases": [
+      "qqmusic",
+      "QQ音乐",
+      "qq 音乐"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://y.qq.com/download/download.html",
+    "url_hint": "qqmusic QQ音乐 qq 音乐",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "capcut",
+    "简介": "剪映 / CapCut（字节剪辑；官网分发，lookup 打开下载页）",
+    "分类": "音视频",
+    "aliases": [
+      "capcut",
+      "jianying",
+      "剪映",
+      "剪映专业版"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.capcut.cn/",
+    "url_hint": "capcut jianying 剪映 剪映专业版",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

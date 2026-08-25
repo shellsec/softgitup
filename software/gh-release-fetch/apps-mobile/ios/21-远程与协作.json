@@ -1,0 +1,130 @@
+[
+  {
+    "id": "todesk_ios",
+    "简介": "ToDesk（iOS；lookup 打开官网下载页，勿启用 auto_update）",
+    "分类": "远程与协作",
+    "aliases": [
+      "todesk",
+      "ToDesk"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.todesk.com/download.html",
+    "releases_url": "https://www.todesk.com/download.html",
+    "url_hint": "todesk ToDesk",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "anydesk_ios",
+    "简介": "AnyDesk（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "远程与协作",
+    "aliases": [
+      "anydesk",
+      "AnyDesk"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id1173237980",
+    "releases_url": "https://apps.apple.com/app/id1173237980",
+    "url_hint": "anydesk AnyDesk",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "teamviewer_ios",
+    "简介": "TeamViewer（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "远程与协作",
+    "aliases": [
+      "teamviewer",
+      "TeamViewer"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id692368163",
+    "releases_url": "https://apps.apple.com/app/id692368163",
+    "url_hint": "teamviewer TeamViewer",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "sunlogin_ios",
+    "简介": "向日葵（iOS；lookup 打开官网下载页，勿启用 auto_update）",
+    "分类": "远程与协作",
+    "aliases": [
+      "sunlogin",
+      "向日葵",
+      "oray"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://sunlogin.oray.com/download",
+    "releases_url": "https://sunlogin.oray.com/download",
+    "url_hint": "sunlogin 向日葵 oray",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "zoom_ios",
+    "简介": "Zoom（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "远程与协作",
+    "aliases": [
+      "zoom",
+      "Zoom"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id546505307",
+    "releases_url": "https://apps.apple.com/app/id546505307",
+    "url_hint": "zoom Zoom",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "teams_ios",
+    "简介": "Microsoft Teams（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "远程与协作",
+    "aliases": [
+      "teams",
+      "Microsoft Teams"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id1113153706",
+    "releases_url": "https://apps.apple.com/app/id1113153706",
+    "url_hint": "teams Microsoft Teams",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "meet_ios",
+    "简介": "Google Meet（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "远程与协作",
+    "aliases": [
+      "google meet",
+      "meet",
+      "谷歌会议"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id1099417390",
+    "releases_url": "https://apps.apple.com/app/id1099417390",
+    "url_hint": "google meet meet 谷歌会议",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  }
+]

@@ -405,5 +405,36 @@
     "open_page_url": "https://github.com/mcmilk/7-Zip-zstd/releases",
     "releases_url": "https://bgithub.xyz/mcmilk/7-Zip-zstd/releases",
     "repo_path": "mcmilk/7-Zip-zstd"
+  },
+  {
+    "id": "leafview",
+    "简介": "LeafView（Linux x86_64 AppImage）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".yml",
+      "blockmap",
+      "darwin",
+      "win",
+      ".deb",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "LeafView-",
+      "linux-x86_64.AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "releases_url": "https://bgithub.xyz/sprout2000/leafview/releases",
+    "repo_path": "sprout2000/leafview"
   }
 ]

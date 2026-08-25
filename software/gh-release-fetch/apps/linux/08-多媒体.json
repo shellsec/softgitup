@@ -806,5 +806,34 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "converseen",
+    "简介": "Converseen（Linux x86_64 AppImage）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "aarch64",
+      ".zsync",
+      "win",
+      "macos"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Converseen-",
+      "anylinux-x86_64.AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "releases_url": "https://bgithub.xyz/Faster3ck/Converseen/releases",
+    "repo_path": "Faster3ck/Converseen"
   }
 ]

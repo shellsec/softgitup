@@ -134,5 +134,118 @@
     ],
     "releases_url": "https://bgithub.xyz/pdfcpu/pdfcpu/releases",
     "repo_path": "pdfcpu/pdfcpu"
+  },
+  {
+    "id": "wps",
+    "简介": "WPS 办公套件（金山官网分发，lookup 打开下载页）",
+    "分类": "办公",
+    "aliases": [
+      "wps",
+      "WPS",
+      "金山办公",
+      "wps office"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.wps.cn/",
+    "url_hint": "wps WPS 金山办公 wps office",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "microsoft_365",
+    "简介": "Microsoft 365 / Office（官网分发，lookup 打开下载页；Linux 为网页版）",
+    "分类": "办公",
+    "aliases": [
+      "office",
+      "microsoft 365",
+      "office 365",
+      "微软办公",
+      "Word",
+      "Excel",
+      "PPT"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.microsoft.com/zh-cn/microsoft-365/download",
+    "url_hint": "office microsoft 365 office 365 微软办公 Word Excel PPT",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "xmind",
+    "简介": "XMind（思维导图；官网分发，lookup 打开下载页）",
+    "分类": "办公",
+    "aliases": [
+      "xmind",
+      "XMind",
+      "思维导图"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://xmind.com/download/",
+    "url_hint": "xmind XMind 思维导图",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "adobe_reader",
+    "简介": "Adobe Acrobat Reader（PDF 阅读；官网分发，lookup 打开下载页）",
+    "分类": "办公",
+    "aliases": [
+      "adobe reader",
+      "acrobat",
+      "Adobe Reader",
+      "Adobe Acrobat",
+      "PDF阅读器"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://get.adobe.com/cn/reader/",
+    "url_hint": "adobe reader acrobat Adobe Reader Adobe Acrobat PDF阅读器",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "google_docs",
+    "简介": "Google 文档（网页版；lookup 打开）",
+    "分类": "办公",
+    "aliases": [
+      "google docs",
+      "谷歌文档"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://docs.google.com/",
+    "url_hint": "google docs 谷歌文档",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "canva",
+    "简介": "Canva（官网分发，lookup 打开下载页）",
+    "分类": "办公",
+    "aliases": [
+      "canva",
+      "Canva"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.canva.com/download/",
+    "url_hint": "canva Canva",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

@@ -219,5 +219,39 @@
     "save_name": "scummvm.apk",
     "releases_url": "https://bgithub.xyz/scummvm/scummvm/releases",
     "repo_path": "scummvm/scummvm"
+  },
+  {
+    "id": "steam_android",
+    "简介": "Steam Android（lookup 打开商店页）",
+    "分类": "游戏",
+    "aliases": [
+      "steam",
+      "Steam"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.valvesoftware.android.steam.community",
+    "url_hint": "steam Steam",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "taptap",
+    "简介": "TapTap Android（lookup 打开商店页）",
+    "分类": "游戏",
+    "aliases": [
+      "taptap",
+      "TapTap"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.taptap",
+    "url_hint": "taptap TapTap",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
   }
 ]

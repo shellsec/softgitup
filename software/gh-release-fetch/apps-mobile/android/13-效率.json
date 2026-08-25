@@ -101,5 +101,81 @@
     "save_name": "habitica.apk",
     "releases_url": "https://bgithub.xyz/HabitRPG/habitica-android/releases",
     "repo_path": "HabitRPG/habitica-android"
+  },
+  {
+    "id": "algidy",
+    "简介": "Algidy（Android 食品保质期/过期提醒；GitHub Release APK）",
+    "分类": "效率",
+    "aliases": [
+      "algidy",
+      "Algidy",
+      "保质期",
+      "食品过期"
+    ],
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers": [
+      "app-release.apk",
+      "Algidy"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "algidy.apk",
+    "releases_url": "https://bgithub.xyz/NhuHuy-79/Algidy/releases",
+    "repo_path": "NhuHuy-79/Algidy"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "parallel",
+      "nominify",
+      "amazon",
+      "play",
+      "variant",
+      "dev-",
+      "debug",
+      ".aab"
+    ],
+    "id": "ankidroid",
+    "简介": "AnkiDroid（间隔重复记忆卡片；GitHub universal APK）",
+    "分类": "效率",
+    "aliases": [
+      "anki",
+      "ankidroid",
+      "Anki"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "AnkiDroid-",
+      "full-universal.apk"
+    ],
+    "save_name": "ankidroid.apk",
+    "releases_url": "https://bgithub.xyz/AnkiDroid/Anki-Android/releases",
+    "repo_path": "AnkiDroid/Anki-Android"
   }
 ]

@@ -112,5 +112,131 @@
     ],
     "releases_url": "https://bgithub.xyz/session-foundation/session-desktop/releases",
     "repo_path": "session-foundation/session-desktop"
+  },
+  {
+    "id": "wechat",
+    "简介": "微信 PC 版（腾讯官网分发，lookup 打开下载页，不自动下载）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "wechat",
+      "weixin",
+      "微信",
+      "WeChat"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://linux.weixin.qq.com/",
+    "url_hint": "wechat weixin 微信 WeChat",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "qq",
+    "简介": "QQ（腾讯官网分发，lookup 打开下载页）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "qq",
+      "QQ",
+      "腾讯QQ"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://im.qq.com/linuxqq/",
+    "url_hint": "qq QQ 腾讯QQ",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "dingtalk",
+    "简介": "钉钉（阿里办公通讯；官网分发，lookup 打开下载页）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "dingtalk",
+      "钉钉",
+      "dingding"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.dingtalk.com/download",
+    "url_hint": "dingtalk 钉钉 dingding",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "feishu",
+    "简介": "飞书 / Lark（字节协作套件；官网分发，lookup 打开下载页）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "feishu",
+      "lark",
+      "飞书",
+      "Lark"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.feishu.cn/download",
+    "url_hint": "feishu lark 飞书 Lark",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "slack",
+    "简介": "Slack（团队聊天；官网分发，lookup 打开下载页）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "slack",
+      "Slack"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://slack.com/downloads",
+    "url_hint": "slack Slack",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "discord",
+    "简介": "Discord（语音/社区；官网分发，lookup 打开下载页）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "discord",
+      "Discord"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://discord.com/download",
+    "url_hint": "discord Discord",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "teams",
+    "简介": "Microsoft Teams（官网分发，lookup 打开下载页）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "teams",
+      "Microsoft Teams",
+      "微软会议"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.microsoft.com/zh-cn/microsoft-teams/download-app",
+    "url_hint": "teams Microsoft Teams 微软会议",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

@@ -136,5 +136,41 @@
     "save_name": "simple_keyboard.apk",
     "releases_url": "https://bgithub.xyz/SimpleMobileTools/Simple-Keyboard/releases",
     "repo_path": "SimpleMobileTools/Simple-Keyboard"
+  },
+  {
+    "id": "gboard",
+    "简介": "Gboard 谷歌输入法（lookup 打开商店页；开源替代 openboard）",
+    "分类": "输入",
+    "aliases": [
+      "gboard",
+      "谷歌输入法",
+      "Gboard"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.google.android.inputmethod.latin",
+    "url_hint": "gboard 谷歌输入法 Gboard",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "sogou_pinyin_android",
+    "简介": "搜狗输入法 Android（lookup 打开官网）",
+    "分类": "输入",
+    "aliases": [
+      "sogou",
+      "搜狗",
+      "搜狗输入法"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://shouji.sogou.com/",
+    "url_hint": "sogou 搜狗 搜狗输入法",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
   }
 ]

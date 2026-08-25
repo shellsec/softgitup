@@ -52,7 +52,7 @@
     "id": "notepadplusplus",
     "简介": "轻量文本编辑器，x64 安装包",
     "分类": "编辑器",
-    "enabled": true,
+    "enabled": false,
     "releases_url": "https://bgithub.xyz/notepad-plus-plus/notepad-plus-plus/releases",
     "repo_path": "notepad-plus-plus/notepad-plus-plus",
     "url_hint": "notepad",
@@ -66,14 +66,14 @@
     ],
     "save_name": "npp.{ver}.Installer.x64.exe",
     "process_name": "notepad++.exe",
-    "kill_before_install": false,
-    "run_installer": false
+    "kill_before_install": true,
+    "run_installer": true
   },
   {
     "id": "notepad_minusminus",
     "简介": "Notepad--（国产轻量跨平台编辑器，GPL，便携 zip）",
     "分类": "编辑器",
-    "enabled": true,
+    "enabled": false,
     "releases_url": "https://bgithub.xyz/cxasm/notepad--/releases",
     "repo_path": "cxasm/notepad--",
     "prefer_api_assets": true,
@@ -875,17 +875,26 @@
   },
   {
     "id": "wind_input",
-    "简介": "WindInput（Windows 输入法）",
+    "简介": "WindInput / 清风输入法（轻量可定制中文输入法；Windows Setup）",
     "分类": "编辑器",
     "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
-    "windows_installer": false,
+    "windows_installer": true,
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false,
+    "run_installer": true,
     "use_download_filename": true,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "WindInput-Setup-",
+      ".exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
     "href_exclude_substrings": [
+      "Portable",
       "source",
       "src.",
       "-src",
@@ -897,9 +906,56 @@
       ".json",
       ".txt",
       ".md",
-      "checksum"
+      "checksum",
+      ".zip"
     ],
     "releases_url": "https://bgithub.xyz/huanfeng/WindInput/releases",
     "repo_path": "huanfeng/WindInput"
+  },
+  {
+    "id": "terax_ai",
+    "简介": "Terax（轻量终端优先 AI 开发工作区；Windows x64 Setup）",
+    "分类": "编辑器",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "Terax.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".msi",
+      ".sig",
+      "arm64",
+      "ia32"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Terax_",
+      "x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "releases_url": "https://bgithub.xyz/crynta/terax-ai/releases",
+    "repo_path": "crynta/terax-ai"
+  },
+  {
+    "id": "typora",
+    "简介": "Typora（Markdown 编辑器；官网分发，lookup 打开下载页）",
+    "分类": "编辑器",
+    "aliases": [
+      "typora",
+      "Typora"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://typora.io/",
+    "url_hint": "typora Typora",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

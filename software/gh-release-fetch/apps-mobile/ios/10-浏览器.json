@@ -1,0 +1,58 @@
+[
+  {
+    "id": "chrome_ios",
+    "简介": "Google Chrome（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "浏览器",
+    "aliases": [
+      "chrome",
+      "谷歌浏览器",
+      "Chrome"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id535886823",
+    "releases_url": "https://apps.apple.com/app/id535886823",
+    "url_hint": "chrome 谷歌浏览器 Chrome",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "edge_ios",
+    "简介": "Microsoft Edge（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "浏览器",
+    "aliases": [
+      "edge",
+      "Edge",
+      "微软浏览器"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id1288723196",
+    "releases_url": "https://apps.apple.com/app/id1288723196",
+    "url_hint": "edge Edge 微软浏览器",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "opera_ios",
+    "简介": "Opera（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "浏览器",
+    "aliases": [
+      "opera",
+      "Opera"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id1411861975",
+    "releases_url": "https://apps.apple.com/app/id1411861975",
+    "url_hint": "opera Opera",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  }
+]

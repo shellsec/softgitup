@@ -525,5 +525,114 @@
     ],
     "releases_url": "https://bgithub.xyz/nicotine-plus/nicotine-plus/releases",
     "repo_path": "nicotine-plus/nicotine-plus"
+  },
+  {
+    "id": "motrix_next",
+    "简介": "MotrixNext（Motrix Tauri 重写版下载器；Windows x64 Setup）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm64",
+      ".dmg",
+      ".deb",
+      "AppImage",
+      ".rpm",
+      ".sig"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "MotrixNext_",
+      "x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "releases_url": "https://bgithub.xyz/AnInsomniacy/motrix-next/releases",
+    "repo_path": "AnInsomniacy/motrix-next"
+  },
+  {
+    "id": "fluxdown",
+    "简介": "FluxDown（Rust 多协议下载器；Windows x64 Setup）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm64",
+      "portable",
+      ".zip",
+      ".dmg",
+      "linux",
+      ".sig"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "FluxDown-",
+      "windows-x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "releases_url": "https://bgithub.xyz/zerx-lab/FluxDown/releases",
+    "repo_path": "zerx-lab/FluxDown"
+  },
+  {
+    "id": "xiadown",
+    "简介": "XiaDown（资源库/视频下载管理；Windows x64 安装包）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".zip",
+      "macos",
+      ".sha256",
+      ".sig"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "xiadown-windows-x64-",
+      "installer.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "releases_url": "https://bgithub.xyz/arnoldhao/xiadown/releases",
+    "repo_path": "arnoldhao/xiadown"
+  },
+  {
+    "id": "xunlei",
+    "简介": "迅雷（官网分发，lookup 打开下载页）",
+    "分类": "下载",
+    "aliases": [
+      "xunlei",
+      "thunder",
+      "迅雷"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.xunlei.com/",
+    "url_hint": "xunlei thunder 迅雷",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

@@ -1540,5 +1540,414 @@
     "process_name": "VoxTrans.exe",
     "kill_before_install": true,
     "run_installer": true
+  },
+  {
+    "id": "deepseek_reasonix",
+    "简介": "DeepSeek Reasonix（DeepSeek 原生终端 AI coding agent / Desktop；Windows x64 安装包）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm64",
+      ".zip",
+      ".minisig"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Reasonix-windows-amd64-installer",
+      ".exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "releases_url": "https://bgithub.xyz/esengine/DeepSeek-Reasonix/releases",
+    "repo_path": "esengine/DeepSeek-Reasonix"
+  },
+  {
+    "id": "qwen_code",
+    "简介": "Qwen Code（通义 Qwen 官方 coding agent CLI；Windows x64 zip）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "darwin",
+      "linux",
+      "arm64",
+      ".sig"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "qwen-code-win-x64",
+      ".zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "releases_url": "https://bgithub.xyz/QwenLM/qwen-code/releases",
+    "repo_path": "QwenLM/qwen-code"
+  },
+  {
+    "id": "kimi_cli",
+    "简介": "Kimi CLI（Moonshot 官方命令行；Windows x64 zip）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "onedir",
+      "aarch64",
+      "linux",
+      "darwin",
+      "apple"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "x86_64-pc-windows-msvc.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "releases_url": "https://bgithub.xyz/moonshotai/kimi-cli/releases",
+    "repo_path": "moonshotai/kimi-cli"
+  },
+  {
+    "id": "claude_code_router",
+    "简介": "Claude Code Router（多模型路由桌面端；Windows exe）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "AppImage",
+      ".dmg",
+      ".zip",
+      "arm64",
+      "mac",
+      "linux"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Claude-Code-Router_",
+      ".exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "releases_url": "https://bgithub.xyz/musistudio/claude-code-router/releases",
+    "repo_path": "musistudio/claude-code-router"
+  },
+  {
+    "id": "koboldcpp",
+    "简介": "KoboldCpp（本地 LLM 推理前端；Windows CUDA 版 exe）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "nocuda",
+      "oldpc",
+      "rocm",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "koboldcpp.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "releases_url": "https://bgithub.xyz/LostRuins/koboldcpp/releases",
+    "repo_path": "LostRuins/koboldcpp"
+  },
+  {
+    "id": "llamafile",
+    "简介": "llamafile（Mozilla 单文件本地 LLM 运行器；跨平台 zip）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".sig",
+      "sha256"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "llamafile-",
+      ".zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "releases_url": "https://bgithub.xyz/Mozilla-Ocho/llamafile/releases",
+    "repo_path": "Mozilla-Ocho/llamafile"
+  },
+  {
+    "id": "llama_cpp",
+    "简介": "llama.cpp（GGML 本地推理；Windows CPU x64 zip，CUDA 包另选）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "cuda",
+      "vulkan",
+      "sycl",
+      "rocm",
+      "openvino",
+      "arm64",
+      "cudart"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "bin-win-cpu-x64",
+      ".zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "releases_url": "https://bgithub.xyz/ggml-org/llama.cpp/releases",
+    "repo_path": "ggml-org/llama.cpp"
+  },
+  {
+    "id": "pinokio",
+    "简介": "Pinokio（一键跑本地 AI 应用的浏览器式桌面；Windows exe）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "AppImage",
+      ".dmg",
+      ".deb",
+      ".rpm",
+      ".zip",
+      "arm64"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Pinokio.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "releases_url": "https://bgithub.xyz/pinokiocomputer/pinokio/releases",
+    "repo_path": "pinokiocomputer/pinokio"
+  },
+  {
+    "id": "open_interpreter",
+    "简介": "Open Interpreter（自然语言操控本机；Windows x64 tar.gz）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "aarch64",
+      "linux",
+      "darwin",
+      "apple"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "open-interpreter-package-x86_64-pc-windows-msvc",
+      ".tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "releases_url": "https://bgithub.xyz/OpenInterpreter/open-interpreter/releases",
+    "repo_path": "OpenInterpreter/open-interpreter"
+  },
+  {
+    "id": "chatall",
+    "简介": "ChatALL（同时问多家大模型的桌面客户端；Windows x64 安装包）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm64",
+      "win.exe",
+      ".zip",
+      "mac",
+      "linux"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ChatALL-",
+      "win-x64.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "releases_url": "https://bgithub.xyz/sunner/ChatALL/releases",
+    "repo_path": "sunner/ChatALL"
+  },
+  {
+    "id": "mods",
+    "简介": "mods（Charm 终端 AI；Windows x64 zip）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm64",
+      "Linux",
+      "Darwin",
+      ".deb",
+      ".rpm",
+      ".tar.gz"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "mods_",
+      "Windows_x86_64.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "releases_url": "https://bgithub.xyz/charmbracelet/mods/releases",
+    "repo_path": "charmbracelet/mods"
+  },
+  {
+    "id": "fabric",
+    "简介": "fabric（AI 提示词工作流 CLI；Windows x64 zip）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm64",
+      "i386",
+      "Linux",
+      "Darwin"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "fabric_Windows_x86_64",
+      ".zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "releases_url": "https://bgithub.xyz/danielmiessler/fabric/releases",
+    "repo_path": "danielmiessler/fabric"
+  },
+  {
+    "id": "magika",
+    "简介": "Magika（Google 开源文件类型识别 CLI；Windows x64 zip）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "linux",
+      "darwin",
+      "apple",
+      "aarch64"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "magika-cli-x86_64-pc-windows-msvc",
+      ".zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "releases_url": "https://bgithub.xyz/google/magika/releases",
+    "repo_path": "google/magika"
+  },
+  {
+    "id": "piper",
+    "简介": "Piper（本地神经网络 TTS；Windows amd64 zip）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "linux",
+      "macos"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "piper_windows_amd64",
+      ".zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "releases_url": "https://bgithub.xyz/rhasspy/piper/releases",
+    "repo_path": "rhasspy/piper"
   }
 ]

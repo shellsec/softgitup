@@ -819,5 +819,23 @@
     "kill_before_install": false,
     "run_installer": false,
     "url_hint": "eSearch"
+  },
+  {
+    "id": "utools",
+    "简介": "uTools（效率启动器；官网分发，lookup 打开下载页）",
+    "分类": "效率",
+    "aliases": [
+      "utools",
+      "uTools",
+      "u工具"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.u.tools/",
+    "url_hint": "utools uTools u工具",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

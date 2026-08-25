@@ -707,5 +707,22 @@
     ],
     "releases_url": "https://bgithub.xyz/ankitects/anki/releases",
     "repo_path": "ankitects/anki"
+  },
+  {
+    "id": "notion",
+    "简介": "Notion 桌面版（官网分发，lookup 打开下载页）",
+    "分类": "笔记",
+    "aliases": [
+      "notion",
+      "Notion"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.notion.com/desktop",
+    "url_hint": "notion Notion",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

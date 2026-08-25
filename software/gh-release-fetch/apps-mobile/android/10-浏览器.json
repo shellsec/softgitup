@@ -107,5 +107,75 @@
     "save_name": "cromite.apk",
     "releases_url": "https://bgithub.xyz/uazo/cromite/releases",
     "repo_path": "uazo/cromite"
+  },
+  {
+    "id": "chrome_android",
+    "简介": "Google Chrome Android（lookup 打开商店页；开源替代见 fenix/cromite）",
+    "分类": "浏览器",
+    "aliases": [
+      "chrome",
+      "谷歌浏览器",
+      "Chrome"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.android.chrome",
+    "url_hint": "chrome 谷歌浏览器 Chrome",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "edge_android",
+    "简介": "Microsoft Edge Android（lookup 打开商店页）",
+    "分类": "浏览器",
+    "aliases": [
+      "edge",
+      "Edge",
+      "微软浏览器"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.microsoft.emmx",
+    "url_hint": "edge Edge 微软浏览器",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "opera_android",
+    "简介": "Opera Android（lookup 打开商店页）",
+    "分类": "浏览器",
+    "aliases": [
+      "opera",
+      "Opera"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.opera.browser",
+    "url_hint": "opera Opera",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "brave_android",
+    "简介": "Brave Android（lookup 打开商店页）",
+    "分类": "浏览器",
+    "aliases": [
+      "brave",
+      "Brave"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.brave.browser",
+    "url_hint": "brave Brave",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
   }
 ]

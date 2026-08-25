@@ -1,0 +1,38 @@
+[
+  {
+    "id": "steam_ios",
+    "简介": "Steam（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "游戏",
+    "aliases": [
+      "steam",
+      "Steam"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id495890035",
+    "releases_url": "https://apps.apple.com/app/id495890035",
+    "url_hint": "steam Steam",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "taptap_ios",
+    "简介": "TapTap（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "游戏",
+    "aliases": [
+      "taptap",
+      "TapTap"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id1114540102",
+    "releases_url": "https://apps.apple.com/app/id1114540102",
+    "url_hint": "taptap TapTap",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  }
+]

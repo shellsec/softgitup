@@ -1,0 +1,317 @@
+[
+  {
+    "id": "wechat_ios",
+    "简介": "微信（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "wechat",
+      "weixin",
+      "微信"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id414478124",
+    "releases_url": "https://apps.apple.com/app/id414478124",
+    "url_hint": "wechat weixin 微信",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "qq_ios",
+    "简介": "QQ（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "qq",
+      "QQ",
+      "手机QQ"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id444934666",
+    "releases_url": "https://apps.apple.com/app/id444934666",
+    "url_hint": "qq QQ 手机QQ",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "wecom_ios",
+    "简介": "企业微信（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "wecom",
+      "企业微信",
+      "wework"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id1029197278",
+    "releases_url": "https://apps.apple.com/app/id1029197278",
+    "url_hint": "wecom 企业微信 wework",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "feishu_ios",
+    "简介": "飞书（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "feishu",
+      "飞书",
+      "lark"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id1451810416",
+    "releases_url": "https://apps.apple.com/app/id1451810416",
+    "url_hint": "feishu 飞书 lark",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "dingtalk_ios",
+    "简介": "钉钉（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "dingtalk",
+      "钉钉"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id930368808",
+    "releases_url": "https://apps.apple.com/app/id930368808",
+    "url_hint": "dingtalk 钉钉",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "instagram_ios",
+    "简介": "Instagram（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "instagram",
+      "ins",
+      "ig",
+      "Instagram"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id389801252",
+    "releases_url": "https://apps.apple.com/app/id389801252",
+    "url_hint": "instagram ins ig Instagram",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "facebook_ios",
+    "简介": "Facebook（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "facebook",
+      "fb",
+      "脸书"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id284882215",
+    "releases_url": "https://apps.apple.com/app/id284882215",
+    "url_hint": "facebook fb 脸书",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "messenger_ios",
+    "简介": "Messenger（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "messenger",
+      "facebook messenger"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id454638411",
+    "releases_url": "https://apps.apple.com/app/id454638411",
+    "url_hint": "messenger facebook messenger",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "whatsapp_ios",
+    "简介": "WhatsApp（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "whatsapp",
+      "WhatsApp"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id310633997",
+    "releases_url": "https://apps.apple.com/app/id310633997",
+    "url_hint": "whatsapp WhatsApp",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "weibo_ios",
+    "简介": "微博（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "weibo",
+      "微博"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id350962117",
+    "releases_url": "https://apps.apple.com/app/id350962117",
+    "url_hint": "weibo 微博",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "reddit_ios",
+    "简介": "Reddit（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "reddit",
+      "Reddit"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id1064216828",
+    "releases_url": "https://apps.apple.com/app/id1064216828",
+    "url_hint": "reddit Reddit",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "snapchat_ios",
+    "简介": "Snapchat（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "snapchat",
+      "Snapchat"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id447188370",
+    "releases_url": "https://apps.apple.com/app/id447188370",
+    "url_hint": "snapchat Snapchat",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "skype_ios",
+    "简介": "Skype（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "skype",
+      "Skype"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id304878510",
+    "releases_url": "https://apps.apple.com/app/id304878510",
+    "url_hint": "skype Skype",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "line_ios",
+    "简介": "LINE（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "line",
+      "LINE"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id443904275",
+    "releases_url": "https://apps.apple.com/app/id443904275",
+    "url_hint": "line LINE",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "twitter_ios",
+    "简介": "X / Twitter（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "twitter",
+      "x.com",
+      "推特",
+      "X"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id333903271",
+    "releases_url": "https://apps.apple.com/app/id333903271",
+    "url_hint": "twitter x.com 推特 X",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "threads_ios",
+    "简介": "Threads（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "threads",
+      "Threads"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id6446901002",
+    "releases_url": "https://apps.apple.com/app/id6446901002",
+    "url_hint": "threads Threads",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "discord_ios",
+    "简介": "Discord（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "discord",
+      "Discord"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id985746746",
+    "releases_url": "https://apps.apple.com/app/id985746746",
+    "url_hint": "discord Discord",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  }
+]

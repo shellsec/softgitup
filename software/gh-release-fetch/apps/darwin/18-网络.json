@@ -112,9 +112,33 @@
   },
   {
     "id": "openvpn",
+    "简介": "OpenVPN 社区版（非 OpenVPN Connect）",
+    "分类": "网络",
+    "aliases": [
+      "openvpn community",
+      "OpenVPN 社区版"
+    ],
     "enabled": false,
     "releases_url": "https://bgithub.xyz/OpenVPN/openvpn/releases",
     "repo_path": "OpenVPN/openvpn"
+  },
+  {
+    "id": "openvpn_connect",
+    "简介": "OpenVPN Connect 3（官方 GUI 客户端；packages.openvpn.net，lookup 打开下载页）",
+    "分类": "网络",
+    "aliases": [
+      "openvpn connect",
+      "OpenVPN Connect",
+      "openvpn-connect"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://openvpn.net/client/",
+    "url_hint": "openvpn connect",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   },
   {
     "id": "croc",
@@ -396,5 +420,78 @@
     "open_page_url": "https://github.com/mullvad/mullvad-browser/releases",
     "releases_url": "https://bgithub.xyz/mullvad/mullvad-browser/releases",
     "repo_path": "mullvad/mullvad-browser"
+  },
+  {
+    "id": "chrome",
+    "简介": "Google Chrome（官网分发，lookup 打开下载页）",
+    "分类": "网络",
+    "aliases": [
+      "chrome",
+      "google chrome",
+      "谷歌浏览器",
+      "Chrome"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.google.com/chrome/",
+    "url_hint": "chrome google chrome 谷歌浏览器 Chrome",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "edge",
+    "简介": "Microsoft Edge（官网分发，lookup 打开下载页）",
+    "分类": "网络",
+    "aliases": [
+      "edge",
+      "microsoft edge",
+      "Edge",
+      "微软浏览器"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.microsoft.com/edge/download",
+    "url_hint": "edge microsoft edge Edge 微软浏览器",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "firefox",
+    "简介": "Mozilla Firefox（官网安装包，lookup 打开下载页）",
+    "分类": "网络",
+    "aliases": [
+      "firefox",
+      "Firefox",
+      "火狐"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.mozilla.org/zh-CN/firefox/new/",
+    "url_hint": "firefox Firefox 火狐",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "opera",
+    "简介": "Opera（官网分发，lookup 打开下载页）",
+    "分类": "网络",
+    "aliases": [
+      "opera",
+      "Opera"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.opera.com/download",
+    "url_hint": "opera Opera",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

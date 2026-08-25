@@ -1,0 +1,39 @@
+[
+  {
+    "id": "gemini_ios",
+    "简介": "Google Gemini（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "AI",
+    "aliases": [
+      "gemini",
+      "Gemini",
+      "bard"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id6477489729",
+    "releases_url": "https://apps.apple.com/app/id6477489729",
+    "url_hint": "gemini Gemini bard",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "copilot_ios",
+    "简介": "Microsoft Copilot（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "AI",
+    "aliases": [
+      "copilot",
+      "Copilot"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id6472538445",
+    "releases_url": "https://apps.apple.com/app/id6472538445",
+    "url_hint": "copilot Copilot",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  }
+]

@@ -123,7 +123,7 @@
     "id": "7zip",
     "简介": "7-Zip（官方 x64 MSI 安装包，ip7z/7zip Release）",
     "分类": "工具",
-    "enabled": true,
+    "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
     "releases_url": "https://bgithub.xyz/ip7z/7zip/releases",
@@ -149,7 +149,7 @@
     "save_name": "7z-x64.msi",
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false,
+    "run_installer": true,
     "url_hint": "7zip"
   },
   {
@@ -183,7 +183,7 @@
     "id": "ditto",
     "简介": "Ditto（剪贴板历史；Release 资产名带版本号，优先 API 匹配 DittoSetup_64bit）",
     "分类": "工具",
-    "enabled": true,
+    "enabled": false,
     "prefer_api_assets": true,
     "releases_url": "https://bgithub.xyz/sabrogden/Ditto/releases",
     "repo_path": "sabrogden/Ditto",
@@ -204,7 +204,7 @@
     "save_name": "DittoSetup_64bit.exe",
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false
+    "run_installer": true
   },
   {
     "id": "flyphotos",
@@ -914,5 +914,70 @@
     ],
     "releases_url": "https://bgithub.xyz/mcmilk/7-Zip-zstd/releases",
     "repo_path": "mcmilk/7-Zip-zstd"
+  },
+  {
+    "id": "leafview",
+    "简介": "LeafView（极简图片查看器；Windows x64 安装包）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".zip",
+      "blockmap",
+      ".yml",
+      "darwin",
+      "linux"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "LeafView-",
+      "win32-x64-installer.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "releases_url": "https://bgithub.xyz/sprout2000/leafview/releases",
+    "repo_path": "sprout2000/leafview"
+  },
+  {
+    "id": "bandizip",
+    "简介": "Bandizip（压缩解压；官网分发，lookup 打开下载页）",
+    "分类": "工具",
+    "aliases": [
+      "bandizip",
+      "Bandizip"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.bandisoft.com/bandizip/",
+    "url_hint": "bandizip Bandizip",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "winrar",
+    "简介": "WinRAR（压缩解压；官网分发，lookup 打开下载页）",
+    "分类": "工具",
+    "aliases": [
+      "winrar",
+      "WinRAR",
+      "rar"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.winrar.com.cn/",
+    "url_hint": "winrar WinRAR rar",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

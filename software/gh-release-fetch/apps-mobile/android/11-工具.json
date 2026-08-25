@@ -237,5 +237,213 @@
     "save_name": "fossify_messages.apk",
     "releases_url": "https://bgithub.xyz/FossifyOrg/Messages/releases",
     "repo_path": "FossifyOrg/Messages"
+  },
+  {
+    "id": "google_maps",
+    "简介": "Google 地图 Android（lookup 打开商店页；开源替代 organicmaps/osmand）",
+    "分类": "工具",
+    "aliases": [
+      "google maps",
+      "谷歌地图",
+      "maps"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.google.android.apps.maps",
+    "url_hint": "google maps 谷歌地图 maps",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "amap",
+    "简介": "高德地图 Android（lookup 打开官网）",
+    "分类": "工具",
+    "aliases": [
+      "amap",
+      "高德",
+      "高德地图"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://mobile.amap.com/",
+    "url_hint": "amap 高德 高德地图",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "baidu_map",
+    "简介": "百度地图 Android（lookup 打开商店页）",
+    "分类": "工具",
+    "aliases": [
+      "baidu map",
+      "百度地图"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.baidu.BaiduMap",
+    "url_hint": "baidu map 百度地图",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "gmail",
+    "简介": "Gmail Android（lookup 打开商店页）",
+    "分类": "工具",
+    "aliases": [
+      "gmail",
+      "Gmail"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.google.android.gm",
+    "url_hint": "gmail Gmail",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "google_keep",
+    "简介": "Google Keep Android（lookup 打开商店页）",
+    "分类": "工具",
+    "aliases": [
+      "keep",
+      "google keep"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.google.android.keep",
+    "url_hint": "keep google keep",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "google_photos",
+    "简介": "Google 相册 Android（lookup 打开商店页）",
+    "分类": "工具",
+    "aliases": [
+      "google photos",
+      "谷歌相册"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.google.android.apps.photos",
+    "url_hint": "google photos 谷歌相册",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "taobao",
+    "简介": "淘宝 Android（lookup 打开商店页）",
+    "分类": "工具",
+    "aliases": [
+      "taobao",
+      "淘宝"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.taobao.taobao",
+    "url_hint": "taobao 淘宝",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "jd",
+    "简介": "京东 Android（lookup 打开商店页）",
+    "分类": "工具",
+    "aliases": [
+      "jd",
+      "京东",
+      "jingdong"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.jingdong.app.mall",
+    "url_hint": "jd 京东 jingdong",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "pinduoduo",
+    "简介": "拼多多 Android（lookup 打开商店页）",
+    "分类": "工具",
+    "aliases": [
+      "pinduoduo",
+      "拼多多",
+      "pdd"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.xunmeng.pinduoduo",
+    "url_hint": "pinduoduo 拼多多 pdd",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "meituan",
+    "简介": "美团 Android（lookup 打开商店页）",
+    "分类": "工具",
+    "aliases": [
+      "meituan",
+      "美团"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.sankuai.meituan",
+    "url_hint": "meituan 美团",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "didi",
+    "简介": "滴滴出行 Android（lookup 打开商店页）",
+    "分类": "工具",
+    "aliases": [
+      "didi",
+      "滴滴"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.sdu.didi.psnger",
+    "url_hint": "didi 滴滴",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "amazon_android",
+    "简介": "Amazon 购物 Android（lookup 打开商店页）",
+    "分类": "工具",
+    "aliases": [
+      "amazon",
+      "亚马逊"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.amazon.mShop.android.shopping",
+    "url_hint": "amazon 亚马逊",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
   }
 ]

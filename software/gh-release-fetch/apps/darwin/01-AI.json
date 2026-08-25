@@ -1676,5 +1676,456 @@
     "use_download_filename": true,
     "releases_url": "https://bgithub.xyz/sipeed/picoclaw/releases",
     "repo_path": "sipeed/picoclaw"
+  },
+  {
+    "id": "deepseek_reasonix",
+    "简介": "DeepSeek Reasonix Desktop（macOS universal dmg）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".zip",
+      ".minisig"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Reasonix-darwin-universal",
+      ".dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "releases_url": "https://bgithub.xyz/esengine/DeepSeek-Reasonix/releases",
+    "repo_path": "esengine/DeepSeek-Reasonix"
+  },
+  {
+    "id": "qwen_code",
+    "简介": "Qwen Code（macOS Apple Silicon tar.gz）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "x64",
+      "linux",
+      "win-x64",
+      ".sig"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "qwen-code-darwin-arm64",
+      ".tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "releases_url": "https://bgithub.xyz/QwenLM/qwen-code/releases",
+    "repo_path": "QwenLM/qwen-code"
+  },
+  {
+    "id": "kimi_cli",
+    "简介": "Kimi CLI（macOS Apple Silicon tar.gz）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "onedir",
+      "x86_64",
+      "windows",
+      "linux"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "aarch64-apple-darwin.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "releases_url": "https://bgithub.xyz/moonshotai/kimi-cli/releases",
+    "repo_path": "moonshotai/kimi-cli"
+  },
+  {
+    "id": "claude_code_router",
+    "简介": "Claude Code Router（macOS Apple Silicon dmg）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "Intel",
+      ".zip",
+      ".exe",
+      "AppImage"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Claude-Code-Router_",
+      "Apple-Silicon-arm64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "releases_url": "https://bgithub.xyz/musistudio/claude-code-router/releases",
+    "repo_path": "musistudio/claude-code-router"
+  },
+  {
+    "id": "llamafile",
+    "简介": "llamafile（Mozilla 单文件本地 LLM 运行器；跨平台 zip）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".sig",
+      "sha256"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "llamafile-",
+      ".zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "releases_url": "https://bgithub.xyz/Mozilla-Ocho/llamafile/releases",
+    "repo_path": "Mozilla-Ocho/llamafile"
+  },
+  {
+    "id": "llama_cpp",
+    "简介": "llama.cpp（macOS Apple Silicon tar.gz）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "x64",
+      "android",
+      "ubuntu",
+      "win-",
+      "ui.tar"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "bin-macos-arm64",
+      ".tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "releases_url": "https://bgithub.xyz/ggml-org/llama.cpp/releases",
+    "repo_path": "ggml-org/llama.cpp"
+  },
+  {
+    "id": "local_ai",
+    "简介": "LocalAI（本地 OpenAI 兼容 API；macOS dmg）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "linux",
+      ".tar",
+      ".exe"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "LocalAI",
+      ".dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "releases_url": "https://bgithub.xyz/mudler/LocalAI/releases",
+    "repo_path": "mudler/LocalAI"
+  },
+  {
+    "id": "pinokio",
+    "简介": "Pinokio（macOS Apple Silicon dmg）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".zip",
+      ".exe",
+      "AppImage",
+      ".deb"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Pinokio-",
+      "arm64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "releases_url": "https://bgithub.xyz/pinokiocomputer/pinokio/releases",
+    "repo_path": "pinokiocomputer/pinokio"
+  },
+  {
+    "id": "open_interpreter",
+    "简介": "Open Interpreter（macOS Apple Silicon tar.gz）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "x86_64",
+      "windows",
+      "linux"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "open-interpreter-package-aarch64-apple-darwin",
+      ".tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "releases_url": "https://bgithub.xyz/OpenInterpreter/open-interpreter/releases",
+    "repo_path": "OpenInterpreter/open-interpreter"
+  },
+  {
+    "id": "chatall",
+    "简介": "ChatALL（macOS Apple Silicon dmg）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "x64",
+      ".zip",
+      "win",
+      "linux"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ChatALL-",
+      "mac-arm64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "releases_url": "https://bgithub.xyz/sunner/ChatALL/releases",
+    "repo_path": "sunner/ChatALL"
+  },
+  {
+    "id": "mods",
+    "简介": "mods（Charm 终端 AI；macOS Apple Silicon tar.gz）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "x86_64",
+      "Windows",
+      "Linux",
+      ".deb",
+      ".rpm"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "mods_",
+      "Darwin_arm64.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "releases_url": "https://bgithub.xyz/charmbracelet/mods/releases",
+    "repo_path": "charmbracelet/mods"
+  },
+  {
+    "id": "fabric",
+    "简介": "fabric（macOS Apple Silicon tar.gz）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "x86_64",
+      "Windows",
+      "Linux"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "fabric_Darwin_arm64",
+      ".tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "releases_url": "https://bgithub.xyz/danielmiessler/fabric/releases",
+    "repo_path": "danielmiessler/fabric"
+  },
+  {
+    "id": "magika",
+    "简介": "Magika（macOS Apple Silicon tar.xz）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "linux",
+      "windows",
+      "x86_64"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "magika-cli-aarch64-apple-darwin",
+      ".tar.xz"
+    ],
+    "installer_extensions": [
+      ".tar.xz"
+    ],
+    "releases_url": "https://bgithub.xyz/google/magika/releases",
+    "repo_path": "google/magika"
+  },
+  {
+    "id": "piper",
+    "简介": "Piper（macOS Apple Silicon tar.gz）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "x64",
+      "linux",
+      "windows"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "piper_macos_aarch64",
+      ".tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "releases_url": "https://bgithub.xyz/rhasspy/piper/releases",
+    "repo_path": "rhasspy/piper"
+  },
+  {
+    "id": "chatgpt",
+    "简介": "ChatGPT 官方 Mac 客户端（lookup 打开下载页）",
+    "分类": "AI",
+    "aliases": [
+      "chatgpt",
+      "ChatGPT",
+      "openai"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://chatgpt.com/download/",
+    "url_hint": "chatgpt ChatGPT openai",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "gemini",
+    "简介": "Google Gemini（网页版；lookup 打开）",
+    "分类": "AI",
+    "aliases": [
+      "gemini",
+      "Gemini",
+      "bard"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://gemini.google.com/",
+    "url_hint": "gemini Gemini bard",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "copilot",
+    "简介": "Microsoft Copilot（Mac App Store；lookup 打开商店页）",
+    "分类": "AI",
+    "aliases": [
+      "copilot",
+      "Copilot"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/microsoft-copilot/id6472538445",
+    "url_hint": "copilot Copilot",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

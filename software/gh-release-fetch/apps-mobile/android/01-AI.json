@@ -105,5 +105,58 @@
     "save_name": "maid.apk",
     "releases_url": "https://bgithub.xyz/Mobile-Artificial-Intelligence/maid/releases",
     "repo_path": "Mobile-Artificial-Intelligence/maid"
+  },
+  {
+    "id": "chatgpt_android",
+    "简介": "ChatGPT 官方 Android（lookup 打开商店页）",
+    "分类": "AI",
+    "aliases": [
+      "chatgpt",
+      "ChatGPT",
+      "openai"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.openai.chatgpt",
+    "url_hint": "chatgpt ChatGPT openai",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "gemini_android",
+    "简介": "Google Gemini Android（lookup 打开商店页）",
+    "分类": "AI",
+    "aliases": [
+      "gemini",
+      "Gemini",
+      "bard"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.google.android.apps.bard",
+    "url_hint": "gemini Gemini bard",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "copilot_android",
+    "简介": "Microsoft Copilot Android（lookup 打开商店页）",
+    "分类": "AI",
+    "aliases": [
+      "copilot",
+      "Copilot"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.microsoft.copilot",
+    "url_hint": "copilot Copilot",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
   }
 ]

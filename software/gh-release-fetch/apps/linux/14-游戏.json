@@ -636,5 +636,22 @@
     "save_name": "xemu.AppImage",
     "releases_url": "https://bgithub.xyz/xemu-project/xemu/releases",
     "repo_path": "xemu-project/xemu"
+  },
+  {
+    "id": "steam",
+    "简介": "Steam（Valve 游戏平台；官网分发，lookup 打开下载页）",
+    "分类": "游戏",
+    "aliases": [
+      "steam",
+      "Steam"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://store.steampowered.com/about/",
+    "url_hint": "steam Steam",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

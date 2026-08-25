@@ -136,5 +136,56 @@
     "save_name": "app_ops.apk",
     "releases_url": "https://bgithub.xyz/RikkaApps/App-Ops-reborn/releases",
     "repo_path": "RikkaApps/App-Ops-reborn"
+  },
+  {
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "debug",
+      "app-debug",
+      ".aab"
+    ],
+    "id": "magisk",
+    "简介": "Magisk（Android 开源 Root 方案；GitHub APK，非破解应用商店包）",
+    "分类": "系统",
+    "aliases": [
+      "magisk",
+      "Magisk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Magisk-",
+      ".apk"
+    ],
+    "save_name": "magisk.apk",
+    "releases_url": "https://bgithub.xyz/topjohnwu/Magisk/releases",
+    "repo_path": "topjohnwu/Magisk"
+  },
+  {
+    "id": "kiss_launcher",
+    "简介": "KISS Launcher（极简启动器；GitHub Release 常无 APK，lookup 打开 Releases）",
+    "分类": "系统",
+    "aliases": [
+      "kiss",
+      "KISS",
+      "launcher"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/Neamar/KISS/releases",
+    "url_hint": "kiss KISS launcher",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
   }
 ]

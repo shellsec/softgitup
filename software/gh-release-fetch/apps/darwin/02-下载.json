@@ -607,5 +607,143 @@
     "open_page_url": "https://github.com/nicotine-plus/nicotine-plus/releases",
     "releases_url": "https://bgithub.xyz/nicotine-plus/nicotine-plus/releases",
     "repo_path": "nicotine-plus/nicotine-plus"
+  },
+  {
+    "id": "motrix_next",
+    "简介": "MotrixNext（macOS Apple Silicon / 或 x64 dmg，优先 arm64）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".exe",
+      ".deb",
+      "AppImage",
+      "app.tar.gz",
+      ".sig"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "MotrixNext_",
+      "aarch64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "releases_url": "https://bgithub.xyz/AnInsomniacy/motrix-next/releases",
+    "repo_path": "AnInsomniacy/motrix-next"
+  },
+  {
+    "id": "ghost_downloader_3",
+    "简介": "Ghost Downloader（macOS Apple Silicon dmg）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "x86_64",
+      ".zip",
+      ".apk",
+      ".exe",
+      ".sig"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Ghost-Downloader-",
+      "macOS-arm64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "releases_url": "https://bgithub.xyz/XiaoYouChR/Ghost-Downloader-3/releases",
+    "repo_path": "XiaoYouChR/Ghost-Downloader-3"
+  },
+  {
+    "id": "fluxdown",
+    "简介": "FluxDown（macOS Apple Silicon dmg）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "x64",
+      ".tar.gz",
+      "windows",
+      "linux",
+      ".sig"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "FluxDown-",
+      "macos-arm64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "releases_url": "https://bgithub.xyz/zerx-lab/FluxDown/releases",
+    "repo_path": "zerx-lab/FluxDown"
+  },
+  {
+    "id": "xiadown",
+    "简介": "XiaDown（macOS Apple Silicon dmg）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".zip",
+      "x64",
+      "windows",
+      ".sha256",
+      ".sig"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "xiadown-macos-arm64-",
+      ".dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "releases_url": "https://bgithub.xyz/arnoldhao/xiadown/releases",
+    "repo_path": "arnoldhao/xiadown"
+  },
+  {
+    "id": "xunlei",
+    "简介": "迅雷（官网分发，lookup 打开下载页）",
+    "分类": "下载",
+    "aliases": [
+      "xunlei",
+      "thunder",
+      "迅雷"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.xunlei.com/",
+    "url_hint": "xunlei thunder 迅雷",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

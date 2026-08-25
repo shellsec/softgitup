@@ -169,5 +169,93 @@
     "save_name": "proton_drive.apk",
     "releases_url": "https://bgithub.xyz/ProtonMail/proton-drive-android/releases",
     "repo_path": "ProtonMail/proton-drive-android"
+  },
+  {
+    "id": "baidunetdisk_android",
+    "简介": "百度网盘 Android（lookup 打开官网）",
+    "分类": "备份",
+    "aliases": [
+      "baidunetdisk",
+      "百度网盘",
+      "百度云"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://pan.baidu.com/download",
+    "url_hint": "baidunetdisk 百度网盘 百度云",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "aliyundrive_android",
+    "简介": "阿里云盘 Android（lookup 打开官网）",
+    "分类": "备份",
+    "aliases": [
+      "aliyundrive",
+      "阿里云盘",
+      "alipan"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.alipan.com/",
+    "url_hint": "aliyundrive 阿里云盘 alipan",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "googledrive",
+    "简介": "Google Drive Android（lookup 打开商店页）",
+    "分类": "备份",
+    "aliases": [
+      "google drive",
+      "googledrive",
+      "谷歌云盘"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.google.android.apps.docs",
+    "url_hint": "google drive googledrive 谷歌云盘",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "onedrive_android",
+    "简介": "OneDrive Android（lookup 打开商店页）",
+    "分类": "备份",
+    "aliases": [
+      "onedrive",
+      "OneDrive"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.microsoft.skydrive",
+    "url_hint": "onedrive OneDrive",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
+  },
+  {
+    "id": "dropbox_android",
+    "简介": "Dropbox Android（lookup 打开商店页）",
+    "分类": "备份",
+    "aliases": [
+      "dropbox",
+      "Dropbox"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.dropbox.android",
+    "url_hint": "dropbox Dropbox",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": ""
   }
 ]
