@@ -1,6 +1,6 @@
 # 移动端软件清单索引（apps-mobile）
 
-> 自动生成：`python tools/generate_mobile_catalog_index.py`。生成时间：**2026-08-25 07:36 UTC**
+> 自动生成：`python tools/generate_mobile_catalog_index.py`。生成时间：**2026-08-26 09:55 UTC**
 
 与桌面 [`apps/`](apps/) 分离。Android 走 GitHub Release APK；iOS 多为 App Store 占位。
 
@@ -14,8 +14,9 @@
 ## 常用命令
 
 ```bat
-python lookup_app.py --apps-dir apps-mobile --platform android 微信
-python lookup_app.py --apps-dir apps-mobile --platform ios 微信
+lookup_mobile.bat 微信
+lookup_ios.bat 微信
+python lookup_app.py --apps-dir apps-mobile --platform android termux
 python auto_update.py --apps-dir apps-mobile --platform android termux
 ```
 

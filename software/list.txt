@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-25T18:36:50.173092",
+  "generated_at": "2026-08-26T18:27:40.334256",
   "total_software": 21,
-  "total_files": 4208,
-  "total_size": 1748685315,
+  "total_files": 4212,
+  "total_size": 1749249729,
   "software": {
     "WinMemoryCleaner": {
       "version": "20260515_144655",
@@ -23997,7 +23997,7 @@
       "last_updated": "2026-08-24T11:35:13.378325"
     },
     "gh-release-fetch": {
-      "version": "20260825_183650",
+      "version": "20260826_182740",
       "files": [
         {
           "path": "auto_update.exe",
@@ -24006,16 +24006,22 @@
           "modified": "2026-08-25T18:33:15.297512"
         },
         {
+          "path": "catalog.html",
+          "size": 560078,
+          "hash": "54a007e668289f843bd0c647968a67ba",
+          "modified": "2026-08-25T15:34:18.741350"
+        },
+        {
           "path": "CATALOG.md",
-          "size": 4761,
-          "hash": "47cc19735bc7cfb60c27c834ce83c8d9",
-          "modified": "2026-08-25T15:34:18.564687"
+          "size": 5081,
+          "hash": "4af46dca0677f43652e490a3335b3163",
+          "modified": "2026-08-26T18:02:33.958450"
         },
         {
           "path": "CATALOG.mobile.md",
-          "size": 3554,
-          "hash": "7d70a5992af79b6ab09678ba8ebba696",
-          "modified": "2026-08-25T15:36:02.695626"
+          "size": 3536,
+          "hash": "f1026d6db7a824f119cba2efb2c78cb2",
+          "modified": "2026-08-26T17:55:30.984390"
         },
         {
           "path": "lookup_app.bat",
@@ -24025,15 +24031,33 @@
         },
         {
           "path": "lookup_app.exe",
-          "size": 6599281,
-          "hash": "35a5d321b27934bb054a6900bbc30f33",
-          "modified": "2026-08-25T18:33:27.969754"
+          "size": 6601155,
+          "hash": "ff20bc86df756a2bdf263c8df02b932d",
+          "modified": "2026-08-26T17:55:49.999206"
+        },
+        {
+          "path": "lookup_ios.bat",
+          "size": 766,
+          "hash": "425f1e52d99b2f4c7ddca9e82032aea8",
+          "modified": "2026-08-26T17:53:47.699530"
+        },
+        {
+          "path": "lookup_mobile.bat",
+          "size": 738,
+          "hash": "8ff043aa1f068e5e90abaaf51d070aac",
+          "modified": "2026-08-26T17:53:47.573873"
+        },
+        {
+          "path": "open_catalog.bat",
+          "size": 326,
+          "hash": "e1c0d9a56cdbe4c0ef85fd731c792572",
+          "modified": "2026-08-26T18:02:08.660017"
         },
         {
           "path": "README.txt",
-          "size": 1706,
-          "hash": "7375fdcae35ef2ee508dda75f52d10e0",
-          "modified": "2026-06-28T15:02:57.834018"
+          "size": 2004,
+          "hash": "b11ae5c1c47c053a10d618be71fbf001",
+          "modified": "2026-08-26T18:02:13.122396"
         },
         {
           "path": "RECOMMENDED.md",
@@ -24104,8 +24128,8 @@
         {
           "path": "VERSION.txt",
           "size": 13,
-          "hash": "35c3dc9b93f7c90b7943c08d54a8e707",
-          "modified": "2026-08-25T18:34:06.376560"
+          "hash": "e479aed38afb26bb8c49fb116ec2dcea",
+          "modified": "2026-08-26T18:22:07.743976"
         },
         {
           "path": "apps\\darwin.json.bak",
@@ -24685,9 +24709,9 @@
         },
         {
           "path": "apps-mobile\\root.json",
-          "size": 795,
-          "hash": "aa70485c9d83d90b504c388083655fb2",
-          "modified": "2026-08-25T15:35:03.286630"
+          "size": 827,
+          "hash": "308f770afe0c3d7558c467226d571b26",
+          "modified": "2026-08-26T17:54:59.315360"
         },
         {
           "path": "apps-mobile\\android\\01-AI.json",
@@ -25416,9 +25440,9 @@
           "modified": "2026-08-21T11:00:49.316489"
         }
       ],
-      "total_files": 236,
-      "total_size": 54064725,
-      "last_updated": "2026-08-25T18:36:50.173092"
+      "total_files": 240,
+      "total_size": 54629139,
+      "last_updated": "2026-08-26T18:27:40.334256"
     }
   }
 }

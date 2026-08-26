@@ -1,6 +1,6 @@
 # apps 软件清单索引
 
-> 自动生成：运行 `python tools/generate_catalog_index.py` 刷新。生成时间：**2026-08-25 07:34 UTC**
+> 自动生成：运行 `python tools/generate_catalog_index.py` 刷新。生成时间：**2026-08-26 10:02 UTC**
 
 主清单数据在 [`apps/`](apps/)（`windows` / `darwin` / `linux` 各 30 个分类分片）。本文件只做**概览与导航**，不替代 JSON 配置。
 
@@ -16,7 +16,7 @@
 
 ## 分类展示页
 
-本地用浏览器打开 [`catalog.html`](catalog.html) 即可按平台/分类浏览（支持搜索、区分可下载与仅官网）。刷新：`python tools/generate_catalog_html.py`。
+本地用浏览器打开 [`catalog.html`](catalog.html) 即可按平台/分类浏览（支持搜索、区分可下载与仅官网）。快捷入口：根目录 `open_catalog.bat`。刷新：`python tools/generate_catalog_html.py`。
 
 Markdown 全分类导读：[`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md)（Windows）/ [`RECOMMENDED.darwin.zh-CN.md`](RECOMMENDED.darwin.zh-CN.md) / [`RECOMMENDED.linux.zh-CN.md`](RECOMMENDED.linux.zh-CN.md)；刷新：`python tools/generate_recommended_md.py`。
 
@@ -59,7 +59,10 @@ Markdown 全分类导读：[`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md)（Wind
 
 | 目的 | 命令 |
 |------|------|
+| 打开分类展示页 | 根目录 `open_catalog.bat` |
 | 模糊查找应用、开启条目 | `lookup_app.bat <关键词>` 或 `python lookup_app.py <关键词>` |
+| 搜 Android APK | `lookup_mobile.bat <关键词>` |
+| 搜 iOS 商店占位 | `lookup_ios.bat <关键词>` |
 | 批量下载已启用条目 | `python auto_update.py`（可选 `--platform windows\|darwin\|linux`） |
 | 全部关闭 enabled | 根目录 `reset_enabled_json.bat` 或 `python tools/reset_enabled_json.py` |
 | 字段说明与分类参考 | [`apps/root.json`](apps/root.json) 内 `_说明` |
@@ -71,6 +74,7 @@ Markdown 全分类导读：[`RECOMMENDED.zh-CN.md`](RECOMMENDED.zh-CN.md)（Wind
 
 | 目录 | 用途 |
 |------|------|
+| [`apps-mobile/`](apps-mobile/) | Android APK / iOS 占位；`lookup_mobile.bat` / `lookup_ios.bat` |
 | [`VibeCodingToolsDown/`](VibeCodingToolsDown/) | AI 编程 IDE 等，manifest 由脚本生成 |
 | [`GiteeExploreHot/catalog/`](GiteeExploreHot/catalog/) | Gitee 仓库分类与 Release 附件索引 |
 

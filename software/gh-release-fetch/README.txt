@@ -5,7 +5,10 @@ GH Release Fetch — Windows 便携版（含 exe，无需安装 Python）
 
 日常用法（双击 bat，无参数时会提示输入关键词）
 ------------------------------------------------
-  lookup_app.bat          搜 GitHub 清单 → 1立刻下载 2加入并下载 3加入列表 4启用
+  lookup_app.bat          搜桌面清单（无参数时先选 桌面/Android/iOS）
+  lookup_mobile.bat       搜 Android APK（GitHub 包可下载；闭源打开商店页）
+  lookup_ios.bat          搜 iOS App Store 占位（只打开商店页）
+  open_catalog.bat        用浏览器打开分类展示页 catalog.html
   search_soft_pages.bat   搜工具/频道介绍页标题（只打开网页）
   search_games.bat        搜 gamer520 游戏页（本地近期列表；无匹配时自动站内搜索，PC/Switch 混排）
   run_saved_apps.bat      按 saved_apps_windows.json 批量更新
@@ -20,6 +23,7 @@ GH Release Fetch — Windows 便携版（含 exe，无需安装 Python）
 
 文件说明
 --------
+  catalog.html            分类展示页（open_catalog.bat 打开）
   apps/                   桌面清单（Windows/macOS/Linux JSON，脚本按平台读取）
   apps-mobile/            移动清单（Android APK 下载 / iOS 占位）
   tools/soft_page_check/  search_soft_pages 的标题索引（history、list）
