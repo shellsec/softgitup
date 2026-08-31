@@ -60,7 +60,6 @@ https://github.com/anfragment/zen
 https://gh-proxy.com/github.com/irbis-sh/zen-desktop/releases/download/v0.25.1/Zen_windows_amd64.zip
 \system_good\Zen.exe
 
-
 其他增强自行下载
 简易的防火墙前端。当你不希望某个“绿色”或“破解”软件有联网行为时，系统自带的防火墙管理太复杂。
 https://www.binisoft.org/wfc
@@ -74,7 +73,14 @@ Bitwarden 其实就是一个密码管理器，和 Apple 自带的密码管理工
 跨平台同步: 不止于 macOS 和 iOS，还支持 Android、浏览器插件和  Linux 等平台上同步；尤其是浏览器插件，利用快捷键一键填充密码，非常方便。
 MFA 多因素认证: 以往的 MFA 都是第三方服务，比如 Google Authenticator，切换到 Bitwarden 后，配合多设备同步， MFA 登录终于不同找手机了。
 
-system_good目录下 使用广告拦截DNS（无需安装软件）局域网谨慎
+
+隐私设置工具，W10Privacy，谨慎
+https://www.ghxi.com/wx20260824.html
+W10Privacy是一款专为Windows 10/11设计的隐私保护工具，可禁用系统后台数据上传、关闭遥测服务、管理应用权限（如麦克风、摄像头）、拦截大量追踪IP，还可卸载预装系统软件。支持一键配置与导出备份，有效防止微软收集用户行为数据，尤其适合追求隐私安全的用户。虽对性能影响不大，但能带来更强的数据控制感与心理安慰。
+W10Privacy-v6.2.0.2-Chs
+
+
+system_good目录下 使用广告拦截DNS（无需安装软件）局域网谨慎，有时导致网络访问不到
 Configure_AdGuard_DNS.bat  推荐优先
 Configure_18bit_DNS.bat 国内18bit去广告
 Restore_Default_DNS.bat 恢复状态
@@ -231,9 +237,10 @@ https://www.423down.com/778.html
 核心特点：汉化界面操作便捷，已注册无功能限制，支持多格式兼容，解压速度快，日常使用适配性高
 
 卸载工具
-GeekUninstaller 选这个
+GeekUninstaller 选这个 
 实测 GeekUninstaller 会速度快，支持win自带的插件卸载 7MB
-https://geekuninstaller.com/download?version=1.5.3.170
+1.5.4.180
+https://geekuninstaller.com/download
 
 当然还有其他选择 https://www.ghxi.com/bulkcrapuninstaller.html 体积有点大，需要.NET
 HiBit Uninstaller 4.0.10 15MB
@@ -840,11 +847,12 @@ https://github.com/UniClipboard/UniClipboard
 开源、端到端加密的通用剪贴板。文本、图片、文件在 Mac、Windows、Linux、iPhone 与 Android 之间实时同步——无需账号，也不经过任何第三方服务器。
 全平台支持 https://github.com/UniClipboard/UniClipboard/releases
 
+UniClipboard_0.19.3_x64-setup
 D:\Program Files\UniClipboard 这个是可以自动更新的 
-https://release.uniclipboard.app/artifacts/v0.19.0/UniClipboard_0.19.0_x64-setup.exe
+https://release.uniclipboard.app/artifacts/v0.19.3/UniClipboard_0.19.3_x64-setup.exe
 
 这个便携式解压就可以用
-https://github.com/UniClipboard/UniClipboard/releases/download/v0.19.0/UniClipboard_0.19.0_x64-portable.zip
+https://github.com/UniClipboard/UniClipboard/releases/download/v0.19.3/UniClipboard_0.19.3_x64-portable.zip
 其他版本 Mac、Windows、Linux、iPhone 与 Android
 https://www.uniclipboard.app/zh/download
 
@@ -1219,6 +1227,32 @@ Accent ZIP Password Recovery ✅ GPU ZIP 全系 Accent 家的 ZIP 版，跟上�
 需要的话，告诉我你的包是 RAR 还是 ZIP、RAR5 还是老 RAR3、显卡型号，我能帮你选最合适的工具并配好攻击参数，不用自己踩坑。
 
 
+
+端口映射
+frp：「我内网有服务，借公网服务器让别人能访问」→ 中心化反向代理。
+frpmgr：「我在 Windows 上不想敲命令用 frp」→ frp 客户端的 Windows 皮肤。
+gost：「我要把流量用各种姿势（代理链/隧道/转发）搬来搬去」→ 瑞士军刀式隧道器，不限定穿透场景
+https://github.com/fatedier/frp
+https://github.com/koho/frpmgr
+https://github.com/ginuerzh/gost
+亲测免费稳定-第三方端口映射服务
+维度  SakuraFrp   StarryFrp   cpolar  网云穿
+免费带宽    10 MiBps    8 Mbps  1 Mbps  1 Mbps（试用3M）
+免费隧道数   2   5(未实名)/10(实名)   4   1
+月流量 5GiB+签到 签到获取    不限  不限
+实名成本    1 元 2 元 否   否
+建站(国内)  需备案 需备案 需备案 需备案
+建站(海外节点)    看节点 香港节点可   无海外免费   无
+适用  个人穿透/RDP/MC 多隧道/MC/轻站   开发调试/临时演示   长期挂 1 个服务
+就推荐这个，主要10M速度也快，还带https加密
+Sakura Frp-可建站-绑定域名-需要实名1块
+https://www.natfrp.com
+https://www.natfrp.com/user/
+https://doc.natfrp.com/launcher/usage.html
+普通用户
+隧道限速 10 Mibps
+隧道数量 2 条
+每月流量 5 GiB
 
 ===================
 最终选择指南（针对你外贸/跨境场景）

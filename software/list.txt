@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-26T18:27:40.334256",
+  "generated_at": "2026-08-31T15:21:36.422066",
   "total_software": 21,
-  "total_files": 4212,
-  "total_size": 1749249729,
+  "total_files": 4214,
+  "total_size": 1773506305,
   "software": {
     "WinMemoryCleaner": {
       "version": "20260515_144655",
@@ -85,7 +85,7 @@
       "last_updated": "2026-06-10T16:55:24.069987"
     },
     "system_good": {
-      "version": "20260825_132853",
+      "version": "20260831_152135",
       "files": [
         {
           "path": "AltSnap.exe",
@@ -178,10 +178,16 @@
           "modified": "2026-08-04T10:40:50.622994"
         },
         {
+          "path": "frpmgr.exe",
+          "size": 21856008,
+          "hash": "53ed43d2e0ffb6c8291b1209fee4dade",
+          "modified": "2026-08-30T11:26:26"
+        },
+        {
           "path": "GeekUninstaller.exe",
-          "size": 7534984,
-          "hash": "4f64390b8efa312d8ddfed61fab78022",
-          "modified": "2025-11-24T23:33:05.183877"
+          "size": 7546512,
+          "hash": "797da41228a4ea1ae10e0e7bab074ca1",
+          "modified": "2026-08-19T19:10:25.335368"
         },
         {
           "path": "gohttpserver.zip",
@@ -203,9 +209,9 @@
         },
         {
           "path": "Lastb_soft_version.txt",
-          "size": 153832,
-          "hash": "e217212b70350adf94a391bb2a6e61cc",
-          "modified": "2026-08-25T10:38:28.224073"
+          "size": 155718,
+          "hash": "078d1ad57a1f2b5303c967df8fb75d5b",
+          "modified": "2026-08-31T12:15:26.240004"
         },
         {
           "path": "lx-music-desktop.7z",
@@ -341,9 +347,9 @@
         },
         {
           "path": "UniClipboard.exe",
-          "size": 17921880,
-          "hash": "07250cf99933367d33e1fc90c6a4e067",
-          "modified": "2026-07-18T21:51:23.333821"
+          "size": 17962277,
+          "hash": "540f3917538bda08eb315570b8ce0c8d",
+          "modified": "2026-08-31T09:22:46.400732"
         },
         {
           "path": "VirtualDesktopSwitcher.exe",
@@ -356,6 +362,12 @@
           "size": 25209840,
           "hash": "0db51a8b99e1ad8603f965d9a5eaccc0",
           "modified": "2026-06-01T09:03:11.636522"
+        },
+        {
+          "path": "W10Privacy.exe",
+          "size": 2343798,
+          "hash": "b8bcf5549470cedd89425c2ebc278c6a",
+          "modified": "2026-08-23T19:54:57.179851"
         },
         {
           "path": "Win11Debloat.zip",
@@ -371,9 +383,9 @@
         },
         {
           "path": "WindowsBatchScriptManager.exe",
-          "size": 10127232,
-          "hash": "53dcc6e378c704c2556b5c3d2cc96405",
-          "modified": "2026-08-17T16:42:29.488869"
+          "size": 10130191,
+          "hash": "b73b97896368815a6cda6d3fd851fd69",
+          "modified": "2026-08-31T15:20:40.108204"
         },
         {
           "path": "WindowsBatchScriptManager_api_server.bat",
@@ -424,9 +436,9 @@
           "modified": "2026-03-11T14:56:47.731452"
         }
       ],
-      "total_files": 56,
-      "total_size": 744096800,
-      "last_updated": "2026-08-25T13:28:53.725245"
+      "total_files": 58,
+      "total_size": 768353376,
+      "last_updated": "2026-08-31T15:21:35.258161"
     },
     "notepad++": {
       "version": "20260824_113512",
