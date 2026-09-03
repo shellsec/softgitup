@@ -196,6 +196,12 @@ typora.7z  自带的1.12.4
 
 https://gndown.lanzoub.com/in0jA3puftud
 
+替代Typora的开源marktext，测试更加丝滑就是比较大200MB，三端都支持，数据安全
+https://marktext.me/
+v0.19.1
+https://github.com/marktext/marktext
+https://github.com/marktext/marktext/releases/download/v0.19.1/marktext-win-x64-0.19.1.zip
+
 文本编辑器完整信息表（2026）
 工具  类型  开源 / 免费 便携  特色亮点  平台
 Notepad++ 通用文本 / 代码 ✅开源免费 ✅便携 插件极多、中文强、轻量快  Windows
@@ -405,8 +411,21 @@ https://gh-proxy.com/github.com/lyswhut/lx-music-desktop/releases/download/v2.12
 https://www.lanzout.com/b481240
 https://www.lanzouo.com/b0cvr5gsf
 
-加载在线更新即可
+加载在线更新即可，测试了
 https://gh-proxy.com/https://raw.githubusercontent.com/shellsec/lx-music-source/refs/heads/master/lx-music-source.js
+已经打包进去
+SixYin（六音）：
+https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/sixyin/latest.js
+Huibq：
+https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/huibq/latest.js
+Flower（野花）：
+https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/flower/latest.js
+LX：
+https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/lx/latest.js
+ikun：
+https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/ikun/latest.js
+Grass（野草）：
+https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/grass/latest.js
 
 2、请在GitHub上搜索 lx-music-source 寻找最新的第三方维护的音源
 https://github.com/yoyodadada/lx-music-source
@@ -426,6 +445,11 @@ lx-music-mobile-v1.8.1-x86/x86_64.apk 安卓模拟器（如 BlueStacks、雷电�
 4、无广畅听全球音乐 Spotify电脑版v1.2.88.483 纯净便携版  500MB大小 使用gmail登录
 https://www.hybase.com/pc/windows/2845.html
 https://pan.baidu.com/s/1SPYv_-wNq1rweMViBb-ljg?pwd=HyHy
+
+
+
+
+
 
 传统键盘支持音量调节
 Keyvol（极简专用工具） 1.1MB，已经在system_good里面
@@ -1068,10 +1092,10 @@ Mac 用户  Karabiner-Elements  免费、功能强、设备独立设置
 进阶需求：若需要长按连续调节，AutoHotkey 脚本可添加定时器逻辑，实现按住不放快速增减音量
 
 
-VirtualDesktopSwitcher 1.3.6
+VirtualDesktopSwitcher 1.4.0
 Windows 10/11 虚拟桌面快速切换和指示工具 / Virtual Desktop Switcher and Indicator for Windows 10/11
 https://github.com/choyy/VirtualDesktopSwitcher
-https://github.com/choyy/VirtualDesktopSwitcher/releases/download/1.3.6/VirtualDesktopSwitcher.exe
+https://github.com/choyy/VirtualDesktopSwitcher/releases/download/1.4.0/VirtualDesktopSwitcher.exe
 创建新桌面 Win + Ctrl + D  点击任务栏的"任务视图"图标(也可用 Win + Tab 调出) ，再点击"新建桌面"
 🎯 快速切换  Win + Ctrl + ← / →  点击任务栏的"任务视图"图标，再点击特定的桌面缩略图
 关闭桌面  Win + Ctrl + F4 在任务视图中，将鼠标悬停在桌面缩略图上，点击右上角的 "X" 
@@ -1232,9 +1256,12 @@ Accent ZIP Password Recovery ✅ GPU ZIP 全系 Accent 家的 ZIP 版，跟上�
 frp：「我内网有服务，借公网服务器让别人能访问」→ 中心化反向代理。
 frpmgr：「我在 Windows 上不想敲命令用 frp」→ frp 客户端的 Windows 皮肤。
 gost：「我要把流量用各种姿势（代理链/隧道/转发）搬来搬去」→ 瑞士军刀式隧道器，不限定穿透场景
-https://github.com/fatedier/frp
-https://github.com/koho/frpmgr
-https://github.com/ginuerzh/gost
+https://github.com/fatedier/frp v0.71.0
+https://github.com/koho/frpmgr   frpmgr-1.27.2-x64
+https://github.com/ginuerzh/gost  v2.12.0
+遇到进程关不掉处理下
+taskkill /F /IM frpmgr.exe
+成功: 已终止进程 "frpmgr.exe"，其 PID 为 15308。
 亲测免费稳定-第三方端口映射服务
 维度  SakuraFrp   StarryFrp   cpolar  网云穿
 免费带宽    10 MiBps    8 Mbps  1 Mbps  1 Mbps（试用3M）
