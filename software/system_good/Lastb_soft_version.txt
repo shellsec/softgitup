@@ -148,7 +148,7 @@ https://github.com/bruderstein/PythonScript/releases/download/v3.0.25/PythonScri
 
 notepad--
 核心特点：体积更小、启动更快，支持语法高亮、代码折叠，低资源占用，操作逻辑贴合中文用户习惯
-https://gitee.com/cxasm/notepad--/releases/download/v3.8.2/Notepad--v3.8.2-win10-portable.zip
+https://gitee.com/cxasm/notepad--/releases/download/v3.9.0/Notepad--v3.9.0-win10-portable.zip
 
 EditPlus v6.1.899 汉化注册版
 核心特点：汉化界面易操作，支持多窗口编辑、语法高亮、代码跳转，自带 FTP 上传，适配基础编程与文本处理
@@ -231,7 +231,7 @@ Anytype ✅开源 本地 P2P  对象 / 数据库  中 P2P 去中心化、无服�
 
 
 压缩工具7z+Rar就是所有，朴实无华
-7-Zip 26.02 压缩率很牛绕不开的好用
+7-Zip 26.03 压缩率很牛绕不开的好用
 https://7-zip.org/download.html
 核心特点：免费无广告，压缩率行业领先，支持极限压缩配置（L9、LZMA2、固实数据），适配多格式压缩 / 解压
 压缩等级（L）：选择 9 -极限压缩
@@ -600,6 +600,19 @@ https://www.52pojie.cn/thread-2117089-1-1.html
 https://wwbmt.lanzouu.com/b00hrvbmej
 密码:52pj
 小狼毫&雾凇拼音安装部署(Windows) https://www.cnblogs.com/zanxj/p/19103238
+输入法错乱重置
+方法一：设置里直接加回（最常用）
+Win + I → 时间和语言 → 语言和区域（Win10 叫“语言”）
+看“首选语言”里有没有 英语(美国)
+没有 → 点“添加语言”搜 English (United States) 装上（不必下显示语言包）
+点 英语(美国) → ⋮/选项 → 键盘 → 添加键盘 → 选“美式键盘 / US QWERTY”
+回到“高级键盘设置”→“替代默认输入法”里挑 英语(美国) - 美式键盘
+Win + 空格 切一下，任务栏应出现 ENG / US
+如果“添加键盘”里根本不出现 US，只显示 US-International 之类，跳到方法三
+PowerShell 强刷语言列表（设置 UI 不改或回弹时用）
+注意一开始强制重置只有eng
+Set-WinUserLanguageList -LanguageList en-US -Force
+再安装rime-ice.7z
 基於這一框架，Rime 開發者與其他開源社區的參與者在 Windows、macOS、Linux、Android 等平臺上創造了不同的輸入法前端實現
 1、weasel.exe 本地化 小狼毫官网：RIME | 中州韻輸入法引擎
 https://rime.im/

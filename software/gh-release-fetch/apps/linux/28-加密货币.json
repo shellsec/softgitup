@@ -400,7 +400,7 @@
   },
   {
     "id": "sparrow_wallet",
-    "简介": "Sparrow Wallet（Bitcoin）",
+    "简介": "Sparrow Wallet（Linux amd64 deb）",
     "分类": "加密货币",
     "enabled": false,
     "prefer_api_assets": true,
@@ -410,10 +410,12 @@
     "kill_before_install": false,
     "run_installer": false,
     "installer_markers": [
-      "Sparrow-",
-      "x86_64.deb"
+      "sparrowwallet_",
+      "amd64.deb"
     ],
     "href_exclude_substrings": [
+      "sparrowserver",
+      "arm64",
       "win",
       "mac",
       "rpm"
@@ -422,9 +424,10 @@
       ".deb"
     ],
     "use_download_filename": true,
-    "save_name": "Sparrow-linux.deb",
+    "save_name": "sparrowwallet_amd64.deb",
     "releases_url": "https://bgithub.xyz/sparrowwallet/sparrow/releases",
-    "repo_path": "sparrowwallet/sparrow"
+    "repo_path": "sparrowwallet/sparrow",
+    "installer_markers_match_all": true
   },
   {
     "id": "wasabi_wallet",

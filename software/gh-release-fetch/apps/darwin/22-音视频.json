@@ -72,22 +72,24 @@
     "run_installer": false,
     "installer_markers_match_all": true,
     "installer_markers": [
-      "Syncplay-",
+      "Syncplay_",
       ".dmg"
     ],
     "href_exclude_substrings": [
       "Setup.exe",
       "AppImage",
       "Portable",
-      "deb"
+      "deb",
+      "linux"
     ],
     "installer_extensions": [
       ".dmg"
     ],
     "download_names": [
-      "Syncplay-{ver}.dmg"
+      "Syncplay_{ver}.dmg"
     ],
-    "save_name": "Syncplay-{ver}.dmg"
+    "save_name": "Syncplay_{ver}.dmg",
+    "use_download_filename": true
   },
   {
     "id": "openshot",

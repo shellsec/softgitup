@@ -370,7 +370,7 @@
   },
   {
     "id": "grype",
-    "简介": "Grype（镜像漏洞扫描）",
+    "简介": "grype（Linux amd64 tar.gz）",
     "分类": "安全",
     "enabled": false,
     "prefer_api_assets": true,
@@ -382,27 +382,28 @@
     "installer_markers_match_all": true,
     "installer_markers": [
       "grype_",
-      "linux_amd64"
+      "linux_amd64.tar.gz"
     ],
     "href_exclude_substrings": [
       "windows",
       "darwin",
-      "386",
-      "arm"
+      "arm",
+      "checksums"
     ],
     "installer_extensions": [
-      ".zip"
+      ".tar.gz"
     ],
     "download_names": [
-      "grype_{ver}_linux_amd64.zip"
+      "grype_{ver}_linux_amd64.tar.gz"
     ],
-    "save_name": "grype_{ver}_linux_amd64.zip",
+    "save_name": "grype_{ver}_linux_amd64.tar.gz",
     "releases_url": "https://bgithub.xyz/anchore/grype/releases",
-    "repo_path": "anchore/grype"
+    "repo_path": "anchore/grype",
+    "use_download_filename": true
   },
   {
     "id": "syft",
-    "简介": "Syft（SBOM）",
+    "简介": "syft（Linux amd64 tar.gz）",
     "分类": "安全",
     "enabled": false,
     "prefer_api_assets": true,
@@ -414,23 +415,25 @@
     "installer_markers_match_all": true,
     "installer_markers": [
       "syft_",
-      "linux_amd64"
+      "linux_amd64.tar.gz"
     ],
     "href_exclude_substrings": [
       "windows",
       "darwin",
-      "386",
-      "arm"
+      "arm",
+      "checksums",
+      ".sbom"
     ],
     "installer_extensions": [
-      ".zip"
+      ".tar.gz"
     ],
     "download_names": [
-      "syft_{ver}_linux_amd64.zip"
+      "syft_{ver}_linux_amd64.tar.gz"
     ],
-    "save_name": "syft_{ver}_linux_amd64.zip",
+    "save_name": "syft_{ver}_linux_amd64.tar.gz",
     "releases_url": "https://bgithub.xyz/anchore/syft/releases",
-    "repo_path": "anchore/syft"
+    "repo_path": "anchore/syft",
+    "use_download_filename": true
   },
   {
     "id": "nuclei",
@@ -490,7 +493,7 @@
   },
   {
     "id": "amass",
-    "简介": "OWASP Amass（子域枚举）",
+    "简介": "Amass（Linux amd64 tar.gz）",
     "分类": "安全",
     "enabled": false,
     "prefer_api_assets": true,
@@ -500,18 +503,20 @@
     "kill_before_install": false,
     "run_installer": false,
     "installer_markers": [
-      "amass_Linux_amd64.zip"
+      "amass_linux_amd64.tar.gz"
     ],
     "href_exclude_substrings": [
       "windows",
       "darwin",
+      "arm",
+      "386",
       "checksums"
     ],
     "installer_extensions": [
-      ".zip"
+      ".tar.gz"
     ],
     "use_download_filename": true,
-    "save_name": "amass-linux-amd64.zip",
+    "save_name": "amass_linux_amd64.tar.gz",
     "releases_url": "https://bgithub.xyz/owasp-amass/amass/releases",
     "repo_path": "owasp-amass/amass"
   },
@@ -737,7 +742,7 @@
   },
   {
     "id": "clamav",
-    "简介": "ClamAV（Linux deb）",
+    "简介": "ClamAV（Linux x86_64 deb）",
     "分类": "安全",
     "enabled": false,
     "prefer_api_assets": true,
@@ -747,20 +752,22 @@
     "kill_before_install": false,
     "run_installer": false,
     "installer_markers": [
-      "clamav_",
-      "amd64.deb"
+      "clamav-",
+      "linux.x86_64.deb"
     ],
     "href_exclude_substrings": [
       "win",
-      "mac"
+      "mac",
+      "aarch64"
     ],
     "installer_extensions": [
       ".deb"
     ],
     "use_download_filename": true,
-    "save_name": "clamav-linux.deb",
+    "save_name": "clamav-linux-x86_64.deb",
     "releases_url": "https://bgithub.xyz/Cisco-Talos/clamav/releases",
-    "repo_path": "Cisco-Talos/clamav"
+    "repo_path": "Cisco-Talos/clamav",
+    "installer_markers_match_all": true
   },
   {
     "id": "vault",
@@ -796,7 +803,7 @@
   },
   {
     "id": "trivy",
-    "简介": "Trivy（漏洞扫描）",
+    "简介": "Trivy（Linux 64bit tar.gz）",
     "分类": "安全",
     "enabled": false,
     "prefer_api_assets": true,
@@ -808,24 +815,27 @@
     "installer_markers_match_all": true,
     "installer_markers": [
       "trivy_",
-      "Linux-64bit.zip"
+      "Linux-64bit.tar.gz"
     ],
     "href_exclude_substrings": [
       "Windows",
       "Darwin",
-      "macOS"
+      "macOS",
+      "ARM",
+      "32bit",
+      "sigstore"
     ],
     "installer_extensions": [
-      ".zip"
+      ".tar.gz"
     ],
     "use_download_filename": true,
-    "save_name": "trivy-linux.zip",
+    "save_name": "trivy-linux-64bit.tar.gz",
     "releases_url": "https://bgithub.xyz/aquasecurity/trivy/releases",
     "repo_path": "aquasecurity/trivy"
   },
   {
     "id": "terrascan",
-    "简介": "Terrascan",
+    "简介": "Terrascan（Linux x86_64 tar.gz）",
     "分类": "安全",
     "enabled": false,
     "prefer_api_assets": true,
@@ -837,17 +847,19 @@
     "installer_markers_match_all": true,
     "installer_markers": [
       "terrascan_",
-      "Linux_x86_64.zip"
+      "Linux_x86_64.tar.gz"
     ],
     "href_exclude_substrings": [
       "Windows",
-      "Darwin"
+      "Darwin",
+      "arm",
+      "i386"
     ],
     "installer_extensions": [
-      ".zip"
+      ".tar.gz"
     ],
     "use_download_filename": true,
-    "save_name": "terrascan-linux.zip",
+    "save_name": "terrascan-linux-amd64.tar.gz",
     "releases_url": "https://bgithub.xyz/tenable/terrascan/releases",
     "repo_path": "tenable/terrascan"
   },

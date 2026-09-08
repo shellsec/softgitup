@@ -49,7 +49,7 @@
   },
   {
     "id": "espanso",
-    "简介": "Espanso 文本扩展",
+    "简介": "Espanso（macOS Universal dmg）",
     "releases_url": "https://bgithub.xyz/espanso/espanso/releases",
     "repo_path": "espanso/espanso",
     "enabled": false,
@@ -61,18 +61,26 @@
     "run_installer": false,
     "分类": "效率",
     "installer_markers": [
-      "Espanso-mac-x86_64"
+      "Espanso-Mac-Universal.dmg"
     ],
     "href_exclude_substrings": [
       "Win",
       "Linux",
-      "Portable"
+      "x86_64",
+      "blockmap"
     ],
-    "use_download_filename": true
+    "use_download_filename": true,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "Espanso-Mac-Universal.dmg"
+    ],
+    "save_name": "Espanso-Mac-Universal.dmg"
   },
   {
     "id": "copyq",
-    "简介": "CopyQ 剪贴板管理",
+    "简介": "CopyQ（macOS Apple Silicon dmg）",
     "releases_url": "https://bgithub.xyz/hluk/CopyQ/releases",
     "repo_path": "hluk/CopyQ",
     "enabled": false,
@@ -85,21 +93,23 @@
     "分类": "效率",
     "installer_markers_match_all": true,
     "installer_markers": [
-      "copyq-",
-      "macos.dmg"
+      "CopyQ-",
+      "macos-12-m1.dmg"
     ],
     "href_exclude_substrings": [
       "setup.exe",
       "linux",
+      "macos-13",
       "checksum"
     ],
     "installer_extensions": [
       ".dmg"
     ],
     "download_names": [
-      "copyq-{ver}-macos.dmg"
+      "CopyQ-{ver}-macos-12-m1.dmg"
     ],
-    "save_name": "copyq-{ver}-macos.dmg"
+    "save_name": "CopyQ-{ver}-macos-12-m1.dmg",
+    "use_download_filename": true
   },
   {
     "id": "powertoys_2",
@@ -783,7 +793,7 @@
   },
   {
     "id": "snapx",
-    "简介": "SnapX（ShareX 跨平台分支；pinned v0.3.0，latest 多为 flatpak）",
+    "简介": "SnapX（macOS Apple Silicon zip）",
     "分类": "效率",
     "enabled": false,
     "prefer_api_assets": true,
@@ -795,8 +805,8 @@
     "pinned_release_tag": "v0.3.0",
     "installer_markers_match_all": true,
     "installer_markers": [
-      "SnapX-Avalonia-Release-",
-      "macOS-ARM64.zip"
+      "SnapX-UI-Release-macOS-",
+      "Arm64.zip"
     ],
     "href_exclude_substrings": [
       "X64.zip",
@@ -807,7 +817,7 @@
       ".zip"
     ],
     "use_download_filename": true,
-    "save_name": "SnapX-macOS-ARM64.zip",
+    "save_name": "SnapX-macOS-Arm64.zip",
     "releases_url": "https://bgithub.xyz/SnapXL/SnapX/releases",
     "repo_path": "SnapXL/SnapX"
   },
@@ -1350,5 +1360,36 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "vorssaint",
+    "简介": "Vorssaint Utils（开源 macOS 菜单栏工具箱）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".zip",
+      ".exe"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Vorssaint-",
+      ".dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "vorssaint",
+      "Vorssaint"
+    ],
+    "releases_url": "https://bgithub.xyz/vorssaintapp/vorssaint-utils/releases",
+    "repo_path": "vorssaintapp/vorssaint-utils"
   }
 ]

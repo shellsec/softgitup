@@ -774,35 +774,37 @@
   },
   {
     "id": "snapx",
-    "简介": "SnapX（ShareX 跨平台分支；pinned v0.3.0，latest 多为 flatpak）",
+    "简介": "SnapX（Windows x64 msi）",
     "分类": "效率",
     "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
-    "windows_installer": false,
+    "windows_installer": true,
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false,
+    "run_installer": true,
     "pinned_release_tag": "v0.3.0",
     "installer_markers_match_all": true,
     "installer_markers": [
-      "SnapX-Avalonia-Release-",
-      "Windows-X64.zip"
+      "SnapX-Release-Windows-",
+      "X64.msi"
     ],
     "href_exclude_substrings": [
-      "ARM64",
+      "Arm64",
       "Linux",
-      "macOS"
+      "macOS",
+      ".tar"
     ],
     "installer_extensions": [
-      ".zip"
+      ".msi"
     ],
     "download_names": [
       "SnapX-Avalonia-Release-{ver}-Windows-X64.zip"
     ],
     "save_name": "SnapX-Avalonia-Release-{ver}-Windows-X64.zip",
     "releases_url": "https://bgithub.xyz/SnapXL/SnapX/releases",
-    "repo_path": "SnapXL/SnapX"
+    "repo_path": "SnapXL/SnapX",
+    "use_download_filename": true
   },
   {
     "id": "xerahs",
@@ -1408,5 +1410,46 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "catime",
+    "简介": "Catime（纯 C 轻量 Windows 计时器：倒计时/番茄钟/秒表，便携 exe）",
+    "分类": "效率",
+    "aliases": [
+      "catime",
+      "Catime",
+      "番茄钟",
+      "倒计时",
+      "计时器"
+    ],
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/vladelaina/Catime/releases",
+    "repo_path": "vladelaina/Catime",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "catime_",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      ".zip",
+      ".tar",
+      ".txt",
+      ".md",
+      "checksum"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "use_download_filename": true,
+    "save_name": "catime_{ver}.exe",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "catime Catime 番茄钟 倒计时 计时器"
   }
 ]

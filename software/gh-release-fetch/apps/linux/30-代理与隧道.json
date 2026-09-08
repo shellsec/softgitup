@@ -285,7 +285,7 @@
   },
   {
     "id": "mihomo",
-    "简介": "mihomo（Clash Meta 内核）",
+    "简介": "Mihomo（Linux amd64 gz）",
     "分类": "代理与隧道",
     "enabled": false,
     "prefer_api_assets": true,
@@ -296,20 +296,30 @@
     "run_installer": false,
     "installer_markers": [
       "mihomo-linux-amd64-v",
-      ".zip"
+      ".gz"
     ],
     "href_exclude_substrings": [
-      "darwin",
+      "compatible",
+      "-v1-",
+      "-v2-",
+      "-v3-",
+      "go12",
+      ".deb",
+      ".rpm",
+      "pkg.tar",
+      "arm",
+      "386",
       "windows",
-      "arm"
+      "darwin"
     ],
     "installer_extensions": [
-      ".zip"
+      ".gz"
     ],
     "use_download_filename": true,
-    "save_name": "mihomo-linux-amd64.zip",
+    "save_name": "mihomo-linux-amd64.gz",
     "releases_url": "https://bgithub.xyz/MetaCubeX/mihomo/releases",
-    "repo_path": "MetaCubeX/mihomo"
+    "repo_path": "MetaCubeX/mihomo",
+    "installer_markers_match_all": true
   },
   {
     "id": "sing_box",

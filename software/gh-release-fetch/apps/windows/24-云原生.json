@@ -249,30 +249,37 @@
   },
   {
     "id": "rancher_desktop",
-    "简介": "Rancher Desktop（K8s/容器）",
+    "简介": "Rancher Desktop（Windows Setup msi）",
     "分类": "云原生",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/rancher-sandbox/rancher-desktop/releases",
     "repo_path": "rancher-sandbox/rancher-desktop",
     "installer_markers": [
-      "Rancher.Desktop.Setup",
-      ".exe"
+      "Rancher.Desktop.Setup.",
+      ".msi"
     ],
     "href_exclude_substrings": [
       "mac",
       "linux",
-      "aarch64"
+      "aarch64",
+      "arm64"
     ],
     "windows_installer": true,
     "download_names": [
-      "Rancher.Desktop.Setup.{ver}.exe"
+      "Rancher.Desktop.Setup.{ver}.msi"
     ],
-    "save_name": "Rancher.Desktop.Setup.{ver}.exe",
+    "save_name": "Rancher.Desktop.Setup.{ver}.msi",
     "process_name": "Rancher Desktop.exe",
     "kill_before_install": true,
     "run_installer": true,
     "version_tag_as_on_github": true,
-    "url_hint": "Rancher"
+    "url_hint": "Rancher",
+    "installer_markers_match_all": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "use_download_filename": true,
+    "prefer_api_assets": true
   },
   {
     "id": "lazydocker",

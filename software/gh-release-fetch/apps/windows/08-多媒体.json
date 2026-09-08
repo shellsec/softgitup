@@ -216,29 +216,36 @@
   },
   {
     "id": "audacity",
-    "简介": "多轨音频录制与编辑",
+    "简介": "多轨音频录制与编辑（Windows x64 msi）",
     "分类": "多媒体",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/audacity/audacity/releases",
     "repo_path": "audacity/audacity",
     "installer_markers": [
-      "audacity-",
-      "64bit.exe"
+      "audacity-win-",
+      "x86_64.msi"
     ],
     "href_exclude_substrings": [
-      "32bit",
+      "arm64",
       "macos",
-      "ubuntu"
+      "ubuntu",
+      "32bit"
     ],
     "windows_installer": true,
     "download_names": [
-      "audacity-win-{ver}-64bit.exe"
+      "audacity-win-{ver}-x86_64.msi"
     ],
-    "save_name": "audacity-win-{ver}-64bit.exe",
+    "save_name": "audacity-win-{ver}-x86_64.msi",
     "process_name": "Audacity.exe",
     "kill_before_install": true,
     "run_installer": true,
-    "version_tag_as_on_github": true
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "use_download_filename": true,
+    "prefer_api_assets": true
   },
   {
     "id": "kdenlive",
@@ -475,30 +482,38 @@
   },
   {
     "id": "jellyfin_media_player",
-    "简介": "Jellyfin 桌面客户端",
+    "简介": "Jellyfin 桌面播放器（windows-x64.exe）",
     "分类": "多媒体",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/jellyfin/jellyfin-media-player/releases",
     "repo_path": "jellyfin/jellyfin-media-player",
     "installer_markers": [
-      "jellyfin-media-player_",
-      "windows-amd64.exe"
+      "JellyfinMediaPlayer-",
+      "windows-x64.exe"
     ],
     "href_exclude_substrings": [
+      "legacy",
+      "x86.exe",
+      "arm64",
       "macos",
-      "linux",
-      "portable"
+      "linux"
     ],
     "windows_installer": true,
     "download_names": [
-      "jellyfin-media-player_{ver}_windows-amd64.exe"
+      "JellyfinMediaPlayer-{ver}-windows-x64.exe"
     ],
-    "save_name": "jellyfin-media-player_{ver}_windows-amd64.exe",
+    "save_name": "JellyfinMediaPlayer-{ver}-windows-x64.exe",
     "process_name": "jellyfinmediaplayer.exe",
     "kill_before_install": true,
     "run_installer": true,
     "version_tag_as_on_github": true,
-    "url_hint": "jellyfin-media-player"
+    "url_hint": "jellyfin-media-player",
+    "installer_markers_match_all": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "use_download_filename": true,
+    "prefer_api_assets": true
   },
   {
     "id": "spotube",

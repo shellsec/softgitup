@@ -72,7 +72,7 @@
   },
   {
     "id": "opencode",
-    "简介": "OpenCode（开源 AI 编程代理 / 桌面端，SST 团队）",
+    "简介": "OpenCode（开源 AI 编程代理 / 桌面端；win-x64）",
     "分类": "AI",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/sst/opencode/releases",
@@ -80,7 +80,7 @@
     "prefer_api_assets": true,
     "installer_markers_match_all": true,
     "installer_markers": [
-      "opencode-desktop-windows-x64",
+      "opencode-desktop-win-x64",
       ".exe"
     ],
     "href_exclude_substrings": [
@@ -94,12 +94,17 @@
     ],
     "windows_installer": true,
     "download_names": [
-      "opencode-desktop-windows-x64.exe"
+      "opencode-desktop-win-x64.exe"
     ],
-    "save_name": "opencode-desktop-windows-x64-{ver}.exe",
+    "save_name": "opencode-desktop-win-x64-{ver}.exe",
     "process_name": "opencode.exe",
     "kill_before_install": true,
-    "run_installer": true
+    "run_installer": true,
+    "use_download_filename": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "version_tag_as_on_github": true
   },
   {
     "id": "goose_ai",
@@ -461,7 +466,7 @@
   },
   {
     "id": "cline",
-    "简介": "Cline（VS Code / Cursor 系扩展，Release .vsix）",
+    "简介": "Cline 桌面端（Windows x64 Setup；已从 VS Code vsix 改为独立安装包）",
     "分类": "AI",
     "enabled": false,
     "prefer_api_assets": true,
@@ -470,26 +475,30 @@
     "repo_path": "cline/cline",
     "installer_markers_match_all": true,
     "installer_markers": [
-      "cline-",
-      ".vsix"
+      "Cline_",
+      "x64-setup.exe"
     ],
     "href_exclude_substrings": [
-      "Source",
-      ".zip",
-      ".tar.gz",
-      "sbom"
+      "arm64",
+      "blockmap",
+      ".sig",
+      "darwin",
+      "linux",
+      ".dmg",
+      ".yml"
     ],
-    "windows_installer": false,
+    "windows_installer": true,
     "installer_extensions": [
-      ".vsix"
+      ".exe"
     ],
     "download_names": [
-      "cline-{ver}.vsix"
+      "Cline_{ver}_x64-setup.exe"
     ],
-    "save_name": "cline-{ver}.vsix",
-    "process_name": "",
-    "kill_before_install": false,
-    "run_installer": false
+    "save_name": "Cline_{ver}_x64-setup.exe",
+    "process_name": "Cline.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "use_download_filename": true
   },
   {
     "id": "continue",
@@ -775,7 +784,7 @@
   },
   {
     "id": "deepseek_cli",
-    "简介": "DeepSeek-TUI dispatcher（deepseek 命令；Windows x64；需配套 deepseek_tui 一起放到 PATH）",
+    "简介": "CodeWhale（原 DeepSeek-TUI dispatcher；Windows x64 CLI）",
     "分类": "AI",
     "enabled": false,
     "prefer_api_assets": true,
@@ -784,13 +793,15 @@
     "repo_path": "Hmbown/DeepSeek-TUI",
     "installer_markers_match_all": true,
     "installer_markers": [
-      "deepseek-windows-x64.exe"
+      "codewhale-windows-x64.exe"
     ],
     "href_exclude_substrings": [
-      "deepseek-tui-",
+      "codewhale-tui-",
       "linux",
       "macos",
       "arm64",
+      "portable",
+      ".zip",
       "sha256"
     ],
     "windows_installer": false,
@@ -798,14 +809,14 @@
       ".exe"
     ],
     "use_download_filename": true,
-    "save_name": "deepseek-windows-x64.exe",
+    "save_name": "codewhale-windows-x64.exe",
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
   },
   {
     "id": "deepseek_tui",
-    "简介": "DeepSeek-TUI companion runtime（deepseek-tui 命令；Windows x64；需与 deepseek_cli 同时存在）",
+    "简介": "CodeWhale TUI companion（原 deepseek-tui；Windows x64）",
     "分类": "AI",
     "enabled": false,
     "prefer_api_assets": true,
@@ -814,20 +825,21 @@
     "repo_path": "Hmbown/DeepSeek-TUI",
     "installer_markers_match_all": true,
     "installer_markers": [
-      "deepseek-tui-windows-x64.exe"
+      "codewhale-tui-windows-x64.exe"
     ],
     "href_exclude_substrings": [
       "linux",
       "macos",
       "arm64",
-      "sha256"
+      "sha256",
+      "portable"
     ],
     "windows_installer": false,
     "installer_extensions": [
       ".exe"
     ],
     "use_download_filename": true,
-    "save_name": "deepseek-tui-windows-x64.exe",
+    "save_name": "codewhale-tui-windows-x64.exe",
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
@@ -1949,5 +1961,243 @@
     ],
     "releases_url": "https://bgithub.xyz/rhasspy/piper/releases",
     "repo_path": "rhasspy/piper"
+  },
+  {
+    "id": "colibri",
+    "简介": "Colibri（本地跑前沿 MoE；Windows x64 zip）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "linux",
+      "macos",
+      "darwin",
+      "arm64"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "colibri-v",
+      "windows-x86_64.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "colibri",
+      "Colibri"
+    ],
+    "releases_url": "https://bgithub.xyz/JustVugg/colibri/releases",
+    "repo_path": "JustVugg/colibri"
+  },
+  {
+    "id": "dsh_desktop",
+    "简介": "DSH Desktop（DeepSeek Harness 桌面端；Windows x64 Setup）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".dmg",
+      ".zip",
+      "arm64",
+      "linux"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "DSH-Desktop-",
+      "x64-Setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "dsh",
+      "dsh desktop",
+      "DeepSeek Harness",
+      "deepseek harness"
+    ],
+    "releases_url": "https://bgithub.xyz/anywhere-labs/dsh-desktop/releases",
+    "repo_path": "anywhere-labs/dsh-desktop"
+  },
+  {
+    "id": "openworker",
+    "简介": "OpenWorker（Andrew Ng 开源 agent 工作台；Windows x64 Setup）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".msi",
+      ".dmg",
+      ".zip",
+      "linux",
+      "macos"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "OpenWorker_",
+      "x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "openworker",
+      "OpenWorker",
+      "andrew ng"
+    ],
+    "releases_url": "https://bgithub.xyz/andrewyng/openworker/releases",
+    "repo_path": "andrewyng/openworker"
+  },
+  {
+    "id": "mimo_code",
+    "简介": "MiMo Code（小米 MiMo 编码 CLI；Windows x64 zip）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "baseline",
+      "arm64",
+      "darwin",
+      "linux"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "mimocode-windows-x64.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "mimocode",
+      "mimo code",
+      "MiMo",
+      "小米代码"
+    ],
+    "releases_url": "https://bgithub.xyz/XiaomiMiMo/MiMo-Code/releases",
+    "repo_path": "XiaomiMiMo/MiMo-Code"
+  },
+  {
+    "id": "freellmapi",
+    "简介": "FreeLLMAPI（聚合免费 LLM 接口的桌面端；Windows Setup）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".zip",
+      ".blockmap",
+      ".dmg",
+      "AppImage",
+      "linux"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "FreeLLMAPI.Setup.",
+      ".exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "freellmapi",
+      "free llm api",
+      "FreeLLMAPI"
+    ],
+    "releases_url": "https://bgithub.xyz/tashfeenahmed/freellmapi/releases",
+    "repo_path": "tashfeenahmed/freellmapi"
+  },
+  {
+    "id": "openclaw_manager",
+    "简介": "OpenClaw Manager（OpenClaw 桌面管理器；Windows x64 Setup）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".msi",
+      ".dmg",
+      "AppImage",
+      ".deb",
+      "arm64"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "OpenClaw.Manager_",
+      "x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "openclaw manager",
+      "虾池子",
+      "openclaw-manager"
+    ],
+    "releases_url": "https://bgithub.xyz/miaoxworld/openclaw-manager/releases",
+    "repo_path": "miaoxworld/openclaw-manager"
+  },
+  {
+    "id": "codex_dream_skin",
+    "简介": "Codex Dream Skin（Codex 桌面美化/皮肤；Windows Setup）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".dmg",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "CodexDreamSkin-Setup-",
+      ".exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "codex dream skin",
+      "CodexDreamSkin"
+    ],
+    "releases_url": "https://bgithub.xyz/Fei-Away/Codex-Dream-Skin/releases",
+    "repo_path": "Fei-Away/Codex-Dream-Skin"
   }
 ]

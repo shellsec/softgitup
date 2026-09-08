@@ -19,7 +19,7 @@
   },
   {
     "id": "espanso",
-    "简介": "Espanso 文本扩展",
+    "简介": "Espanso（Linux X11 AppImage）",
     "releases_url": "https://bgithub.xyz/espanso/espanso/releases",
     "repo_path": "espanso/espanso",
     "enabled": false,
@@ -31,18 +31,26 @@
     "run_installer": false,
     "分类": "效率",
     "installer_markers": [
-      "Espanso-Linux-x86_64"
+      "Espanso-X11.AppImage"
     ],
     "href_exclude_substrings": [
+      "wayland",
+      "debian",
       "Win",
-      "Mac",
-      "Portable"
+      "Mac"
     ],
-    "use_download_filename": true
+    "use_download_filename": true,
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "download_names": [
+      "Espanso-X11.AppImage"
+    ],
+    "save_name": "Espanso-X11.AppImage"
   },
   {
     "id": "copyq",
-    "简介": "CopyQ 剪贴板管理",
+    "简介": "CopyQ（Linux x86_64 AppImage）",
     "releases_url": "https://bgithub.xyz/hluk/CopyQ/releases",
     "repo_path": "hluk/CopyQ",
     "enabled": false,
@@ -55,8 +63,8 @@
     "分类": "效率",
     "installer_markers_match_all": true,
     "installer_markers": [
-      "copyq-",
-      "linux-x86_64.tar.gz"
+      "CopyQ-",
+      "x86_64.AppImage"
     ],
     "href_exclude_substrings": [
       "setup.exe",
@@ -64,12 +72,13 @@
       "checksum"
     ],
     "installer_extensions": [
-      ".tar.gz"
+      ".AppImage"
     ],
     "download_names": [
-      "copyq-{ver}-linux-x86_64.tar.gz"
+      "CopyQ-{ver}-x86_64.AppImage"
     ],
-    "save_name": "copyq-{ver}-linux-x86_64.tar.gz"
+    "save_name": "CopyQ-{ver}-x86_64.AppImage",
+    "use_download_filename": true
   },
   {
     "id": "powertoys_2",
@@ -548,7 +557,7 @@
   },
   {
     "id": "snapx",
-    "简介": "SnapX（ShareX 跨平台分支；pinned v0.3.0，latest 多为 flatpak）",
+    "简介": "SnapX（Linux x64 tar.zst）",
     "分类": "效率",
     "enabled": false,
     "prefer_api_assets": true,
@@ -560,13 +569,15 @@
     "pinned_release_tag": "v0.3.0",
     "installer_markers_match_all": true,
     "installer_markers": [
-      "SnapX-Avalonia-Release-",
-      "Linux-X64.tar.zst"
+      "SnapX-UI-Release-Linux-",
+      "X64.tar.zst"
     ],
     "href_exclude_substrings": [
-      "ARM64",
+      "musl",
+      "Arm64",
       "Windows",
-      "macOS"
+      "macOS",
+      "FreeBSD"
     ],
     "installer_extensions": [
       ".zst"

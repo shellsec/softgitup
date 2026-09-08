@@ -85,33 +85,35 @@
     "repo_path": "lite-xl/lite-xl",
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
-    "简介": "Lite XL（Linux x86_64 tar.gz）",
+    "简介": "Lite XL（Linux x86_64 AppImage）",
     "分类": "编辑器",
     "installer_markers_match_all": true,
     "installer_markers": [
-      "lite-xl-",
-      "linux-x86_64.tar.gz"
+      "LiteXL-",
+      "x86_64.AppImage"
     ],
     "href_exclude_substrings": [
+      "addons",
+      "i686",
       "windows",
-      "macos",
-      "arm64"
+      "macos"
     ],
     "windows_installer": false,
     "installer_extensions": [
-      ".tar.gz"
+      ".AppImage"
     ],
     "download_names": [
-      "lite-xl-{ver}-linux-x86_64.tar.gz"
+      "LiteXL-v{ver}-x86_64.AppImage"
     ],
-    "save_name": "lite-xl-{ver}-linux-x86_64.tar.gz",
+    "save_name": "LiteXL-v{ver}-x86_64.AppImage",
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false
+    "run_installer": false,
+    "use_download_filename": true
   },
   {
     "id": "pulsar",
-    "简介": "Pulsar（Linux x64 tar.gz）",
+    "简介": "Pulsar（Linux x64 AppImage）",
     "分类": "编辑器",
     "releases_url": "https://bgithub.xyz/pulsar-edit/pulsar/releases",
     "repo_path": "pulsar-edit/pulsar",
@@ -124,19 +126,20 @@
     "run_installer": false,
     "installer_markers_match_all": true,
     "installer_markers": [
-      "Pulsar-",
-      "linux-x64.tar.gz"
+      "Linux.Pulsar-",
+      ".AppImage"
     ],
     "href_exclude_substrings": [
+      "ARM",
       "win",
       "mac",
       "arm64"
     ],
     "installer_extensions": [
-      ".tar.gz"
+      ".AppImage"
     ],
     "use_download_filename": true,
-    "save_name": "Pulsar-linux-x64.tar.gz"
+    "save_name": "Linux.Pulsar.AppImage"
   },
   {
     "id": "notepad_next",
@@ -366,7 +369,7 @@
   },
   {
     "id": "cursor",
-    "简介": "Cursor Linux x64 AppImage（manifest：官方 CDN）",
+    "简介": "Cursor Linux x64 AppImage（国内勿用应用内更新：lookup 走 snapshot）",
     "分类": "编辑器",
     "enabled": false,
     "resolve_via": "github_pages_manifest",
@@ -380,7 +383,34 @@
     "installer_extensions": [
       ".AppImage"
     ],
-    "save_name": "Cursor-x86_64.AppImage"
+    "save_name": "Cursor-x86_64.AppImage",
+    "aliases": [
+      "cursor ide",
+      "cursor 国内更新"
+    ]
+  },
+  {
+    "id": "cursor_reh",
+    "简介": "Cursor Remote-SSH 服务端 linux-x64（与客户端同一 snapshot commit；国内服务器请本地下载后 scp）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "cursor_reh",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "save_name": "cursor-reh-linux-x64.tar.gz",
+    "aliases": [
+      "cursor-server",
+      "cursor reh",
+      "remote ssh"
+    ]
   },
   {
     "id": "trae",
@@ -699,5 +729,72 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "t3code",
+    "简介": "T3 Code（Linux x86_64 AppImage）",
+    "分类": "编辑器",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".exe",
+      ".dmg",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "T3-Code-",
+      "x86_64.AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "aliases": [
+      "t3code",
+      "t3 code",
+      "T3 Code"
+    ],
+    "releases_url": "https://bgithub.xyz/pingdotgg/t3code/releases",
+    "repo_path": "pingdotgg/t3code"
+  },
+  {
+    "id": "microsoft_edit",
+    "简介": "Microsoft Edit（Linux x86_64 tar.gz）",
+    "分类": "编辑器",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "aarch64",
+      "windows",
+      "darwin",
+      "apple"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "edit-",
+      "x86_64-linux-gnu.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "aliases": [
+      "msedit",
+      "microsoft edit",
+      "微软edit"
+    ],
+    "releases_url": "https://bgithub.xyz/microsoft/edit/releases",
+    "repo_path": "microsoft/edit"
   }
 ]

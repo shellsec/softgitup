@@ -655,7 +655,7 @@
   },
   {
     "id": "subtitleedit",
-    "简介": "Subtitle Edit（字幕编辑）",
+    "简介": "Subtitle Edit（Linux x64 tar.gz）",
     "分类": "多媒体",
     "enabled": false,
     "prefer_api_assets": true,
@@ -665,18 +665,19 @@
     "kill_before_install": false,
     "run_installer": false,
     "installer_markers": [
-      "SubtitleEdit-",
-      "Linux.zip"
+      "SubtitleEdit-Linux-x64.tar.gz"
     ],
     "href_exclude_substrings": [
+      "ARM64",
       "Windows",
-      "Mac"
+      "Mac",
+      "SeConv"
     ],
     "installer_extensions": [
-      ".zip"
+      ".tar.gz"
     ],
     "use_download_filename": true,
-    "save_name": "SubtitleEdit-Linux.zip",
+    "save_name": "SubtitleEdit-Linux-x64.tar.gz",
     "releases_url": "https://bgithub.xyz/SubtitleEdit/subtitleedit/releases",
     "repo_path": "SubtitleEdit/subtitleedit"
   },

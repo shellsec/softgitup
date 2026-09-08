@@ -73,7 +73,7 @@
   },
   {
     "id": "ferdium",
-    "简介": "Ferdium（聚合 Slack/Discord 等）",
+    "简介": "Ferdium（macOS arm64 dmg）",
     "分类": "网络与协作",
     "releases_url": "https://bgithub.xyz/ferdium/ferdium-app/releases",
     "repo_path": "ferdium/ferdium-app",
@@ -85,16 +85,25 @@
     "kill_before_install": false,
     "run_installer": false,
     "installer_markers": [
-      "Ferdium-mac-arm64",
-      ".dmg"
+      "Ferdium-mac-",
+      "-arm64.dmg"
     ],
     "installer_markers_match_all": true,
     "href_exclude_substrings": [
+      "bundle",
+      "x64",
+      "blockmap",
       "linux",
-      "win",
-      "x86"
+      "win"
     ],
-    "use_download_filename": true
+    "use_download_filename": true,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "Ferdium-mac-{ver}-arm64.dmg"
+    ],
+    "save_name": "Ferdium-mac-{ver}-arm64.dmg"
   },
   {
     "id": "jitsi_meet_electron",

@@ -735,34 +735,36 @@
   },
   {
     "id": "oh_my_posh",
-    "简介": "Oh My Posh（终端提示符主题引擎）",
+    "简介": "Oh My Posh（Windows amd64 独立 exe）",
     "分类": "命令行",
     "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
-    "windows_installer": true,
+    "windows_installer": false,
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": true,
+    "run_installer": false,
     "installer_markers_match_all": true,
     "installer_markers": [
-      "install-x64.msi"
+      "posh-windows-amd64.exe"
     ],
     "href_exclude_substrings": [
       "arm64",
-      "msix",
-      "arm.",
-      "delta"
+      "darwin",
+      "linux",
+      ".msix",
+      "checksums"
     ],
     "installer_extensions": [
-      ".msi"
+      ".exe"
     ],
     "download_names": [
-      "install-x64.msi"
+      "posh-windows-amd64.exe"
     ],
-    "save_name": "oh-my-posh-install-x64.msi",
+    "save_name": "posh-windows-amd64.exe",
     "releases_url": "https://bgithub.xyz/JanDeDobbeleer/oh-my-posh/releases",
-    "repo_path": "JanDeDobbeleer/oh-my-posh"
+    "repo_path": "JanDeDobbeleer/oh-my-posh",
+    "use_download_filename": true
   },
   {
     "id": "whisper_cpp",

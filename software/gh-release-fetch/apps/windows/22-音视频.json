@@ -78,7 +78,7 @@
   },
   {
     "id": "openshot",
-    "简介": "OpenShot 视频编辑器（Windows x64 exe）",
+    "简介": "OpenShot（Windows x86_64.exe）",
     "分类": "音视频",
     "enabled": false,
     "prefer_api_assets": true,
@@ -87,23 +87,27 @@
     "repo_path": "OpenShot/openshot-qt",
     "installer_markers_match_all": true,
     "installer_markers": [
-      "OpenShot",
-      "x64.exe"
+      "OpenShot-",
+      "x86_64.exe"
     ],
     "href_exclude_substrings": [
-      "dmg",
-      "AppImage",
-      "arm64",
-      "portable"
+      "-x86.exe",
+      "macos",
+      "linux",
+      "arm"
     ],
     "windows_installer": true,
     "download_names": [
-      "OpenShot-v{ver}-x64.exe"
+      "OpenShot-v{ver}-x86_64.exe"
     ],
-    "save_name": "OpenShot-v{ver}-x64.exe",
+    "save_name": "OpenShot-v{ver}-x86_64.exe",
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": true
+    "run_installer": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "use_download_filename": true
   },
   {
     "id": "screen_to_gif",
@@ -385,5 +389,36 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "mineradio",
+    "简介": "Mineradio（沉浸式歌词/粒子音乐播放器；Windows Setup）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".zip",
+      ".dmg"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Mineradio-",
+      "Setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "mineradio",
+      "Mineradio"
+    ],
+    "releases_url": "https://bgithub.xyz/XxHuberrr/Mineradio/releases",
+    "repo_path": "XxHuberrr/Mineradio"
   }
 ]

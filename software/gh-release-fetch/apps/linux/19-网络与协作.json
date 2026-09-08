@@ -49,7 +49,7 @@
   },
   {
     "id": "rocketchat_desktop",
-    "简介": "Rocket.Chat 桌面客户端",
+    "简介": "Rocket.Chat 桌面端（linux-amd64.deb）",
     "分类": "网络与协作",
     "releases_url": "https://bgithub.xyz/RocketChat/Rocket.Chat.Electron/releases",
     "repo_path": "RocketChat/Rocket.Chat.Electron",
@@ -61,20 +61,24 @@
     "kill_before_install": false,
     "run_installer": false,
     "installer_markers": [
-      "linux-x64.deb"
+      "linux-amd64.deb"
     ],
     "installer_markers_match_all": false,
     "href_exclude_substrings": [
       "win",
       "mac",
       "arm64",
-      "appx"
+      "appx",
+      "snap"
     ],
-    "use_download_filename": true
+    "use_download_filename": true,
+    "installer_extensions": [
+      ".deb"
+    ]
   },
   {
     "id": "ferdium",
-    "简介": "Ferdium（聚合 Slack/Discord 等）",
+    "简介": "Ferdium（Linux amd64 deb）",
     "分类": "网络与协作",
     "releases_url": "https://bgithub.xyz/ferdium/ferdium-app/releases",
     "repo_path": "ferdium/ferdium-app",
@@ -86,16 +90,25 @@
     "kill_before_install": false,
     "run_installer": false,
     "installer_markers": [
-      "Ferdium-linux-x64",
-      ".AppImage"
+      "Ferdium-linux-",
+      "amd64.deb"
     ],
     "installer_markers_match_all": true,
     "href_exclude_substrings": [
-      "mac",
-      "win",
-      "arm64"
+      "arm",
+      "portable",
+      "rpm",
+      "freebsd",
+      "AppImage"
     ],
-    "use_download_filename": true
+    "use_download_filename": true,
+    "installer_extensions": [
+      ".deb"
+    ],
+    "download_names": [
+      "Ferdium-linux-{ver}-amd64.deb"
+    ],
+    "save_name": "Ferdium-linux-{ver}-amd64.deb"
   },
   {
     "id": "jitsi_meet_electron",

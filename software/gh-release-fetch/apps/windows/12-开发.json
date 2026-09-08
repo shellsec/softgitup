@@ -518,29 +518,38 @@
   },
   {
     "id": "git_lfs",
-    "简介": "Git LFS 大文件扩展",
+    "简介": "Git LFS（Windows 安装器 git-lfs-windows-v{ver}.exe）",
     "分类": "开发",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/git-lfs/git-lfs/releases",
     "repo_path": "git-lfs/git-lfs",
     "installer_markers": [
-      "git-lfs-windows-amd64",
-      ".zip"
+      "git-lfs-windows-v",
+      ".exe"
     ],
     "href_exclude_substrings": [
-      "386",
+      "amd64",
       "arm64",
+      "386",
+      ".zip",
+      "linux",
       "darwin"
     ],
     "windows_installer": true,
     "download_names": [
-      "git-lfs-windows-amd64-v{ver}.zip"
+      "git-lfs-windows-v{ver}.exe"
     ],
-    "save_name": "git-lfs-windows-amd64-v{ver}.zip",
+    "save_name": "git-lfs-windows-v{ver}.exe",
     "process_name": "git-lfs.exe",
     "kill_before_install": false,
-    "run_installer": false,
-    "version_tag_as_on_github": true
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "use_download_filename": true,
+    "prefer_api_assets": true
   },
   {
     "id": "zig",
@@ -674,17 +683,18 @@
   },
   {
     "id": "astgrep",
-    "简介": "AST 结构感知的代码搜索",
+    "简介": "ast-grep（Windows x64 zip；包名前缀改为 app-）",
     "分类": "开发",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/ast-grep/ast-grep/releases",
     "repo_path": "ast-grep/ast-grep",
     "version_tag_as_on_github": true,
     "installer_markers": [
-      "ast-grep-x86_64-pc-windows-msvc.zip"
+      "app-x86_64-pc-windows-msvc.zip"
     ],
     "href_exclude_substrings": [
       "aarch64",
+      "i686",
       "apple",
       "linux"
     ],
@@ -693,12 +703,14 @@
       ".zip"
     ],
     "download_names": [
-      "ast-grep-x86_64-pc-windows-msvc.zip"
+      "app-x86_64-pc-windows-msvc.zip"
     ],
-    "save_name": "ast-grep-x86_64-pc-windows-msvc.zip",
+    "save_name": "app-x86_64-pc-windows-msvc.zip",
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false
+    "run_installer": false,
+    "use_download_filename": true,
+    "prefer_api_assets": true
   },
   {
     "id": "semgrep",
@@ -821,29 +833,38 @@
   },
   {
     "id": "nvm_windows",
-    "简介": "nvm-windows（Node 版本管理器）",
+    "简介": "nvm-windows（Node 版本管理器；amd64-setup.exe）",
     "分类": "开发",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/coreybutler/nvm-windows/releases",
     "repo_path": "coreybutler/nvm-windows",
     "version_tag_as_on_github": true,
     "installer_markers": [
-      "nvm-setup.exe"
+      "nvm-",
+      "amd64-setup.exe"
     ],
     "href_exclude_substrings": [
+      "arm64",
       "noinstall",
       ".zip",
-      ".7z"
+      ".7z",
+      "sync.exe"
     ],
     "windows_installer": true,
     "download_names": [
-      "nvm-setup.exe"
+      "nvm-{ver}-amd64-setup.exe"
     ],
-    "save_name": "nvm-setup.exe",
+    "save_name": "nvm-{ver}-amd64-setup.exe",
     "process_name": "",
     "kill_before_install": false,
     "run_installer": true,
-    "url_hint": "nvm-setup"
+    "url_hint": "nvm-setup",
+    "installer_markers_match_all": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "use_download_filename": true,
+    "prefer_api_assets": true
   },
   {
     "id": "fnm",
@@ -2016,5 +2037,104 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "gitdesktop",
+    "简介": "GitDesktop（AI 原生 Git 桌面客户端；Windows x64 Setup）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".msi",
+      ".sig",
+      ".dmg",
+      "AppImage",
+      ".deb"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "GitDesktop_",
+      "x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "gitdesktop",
+      "GitDesktop",
+      "git desktop"
+    ],
+    "releases_url": "https://bgithub.xyz/theBGuy/GitDesktop/releases",
+    "repo_path": "theBGuy/GitDesktop"
+  },
+  {
+    "id": "gitcat",
+    "简介": "GitCat（可撤销操作的 Git 客户端；Windows x64 Setup）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".msi",
+      ".sig",
+      ".dmg",
+      "AppImage",
+      "arm64"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "GitCat_",
+      "x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "gitcat",
+      "GitCat"
+    ],
+    "releases_url": "https://bgithub.xyz/zangjiucheng/GitCat/releases",
+    "repo_path": "zangjiucheng/GitCat"
+  },
+  {
+    "id": "open_code_review",
+    "简介": "Open Code Review（阿里开源代码评审 CLI；Windows amd64 exe）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm64"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "opencodereview-windows-amd64.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "opencodereview",
+      "open code review",
+      "阿里代码评审"
+    ],
+    "releases_url": "https://bgithub.xyz/alibaba/open-code-review/releases",
+    "repo_path": "alibaba/open-code-review"
   }
 ]

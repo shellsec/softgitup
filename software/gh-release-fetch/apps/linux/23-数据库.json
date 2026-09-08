@@ -90,7 +90,7 @@
   },
   {
     "id": "dbeaver",
-    "简介": "DBeaver CE 数据库客户端",
+    "简介": "DBeaver CE（Linux x86_64 tar.gz）",
     "releases_url": "https://bgithub.xyz/dbeaver/dbeaver/releases",
     "repo_path": "dbeaver/dbeaver",
     "enabled": false,
@@ -104,21 +104,24 @@
     "installer_markers_match_all": true,
     "installer_markers": [
       "dbeaver-ce-",
-      "linux.gtk.x86_64.tar.gz"
+      "linux-x86_64.tar.gz"
     ],
     "href_exclude_substrings": [
       "windows",
       "macos",
       "aarch64",
-      "sha256"
+      "sha256",
+      ".deb",
+      ".rpm"
     ],
     "installer_extensions": [
       ".tar.gz"
     ],
     "download_names": [
-      "dbeaver-ce-{ver}-linux.gtk.x86_64.tar.gz"
+      "dbeaver-ce-{ver}-linux-x86_64.tar.gz"
     ],
-    "save_name": "dbeaver-ce-{ver}-linux.gtk.x86_64.tar.gz"
+    "save_name": "dbeaver-ce-{ver}-linux-x86_64.tar.gz",
+    "use_download_filename": true
   },
   {
     "id": "sqlitestudio",
@@ -186,7 +189,7 @@
   },
   {
     "id": "dolt",
-    "简介": "Dolt（Git 语义数据库）",
+    "简介": "Dolt（Linux amd64 tar.gz）",
     "分类": "数据库",
     "enabled": false,
     "prefer_api_assets": true,
@@ -196,18 +199,19 @@
     "kill_before_install": false,
     "run_installer": false,
     "installer_markers": [
-      "dolt-linux-amd64.zip"
+      "dolt-linux-amd64.tar.gz"
     ],
     "href_exclude_substrings": [
+      "arm64",
       "windows",
       "darwin",
-      "arm"
+      ".rpm"
     ],
     "installer_extensions": [
-      ".zip"
+      ".tar.gz"
     ],
     "use_download_filename": true,
-    "save_name": "dolt-linux-amd64.zip",
+    "save_name": "dolt-linux-amd64.tar.gz",
     "releases_url": "https://bgithub.xyz/dolthub/dolt/releases",
     "repo_path": "dolthub/dolt"
   },
@@ -273,5 +277,87 @@
     "save_name": "usql-{ver}-linux-amd64.zip",
     "releases_url": "https://bgithub.xyz/xo/usql/releases",
     "repo_path": "xo/usql"
+  },
+  {
+    "id": "dbx",
+    "简介": "DBX（轻量跨平台数据库客户端；Linux x64 AppImage）",
+    "分类": "数据库",
+    "aliases": [
+      "dbx",
+      "DBX",
+      "t8y2"
+    ],
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/t8y2/dbx/releases",
+    "repo_path": "t8y2/dbx",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "DBX_",
+      "_amd64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      ".rpm",
+      ".deb",
+      ".dmg",
+      "setup",
+      "portable",
+      "jdbc"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "download_names": [
+      "DBX_{ver}_amd64.AppImage"
+    ],
+    "save_name": "DBX_{ver}_amd64.AppImage",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "dbx DBX t8y2"
+  },
+  {
+    "id": "dbx_linux_arm64",
+    "简介": "DBX（Linux arm64 AppImage）",
+    "分类": "数据库",
+    "aliases": [
+      "dbx arm64",
+      "DBX arm64"
+    ],
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/t8y2/dbx/releases",
+    "repo_path": "t8y2/dbx",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "DBX_",
+      "_arm64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "amd64",
+      ".rpm",
+      ".deb",
+      ".dmg",
+      "setup",
+      "portable",
+      "jdbc"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "download_names": [
+      "DBX_{ver}_arm64.AppImage"
+    ],
+    "save_name": "DBX_{ver}_arm64.AppImage",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "dbx arm64 DBX arm64",
+    "use_download_filename": true
   }
 ]

@@ -458,8 +458,9 @@
     "run_installer": false,
     "use_download_filename": true,
     "href_exclude_substrings": [
-      "win",
-      ".msi"
+      "windows",
+      ".msi",
+      ".exe"
     ],
     "installer_markers_match_all": true,
     "installer_markers": [

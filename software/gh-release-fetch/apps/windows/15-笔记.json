@@ -119,27 +119,40 @@
   },
   {
     "id": "marktext",
-    "简介": "Markdown 编辑器（安装包名无版本号）",
+    "简介": "MarkText（开源 Markdown 编辑器；Windows x64 Setup）",
     "分类": "笔记",
     "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
     "releases_url": "https://bgithub.xyz/marktext/marktext/releases",
     "repo_path": "marktext/marktext",
+    "installer_markers_match_all": true,
     "installer_markers": [
-      "marktext-setup.exe"
+      "marktext-win-x64-",
+      "-setup.exe"
     ],
     "href_exclude_substrings": [
+      "arm64",
       "mac",
-      "ia32",
-      ".zip"
+      "linux",
+      ".zip",
+      ".blockmap",
+      "ia32"
     ],
     "windows_installer": true,
-    "download_names": [
-      "marktext-setup.exe"
+    "installer_extensions": [
+      ".exe"
     ],
-    "save_name": "marktext-setup.exe",
+    "use_download_filename": true,
+    "save_name": "marktext-win-x64-{ver}-setup.exe",
     "process_name": "Mark Text.exe",
     "kill_before_install": true,
-    "run_installer": true
+    "run_installer": true,
+    "aliases": [
+      "marktext",
+      "MarkText",
+      "Mark Text"
+    ]
   },
   {
     "id": "standardnotes",

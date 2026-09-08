@@ -204,31 +204,33 @@
   },
   {
     "id": "gdu",
-    "简介": "交互式磁盘占用分析",
+    "简介": "gdu（Windows amd64 exe.zip）",
     "分类": "系统",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/dundee/gdu/releases",
     "repo_path": "dundee/gdu",
     "version_tag_as_on_github": true,
     "installer_markers": [
-      "gdu-windows-amd64.zip"
+      "gdu_windows_amd64.exe.zip"
     ],
     "href_exclude_substrings": [
-      "linux",
+      "arm",
       "darwin",
-      "arm"
+      "linux"
     ],
     "windows_installer": false,
     "installer_extensions": [
       ".zip"
     ],
     "download_names": [
-      "gdu-windows-amd64.zip"
+      "gdu_windows_amd64.exe.zip"
     ],
-    "save_name": "gdu-windows-amd64.zip",
+    "save_name": "gdu_windows_amd64.exe.zip",
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false
+    "run_installer": false,
+    "use_download_filename": true,
+    "prefer_api_assets": true
   },
   {
     "id": "qemu",
@@ -1183,40 +1185,33 @@
   },
   {
     "id": "winhance",
-    "简介": "Winhance（Windows 优化脚本套件）",
+    "简介": "Winhance（Windows 安装器）",
     "分类": "系统",
     "enabled": false,
     "prefer_api_assets": true,
     "version_tag_as_on_github": true,
-    "windows_installer": false,
+    "windows_installer": true,
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false,
+    "run_installer": true,
     "use_download_filename": true,
     "href_exclude_substrings": [
+      ".ps1",
       "source",
-      "src.",
-      "-src",
-      "symbols",
-      "debug",
-      "pdb",
-      "sha256",
-      ".sig",
-      ".json",
-      ".txt",
-      ".md",
-      "checksum"
+      "pdb"
     ],
     "installer_markers": [
-      "Get.ps1",
-      ".ps1"
+      "Winhance.Installer.exe"
     ],
     "installer_extensions": [
-      ".ps1",
-      ".zip"
+      ".exe"
     ],
     "releases_url": "https://bgithub.xyz/memstechtips/Winhance/releases",
-    "repo_path": "memstechtips/Winhance"
+    "repo_path": "memstechtips/Winhance",
+    "download_names": [
+      "Winhance.Installer.exe"
+    ],
+    "save_name": "Winhance.Installer.exe"
   },
   {
     "id": "memreduct",
@@ -1781,5 +1776,41 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "openlogi",
+    "简介": "OpenLogi（罗技 Options+ 本地开源替代；Windows x64 MSI）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm64",
+      ".zip",
+      ".minisig",
+      "linux",
+      "macos"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "OpenLogi-v",
+      "windows-x86_64.msi"
+    ],
+    "installer_extensions": [
+      ".msi"
+    ],
+    "aliases": [
+      "openlogi",
+      "logitech options",
+      "罗技",
+      "Options+"
+    ],
+    "releases_url": "https://bgithub.xyz/AprilNEA/OpenLogi/releases",
+    "repo_path": "AprilNEA/OpenLogi"
   }
 ]

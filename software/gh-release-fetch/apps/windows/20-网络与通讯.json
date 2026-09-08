@@ -81,29 +81,35 @@
   },
   {
     "id": "chatterino",
-    "简介": "Twitch 聊天客户端 Chatterino",
+    "简介": "Chatterino（Windows Installer.exe）",
     "分类": "网络与通讯",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/Chatterino/chatterino2/releases",
     "repo_path": "Chatterino/chatterino2",
     "installer_markers": [
-      "Chatterino-",
-      "installer.exe"
+      "Chatterino.Installer.exe"
     ],
     "href_exclude_substrings": [
       "portable",
       "ubuntu",
-      "macos"
+      "macos",
+      "debug",
+      ".pdb"
     ],
     "windows_installer": true,
     "download_names": [
-      "Chatterino-{ver}-installer.exe"
+      "Chatterino.Installer.exe"
     ],
-    "save_name": "Chatterino-{ver}-installer.exe",
+    "save_name": "Chatterino.Installer.exe",
     "process_name": "chatterino.exe",
     "kill_before_install": true,
     "run_installer": true,
-    "version_tag_as_on_github": true
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "use_download_filename": true,
+    "prefer_api_assets": true
   },
   {
     "id": "element_desktop",

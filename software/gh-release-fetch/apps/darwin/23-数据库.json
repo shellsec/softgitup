@@ -179,7 +179,7 @@
   },
   {
     "id": "dolt",
-    "简介": "Dolt（Git 语义数据库）",
+    "简介": "Dolt（macOS arm64 tar.gz）",
     "分类": "数据库",
     "enabled": false,
     "prefer_api_assets": true,
@@ -189,18 +189,18 @@
     "kill_before_install": false,
     "run_installer": false,
     "installer_markers": [
-      "dolt-darwin-amd64.zip"
+      "dolt-darwin-arm64.tar.gz"
     ],
     "href_exclude_substrings": [
+      "amd64",
       "windows",
-      "linux",
-      "arm"
+      "linux"
     ],
     "installer_extensions": [
-      ".zip"
+      ".tar.gz"
     ],
     "use_download_filename": true,
-    "save_name": "dolt-darwin-amd64.zip",
+    "save_name": "dolt-darwin-arm64.tar.gz",
     "releases_url": "https://bgithub.xyz/dolthub/dolt/releases",
     "repo_path": "dolthub/dolt"
   },
@@ -266,5 +266,88 @@
     "save_name": "usql-{ver}-darwin-amd64.zip",
     "releases_url": "https://bgithub.xyz/xo/usql/releases",
     "repo_path": "xo/usql"
+  },
+  {
+    "id": "dbx",
+    "简介": "DBX（macOS Apple Silicon arm64 dmg）",
+    "分类": "数据库",
+    "aliases": [
+      "dbx",
+      "DBX",
+      "t8y2"
+    ],
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/t8y2/dbx/releases",
+    "repo_path": "t8y2/dbx",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "DBX_",
+      "_arm64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "AppImage",
+      "setup",
+      "portable",
+      "x64.dmg",
+      ".rpm",
+      ".deb",
+      "jdbc"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "DBX_{ver}_arm64.dmg"
+    ],
+    "save_name": "DBX_{ver}_arm64.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "dbx DBX t8y2",
+    "use_download_filename": true
+  },
+  {
+    "id": "dbx_darwin_intel",
+    "简介": "DBX（轻量跨平台数据库客户端；macOS Intel dmg）",
+    "分类": "数据库",
+    "aliases": [
+      "dbx intel",
+      "DBX Intel"
+    ],
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/t8y2/dbx/releases",
+    "repo_path": "t8y2/dbx",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "DBX_",
+      "_x64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      "AppImage",
+      "setup",
+      "portable",
+      ".rpm",
+      ".deb",
+      "jdbc",
+      ".app.tar.gz"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "DBX_{ver}_x64.dmg"
+    ],
+    "save_name": "DBX_{ver}_x64.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "dbx intel DBX Intel"
   }
 ]

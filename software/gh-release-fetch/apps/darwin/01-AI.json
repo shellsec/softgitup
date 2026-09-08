@@ -483,7 +483,7 @@
   },
   {
     "id": "cline",
-    "简介": "Cline（VS Code 扩展，Release .vsix）",
+    "简介": "Cline 桌面端（macOS universal dmg）",
     "分类": "AI",
     "enabled": false,
     "prefer_api_assets": true,
@@ -492,26 +492,29 @@
     "repo_path": "cline/cline",
     "installer_markers_match_all": true,
     "installer_markers": [
-      "cline-",
-      ".vsix"
+      "Cline_",
+      "universal.dmg"
     ],
     "href_exclude_substrings": [
-      "Source",
-      ".zip",
-      ".tar.gz",
-      "sbom"
+      "blockmap",
+      ".sig",
+      ".exe",
+      "linux",
+      ".yml",
+      ".zip"
     ],
     "windows_installer": false,
     "installer_extensions": [
-      ".vsix"
+      ".dmg"
     ],
     "download_names": [
-      "cline-{ver}.vsix"
+      "Cline_{ver}_universal.dmg"
     ],
-    "save_name": "cline-{ver}.vsix",
+    "save_name": "Cline_{ver}_universal.dmg",
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false
+    "run_installer": false,
+    "use_download_filename": true
   },
   {
     "id": "continue",
@@ -777,7 +780,7 @@
   },
   {
     "id": "deepseek_cli",
-    "简介": "DeepSeek-TUI dispatcher（deepseek 命令；macOS Apple Silicon，裸 binary deepseek-macos-arm64；需配套 deepseek_tui，并 chmod +x 后放入 PATH）",
+    "简介": "CodeWhale（原 DeepSeek-TUI dispatcher；macOS Apple Silicon）",
     "分类": "AI",
     "enabled": false,
     "prefer_api_assets": true,
@@ -786,25 +789,26 @@
     "repo_path": "Hmbown/DeepSeek-TUI",
     "installer_markers_match_all": true,
     "installer_markers": [
-      "deepseek-macos-arm64"
+      "codewhale-macos-arm64"
     ],
     "href_exclude_substrings": [
-      "deepseek-tui-",
+      "codewhale-tui-",
       "linux",
       "windows",
       "x64",
-      "sha256"
+      "sha256",
+      ".tar.gz"
     ],
     "windows_installer": false,
     "use_download_filename": true,
-    "save_name": "deepseek-macos-arm64",
+    "save_name": "codewhale-macos-arm64",
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
   },
   {
     "id": "deepseek_tui",
-    "简介": "DeepSeek-TUI companion runtime（deepseek-tui 命令；macOS Apple Silicon，裸 binary deepseek-tui-macos-arm64；需与 deepseek_cli 同时存在）",
+    "简介": "CodeWhale TUI companion（macOS Apple Silicon）",
     "分类": "AI",
     "enabled": false,
     "prefer_api_assets": true,
@@ -813,17 +817,18 @@
     "repo_path": "Hmbown/DeepSeek-TUI",
     "installer_markers_match_all": true,
     "installer_markers": [
-      "deepseek-tui-macos-arm64"
+      "codewhale-tui-macos-arm64"
     ],
     "href_exclude_substrings": [
       "linux",
       "windows",
       "x64",
-      "sha256"
+      "sha256",
+      ".tar.gz"
     ],
     "windows_installer": false,
     "use_download_filename": true,
-    "save_name": "deepseek-tui-macos-arm64",
+    "save_name": "codewhale-tui-macos-arm64",
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
@@ -2127,5 +2132,238 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "colibri",
+    "简介": "Colibri（macOS Apple Silicon tar.gz）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "linux",
+      "windows",
+      "x86_64"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "colibri-v",
+      "macos-arm64.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "aliases": [
+      "colibri",
+      "Colibri"
+    ],
+    "releases_url": "https://bgithub.xyz/JustVugg/colibri/releases",
+    "repo_path": "JustVugg/colibri"
+  },
+  {
+    "id": "dsh_desktop",
+    "简介": "DSH Desktop（macOS universal dmg）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".exe",
+      ".zip",
+      "linux"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "DSH.Desktop-",
+      "universal.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "dsh",
+      "dsh desktop",
+      "DeepSeek Harness",
+      "deepseek harness"
+    ],
+    "releases_url": "https://bgithub.xyz/anywhere-labs/dsh-desktop/releases",
+    "repo_path": "anywhere-labs/dsh-desktop"
+  },
+  {
+    "id": "openworker",
+    "简介": "OpenWorker（macOS Apple Silicon dmg）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "x64",
+      "windows",
+      ".exe",
+      ".msi"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "OpenWorker_",
+      "aarch64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "openworker",
+      "OpenWorker",
+      "andrew ng"
+    ],
+    "releases_url": "https://bgithub.xyz/andrewyng/openworker/releases",
+    "repo_path": "andrewyng/openworker"
+  },
+  {
+    "id": "mimo_code",
+    "简介": "MiMo Code（macOS Apple Silicon zip）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "x64",
+      "windows",
+      "linux",
+      "baseline"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "mimocode-darwin-arm64.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "mimocode",
+      "mimo code",
+      "MiMo",
+      "小米代码"
+    ],
+    "releases_url": "https://bgithub.xyz/XiaomiMiMo/MiMo-Code/releases",
+    "repo_path": "XiaomiMiMo/MiMo-Code"
+  },
+  {
+    "id": "freellmapi",
+    "简介": "FreeLLMAPI（macOS Apple Silicon dmg）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".blockmap",
+      ".exe",
+      "AppImage",
+      "win"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "FreeLLMAPI-",
+      "arm64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "freellmapi",
+      "free llm api",
+      "FreeLLMAPI"
+    ],
+    "releases_url": "https://bgithub.xyz/tashfeenahmed/freellmapi/releases",
+    "repo_path": "tashfeenahmed/freellmapi"
+  },
+  {
+    "id": "openclaw_manager",
+    "简介": "OpenClaw Manager（macOS universal dmg）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".exe",
+      "AppImage",
+      ".deb",
+      ".msi"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "OpenClaw.Manager_",
+      "universal.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "openclaw manager",
+      "虾池子",
+      "openclaw-manager"
+    ],
+    "releases_url": "https://bgithub.xyz/miaoxworld/openclaw-manager/releases",
+    "repo_path": "miaoxworld/openclaw-manager"
+  },
+  {
+    "id": "codex_dream_skin",
+    "简介": "Codex Dream Skin（macOS dmg）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".exe",
+      "Setup"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "CodexDreamSkin-",
+      ".dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "codex dream skin",
+      "CodexDreamSkin"
+    ],
+    "releases_url": "https://bgithub.xyz/Fei-Away/Codex-Dream-Skin/releases",
+    "repo_path": "Fei-Away/Codex-Dream-Skin"
   }
 ]

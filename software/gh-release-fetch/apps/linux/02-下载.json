@@ -84,7 +84,7 @@
     "run_installer": false
   },
   {
-    "简介": "qBittorrent（BT/磁力）",
+    "简介": "qBittorrent（Linux x86_64 AppImage）",
     "分类": "下载",
     "enabled": false,
     "prefer_api_assets": true,
@@ -94,10 +94,11 @@
     "id": "qbittorrent",
     "installer_markers_match_all": true,
     "installer_markers": [
-      "qbittorrent_",
+      "qbittorrent-",
       "_x86_64.AppImage"
     ],
     "href_exclude_substrings": [
+      "lt20",
       "Windows",
       "Darwin",
       "arm64",
@@ -108,7 +109,7 @@
       ".AppImage"
     ],
     "use_download_filename": true,
-    "save_name": "qbittorrent.AppImage",
+    "save_name": "qbittorrent-{ver}_x86_64.AppImage",
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
@@ -147,7 +148,7 @@
     "run_installer": false
   },
   {
-    "简介": "Motrix（全能下载工具：HTTP/FTP/BT/磁力链）",
+    "简介": "Motrix（Linux x64 AppImage）",
     "分类": "下载",
     "releases_url": "https://bgithub.xyz/agalwood/Motrix/releases",
     "repo_path": "agalwood/Motrix",
@@ -162,23 +163,27 @@
     "installer_markers_match_all": true,
     "installer_markers": [
       "Motrix-",
-      "x64.AppImage"
+      ".AppImage"
     ],
     "href_exclude_substrings": [
-      "dmg",
-      "exe",
       "arm64",
-      "yml",
-      "blockmap"
+      "armv7l",
+      "win",
+      "dmg",
+      "deb",
+      "mac"
     ],
     "installer_extensions": [
       ".AppImage"
     ],
     "use_download_filename": true,
-    "save_name": "Motrix.AppImage"
+    "save_name": "Motrix-{ver}.AppImage",
+    "download_names": [
+      "Motrix-{ver}.AppImage"
+    ]
   },
   {
-    "简介": "Gopeed（HTTP/BT 等，现代下载器）",
+    "简介": "Gopeed（Linux amd64 AppImage）",
     "分类": "下载",
     "releases_url": "https://bgithub.xyz/GopeedLab/gopeed/releases",
     "repo_path": "GopeedLab/gopeed",
@@ -193,24 +198,23 @@
     "installer_markers_match_all": true,
     "installer_markers": [
       "Gopeed-v",
-      "linux-amd64.zip"
+      "linux-amd64.AppImage"
     ],
     "href_exclude_substrings": [
+      "arm64",
       "windows",
       "macos",
-      "qnap",
-      "arm64",
-      "ia32",
-      "blockmap",
-      ".deb"
+      "android",
+      "web-"
     ],
     "installer_extensions": [
-      ".zip"
+      ".AppImage"
     ],
     "download_names": [
-      "Gopeed-v{ver}-linux-amd64.zip"
+      "Gopeed-v{ver}-linux-amd64.AppImage"
     ],
-    "save_name": "Gopeed-v{ver}-linux-amd64.zip"
+    "save_name": "Gopeed-v{ver}-linux-amd64.AppImage",
+    "use_download_filename": true
   },
   {
     "id": "qbittorrent_enhanced_edition",

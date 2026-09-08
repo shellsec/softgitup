@@ -1168,7 +1168,7 @@
   },
   {
     "id": "owasp_zap",
-    "简介": "OWASP ZAP（Web 安全测试，Windows 安装包）",
+    "简介": "OWASP ZAP（Windows 安装包 windows.exe）",
     "分类": "安全",
     "enabled": false,
     "prefer_api_assets": true,
@@ -1178,13 +1178,14 @@
     "installer_markers_match_all": true,
     "installer_markers": [
       "ZAP_",
-      "_Windows.exe"
+      "windows.exe"
     ],
     "href_exclude_substrings": [
-      "Linux",
-      "Darwin",
-      "CrossPlatform",
-      ".sha512"
+      "x32",
+      "Mac",
+      "unix",
+      "aarch64",
+      "Linux"
     ],
     "windows_installer": true,
     "download_names": [
@@ -1193,7 +1194,11 @@
     "save_name": "ZAP_{ver}_Windows.exe",
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": true
+    "run_installer": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "use_download_filename": true
   },
   {
     "id": "tinywall",

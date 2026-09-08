@@ -105,24 +105,35 @@
   },
   {
     "id": "duckstation",
-    "简介": "PlayStation 1 模拟器",
+    "简介": "DuckStation（Windows x64 installer.exe）",
     "分类": "游戏",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/stenzek/duckstation/releases",
     "repo_path": "stenzek/duckstation",
     "installer_markers": [
-      "duckstation-windows-x64-release.zip"
+      "duckstation-windows-x64-installer.exe"
     ],
-    "href_exclude_substrings": [],
+    "href_exclude_substrings": [
+      "arm64",
+      "sse2",
+      "linux",
+      "macos",
+      ".zip"
+    ],
     "windows_installer": true,
     "download_names": [
-      "duckstation-windows-x64-release.zip"
+      "duckstation-windows-x64-installer.exe"
     ],
-    "save_name": "duckstation-windows-x64-release.zip",
+    "save_name": "duckstation-windows-x64-installer.exe",
     "process_name": "duckstation-qt-x64.exe",
     "kill_before_install": false,
-    "run_installer": false,
-    "version_tag_as_on_github": true
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "use_download_filename": true,
+    "prefer_api_assets": true
   },
   {
     "id": "pcsx2",
@@ -177,27 +188,36 @@
   },
   {
     "id": "xemu",
-    "简介": "Xbox 模拟器 xemu",
+    "简介": "xemu（Windows x86_64 release zip）",
     "分类": "游戏",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/mborgerson/xemu/releases",
     "repo_path": "mborgerson/xemu",
     "installer_markers": [
-      "xemu-win-release.zip"
+      "xemu-win-x86_64-release.zip"
     ],
     "href_exclude_substrings": [
+      "arm64",
+      "aarch64",
       "linux",
-      "darwin"
+      "macos",
+      "dbg",
+      "pdb"
     ],
-    "windows_installer": true,
+    "windows_installer": false,
     "download_names": [
-      "xemu-win-release.zip"
+      "xemu-win-x86_64-release.zip"
     ],
-    "save_name": "xemu-win-release.zip",
+    "save_name": "xemu-win-x86_64-release.zip",
     "process_name": "xemu.exe",
     "kill_before_install": false,
     "run_installer": false,
-    "version_tag_as_on_github": true
+    "version_tag_as_on_github": true,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "prefer_api_assets": true
   },
   {
     "id": "scummvm",
@@ -278,29 +298,36 @@
   },
   {
     "id": "minetest",
-    "简介": "体素沙盒（类 Minecraft）",
+    "简介": "Luanti（原 Minetest；Windows 安装器 .exe）",
     "分类": "游戏",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/minetest/minetest/releases",
     "repo_path": "minetest/minetest",
     "installer_markers": [
-      "minetest-",
-      "win64.zip"
+      "luanti-",
+      ".exe"
     ],
     "href_exclude_substrings": [
-      "linux",
-      "osx",
-      "android"
+      ".zip",
+      ".apk",
+      "win32",
+      "macos"
     ],
     "windows_installer": true,
     "download_names": [
-      "minetest-{ver}-win64.zip"
+      "luanti-{ver}.exe"
     ],
-    "save_name": "minetest-{ver}-win64.zip",
+    "save_name": "luanti-{ver}.exe",
     "process_name": "minetest.exe",
     "kill_before_install": false,
-    "run_installer": false,
-    "version_tag_as_on_github": true
+    "run_installer": true,
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "use_download_filename": true,
+    "prefer_api_assets": true
   },
   {
     "id": "warzone2100",

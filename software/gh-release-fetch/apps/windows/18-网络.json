@@ -865,5 +865,44 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "pojie_netdiag",
+    "简介": "吾爱破解论坛网络诊断修复工具（Windows 便携 exe；检测/修复论坛打不开、DNS 劫持、验证码异常）",
+    "分类": "网络",
+    "aliases": [
+      "52pojie",
+      "吾爱破解",
+      "netdiag",
+      "网络诊断",
+      "吾爱网络诊断",
+      "52pojie-Netdiag"
+    ],
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Hmily-LCG/52pojie-Netdiag/releases",
+    "repo_path": "Hmily-LCG/52pojie-Netdiag",
+    "installer_extensions": [
+      ".exe"
+    ],
+    "installer_markers": [
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      ".zip",
+      ".tar",
+      ".txt",
+      ".md",
+      "checksum"
+    ],
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "url_hint": "52pojie 吾爱破解 netdiag 网络诊断"
   }
 ]

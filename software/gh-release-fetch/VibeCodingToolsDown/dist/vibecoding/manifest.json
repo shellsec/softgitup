@@ -1,26 +1,27 @@
 {
   "schema": 1,
-  "generated_at": "2026-08-21T03:00:49Z",
+  "generated_at": "2026-09-02T09:33:08Z",
   "items": [
     {
       "id": "cursor",
-      "version": "3.17.8",
-      "version_tag": "v3.17.8",
+      "version": "3.18.25",
+      "version_tag": "v3.18.25",
       "downloads": {
         "windows": {
-          "url": "https://downloads.cursor.com/production/2fdd31c9f33f7fbe501f2d57772dc5bf64b63621/win32/x64/user-setup/CursorUserSetup-x64-3.17.8.exe",
-          "filename": "CursorUserSetup-x64-3.17.8.exe"
+          "url": "https://downloads.cursor.com/production/280eca2911f1774689696e5f1efa5a4f97a87af3/win32/x64/user-setup/CursorUserSetup-x64-3.18.25.exe",
+          "filename": "CursorUserSetup-x64-3.18.25.exe"
         },
         "darwin": {
-          "url": "https://downloads.cursor.com/production/2fdd31c9f33f7fbe501f2d57772dc5bf64b63621/darwin/universal/Cursor-darwin-universal.dmg",
+          "url": "https://downloads.cursor.com/production/280eca2911f1774689696e5f1efa5a4f97a87af3/darwin/universal/Cursor-darwin-universal.dmg",
           "filename": "Cursor-darwin-universal.dmg"
         },
         "linux": {
-          "url": "https://downloads.cursor.com/production/2fdd31c9f33f7fbe501f2d57772dc5bf64b63621/linux/x64/Cursor-3.17.8-x86_64.AppImage",
-          "filename": "Cursor-3.17.8-x86_64.AppImage"
+          "url": "https://downloads.cursor.com/production/280eca2911f1774689696e5f1efa5a4f97a87af3/linux/x64/Cursor-3.18.25-x86_64.AppImage",
+          "filename": "Cursor-3.18.25-x86_64.AppImage"
         }
       },
-      "notes": "索引自 accesstechnology-mike/cursor-downloads Release 正文中的官方 CDN 链。"
+      "notes": "索引自 accesstechnology-mike/cursor-downloads。国内请用本 snapshot 覆盖安装，勿依赖应用内 Check for Updates。 commit=280eca2911f1774689696e5f1efa5a4f97a87af3",
+      "commit": "280eca2911f1774689696e5f1efa5a4f97a87af3"
     },
     {
       "id": "vscode",
@@ -508,6 +509,27 @@
         }
       },
       "notes": "GitHub farion1231/cc-switch（CC Switch）；Windows MSI、macOS dmg、Linux x86_64 AppImage。"
+    },
+    {
+      "id": "cursor_reh",
+      "version": "3.18.25",
+      "version_tag": "v3.18.25",
+      "downloads": {
+        "windows": {
+          "url": "https://downloads.cursor.com/production/280eca2911f1774689696e5f1efa5a4f97a87af3/linux/x64/cursor-reh-linux-x64.tar.gz",
+          "filename": "cursor-reh-linux-x64.tar.gz"
+        },
+        "darwin": {
+          "url": "https://downloads.cursor.com/production/280eca2911f1774689696e5f1efa5a4f97a87af3/linux/x64/cursor-reh-linux-x64.tar.gz",
+          "filename": "cursor-reh-linux-x64.tar.gz"
+        },
+        "linux": {
+          "url": "https://downloads.cursor.com/production/280eca2911f1774689696e5f1efa5a4f97a87af3/linux/x64/cursor-reh-linux-x64.tar.gz",
+          "filename": "cursor-reh-linux-x64.tar.gz"
+        }
+      },
+      "notes": "Cursor Remote-SSH 服务端 linux-x64。 解压到 ~/.cursor-server/bin/linux-x64/280eca2911f1774689696e5f1efa5a4f97a87af3/ ，再 touch 0。 国内服务器访问不了 downloads.cursor.com 时：本机 snapshot 下载后 scp 上去。",
+      "commit": "280eca2911f1774689696e5f1efa5a4f97a87af3"
     }
   ],
   "errors": []

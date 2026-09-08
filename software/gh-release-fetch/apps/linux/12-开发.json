@@ -705,7 +705,7 @@
   },
   {
     "id": "hugo_extended",
-    "简介": "Hugo Extended（静态站点）",
+    "简介": "Hugo Extended（Linux amd64 tar.gz）",
     "分类": "开发",
     "enabled": false,
     "prefer_api_assets": true,
@@ -717,26 +717,28 @@
     "installer_markers_match_all": true,
     "installer_markers": [
       "hugo_extended_",
-      "linux-amd64"
+      "linux-amd64.tar.gz"
     ],
     "href_exclude_substrings": [
+      "withdeploy",
       "windows",
       "darwin",
       "arm"
     ],
     "installer_extensions": [
-      ".zip"
+      ".tar.gz"
     ],
     "download_names": [
-      "hugo_extended_{ver}_linux-amd64.zip"
+      "hugo_extended_{ver}_linux-amd64.tar.gz"
     ],
-    "save_name": "hugo_extended_{ver}_linux-amd64.zip",
+    "save_name": "hugo_extended_{ver}_linux-amd64.tar.gz",
     "releases_url": "https://bgithub.xyz/gohugoio/hugo/releases",
-    "repo_path": "gohugoio/hugo"
+    "repo_path": "gohugoio/hugo",
+    "use_download_filename": true
   },
   {
     "id": "astgrep",
-    "简介": "ast-grep（AST 代码搜索）",
+    "简介": "ast-grep（Linux x64 zip；包名前缀改为 app-）",
     "分类": "开发",
     "enabled": false,
     "prefer_api_assets": true,
@@ -747,14 +749,13 @@
     "run_installer": false,
     "installer_markers_match_all": true,
     "installer_markers": [
-      "ast-grep-",
-      "linux_amd64"
+      "app-x86_64-unknown-linux-gnu.zip"
     ],
     "href_exclude_substrings": [
+      "aarch64",
       "windows",
       "darwin",
-      "386",
-      "arm"
+      "musl"
     ],
     "installer_extensions": [
       ".zip"
@@ -762,9 +763,10 @@
     "download_names": [
       "ast-grep-{ver}_linux_amd64.zip"
     ],
-    "save_name": "ast-grep-{ver}_linux_amd64.zip",
+    "save_name": "app-x86_64-unknown-linux-gnu.zip",
     "releases_url": "https://bgithub.xyz/ast-grep/ast-grep/releases",
-    "repo_path": "ast-grep/ast-grep"
+    "repo_path": "ast-grep/ast-grep",
+    "use_download_filename": true
   },
   {
     "id": "dprint",
@@ -818,7 +820,7 @@
   },
   {
     "id": "netron",
-    "简介": "Netron（模型可视化）",
+    "简介": "Netron（Linux amd64 deb）",
     "分类": "开发",
     "enabled": false,
     "prefer_api_assets": true,
@@ -828,20 +830,26 @@
     "kill_before_install": false,
     "run_installer": false,
     "installer_markers": [
-      "netron-",
-      "Linux-x64.zip"
+      "Netron-",
+      "amd64.deb"
     ],
     "href_exclude_substrings": [
-      "Windows",
-      "Darwin"
+      "Setup",
+      "dmg",
+      "rpm",
+      ".yml"
     ],
     "installer_extensions": [
-      ".zip"
+      ".deb"
     ],
     "use_download_filename": true,
-    "save_name": "netron-Linux-x64.zip",
+    "save_name": "Netron-{ver}-amd64.deb",
     "releases_url": "https://bgithub.xyz/lutzroeder/netron/releases",
-    "repo_path": "lutzroeder/netron"
+    "repo_path": "lutzroeder/netron",
+    "installer_markers_match_all": true,
+    "download_names": [
+      "Netron-{ver}-amd64.deb"
+    ]
   },
   {
     "id": "cutter",
@@ -1026,5 +1034,75 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "gitdesktop",
+    "简介": "GitDesktop（Linux amd64 AppImage）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".deb",
+      ".rpm",
+      ".exe",
+      ".dmg",
+      ".sig"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "GitDesktop_",
+      "amd64.AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "aliases": [
+      "gitdesktop",
+      "GitDesktop",
+      "git desktop"
+    ],
+    "releases_url": "https://bgithub.xyz/theBGuy/GitDesktop/releases",
+    "repo_path": "theBGuy/GitDesktop"
+  },
+  {
+    "id": "gitcat",
+    "简介": "GitCat（Linux amd64 AppImage）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "aarch64",
+      ".deb",
+      ".rpm",
+      ".exe",
+      ".dmg",
+      ".sig"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "GitCat_",
+      "amd64.AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "aliases": [
+      "gitcat",
+      "GitCat"
+    ],
+    "releases_url": "https://bgithub.xyz/zangjiucheng/GitCat/releases",
+    "repo_path": "zangjiucheng/GitCat"
   }
 ]

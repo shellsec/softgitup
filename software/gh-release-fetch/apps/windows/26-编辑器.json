@@ -405,7 +405,7 @@
   },
   {
     "id": "pulsar",
-    "简介": "Pulsar（Atom 继任编辑器，Windows zip）",
+    "简介": "Pulsar（Windows Setup exe）",
     "分类": "编辑器",
     "enabled": false,
     "prefer_api_assets": true,
@@ -414,13 +414,14 @@
     "repo_path": "pulsar-edit/pulsar",
     "installer_markers_match_all": true,
     "installer_markers": [
-      "Pulsar.Setup.",
-      "x64.exe"
+      "Windows.Pulsar.Setup.",
+      ".exe"
     ],
     "href_exclude_substrings": [
       "arm64",
       "mac",
       "linux",
+      ".zip",
       ".blockmap"
     ],
     "windows_installer": true,
@@ -430,7 +431,11 @@
     "save_name": "Pulsar.Setup.{ver}.x64.exe",
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": true
+    "run_installer": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "use_download_filename": true
   },
   {
     "id": "lite_xl",
@@ -605,7 +610,7 @@
   },
   {
     "id": "cursor",
-    "简介": "Cursor（manifest：cursor-downloads + 官方 CDN）",
+    "简介": "Cursor（国内勿用应用内更新：lookup 走 snapshot 覆盖安装）",
     "分类": "编辑器",
     "enabled": false,
     "resolve_via": "github_pages_manifest",
@@ -616,7 +621,34 @@
     "process_name": "Cursor.exe",
     "kill_before_install": true,
     "run_installer": true,
-    "save_name": "CursorUserSetup-x64-{ver}.exe"
+    "save_name": "CursorUserSetup-x64-{ver}.exe",
+    "aliases": [
+      "cursor ide",
+      "cursor 国内更新"
+    ]
+  },
+  {
+    "id": "cursor_reh",
+    "简介": "Cursor Remote-SSH 服务端 linux-x64（与客户端同一 snapshot commit，scp 到服务器）",
+    "分类": "编辑器",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "cursor_reh",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "save_name": "cursor-reh-linux-x64.tar.gz",
+    "aliases": [
+      "cursor-server",
+      "cursor reh",
+      "remote ssh"
+    ]
   },
   {
     "id": "trae",
@@ -957,5 +989,75 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "t3code",
+    "简介": "T3 Code（Ping.gg 开源 AI 编辑器；Windows x64）",
+    "分类": "编辑器",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".zip",
+      ".blockmap",
+      ".dmg",
+      "AppImage",
+      "arm64"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "T3-Code-",
+      "x64.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "t3code",
+      "t3 code",
+      "T3 Code"
+    ],
+    "releases_url": "https://bgithub.xyz/pingdotgg/t3code/releases",
+    "repo_path": "pingdotgg/t3code"
+  },
+  {
+    "id": "microsoft_edit",
+    "简介": "Microsoft Edit（微软终端编辑器；Windows x64 zip）",
+    "分类": "编辑器",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "aarch64",
+      "linux",
+      "darwin",
+      "apple"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "edit-",
+      "x86_64-windows.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "msedit",
+      "microsoft edit",
+      "edit.exe",
+      "微软edit"
+    ],
+    "releases_url": "https://bgithub.xyz/microsoft/edit/releases",
+    "repo_path": "microsoft/edit"
   }
 ]

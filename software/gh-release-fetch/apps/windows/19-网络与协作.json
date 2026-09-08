@@ -1,28 +1,36 @@
 [
   {
     "id": "mattermost_desktop",
-    "简介": "Mattermost 桌面客户端",
+    "简介": "Mattermost 桌面端（win-x64.msi）",
     "分类": "网络与协作",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/mattermost/desktop/releases",
     "repo_path": "mattermost/desktop",
     "installer_markers": [
       "mattermost-desktop-",
-      "win.exe"
+      "win-x64.msi"
     ],
     "href_exclude_substrings": [
+      "arm64",
+      "linux",
       "mac",
-      "linux"
+      ".zip"
     ],
     "windows_installer": true,
     "download_names": [
-      "mattermost-desktop-{ver}-win.exe"
+      "mattermost-desktop-{ver}-win-x64.msi"
     ],
-    "save_name": "mattermost-desktop-{ver}-win.exe",
+    "save_name": "mattermost-desktop-{ver}-win-x64.msi",
     "process_name": "Mattermost.exe",
     "kill_before_install": true,
     "run_installer": true,
-    "version_tag_as_on_github": true
+    "version_tag_as_on_github": true,
+    "installer_markers_match_all": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "use_download_filename": true,
+    "prefer_api_assets": true
   },
   {
     "id": "zulip_desktop",

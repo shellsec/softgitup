@@ -166,7 +166,7 @@
   },
   {
     "id": "cherry_studio",
-    "简介": "Cherry Studio Linux（x86_64 AppImage，GitHub Release API）",
+    "简介": "Cherry Studio Linux（x64 AppImage）",
     "分类": "AI",
     "enabled": false,
     "prefer_api_assets": true,
@@ -176,7 +176,7 @@
     "installer_markers_match_all": true,
     "installer_markers": [
       "Cherry-Studio-",
-      "x86_64.AppImage"
+      "linux-x64.AppImage"
     ],
     "href_exclude_substrings": [
       "arm64",
@@ -187,19 +187,21 @@
       "rpm",
       "zip",
       "blockmap",
-      ".yml"
+      ".yml",
+      "-CN-"
     ],
     "windows_installer": false,
     "installer_extensions": [
       ".AppImage"
     ],
     "download_names": [
-      "Cherry-Studio-{ver}-x86_64.AppImage"
+      "Cherry-Studio-{ver}-linux-x64.AppImage"
     ],
-    "save_name": "Cherry-Studio-{ver}-x86_64.AppImage",
+    "save_name": "Cherry-Studio-{ver}-linux-x64.AppImage",
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false
+    "run_installer": false,
+    "use_download_filename": true
   },
   {
     "id": "cc_switch",
@@ -341,7 +343,7 @@
   },
   {
     "id": "codex_cli",
-    "简介": "OpenAI Codex CLI（Linux x86_64 gnu，codex-x86_64-unknown-linux-gnu.tar.gz）",
+    "简介": "Codex CLI（Linux x86_64 musl tar.gz）",
     "分类": "AI",
     "enabled": false,
     "prefer_api_assets": true,
@@ -350,37 +352,36 @@
     "repo_path": "openai/codex",
     "installer_markers_match_all": true,
     "installer_markers": [
-      "codex-x86_64-unknown-linux-gnu",
-      ".tar.gz"
+      "codex-x86_64-unknown-linux-musl.tar.gz"
     ],
     "href_exclude_substrings": [
-      "musl",
-      "aarch64",
-      "apple-darwin",
-      "pc-windows",
-      "command-runner",
-      "responses-api-proxy",
-      "sandbox-setup",
+      "app-server",
+      "package",
+      "symbols",
       "npm-",
       "argument-comment",
-      "install.ps1",
-      "install.sh",
+      "command-runner",
+      "responses-api",
+      "sandbox",
+      "bwrap",
       "sigstore",
-      ".zst"
+      ".zst",
+      "install.sh",
+      "aarch64"
     ],
     "windows_installer": false,
     "installer_extensions": [
       ".tar.gz"
     ],
     "use_download_filename": true,
-    "save_name": "codex-x86_64-unknown-linux-gnu.tar.gz",
+    "save_name": "codex-x86_64-unknown-linux-musl.tar.gz",
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
   },
   {
     "id": "codex_cli_linux_arm64",
-    "简介": "OpenAI Codex CLI（Linux aarch64 gnu，codex-aarch64-unknown-linux-gnu.tar.gz）",
+    "简介": "Codex CLI（Linux arm64 musl tar.gz）",
     "分类": "AI",
     "enabled": false,
     "prefer_api_assets": true,
@@ -389,30 +390,29 @@
     "repo_path": "openai/codex",
     "installer_markers_match_all": true,
     "installer_markers": [
-      "codex-aarch64-unknown-linux-gnu",
-      ".tar.gz"
+      "codex-aarch64-unknown-linux-musl.tar.gz"
     ],
     "href_exclude_substrings": [
-      "musl",
-      "x86_64",
-      "apple-darwin",
-      "pc-windows",
-      "command-runner",
-      "responses-api-proxy",
-      "sandbox-setup",
+      "app-server",
+      "package",
+      "symbols",
       "npm-",
       "argument-comment",
-      "install.ps1",
-      "install.sh",
+      "command-runner",
+      "responses-api",
+      "sandbox",
+      "bwrap",
       "sigstore",
-      ".zst"
+      ".zst",
+      "install.sh",
+      "x86_64"
     ],
     "windows_installer": false,
     "installer_extensions": [
       ".tar.gz"
     ],
     "use_download_filename": true,
-    "save_name": "codex-aarch64-unknown-linux-gnu.tar.gz",
+    "save_name": "codex-aarch64-unknown-linux-musl.tar.gz",
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
@@ -759,7 +759,7 @@
   },
   {
     "id": "deepseek_cli",
-    "简介": "DeepSeek-TUI dispatcher（deepseek 命令；Linux x64，裸 binary deepseek-linux-x64；需配套 deepseek_tui，并 chmod +x 后放入 PATH）",
+    "简介": "CodeWhale（原 DeepSeek-TUI dispatcher；Linux x64）",
     "分类": "AI",
     "enabled": false,
     "prefer_api_assets": true,
@@ -768,25 +768,26 @@
     "repo_path": "Hmbown/DeepSeek-TUI",
     "installer_markers_match_all": true,
     "installer_markers": [
-      "deepseek-linux-x64"
+      "codewhale-linux-x64"
     ],
     "href_exclude_substrings": [
-      "deepseek-tui-",
+      "codewhale-tui-",
       "macos",
       "windows",
       "arm64",
-      "sha256"
+      "sha256",
+      ".tar.gz"
     ],
     "windows_installer": false,
     "use_download_filename": true,
-    "save_name": "deepseek-linux-x64",
+    "save_name": "codewhale-linux-x64",
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
   },
   {
     "id": "deepseek_tui",
-    "简介": "DeepSeek-TUI companion runtime（deepseek-tui 命令；Linux x64，裸 binary deepseek-tui-linux-x64；需与 deepseek_cli 同时存在）",
+    "简介": "CodeWhale TUI companion（Linux x64）",
     "分类": "AI",
     "enabled": false,
     "prefer_api_assets": true,
@@ -795,17 +796,18 @@
     "repo_path": "Hmbown/DeepSeek-TUI",
     "installer_markers_match_all": true,
     "installer_markers": [
-      "deepseek-tui-linux-x64"
+      "codewhale-tui-linux-x64"
     ],
     "href_exclude_substrings": [
       "macos",
       "windows",
       "arm64",
-      "sha256"
+      "sha256",
+      ".tar.gz"
     ],
     "windows_installer": false,
     "use_download_filename": true,
-    "save_name": "deepseek-tui-linux-x64",
+    "save_name": "codewhale-tui-linux-x64",
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
@@ -1922,5 +1924,141 @@
     ],
     "releases_url": "https://bgithub.xyz/rhasspy/piper/releases",
     "repo_path": "rhasspy/piper"
+  },
+  {
+    "id": "colibri",
+    "简介": "Colibri（Linux x86_64 tar.gz）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "windows",
+      "macos",
+      "darwin",
+      "arm64"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "colibri-v",
+      "linux-x86_64.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "aliases": [
+      "colibri",
+      "Colibri"
+    ],
+    "releases_url": "https://bgithub.xyz/JustVugg/colibri/releases",
+    "repo_path": "JustVugg/colibri"
+  },
+  {
+    "id": "mimo_code",
+    "简介": "MiMo Code（Linux x64 tar.gz）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "musl",
+      "baseline",
+      "arm64",
+      "windows",
+      "darwin"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "mimocode-linux-x64.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "aliases": [
+      "mimocode",
+      "mimo code",
+      "MiMo",
+      "小米代码"
+    ],
+    "releases_url": "https://bgithub.xyz/XiaomiMiMo/MiMo-Code/releases",
+    "repo_path": "XiaomiMiMo/MiMo-Code"
+  },
+  {
+    "id": "freellmapi",
+    "简介": "FreeLLMAPI（Linux AppImage）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".deb",
+      ".exe",
+      ".dmg",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "FreeLLMAPI-",
+      ".AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "aliases": [
+      "freellmapi",
+      "free llm api",
+      "FreeLLMAPI"
+    ],
+    "releases_url": "https://bgithub.xyz/tashfeenahmed/freellmapi/releases",
+    "repo_path": "tashfeenahmed/freellmapi"
+  },
+  {
+    "id": "openclaw_manager",
+    "简介": "OpenClaw Manager（Linux amd64 AppImage）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "aarch64",
+      ".deb",
+      ".exe",
+      ".dmg"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "OpenClaw.Manager_",
+      "amd64.AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "aliases": [
+      "openclaw manager",
+      "虾池子",
+      "openclaw-manager"
+    ],
+    "releases_url": "https://bgithub.xyz/miaoxworld/openclaw-manager/releases",
+    "repo_path": "miaoxworld/openclaw-manager"
   }
 ]

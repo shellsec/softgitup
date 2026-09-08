@@ -667,7 +667,7 @@
   },
   {
     "id": "subtitleedit",
-    "简介": "Subtitle Edit（字幕编辑）",
+    "简介": "Subtitle Edit（macOS Apple Silicon dmg）",
     "分类": "多媒体",
     "enabled": false,
     "prefer_api_assets": true,
@@ -677,20 +677,24 @@
     "kill_before_install": false,
     "run_installer": false,
     "installer_markers": [
-      "SubtitleEdit-",
-      "Mac.zip"
+      "SubtitleEdit-macOS-ARM64.dmg"
     ],
     "href_exclude_substrings": [
+      "x64",
       "Windows",
-      "Linux"
-    ],
-    "installer_extensions": [
+      "Linux",
       ".zip"
     ],
+    "installer_extensions": [
+      ".dmg"
+    ],
     "use_download_filename": true,
-    "save_name": "SubtitleEdit-Mac.zip",
+    "save_name": "SubtitleEdit-macOS-ARM64.dmg",
     "releases_url": "https://bgithub.xyz/SubtitleEdit/subtitleedit/releases",
-    "repo_path": "SubtitleEdit/subtitleedit"
+    "repo_path": "SubtitleEdit/subtitleedit",
+    "download_names": [
+      "SubtitleEdit-macOS-ARM64.dmg"
+    ]
   },
   {
     "id": "mpv_macos_intel",

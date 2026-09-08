@@ -705,7 +705,7 @@
   },
   {
     "id": "hugo_extended",
-    "简介": "Hugo Extended（静态站点）",
+    "简介": "Hugo Extended（macOS universal pkg）",
     "分类": "开发",
     "enabled": false,
     "prefer_api_assets": true,
@@ -717,26 +717,27 @@
     "installer_markers_match_all": true,
     "installer_markers": [
       "hugo_extended_",
-      "darwin-universal"
+      "darwin-universal.pkg"
     ],
     "href_exclude_substrings": [
+      "withdeploy",
       "windows",
-      "linux",
-      "arm"
+      "linux"
     ],
     "installer_extensions": [
-      ".zip"
+      ".pkg"
     ],
     "download_names": [
-      "hugo_extended_{ver}_darwin-universal.zip"
+      "hugo_extended_{ver}_darwin-universal.pkg"
     ],
-    "save_name": "hugo_extended_{ver}_darwin-universal.zip",
+    "save_name": "hugo_extended_{ver}_darwin-universal.pkg",
     "releases_url": "https://bgithub.xyz/gohugoio/hugo/releases",
-    "repo_path": "gohugoio/hugo"
+    "repo_path": "gohugoio/hugo",
+    "use_download_filename": true
   },
   {
     "id": "astgrep",
-    "简介": "ast-grep（AST 代码搜索）",
+    "简介": "ast-grep（macOS Apple Silicon zip；包名前缀改为 app-）",
     "分类": "开发",
     "enabled": false,
     "prefer_api_assets": true,
@@ -747,14 +748,12 @@
     "run_installer": false,
     "installer_markers_match_all": true,
     "installer_markers": [
-      "ast-grep-",
-      "darwin_amd64"
+      "app-aarch64-apple-darwin.zip"
     ],
     "href_exclude_substrings": [
+      "x86_64",
       "windows",
-      "linux",
-      "386",
-      "arm"
+      "linux"
     ],
     "installer_extensions": [
       ".zip"
@@ -762,9 +761,10 @@
     "download_names": [
       "ast-grep-{ver}_darwin_amd64.zip"
     ],
-    "save_name": "ast-grep-{ver}_darwin_amd64.zip",
+    "save_name": "app-aarch64-apple-darwin.zip",
     "releases_url": "https://bgithub.xyz/ast-grep/ast-grep/releases",
-    "repo_path": "ast-grep/ast-grep"
+    "repo_path": "ast-grep/ast-grep",
+    "use_download_filename": true
   },
   {
     "id": "dprint",
@@ -818,7 +818,7 @@
   },
   {
     "id": "netron",
-    "简介": "Netron（模型可视化）",
+    "简介": "Netron（macOS dmg）",
     "分类": "开发",
     "enabled": false,
     "prefer_api_assets": true,
@@ -828,20 +828,28 @@
     "kill_before_install": false,
     "run_installer": false,
     "installer_markers": [
-      "netron-",
-      "Darwin-x64.zip"
+      "Netron-",
+      ".dmg"
     ],
     "href_exclude_substrings": [
-      "Windows",
-      "Linux"
+      ".zip",
+      "Setup",
+      "blockmap",
+      ".deb",
+      ".rpm",
+      ".yml"
     ],
     "installer_extensions": [
-      ".zip"
+      ".dmg"
     ],
     "use_download_filename": true,
-    "save_name": "netron-Darwin-x64.zip",
+    "save_name": "Netron-{ver}.dmg",
     "releases_url": "https://bgithub.xyz/lutzroeder/netron/releases",
-    "repo_path": "lutzroeder/netron"
+    "repo_path": "lutzroeder/netron",
+    "installer_markers_match_all": true,
+    "download_names": [
+      "Netron-{ver}.dmg"
+    ]
   },
   {
     "id": "xtool",
@@ -1053,5 +1061,74 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "gitdesktop",
+    "简介": "GitDesktop（macOS universal dmg）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".exe",
+      "AppImage",
+      ".deb",
+      ".sig",
+      ".msi"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "GitDesktop_",
+      "universal.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "gitdesktop",
+      "GitDesktop",
+      "git desktop"
+    ],
+    "releases_url": "https://bgithub.xyz/theBGuy/GitDesktop/releases",
+    "repo_path": "theBGuy/GitDesktop"
+  },
+  {
+    "id": "gitcat",
+    "简介": "GitCat（macOS Apple Silicon dmg）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "x64",
+      ".exe",
+      "AppImage",
+      ".sig",
+      ".msi"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "GitCat_",
+      "aarch64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "gitcat",
+      "GitCat"
+    ],
+    "releases_url": "https://bgithub.xyz/zangjiucheng/GitCat/releases",
+    "repo_path": "zangjiucheng/GitCat"
   }
 ]

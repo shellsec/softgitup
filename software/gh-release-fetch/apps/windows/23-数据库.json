@@ -545,5 +545,47 @@
     ],
     "releases_url": "https://bgithub.xyz/shellsec/navicat_for_mac_reset/releases",
     "repo_path": "shellsec/navicat_for_mac_reset"
+  },
+  {
+    "id": "dbx",
+    "简介": "DBX（轻量跨平台数据库客户端，支持 MySQL/PostgreSQL/SQLite/Redis/MongoDB/达梦等；Windows x64 安装包）",
+    "分类": "数据库",
+    "aliases": [
+      "dbx",
+      "DBX",
+      "t8y2"
+    ],
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/t8y2/dbx/releases",
+    "repo_path": "t8y2/dbx",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "DBX_",
+      "_x64-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "webview2",
+      "portable",
+      "win7",
+      ".msi",
+      "jdbc",
+      ".sig",
+      ".sha256"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".exe"
+    ],
+    "download_names": [
+      "DBX_{ver}_x64-setup.exe"
+    ],
+    "save_name": "DBX_{ver}_x64-setup.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "url_hint": "dbx DBX t8y2"
   }
 ]

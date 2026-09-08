@@ -28,7 +28,7 @@
   },
   {
     "id": "imageglass",
-    "简介": "ImageGlass（轻量看图，x64 MSI）",
+    "简介": "ImageGlass（Windows x64 msi；包名 win-x64）",
     "分类": "工具",
     "enabled": false,
     "releases_url": "https://bgithub.xyz/d2phap/ImageGlass/releases",
@@ -38,7 +38,7 @@
     "installer_markers_match_all": true,
     "installer_markers": [
       "ImageGlass_",
-      "_x64.msi"
+      "win-x64.msi"
     ],
     "href_exclude_substrings": [
       "arm64",
@@ -49,12 +49,13 @@
       ".msi"
     ],
     "download_names": [
-      "ImageGlass_{ver}_x64.msi"
+      "ImageGlass_{ver}_win-x64.msi"
     ],
-    "save_name": "ImageGlass_{ver}_x64.msi",
+    "save_name": "ImageGlass_{ver}_win-x64.msi",
     "process_name": "ImageGlass.exe",
     "kill_before_install": true,
-    "run_installer": true
+    "run_installer": true,
+    "use_download_filename": true
   },
   {
     "id": "fileconverter",

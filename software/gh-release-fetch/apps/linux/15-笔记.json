@@ -330,7 +330,7 @@
   },
   {
     "id": "marktext",
-    "简介": "MarkText（Linux AppImage）",
+    "简介": "MarkText（开源 Markdown 编辑器；Linux AppImage）",
     "分类": "笔记",
     "enabled": false,
     "prefer_api_assets": true,
@@ -339,25 +339,38 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false,
+    "installer_markers_match_all": true,
     "installer_markers": [
-      "marktext-x64.AppImage"
+      "marktext-linux-",
+      ".AppImage"
     ],
     "href_exclude_substrings": [
       "setup.exe",
       "dmg",
-      "arm"
+      "arm",
+      ".deb",
+      ".rpm",
+      ".snap",
+      ".tar.gz",
+      "win-",
+      "mac-"
     ],
     "installer_extensions": [
       ".AppImage"
     ],
     "use_download_filename": true,
-    "save_name": "marktext-x64.AppImage",
+    "save_name": "marktext-linux-{ver}.AppImage",
     "releases_url": "https://bgithub.xyz/marktext/marktext/releases",
-    "repo_path": "marktext/marktext"
+    "repo_path": "marktext/marktext",
+    "aliases": [
+      "marktext",
+      "MarkText",
+      "Mark Text"
+    ]
   },
   {
     "id": "siyuan",
-    "简介": "思源笔记",
+    "简介": "思源笔记（Linux AppImage）",
     "分类": "笔记",
     "enabled": false,
     "prefer_api_assets": true,
@@ -369,18 +382,28 @@
     "installer_markers_match_all": true,
     "installer_markers": [
       "siyuan-",
-      "linux-amd64"
+      "linux.AppImage"
     ],
     "href_exclude_substrings": [
+      "arm64",
       "win",
       "mac",
       "apk",
-      "SHA256"
+      "SHA256",
+      ".deb",
+      ".rpm",
+      ".tar.gz"
     ],
     "use_download_filename": true,
-    "save_name": "siyuan-linux-amd64",
+    "save_name": "siyuan-{ver}-linux.AppImage",
     "releases_url": "https://bgithub.xyz/siyuan-note/siyuan/releases",
-    "repo_path": "siyuan-note/siyuan"
+    "repo_path": "siyuan-note/siyuan",
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "download_names": [
+      "siyuan-{ver}-linux.AppImage"
+    ]
   },
   {
     "id": "xournalpp",

@@ -84,7 +84,7 @@
     "run_installer": false
   },
   {
-    "简介": "qBittorrent（BT/磁力）",
+    "简介": "qBittorrent（macOS dmg）",
     "分类": "下载",
     "enabled": false,
     "prefer_api_assets": true,
@@ -94,20 +94,21 @@
     "id": "qbittorrent",
     "installer_markers_match_all": true,
     "installer_markers": [
-      "qbittorrent_",
-      "_dmg"
+      "qbittorrent-",
+      ".dmg"
     ],
     "href_exclude_substrings": [
+      "lt20",
       "Windows",
-      "Linux",
-      ".asc"
+      "linux",
+      "AppImage"
     ],
     "windows_installer": false,
     "installer_extensions": [
       ".dmg"
     ],
     "use_download_filename": true,
-    "save_name": "qbittorrent.dmg",
+    "save_name": "qbittorrent-{ver}.dmg",
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
@@ -124,12 +125,14 @@
     "installer_markers_match_all": true,
     "installer_markers": [
       "Transmission-",
-      "-.dmg"
+      ".dmg"
     ],
     "href_exclude_substrings": [
       "windows",
       "linux",
-      "pdb"
+      "pdb",
+      "dsym",
+      ".zip"
     ],
     "windows_installer": false,
     "installer_extensions": [
@@ -141,7 +144,8 @@
     "save_name": "Transmission-{ver}.dmg",
     "process_name": "",
     "kill_before_install": false,
-    "run_installer": false
+    "run_installer": false,
+    "use_download_filename": true
   },
   {
     "简介": "Motrix（全能下载工具：HTTP/FTP/BT/磁力链）",

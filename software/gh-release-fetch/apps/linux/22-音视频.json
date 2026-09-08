@@ -58,7 +58,7 @@
   },
   {
     "id": "syncplay",
-    "简介": "Syncplay（异地同步播放）",
+    "简介": "Syncplay（Linux deb）",
     "分类": "音视频",
     "releases_url": "https://bgithub.xyz/Syncplay/syncplay/releases",
     "repo_path": "Syncplay/syncplay",
@@ -71,21 +71,23 @@
     "run_installer": false,
     "installer_markers_match_all": true,
     "installer_markers": [
-      "Syncplay-",
-      "x86_64.AppImage"
+      "syncplay_",
+      ".deb"
     ],
     "href_exclude_substrings": [
+      "server",
       "Setup.exe",
       "dmg",
       "Portable"
     ],
     "installer_extensions": [
-      ".AppImage"
+      ".deb"
     ],
     "download_names": [
-      "Syncplay-{ver}-x86_64.AppImage"
+      "syncplay_{ver}.deb"
     ],
-    "save_name": "Syncplay-{ver}-x86_64.AppImage"
+    "save_name": "syncplay_{ver}.deb",
+    "use_download_filename": true
   },
   {
     "id": "openshot",

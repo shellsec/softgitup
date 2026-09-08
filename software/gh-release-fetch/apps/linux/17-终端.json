@@ -288,7 +288,7 @@
   },
   {
     "id": "contour",
-    "简介": "Contour（现代 GPU 加速终端；Ubuntu deb）",
+    "简介": "Contour 终端（Ubuntu amd64 deb）",
     "分类": "终端",
     "enabled": false,
     "prefer_api_assets": true,
@@ -302,17 +302,51 @@
       "dbgsym",
       "win",
       ".msi",
-      ".zip"
+      ".zip",
+      "macOS"
     ],
     "installer_markers_match_all": true,
     "installer_markers": [
       "contour-",
-      "ubuntu24.04-amd64.deb"
+      "ubuntu",
+      "amd64.deb"
     ],
     "installer_extensions": [
       ".deb"
     ],
     "releases_url": "https://bgithub.xyz/contour-terminal/contour/releases",
     "repo_path": "contour-terminal/contour"
+  },
+  {
+    "id": "agent_manager",
+    "简介": "agent-manager（Linux amd64 tar.gz；Windows 请用 WSL）",
+    "分类": "终端",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "darwin",
+      "arm64",
+      "checksum"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "agent-manager_",
+      "linux_amd64.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "aliases": [
+      "agent-manager",
+      "agent manager"
+    ],
+    "releases_url": "https://bgithub.xyz/yoanwai/agent-manager/releases",
+    "repo_path": "yoanwai/agent-manager"
   }
 ]

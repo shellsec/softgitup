@@ -329,7 +329,7 @@
   },
   {
     "id": "marktext",
-    "简介": "MarkText（macOS dmg）",
+    "简介": "MarkText（开源 Markdown 编辑器；macOS Apple Silicon dmg）",
     "分类": "笔记",
     "enabled": false,
     "prefer_api_assets": true,
@@ -338,22 +338,32 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false,
+    "installer_markers_match_all": true,
     "installer_markers": [
-      "marktext-",
-      "-x64.dmg"
+      "marktext-mac-arm64-",
+      ".dmg"
     ],
     "href_exclude_substrings": [
+      "x64",
+      ".zip",
+      ".blockmap",
       "setup.exe",
       "AppImage",
-      "arm"
+      "linux",
+      "win-"
     ],
     "installer_extensions": [
       ".dmg"
     ],
     "use_download_filename": true,
-    "save_name": "marktext-x64.dmg",
+    "save_name": "marktext-mac-arm64-{ver}.dmg",
     "releases_url": "https://bgithub.xyz/marktext/marktext/releases",
-    "repo_path": "marktext/marktext"
+    "repo_path": "marktext/marktext",
+    "aliases": [
+      "marktext",
+      "MarkText",
+      "Mark Text"
+    ]
   },
   {
     "id": "siyuan",
