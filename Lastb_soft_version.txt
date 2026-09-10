@@ -408,6 +408,7 @@ FFmpeg（命令行） 支持所有格式  支持  ★★★★★（最强）   
 
 system_good目录下
 
+听音乐
 测试了各个平台音乐，痛点就是付费和版权音质，你懂得，一步到位！落雪太赞了，必备！
 1、洛雪音乐win电脑版 全网免VIP无损下载 也支持mac
 落雪音乐 安装包，解压后251M超出大小了，更新安装到，Program Files\lx-music-desktop\ 即可
@@ -435,9 +436,12 @@ JuheApi
 https://gh-proxy.com/raw.githubusercontent.com/pdone/lx-music-source/main/juhe/latest.js
 QDY
 https://gh-proxy.com/raw.githubusercontent.com/pdone/lx-music-source/main/qdy/latest.js
+xinghai
+https://zrcdy.dpdns.org/lx/xinghai-music-sourcev2.3.13.js
 
 2、请在GitHub上搜索 lx-music-source 寻找最新的第三方维护的音源
 https://github.com/yoyodadada/lx-music-source
+https://github.com/cdyUuu/lx-music-xinghai-source
 https://github.com/Macrohard0001/lx-ikun-music-sources
 https://github.com/search?q=lx-music-source&type=repositories&s=updated&o=desc
 https://github.com/search?q=lx-music-source&type=repositories
@@ -484,7 +488,25 @@ https://apps.apple.com/cn/app/汽水音乐-抖音音乐版/id1605585211
 7、服务端docker自建,需要自己的机器NAS
 https://github.com/XCQ0607/lxserver
 
+8、TV版本
+星河Music（星河音乐）是洛雪系第三方音乐播放器
+星河音乐tv电视版，自行搜
+📺 LX Music TV（洛雪音乐电视版）
+基于 LX Music 移植的大屏版，支持直接导入 JS 音源，遥控器适配，大屏歌词、多平台搜索、音质选择都有。
+导入方式：设置 → 音源 API → 导入用户 API（填 JS 音源链接或本地文件）
+下载：可在第三方软件站（如 9K9K 等）搜索「LX Music TV」下载 APK
+🎵 ZL-Music（TV 版，Apple Music 风格 UI）
+基于 lx-music-mobile 二次开发的 TV 版，同样支持洛雪 JS 音源导入，界面偏 Apple Music TV 风格，焦点/遥控器适配较好。
+导入方式：设置页 → 音源列表 → 在线导入/本地 JS 文件
+下载：可在第三方软件站（如 9K9K 等）搜索「ZL-Music TV」下载 APK
 
+9、其他车载端-蓝牙连接手机网页播放
+智能音箱-小爱同学pro-蓝牙连接手机网页播放
+可穿戴设备，不支持
+
+看视频，安卓平板类
+https://www.pejdw.com/app/shipin/
+安卓端，视频类app，可以直接下载和安装的，经常更新不错，无需跳网盘
 
 
 传统键盘支持音量调节
