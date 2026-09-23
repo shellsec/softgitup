@@ -8,7 +8,7 @@
 
 通知配置-最好关掉异常通知
 
-API 服务：通过 HTTP 调用主程序的 CLI（优先 exe，无则 main.py），供另一台机器远程启停、添加脚本等。
+API 服务：通过 HTTP 调用主程序的 CLI（优先 python main.py，无 main.py 时才用 exe），供另一台机器远程启停、添加脚本等。
 同一进程提供 MCP（POST /mcp），供 Cursor / Claude 等客户端接入。
 也可在 GUI 面板「API: 启动API / 停止API / 重启API」独立管理，无需加入任务列表。
 
@@ -27,6 +27,12 @@ Python 安装（仅 API 脚本需要；主程序 exe 不需要 Python）：
   验证:         python --version
   依赖安装:     pip install fastapi uvicorn
                 或 pip install fastapi "uvicorn[standard]"
+
+                pip install --user fastapi "uvicorn[standard]" -i https://pypi.mirrors.ustc.edu.cn/simple --trusted-host pypi.mirrors.ustc.edu.cn
+                其他更新的
+                python -m pip install --upgrade pip -i https://pypi.mirrors.ustc.edu.cn/simple --trusted-host pypi.mirrors.ustc.edu.cn
+                pip config set global.index-url https://pypi.mirrors.ustc.edu.cn/simple
+                pip install --user -r requirements.txt -i https://pypi.mirrors.ustc.edu.cn/simple --trusted-host pypi.mirrors.ustc.edu.cn
 
 可选 GET /exec 命令执行（默认关闭，高危）：
   见下方「ENABLE_GET_CMD_EXEC」：去掉该行行首 # 后重启本脚本即可启用
@@ -82,7 +88,7 @@ except ImportError:
     __version__ = "1.1.0"
 
 ROOT = Path(__file__).resolve().parent
-# 主程序：Windows 打包后主要为 exe；无 exe 时（开发环境或 Mac/Linux）用 main.py
+# 主程序：有 main.py 时用当前 Python 跑 CLI，避免拉起需 UAC 的 GUI exe（WinError 740）
 MAIN_EXE = ROOT / "WindowsBatchScriptManager.exe"
 MAIN_SCRIPT = ROOT / "main.py"
 API_KEY = os.environ.get("API_KEY", "change-me-in-production")
@@ -132,9 +138,32 @@ def run_shell_command(cmd: str, timeout: int = _CMD_EXEC_TIMEOUT):
 
 
 def get_cli_cmd():
+    """优先用当前 Python 跑 main.py，避免 CreateProcess 调起需 UAC 的 GUI exe（WinError 740）。"""
+    if MAIN_SCRIPT.is_file():
+        return [sys.executable, str(MAIN_SCRIPT)]
     if MAIN_EXE.exists():
         return [str(MAIN_EXE)]
     return [sys.executable, str(MAIN_SCRIPT)]
+
+
+def _is_elevation_error(err: str) -> bool:
+    s = err or ""
+    sl = s.lower()
+    return "740" in s or "提升" in s or "elevation" in sl
+
+
+def _format_cli_error(err: str, cmd=None) -> str:
+    s = (err or "").strip()
+    if not _is_elevation_error(s):
+        return s
+    hint = (
+        "启动 CLI 需要提升权限（WinError 740）。"
+        "API 不会以管理员方式拉起 GUI exe；请用 python 运行本脚本，并确保同目录有 main.py。"
+        "若 WindowsBatchScriptManager.exe 被设为「以管理员身份运行」，请取消该兼容性设置。"
+    )
+    if cmd:
+        hint += " 命令: %s。" % " ".join(str(x) for x in cmd)
+    return hint + " 原始错误: " + s
 
 
 def _append_optional_cli_args(cmd_args, **kw):
@@ -172,11 +201,14 @@ def run_cli(*args, json_out=True):
         cmd.append("--json")
     try:
         r = subprocess.run(cmd, cwd=str(ROOT), capture_output=True, text=True, timeout=120, encoding="utf-8", errors="replace")
-        return (r.stdout or "").strip(), (r.stderr or "").strip(), r.returncode
+        err = (r.stderr or "").strip()
+        if r.returncode != 0:
+            err = _format_cli_error(err or "failed", cmd)
+        return (r.stdout or "").strip(), err, r.returncode
     except subprocess.TimeoutExpired:
         return "", "CLI timeout (120s)", -1
     except Exception as e:
-        return "", str(e), -1
+        return "", _format_cli_error(str(e), cmd), -1
 
 
 try:

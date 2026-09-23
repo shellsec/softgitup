@@ -53,4 +53,4 @@ class EnablePackageCommand(ExistingPackagesCommand):
 
         PackageDisabler.reenable_packages({PackageDisabler.ENABLE: package_name})
 
-        sublime.status_message('Package %s successfully enabled.' % package_name)
+        sublime.status_message('插件 %s 已启用。' % package_name)

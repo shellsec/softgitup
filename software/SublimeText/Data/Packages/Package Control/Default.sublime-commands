@@ -1,0 +1,130 @@
+[
+    {
+        "caption": "Package Control: 添加频道",
+        "command": "add_channel"
+    },
+    {
+        "caption": "Package Control: 添加仓库",
+        "command": "add_repository"
+    },
+    {
+        "caption": "Package Control: 高级禁用插件",
+        "command": "disable_packages"
+    },
+    {
+        "caption": "Package Control: 列出可用的库",
+        "command": "list_available_libraries"
+    },
+    {
+        "caption": "Package Control: 高级启用插件",
+        "command": "enable_packages"
+    },
+    {
+        "caption": "Package Control: 高级安装插件",
+        "command": "install_packages"
+    },
+    {
+        "caption": "Package Control: 高级移除插件",
+        "command": "remove_packages"
+    },
+    {
+        "caption": "Package Control: 高级升级插件",
+        "command": "upgrade_packages"
+    },
+    {
+        "caption": "Package Control: 清除缓存目录",
+        "command": "clear_package_cache"
+    },
+    {
+        "caption": "Package Control: 创建插件文件",
+        "command": "create_package"
+    },
+    {
+        "caption": "Package Control: 禁用插件",
+        "command": "disable_package"
+    },
+    {
+        "caption": "Package Control: 发现插件",
+        "command": "discover_packages"
+    },
+    {
+        "caption": "Package Control: 启用插件",
+        "command": "enable_package"
+    },
+    {
+        "caption": "Package Control: 安装插件",
+        "command": "install_package"
+    },
+    {
+        "caption": "Package Control: 列出插件",
+        "command": "list_packages"
+    },
+    {
+        "caption": "Package Control: 列出未管理插件",
+        "command": "list_unmanaged_packages"
+    },
+    {
+        "caption": "Package Control: 移除频道",
+        "command": "remove_channel"
+    },
+    {
+        "caption": "Package Control: 移除插件",
+        "command": "remove_package"
+    },
+    {
+        "caption": "Package Control: 移除仓库",
+        "command": "remove_repository"
+    },
+    {
+        "caption": "Package Control: 还原内置插件",
+        "command": "revert_package"
+    },
+    {
+        "caption": "Package Control: 满足库依赖",
+        "command": "satisfy_libraries"
+    },
+    {
+        "caption": "Package Control: 满足插件依赖",
+        "command": "satisfy_packages"
+    },
+    {
+        "caption": "Package Control: 升级所有插件",
+        "command": "upgrade_all_packages"
+    },
+    {
+        "caption": "Package Control: 升级插件",
+        "command": "upgrade_package"
+    },
+    {
+        "caption": "Package Control: 新建频道…",
+        "command": "new_channel_json"
+    },
+    {
+        "caption": "Package Control: 新建仓库…",
+        "command": "new_repository_json"
+    },
+    {
+        "caption": "Package Control: 启用调试模式",
+        "command": "package_control_enable_debug_mode"
+    },
+    {
+        "caption": "Package Control: 禁用调试模式",
+        "command": "package_control_disable_debug_mode"
+    },
+    {
+        "caption": "Preferences: 包管理器设置",
+        "command": "edit_settings",
+        "args": {
+            "base_file": "${packages}/Package Control/Package Control.sublime-settings",
+            "default": "// See the left pane for the list of settings and valid values\n{\n\t$0\n}\n"
+        }
+    },
+    {
+        "caption": "Package Control: 用户 CA 证书",
+        "command": "open_file",
+        "args": {
+            "file": "$packages/User/Package Control.user-ca-bundle",
+            "semi_transient": true
+        },
+    }
+]

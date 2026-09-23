@@ -1,7 +1,14 @@
 {
 	"bootstrapped": true,
+	"channels":
+	[
+		"https://cdn.jsdelivr.net/gh/HBLong/package_control_channel@master/repository.json"
+	],
 	"installed_packages":
 	[
 		"Package Control"
+	],
+	"in_process_packages":
+	[
 	],
 }

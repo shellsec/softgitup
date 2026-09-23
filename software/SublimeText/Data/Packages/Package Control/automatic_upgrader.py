@@ -88,7 +88,7 @@ class AutomaticUpgrader:
 
         upgrader = PackageTaskRunner(self.manager)
 
-        with ActivityIndicator('Searching updates...') as progress:
+        with ActivityIndicator('正在搜索更新...') as progress:
             # upgrade existing libraries
             required_libraries = upgrader.manager.find_required_libraries()
             missing_libraries = upgrader.manager.find_missing_libraries(required_libraries=required_libraries)

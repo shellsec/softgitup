@@ -1,29 +1,35 @@
 # SoftGitUp - 日常工具云升级同步系统
 
-**中文** | [English](README_EN.md)
+**语言 / Language:** 中文 | [English](README.en.md)
+
+[aiv123.com](https://aiv123.com/) · AI 工具导航，600+ 工具一网打尽
 
 ## 🚀 推荐使用 [ofox.ai](https://ofox.io/x/aiv123)
 
-> **一句话**：一个账号直达 GPT-5.5 / Claude 4.8 Opus / Gemini 3.5 Flash 等 **100+** 顶尖模型，首充额外赠 **$3** 额度。
+> **一句话**：一个账号直达最新 GPT / Claude / Gemini 等 **100+** 顶尖模型，首充额外赠 **$3** 额度。
+
+文本、图像、视频、向量一站调用；支持缓存，重复请求更省更快。
 
 [👉 注册领取](https://ofox.io/x/aiv123) · 全球专线 · 企业级 SLA · 不留存对话
 
-| ⚡️ 极速稳定 | 🧠 模型全 | 🛡️ 隐私安全 |
+| ⚡️ 极速更省 | 🧠 模型与模态 | 🛡️ 隐私安全 |
 |:---:|:---:|:---:|
-| 全球专线，企业级 SLA | 100+ 模型一号直达 | 不留存任何对话 |
+| 全球专线，企业级 SLA，支持缓存 | 100+ 模型 · 文本 / 图像 / 视频 / 向量 | 不留存任何对话 |
 
 ## ☕ 请我喝可乐
 
 开源不易，欢迎赞助支持：  
 👉 [爱发电](https://ifdian.net/a/shellsec)
 
+---
+
 一个用于管理本地软件目录并自动同步更新的工具系统，支持GitHub和GitLab云存储，支持Git加速下载。
 具体可查看 [`Lastb_soft_version.txt`](Lastb_soft_version.txt) 最新更新文档。
 
 <!-- SOFTWARE_SIZE_START -->
 > 📦 **software/ 体积统计**（`generate_and_push.bat` 自动刷新）：
-> 共 **21** 款软件、**4,219** 个文件，合计 **1.65 GB**；统计时间 2026-09-10 18:15。
-> 体积 Top5：system_good (732.2 MB)、PotPlayer (253.1 MB)、UltraEdit (202.3 MB)、WiseCare365 (74.3 MB)、notepad++ (73.7 MB)。
+> 共 **21** 款软件、**4,563** 个文件，合计 **1.66 GB**；统计时间 2026-09-23 17:08。
+> 体积 Top5：system_good (729.6 MB)、PotPlayer (253.1 MB)、UltraEdit (202.3 MB)、SublimeText (78.4 MB)、WiseCare365 (74.3 MB)。
 <!-- SOFTWARE_SIZE_END -->
 
 **维护者月度快检**（可选，不更新 `software/` 也完全可用）：见 [`soft_page_check/`](soft_page_check/README.md) — 双击 `monthly_sop.bat` 检查标题变化；装机开源可 `monthly_a_download_soft_github.bat` 直下，其余手工更新后发布。
@@ -143,7 +149,7 @@ softgitup/
 │   └── ...
 ├── logs/                   # 日志目录
 ├── README.md              # 项目说明（中文）
-└── README_EN.md           # Project docs (English)
+└── README.en.md           # Project docs (English)
 ```
 
 ## 快速开始
@@ -854,7 +860,7 @@ MIT License
 
 ## 📚 相关文档
 
-- [English README](README_EN.md) — English version of this document
+- [English README](README.en.md) — English version of this document
 - [**页面快检与月度 SOP**](soft_page_check/README.md) — 维护者：标题比对、报告页、更新与发布流程
 - [配置说明](配置说明.md) - 详细的配置参数说明
 - [本地服务器使用说明](本地服务器使用说明.md) - 搭建本地文件服务器指南

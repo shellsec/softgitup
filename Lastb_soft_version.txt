@@ -157,7 +157,7 @@ https://pan.quark.cn/s/d586d0925b85
 EmEditor pro Version 21.5.2 注册版    目前最新版 的注册是未注册的EmEditor v26.2.1 绿色便携版 https://www.ghxi.com/emeditor.html
 https://www.423down.com/7569.html
 核心特点：支持超大文件（GB 级）快速打开，多光标编辑、正则表达式功能强大，可自定义界面与快捷键，兼容性强
-SublimeText v4200 注册版
+SublimeText v4213 注册版
 核心特点：启动秒开、低资源占用，支持多光标编辑、代码补全，插件库丰富可实现全功能拓展，跨平台适配 Windows/Mac/Linux
 
 UltraEdit 2026.0.0.23 64-bit  v33.0.0.23-x64 注册版  //目录里目前选这个
@@ -330,10 +330,10 @@ CrystalDiskInfo 硬盘检测工具 CrystalDiskInfo v9.9.2
 https://www.423down.com/5432.html
 核心特点：中文界面易操作，绿色免装，实时检测硬盘健康、温度、使用时长等关键数据，及时预警硬盘故障
 
-Everything-1.5.0.1422b.x64
+Everything-1.5.0.1423b.x64.zip - ZIP 压缩文件, 解包大小为 6,463,818 字节
 核心特点：检索速度极快，支持模糊搜索、精准匹配，轻量不占资源，适配大数量文件的快速查找
 https://www.voidtools.com/forum/viewtopic.php?f=12&t=9787
-https://www.voidtools.com/Everything-1.5.0.1418b.x64.zip
+https://www.voidtools.com/Everything-1.5.0.1423b.x64.zip
 
 除了本地文件搜索还需要内容搜索，测试搜索内容很强
 UltraSearch.rar
@@ -412,10 +412,16 @@ system_good目录下
 测试了各个平台音乐，痛点就是付费和版权音质，你懂得，一步到位！落雪太赞了，必备！
 1、洛雪音乐win电脑版 全网免VIP无损下载 也支持mac
 落雪音乐 安装包，解压后251M超出大小了，更新安装到，Program Files\lx-music-desktop\ 即可
+\lx-music-desktop\lxpy
+https://github.com/shellsec/lxpy
+手机网页遥控（推荐）
+电脑和手机连同一 Wi-Fi / 局域网。对应系统的洛雪桌面端需要已安装，并在 设置 → 开放 API 勾选 启用开放 API 服务。
+启动.bat即可
+
 https://github.com/lyswhut/lx-music-desktop/releases
-https://gh-proxy.com/github.com/lyswhut/lx-music-desktop/releases/download/v2.12.2/lx-music-desktop-v2.12.2-win_x64-green.7z
-https://www.lanzout.com/b481240
-https://www.lanzouo.com/b0cvr5gsf
+加速下载，不在携带解压包了，原有压缩包2.12.2 运行没问题，就保留着
+使用gh-release-fetch一键下载即可
+https://gh-proxy.com/github.com/lyswhut/lx-music-desktop/releases/download/v2.12.5/lx-music-desktop-v2.12.5-win_x64-green.7z
 
 加载在线更新即可，测试了
 https://gh-proxy.com/https://raw.githubusercontent.com/shellsec/lx-music-source/refs/heads/master/lx-music-source.js
@@ -525,7 +531,7 @@ Keyvol 是Windows 平台极简音量控制小工具，这里提供安全获取�
 
 
 
-[Windows] XYplorer资源管理器v28.30.1300 高级便携版 [Hybase.com]黑域基地
+[Windows] XYplorer_28.30.2900_Portable 高级便携版 [Hybase.com]黑域基地
 XYplorer.rar 很好用，就放在 D:\Program Files\XYplorer ，文件统一管理
 https://www.hybase.com/pc/windows/2818.html
 XYplorer 是一款有很多人推荐的经典的替代微软 Windows 系统内置资源管理器的多功能增强文件管理软件，特色是支持多面板/多窗格分栏显示和操作，以及多标签页切换等...
@@ -647,6 +653,12 @@ https://github.com/GMYXDS/MstscManager
 其他的Termius 9.37.5 PRO 最新破解版（高颜值的SSH终端软件）
 https://www.wuleba.com/2844.html
 
+本地输入法
+小狼毫 + 薄荷/雾凇/白霜：最硬，全开源、零联网、无官网服务 → 涉密首选
+清风 WindInput：开源 + 离线 + 图形化，安全且省事 → 日常本地隐私首选
+墨奇：本地输入 OK，但原生带 AI / WebDAV / 云剪贴板，要手动关
+搜狗/百度/QQ/微信输入法：本地隐私最不推荐
+
 小狼毫 (Weasel)+ 雾凇拼音 (rime-ice)
 ！！搜狗输入法有后台常驻修改首页已经放弃改为开源输入法非常好用，搜狗有挖矿广告
 搜狗输入法清理工具-支持任意版本
@@ -735,6 +747,114 @@ https://github.com/huanfeng/WindInput
 薄荷输入
 https://cnb.cool/Mintimate/rime/oh-my-rime
 https://cnb.cool/Mintimate/rime/oh-my-rime-cli
+
+Windows本地/开源输入法全景图（置信度：高，基于GitHub活跃度+社区实测反馈）
+
+一、底层引擎层
+
+引擎 定位 优势 局限
+
+librime 开源跨平台输入法核心 算法成熟、方案生态最丰富、完全本地 配置门槛高、前端质量参差不齐
+
+自研TSF 厂商自研输入法框架 系统集成度高、兼容性最好、可原生支持AI 生态封闭、方案扩展性弱
+
+PIME框架 Python/TSF混合框架 适合二次开发、可快速原型 稳定性一般、不适合日常主力
+
+系统API 微软自带输入法接口 零安装、绝对稳定、无隐私风险 自定义能力极弱
+
+二、Windows前端层（按推荐优先级排序）
+
+前端 引擎 开箱即用 图形化设置 AI能力 适合人群
+
+墨奇输入法 librime(Go封装) ✅✅✅ ✅✅✅ ✅原生 拼音用户、AI需求、不愿折腾
+
+清风输入法 自研Rust ✅✅✅ ✅✅✅ ❌ 五笔/码表用户、按窗口切状态
+
+水杉输入法 自研TSF ✅✅✅ ✅✅ ✅原生 要语音+AI+辅助码的综合用户
+
+小狼毫Weasel librime ❌ ❌ ❌ Rime硬核玩家、方案开发者
+
+玉兔毫Rabbit librime(AHK) ✅✅ ⚠️部分 ❌ 受限环境、便携需求、U盘运行
+
+fcitx5-rime librime(Linux移植) ❌ ⚠️ ❌ Linux双持用户、跨平台强迫症
+
+小小输入法 自研 ✅✅✅ ✅✅ ❌ 极简主义、五笔/郑码老用户
+
+三、Rime方案包层（词库+配置）
+
+方案包 核心词库 全拼 双拼 五笔 音形 跨平台 维护状态
+
+薄荷oh-my-rime myriad/万象 ✅ ✅ ✅ ✅ ✅全平台 活跃
+
+万象拼音 myriad/万象 ✅ ✅ ✅ ✅ ✅全平台 活跃
+
+白霜拼音 白霜(雾凇重制) ✅ ✅ ❌ ⚠️ ✅全平台 活跃
+
+雾凇拼音 雾凇原始 ✅ ✅ ❌ ❌ ✅全平台 基本停更
+
+四叶草拼音 混合词库 ✅ ✅ ❌ ❌ ⚠️部分 低活跃
+
+极点五笔Rime版 极点码表 ❌ ❌ ✅ ❌ ✅全平台 维护中
+
+四、老牌本地工具层
+
+工具 类型 本地化 词库管理 适合场景
+
+极点五笔 独立输入法 ✅✅✅ txt码表 五笔老用户、兼容旧习惯
+
+万能五笔 独立输入法 ✅✅✅ 内置+导入 五笔拼音混输、传统办公
+
+微软拼音/五笔 系统自带 ✅✅✅ 注册表/少量 零维护、高稳定性要求
+
+五、现代AI/语音层（本地+云端混合）
+
+工具 核心能力 本地处理 云端AI 语音输入 适合场景
+
+水杉输入法 AI联想+语音 ✅候选 ✅可配置 ✅ 综合办公、长文写作
+
+微信输入法 跨端同步+AI ⚠️部分 ✅ ✅ 微信生态重度用户
+
+豆包输入法 AI对话+写作 ❌ ✅ ✅ AI辅助创作
+
+LazyTyper 本地AI补全 ✅ ❌ ❌ 代码/文档快速输入
+
+VocoType 本地语音识别 ✅✅✅ ❌ ✅✅✅ 语音输入重度用户
+
+六、选型决策树（直接对号入座）
+
+1. Windows主力+拼音+不想折腾 → 墨奇
+2. Windows主力+五笔/码表+按窗口切状态 → 清风
+3. 要语音+AI+辅助码一体化 → 水杉
+4. 已在用Rime+要现成方案包 → 薄荷/万象
+5. Linux双持+跨平台一致体验 → fcitx5-rime+万象
+6. 受限环境/U盘便携 → 玉兔毫
+7. 极简/老机器/五笔老用户 → 小小/极点
+8. 零维护/高稳定性 → 微软拼音/五笔
+9. 语音输入重度 → VocoType
+10. AI写作辅助 → 墨奇AI/豆包输入法
+
+七、组合推荐（已验证稳定）
+
+组合 场景 备注
+
+墨奇+白霜词库 日常办公 拼音最优解
+
+清风+极点码表 五笔办公 兼容性最好
+
+小狼毫+薄荷方案 深度自定义 折腾党专属
+
+水杉+本地语音模型 语音写作 隐私+效率
+
+微软拼音+墨奇(备用) 企业环境 防兼容性问题
+
+八、避坑指南
+
+1. 不要同时装两个Rime前端（小狼毫+墨奇会冲突）
+2. Rime方案包不要叠加太多（薄荷+万象可能冲突，选一个即可）
+3. 清风macOS版需手动放行（无苹果公证）
+4. 墨奇AI功能需自备API Key（无免费额度）
+5. 玉兔毫不适合游戏场景（非系统级IME）
+
 
 
 startback_aio.zip 开始菜单 默认这个即可，通用
@@ -942,12 +1062,12 @@ https://github.com/UniClipboard/UniClipboard
 开源、端到端加密的通用剪贴板。文本、图片、文件在 Mac、Windows、Linux、iPhone 与 Android 之间实时同步——无需账号，也不经过任何第三方服务器。
 全平台支持 https://github.com/UniClipboard/UniClipboard/releases
 
-UniClipboard_0.19.3_x64-setup
+UniClipboard_0.19.4_x64-setup
 D:\Program Files\UniClipboard 这个是可以自动更新的 
-https://release.uniclipboard.app/artifacts/v0.19.3/UniClipboard_0.19.3_x64-setup.exe
+https://release.uniclipboard.app/artifacts/v0.19.4/UniClipboard_0.19.4_x64-setup.exe
 
 这个便携式解压就可以用
-https://github.com/UniClipboard/UniClipboard/releases/download/v0.19.3/UniClipboard_0.19.3_x64-portable.zip
+https://github.com/UniClipboard/UniClipboard/releases/download/v0.19.4/UniClipboard_0.19.4_x64-portable.zip
 其他版本 Mac、Windows、Linux、iPhone 与 Android
 https://www.uniclipboard.app/zh/download
 

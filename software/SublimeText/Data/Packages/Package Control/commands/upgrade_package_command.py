@@ -20,13 +20,13 @@ class UpgradePackageCommand(sublime_plugin.ApplicationCommand):
         def show_quick_panel():
             upgrader = PackageTaskRunner()
 
-            with ActivityIndicator('Searching updates...') as progress:
+            with ActivityIndicator('正在搜索更新...') as progress:
                 tasks = upgrader.create_package_tasks(
                     actions=(upgrader.PULL, upgrader.UPGRADE),
                     ignore_packages=upgrader.ignored_packages()  # don't upgrade disabled packages
                 )
                 if tasks is False:
-                    message = 'There are no packages available for upgrade'
+                    message = '没有可升级的插件'
                     console_write(message)
                     progress.finish(message)
                     show_message(
@@ -40,7 +40,7 @@ class UpgradePackageCommand(sublime_plugin.ApplicationCommand):
                     return
 
                 if not tasks:
-                    message = 'All packages up-to-date!'
+                    message = '所有插件已是最新！'
                     console_write(message)
                     progress.finish(message)
                     show_message(message)
@@ -51,7 +51,7 @@ class UpgradePackageCommand(sublime_plugin.ApplicationCommand):
                     return
 
                 def worker(tasks):
-                    with ActivityIndicator('Preparing...') as progress:
+                    with ActivityIndicator('准备中...') as progress:
                         upgrader.run_upgrade_tasks(tasks, progress)
 
                 threading.Thread(

@@ -1,38 +1,38 @@
 [
     {
-        "command": "cut", 
+        "command": "cut",
         "caption": "剪切"
-    }, 
+    },
     {
-        "command": "copy", 
+        "command": "copy",
         "caption": "复制"
-    }, 
+    },
     {
-        "command": "paste", 
+        "command": "paste",
         "caption": "粘贴"
-    }, 
+    },
     {
         "caption": "-"
-    }, 
+    },
     {
-        "command": "select_all", 
+        "command": "select_all",
         "caption": "全选"
-    }, 
+    },
     {
         "caption": "-"
-    }, 
+    },
     {
-        "command": "console_python_version", 
+        "command": "console_python_version",
         "args": {
             "version": "3.8"
-        }, 
+        },
         "checkbox": true
-    }, 
+    },
     {
-        "command": "console_python_version", 
+        "command": "console_python_version",
         "args": {
             "version": "3.3"
-        }, 
+        },
         "checkbox": true
     }
 ]

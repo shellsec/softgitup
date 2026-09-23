@@ -42,7 +42,7 @@
 				"children":
 				[
 					{
-						"caption": "ConvertToUTF8",
+						"caption": "编码转换",
 						"children":
 						[
 							{
@@ -50,14 +50,14 @@
 								{
 									"file": "${packages}/ConvertToUTF8/ConvertToUTF8.sublime-settings"
 								},
-								"caption": "Settings – Default"
+								"caption": "设置 – 默认"
 							},
 							{
 								"command": "open_file", "args":
 								{
 									"file": "${packages}/User/ConvertToUTF8.sublime-settings"
 								},
-								"caption": "Settings – User"
+								"caption": "设置 – 用户"
 							},
 							{ "caption": "-" }
 						]

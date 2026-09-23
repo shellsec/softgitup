@@ -1,0 +1,60 @@
+[
+    {
+        "id": "tools",
+        "children": [
+            {
+                "caption": "插件",
+                "id": "packages",
+                "children": [
+                    {
+                        "caption": "包管理器",
+                        "id": "package-control",
+                        "children":
+                        [
+                            {
+                                "caption": "新建频道…",
+                                "command": "new_channel_json"
+                            },
+                            {
+                                "caption": "新建仓库…",
+                                "command": "new_repository_json"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "preferences",
+        "children": [
+            {
+                "caption": "插件设置",
+                "mnemonic": "P",
+                "id": "package-settings",
+                "children": [
+                    {
+                        "caption": "包管理器",
+                        "children": [
+                            {
+                                "caption": "设置",
+                                "command": "edit_settings",
+                                "args": {
+                                    "base_file": "${packages}/Package Control/Package Control.sublime-settings",
+                                    "default": "// See the left pane for the list of settings and valid values\n{\n\t$0\n}\n"
+                                }
+                            },
+                            { "caption": "-" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "caption": "包管理器",
+                "mnemonic": "C",
+                "command": "show_overlay",
+                "args": {"overlay": "command_palette", "text": "Package Control: "}
+            }
+        ]
+    }
+]

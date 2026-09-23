@@ -6,7 +6,7 @@
 		"children": [
 			{
 				"command": "side_bar_save_as_admin",
-				"caption": "Save as Admin"
+				"caption": "以管理员身份另存为…"
 			}
 		]
 	},
@@ -17,21 +17,21 @@
 				"id": "package-settings",
 				"children": [
 					{
-						"caption": "Side Bar",
+						"caption": "侧边栏",
 						"children": [
 							{
 								"command": "open_file",
 								"args": {
 									"file": "${packages}/SideBarEnhancements/Side Bar.sublime-settings"
 								},
-								"caption": "Settings – Default"
+								"caption": "设置 – 默认"
 							},
 							{
 								"command": "open_file",
 								"args": {
 									"file": "${packages}/User/Side Bar.sublime-settings"
 								},
-								"caption": "Settings – User"
+								"caption": "设置 – 用户"
 							},
 							{ "caption": "-" },
 							{
@@ -40,7 +40,7 @@
 									"file": "${packages}/SideBarEnhancements/Default (OSX).sublime-keymap",
 									"platform": "OSX"
 								},
-								"caption": "Key Bindings – Default"
+								"caption": "快捷键 – 默认"
 							},
 							{
 								"command": "open_file",
@@ -48,7 +48,7 @@
 									"file": "${packages}/SideBarEnhancements/Default (Linux).sublime-keymap",
 									"platform": "Linux"
 								},
-								"caption": "Key Bindings – Default"
+								"caption": "快捷键 – 默认"
 							},
 							{
 								"command": "open_file",
@@ -56,7 +56,7 @@
 									"file": "${packages}/SideBarEnhancements/Default (Windows).sublime-keymap",
 									"platform": "Windows"
 								},
-								"caption": "Key Bindings – Default"
+								"caption": "快捷键 – 默认"
 							},
 							{
 								"command": "open_file",
@@ -64,7 +64,7 @@
 									"file": "${packages}/User/Default (OSX).sublime-keymap",
 									"platform": "OSX"
 								},
-								"caption": "Key Bindings – User"
+								"caption": "快捷键 – 用户"
 							},
 							{
 								"command": "open_file",
@@ -72,7 +72,7 @@
 									"file": "${packages}/User/Default (Linux).sublime-keymap",
 									"platform": "Linux"
 								},
-								"caption": "Key Bindings – User"
+								"caption": "快捷键 – 用户"
 							},
 							{
 								"command": "open_file",
@@ -80,7 +80,7 @@
 									"file": "${packages}/User/Default (Windows).sublime-keymap",
 									"platform": "Windows"
 								},
-								"caption": "Key Bindings – User"
+								"caption": "快捷键 – 用户"
 							},
 							{ "caption": "-" }
 						]

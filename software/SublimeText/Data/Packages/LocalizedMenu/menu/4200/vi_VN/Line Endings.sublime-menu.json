@@ -1,0 +1,5 @@
+[
+	{ "command": "set_line_ending", "args": {"type": "windows"}, "caption": "Kết thúc dòng Windows (CRLF)", "checkbox": true },
+	{ "command": "set_line_ending", "args": {"type": "unix"}, "caption": "Kết thúc dòng Unix (LF)", "checkbox": true },
+	{ "command": "set_line_ending", "args": {"type": "cr"}, "caption": "Kết thúc dòng Mac OS 9 (CR)", "checkbox": true }
+]

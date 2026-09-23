@@ -1,0 +1,11 @@
+[
+  { "caption": "-", "id": "repo_commands" },
+  { "caption": "Git Deposunu Aç…", "command": "sublime_merge_open_repo" },
+  { "caption": "Dosya Geçmişi…", "command": "sublime_merge_file_history" },
+  { "caption": "-", "id": "file" },
+  { "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"}, "caption": "İçeren Klasörü Aç…" },
+  { "command": "copy_path", "caption": "Dosya Yolunu Kopyala" },
+  { "command": "reveal_in_side_bar", "caption": "Yan Çubukta Göster" },
+  { "command": "force_reopen_as", "args": {"type": "text"}, "caption": "Dosyayı Metin Olarak Yeniden Aç" },
+  { "caption": "-", "id": "end" }
+]

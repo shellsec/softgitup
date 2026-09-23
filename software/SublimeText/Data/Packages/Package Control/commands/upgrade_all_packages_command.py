@@ -21,7 +21,7 @@ class UpgradeAllPackagesCommand(sublime_plugin.ApplicationCommand):
     def run(self, unattended=False):
 
         def worker():
-            message = 'Searching updates...'
+            message = '正在搜索更新...'
             with ActivityIndicator(message) as progress:
                 console_write(message)
                 upgrader = PackageTaskRunner()

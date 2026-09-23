@@ -59,6 +59,103 @@ html.dark tt {
 <h1>Stable Channel Changelog</h1>
 
 <article class="current">
+<h2>Build 4213</h2>
+<div class="release-date">21 Sep 2026</div>
+
+<p>Sublime Text now ships with Python 3.14 and Python 3.3. Python 3.3 is disabled by default and will be removed in a future version. If you're experiencing plugin compatibility issues you can re-enable 3.3 using the setting <tt>"disable_plugin_host_3.3": false</tt>.</p>
+
+<h3>New Features and Improvements</h3>
+<ul class="topic">
+    <li>Upgraded Python 3.8 to Python 3.14</li>
+    <li>Python 3.3 is now disabled by default</li>
+    <li>Various syntax highlighting improvements</li>
+    <li>Newly rewritten C# syntax highlighting thanks to <a href="https://github.com/deathaxe">deathaxe</a></li>
+    <li>Added file icon themes. See <a href="https://www.sublimetext.com/docs/themes.html#file-icon-themes">the documentation</a></li>
+    <li>Added <tt>open_terminal</tt> command for opening external terminal emulators</li>
+    <li>Scope selectors can now use <tt>&gt;</tt> to explicitly match child scopes</li>
+    <li>Improved performance when saving many files</li>
+    <li>Improved performance of git status</li>
+    <li>Improved tab dragging behavior while using <tt>enable_tab_scrolling</tt></li>
+    <li>Undo/redo history is no longer restored when the file has changed on disk</li>
+    <li>Fine tuned fuzzy matching logic to improve sorting in some cases</li>
+    <li>Added support for git reftables</li>
+    <li>Improved join line behavior with right-brackets</li>
+    <li>Improved ruler position when using a proportional font</li>
+    <li>Added <tt>"io_workers"</tt> setting</li>
+</ul>
+
+<h3>API</h3>
+<ul class="topic">
+    <li>Improved type hints</li>
+    <li>Added <tt>Sheet.name()</tt> and <tt>Sheet.set_name()</tt> for all sheet types</li>
+    <li>Added <tt>sublime.lib_path()</tt> function</li>
+    <li><tt>sublime.load_resource</tt> will now throw <tt>FileTooLarge</tt> when the resource exceeds size limits</li>
+    <li><tt>sublime.load_resource</tt> can now be passed a <tt>max_size</tt> parameter</li>
+    <li>Fixed <tt>find_syntax_for_file</tt> not handling paths on Windows</li>
+    <li>Fixed some edge cases when using <tt>NewFileFlags.REPLACE_MRU</tt></li>
+    <li>Fixed <tt>View.syntax()</tt> returning <tt>None</tt> with specific syntaxes</li>
+    <li>Fixed command names not being snake_cased correctly</li>
+    <li>Fixed initialization when multi-inheriting classes</li>
+</ul>
+
+<h3>Windows</h3>
+<ul class="topic">
+    <li>The minimum required version is now Windows 10</li>
+    <li>Fixed a problem where rendering stops running</li>
+    <li>Fixed a code-signing issue that could result in spurious warnings</li>
+    <li>Fixed multi-instance handling when running ST as administrator</li>
+    <li>Limited the number of extensions shown in file dialogs</li>
+    <li>Fixed installer not removing all files after certain updates</li>
+</ul>
+
+<h3>Mac</h3>
+<ul class="topic">
+    <li>The minimum required version is now macOS 10.13</li>
+    <li>Added <tt>"click_through"</tt> setting</li>
+    <li>Fixed windows not restoring to workspaces</li>
+    <li>Fixed window styling for macOS 27</li>
+    <li>Fixed issues restoring minimized windows</li>
+    <li>Fixed incorrect window size when going from a maximized window to full screen</li>
+    <li>Made <tt>open_dir</tt> command work with no open windows</li>
+</ul>
+
+<h3>Linux</h3>
+<ul class="topic">
+    <li>Fixed modal dialogs blocking all open windows</li>
+    <li>Fixed drag-state becoming stuck after dragging text from chrome</li>
+    <li>Fixed incorrectly setting selection clipboard when multiple sheets are selected</li>
+    <li>Fixed modifier keys persisting after window close</li>
+    <li>Fixed KDE "alternate characters" input method not working as expected</li>
+    <li>Fixed tab dragging under Wayland causing an air-drop when not intended</li>
+    <li><tt>PATH</tt> is now respected when looking up <tt>pkexec</tt> and <tt>gksudo</tt></li>
+</ul>
+
+<h3>Fixes</h3>
+<ul class="topic">
+    <li>Fixed find-in-files not properly searching for folders starting with a dot</li>
+    <li>Fixed minimized windows popping up on quit</li>
+    <li>Fixed a case where <tt>close_project</tt> command corrupted the workspace file</li>
+    <li>Fixed <tt>close_project</tt> not closing windows when expected</li>
+    <li>Fixed a case where loading a project cleared the folder list</li>
+    <li>Fixed a false positive case in filesystem loop detection</li>
+    <li>Fixed sidebar resizing not working when sidebar is on the right and using non-integer DPI scaling</li>
+    <li>Fixed the side bar selection not begin updating in some cases</li>
+    <li>Fixed an issue with sidebar focus when animations are disabled</li>
+    <li>Fixed sheets not being focused when double-clicking in the sidebar with <tt>"preview_on_click"</tt> disabled</li>
+    <li>Fixed selection not being maintained when joining lines</li>
+    <li>Fixed caret disappearing when clicking off inline diffs</li>
+    <li>Fixed <tt>select_lines</tt> not scrolling to reveal the selection</li>
+    <li>Fixed <i>Close Unmodified Tabs</i> menu hiding when no tabs are modified</li>
+    <li>Fixed Goto Definition sometimes being scrolled incorrectly</li>
+    <li>Fixed <tt>?</tt> matching <tt>/</tt> in wildcards</li>
+    <li>Fixed file encoding not being restored for unsaved files</li>
+    <li>Fixed non-integer <tt>"default_font_size"</tt> being rounded</li>
+    <li>Fixed build system variable <tt>"path"</tt> not working</li>
+    <li>Fixed a syntax engine crash</li>
+</ul>
+</article>
+
+<article>
 <h2>Build 4200</h2>
 <div class="release-date">21 May 2025</div>
 

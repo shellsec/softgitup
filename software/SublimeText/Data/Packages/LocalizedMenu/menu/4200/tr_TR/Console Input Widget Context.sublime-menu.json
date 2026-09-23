@@ -1,0 +1,10 @@
+[
+  { "command": "cut", "caption": "Kes" },
+  { "command": "copy", "caption": "Kopyala" },
+  { "command": "paste", "caption": "Yapıştır" },
+  { "caption": "-" },
+  { "command": "select_all", "caption": "Tümünü Seç" },
+  { "caption": "-" },
+  { "command": "console_python_version", "args": {"version": "3.8"}, "caption": "Python 3.8", "checkbox": true },
+  { "command": "console_python_version", "args": {"version": "3.3"}, "caption": "Python 3.3", "checkbox": true }
+]

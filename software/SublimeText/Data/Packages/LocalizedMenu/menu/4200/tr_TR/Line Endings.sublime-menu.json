@@ -1,0 +1,5 @@
+[
+  { "command": "set_line_ending", "args": {"type": "windows"}, "caption": "Windows Satır Sonları (CRLF)", "checkbox": true },
+  { "command": "set_line_ending", "args": {"type": "unix"}, "caption": "Unix Satır Sonları (LF)", "checkbox": true },
+  { "command": "set_line_ending", "args": {"type": "cr"}, "caption": "Mac OS 9 Satır Sonları (CR)", "checkbox": true }
+]

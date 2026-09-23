@@ -1,0 +1,302 @@
+{
+	// A list of URLs that each contain a JSON file with a list of repositories.
+	// The repositories from these channels are placed in order after the
+	// repositories from the "repositories" setting
+	"channels": [
+		// channel_v4 for python 3.8 compatible libraries to enable plugins
+		// to migrate to python 3.8 until packagecontrol.io supports new scheme.
+		// Note: Must always be located before default channel in the list!
+		// Repo: https://github.com/packagecontrol/channel
+		"https://packagecontrol.github.io/channel/channel_v4.json",
+		// default channel for packages
+		// Repo: https://github.com/wbond/package_control_channel
+		"https://packagecontrol.io/channel_v3.json"
+	],
+
+	// A list of URLs that contain a packages JSON file or point to a
+	// Github, GitLab or BitBucket user, repository or reference.
+	//
+	// Examples:
+	//
+	//    https://my-server.com/packages/repository.json
+	//    https://github.com/{user}
+	//    https://github.com/{user}/{repo}
+	//    https://github.com/{user}/{repo}/tags
+	//    https://github.com/{user}/{repo}/tree/{branch}
+	//
+	// Note:
+	//
+	//    Authentication via `http_basic_auth` setting may be required to avoid
+	//    hitting rate limit too early and often, if many codehoster repositories
+	//    are listed here.
+	//
+	// These repositories are placed in order before repositories from
+	// the "channels" setting.
+	"repositories": [],
+
+	// A list of packages, which have been installed via Package Control.
+	//
+	// All packages in this list are automatically installed at start,
+	// if missing on filesystem (see: ``install_missing``).
+	//
+	// Values of all all found Package Control.sublime-settings are merged to
+	// determine the list of packages to install. Any package can therefore
+	// ship a list of required packages, it wants to also be installed.
+	// Such packages are can't be uninstalled by user and aren't added to
+	// Packages/User/Package Control.sublime-settings
+	"installed_packages": [],
+
+	// A list of packages to install pre-release versions for. Versions
+	// under 1.0.0 are not considered pre-release, only those using the SemVer
+	// -prerelease suffixes will be ignored if the package is not in this
+	// list.
+	"install_prereleases": [],
+
+	// This helps solve naming issues where a repository is not named the
+	// same as the package should be. This is primarily only useful for
+	// GitHub, Gitlab and BitBucket repositories. This mapping will override
+	// the mapping that is retrieved from the repository channels.
+	"package_name_map": {},
+
+	// If debugging information for HTTP/HTTPS connections should be printed
+	// to the Sublime Text console
+	"debug": false,
+
+	// Print package install and upgrade messages.
+	// Valid values are:
+	// - "disabled": don't print anything
+	// - "background": open message view in background
+	// - "foreground": open message view in foreground
+	// - "auto": focus messages depending on command mode (unattended)
+	"print_messages": "auto",
+
+	// If package install, upgrade and removal info should be submitted to
+	// the channel for aggregated statistics
+	"submit_usage": true,
+
+	// The classic URL to post install, upgrade and removal notices to
+	// It drives install stats on packagecontrol.io.
+	// (empty value disables the target)
+	"submit_url": "https://packagecontrol.io/submit",
+
+	// The new URL to post install, upgrade and removal notices to
+	// It drives install stats on packages.sublimetext.io.
+	// (empty value disables the target)
+	"submit_usage_url": "https://stats.sublimetext.io/event",
+
+	// Maximum days to keep backups. All older ones are removed when ST starts
+	"max_backup_age": 14,
+
+	// If missing packages should be automatically installed when ST starts
+	"install_missing": true,
+
+	// If a package was installed by Package Control (has a
+	// package-metadata.json file) but is not in installed_packages, remove it
+	// based upon the assumption that it was removed on another machine and
+	// the Package Control.sublime-settings file was synced to this machine.
+	"remove_orphaned": true,
+
+	// Remove libraries of disabled or absent plugin_hosts at startup.
+	"remove_orphaned_environments": true,
+
+	// If incompatible packages should be automatically upgraded when ST starts.
+	// If ST is upgraded or moved to other computers, installed packages may
+	// become incompatible with either ST, OS or CPU architecture.
+	"auto_migrate": true,
+
+	// If packages should be automatically upgraded when ST starts
+	"auto_upgrade": true,
+
+	// The minimum frequency in hours in which to check for automatic upgrades,
+	// setting this to 0 will always check for automatic upgrades
+	"auto_upgrade_frequency": 8,
+
+	// Packages to not auto upgrade
+	"auto_upgrade_ignore": [],
+
+	// Timeout for downloading channels, repositories and packages. Doesn't
+	// have an effect on Windows due to a bug in WinINet.
+	"timeout": 30,
+
+	// The number of seconds to cache repository and package info for
+	// No HTTP requests are made for responses with up to this age.
+	"cache_length": 600,
+
+	// An HTTP proxy server to use for requests. Not normally used on Windows
+	// since the system proxy configuration is utilized via WinINet.
+	"http_proxy": "",
+
+	// An HTTPS proxy server to use for requests - this will inherit from
+	// http_proxy if it is set to "" or null and http_proxy has a value. You
+	// can set this to false to prevent inheriting from http_proxy. Not
+	// normally used on Windows since the system proxy configuration is
+	// utilized via WinINet.
+	"https_proxy": "",
+
+	// Username and password for both http_proxy and https_proxy. May be used
+	// with WinINet to set credentials for system-level proxy config.
+	"proxy_username": "",
+	"proxy_password": "",
+
+	// If HTTP responses should be cached to disk
+	"http_cache": true,
+
+	// Number of seconds to cache HTTP responses for, defaults to one week
+	// If a local cache entry hasn't been requested within this time span,
+	// it will be removed from storage.
+	"http_cache_length": 604800,
+
+	// User agent for HTTP requests. If "%s" is present, will be replaced
+	// with the current version.
+	"user_agent": "Package Control v%s",
+
+	// Username and password support for private repositories, or for
+	// bypassing anonymous user download limits on services.
+	//
+	// Each entry should be a key of the domain name, with a 2-element list
+	// as the value, first the username and then the password. Examples of
+	// common hosting platforms below:
+	//
+	// {
+	//     "api.github.com": ["username", "personal access token"],
+	//     "gitlab.com": ["username", "personal access token"],
+	//     "api.bitbucket.org": ["username", "app password"],
+	// }
+	"http_basic_auth": {},
+
+	// A list of package names to ignore when performing operations. This will
+	// only affect packages that appear to be a git or hg repository, but will
+	// be especially useful for package developers who manually deal with the
+	// repository and don't want Package Control touching it.
+	//
+	// It can help if trying to list packages to install hangs, possibly due
+	// to an interactive prompt.
+	//
+	// The setting can also be set to the boolean true to ignore all git and hg
+	// repositories, no matter what the name.
+	"ignore_vcs_packages": [],
+
+	// Custom path(s) to "git" binary for when it can't be automatically
+	// found on the system and a package includes a .git metadata directory.
+	// Supports more than one path to allow users to sync settings across
+	// operating systems.
+	"git_binary": [],
+
+	// This should NOT contain the name of the remote or branch - that will
+	// be automatically determined.
+	"git_update_command": ["pull", "--ff-only", "--quiet"],
+
+	// Custom path(s) to "hg" binary for when it can't be automatically
+	// found on the system and a package includes a .hg metadata directory.
+	// Supports more than one path to allow users to sync settings across
+	// operating systems.
+	"hg_binary": [],
+
+	// For HG repositories, be sure to use "default" as the remote URL.
+	// This is the default behavior when cloning an HG repo.
+	"hg_update_command": ["pull", "--update"],
+
+	// Additional packages to ignore when listing unmanaged packages.
+	"unmanaged_packages_ignore": [],
+
+	// The downloader backends that should be used for HTTP(S) requests, split
+	// by operating system to allow for configuration to be shared.
+	//
+	// Valid options include: "urllib", "oscrypto", "curl", "wget",
+	// (Windows-only) "wininet"
+	//
+	// This setting allows Windows users to bypass wininet and use urllib
+	// instead if they machine or network presents trouble to wininet. Some
+	// OS X and Linux users have also reported better luck with certain
+	// proxies using curl or wget instead of urllib.
+	//
+	// The "curl" and "wget" options require the command line "curl" or "wget"
+	// program installed and present in the PATH.
+	"downloader_precedence": {
+		"windows": ["wininet", "oscrypto", "urllib"],
+		"osx": ["urllib", "oscrypto", "curl"],
+		"linux": ["urllib", "oscrypto", "curl", "wget"]
+	},
+
+	// Directories to ignore when creating a package
+	"dirs_to_ignore": [
+		".circleci",
+		".git",
+		".github",
+		".hg",
+		".svn",
+		"_darcs",
+		"CVS"
+	],
+
+	// Files to ignore when creating a package
+	"files_to_ignore": [
+		"*.pyc",
+		"*.sublime-project",
+		"*.sublime-workspace",
+		"*.tmTheme.cache",
+		".bzrignore",
+		".codecov.yml",
+		".coveragerc",
+		".flake8",
+		".gitattributes",
+		".gitignore",
+		".hgignore",
+		".travis.yml",
+		"__init__.py",
+		"appveyor.yml",
+		"codecov.yml",
+		"mypy.ini",
+		"pyproject.toml",
+		"tox.ini",
+	],
+
+	// Files to include, even if they match a pattern in files_to_ignore
+	"files_to_include": [],
+
+	// When a package is created, copy it to this folder - defaults to Desktop
+	"package_destination": "",
+
+	// A way to create different packaging profiles for different types of
+	// package releases, such as for different platforms or binary-only
+	// releases.
+	//
+	// The key of the object will be the profile name and a list of them will
+	// be presenting when running the "Create Package File" command. The
+	// profile "Default" will use the top-level version on the following
+	// settings:
+	//
+	// - "dirs_to_ignore"
+	// - "files_to_ignore"
+	// - "files_to_include"
+	// - "package_destination"
+	//
+	// If a profile does not include one of those three setting, it will fall
+	// back to the top-level settings.
+	"package_profiles": {
+		"Binaries Only": {
+			// Exclude all .py files, but consequently include all .pyc files
+			"files_to_ignore": [
+				"*.sublime-project",
+				"*.sublime-workspace",
+				"*.tmTheme.cache",
+				".bzrignore",
+				".gitignore",
+				".gitattributes",
+				".hgignore",
+				".codecov.yml",
+				".travis.yml",
+				"appveyor.yml",
+				"codecov.yml",
+				"*.py",
+				".coveragerc",
+				".flake8",
+				"pyproject.toml",
+				"tox.ini",
+				"mypy.ini"
+			],
+
+			"files_to_include": []
+		}
+	},
+}

@@ -1,107 +1,114 @@
 [
     {
-        "command": "new_file_at", 
-        "caption": "新建文件", 
+        "caption": "新建文件",
+        "command": "new_file_at",
         "args": {
             "dirs": []
         }
-    }, 
+    },
     {
-        "command": "rename_path", 
-        "caption": "重命名…", 
+        "caption": "重命名…",
+        "command": "rename_path",
         "args": {
             "paths": []
         }
-    }, 
+    },
     {
-        "command": "delete_file", 
-        "caption": "删除文件", 
+        "caption": "删除文件",
+        "command": "delete_file",
         "args": {
-            "files": [], 
+            "files": [],
             "prompt": false
         }
-    }, 
+    },
     {
-        "command": "open_folder", 
-        "caption": "打开文件夹…", 
+        "caption": "打开文件夹…",
+        "command": "open_folder",
         "args": {
             "dirs": []
         }
-    }, 
+    },
     {
-        "command": "open_containing_folder", 
-        "caption": "打开所在文件夹…", 
+        "caption": "打开所在文件夹…",
+        "command": "open_containing_folder",
         "args": {
             "files": []
         }
-    }, 
+    },
     {
-        "command": "reveal_link_source", 
-        "caption": "打开链接目录", 
+        "caption": "复制文件路径",
+        "command": "copy_path_sidebar",
+        "args": {
+            "paths": []
+        }
+    },
+    {
+        "caption": "打开链接目录",
+        "command": "reveal_link_source",
         "args": {
             "dirs": []
         }
-    }, 
+    },
     {
-        "caption": "-", 
+        "caption": "-",
         "id": "repo_commands"
-    }, 
+    },
     {
-        "command": "sublime_merge_open_repo", 
-        "caption": "打开Git仓库…", 
+        "caption": "打开Git仓库…",
+        "command": "sublime_merge_open_repo",
         "args": {
             "paths": []
         }
-    }, 
+    },
     {
-        "command": "sublime_merge_file_history", 
-        "caption": "文件历史…", 
+        "caption": "文件历史…",
+        "command": "sublime_merge_file_history",
         "args": {
             "files": []
         }
-    }, 
+    },
     {
-        "command": "sublime_merge_folder_history", 
-        "caption": "目录历史…", 
+        "caption": "目录历史…",
+        "command": "sublime_merge_folder_history",
         "args": {
             "paths": []
         }
-    }, 
+    },
     {
-        "command": "sublime_merge_blame_file", 
-        "caption": "审查文件…", 
+        "caption": "审查文件…",
+        "command": "sublime_merge_blame_file",
         "args": {
             "files": []
         }
-    }, 
+    },
     {
-        "caption": "-", 
+        "caption": "-",
         "id": "folder_commands"
-    }, 
+    },
     {
-        "command": "new_folder", 
-        "caption": "新建文件夹…", 
+        "caption": "新建文件夹…",
+        "command": "new_folder",
         "args": {
             "dirs": []
         }
-    }, 
+    },
     {
-        "command": "delete_folder", 
-        "caption": "删除文件夹", 
+        "caption": "删除文件夹",
+        "command": "delete_folder",
         "args": {
-            "dirs": [], 
+            "dirs": [],
             "prompt": true
         }
-    }, 
+    },
     {
-        "command": "find_in_folder", 
-        "caption": "在文件夹中查找…", 
+        "caption": "在文件夹中查找…",
+        "command": "find_in_folder",
         "args": {
             "dirs": []
         }
-    }, 
+    },
     {
-        "caption": "-", 
+        "caption": "-",
         "id": "end"
     }
 ]

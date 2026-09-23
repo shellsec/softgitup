@@ -1,0 +1,10 @@
+[
+  { "command": "clear_location", "caption": "Temizle" },
+  { "command": "add_directory", "caption": "Klasör Ekle" },
+  { "command": "add_where_snippet", "args": {"snippet": "*.${0:txt}"}, "caption": "Dahil Etme Filtresi Ekle" },
+  { "command": "add_where_snippet", "args": {"snippet": "-*.${0:txt}"}, "caption": "Hariç Tutma Filtresi Ekle" },
+  { "command": "add_where_snippet", "args": {"snippet": "<project filters>"}, "caption": "Proje Filtreleri Ekle" },
+  { "command": "add_where_snippet", "args": {"snippet": "<open folders>"}, "caption": "Açık Klasörleri Ekle" },
+  { "command": "add_where_snippet", "args": {"snippet": "<open files>"}, "caption": "Açık Dosyaları Ekle" },
+  { "command": "add_where_snippet", "args": {"snippet": "<current file>"}, "caption": "Geçerli Dosyayı Ekle" }
+]

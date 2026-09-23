@@ -146,7 +146,6 @@ def add_profiling(event_handler):
     """
 
     def profiler(*args):
-        global profile
         t0 = time.time()
         try:
             return event_handler(*args)
@@ -845,7 +844,6 @@ class Summary():
 
 
 def get_profiling_data():
-    global profile
     out = []
     for event in profile:
         data = profile[event]
@@ -1390,6 +1388,8 @@ class ApplicationCommand(Command):
 
 class WindowCommand(Command):
     def __init__(self, window):
+        super().__init__()
+
         self.window = window
 
     def run_(self, edit_token, args):
@@ -1420,6 +1420,8 @@ class WindowCommand(Command):
 
 class TextCommand(Command):
     def __init__(self, view):
+        super().__init__()
+
         self.view = view
 
     def run_(self, edit_token, args):
@@ -1470,6 +1472,8 @@ class ViewEventListener():
         return True
 
     def __init__(self, view):
+        super().__init__()
+
         self.view = view
 
 
@@ -1513,6 +1517,8 @@ class TextChangeListener:
         return True
 
     def __init__(self):
+        super().__init__()
+
         self.__key = None
         self.buffer = None
 

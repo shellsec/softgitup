@@ -1,0 +1,10 @@
+[
+	{ "command": "clear_location", "caption": "Xóa" },
+	{ "command": "add_directory", "caption": "Thêm thư mục" },
+	{ "command": "add_where_snippet", "args": {"snippet": "*.${0:txt}"}, "caption": "Thêm bộ lọc bao gồm" },
+	{ "command": "add_where_snippet", "args": {"snippet": "-*.${0:txt}"}, "caption": "Thêm bộ lọc loại trừ" },
+	{ "command": "add_where_snippet", "args": {"snippet": "<project filters>"}, "caption": "Thêm bộ lọc dự án" },
+	{ "command": "add_where_snippet", "args": {"snippet": "<open folders>"}, "caption": "Thêm các thư mục đang mở" },
+	{ "command": "add_where_snippet", "args": {"snippet": "<open files>"}, "caption": "Thêm các tệp đang mở" },
+	{ "command": "add_where_snippet", "args": {"snippet": "<current file>"}, "caption": "Thêm tệp hiện tại" }
+]

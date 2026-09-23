@@ -1,0 +1,72 @@
+[
+	{
+		"id": "preferences",
+		"children": [
+			{
+				"id": "package-settings",
+				"caption": "Paramètres du paquet",
+				"children":
+				[
+					{
+						"caption": "LocalizedMenu",
+						"children":
+						[
+							{
+								"command": "open_file", "args":
+								{
+									"file": "${packages}/LocalizedMenu/LocalizedMenu.sublime-settings"
+								},
+								"caption": "Paramètres - Par défaut"
+							},
+							{
+								"command": "open_file", "args":
+								{
+									"file": "${packages}/User/LocalizedMenu.sublime-settings"
+								},
+								"caption": "Paramètres – Utilisateur"
+							},
+							{ "caption": "-" }
+						]
+					}
+				]
+			},
+			{ "caption": "-" },
+			{
+				"id": "locales",
+				"caption": "Langues", "mnemonic": "L",
+				"children": [
+					{
+						"command": "localize_run",
+						"args": {
+							"action": "detect"
+						},
+						"caption": "Détecter"
+					},
+					{
+						"command": "localize_run",
+						"args": {
+							"action": "reset"
+						},
+						"caption": "Réinitialiser"
+					},
+					{
+						"command": "localize_run",
+						"args": {
+							"action": "add"
+						},
+						"caption": "Ajouter une langue…"
+					},
+					{
+						"command": "localize_run",
+						"args": {
+							"action": "submit"
+						},
+						"caption": "Soumettre la langue…"
+					},
+					{ "caption": "-" }
+				]
+			},
+			{ "caption": "-" }
+		]
+	}
+]

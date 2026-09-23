@@ -8,88 +8,88 @@
                 "children":
                 [
                     {
-                        "caption": "This file",
+                        "caption": "当前文件",
                         "children":
                         [
-                             { "caption": "Log", "command": "git_log" }
-                            ,{ "caption": "Graph", "command": "git_graph" }
+                             { "caption": "日志", "command": "git_log" }
+                            ,{ "caption": "图形", "command": "git_graph" }
                             ,{ "caption": "-" }
-                            ,{ "caption": "Diff", "command": "git_diff" }
-                            ,{ "caption": "Diff (no whitespace)", "command": "git_diff", "args": { "ignore_whitespace": true } }
-                            ,{ "caption": "DiffTool", "command": "git_raw", "args": { "command": "git difftool", "append_current_file": true, "may_change_files": false } }
+                            ,{ "caption": "差异", "command": "git_diff" }
+                            ,{ "caption": "差异（忽略空白）", "command": "git_diff", "args": { "ignore_whitespace": true } }
+                            ,{ "caption": "差异工具", "command": "git_raw", "args": { "command": "git difftool", "append_current_file": true, "may_change_files": false } }
                             ,{ "caption": "-" }
-                            ,{ "caption": "Add", "command": "git_raw", "args": { "command": "git add", "append_current_file": true } }
-                            ,{ "caption": "Add Selected Hunk", "command": "git_add_selected_hunk" }
+                            ,{ "caption": "添加", "command": "git_raw", "args": { "command": "git add", "append_current_file": true } }
+                            ,{ "caption": "添加选中块", "command": "git_add_selected_hunk" }
                             ,{ "caption": "-" }
-                            ,{ "caption": "Reset", "command": "git_raw", "args": { "command": "git reset HEAD", "append_current_file": true, "show_in": "suppress" } }
-                            ,{ "caption": "Checkout (Discard Changes)", "command": "git_raw", "args": { "command": "git checkout", "append_current_file": true } }
+                            ,{ "caption": "重置", "command": "git_raw", "args": { "command": "git reset HEAD", "append_current_file": true, "show_in": "suppress" } }
+                            ,{ "caption": "检出（放弃更改）", "command": "git_raw", "args": { "command": "git checkout", "append_current_file": true } }
                             ,{ "caption": "-" }
-                            ,{ "caption": "Quick Commit Current File", "command": "git_quick_commit" }
-                            ,{ "caption": "Commit Selected Hunk", "command": "git_commit_selected_hunk" }
+                            ,{ "caption": "快速提交当前文件", "command": "git_quick_commit" }
+                            ,{ "caption": "提交选中块", "command": "git_commit_selected_hunk" }
                             ,{ "caption": "-" }
-                            ,{ "caption": "Blame", "command": "git_blame" }
+                            ,{ "caption": "责任追溯", "command": "git_blame" }
                             ,{ "caption": "-" }
-                            ,{ "caption": "Toggle Annotations", "command": "git_toggle_annotations" }
+                            ,{ "caption": "切换标注", "command": "git_toggle_annotations" }
                         ]
                     }
                     ,{
-                        "caption": "Whole repo",
+                        "caption": "整个仓库",
                         "children":
                         [
-                             { "caption": "Log", "command": "git_log_all" }
-                            ,{ "caption": "Graph", "command": "git_graph_all" }
+                             { "caption": "日志", "command": "git_log_all" }
+                            ,{ "caption": "图形", "command": "git_graph_all" }
                             ,{ "caption": "-" }
-                            ,{ "caption": "Diff", "command": "git_diff_all" }
-                            ,{ "caption": "Diff (no whitespace)", "command": "git_diff_all", "args": { "ignore_whitespace": true } }
-                            ,{ "caption": "Diff Staged", "command": "git_diff_commit" }
-                            ,{ "caption": "Diff Staged (no whitespace)", "command": "git_diff_commit", "args": { "ignore_whitespace": true } }
-                            ,{ "caption": "Diff Tool", "command": "git_raw", "args": { "command": "git difftool", "may_change_files": false } }
-                            ,{ "caption": "Reset Hard", "command": "git_reset_hard_head" }
+                            ,{ "caption": "差异", "command": "git_diff_all" }
+                            ,{ "caption": "差异（忽略空白）", "command": "git_diff_all", "args": { "ignore_whitespace": true } }
+                            ,{ "caption": "差异（已暂存）", "command": "git_diff_commit" }
+                            ,{ "caption": "差异（已暂存，忽略空白）", "command": "git_diff_commit", "args": { "ignore_whitespace": true } }
+                            ,{ "caption": "差异工具", "command": "git_raw", "args": { "command": "git difftool", "may_change_files": false } }
+                            ,{ "caption": "强制重置", "command": "git_reset_hard_head" }
                             ,{ "caption": "-" }
-                            ,{ "caption": "Add...", "command": "git_add_choice" }
+                            ,{ "caption": "添加...", "command": "git_add_choice" }
                             ,{ "caption": "-" }
-                            ,{ "caption": "Reset", "command": "git_raw", "args": { "command": "git reset HEAD", "show_in": "suppress" } }
+                            ,{ "caption": "重置", "command": "git_raw", "args": { "command": "git reset HEAD", "show_in": "suppress" } }
                             ,{ "caption": "-" }
-                            ,{ "caption": "Commit", "command": "git_commit" }
-                            ,{ "caption": "Amend Last Commit", "command": "git_commit_amend" }
+                            ,{ "caption": "提交", "command": "git_commit" }
+                            ,{ "caption": "修订上次提交", "command": "git_commit_amend" }
                             ,{ "caption": "-" }
-                            ,{ "caption": "Open...", "command": "git_open_file" }
-                            ,{ "caption": "Open Config", "command": "git_open_config_file" }
-                            ,{ "caption": "Open Url", "command": "git_open_config_url", "args": { "url_param": "remote.origin.url" } }
+                            ,{ "caption": "打开...", "command": "git_open_file" }
+                            ,{ "caption": "打开配置", "command": "git_open_config_file" }
+                            ,{ "caption": "打开链接", "command": "git_open_config_url", "args": { "url_param": "remote.origin.url" } }
                         ]
                     }
                     ,{
-                        "caption": "Stash",
+                        "caption": "储藏",
                         "children":
                         [
-                             { "caption": "Save", "command": "git_raw", "args": { "command": "git stash", "may_change_files": true } }
-                            ,{ "caption": "Pop", "command": "git_raw", "args": { "command": "git stash pop", "may_change_files": true } }
-                            ,{ "caption": "Apply", "command": "git_stash_apply" }
-                            ,{ "caption": "Drop", "command": "git_stash_drop" }
-                            ,{ "caption": "List", "command": "git_stash_list" }
+                             { "caption": "保存", "command": "git_raw", "args": { "command": "git stash", "may_change_files": true } }
+                            ,{ "caption": "弹出", "command": "git_raw", "args": { "command": "git stash pop", "may_change_files": true } }
+                            ,{ "caption": "应用", "command": "git_stash_apply" }
+                            ,{ "caption": "删除", "command": "git_stash_drop" }
+                            ,{ "caption": "列表", "command": "git_stash_list" }
                         ]
                     }
                     ,{ "caption": "-" }
                     ,{
-                        "caption": "Flow",
+                        "caption": "流程",
                         "children":
                         [
-                            { "caption": "Feature Start", "command": "git_flow_feature_start"}
-                            ,{ "caption": "Feature Finish", "command": "git_flow_feature_finish"}
+                            { "caption": "功能开始", "command": "git_flow_feature_start"}
+                            ,{ "caption": "功能完成", "command": "git_flow_feature_finish"}
                             ,{ "caption": "-"}
-                            ,{ "caption": "Release Start", "command": "git_flow_release_start"}
-                            ,{ "caption": "Release Finish", "command": "git_flow_release_finish"}
+                            ,{ "caption": "发布开始", "command": "git_flow_release_start"}
+                            ,{ "caption": "发布完成", "command": "git_flow_release_finish"}
                             ,{ "caption": "-"}
-                            ,{ "caption": "Hotfix Start", "command": "git_flow_hotfix_start"}
-                            ,{ "caption": "Hotfix Finish", "command": "git_flow_hotfix_finish"}
+                            ,{ "caption": "热修复开始", "command": "git_flow_hotfix_start"}
+                            ,{ "caption": "热修复完成", "command": "git_flow_hotfix_finish"}
                         ]
                     }
                     ,{ "caption": "-" }
-                    ,{ "caption": "Init", "command": "git_init"}
-                    ,{ "caption": "Status...", "command": "git_status" }
-                    ,{ "caption": "Branches...", "command": "git_branch" }
-                    ,{ "caption": "Merge...", "command": "git_merge" }
-                    ,{ "caption": "See commit history...", "command": "git_commit_history"}
+                    ,{ "caption": "初始化", "command": "git_init"}
+                    ,{ "caption": "状态...", "command": "git_status" }
+                    ,{ "caption": "分支...", "command": "git_branch" }
+                    ,{ "caption": "合并...", "command": "git_merge" }
+                    ,{ "caption": "查看提交历史...", "command": "git_commit_history"}
                 ]
             }
         ]
@@ -114,12 +114,12 @@
                             {
                                 "command": "open_file",
                                 "args": {"file": "${packages}/Git/Git.sublime-settings"},
-                                "caption": "Settings – Default"
+                                "caption": "设置 – 默认"
                             },
                             {
                                 "command": "open_file",
                                 "args": {"file": "${packages}/User/Git.sublime-settings"},
-                                "caption": "Settings – User"
+                                "caption": "设置 – 用户"
                             },
                             { "caption": "-" }
                         ]

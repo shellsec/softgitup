@@ -1,0 +1,19 @@
+[
+	{ "caption": "Tệp mới", "command": "new_file_at", "args": {"dirs": []} },
+	{ "caption": "Đổi tên...", "command": "rename_path", "args": {"paths": []} },
+	{ "caption": "Xóa tệp", "command": "delete_file", "args": {"files": [], "prompt": false} },
+	{ "caption": "Mở thư mục...", "command": "open_folder", "args": {"dirs": []} },
+	{ "caption": "Mở thư mục chứa...", "command": "open_containing_folder", "args": {"files": []} },
+	{ "caption": "Sao chép đường dẫn", "command": "copy_path_sidebar", "args": {"paths": []} },
+	{ "caption": "Hiện nguồn liên kết", "command": "reveal_link_source", "args": {"dirs": []} },
+	{ "caption": "-", "id": "repo_commands" },
+	{ "caption": "Mở kho lưu trữ Git...", "command": "sublime_merge_open_repo", "args": {"paths": []}},
+	{ "caption": "Lịch sử tệp...", "command": "sublime_merge_file_history", "args": {"files": []}},
+	{ "caption": "Lịch sử thư mục...", "command": "sublime_merge_folder_history", "args": {"paths": []}},
+	{ "caption": "Đổ lỗi tệp...", "command": "sublime_merge_blame_file", "args": {"files": []}},
+	{ "caption": "-", "id": "folder_commands" },
+	{ "caption": "Thư mục mới...", "command": "new_folder", "args": {"dirs": []} },
+	{ "caption": "Xóa thư mục", "command": "delete_folder", "args": {"dirs": [], "prompt": true} },
+	{ "caption": "Tìm trong thư mục...", "command": "find_in_folder", "args": {"dirs": []} },
+	{ "caption": "-", "id": "end" }
+]

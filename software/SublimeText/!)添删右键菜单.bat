@@ -34,7 +34,7 @@ reg delete "HKCR\*\shell\Sublime Text" /f >NUL 2>NUL
 reg delete "HKLM\*\shell\Sublime Text" /f >NUL 2>NUL
 IF EXIST "%WinDir%\System32\CHOICE.exe" ( 
 ECHO.&ECHO 移除完成
-ECHO.&ECHO ghxi.com
+ECHO.&ECHO 423Down.com
 TIMEOUT /t 2 >NUL & CLS & GOTO MENU
 ) ELSE ( 
 ECHO.&ECHO 已删除，任意键返回 &PAUSE>NUL&CLS&GOTO MENU) 

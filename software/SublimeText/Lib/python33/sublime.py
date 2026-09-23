@@ -28,6 +28,11 @@ class _LogWriter(io.TextIOBase):
 sys.stdout = _LogWriter()
 sys.stderr = _LogWriter()
 
+
+class FileTooLargeError(FileNotFoundError):
+    pass
+
+
 HOVER_TEXT = 1
 HOVER_GUTTER = 2
 HOVER_MARGIN = 3
@@ -450,18 +455,18 @@ def score_selector(scope_name, selector):
     return sublime_api.score_selector(scope_name, selector)
 
 
-def load_resource(name):
-    s = sublime_api.load_resource(name)
-    if s is None:
-        raise IOError('resource "%s" not found' % name)
-    return s
+def load_resource(name, max_size=(1 << 24)):
+    r = sublime_api.load_resource(name, max_size)
+    if isinstance(r, type):
+        raise r(name)
+    return r
 
 
-def load_binary_resource(name):
-    bytes = sublime_api.load_binary_resource(name)
-    if bytes is None:
-        raise IOError('resource "%s" not found' % name)
-    return bytes
+def load_binary_resource(name, max_size=(1 << 24)):
+    r = sublime_api.load_binary_resource(name, max_size)
+    if isinstance(r, type):
+        raise r(name)
+    return r
 
 
 def find_resources(pattern):
@@ -1183,6 +1188,12 @@ class Sheet():
         else:
             return View(view_id)
 
+    def name(self):
+        return sublime_api.sheet_get_name(self.sheet_id)
+
+    def set_name(self, name):
+        sublime_api.sheet_set_name(self.sheet_id, name)
+
     def file_name(self):
         fn = sublime_api.sheet_file_name(self.sheet_id)
         if len(fn) == 0:
@@ -1212,9 +1223,6 @@ class TextSheet(Sheet):
     def __repr__(self):
         return 'TextSheet(%r)' % self.sheet_id
 
-    def set_name(self, name):
-        sublime_api.sheet_set_name(self.sheet_id, name)
-
 
 class ImageSheet(Sheet):
     def __repr__(self):
@@ -1224,9 +1232,6 @@ class ImageSheet(Sheet):
 class HtmlSheet(Sheet):
     def __repr__(self):
         return 'HtmlSheet(%r)' % self.sheet_id
-
-    def set_name(self, name):
-        sublime_api.sheet_set_name(self.sheet_id, name)
 
     def set_contents(self, contents):
         sublime_api.html_sheet_set_contents(self.sheet_id, contents)

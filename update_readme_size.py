@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""读取 software/list.txt 的统计数据，刷新 README.md / README_EN.md 中的 software/ 体积统计块。
+"""读取 software/list.txt 的统计数据，刷新 README.md / README.en.md 中的 software/ 体积统计块。
 
 由 generate_and_push.bat 在 soft_manager.py 生成 list.txt 之后调用，
 只改写 <!-- SOFTWARE_SIZE_START --> 与 <!-- SOFTWARE_SIZE_END --> 之间的内容。
@@ -101,7 +101,7 @@ def main():
     )
 
     ok = update_block(os.path.join(BASE_DIR, "README.md"), block_zh)
-    ok = update_block(os.path.join(BASE_DIR, "README_EN.md"), block_en) and ok
+    ok = update_block(os.path.join(BASE_DIR, "README.en.md"), block_en) and ok
     print("[INFO] 统计：{} 款 / {} 文件 / {}".format(total_software, files_str, size_str))
     return 0 if ok else 1
 

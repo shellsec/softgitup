@@ -32,7 +32,7 @@ class UpgradePackagesCommand(sublime_plugin.ApplicationCommand):
         if isinstance(packages, list):
 
             def worker():
-                message = 'Searching updates...'
+                message = '正在搜索更新...'
                 with ActivityIndicator(message) as progress:
                     console_write(message)
                     upgrader = PackageTaskRunner()
