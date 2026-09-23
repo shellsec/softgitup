@@ -57,7 +57,7 @@ call :summary changed_hybase_mobile_urls.txt last_diff_hybase_mobile.json hybase
 
 echo.
 echo ========== 8/12 dayanzai 系统 ==========
-echo 刷新 dayanzai / down66 系统区 URL 清单...
+echo 刷新 dayanzai / appx64 系统区 URL 清单...
 python extract_list_system_urls.py
 if errorlevel 1 echo [警告] 清单刷新失败，继续使用已有 list 文件。
 python fetch_titles.py --scope dayanzai_system --compare
@@ -71,16 +71,16 @@ if errorlevel 1 goto fail
 call :summary changed_dayanzai_mobile_urls.txt last_diff_dayanzai_mobile.json dayanzai移动
 
 echo.
-echo ========== 10/12 down66 系统 ==========
-python fetch_titles.py --scope down66_system --compare
+echo ========== 10/12 appx64 系统 ==========
+python fetch_titles.py --scope appx64_system --compare
 if errorlevel 1 goto fail
-call :summary changed_down66_system_urls.txt last_diff_down66_system.json down66系统
+call :summary changed_appx64_system_urls.txt last_diff_appx64_system.json appx64系统
 
 echo.
-echo ========== 11/12 down66 移动 ==========
-python fetch_titles.py --scope down66_mobile --compare
+echo ========== 11/12 appx64 移动 ==========
+python fetch_titles.py --scope appx64_mobile --compare
 if errorlevel 1 goto fail
-call :summary changed_down66_mobile_urls.txt last_diff_down66_mobile.json down66移动
+call :summary changed_appx64_mobile_urls.txt last_diff_appx64_mobile.json appx64移动
 
 echo.
 echo ============================================================
@@ -93,7 +93,7 @@ echo    423down  open_changed_423down.bat
 echo    7xiazai  open_changed_7xiazai.bat
 echo    hybase   open_changed_hybase.bat
 echo    dayanzai open_changed_dayanzai.bat
-echo    down66   open_changed_down66.bat
+echo    appx64   open_changed_appx64.bat
 echo.
 if exist "reports\index.html" start "" "%~dp0reports\index.html"
 pause

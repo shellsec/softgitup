@@ -50,7 +50,7 @@ A_PATTERNS: dict[str, list[str]] = {
     "SublimeText": ["sublimetext"],
     "WinRAR": ["423down.com/778", "winrar", "7xiazai.com/winrar"],
     "7-Zip": ["7-zip.org"],
-    "UltraEdit": ["uestudio", "down66.com/uestudio"],
+    "UltraEdit": ["uestudio", "appx64.com/uestudio"],
     "CrystalDiskInfo": ["423down.com/5432", "crystaldiskinfo"],
     "lx-music-desktop": [
         "lx-music-desktop",
@@ -82,7 +82,11 @@ DOMAIN_LABELS = {
     "pan.quark.cn": "quark",
     "pan.baidu.com": "baidu",
     "gitee.com": "gitee",
-    "down66.com": "down66",
+    "appx64.com": "appx64",
+    "www.appx64.com": "appx64",
+    # 兼容旧域名（站点已迁至 appx64.com）
+    "down66.com": "appx64",
+    "www.down66.com": "appx64",
 }
 
 

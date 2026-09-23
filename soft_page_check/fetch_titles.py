@@ -91,19 +91,91 @@ def latest_path(scope: str) -> Path:
     return HISTORY_DIR / f"titles_latest_{scope.upper()}.json"
 
 
+VERSION_TOKEN = re.compile(r"v\d+(?:[A-Za-z]\d*)?(?:\.\d+){0,4}|\b\d+(?:\.\d+){2,4}\b|\b\d{6,}\b", re.I)
+
+
 def looks_garbled_cjk(title: str) -> bool:
-    return "\ufffd" in (title or "")
+    """Detect CJK mojibake: U+FFFD and/or Cyrillic leftovers from GBK→UTF-8 replace."""
+    if not title:
+        return False
+    if "\ufffd" in title:
+        return True
+    cyr = sum(1 for c in title if "\u0400" <= c <= "\u04ff" or "\u0300" <= c <= "\u036f")
+    cjk = sum(1 for c in title if "\u4e00" <= c <= "\u9fff")
+    if cyr >= 2 and cjk == 0:
+        return True
+    if cyr >= 1 and cjk == 0 and ("[Windows]" in title or "[Android]" in title or "[Mac]" in title):
+        return True
+    return False
 
 
 def ascii_skeleton(title: str) -> str:
     return re.sub(r"[^A-Za-z0-9.]+", "", title or "")
 
 
-VERSION_TOKEN = re.compile(r"v?\d+(?:\.\d+){1,4}", re.I)
-
-
 def version_tokens(title: str) -> list[str]:
     return [m.group(0).lower() for m in VERSION_TOKEN.finditer(title or "")]
+
+
+def version_tokens_raw(title: str) -> list[str]:
+    return [m.group(0) for m in VERSION_TOKEN.finditer(title or "")]
+
+
+def try_mojibake_repair(title: str) -> str | None:
+    """Best-effort classic repairs (UTF-8-as-latin1/cp1252, or as GBK)."""
+    if not title or not looks_garbled_cjk(title):
+        return None
+    for enc_from in ("latin-1", "cp1252"):
+        try:
+            raw = title.encode(enc_from)
+        except UnicodeEncodeError:
+            continue
+        for enc_to in ("utf-8", "gb18030", "gbk"):
+            try:
+                fixed = raw.decode(enc_to)
+            except UnicodeDecodeError:
+                continue
+            if fixed and not looks_garbled_cjk(fixed) and fixed != title:
+                return normalize_title(fixed)
+    return None
+
+
+def reconstruct_title_from_hint(garbled: str, good: str) -> str | None:
+    """Rebuild readable old title by swapping version tokens into a good new title."""
+    if not garbled or not good or looks_garbled_cjk(good):
+        return None
+    old_v = version_tokens_raw(garbled)
+    new_v = version_tokens_raw(good)
+    if not old_v or not new_v:
+        if ascii_skeleton(garbled) == ascii_skeleton(good):
+            return normalize_title(good)
+        return None
+    # Pair shared version-token prefix even when counts differ.
+    result = good
+    for new_tok, old_tok in zip(new_v, old_v):
+        if new_tok.lower() == old_tok.lower():
+            continue
+        idx = result.lower().find(new_tok.lower())
+        if idx < 0:
+            if ascii_skeleton(garbled) == ascii_skeleton(good):
+                return normalize_title(good)
+            return None
+        result = result[:idx] + old_tok + result[idx + len(new_tok) :]
+    return normalize_title(result)
+
+
+def fix_title(title: str, hint: str | None = None) -> str:
+    """Repair a garbled title; optionally use a known-good hint (same URL / new title)."""
+    if not looks_garbled_cjk(title):
+        return title
+    repaired = try_mojibake_repair(title)
+    if repaired:
+        return repaired
+    if hint:
+        reconstructed = reconstruct_title_from_hint(title, hint)
+        if reconstructed:
+            return reconstructed
+    return title
 
 
 def encoding_only_change(old_title: str, new_title: str) -> bool:
@@ -114,7 +186,6 @@ def encoding_only_change(old_title: str, new_title: str) -> bool:
     if old_v or new_v:
         return old_v == new_v
     return True
-
 
 def should_preserve_latest(previous: dict | None, current: dict) -> bool:
     curr_ok = sum(1 for e in current.get("entries", []) if e.get("status") == "ok")
@@ -233,6 +304,79 @@ def failure_label(entry: dict) -> str:
     return entry.get("status") or "fetch_failed"
 
 
+
+def repair_stored_titles() -> int:
+    """Repair mojibake in history snapshots and last_diff_*.json. Returns fix count."""
+    fixed = 0
+
+    good_by_url: dict[str, str] = {}
+    for latest in HISTORY_DIR.glob("titles_latest_*.json"):
+        try:
+            data = json.loads(latest.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        for entry in data.get("entries", []):
+            title = entry.get("title") or ""
+            url = entry.get("url") or ""
+            if url and title and entry.get("status") == "ok" and not looks_garbled_cjk(title):
+                good_by_url[url] = title
+
+    def _fix_entry_title(entry: dict) -> bool:
+        nonlocal fixed
+        title = entry.get("title") or ""
+        url = entry.get("url") or ""
+        if not looks_garbled_cjk(title):
+            return False
+        repaired = fix_title(title, hint=good_by_url.get(url))
+        if repaired != title:
+            entry["title"] = repaired
+            fixed += 1
+            return True
+        return False
+
+    for snap in HISTORY_DIR.glob("titles_*.json"):
+        try:
+            data = json.loads(snap.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        changed = False
+        for entry in data.get("entries", []):
+            if _fix_entry_title(entry):
+                changed = True
+        if changed:
+            snap.write_text(json.dumps(data, ensure_ascii=False, indent=2) + chr(10), encoding="utf-8")
+
+    for diff_path in REPORTS_DIR.glob("last_diff_*.json"):
+        try:
+            data = json.loads(diff_path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        changed = False
+        for key in ("title_changed", "recovered"):
+            for item in data.get(key) or []:
+                old = item.get("old") or ""
+                new = item.get("new") or ""
+                url = item.get("url") or ""
+                if looks_garbled_cjk(old):
+                    hint = new if new and not looks_garbled_cjk(new) else good_by_url.get(url)
+                    repaired = fix_title(old, hint=hint)
+                    if repaired != old:
+                        item["old"] = repaired
+                        fixed += 1
+                        changed = True
+                if looks_garbled_cjk(new):
+                    repaired = fix_title(new, hint=good_by_url.get(url))
+                    if repaired != new:
+                        item["new"] = repaired
+                        fixed += 1
+                        changed = True
+        if changed:
+            diff_path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + chr(10), encoding="utf-8")
+
+    return fixed
+
+
+
 def compare(previous: dict, current: dict) -> dict:
     prev_map = {e["url"]: e for e in previous.get("entries", [])}
     curr_map = {e["url"]: e for e in current.get("entries", [])}
@@ -261,9 +405,19 @@ def compare(previous: dict, current: dict) -> dict:
                 }
             )
         elif normalize_title(prev.get("title", "")) != normalize_title(entry.get("title", "")):
-            old_title = prev.get("title", "")
+            raw_old = prev.get("title", "")
             new_title = entry.get("title", "")
-            if encoding_only_change(old_title, new_title):
+            old_title = fix_title(raw_old, hint=new_title)
+            if normalize_title(old_title) == normalize_title(new_title):
+                recovered.append(
+                    {
+                        "url": url,
+                        "old": old_title,
+                        "new": new_title,
+                        **pick_meta(entry),
+                    }
+                )
+            elif encoding_only_change(raw_old, new_title):
                 recovered.append(
                     {
                         "url": url,
@@ -526,7 +680,7 @@ def main() -> int:
         "--scope",
         choices=sorted(set(all_scopes)),
         default="a",
-        help="list scope 按系统/移动拆分；hybase/dayanzai/down66/7xiazai 为旧名（依次跑 system+mobile）",
+        help="list scope 按系统/移动拆分；hybase/dayanzai/appx64/down66/7xiazai 为旧名（依次跑 system+mobile；down66=appx64 别名）",
     )
     parser.add_argument("--compare", action="store_true", help="与上次同范围快照比对")
     args = parser.parse_args()

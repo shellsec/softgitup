@@ -29,8 +29,8 @@ For the latest curated software list and notes, see [`Lastb_soft_version.txt`](L
 
 <!-- SOFTWARE_SIZE_START -->
 > 📦 **`software/` size stats** (auto-refreshed by `generate_and_push.bat`):
-> **21** packages, **4,563** files, **1.66 GB** total; generated at 2026-09-23 17:09.
-> Top 5 by size: system_good (729.6 MB), PotPlayer (253.1 MB), UltraEdit (202.3 MB), SublimeText (78.4 MB), WiseCare365 (74.3 MB).
+> **21** packages, **4,558** files, **1.66 GB** total; generated at 2026-09-23 18:23.
+> Top 5 by size: system_good (730.0 MB), PotPlayer (253.1 MB), UltraEdit (202.3 MB), SublimeText (78.4 MB), WiseCare365 (74.3 MB).
 <!-- SOFTWARE_SIZE_END -->
 
 **Maintainer page check** (optional — `software/` works fine without updates): see [`soft_page_check/`](soft_page_check/README.md). Run `monthly_sop.bat` to compare titles; open-source installs can use `monthly_a_download_soft_github.bat`, then publish after replacing under `software/`.
@@ -325,7 +325,7 @@ python sync_software.py
 | **Board** | [`soft_page_check/open_monthly_a.bat`](soft_page_check/open_monthly_a.bat) | `reports/monthly_a.html`: old→new + OSS downloadable list |
 | **OSS installs** | [`soft_page_check/monthly_a_download_soft_github.bat`](soft_page_check/monthly_a_download_soft_github.bat) | Download only (no install); clears then writes `gh-release-fetch/windows/` (gitignored) |
 | **~Quarterly** | [`soft_page_check/monthly_check_full.bat`](soft_page_check/monthly_check_full.bat) **twice** | Full report: A + install list + 423down + 7xiazai + list sites |
-| **List sites (optional)** | [`soft_page_check/monthly_check_list.bat`](soft_page_check/monthly_check_list.bat) | hybase / dayanzai / down66 only (`list/*_urls.txt`) |
+| **List sites (optional)** | [`soft_page_check/monthly_check_list.bat`](soft_page_check/monthly_check_list.bat) | hybase / dayanzai / appx64 only (`list/*_urls.txt`) |
 | **If changed** | Open `soft_page_check/reports/monthly_a.html` / `index.html` | Cracked / mirror / cloud links — download manually |
 | **To update** | Replace under `software/` | Packages land in `software/gh-release-fetch/windows/`; or `run_update.bat` |
 | **Publish** | `generate_and_push.bat` at repo root | Regenerates `list.txt` and pushes |

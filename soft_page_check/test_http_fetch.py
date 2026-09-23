@@ -5,7 +5,7 @@ import unittest
 from unittest.mock import patch
 from extract_7xiazai_pages import merge_discovered
 from extract_list_system_urls import crawl_pages, last_page_hint
-from fetch_titles import encoding_only_change, looks_garbled_cjk, should_preserve_latest
+from fetch_titles import encoding_only_change, looks_garbled_cjk, should_preserve_latest, fix_title
 from http_fetch import FetchError, decode_html, is_cloudflare_challenge
 
 
@@ -91,6 +91,19 @@ class HttpFetchTests(unittest.TestCase):
         body = b"<!DOCTYPE html><title>Just a moment...</title>challenges.cloudflare"
         headers = FakeHeaders({"Server": "cloudflare"})
         self.assertTrue(is_cloudflare_challenge(403, headers, body))
+
+
+    def test_fix_title_reconstructs_version(self) -> None:
+        old = "[Windows] �� Escrcpy v2.10.2 � - �"
+        new = "[Windows] 一键手机电脑同屏神器 Escrcpy v3.2.0 便携版 - 黑域基地"
+        fixed = fix_title(old, hint=new)
+        self.assertIn("Escrcpy v2.10.2", fixed)
+        self.assertIn("一键", fixed)
+        self.assertFalse(looks_garbled_cjk(fixed))
+
+    def test_decode_scores_gbk_page(self) -> None:
+        raw = "黑域基地".encode("gb18030")
+        self.assertIn("黑域", decode_html(raw))
 
 
 if __name__ == "__main__":

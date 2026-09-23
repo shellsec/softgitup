@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-08-24 11:02:39",
+  "built_at": "2026-09-23 17:13:50",
   "sync_dirs": [
     "WinMemoryCleaner",
     "NetTime",
@@ -24,9 +24,9 @@
     "gh-release-fetch"
   ],
   "stats": {
-    "total_pages": 178,
-    "tier_a_pages": 45,
-    "tier_b_pages": 133,
+    "total_pages": 200,
+    "tier_a_pages": 46,
+    "tier_b_pages": 154,
     "no_url_sync_dirs": [
       "Chrome",
       "notepad--",
@@ -91,7 +91,7 @@
       "https://7-zip.org/download.html"
     ],
     "UltraEdit": [
-      "https://down66.com/uestudio"
+      "https://appx64.com/uestudio"
     ],
     "CrystalDiskInfo": [
       "https://www.423down.com/5432.html"
@@ -104,6 +104,7 @@
       "https://github.com/yoyodadada/lx-music-source"
     ],
     "typora": [
+      "https://github.com/obgnail/typora_plugin",
       "https://typora.io/releases/all",
       "https://wwt.lanzouj.com/b03v5h3sd",
       "https://www.423down.com/15527.html"
@@ -167,6 +168,12 @@
       "domain": "anytxt.net"
     },
     {
+      "url": "https://apps.apple.com/cn/app/汽水音乐-抖音音乐版/id1605585211",
+      "tier": "B",
+      "software": [],
+      "domain": "apps.apple.com"
+    },
+    {
       "url": "https://appx64.lanzout.com/b546490",
       "tier": "B",
       "software": [],
@@ -215,24 +222,30 @@
       "domain": "developer.microsoft.com"
     },
     {
-      "url": "https://down66.com/diskgenius",
+      "url": "https://doc.natfrp.com/launcher/usage.html",
       "tier": "B",
       "software": [],
-      "domain": "down66"
+      "domain": "doc.natfrp.com"
     },
     {
-      "url": "https://down66.com/duplicatecleaner",
+      "url": "https://appx64.com/diskgenius",
       "tier": "B",
       "software": [],
-      "domain": "down66"
+      "domain": "appx64"
     },
     {
-      "url": "https://down66.com/uestudio",
+      "url": "https://appx64.com/duplicatecleaner",
+      "tier": "B",
+      "software": [],
+      "domain": "appx64"
+    },
+    {
+      "url": "https://appx64.com/uestudio",
       "tier": "A",
       "software": [
         "UltraEdit"
       ],
-      "domain": "down66"
+      "domain": "appx64"
     },
     {
       "url": "https://fastcopy.net.cn/",
@@ -265,7 +278,7 @@
       "domain": "folivora.ai"
     },
     {
-      "url": "https://geekuninstaller.com/download?version=1.5.3.170",
+      "url": "https://geekuninstaller.com/download",
       "tier": "B",
       "software": [],
       "domain": "geekuninstaller.com"
@@ -329,6 +342,12 @@
       "domain": "github"
     },
     {
+      "url": "https://github.com/XCQ0607/lxserver",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
       "url": "https://github.com/XMuli/SunnyCapturer/releases",
       "tier": "B",
       "software": [],
@@ -355,6 +374,12 @@
       "domain": "github"
     },
     {
+      "url": "https://github.com/cdyUuu/lx-music-xinghai-source",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
       "url": "https://github.com/choyy/VirtualDesktopSwitcher",
       "tier": "A",
       "software": [
@@ -369,6 +394,12 @@
       "domain": "github"
     },
     {
+      "url": "https://github.com/fatedier/frp",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
       "url": "https://github.com/gaboolic/moqi-im-windows",
       "tier": "B",
       "software": [],
@@ -376,6 +407,12 @@
     },
     {
       "url": "https://github.com/gaboolic/rime-frost",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/ginuerzh/gost",
       "tier": "B",
       "software": [],
       "domain": "github"
@@ -411,6 +448,12 @@
       "domain": "github"
     },
     {
+      "url": "https://github.com/koho/frpmgr",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
       "url": "https://github.com/lyswhut/lx-music-desktop/releases",
       "tier": "A",
       "software": [
@@ -427,6 +470,12 @@
       "domain": "github"
     },
     {
+      "url": "https://github.com/marktext/marktext",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
       "url": "https://github.com/microsoft/PowerToys",
       "tier": "B",
       "software": [],
@@ -436,6 +485,14 @@
       "url": "https://github.com/modelscope/FunASR",
       "tier": "B",
       "software": [],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/obgnail/typora_plugin",
+      "tier": "A",
+      "software": [
+        "typora"
+      ],
       "domain": "github"
     },
     {
@@ -497,6 +554,12 @@
       "domain": "github"
     },
     {
+      "url": "https://github.com/shellsec/lxpy",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
       "url": "https://github.com/super-productivity/super-productivity",
       "tier": "B",
       "software": [],
@@ -549,10 +612,40 @@
       "domain": "hashcat.net"
     },
     {
+      "url": "https://i.webos.im/",
+      "tier": "B",
+      "software": [],
+      "domain": "i.webos.im"
+    },
+    {
+      "url": "https://ios.25pan.com/",
+      "tier": "B",
+      "software": [],
+      "domain": "ios.25pan.com"
+    },
+    {
+      "url": "https://ios.25pan.com/music",
+      "tier": "B",
+      "software": [],
+      "domain": "ios.25pan.com"
+    },
+    {
       "url": "https://karabiner-elements.pqrs.org/",
       "tier": "B",
       "software": [],
       "domain": "karabiner-elements.pqrs.org"
+    },
+    {
+      "url": "https://m.uzz.me/",
+      "tier": "B",
+      "software": [],
+      "domain": "m.uzz.me"
+    },
+    {
+      "url": "https://marktext.me/",
+      "tier": "B",
+      "software": [],
+      "domain": "marktext.me"
     },
     {
       "url": "https://masuit.org/1924?t=0HNIV93LNR9TK",
@@ -571,6 +664,18 @@
       "tier": "B",
       "software": [],
       "domain": "moba-xterm-keygen.vercel.app"
+    },
+    {
+      "url": "https://music.douyin.com",
+      "tier": "B",
+      "software": [],
+      "domain": "music.douyin.com"
+    },
+    {
+      "url": "https://music.migu.cn",
+      "tier": "B",
+      "software": [],
+      "domain": "music.migu.cn"
     },
     {
       "url": "https://ollama.com/download",
@@ -653,6 +758,12 @@
       "tier": "B",
       "software": [],
       "domain": "support.microsoft.com"
+    },
+    {
+      "url": "https://tfapps.store/?ref=AJMKRY5E",
+      "tier": "B",
+      "software": [],
+      "domain": "tfapps.store"
     },
     {
       "url": "https://typora.io/releases/all",
@@ -1019,6 +1130,12 @@
       "domain": "ghxi"
     },
     {
+      "url": "https://www.ghxi.com/wx20260824.html",
+      "tier": "B",
+      "software": [],
+      "domain": "ghxi"
+    },
+    {
       "url": "https://www.ghxi.com/yxkhj.html",
       "tier": "B",
       "software": [],
@@ -1119,18 +1236,6 @@
       "domain": "www.kmplayer.com"
     },
     {
-      "url": "https://www.lanzouo.com/b0cvr5gsf",
-      "tier": "B",
-      "software": [],
-      "domain": "lanzou"
-    },
-    {
-      "url": "https://www.lanzout.com/b481240",
-      "tier": "B",
-      "software": [],
-      "domain": "lanzou"
-    },
-    {
       "url": "https://www.lanzout.com/b554791",
       "tier": "B",
       "software": [],
@@ -1153,6 +1258,18 @@
       "tier": "B",
       "software": [],
       "domain": "www.mythicsoft.com"
+    },
+    {
+      "url": "https://www.natfrp.com",
+      "tier": "B",
+      "software": [],
+      "domain": "www.natfrp.com"
+    },
+    {
+      "url": "https://www.natfrp.com/user/",
+      "tier": "B",
+      "software": [],
+      "domain": "www.natfrp.com"
     },
     {
       "url": "https://www.openwall.com/john/",
@@ -1185,6 +1302,12 @@
       "domain": "www.passware.com"
     },
     {
+      "url": "https://www.pejdw.com/app/shipin/",
+      "tier": "B",
+      "software": [],
+      "domain": "www.pejdw.com"
+    },
+    {
       "url": "https://www.python.org/downloads/release/python-31114/",
       "tier": "B",
       "software": [],
@@ -1195,6 +1318,12 @@
       "tier": "B",
       "software": [],
       "domain": "www.python.org"
+    },
+    {
+      "url": "https://www.qishui.com",
+      "tier": "B",
+      "software": [],
+      "domain": "www.qishui.com"
     },
     {
       "url": "https://www.snipaste.com/index.html",
@@ -1273,6 +1402,12 @@
       "tier": "B",
       "software": [],
       "domain": "xnee.wordpress.com"
+    },
+    {
+      "url": "https://zrcdy.dpdns.org/lx/xinghai-music-sourcev2.3.13.js",
+      "tier": "B",
+      "software": [],
+      "domain": "zrcdy.dpdns.org"
     }
   ]
 }

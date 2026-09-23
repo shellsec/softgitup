@@ -23,11 +23,11 @@ LIST_SITE_GROUPS: list[dict] = [
         "scopes": ["dayanzai_system", "dayanzai_mobile"],
     },
     {
-        "id": "down66",
-        "title": "down66",
-        "desc": "软仓 · PC 与 Android app 分开比对",
+        "id": "appx64",
+        "title": "appx64",
+        "desc": "软仓（原 down66.com，现 appx64.com）· PC 与 Android app 分开比对",
         "accent": "#ca8a04",
-        "scopes": ["down66_system", "down66_mobile"],
+        "scopes": ["appx64_system", "appx64_mobile"],
     },
     {
         "id": "7xiazai",
@@ -79,23 +79,23 @@ LIST_SCOPE_DEFS: dict[str, dict] = {
         "accent": "#ec4899",
         "optional": False,
     },
-    "down66_system": {
-        "url_file": LIST_DIR / "down66_system_urls.txt",
-        "hint": "list/down66_system_urls.txt",
-        "site": "down66",
+    "appx64_system": {
+        "url_file": LIST_DIR / "appx64_system_urls.txt",
+        "hint": "list/appx64_system_urls.txt",
+        "site": "appx64",
         "platform": "system",
         "title": "系统",
-        "subtitle": "down66.com/pc（约 357 条，已排除 app 清单）",
+        "subtitle": "appx64.com/pc（约 357 条，已排除 app 清单）",
         "accent": "#a16207",
         "optional": False,
     },
-    "down66_mobile": {
-        "url_file": LIST_DIR / "down66_app_urls.txt",
-        "hint": "list/down66_app_urls.txt",
-        "site": "down66",
+    "appx64_mobile": {
+        "url_file": LIST_DIR / "appx64_app_urls.txt",
+        "hint": "list/appx64_app_urls.txt",
+        "site": "appx64",
         "platform": "mobile",
         "title": "移动",
-        "subtitle": "down66.com/app Android（约 226 条）",
+        "subtitle": "appx64.com/app Android（约 226 条）",
         "accent": "#eab308",
         "optional": False,
     },
@@ -122,10 +122,12 @@ LIST_SCOPE_DEFS: dict[str, dict] = {
 }
 
 # 旧 scope 名 → 拆成 system + mobile 依次执行
+# down66：站点已迁至 appx64.com，保留旧名作兼容别名
 LEGACY_LIST_SCOPES: dict[str, list[str]] = {
     "hybase": ["hybase_system", "hybase_mobile"],
     "dayanzai": ["dayanzai_system", "dayanzai_mobile"],
-    "down66": ["down66_system", "down66_mobile"],
+    "appx64": ["appx64_system", "appx64_mobile"],
+    "down66": ["appx64_system", "appx64_mobile"],
     "7xiazai": ["7xiazai_system", "7xiazai_mobile"],
 }
 

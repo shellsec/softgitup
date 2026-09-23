@@ -3,17 +3,17 @@ chcp 65001 >nul
 cd /d "%~dp0"
 
 echo ========================================
-echo list 四站快检（hybase/dayanzai/down66/7xiazai · 系统/移动）
+echo list 四站快检（hybase/dayanzai/appx64/7xiazai · 系统/移动）
 echo ========================================
 echo.
-echo 刷新 URL 清单（7xiazai + dayanzai/down66 系统区）...
+echo 刷新 URL 清单（7xiazai + dayanzai/appx64 系统区）...
 python extract_7xiazai_pages.py
 if errorlevel 1 echo [警告] 7xiazai 清单刷新失败，继续使用已有文件。
 python extract_list_system_urls.py
-if errorlevel 1 echo [警告] dayanzai/down66 清单刷新失败，继续使用已有文件。
+if errorlevel 1 echo [警告] dayanzai/appx64 清单刷新失败，继续使用已有文件。
 echo.
 
-for %%S in (hybase_system hybase_mobile dayanzai_system dayanzai_mobile down66_system down66_mobile 7xiazai_system 7xiazai_mobile) do (
+for %%S in (hybase_system hybase_mobile dayanzai_system dayanzai_mobile appx64_system appx64_mobile 7xiazai_system 7xiazai_mobile) do (
     echo ========== %%S ==========
     python fetch_titles.py --scope %%S --compare
     if errorlevel 1 goto fail

@@ -98,8 +98,11 @@ def _render_changed_cards(items: list[dict], scope_id: str) -> str:
     blocks = []
     for i, item in enumerate(items):
         url = item.get("url", "")
-        old = html.escape(str(item.get("old", "")))
-        new = html.escape(str(item.get("new", "")))
+        from fetch_titles import fix_title
+        raw_old = str(item.get("old", ""))
+        raw_new = str(item.get("new", ""))
+        old = html.escape(fix_title(raw_old, hint=raw_new))
+        new = html.escape(raw_new)
         sw = item.get("software") or []
         tags = "".join(f'<span class="tag">{html.escape(s)}</span>' for s in sw)
         url_e = html.escape(url)
@@ -527,7 +530,7 @@ def build_index_html() -> Path:
       <a href="#site-7xiazai">7xiazai</a>
       <a href="#site-hybase">hybase</a>
       <a href="#site-dayanzai">dayanzai</a>
-      <a href="#site-down66">down66</a>
+      <a href="#site-appx64">appx64</a>
     </nav>
     {sections}
     <footer>soft_page_check/reports/index.html · 重新运行 monthly_check.bat 后刷新</footer>
@@ -600,6 +603,10 @@ def save_diff(scope: str, diff: dict, snapshot_path: Path) -> None:
 
 
 def main() -> None:
+    from fetch_titles import repair_stored_titles
+    n = repair_stored_titles()
+    if n:
+        print(f"已修复历史/diff 乱码标题: {n} 处")
     path = build_index_html()
     print(f"报告页: {path}")
 

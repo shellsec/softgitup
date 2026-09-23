@@ -58,7 +58,27 @@ def is_cloudflare_challenge(status: int | None, headers, body: bytes = b"") -> b
     return False
 
 
+def _normalize_charset(name: str | None) -> str:
+    enc = (name or "").strip().lower().replace("_", "-")
+    if enc in {"gbk", "gb2312", "gb-2312"}:
+        return "gb18030"
+    return enc
+
+
+def _decode_score(text: str) -> tuple[int, int, int]:
+    """Higher is better: fewer U+FFFD, more CJK, fewer Cyrillic mojibake marks."""
+    fffd = text.count("\ufffd")
+    cjk = sum(1 for c in text if "\u4e00" <= c <= "\u9fff")
+    cyr = sum(1 for c in text if "\u0400" <= c <= "\u04ff" or "\u0300" <= c <= "\u036f")
+    return (-fffd, cjk, -cyr)
+
+
 def decode_html(raw: bytes, header_charset: str | None = None) -> str:
+    """Decode HTML bytes, preferring charset that yields readable CJK over mojibake.
+
+    Historical bug: decoding GBK pages as UTF-8 with errors=replace produced titles
+    full of U+FFFD / Cyrillic lookalikes (hybase etc.). Always score candidates.
+    """
     candidates: list[str] = []
     if header_charset:
         candidates.append(header_charset)
@@ -66,20 +86,31 @@ def decode_html(raw: bytes, header_charset: str | None = None) -> str:
     if match:
         candidates.append(match.group(1).decode("ascii", errors="ignore"))
     candidates.extend(["utf-8", "gb18030"])
+
     seen: set[str] = set()
+    scored: list[tuple[tuple[int, int, int], str]] = []
     for enc in candidates:
-        enc = (enc or "").strip().lower().replace("_", "-")
+        enc = _normalize_charset(enc)
         if not enc or enc in seen:
             continue
         seen.add(enc)
-        if enc in {"gbk", "gb2312", "gb-2312"}:
-            enc = "gb18030"
         try:
-            return raw.decode(enc)
+            text = raw.decode(enc)
         except (LookupError, UnicodeDecodeError):
             continue
-    return raw.decode("utf-8", errors="replace")
+        scored.append((_decode_score(text), text))
 
+    if scored:
+        scored.sort(key=lambda item: item[0], reverse=True)
+        return scored[0][1]
+
+    # Last resort: prefer gb18030 replace (Chinese download sites) over utf-8 replace.
+    fallbacks: list[tuple[tuple[int, int, int], str]] = []
+    for enc in ("gb18030", "utf-8"):
+        text = raw.decode(enc, errors="replace")
+        fallbacks.append((_decode_score(text), text))
+    fallbacks.sort(key=lambda item: item[0], reverse=True)
+    return fallbacks[0][1]
 
 def fetch_bytes(
     url: str,

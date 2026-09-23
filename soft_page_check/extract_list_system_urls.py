@@ -1,4 +1,4 @@
-"""从 dayanzai 首页分页、down66 /pc 分页发现 PC 区 URL，写入 list/*_system_urls.txt。"""
+"""从 dayanzai 首页分页、appx64 /pc 分页发现 PC 区 URL，写入 list/*_system_urls.txt。"""
 from __future__ import annotations
 
 import re
@@ -16,6 +16,12 @@ TIMEOUT = 25
 WORKERS = 8
 HREF_PAT = re.compile(r"""href\s*=\s*['"]([^'"]+)['"]""", re.I)
 PAGES_HINT = re.compile(r"pages:\s*\d+-(\d+)", re.I)
+
+# 站点已由 down66.com 迁至 appx64.com；抓取时仍接受旧主机名，写出统一为 appx64.com
+APPX64_BASE = "https://appx64.com/"
+APPX64_HOSTS = frozenset(
+    {"appx64.com", "www.appx64.com", "down66.com", "www.down66.com"}
+)
 
 
 def fetch(url: str) -> str:
@@ -65,7 +71,7 @@ def dayanzai_article_urls(html: str) -> set[str]:
     return urls
 
 
-def down66_pc_urls(html: str) -> set[str]:
+def appx64_pc_urls(html: str) -> set[str]:
     skip = {
         "pc",
         "windows",
@@ -83,15 +89,15 @@ def down66_pc_urls(html: str) -> set[str]:
     }
     urls: set[str] = set()
     for href in HREF_PAT.findall(html):
-        u = urljoin("https://down66.com/", href.split("#")[0].strip())
+        u = urljoin(APPX64_BASE, href.split("#")[0].strip())
         parsed = urlparse(u)
         host = parsed.netloc.lower()
-        if host not in ("down66.com", "www.down66.com"):
+        if host not in APPX64_HOSTS:
             continue
         parts = [p for p in parsed.path.strip("/").split("/") if p]
         if len(parts) != 1 or parts[0] in skip:
             continue
-        urls.add(f"https://down66.com/{parts[0]}")
+        urls.add(f"https://appx64.com/{parts[0]}")
     return urls
 
 
@@ -171,27 +177,48 @@ def crawl_dayanzai_system() -> tuple[list[str], list[str]]:
     return system, header
 
 
-def crawl_down66_system() -> tuple[list[str], list[str]]:
-    out_path = LIST / "down66_system_urls.txt"
-    mobile = read_url_lines(LIST / "down66_app_urls.txt")
-    existing = read_url_lines(out_path)
+def _normalize_appx64_urls(urls: set[str]) -> set[str]:
+    """Rewrite legacy down66 hosts to appx64.com."""
+    return {
+        u.replace("https://www.down66.com/", "https://appx64.com/")
+        .replace("http://www.down66.com/", "https://appx64.com/")
+        .replace("https://down66.com/", "https://appx64.com/")
+        .replace("http://down66.com/", "https://appx64.com/")
+        .replace("https://www.appx64.com/", "https://appx64.com/")
+        .replace("http://www.appx64.com/", "https://appx64.com/")
+        .replace("http://appx64.com/", "https://appx64.com/")
+        for u in urls
+    }
+
+
+def crawl_appx64_system() -> tuple[list[str], list[str]]:
+    out_path = LIST / "appx64_system_urls.txt"
+    mobile = _normalize_appx64_urls(read_url_lines(LIST / "appx64_app_urls.txt"))
+    existing = _normalize_appx64_urls(read_url_lines(out_path))
     fallback = last_page_hint(out_path, 20)
     last = discover_last_page(
-        "https://down66.com/pc/page/{}/",
+        "https://appx64.com/pc/page/{}/",
         max_probe=80,
         fallback=fallback,
     )
-    page_urls = ["https://down66.com/pc"] + [
-        f"https://down66.com/pc/page/{p}/" for p in range(2, last + 1)
+    page_urls = ["https://appx64.com/pc"] + [
+        f"https://appx64.com/pc/page/{p}/" for p in range(2, last + 1)
     ]
-    print(f"down66 系统区分页 1-{last}（并发 {WORKERS}）...")
-    found, errors = crawl_pages(page_urls, down66_pc_urls)
+    print(f"appx64 系统区分页 1-{last}（并发 {WORKERS}）...")
+    found, errors = crawl_pages(page_urls, appx64_pc_urls)
     if errors:
         print(f"  列表页异常 {len(errors)} 个，与已有清单合并以免丢 URL")
         found |= existing
+    # Cloudflare 等全失败时，勿用极小结果覆盖已有大清单
+    if existing and len(found) < max(20, len(existing) // 5):
+        print(
+            f"  抓取结果过少（{len(found)}），保留现有 {len(existing)} 条"
+            "（常见原因：Cloudflare 人机验证）"
+        )
+        found = existing
     system = sorted(found - mobile)
     header = [
-        "# down66.com/pc 分页（排除 app 清单已有 URL）",
+        "# appx64.com/pc 分页（排除 app 清单已有 URL；原 down66.com）",
         f"# pages: 1-{last}",
         f"# total: {len(system)}",
     ]
@@ -217,7 +244,7 @@ def main() -> None:
         sys.stdout.reconfigure(encoding="utf-8")
 
     _write_or_keep("dayanzai_system", crawl_dayanzai_system, LIST / "dayanzai_system_urls.txt")
-    _write_or_keep("down66_system", crawl_down66_system, LIST / "down66_system_urls.txt")
+    _write_or_keep("appx64_system", crawl_appx64_system, LIST / "appx64_system_urls.txt")
 
 
 if __name__ == "__main__":

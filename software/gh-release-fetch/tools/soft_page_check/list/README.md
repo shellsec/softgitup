@@ -10,8 +10,8 @@
 | `hybase_mobile` | 移动 | `hybase_newlist_urls_mobile.txt` | 242 | ✅ |
 | `dayanzai_system` | 系统 | `dayanzai_system_urls.txt` | 2936 | ✅ |
 | `dayanzai_mobile` | 移动 | `dayanzai_android_urls.txt` | 262 | ✅ |
-| `down66_system` | 系统 | `down66_system_urls.txt` | 357 | ✅ |
-| `down66_mobile` | 移动 | `down66_app_urls.txt` | 226 | ✅ |
+| `appx64_system` | 系统 | `appx64_system_urls.txt` | 357 | ✅ |
+| `appx64_mobile` | 移动 | `appx64_app_urls.txt` | 226 | ✅ |
 | `7xiazai_system` | 系统 | `7xiazai_list_urls_system.txt` | 442 | ✅ |
 | `7xiazai_mobile` | 移动 | `7xiazai_list_urls_mobile.txt` | 226 | ✅ |
 | `gamer520` | 游戏 | `gamer520_urls.txt` + `gamer520_list.txt` | 首页 **50 页**（月检默认） | 可选；`search_games` 本地无匹配时 **站内搜索** |
@@ -21,7 +21,7 @@
 
 - `hybase_newlist_urls.txt` / `hybase_newlist_list.txt`（600）
 - `7xiazai_list_urls.txt` — 合并清单（extract 后按标题自动拆分）
-- `dayanzai_android_list.txt`、`down66_app_list.txt` — 标题+URL 对照
+- `dayanzai_android_list.txt`、`appx64_app_list.txt` — 标题+URL 对照
 
 ## 快检入口
 
@@ -29,7 +29,7 @@
 |--------|------|
 | `monthly_check_site.bat hybase` | hybase 系统 + 移动 |
 | `monthly_check_site.bat dayanzai` | dayanzai 系统 + 移动 |
-| `monthly_check_site.bat down66` | down66 系统 + 移动 |
+| `monthly_check_site.bat appx64` | appx64 系统 + 移动 |
 | `monthly_check_site.bat gamer520` | gamer520 近期文章 |
 | `monthly_check_site.bat macwk` | macwk Mac 软件全量 |
 | `monthly_check_list.bat` | 7xiazai + 上述三站连跑 |
@@ -56,7 +56,7 @@ python fetch_titles.py --scope hybase --compare
 python extract_list_system_urls.py
 ```
 
-也可手工编辑 `dayanzai_system_urls.txt` / `down66_system_urls.txt`，每行一个 URL（`#` 开头为注释）。
+也可手工编辑 `dayanzai_system_urls.txt` / `appx64_system_urls.txt`，每行一个 URL（`#` 开头为注释）。
 
 ## 报告页
 

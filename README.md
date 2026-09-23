@@ -28,8 +28,8 @@
 
 <!-- SOFTWARE_SIZE_START -->
 > 📦 **software/ 体积统计**（`generate_and_push.bat` 自动刷新）：
-> 共 **21** 款软件、**4,563** 个文件，合计 **1.66 GB**；统计时间 2026-09-23 17:09。
-> 体积 Top5：system_good (729.6 MB)、PotPlayer (253.1 MB)、UltraEdit (202.3 MB)、SublimeText (78.4 MB)、WiseCare365 (74.3 MB)。
+> 共 **21** 款软件、**4,558** 个文件，合计 **1.66 GB**；统计时间 2026-09-23 18:23。
+> 体积 Top5：system_good (730.0 MB)、PotPlayer (253.1 MB)、UltraEdit (202.3 MB)、SublimeText (78.4 MB)、WiseCare365 (74.3 MB)。
 <!-- SOFTWARE_SIZE_END -->
 
 **维护者月度快检**（可选，不更新 `software/` 也完全可用）：见 [`soft_page_check/`](soft_page_check/README.md) — 双击 `monthly_sop.bat` 检查标题变化；装机开源可 `monthly_a_download_soft_github.bat` 直下，其余手工更新后发布。
@@ -327,7 +327,7 @@ pyinstaller --onefile --name=sync_software --clean --noconfirm sync_software.py
 | **看工作台** | [`soft_page_check/open_monthly_a.bat`](soft_page_check/open_monthly_a.bat) | `reports/monthly_a.html`：旧→新版本 + 装机开源可直下 |
 | **装机开源** | [`soft_page_check/monthly_a_download_soft_github.bat`](soft_page_check/monthly_a_download_soft_github.bat) | 只下载不安装；先清空再拉到 `gh-release-fetch/windows/`（gitignore，不入库） |
 | **约每季度** | [`soft_page_check/monthly_check_full.bat`](soft_page_check/monthly_check_full.bat) **连跑两次** | A + 装机 + 423down + 7xiazai + list 三站全量；报告七分区均有比对 |
-| **list 三站（可选）** | [`soft_page_check/monthly_check_list.bat`](soft_page_check/monthly_check_list.bat) | 仅 hybase/dayanzai/down66（`list/*_urls.txt`） |
+| **list 三站（可选）** | [`soft_page_check/monthly_check_list.bat`](soft_page_check/monthly_check_list.bat) | 仅 hybase/dayanzai/appx64（`list/*_urls.txt`） |
 | **有变化时** | 打开 `soft_page_check/reports/monthly_a.html` / `index.html` 确认 | 423down / 网盘 / 破解版须浏览器手工下载 |
 | **确定更新** | 替换 `software/` 对应子目录 | 开源包在 `software/gh-release-fetch/windows/`；也可跑 `run_update.bat` |
 | **发布** | 根目录 `generate_and_push.bat` | 生成 `list.txt` 并 push |
