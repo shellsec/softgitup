@@ -436,5 +436,156 @@
     ],
     "releases_url": "https://bgithub.xyz/sprout2000/leafview/releases",
     "repo_path": "sprout2000/leafview"
+  },
+  {
+    "id": "tagspaces",
+    "简介": "TagSpaces（本地文件标签与素材库；Linux x86_64 AppImage）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm64",
+      ".deb",
+      ".tar.gz",
+      "win-",
+      "mac-",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "tagspaces-linux-x86_64-",
+      ".AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "aliases": [
+      "tagspaces",
+      "TagSpaces",
+      "文件标签",
+      "素材库"
+    ],
+    "releases_url": "https://bgithub.xyz/tagspaces/tagspaces/releases",
+    "repo_path": "tagspaces/tagspaces"
+  },
+  {
+    "id": "czkawka",
+    "简介": "Czkawka/Krokiet（开源重复文件清理，Linux x86_64 Krokiet）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/qarmin/czkawka/releases",
+    "repo_path": "qarmin/czkawka",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "linux_krokiet_x86_64"
+    ],
+    "href_exclude_substrings": [
+      "heif",
+      "all_backends",
+      "femtovg",
+      "vulkan",
+      "skia",
+      "arm64",
+      "cli",
+      "windows_",
+      "mac_",
+      ".zip",
+      "gui_"
+    ],
+    "windows_installer": false,
+    "download_names": [
+      "linux_krokiet_x86_64"
+    ],
+    "save_name": "linux_krokiet_x86_64",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "aliases": [
+      "Czkawka",
+      "Krokiet"
+    ]
+  },
+  {
+    "id": "nomacs",
+    "简介": "nomacs（开源图像查看器，Linux x86_64 AppImage）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/nomacs/nomacs/releases",
+    "repo_path": "nomacs/nomacs",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "nomacs-linux-x86_64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      "aarch64",
+      ".msi",
+      ".dmg",
+      ".zip",
+      "macOS",
+      "win",
+      "portable"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "download_names": [
+      "nomacs-linux-x86_64.AppImage"
+    ],
+    "save_name": "nomacs-linux-x86_64.AppImage",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "aliases": [
+      "nomacs"
+    ]
+  },
+  {
+    "id": "umi_ocr",
+    "简介": "Umi-OCR（离线开源 OCR，Linux Paddle tar.xz）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/hiroi-sora/Umi-OCR/releases",
+    "repo_path": "hiroi-sora/Umi-OCR",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Umi-OCR_Linux_Paddle_",
+      ".tar.xz"
+    ],
+    "href_exclude_substrings": [
+      ".7z.exe",
+      ".exe",
+      "Rapid",
+      "Windows",
+      ".sha"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".xz"
+    ],
+    "download_names": [
+      "Umi-OCR_Linux_Paddle_{ver}.tar.xz"
+    ],
+    "save_name": "Umi-OCR_Linux_Paddle_{ver}.tar.xz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "aliases": [
+      "Umi-OCR",
+      "Umi OCR",
+      "umiocr"
+    ]
   }
 ]

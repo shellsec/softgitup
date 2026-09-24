@@ -285,5 +285,101 @@
     ],
     "releases_url": "https://bgithub.xyz/open-telemetry/opentelemetry-collector-releases/releases",
     "repo_path": "open-telemetry/opentelemetry-collector-releases"
+  },
+  {
+    "id": "beszel",
+    "简介": "Beszel（轻量服务器监控 Hub；macOS Apple Silicon tar.gz）",
+    "分类": "可观测",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "agent",
+      "amd64"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "beszel_darwin_arm64.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "aliases": [
+      "beszel",
+      "Beszel"
+    ],
+    "releases_url": "https://bgithub.xyz/henrygd/beszel/releases",
+    "repo_path": "henrygd/beszel"
+  },
+  {
+    "id": "k6",
+    "简介": "k6（Grafana 负载测试 CLI；macOS Apple Silicon zip）",
+    "分类": "可观测",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "amd64",
+      "linux",
+      "windows"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "k6-v",
+      "macos-arm64.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "k6",
+      "grafana k6"
+    ],
+    "releases_url": "https://bgithub.xyz/grafana/k6/releases",
+    "repo_path": "grafana/k6"
   }
 ]

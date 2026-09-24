@@ -906,5 +906,51 @@
     "url_hint": "keepass",
     "releases_url": "https://bgithub.xyz/KeePass/KeePass/releases",
     "repo_path": "KeePass/KeePass"
+  },
+  {
+    "id": "lulu",
+    "简介": "LuLu（Objective-See macOS 开源防火墙；dmg）",
+    "分类": "安全",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "LuLu_",
+      ".dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "lulu",
+      "LuLu"
+    ],
+    "releases_url": "https://bgithub.xyz/objective-see/LuLu/releases",
+    "repo_path": "objective-see/LuLu"
   }
 ]

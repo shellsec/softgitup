@@ -1,27 +1,27 @@
 {
   "schema": 1,
-  "generated_at": "2026-09-02T09:33:08Z",
+  "generated_at": "2026-09-16T23:49:42Z",
   "items": [
     {
       "id": "cursor",
-      "version": "3.18.25",
-      "version_tag": "v3.18.25",
+      "version": "3.21.4",
+      "version_tag": "v3.21.4",
       "downloads": {
         "windows": {
-          "url": "https://downloads.cursor.com/production/280eca2911f1774689696e5f1efa5a4f97a87af3/win32/x64/user-setup/CursorUserSetup-x64-3.18.25.exe",
-          "filename": "CursorUserSetup-x64-3.18.25.exe"
+          "url": "https://downloads.cursor.com/production/6294c6f4f2868bf530f04ea320bd44ab7ecb3492/win32/x64/user-setup/CursorUserSetup-x64-3.21.4.exe",
+          "filename": "CursorUserSetup-x64-3.21.4.exe"
         },
         "darwin": {
-          "url": "https://downloads.cursor.com/production/280eca2911f1774689696e5f1efa5a4f97a87af3/darwin/universal/Cursor-darwin-universal.dmg",
+          "url": "https://downloads.cursor.com/production/6294c6f4f2868bf530f04ea320bd44ab7ecb3492/darwin/universal/Cursor-darwin-universal.dmg",
           "filename": "Cursor-darwin-universal.dmg"
         },
         "linux": {
-          "url": "https://downloads.cursor.com/production/280eca2911f1774689696e5f1efa5a4f97a87af3/linux/x64/Cursor-3.18.25-x86_64.AppImage",
-          "filename": "Cursor-3.18.25-x86_64.AppImage"
+          "url": "https://downloads.cursor.com/production/6294c6f4f2868bf530f04ea320bd44ab7ecb3492/linux/x64/Cursor-3.21.4-x86_64.AppImage",
+          "filename": "Cursor-3.21.4-x86_64.AppImage"
         }
       },
-      "notes": "索引自 accesstechnology-mike/cursor-downloads。国内请用本 snapshot 覆盖安装，勿依赖应用内 Check for Updates。 commit=280eca2911f1774689696e5f1efa5a4f97a87af3",
-      "commit": "280eca2911f1774689696e5f1efa5a4f97a87af3"
+      "notes": "索引自 accesstechnology-mike/cursor-downloads。国内请用本 snapshot 覆盖安装，勿依赖应用内 Check for Updates。 commit=6294c6f4f2868bf530f04ea320bd44ab7ecb3492",
+      "commit": "6294c6f4f2868bf530f04ea320bd44ab7ecb3492"
     },
     {
       "id": "vscode",
@@ -512,24 +512,45 @@
     },
     {
       "id": "cursor_reh",
-      "version": "3.18.25",
-      "version_tag": "v3.18.25",
+      "version": "3.21.4",
+      "version_tag": "v3.21.4",
       "downloads": {
         "windows": {
-          "url": "https://downloads.cursor.com/production/280eca2911f1774689696e5f1efa5a4f97a87af3/linux/x64/cursor-reh-linux-x64.tar.gz",
+          "url": "https://downloads.cursor.com/production/6294c6f4f2868bf530f04ea320bd44ab7ecb3492/linux/x64/cursor-reh-linux-x64.tar.gz",
           "filename": "cursor-reh-linux-x64.tar.gz"
         },
         "darwin": {
-          "url": "https://downloads.cursor.com/production/280eca2911f1774689696e5f1efa5a4f97a87af3/linux/x64/cursor-reh-linux-x64.tar.gz",
+          "url": "https://downloads.cursor.com/production/6294c6f4f2868bf530f04ea320bd44ab7ecb3492/linux/x64/cursor-reh-linux-x64.tar.gz",
           "filename": "cursor-reh-linux-x64.tar.gz"
         },
         "linux": {
-          "url": "https://downloads.cursor.com/production/280eca2911f1774689696e5f1efa5a4f97a87af3/linux/x64/cursor-reh-linux-x64.tar.gz",
+          "url": "https://downloads.cursor.com/production/6294c6f4f2868bf530f04ea320bd44ab7ecb3492/linux/x64/cursor-reh-linux-x64.tar.gz",
           "filename": "cursor-reh-linux-x64.tar.gz"
         }
       },
-      "notes": "Cursor Remote-SSH 服务端 linux-x64。 解压到 ~/.cursor-server/bin/linux-x64/280eca2911f1774689696e5f1efa5a4f97a87af3/ ，再 touch 0。 国内服务器访问不了 downloads.cursor.com 时：本机 snapshot 下载后 scp 上去。",
-      "commit": "280eca2911f1774689696e5f1efa5a4f97a87af3"
+      "notes": "Cursor Remote-SSH 服务端 linux-x64。 解压到 ~/.cursor-server/bin/linux-x64/6294c6f4f2868bf530f04ea320bd44ab7ecb3492/ ，再 touch 0。 国内服务器访问不了 downloads.cursor.com 时：本机 snapshot 下载后 scp 上去。",
+      "commit": "6294c6f4f2868bf530f04ea320bd44ab7ecb3492"
+    },
+    {
+      "id": "grok_bot",
+      "version": "0.47.0",
+      "version_tag": "v0.47.0",
+      "downloads": {
+        "windows": {
+          "url": "https://downloads.cursor.com/grokbot/stable/win32-x64/0.47.0/Grok_Bot_0.47.0_Setup.exe",
+          "filename": "Grok_Bot_0.47.0_Setup.exe"
+        },
+        "darwin": {
+          "url": "https://downloads.cursor.com/grokbot/stable/darwin-arm64/0.47.0/Grok_Bot_0.47.0.dmg",
+          "filename": "Grok_Bot_0.47.0.dmg"
+        },
+        "linux": {
+          "url": "https://downloads.cursor.com/grokbot/stable/c1e7d7a46549956d25f53e9c0b9f59666e03aa3a/linux/x64/Grok_Bot_0.47.0.AppImage",
+          "filename": "Grok_Bot_0.47.0.AppImage"
+        }
+      },
+      "notes": "Cursor 官网 Grok Bot 桌面端（不是 Cursor IDE，也不是 grok.com 网页）。 直链来自 https://cursor.com/cn/download/bot 页内 downloads.cursor.com/grokbot/ ； 勿套 gh-proxy，勿把 /download/bot?download=1 当安装包。 commit=c1e7d7a46549956d25f53e9c0b9f59666e03aa3a",
+      "commit": "c1e7d7a46549956d25f53e9c0b9f59666e03aa3a"
     }
   ],
   "errors": []

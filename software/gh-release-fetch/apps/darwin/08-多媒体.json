@@ -730,7 +730,7 @@
   },
   {
     "id": "lx_music_desktop",
-    "简介": "洛雪音乐助手（桌面版）",
+    "简介": "洛雪音乐助手（桌面版；macOS Apple Silicon dmg）",
     "分类": "多媒体",
     "enabled": false,
     "prefer_api_assets": true,
@@ -741,26 +741,27 @@
     "run_installer": false,
     "use_download_filename": true,
     "href_exclude_substrings": [
-      "arm",
-      "macos",
+      "x64",
+      "win",
       "linux",
       "ia32",
+      "blockmap",
       "source"
     ],
     "installer_markers_match_all": true,
     "installer_markers": [
-      "win_x64"
+      "lx-music-desktop-",
+      "arm64.dmg"
     ],
     "installer_extensions": [
-      ".7z",
-      ".exe"
+      ".dmg"
     ],
     "releases_url": "https://bgithub.xyz/lyswhut/lx-music-desktop/releases",
     "repo_path": "lyswhut/lx-music-desktop"
   },
   {
     "id": "listen1_desktop",
-    "简介": "Listen 1（聚合音乐播放器）",
+    "简介": "Listen 1（聚合音乐播放器；macOS Apple Silicon dmg）",
     "分类": "多媒体",
     "enabled": false,
     "prefer_api_assets": true,
@@ -782,7 +783,20 @@
       ".json",
       ".txt",
       ".md",
-      "checksum"
+      "checksum",
+      "linux",
+      "win",
+      "x64",
+      "universal",
+      "blockmap"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "listen1_",
+      "mac_arm64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
     ],
     "releases_url": "https://bgithub.xyz/listen1/listen1_desktop/releases",
     "repo_path": "listen1/listen1_desktop"
@@ -892,5 +906,201 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "vutronmusic",
+    "简介": "VutronMusic（第三方网易云音乐播放器；macOS Apple Silicon dmg）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x64",
+      "linux",
+      "win",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "VutronMusic-",
+      "_mac_arm64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "vutronmusic",
+      "VutronMusic"
+    ],
+    "releases_url": "https://bgithub.xyz/stark81/VutronMusic/releases",
+    "repo_path": "stark81/VutronMusic"
+  },
+  {
+    "id": "psst",
+    "简介": "Psst（轻量 Spotify 客户端；macOS dmg）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "linux",
+      "exe",
+      ".deb"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Psst.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "psst",
+      "Psst"
+    ],
+    "releases_url": "https://bgithub.xyz/jpochyla/psst/releases",
+    "repo_path": "jpochyla/psst"
+  },
+  {
+    "id": "yesplaymusic",
+    "简介": "YesPlayMusic（第三方网易云音乐播放器；macOS Apple Silicon dmg）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "universal",
+      "x64",
+      "windows",
+      "linux",
+      ".tar.gz"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "YesPlayMusic-mac-",
+      "-arm64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "yesplaymusic",
+      "YesPlayMusic"
+    ],
+    "releases_url": "https://bgithub.xyz/qier222/YesPlayMusic/releases",
+    "repo_path": "qier222/YesPlayMusic"
+  },
+  {
+    "id": "quickrecorder",
+    "简介": "QuickRecorder（开源轻量屏幕录制；dmg）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      ".delta"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "QuickRecorder_v",
+      ".dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "quickrecorder",
+      "QuickRecorder"
+    ],
+    "releases_url": "https://bgithub.xyz/lihaoyun6/QuickRecorder/releases",
+    "repo_path": "lihaoyun6/QuickRecorder"
   }
 ]

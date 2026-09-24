@@ -282,5 +282,105 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "backrest",
+    "简介": "Backrest（restic Web UI 备份；macOS Apple Silicon tar.gz）",
+    "分类": "备份",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x86_64",
+      "Linux",
+      "Windows",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "backrest_Darwin_arm64.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "aliases": [
+      "backrest",
+      "Backrest",
+      "restic ui"
+    ],
+    "releases_url": "https://bgithub.xyz/garethgeorge/backrest/releases",
+    "repo_path": "garethgeorge/backrest"
+  },
+  {
+    "id": "vorta",
+    "简介": "Vorta（Borg 备份图形前端；macOS Apple Silicon dmg）",
+    "分类": "备份",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "intel",
+      "x86"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Vorta-",
+      "-arm.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "vorta",
+      "Vorta",
+      "borg gui",
+      "borg备份"
+    ],
+    "releases_url": "https://bgithub.xyz/borgbase/vorta/releases",
+    "repo_path": "borgbase/vorta"
   }
 ]

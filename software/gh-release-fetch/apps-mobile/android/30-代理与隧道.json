@@ -261,5 +261,45 @@
     "save_name": "clash_for_android.apk",
     "releases_url": "https://bgithub.xyz/Kr328/ClashForAndroid/releases",
     "repo_path": "Kr328/ClashForAndroid"
+  },
+  {
+    "id": "karing",
+    "简介": "Karing（多协议代理客户端；Android arm64-v8a APK）",
+    "分类": "代理与隧道",
+    "aliases": [
+      "karing",
+      "Karing"
+    ],
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "karing_",
+      "android_arm64-v8a.apk"
+    ],
+    "href_exclude_substrings": [
+      "armeabi",
+      "android_arm.apk",
+      "windows",
+      "linux",
+      "macos",
+      "debug",
+      ".aab",
+      "unsigned",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "karing.apk",
+    "releases_url": "https://bgithub.xyz/KaringX/Karing/releases",
+    "repo_path": "KaringX/Karing"
   }
 ]

@@ -102,5 +102,24 @@
     "save_name": "notally.apk",
     "releases_url": "https://bgithub.xyz/c0de517/notally/releases",
     "repo_path": "c0de517/notally"
+  },
+  {
+    "id": "youdao_note_android",
+    "简介": "有道云笔记 Android（lookup 打开官网）",
+    "分类": "笔记",
+    "aliases": [
+      "youdao_note",
+      "有道云笔记",
+      "有道笔记",
+      "网易有道"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://note.youdao.com/note-download/",
+    "url_hint": "youdao_note 有道云笔记 有道笔记 网易有道",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

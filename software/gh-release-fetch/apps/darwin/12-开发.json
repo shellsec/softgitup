@@ -1130,5 +1130,108 @@
     ],
     "releases_url": "https://bgithub.xyz/zangjiucheng/GitCat/releases",
     "repo_path": "zangjiucheng/GitCat"
+  },
+  {
+    "id": "flyenv",
+    "简介": "FlyEnv（原 PhpWebStudy，本地开发环境；macOS Apple Silicon dmg）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x64",
+      "windows",
+      "linux",
+      ".zip",
+      ".deb",
+      ".rpm"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "FlyEnv-",
+      "-arm64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "flyenv",
+      "FlyEnv",
+      "PhpWebStudy"
+    ],
+    "releases_url": "https://bgithub.xyz/xpf0000/PhpWebStudy/releases",
+    "repo_path": "xpf0000/PhpWebStudy"
+  },
+  {
+    "id": "yaak",
+    "简介": "Yaak（本地优先 API 客户端；macOS Apple Silicon dmg）",
+    "分类": "开发",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x64",
+      ".app.tar.gz",
+      "windows",
+      "linux"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Yaak_",
+      "_aarch64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "yaak",
+      "Yaak"
+    ],
+    "releases_url": "https://bgithub.xyz/mountain-loop/yaak/releases",
+    "repo_path": "mountain-loop/yaak"
   }
 ]

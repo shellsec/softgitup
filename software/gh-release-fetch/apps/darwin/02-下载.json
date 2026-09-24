@@ -749,5 +749,109 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "ab_download_manager",
+    "简介": "ABDownloadManager（开源跨平台下载管理器；macOS Apple Silicon dmg）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x64",
+      "linux",
+      "windows",
+      ".tar.gz",
+      ".md5"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ABDownloadManager_",
+      "mac_arm64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "abdownloadmanager",
+      "ABDownloadManager",
+      "AB Download Manager"
+    ],
+    "releases_url": "https://bgithub.xyz/amir1376/ab-download-manager/releases",
+    "repo_path": "amir1376/ab-download-manager"
+  },
+  {
+    "id": "n_m3u8dl_re",
+    "简介": "N_m3u8DL-RE（nilaoda m3u8/流媒体下载；macOS Apple Silicon tar.gz）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "osx-x64",
+      "linux",
+      "win-",
+      "android"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "N_m3u8DL-RE_",
+      "osx-arm64_",
+      ".tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "aliases": [
+      "n_m3u8dl_re",
+      "N_m3u8DL-RE",
+      "m3u8dl-re"
+    ],
+    "releases_url": "https://bgithub.xyz/nilaoda/N_m3u8DL-RE/releases",
+    "repo_path": "nilaoda/N_m3u8DL-RE"
   }
 ]

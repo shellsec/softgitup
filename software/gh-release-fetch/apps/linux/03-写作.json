@@ -372,5 +372,252 @@
     "open_page_url": "https://github.com/zotero/zotero/releases",
     "releases_url": "https://bgithub.xyz/zotero/zotero/releases",
     "repo_path": "zotero/zotero"
+  },
+  {
+    "id": "novelwriter",
+    "简介": "novelWriter（开源小说/长文写作编辑器；Linux x86_64 AppImage）",
+    "分类": "写作",
+    "aliases": [
+      "novelwriter",
+      "novel Writer",
+      "小说写作"
+    ],
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm64",
+      "setup.exe",
+      "flatpak",
+      "sha256",
+      ".zsync",
+      ".whl",
+      ".deb",
+      "checksum"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "novelwriter-",
+      "x86_64.AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "releases_url": "https://bgithub.xyz/saga-soft/novelWriter/releases",
+    "repo_path": "saga-soft/novelWriter"
+  },
+  {
+    "id": "readest",
+    "简介": "Readest（开源跨平台电子书阅读器；Linux amd64 AppImage）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".sig",
+      "aarch64",
+      ".deb",
+      ".rpm",
+      "setup.exe",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Readest_",
+      "amd64.AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "aliases": [
+      "readest",
+      "Readest",
+      "电子书阅读"
+    ],
+    "releases_url": "https://bgithub.xyz/readest/readest/releases",
+    "repo_path": "readest/readest"
+  },
+  {
+    "id": "foliate",
+    "简介": "Foliate（GNOME 电子书阅读器；Linux all.deb）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "tar.xz",
+      "sha256"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "foliate_",
+      "_all.deb"
+    ],
+    "installer_extensions": [
+      ".deb"
+    ],
+    "aliases": [
+      "foliate",
+      "Foliate",
+      "电子书阅读"
+    ],
+    "releases_url": "https://bgithub.xyz/johnfactotum/foliate/releases",
+    "repo_path": "johnfactotum/foliate"
+  },
+  {
+    "id": "horsemd",
+    "简介": "HorseMD（开源 Typora 平替，所见即所得 Markdown；Linux amd64 deb）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".yml",
+      ".exe",
+      ".dmg",
+      ".zip",
+      ".blockmap",
+      "mac"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "horse_",
+      "_amd64.deb"
+    ],
+    "installer_extensions": [
+      ".deb"
+    ],
+    "aliases": [
+      "horsemd",
+      "HorseMD",
+      "horseMD",
+      "Typora平替"
+    ],
+    "releases_url": "https://bgithub.xyz/BND-1/horseMD/releases",
+    "repo_path": "BND-1/horseMD"
+  },
+  {
+    "id": "youdao_dict",
+    "简介": "有道词典（网易有道；官网分发，lookup 打开下载页）",
+    "分类": "写作",
+    "aliases": [
+      "youdao_dict",
+      "有道词典",
+      "有道",
+      "网易有道"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://cidian.youdao.com/",
+    "url_hint": "youdao_dict 有道词典 有道 网易有道",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "solomd",
+    "简介": "SoloMD（开源 Markdown 编辑器，Linux amd64 AppImage）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/zhitongblog/solomd/releases",
+    "repo_path": "zhitongblog/solomd",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "SoloMD_",
+      "_amd64.AppImage"
+    ],
+    "href_exclude_substrings": [
+      ".msi",
+      ".exe",
+      ".dmg",
+      ".deb",
+      ".rpm",
+      ".apk",
+      "aarch64",
+      "arm64",
+      "portable",
+      "mcp-",
+      "clipper",
+      "SHA256"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "download_names": [
+      "SoloMD_{ver}_amd64.AppImage"
+    ],
+    "save_name": "SoloMD_{ver}_amd64.AppImage",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "aliases": [
+      "SoloMD"
+    ]
+  },
+  {
+    "id": "vic_diary",
+    "简介": "维克日记（Markdown 日记，Linux AppImage）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/vo-soft/vic-diary-releases/releases",
+    "repo_path": "vo-soft/vic-diary-releases",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "vic-diary-",
+      ".AppImage"
+    ],
+    "href_exclude_substrings": [
+      ".blockmap",
+      ".exe",
+      ".dmg",
+      ".deb",
+      ".rpm",
+      ".zip",
+      "arm64",
+      "setup",
+      "mac"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "download_names": [
+      "vic-diary-{ver}.AppImage"
+    ],
+    "save_name": "vic-diary-{ver}.AppImage",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "aliases": [
+      "维克日记",
+      "VicDiary",
+      "vic-diary"
+    ]
   }
 ]

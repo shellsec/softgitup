@@ -31,9 +31,43 @@
   },
   {
     "id": "qownnotes",
+    "简介": "QOwnNotes（Markdown 笔记，支持 Nextcloud；macOS universal dmg，含 Apple Silicon）",
+    "分类": "笔记",
     "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
     "releases_url": "https://bgithub.xyz/pbek/QOwnNotes/releases",
-    "repo_path": "pbek/QOwnNotes"
+    "repo_path": "pbek/QOwnNotes",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "QOwnNotes.dmg"
+    ],
+    "href_exclude_substrings": [
+      "sha256",
+      "sha512",
+      "checksum",
+      "AppImage",
+      ".zip",
+      ".snap",
+      "tar.xz",
+      "Qt5",
+      "linux",
+      "windows"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "use_download_filename": true,
+    "save_name": "QOwnNotes.dmg",
+    "aliases": [
+      "qownnotes",
+      "QOwnNotes",
+      "ownnotes"
+    ]
   },
   {
     "id": "memos",
@@ -566,16 +600,136 @@
   },
   {
     "id": "notion",
-    "简介": "Notion 桌面版（官网分发，lookup 打开下载页）",
+    "简介": "Notion / Notion AI（官网分发，lookup 打开下载页）",
     "分类": "笔记",
     "aliases": [
       "notion",
-      "Notion"
+      "Notion",
+      "Notion AI",
+      "notion ai"
     ],
     "enabled": false,
     "open_page_only": true,
     "open_page_url": "https://www.notion.com/desktop",
-    "url_hint": "notion Notion",
+    "url_hint": "notion Notion Notion AI",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "miaoyan",
+    "简介": "妙言 MiaoYan（macOS 原生 Markdown 编辑器；dmg）",
+    "分类": "笔记",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "MiaoYan.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "miaoyan",
+      "MiaoYan",
+      "妙言"
+    ],
+    "releases_url": "https://bgithub.xyz/tw93/MiaoYan/releases",
+    "repo_path": "tw93/MiaoYan"
+  },
+  {
+    "id": "cubox",
+    "简介": "Cubox（稍后读 / 知识库网页；lookup 打开官网）",
+    "分类": "笔记",
+    "aliases": [
+      "cubox",
+      "Cubox"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://cubox.cc/",
+    "url_hint": "cubox Cubox",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "yuque",
+    "简介": "语雀（知识库网页；lookup 打开官网）",
+    "分类": "笔记",
+    "aliases": [
+      "yuque",
+      "语雀"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.yuque.com/",
+    "url_hint": "yuque 语雀",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "feishu_wiki",
+    "简介": "飞书知识库（产品页；lookup 打开官网。客户端见 feishu）",
+    "分类": "笔记",
+    "aliases": [
+      "feishu wiki",
+      "飞书知识库",
+      "知识库",
+      "lark wiki"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.feishu.cn/product/wiki",
+    "url_hint": "feishu wiki 飞书知识库 知识库 lark wiki",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "youdao_note",
+    "简介": "有道云笔记（网易有道；官网分发，lookup 打开下载页）",
+    "分类": "笔记",
+    "aliases": [
+      "youdao_note",
+      "有道云笔记",
+      "有道笔记",
+      "网易有道"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://note.youdao.com/note-download/",
+    "url_hint": "youdao_note 有道云笔记 有道笔记 网易有道",
     "windows_installer": false,
     "process_name": "",
     "kill_before_install": false,

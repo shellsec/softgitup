@@ -526,5 +526,677 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "radarr",
+    "简介": "Radarr（电影媒体库管理；macOS Apple Silicon app zip）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "osx-core",
+      "x64",
+      "linux",
+      "windows",
+      "freebsd"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Radarr.master.",
+      "osx-app-core-arm64.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "radarr",
+      "Radarr",
+      "电影库",
+      "电影刮削"
+    ],
+    "releases_url": "https://bgithub.xyz/Radarr/Radarr/releases",
+    "repo_path": "Radarr/Radarr"
+  },
+  {
+    "id": "sonarr",
+    "简介": "Sonarr（剧集媒体库管理；macOS Apple Silicon app zip）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "osx-x64",
+      "osx-arm64.tar",
+      "linux",
+      "win-",
+      "freebsd"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Sonarr.main.",
+      "osx-arm64-app.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "sonarr",
+      "Sonarr",
+      "剧集库",
+      "电视剧"
+    ],
+    "releases_url": "https://bgithub.xyz/Sonarr/Sonarr/releases",
+    "repo_path": "Sonarr/Sonarr"
+  },
+  {
+    "id": "prowlarr",
+    "简介": "Prowlarr（媒体库索引器管理；macOS Apple Silicon app zip）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "osx-core",
+      "x64",
+      "linux",
+      "windows",
+      "freebsd"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Prowlarr.master.",
+      "osx-app-core-arm64.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "prowlarr",
+      "Prowlarr",
+      "索引器"
+    ],
+    "releases_url": "https://bgithub.xyz/Prowlarr/Prowlarr/releases",
+    "repo_path": "Prowlarr/Prowlarr"
+  },
+  {
+    "id": "lidarr",
+    "简介": "Lidarr（音乐媒体库管理；macOS Apple Silicon app zip）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "osx-core",
+      "x64",
+      "linux",
+      "windows",
+      "freebsd"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Lidarr.master.",
+      "osx-app-core-arm64.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "lidarr",
+      "Lidarr",
+      "音乐库"
+    ],
+    "releases_url": "https://bgithub.xyz/Lidarr/Lidarr/releases",
+    "repo_path": "Lidarr/Lidarr"
+  },
+  {
+    "id": "bazarr",
+    "简介": "Bazarr（媒体库字幕管理，配合 Sonarr/Radarr；官方 zip）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "bazarr.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "bazarr",
+      "Bazarr",
+      "字幕管理"
+    ],
+    "releases_url": "https://bgithub.xyz/morpheus65535/bazarr/releases",
+    "repo_path": "morpheus65535/bazarr"
+  },
+  {
+    "id": "tautulli",
+    "简介": "Tautulli（Plex 媒体库统计与监控；macOS Apple Silicon pkg）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x86_64",
+      "windows",
+      "linux"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Tautulli-macos-",
+      "arm64.pkg"
+    ],
+    "installer_extensions": [
+      ".pkg"
+    ],
+    "aliases": [
+      "tautulli",
+      "Tautulli",
+      "Plex统计"
+    ],
+    "releases_url": "https://bgithub.xyz/Tautulli/Tautulli/releases",
+    "repo_path": "Tautulli/Tautulli"
+  },
+  {
+    "id": "iina",
+    "简介": "IINA（macOS 开源播放器，universal dmg，含 Apple Silicon）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "beta",
+      "nightly"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "IINA.v",
+      ".dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "iina",
+      "IINA",
+      "播放器"
+    ],
+    "releases_url": "https://bgithub.xyz/iina/iina/releases",
+    "repo_path": "iina/iina"
+  },
+  {
+    "id": "navidrome",
+    "简介": "Navidrome（自建音乐库服务器；macOS Apple Silicon tar.gz）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "amd64",
+      "linux",
+      "windows"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "navidrome_",
+      "darwin_arm64.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "aliases": [
+      "navidrome",
+      "Navidrome",
+      "音乐服务器"
+    ],
+    "releases_url": "https://bgithub.xyz/navidrome/navidrome/releases",
+    "repo_path": "navidrome/navidrome"
+  },
+  {
+    "id": "feishin",
+    "简介": "Feishin（Jellyfin/Navidrome/Subsonic 音乐桌面；macOS Apple Silicon dmg）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x64",
+      ".zip",
+      "win-",
+      "linux"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Feishin-",
+      "mac-arm64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "feishin",
+      "Feishin",
+      "Jellyfin音乐"
+    ],
+    "releases_url": "https://bgithub.xyz/jeffvli/feishin/releases",
+    "repo_path": "jeffvli/feishin"
+  },
+  {
+    "id": "lrcget",
+    "简介": "LRCGET（本地曲库歌词下载/嵌入；macOS Apple Silicon dmg）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x64",
+      "app.tar.gz",
+      "setup.exe",
+      "AppImage"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "LRCGET_",
+      "aarch64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "lrcget",
+      "LRCGET",
+      "歌词"
+    ],
+    "releases_url": "https://bgithub.xyz/tranxuanthang/lrcget/releases",
+    "repo_path": "tranxuanthang/lrcget"
+  },
+  {
+    "id": "tauon",
+    "简介": "Tauon（本地音乐库播放器；macOS 签名 dmg）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "windows",
+      "linux",
+      ".7z"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Tauon-signed.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "tauon",
+      "Tauon",
+      "TauonMusicBox",
+      "音乐播放器"
+    ],
+    "releases_url": "https://bgithub.xyz/Taiko2k/Tauon/releases",
+    "repo_path": "Taiko2k/Tauon"
+  },
+  {
+    "id": "iptvnator",
+    "简介": "IPTVnator（跨平台 IPTV 播放器；macOS Apple Silicon dmg）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x64",
+      "windows",
+      "linux",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "iptvnator-",
+      "mac-arm64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "iptvnator",
+      "IPTVnator"
+    ],
+    "releases_url": "https://bgithub.xyz/4gray/iptvnator/releases",
+    "repo_path": "4gray/iptvnator"
+  },
+  {
+    "id": "concat_editor",
+    "简介": "Concat（开源 CapCut 替代剪辑；macOS Apple Silicon dmg）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      "x86_64",
+      "windows",
+      "linux",
+      "android",
+      "ios"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Concat-",
+      "macos-arm64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "concat",
+      "Concat",
+      "WolfCut",
+      "jub0t"
+    ],
+    "releases_url": "https://bgithub.xyz/jub0t/Concat/releases",
+    "repo_path": "jub0t/Concat"
+  },
+  {
+    "id": "xigua",
+    "简介": "西瓜视频（字节；网页，lookup 打开官网）",
+    "分类": "音视频",
+    "aliases": [
+      "xigua",
+      "西瓜视频",
+      "西瓜",
+      "字节"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.ixigua.com/",
+    "url_hint": "xigua 西瓜视频 西瓜 字节",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

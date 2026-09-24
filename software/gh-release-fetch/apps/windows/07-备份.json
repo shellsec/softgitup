@@ -232,5 +232,94 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "backrest",
+    "简介": "Backrest（restic Web UI 备份；Windows x64 安装包）",
+    "分类": "备份",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "Darwin",
+      "Linux",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "BackrestSetup-x86_64.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "backrest",
+      "Backrest",
+      "restic ui",
+      "restic图形"
+    ],
+    "releases_url": "https://bgithub.xyz/garethgeorge/backrest/releases",
+    "repo_path": "garethgeorge/backrest"
+  },
+  {
+    "id": "googledrive",
+    "简介": "Google Drive for desktop（官网分发，lookup 打开下载页）",
+    "分类": "备份",
+    "aliases": [
+      "google drive",
+      "googledrive",
+      "谷歌云盘",
+      "Google"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.google.com/drive/download/",
+    "url_hint": "google drive googledrive 谷歌云盘 Google",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "icloud",
+    "简介": "iCloud for Windows（苹果；lookup 打开官网。Mac 为系统自带）",
+    "分类": "备份",
+    "aliases": [
+      "icloud",
+      "iCloud",
+      "苹果云盘",
+      "Apple"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.icloud.com/",
+    "url_hint": "icloud iCloud 苹果云盘 Apple",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

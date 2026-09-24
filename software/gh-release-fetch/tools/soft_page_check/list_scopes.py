@@ -25,7 +25,7 @@ LIST_SITE_GROUPS: list[dict] = [
     {
         "id": "appx64",
         "title": "appx64",
-        "desc": "软仓（原 down66.com，现 appx64.com）· PC 与 Android app 分开比对",
+        "desc": "软仓 · PC 与 Android app 分开比对",
         "accent": "#ca8a04",
         "scopes": ["appx64_system", "appx64_mobile"],
     },
@@ -122,12 +122,10 @@ LIST_SCOPE_DEFS: dict[str, dict] = {
 }
 
 # 旧 scope 名 → 拆成 system + mobile 依次执行
-# down66：站点已迁至 appx64.com，保留旧名作兼容别名
 LEGACY_LIST_SCOPES: dict[str, list[str]] = {
     "hybase": ["hybase_system", "hybase_mobile"],
     "dayanzai": ["dayanzai_system", "dayanzai_mobile"],
     "appx64": ["appx64_system", "appx64_mobile"],
-    "down66": ["appx64_system", "appx64_mobile"],
     "7xiazai": ["7xiazai_system", "7xiazai_mobile"],
 }
 

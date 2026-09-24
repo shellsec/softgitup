@@ -158,5 +158,91 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "fontforge",
+    "简介": "FontForge（开源字体编辑器；Windows x64 安装包）",
+    "分类": "办公与设计",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "Linux",
+      "MacOS",
+      ".tar.xz",
+      "AppImage"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "FontForge-",
+      "Windows-x64.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "fontforge",
+      "FontForge",
+      "字体编辑",
+      "字体"
+    ],
+    "releases_url": "https://bgithub.xyz/fontforge/fontforge/releases",
+    "repo_path": "fontforge/fontforge"
+  },
+  {
+    "id": "adobe_creative_cloud",
+    "简介": "Adobe Creative Cloud（官方桌面应用；lookup 打开官网。不收录破解/绿色改包）",
+    "分类": "办公与设计",
+    "aliases": [
+      "adobe_creative_cloud",
+      "Adobe",
+      "Creative Cloud",
+      "Adobe CC",
+      "创意云"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.adobe.com/cn/creativecloud.html",
+    "url_hint": "adobe_creative_cloud Adobe Creative Cloud Adobe CC 创意云",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "killerpdf",
+    "简介": "KillerPDF（开源 PDF 编辑器，Windows 安装包）",
+    "分类": "办公与设计",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/SteveTheKiller/KillerPDF/releases",
+    "repo_path": "SteveTheKiller/KillerPDF",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "KillerPDF.exe"
+    ],
+    "href_exclude_substrings": [
+      "Portable",
+      "src",
+      "SHA256",
+      ".zip"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "KillerPDF.exe"
+    ],
+    "save_name": "KillerPDF.exe",
+    "process_name": "KillerPDF.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "aliases": [
+      "KillerPDF"
+    ]
   }
 ]

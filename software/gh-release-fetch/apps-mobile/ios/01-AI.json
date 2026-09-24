@@ -35,5 +35,163 @@
     "kill_before_install": false,
     "windows_installer": false,
     "process_name": ""
+  },
+  {
+    "id": "claude_ios",
+    "简介": "Claude（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "AI",
+    "aliases": [
+      "claude",
+      "Claude",
+      "anthropic"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id6473753684",
+    "url_hint": "claude Claude anthropic",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "releases_url": "https://apps.apple.com/app/id6473753684"
+  },
+  {
+    "id": "doubao_ios",
+    "简介": "豆包（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "AI",
+    "aliases": [
+      "doubao",
+      "豆包",
+      "doubao ai"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id6459478672",
+    "url_hint": "doubao 豆包 doubao ai",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "releases_url": "https://apps.apple.com/app/id6459478672"
+  },
+  {
+    "id": "yuanbao_ios",
+    "简介": "腾讯元宝（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "AI",
+    "aliases": [
+      "yuanbao",
+      "元宝",
+      "腾讯元宝"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id6480446430",
+    "url_hint": "yuanbao 元宝 腾讯元宝",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "releases_url": "https://apps.apple.com/app/id6480446430"
+  },
+  {
+    "id": "kimi_ios",
+    "简介": "Kimi（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "AI",
+    "aliases": [
+      "kimi",
+      "Kimi",
+      "月之暗面"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id6474233312",
+    "url_hint": "kimi Kimi 月之暗面",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "releases_url": "https://apps.apple.com/app/id6474233312"
+  },
+  {
+    "id": "deepseek_ios",
+    "简介": "DeepSeek（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "AI",
+    "aliases": [
+      "deepseek",
+      "DeepSeek",
+      "深度求索"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id6737597349",
+    "url_hint": "deepseek DeepSeek 深度求索",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "releases_url": "https://apps.apple.com/app/id6737597349"
+  },
+  {
+    "id": "qwen_ios",
+    "简介": "千问（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "AI",
+    "aliases": [
+      "qwen",
+      "Qwen",
+      "千问",
+      "通义千问",
+      "tongyi",
+      "qianwen"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id6466733523",
+    "url_hint": "qwen Qwen 千问 通义千问 tongyi qianwen",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "releases_url": "https://apps.apple.com/app/id6466733523"
+  },
+  {
+    "id": "spark_ios",
+    "简介": "讯飞星火（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "AI",
+    "aliases": [
+      "spark",
+      "星火",
+      "讯飞星火",
+      "xinghuo"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id6449919551",
+    "url_hint": "spark 星火 讯飞星火 xinghuo",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "releases_url": "https://apps.apple.com/app/id6449919551"
+  },
+  {
+    "id": "zhipu_ios",
+    "简介": "智谱清言（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "AI",
+    "aliases": [
+      "zhipu",
+      "智谱",
+      "清言",
+      "智谱清言",
+      "chatglm"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id6450893458",
+    "url_hint": "zhipu 智谱 清言 智谱清言 chatglm",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "releases_url": "https://apps.apple.com/app/id6450893458"
   }
 ]

@@ -638,5 +638,103 @@
     ],
     "releases_url": "https://bgithub.xyz/mihomo-party-org/clash-party/releases",
     "repo_path": "mihomo-party-org/clash-party"
+  },
+  {
+    "id": "karing",
+    "简介": "Karing（多协议代理客户端；macOS universal dmg）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      ".pkg",
+      "windows",
+      "linux",
+      "android"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "karing_",
+      "macos_universal.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "karing",
+      "Karing"
+    ],
+    "releases_url": "https://bgithub.xyz/KaringX/Karing/releases",
+    "repo_path": "KaringX/Karing"
+  },
+  {
+    "id": "gui_for_clash",
+    "简介": "GUI.for.Clash（Clash/Mihomo 图形前端；macOS Apple Silicon zip）",
+    "分类": "代理与隧道",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "amd64",
+      "windows",
+      "linux"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "GUI.for.Clash-darwin-arm64.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "gui.for.clash",
+      "GUI.for.Clash"
+    ],
+    "releases_url": "https://bgithub.xyz/GUI-for-Cores/GUI.for.Clash/releases",
+    "repo_path": "GUI-for-Cores/GUI.for.Clash"
   }
 ]

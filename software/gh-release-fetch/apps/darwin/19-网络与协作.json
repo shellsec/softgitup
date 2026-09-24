@@ -132,5 +132,55 @@
     ],
     "releases_url": "https://bgithub.xyz/jitsi/jitsi-meet-electron/releases",
     "repo_path": "jitsi/jitsi-meet-electron"
+  },
+  {
+    "id": "revolt_desktop",
+    "简介": "Revolt（开源 Discord 风格聊天；macOS universal dmg）",
+    "分类": "网络与协作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      ".zip",
+      "AppImage",
+      "windows"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Revolt-",
+      "-universal.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "revolt",
+      "Revolt",
+      "revolt.chat"
+    ],
+    "releases_url": "https://bgithub.xyz/revoltchat/desktop/releases",
+    "repo_path": "revoltchat/desktop"
   }
 ]

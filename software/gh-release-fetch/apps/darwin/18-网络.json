@@ -1,11 +1,5 @@
 [
   {
-    "id": "localsend",
-    "enabled": false,
-    "releases_url": "https://bgithub.xyz/localsend/localsend/releases",
-    "repo_path": "localsend/localsend"
-  },
-  {
     "id": "syncthing",
     "简介": "Syncthing（macOS universal 官方 zip，仅下载）",
     "分类": "网络",
@@ -489,6 +483,220 @@
     "open_page_only": true,
     "open_page_url": "https://www.opera.com/download",
     "url_hint": "opera Opera",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "switchhosts",
+    "简介": "SwitchHosts（Hosts 快速切换；macOS Apple Silicon dmg）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x64",
+      "universal",
+      "windows",
+      "linux"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "SwitchHosts-",
+      "mac-aarch64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "switchhosts",
+      "SwitchHosts"
+    ],
+    "releases_url": "https://bgithub.xyz/oldj/SwitchHosts/releases",
+    "repo_path": "oldj/SwitchHosts"
+  },
+  {
+    "id": "fluent_reader",
+    "简介": "Fluent Reader（开源 RSS 阅读器；macOS dmg）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "Setup",
+      "windows",
+      "AppImage",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Fluent.Reader.",
+      ".dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "fluent reader",
+      "Fluent Reader",
+      "fluent-reader"
+    ],
+    "releases_url": "https://bgithub.xyz/yang991178/fluent-reader/releases",
+    "repo_path": "yang991178/fluent-reader"
+  },
+  {
+    "id": "finicky",
+    "简介": "Finicky（按规则选择打开 URL 的浏览器；dmg）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Finicky.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "finicky",
+      "Finicky"
+    ],
+    "releases_url": "https://bgithub.xyz/johnste/finicky/releases",
+    "repo_path": "johnste/finicky"
+  },
+  {
+    "id": "adguardhome",
+    "简介": "AdGuard Home（局域网 DNS 广告拦截；macOS Apple Silicon zip）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "amd64",
+      "linux",
+      "windows"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "AdGuardHome_darwin_arm64.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "adguardhome",
+      "AdGuard Home"
+    ],
+    "releases_url": "https://bgithub.xyz/AdguardTeam/AdGuardHome/releases",
+    "repo_path": "AdguardTeam/AdGuardHome"
+  },
+  {
+    "id": "quark",
+    "简介": "夸克（阿里浏览器/网盘门户；官网分发，lookup 打开下载页。含推广与会员引导，请自行甄别）",
+    "分类": "网络",
+    "aliases": [
+      "quark",
+      "夸克",
+      "夸克浏览器",
+      "夸克网盘",
+      "阿里"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.quark.cn/",
+    "url_hint": "quark 夸克 夸克浏览器 夸克网盘 阿里",
     "windows_installer": false,
     "process_name": "",
     "kill_before_install": false,

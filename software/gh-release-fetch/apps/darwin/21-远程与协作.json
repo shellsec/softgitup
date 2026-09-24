@@ -367,5 +367,183 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "lan_mouse",
+    "简介": "Lan Mouse（跨平台键鼠共享；macOS Apple Silicon zip）",
+    "分类": "远程与协作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "intel",
+      "linux",
+      "windows"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "lan-mouse-macos-arm64.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "lan mouse",
+      "Lan Mouse",
+      "lan-mouse"
+    ],
+    "releases_url": "https://bgithub.xyz/feschber/lan-mouse/releases",
+    "repo_path": "feschber/lan-mouse"
+  },
+  {
+    "id": "iflyrec",
+    "简介": "讯飞听见（会议/录音转写网页；lookup 打开官网）",
+    "分类": "远程与协作",
+    "aliases": [
+      "iflyrec",
+      "讯飞听见",
+      "听见",
+      "讯飞转写"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.iflyrec.com/",
+    "url_hint": "iflyrec 讯飞听见 听见 讯飞转写",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "feishu_minutes",
+    "简介": "飞书妙记（会议转写网页；lookup 打开官网。客户端见 feishu）",
+    "分类": "远程与协作",
+    "aliases": [
+      "feishu minutes",
+      "飞书妙记",
+      "妙记",
+      "lark minutes"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.feishu.cn/product/minutes",
+    "url_hint": "feishu minutes 飞书妙记 妙记 lark minutes",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "otter",
+    "简介": "Otter（会议转写网页；lookup 打开官网）",
+    "分类": "远程与协作",
+    "aliases": [
+      "otter",
+      "Otter",
+      "otter.ai"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://otter.ai/",
+    "url_hint": "otter Otter otter.ai",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "fireflies",
+    "简介": "Fireflies（会议转写网页；lookup 打开官网）",
+    "分类": "远程与协作",
+    "aliases": [
+      "fireflies",
+      "Fireflies"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://fireflies.ai/",
+    "url_hint": "fireflies Fireflies",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "tingwu",
+    "简介": "通义听悟（会议/音视频转写网页；lookup 打开官网）",
+    "分类": "远程与协作",
+    "aliases": [
+      "tingwu",
+      "听悟",
+      "通义听悟"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://tingwu.aliyun.com/",
+    "url_hint": "tingwu 听悟 通义听悟",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "notta",
+    "简介": "Notta（会议转写网页；lookup 打开官网）",
+    "分类": "远程与协作",
+    "aliases": [
+      "notta",
+      "Notta"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.notta.ai/",
+    "url_hint": "notta Notta",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "tencent_meeting",
+    "简介": "腾讯会议（官网分发，lookup 打开下载页）",
+    "分类": "远程与协作",
+    "aliases": [
+      "tencent_meeting",
+      "腾讯会议",
+      "wemeet",
+      "WeMeet",
+      "voov",
+      "VooV"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://meeting.tencent.com/download/",
+    "url_hint": "tencent_meeting 腾讯会议 wemeet WeMeet voov VooV",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

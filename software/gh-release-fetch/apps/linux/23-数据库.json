@@ -359,5 +359,55 @@
     "run_installer": false,
     "url_hint": "dbx arm64 DBX arm64",
     "use_download_filename": true
+  },
+  {
+    "id": "dbgate",
+    "简介": "DbGate（开源多数据库桌面客户端；Debian amd64 deb）",
+    "分类": "数据库",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "premium",
+      "latest",
+      "arm64",
+      "AppImage"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "dbgate-",
+      "-linux_amd64.deb"
+    ],
+    "installer_extensions": [
+      ".deb"
+    ],
+    "aliases": [
+      "dbgate",
+      "DbGate"
+    ],
+    "releases_url": "https://bgithub.xyz/dbgate/dbgate/releases",
+    "repo_path": "dbgate/dbgate"
   }
 ]

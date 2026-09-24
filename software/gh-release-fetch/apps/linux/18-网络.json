@@ -1,11 +1,5 @@
 [
   {
-    "id": "localsend",
-    "enabled": false,
-    "releases_url": "https://bgithub.xyz/localsend/localsend/releases",
-    "repo_path": "localsend/localsend"
-  },
-  {
     "id": "syncthing",
     "简介": "Syncthing（Linux x86_64 官方 tar.gz，仅下载）",
     "分类": "网络",
@@ -565,5 +559,157 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "switchhosts",
+    "简介": "SwitchHosts（Hosts 快速切换；Linux x64 AppImage）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm",
+      "aarch64",
+      "windows",
+      "mac",
+      ".deb",
+      ".rpm"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "SwitchHosts-",
+      "linux-amd64.AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "aliases": [
+      "switchhosts",
+      "SwitchHosts"
+    ],
+    "releases_url": "https://bgithub.xyz/oldj/SwitchHosts/releases",
+    "repo_path": "oldj/SwitchHosts"
+  },
+  {
+    "id": "fluent_reader",
+    "简介": "Fluent Reader（开源 RSS 阅读器；Linux AppImage）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "windows",
+      "Setup",
+      "dmg"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Fluent.Reader.",
+      ".AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "aliases": [
+      "fluent reader",
+      "Fluent Reader",
+      "fluent-reader"
+    ],
+    "releases_url": "https://bgithub.xyz/yang991178/fluent-reader/releases",
+    "repo_path": "yang991178/fluent-reader"
+  },
+  {
+    "id": "adguardhome",
+    "简介": "AdGuard Home（局域网 DNS 广告拦截；Linux amd64 tar.gz）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm",
+      "386",
+      "frontend",
+      "windows",
+      "darwin"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "AdGuardHome_linux_amd64.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "aliases": [
+      "adguardhome",
+      "AdGuard Home"
+    ],
+    "releases_url": "https://bgithub.xyz/AdguardTeam/AdGuardHome/releases",
+    "repo_path": "AdguardTeam/AdGuardHome"
   }
 ]

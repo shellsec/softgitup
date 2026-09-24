@@ -867,6 +867,44 @@
     "run_installer": false
   },
   {
+    "id": "ms_wallpaper_assistant",
+    "简介": "微软壁纸助手（必应每日一图 + Windows 聚焦，绿色 zip 解压即用）",
+    "分类": "系统",
+    "aliases": [
+      "ms_wallpaper_assistant",
+      "ms-wallpaper-assistant",
+      "微软壁纸助手",
+      "壁纸助手",
+      "bing wallpaper"
+    ],
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/kele551/ms-wallpaper-assistant/releases",
+    "repo_path": "kele551/ms-wallpaper-assistant",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "MSWallpaperAssistant-",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "version.json",
+      ".json"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "MSWallpaperAssistant-v{ver}.zip"
+    ],
+    "use_download_filename": true,
+    "save_name": "MSWallpaperAssistant-v{ver}.zip",
+    "process_name": "微软壁纸助手.exe",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
     "id": "bingwallpaper_windows",
     "简介": "BingWallpaper.Windows（轻量必应每日壁纸自动应用；Windows 安装包 zip）",
     "分类": "系统",
@@ -1812,5 +1850,203 @@
     ],
     "releases_url": "https://bgithub.xyz/AprilNEA/OpenLogi/releases",
     "repo_path": "AprilNEA/OpenLogi"
+  },
+  {
+    "id": "letrecovery",
+    "简介": "LetRecovery（Windows 系统重装工具；Windows x64 Setup）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "LetRecovery.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".7z",
+      "source",
+      "linux",
+      "darwin",
+      "mac"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "LetRecovery-Setup-x64.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "letrecovery",
+      "LetRecovery",
+      "系统重装",
+      "重装系统"
+    ],
+    "releases_url": "https://bgithub.xyz/NORMAL-EX/LetRecovery/releases",
+    "repo_path": "NORMAL-EX/LetRecovery"
+  },
+  {
+    "id": "easyrc",
+    "简介": "EasyRC 一键重装（FirPE 出品；官网分发，lookup 打开下载页，不自动下载）",
+    "分类": "系统",
+    "aliases": [
+      "easyrc",
+      "EasyRC",
+      "easrc",
+      "firpe",
+      "FirPE",
+      "一键重装"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://firpe.cn/page-196",
+    "url_hint": "easyrc EasyRC easrc firpe FirPE 一键重装",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "wintohdd",
+    "简介": "Hasleo WinToHDD（硬盘直接安装/重装/克隆；官网分发，lookup 打开官方页，不收录第三方改包）",
+    "分类": "系统",
+    "aliases": [
+      "wintohdd",
+      "WinToHDD",
+      "hasleo",
+      "Hasleo",
+      "WinToHDD Free"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.easyuefi.com/wintohdd/",
+    "url_hint": "wintohdd WinToHDD hasleo Hasleo",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "baidu_ime",
+    "简介": "百度输入法（官网分发，lookup 打开下载页）",
+    "分类": "系统",
+    "aliases": [
+      "baidu_ime",
+      "百度输入法",
+      "百度拼音",
+      "百度"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://shurufa.baidu.com/",
+    "url_hint": "baidu_ime 百度输入法 百度拼音 百度",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "huawei_pc_manager",
+    "简介": "华为电脑管家（华为 Windows 电脑官方；lookup 打开下载页。仅华为机型）",
+    "分类": "系统",
+    "aliases": [
+      "huawei_pc_manager",
+      "华为电脑管家",
+      "华为",
+      "PC Manager"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://consumer.huawei.com/cn/support/pc-manager/",
+    "url_hint": "huawei_pc_manager 华为电脑管家 华为 PC Manager",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "xiaomi_pc_manager",
+    "简介": "小米电脑管家（小米/Redmi 电脑官方；lookup 打开官网帮助页。非小米电脑请勿用第三方破解包）",
+    "分类": "系统",
+    "aliases": [
+      "xiaomi_pc_manager",
+      "小米电脑管家",
+      "小米",
+      "红米电脑"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://pc.mi.com/pc-manager-help",
+    "url_hint": "xiaomi_pc_manager 小米电脑管家 小米 红米电脑",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "honor_pc_manager",
+    "简介": "荣耀电脑管家（荣耀官网；lookup 打开下载页。仅荣耀机型）",
+    "分类": "系统",
+    "aliases": [
+      "honor_pc_manager",
+      "荣耀电脑管家",
+      "荣耀"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.honor.com/cn/tech/pc-manager/",
+    "url_hint": "honor_pc_manager 荣耀电脑管家 荣耀",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "lenovo_pc_manager",
+    "简介": "联想电脑管家（联想官网；lookup 打开下载页）",
+    "分类": "系统",
+    "aliases": [
+      "lenovo_pc_manager",
+      "联想电脑管家",
+      "联想"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://guanjia.lenovo.com.cn/",
+    "url_hint": "lenovo_pc_manager 联想电脑管家 联想",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "wintune",
+    "简介": "WinTune（开源 Windows 系统优化小工具，x64）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/tranht17/WinTune/releases",
+    "repo_path": "tranht17/WinTune",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "WinTune.exe"
+    ],
+    "href_exclude_substrings": [
+      "WinTune32",
+      ".sha"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "WinTune.exe"
+    ],
+    "save_name": "WinTune.exe",
+    "process_name": "WinTune.exe",
+    "kill_before_install": true,
+    "run_installer": false,
+    "aliases": [
+      "WinTune"
+    ]
   }
 ]

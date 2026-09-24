@@ -938,6 +938,7 @@
     "use_download_filename": true,
     "aliases": [
       "Super Productivity",
+      "super-productivity",
       "superproductivity"
     ],
     "process_name": "",
@@ -1391,5 +1392,617 @@
     ],
     "releases_url": "https://bgithub.xyz/vorssaintapp/vorssaint-utils/releases",
     "repo_path": "vorssaintapp/vorssaint-utils"
+  },
+  {
+    "id": "openclip",
+    "简介": "OpenClip（macOS 划词悬浮动作栏，PopClip 开源替代；Apple Silicon dmg）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "OpenClip-",
+      ".dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "openclip",
+      "OpenClip",
+      "PopClip"
+    ],
+    "releases_url": "https://bgithub.xyz/ganeshmshetty/openclip/releases",
+    "repo_path": "ganeshmshetty/openclip"
+  },
+  {
+    "id": "easydict",
+    "简介": "Easydict（划词/截图翻译；macOS dmg）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Easydict.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "easydict",
+      "Easydict"
+    ],
+    "releases_url": "https://bgithub.xyz/tisfeng/Easydict/releases",
+    "repo_path": "tisfeng/Easydict"
+  },
+  {
+    "id": "dockdoor",
+    "简介": "DockDoor（macOS Windows 风格窗口预览/切换；dmg）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "DockDoor.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "dockdoor",
+      "DockDoor"
+    ],
+    "releases_url": "https://bgithub.xyz/ejbills/DockDoor/releases",
+    "repo_path": "ejbills/DockDoor"
+  },
+  {
+    "id": "reminders_menubar",
+    "简介": "Reminders MenuBar（菜单栏管理提醒事项；dmg）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Reminders-MenuBar.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "reminders-menubar",
+      "Reminders MenuBar"
+    ],
+    "releases_url": "https://bgithub.xyz/DamascenoRafael/reminders-menubar/releases",
+    "repo_path": "DamascenoRafael/reminders-menubar"
+  },
+  {
+    "id": "kando",
+    "简介": "Kando（开源饼状菜单；macOS Apple Silicon dmg）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x64",
+      "windows",
+      "linux",
+      "Setup",
+      ".zip",
+      "darwin-"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Kando-",
+      "-arm64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "kando",
+      "Kando"
+    ],
+    "releases_url": "https://bgithub.xyz/kando-menu/kando/releases",
+    "repo_path": "kando-menu/kando"
+  },
+  {
+    "id": "piclist",
+    "简介": "PicList（开源图床/图床管理；macOS Apple Silicon dmg）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x64",
+      "windows",
+      "linux",
+      "Setup"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "PicList-",
+      "-arm64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "piclist",
+      "PicList"
+    ],
+    "releases_url": "https://bgithub.xyz/Kuingsmile/PicList/releases",
+    "repo_path": "Kuingsmile/PicList"
+  },
+  {
+    "id": "hidden_bar",
+    "简介": "Hidden Bar（菜单栏图标隐藏；macos zip）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Hidden-Bar-",
+      "-macos.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "hidden bar",
+      "Hidden Bar",
+      "hiddenbar"
+    ],
+    "releases_url": "https://bgithub.xyz/dwarvesf/hidden/releases",
+    "repo_path": "dwarvesf/hidden"
+  },
+  {
+    "id": "boring_notch",
+    "简介": "Boring Notch（MacBook 刘海动态岛控制中心；dmg）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "boringNotch.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "boring notch",
+      "Boring Notch",
+      "boringNotch"
+    ],
+    "releases_url": "https://bgithub.xyz/TheBoredTeam/boring.notch/releases",
+    "repo_path": "TheBoredTeam/boring.notch"
+  },
+  {
+    "id": "onlyswitch",
+    "简介": "OnlySwitch（菜单栏系统开关合集；dmg）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "OnlySwitch.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "onlyswitch",
+      "OnlySwitch"
+    ],
+    "releases_url": "https://bgithub.xyz/jacklandrin/OnlySwitch/releases",
+    "repo_path": "jacklandrin/OnlySwitch"
+  },
+  {
+    "id": "handy",
+    "简介": "Handy（开源语音输入；macOS Apple Silicon dmg）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x64",
+      "windows",
+      "linux",
+      ".tar.gz"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Handy_",
+      "_aarch64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "handy",
+      "Handy"
+    ],
+    "releases_url": "https://bgithub.xyz/cjpais/Handy/releases",
+    "repo_path": "cjpais/Handy"
+  },
+  {
+    "id": "pot",
+    "简介": "Pot（划词翻译/OCR；macOS Apple Silicon dmg）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x64",
+      "windows",
+      "linux",
+      ".tar.gz"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "pot_",
+      "_aarch64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "pot",
+      "Pot",
+      "pot-desktop"
+    ],
+    "releases_url": "https://bgithub.xyz/pot-app/pot-desktop/releases",
+    "repo_path": "pot-app/pot-desktop"
+  },
+  {
+    "id": "zapier",
+    "简介": "Zapier（自动化工作流网页；lookup 打开官网）",
+    "分类": "效率",
+    "aliases": [
+      "zapier",
+      "Zapier"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://zapier.com/",
+    "url_hint": "zapier Zapier",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "make",
+    "简介": "Make（原 Integromat；自动化工作流网页；lookup 打开官网）",
+    "分类": "效率",
+    "aliases": [
+      "make",
+      "Make",
+      "integromat",
+      "Integromat"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.make.com/",
+    "url_hint": "make Make integromat Integromat",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "jijyun",
+    "简介": "集简云（国内自动化集成网页；lookup 打开官网）",
+    "分类": "效率",
+    "aliases": [
+      "jijyun",
+      "集简云",
+      "jijian"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.jijyun.cn/",
+    "url_hint": "jijyun 集简云 jijian",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "n8n",
+    "简介": "n8n（开源自动化工作流；lookup 打开官网，自托管用 Docker）",
+    "分类": "效率",
+    "aliases": [
+      "n8n",
+      "n8n.io"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://n8n.io/",
+    "url_hint": "n8n n8n.io",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "activepieces",
+    "简介": "Activepieces（开源自动化工作流；lookup 打开官网）",
+    "分类": "效率",
+    "aliases": [
+      "activepieces",
+      "Activepieces"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.activepieces.com/",
+    "url_hint": "activepieces Activepieces",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

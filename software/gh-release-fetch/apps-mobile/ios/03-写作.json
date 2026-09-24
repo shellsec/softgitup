@@ -36,5 +36,25 @@
     "kill_before_install": false,
     "windows_installer": false,
     "process_name": ""
+  },
+  {
+    "id": "youdao_dict_ios",
+    "简介": "有道词典（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "写作",
+    "aliases": [
+      "youdao_dict",
+      "有道词典",
+      "有道",
+      "网易有道"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id353115739",
+    "url_hint": "youdao_dict 有道词典 有道 网易有道",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "releases_url": "https://apps.apple.com/app/id353115739"
   }
 ]

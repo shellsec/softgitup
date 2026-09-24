@@ -158,5 +158,198 @@
     "kill_before_install": false,
     "windows_installer": false,
     "process_name": ""
+  },
+  {
+    "id": "ollitert",
+    "简介": "OlliteRT（Android 本地 LLM 推理服务 / OpenAI 兼容 API；arm64-v8a beta APK）",
+    "分类": "AI",
+    "aliases": [
+      "OlliteRT",
+      "ollite_rt",
+      "ollite"
+    ],
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "pinned_release_tag": "v0.9.6-beta.1",
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "OlliteRT",
+      "arm64-v8a",
+      ".apk"
+    ],
+    "href_exclude_substrings": [
+      "armeabi",
+      "x86",
+      "debug",
+      ".aab",
+      "test",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt"
+    ],
+    "use_download_filename": true,
+    "save_name": "ollitert.apk",
+    "url_hint": "OlliteRT ollite",
+    "releases_url": "https://bgithub.xyz/NightMean/OlliteRT/releases",
+    "repo_path": "NightMean/OlliteRT"
+  },
+  {
+    "id": "doubao_android",
+    "简介": "豆包 Android（lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "doubao",
+      "豆包",
+      "doubao ai"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.doubao.com/",
+    "url_hint": "doubao 豆包 doubao ai",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "qwen_android",
+    "简介": "千问 Android（lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "qwen",
+      "Qwen",
+      "千问",
+      "通义千问",
+      "tongyi",
+      "qianwen"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.qianwen.com/",
+    "url_hint": "qwen Qwen 千问 通义千问 tongyi qianwen",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "kimi_android",
+    "简介": "Kimi Android（lookup 打开商店页）",
+    "分类": "AI",
+    "aliases": [
+      "kimi",
+      "Kimi",
+      "月之暗面"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.moonshot.kimichat",
+    "url_hint": "kimi Kimi 月之暗面",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "deepseek_android",
+    "简介": "DeepSeek Android（lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "deepseek",
+      "DeepSeek",
+      "深度求索"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://chat.deepseek.com/",
+    "url_hint": "deepseek DeepSeek 深度求索",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "yuanbao_android",
+    "简介": "腾讯元宝 Android（lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "yuanbao",
+      "元宝",
+      "腾讯元宝"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://yuanbao.tencent.com/",
+    "url_hint": "yuanbao 元宝 腾讯元宝",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "claude_android",
+    "简介": "Claude Android（lookup 打开商店页）",
+    "分类": "AI",
+    "aliases": [
+      "claude",
+      "Claude",
+      "anthropic"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.anthropic.claude",
+    "url_hint": "claude Claude anthropic",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "spark_android",
+    "简介": "讯飞星火 Android（lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "spark",
+      "星火",
+      "讯飞星火",
+      "xinghuo"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://xinghuo.xfyun.cn/",
+    "url_hint": "spark 星火 讯飞星火 xinghuo",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "zhipu_android",
+    "简介": "智谱清言 Android（lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "zhipu",
+      "智谱",
+      "清言",
+      "智谱清言",
+      "chatglm"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://chatglm.cn/",
+    "url_hint": "zhipu 智谱 清言 智谱清言 chatglm",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

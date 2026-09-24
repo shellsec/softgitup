@@ -396,5 +396,40 @@
     "kill_before_install": false,
     "run_installer": false,
     "url_hint": "superpng"
+  },
+  {
+    "id": "photodemon",
+    "简介": "PhotoDemon（开源图片编辑，Windows 便携 zip）",
+    "分类": "多媒体与设计",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/tannerhelland/PhotoDemon/releases",
+    "repo_path": "tannerhelland/PhotoDemon",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "PhotoDemon-",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "src",
+      "source",
+      ".sha",
+      "md5"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "download_names": [
+      "PhotoDemon-{ver}.zip"
+    ],
+    "save_name": "PhotoDemon-{ver}.zip",
+    "process_name": "PhotoDemon.exe",
+    "kill_before_install": true,
+    "run_installer": false,
+    "aliases": [
+      "PhotoDemon"
+    ]
   }
 ]

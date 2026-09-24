@@ -1178,5 +1178,398 @@
     ],
     "releases_url": "https://bgithub.xyz/AprilNEA/OpenLogi/releases",
     "repo_path": "AprilNEA/OpenLogi"
+  },
+  {
+    "id": "stats",
+    "简介": "Stats（macOS 菜单栏系统监视器；dmg）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Stats.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "stats",
+      "Stats",
+      "exelban"
+    ],
+    "releases_url": "https://bgithub.xyz/exelban/stats/releases",
+    "repo_path": "exelban/stats"
+  },
+  {
+    "id": "battery_limiter",
+    "简介": "Battery（限制充电保护电池，AlDente 同类；macOS Apple Silicon dmg）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x64",
+      ".zip",
+      "windows",
+      "linux"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "battery-",
+      "-mac-arm64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "battery",
+      "Battery",
+      "充电限制"
+    ],
+    "releases_url": "https://bgithub.xyz/actuallymentor/battery/releases",
+    "repo_path": "actuallymentor/battery"
+  },
+  {
+    "id": "pearcleaner",
+    "简介": "Pearcleaner（开源应用卸载/清理；dmg）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Pearcleaner.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "pearcleaner",
+      "Pearcleaner"
+    ],
+    "releases_url": "https://bgithub.xyz/alienator88/Pearcleaner/releases",
+    "repo_path": "alienator88/Pearcleaner"
+  },
+  {
+    "id": "utm",
+    "简介": "UTM（macOS 开源虚拟机；dmg）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      ".deb",
+      "SE",
+      "Remote"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "UTM.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "utm",
+      "UTM"
+    ],
+    "releases_url": "https://bgithub.xyz/utmapp/UTM/releases",
+    "repo_path": "utmapp/UTM"
+  },
+  {
+    "id": "mac_mouse_fix",
+    "简介": "Mac Mouse Fix（鼠标平滑滚动/按键；app zip）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "MacMouseFixApp.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "mac mouse fix",
+      "Mac Mouse Fix"
+    ],
+    "releases_url": "https://bgithub.xyz/noah-nuebling/mac-mouse-fix/releases",
+    "repo_path": "noah-nuebling/mac-mouse-fix"
+  },
+  {
+    "id": "linearmouse",
+    "简介": "LinearMouse（鼠标/触控板调校；dmg）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "dSYM"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "LinearMouse.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "linearmouse",
+      "LinearMouse"
+    ],
+    "releases_url": "https://bgithub.xyz/linearmouse/linearmouse/releases",
+    "repo_path": "linearmouse/linearmouse"
+  },
+  {
+    "id": "monitorcontrol",
+    "简介": "MonitorControl（外接显示器亮度/音量；dmg）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "MonitorControl.",
+      ".dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "monitorcontrol",
+      "MonitorControl"
+    ],
+    "releases_url": "https://bgithub.xyz/MonitorControl/MonitorControl/releases",
+    "repo_path": "MonitorControl/MonitorControl"
+  },
+  {
+    "id": "airbattery",
+    "简介": "AirBattery（Apple 设备电量显示；dmg）",
+    "分类": "系统",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      ".delta"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "AirBattery_v",
+      ".dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "airbattery",
+      "AirBattery"
+    ],
+    "releases_url": "https://bgithub.xyz/lihaoyun6/AirBattery/releases",
+    "repo_path": "lihaoyun6/AirBattery"
+  },
+  {
+    "id": "baidu_ime",
+    "简介": "百度输入法（官网分发，lookup 打开下载页）",
+    "分类": "系统",
+    "aliases": [
+      "baidu_ime",
+      "百度输入法",
+      "百度拼音",
+      "百度"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://shurufa.baidu.com/",
+    "url_hint": "baidu_ime 百度输入法 百度拼音 百度",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

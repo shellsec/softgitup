@@ -1,12 +1,19 @@
 # 软件目录（Windows · 全分类导读）
 
-> 由 `python tools/generate_recommended_md.py` 根据 [`apps/windows/`](apps/windows/) 自动生成，生成日期：**2026-08-25**。条目 **819** 个（windows 平台；含 GitHub 可下载与仅打开官网）。
+> 由 `python tools/generate_recommended_md.py` 根据 [`apps/windows/`](apps/windows/) 自动生成，生成日期：**2026-09-20**。条目 **1017** 个（windows 平台；含 GitHub 可下载与仅打开官网）。
 > 其它平台导读：[macOS](RECOMMENDED.darwin.zh-CN.md) · [Linux](RECOMMENDED.linux.zh-CN.md)。
 > 本地分类展示页：[`catalog.html`](catalog.html)。技术索引见 [`CATALOG.md`](CATALOG.md)。启用/更新：lookup → `run_saved_apps`。
 
 ---
 
-## AI（68）
+## AI（151）
+
+### 360 智脑（对话网页；lookup 打开官网 · `ai360`
+
+360 智脑（对话网页；lookup 打开官网。不是 360 安全卫士）
+
+- 页面：https://ai.360.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows ai360`
 
 ### aichat（终端里用 OpenAI/本地模型等 · `aichat`
 
@@ -21,6 +28,13 @@ aider（终端 AI 结对编程，Windows exe）
 
 - 仓库：`Aider-AI/aider` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows aider`
+
+### Amazon Q（AWS 编程/云助手产品页；lookup 打开官网 · `amazon_q`
+
+Amazon Q（AWS 编程/云助手产品页；lookup 打开官网。CLI 见 amazon_q_cli）
+
+- 页面：https://aws.amazon.com/q/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows amazon_q`
 
 ### amazon q cli · `amazon_q_cli`
 
@@ -42,6 +56,20 @@ AnythingLLM Windows ARM64（同上，CDN latest Arm64 安装包）
 
 - 仓库：`Mintplex-Labs/anything-llm` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows anything_llm_arm64`
+
+### AxAgent（Tauri 桌面 AI 智能体工作台；Windows x64 MSI） · `axagent`
+
+AxAgent（Tauri 桌面 AI 智能体工作台；Windows x64 MSI）
+
+- 仓库：`polite0803/AxAgent` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows axagent`
+
+### 百川 / 百小应（对话网页；lookup 打开官网） · `baichuan`
+
+百川 / 百小应（对话网页；lookup 打开官网）
+
+- 页面：https://yi.baichuan-ai.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows baichuan`
 
 ### botgem · `botgem`
 
@@ -78,12 +106,33 @@ Chatbox：主仓库 chatboxai/chatbox 的 GitHub Release 多为源码；桌面�
 - 仓库：`chatboxai/chatbox` · 页面：https://chatboxai.app · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
 - 查找：`lookup_app.bat --platform windows chatbox`
 
+### ChatGPT（OpenAI 对话；lookup 打开官网 · `chatgpt`
+
+ChatGPT（OpenAI 对话；lookup 打开官网，不自动下载客户端）
+
+- 页面：https://chatgpt.com/download/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows chatgpt`
+
 ### Cherry Studio（多模型 AI 桌面客户端 · `cherry_studio`
 
 Cherry Studio（多模型 AI 桌面客户端，CherryHQ）
 
 - 仓库：`CherryHQ/cherry-studio` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows cherry_studio`
+
+### Cici / Dola（字节海外对话网页；lookup 打开官网 · `cici`
+
+Cici / Dola（字节海外对话网页；lookup 打开官网。国内见 doubao）
+
+- 页面：https://www.ciciai.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows cici`
+
+### Claude（Anthropic 对话网页；lookup 打开官网 · `claude`
+
+Claude（Anthropic 对话网页；lookup 打开官网。CLI 见 claude_code）
+
+- 页面：https://claude.ai/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows claude`
 
 ### Claude Code（Anthropic 官方终端 CLI 原生构建 · `claude_code`
 
@@ -99,11 +148,11 @@ Claude Code Router（多模型路由桌面端；Windows exe）
 - 仓库：`musistudio/claude-code-router` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows claude_code_router`
 
-### Cline（VS Code / Cursor 系扩展 · `cline`
+### cline · `cline`
 
-Cline（VS Code / Cursor 系扩展，Release .vsix）
+Cline 桌面端（Windows x64 Setup；已从 VS Code vsix 改为独立安装包）
 
-- 仓库：`cline/cline` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
+- 仓库：`cline/cline` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows cline`
 
 ### cockpit tools · `cockpit_tools`
@@ -112,6 +161,13 @@ Cockpit Tools（通用 AI IDE 账号管理：Cursor / Copilot / Windsurf / Codex
 
 - 仓库：`jlcodes99/cockpit-tools` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows cockpit_tools`
+
+### Coco AI（本地搜索与个人助手桌面端；Windows x64 Setup） · `coco_ai`
+
+Coco AI（本地搜索与个人助手桌面端；Windows x64 Setup）
+
+- 仓库：`infinilabs/coco-app` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows coco_ai`
 
 ### codex app · `codex_app`
 
@@ -127,12 +183,26 @@ OpenAI Codex CLI（Rust 发行包，Windows x64 推荐 exe.zip）
 - 仓库：`openai/codex` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows codex_cli`
 
+### Codex Dream Skin（Codex 桌面美化/皮肤；Windows Setup） · `codex_dream_skin`
+
+Codex Dream Skin（Codex 桌面美化/皮肤；Windows Setup）
+
+- 仓库：`Fei-Away/Codex-Dream-Skin` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows codex_dream_skin`
+
 ### CodexPlusPlus（Codex App 增强工具 · `codex_plus_plus`
 
 CodexPlusPlus（Codex App 增强工具，Windows x64 安装包）
 
 - 仓库：`BigPizzaV3/CodexPlusPlus` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows codex_plus_plus`
+
+### Colibri（本地跑前沿 MoE；Windows x64 zip） · `colibri`
+
+Colibri（本地跑前沿 MoE；Windows x64 zip）
+
+- 仓库：`JustVugg/colibri` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
+- 查找：`lookup_app.bat --platform windows colibri`
 
 ### ComfyUI（本地 AI 图像工作流；Windows NVIDIA 便携版 · `comfyui`
 
@@ -141,12 +211,33 @@ ComfyUI（本地 AI 图像工作流；Windows NVIDIA 便携版 7z，解压即用
 - 仓库：`comfyanonymous/ComfyUI` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows comfyui`
 
+### Comfy Desktop（官方桌面端下载页；lookup 打开 · `comfyui_desktop`
+
+Comfy Desktop（官方桌面端下载页；lookup 打开。便携包见 comfyui）
+
+- 页面：https://comfy.org/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows comfyui_desktop`
+
 ### Continue（VS Code / JetBrains 系 AI 编程扩展 · `continue`
 
 Continue（VS Code / JetBrains 系 AI 编程扩展，Release .vsix；注意 v2.x 部分 Release 无 .vsix 资产）
 
 - 仓库：`continuedev/continue` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows continue`
+
+### Microsoft Copilot（对话网页；lookup 打开官网 · `copilot`
+
+Microsoft Copilot（对话网页；lookup 打开官网。GitHub 编程助手见 github_copilot）
+
+- 页面：https://copilot.microsoft.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows copilot`
+
+### 扣子 Coze（字节智能体/工作流网页；lookup 打开官网） · `coze`
+
+扣子 Coze（字节智能体/工作流网页；lookup 打开官网）
+
+- 页面：https://www.coze.cn/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows coze`
 
 ### Crush（Charmbracelet 终端 AI 编程助手） · `crush`
 
@@ -155,9 +246,23 @@ Crush（Charmbracelet 终端 AI 编程助手）
 - 仓库：`charmbracelet/crush` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows crush`
 
+### DeepChat（开源多模型 AI 桌面客户端；Windows x64） · `deepchat`
+
+DeepChat（开源多模型 AI 桌面客户端；Windows x64）
+
+- 仓库：`ThinkInAIXYZ/deepchat` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows deepchat`
+
+### DeepSeek（深度求索对话网页；lookup 打开官网 · `deepseek`
+
+DeepSeek（深度求索对话网页；lookup 打开官网。CLI 见 deepseek_cli）
+
+- 页面：https://chat.deepseek.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows deepseek`
+
 ### deepseek cli · `deepseek_cli`
 
-DeepSeek-TUI dispatcher（deepseek 命令；Windows x64；需配套 deepseek_tui 一起放到 PATH）
+CodeWhale（原 DeepSeek-TUI dispatcher；Windows x64 CLI）
 
 - 仓库：`Hmbown/DeepSeek-TUI` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows deepseek_cli`
@@ -171,10 +276,45 @@ DeepSeek Reasonix（DeepSeek 原生终端 AI coding agent / Desktop；Windows x6
 
 ### deepseek tui · `deepseek_tui`
 
-DeepSeek-TUI companion runtime（deepseek-tui 命令；Windows x64；需与 deepseek_cli 同时存在）
+CodeWhale TUI companion（原 deepseek-tui；Windows x64）
 
 - 仓库：`Hmbown/DeepSeek-TUI` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows deepseek_tui`
+
+### Deeting OS（本地优先 AI 工作台；Windows x64 Setup） · `deeting`
+
+Deeting OS（本地优先 AI 工作台；Windows x64 Setup）
+
+- 仓库：`MarshallEriksen-Neura/Deeting` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows deeting`
+
+### Dify（开源 LLM 应用/工作流平台；lookup 打开官网 · `dify`
+
+Dify（开源 LLM 应用/工作流平台；lookup 打开官网，自托管用 Docker）
+
+- 页面：https://dify.ai/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows dify`
+
+### dive ai · `dive_ai`
+
+Dive AI Agent（开源 MCP Host 桌面智能体；Windows x64 Tauri Setup）
+
+- 仓库：`OpenAgentPlatform/Dive` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows dive_ai`
+
+### 豆包（字节对话网页；lookup 打开官网） · `doubao`
+
+豆包（字节对话网页；lookup 打开官网）
+
+- 页面：https://www.doubao.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows doubao`
+
+### dsh desktop · `dsh_desktop`
+
+DSH Desktop（DeepSeek Harness 桌面端；Windows x64 Setup）
+
+- 仓库：`anywhere-labs/dsh-desktop` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows dsh_desktop`
 
 ### fabric（AI 提示词工作流 CLI；Windows x64 zip） · `fabric`
 
@@ -183,12 +323,82 @@ fabric（AI 提示词工作流 CLI；Windows x64 zip）
 - 仓库：`danielmiessler/fabric` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows fabric`
 
+### FastGPT（开源知识库问答；lookup 打开官网 · `fastgpt`
+
+FastGPT（开源知识库问答；lookup 打开官网，自托管用 Docker）
+
+- 页面：https://fastgpt.in/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows fastgpt`
+
+### Felo（多语言 AI 搜索网页；lookup 打开官网） · `felo`
+
+Felo（多语言 AI 搜索网页；lookup 打开官网）
+
+- 页面：https://felo.ai/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows felo`
+
+### 5ire（桌面 AI 助手 / MCP 客户端；Windows Setup） · `fiveire`
+
+5ire（桌面 AI 助手 / MCP 客户端；Windows Setup）
+
+- 仓库：`nanbingxyz/5ire` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows fiveire`
+
+### Flock（Tauri 桌面多 Agent 工作台；Windows x64 Setup） · `flock`
+
+Flock（Tauri 桌面多 Agent 工作台；Windows x64 Setup）
+
+- 仓库：`Onelevenvy/flock` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows flock`
+
+### FLUX / Black Forest Labs（生图官网；lookup 打开 · `flux`
+
+FLUX / Black Forest Labs（生图官网；lookup 打开。本地工作流见 comfyui）
+
+- 页面：https://bfl.ai/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows flux`
+
+### FreeLLMAPI（聚合免费 LLM 接口的桌面端；Windows Setup） · `freellmapi`
+
+FreeLLMAPI（聚合免费 LLM 接口的桌面端；Windows Setup）
+
+- 仓库：`tashfeenahmed/freellmapi` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows freellmapi`
+
+### Google Gemini（对话网页；lookup 打开官网 · `gemini`
+
+Google Gemini（对话网页；lookup 打开官网。CLI 见 gemini_cli）
+
+- 页面：https://gemini.google.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows gemini`
+
 ### gemini cli · `gemini_cli`
 
 Gemini CLI（Google 官方；Release 多为 gemini-cli-bundle.zip 通用包）
 
 - 仓库：`google-gemini/gemini-cli` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows gemini_cli`
+
+### Gemini Code Assist（Google 代码助手产品页；lookup 打开官网 · `gemini_code_assist`
+
+Gemini Code Assist（Google 代码助手产品页；lookup 打开官网。CLI 见 gemini_cli）
+
+- 页面：https://codeassist.google/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows gemini_code_assist`
+
+### Genspark（AI 工作区 / 搜索网页；lookup 打开官网） · `genspark`
+
+Genspark（AI 工作区 / 搜索网页；lookup 打开官网）
+
+- 页面：https://www.genspark.ai/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows genspark`
+
+### GitHub Copilot（官方产品页；lookup 打开官网 · `github_copilot`
+
+GitHub Copilot（官方产品页；lookup 打开官网。CLI 见 github_copilot_cli）
+
+- 页面：https://github.com/features/copilot · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows github_copilot`
 
 ### GitHub Copilot CLI（官方 github/copilot-cli · `github_copilot_cli`
 
@@ -218,12 +428,68 @@ GPT4All（本地运行 LLM 的桌面客户端）
 - 仓库：`nomic-ai/gpt4all` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows gpt4all`
 
+### Grok（xAI 对话网页；lookup 打开官网） · `grok`
+
+Grok（xAI 对话网页；lookup 打开官网）
+
+- 页面：https://grok.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows grok`
+
+### Grok Bot（Cursor 官网桌面端 · `grok_bot`
+
+Grok Bot（Cursor 官网桌面端，不是 Cursor IDE，也不是 grok.com 网页）
+
+- 页面：https://cursor.com/cn/download/bot · 分片：`apps/windows/01-AI.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`lookup_app.bat --platform windows grok_bot`
+
+### Groq 控制台（高速推理网页；lookup 打开官网） · `groq`
+
+Groq 控制台（高速推理网页；lookup 打开官网）
+
+- 页面：https://console.groq.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows groq`
+
+### 海螺视频（MiniMax 视频生成网页；lookup 打开官网 · `hailuo_video`
+
+海螺视频（MiniMax 视频生成网页；lookup 打开官网。对话见 minimax）
+
+- 页面：https://hailuoai.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows hailuo_video`
+
 ### Headroom（压缩工具输出/日志/RAG 再喂给 LLM · `headroom`
 
 Headroom（压缩工具输出/日志/RAG 再喂给 LLM，省 token；Python wheel / npm 包）
 
 - 仓库：`chopratejas/headroom` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows headroom`
+
+### Hugging Face（模型/Spaces 网页；lookup 打开官网） · `huggingface`
+
+Hugging Face（模型/Spaces 网页；lookup 打开官网）
+
+- 页面：https://huggingface.co/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows huggingface`
+
+### 腾讯混元（对话网页；lookup 打开官网 · `hunyuan`
+
+腾讯混元（对话网页；lookup 打开官网。C 端助手见 yuanbao）
+
+- 页面：https://hunyuan.tencent.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows hunyuan`
+
+### Ideogram（AI 生图 / 文字排版网页；lookup 打开官网） · `ideogram`
+
+Ideogram（AI 生图 / 文字排版网页；lookup 打开官网）
+
+- 页面：https://ideogram.ai/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows ideogram`
+
+### ima（腾讯 AI 知识工作台网页；lookup 打开官网 · `ima`
+
+ima（腾讯 AI 知识工作台网页；lookup 打开官网。C 端助手见 yuanbao）
+
+- 页面：https://ima.qq.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows ima`
 
 ### 沉浸式翻译（浏览器扩展离线包 · `immersive_translate`
 
@@ -239,12 +505,33 @@ Jan（离线优先的本地 AI 聊天客户端）
 - 仓库：`janhq/jan` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows jan`
 
+### Jaz（Ollama 原生本地 Chat 桌面端；Windows Setup） · `jaz`
+
+Jaz（Ollama 原生本地 Chat 桌面端；Windows Setup）
+
+- 仓库：`gluonfield/jaz` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows jaz`
+
+### 即梦 AI（字节图像/视频生成网页；lookup 打开官网） · `jimeng`
+
+即梦 AI（字节图像/视频生成网页；lookup 打开官网）
+
+- 页面：https://jimeng.jianying.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows jimeng`
+
 ### Kilo Code（开源 AI 编程 VS Code 扩展） · `kilocode`
 
 Kilo Code（开源 AI 编程 VS Code 扩展）
 
 - 仓库：`Kilo-Org/kilocode` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows kilocode`
+
+### Kimi（月之暗面对话网页；lookup 打开官网 · `kimi`
+
+Kimi（月之暗面对话网页；lookup 打开官网。CLI 见 kimi_cli）
+
+- 页面：https://www.kimi.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows kimi`
 
 ### Kimi CLI（Moonshot 官方命令行；Windows x64 zip） · `kimi_cli`
 
@@ -260,12 +547,26 @@ Kiro CLI（manifest：prod.download.cli.kiro.dev）
 - 分片：`apps/windows/01-AI.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows kiro`
 
+### 可灵（快手图像/视频生成网页；lookup 打开官网） · `kling`
+
+可灵（快手图像/视频生成网页；lookup 打开官网）
+
+- 页面：https://klingai.kuaishou.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows kling`
+
 ### KoboldCpp（本地 LLM 推理前端；Windows CUDA 版 exe） · `koboldcpp`
 
 KoboldCpp（本地 LLM 推理前端；Windows CUDA 版 exe）
 
 - 仓库：`LostRuins/koboldcpp` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows koboldcpp`
+
+### Kun（本地优先 AI Agent 工作台；Windows x64） · `kun`
+
+Kun（本地优先 AI Agent 工作台；Windows x64）
+
+- 仓库：`KunAgent/Kun` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows kun`
 
 ### LangChain：Python/JS 开发框架 · `langchain_note`
 
@@ -280,6 +581,27 @@ Langflow（可视化 LLM 工作流桌面端）
 
 - 仓库：`langflow-ai/langflow` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows langflow`
+
+### Leonardo（AI 生图网页；lookup 打开官网） · `leonardo`
+
+Leonardo（AI 生图网页；lookup 打开官网）
+
+- 页面：https://leonardo.ai/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows leonardo`
+
+### 零一万物（公司/产品门户；lookup 打开官网） · `lingyi`
+
+零一万物（公司/产品门户；lookup 打开官网）
+
+- 页面：https://www.lingyiwanwu.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows lingyi`
+
+### LiveAgent（开源 AI Agent 桌面客户端；Windows x64 Setup） · `live_agent`
+
+LiveAgent（开源 AI Agent 桌面客户端；Windows x64 Setup）
+
+- 仓库：`Stack-Cairn/LiveAgent` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows live_agent`
 
 ### llama.cpp（GGML 本地推理；Windows CPU x64 zip · `llama_cpp`
 
@@ -316,12 +638,61 @@ Lobe Chat Hub（多模型 AI 桌面客户端，LobeHub）
 - 仓库：`lobehub/lobe-chat` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows lobe_chat`
 
+### LobsterAI（网易有道开源桌面办公智能体；Windows x64） · `lobsterai`
+
+LobsterAI（网易有道开源桌面办公智能体；Windows x64）
+
+- 仓库：`netease-youdao/LobsterAI` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows lobsterai`
+
+### Luma Dream Machine（AI 视频生成网页；lookup 打开官网） · `luma`
+
+Luma Dream Machine（AI 视频生成网页；lookup 打开官网）
+
+- 页面：https://lumalabs.ai/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows luma`
+
 ### Magika（Google 开源文件类型识别 CLI；Windows x64 zip） · `magika`
 
 Magika（Google 开源文件类型识别 CLI；Windows x64 zip）
 
 - 仓库：`google/magika` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows magika`
+
+### Meta AI（对话网页；lookup 打开官网） · `meta_ai`
+
+Meta AI（对话网页；lookup 打开官网）
+
+- 页面：https://www.meta.ai/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows meta_ai`
+
+### 秘塔 AI 搜索（网页；lookup 打开官网） · `metaso`
+
+秘塔 AI 搜索（网页；lookup 打开官网）
+
+- 页面：https://metaso.cn/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows metaso`
+
+### Midjourney（图像生成网页；lookup 打开官网） · `midjourney`
+
+Midjourney（图像生成网页；lookup 打开官网）
+
+- 页面：https://www.midjourney.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows midjourney`
+
+### MiMo Code（小米 MiMo 编码 CLI；Windows x64 zip） · `mimo_code`
+
+MiMo Code（小米 MiMo 编码 CLI；Windows x64 zip）
+
+- 仓库：`XiaomiMiMo/MiMo-Code` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
+- 查找：`lookup_app.bat --platform windows mimo_code`
+
+### MiniMax Agent（海螺对话网页；lookup 打开官网 · `minimax`
+
+MiniMax Agent（海螺对话网页；lookup 打开官网。视频见 hailuo_video）
+
+- 页面：https://agent.minimaxi.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows minimax`
 
 ### mods（Charm 终端 AI；Windows x64 zip） · `mods`
 
@@ -336,6 +707,20 @@ NextChat（原 ChatGPT-Next-Web）：仓库 ChatGPTNextWeb/NextChat 的 Release 
 
 - 仓库：`ChatGPTNextWeb/NextChat` · 页面：https://github.com/ChatGPTNextWeb/NextChat · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
 - 查找：`lookup_app.bat --platform windows nextchat`
+
+### Noi（本地优先 AI 工作台 / 多会话桌面端；Windows Setup） · `noi`
+
+Noi（本地优先 AI 工作台 / 多会话桌面端；Windows Setup）
+
+- 仓库：`lencx/Noi` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows noi`
+
+### Nuphus（本地优先桌面 AI 智能体；Windows x64 Setup） · `nuphus`
+
+Nuphus（本地优先桌面 AI 智能体；Windows x64 Setup）
+
+- 仓库：`mrpulor-gh/nuphus` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows nuphus`
 
 ### Ollama（本地运行大模型与 OpenAI 风格 API） · `ollama`
 
@@ -358,6 +743,13 @@ Open Interpreter（自然语言操控本机；Windows x64 tar.gz）
 - 仓库：`OpenInterpreter/open-interpreter` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows open_interpreter`
 
+### open science · `open_science`
+
+Open Science Desktop（本地优先科研 AI 工作台；Windows x64 Setup）
+
+- 仓库：`ai4s-research/open-science` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows open_science`
+
 ### Open WebUI Desktop（本地 AI 聊天桌面端） · `open_webui_desktop`
 
 Open WebUI Desktop（本地 AI 聊天桌面端）
@@ -379,9 +771,16 @@ OpenClaw（个人 AI 助手；Windows 用 Release 中 OpenClaw-*.zip）
 - 仓库：`openclaw/openclaw` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows openclaw`
 
-### OpenCode（开源 AI 编程代理 / 桌面端 · `opencode`
+### openclaw manager · `openclaw_manager`
 
-OpenCode（开源 AI 编程代理 / 桌面端，SST 团队）
+OpenClaw Manager（OpenClaw 桌面管理器；Windows x64 Setup）
+
+- 仓库：`miaoxworld/openclaw-manager` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows openclaw_manager`
+
+### OpenCode（开源 AI 编程代理 / 桌面端；win-x64） · `opencode`
+
+OpenCode（开源 AI 编程代理 / 桌面端；win-x64）
 
 - 仓库：`sst/opencode` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows opencode`
@@ -393,12 +792,54 @@ OpenHands（开源 AI 软件工程师代理；桌面/CLI 以 Docker 与源码为
 - 仓库：`All-Hands-AI/OpenHands` · 分片：`apps/windows/01-AI.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows openhands`
 
+### OpenHuman（开源本地优先个人 AI 桌面端；Windows x64 Setup） · `openhuman`
+
+OpenHuman（开源本地优先个人 AI 桌面端；Windows x64 Setup）
+
+- 仓库：`tinyhumansai/openhuman` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows openhuman`
+
+### OpenRouter（多模型 API 路由网页；lookup 打开官网） · `openrouter`
+
+OpenRouter（多模型 API 路由网页；lookup 打开官网）
+
+- 页面：https://openrouter.ai/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows openrouter`
+
+### openworker · `openworker`
+
+OpenWorker（Andrew Ng 开源 agent 工作台；Windows x64 Setup）
+
+- 仓库：`andrewyng/openworker` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows openworker`
+
+### Perplexity（AI 搜索网页；lookup 打开官网） · `perplexity`
+
+Perplexity（AI 搜索网页；lookup 打开官网）
+
+- 页面：https://www.perplexity.ai/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows perplexity`
+
+### Phind（开发者 AI 搜索网页；lookup 打开官网） · `phind`
+
+Phind（开发者 AI 搜索网页；lookup 打开官网）
+
+- 页面：https://www.phind.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows phind`
+
 ### PicoClaw（超轻量 AI 助手；Windows x86_64 zip） · `picoclaw`
 
 PicoClaw（超轻量 AI 助手；Windows x86_64 zip）
 
 - 仓库：`sipeed/picoclaw` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows picoclaw`
+
+### Pika（AI 视频生成网页；lookup 打开官网 · `pika_ai`
+
+Pika（AI 视频生成网页；lookup 打开官网。与 macOS 取色工具 pika 区分）
+
+- 页面：https://pika.art/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows pika_ai`
 
 ### Pinokio（一键跑本地 AI 应用的浏览器式桌面；Windows exe） · `pinokio`
 
@@ -413,6 +854,20 @@ Piper（本地神经网络 TTS；Windows amd64 zip）
 
 - 仓库：`rhasspy/piper` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows piper`
+
+### Poe（Quora 多模型对话网页；lookup 打开官网） · `poe`
+
+Poe（Quora 多模型对话网页；lookup 打开官网）
+
+- 页面：https://poe.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows poe`
+
+### 千问 / 通义千问（阿里对话网页；lookup 打开官网 · `qwen`
+
+千问 / 通义千问（阿里对话网页；lookup 打开官网。CLI 见 qwen_code）
+
+- 页面：https://www.qianwen.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows qwen`
 
 ### qwen code · `qwen_code`
 
@@ -435,12 +890,61 @@ RTK（CLI 代理：常见开发命令输出压缩 60–90% token，Rust 单文�
 - 仓库：`rtk-ai/rtk` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows rtk`
 
+### RunComfy（云端 ComfyUI 网页；lookup 打开官网） · `runcomfy`
+
+RunComfy（云端 ComfyUI 网页；lookup 打开官网）
+
+- 页面：https://www.runcomfy.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows runcomfy`
+
+### RunDiffusion（云端生图网页；lookup 打开官网） · `rundiffusion`
+
+RunDiffusion（云端生图网页；lookup 打开官网）
+
+- 页面：https://www.rundiffusion.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows rundiffusion`
+
+### Runway（AI 视频生成网页；lookup 打开官网） · `runway`
+
+Runway（AI 视频生成网页；lookup 打开官网）
+
+- 页面：https://runway.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows runway`
+
+### 商汤日日新 / 商量（大模型门户；lookup 打开官网） · `sensenova`
+
+商汤日日新 / 商量（大模型门户；lookup 打开官网）
+
+- 页面：https://www.sensenova.cn/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows sensenova`
+
+### 硅基流动（模型推理控制台；lookup 打开官网） · `siliconflow`
+
+硅基流动（模型推理控制台；lookup 打开官网）
+
+- 页面：https://cloud.siliconflow.cn/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows siliconflow`
+
 ### Sourcegraph src CLI（windows · `sourcegraph_src_cli`
 
 Sourcegraph src CLI（windows，Cody/源码搜索生态）
 
 - 仓库：`sourcegraph/src-cli` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows sourcegraph_src_cli`
+
+### 讯飞星火（对话网页；lookup 打开官网） · `spark`
+
+讯飞星火（对话网页；lookup 打开官网）
+
+- 页面：https://xinghuo.xfyun.cn/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows spark`
+
+### sztucode · `sztucode`
+
+SztuCode（开源本地优先 AI 编程/办公智能体桌面端；Windows x64 Setup）
+
+- 仓库：`rojim666/SztuCode` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows sztucode`
 
 ### Tabby（自托管 AI 代码补全服务 / 本地推理包） · `tabbyml`
 
@@ -449,12 +953,33 @@ Tabby（自托管 AI 代码补全服务 / 本地推理包）
 - 仓库：`TabbyML/tabby` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows tabbyml`
 
+### Tabnine（AI 代码补全产品页；lookup 打开官网） · `tabnine`
+
+Tabnine（AI 代码补全产品页；lookup 打开官网）
+
+- 页面：https://www.tabnine.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows tabnine`
+
 ### textgen webui · `textgen_webui`
 
 text-generation-webui / oobabooga（本地 LLM WebUI；Windows CPU 便携 zip）
 
 - 仓库：`oobabooga/text-generation-webui` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows textgen_webui`
+
+### 天工（昆仑万维 AI 搜索/助手网页；lookup 打开官网） · `tiangong`
+
+天工（昆仑万维 AI 搜索/助手网页；lookup 打开官网）
+
+- 页面：https://www.tiangong.cn/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows tiangong`
+
+### Vidu（生数科技视频生成网页；lookup 打开官网） · `vidu`
+
+Vidu（生数科技视频生成网页；lookup 打开官网）
+
+- 页面：https://www.vidu.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows vidu`
 
 ### VoxTrans（桌面转写/翻译/字幕编辑；Windows CPU 版） · `voxtrans`
 
@@ -477,6 +1002,55 @@ GitHub Copilot Chat（VS Code 扩展 .vsix）
 - 仓库：`microsoft/vscode-copilot-chat` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows vscode_copilot_chat`
 
+### 通义万相（阿里图像/视频生成网页；lookup 打开官网） · `wanxiang`
+
+通义万相（阿里图像/视频生成网页；lookup 打开官网）
+
+- 页面：https://tongyi.aliyun.com/wan/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows wanxiang`
+
+### 文心（百度对话网页 · `wenxin`
+
+文心（百度对话网页，原「文心一言」；lookup 打开官网）
+
+- 页面：https://wenxin.baidu.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows wenxin`
+
+### Witsy（桌面 AI 助手 / MCP 客户端；Windows x64 Setup） · `witsy`
+
+Witsy（桌面 AI 助手 / MCP 客户端；Windows x64 Setup）
+
+- 仓库：`Kochava-Studios/witsy` · 分片：`apps/windows/01-AI.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows witsy`
+
+### 华为小艺（对话网页；lookup 打开官网 · `xiaoyi`
+
+华为小艺（对话网页；lookup 打开官网。系统内置助手无独立安装包）
+
+- 页面：https://xiaoyi.huawei.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows xiaoyi`
+
+### You.com（AI 搜索网页；lookup 打开官网） · `you_com`
+
+You.com（AI 搜索网页；lookup 打开官网）
+
+- 页面：https://you.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows you_com`
+
+### 腾讯元宝（对话网页；lookup 打开官网） · `yuanbao`
+
+腾讯元宝（对话网页；lookup 打开官网）
+
+- 页面：https://yuanbao.tencent.com/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows yuanbao`
+
+### 跃问（阶跃星辰对话网页；lookup 打开官网） · `yuewen`
+
+跃问（阶跃星辰对话网页；lookup 打开官网）
+
+- 页面：https://stepchat.cn/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows yuewen`
+
 ### Zed Codex ACP（在 Zed 中使用 Codex · `zed_codex_acp`
 
 Zed Codex ACP（在 Zed 中使用 Codex，windows）
@@ -484,9 +1058,23 @@ Zed Codex ACP（在 Zed 中使用 Codex，windows）
 - 仓库：`zed-industries/codex-acp` · 分片：`apps/windows/01-AI.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows zed_codex_acp`
 
+### 智谱清言 / ChatGLM（对话网页；lookup 打开官网） · `zhipu`
+
+智谱清言 / ChatGLM（对话网页；lookup 打开官网）
+
+- 页面：https://chatglm.cn/ · 分片：`apps/windows/01-AI.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows zhipu`
+
 ---
 
-## 下载（24）
+## 下载（26）
+
+### ABDownloadManager（开源跨平台下载管理器；Windows x64 exe） · `ab_download_manager`
+
+ABDownloadManager（开源跨平台下载管理器；Windows x64 exe）
+
+- 仓库：`amir1376/ab-download-manager` · 分片：`apps/windows/02-下载.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows ab_download_manager`
 
 ### aria2（多协议下载 CLI · `aria2`
 
@@ -579,6 +1167,13 @@ MotrixNext（Motrix Tauri 重写版下载器；Windows x64 Setup）
 - 仓库：`AnInsomniacy/motrix-next` · 分片：`apps/windows/02-下载.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows motrix_next`
 
+### N_m3u8DL-RE（nilaoda m3u8/流媒体下载；Windows x64 zip · `n_m3u8dl_re`
+
+N_m3u8DL-RE（nilaoda m3u8/流媒体下载；Windows x64 zip，CLI 后继）
+
+- 仓库：`nilaoda/N_m3u8DL-RE` · 分片：`apps/windows/02-下载.json` · 配置：已配匹配规则
+- 查找：`lookup_app.bat --platform windows n_m3u8dl_re`
+
 ### Nicotine+（Soulseek 图形客户端） · `nicotine_plus`
 
 Nicotine+（Soulseek 图形客户端）
@@ -658,7 +1253,7 @@ XiaDown（资源库/视频下载管理；Windows x64 安装包）
 
 ---
 
-## 云原生（23）
+## 云原生（25）
 
 ### Caddy HTTP/1-3 服务器与反向代理（自动 HTTPS · `caddy`
 
@@ -765,6 +1360,13 @@ Multipass（Canonical 轻量 Ubuntu VM）
 - 仓库：`hashicorp/nomad` · 分片：`apps/windows/24-云原生.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows nomad`
 
+### OpenTofu（Terraform 开源分支；Windows amd64 zip） · `opentofu`
+
+OpenTofu（Terraform 开源分支；Windows amd64 zip）
+
+- 仓库：`opentofu/opentofu` · 分片：`apps/windows/24-云原生.json` · 配置：已配匹配规则
+- 查找：`lookup_app.bat --platform windows opentofu`
+
 ### 镜像构建自动化 · `packer`
 
 镜像构建自动化
@@ -793,9 +1395,16 @@ Portainer（容器管理 UI 服务端包）
 - 仓库：`portainer/portainer` · 分片：`apps/windows/24-云原生.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows portainer`
 
-### Rancher Desktop（K8s/容器） · `rancher_desktop`
+### Pulumi（现代 IaC CLI；Windows x64 zip） · `pulumi`
 
-Rancher Desktop（K8s/容器）
+Pulumi（现代 IaC CLI；Windows x64 zip）
+
+- 仓库：`pulumi/pulumi` · 分片：`apps/windows/24-云原生.json` · 配置：已配匹配规则
+- 查找：`lookup_app.bat --platform windows pulumi`
+
+### Rancher Desktop（Windows Setup msi） · `rancher_desktop`
+
+Rancher Desktop（Windows Setup msi）
 
 - 仓库：`rancher-sandbox/rancher-desktop` · 分片：`apps/windows/24-云原生.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows rancher_desktop`
@@ -823,7 +1432,7 @@ Kubernetes 本地开发（tilt）
 
 ---
 
-## 代理与隧道（15）
+## 代理与隧道（17）
 
 ### Clash Party（原 Mihomo Party；Windows x64 Setup） · `clash_party`
 
@@ -867,6 +1476,13 @@ Frpc Desktop（frp 桌面 GUI 客户端，Windows Setup）
 - 仓库：`luckjiawei/frpc-desktop` · 分片：`apps/windows/30-代理与隧道.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows frpc_desktop`
 
+### gui for clash · `gui_for_clash`
+
+GUI.for.Clash（Clash/Mihomo 图形前端；Windows amd64 zip）
+
+- 仓库：`GUI-for-Cores/GUI.for.Clash` · 分片：`apps/windows/30-代理与隧道.json` · 配置：已配匹配规则
+- 查找：`lookup_app.bat --platform windows gui_for_clash`
+
 ### GUI.for.SingBox（sing-box 图形前端） · `gui_for_singbox`
 
 GUI.for.SingBox（sing-box 图形前端）
@@ -880,6 +1496,13 @@ Hiddify（原 Hiddify Next / hiddify-app）（跨平台代理客户端，Meta/�
 
 - 仓库：`hiddify/hiddify-app` · 分片：`apps/windows/30-代理与隧道.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows hiddify_next`
+
+### Karing（多协议代理客户端；Windows x64） · `karing`
+
+Karing（多协议代理客户端；Windows x64）
+
+- 仓库：`KaringX/Karing` · 分片：`apps/windows/30-代理与隧道.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows karing`
 
 ### mihomo（Clash Meta 内核二进制 · `mihomo`
 
@@ -932,7 +1555,7 @@ Xray-core（代理内核）
 
 ---
 
-## 写作（13）
+## 写作（18）
 
 ### 开源免费多平台 Markdown 写作工具 Boostnote · `boostnote`
 
@@ -955,6 +1578,20 @@ flymd（Markdown 编辑器）
 - 仓库：`flyhunterl/flymd` · 分片：`apps/windows/03-写作.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows flymd`
 
+### GoldenDict-ng（开源词典/词库阅读器；Windows 安装包 · `goldendict_ng`
+
+GoldenDict-ng（开源词典/词库阅读器；Windows 安装包，Qt 6.10）
+
+- 仓库：`xiaoyifang/goldendict-ng` · 分片：`apps/windows/03-写作.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows goldendict_ng`
+
+### HorseMD（开源 Typora 平替 · `horsemd`
+
+HorseMD（开源 Typora 平替，所见即所得 Markdown；Windows Setup）
+
+- 仓库：`BND-1/horseMD` · 分片：`apps/windows/03-写作.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows horsemd`
+
 ### 开源跨平台电子书阅读器 Koodo Reader · `koodo_reader`
 
 开源跨平台电子书阅读器 Koodo Reader 2.3.5 免费好用的电子书阅读器
@@ -969,6 +1606,13 @@ mdBook（Rust 官方 Markdown 电子书/文档站点生成器）
 - 仓库：`rust-lang/mdBook` · 分片：`apps/windows/03-写作.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows mdbook`
 
+### novelWriter（开源小说/长文写作编辑器；Windows x64 安装包） · `novelwriter`
+
+novelWriter（开源小说/长文写作编辑器；Windows x64 安装包）
+
+- 仓库：`saga-soft/novelWriter` · 分片：`apps/windows/03-写作.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows novelwriter`
+
 ### Pandoc（文档格式转换 · `pandoc`
 
 Pandoc（文档格式转换，Windows MSI）
@@ -982,6 +1626,13 @@ Quarto CLI（科学/技术写作发布：PDF/HTML/Word）
 
 - 仓库：`quarto-dev/quarto-cli` · 分片：`apps/windows/03-写作.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows quarto_cli`
+
+### Readest（开源跨平台电子书阅读器；Windows x64 安装包） · `readest`
+
+Readest（开源跨平台电子书阅读器；Windows x64 安装包）
+
+- 仓库：`readest/readest` · 分片：`apps/windows/03-写作.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows readest`
 
 ### 专业 EPUB 格式电子书编辑器 Sigil · `sigil`
 
@@ -1011,6 +1662,13 @@ Vale（Markdown/文档风格与语法检查 CLI）
 - 仓库：`errata-ai/vale` · 分片：`apps/windows/03-写作.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows vale`
 
+### 有道词典（网易有道；官网分发 · `youdao_dict`
+
+有道词典（网易有道；官网分发，lookup 打开下载页）
+
+- 页面：https://cidian.youdao.com/ · 分片：`apps/windows/03-写作.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows youdao_dict`
+
 ### Zola（静态站点生成器 · `zola`
 
 Zola（静态站点生成器，Markdown 内容）
@@ -1027,7 +1685,7 @@ Zotero（文献管理；官方不走 GitHub Assets，请打开 Releases/官网�
 
 ---
 
-## 办公（15）
+## 办公（18）
 
 ### Adobe Acrobat Reader（PDF 阅读；官网分发 · `adobe_reader`
 
@@ -1049,6 +1707,20 @@ AFFiNE（知识库 / 文档 / 白板一体化，本地与同步）
 
 - 仓库：`kovidgoyal/calibre` · 分片：`apps/windows/04-办公.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows calibre`
+
+### JabRef（开源文献/BibTeX 管理；Windows MSI） · `jabref`
+
+JabRef（开源文献/BibTeX 管理；Windows MSI）
+
+- 仓库：`JabRef/jabref` · 分片：`apps/windows/04-办公.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows jabref`
+
+### Kavita（开源电子书/漫画库服务器；Windows x64 tar.gz） · `kavita`
+
+Kavita（开源电子书/漫画库服务器；Windows x64 tar.gz）
+
+- 仓库：`Kareadita/Kavita` · 分片：`apps/windows/04-办公.json` · 配置：已配匹配规则
+- 查找：`lookup_app.bat --platform windows kavita`
 
 ### 离线维基与 ZIM 阅读 · `kiwix`
 
@@ -1106,6 +1778,13 @@ Sumatra PDF 轻量阅读器
 - 仓库：`sumatrapdfreader/sumatrapdf` · 分片：`apps/windows/04-办公.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows sumatra_pdf`
 
+### 腾讯文档（在线协作 Office；官网分发 · `tencent_docs`
+
+腾讯文档（在线协作 Office；官网分发，lookup 打开下载页）
+
+- 页面：https://docs.qq.com/home/download · 分片：`apps/windows/04-办公.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows tencent_docs`
+
 ### LaTeX 编辑器（需本机 TeX） · `texstudio`
 
 LaTeX 编辑器（需本机 TeX）
@@ -1136,7 +1815,14 @@ XMind（思维导图；官网分发，lookup 打开下载页）
 
 ---
 
-## 办公与设计（6）
+## 办公与设计（8）
+
+### Adobe Creative Cloud（官方桌面应用；lookup 打开官网 · `adobe_creative_cloud`
+
+Adobe Creative Cloud（官方桌面应用；lookup 打开官网。不收录破解/绿色改包）
+
+- 页面：https://www.adobe.com/cn/creativecloud.html · 分片：`apps/windows/05-办公与设计.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows adobe_creative_cloud`
 
 ### 流程图 / 架构图桌面版（draw.io） · `drawio`
 
@@ -1151,6 +1837,13 @@ Figma 桌面版（官网分发；Linux 打开网页版）
 
 - 页面：https://www.figma.com/downloads/ · 分片：`apps/windows/05-办公与设计.json` · 配置：仅打开官网
 - 查找：`lookup_app.bat --platform windows figma`
+
+### FontForge（开源字体编辑器；Windows x64 安装包） · `fontforge`
+
+FontForge（开源字体编辑器；Windows x64 安装包）
+
+- 仓库：`fontforge/fontforge` · 分片：`apps/windows/05-办公与设计.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows fontforge`
 
 ### LibreCAD（开源 · `librecad`
 
@@ -1249,7 +1942,14 @@ Wasabi Wallet（比特币桌面钱包，CoinJoin 隐私向；请自行了解当�
 
 ---
 
-## 可观测（11）
+## 可观测（13）
+
+### Beszel（轻量服务器监控 Hub；Windows amd64 zip） · `beszel`
+
+Beszel（轻量服务器监控 Hub；Windows amd64 zip）
+
+- 仓库：`henrygd/beszel` · 分片：`apps/windows/25-可观测.json` · 配置：已配匹配规则
+- 查找：`lookup_app.bat --platform windows beszel`
 
 ### Grafana 可观测性仪表盘（Windows zip） · `grafana`
 
@@ -1271,6 +1971,13 @@ Grafana Alloy（OpenTelemetry Collector 发行版，可观测数据管道）
 
 - 仓库：`jaegertracing/jaeger` · 分片：`apps/windows/25-可观测.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows jaeger`
+
+### k6（Grafana 负载测试 CLI；Windows amd64 MSI） · `k6`
+
+k6（Grafana 负载测试 CLI；Windows amd64 MSI）
+
+- 仓库：`grafana/k6` · 分片：`apps/windows/25-可观测.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows k6`
 
 ### Grafana Loki（日志聚合 · `loki`
 
@@ -1330,7 +2037,7 @@ VictoriaMetrics（高性能 Prometheus 兼容时序库；单机 Windows）
 
 ---
 
-## 命令行（28）
+## 命令行（29）
 
 ### Atuin（Shell 历史同步/检索 · `atuin`
 
@@ -1437,12 +2144,19 @@ Nushell（结构化数据的现代 Shell）
 - 仓库：`nushell/nushell` · 分片：`apps/windows/06-命令行.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows nushell`
 
-### Oh My Posh（终端提示符主题引擎） · `oh_my_posh`
+### Oh My Posh（Windows amd64 独立 exe） · `oh_my_posh`
 
-Oh My Posh（终端提示符主题引擎）
+Oh My Posh（Windows amd64 独立 exe）
 
-- 仓库：`JanDeDobbeleer/oh-my-posh` · 分片：`apps/windows/06-命令行.json` · 配置：规则较完整
+- 仓库：`JanDeDobbeleer/oh-my-posh` · 分片：`apps/windows/06-命令行.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows oh_my_posh`
+
+### PowerShell · `powershell`
+
+PowerShell 7（跨平台 Shell；Windows x64 MSI）
+
+- 仓库：`PowerShell/PowerShell` · 分片：`apps/windows/06-命令行.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows powershell`
 
 ### 进程列表查看器（Rust） · `procs`
 
@@ -1530,7 +2244,7 @@ cd 智能跳转（zip）
 
 ---
 
-## 备份（10）
+## 备份（13）
 
 ### 阿里云盘（官网分发 · `aliyundrive`
 
@@ -1538,6 +2252,13 @@ cd 智能跳转（zip）
 
 - 页面：https://www.alipan.com/ · 分片：`apps/windows/07-备份.json` · 配置：仅打开官网
 - 查找：`lookup_app.bat --platform windows aliyundrive`
+
+### Backrest（restic Web UI 备份；Windows x64 安装包） · `backrest`
+
+Backrest（restic Web UI 备份；Windows x64 安装包）
+
+- 仓库：`garethgeorge/backrest` · 分片：`apps/windows/07-备份.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows backrest`
 
 ### 百度网盘（官网分发 · `baidunetdisk`
 
@@ -1566,6 +2287,20 @@ Duplicacy（跨云去重备份 CLI，Windows x64）
 
 - 仓库：`gilbertchen/duplicacy` · 分片：`apps/windows/07-备份.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows duplicacy`
+
+### Google Drive for desktop（官网分发 · `googledrive`
+
+Google Drive for desktop（官网分发，lookup 打开下载页）
+
+- 页面：https://www.google.com/drive/download/ · 分片：`apps/windows/07-备份.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows googledrive`
+
+### iCloud for Windows（苹果；lookup 打开官网 · `icloud`
+
+iCloud for Windows（苹果；lookup 打开官网。Mac 为系统自带）
+
+- 页面：https://www.icloud.com/ · 分片：`apps/windows/07-备份.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows icloud`
 
 ### Kopia（增量备份快照 · `kopia`
 
@@ -1604,11 +2339,11 @@ UrBackup Server（客户端/服务端镜像与文件备份）
 
 ---
 
-## 多媒体（47）
+## 多媒体（51）
 
-### 多轨音频录制与编辑 · `audacity`
+### 多轨音频录制与编辑（Windows x64 msi） · `audacity`
 
-多轨音频录制与编辑
+多轨音频录制与编辑（Windows x64 msi）
 
 - 仓库：`audacity/audacity` · 分片：`apps/windows/08-多媒体.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows audacity`
@@ -1690,9 +2425,16 @@ FormatMaster（视频/音频/图片/文档一站式格式转换；Windows 安装
 - 仓库：`HandBrake/HandBrake` · 分片：`apps/windows/08-多媒体.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows handbrake`
 
-### Jellyfin 桌面客户端 · `jellyfin_media_player`
+### Hydrus Network（本地媒体/图库标签整理；Windows 安装包） · `hydrus`
 
-Jellyfin 桌面客户端
+Hydrus Network（本地媒体/图库标签整理；Windows 安装包）
+
+- 仓库：`hydrusnetwork/hydrus` · 分片：`apps/windows/08-多媒体.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows hydrus`
+
+### Jellyfin 桌面播放器（windows-x64.exe） · `jellyfin_media_player`
+
+Jellyfin 桌面播放器（windows-x64.exe）
 
 - 仓库：`jellyfin/jellyfin-media-player` · 分片：`apps/windows/08-多媒体.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows jellyfin_media_player`
@@ -1844,6 +2586,13 @@ PotPlayer 一键配置工具
 - 仓库：`neatgz/PotPlayer_OneKey_Tool` · 分片：`apps/windows/08-多媒体.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows potplayer_onekey`
 
+### Psst（轻量 Spotify 客户端；Windows exe） · `psst`
+
+Psst（轻量 Spotify 客户端；Windows exe）
+
+- 仓库：`jpochyla/psst` · 分片：`apps/windows/08-多媒体.json` · 配置：已配匹配规则
+- 查找：`lookup_app.bat --platform windows psst`
+
 ### 开源媒体播放器 QMPlay2 Build · `qmplay2`
 
 开源媒体播放器 QMPlay2 Build 25.09.11 + x64 中文多语免费版
@@ -1921,12 +2670,26 @@ VLC 媒体播放器（跨平台）
 - 仓库：`G-Stas/Volumey` · 分片：`apps/windows/08-多媒体.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows volumey`
 
+### VutronMusic（第三方网易云音乐播放器；Windows x64） · `vutronmusic`
+
+VutronMusic（第三方网易云音乐播放器；Windows x64）
+
+- 仓库：`stark81/VutronMusic` · 分片：`apps/windows/08-多媒体.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows vutronmusic`
+
 ### 开源免费本地音乐播放器 Dopamine · `xmanager`
 
 开源免费本地音乐播放器 Dopamine 3.0.5 中文多语免费版
 
 - 仓库：`digimezzo/dopamine` · 分片：`apps/windows/08-多媒体.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows xmanager`
+
+### YesPlayMusic（第三方网易云音乐播放器；Windows 安装包） · `yesplaymusic`
+
+YesPlayMusic（第三方网易云音乐播放器；Windows 安装包）
+
+- 仓库：`qier222/YesPlayMusic` · 分片：`apps/windows/08-多媒体.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows yesplaymusic`
 
 ### 视频下载命令行（单文件 yt-dlp.exe） · `yt_dlp`
 
@@ -2272,9 +3035,9 @@ osquery（SQL 查本机状态，端点可见性）
 - 仓库：`osquery/osquery` · 分片：`apps/windows/10-安全.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows osquery`
 
-### OWASP ZAP（Web 安全测试 · `owasp_zap`
+### OWASP ZAP（Windows 安装包 windows.exe） · `owasp_zap`
 
-OWASP ZAP（Web 安全测试，Windows 安装包）
+OWASP ZAP（Windows 安装包 windows.exe）
 
 - 仓库：`zaproxy/zaproxy` · 分片：`apps/windows/10-安全.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows owasp_zap`
@@ -2414,7 +3177,7 @@ Zen 系统级广告拦截与隐私守护（irbis-sh/zen-desktop，原 anfragment
 
 ---
 
-## 局域网文件共享（13）
+## 局域网文件共享（17）
 
 ### AList（多网盘挂载 · `alist`
 
@@ -2479,6 +3242,13 @@ codeskyblue/gohttpserver：轻量 HTTP 目录服务（chfs 系常用实现；tag
 - 仓库：`codeskyblue/gohttpserver` · 分片：`apps/windows/29-局域网文件共享.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows gohttpserver`
 
+### HFS HTTP File Server（网页文件共享 · `hfs`
+
+HFS HTTP File Server（网页文件共享，Windows x64 zip）
+
+- 仓库：`rejetto/hfs` · 分片：`apps/windows/29-局域网文件共享.json` · 配置：已配匹配规则
+- 查找：`lookup_app.bat --platform windows hfs`
+
 ### localfs-go · `localfs-go`
 
 monocodx/localfs-go：局域网文件服务（仓库当前无 GitHub Release 二进制，仅作定位；请自行编译或关注作者分发）
@@ -2492,6 +3262,27 @@ monocodx/localfs-go：局域网文件服务（仓库当前无 GitHub Release 二
 
 - 仓库：`nocab-transfer/nocab-desktop` · 分片：`apps/windows/29-局域网文件共享.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows nocab_desktop`
+
+### OnionShare（Tor 匿名文件分享；Windows x64 MSI） · `onionshare`
+
+OnionShare（Tor 匿名文件分享；Windows x64 MSI）
+
+- 仓库：`onionshare/onionshare` · 分片：`apps/windows/29-局域网文件共享.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows onionshare`
+
+### OpenList（AList 开源续作 · `openlist`
+
+OpenList（AList 开源续作，多网盘挂载；Windows amd64 zip）
+
+- 仓库：`OpenListTeam/OpenList` · 分片：`apps/windows/29-局域网文件共享.json` · 配置：已配匹配规则
+- 查找：`lookup_app.bat --platform windows openlist`
+
+### sendme（n0/iroh 点对点传文件 CLI；Windows x64 zip） · `sendme`
+
+sendme（n0/iroh 点对点传文件 CLI；Windows x64 zip）
+
+- 仓库：`n0-computer/sendme` · 分片：`apps/windows/29-局域网文件共享.json` · 配置：已配匹配规则
+- 查找：`lookup_app.bat --platform windows sendme`
 
 ### SFTPGo（SFTP/WebDAV 文件服务） · `sftpgo`
 
@@ -2509,7 +3300,7 @@ SFTPGo（SFTP/WebDAV 文件服务）
 
 ---
 
-## 工具（38）
+## 工具（43）
 
 ### 7-Zip（官方 x64 MSI 安装包 · `7zip`
 
@@ -2588,6 +3379,13 @@ Ditto（剪贴板历史；Release 资产名带版本号，优先 API 匹配 Ditt
 - 仓库：`sabrogden/Ditto` · 分片：`apps/windows/11-工具.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows ditto`
 
+### EcoPaste（开源剪贴板管理；Windows x64 安装包） · `ecopaste`
+
+EcoPaste（开源剪贴板管理；Windows x64 安装包）
+
+- 仓库：`EcoPasteHub/EcoPaste` · 分片：`apps/windows/11-工具.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows ecopaste`
+
 ### FileImgSwap · `file_img_swap`
 
 FileImgSwap
@@ -2630,9 +3428,9 @@ FlashErase
 - 仓库：`hellzerg/hashing` · 分片：`apps/windows/11-工具.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows hashing`
 
-### ImageGlass（轻量看图 · `imageglass`
+### ImageGlass（Windows x64 msi；包名 win-x64） · `imageglass`
 
-ImageGlass（轻量看图，x64 MSI）
+ImageGlass（Windows x64 msi；包名 win-x64）
 
 - 仓库：`d2phap/ImageGlass` · 分片：`apps/windows/11-工具.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows imageglass`
@@ -2650,6 +3448,13 @@ imewlconverter（词库转换）
 
 - 仓库：`studyzy/imewlconverter` · 分片：`apps/windows/11-工具.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows imewlconverter`
+
+### 京东（无官方 Windows 客户端；lookup 打开网页） · `jd`
+
+京东（无官方 Windows 客户端；lookup 打开网页）
+
+- 页面：https://www.jd.com/ · 分片：`apps/windows/11-工具.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows jd`
 
 ### KeymouseGo（键鼠宏录制） · `keymouse_go`
 
@@ -2671,6 +3476,13 @@ LiYing
 
 - 仓库：`aoguai/LiYing` · 分片：`apps/windows/11-工具.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows li_ying`
+
+### 美团（无官方 Windows 客户端；lookup 打开网页） · `meituan`
+
+美团（无官方 Windows 客户端；lookup 打开网页）
+
+- 页面：https://www.meituan.com/ · 分片：`apps/windows/11-工具.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows meituan`
 
 ### MousePlus（鼠标增强） · `mouse_plus`
 
@@ -2763,6 +3575,20 @@ SyncClipboard（剪贴板同步）
 - 仓库：`Jeric-X/SyncClipboard` · 分片：`apps/windows/11-工具.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows sync_clipboard`
 
+### TagSpaces（本地文件标签与素材库；Windows x64 安装包） · `tagspaces`
+
+TagSpaces（本地文件标签与素材库；Windows x64 安装包）
+
+- 仓库：`tagspaces/tagspaces` · 分片：`apps/windows/11-工具.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows tagspaces`
+
+### 淘宝（无官方 Windows 客户端；lookup 打开网页） · `taobao`
+
+淘宝（无官方 Windows 客户端；lookup 打开网页）
+
+- 页面：https://www.taobao.com/ · 分片：`apps/windows/11-工具.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows taobao`
+
 ### WinRAR（压缩解压；官网分发 · `winrar`
 
 WinRAR（压缩解压；官网分发，lookup 打开下载页）
@@ -2779,7 +3605,7 @@ XiangYue
 
 ---
 
-## 开发（74）
+## 开发（79）
 
 ### act（本地运行 GitHub Actions · `act`
 
@@ -2802,9 +3628,9 @@ Air（Go 热重载：保存即编译运行，本地开发常用）
 - 仓库：`cosmtrek/air` · 分片：`apps/windows/12-开发.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows air`
 
-### AST 结构感知的代码搜索 · `astgrep`
+### ast-grep（Windows x64 zip；包名前缀改为 app-） · `astgrep`
 
-AST 结构感知的代码搜索
+ast-grep（Windows x64 zip；包名前缀改为 app-）
 
 - 仓库：`ast-grep/ast-grep` · 分片：`apps/windows/12-开发.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows astgrep`
@@ -2907,6 +3733,13 @@ Fastfetch（系统信息展示，neofetch 的现代替代品，速度快）
 - 仓库：`fastfetch-cli/fastfetch` · 分片：`apps/windows/12-开发.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows fastfetch`
 
+### FlyEnv（原 PhpWebStudy · `flyenv`
+
+FlyEnv（原 PhpWebStudy，本地开发环境；Windows 安装包）
+
+- 仓库：`xpf0000/PhpWebStudy` · 分片：`apps/windows/12-开发.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows flyenv`
+
 ### Fast Node Manager（fnm） · `fnm`
 
 Fast Node Manager（fnm）
@@ -2935,11 +3768,11 @@ Git for Windows（官方安装包）
 - 仓库：`git-for-windows/git` · 分片：`apps/windows/12-开发.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows git_for_windows`
 
-### Git LFS 大文件扩展 · `git_lfs`
+### Git LFS（Windows 安装器 git-lfs-windows-v{ver}.exe） · `git_lfs`
 
-Git LFS 大文件扩展
+Git LFS（Windows 安装器 git-lfs-windows-v{ver}.exe）
 
-- 仓库：`git-lfs/git-lfs` · 分片：`apps/windows/12-开发.json` · 配置：已配匹配规则
+- 仓库：`git-lfs/git-lfs` · 分片：`apps/windows/12-开发.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows git_lfs`
 
 ### Git for Windows（含 Git Bash） · `git_windows`
@@ -2948,6 +3781,20 @@ Git for Windows（含 Git Bash）
 
 - 仓库：`git-for-windows/git` · 分片：`apps/windows/12-开发.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows git_windows`
+
+### GitCat（可撤销操作的 Git 客户端；Windows x64 Setup） · `gitcat`
+
+GitCat（可撤销操作的 Git 客户端；Windows x64 Setup）
+
+- 仓库：`zangjiucheng/GitCat` · 分片：`apps/windows/12-开发.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows gitcat`
+
+### GitDesktop（AI 原生 Git 桌面客户端；Windows x64 Setup） · `gitdesktop`
+
+GitDesktop（AI 原生 Git 桌面客户端；Windows x64 Setup）
+
+- 仓库：`theBGuy/GitDesktop` · 分片：`apps/windows/12-开发.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows gitdesktop`
 
 ### 轻量 Git 服务（Windows amd64） · `gitea`
 
@@ -3117,12 +3964,19 @@ Node.js 运行时（MSI 安装包）
 - 仓库：`nodejs/node` · 分片：`apps/windows/12-开发.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows nodejs`
 
-### nvm-windows（Node 版本管理器） · `nvm_windows`
+### nvm-windows（Node 版本管理器；amd64-setup.exe） · `nvm_windows`
 
-nvm-windows（Node 版本管理器）
+nvm-windows（Node 版本管理器；amd64-setup.exe）
 
 - 仓库：`coreybutler/nvm-windows` · 分片：`apps/windows/12-开发.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows nvm_windows`
+
+### Open Code Review（阿里开源代码评审 CLI；Windows amd64 exe） · `open_code_review`
+
+Open Code Review（阿里开源代码评审 CLI；Windows amd64 exe）
+
+- 仓库：`alibaba/open-code-review` · 分片：`apps/windows/12-开发.json` · 配置：已配匹配规则
+- 查找：`lookup_app.bat --platform windows open_code_review`
 
 ### OpenCV 计算机视觉库（开发用） · `opencamera_bridge`
 
@@ -3292,6 +4146,13 @@ wxMaxima（Maxima 计算机代数 GUI）
 - 仓库：`wxMaxima-developers/wxmaxima` · 分片：`apps/windows/12-开发.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows wxmaxima`
 
+### Yaak（本地优先 API 客户端；Windows x64 Setup） · `yaak`
+
+Yaak（本地优先 API 客户端；Windows x64 Setup）
+
+- 仓库：`mountain-loop/yaak` · 分片：`apps/windows/12-开发.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows yaak`
+
 ### Zig 语言工具链 · `zig`
 
 Zig 语言工具链
@@ -3301,7 +4162,21 @@ Zig 语言工具链
 
 ---
 
-## 效率（48）
+## 效率（59）
+
+### Activepieces（开源自动化工作流；lookup 打开官网） · `activepieces`
+
+Activepieces（开源自动化工作流；lookup 打开官网）
+
+- 页面：https://www.activepieces.com/ · 分片：`apps/windows/13-效率.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows activepieces`
+
+### ActivityWatch（开源自动时间追踪；Windows x64 Setup） · `activitywatch`
+
+ActivityWatch（开源自动时间追踪；Windows x64 Setup）
+
+- 仓库：`ActivityWatch/activitywatch` · 分片：`apps/windows/13-效率.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows activitywatch`
 
 ### AltSnap（AltDrag 继任：按住 Alt 拖动/调整窗口 · `altsnap`
 
@@ -3323,6 +4198,13 @@ Calendar Diary（日历日记：记录每日任务、计划与心情；本地存
 
 - 仓库：`trustdev-org/calendar-diary` · 分片：`apps/windows/13-效率.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows calendar_diary`
+
+### Catime（纯 C 轻量 Windows 计时器：倒计时/番茄钟/秒表 · `catime`
+
+Catime（纯 C 轻量 Windows 计时器：倒计时/番茄钟/秒表，便携 exe）
+
+- 仓库：`vladelaina/Catime` · 分片：`apps/windows/13-效率.json` · 配置：已配匹配规则
+- 查找：`lookup_app.bat --platform windows catime`
 
 ### CopyQ（剪贴板历史与管理） · `copyq`
 
@@ -3401,6 +4283,27 @@ Greenshot 便携版（Windows zip）
 - 仓库：`greenshot/greenshot` · 分片：`apps/windows/13-效率.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows greenshot_portable`
 
+### Handy（开源语音输入；Windows x64 安装包） · `handy`
+
+Handy（开源语音输入；Windows x64 安装包）
+
+- 仓库：`cjpais/Handy` · 分片：`apps/windows/13-效率.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows handy`
+
+### 集简云（国内自动化集成网页；lookup 打开官网） · `jijyun`
+
+集简云（国内自动化集成网页；lookup 打开官网）
+
+- 页面：https://www.jijyun.cn/ · 分片：`apps/windows/13-效率.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows jijyun`
+
+### Kando（开源饼状菜单；Windows x64 安装包） · `kando`
+
+Kando（开源饼状菜单；Windows x64 安装包）
+
+- 仓库：`kando-menu/kando` · 分片：`apps/windows/13-效率.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows kando`
+
 ### komorebi（Windows 平铺窗口管理；x64 MSI） · `komorebi`
 
 komorebi（Windows 平铺窗口管理；x64 MSI）
@@ -3422,12 +4325,26 @@ Listary（文件搜索启动器；官网分发，lookup 打开下载页）
 - 页面：https://www.listary.com/download · 分片：`apps/windows/13-效率.json` · 配置：仅打开官网
 - 查找：`lookup_app.bat --platform windows listary`
 
+### Make（原 Integromat；自动化工作流网页；lookup 打开官网） · `make`
+
+Make（原 Integromat；自动化工作流网页；lookup 打开官网）
+
+- 页面：https://www.make.com/ · 分片：`apps/windows/13-效率.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows make`
+
 ### 免费快速启动工具 Maye Nano · `maye`
 
 免费快速启动工具 Maye Nano 6.1.0.260422 中文免费版
 
 - 仓库：`25H/MayeNano` · 分片：`apps/windows/13-效率.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows maye`
+
+### n8n（开源自动化工作流；lookup 打开官网 · `n8n`
+
+n8n（开源自动化工作流；lookup 打开官网，自托管用 Docker）
+
+- 页面：https://n8n.io/ · 分片：`apps/windows/13-效率.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows n8n`
 
 ### OhMyShot（截图美化/标注/滚动截图/GIF；跨平台 GitHub Release） · `ohmyshot`
 
@@ -3457,6 +4374,13 @@ PaperTodo（极简桌面便签/待办；Windows x64 自包含安装包）
 - 仓库：`Molunerfinn/PicGo` · 分片：`apps/windows/13-效率.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows picgo`
 
+### PicList（开源图床/图床管理 · `piclist`
+
+PicList（开源图床/图床管理，PicGo 增强；Windows x64 安装包）
+
+- 仓库：`Kuingsmile/PicList` · 分片：`apps/windows/13-效率.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows piclist`
+
 ### PicPick（截图/取色/标尺；官网 picpick.app 分发 · `picpick`
 
 PicPick（截图/取色/标尺；官网 picpick.app 分发，GitHub 无安装包；勿启用）
@@ -3477,6 +4401,13 @@ Pomotroid（番茄钟）
 
 - 仓库：`Splode/pomotroid` · 分片：`apps/windows/13-效率.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows pomotroid`
+
+### Pot（划词翻译/OCR；Windows x64 安装包） · `pot`
+
+Pot（划词翻译/OCR；Windows x64 安装包）
+
+- 仓库：`pot-app/pot-desktop` · 分片：`apps/windows/13-效率.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows pot`
 
 ### 开源免费 Windows 实用程序 PowerToys · `powertoys_2`
 
@@ -3520,11 +4451,11 @@ SmartSystemMenu（为所有窗口系统菜单增加置顶/透明度/优先级等
 - 仓库：`AlexanderPro/SmartSystemMenu` · 分片：`apps/windows/13-效率.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows smartsystemmenu`
 
-### SnapX（ShareX 跨平台分支；pinned · `snapx`
+### SnapX（Windows x64 msi） · `snapx`
 
-SnapX（ShareX 跨平台分支；pinned v0.3.0，latest 多为 flatpak）
+SnapX（Windows x64 msi）
 
-- 仓库：`SnapXL/SnapX` · 分片：`apps/windows/13-效率.json` · 配置：已配匹配规则
+- 仓库：`SnapXL/SnapX` · 分片：`apps/windows/13-效率.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows snapx`
 
 ### Snipaste（截图/贴图/OCR；官方 CDN download.snipaste.com） · `snipaste`
@@ -3632,6 +4563,13 @@ YASB（Yet Another Status Bar，Windows 状态栏；x64 MSI）
 - 仓库：`amnweb/yasb` · 分片：`apps/windows/13-效率.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows yasb`
 
+### Zapier（自动化工作流网页；lookup 打开官网） · `zapier`
+
+Zapier（自动化工作流网页；lookup 打开官网）
+
+- 页面：https://zapier.com/ · 分片：`apps/windows/13-效率.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows zapier`
+
 ### Zebar（跨平台状态栏 · `zebar`
 
 Zebar（跨平台状态栏，常与 GlazeWM 搭配；Windows x64 MSI）
@@ -3641,7 +4579,7 @@ Zebar（跨平台状态栏，常与 GlazeWM 搭配；Windows x64 MSI）
 
 ---
 
-## 数据库（18）
+## 数据库（20）
 
 ### SQL 编辑器与数据库管理 · `beekeeper`
 
@@ -3677,6 +4615,20 @@ DBeaver 全量驱动包
 
 - 仓库：`moshowgame/dbeaver-driver-all` · 分片：`apps/windows/23-数据库.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows dbeaver_driver_all`
+
+### DbGate（开源多数据库桌面客户端；Windows x64） · `dbgate`
+
+DbGate（开源多数据库桌面客户端；Windows x64）
+
+- 仓库：`dbgate/dbgate` · 分片：`apps/windows/23-数据库.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows dbgate`
+
+### DBX（轻量跨平台数据库客户端 · `dbx`
+
+DBX（轻量跨平台数据库客户端，支持 MySQL/PostgreSQL/SQLite/Redis/MongoDB/达梦等；Windows x64 安装包）
+
+- 仓库：`t8y2/dbx` · 分片：`apps/windows/23-数据库.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows dbx`
 
 ### Dolt（Git 语义的关系型数据库 / 数据版本控制 CLI） · `dolt`
 
@@ -3771,7 +4723,7 @@ usql（通用 SQL 客户端，支持多数据库）
 
 ---
 
-## 游戏（34）
+## 游戏（37）
 
 ### 古代战争 RTS · `0ad`
 
@@ -3801,11 +4753,11 @@ DOSBox Staging  DOS 环境
 - 仓库：`joncampbell123/dosbox-x` · 分片：`apps/windows/14-游戏.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows dosbox_x`
 
-### PlayStation · `duckstation`
+### DuckStation（Windows x64 installer.exe） · `duckstation`
 
-PlayStation 1 模拟器
+DuckStation（Windows x64 installer.exe）
 
-- 仓库：`stenzek/duckstation` · 分片：`apps/windows/14-游戏.json` · 配置：已配匹配规则
+- 仓库：`stenzek/duckstation` · 分片：`apps/windows/14-游戏.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows duckstation`
 
 ### Epic Games 启动器（官网分发 · `epic_games`
@@ -3815,6 +4767,13 @@ Epic Games 启动器（官网分发，lookup 打开下载页）
 - 页面：https://store.epicgames.com/zh-CN/download · 分片：`apps/windows/14-游戏.json` · 配置：仅打开官网
 - 查找：`lookup_app.bat --platform windows epic_games`
 
+### GDevelop（无代码/低代码游戏引擎；Windows Setup） · `gdevelop`
+
+GDevelop（无代码/低代码游戏引擎；Windows Setup）
+
+- 仓库：`4ian/GDevelop` · 分片：`apps/windows/14-游戏.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows gdevelop`
+
 ### 游戏启动器（Epic/GOG 等） · `heroic`
 
 游戏启动器（Epic/GOG 等）
@@ -3822,11 +4781,25 @@ Epic Games 启动器（官网分发，lookup 打开下载页）
 - 仓库：`Heroic-Games-Launcher/HeroicGamesLauncher` · 分片：`apps/windows/14-游戏.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows heroic`
 
-### 体素沙盒（类 Minecraft） · `minetest`
+### itch（itch.io 官方游戏库客户端；Windows amd64 tar.gz） · `itch`
 
-体素沙盒（类 Minecraft）
+itch（itch.io 官方游戏库客户端；Windows amd64 tar.gz）
 
-- 仓库：`minetest/minetest` · 分片：`apps/windows/14-游戏.json` · 配置：已配匹配规则
+- 仓库：`itchio/itch` · 分片：`apps/windows/14-游戏.json` · 配置：已配匹配规则
+- 查找：`lookup_app.bat --platform windows itch`
+
+### Legendary（Epic Games 开源命令行启动器；Windows x64 exe） · `legendary`
+
+Legendary（Epic Games 开源命令行启动器；Windows x64 exe）
+
+- 仓库：`legendary-gl/legendary` · 分片：`apps/windows/14-游戏.json` · 配置：已配匹配规则
+- 查找：`lookup_app.bat --platform windows legendary`
+
+### Luanti（原 Minetest；Windows 安装器 .exe） · `minetest`
+
+Luanti（原 Minetest；Windows 安装器 .exe）
+
+- 仓库：`minetest/minetest` · 分片：`apps/windows/14-游戏.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows minetest`
 
 ### Moonlight（开源 GameStream 客户端 · `moonlight_qt`
@@ -4004,16 +4977,16 @@ SuperTuxKart 赛车
 - 仓库：`wesnoth/wesnoth` · 分片：`apps/windows/14-游戏.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows wesnoth`
 
-### Xbox 模拟器 xemu · `xemu`
+### xemu（Windows x86_64 release zip） · `xemu`
 
-Xbox 模拟器 xemu
+xemu（Windows x86_64 release zip）
 
 - 仓库：`mborgerson/xemu` · 分片：`apps/windows/14-游戏.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows xemu`
 
 ---
 
-## 笔记（29）
+## 笔记（33）
 
 ### Anki（间隔重复记忆卡片） · `anki`
 
@@ -4057,12 +5030,26 @@ AppFlowy（开源 Notion 类，本地与同步）
 - 仓库：`Crypto-Notepad/Crypto-Notepad` · 分片：`apps/windows/15-笔记.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows crypto_notepad`
 
+### Cubox（稍后读 / 知识库网页；lookup 打开官网） · `cubox`
+
+Cubox（稍后读 / 知识库网页；lookup 打开官网）
+
+- 页面：https://cubox.cc/ · 分片：`apps/windows/15-笔记.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows cubox`
+
 ### 开源免费桌面笔记工具 DesktopNote · `desktopnote`
 
 开源免费桌面笔记工具 DesktopNote 1.6.4 绿色中文版
 
 - 仓库：`changbowen/DesktopNote` · 分片：`apps/windows/15-笔记.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows desktopnote`
+
+### 飞书知识库（产品页；lookup 打开官网 · `feishu_wiki`
+
+飞书知识库（产品页；lookup 打开官网。客户端见 feishu）
+
+- 页面：https://www.feishu.cn/product/wiki · 分片：`apps/windows/15-笔记.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows feishu_wiki`
 
 ### Markdown 笔记 · `joplin`
 
@@ -4085,9 +5072,9 @@ MarkFlowy（Markdown 笔记）
 - 仓库：`drl990114/MarkFlowy` · 分片：`apps/windows/15-笔记.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows markflowy`
 
-### Markdown 编辑器（安装包名无版本号） · `marktext`
+### MarkText（开源 Markdown 编辑器；Windows x64 Setup） · `marktext`
 
-Markdown 编辑器（安装包名无版本号）
+MarkText（开源 Markdown 编辑器；Windows x64 Setup）
 
 - 仓库：`marktext/marktext` · 分片：`apps/windows/15-笔记.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows marktext`
@@ -4113,9 +5100,9 @@ NoteGen（AI 笔记生成）
 - 仓库：`streetwriters/notesnook` · 分片：`apps/windows/15-笔记.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows notesnook`
 
-### Notion 桌面版（官网分发 · `notion`
+### Notion / Notion AI（官网分发 · `notion`
 
-Notion 桌面版（官网分发，lookup 打开下载页）
+Notion / Notion AI（官网分发，lookup 打开下载页）
 
 - 页面：https://www.notion.com/desktop · 分片：`apps/windows/15-笔记.json` · 配置：仅打开官网
 - 查找：`lookup_app.bat --platform windows notion`
@@ -4134,9 +5121,9 @@ Notion 桌面版（官网分发，lookup 打开下载页）
 - 仓库：`63BeetleSmurf/PinnyNotes` · 分片：`apps/windows/15-笔记.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows pinny_notes`
 
-### Markdown 笔记（支持 Nextcloud） · `qownnotes`
+### QOwnNotes（Markdown 笔记 · `qownnotes`
 
-Markdown 笔记（支持 Nextcloud）
+QOwnNotes（Markdown 笔记，支持 Nextcloud；Windows 无 exe/msi，官方 zip）
 
 - 仓库：`pbek/QOwnNotes` · 分片：`apps/windows/15-笔记.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows qownnotes`
@@ -4204,6 +5191,20 @@ Yank Note（yn）Markdown 笔记，本地优先、可运行代码块
 - 仓库：`purocean/yn` · 分片：`apps/windows/15-笔记.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows yanknote`
 
+### 有道云笔记（网易有道；官网分发 · `youdao_note`
+
+有道云笔记（网易有道；官网分发，lookup 打开下载页）
+
+- 页面：https://note.youdao.com/note-download/ · 分片：`apps/windows/15-笔记.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows youdao_note`
+
+### 语雀（知识库网页；lookup 打开官网） · `yuque`
+
+语雀（知识库网页；lookup 打开官网）
+
+- 页面：https://www.yuque.com/ · 分片：`apps/windows/15-笔记.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows yuque`
+
 ### Markdown 写作环境 · `zettlr`
 
 Markdown 写作环境
@@ -4220,7 +5221,7 @@ Zotero Better Notes（插件 Release）
 
 ---
 
-## 系统（67）
+## 系统（76）
 
 ### Windows · `auto_dark_mode`
 
@@ -4228,6 +5229,13 @@ Windows 10 自动深色模式 Auto Dark Mode X 11.0.0.54 中文多语免费版
 
 - 仓库：`Armin2208/Windows-Auto-Night-Mode` · 分片：`apps/windows/16-系统.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows auto_dark_mode`
+
+### 百度输入法（官网分发 · `baidu_ime`
+
+百度输入法（官网分发，lookup 打开下载页）
+
+- 页面：https://shurufa.baidu.com/ · 分片：`apps/windows/16-系统.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows baidu_ime`
 
 ### balenaEtcher（USB 启动盘写入） · `balena_etcher`
 
@@ -4299,6 +5307,13 @@ Windows Defender Remover
 - 仓库：`muesli/duf` · 分片：`apps/windows/16-系统.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows duf`
 
+### EasyRC 一键重装（FirPE 出品；官网分发 · `easyrc`
+
+EasyRC 一键重装（FirPE 出品；官网分发，lookup 打开下载页，不自动下载）
+
+- 页面：https://firpe.cn/page-196 · 分片：`apps/windows/16-系统.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows easyrc`
+
 ### 开源 EFI 引导编辑器 EFI Boot Editor · `efi_boot_editor`
 
 开源 EFI 引导编辑器 EFI Boot Editor 1.5.7 中文多语免费版
@@ -4341,12 +5356,26 @@ Flying Bird Wallpaper（多源壁纸：Bing/Unsplash/Wallhaven/NASA 等，支持
 - 仓库：`OXOYO/Flying-Bird-Wallpaper` · 分片：`apps/windows/16-系统.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows flying_bird_wallpaper`
 
-### 交互式磁盘占用分析 · `gdu`
+### gdu（Windows amd64 exe.zip） · `gdu`
 
-交互式磁盘占用分析
+gdu（Windows amd64 exe.zip）
 
 - 仓库：`dundee/gdu` · 分片：`apps/windows/16-系统.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows gdu`
+
+### 荣耀电脑管家（荣耀官网；lookup 打开下载页 · `honor_pc_manager`
+
+荣耀电脑管家（荣耀官网；lookup 打开下载页。仅荣耀机型）
+
+- 页面：https://www.honor.com/cn/tech/pc-manager/ · 分片：`apps/windows/16-系统.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows honor_pc_manager`
+
+### 华为电脑管家（华为 Windows 电脑官方；lookup 打开下载页 · `huawei_pc_manager`
+
+华为电脑管家（华为 Windows 电脑官方；lookup 打开下载页。仅华为机型）
+
+- 页面：https://consumer.huawei.com/cn/support/pc-manager/ · 分片：`apps/windows/16-系统.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows huawei_pc_manager`
 
 ### Bing每日壁纸（jadepeng；自动获取必应图片设为壁纸 · `jadepeng_bing_wallpaper`
 
@@ -4354,6 +5383,20 @@ Bing每日壁纸（jadepeng；自动获取必应图片设为壁纸，支持历�
 
 - 仓库：`jadepeng/bing-wallpaper` · 分片：`apps/windows/16-系统.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows jadepeng_bing_wallpaper`
+
+### 联想电脑管家（联想官网；lookup 打开下载页） · `lenovo_pc_manager`
+
+联想电脑管家（联想官网；lookup 打开下载页）
+
+- 页面：https://guanjia.lenovo.com.cn/ · 分片：`apps/windows/16-系统.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows lenovo_pc_manager`
+
+### LetRecovery（Windows 系统重装工具；Windows x64 Setup） · `letrecovery`
+
+LetRecovery（Windows 系统重装工具；Windows x64 Setup）
+
+- 仓库：`NORMAL-EX/LetRecovery` · 分片：`apps/windows/16-系统.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows letrecovery`
 
 ### LibreHardwareMonitor（硬件温度/风扇/负载监控） · `libre_hardware_monitor`
 
@@ -4417,6 +5460,13 @@ MonitorBrightnessAdjuster
 
 - 仓库：`a1ive/nwinfo` · 分片：`apps/windows/16-系统.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows nwinfo`
+
+### OpenLogi（罗技 Options+ 本地开源替代；Windows x64 MSI） · `openlogi`
+
+OpenLogi（罗技 Options+ 本地开源替代；Windows x64 MSI）
+
+- 仓库：`AprilNEA/OpenLogi` · 分片：`apps/windows/16-系统.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows openlogi`
 
 ### 开源 Windows · `optimizer`
 
@@ -4656,11 +5706,11 @@ WindowTabs（为任意窗口添加浏览器式标签页；Standard Software 开�
 - 仓库：`t1m0thyj/WinDynamicDesktop` · 分片：`apps/windows/16-系统.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows windynamicdesktop`
 
-### Winhance（Windows 优化脚本套件） · `winhance`
+### Winhance（Windows 安装器） · `winhance`
 
-Winhance（Windows 优化脚本套件）
+Winhance（Windows 安装器）
 
-- 仓库：`memstechtips/Winhance` · 分片：`apps/windows/16-系统.json` · 配置：已配匹配规则
+- 仓库：`memstechtips/Winhance` · 分片：`apps/windows/16-系统.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows winhance`
 
 ### 开源免费 Windows · `winslop`
@@ -4669,6 +5719,13 @@ Winhance（Windows 优化脚本套件）
 
 - 仓库：`builtbybel/Winslop` · 分片：`apps/windows/16-系统.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows winslop`
+
+### Hasleo WinToHDD（硬盘直接安装/重装/克隆；官网分发 · `wintohdd`
+
+Hasleo WinToHDD（硬盘直接安装/重装/克隆；官网分发，lookup 打开官方页，不收录第三方改包）
+
+- 页面：https://www.easyuefi.com/wintohdd/ · 分片：`apps/windows/16-系统.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows wintohdd`
 
 ### Windows Subsystem for Linux（WSL2 官方 x64 安装包） · `wsl`
 
@@ -4684,6 +5741,13 @@ Windows Subsystem for Linux（WSL2 官方 x64 安装包）
 - 仓库：`bostrot/wsl2-distro-manager` · 分片：`apps/windows/16-系统.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows wsl_manager`
 
+### 小米电脑管家（小米/Redmi 电脑官方；lookup 打开官网帮助页 · `xiaomi_pc_manager`
+
+小米电脑管家（小米/Redmi 电脑官方；lookup 打开官网帮助页。非小米电脑请勿用第三方破解包）
+
+- 页面：https://pc.mi.com/pc-manager-help · 分片：`apps/windows/16-系统.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows xiaomi_pc_manager`
+
 ### zen browser legacy · `zen_browser_legacy`
 
 Zen Browser（旧仓库 anfragment/zen；新上游 irbis-sh/zen-desktop）
@@ -4693,7 +5757,7 @@ Zen Browser（旧仓库 anfragment/zen；新上游 irbis-sh/zen-desktop）
 
 ---
 
-## 终端（17）
+## 终端（20）
 
 ### GPU 终端（Windows 安装器 MSI） · `alacritty`
 
@@ -4729,6 +5793,13 @@ Ghostty 终端（Windows 安装包尚未在 GitHub Release 稳定提供；macOS/
 
 - 仓库：`ghostty-org/ghostty` · 分片：`apps/windows/17-终端.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows ghostty`
+
+### Hyper（Electron 终端；Windows 安装包） · `hyper`
+
+Hyper（Electron 终端；Windows 安装包）
+
+- 仓库：`vercel/hyper` · 分片：`apps/windows/17-终端.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows hyper`
 
 ### 开源免费 Windows 终端仿真器 NxShell · `nxshell`
 
@@ -4786,6 +5857,13 @@ Warp（agentic 终端与开发环境，源码在 GitHub；正式安装包由 war
 - 仓库：`warpdotdev/warp` · 分片：`apps/windows/17-终端.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows warp`
 
+### Wave Terminal（AI/工作区终端；Windows x64） · `waveterm`
+
+Wave Terminal（AI/工作区终端；Windows x64）
+
+- 仓库：`wavetermdev/waveterm` · 分片：`apps/windows/17-终端.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows waveterm`
+
 ### GPU 加速终端 · `wezterm`
 
 GPU 加速终端，Lua 配置
@@ -4807,6 +5885,13 @@ WindTerm（SSH/SFTP/终端，便携版）
 - 仓库：`kingToolbox/WindTerm` · 分片：`apps/windows/17-终端.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows windterm`
 
+### WoTerm（跨平台 SSH/SFTP/RDP 终端；Windows 安装包 zip） · `woterm`
+
+WoTerm（跨平台 SSH/SFTP/RDP 终端；Windows 安装包 zip）
+
+- 仓库：`aoyiduo/woterm` · 分片：`apps/windows/17-终端.json` · 配置：已配匹配规则
+- 查找：`lookup_app.bat --platform windows woterm`
+
 ### 开源免费命令终端 xTerminal · `xterminal`
 
 开源免费命令终端 xTerminal 3.0.1.0 + x64 中文多语免费版
@@ -4816,7 +5901,7 @@ WindTerm（SSH/SFTP/终端，便携版）
 
 ---
 
-## 编辑器（41）
+## 编辑器（44）
 
 ### 开源免费 Windows 记事本 AkelPad · `akelpad`
 
@@ -4860,12 +5945,19 @@ CodeBuddy 国内版（manifest：copilot.tencent.com）
 - 仓库：`Alexey-T/CudaText` · 分片：`apps/windows/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows cudatext`
 
-### Cursor（manifest：cursor-downloads + 官方 CDN） · `cursor`
+### Cursor（国内勿用应用内更新：lookup 走 snapshot 覆盖安装） · `cursor`
 
-Cursor（manifest：cursor-downloads + 官方 CDN）
+Cursor（国内勿用应用内更新：lookup 走 snapshot 覆盖安装）
+
+- 页面：https://cursor.com/cn/download · 分片：`apps/windows/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
+- 查找：`lookup_app.bat --platform windows cursor`
+
+### cursor reh · `cursor_reh`
+
+Cursor Remote-SSH 服务端 linux-x64（与客户端同一 snapshot commit，scp 到服务器）
 
 - 分片：`apps/windows/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
-- 查找：`lookup_app.bat --platform windows cursor`
+- 查找：`lookup_app.bat --platform windows cursor_reh`
 
 ### Fork Git 图形客户端（Windows） · `fork`
 
@@ -4923,6 +6015,13 @@ markdown-it（JS 库 Release，非安装包）
 - 仓库：`markdown-it/markdown-it` · 分片：`apps/windows/26-编辑器.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows markdown_it`
 
+### Microsoft Edit（微软终端编辑器；Windows x64 zip） · `microsoft_edit`
+
+Microsoft Edit（微软终端编辑器；Windows x64 zip）
+
+- 仓库：`microsoft/edit` · 分片：`apps/windows/26-编辑器.json` · 配置：已配匹配规则
+- 查找：`lookup_app.bat --platform windows microsoft_edit`
+
 ### Neovide（Neovim 图形前端） · `neovide`
 
 Neovide（Neovim 图形前端）
@@ -4965,9 +6064,9 @@ Notepad--（国产轻量跨平台编辑器，GPL，便携 zip）
 - 仓库：`notepad-plus-plus/notepad-plus-plus` · 分片：`apps/windows/26-编辑器.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows notepadplusplus`
 
-### Pulsar（Atom 继任编辑器 · `pulsar`
+### Pulsar（Windows Setup exe） · `pulsar`
 
-Pulsar（Atom 继任编辑器，Windows zip）
+Pulsar（Windows Setup exe）
 
 - 仓库：`pulsar-edit/pulsar` · 分片：`apps/windows/26-编辑器.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows pulsar`
@@ -4999,6 +6098,13 @@ Sublime Merge Git 客户端
 
 - 仓库：`sublimehq/sublime_merge` · 分片：`apps/windows/26-编辑器.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows sublime_merge`
+
+### T3 Code（Ping.gg 开源 AI 编辑器；Windows x64） · `t3code`
+
+T3 Code（Ping.gg 开源 AI 编辑器；Windows x64）
+
+- 仓库：`pingdotgg/t3code` · 分片：`apps/windows/26-编辑器.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows t3code`
 
 ### Terax（轻量终端优先 AI 开发工作区；Windows x64 Setup） · `terax_ai`
 
@@ -5107,7 +6213,14 @@ Zed（Rust 高性能编辑器，开源，Windows x64 安装包）
 
 ---
 
-## 网络（33）
+## 网络（38）
+
+### AdGuard Home（局域网 DNS 广告拦截；Windows amd64 zip） · `adguardhome`
+
+AdGuard Home（局域网 DNS 广告拦截；Windows amd64 zip）
+
+- 仓库：`AdguardTeam/AdGuardHome` · 分片：`apps/windows/18-网络.json` · 配置：已配匹配规则
+- 查找：`lookup_app.bat --platform windows adguardhome`
 
 ### 局域网 IP 扫描 · `angryip`
 
@@ -5186,6 +6299,13 @@ FlowPick（媒体资源嗅探浏览器扩展，Chrome zip；小众软件推荐�
 - 仓库：`ezwebtools/flowpick` · 分片：`apps/windows/18-网络.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows flowpick`
 
+### Fluent Reader（开源 RSS 阅读器；Windows x64 安装包） · `fluent_reader`
+
+Fluent Reader（开源 RSS 阅读器；Windows x64 安装包）
+
+- 仓库：`yang991178/fluent-reader` · 分片：`apps/windows/18-网络.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows fluent_reader`
+
 ### 开源免费网络测试工具 InternetTest Pro · `internettest`
 
 开源免费网络测试工具 InternetTest Pro 9.1.0.2602 中文多语免费版
@@ -5256,6 +6376,20 @@ OpenVPN Connect 3（官方 GUI 客户端；安装包来自 packages.openvpn.net�
 - 页面：https://openvpn.net/client/ · 分片：`apps/windows/18-网络.json` · 配置：仅打开官网
 - 查找：`lookup_app.bat --platform windows openvpn_connect`
 
+### pojie netdiag · `pojie_netdiag`
+
+吾爱破解论坛网络诊断修复工具（Windows 便携 exe；检测/修复论坛打不开、DNS 劫持、验证码异常）
+
+- 仓库：`Hmily-LCG/52pojie-Netdiag` · 分片：`apps/windows/18-网络.json` · 配置：已配匹配规则
+- 查找：`lookup_app.bat --platform windows pojie_netdiag`
+
+### 夸克（阿里浏览器/网盘门户；官网分发 · `quark`
+
+夸克（阿里浏览器/网盘门户；官网分发，lookup 打开下载页。含推广与会员引导，请自行甄别）
+
+- 页面：https://www.quark.cn/ · 分片：`apps/windows/18-网络.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows quark`
+
 ### 云存储同步命令行（zip） · `rclone`
 
 云存储同步命令行（zip）
@@ -5269,6 +6403,13 @@ Simple Web Server
 
 - 仓库：`terreng/simple-web-server` · 分片：`apps/windows/18-网络.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows simple_web_server`
+
+### SwitchHosts（Hosts 快速切换；Windows x64 安装包） · `switchhosts`
+
+SwitchHosts（Hosts 快速切换；Windows x64 安装包）
+
+- 仓库：`oldj/SwitchHosts` · 分片：`apps/windows/18-网络.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows switchhosts`
 
 ### Syncthing（P2P 文件同步 · `syncthing`
 
@@ -5342,7 +6483,7 @@ ZeroTier 虚拟组网
 
 ---
 
-## 网络与协作（5）
+## 网络与协作（6）
 
 ### Ferdium（聚合 Slack/Discord/Matrix 等服务的桌面端 · `ferdium`
 
@@ -5358,12 +6499,19 @@ Jitsi Meet（开源视频会议桌面端）
 - 仓库：`jitsi/jitsi-meet-electron` · 分片：`apps/windows/19-网络与协作.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows jitsi_meet_electron`
 
-### Mattermost 桌面客户端 · `mattermost_desktop`
+### Mattermost 桌面端（win-x64.msi） · `mattermost_desktop`
 
-Mattermost 桌面客户端
+Mattermost 桌面端（win-x64.msi）
 
 - 仓库：`mattermost/desktop` · 分片：`apps/windows/19-网络与协作.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows mattermost_desktop`
+
+### Revolt（开源 Discord 风格聊天；Windows Setup） · `revolt_desktop`
+
+Revolt（开源 Discord 风格聊天；Windows Setup）
+
+- 仓库：`revoltchat/desktop` · 分片：`apps/windows/19-网络与协作.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows revolt_desktop`
 
 ### Rocket.Chat 桌面客户端（Electron） · `rocketchat_desktop`
 
@@ -5381,7 +6529,7 @@ Zulip 桌面客户端
 
 ---
 
-## 网络与通讯（20）
+## 网络与通讯（24）
 
 ### BetterWX-UI · `betterwx_ui`
 
@@ -5390,9 +6538,9 @@ BetterWX-UI
 - 仓库：`afaa1991/BetterWX-UI` · 分片：`apps/windows/20-网络与通讯.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows betterwx_ui`
 
-### Twitch 聊天客户端 Chatterino · `chatterino`
+### Chatterino（Windows Installer.exe） · `chatterino`
 
-Twitch 聊天客户端 Chatterino
+Chatterino（Windows Installer.exe）
 
 - 仓库：`Chatterino/chatterino2` · 分片：`apps/windows/20-网络与通讯.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows chatterino`
@@ -5439,6 +6587,13 @@ Foxmail（腾讯邮箱客户端；官网分发，lookup 打开下载页）
 - 页面：https://www.foxmail.com/ · 分片：`apps/windows/20-网络与通讯.json` · 配置：仅打开官网
 - 查找：`lookup_app.bat --platform windows foxmail`
 
+### Microsoft Outlook（微软邮箱/日历；官网分发 · `outlook`
+
+Microsoft Outlook（微软邮箱/日历；官网分发，lookup 打开下载页）
+
+- 页面：https://www.microsoft.com/zh-cn/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook · 分片：`apps/windows/20-网络与通讯.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows outlook`
+
 ### QQ（腾讯官网分发 · `qq`
 
 QQ（腾讯官网分发，lookup 打开下载页）
@@ -5466,6 +6621,13 @@ Signal 端到端加密通讯
 
 - 仓库：`signalapp/Signal-Desktop` · 分片：`apps/windows/20-网络与通讯.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows signal_desktop`
+
+### SimpleX Chat 桌面（无用户 ID 的端到端加密聊天；Windows x64 MSI） · `simplex_desktop`
+
+SimpleX Chat 桌面（无用户 ID 的端到端加密聊天；Windows x64 MSI）
+
+- 仓库：`simplex-chat/simplex-chat` · 分片：`apps/windows/20-网络与通讯.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows simplex_desktop`
 
 ### Slack（团队聊天；官网分发 · `slack`
 
@@ -5502,6 +6664,13 @@ Mozilla Thunderbird 邮件客户端
 - 仓库：`mozilla/kitsune` · 分片：`apps/windows/20-网络与通讯.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows thunderbird_2`
 
+### TIM（QQ 办公简洁版；官网分发 · `tim`
+
+TIM（QQ 办公简洁版；官网分发，lookup 打开下载页）
+
+- 页面：https://tim.qq.com/download.html · 分片：`apps/windows/20-网络与通讯.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows tim`
+
 ### 微信 PC 版（腾讯官网分发 · `wechat`
 
 微信 PC 版（腾讯官网分发，lookup 打开下载页，不自动下载）
@@ -5523,9 +6692,16 @@ WeChatMsg（微信聊天记录导出）
 - 页面：https://work.weixin.qq.com/#indexDownload · 分片：`apps/windows/20-网络与通讯.json` · 配置：仅打开官网
 - 查找：`lookup_app.bat --platform windows wecom`
 
+### 华为云 WeLink（企业办公；官网分发 · `welink`
+
+华为云 WeLink（企业办公；官网分发，lookup 打开下载页）
+
+- 页面：https://www.huaweicloud.com/product/welink-download.html · 分片：`apps/windows/20-网络与通讯.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows welink`
+
 ---
 
-## 远程与协作（22）
+## 远程与协作（30）
 
 ### Android DEX（把安卓当桌面；基于 scrcpy · `android_dex`
 
@@ -5576,12 +6752,40 @@ escrcpy（Mu-L fork；主清单为 viarotel-org/escrcpy）
 - 仓库：`Mu-L/escrcpy` · 分片：`apps/windows/21-远程与协作.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows escrcpy_mu_l`
 
+### 飞书妙记（会议转写网页；lookup 打开官网 · `feishu_minutes`
+
+飞书妙记（会议转写网页；lookup 打开官网。客户端见 feishu）
+
+- 页面：https://www.feishu.cn/product/minutes · 分片：`apps/windows/21-远程与协作.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows feishu_minutes`
+
+### Fireflies（会议转写网页；lookup 打开官网） · `fireflies`
+
+Fireflies（会议转写网页；lookup 打开官网）
+
+- 页面：https://fireflies.ai/ · 分片：`apps/windows/21-远程与协作.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows fireflies`
+
+### 讯飞听见（会议/录音转写网页；lookup 打开官网） · `iflyrec`
+
+讯飞听见（会议/录音转写网页；lookup 打开官网）
+
+- 页面：https://www.iflyrec.com/ · 分片：`apps/windows/21-远程与协作.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows iflyrec`
+
 ### Input Leap（Barrier 分支；当前多为调试包 · `input_leap`
 
 Input Leap（Barrier 分支；当前多为调试包，请打开 Releases 页）
 
 - 仓库：`input-leap/input-leap` · 页面：https://github.com/input-leap/input-leap/releases · 分片：`apps/windows/21-远程与协作.json` · 配置：仅打开官网
 - 查找：`lookup_app.bat --platform windows input_leap`
+
+### Lan Mouse（跨平台键鼠共享；Windows x64 zip） · `lan_mouse`
+
+Lan Mouse（跨平台键鼠共享；Windows x64 zip）
+
+- 仓库：`feschber/lan-mouse` · 分片：`apps/windows/21-远程与协作.json` · 配置：已配匹配规则
+- 查找：`lookup_app.bat --platform windows lan_mouse`
 
 ### MobaXterm 中文语言包 · `mobaxterm_cn`
 
@@ -5625,6 +6829,20 @@ Netcatty（SSH / SFTP / 终端一体工作区；Windows x64 安装包）
 - 仓库：`binaricat/Netcatty` · 分片：`apps/windows/21-远程与协作.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows netcatty`
 
+### Notta（会议转写网页；lookup 打开官网） · `notta`
+
+Notta（会议转写网页；lookup 打开官网）
+
+- 页面：https://www.notta.ai/ · 分片：`apps/windows/21-远程与协作.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows notta`
+
+### Otter（会议转写网页；lookup 打开官网） · `otter`
+
+Otter（会议转写网页；lookup 打开官网）
+
+- 页面：https://otter.ai/ · 分片：`apps/windows/21-远程与协作.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows otter`
+
 ### QtScrcpy（安卓投屏控制；Windows x64 zip） · `qtscrcpy`
 
 QtScrcpy（安卓投屏控制；Windows x64 zip）
@@ -5660,12 +6878,26 @@ TeamViewer（远程协助；闭源官网分发，lookup 打开下载页）
 - 页面：https://www.teamviewer.com/zh-cn/download/ · 分片：`apps/windows/21-远程与协作.json` · 配置：仅打开官网
 - 查找：`lookup_app.bat --platform windows teamviewer`
 
+### 腾讯会议（官网分发 · `tencent_meeting`
+
+腾讯会议（官网分发，lookup 打开下载页）
+
+- 页面：https://meeting.tencent.com/download/ · 分片：`apps/windows/21-远程与协作.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows tencent_meeting`
+
 ### TigerVNC（开源 VNC；GitHub 无 Assets · `tigervnc`
 
 TigerVNC（开源 VNC；GitHub 无 Assets，请打开 Releases/官网）
 
 - 仓库：`TigerVNC/tigervnc` · 页面：https://github.com/TigerVNC/tigervnc/releases · 分片：`apps/windows/21-远程与协作.json` · 配置：仅打开官网
 - 查找：`lookup_app.bat --platform windows tigervnc`
+
+### 通义听悟（会议/音视频转写网页；lookup 打开官网） · `tingwu`
+
+通义听悟（会议/音视频转写网页；lookup 打开官网）
+
+- 页面：https://tingwu.aliyun.com/ · 分片：`apps/windows/21-远程与协作.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows tingwu`
 
 ### ToDesk（远程桌面；闭源官网分发 · `todesk`
 
@@ -5683,7 +6915,7 @@ Zoom（视频会议；闭源官网分发，lookup 打开下载页）
 
 ---
 
-## 金融与股票（8）
+## 金融与股票（11）
 
 ### Actual Budget（开源个人/家庭预算与银行同步风格记账 · `actual_budget`
 
@@ -5691,6 +6923,13 @@ Actual Budget（开源个人/家庭预算与银行同步风格记账，E2E 加�
 
 - 仓库：`actualbudget/actual` · 分片：`apps/windows/27-金融与股票.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows actual_budget`
+
+### 支付宝（无官方 Windows 客户端；lookup 打开官网 · `alipay`
+
+支付宝（无官方 Windows 客户端；lookup 打开官网。客户端见 Android/iOS）
+
+- 页面：https://mobile.alipay.com/ · 分片：`apps/windows/27-金融与股票.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows alipay`
 
 ### Freqtrade（量化交易机器人；以 Docker/源码为主 · `freqtrade`
 
@@ -5734,6 +6973,13 @@ OpenBB Open Data Platform（桌面端：金融/投研数据与工具链入口）
 - 仓库：`OpenBB-finance/OpenBB` · 分片：`apps/windows/27-金融与股票.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows openbb_desktop`
 
+### Portfolio Performance（开源投资组合跟踪；Windows Setup） · `portfolio_performance`
+
+Portfolio Performance（开源投资组合跟踪；Windows Setup）
+
+- 仓库：`portfolio-performance/portfolio` · 分片：`apps/windows/27-金融与股票.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows portfolio_performance`
+
 ### TA-Lib（技术分析 C 库；Windows x86_64 官方 zip · `ta_lib`
 
 TA-Lib（技术分析 C 库；Windows x86_64 官方 zip，量化/指标常用）
@@ -5741,9 +6987,30 @@ TA-Lib（技术分析 C 库；Windows x86_64 官方 zip，量化/指标常用）
 - 仓库：`ta-lib/ta-lib` · 分片：`apps/windows/27-金融与股票.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows ta_lib`
 
+### Wealthfolio（本地优先投资组合桌面；Windows x64 Setup） · `wealthfolio`
+
+Wealthfolio（本地优先投资组合桌面；Windows x64 Setup）
+
+- 仓库：`afadil/wealthfolio` · 分片：`apps/windows/27-金融与股票.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows wealthfolio`
+
 ---
 
-## 音视频（16）
+## 音视频（35）
+
+### Bazarr（媒体库字幕管理 · `bazarr`
+
+Bazarr（媒体库字幕管理，配合 Sonarr/Radarr；官方 zip）
+
+- 仓库：`morpheus65535/bazarr` · 分片：`apps/windows/22-音视频.json` · 配置：已配匹配规则
+- 查找：`lookup_app.bat --platform windows bazarr`
+
+### 哔哩哔哩（官网分发 · `bilibili`
+
+哔哩哔哩（官网分发，lookup 打开客户端下载页）
+
+- 页面：https://app.bilibili.com/ · 分片：`apps/windows/22-音视频.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows bilibili`
 
 ### 剪映 / CapCut（字节剪辑；官网分发 · `capcut`
 
@@ -5751,6 +7018,27 @@ TA-Lib（技术分析 C 库；Windows x86_64 官方 zip，量化/指标常用）
 
 - 页面：https://www.capcut.cn/ · 分片：`apps/windows/22-音视频.json` · 配置：仅打开官网
 - 查找：`lookup_app.bat --platform windows capcut`
+
+### Concat（开源 CapCut 替代剪辑；Windows x64 Setup） · `concat_editor`
+
+Concat（开源 CapCut 替代剪辑；Windows x64 Setup）
+
+- 仓库：`jub0t/Concat` · 分片：`apps/windows/22-音视频.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows concat_editor`
+
+### 抖音电脑版（字节；官网分发 · `douyin`
+
+抖音电脑版（字节；官网分发，lookup 打开下载页）
+
+- 页面：https://www.douyin.com/downloadpage/pc · 分片：`apps/windows/22-音视频.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows douyin`
+
+### feishin · `feishin`
+
+Feishin（Jellyfin/Navidrome/Subsonic 音乐桌面；Windows x64 安装包）
+
+- 仓库：`jeffvli/feishin` · 分片：`apps/windows/22-音视频.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows feishin`
 
 ### FFmpeg（BtbN 预编译 master/latest 构建） · `ffmpeg_builds`
 
@@ -5766,12 +7054,61 @@ FxSound（开源音频增强；Windows x64 Setup）
 - 仓库：`fxsound2/fxsound-app` · 分片：`apps/windows/22-音视频.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows fxsound`
 
+### IPTVnator（跨平台 IPTV 播放器；Windows x64 安装包） · `iptvnator`
+
+IPTVnator（跨平台 IPTV 播放器；Windows x64 安装包）
+
+- 仓库：`4gray/iptvnator` · 分片：`apps/windows/22-音视频.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows iptvnator`
+
+### iTunes（苹果官网 Windows 版；lookup 打开下载页 · `itunes`
+
+iTunes（苹果官网 Windows 版；lookup 打开下载页。Mac 为系统自带/音乐 App）
+
+- 页面：https://www.apple.com.cn/itunes/ · 分片：`apps/windows/22-音视频.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows itunes`
+
+### Lidarr（音乐媒体库管理；Windows x64 安装包） · `lidarr`
+
+Lidarr（音乐媒体库管理；Windows x64 安装包）
+
+- 仓库：`Lidarr/Lidarr` · 分片：`apps/windows/22-音视频.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows lidarr`
+
 ### LosslessCut（无损裁剪/合并视频音频 · `losslesscut`
 
 LosslessCut（无损裁剪/合并视频音频，Windows 便携版）
 
 - 仓库：`mifi/lossless-cut` · 分片：`apps/windows/22-音视频.json` · 配置：已配匹配规则
 - 查找：`lookup_app.bat --platform windows losslesscut`
+
+### LRCGET（本地曲库歌词下载/嵌入；Windows x64 安装包） · `lrcget`
+
+LRCGET（本地曲库歌词下载/嵌入；Windows x64 安装包）
+
+- 仓库：`tranxuanthang/lrcget` · 分片：`apps/windows/22-音视频.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows lrcget`
+
+### MediaElch（Kodi 媒体库刮削/NFO；Windows x64 zip） · `mediaelch`
+
+MediaElch（Kodi 媒体库刮削/NFO；Windows x64 zip）
+
+- 仓库：`Komet/MediaElch` · 分片：`apps/windows/22-音视频.json` · 配置：已配匹配规则
+- 查找：`lookup_app.bat --platform windows mediaelch`
+
+### Mineradio（沉浸式歌词/粒子音乐播放器；Windows Setup） · `mineradio`
+
+Mineradio（沉浸式歌词/粒子音乐播放器；Windows Setup）
+
+- 仓库：`XxHuberrr/Mineradio` · 分片：`apps/windows/22-音视频.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows mineradio`
+
+### Navidrome（自建音乐库服务器；Windows amd64 msi） · `navidrome`
+
+Navidrome（自建音乐库服务器；Windows amd64 msi）
+
+- 仓库：`navidrome/navidrome` · 分片：`apps/windows/22-音视频.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows navidrome`
 
 ### 网易云音乐（官网分发 · `netease_cloud_music`
 
@@ -5794,12 +7131,19 @@ Olive（开源非线性视频剪辑；钉选 0.2.0-nightly）
 - 仓库：`olive-editor/olive` · 分片：`apps/windows/22-音视频.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows olive`
 
-### OpenShot 视频编辑器（Windows x64 exe） · `openshot`
+### OpenShot（Windows x86_64.exe） · `openshot`
 
-OpenShot 视频编辑器（Windows x64 exe）
+OpenShot（Windows x86_64.exe）
 
 - 仓库：`OpenShot/openshot-qt` · 分片：`apps/windows/22-音视频.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows openshot`
+
+### MusicBrainz Picard（音乐标签刮削；Windows 安装包） · `picard`
+
+MusicBrainz Picard（音乐标签刮削；Windows 安装包）
+
+- 仓库：`metabrainz/picard` · 分片：`apps/windows/22-音视频.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows picard`
 
 ### PotPlayer（本地播放器；官网分发 · `potplayer`
 
@@ -5807,6 +7151,13 @@ PotPlayer（本地播放器；官网分发，lookup 打开下载页）
 
 - 页面：https://potplayer.daum.net/ · 分片：`apps/windows/22-音视频.json` · 配置：仅打开官网
 - 查找：`lookup_app.bat --platform windows potplayer`
+
+### Prowlarr（媒体库索引器管理 · `prowlarr`
+
+Prowlarr（媒体库索引器管理，配合 Radarr/Sonarr/Lidarr；Windows x64 安装包）
+
+- 仓库：`Prowlarr/Prowlarr` · 分片：`apps/windows/22-音视频.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows prowlarr`
 
 ### QQ 音乐（官网分发 · `qqmusic`
 
@@ -5822,6 +7173,13 @@ QQ 音乐（官网分发，lookup 打开下载页）
 - 仓库：`HaujetZhao/QuickCut` · 分片：`apps/windows/22-音视频.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows quickcut`
 
+### Radarr（电影媒体库管理；Windows x64 安装包） · `radarr`
+
+Radarr（电影媒体库管理；Windows x64 安装包）
+
+- 仓库：`Radarr/Radarr` · 分片：`apps/windows/22-音视频.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows radarr`
+
 ### ScreenToGif（GIF/录屏 · `screen_to_gif`
 
 ScreenToGif（GIF/录屏，Windows x64 安装包）
@@ -5835,6 +7193,13 @@ ScreenToGif（GIF/录屏，Windows x64 安装包）
 
 - 仓库：`lextrack/Simple-Screen-Recorder` · 分片：`apps/windows/22-音视频.json` · 配置：基础条目（试跑前建议补规则）
 - 查找：`lookup_app.bat --platform windows simple_screen_recorder`
+
+### Sonarr（剧集媒体库管理；Windows x64 安装包） · `sonarr`
+
+Sonarr（剧集媒体库管理；Windows x64 安装包）
+
+- 仓库：`Sonarr/Sonarr` · 分片：`apps/windows/22-音视频.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows sonarr`
 
 ### Spotify（官方客户端；lookup 打开下载页 · `spotify`
 
@@ -5850,11 +7215,32 @@ Syncplay（异地同步播放本地视频，连麦追剧）
 - 仓库：`Syncplay/syncplay` · 分片：`apps/windows/22-音视频.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows syncplay`
 
+### Tauon（本地音乐库播放器；Windows 安装包） · `tauon`
+
+Tauon（本地音乐库播放器；Windows 安装包）
+
+- 仓库：`Taiko2k/Tauon` · 分片：`apps/windows/22-音视频.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows tauon`
+
+### Tautulli（Plex 媒体库统计与监控；Windows x64 安装包） · `tautulli`
+
+Tautulli（Plex 媒体库统计与监控；Windows x64 安装包）
+
+- 仓库：`Tautulli/Tautulli` · 分片：`apps/windows/22-音视频.json` · 配置：规则较完整
+- 查找：`lookup_app.bat --platform windows tautulli`
+
 ### VidCutter（基于 mpv 的视频剪切/合并） · `vidcutter`
 
 VidCutter（基于 mpv 的视频剪切/合并）
 
 - 仓库：`ozmartian/vidcutter` · 分片：`apps/windows/22-音视频.json` · 配置：规则较完整
 - 查找：`lookup_app.bat --platform windows vidcutter`
+
+### 西瓜视频（字节；网页 · `xigua`
+
+西瓜视频（字节；网页，lookup 打开官网）
+
+- 页面：https://www.ixigua.com/ · 分片：`apps/windows/22-音视频.json` · 配置：仅打开官网
+- 查找：`lookup_app.bat --platform windows xigua`
 
 ---

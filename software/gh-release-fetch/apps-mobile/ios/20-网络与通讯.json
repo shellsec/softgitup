@@ -313,5 +313,64 @@
     "kill_before_install": false,
     "windows_installer": false,
     "process_name": ""
+  },
+  {
+    "id": "tim_ios",
+    "简介": "TIM（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "tim",
+      "TIM",
+      "QQ办公"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id1175213887",
+    "url_hint": "tim TIM QQ办公",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "releases_url": "https://apps.apple.com/app/id1175213887"
+  },
+  {
+    "id": "welink_ios",
+    "简介": "华为云 WeLink（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "welink",
+      "WeLink",
+      "华为云WeLink",
+      "华为"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id1382487847",
+    "url_hint": "welink WeLink 华为云WeLink 华为",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "releases_url": "https://apps.apple.com/app/id1382487847"
+  },
+  {
+    "id": "outlook_ios",
+    "简介": "Microsoft Outlook（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "outlook",
+      "Outlook",
+      "微软邮箱",
+      "微软"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id951937596",
+    "url_hint": "outlook Outlook 微软邮箱 微软",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "releases_url": "https://apps.apple.com/app/id951937596"
   }
 ]

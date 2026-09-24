@@ -1254,5 +1254,190 @@
     ],
     "releases_url": "https://bgithub.xyz/Faster3ck/Converseen/releases",
     "repo_path": "Faster3ck/Converseen"
+  },
+  {
+    "id": "hydrus",
+    "简介": "Hydrus Network（本地媒体/图库标签整理；Windows 安装包）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "Extract",
+      "Linux",
+      ".zip",
+      ".tar",
+      "pdb"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Windows",
+      "Installer.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "hydrus",
+      "Hydrus",
+      "Hydrus Network",
+      "图库整理"
+    ],
+    "releases_url": "https://bgithub.xyz/hydrusnetwork/hydrus/releases",
+    "repo_path": "hydrusnetwork/hydrus"
+  },
+  {
+    "id": "vutronmusic",
+    "简介": "VutronMusic（第三方网易云音乐播放器；Windows x64）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "Portable",
+      "linux",
+      "mac",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "VutronMusic-",
+      "_win.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "vutronmusic",
+      "VutronMusic"
+    ],
+    "releases_url": "https://bgithub.xyz/stark81/VutronMusic/releases",
+    "repo_path": "stark81/VutronMusic"
+  },
+  {
+    "id": "psst",
+    "简介": "Psst（轻量 Spotify 客户端；Windows exe）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "linux",
+      "dmg",
+      ".deb"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Psst.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "psst",
+      "Psst"
+    ],
+    "releases_url": "https://bgithub.xyz/jpochyla/psst/releases",
+    "repo_path": "jpochyla/psst"
+  },
+  {
+    "id": "yesplaymusic",
+    "简介": "YesPlayMusic（第三方网易云音乐播放器；Windows 安装包）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "linux",
+      "mac",
+      "AppImage",
+      ".blockmap"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "YesPlayMusic-Setup-",
+      ".exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "yesplaymusic",
+      "YesPlayMusic"
+    ],
+    "releases_url": "https://bgithub.xyz/qier222/YesPlayMusic/releases",
+    "repo_path": "qier222/YesPlayMusic"
   }
 ]

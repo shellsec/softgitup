@@ -868,6 +868,7 @@
     "use_download_filename": true,
     "aliases": [
       "Super Productivity",
+      "super-productivity",
       "superproductivity"
     ],
     "process_name": "",
@@ -1451,5 +1452,383 @@
     "kill_before_install": false,
     "run_installer": false,
     "url_hint": "catime Catime 番茄钟 倒计时 计时器"
+  },
+  {
+    "id": "kando",
+    "简介": "Kando（开源饼状菜单；Windows x64 安装包）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "darwin",
+      "linux",
+      "AppImage",
+      ".rpm",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Kando-",
+      "Setup-x64.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "kando",
+      "Kando"
+    ],
+    "releases_url": "https://bgithub.xyz/kando-menu/kando/releases",
+    "repo_path": "kando-menu/kando"
+  },
+  {
+    "id": "piclist",
+    "简介": "PicList（开源图床/图床管理，PicGo 增强；Windows x64 安装包）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "linux",
+      "mac",
+      "dmg",
+      ".yml"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "PicList-Setup-",
+      "-x64.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "piclist",
+      "PicList"
+    ],
+    "releases_url": "https://bgithub.xyz/Kuingsmile/PicList/releases",
+    "repo_path": "Kuingsmile/PicList"
+  },
+  {
+    "id": "handy",
+    "简介": "Handy（开源语音输入；Windows x64 安装包）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "linux",
+      "dmg",
+      ".msi",
+      ".sig"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Handy_",
+      "_x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "handy",
+      "Handy"
+    ],
+    "releases_url": "https://bgithub.xyz/cjpais/Handy/releases",
+    "repo_path": "cjpais/Handy"
+  },
+  {
+    "id": "pot",
+    "简介": "Pot（划词翻译/OCR；Windows x64 安装包）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "x86",
+      "linux",
+      "dmg",
+      "webview2",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "pot_",
+      "_x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "pot",
+      "Pot",
+      "pot-desktop"
+    ],
+    "releases_url": "https://bgithub.xyz/pot-app/pot-desktop/releases",
+    "repo_path": "pot-app/pot-desktop"
+  },
+  {
+    "id": "zapier",
+    "简介": "Zapier（自动化工作流网页；lookup 打开官网）",
+    "分类": "效率",
+    "aliases": [
+      "zapier",
+      "Zapier"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://zapier.com/",
+    "url_hint": "zapier Zapier",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "make",
+    "简介": "Make（原 Integromat；自动化工作流网页；lookup 打开官网）",
+    "分类": "效率",
+    "aliases": [
+      "make",
+      "Make",
+      "integromat",
+      "Integromat"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.make.com/",
+    "url_hint": "make Make integromat Integromat",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "jijyun",
+    "简介": "集简云（国内自动化集成网页；lookup 打开官网）",
+    "分类": "效率",
+    "aliases": [
+      "jijyun",
+      "集简云",
+      "jijian"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.jijyun.cn/",
+    "url_hint": "jijyun 集简云 jijian",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "n8n",
+    "简介": "n8n（开源自动化工作流；lookup 打开官网，自托管用 Docker）",
+    "分类": "效率",
+    "aliases": [
+      "n8n",
+      "n8n.io"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://n8n.io/",
+    "url_hint": "n8n n8n.io",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "activepieces",
+    "简介": "Activepieces（开源自动化工作流；lookup 打开官网）",
+    "分类": "效率",
+    "aliases": [
+      "activepieces",
+      "Activepieces"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.activepieces.com/",
+    "url_hint": "activepieces Activepieces",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "activitywatch",
+    "简介": "ActivityWatch（开源自动时间追踪；Windows x64 Setup）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "aw-qt.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      ".zip",
+      "linux",
+      "macos"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "activitywatch-v",
+      "windows-x86_64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "activitywatch",
+      "ActivityWatch",
+      "时间追踪"
+    ],
+    "releases_url": "https://bgithub.xyz/ActivityWatch/activitywatch/releases",
+    "repo_path": "ActivityWatch/activitywatch"
+  },
+  {
+    "id": "dawn_launcher",
+    "简介": "Dawn Launcher（开源快捷启动工具，Windows 安装包；对应 GitHub OSS 分支）",
+    "分类": "效率",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/fanchenio/DawnLauncher/releases",
+    "repo_path": "fanchenio/DawnLauncher",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Dawn.Launcher-",
+      ".exe"
+    ],
+    "href_exclude_substrings": [
+      ".7z",
+      ".blockmap",
+      ".yml",
+      "arm64"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Dawn.Launcher-{ver}.exe"
+    ],
+    "save_name": "Dawn.Launcher-{ver}.exe",
+    "process_name": "Dawn Launcher.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "aliases": [
+      "Dawn Launcher",
+      "DawnLauncher"
+    ]
   }
 ]

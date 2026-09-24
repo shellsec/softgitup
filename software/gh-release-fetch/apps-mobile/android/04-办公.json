@@ -208,5 +208,23 @@
     "kill_before_install": false,
     "windows_installer": false,
     "process_name": ""
+  },
+  {
+    "id": "tencent_docs_android",
+    "简介": "腾讯文档 Android（lookup 打开官网下载页）",
+    "分类": "办公",
+    "aliases": [
+      "tencent_docs",
+      "腾讯文档",
+      "docs.qq"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://docs.qq.com/home/download",
+    "url_hint": "tencent_docs 腾讯文档 docs.qq",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

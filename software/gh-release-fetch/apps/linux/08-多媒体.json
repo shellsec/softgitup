@@ -683,7 +683,7 @@
   },
   {
     "id": "lx_music_desktop",
-    "简介": "洛雪音乐助手（桌面版）",
+    "简介": "洛雪音乐助手（桌面版；Linux x64 rpm）",
     "分类": "多媒体",
     "enabled": false,
     "prefer_api_assets": true,
@@ -696,24 +696,25 @@
     "href_exclude_substrings": [
       "arm",
       "macos",
-      "linux",
+      "win",
       "ia32",
-      "source"
+      "source",
+      ".yml"
     ],
     "installer_markers_match_all": true,
     "installer_markers": [
-      "win_x64"
+      "lx-music-desktop-",
+      "x64.rpm"
     ],
     "installer_extensions": [
-      ".7z",
-      ".exe"
+      ".rpm"
     ],
     "releases_url": "https://bgithub.xyz/lyswhut/lx-music-desktop/releases",
     "repo_path": "lyswhut/lx-music-desktop"
   },
   {
     "id": "listen1_desktop",
-    "简介": "Listen 1（聚合音乐播放器）",
+    "简介": "Listen 1（聚合音乐播放器；Linux x64 AppImage）",
     "分类": "多媒体",
     "enabled": false,
     "prefer_api_assets": true,
@@ -735,7 +736,19 @@
       ".json",
       ".txt",
       ".md",
-      "checksum"
+      "checksum",
+      "mac",
+      "win",
+      ".deb",
+      ".yml"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "listen1_",
+      "linux_x86_64.AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
     ],
     "releases_url": "https://bgithub.xyz/listen1/listen1_desktop/releases",
     "repo_path": "listen1/listen1_desktop"
@@ -836,5 +849,191 @@
     ],
     "releases_url": "https://bgithub.xyz/Faster3ck/Converseen/releases",
     "repo_path": "Faster3ck/Converseen"
+  },
+  {
+    "id": "hydrus",
+    "简介": "Hydrus Network（本地媒体/图库标签整理；Linux Executable tar.zst）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "Windows",
+      ".zip",
+      "Installer"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Linux",
+      "Executable.tar.zst"
+    ],
+    "installer_extensions": [
+      ".zst",
+      ".tar.zst"
+    ],
+    "aliases": [
+      "hydrus",
+      "Hydrus",
+      "Hydrus Network",
+      "图库整理"
+    ],
+    "releases_url": "https://bgithub.xyz/hydrusnetwork/hydrus/releases",
+    "repo_path": "hydrusnetwork/hydrus"
+  },
+  {
+    "id": "vutronmusic",
+    "简介": "VutronMusic（第三方网易云音乐播放器；Linux x64 deb）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "aarch64",
+      "mac",
+      "win",
+      "AppImage",
+      ".rpm"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "VutronMusic-",
+      "_linux_amd64.deb"
+    ],
+    "installer_extensions": [
+      ".deb"
+    ],
+    "aliases": [
+      "vutronmusic",
+      "VutronMusic"
+    ],
+    "releases_url": "https://bgithub.xyz/stark81/VutronMusic/releases",
+    "repo_path": "stark81/VutronMusic"
+  },
+  {
+    "id": "psst",
+    "简介": "Psst（轻量 Spotify 客户端；Linux amd64 deb）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "windows",
+      "dmg"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "psst-amd64.deb"
+    ],
+    "installer_extensions": [
+      ".deb"
+    ],
+    "aliases": [
+      "psst",
+      "Psst"
+    ],
+    "releases_url": "https://bgithub.xyz/jpochyla/psst/releases",
+    "repo_path": "jpochyla/psst"
+  },
+  {
+    "id": "yesplaymusic",
+    "简介": "YesPlayMusic（第三方网易云音乐播放器；Linux AppImage）",
+    "分类": "多媒体",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "windows",
+      "mac",
+      ".deb",
+      ".rpm",
+      ".yml"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "YesPlayMusic-",
+      ".AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "aliases": [
+      "yesplaymusic",
+      "YesPlayMusic"
+    ],
+    "releases_url": "https://bgithub.xyz/qier222/YesPlayMusic/releases",
+    "repo_path": "qier222/YesPlayMusic"
   }
 ]

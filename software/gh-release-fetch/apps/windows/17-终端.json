@@ -408,5 +408,157 @@
     ],
     "releases_url": "https://bgithub.xyz/contour-terminal/contour/releases",
     "repo_path": "contour-terminal/contour"
+  },
+  {
+    "id": "hyper",
+    "简介": "Hyper（Electron 终端；Windows 安装包）",
+    "分类": "终端",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "linux",
+      "mac",
+      "AppImage",
+      ".blockmap"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Hyper-Setup-",
+      ".exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "hyper",
+      "Hyper"
+    ],
+    "releases_url": "https://bgithub.xyz/vercel/hyper/releases",
+    "repo_path": "vercel/hyper"
+  },
+  {
+    "id": "waveterm",
+    "简介": "Wave Terminal（AI/工作区终端；Windows x64）",
+    "分类": "终端",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "Wave.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      ".msi",
+      ".zip",
+      "darwin",
+      "linux"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Wave-win32-x64-",
+      ".exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "waveterm",
+      "wave terminal",
+      "Wave Terminal",
+      "wave"
+    ],
+    "releases_url": "https://bgithub.xyz/wavetermdev/waveterm/releases",
+    "repo_path": "wavetermdev/waveterm"
+  },
+  {
+    "id": "woterm",
+    "简介": "WoTerm（跨平台 SSH/SFTP/RDP 终端；Windows 安装包 zip）",
+    "分类": "终端",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "portable",
+      "linux",
+      "macosx"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "woterm-windows-installation-",
+      ".zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "woterm",
+      "WoTerm",
+      "wo_term"
+    ],
+    "releases_url": "https://bgithub.xyz/aoyiduo/woterm/releases",
+    "repo_path": "aoyiduo/woterm"
   }
 ]

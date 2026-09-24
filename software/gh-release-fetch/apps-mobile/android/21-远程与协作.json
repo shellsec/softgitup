@@ -227,5 +227,24 @@
     "kill_before_install": false,
     "windows_installer": false,
     "process_name": ""
+  },
+  {
+    "id": "tencent_meeting_android",
+    "简介": "腾讯会议 Android（lookup 打开官网下载页）",
+    "分类": "远程与协作",
+    "aliases": [
+      "tencent_meeting",
+      "腾讯会议",
+      "wemeet",
+      "WeMeet"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://meeting.tencent.com/download/",
+    "url_hint": "tencent_meeting 腾讯会议 wemeet WeMeet",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

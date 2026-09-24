@@ -172,5 +172,24 @@
     "kill_before_install": false,
     "windows_installer": false,
     "process_name": ""
+  },
+  {
+    "id": "baidu_ime_android",
+    "简介": "百度输入法 Android（lookup 打开官网）",
+    "分类": "输入",
+    "aliases": [
+      "baidu_ime",
+      "百度输入法",
+      "百度拼音",
+      "百度"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://shurufa.baidu.com/",
+    "url_hint": "baidu_ime 百度输入法 百度拼音 百度",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

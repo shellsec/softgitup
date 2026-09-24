@@ -126,5 +126,25 @@
     "kill_before_install": false,
     "windows_installer": false,
     "process_name": ""
+  },
+  {
+    "id": "tencent_meeting_ios",
+    "简介": "腾讯会议（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "远程与协作",
+    "aliases": [
+      "tencent_meeting",
+      "腾讯会议",
+      "wemeet",
+      "WeMeet"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id1484048379",
+    "url_hint": "tencent_meeting 腾讯会议 wemeet WeMeet",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "releases_url": "https://apps.apple.com/app/id1484048379"
   }
 ]

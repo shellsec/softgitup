@@ -214,5 +214,126 @@
     "open_page_url": "https://github.com/freqtrade/freqtrade/releases",
     "releases_url": "https://bgithub.xyz/freqtrade/freqtrade/releases",
     "repo_path": "freqtrade/freqtrade"
+  },
+  {
+    "id": "portfolio_performance",
+    "简介": "Portfolio Performance（开源投资组合跟踪；Windows Setup）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "PortfolioPerformance.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      ".zip",
+      "linux",
+      "dmg",
+      "distro"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "PortfolioPerformance-",
+      "-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "portfolio performance",
+      "Portfolio Performance",
+      "投资组合",
+      "pp"
+    ],
+    "releases_url": "https://bgithub.xyz/portfolio-performance/portfolio/releases",
+    "repo_path": "portfolio-performance/portfolio"
+  },
+  {
+    "id": "wealthfolio",
+    "简介": "Wealthfolio（本地优先投资组合桌面；Windows x64 Setup）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "Wealthfolio.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "machine",
+      "nsis",
+      ".msi"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Wealthfolio_",
+      "_x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "wealthfolio",
+      "Wealthfolio",
+      "财富组合"
+    ],
+    "releases_url": "https://bgithub.xyz/afadil/wealthfolio/releases",
+    "repo_path": "afadil/wealthfolio"
+  },
+  {
+    "id": "alipay",
+    "简介": "支付宝（无官方 Windows 客户端；lookup 打开官网。客户端见 Android/iOS）",
+    "分类": "金融与股票",
+    "aliases": [
+      "alipay",
+      "支付宝",
+      "阿里"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://mobile.alipay.com/",
+    "url_hint": "alipay 支付宝 阿里",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

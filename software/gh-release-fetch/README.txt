@@ -34,4 +34,5 @@ GH Release Fetch — Windows 便携版（含 exe，无需安装 Python）
 ----
   - 本包不含 Python；维护脚本（monthly_check 等）请使用完整 Git 仓库。
   - 个人列表 saved_apps_windows.json 可在本目录新建，勿覆盖他人配置。
+  - 下载的 exe/msi 会尝试自动运行安装程序；7z/zip 等压缩包不会自动解压，会打开所在目录（默认本目录下的 windows\）并选中文件。
   - 项目：https://github.com/shellsec/gh-release-fetch

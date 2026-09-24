@@ -17,11 +17,14 @@
     "installer_markers": [
       "LocalSend-",
       "android",
-      "aarch64",
+      "arm64v8",
       ".apk"
     ],
     "href_exclude_substrings": [
       "arm32",
+      "arm32v7",
+      "google-play",
+      "x64",
       "x86",
       "windows",
       "linux",

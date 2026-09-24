@@ -335,5 +335,254 @@
     "open_page_url": "https://github.com/zotero/zotero/releases",
     "releases_url": "https://bgithub.xyz/zotero/zotero/releases",
     "repo_path": "zotero/zotero"
+  },
+  {
+    "id": "novelwriter",
+    "简介": "novelWriter（开源小说/长文写作编辑器；Windows x64 安装包）",
+    "分类": "写作",
+    "aliases": [
+      "novelwriter",
+      "novel Writer",
+      "小说写作"
+    ],
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm64",
+      "linux",
+      "AppImage",
+      "flatpak",
+      "sha256",
+      ".zsync",
+      ".whl",
+      ".deb",
+      "checksum"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "novelwriter-",
+      "amd64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "releases_url": "https://bgithub.xyz/saga-soft/novelWriter/releases",
+    "repo_path": "saga-soft/novelWriter"
+  },
+  {
+    "id": "readest",
+    "简介": "Readest（开源跨平台电子书阅读器；Windows x64 安装包）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "portable",
+      "arm64",
+      ".sig",
+      "AppImage",
+      ".dmg",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Readest_",
+      "x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "readest",
+      "Readest",
+      "电子书阅读"
+    ],
+    "releases_url": "https://bgithub.xyz/readest/readest/releases",
+    "repo_path": "readest/readest"
+  },
+  {
+    "id": "goldendict_ng",
+    "简介": "GoldenDict-ng（开源词典/词库阅读器；Windows 安装包，Qt 6.10）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "exe-only",
+      "Qt6.8",
+      ".7z",
+      ".pdb",
+      "macOS"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "GoldenDict-ng-",
+      "Qt6.10.3-Windows-installer.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "goldendict",
+      "goldendict-ng",
+      "GoldenDict",
+      "词典",
+      "字典"
+    ],
+    "releases_url": "https://bgithub.xyz/xiaoyifang/goldendict-ng/releases",
+    "repo_path": "xiaoyifang/goldendict-ng"
+  },
+  {
+    "id": "horsemd",
+    "简介": "HorseMD（开源 Typora 平替，所见即所得 Markdown；Windows Setup）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".blockmap",
+      ".yml",
+      ".dmg",
+      ".deb",
+      ".zip",
+      "linux",
+      "mac"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "HorseMD-Setup-",
+      ".exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "horsemd",
+      "HorseMD",
+      "horseMD",
+      "Typora平替"
+    ],
+    "releases_url": "https://bgithub.xyz/BND-1/horseMD/releases",
+    "repo_path": "BND-1/horseMD"
+  },
+  {
+    "id": "youdao_dict",
+    "简介": "有道词典（网易有道；官网分发，lookup 打开下载页）",
+    "分类": "写作",
+    "aliases": [
+      "youdao_dict",
+      "有道词典",
+      "有道",
+      "网易有道"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://cidian.youdao.com/",
+    "url_hint": "youdao_dict 有道词典 有道 网易有道",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "solomd",
+    "简介": "SoloMD（开源 Markdown 编辑器，Windows x64 MSI）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/zhitongblog/solomd/releases",
+    "repo_path": "zhitongblog/solomd",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "SoloMD_",
+      "_x64_en-US.msi"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "portable",
+      "AppImage",
+      ".deb",
+      ".rpm",
+      ".dmg",
+      ".apk",
+      "mcp-",
+      "clipper",
+      "SHA256"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "SoloMD_{ver}_x64_en-US.msi"
+    ],
+    "save_name": "SoloMD_{ver}_x64_en-US.msi",
+    "process_name": "SoloMD.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "use_download_filename": true,
+    "aliases": [
+      "SoloMD"
+    ]
+  },
+  {
+    "id": "vic_diary",
+    "简介": "维克日记（Markdown 日记，Windows setup）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/vo-soft/vic-diary-releases/releases",
+    "repo_path": "vo-soft/vic-diary-releases",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "vic-diary-",
+      "-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      ".blockmap",
+      ".zip",
+      ".dmg",
+      "AppImage",
+      ".deb",
+      ".rpm",
+      "arm64",
+      "mac"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "vic-diary-{ver}-setup.exe"
+    ],
+    "save_name": "vic-diary-{ver}-setup.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "aliases": [
+      "维克日记",
+      "VicDiary",
+      "vic-diary"
+    ]
   }
 ]

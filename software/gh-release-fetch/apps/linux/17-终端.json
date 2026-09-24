@@ -348,5 +348,199 @@
     ],
     "releases_url": "https://bgithub.xyz/yoanwai/agent-manager/releases",
     "repo_path": "yoanwai/agent-manager"
+  },
+  {
+    "id": "powershell",
+    "简介": "PowerShell 7（跨平台 Shell；Linux x64 tar.gz）",
+    "分类": "终端",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/PowerShell/PowerShell/releases",
+    "repo_path": "PowerShell/PowerShell",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "powershell-",
+      "linux-x64.tar.gz"
+    ],
+    "href_exclude_substrings": [
+      "arm",
+      "musl",
+      "fxdependent",
+      "preview",
+      "lts",
+      "sha256",
+      "osx",
+      "win",
+      ".deb",
+      ".rpm"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "use_download_filename": true,
+    "save_name": "powershell-{ver}-linux-x64.tar.gz",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "aliases": [
+      "powershell",
+      "pwsh",
+      "PowerShell 7"
+    ]
+  },
+  {
+    "id": "hyper",
+    "简介": "Hyper（Electron 终端；Linux x64 AppImage）",
+    "分类": "终端",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "windows",
+      "mac",
+      ".deb",
+      ".rpm"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Hyper-",
+      ".AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "aliases": [
+      "hyper",
+      "Hyper"
+    ],
+    "releases_url": "https://bgithub.xyz/vercel/hyper/releases",
+    "repo_path": "vercel/hyper"
+  },
+  {
+    "id": "waveterm",
+    "简介": "Wave Terminal（AI/工作区终端；Debian amd64 deb）",
+    "分类": "终端",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "AppImage",
+      "rpm",
+      "arm64",
+      "windows"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "waveterm-linux-amd64-",
+      ".deb"
+    ],
+    "installer_extensions": [
+      ".deb"
+    ],
+    "aliases": [
+      "waveterm",
+      "wave terminal",
+      "Wave Terminal"
+    ],
+    "releases_url": "https://bgithub.xyz/wavetermdev/waveterm/releases",
+    "repo_path": "wavetermdev/waveterm"
+  },
+  {
+    "id": "woterm",
+    "简介": "WoTerm（跨平台 SSH/SFTP/RDP 终端；Linux x86_64 安装包）",
+    "分类": "终端",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "windows",
+      "macosx",
+      "portable",
+      "arm64"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "woterm-linux-x86_64-installation-",
+      ".tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "aliases": [
+      "woterm",
+      "WoTerm",
+      "wo_term"
+    ],
+    "releases_url": "https://bgithub.xyz/aoyiduo/woterm/releases",
+    "repo_path": "aoyiduo/woterm"
   }
 ]

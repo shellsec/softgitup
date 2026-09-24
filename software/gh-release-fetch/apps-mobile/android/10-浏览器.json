@@ -177,5 +177,25 @@
     "kill_before_install": false,
     "windows_installer": false,
     "process_name": ""
+  },
+  {
+    "id": "quark_android",
+    "简介": "夸克 Android（阿里浏览器/网盘门户；lookup 打开官网。含推广与会员引导，请自行甄别）",
+    "分类": "浏览器",
+    "aliases": [
+      "quark",
+      "夸克",
+      "夸克浏览器",
+      "夸克网盘",
+      "阿里"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.quark.cn/",
+    "url_hint": "quark 夸克 夸克浏览器 夸克网盘 阿里",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

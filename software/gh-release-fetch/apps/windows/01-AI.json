@@ -2199,5 +2199,1996 @@
     ],
     "releases_url": "https://bgithub.xyz/Fei-Away/Codex-Dream-Skin/releases",
     "repo_path": "Fei-Away/Codex-Dream-Skin"
+  },
+  {
+    "id": "sztucode",
+    "简介": "SztuCode（开源本地优先 AI 编程/办公智能体桌面端；Windows x64 Setup）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".msi",
+      ".dmg",
+      ".zip",
+      "AppImage",
+      ".deb",
+      "arm64",
+      "linux"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "SztuCode_",
+      "x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "sztucode",
+      "SztuCode",
+      "sztu code",
+      "sztu-code"
+    ],
+    "releases_url": "https://bgithub.xyz/rojim666/SztuCode/releases",
+    "repo_path": "rojim666/SztuCode"
+  },
+  {
+    "id": "deepchat",
+    "简介": "DeepChat（开源多模型 AI 桌面客户端；Windows x64）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "linux",
+      "mac",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "DeepChat-",
+      "windows-x64.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "deepchat",
+      "DeepChat",
+      "深度聊天"
+    ],
+    "releases_url": "https://bgithub.xyz/ThinkInAIXYZ/deepchat/releases",
+    "repo_path": "ThinkInAIXYZ/deepchat"
+  },
+  {
+    "id": "fiveire",
+    "简介": "5ire（桌面 AI 助手 / MCP 客户端；Windows Setup）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "linux",
+      "mac",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "5ire-Setup-",
+      ".exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "5ire",
+      "fiveire",
+      "fai-er"
+    ],
+    "releases_url": "https://bgithub.xyz/nanbingxyz/5ire/releases",
+    "repo_path": "nanbingxyz/5ire"
+  },
+  {
+    "id": "witsy",
+    "简介": "Witsy（桌面 AI 助手 / MCP 客户端；Windows x64 Setup）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "darwin",
+      "linux",
+      ".zip",
+      ".nupkg"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Witsy-",
+      "win32-x64.Setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "witsy",
+      "Witsy",
+      "nbonamy"
+    ],
+    "releases_url": "https://bgithub.xyz/Kochava-Studios/witsy/releases",
+    "repo_path": "Kochava-Studios/witsy"
+  },
+  {
+    "id": "coco_ai",
+    "简介": "Coco AI（本地搜索与个人助手桌面端；Windows x64 Setup）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "x86-setup",
+      "linux",
+      ".dmg"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Coco-AI_",
+      "x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "coco",
+      "coco ai",
+      "Coco AI",
+      "infinilabs"
+    ],
+    "releases_url": "https://bgithub.xyz/infinilabs/coco-app/releases",
+    "repo_path": "infinilabs/coco-app"
+  },
+  {
+    "id": "dive_ai",
+    "简介": "Dive AI Agent（开源 MCP Host 桌面智能体；Windows x64 Tauri Setup）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "electron",
+      "linux",
+      "mac",
+      ".msi"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "dive_",
+      "x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "dive ai",
+      "Dive AI",
+      "openagentplatform"
+    ],
+    "releases_url": "https://bgithub.xyz/OpenAgentPlatform/Dive/releases",
+    "repo_path": "OpenAgentPlatform/Dive"
+  },
+  {
+    "id": "noi",
+    "简介": "Noi（本地优先 AI 工作台 / 多会话桌面端；Windows Setup）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      ".msi",
+      ".dmg",
+      "AppImage",
+      ".nupkg",
+      "darwin"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Noi-",
+      "Setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "noi",
+      "Noi",
+      "lencx"
+    ],
+    "releases_url": "https://bgithub.xyz/lencx/Noi/releases",
+    "repo_path": "lencx/Noi"
+  },
+  {
+    "id": "lobsterai",
+    "简介": "LobsterAI（网易有道开源桌面办公智能体；Windows x64）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "mac",
+      ".dmg"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "LobsterAI--",
+      "win-x64.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "lobsterai",
+      "LobsterAI",
+      "龙虾",
+      "有道智能体"
+    ],
+    "releases_url": "https://bgithub.xyz/netease-youdao/LobsterAI/releases",
+    "repo_path": "netease-youdao/LobsterAI"
+  },
+  {
+    "id": "kun",
+    "简介": "Kun（本地优先 AI Agent 工作台；Windows x64）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "linux",
+      "mac",
+      ".zip",
+      ".dmg"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Kun-",
+      "win-x64.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "kun",
+      "Kun",
+      "kun-agent",
+      "KunAgent"
+    ],
+    "releases_url": "https://bgithub.xyz/KunAgent/Kun/releases",
+    "repo_path": "KunAgent/Kun"
+  },
+  {
+    "id": "deeting",
+    "简介": "Deeting OS（本地优先 AI 工作台；Windows x64 Setup）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      ".msi",
+      "linux",
+      ".dmg"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "deeting_",
+      "x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "deeting",
+      "Deeting",
+      "谛听"
+    ],
+    "releases_url": "https://bgithub.xyz/MarshallEriksen-Neura/Deeting/releases",
+    "repo_path": "MarshallEriksen-Neura/Deeting"
+  },
+  {
+    "id": "axagent",
+    "简介": "AxAgent（Tauri 桌面 AI 智能体工作台；Windows x64 MSI）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "portable",
+      "arm64",
+      "linux",
+      "macos"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "AxAgent_",
+      "windows-x64.msi"
+    ],
+    "installer_extensions": [
+      ".msi"
+    ],
+    "aliases": [
+      "axagent",
+      "AxAgent"
+    ],
+    "releases_url": "https://bgithub.xyz/polite0803/AxAgent/releases",
+    "repo_path": "polite0803/AxAgent"
+  },
+  {
+    "id": "nuphus",
+    "简介": "Nuphus（本地优先桌面 AI 智能体；Windows x64 Setup）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      ".zip",
+      "osx",
+      "linux",
+      ".dmg"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "nuphus-win32-x64-",
+      "setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "nuphus",
+      "Nuphus"
+    ],
+    "releases_url": "https://bgithub.xyz/mrpulor-gh/nuphus/releases",
+    "repo_path": "mrpulor-gh/nuphus"
+  },
+  {
+    "id": "openhuman",
+    "简介": "OpenHuman（开源本地优先个人 AI 桌面端；Windows x64 Setup）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      ".msi",
+      "linux",
+      ".dmg",
+      "aarch64"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "OpenHuman_",
+      "x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "openhuman",
+      "OpenHuman"
+    ],
+    "releases_url": "https://bgithub.xyz/tinyhumansai/openhuman/releases",
+    "repo_path": "tinyhumansai/openhuman"
+  },
+  {
+    "id": "live_agent",
+    "简介": "LiveAgent（开源 AI Agent 桌面客户端；Windows x64 Setup）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      ".msi",
+      "portable",
+      "linux",
+      "macOS"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "LiveAgent-",
+      "Windows-x64-Setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "liveagent",
+      "live agent",
+      "LiveAgent",
+      "stack-cairn"
+    ],
+    "releases_url": "https://bgithub.xyz/Stack-Cairn/LiveAgent/releases",
+    "repo_path": "Stack-Cairn/LiveAgent"
+  },
+  {
+    "id": "flock",
+    "简介": "Flock（Tauri 桌面多 Agent 工作台；Windows x64 Setup）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      ".msi",
+      "linux",
+      ".dmg"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Flock_",
+      "x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "flock",
+      "Flock",
+      "onelevenvy"
+    ],
+    "releases_url": "https://bgithub.xyz/Onelevenvy/flock/releases",
+    "repo_path": "Onelevenvy/flock"
+  },
+  {
+    "id": "open_science",
+    "简介": "Open Science Desktop（本地优先科研 AI 工作台；Windows x64 Setup）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      ".msi",
+      "linux",
+      ".dmg"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Open.Science_",
+      "x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "open science",
+      "Open Science",
+      "osd"
+    ],
+    "releases_url": "https://bgithub.xyz/ai4s-research/open-science/releases",
+    "repo_path": "ai4s-research/open-science"
+  },
+  {
+    "id": "jaz",
+    "简介": "Jaz（Ollama 原生本地 Chat 桌面端；Windows Setup）",
+    "分类": "AI",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      ".zip",
+      "mac",
+      "linux",
+      "backend"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Jaz.Setup.",
+      ".exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "jaz",
+      "Jaz",
+      "enchanted"
+    ],
+    "releases_url": "https://bgithub.xyz/gluonfield/jaz/releases",
+    "repo_path": "gluonfield/jaz"
+  },
+  {
+    "id": "chatgpt",
+    "简介": "ChatGPT（OpenAI 对话；lookup 打开官网，不自动下载客户端）",
+    "分类": "AI",
+    "aliases": [
+      "chatgpt",
+      "ChatGPT",
+      "openai",
+      "GPT"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://chatgpt.com/download/",
+    "url_hint": "chatgpt ChatGPT openai GPT",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "claude",
+    "简介": "Claude（Anthropic 对话网页；lookup 打开官网。CLI 见 claude_code）",
+    "分类": "AI",
+    "aliases": [
+      "claude",
+      "Claude",
+      "anthropic",
+      "克劳德"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://claude.ai/",
+    "url_hint": "claude Claude anthropic 克劳德",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "deepseek",
+    "简介": "DeepSeek（深度求索对话网页；lookup 打开官网。CLI 见 deepseek_cli）",
+    "分类": "AI",
+    "aliases": [
+      "deepseek",
+      "DeepSeek",
+      "深度求索"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://chat.deepseek.com/",
+    "url_hint": "deepseek DeepSeek 深度求索",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "yuanbao",
+    "简介": "腾讯元宝（对话网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "yuanbao",
+      "元宝",
+      "腾讯元宝"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://yuanbao.tencent.com/",
+    "url_hint": "yuanbao 元宝 腾讯元宝",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "kimi",
+    "简介": "Kimi（月之暗面对话网页；lookup 打开官网。CLI 见 kimi_cli）",
+    "分类": "AI",
+    "aliases": [
+      "kimi",
+      "Kimi",
+      "月之暗面",
+      "kimi.ai"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.kimi.com/",
+    "url_hint": "kimi Kimi 月之暗面 kimi.ai",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "doubao",
+    "简介": "豆包（字节对话网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "doubao",
+      "豆包",
+      "doubao ai"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.doubao.com/",
+    "url_hint": "doubao 豆包 doubao ai",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "jimeng",
+    "简介": "即梦 AI（字节图像/视频生成网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "jimeng",
+      "即梦",
+      "即梦AI",
+      "即梦 AI"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://jimeng.jianying.com/",
+    "url_hint": "jimeng 即梦 即梦AI 即梦 AI",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "kling",
+    "简介": "可灵（快手图像/视频生成网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "kling",
+      "可灵",
+      "可灵AI",
+      "klingai"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://klingai.kuaishou.com/",
+    "url_hint": "kling 可灵 可灵AI klingai",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "midjourney",
+    "简介": "Midjourney（图像生成网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "midjourney",
+      "Midjourney",
+      "MJ"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.midjourney.com/",
+    "url_hint": "midjourney Midjourney MJ",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "github_copilot",
+    "简介": "GitHub Copilot（官方产品页；lookup 打开官网。CLI 见 github_copilot_cli）",
+    "分类": "AI",
+    "aliases": [
+      "github copilot",
+      "GitHub Copilot",
+      "copilot"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://github.com/features/copilot",
+    "url_hint": "github copilot GitHub Copilot copilot",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "coze",
+    "简介": "扣子 Coze（字节智能体/工作流网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "coze",
+      "扣子",
+      "扣子 Coze",
+      "coze.cn"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.coze.cn/",
+    "url_hint": "coze 扣子 扣子 Coze coze.cn",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "dify",
+    "简介": "Dify（开源 LLM 应用/工作流平台；lookup 打开官网，自托管用 Docker）",
+    "分类": "AI",
+    "aliases": [
+      "dify",
+      "Dify"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://dify.ai/",
+    "url_hint": "dify Dify",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "fastgpt",
+    "简介": "FastGPT（开源知识库问答；lookup 打开官网，自托管用 Docker）",
+    "分类": "AI",
+    "aliases": [
+      "fastgpt",
+      "FastGPT"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://fastgpt.in/",
+    "url_hint": "fastgpt FastGPT",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "metaso",
+    "简介": "秘塔 AI 搜索（网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "metaso",
+      "秘塔",
+      "秘塔AI",
+      "秘塔搜索"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://metaso.cn/",
+    "url_hint": "metaso 秘塔 秘塔AI 秘塔搜索",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "perplexity",
+    "简介": "Perplexity（AI 搜索网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "perplexity",
+      "Perplexity"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.perplexity.ai/",
+    "url_hint": "perplexity Perplexity",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "rundiffusion",
+    "简介": "RunDiffusion（云端生图网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "rundiffusion",
+      "RunDiffusion"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.rundiffusion.com/",
+    "url_hint": "rundiffusion RunDiffusion",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "runcomfy",
+    "简介": "RunComfy（云端 ComfyUI 网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "runcomfy",
+      "RunComfy"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.runcomfy.com/",
+    "url_hint": "runcomfy RunComfy",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "gemini",
+    "简介": "Google Gemini（对话网页；lookup 打开官网。CLI 见 gemini_cli）",
+    "分类": "AI",
+    "aliases": [
+      "gemini",
+      "Gemini",
+      "bard",
+      "双子座",
+      "Google Gemini"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://gemini.google.com/",
+    "url_hint": "gemini Gemini bard 双子座 Google Gemini",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "grok",
+    "简介": "Grok（xAI 对话网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "grok",
+      "Grok",
+      "xAI",
+      "grok.com"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://grok.com/",
+    "url_hint": "grok Grok xAI grok.com",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "grok_bot",
+    "简介": "Grok Bot（Cursor 官网桌面端，不是 Cursor IDE，也不是 grok.com 网页）",
+    "分类": "AI",
+    "enabled": false,
+    "resolve_via": "github_pages_manifest",
+    "manifest_item_id": "grok_bot",
+    "open_page_url": "https://cursor.com/cn/download/bot",
+    "version_tag_as_on_github": true,
+    "use_download_filename": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "save_name": "Grok_Bot_{ver}_Setup.exe",
+    "aliases": [
+      "Grok Bot",
+      "grokbot"
+    ]
+  },
+  {
+    "id": "poe",
+    "简介": "Poe（Quora 多模型对话网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "poe",
+      "Poe",
+      "poe.com"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://poe.com/",
+    "url_hint": "poe Poe poe.com",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "qwen",
+    "简介": "千问 / 通义千问（阿里对话网页；lookup 打开官网。CLI 见 qwen_code）",
+    "分类": "AI",
+    "aliases": [
+      "qwen",
+      "Qwen",
+      "千问",
+      "通义千问",
+      "tongyi",
+      "qianwen"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.qianwen.com/",
+    "url_hint": "qwen Qwen 千问 通义千问 tongyi qianwen",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "wenxin",
+    "简介": "文心（百度对话网页，原「文心一言」；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "wenxin",
+      "文心",
+      "文心一言",
+      "文心一格",
+      "yiyan",
+      "ernie"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://wenxin.baidu.com/",
+    "url_hint": "wenxin 文心 文心一言 文心一格 yiyan ernie",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "spark",
+    "简介": "讯飞星火（对话网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "spark",
+      "星火",
+      "讯飞星火",
+      "xinghuo",
+      "讯飞"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://xinghuo.xfyun.cn/",
+    "url_hint": "spark 星火 讯飞星火 xinghuo 讯飞",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "zhipu",
+    "简介": "智谱清言 / ChatGLM（对话网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "zhipu",
+      "智谱",
+      "清言",
+      "智谱清言",
+      "chatglm",
+      "ChatGLM"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://chatglm.cn/",
+    "url_hint": "zhipu 智谱 清言 智谱清言 chatglm ChatGLM",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "minimax",
+    "简介": "MiniMax Agent（海螺对话网页；lookup 打开官网。视频见 hailuo_video）",
+    "分类": "AI",
+    "aliases": [
+      "minimax",
+      "MiniMax",
+      "海螺",
+      "海螺AI",
+      "海螺对话"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://agent.minimaxi.com/",
+    "url_hint": "minimax MiniMax 海螺 海螺AI 海螺对话",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "baichuan",
+    "简介": "百川 / 百小应（对话网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "baichuan",
+      "百川",
+      "百小应",
+      "百川智能"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://yi.baichuan-ai.com/",
+    "url_hint": "baichuan 百川 百小应 百川智能",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "hunyuan",
+    "简介": "腾讯混元（对话网页；lookup 打开官网。C 端助手见 yuanbao）",
+    "分类": "AI",
+    "aliases": [
+      "hunyuan",
+      "混元",
+      "腾讯混元"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://hunyuan.tencent.com/",
+    "url_hint": "hunyuan 混元 腾讯混元",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "runway",
+    "简介": "Runway（AI 视频生成网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "runway",
+      "Runway",
+      "runwayml"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://runway.com/",
+    "url_hint": "runway Runway runwayml",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "pika_ai",
+    "简介": "Pika（AI 视频生成网页；lookup 打开官网。与 macOS 取色工具 pika 区分）",
+    "分类": "AI",
+    "aliases": [
+      "pika",
+      "Pika",
+      "pika.art",
+      "Pika AI"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://pika.art/",
+    "url_hint": "pika Pika pika.art Pika AI",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "luma",
+    "简介": "Luma Dream Machine（AI 视频生成网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "luma",
+      "Luma",
+      "Dream Machine",
+      "lumalabs"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://lumalabs.ai/",
+    "url_hint": "luma Luma Dream Machine lumalabs",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "leonardo",
+    "简介": "Leonardo（AI 生图网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "leonardo",
+      "Leonardo",
+      "Leonardo AI"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://leonardo.ai/",
+    "url_hint": "leonardo Leonardo Leonardo AI",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "ideogram",
+    "简介": "Ideogram（AI 生图 / 文字排版网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "ideogram",
+      "Ideogram"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://ideogram.ai/",
+    "url_hint": "ideogram Ideogram",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "flux",
+    "简介": "FLUX / Black Forest Labs（生图官网；lookup 打开。本地工作流见 comfyui）",
+    "分类": "AI",
+    "aliases": [
+      "flux",
+      "FLUX",
+      "Black Forest Labs",
+      "bfl",
+      "flux.ai"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://bfl.ai/",
+    "url_hint": "flux FLUX Black Forest Labs bfl flux.ai",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "wanxiang",
+    "简介": "通义万相（阿里图像/视频生成网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "wanxiang",
+      "万相",
+      "通义万相",
+      "wan"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://tongyi.aliyun.com/wan/",
+    "url_hint": "wanxiang 万相 通义万相 wan",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "vidu",
+    "简介": "Vidu（生数科技视频生成网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "vidu",
+      "Vidu",
+      "生数",
+      "vidu.cn"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.vidu.com/",
+    "url_hint": "vidu Vidu 生数 vidu.cn",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "hailuo_video",
+    "简介": "海螺视频（MiniMax 视频生成网页；lookup 打开官网。对话见 minimax）",
+    "分类": "AI",
+    "aliases": [
+      "hailuo",
+      "海螺视频",
+      "Hailuo",
+      "hailuoai"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://hailuoai.com/",
+    "url_hint": "hailuo 海螺视频 Hailuo hailuoai",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "comfyui_desktop",
+    "简介": "Comfy Desktop（官方桌面端下载页；lookup 打开。便携包见 comfyui）",
+    "分类": "AI",
+    "aliases": [
+      "comfy desktop",
+      "Comfy Desktop",
+      "ComfyUI Desktop",
+      "comfy.org"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://comfy.org/",
+    "url_hint": "comfy desktop Comfy Desktop ComfyUI Desktop comfy.org",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "tabnine",
+    "简介": "Tabnine（AI 代码补全产品页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "tabnine",
+      "Tabnine"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.tabnine.com/",
+    "url_hint": "tabnine Tabnine",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "gemini_code_assist",
+    "简介": "Gemini Code Assist（Google 代码助手产品页；lookup 打开官网。CLI 见 gemini_cli）",
+    "分类": "AI",
+    "aliases": [
+      "gemini code assist",
+      "Gemini Code Assist",
+      "code assist",
+      "duet ai"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://codeassist.google/",
+    "url_hint": "gemini code assist Gemini Code Assist code assist duet ai",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "you_com",
+    "简介": "You.com（AI 搜索网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "you.com",
+      "You.com",
+      "youcom"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://you.com/",
+    "url_hint": "you.com You.com youcom",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "phind",
+    "简介": "Phind（开发者 AI 搜索网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "phind",
+      "Phind"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.phind.com/",
+    "url_hint": "phind Phind",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "tiangong",
+    "简介": "天工（昆仑万维 AI 搜索/助手网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "tiangong",
+      "天工",
+      "天工AI",
+      "skywork"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.tiangong.cn/",
+    "url_hint": "tiangong 天工 天工AI skywork",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "genspark",
+    "简介": "Genspark（AI 工作区 / 搜索网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "genspark",
+      "Genspark"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.genspark.ai/",
+    "url_hint": "genspark Genspark",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "felo",
+    "简介": "Felo（多语言 AI 搜索网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "felo",
+      "Felo",
+      "felo.ai"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://felo.ai/",
+    "url_hint": "felo Felo felo.ai",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "huggingface",
+    "简介": "Hugging Face（模型/Spaces 网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "huggingface",
+      "Hugging Face",
+      "hf",
+      "spaces",
+      "Hugging Face Spaces"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://huggingface.co/",
+    "url_hint": "huggingface Hugging Face hf spaces Hugging Face Spaces",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "groq",
+    "简介": "Groq 控制台（高速推理网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "groq",
+      "Groq",
+      "groq console"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://console.groq.com/",
+    "url_hint": "groq Groq groq console",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "openrouter",
+    "简介": "OpenRouter（多模型 API 路由网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "openrouter",
+      "OpenRouter"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://openrouter.ai/",
+    "url_hint": "openrouter OpenRouter",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "siliconflow",
+    "简介": "硅基流动（模型推理控制台；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "siliconflow",
+      "硅基流动",
+      "硅基",
+      "silicon flow"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://cloud.siliconflow.cn/",
+    "url_hint": "siliconflow 硅基流动 硅基 silicon flow",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "copilot",
+    "简介": "Microsoft Copilot（对话网页；lookup 打开官网。GitHub 编程助手见 github_copilot）",
+    "分类": "AI",
+    "aliases": [
+      "copilot",
+      "Copilot",
+      "Microsoft Copilot",
+      "微软Copilot"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://copilot.microsoft.com/",
+    "url_hint": "copilot Copilot Microsoft Copilot 微软Copilot",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "ima",
+    "简介": "ima（腾讯 AI 知识工作台网页；lookup 打开官网。C 端助手见 yuanbao）",
+    "分类": "AI",
+    "aliases": [
+      "ima",
+      "腾讯ima",
+      "ima.qq"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://ima.qq.com/",
+    "url_hint": "ima 腾讯ima ima.qq",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "cici",
+    "简介": "Cici / Dola（字节海外对话网页；lookup 打开官网。国内见 doubao）",
+    "分类": "AI",
+    "aliases": [
+      "cici",
+      "Cici",
+      "Dola",
+      "ciciai"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.ciciai.com/",
+    "url_hint": "cici Cici Dola ciciai",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "xiaoyi",
+    "简介": "华为小艺（对话网页；lookup 打开官网。系统内置助手无独立安装包）",
+    "分类": "AI",
+    "aliases": [
+      "xiaoyi",
+      "小艺",
+      "华为小艺",
+      "Celia"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://xiaoyi.huawei.com/",
+    "url_hint": "xiaoyi 小艺 华为小艺 Celia",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "yuewen",
+    "简介": "跃问（阶跃星辰对话网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "yuewen",
+      "跃问",
+      "阶跃",
+      "阶跃星辰",
+      "stepfun",
+      "stepchat"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://stepchat.cn/",
+    "url_hint": "yuewen 跃问 阶跃 阶跃星辰 stepfun stepchat",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "lingyi",
+    "简介": "零一万物（公司/产品门户；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "lingyi",
+      "零一万物",
+      "01.ai",
+      "01ai",
+      "万知"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.lingyiwanwu.com/",
+    "url_hint": "lingyi 零一万物 01.ai 01ai 万知",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "sensenova",
+    "简介": "商汤日日新 / 商量（大模型门户；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "sensenova",
+      "日日新",
+      "商量",
+      "商汤",
+      "SenseChat"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.sensenova.cn/",
+    "url_hint": "sensenova 日日新 商量 商汤 SenseChat",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "meta_ai",
+    "简介": "Meta AI（对话网页；lookup 打开官网）",
+    "分类": "AI",
+    "aliases": [
+      "meta ai",
+      "Meta AI",
+      "meta.ai",
+      "Llama"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.meta.ai/",
+    "url_hint": "meta ai Meta AI meta.ai Llama",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "amazon_q",
+    "简介": "Amazon Q（AWS 编程/云助手产品页；lookup 打开官网。CLI 见 amazon_q_cli）",
+    "分类": "AI",
+    "aliases": [
+      "amazon q",
+      "Amazon Q",
+      "amazonq"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://aws.amazon.com/q/",
+    "url_hint": "amazon q Amazon Q amazonq",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "ai360",
+    "简介": "360 智脑（对话网页；lookup 打开官网。不是 360 安全卫士）",
+    "分类": "AI",
+    "aliases": [
+      "360智脑",
+      "智脑",
+      "ai360",
+      "360 AI"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://ai.360.com/",
+    "url_hint": "360智脑 智脑 ai360 360 AI",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "codex_claude_cursor_signal",
+    "简介": "Codex Claude Cursor Signal（Codex/Claude Code/Cursor 会话红绿灯状态指示，托盘+桌面面板；Win x64 zip）",
+    "分类": "AI",
+    "aliases": [
+      "ccc-signal",
+      "agent signal",
+      "红绿灯"
+    ],
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/sxlisme/codex-claude-cursor-signal/releases",
+    "repo_path": "sxlisme/codex-claude-cursor-signal",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "CodexClaudeSignal-Windows-x64",
+      ".zip"
+    ],
+    "href_exclude_substrings": [
+      "macOS",
+      "darwin",
+      "linux"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".zip"
+    ],
+    "use_download_filename": true,
+    "download_names": [
+      "CodexClaudeSignal-Windows-x64.zip"
+    ],
+    "save_name": "CodexClaudeSignal-Windows-x64.zip",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

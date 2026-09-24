@@ -17,5 +17,25 @@
     "kill_before_install": false,
     "windows_installer": false,
     "process_name": ""
+  },
+  {
+    "id": "baidu_ime_ios",
+    "简介": "百度输入法（iOS · App Store；lookup 打开商店页，勿启用 auto_update）",
+    "分类": "输入",
+    "aliases": [
+      "baidu_ime",
+      "百度输入法",
+      "百度拼音",
+      "百度"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://apps.apple.com/app/id916139408",
+    "url_hint": "baidu_ime 百度输入法 百度拼音 百度",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "releases_url": "https://apps.apple.com/app/id916139408"
   }
 ]

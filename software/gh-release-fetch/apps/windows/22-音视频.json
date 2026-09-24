@@ -420,5 +420,820 @@
     ],
     "releases_url": "https://bgithub.xyz/XxHuberrr/Mineradio/releases",
     "repo_path": "XxHuberrr/Mineradio"
+  },
+  {
+    "id": "radarr",
+    "简介": "Radarr（电影媒体库管理；Windows x64 安装包）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x86",
+      "linux",
+      "osx",
+      "freebsd",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Radarr.master.",
+      "windows-core-x64-installer.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "radarr",
+      "Radarr",
+      "电影库",
+      "电影刮削"
+    ],
+    "releases_url": "https://bgithub.xyz/Radarr/Radarr/releases",
+    "repo_path": "Radarr/Radarr"
+  },
+  {
+    "id": "sonarr",
+    "简介": "Sonarr（剧集媒体库管理；Windows x64 安装包）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x86",
+      "linux",
+      "osx",
+      "freebsd",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Sonarr.main.",
+      "win-x64-installer.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "sonarr",
+      "Sonarr",
+      "剧集库",
+      "电视剧"
+    ],
+    "releases_url": "https://bgithub.xyz/Sonarr/Sonarr/releases",
+    "repo_path": "Sonarr/Sonarr"
+  },
+  {
+    "id": "prowlarr",
+    "简介": "Prowlarr（媒体库索引器管理，配合 Radarr/Sonarr/Lidarr；Windows x64 安装包）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x86",
+      "linux",
+      "osx",
+      "freebsd",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Prowlarr.master.",
+      "windows-core-x64-installer.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "prowlarr",
+      "Prowlarr",
+      "索引器"
+    ],
+    "releases_url": "https://bgithub.xyz/Prowlarr/Prowlarr/releases",
+    "repo_path": "Prowlarr/Prowlarr"
+  },
+  {
+    "id": "lidarr",
+    "简介": "Lidarr（音乐媒体库管理；Windows x64 安装包）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x86",
+      "linux",
+      "osx",
+      "freebsd",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Lidarr.master.",
+      "windows-core-x64-installer.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "lidarr",
+      "Lidarr",
+      "音乐库"
+    ],
+    "releases_url": "https://bgithub.xyz/Lidarr/Lidarr/releases",
+    "repo_path": "Lidarr/Lidarr"
+  },
+  {
+    "id": "bazarr",
+    "简介": "Bazarr（媒体库字幕管理，配合 Sonarr/Radarr；官方 zip）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "bazarr.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "bazarr",
+      "Bazarr",
+      "字幕管理"
+    ],
+    "releases_url": "https://bgithub.xyz/morpheus65535/bazarr/releases",
+    "repo_path": "morpheus65535/bazarr"
+  },
+  {
+    "id": "tautulli",
+    "简介": "Tautulli（Plex 媒体库统计与监控；Windows x64 安装包）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "macos",
+      "linux"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Tautulli-windows-",
+      "x64.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "tautulli",
+      "Tautulli",
+      "Plex统计"
+    ],
+    "releases_url": "https://bgithub.xyz/Tautulli/Tautulli/releases",
+    "repo_path": "Tautulli/Tautulli"
+  },
+  {
+    "id": "mediaelch",
+    "简介": "MediaElch（Kodi 媒体库刮削/NFO；Windows x64 zip）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "win_7",
+      "linux",
+      "macOS",
+      "AppImage"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "MediaElch_win_10_or_later_Qt6_",
+      ".zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "mediaelch",
+      "MediaElch",
+      "刮削",
+      "Kodi刮削"
+    ],
+    "releases_url": "https://bgithub.xyz/Komet/MediaElch/releases",
+    "repo_path": "Komet/MediaElch"
+  },
+  {
+    "id": "navidrome",
+    "简介": "Navidrome（自建音乐库服务器；Windows amd64 msi）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "386",
+      "linux",
+      "darwin",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "navidrome_",
+      "windows_amd64_installer.msi"
+    ],
+    "installer_extensions": [
+      ".msi"
+    ],
+    "aliases": [
+      "navidrome",
+      "Navidrome",
+      "音乐服务器"
+    ],
+    "releases_url": "https://bgithub.xyz/navidrome/navidrome/releases",
+    "repo_path": "navidrome/navidrome"
+  },
+  {
+    "id": "feishin",
+    "简介": "Feishin（Jellyfin/Navidrome/Subsonic 音乐桌面；Windows x64 安装包）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      ".zip",
+      "linux",
+      "mac-"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Feishin-",
+      "win-x64.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "feishin",
+      "Feishin",
+      "Jellyfin音乐"
+    ],
+    "releases_url": "https://bgithub.xyz/jeffvli/feishin/releases",
+    "repo_path": "jeffvli/feishin"
+  },
+  {
+    "id": "picard",
+    "简介": "MusicBrainz Picard（音乐标签刮削；Windows 安装包）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "MusicBrainz-Picard",
+      "msix",
+      "macOS",
+      "unsigned"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "picard-setup-",
+      ".exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "picard",
+      "Picard",
+      "MusicBrainz",
+      "音乐标签"
+    ],
+    "releases_url": "https://bgithub.xyz/metabrainz/picard/releases",
+    "repo_path": "metabrainz/picard"
+  },
+  {
+    "id": "lrcget",
+    "简介": "LRCGET（本地曲库歌词下载/嵌入；Windows x64 安装包）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      ".msi",
+      ".dmg",
+      "AppImage",
+      ".deb"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "LRCGET_",
+      "x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "lrcget",
+      "LRCGET",
+      "歌词"
+    ],
+    "releases_url": "https://bgithub.xyz/tranxuanthang/lrcget/releases",
+    "repo_path": "tranxuanthang/lrcget"
+  },
+  {
+    "id": "tauon",
+    "简介": "Tauon（本地音乐库播放器；Windows 安装包）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      ".7z",
+      ".dmg",
+      "linux"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "TauonMusicBox-windows-installer.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "tauon",
+      "Tauon",
+      "TauonMusicBox",
+      "音乐播放器"
+    ],
+    "releases_url": "https://bgithub.xyz/Taiko2k/Tauon/releases",
+    "repo_path": "Taiko2k/Tauon"
+  },
+  {
+    "id": "iptvnator",
+    "简介": "IPTVnator（跨平台 IPTV 播放器；Windows x64 安装包）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "linux",
+      "mac",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "iptvnator-",
+      "windows-x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "iptvnator",
+      "IPTVnator"
+    ],
+    "releases_url": "https://bgithub.xyz/4gray/iptvnator/releases",
+    "repo_path": "4gray/iptvnator"
+  },
+  {
+    "id": "concat_editor",
+    "简介": "Concat（开源 CapCut 替代剪辑；Windows x64 Setup）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "concat.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      "aarch64",
+      ".zip",
+      ".msi",
+      "android",
+      "linux",
+      "macos",
+      "ios"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Concat-",
+      "windows-x86_64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "concat",
+      "Concat",
+      "WolfCut",
+      "jub0t"
+    ],
+    "releases_url": "https://bgithub.xyz/jub0t/Concat/releases",
+    "repo_path": "jub0t/Concat"
+  },
+  {
+    "id": "bilibili",
+    "简介": "哔哩哔哩（官网分发，lookup 打开客户端下载页）",
+    "分类": "音视频",
+    "aliases": [
+      "bilibili",
+      "b站",
+      "哔哩哔哩"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://app.bilibili.com/",
+    "url_hint": "bilibili b站 哔哩哔哩",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "douyin",
+    "简介": "抖音电脑版（字节；官网分发，lookup 打开下载页）",
+    "分类": "音视频",
+    "aliases": [
+      "douyin",
+      "抖音",
+      "抖音电脑版",
+      "字节"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.douyin.com/downloadpage/pc",
+    "url_hint": "douyin 抖音 抖音电脑版 字节",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "itunes",
+    "简介": "iTunes（苹果官网 Windows 版；lookup 打开下载页。Mac 为系统自带/音乐 App）",
+    "分类": "音视频",
+    "aliases": [
+      "itunes",
+      "iTunes",
+      "苹果音乐",
+      "Apple"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.apple.com.cn/itunes/",
+    "url_hint": "itunes iTunes 苹果音乐 Apple",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "xigua",
+    "简介": "西瓜视频（字节；网页，lookup 打开官网）",
+    "分类": "音视频",
+    "aliases": [
+      "xigua",
+      "西瓜视频",
+      "西瓜",
+      "字节"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.ixigua.com/",
+    "url_hint": "xigua 西瓜视频 西瓜 字节",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "ffmpegfreeui",
+    "简介": "FFmpegFreeUI / 3FUI（FFmpeg 图形界面，Windows x64）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Lake1059/FFmpegFreeUI/releases",
+    "repo_path": "Lake1059/FFmpegFreeUI",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "FFmpegFreeUI.x64.exe"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "Updater.exe"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "FFmpegFreeUI.x64.exe"
+    ],
+    "save_name": "FFmpegFreeUI.x64.exe",
+    "process_name": "FFmpegFreeUI.exe",
+    "kill_before_install": true,
+    "run_installer": false,
+    "aliases": [
+      "FFmpegFreeUI",
+      "3FUI",
+      "FFmpeg Free UI"
+    ]
   }
 ]

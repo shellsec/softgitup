@@ -344,5 +344,637 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "radarr",
+    "简介": "Radarr（电影媒体库管理；Linux x64 tar.gz）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "musl",
+      "arm",
+      "osx",
+      "windows",
+      "freebsd"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Radarr.master.",
+      "linux-core-x64.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "aliases": [
+      "radarr",
+      "Radarr",
+      "电影库",
+      "电影刮削"
+    ],
+    "releases_url": "https://bgithub.xyz/Radarr/Radarr/releases",
+    "repo_path": "Radarr/Radarr"
+  },
+  {
+    "id": "sonarr",
+    "简介": "Sonarr（剧集媒体库管理；Linux x64 tar.gz）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "musl",
+      "arm",
+      "osx",
+      "win-",
+      "freebsd"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Sonarr.main.",
+      "linux-x64.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "aliases": [
+      "sonarr",
+      "Sonarr",
+      "剧集库",
+      "电视剧"
+    ],
+    "releases_url": "https://bgithub.xyz/Sonarr/Sonarr/releases",
+    "repo_path": "Sonarr/Sonarr"
+  },
+  {
+    "id": "prowlarr",
+    "简介": "Prowlarr（媒体库索引器管理；Linux x64 tar.gz）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "musl",
+      "arm",
+      "osx",
+      "windows",
+      "freebsd"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Prowlarr.master.",
+      "linux-core-x64.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "aliases": [
+      "prowlarr",
+      "Prowlarr",
+      "索引器"
+    ],
+    "releases_url": "https://bgithub.xyz/Prowlarr/Prowlarr/releases",
+    "repo_path": "Prowlarr/Prowlarr"
+  },
+  {
+    "id": "lidarr",
+    "简介": "Lidarr（音乐媒体库管理；Linux x64 tar.gz）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "musl",
+      "arm",
+      "osx",
+      "windows",
+      "freebsd"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Lidarr.master.",
+      "linux-core-x64.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "aliases": [
+      "lidarr",
+      "Lidarr",
+      "音乐库"
+    ],
+    "releases_url": "https://bgithub.xyz/Lidarr/Lidarr/releases",
+    "repo_path": "Lidarr/Lidarr"
+  },
+  {
+    "id": "bazarr",
+    "简介": "Bazarr（媒体库字幕管理，配合 Sonarr/Radarr；官方 zip）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "bazarr.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "bazarr",
+      "Bazarr",
+      "字幕管理"
+    ],
+    "releases_url": "https://bgithub.xyz/morpheus65535/bazarr/releases",
+    "repo_path": "morpheus65535/bazarr"
+  },
+  {
+    "id": "mediaelch",
+    "简介": "MediaElch（Kodi 媒体库刮削/NFO；Linux x86_64 AppImage）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "win_",
+      "macOS",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "MediaElch_linux_",
+      ".AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "aliases": [
+      "mediaelch",
+      "MediaElch",
+      "刮削",
+      "Kodi刮削"
+    ],
+    "releases_url": "https://bgithub.xyz/Komet/MediaElch/releases",
+    "repo_path": "Komet/MediaElch"
+  },
+  {
+    "id": "navidrome",
+    "简介": "Navidrome（自建音乐库服务器；Linux amd64 deb）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm",
+      "386",
+      "riscv",
+      "windows",
+      "darwin",
+      ".rpm",
+      ".tar.gz"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "navidrome_",
+      "linux_amd64.deb"
+    ],
+    "installer_extensions": [
+      ".deb"
+    ],
+    "aliases": [
+      "navidrome",
+      "Navidrome",
+      "音乐服务器"
+    ],
+    "releases_url": "https://bgithub.xyz/navidrome/navidrome/releases",
+    "repo_path": "navidrome/navidrome"
+  },
+  {
+    "id": "feishin",
+    "简介": "Feishin（Jellyfin/Navidrome/Subsonic 音乐桌面；Linux x86_64 AppImage）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      ".deb",
+      ".tar.xz",
+      "win-",
+      "mac-"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Feishin-linux-x86_64.AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "aliases": [
+      "feishin",
+      "Feishin",
+      "Jellyfin音乐"
+    ],
+    "releases_url": "https://bgithub.xyz/jeffvli/feishin/releases",
+    "repo_path": "jeffvli/feishin"
+  },
+  {
+    "id": "lrcget",
+    "简介": "LRCGET（本地曲库歌词下载/嵌入；Linux amd64 AppImage）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      ".deb",
+      ".rpm",
+      ".dmg",
+      "setup.exe"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "LRCGET_",
+      "amd64.AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "aliases": [
+      "lrcget",
+      "LRCGET",
+      "歌词"
+    ],
+    "releases_url": "https://bgithub.xyz/tranxuanthang/lrcget/releases",
+    "repo_path": "tranxuanthang/lrcget"
+  },
+  {
+    "id": "tauon",
+    "简介": "Tauon（本地音乐库播放器；Linux 便携 7z）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "windows",
+      ".dmg",
+      "installer"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "TauonMusicBox-linux.7z"
+    ],
+    "installer_extensions": [
+      ".7z"
+    ],
+    "aliases": [
+      "tauon",
+      "Tauon",
+      "TauonMusicBox",
+      "音乐播放器"
+    ],
+    "releases_url": "https://bgithub.xyz/Taiko2k/Tauon/releases",
+    "repo_path": "Taiko2k/Tauon"
+  },
+  {
+    "id": "iptvnator",
+    "简介": "IPTVnator（跨平台 IPTV 播放器；Linux x64 deb）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "windows",
+      "mac",
+      ".snap",
+      "AppImage"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "iptvnator-",
+      "linux-amd64.deb"
+    ],
+    "installer_extensions": [
+      ".deb"
+    ],
+    "aliases": [
+      "iptvnator",
+      "IPTVnator"
+    ],
+    "releases_url": "https://bgithub.xyz/4gray/iptvnator/releases",
+    "repo_path": "4gray/iptvnator"
+  },
+  {
+    "id": "capcut",
+    "简介": "剪映 / CapCut（字节剪辑；官网分发，lookup 打开下载页）",
+    "分类": "音视频",
+    "aliases": [
+      "capcut",
+      "jianying",
+      "剪映",
+      "剪映专业版"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.capcut.cn/",
+    "url_hint": "capcut jianying 剪映 剪映专业版",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "concat_editor",
+    "简介": "Concat（开源 CapCut 替代剪辑；Linux x86_64 AppImage）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      "aarch64",
+      ".deb",
+      ".rpm",
+      ".tar.gz",
+      "windows",
+      "macos",
+      "android",
+      "ios"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Concat-",
+      "linux-x86_64.AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "aliases": [
+      "concat",
+      "Concat",
+      "WolfCut",
+      "jub0t"
+    ],
+    "releases_url": "https://bgithub.xyz/jub0t/Concat/releases",
+    "repo_path": "jub0t/Concat"
   }
 ]

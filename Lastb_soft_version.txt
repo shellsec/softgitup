@@ -13,16 +13,25 @@ $$$$$$$  |$$ |  $$ |\$$$$$$$\ $$ |$$ |$$$$$$$  |\$$$$$$$\ \$$$$$$$\
 个人数字生存指南
 基于信息安全和数据安全的思想减少上报敏感数据和保护自身避免算法收割
 最好的重装系统方案，无需U盘，无广告，随时想装就装下载系统+重装到C盘即可
-1、下载系统，默认百度网盘
-Windows 11 版本 26H1 更新历史记录
-https://support.microsoft.com/zh-CN/servicing/os/windows-11/2026/02/windows-11-version-26h1-update-history
-据我了解，目前网上有许多打着精简旗号的系统却夹带 “私货”，像真正做到纯净无第三方软件及OEM信息的寥寥无几。但也不是没有，像不忘初心版，吻妻版，都是较优秀的第三方精简系统！
-不忘初心 精简版
+安装原版的是为了可以更新，但是更新可以走腾讯管家，且官方有时更新会出问题，所以我一般选无需更新的
+
+一、首先核心是系统了，你是win10的话想上win11判断自己机器是否可以。
+https://github.com/rcmaehl/WhyNotWin11/   WhyNotWin11.exe 2mB
+结果例子你看看具体可以从以下几个关键项看出“支持”的证据：
+架构（核心支持）：第一项“架构 (CPU + OS)”是绿勾，显示“64位 CPU + 64位系统”；第五项“支持 DirectX 12 与 WDDM”也是绿勾（WDDM 3），说明显卡和底层架构完全满足 Win11 运行。
+性能与容量（富余）：内存大小（绿勾 128 GB）、可用磁盘容量（绿勾，7个磁盘满足）、CPU核心数（36核72线程）和主频（2300 MHz），实际性能非常强悍，跑系统毫无压力。
+CPU 指令集（隐性支持）：虽然第三项“CPU 兼容性”是红叉（因为 Xeon E5-2699 v3 不在微软官方白名单），但结合你“已经是 Win11”的事实，说明它具备 SSE4.2 和 POPCNT 指令集，能过内核硬墙（这就是能装更高版本的关键）。
+红叉代表“合规限制”而非“不能跑”：引导方式（Legacy）、磁盘分区（非 GPT）、安全启动（禁用）、TPM（禁用）这四个红叉，只是说明你当前是“绕过安装”状态，这些属于 BIOS/分区设置门槛，不是硬件性能不行。
+总结来说：图上绿勾证明了你的硬件性能与架构完全支持，红叉只是官方白名单与安全启动门槛（你已绕过）。所以你才能顺利运行，且未来用 Rufus 等工具绕过仍可装 25H2/26H2
+
+二、下载系统-本机安装EasyRC本地镜像重装这条线，全程不用U盘
+1、下载系统
+不忘初心 精简版，无更新版
+https://www.423down.com/win11
+https://appx64.com/os/
 https://www.hybase.com/search.asp?m=2&word=%B2%BB%CD%FC%B3%F5%D0%C4
 原版
 https://www.yyczxt.com/
-https://www.yyczxt.com/original.html#Windows/Windows11/26H1
-https://www.yyczxt.com/original.html#Windows/Windows11/25H2
 2、无需U盘，一键加载iso重装系统
 从“不需要PE”这个需求出发，最推荐你使用 EasyRC 这款工具。它是一个免费、绿色的软件，可以直接在Windows系统里运行，避免了PE工具可能带来的广告捆绑问题。
 ⚙️ 工具推荐与对比
@@ -32,7 +41,7 @@ EasyRC：本地运行 → 释放内置精简 PE 到硬盘保留区 → 重启进
 Hasleo WinToHDD 功能全面，支持“热克隆”系统，内置“创建多安装USB”等高级功能。   功能最全面，除了重装，还能克隆系统、创建多功能启动盘。
 CoolReinstall   绿色版无需安装，可以在线下载系统，下载速度很快。    追求极致简便，或希望软件同时提供系统镜像下载的用户。
 Ventoy  开源免费，兼容性强，支持多ISO并存。 手边有U盘，追求最通用、最灵活安装方式的用户。
-3、EasyRC下载 EasyRCV3.8.12.0 30MB+，功能丰富，无广告，且可以在线安装系统。都是纯净系统 EasyRC.7z
+3、EasyRC下载 EasyRCV3.8.13.0 30MB+，功能丰富，无广告，且可以在线安装系统。都是纯净系统 EasyRC.7z
 https://firpe.cn/page-196
 更新日志
 https://firpe.cn/page-609
@@ -40,8 +49,8 @@ https://firpe.cn/
 参考内容：
 https://cloud.tencent.cn/developer/article/2662167?policyId=1004
 https://cloud.tencent.cn/developer/article/2646514?policyId=1004
-其他测试过，有广告
-laomaotao 优启通，繁琐
+
+3、其他测试过，有广告 laomaotao 优启通，繁琐
 其他方案
 [Windows] 无需U盘重装系统工具 Hasleo WinToHDD v7.0.2.2 高级便携版
 https://www.hybase.com/pc/windows/927.html
@@ -52,6 +61,12 @@ EasyRC：专注于将重装流程封装得极度简单。其宣传的“一键�
 两者实现“无需U盘”的路径不同。
 Hasleo WinToHDD：采用硬盘直接安装技术。在当前系统中配置好后，软件会智能修改硬盘引导方式，重启后直接从硬盘上的镜像文件引导安装。
 EasyRC：本质是PE内核重装。软件内置精简版WinPE环境，类似U盘PE的本地化变体。下载PE配置环境后重启进入，再调用安装程序完成部署，流程更接近传统PE
+
+卸载工具
+GeekUninstaller 选这个 
+实测 GeekUninstaller 会速度快，支持win自带的插件卸载 7MB
+1.5.5.185 
+https://geekuninstaller.com/download
 
 网络安全DNS解析安全
 Zen 是一款适用于 Windows、macOS 和 Linux 的开源系统级广告拦截器和隐私保护程序。它的工作原理是设置一个代理，拦截来自所有应用程序的 HTTP 请求，并阻止那些投放广告、跟踪监控您的行为、恶意软件和其他不需要的内容的脚本。通过在系统级别运行，Zen 可以防御浏览器扩展无法防御的威胁，例如嵌入桌面应用程序和操作系统组件中的跟踪器。Zen 附带了许多预装的过滤器，而且还可以轻松添加主机文件和 EasyList 样式的过滤器，能够根据特定需求定制保护。
@@ -73,17 +88,10 @@ Bitwarden 其实就是一个密码管理器，和 Apple 自带的密码管理工
 跨平台同步: 不止于 macOS 和 iOS，还支持 Android、浏览器插件和  Linux 等平台上同步；尤其是浏览器插件，利用快捷键一键填充密码，非常方便。
 MFA 多因素认证: 以往的 MFA 都是第三方服务，比如 Google Authenticator，切换到 Bitwarden 后，配合多设备同步， MFA 登录终于不同找手机了。
 
-
 隐私设置工具，W10Privacy，谨慎
 https://www.ghxi.com/wx20260824.html
 W10Privacy是一款专为Windows 10/11设计的隐私保护工具，可禁用系统后台数据上传、关闭遥测服务、管理应用权限（如麦克风、摄像头）、拦截大量追踪IP，还可卸载预装系统软件。支持一键配置与导出备份，有效防止微软收集用户行为数据，尤其适合追求隐私安全的用户。虽对性能影响不大，但能带来更强的数据控制感与心理安慰。
 W10Privacy-v6.2.0.2-Chs
-
-
-system_good目录下 使用广告拦截DNS（无需安装软件）局域网谨慎，有时导致网络访问不到
-Configure_AdGuard_DNS.bat  推荐优先
-Configure_18bit_DNS.bat 国内18bit去广告
-Restore_Default_DNS.bat 恢复状态
 
 system_good目录下 任务栏固定 / 桌面快捷方式（Win10/Win11，无需管理员）
 路径自适应：脚本在 D:\Program Files\system_good 时，软件根为 D:\Program Files\，自动解析同级子目录
@@ -249,13 +257,8 @@ https://www.423down.com/778.html
 核心特点：汉化界面操作便捷，已注册无功能限制，支持多格式兼容，解压速度快，日常使用适配性高
 
 其他自行下载
+Bandizip 是一款可靠和快速的压缩软件，支持中文，它支持 WinZip、7-Zip 和 Winrar 以及其它压缩格式。它拥有非常快速的压缩和解压缩的算法，适用于多核心压缩、快速拖放、高速压缩等功能。
 https://appx64.com/bandizip
-
-卸载工具
-GeekUninstaller 选这个 
-实测 GeekUninstaller 会速度快，支持win自带的插件卸载 7MB
-1.5.5.185 
-https://geekuninstaller.com/download
 
 当然还有其他选择 https://www.ghxi.com/bulkcrapuninstaller.html 体积有点大，需要.NET
 HiBit Uninstaller 4.0.10 15MB
@@ -459,7 +462,7 @@ https://github.com/search?q=lx-music-source&type=repositories
 基本设置——自定义源——在线导入（任选一个就行），打钩，显示[初始化成功]
 3、洛雪音乐安卓手机版
 https://github.com/lyswhut/lx-music-mobile/releases
-https://gh-proxy.com/github.com/lyswhut/lx-music-mobile/releases/download/v1.8.4/lx-music-mobile-v1.8.4-arm64-v8a.apk
+https://gh-proxy.com/github.com/lyswhut/lx-music-mobile/releases/download/v1.9.1/lx-music-mobile-v1.9.1-arm64-v8a.apk
 文件名 适用设备  特点
 lx-music-mobile-v1.8.1-arm64-v8a.apk  绝大多数现代安卓手机 / 平板（2016 年后的安卓设备，如华为、小米、OPPO、vivo、三星等）  64 位 ARM 架构，性能最好，体积适中（14.1MB），兼容性最优
 lx-music-mobile-v1.8.1-armeabi-v7a.apk  老旧安卓设备（2016 年前的 32 位 ARM 架构手机）  32 位 ARM 架构，兼容老设备，体积最小（13MB）
@@ -657,208 +660,130 @@ https://github.com/GMYXDS/MstscManager
 其他的Termius 9.37.5 PRO 最新破解版（高颜值的SSH终端软件）
 https://www.wuleba.com/2844.html
 
-本地输入法
-小狼毫 + 薄荷/雾凇/白霜：最硬，全开源、零联网、无官网服务 → 涉密首选
-清风 WindInput：开源 + 离线 + 图形化，安全且省事 → 日常本地隐私首选
-墨奇：本地输入 OK，但原生带 AI / WebDAV / 云剪贴板，要手动关
-搜狗/百度/QQ/微信输入法：本地隐私最不推荐
+本地输入法最终推荐
+- 日常主力：墨奇（关云功能） 或 清风  
+- 隐私/涉密：小狼毫 + 白霜  
+- 语音：VocoType  
+- 手机：Android → XIMEI比厂商输入法安全 https://ime.ximei.me/；iOS/macOS → 系统自带  
+- 永远别装：搜狗 / 百度 / QQ / 微信输入法  
 
-小狼毫 (Weasel)+ 雾凇拼音 (rime-ice)
-！！搜狗输入法有后台常驻修改首页已经放弃改为开源输入法非常好用，搜狗有挖矿广告
-搜狗输入法清理工具-支持任意版本
-https://www.52pojie.cn/thread-2117089-1-1.html
-https://wwbmt.lanzouu.com/b00hrvbmej
-密码:52pj
-小狼毫&雾凇拼音安装部署(Windows) https://www.cnblogs.com/zanxj/p/19103238
-输入法错乱重置
-方法一：设置里直接加回（最常用）
-Win + I → 时间和语言 → 语言和区域（Win10 叫“语言”）
-看“首选语言”里有没有 英语(美国)
-没有 → 点“添加语言”搜 English (United States) 装上（不必下显示语言包）
-点 英语(美国) → ⋮/选项 → 键盘 → 添加键盘 → 选“美式键盘 / US QWERTY”
-回到“高级键盘设置”→“替代默认输入法”里挑 英语(美国) - 美式键盘
-Win + 空格 切一下，任务栏应出现 ENG / US
-如果“添加键盘”里根本不出现 US，只显示 US-International 之类，跳到方法三
-PowerShell 强刷语言列表（设置 UI 不改或回弹时用）
-注意一开始强制重置只有eng
+Windows 本地输入法三条线分开写，不跳步、不假设你会 Rime、不假设你会编译。
+Windows 本地输入法 · 保姆级部署（小狼毫 + 白霜）
+0. 先说结论（照这个选就行）
+• 不想碰配置 → 装 墨奇（自带白霜，关掉 AI 就能用）
+• 要最硬核 / 零联网 / 全开源可审计 → 小狼毫 + 白霜
+- 五笔 / 码表 / 按窗口独立状态 / 图形化 → 清风
+• 语音输入 → VocoType（本地模型，首次联网下模型，之后拔网用）
+⚠️ 小狼毫 和 墨奇 不要同时启用（都是 Rime 前端，会抢 TSF，候选窗乱跳）
+1. 通用前置（做一次）
+1.1 清掉搜狗/百度/QQ 输入法残留
+• 控制面板 → 程序和功能 → 卸载搜狗/百度/QQ/微信输入法
+• 搜狗残留清理（可选）：
+  • https://www.52pojie.cn/thread-2117089-1-1.html
+  - 蓝奏：https://wwbmt.lanzouu.com/b00hrvbmej 密码 52pj
+1.2 重置 Windows 语言列表（防输入法错乱）
+以管理员打开 PowerShell：
 Set-WinUserLanguageList -LanguageList en-US -Force
-再安装rime-ice.7z
-基於這一框架，Rime 開發者與其他開源社區的參與者在 Windows、macOS、Linux、Android 等平臺上創造了不同的輸入法前端實現
-1、weasel.exe 本地化 小狼毫官网：RIME | 中州韻輸入法引擎
-https://rime.im/
-下載、安裝完成後，切換到 Rime 輸入法，立即擊響中文之韻。
-按組合鍵 Ctrl+` 或 F4 鍵喚出輸入方案選單，由此切換到朙月拼音、注音、倉頡等已啓用的輸入方案。
-亦可調整 Rime 輸入法最常用的選項
-----
-2、Rime 配置：雾凇拼音 | 长期维护的简体词库 强烈推荐
-https://github.com/iDvel/rime-ice
-https://github.com/iDvel/rime-ice/releases/tag/nightly
-rime-icefull.zip 已经softgitup里同步更新rime-ice.7z 合并
-核心特点：小狼毫为 RIME 中州韵 Windows 前端，开源无后台 / 无广告 / 无挖矿，雾凇拼音为简体词库，长期更新修订，支持中英混输、拆字反查、数字大写、拼音纠错等实用功能，配置可一键导入
-我这边覆盖 C:\Users\Administrator\AppData\Roaming\Rime
-输入法设定打钩
-方案名称
-雾凇拼音
-仓・九宫格
-自然码双拼
-智能 ABC 双拼
-微软双拼
-搜狗双拼
-小鹤双拼
-紫光双拼
-拼音加加双拼
-
-3、更新和商业输入法一样的词典
-白霜拼音：蒹葭苍苍，白露为霜。白霜拼音使用高质量语料，进行分词，重新统计字频、词频，归一化，打造纯净、词频准确、智能的词库。白霜词库是目前rime方案下最好的开源词库，经评测准确性已经不输于商业输入法。在墨奇输入法内置，欢迎使用。
-https://github.com/gaboolic/rime-frost
-小狼毫：%APPDATA%\Rime （可以在右下角小狼毫输入法右键打开菜单选用户文件夹）复制完之后，去输入法设定里选择白霜拼音，然后重新部署
-注：%APPDATA% 路径实际为 C:\Users<USER>\AppData\Roaming
-首次安装：
-根据用户使用的系统、安装的软件不同，先 cd 到对应的配置文件的父级目录(例如 Windows 为 %APPDATA%、mac 鼠须管为 ~/Library/)，然后执行以下命令：
-git clone --depth 1 https://github.com/gaboolic/rime-frost Rime
-后续更新：
-在 Rime 文件夹执行 git pull 即可。
-Mac: cd ~/Library/Rime && git pull
-Windows: cd "$env:APPDATA\Rime" && git pull
-其他系统以此类推
-实际我是在 %APPDATA%\Rime 里面执行 git clone --depth 1 https://github.com/gaboolic/rime-frost Rime，然后再复制覆盖过去，再选 白霜拼音
-
-4、需要本地语音输入法输入，快速输入很舒服，F2直接输入识别
-VocoType 是一款运行在本地端侧的隐私安全语音输入工具，通过快捷键即可将语音实时转换为文字并自动输入到当前应用。支持语音转文字MCP、AI 优化文本、自定义替换词典、录音视频转文字等功能，让语音输入更高效、更安全。
-https://github.com/233stone/vocotype-cli
-https://vocotype.com/
-https://package.vocotype.com/package/release/VocoType_Windows.exe  24M已经内置了
-VocoType 是一款专为桌面端设计的离线语音输入软件。它利用先进的本地 AI 模型，将您的语音实时转换为文字，无需联网，确保100% 隐私安全。无论您是作家、程序员还是办公人员，VocoType 都能显著提升您的输入效率。
-Q: VocoType 收费吗？
-目前 VocoType 的核心功能完全免费。我们的目标是让更多人体验到本地化语音识别的便捷与安全。
-2. 核心功能与使用
-Q: 真的完全离线吗？
-是的。除了首次启动需要下载必要的 AI 模型文件外，后续所有的语音识别和文字转换工作都在您的电脑本地完成。您可以拔掉网线使用，非常适合处理法律文书、医疗病历或商业机密等敏感数据。
-Q: 识别准确率如何？
-得益于强大的 paraformer 模型，VocoType 在安静环境下的也能有极高的语音输入准确率。它支持中英文混合输入，无需手动切换语言，让您的思维流畅不中断。
-Q: 支持哪些语言？
-目前主要优化了中文（普通话）和英文的识别。未来我们将逐步增加对更多语言和方言的支持。
-https://mcprepository.com/233stone/vocotype-cli
-https://github.com/modelscope/FunASR
-本地模型确实有的
-C:\Users\Administrator\.cache\modelscope\hub\models\iic\speech_paraformer-large_asr_nat-zh-cn-16k-common-vocab8404-onnx\model_quant.onnx
-
-5、其他开源输入法
-墨奇输入法windows版
-https://github.com/gaboolic/moqi-im-windows
-清风输入法
-https://github.com/huanfeng/WindInput
-薄荷输入
-https://cnb.cool/Mintimate/rime/oh-my-rime
-https://cnb.cool/Mintimate/rime/oh-my-rime-cli
-
-Windows本地/开源输入法全景图（置信度：高，基于GitHub活跃度+社区实测反馈）
-
-一、底层引擎层
-
-引擎 定位 优势 局限
-
-librime 开源跨平台输入法核心 算法成熟、方案生态最丰富、完全本地 配置门槛高、前端质量参差不齐
-
-自研TSF 厂商自研输入法框架 系统集成度高、兼容性最好、可原生支持AI 生态封闭、方案扩展性弱
-
-PIME框架 Python/TSF混合框架 适合二次开发、可快速原型 稳定性一般、不适合日常主力
-
-系统API 微软自带输入法接口 零安装、绝对稳定、无隐私风险 自定义能力极弱
-
-二、Windows前端层（按推荐优先级排序）
-
-前端 引擎 开箱即用 图形化设置 AI能力 适合人群
-
-墨奇输入法 librime(Go封装) ✅✅✅ ✅✅✅ ✅原生 拼音用户、AI需求、不愿折腾
-
-清风输入法 自研Rust ✅✅✅ ✅✅✅ ❌ 五笔/码表用户、按窗口切状态
-
-水杉输入法 自研TSF ✅✅✅ ✅✅ ✅原生 要语音+AI+辅助码的综合用户
-
-小狼毫Weasel librime ❌ ❌ ❌ Rime硬核玩家、方案开发者
-
-玉兔毫Rabbit librime(AHK) ✅✅ ⚠️部分 ❌ 受限环境、便携需求、U盘运行
-
-fcitx5-rime librime(Linux移植) ❌ ⚠️ ❌ Linux双持用户、跨平台强迫症
-
-小小输入法 自研 ✅✅✅ ✅✅ ❌ 极简主义、五笔/郑码老用户
-
-三、Rime方案包层（词库+配置）
-
-方案包 核心词库 全拼 双拼 五笔 音形 跨平台 维护状态
-
-薄荷oh-my-rime myriad/万象 ✅ ✅ ✅ ✅ ✅全平台 活跃
-
-万象拼音 myriad/万象 ✅ ✅ ✅ ✅ ✅全平台 活跃
-
-白霜拼音 白霜(雾凇重制) ✅ ✅ ❌ ⚠️ ✅全平台 活跃
-
-雾凇拼音 雾凇原始 ✅ ✅ ❌ ❌ ✅全平台 基本停更
-
-四叶草拼音 混合词库 ✅ ✅ ❌ ❌ ⚠️部分 低活跃
-
-极点五笔Rime版 极点码表 ❌ ❌ ✅ ❌ ✅全平台 维护中
-
-四、老牌本地工具层
-
-工具 类型 本地化 词库管理 适合场景
-
-极点五笔 独立输入法 ✅✅✅ txt码表 五笔老用户、兼容旧习惯
-
-万能五笔 独立输入法 ✅✅✅ 内置+导入 五笔拼音混输、传统办公
-
-微软拼音/五笔 系统自带 ✅✅✅ 注册表/少量 零维护、高稳定性要求
-
-五、现代AI/语音层（本地+云端混合）
-
-工具 核心能力 本地处理 云端AI 语音输入 适合场景
-
-水杉输入法 AI联想+语音 ✅候选 ✅可配置 ✅ 综合办公、长文写作
-
-微信输入法 跨端同步+AI ⚠️部分 ✅ ✅ 微信生态重度用户
-
-豆包输入法 AI对话+写作 ❌ ✅ ✅ AI辅助创作
-
-LazyTyper 本地AI补全 ✅ ❌ ❌ 代码/文档快速输入
-
-VocoType 本地语音识别 ✅✅✅ ❌ ✅✅✅ 语音输入重度用户
-
-六、选型决策树（直接对号入座）
-
-1. Windows主力+拼音+不想折腾 → 墨奇
-2. Windows主力+五笔/码表+按窗口切状态 → 清风
-3. 要语音+AI+辅助码一体化 → 水杉
-4. 已在用Rime+要现成方案包 → 薄荷/万象
-5. Linux双持+跨平台一致体验 → fcitx5-rime+万象
-6. 受限环境/U盘便携 → 玉兔毫
-7. 极简/老机器/五笔老用户 → 小小/极点
-8. 零维护/高稳定性 → 微软拼音/五笔
-9. 语音输入重度 → VocoType
-10. AI写作辅助 → 墨奇AI/豆包输入法
-
-七、组合推荐（已验证稳定）
-
-组合 场景 备注
-
-墨奇+白霜词库 日常办公 拼音最优解
-
-清风+极点码表 五笔办公 兼容性最好
-
-小狼毫+薄荷方案 深度自定义 折腾党专属
-
-水杉+本地语音模型 语音写作 隐私+效率
-
-微软拼音+墨奇(备用) 企业环境 防兼容性问题
-
-八、避坑指南
-
-1. 不要同时装两个Rime前端（小狼毫+墨奇会冲突）
-2. Rime方案包不要叠加太多（薄荷+万象可能冲突，选一个即可）
-3. 清风macOS版需手动放行（无苹果公证）
-4. 墨奇AI功能需自备API Key（无免费额度）
-5. 玉兔毫不适合游戏场景（非系统级IME）
-
+然后：
+• 设置 → 时间和语言 → 语言和区域
+• 英语(美国) → 选项 → 键盘 → 添加键盘 → 美式键盘 (US QWERTY)
+• 高级键盘设置 → 替代默认输入法 → 英语(美国) - 美式键盘
+✅ 任务栏显示 ENG / US 就算地基干净了。
+2. 方案 A：小狼毫 + 白霜（最硬核）
+2.1 装小狼毫
+1. 打开 https://rime.im/
+2. 下载 Weasel 安装包（.exe）
+3. 右键 → 以管理员身份运行
+4. 一路下一步
+5. 装完任务栏右下角出现 小狼毫图标 ✅
+6. Win+空格 切到 Rime → 按 Ctrl+\ 或 F4` 能弹方案菜单 ✅
+弹不出菜单 = 没装好 / 没切到 Rime，先别往下走。
+2.2 装白霜词库（推荐）或雾凇（二选一）
+方式一：git（会更新，推荐）
+打开 PowerShell：
+cd "$env:APPDATA\Rime"
+git clone --depth 1 https://github.com/gaboolic/rime-frost Rime-frost
+然后把 Rime-frost 里的文件复制到 %APPDATA%\Rime\ 根目录（别套两层文件夹）。
+方式二：下载 ZIP（不会 git 用这个）
+1. https://github.com/gaboolic/rime-frost → Code → Download ZIP
+2. 解压
+3. 把里面文件复制到：
+   C:\Users\你的用户名\AppData\Roaming\Rime\
+   
+4. 正确结构应该是：
+   Rime\
+   ├── default.yaml
+   ├── weasel.yaml
+   ├── rime_frost.schema.yaml
+   ├── frost/  （词库、lua、dict 等）
+   └── ...
+   
+❌ 常见错误：解压出 rime-frost\rime-frost\... 两层目录 → 方案不显示
+2.3 启用白霜
+1. 右键小狼毫图标 → 输入法设定
+2. 方案列表里勾：
+   - ✅ 白霜拼音
+   • （可选）小鹤双拼 / 微软双拼 / 自然码双拼
+3. 确定
+4. 右键小狼毫 → 重新部署
+5. F4 → 切到「白霜拼音」
+✅ 打 nihao 出「你好」、shijie 出「世界」= 成功
+2.4 更新白霜
+cd "$env:APPDATA\Rime\Rime-frost"
+git pull
+# 再复制回 %APPDATA%\Rime\ 根目录 → 重新部署
+3. 方案 B：清风 WindInput（五笔/码表/省事）
+3.1 装
+1. https://github.com/huanfeng/WindInput
+2. 进 Releases → 下 Windows 安装包（.exe）
+3. 双击安装
+   > SmartScreen 拦 → 「更多信息 → 仍要运行」
+4. 装完切到「清风」就能打
+3.2 特点
+• Rust 写的，轻、快、零联网
+• 五笔 / 码表友好
+- 按窗口独立状态（A 窗口中文，B 窗口英文，不串）
+• 图形化设置，不像 Rime 要改 yaml
+✅ 不想学 yaml 的人，直接选这个
+4. 方案 C：墨奇（拼音开箱 + 可选 AI）
+4.1 装
+1. https://github.com/gaboolic/moqi-im-windows
+2. Releases 里下 moqi-im-windows-setup.exe
+   （别自己跑 CMake/VS2022，那是源码构建，普通用户不需要）
+3. 安装 → 切到「墨奇」→ 默认就是白霜拼音
+✅ 不用碰 %APPDATA%\Rime，不用重新部署
+4.2 关掉隐私相关功能（重点）
+设置 / 托盘菜单里把这几个关了：
+• ❌ AI 联想（或填自己的 key 才开）
+• ❌ WebDAV 同步
+• ❌ 云剪贴板
+• ❌ 任意“上传词库 / 用户画像 / 云词频”
+墨奇本地输入本身没问题，问题只在“原生带云功能”，关掉就回到本地输入法水准。
+4.3 和谁冲突
+• ❌ 和小狼毫同时启用 → 候选窗打架
+• ✅ 和 VocoType 不冲突（VocoType 是全局快捷键灌字）
+5. 语音输入：VocoType（本地）
+1. 下：https://vocotype.com/ 或 release 里的 VocoType_Windows.exe
+2. 安装
+3. 首次启动 → 自动下 paraformer 模型（这次要联网）
+   模型位置：
+   C:\Users\Administrator\.cache\modelscope\hub\models\iic\speech_paraformer-...
+4. 下完之后：
+   • 按 F2 → 说话 → 文字进当前光标位置
+   • 拔掉网线也能用
+5. 设置里确认：
+   • 不登录账号
+   • 不上传音频
+   • 不启用“AI 云端优化”
+✅ 法律文书 / 代码口述 / 长文写作 都很香
+6. 排错速查
+现象 原因 解决
+小狼毫切过去还是英文 方案没选拼音 F4 → 白霜/雾凇拼音
+方案菜单里没白霜 解压套娃 / 没重新部署 检查 %APPDATA%\Rime 层级 → 重新部署
+部署完词很傻 用的是默认朙月拼音 确认勾了白霜并重新部署
+墨奇和白霜都装了很乱 两个 Rime 前端抢 卸掉小狼毫或卸掉墨奇
+VocoType 按 F2 没反应 模型没下完 / 快捷键被占 看托盘、看模型目录
+银行网站报证书错 Zen 在解密 HTTPS Zen 里加域名绕过
 
 
 startback_aio.zip 开始菜单 默认这个即可，通用
@@ -1361,6 +1286,20 @@ Paste As File 把剪贴板的内容直接粘贴为文件
 AltSnap 能让小白按住键盘 Alt 键 + 鼠标左键​ 随便拖窗口任意地方来移动或自动排成九宫格，不用非得去点最顶上那条细长的标题栏
 AltSnap1.68-x64-inst  190K 非常实用必备
 https://github.com/RamonUnch/AltSnap
+
+让电脑桌面壁纸自己换：必应每日一图 + Windows 聚焦双图源，4K 原图。下载一个 exe 双击就用，不用安装、不要管理员权限，后台换图不闪窗。
+https://github.com/kele551/ms-wallpaper-assistant
+https://github.com/kele551/ms-wallpaper-assistant/releases/download/v2.0.7/MSWallpaperAssistant-v2.0.7.zip
+微软壁纸助手.exe
+它做三件事:
+1. 每天把「必应每日一图」存下来, 并设成桌面壁纸
+2. 每半小时换一张「Windows 聚焦」壁纸, 不重复
+3. 几天没开机也不漏图, 错过的必应壁纸会自动补齐
+图片全部存在你自己电脑上, 不会上传到任何服务器。
+壁纸你随时可以自己删、自己挪到别处, 删了不影响它继续换图。
+
+
+
 
 todo
 https://github.com/super-productivity/super-productivity

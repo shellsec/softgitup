@@ -294,5 +294,47 @@
     "kill_before_install": false,
     "windows_installer": false,
     "process_name": ""
+  },
+  {
+    "id": "concat_editor",
+    "简介": "Concat（开源 CapCut 替代剪辑；Android arm64 APK）",
+    "分类": "音视频",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "run_installer": false,
+    "kill_before_install": false,
+    "windows_installer": false,
+    "process_name": "",
+    "installer_extensions": [
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Concat-",
+      "android-arm64.apk"
+    ],
+    "href_exclude_substrings": [
+      "debug",
+      ".aab",
+      "unsigned",
+      "sources",
+      ".json",
+      ".txt",
+      "sha256",
+      "ios",
+      "windows",
+      "linux",
+      "macos"
+    ],
+    "use_download_filename": true,
+    "aliases": [
+      "concat",
+      "Concat",
+      "WolfCut",
+      "jub0t"
+    ],
+    "releases_url": "https://bgithub.xyz/jub0t/Concat/releases",
+    "repo_path": "jub0t/Concat"
   }
 ]

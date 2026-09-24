@@ -634,5 +634,112 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "ab_download_manager",
+    "简介": "ABDownloadManager（开源跨平台下载管理器；Windows x64 exe）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "linux",
+      "mac",
+      ".zip",
+      ".md5",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "ABDownloadManager_",
+      "windows_x64.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "abdownloadmanager",
+      "ABDownloadManager",
+      "AB Download Manager"
+    ],
+    "releases_url": "https://bgithub.xyz/amir1376/ab-download-manager/releases",
+    "repo_path": "amir1376/ab-download-manager"
+  },
+  {
+    "id": "n_m3u8dl_re",
+    "简介": "N_m3u8DL-RE（nilaoda m3u8/流媒体下载；Windows x64 zip，CLI 后继）",
+    "分类": "下载",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "NT6",
+      "linux",
+      "osx",
+      "android"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "N_m3u8DL-RE_",
+      "win-x64_",
+      ".zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "n_m3u8dl_re",
+      "N_m3u8DL-RE",
+      "m3u8dl-re",
+      "m3u8下载"
+    ],
+    "releases_url": "https://bgithub.xyz/nilaoda/N_m3u8DL-RE/releases",
+    "repo_path": "nilaoda/N_m3u8DL-RE"
   }
 ]

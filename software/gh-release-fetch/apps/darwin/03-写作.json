@@ -402,5 +402,214 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "readest",
+    "简介": "Readest（开源跨平台电子书阅读器；macOS universal dmg）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".sig",
+      "app.tar.gz",
+      "setup.exe",
+      "AppImage",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Readest_",
+      "universal.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "readest",
+      "Readest",
+      "电子书阅读"
+    ],
+    "releases_url": "https://bgithub.xyz/readest/readest/releases",
+    "repo_path": "readest/readest"
+  },
+  {
+    "id": "goldendict_ng",
+    "简介": "GoldenDict-ng（开源词典/词库阅读器；macOS Apple Silicon dmg，Qt 6.10）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "x86_64",
+      "Qt6.8",
+      "Windows"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "GoldenDict-ng-",
+      "Qt6.10.3-macOS-arm64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "goldendict",
+      "goldendict-ng",
+      "GoldenDict",
+      "词典",
+      "字典"
+    ],
+    "releases_url": "https://bgithub.xyz/xiaoyifang/goldendict-ng/releases",
+    "repo_path": "xiaoyifang/goldendict-ng"
+  },
+  {
+    "id": "horsemd",
+    "简介": "HorseMD（开源 Typora 平替，所见即所得 Markdown；macOS Apple Silicon dmg）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      ".blockmap",
+      ".zip",
+      ".yml",
+      ".exe",
+      ".deb",
+      "mac.zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "HorseMD-",
+      "-arm64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "horsemd",
+      "HorseMD",
+      "horseMD",
+      "Typora平替"
+    ],
+    "releases_url": "https://bgithub.xyz/BND-1/horseMD/releases",
+    "repo_path": "BND-1/horseMD"
+  },
+  {
+    "id": "youdao_dict",
+    "简介": "有道词典（网易有道；官网分发，lookup 打开下载页）",
+    "分类": "写作",
+    "aliases": [
+      "youdao_dict",
+      "有道词典",
+      "有道",
+      "网易有道"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://cidian.youdao.com/",
+    "url_hint": "youdao_dict 有道词典 有道 网易有道",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "solomd",
+    "简介": "SoloMD（开源 Markdown 编辑器，macOS universal dmg）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/zhitongblog/solomd/releases",
+    "repo_path": "zhitongblog/solomd",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "SoloMD_",
+      "_universal.dmg"
+    ],
+    "href_exclude_substrings": [
+      ".msi",
+      ".exe",
+      "AppImage",
+      ".deb",
+      ".rpm",
+      ".apk",
+      "portable",
+      "mcp-",
+      "clipper",
+      "SHA256",
+      "x64"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "SoloMD_{ver}_universal.dmg"
+    ],
+    "save_name": "SoloMD_{ver}_universal.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "aliases": [
+      "SoloMD"
+    ]
+  },
+  {
+    "id": "vic_diary",
+    "简介": "维克日记（Markdown 日记，macOS arm64 dmg）",
+    "分类": "写作",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/vo-soft/vic-diary-releases/releases",
+    "repo_path": "vo-soft/vic-diary-releases",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "vic-diary-",
+      "-arm64-mac.dmg"
+    ],
+    "href_exclude_substrings": [
+      ".blockmap",
+      ".zip",
+      ".exe",
+      "AppImage",
+      ".deb",
+      ".rpm",
+      "x64",
+      "setup"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "vic-diary-{ver}-arm64-mac.dmg"
+    ],
+    "save_name": "vic-diary-{ver}-arm64-mac.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "aliases": [
+      "维克日记",
+      "VicDiary",
+      "vic-diary"
+    ]
   }
 ]

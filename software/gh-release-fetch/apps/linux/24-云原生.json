@@ -434,5 +434,108 @@
     "open_page_url": "https://github.com/canonical/multipass/releases",
     "releases_url": "https://bgithub.xyz/canonical/multipass/releases",
     "repo_path": "canonical/multipass"
+  },
+  {
+    "id": "opentofu",
+    "简介": "OpenTofu（Terraform 开源分支；Linux amd64 zip）",
+    "分类": "云原生",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      ".sig",
+      ".pem",
+      ".gpgsig",
+      "arm",
+      ".deb",
+      ".rpm"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "tofu_",
+      "linux_amd64.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "opentofu",
+      "OpenTofu",
+      "tofu"
+    ],
+    "releases_url": "https://bgithub.xyz/opentofu/opentofu/releases",
+    "repo_path": "opentofu/opentofu"
+  },
+  {
+    "id": "pulumi",
+    "简介": "Pulumi（现代 IaC CLI；Linux x64 tar.gz）",
+    "分类": "云原生",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      ".sig",
+      "arm64",
+      "windows",
+      "darwin"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "pulumi-v",
+      "linux-x64.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "aliases": [
+      "pulumi",
+      "Pulumi"
+    ],
+    "releases_url": "https://bgithub.xyz/pulumi/pulumi/releases",
+    "repo_path": "pulumi/pulumi"
   }
 ]

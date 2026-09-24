@@ -208,5 +208,24 @@
     "save_name": "koreader.apk",
     "releases_url": "https://bgithub.xyz/koreader/koreader/releases",
     "repo_path": "koreader/koreader"
+  },
+  {
+    "id": "youdao_dict_android",
+    "简介": "有道词典 Android（lookup 打开官网）",
+    "分类": "写作",
+    "aliases": [
+      "youdao_dict",
+      "有道词典",
+      "有道",
+      "网易有道"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://cidian.youdao.com/",
+    "url_hint": "youdao_dict 有道词典 有道 网易有道",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

@@ -711,5 +711,302 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "tagspaces",
+    "简介": "TagSpaces（本地文件标签与素材库；macOS Apple Silicon dmg）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "x64",
+      ".pkg",
+      "win-",
+      "linux",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "tagspaces-mac-arm64-",
+      ".dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "tagspaces",
+      "TagSpaces",
+      "文件标签",
+      "素材库"
+    ],
+    "releases_url": "https://bgithub.xyz/tagspaces/tagspaces/releases",
+    "repo_path": "tagspaces/tagspaces"
+  },
+  {
+    "id": "maccy",
+    "简介": "Maccy（macOS 原生剪贴板管理；app zip）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Maccy.app.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "maccy",
+      "Maccy"
+    ],
+    "releases_url": "https://bgithub.xyz/p0deje/Maccy/releases",
+    "repo_path": "p0deje/Maccy"
+  },
+  {
+    "id": "ecopaste",
+    "简介": "EcoPaste（开源剪贴板管理；macOS Apple Silicon dmg）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x64",
+      "windows",
+      "exe",
+      ".tar.gz"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "EcoPaste_",
+      "_aarch64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "ecopaste",
+      "EcoPaste"
+    ],
+    "releases_url": "https://bgithub.xyz/EcoPasteHub/EcoPaste/releases",
+    "repo_path": "EcoPasteHub/EcoPaste"
+  },
+  {
+    "id": "pika",
+    "简介": "Pika（macOS 菜单栏取色；dmg）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Pika-",
+      ".dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "pika",
+      "Pika"
+    ],
+    "releases_url": "https://bgithub.xyz/superhighfives/pika/releases",
+    "repo_path": "superhighfives/pika"
+  },
+  {
+    "id": "keka",
+    "简介": "Keka（macOS 压缩/解压；dmg）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Keka-",
+      ".dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "keka",
+      "Keka"
+    ],
+    "releases_url": "https://bgithub.xyz/aonez/Keka/releases",
+    "repo_path": "aonez/Keka"
+  },
+  {
+    "id": "czkawka",
+    "简介": "Czkawka/Krokiet（开源重复文件清理，macOS arm64 Krokiet）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/qarmin/czkawka/releases",
+    "repo_path": "qarmin/czkawka",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "mac_krokiet_arm64"
+    ],
+    "href_exclude_substrings": [
+      "heif",
+      "all_backends",
+      "femtovg",
+      "vulkan",
+      "skia",
+      "cli",
+      "windows_",
+      "linux_",
+      ".zip"
+    ],
+    "windows_installer": false,
+    "download_names": [
+      "mac_krokiet_arm64"
+    ],
+    "save_name": "mac_krokiet_arm64",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "aliases": [
+      "Czkawka",
+      "Krokiet"
+    ]
+  },
+  {
+    "id": "nomacs",
+    "简介": "nomacs（开源图像查看器，macOS arm64 dmg）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/nomacs/nomacs/releases",
+    "repo_path": "nomacs/nomacs",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "nomacs-macOS-arm64.dmg"
+    ],
+    "href_exclude_substrings": [
+      "x86_64",
+      "AppImage",
+      ".msi",
+      ".zip",
+      "linux",
+      "win",
+      "portable"
+    ],
+    "windows_installer": false,
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "download_names": [
+      "nomacs-macOS-arm64.dmg"
+    ],
+    "save_name": "nomacs-macOS-arm64.dmg",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "aliases": [
+      "nomacs"
+    ]
   }
 ]

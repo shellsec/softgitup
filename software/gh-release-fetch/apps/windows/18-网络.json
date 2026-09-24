@@ -1,25 +1,5 @@
 [
   {
-    "id": "localsend",
-    "简介": "局域网跨设备传文件，需同网段",
-    "分类": "网络",
-    "enabled": false,
-    "releases_url": "https://bgithub.xyz/localsend/localsend/releases",
-    "repo_path": "localsend/localsend",
-    "installer_markers": [
-      "LocalSend-",
-      "windows-x86-64.exe"
-    ],
-    "windows_installer": true,
-    "download_names": [
-      "LocalSend-{ver}-windows-x86-64.exe"
-    ],
-    "save_name": "LocalSend-{ver}-windows-x86-64.exe",
-    "process_name": "localsend_app.exe",
-    "kill_before_install": true,
-    "run_installer": true
-  },
-  {
     "id": "angryip",
     "简介": "局域网 IP 扫描",
     "分类": "网络",
@@ -904,5 +884,209 @@
     "kill_before_install": false,
     "run_installer": false,
     "url_hint": "52pojie 吾爱破解 netdiag 网络诊断"
+  },
+  {
+    "id": "switchhosts",
+    "简介": "SwitchHosts（Hosts 快速切换；Windows x64 安装包）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "x86",
+      "linux",
+      "mac",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "SwitchHosts-",
+      "windows-x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "switchhosts",
+      "SwitchHosts"
+    ],
+    "releases_url": "https://bgithub.xyz/oldj/SwitchHosts/releases",
+    "repo_path": "oldj/SwitchHosts"
+  },
+  {
+    "id": "fluent_reader",
+    "简介": "Fluent Reader（开源 RSS 阅读器；Windows x64 安装包）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x86",
+      "linux",
+      "dmg",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Fluent.Reader.Setup.",
+      ".x64.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "fluent reader",
+      "Fluent Reader",
+      "fluent-reader"
+    ],
+    "releases_url": "https://bgithub.xyz/yang991178/fluent-reader/releases",
+    "repo_path": "yang991178/fluent-reader"
+  },
+  {
+    "id": "adguardhome",
+    "简介": "AdGuard Home（局域网 DNS 广告拦截；Windows amd64 zip）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "386",
+      "arm64",
+      "linux",
+      "darwin"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "AdGuardHome_windows_amd64.zip"
+    ],
+    "installer_extensions": [
+      ".zip"
+    ],
+    "aliases": [
+      "adguardhome",
+      "AdGuard Home",
+      "adguard home",
+      "广告拦截dns"
+    ],
+    "releases_url": "https://bgithub.xyz/AdguardTeam/AdGuardHome/releases",
+    "repo_path": "AdguardTeam/AdGuardHome"
+  },
+  {
+    "id": "quark",
+    "简介": "夸克（阿里浏览器/网盘门户；官网分发，lookup 打开下载页。含推广与会员引导，请自行甄别）",
+    "分类": "网络",
+    "aliases": [
+      "quark",
+      "夸克",
+      "夸克浏览器",
+      "夸克网盘",
+      "阿里"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.quark.cn/",
+    "url_hint": "quark 夸克 夸克浏览器 夸克网盘 阿里",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "foxpath",
+    "简介": "狐径 FoxPath（GitHub 直连助手，绿色单文件）",
+    "分类": "网络",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/kele551/FoxPath/releases",
+    "repo_path": "kele551/FoxPath",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "FoxPath.exe"
+    ],
+    "href_exclude_substrings": [
+      "version.json",
+      ".sha",
+      "src"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "FoxPath.exe"
+    ],
+    "save_name": "FoxPath.exe",
+    "process_name": "FoxPath.exe",
+    "kill_before_install": true,
+    "run_installer": false,
+    "aliases": [
+      "狐径",
+      "FoxPath"
+    ]
   }
 ]

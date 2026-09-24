@@ -177,12 +177,16 @@
       "feishu",
       "lark",
       "飞书",
-      "Lark"
+      "Lark",
+      "飞书知识库",
+      "知识库",
+      "wiki",
+      "lark wiki"
     ],
     "enabled": false,
     "open_page_only": true,
     "open_page_url": "https://www.feishu.cn/download",
-    "url_hint": "feishu lark 飞书 Lark",
+    "url_hint": "feishu lark 飞书 Lark 飞书知识库 wiki lark wiki",
     "windows_installer": false,
     "process_name": "",
     "kill_before_install": false,
@@ -447,6 +451,94 @@
     "open_page_only": true,
     "open_page_url": "https://www.threads.net/",
     "url_hint": "threads Threads",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "simplex_desktop",
+    "简介": "SimpleX Chat 桌面（无用户 ID 的端到端加密聊天；macOS Apple Silicon dmg）",
+    "分类": "网络与通讯",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x86_64",
+      "windows",
+      "ubuntu",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "simplex-desktop-macos-aarch64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "simplex",
+      "SimpleX",
+      "simplex chat"
+    ],
+    "releases_url": "https://bgithub.xyz/simplex-chat/simplex-chat/releases",
+    "repo_path": "simplex-chat/simplex-chat"
+  },
+  {
+    "id": "welink",
+    "简介": "华为云 WeLink（企业办公；官网分发，lookup 打开下载页）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "welink",
+      "WeLink",
+      "华为云WeLink",
+      "华为"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.huaweicloud.com/product/welink-download.html",
+    "url_hint": "welink WeLink 华为云WeLink 华为",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "outlook",
+    "简介": "Microsoft Outlook（微软邮箱/日历；官网分发，lookup 打开下载页）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "outlook",
+      "Outlook",
+      "微软邮箱",
+      "微软"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.microsoft.com/zh-cn/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook",
+    "url_hint": "outlook Outlook 微软邮箱 微软",
     "windows_installer": false,
     "process_name": "",
     "kill_before_install": false,

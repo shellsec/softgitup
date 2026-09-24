@@ -980,5 +980,334 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "tagspaces",
+    "简介": "TagSpaces（本地文件标签与素材库；Windows x64 安装包）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "arm64",
+      ".zip",
+      ".blockmap",
+      "linux",
+      "mac-",
+      ".apk"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "tagspaces-win-x64-",
+      ".exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "tagspaces",
+      "TagSpaces",
+      "文件标签",
+      "素材库"
+    ],
+    "releases_url": "https://bgithub.xyz/tagspaces/tagspaces/releases",
+    "repo_path": "tagspaces/tagspaces"
+  },
+  {
+    "id": "ecopaste",
+    "简介": "EcoPaste（开源剪贴板管理；Windows x64 安装包）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      ".sig",
+      "linux",
+      "dmg",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "EcoPaste_",
+      "_x64-setup.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "ecopaste",
+      "EcoPaste"
+    ],
+    "releases_url": "https://bgithub.xyz/EcoPasteHub/EcoPaste/releases",
+    "repo_path": "EcoPasteHub/EcoPaste"
+  },
+  {
+    "id": "steganographier_gui",
+    "简介": "隐写者 SteganographierGUI（文件隐写入 MP4/MKV；Windows 安装包）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "portable",
+      ".zip",
+      "SHA256",
+      ".txt",
+      "source",
+      "src.",
+      "linux",
+      "darwin",
+      "macos",
+      "mac-"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "SteganographierGUI_v",
+      "_installer.exe"
+    ],
+    "installer_extensions": [
+      ".exe"
+    ],
+    "aliases": [
+      "steganographier",
+      "steganographiergui",
+      "steganographier_gui",
+      "隐写者",
+      "隐写"
+    ],
+    "releases_url": "https://bgithub.xyz/cenglin123/SteganographierGUI/releases",
+    "repo_path": "cenglin123/SteganographierGUI"
+  },
+  {
+    "id": "taobao",
+    "简介": "淘宝（无官方 Windows 客户端；lookup 打开网页）",
+    "分类": "工具",
+    "aliases": [
+      "taobao",
+      "淘宝",
+      "阿里"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.taobao.com/",
+    "url_hint": "taobao 淘宝 阿里",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "jd",
+    "简介": "京东（无官方 Windows 客户端；lookup 打开网页）",
+    "分类": "工具",
+    "aliases": [
+      "jd",
+      "京东",
+      "jingdong"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.jd.com/",
+    "url_hint": "jd 京东 jingdong",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "meituan",
+    "简介": "美团（无官方 Windows 客户端；lookup 打开网页）",
+    "分类": "工具",
+    "aliases": [
+      "meituan",
+      "美团"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.meituan.com/",
+    "url_hint": "meituan 美团",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "viap",
+    "简介": "Viap（Windows 应用与数据迁移；NTFS Junction/符号链接重定向，保留原路径；含卸载残留清理）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/Chunyu33/viap/releases",
+    "repo_path": "Chunyu33/viap",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "viap_",
+      "x64-setup.exe"
+    ],
+    "href_exclude_substrings": [
+      "offline-webview2",
+      "portable",
+      ".sig",
+      ".zip",
+      "arm64",
+      "darwin",
+      "linux",
+      "macos"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "viap_{ver}_x64-setup.exe"
+    ],
+    "save_name": "viap_{ver}_x64-setup.exe",
+    "process_name": "viap.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "aliases": [
+      "Viap",
+      "viap",
+      "应用迁移"
+    ]
+  },
+  {
+    "id": "czkawka",
+    "简介": "Czkawka/Krokiet（开源重复文件清理，Windows Krokiet skia_opengl）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/qarmin/czkawka/releases",
+    "repo_path": "qarmin/czkawka",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "windows_krokiet_on_windows_skia_opengl.exe"
+    ],
+    "href_exclude_substrings": [
+      "on_linux",
+      "all_backends",
+      "femtovg",
+      "vulkan",
+      "gtk",
+      "cli",
+      "linux_",
+      "mac_"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "windows_krokiet_on_windows_skia_opengl.exe"
+    ],
+    "save_name": "windows_krokiet_on_windows_skia_opengl.exe",
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "aliases": [
+      "Czkawka",
+      "Krokiet"
+    ]
+  },
+  {
+    "id": "nomacs",
+    "简介": "nomacs（开源图像查看器，Windows x64 MSI）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/nomacs/nomacs/releases",
+    "repo_path": "nomacs/nomacs",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "nomacs-setup-x64.msi"
+    ],
+    "href_exclude_substrings": [
+      "portable",
+      "win7",
+      "AppImage",
+      ".dmg",
+      "linux",
+      "macOS"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "download_names": [
+      "nomacs-setup-x64.msi"
+    ],
+    "save_name": "nomacs-setup-x64.msi",
+    "process_name": "nomacs.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "use_download_filename": true,
+    "aliases": [
+      "nomacs"
+    ]
+  },
+  {
+    "id": "umi_ocr",
+    "简介": "Umi-OCR（离线开源 OCR，Windows Rapid 自解压包）",
+    "分类": "工具",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/hiroi-sora/Umi-OCR/releases",
+    "repo_path": "hiroi-sora/Umi-OCR",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Umi-OCR_Rapid_",
+      ".7z.exe"
+    ],
+    "href_exclude_substrings": [
+      "Paddle",
+      "Linux",
+      ".tar",
+      ".sha",
+      "Source"
+    ],
+    "windows_installer": true,
+    "download_names": [
+      "Umi-OCR_Rapid_v{ver}.7z.exe"
+    ],
+    "save_name": "Umi-OCR_Rapid_v{ver}.7z.exe",
+    "process_name": "Umi-OCR.exe",
+    "kill_before_install": true,
+    "run_installer": false,
+    "aliases": [
+      "Umi-OCR",
+      "Umi OCR",
+      "umiocr"
+    ]
   }
 ]

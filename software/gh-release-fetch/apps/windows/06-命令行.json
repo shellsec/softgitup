@@ -825,5 +825,44 @@
     ],
     "releases_url": "https://bgithub.xyz/gokcehan/lf/releases",
     "repo_path": "gokcehan/lf"
+  },
+  {
+    "id": "powershell",
+    "简介": "PowerShell 7（跨平台 Shell；Windows x64 MSI）",
+    "分类": "命令行",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "releases_url": "https://bgithub.xyz/PowerShell/PowerShell/releases",
+    "repo_path": "PowerShell/PowerShell",
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "PowerShell-",
+      "win-x64.msi"
+    ],
+    "href_exclude_substrings": [
+      "arm64",
+      "x86",
+      ".zip",
+      "sha256",
+      "preview",
+      "LTS",
+      "fxdependent",
+      ".msix"
+    ],
+    "windows_installer": true,
+    "installer_extensions": [
+      ".msi"
+    ],
+    "use_download_filename": true,
+    "save_name": "PowerShell-{ver}-win-x64.msi",
+    "process_name": "pwsh.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "aliases": [
+      "powershell",
+      "pwsh",
+      "PowerShell 7"
+    ]
   }
 ]

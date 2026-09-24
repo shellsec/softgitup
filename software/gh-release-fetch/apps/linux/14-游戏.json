@@ -653,5 +653,151 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "itch",
+    "简介": "itch（itch.io 官方游戏库客户端；Linux amd64 tar.gz）",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "darwin",
+      "windows",
+      "arm64"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "itch-v",
+      "linux-amd64.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "aliases": [
+      "itch",
+      "itch.io",
+      "itchio"
+    ],
+    "releases_url": "https://bgithub.xyz/itchio/itch/releases",
+    "repo_path": "itchio/itch"
+  },
+  {
+    "id": "legendary",
+    "简介": "Legendary（Epic Games 开源命令行启动器；Linux x64 二进制）",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "windows",
+      "macOS"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "legendary_linux_x64"
+    ],
+    "aliases": [
+      "legendary",
+      "Legendary",
+      "Epic CLI"
+    ],
+    "releases_url": "https://bgithub.xyz/legendary-gl/legendary/releases",
+    "repo_path": "legendary-gl/legendary"
+  },
+  {
+    "id": "gdevelop",
+    "简介": "GDevelop（无代码/低代码游戏引擎；Linux x64 AppImage）",
+    "分类": "游戏",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "arm64",
+      "Setup",
+      "windows",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "GDevelop-5-",
+      ".AppImage"
+    ],
+    "installer_extensions": [
+      ".AppImage"
+    ],
+    "aliases": [
+      "gdevelop",
+      "GDevelop"
+    ],
+    "releases_url": "https://bgithub.xyz/4ian/GDevelop/releases",
+    "repo_path": "4ian/GDevelop"
   }
 ]

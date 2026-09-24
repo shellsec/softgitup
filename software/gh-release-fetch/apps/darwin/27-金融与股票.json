@@ -312,5 +312,106 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "portfolio_performance",
+    "简介": "Portfolio Performance（开源投资组合跟踪；macOS Apple Silicon dmg）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x86_64",
+      "linux",
+      "windows",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "PortfolioPerformance-",
+      "-aarch64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "portfolio performance",
+      "Portfolio Performance",
+      "投资组合"
+    ],
+    "releases_url": "https://bgithub.xyz/portfolio-performance/portfolio/releases",
+    "repo_path": "portfolio-performance/portfolio"
+  },
+  {
+    "id": "wealthfolio",
+    "简介": "Wealthfolio（本地优先投资组合桌面；macOS Apple Silicon dmg）",
+    "分类": "金融与股票",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "x64",
+      ".app.tar.gz",
+      "windows",
+      "linux"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "Wealthfolio_",
+      "_aarch64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "wealthfolio",
+      "Wealthfolio"
+    ],
+    "releases_url": "https://bgithub.xyz/afadil/wealthfolio/releases",
+    "repo_path": "afadil/wealthfolio"
   }
 ]

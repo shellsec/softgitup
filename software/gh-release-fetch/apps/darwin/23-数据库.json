@@ -349,5 +349,56 @@
     "kill_before_install": false,
     "run_installer": false,
     "url_hint": "dbx intel DBX Intel"
+  },
+  {
+    "id": "dbgate",
+    "简介": "DbGate（开源多数据库桌面客户端；macOS Apple Silicon dmg）",
+    "分类": "数据库",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "premium",
+      "latest",
+      "universal",
+      "x64",
+      ".zip"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "dbgate-",
+      "-mac_arm64.dmg"
+    ],
+    "installer_extensions": [
+      ".dmg"
+    ],
+    "aliases": [
+      "dbgate",
+      "DbGate"
+    ],
+    "releases_url": "https://bgithub.xyz/dbgate/dbgate/releases",
+    "repo_path": "dbgate/dbgate"
   }
 ]

@@ -568,5 +568,61 @@
     "kill_before_install": false,
     "windows_installer": false,
     "process_name": ""
+  },
+  {
+    "id": "tim_android",
+    "简介": "TIM Android（lookup 打开官网下载页）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "tim",
+      "TIM",
+      "QQ办公"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://tim.qq.com/download.html",
+    "url_hint": "tim TIM QQ办公",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "welink_android",
+    "简介": "华为云 WeLink Android（lookup 打开官网下载页）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "welink",
+      "WeLink",
+      "华为云WeLink",
+      "华为"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://www.huaweicloud.com/product/welink-download.html",
+    "url_hint": "welink WeLink 华为云WeLink 华为",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
+  },
+  {
+    "id": "outlook_android",
+    "简介": "Microsoft Outlook Android（lookup 打开商店页）",
+    "分类": "网络与通讯",
+    "aliases": [
+      "outlook",
+      "Outlook",
+      "微软邮箱",
+      "微软"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://play.google.com/store/apps/details?id=com.microsoft.office.outlook",
+    "url_hint": "outlook Outlook 微软邮箱 微软",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]

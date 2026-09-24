@@ -372,5 +372,112 @@
     "process_name": "",
     "kill_before_install": false,
     "run_installer": false
+  },
+  {
+    "id": "kavita",
+    "简介": "Kavita（开源电子书/漫画库服务器；Windows x64 tar.gz）",
+    "分类": "办公",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "win-x86",
+      "linux",
+      "osx",
+      "arm",
+      "musl"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "kavita-win-x64.tar.gz"
+    ],
+    "installer_extensions": [
+      ".tar.gz"
+    ],
+    "aliases": [
+      "kavita",
+      "Kavita",
+      "电子书库",
+      "漫画库"
+    ],
+    "releases_url": "https://bgithub.xyz/Kareadita/Kavita/releases",
+    "repo_path": "Kareadita/Kavita"
+  },
+  {
+    "id": "jabref",
+    "简介": "JabRef（开源文献/BibTeX 管理；Windows MSI）",
+    "分类": "办公",
+    "enabled": false,
+    "prefer_api_assets": true,
+    "version_tag_as_on_github": true,
+    "windows_installer": true,
+    "process_name": "JabRef.exe",
+    "kill_before_install": true,
+    "run_installer": true,
+    "use_download_filename": true,
+    "href_exclude_substrings": [
+      "source",
+      "src.",
+      "-src",
+      "symbols",
+      "debug",
+      "pdb",
+      "sha256",
+      ".sig",
+      ".asc",
+      ".json",
+      ".txt",
+      ".md",
+      "checksum",
+      ".yml",
+      ".blockmap",
+      ".minisig",
+      ".apk",
+      "portable",
+      "dmg",
+      "pkg",
+      "linux",
+      "arm64"
+    ],
+    "installer_markers_match_all": true,
+    "installer_markers": [
+      "JabRef-",
+      ".msi"
+    ],
+    "installer_extensions": [
+      ".msi"
+    ],
+    "aliases": [
+      "jabref",
+      "JabRef",
+      "文献管理",
+      "bibtex"
+    ],
+    "releases_url": "https://bgithub.xyz/JabRef/jabref/releases",
+    "repo_path": "JabRef/jabref"
+  },
+  {
+    "id": "tencent_docs",
+    "简介": "腾讯文档（在线协作 Office；官网分发，lookup 打开下载页）",
+    "分类": "办公",
+    "aliases": [
+      "tencent_docs",
+      "腾讯文档",
+      "docs.qq",
+      "tdocs"
+    ],
+    "enabled": false,
+    "open_page_only": true,
+    "open_page_url": "https://docs.qq.com/home/download",
+    "url_hint": "tencent_docs 腾讯文档 docs.qq tdocs",
+    "windows_installer": false,
+    "process_name": "",
+    "kill_before_install": false,
+    "run_installer": false
   }
 ]
