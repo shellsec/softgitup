@@ -416,7 +416,7 @@ FFmpeg（命令行） 支持所有格式  支持  ★★★★★（最强）   
 
 system_good目录下
 
-娱乐至死-音乐电影游戏网盘学习资源破解资源
+娱乐至死-音乐电影游戏网盘学习资源破解资源IPTV资源
 
 音乐资源
 测试了各个平台音乐，痛点就是付费和版权音质，你懂得，一步到位！落雪太赞了，必备！
@@ -633,6 +633,61 @@ https://sysin.org
 https://macked.app/
 https://www.ifmac.cn/
 https://cn-sec.com/
+
+IPTV资源
+# 全平台 IPTV播放器总表（全部只是播放器，**不含直播源**）
+> 一句话推荐：**IPTV Smarters Pro** 是跨平台全能款；**TiviMate仅限安卓TV/FireTV**，电视端体验天花板；苹果生态优先 **GSE / APTV**；三星LG电视原生用 SS IPTV / IBO Player。
+
+|平台|首选APP|备选|备注|
+|---|---|---|---|
+|Windows PC|IPTV Smarters Pro、MyIPTV Player（微软商店）|VLC、PotPlayer、Kodi|MyIPTV免费原生；VLC仅用来测试M3U流，EPG弱|
+|macOS|IPTV Smarters Pro、APTV|GSE Smart IPTV、IINA、Kodi|APTV苹果全家桶同步EPG，App Store可下|
+|Linux|Kodi、VLC|IPTV Smarters|适合软路由/服务器，一般用来做网关而非直接看|
+|Android TV / FireTV / Google TV|**TiviMate（首选）**|IPTV Smarters Pro、Ott Navigator、Perfect Player|TiviMate无PC/苹果版，遥控器EPG体验最强，需要侧载APK|
+|安卓手机|IPTV Smarters Pro、GSE|VLC|手机触屏操作，不推荐TiviMate（专为遥控器设计）|
+|iPhone / iPad|GSE Smart IPTV、APTV|IPTV Smarters Pro|App Store直接安装，不用签名侧载|
+|Apple TV（tvOS）|APTV、GSE Smart IPTV|IPTV Smarters Pro|原生tvOS界面，支持遥控器、EPG、画中画|
+|三星Tizen智能电视|SS IPTV / IBO Player Pro|IPTV Smarters（部分机型）|不用盒子，电视应用商店直接装|
+|LG webOS智能电视|SS IPTV / IBO Player Pro|Smart IPTV|老款LG优先SS IPTV|
+|网页端（任意浏览器，免安装）|IPTV Smarters Web版|Web IPTV测试页|临时应急，电脑/平板浏览器直接打开 [https://iptvsmarters.com/webplayer|](https://iptvsmarters.com/webplayer|)
+|树莓派|Kodi + IPTV Simple Client|VLC|适合做轻量播放/内网网关|
+
+## ✅ 各平台播放器核心能力对比
+1. **IPTV Smarters Pro【全屋统一方案首选】**
+    ✅支持：Windows / Mac / Android / iOS / AppleTV / FireTV / Web网页
+    ✅协议：M3U + Xtream账号 + EPG + VOD点播 + 回看
+    ✅优点：**一套源，所有终端共用，界面统一**，新手最省心
+    官网：iptvsmarters.com
+2. **TiviMate【电视端天花板，仅限安卓TV系】**
+    仅安卓TV/FireTV，**没有PC、iOS、Mac版本**；换台快，EPG节目表体验最好，支持多Playlist、回看、录制
+    官网：tivimate.com
+3. **GSE Smart IPTV【苹果生态主力】**
+    iOS / iPadOS / AppleTV / Mac / 安卓；支持M3U/Xtream，苹果生态老牌稳定播放器
+4. **APTV（苹果全家桶新选择）**
+    iPhone/iPad/Mac/AppleTV/WatchOS，iCloud同步频道收藏、EPG，界面现代化，App Store直接搜
+5. **SS IPTV / IBO Player**
+    三星Tizen、LG webOS原生电视APP，**不用额外盒子**，老款智能电视救星
+6. **Kodi【极客万能】**
+    全平台，但需要装PVR IPTV Simple Client插件，设置繁琐，自由度最高
+
+## 🧩 全屋统一部署架构（一套源，全终端访问）
+> 适合：家里Windows、Mac、iPhone、安卓盒子、三星电视多设备一起用
+1. 准备：M3U链接 / Xtream账号（仅播放器，不提供源）
+2. 全部终端统一安装 **IPTV Smarters Pro**
+3. 在所有设备填入同一套Playlist，EPG共用同一个XMLTV地址
+4. 有线网络优先，路由器开启IGMP Proxy（如果你用运营商IPTV组播内网流）
+
+## 📌 公用测试EPG & 海外公开M3U（仅用来测试播放器）
+M3U：`[https://iptv-org.github.io/iptv/index.m3u](https://iptv-org.github.io/iptv/index.m3u)`
+EPG：`[https://iptv-org.github.io/epg/guides.xml](https://iptv-org.github.io/epg/guides.xml)`
+> 只有海外免费公开频道，**无国内央卫视**，仅测试播放器能否正常加载。
+
+## ⚠️合规重申
+所有上面这些**都只是播放器软件**，本身不带电视台直播流；私自使用无版权直播源存在违规风险。国内唯一合法IPTV是运营商专网IPTV（电信/移动/联通/广电）。
+
+## 推荐两种落地路线
+- 路线1【懒人全屋】：**IPTV Smarters Pro** 全平台统一，一套源，手机电脑电视全部用同一个APP
+- 路线2【电视极致体验】：电视盒子用 **TiviMate**；手机/电脑/苹果设备用 **IPTV Smarters Pro**
 
 
 传统键盘支持音量调节

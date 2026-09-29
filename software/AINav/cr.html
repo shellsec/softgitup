@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>资源导航站 · 影视 / 游戏 / 网盘 / 破解</title>
+<title>资源导航站 · 58 个站点</title>
 <style>
 :root{
   --bg:#0f1117; --bg2:#151823; --card:#1b2030; --card2:#222838;
@@ -21,7 +21,6 @@ body{
 }
 .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
 
-/* Header */
 header{position:sticky;top:0;z-index:50;background:rgba(15,17,23,.82);backdrop-filter:blur(12px);
   border-bottom:1px solid var(--line)}
 .hbox{display:flex;align-items:center;gap:16px;padding:14px 0;flex-wrap:wrap}
@@ -35,7 +34,6 @@ header{position:sticky;top:0;z-index:50;background:rgba(15,17,23,.82);backdrop-f
 .search::before{content:"🔍";position:absolute;left:12px;top:50%;transform:translateY(-50%);opacity:.5;font-size:13px}
 .count{font-size:12px;color:var(--txt3);white-space:nowrap}
 
-/* Hero */
 .hero{padding:44px 0 26px;text-align:center}
 .hero h1{font-size:clamp(24px,4vw,38px);font-weight:800;line-height:1.3}
 .hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--brand),var(--brand2),var(--accent));
@@ -46,7 +44,6 @@ header{position:sticky;top:0;z-index:50;background:rgba(15,17,23,.82);backdrop-f
 .tag:hover{border-color:var(--brand);color:var(--txt);transform:translateY(-1px)}
 .tag.on{background:linear-gradient(90deg,var(--brand),var(--brand2));color:#fff;border-color:transparent}
 
-/* Section */
 section{padding-top:34px;scroll-margin-top:80px}
 .sec-head{display:flex;align-items:center;gap:12px;margin-bottom:16px}
 .sec-head .ic{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;font-size:18px;
@@ -73,13 +70,11 @@ section{padding-top:34px;scroll-margin-top:80px}
 .card:hover .go{opacity:1;transform:translateX(0)}
 .empty{display:none;text-align:center;color:var(--txt3);padding:60px 0;font-size:14px}
 
-/* Footer */
 footer{margin-top:50px;padding-top:24px;border-top:1px solid var(--line);color:var(--txt3);font-size:12.5px;text-align:center}
 footer p{margin:6px 0}
 .disclaimer{display:inline-block;margin-top:10px;padding:8px 14px;border-radius:8px;background:rgba(255,180,60,.08);
   border:1px solid rgba(255,180,60,.25);color:var(--warn);max-width:760px;text-align:left}
 
-/* Top btn */
 #top{position:fixed;right:22px;bottom:22px;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;
   background:var(--card);border:1px solid var(--line);color:var(--txt2);cursor:pointer;opacity:0;pointer-events:none;
   transition:.2s;z-index:60;font-size:16px}
@@ -100,13 +95,143 @@ footer p{margin:6px 0}
 
 <div class="wrap">
   <div class="hero">
-    <h1>一站式 <em>资源导航</em><br>影视 · 游戏 · 网盘 · 学习 · 破解</h1>
+    <h1>一站式 <em>资源导航</em><br>AI · 资讯 · 影视 · 游戏 · 网盘 · 破解</h1>
     <p>把常用资源站收进一个页面，点开即走 · 无需联网、无追踪、无依赖</p>
     <div class="tags" id="tags"></div>
   </div>
 
+  <!-- AI 工具 -->
+  <section id="cat-0" data-name="AI 工具导航">
+    <div class="sec-head">
+      <div class="ic">🤖</div><h2>AI 工具导航</h2>
+      <small>置顶 · 收录 600+ AI 工具的分类索引站</small>
+    </div>
+    <div class="grid">
+      <a class="card" href="https://aiv123.com/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">AI</div><h3>AIV123 · AI 工具导航</h3></div>
+        <div class="desc">AI 工具分类索引站，按写作、绘图、编程、视频、办公等场景收录 600+ 工具，找工具先来这。</div>
+        <div class="meta"><span>aiv123.com</span><span class="go">前往 →</span></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- 资讯与工具 -->
+  <section id="cat-1" data-name="资讯与工具">
+    <div class="sec-head">
+      <div class="ic">📰</div><h2>资讯与工具</h2>
+      <small>科技资讯 · 热榜聚合 · 财经 · 实用工具 · 社区</small>
+    </div>
+    <div class="grid">
+      <a class="card" href="https://www.smzdm.com/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">值</div><h3>什么值得买</h3></div>
+        <div class="desc">兴趣消费指南，好价爆料、商品评测与社区讨论，覆盖数码、家电、日用全品类。</div>
+        <div class="meta"><span>smzdm.com</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://www.cls.cn/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">财</div><h3>财联社</h3></div>
+        <div class="desc">7×24 小时财经快讯，电报式播报 A 股、宏观、产业与海外市场动态，时效性极强。</div>
+        <div class="meta"><span>cls.cn</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://www.panewslab.com/zh" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">P</div><h3>PANews</h3></div>
+        <div class="desc">Web3 与区块链中文媒体，加密市场、项目深度报道与行业数据资讯。</div>
+        <div class="meta"><span>panewslab.com</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://wallstreetcn.com/live/global" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">华</div><h3>华尔街见闻 · 全球直播</h3></div>
+        <div class="desc">全球市场 7×24 实时快讯，美股、外汇、宏观、大宗商品一手资讯。</div>
+        <div class="meta"><span>wallstreetcn.com/live</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://newsnow.busiyi.world/c/realtime" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">NN</div><h3>NewsNow · 实时新闻</h3></div>
+        <div class="desc">实时新闻聚合阅读器，汇集全球热点新闻，提供优雅的阅读体验。</div>
+        <div class="meta"><span>newsnow.busiyi.world</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://smzdk.top/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">S</div><h3>SMZDK · RSS 阅读器</h3></div>
+        <div class="desc">专注极致阅读体验的 RSS 阅读器，支持 AI 摘要、智能推荐、全平台同步。</div>
+        <div class="meta"><span>smzdk.top</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://tophub.today/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">榜</div><h3>今日热榜</h3></div>
+        <div class="desc">各站热榜聚合：微信、头条、百度、知乎、微博、贴吧、Github、抖音等，追踪全网热点。</div>
+        <div class="meta"><span>tophub.today</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://www.ithome.com/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">IT</div><h3>IT之家</h3></div>
+        <div class="desc">前沿科技门户，科技新闻快讯与手机数码评测，覆盖智能车、AR/VR、苹果、鸿蒙、安卓、Win。</div>
+        <div class="meta"><span>ithome.com</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://www.cnbeta.com.tw/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">Cβ</div><h3>cnBeta · 中文业界资讯</h3></div>
+        <div class="desc">国内领先的即时科技资讯站点，消息快、立场中立，网友讨论气氛浓厚。</div>
+        <div class="meta"><span>cnbeta.com.tw</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://www.landiannews.com/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">蓝</div><h3>蓝点网</h3></div>
+        <div class="desc">科技资讯、软件工具、技术教程，给你感兴趣的内容。</div>
+        <div class="meta"><span>landiannews.com</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://www.36kr.com/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">36</div><h3>36氪</h3></div>
+        <div class="desc">新经济服务平台，创投、商业、科技深度报道与行业分析。</div>
+        <div class="meta"><span>36kr.com</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://sspai.com/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">少</div><h3>少数派</h3></div>
+        <div class="desc">高效工作、品质生活，帮助用户更好地运用数字产品与科学方法。</div>
+        <div class="meta"><span>sspai.com</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://www.freebuf.com/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">F</div><h3>FreeBuf · 网络安全行业门户</h3></div>
+        <div class="desc">国内知名网络安全行业门户，漏洞资讯、安全技术、企业安全与从业者社区。</div>
+        <div class="meta"><span>freebuf.com</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://www.woshipm.com/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">产</div><h3>人人都是产品经理</h3></div>
+        <div class="desc">产品经理、运营从业者社区，产品设计、运营方法与行业分析干货。</div>
+        <div class="meta"><span>woshipm.com</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://www.199it.com/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">数</div><h3>互联网数据资讯网</h3></div>
+        <div class="desc">专注互联网行业数据与研究报告，海量行业报告、统计数据免费下载。</div>
+        <div class="meta"><span>199it.com</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://www.v2ex.com/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">V2</div><h3>V2EX</h3></div>
+        <div class="desc">设计师、程序员及创意工作者的综合讨论社区，话题广泛、气氛友好。</div>
+        <div class="meta"><span>v2ex.com</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://www.nodeseek.com/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">N</div><h3>NodeSeek</h3></div>
+        <div class="desc">面向 Web 开发、主机、VPS / 服务器与各类极客话题的交流社区。</div>
+        <div class="meta"><span>nodeseek.com</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://www.niaogebiji.com/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">鸟</div><h3>鸟哥笔记</h3></div>
+        <div class="desc">互联网运营干货平台，营销推广、用户增长、电商运营实战经验分享。</div>
+        <div class="meta"><span>niaogebiji.com</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://cli.im/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">码</div><h3>草料二维码</h3></div>
+        <div class="desc">在线二维码生成与服务，支持文本、网址、活码、批量生码与业务搭建。</div>
+        <div class="meta"><span>cli.im</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://cli.im/deqr" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">解</div><h3>草料二维码 · 解码器</h3></div>
+        <div class="desc">二维码识别与解码工具，支持图片、摄像头、URL 解码，可批量导出结果。</div>
+        <div class="meta"><span>cli.im/deqr</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://suijimimashengcheng.bmcx.com/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">密</div><h3>随机密码生成器</h3></div>
+        <div class="desc">在线随机密码批量生成工具，可自定义长度与字符类型，一键生成高强度密码。</div>
+        <div class="meta"><span>bmcx.com</span><span class="go">前往 →</span></div>
+      </a>
+    </div>
+  </section>
+
   <!-- 影视 -->
-  <section id="cat-1" data-name="影视资源">
+  <section id="cat-2" data-name="影视资源">
     <div class="sec-head">
       <div class="ic">🎬</div><h2>影视资源</h2>
       <small>免费最新电影 / 追剧 / 安卓 App</small>
@@ -136,7 +261,7 @@ footer p{margin:6px 0}
   </section>
 
   <!-- 游戏 -->
-  <section id="cat-2" data-name="游戏资源">
+  <section id="cat-3" data-name="游戏资源">
     <div class="sec-head">
       <div class="ic">🎮</div><h2>游戏资源</h2>
       <small>Switch · PC · 模拟器 · PS</small>
@@ -153,7 +278,7 @@ footer p{margin:6px 0}
         <div class="meta"><span>vip.gamers520.com</span><span class="go">前往 →</span></div>
       </a>
       <a class="card" href="https://laoquzhang.com" target="_blank" rel="noopener">
-        <div class="top"><div class="fav">老</div><h3>老曲站 · GAMER520 官方公告</h3></div>
+        <div class="top"><div class="fav">老</div><h3>老区长 · GAMER520 官方公告</h3></div>
         <div class="desc">官方公告与资源发布阵地，Switch、PC、PS 相关资源同步。</div>
         <div class="meta"><span>laoquzhang.com</span><span class="go">前往 →</span></div>
       </a>
@@ -161,7 +286,7 @@ footer p{margin:6px 0}
   </section>
 
   <!-- 网盘学习 -->
-  <section id="cat-3" data-name="网盘与学习资源">
+  <section id="cat-4" data-name="网盘与学习资源">
     <div class="sec-head">
       <div class="ic">🗂️</div><h2>网盘与学习资源</h2>
       <small>大圣盘 · 夸克资源社区 · 电子书籍</small>
@@ -226,7 +351,7 @@ footer p{margin:6px 0}
   </section>
 
   <!-- 破解 -->
-  <section id="cat-4" data-name="破解资源">
+  <section id="cat-5" data-name="破解资源">
     <div class="sec-head">
       <div class="ic">🛠️</div><h2>破解资源</h2>
       <small>破解社区 · 绿色软件 · 逆向学习</small>
@@ -284,7 +409,7 @@ footer p{margin:6px 0}
       </a>
       <a class="card" href="https://www.dayanzai.me/" target="_blank" rel="noopener">
         <div class="top"><div class="fav">大</div><h3>大眼仔旭</h3></div>
-        <div class="desc">专注开源软件、视频剪辑、免费商用字体、录屏、思维导图等办公资源。</div>
+        <div class="desc">老牌绿色软件与汉化资源站，覆盖办公、视频剪辑、免费商用字体、录屏、思维导图，兼更 Win / macOS 系统与安卓应用。</div>
         <div class="meta"><span>dayanzai.me</span><span class="go">前往 →</span></div>
       </a>
       <a class="card" href="https://masuit.org/" target="_blank" rel="noopener">
@@ -302,11 +427,6 @@ footer p{margin:6px 0}
         <div class="desc">专注 Mac 破解资源的分享与下载，macOS 应用集中地。</div>
         <div class="meta"><span>macked.app</span><span class="go">前往 →</span></div>
       </a>
-      <a class="card" href="https://sysin.org" target="_blank" rel="noopener">
-        <div class="top"><div class="fav">S</div><h3>sysin · SYStem INside</h3></div>
-        <div class="desc">系统与虚拟化资源，VMware、ESXi、macOS 镜像与教程。</div>
-        <div class="meta"><span>sysin.org</span><span class="go">前往 →</span></div>
-      </a>
       <a class="card" href="https://cn-sec.com/" target="_blank" rel="noopener">
         <div class="top"><div class="fav">安</div><h3>CN-SEC 中文网</h3></div>
         <div class="desc">聚合网络安全、存储安全技术文章，融合安全最新讯息。</div>
@@ -316,6 +436,11 @@ footer p{margin:6px 0}
         <div class="top"><div class="fav">4M</div><h3>是免费 .NET</h3></div>
         <div class="desc">免费资源博客，软件、素材与实用工具分享。</div>
         <div class="meta"><span>4mf.net</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://www.ifmac.cn/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">M</div><h3>iFmac · Mac 软件分享</h3></div>
+        <div class="desc">Mac 平台软件资源站，苹果电脑常用应用与破解资源整理。</div>
+        <div class="meta"><span>ifmac.cn</span><span class="go">前往 →</span></div>
       </a>
     </div>
   </section>
@@ -343,7 +468,6 @@ footer p{margin:6px 0}
   var total = document.getElementById('total');
   total.textContent = cards.length;
 
-  // 分类筛选标签
   var tags = document.getElementById('tags');
   var all = document.createElement('div');
   all.className = 'tag on'; all.textContent = '全部';
@@ -387,7 +511,6 @@ footer p{margin:6px 0}
 
   q.addEventListener('input', apply);
 
-  // 回到顶部
   var top = document.getElementById('top');
   window.addEventListener('scroll', function(){
     top.classList.toggle('show', window.scrollY > 400);
