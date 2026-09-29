@@ -7,8 +7,8 @@ if not exist "%~dp0index.html" (
   pause
   exit /b 1
 )
-if not exist "%~dp0cr.html" (
-  echo [ERROR] cr.html not found next to this script.
+if not exist "%~dp0cr\index.html" (
+  echo [ERROR] cr\index.html not found next to this script.
   pause
   exit /b 1
 )
@@ -26,10 +26,10 @@ if errorlevel 1 (
   exit /b 1
 )
 
-"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -File "%~dp0install-nav-shortcut.ps1" -IndexHtmlPath "%~dp0cr.html" -ShortcutName "CR-Navigator.url" -NoOpen
+"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -File "%~dp0install-nav-shortcut.ps1" -IndexHtmlPath "%~dp0cr\index.html" -ShortcutName "CR-Navigator.url" -NoOpen
 if errorlevel 1 (
   echo.
-  echo PowerShell step failed for cr.html.
+  echo PowerShell step failed for cr\index.html.
   pause
   exit /b 1
 )
