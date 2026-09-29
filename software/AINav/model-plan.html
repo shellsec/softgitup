@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <link rel="stylesheet" href="site-mobile.css">
   <title>AI 模型旗舰横评对比 — 国内+海外 — AINav</title>
-  <meta name="description" content="11 款 AI 旗舰模型横评对比：DeepSeek-V4-Pro/Flash、GLM-5.2、Kimi K2.6、Qwen 3.6、MiniMax M2.7、Gemma 4、GPT-5、Claude Fable 5/Opus 4.8、Gemini 3.1 Pro、Grok 4.5；含技术亮点、场景矩阵与选型建议。">
+  <meta name="description" content="2026-09 旗舰横评：Claude Opus 5.5 / Fable 5.1、GPT-6 Sol/Luna、Grok 4.7、Kimi K3、MiMo-V2.6、Hy4、GLM-5.3 / FlashX、DeepSeek-V4.1-Flash。决策模型见专题页。">
   <link rel="canonical" href="https://aiv123.com/model-plan.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="AI 模型旗舰横评对比 — 国内+海外">
-  <meta property="og:description" content="11 款 AI 旗舰模型横评 · 国内 vs 海外 · 含 Grok 4.5 · 技术亮点与场景矩阵。">
+  <meta property="og:description" content="2026-09 旗舰横评 · 含 Opus 5.5、GPT-6 Sol、Grok 4.7、MiMo-V2.6、DeepSeek Flash。">
   <meta property="og:url" content="https://aiv123.com/model-plan.html">
   <meta property="og:site_name" content="AINav">
   <meta name="twitter:card" content="summary">
@@ -62,6 +62,7 @@
     .badge-gemini { background: rgba(63,185,80,0.15); color: var(--accent2); border: 1px solid rgba(63,185,80,0.3); }
     .badge-overseas { background: rgba(167,139,250,0.15); color: var(--overseas); border: 1px solid rgba(167,139,250,0.3); }
     .badge-hot { background: rgba(255,107,107,0.15); color: var(--hot); border: 1px solid rgba(255,107,107,0.3); }
+    .badge-hy { background: rgba(0,82,217,0.15); color: #3b82f6; border: 1px solid rgba(0,82,217,0.3); }
     .cp-platforms { display: grid; grid-template-columns: 1fr; gap: 1.2rem; }
     @media (min-width: 52rem) { .cp-platforms { grid-template-columns: 1fr 1fr; } }
     .cp-platform { border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; }
@@ -111,24 +112,23 @@
 
   <div class="cp-wrap">
     <div style="margin-bottom:1rem;padding:.55rem .85rem;border-radius:8px;border:1px solid var(--border);background:var(--card);display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.35rem .6rem;font-size:.84rem;line-height:1.5;">
-      <strong style="color:var(--text)">OpenAI: GPT-5</strong> <span style="color:var(--muted)">·</span>
-      <strong style="color:var(--text)">Anthropic: Claude Opus 4.8</strong> <span style="color:var(--muted)">·</span>
-      <strong style="color:var(--text)">Google: Gemini 3.1 Pro</strong> <span style="color:var(--muted)">· 国内直连免梯</span>
-      <span class="plan-promo-code" data-code="AFF_BB0FNC" style="color:var(--accent2);font-weight:600;cursor:pointer" title="点击复制优惠码">$2优惠码 AFF_BB0FNC</span>
-      <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">立即注册</a>
+      <strong style="color:var(--accent2)">合作推广</strong> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">GPT / Claude / Gemini</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">100+ 模型</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">文本 / 图像 / 视频</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">支持缓存</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">不留存对话</span> <span style="color:var(--muted)">·</span> <span style="color:var(--accent2);font-weight:600">首充赠 $3</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">立即注册</a>
     </div>
     <h1>🧠 AI 模型选型横评</h1>
-    <p class="cp-subtitle">11 款 AI 旗舰模型技术特性 × 适用场景映射：DeepSeek-V4-Pro、GLM-5.2、Kimi K2.6、Qwen 3.6、MiniMax M2.7、Gemma 4、GPT-5、Claude Fable 5/Opus 4.8、Gemini 3.1 Pro、Grok 4.5。</p>
-    <p class="cp-updated-line"><span class="cp-updated">最后更新：2026-07-15</span></p>
+    <p class="cp-subtitle">2026-09 旗舰：Claude Opus 5.5 / Fable 5.1、GPT-6 Sol / Luna、Grok 4.7、Kimi K3、MiMo-V2.6、Step 5 Preview、Hy4、GLM-5.3 / FlashX、<strong>DeepSeek-V4.1-Flash</strong>（API <code>deepseek-flash</code>）。要分类/路由/打分这类<strong>非聊天</strong>决策，另见 <a href="decision-model-plan.html">决策模型</a>。Agent 名次对照 <a href="https://arena.ai/leaderboard/agent" target="_blank" rel="noopener noreferrer">Arena Agent 榜</a>（2026-09-05）。</p>
+    <p class="cp-updated-line"><span class="cp-updated">最后更新：2026-09-23</span> · 刊例以各厂商价表为准</p>
+    <p style="margin:0 0 1rem;font-size:.88rem;">不确定选哪个？先用 <a href="model-finder.html" style="font-weight:700;">模型推荐器</a> 答 3 个问题，再回来看横评。本机跑权重（Ollama / 显存 / GGUF）看 <a href="local-model-plan.html" style="font-weight:700;">本地模型</a>。</p>
 
     <div class="cp-legend">
       <span class="cp-legend-item"><span class="cp-badge badge-deepseek">DeepSeek</span> 长上下文</span>
-      <span class="cp-legend-item"><span class="cp-badge badge-glm">GLM</span> 长程 Coding</span>
+      <span class="cp-legend-item"><span class="cp-badge badge-glm">GLM-5.3</span> 长程 Coding</span>
       <span class="cp-legend-item"><span class="cp-badge badge-kimi">Kimi</span> Agent</span>
-      <span class="cp-legend-item"><span class="cp-badge badge-qwen">Qwen</span> 性价比</span>
+      <span class="cp-legend-item"><span class="cp-badge badge-hy">Hy4</span> 开源 Agent</span>
+      <span class="cp-legend-item"><span class="cp-badge badge-qwen">Qwen 3.8</span> 开源旗舰</span>
       <span class="cp-legend-item"><span class="cp-badge badge-minimax">MiniMax</span> 速度</span>
       <span class="cp-legend-item"><span class="cp-badge badge-gemma">Gemma</span> 端侧</span>
-      <span class="cp-legend-item"><span class="cp-badge badge-overseas">GPT/Claude/Gemini/Grok</span> 海外旗舰</span>
+      <span class="cp-legend-item"><span class="cp-badge badge-overseas">Fable 5.1 / Opus 5.5 / GPT-6 / Grok 4.7</span> 海外旗舰</span>
+      <span class="cp-legend-item"><a href="decision-model-plan.html" class="cp-badge badge-new" style="text-decoration:none;">决策模型</a> Jev / Laya</span>
     </div>
 
     <div class="cp-section-hd"><span class="cp-flag">🇨🇳</span> 国内旗舰模型</div>
@@ -136,53 +136,125 @@
 
       <div class="cp-platform">
         <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://api-docs.deepseek.com/news/news260910" target="_blank" rel="noopener noreferrer">DeepSeek-V4.1-Flash</a></span>
+          <span class="cp-badge badge-deepseek">速度 / 多模态</span>
+          <span class="cp-badge badge-hot">🆕 9/10</span>
+        </div>
+        <div class="cp-platform-body">
+          <strong>核心技术：</strong><span class="tech-tag">552B MoE</span><span class="tech-tag">非对称 Encoder-Decoder</span><span class="tech-tag">原生视觉</span><span class="tech-tag">API <code>deepseek-flash</code></span><br>
+          <strong class="good">✓ 天然适合：</strong>便宜快调用、编程 / Agent 轻量循环、图文理解、Strix 一类<strong>快扫</strong><br>
+          <strong class="bad">✗ 天然不适合：</strong>当成「深扫最强」；端侧手机（这是云 API / 大 MoE）<br>
+          <strong>设计理念：</strong>2026-09-10 上线，官方称输入激活约 8B、输出约 16B。新接入一律用 <code>deepseek-flash</code>。旧 ID <code>deepseek-v4-flash</code> 等兼容转发到 V4.1-Flash。官方说明：自 <strong>2026-09-14 04:00 UTC</strong> 起，<code>deepseek-v4-pro</code> 请求暂时也转发到 V4.1-Flash（按 Flash 计费），直到 V4.1-Pro 上线——选型别把「Pro」字样当仍可用的独立强档
+        </div>
+      </div>
+
+      <div class="cp-platform">
+        <div class="cp-platform-head">
           <span class="cp-platform-name"><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro" target="_blank" rel="noopener noreferrer">DeepSeek-V4-Pro</a></span>
-          <span class="cp-badge badge-deepseek">长上下文</span>
+          <span class="cp-badge badge-deepseek">长上下文 · 过渡</span>
         </div>
         <div class="cp-platform-body">
           <strong>核心技术：</strong><span class="tech-tag">1.6T MoE</span><span class="tech-tag">CSA+HCA</span><span class="tech-tag">1M 上下文</span><span class="tech-tag">Think Max</span><br>
-          <strong class="good">✓ 天然适合：</strong>开源 Agent 底座、百万 token 论文/代码库、长程研究复现<br>
-          <strong class="bad">✗ 天然不适合：</strong>极低延迟对话、端侧部署、强合规私有化未评估场景<br>
-          <strong>设计理念：</strong>用稀疏注意力把 1M 上下文做成「可用」而非「纸面参数」；V4-Flash 适合轻量部署
+          <strong class="good">✓ 天然适合：</strong>开源权重研究复现、历史文档仍写 Pro 的长上下文场景（以你实际拿到的推理端为准）<br>
+          <strong class="bad">✗ 天然不适合：</strong>默认假设官网 API 的 <code>deepseek-v4-pro</code> 仍是独立 Pro 权重——见上条 Flash 转发说明<br>
+          <strong>设计理念：</strong>稀疏注意力把 1M 做成「可用」。权重仍在 HF；云 API 侧以官方 changelog 为准。Strix 深扫更稳的默认仍是 <code>glm-5.3</code>，别死磕已转发的 Pro ID
         </div>
       </div>
 
       <div class="cp-platform">
         <div class="cp-platform-head">
-          <span class="cp-platform-name"><a href="https://z.ai/blog/glm-5.2" target="_blank" rel="noopener noreferrer">GLM-5.2</a></span>
+          <span class="cp-platform-name"><a href="https://z.ai/blog/glm-5.3" target="_blank" rel="noopener noreferrer">GLM-5.3</a></span>
           <span class="cp-badge badge-glm">长程 Coding</span>
+          <span class="cp-badge badge-hot">🆕 8/14</span>
         </div>
         <div class="cp-platform-body">
-          <strong>核心技术：</strong><span class="tech-tag">Solid 1M</span><span class="tech-tag">IndexShare</span><span class="tech-tag">MIT 开源</span><span class="tech-tag">长程 RL</span><br>
-          <strong class="good">✓ 天然适合：</strong>项目级工程上下文、数小时连续 Coding、对标 Opus 4.8 的国产长程任务<br>
-          <strong class="bad">✗ 天然不适合：</strong>峰值时段额度 3× 消耗、纯闲聊低延迟场景<br>
-          <strong>设计理念：</strong>Coding Plan 全量开放；Fable 5 暂停后的务实国产替代路线
+          <strong>核心技术：</strong><span class="tech-tag">同 5.2 底座</span><span class="tech-tag">后训练加码</span><span class="tech-tag">常开思考</span><span class="tech-tag">Coding Plan 全量</span><br>
+          <strong class="good">✓ 天然适合：</strong>项目级工程、终端 Agent、Strix 默认深扫、对标 Opus 档的国产长程 Coding<br>
+          <strong class="bad">✗ 天然不适合：</strong>关掉思考的极低延迟闲聊（思考不可关，只能调 low/high/max）<br>
+          <strong>设计理念：</strong>底座仍是 GLM-5.2；8/14 只加后训练。Coding Plan 用户已切到 5.3。速度档另见下方 FlashX
         </div>
       </div>
 
       <div class="cp-platform">
         <div class="cp-platform-head">
-          <span class="cp-platform-name"><a href="https://kimi.moonshot.cn" target="_blank" rel="noopener noreferrer">Kimi K2.6</a></span>
+          <span class="cp-platform-name"><a href="https://z.ai/" target="_blank" rel="noopener noreferrer">GLM-5.3-Flash / FlashX</a></span>
+          <span class="cp-badge badge-glm">速度档</span>
+          <span class="cp-badge badge-hot">🆕 9/18</span>
+        </div>
+        <div class="cp-platform-body">
+          <strong>核心技术：</strong><span class="tech-tag">原生多模态 Flash</span><span class="tech-tag">FlashX 高吞吐</span><span class="tech-tag">API 已上线</span><br>
+          <strong class="good">✓ 天然适合：</strong>要快、要控成本的浅扫 / 高并发；FlashX 官方称最高约 <strong>200 tokens/s</strong>（ainews / AIBase 2026-09-18）<br>
+          <strong class="bad">✗ 天然不适合：</strong>顶替 GLM-5.3 全量深扫与长程工程；价格刊例以智谱官方为准，本站不编<br>
+          <strong>设计理念：</strong>Flash 曾以 Ox Alpha 匿名亮相；FlashX 是同线提速版。Strix 更省档可写 <code>glm-5.3-flash</code>，默认深扫仍用 <code>glm-5.3</code>
+        </div>
+      </div>
+
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://www.kimi.com/zh-cn/blog/kimi-k3" target="_blank" rel="noopener noreferrer">Kimi K3</a></span>
           <span class="cp-badge badge-kimi">Agent 深度</span>
+          <span class="cp-badge badge-new">🆕 2.8T</span>
         </div>
         <div class="cp-platform-body">
-          <strong>核心技术：</strong><span class="tech-tag">300 并行子 Agent</span><span class="tech-tag">4000 步协作</span><span class="tech-tag">96.6% 工具成功率</span><br>
-          <strong class="good">✓ 天然适合：</strong>多步工作流、检索+推理+执行、复杂 Agent 编排<br>
-          <strong class="bad">✗ 天然不适合：</strong>纯单轮问答、极致低价批量推理<br>
-          <strong>设计理念：</strong>Agent 深度与广度优先，复杂任务需要多个专家协作
+          <strong>核心技术：</strong><span class="tech-tag">2.8T 开源</span><span class="tech-tag">1M 上下文</span><span class="tech-tag">原生多模态</span><span class="tech-tag">Arena Agent #7</span><br>
+          <strong class="good">✓ 天然适合：</strong>长仓工程、多步 Agent、知识工作与深度推理<br>
+          <strong class="bad">✗ 天然不适合：</strong>极致低价批量（可用 K2.x / Flash 档）<br>
+          <strong>设计理念：</strong>开源旗舰；Kimi Code / Work / API（<code>kimi-k3</code>）可用。2026-09 起有 <strong>Kimi Code 桌面版</strong>（macOS / Windows）。Arena Agent（2026-09-05）K3 Max 第 7
         </div>
       </div>
 
       <div class="cp-platform">
         <div class="cp-platform-head">
-          <span class="cp-platform-name"><a href="https://tongyi.aliyun.com/qianwen/" target="_blank" rel="noopener noreferrer">Qwen 3.6</a></span>
-          <span class="cp-badge badge-qwen">性价比</span>
+          <span class="cp-platform-name"><a href="https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL" target="_blank" rel="noopener noreferrer">Xiaomi MiMo-V2.6</a></span>
+          <span class="cp-badge badge-hot">🆕 9/22</span>
+          <span class="cp-badge badge-qwen">开源全模态</span>
         </div>
         <div class="cp-platform-body">
-          <strong>核心技术：</strong><span class="tech-tag">36T 数据</span><span class="tech-tag">自我反思 RL</span><span class="tech-tag">1M 上下文</span><span class="tech-tag">$0.29/M</span><br>
-          <strong class="good">✓ 天然适合：</strong>代码/多语言任务、API 批量调用、成本敏感的海量推理<br>
-          <strong class="bad">✗ 天然不适合：</strong>顶级 Agent 深度、端侧部署<br>
-          <strong>设计理念：</strong>数据规模 + 低价 API，「足够好且足够便宜」
+          <strong>核心技术：</strong><span class="tech-tag">Pro / Flash</span><span class="tech-tag">AA 指数约 46</span><span class="tech-tag">HF 开源</span><br>
+          <strong class="good">✓ 天然适合：</strong>要开源全模态底座、Agent 基准接近 Opus 5 / 上一代 Sol 档<br>
+          <strong class="bad">✗ 天然不适合：</strong>对标 Fable 5.1 / GPT-6 Astra；Token Plan 刊例仍以官网 V2.5 为准<br>
+          <strong>设计理念：</strong>2026-09-22 开源 Pro/Flash。多家评测称 AA 综合智能指数约 46，开源侧很靠前，仍低于顶级闭源。权重见 Hugging Face XiaomiMiMo
+        </div>
+      </div>
+
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://platform.stepfun.com/" target="_blank" rel="noopener noreferrer">Step 5 Preview</a></span>
+          <span class="cp-badge badge-new">🆕 9/20</span>
+        </div>
+        <div class="cp-platform-body">
+          <strong>核心技术：</strong><span class="tech-tag">600B MoE</span><span class="tech-tag">激活 ~27B</span><span class="tech-tag">1M 上下文</span><span class="tech-tag">原生多模态</span><br>
+          <strong class="good">✓ 天然适合：</strong>长程 Agentic 任务、要开源性价比逼近 K3 档<br>
+          <strong class="bad">✗ 天然不适合：</strong>把 Preview 当最终 GA；完整权重节奏以阶跃公告为准<br>
+          <strong>设计理念：</strong>阶跃星辰 2026-09-20 起 API / Studio 可用。套餐池见 <a href="coding-plan.html">编程套餐</a> Step Plan
+        </div>
+      </div>
+
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://www.alibabacloud.com/blog/qwen3-8-max-a-new-bar-for-coding-and-cowork_603421" target="_blank" rel="noopener noreferrer">Qwen 3.8 Max</a></span>
+          <span class="cp-badge badge-qwen">开源旗舰</span>
+          <span class="cp-badge badge-hot">🆕 8/3</span>
+        </div>
+        <div class="cp-platform-body">
+          <strong>核心技术：</strong><span class="tech-tag">2.4T MoE</span><span class="tech-tag">Max 级开源</span><span class="tech-tag">1M 上下文</span><span class="tech-tag">$2/$6</span><br>
+          <strong class="good">✓ 天然适合：</strong>编码/Cowork、长程任务、要开源权重的旗舰替代<br>
+          <strong class="bad">✗ 天然不适合：</strong>一张 24GB 卡（那是 <a href="local-model-plan.html">Qwen3.8-27B</a>）；纯图便宜批量可仍看 3.6 API<br>
+          <strong>设计理念：</strong>第一次把 Max 档权重开源；API 约 $2/$6 每百万 token。消费级本地请走 27B，不要找 Max 的 GGUF。Arena Agent #16
+        </div>
+      </div>
+
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://huggingface.co/tencent/Hy4-preview" target="_blank" rel="noopener noreferrer">Tencent Hy4 preview</a></span>
+          <span class="cp-badge badge-hy">开源 Agent</span>
+          <span class="cp-badge badge-hot">🆕 8/28</span>
+        </div>
+        <div class="cp-platform-body">
+          <strong>核心技术：</strong><span class="tech-tag">770B MoE</span><span class="tech-tag">49B 激活</span><span class="tech-tag">1M 上下文</span><span class="tech-tag">Apache 2.0</span><span class="tech-tag">$0.83/$2.50</span><br>
+          <strong class="good">✓ 天然适合：</strong>国内直连的开源 Agent、编码/办公、要低价长上下文的生产力任务<br>
+          <strong class="bad">✗ 天然不适合：</strong>把 preview 当最终 GA；端侧单卡（这是云端 MoE）<br>
+          <strong>设计理念：</strong>混元 Hy 线预览权重。Arena Agent（2026-09-05）排第 10，任务成本中位约 $0.27。API / 元宝 / CodeBuddy / OpenRouter 可调用；权重在 Hugging Face
         </div>
       </div>
 
@@ -208,7 +280,7 @@
           <strong>核心技术：</strong><span class="tech-tag">E2B 端侧</span><span class="tech-tag">PLE 多模态</span><span class="tech-tag">140+ 语言</span><span class="tech-tag">Apache 2.0</span><br>
           <strong class="good">✓ 天然适合：</strong>端侧 AI 助手、隐私本地、离线翻译、IoT<br>
           <strong class="bad">✗ 天然不适合：</strong>超大模型搜索、1M 上下文长任务<br>
-          <strong>设计理念：</strong>端侧 AI 的「平台级能力」，车机/IoT/手机端为主战场
+          <strong>设计理念：</strong>端侧 AI 的「平台级能力」，车机/IoT/手机端为主战场。手机运行时与能干活小模型见 <a href="edge-model-plan.html">端侧模型</a>；桌面 GGUF / 显存分档见 <a href="local-model-plan.html">本地模型横评</a>
         </div>
       </div>
     </div>
@@ -218,75 +290,81 @@
 
       <div class="cp-platform overseas">
         <div class="cp-platform-head">
-          <span class="cp-platform-name"><a href="https://chatgpt.com" target="_blank" rel="noopener noreferrer">GPT-5 (OpenAI)</a></span>
+          <span class="cp-platform-name"><a href="https://openai.com/index/introducing-gpt-6-sol-and-luna" target="_blank" rel="noopener noreferrer">GPT-6 Sol / Luna (OpenAI)</a></span>
           <span class="cp-badge badge-gpt">通用旗舰</span>
+          <span class="cp-badge badge-hot">🆕 9/23</span>
           <span class="cp-badge badge-overseas">海外</span>
         </div>
         <div class="cp-platform-body">
-          <strong>核心技术：</strong><span class="tech-tag">多模态原生</span><span class="tech-tag">内置 CoT</span><span class="tech-tag">工具调用</span><br>
-          <strong class="good">✓ 天然适合：</strong>通用对话、创意写作、多模态理解、插件/Agent 生态<br>
-          <strong class="bad">✗ 天然不适合：</strong>超长上下文(对比 1M 档)、国内直连、端侧部署<br>
-          <strong>设计理念：</strong>通用智能优先，一个模型覆盖最多场景
+          <strong>核心技术：</strong><span class="tech-tag">Sol / Luna</span><span class="tech-tag">对齐 Astra 训练法</span><span class="tech-tag">日常工作降本</span><br>
+          <strong class="good">✓ 天然适合：</strong>ChatGPT 日常付费默认、要接近旗舰但更省钱的编程/办公/Agent<br>
+          <strong class="bad">✗ 天然不适合：</strong>无妥协极限仍选 <strong>GPT-6 Astra</strong>；国内直连需网关<br>
+          <strong>设计理念：</strong>2026-09-23 发布。OpenAI 称 Astra 仍是整体最强；Sol / Luna 把接近旗舰的能力放到更快、更省的尺寸。报道称 API 价较 GPT-5.6 促销价约降一半——<strong>绝对刊例以 OpenAI 价表为准</strong>，本站不写死
         </div>
       </div>
 
       <div class="cp-platform overseas">
         <div class="cp-platform-head">
-          <span class="cp-platform-name"><a href="https://www.anthropic.com/claude/fable" target="_blank" rel="noopener noreferrer">Claude Fable 5</a></span>
+          <span class="cp-platform-name"><a href="https://www.anthropic.com/claude-fable-and-mythos-5-1" target="_blank" rel="noopener noreferrer">Claude Fable 5.1</a></span>
           <span class="cp-badge badge-claude">长程旗舰</span>
-          <span class="cp-badge badge-hot">暂停中</span>
           <span class="cp-badge badge-overseas">海外</span>
         </div>
         <div class="cp-platform-body">
-          <strong>核心技术：</strong><span class="tech-tag">1M 上下文</span><span class="tech-tag">128K 输出</span><span class="tech-tag">长程 Agent</span><br>
-          <strong class="good">✓ 天然适合：</strong>数小时/数天异步长程任务（6/9 发布时为最强 GA 模型）<br>
-          <strong class="bad">✗ 天然不适合：</strong>6/12 起全球暂停访问；敏感域回落 Opus 4.8<br>
-          <strong>设计理念：</strong>能力 &gt; 速度；恢复前请用 Opus 4.8 / Sonnet 4.6，国产侧用 GLM-5.2
+          <strong>核心技术：</strong><span class="tech-tag">1M 上下文</span><span class="tech-tag">128K 输出</span><span class="tech-tag">缓存读 $0.25</span><span class="tech-tag">Arena Agent #1</span><br>
+          <strong class="good">✓ 天然适合：</strong>数小时/数天异步长程任务、Agent 编排、复杂知识工作；<a href="https://arena.ai/leaderboard/agent" target="_blank" rel="noopener noreferrer">Arena Agent</a> 总分第一（2026-09-05）<br>
+          <strong class="bad">✗ 天然不适合：</strong>日常编码（先用 Opus 5.5）；生科/攻防网安仍受安全分类器约束，可信访问走 Mythos 5.1<br>
+          <strong>设计理念：</strong>9/1 接档 Fable 5。刊例仍 <strong>$10/$50</strong>，缓存命中 <strong>$0.25</strong>。日常稳妥档优先 Opus 5.5
         </div>
       </div>
 
       <div class="cp-platform overseas">
         <div class="cp-platform-head">
-          <span class="cp-platform-name"><a href="https://www.anthropic.com/claude" target="_blank" rel="noopener noreferrer">Claude Opus 4.8</a></span>
+          <span class="cp-platform-name"><a href="https://www.anthropic.com/news/claude-opus-5" target="_blank" rel="noopener noreferrer">Claude Opus 5.5</a></span>
           <span class="cp-badge badge-claude">深度推理</span>
+          <span class="cp-badge badge-hot">🆕 9/23</span>
           <span class="cp-badge badge-overseas">海外</span>
         </div>
         <div class="cp-platform-body">
-          <strong>核心技术：</strong><span class="tech-tag">Constitutional AI</span><span class="tech-tag">200K+ 上下文</span><span class="tech-tag">代码/推理</span><br>
-          <strong class="good">✓ 天然适合：</strong>Fable 5 暂停期间主力；复杂代码、长文档、学术研究<br>
-          <strong class="bad">✗ 天然不适合：</strong>中文略弱、需梯子、端侧部署<br>
-          <strong>设计理念：</strong>质量 &gt; 速度；对齐与安全优先的可靠输出
+          <strong>核心技术：</strong><span class="tech-tag">Claude 5.5 首款</span><span class="tech-tag">近 Fable 5.1</span><span class="tech-tag">成本↓约40%</span><span class="tech-tag">速度↑约30%</span><br>
+          <strong class="good">✓ 天然适合：</strong>日常长程 Coding / Claude Code 主力；要接近 Fable 智商但更省<br>
+          <strong class="bad">✗ 天然不适合：</strong>中文略弱、需梯子、端侧；绝对刊例以 Anthropic 价表为准<br>
+          <strong>设计理念：</strong>2026-09-23 上线 Claude 与主要云。官方称多数任务接近 Fable 5.1，典型任务成本较 Opus 5 约降 40%、输出约提速 30%。刊例以 Anthropic 为准；上代 Opus 5（$5/$25）可作对照
         </div>
       </div>
 
       <div class="cp-platform overseas">
         <div class="cp-platform-head">
-          <span class="cp-platform-name"><a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer">Gemini 3.1 Pro</a></span>
-          <span class="cp-badge badge-gemini">多模态旗舰</span>
+          <span class="cp-platform-name"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/" target="_blank" rel="noopener noreferrer">Gemini 3.8 Flash</a></span>
+          <span class="cp-badge badge-gemini">速度/Agent</span>
           <span class="cp-badge badge-overseas">海外</span>
         </div>
         <div class="cp-platform-body">
-          <strong>核心技术：</strong><span class="tech-tag">1M 上下文</span><span class="tech-tag">原生多模态</span><span class="tech-tag">Workspace 集成</span><br>
-          <strong class="good">✓ 天然适合：</strong>多模态理解、视频/图像/文档、Google 生态与搜索增强<br>
-          <strong class="bad">✗ 天然不适合：</strong>中文代码场景弱于 Claude/GLM、需梯子<br>
-          <strong>设计理念：</strong>多模态优先 &gt; 纯文本；AI 融入 Google 工作流
+          <strong>核心技术：</strong><span class="tech-tag">$0.75/$3.75 引入至 12/31</span><span class="tech-tag">长程工程</span><span class="tech-tag">2027-01-01 翻倍</span><br>
+          <strong class="good">✓ 天然适合：</strong>软件工程、多步 Agent、要便宜速度的 Google 生态<br>
+          <strong class="bad">✗ 天然不适合：</strong>把 Flash 当 Pro 用；引入价只到 <strong>2026-12-31</strong>，次日变 $1.50/$7.50<br>
+          <strong>设计理念：</strong>接档 3.7，同价同速、推理与编码加码。ID <code>gemini-3.8-flash</code>。1M 研究/视频理解仍可看 3.1 Pro
         </div>
       </div>
 
       <div class="cp-platform overseas">
         <div class="cp-platform-head">
-          <span class="cp-platform-name"><a href="https://x.ai/news/grok-4-5" target="_blank" rel="noopener noreferrer">Grok 4.5 (xAI)</a></span>
+          <span class="cp-platform-name"><a href="https://x.ai/" target="_blank" rel="noopener noreferrer">Grok 4.7 (SpaceXAI / xAI)</a></span>
           <span class="cp-badge badge-overseas">海外</span>
-          <span class="cp-badge badge-hot">🆕 2026-07</span>
+          <span class="cp-badge badge-hot">🆕 9/21</span>
         </div>
         <div class="cp-platform-body">
-          <strong>核心技术：</strong><span class="tech-tag">编程/Agent</span><span class="tech-tag">可调 reasoning</span><span class="tech-tag">工具调用</span><span class="tech-tag">高性价比 API</span><br>
-          <strong class="good">✓ 天然适合：</strong>写代码、agentic 任务、知识工作；Cursor 全套餐与 Grok Build 可用<br>
-          <strong class="bad">✗ 天然不适合：</strong>欧盟可用性可能滞后；需对照官网区域限制<br>
-          <strong>设计理念：</strong>与 Cursor 联合训练向；API 约 $2/$6 每百万 token，强调单位成本智能密度
+          <strong>核心技术：</strong><span class="tech-tag">~2.1T</span><span class="tech-tag">$2/$6</span><span class="tech-tag">长任务</span><span class="tech-tag">编程/知识工作</span><br>
+          <strong class="good">✓ 天然适合：</strong>写代码、数小时级长跑 Agent、要高性价比旗舰<br>
+          <strong class="bad">✗ 天然不适合：</strong>对标 Claude Fable 5.1 / GPT-6 Astra 的极限档；长上下文溢价规则以 xAI 价表为准<br>
+          <strong>设计理念：</strong>2026-09-21/22 上线。主打编程与知识工作长任务；报道称速度约同类两倍、价格约旗舰一半，API 约 $2/$6 每百万 token（与 4.6 刊例同量级）。综合仍逊于 Fable 5.1 / Astra
         </div>
       </div>
     </div>
+
+    <div class="cp-section-hd" id="decision"><span class="cp-flag">⚡</span> 决策模型（非聊天）</div>
+    <p style="font-size:.85rem;line-height:1.7;margin:0 0 1rem;padding:.75rem 1rem;border:1px solid var(--border);border-radius:10px;background:var(--card);">
+      分类、路由、打分、是否分支这类<strong>给程序用的结构化决策</strong>，不要和聊天旗舰混选。闭源云 API 看 TypeSafe <strong>Jev</strong>；开源权重看 <strong>Laya</strong>（Apache 2.0）等。详见专题 <a href="decision-model-plan.html" style="font-weight:700;">决策模型</a>。
+    </p>
 
     <div class="cp-section-hd"><span class="cp-flag">📊</span> 技术特性 × 场景速查表</div>
     <div class="cp-matrix-wrap">
@@ -295,28 +373,59 @@
           <tr><th>模型</th><th>核心技术亮点</th><th>天然适合</th><th>天然不适合</th></tr>
         </thead>
         <tbody>
-          <tr><td class="model-name">DeepSeek-V4-Pro</td><td>1.6T MoE · CSA+HCA · 1M · Think Max</td><td class="good">开源 Agent 长上下文、研究复现</td><td class="bad">极低延迟、端侧</td></tr>
-          <tr><td class="model-name">GLM-5.2</td><td>IndexShare · Solid 1M · MIT · 长程 Coding RL</td><td class="good">项目级工程、对标 Opus 4.8 的国产 Coding</td><td class="bad">峰值 3× 额度</td></tr>
-          <tr><td class="model-name">Kimi K2.6</td><td>300 子 Agent · 4000 步协作 · 96.6% 工具率</td><td class="good">复杂多步工作流、Agent 编排</td><td class="bad">纯单轮低价批量</td></tr>
-          <tr><td class="model-name">Qwen 3.6</td><td>36T 数据 · 反思 RL · 1M · $0.29/M</td><td class="good">代码/多语言、高性价比 API</td><td class="bad">顶级 Agent 深度</td></tr>
+          <tr><td class="model-name">DeepSeek-V4.1-Flash</td><td>552B MoE · API <code>deepseek-flash</code> · 原生视觉</td><td class="good">便宜快、轻量 Agent、快扫</td><td class="bad">深扫最强、端侧</td></tr>
+          <tr><td class="model-name">DeepSeek-V4-Pro</td><td>权重仍在 · API ID 过渡期可能转发 Flash</td><td class="good">开源复现、历史长上下文文档</td><td class="bad">默认当独立云端强档</td></tr>
+          <tr><td class="model-name">GLM-5.3</td><td>5.2 底座 · 后训练 · 常开思考 · Coding Plan</td><td class="good">项目级工程、终端 Agent、Strix 默认</td><td class="bad">思考关不掉</td></tr>
+          <tr><td class="model-name">GLM-5.3-Flash / FlashX</td><td>速度档 · FlashX ~200 tok/s（报道）</td><td class="good">浅扫、高吞吐</td><td class="bad">顶替 5.3 深扫</td></tr>
+          <tr><td class="model-name">Kimi K3</td><td>2.8T · 1M · Arena Agent #7 · Code Desktop</td><td class="good">复杂工程、多步工作流</td><td class="bad">纯单轮低价批量</td></tr>
+          <tr><td class="model-name">MiMo-V2.6</td><td>开源全模态 · AA 46 · Pro/Flash</td><td class="good">最强开源全模态底座</td><td class="bad">闭源极限档</td></tr>
+          <tr><td class="model-name">Step 5 Preview</td><td>600B MoE · ~27B 激活 · 1M</td><td class="good">Agentic 长任务性价比</td><td class="bad">Preview / 权重节奏</td></tr>
+          <tr><td class="model-name">Qwen 3.8 Max</td><td>2.4T · Max 开源 · $2/$6</td><td class="good">编码/Cowork、开源旗舰</td><td class="bad">单卡请改 27B</td></tr>
+          <tr><td class="model-name">Hy4 preview</td><td>770B MoE · Apache 2.0 · $0.83/$2.50</td><td class="good">国内开源 Agent、低价长上下文</td><td class="bad">preview，非端侧</td></tr>
           <tr><td class="model-name">MiniMax M2.7</td><td>10B 激活 · 30 tok/s · 流式</td><td class="good">实时对话、高并发 API</td><td class="bad">超长文档深度推理</td></tr>
           <tr><td class="model-name">Gemma 4</td><td>E2B 端侧 · PLE · 140+ 语言 · Apache 2.0</td><td class="good">端侧/离线/隐私</td><td class="bad">1M 长上下文</td></tr>
-          <tr><td class="model-name" style="color:var(--overseas)">GPT-5</td><td>多模态 · CoT · Function Calling</td><td class="good">通用对话、插件 Agent</td><td class="bad">国内直连、1M 档对比弱</td></tr>
-          <tr><td class="model-name" style="color:var(--overseas)">Claude Fable 5</td><td>1M · 长程 Agent · 6/12 全球暂停</td><td class="good">发布时最强长程 GA（已暂停）</td><td class="bad">当前不可用</td></tr>
-          <tr><td class="model-name" style="color:var(--overseas)">Claude Opus 4.8</td><td>Constitutional AI · 200K+ · 代码旗舰</td><td class="good">复杂代码、长文档、Fable 回落主力</td><td class="bad">中文、梯子</td></tr>
-          <tr><td class="model-name" style="color:var(--overseas)">Gemini 3.1 Pro</td><td>1M · 多模态 · Google 生态</td><td class="good">多模态、搜索、Workspace</td><td class="bad">中文代码弱于 GLM/Claude</td></tr>
-          <tr><td class="model-name" style="color:var(--overseas)">Grok 4.5</td><td>Coding/Agent · 可调推理 · API $2/$6</td><td class="good">工程编码、Agent、Cursor/Grok Build</td><td class="bad">欧盟滞后、非中文生态首选</td></tr>
+          <tr><td class="model-name" style="color:var(--overseas)">GPT-6 Sol / Luna</td><td>9/23 · 近 Astra 训练 · 更省</td><td class="good">ChatGPT 日常付费默认</td><td class="bad">极限仍选 Astra</td></tr>
+          <tr><td class="model-name" style="color:var(--overseas)">Claude Fable 5.1</td><td>$10/$50 · 缓存读 $0.25 · Arena #1</td><td class="good">长程 Agent 最强公开档</td><td class="bad">日常请先用 Opus 5.5</td></tr>
+          <tr><td class="model-name" style="color:var(--overseas)">Claude Opus 5.5</td><td>成本↓~40% · 速度↑~30% · 近 Fable</td><td class="good">日常长程 Coding 主力</td><td class="bad">中文、梯子；刊例看官方</td></tr>
+          <tr><td class="model-name" style="color:var(--overseas)">Gemini 3.8 Flash</td><td>$0.75/$3.75 至 12/31 · 元旦翻倍</td><td class="good">速度、工程 Agent</td><td class="bad">不是 3.1 Pro 替代</td></tr>
+          <tr><td class="model-name" style="color:var(--overseas)">Grok 4.7</td><td>$2/$6 · ~2.1T · 长任务</td><td class="good">工程编码、长跑 Agent</td><td class="bad">逊于 Fable / Astra</td></tr>
+          <tr><td class="model-name" style="color:var(--overseas)"><a href="decision-model-plan.html">Jev / Laya</a></td><td>决策专用 · 云 API / 开源权重</td><td class="good">软件内结构化决策</td><td class="bad">不聊天、不生成文本</td></tr>
         </tbody>
       </table>
     </div>
+
+    </div>
+
+    <div class="cp-section-hd"><span class="cp-flag">🏆</span> Arena Agent 榜 Top 10（2026-09-05）</div>
+    <p style="font-size:.82rem;color:var(--muted);margin:0 0 .6rem;">按真实 Agent 会话的净提升排序，不是 SWE-bench。来源 <a href="https://arena.ai/leaderboard/agent" target="_blank" rel="noopener noreferrer">arena.ai/leaderboard/agent</a> · 228 万会话 / 59 个模型。刊例为百万 token 输入/输出。</p>
+    <div class="cp-matrix-wrap">
+      <table class="cp-matrix">
+        <thead>
+          <tr><th>#</th><th>模型</th><th>净提升</th><th>确认成功</th><th>任务成本 P50</th><th>刊例 $/M</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td class="model-name" style="color:var(--overseas)">Claude Fable 5.1 (Max)</td><td>15.87%</td><td>22.45%</td><td>$4.32</td><td>$10 / $50</td></tr>
+          <tr><td>2</td><td class="model-name" style="color:var(--overseas)">Claude Opus 5 (High)</td><td>12.68%</td><td>13.30%</td><td>$2.43</td><td>$5 / $25</td></tr>
+          <tr><td>3</td><td class="model-name" style="color:var(--overseas)">Claude Opus 5 (Max)</td><td>11.67%</td><td>14.89%</td><td>$3.66</td><td>$5 / $25</td></tr>
+          <tr><td>4</td><td class="model-name" style="color:var(--overseas)">Claude Fable 5 (High)</td><td>10.23%</td><td>7.37%</td><td>$2.37</td><td>$10 / $50</td></tr>
+          <tr><td>5</td><td class="model-name" style="color:var(--overseas)">GPT-5.6 Sol (xHigh)</td><td>9.31%</td><td>6.68%</td><td>$1.22</td><td>$4 / $20</td></tr>
+          <tr><td>6</td><td class="model-name" style="color:var(--overseas)">Claude Opus 4.8 (High)</td><td>9.17%</td><td>5.27%</td><td>$1.56</td><td>$5 / $25</td></tr>
+          <tr><td>7</td><td class="model-name">Kimi K3 (Max)</td><td>7.96%</td><td>16.58%</td><td>$0.82</td><td>$3 / $15</td></tr>
+          <tr><td>8</td><td class="model-name" style="color:var(--overseas)">Claude Sonnet 5 (High)</td><td>7.41%</td><td>2.80%</td><td>$0.87</td><td>$2 / $10</td></tr>
+          <tr><td>9</td><td class="model-name" style="color:var(--overseas)">GPT-5.5 (xHigh)</td><td>7.21%</td><td>2.07%</td><td>$1.07</td><td>$5 / $30</td></tr>
+          <tr><td>10</td><td class="model-name">Tencent Hy4 preview</td><td>6.92%</td><td>13.56%</td><td>$0.27</td><td>$0.83 / $2.50</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.76rem;color:var(--muted);margin:.5rem 0 0;">国内开源侧：Hy4 #10、GLM-5.2 Max #12、Qwen 3.8 Max #16、DeepSeek-V4-Pro High #18、GLM-5.3 Max #22。海外速度档 Gemini 3.8 Flash High #17（3.7 已落到 #35）。</p>
 
     <div class="cp-section-hd"><span class="cp-flag">🎯</span> 场景选型推荐</div>
 
     <div class="cp-scenario">
       <div class="cp-scenario-head">📚 场景 1：读 100 万字论文/法规</div>
       <div class="cp-scenario-body">
-        <span class="candidate">候选：DeepSeek-V4-Pro、Qwen 3.6 Plus、Gemini 3.1 Pro</span><br>
-        <span class="recommend">👉 推荐：DeepSeek-V4-Pro</span>
+        <span class="candidate">候选：DeepSeek-V4.1-Flash、Qwen 3.8 Max、Gemini 3.1 Pro</span><br>
+        <span class="recommend">👉 推荐：日常快调用 DeepSeek-V4.1-Flash（<code>deepseek-flash</code>）；要稳长程先看 GLM-5.3</span>
         <ul class="reason">
           <li>1M 上下文 + CSA/HCA，长上下文推理 FLOPs 约为 V3.2 的 27%</li>
           <li>Engram 条件记忆可 O(1) 检索超长文档条款</li>
@@ -327,12 +436,12 @@
     <div class="cp-scenario">
       <div class="cp-scenario-head">💻 场景 2：AI 写完整 Web 应用（前端+后端+部署）</div>
       <div class="cp-scenario-body">
-        <span class="candidate">候选：GLM-5.2、Kimi K2.6、Claude Opus 4.8、<strong>Grok 4.5</strong></span><br>
-        <span class="recommend">👉 推荐：GLM-5.2（国内）/ Grok 4.5 或 Claude Opus 4.8（海外）</span>
+        <span class="candidate">候选：GLM-5.3、Kimi K3、Claude Opus 5.5、<strong>Grok 4.7</strong></span><br>
+        <span class="recommend">👉 推荐：GLM-5.3（国内）/ Claude Opus 5.5 或 Grok 4.7（海外）</span>
         <ul class="reason">
-          <li>GLM-5.2 Solid 1M 已验证长程工程任务，Coding Plan 全量开放</li>
-          <li>Grok 4.5（2026-07）主打 coding/agent，Cursor 全套餐可用，API 单价低</li>
-          <li>Fable 5 暂停期间，Opus 4.8 仍为 Anthropic 侧长程 Coding 主力</li>
+          <li>GLM-5.3 已推到全部 Coding Plan；高峰积分全额，其余时段五折</li>
+          <li>Grok 4.7（2026-09-21/22）长任务 coding/agent；API 报道约 $2/$6</li>
+          <li>日常稳妥用 Opus 5.5；冲极限用 Fable 5.1（Arena Agent #1，缓存更便宜）</li>
         </ul>
       </div>
     </div>
@@ -340,7 +449,7 @@
     <div class="cp-scenario">
       <div class="cp-scenario-head">⚡ 场景 3：7×24 客服系统</div>
       <div class="cp-scenario-body">
-        <span class="candidate">候选：MiniMax M2.7、Qwen 3.6 Plus、Gemma 4</span><br>
+        <span class="candidate">候选：MiniMax M2.7、Gemini 3.8 Flash、Gemma 4</span><br>
         <span class="recommend">👉 推荐：MiniMax M2.7（云端）/ Gemma 4（端侧）</span>
         <ul class="reason">
           <li>M2.7 约 30 tok/s，10B 激活参数适合高并发</li>
@@ -352,23 +461,25 @@
     <div class="cp-scenario">
       <div class="cp-scenario-head">🤖 场景 4：开源 Agent 底座（Hermes + 国产 API）</div>
       <div class="cp-scenario-body">
-        <span class="candidate">候选：DeepSeek-V4-Pro、GLM-5.2、Qwen 3.6</span><br>
-        <span class="recommend">👉 推荐：GLM-5.2 + Hermes Agent</span>
+        <span class="candidate">候选：DeepSeek-V4-Pro、GLM-5.3、Qwen 3.8 Max、Hy4 preview</span><br>
+        <span class="recommend">👉 推荐：GLM-5.3 + Hermes Agent；要开源低价看 Hy4</span>
         <ul class="reason">
-          <li>2026 社区主流组合：Hermes 负责 Agent 编排，GLM-5.2 负责长程 Coding</li>
-          <li>DeepSeek-V4-Pro 适合极致长上下文与开源权重自部署</li>
+          <li>社区主流：Hermes 编排 + GLM-5.3 长程 Coding</li>
+          <li>Hy4 preview（8/28）Apache 2.0，Arena Agent #10，API 约 $0.83/$2.50</li>
+          <li>要开源 Max 档智商用 Qwen 3.8 Max；本机 24GB 用 <a href="local-model-plan.html">Qwen3.8-27B</a></li>
         </ul>
       </div>
     </div>
 
     <div class="cp-scenario">
-      <div class="cp-scenario-head">🛡️ 场景 5：长程 Agent（Fable 5 暂停后的替代）</div>
+      <div class="cp-scenario-head">🛡️ 场景 5：长程 Agent（Arena 2026-09-05）</div>
       <div class="cp-scenario-body">
-        <span class="candidate">候选：Claude Opus 4.8、GLM-5.2、DeepSeek-V4-Pro</span><br>
-        <span class="recommend">👉 推荐：海外 Opus 4.8 / 国内 GLM-5.2</span>
+        <span class="candidate">候选：Claude Fable 5.1、Claude Opus 5.5、Kimi K3、Hy4 preview</span><br>
+        <span class="recommend">👉 推荐：冲极限 Fable 5.1 / 日常 Opus 5.5；国内 Kimi K3 或 Hy4</span>
         <ul class="reason">
-          <li>Fable 5 于 2026/6/12 全球暂停；Anthropic 敏感域自动回落 Opus 4.8</li>
-          <li>智谱明确将 GLM-5.2 定位为 Fable 不可用时的开放替代路线</li>
+          <li>Fable 5.1（9/1）接档 Fable 5，Arena Agent 总分第一；缓存读降到 $0.25</li>
+          <li>日常主力用 Opus 5.5；极限定用 Fable 5.1（Arena Agent #1）</li>
+          <li>国内：Kimi K3 Max 第 7；Hy4 preview 第 10（preview，单价更低）</li>
         </ul>
       </div>
     </div>
@@ -376,23 +487,24 @@
     <div class="cp-summary">
       <h2>📌 一句话速查</h2>
       <div class="cp-summary-grid">
-        <div class="cp-summary-item"><span class="cp-badge badge-deepseek">长上下文</span> 百万 token <span class="arrow">→</span> DeepSeek-V4-Pro</div>
-        <div class="cp-summary-item"><span class="cp-badge badge-glm">长程 Coding</span> 工程交付 <span class="arrow">→</span> GLM-5.2</div>
-        <div class="cp-summary-item"><span class="cp-badge badge-kimi">Agent</span> 多步工作流 <span class="arrow">→</span> Kimi K2.6</div>
-        <div class="cp-summary-item"><span class="cp-badge badge-qwen">性价比</span> 海量 API <span class="arrow">→</span> Qwen 3.6</div>
+        <div class="cp-summary-item"><span class="cp-badge badge-deepseek">快调用</span> DeepSeek <span class="arrow">→</span> V4.1-Flash（<code>deepseek-flash</code>）</div>
+        <div class="cp-summary-item"><span class="cp-badge badge-glm">长程 Coding</span> 工程交付 <span class="arrow">→</span> GLM-5.3</div>
+        <div class="cp-summary-item"><span class="cp-badge badge-kimi">Agent</span> 多步工作流 <span class="arrow">→</span> Kimi K3 / Hy4</div>
+        <div class="cp-summary-item"><span class="cp-badge badge-qwen">开源旗舰</span> Max 档 <span class="arrow">→</span> Qwen 3.8 Max</div>
         <div class="cp-summary-item"><span class="cp-badge badge-minimax">速度</span> 实时交互 <span class="arrow">→</span> MiniMax M2.7</div>
-        <div class="cp-summary-item"><span class="cp-badge badge-gemma">端侧</span> 离线/隐私 <span class="arrow">→</span> Gemma 4</div>
-        <div class="cp-summary-item"><span class="cp-badge badge-gpt">通用</span> 生态最广 <span class="arrow">→</span> GPT-5</div>
-        <div class="cp-summary-item"><span class="cp-badge badge-claude">深度</span> 代码/推理 <span class="arrow">→</span> Opus 4.8</div>
-        <div class="cp-summary-item"><span class="cp-badge badge-gemini">多模态</span> 视频/搜索 <span class="arrow">→</span> Gemini 3.1 Pro</div>
-        <div class="cp-summary-item"><span class="cp-badge badge-overseas">Coding/Agent</span> 工程编码 <span class="arrow">→</span> Grok 4.5 / Claude Opus 4.8</div>
+        <div class="cp-summary-item"><span class="cp-badge badge-gemma">端侧</span> 离线/隐私 <span class="arrow">→</span> Gemma 4 / <a href="edge-model-plan.html">端侧模型</a></div>
+        <div class="cp-summary-item"><span class="cp-badge badge-gpt">通用</span> ChatGPT <span class="arrow">→</span> GPT-6 Sol</div>
+        <div class="cp-summary-item"><span class="cp-badge badge-claude">深度</span> 日常 Coding <span class="arrow">→</span> Opus 5.5</div>
+        <div class="cp-summary-item"><span class="cp-badge badge-claude">长程</span> Agent 极限 <span class="arrow">→</span> Fable 5.1</div>
+        <div class="cp-summary-item"><span class="cp-badge badge-gemini">速度档</span> Google <span class="arrow">→</span> Gemini 3.8 Flash</div>
+        <div class="cp-summary-item"><span class="cp-badge badge-overseas">Coding/Agent</span> 工程编码 <span class="arrow">→</span> Grok 4.7 / Claude Opus 5.5</div>
       </div>
-      <p style="margin-top:1rem;font-size:0.88rem;color:var(--muted);text-align:center;">没有「最好的模型」，只有「最适合你场景的模型」。</p>
+      <p style="margin-top:1rem;font-size:0.88rem;color:var(--muted);text-align:center;">没有「最好的模型」，只有「最适合你场景的模型」。Agent 名次来自 <a href="https://arena.ai/leaderboard/agent" target="_blank" rel="noopener noreferrer">Arena Agent</a>（2026-09-05，228 万会话）。</p>
     </div>
 
     <div class="cp-footer">
-      <p>数据来源：各模型官方技术博客与论文 · 能力评估以公开基准为准</p>
-      <p><a href="index.html">← 返回 AINav 首页</a> · <a href="free-tier.html">🆓 免费额度</a> · <a href="token-optimization.html">Token优化</a> · <a href="coding-plan.html">编程套餐横评</a> · <a href="agent-plan.html">Agent横评</a></p>
+      <p>数据来源：各模型官方技术博客与论文 · Agent 名次对照 <a href="https://arena.ai/leaderboard/agent" target="_blank" rel="noopener noreferrer">Arena Agent Leaderboard</a>（2026-09-05）</p>
+      <p><a href="index.html">← 返回 AINav 首页</a> · <a href="model-finder.html">模型推荐器</a> · <a href="local-model-plan.html">本地模型</a> · <a href="edge-model-plan.html">端侧模型</a> · <a href="decision-model-plan.html">决策模型</a> · <a href="low-filter-api-plan.html">低过滤云 API</a> · <a href="free-tier.html">🆓 免费额度</a> · <a href="token-optimization.html">Token优化</a> · <a href="coding-plan.html">编程套餐横评</a> · <a href="agent-plan.html">Agent横评</a></p>
     </div>
   </div>
 

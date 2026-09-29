@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="stylesheet" href="site-mobile.css">
+  <title>低过滤云 API — Abliterated / Uncensored 推理 · OpenAI 兼容按量 — AINav</title>
+  <meta name="description" content="低过滤云 API：Venice / NinjaChat；红队与 Strix 自动化审计的模型档位（Flash 快扫 ≠ 深扫最强）。OpenAI 兼容、按量计费。">
+  <link rel="canonical" href="https://aiv123.com/low-filter-api-plan.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="低过滤云 API — Abliterated / Uncensored 推理">
+  <meta property="og:description" content="Venice 首选、NinjaChat 次选；Strix 档位：Flash 快扫、V4-Pro/GLM 深扫、GPT/Claude 最强报告。">
+  <meta property="og:url" content="https://aiv123.com/low-filter-api-plan.html">
+  <meta property="og:site_name" content="AINav">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%230969da'/><text x='50' y='72' font-size='60' text-anchor='middle' fill='white' font-family='system-ui' font-weight='700'>AI</text></svg>">
+  <style>
+    :root, html[data-theme="dark"] {
+      --bg: #0f1419; --panel: #151b23; --card: #1c2430; --border: #2d3848;
+      --text: #e6edf3; --muted: #8b9cb3; --accent: #58a6ff; --accent2: #3fb950;
+      --warn: #d29922; --danger: #f85149; --hot: #ff6b6b; --overseas: #a78bfa;
+      --oss: #f0883e;
+    }
+    html[data-theme="light"] {
+      --bg: #f6f8fa; --panel: #fff; --card: #fff; --border: #d0d7de;
+      --text: #1f2328; --muted: #59636e; --accent: #0969da; --accent2: #1a7f37;
+      --warn: #9a6700; --danger: #cf222e; --hot: #e53935; --overseas: #7c3aed;
+      --oss: #bc4c00;
+    }
+    @media (prefers-color-scheme: light) {
+      html[data-theme="system"] {
+        --bg: #f6f8fa; --panel: #fff; --card: #fff; --border: #d0d7de;
+        --text: #1f2328; --muted: #59636e; --accent: #0969da; --accent2: #1a7f37;
+        --warn: #9a6700; --danger: #cf222e; --hot: #e53935; --overseas: #7c3aed;
+        --oss: #bc4c00;
+      }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Segoe UI", system-ui, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.6; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .cp-top { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); background: var(--panel); position: sticky; top: 0; z-index: 10; }
+    .cp-top-inner { max-width: 76rem; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; justify-content: space-between; }
+    .cp-nav a { font-weight: 600; margin-right: 1rem; font-size: 0.88rem; }
+    .cp-toolbar { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; }
+    .theme-btn { font-size: 0.72rem; padding: 0.2rem 0.5rem; border-radius: 5px; border: 1px solid var(--border);
+      background: var(--card); color: var(--muted); cursor: pointer; font-family: inherit; }
+    .theme-btn.is-active { color: var(--accent); border-color: var(--accent); font-weight: 600; }
+    .cp-wrap { max-width: 76rem; margin: 0 auto; padding: 1rem; }
+    h1 { font-size: 1.35rem; margin: 0 0 0.3rem; }
+    .cp-subtitle { font-size: 0.88rem; color: var(--muted); margin-bottom: 0.4rem; }
+    .cp-related { font-size: 0.82rem; color: var(--muted); margin: 0 0 0.8rem; }
+    .cp-section-hd { font-size: 1.1rem; font-weight: 700; margin: 1.8rem 0 0.8rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--border); display: flex; align-items: center; gap: 0.5rem; }
+    .cp-legend { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 1.2rem; font-size: 0.82rem; }
+    .cp-badge { display: inline-block; padding: 0.1rem 0.45rem; border-radius: 4px; font-size: 0.72rem; font-weight: 600; }
+    .badge-rec { background: rgba(88,166,255,0.15); color: var(--accent); border: 1px solid rgba(88,166,255,0.3); }
+    .badge-hot { background: rgba(255,107,107,0.15); color: var(--hot); border: 1px solid rgba(255,107,107,0.3); }
+    .badge-new { background: rgba(63,185,80,0.15); color: var(--accent2); border: 1px solid rgba(63,185,80,0.3); }
+    .badge-warn { background: rgba(210,153,34,0.15); color: var(--warn); border: 1px solid rgba(210,153,34,0.3); }
+    .badge-skip { background: rgba(139,156,179,0.12); color: var(--muted); border: 1px solid var(--border); }
+    .badge-overseas { background: rgba(167,139,250,0.15); color: var(--overseas); border: 1px solid rgba(167,139,250,0.3); }
+    .cp-platforms { display: grid; grid-template-columns: 1fr; gap: 1.2rem; }
+    @media (min-width: 52rem) { .cp-platforms { grid-template-columns: 1fr 1fr; } }
+    .cp-platform { border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .cp-platform.featured { border-color: rgba(88,166,255,0.4); }
+    .cp-platform-head { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+    .cp-platform-name { font-size: 1.05rem; font-weight: 700; }
+    .cp-platform-name a { color: var(--text); }
+    .cp-platform-name a:hover { color: var(--accent); text-decoration: none; }
+    .cp-platform-body { padding: 0.75rem 1rem; font-size: 0.85rem; line-height: 1.7; }
+    .cp-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+    .cp-table th { text-align: left; font-weight: 600; color: var(--muted); padding: 0.3rem 0.5rem; border-bottom: 1px solid var(--border); font-size: 0.76rem; white-space: nowrap; }
+    .cp-table td { padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .cp-table tr:last-child td { border-bottom: none; }
+    .cp-table .plan-name { font-weight: 600; white-space: nowrap; }
+    .cp-table .plan-price { white-space: nowrap; color: var(--accent2); font-weight: 600; }
+    .cp-table .plan-limit { font-size: 0.76rem; color: var(--muted); }
+    .cp-matrix-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; background: var(--card); }
+    .cp-matrix { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+    .cp-matrix th, .cp-matrix td { padding: 0.45rem 0.65rem; border: 1px solid var(--border); text-align: left; }
+    .cp-matrix th { background: var(--panel); font-weight: 600; color: var(--muted); font-size: 0.76rem; }
+    .cp-matrix .model-name { font-weight: 700; white-space: nowrap; }
+    .cp-matrix .price { color: var(--oss); font-weight: 700; white-space: nowrap; }
+    .cp-code { display: block; margin: 0.45rem 0 0.2rem; padding: 0.55rem 0.7rem; border-radius: 6px; background: var(--panel); border: 1px solid var(--border); font-family: ui-monospace, Consolas, monospace; font-size: 0.78rem; overflow-x: auto; white-space: pre; line-height: 1.5; }
+    code { font-size: 0.78rem; padding: 0.05rem 0.32rem; border-radius: 4px; background: var(--panel); border: 1px solid var(--border); font-family: ui-monospace, Consolas, monospace; }
+    .cp-notice { margin: 0 0 1rem; padding: 0; border: 1px solid rgba(210,153,34,.35); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .cp-notice-head { padding: 0.65rem 1rem; border-bottom: 1px solid rgba(210,153,34,0.2); font-weight: 700; font-size: 1rem; background: rgba(210,153,34,0.06); }
+    .cp-notice-body { padding: 0.75rem 1rem; font-size: 0.84rem; line-height: 1.7; }
+    .cp-notice-body ul { padding-left: 1.2rem; margin: 0.45rem 0 0; }
+    .cp-notice-body li { margin-bottom: 0.35rem; }
+    .cp-scenario { margin-top: 1rem; border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .cp-scenario-head { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); font-weight: 700; font-size: 0.95rem; }
+    .cp-scenario-body { padding: 0.75rem 1rem; font-size: 0.85rem; line-height: 1.75; }
+    .recommend { color: var(--accent2); font-weight: 700; }
+    .reason { margin-top: 0.4rem; padding-left: 1rem; border-left: 3px solid var(--accent2); }
+    .cp-faq { margin-top: 2rem; border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .cp-faq-head { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); font-weight: 700; font-size: 1rem; }
+    .cp-faq-item { border-bottom: 1px solid var(--border); }
+    .cp-faq-item:last-child { border-bottom: none; }
+    .cp-faq-q { padding: 0.6rem 1rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 0.88rem; user-select: none; }
+    .cp-faq-q:hover { background: rgba(88,166,255,0.04); }
+    .cp-faq-q .cp-faq-arrow { font-size: 0.72rem; color: var(--muted); transition: transform 0.2s; flex-shrink: 0; margin-left: 0.5rem; }
+    .cp-faq-item.is-open .cp-faq-q .cp-faq-arrow { transform: rotate(180deg); }
+    .cp-faq-a { padding: 0 1rem; max-height: 0; overflow: hidden; transition: max-height 0.25s ease, padding 0.25s ease; font-size: 0.82rem; line-height: 1.7; color: var(--muted); }
+    .cp-faq-item.is-open .cp-faq-a { max-height: 22rem; padding: 0 1rem 0.75rem; }
+    .cp-faq-a strong { color: var(--text); }
+    .cp-summary { margin-top: 2rem; padding: 1rem 1.2rem; border: 2px solid var(--accent); border-radius: 10px; background: rgba(88,166,255,0.04); }
+    .cp-summary h2 { font-size: 1.05rem; margin: 0 0 0.8rem; }
+    .cp-summary-grid { display: grid; grid-template-columns: 1fr; gap: 0.5rem; font-size: 0.88rem; }
+    @media (min-width: 40rem) { .cp-summary-grid { grid-template-columns: 1fr 1fr; } }
+    .cp-summary-item { display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.6rem; border-radius: 6px; background: var(--card); border: 1px solid var(--border); }
+    .cp-summary-item .arrow { color: var(--accent2); font-weight: 700; }
+    .cp-updated-line { font-size: 0.76rem; color: var(--muted); margin: 0 0 0.8rem; }
+    .cp-footer { max-width: 76rem; margin: 2rem auto 1rem; padding: 0 1rem; font-size: 0.76rem; color: var(--muted); text-align: center; }
+    .src { font-size: 0.72rem; color: var(--muted); }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2B8FBWRX4N"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2B8FBWRX4N');</script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "2d49f38b39c743ac80b6d6b9ff99494d"}'></script>
+</head>
+<body>
+  <div class="cp-top">
+    <div class="cp-top-inner">
+      <div class="cp-nav" data-plan-nav></div>
+      <div class="cp-toolbar">
+        <button type="button" class="theme-btn" data-theme-set="system">跟随系统</button>
+        <button type="button" class="theme-btn" data-theme-set="light">浅色</button>
+        <button type="button" class="theme-btn" data-theme-set="dark">深色</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cp-wrap">
+    <h1>低过滤云 API</h1>
+    <p class="cp-subtitle">Abliterated / Uncensored 推理 API · 云端调用 · OpenAI 兼容 · 按量计费。含 Strix 自动化审计的模型档位对照。</p>
+    <p class="cp-related">日常旗舰请看 <a href="model-plan.html">模型选型</a>；本机跑开源权重看 <a href="local-model-plan.html">本地模型</a>；编程套餐看 <a href="coding-plan.html">编程套餐</a>；Agent 编排看 <a href="agent-plan.html">Agent 横评</a>。主流推理云（OpenRouter / Together 等）在百科「AI 模型 API」分类。</p>
+    <p class="cp-updated-line"><span class="cp-updated">最后更新：2026-09-23</span> · Strix 模型 ID 对照 <a href="https://docs.strix.ai/llm-providers/overview" target="_blank" rel="noopener noreferrer">docs.strix.ai</a></p>
+
+    <div class="cp-notice">
+      <div class="cp-notice-head">用途边界</div>
+      <div class="cp-notice-body">
+        本页只收<strong>能长期用的文本 / 代码云 API</strong>：OpenAI 兼容、按量计费、适合接到现有 SDK 或 IDE；并对照 <strong>Strix</strong> 等自动化审计该配哪档模型。适用场景是红队、安全评测、减少过度拒答对评测的干扰。
+        <ul>
+          <li><strong>不提供</strong>越狱教程、绕过安全策略的操作步骤，也不讨论如何攻击第三方系统。只测你有权测试的目标。</li>
+          <li><strong>不收录</strong>以成人生成为卖点的图像 / 视频服务；站点即便有文本接口，卖点偏此也不进推荐卡。</li>
+          <li>「低过滤 / abliterated」<strong>不等于</strong>零审查、不等于可违法使用。服务商仍可能有 ToS、地区限制与日志政策，以官网为准。</li>
+          <li>Strix 选型：官方推荐是 glm-5.3 / gpt-5.4 / claude-sonnet-4-6 / gemini-3-pro；<strong>DeepSeek Flash 是便宜快扫，不是最强深扫</strong>。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cp-legend">
+      <span><span class="cp-badge badge-rec">首选</span> Venice.ai</span>
+      <span><span class="cp-badge badge-new">次选</span> NinjaChat</span>
+      <span><span class="cp-badge badge-warn">单价待核实</span> Unfil / Hypereal</span>
+      <span><span class="cp-badge badge-skip">不进推荐卡</span> Web / 成人向 / 企业网关</span>
+    </div>
+
+    <div class="cp-section-hd"><span>对照表</span></div>
+    <div class="cp-matrix-wrap">
+      <table class="cp-matrix">
+        <thead>
+          <tr><th>服务商</th><th>定位</th><th>兼容与计费</th><th>本站口径</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="model-name">Venice.ai</td>
+            <td>隐私向推理云，目录含低过滤开源权重与旗舰模型</td>
+            <td>OpenAI 兼容；按 token 扣 credits（约 100 credits = $1）</td>
+            <td><span class="cp-badge badge-rec">首选</span> 文档完整，文本 API 可长期接代码</td>
+          </tr>
+          <tr>
+            <td class="model-name">NinjaChat</td>
+            <td>聚合 API；低过滤档为独立模型 ID</td>
+            <td>OpenAI 兼容；低过滤档按次计费，不是按 token</td>
+            <td><span class="cp-badge badge-new">次选</span> 适合短测与轻量脚本</td>
+          </tr>
+          <tr>
+            <td class="model-name">Unfil.ai</td>
+            <td>宣称低过滤文本 LLM API</td>
+            <td>按 token 报价（厂商页有表）</td>
+            <td><span class="cp-badge badge-warn">单价待核实</span> 只看文本接口，不推图像</td>
+          </tr>
+          <tr>
+            <td class="model-name">Hypereal Cloud</td>
+            <td>现更偏通用聚合 API</td>
+            <td>OpenAI 兼容；低过滤型号是否在架以目录为准</td>
+            <td><span class="cp-badge badge-warn">单价待核实</span> 不当作低过滤专线</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="src" style="margin:0.45rem 0 0;">Venice 价表：<a href="https://docs.venice.ai/overview/pricing" target="_blank" rel="noopener noreferrer">docs.venice.ai/overview/pricing</a> · NinjaChat：<a href="https://docs.ninjachat.ai/pricing" target="_blank" rel="noopener noreferrer">docs.ninjachat.ai/pricing</a>。价格会变，下单前再对一次官网。</p>
+
+    <div class="cp-section-hd"><span>推荐卡 · 文本 / 代码 API</span></div>
+    <div class="cp-platforms">
+      <div class="cp-platform featured">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://docs.venice.ai/welcome" target="_blank" rel="noopener noreferrer">Venice.ai</a></span>
+          <span class="cp-badge badge-rec">首选</span>
+          <span class="cp-badge badge-overseas">OpenAI 兼容</span>
+        </div>
+        <div class="cp-platform-body">
+          <p style="margin:0 0 0.55rem;">Base URL：<code>https://api.venice.ai/api/v1</code>。目录很大：既有 Claude / GPT 等旗舰（仍走提供商策略），也有低过滤开源权重。写代码时<strong>显式传模型 ID</strong>，不要默认成旗舰聊天模型。</p>
+          <table class="cp-table">
+            <thead><tr><th>模型（本页关注）</th><th>ID</th><th>输入 / 输出</th><th>上下文</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">Gemma 4 Uncensored</td>
+                <td><code>gemma-4-uncensored</code></td>
+                <td class="plan-price">$0.16 / $0.50</td>
+                <td class="plan-limit">256K</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Venice Uncensored 1.2</td>
+                <td><code>venice-uncensored-1-2</code></td>
+                <td class="plan-price">$0.20 / $0.90</td>
+                <td class="plan-limit">128K</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Qwen 3.6 Plus Uncensored</td>
+                <td><code>qwen-3-6-plus</code></td>
+                <td class="plan-price">$0.63 / $3.75</td>
+                <td class="plan-limit">1M（&gt;256K 更高）</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Hermes 3 Llama 3.1 405B</td>
+                <td><code>hermes-3-llama-3.1-405b</code></td>
+                <td class="plan-price">$1.10 / $3.00</td>
+                <td class="plan-limit">128K</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="src" style="margin:0.55rem 0 0.4rem;">单价 = $/百万 token，2026-09-08 对照官方价表。旧文里的 Hermes 4 70B 现价表未列出，勿再当现行价。</p>
+          <table class="cp-table">
+            <thead><tr><th>套餐</th><th>月价</th><th>和 API 的关系</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">Free</td>
+                <td class="plan-price">$0</td>
+                <td class="plan-limit">Web 约 10 次文本/天；API 需另购 credits</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Pro</td>
+                <td class="plan-price">$18</td>
+                <td class="plan-limit">100 credits/月（约 $1 API）— 不够当主力推理</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Pro+</td>
+                <td class="plan-price">$68</td>
+                <td class="plan-limit">7,500 credits/月，可结转 2 个月</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Max</td>
+                <td class="plan-price">$200</td>
+                <td class="plan-limit">22,500 credits/月，可结转 3 个月</td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="font-size:0.78rem;color:var(--muted);margin:0.55rem 0 0;"><strong>套餐内无限对话 ≠ API 无限。</strong>FAQ 写明：Web/App 额度与 API 分开；每次 API 按模型 token 价扣 credits。写代码请按量充 credits，别指望 Pro 那 100 credits 撑 Agent。</p>
+        </div>
+      </div>
+
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://docs.ninjachat.ai/openai-compatibility" target="_blank" rel="noopener noreferrer">NinjaChat</a></span>
+          <span class="cp-badge badge-new">次选</span>
+          <span class="cp-badge badge-overseas">按次计费</span>
+        </div>
+        <div class="cp-platform-body">
+          <p style="margin:0 0 0.55rem;">Base URL：<code>https://www.ninjachat.ai/api/v1</code>。<strong>必须带 www</strong>：apex 域名会剥掉 <code>Authorization</code>，请求会变成未认证。OpenAI SDK 可直接换 base URL；也兼容 <code>/chat/completions</code>。</p>
+          <table class="cp-table">
+            <thead><tr><th>项目</th><th>说明</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">低过滤档</td>
+                <td>模型 ID <code>uncensored-ai</code>，Budget 档 <strong>$0.003 / 次请求</strong></td>
+              </tr>
+              <tr>
+                <td class="plan-name">计费口径</td>
+                <td>按次，不按 token。长输出往往更划算；海量短请求要另算</td>
+              </tr>
+              <tr>
+                <td class="plan-name">入门余额</td>
+                <td>预付 Developer Balance；手机验证可解锁约 $0.50 试用（以官网为准）</td>
+              </tr>
+              <tr>
+                <td class="plan-name">密钥</td>
+                <td>前缀 <code>nj_sk_</code>，在 Developers → Connections 创建</td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="font-size:0.78rem;color:var(--muted);margin:0.55rem 0 0;">NinjaChat 同一把钥匙也能调 GPT / Claude，那些档仍是主流模型策略。本页只把 <code>uncensored-ai</code> 当低过滤次选；日常旗舰编码请回 <a href="coding-plan.html">编程套餐</a>。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cp-section-hd"><span>进表但单价待核实</span></div>
+    <div class="cp-platforms">
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://unfil.ai/" target="_blank" rel="noopener noreferrer">Unfil.ai</a></span>
+          <span class="cp-badge badge-warn">单价待核实</span>
+        </div>
+        <div class="cp-platform-body">
+          <p style="margin:0 0 0.55rem;">厂商页列出若干文本 LLM 及 $/M token。本站<strong>未独立对账</strong>，下单前以控制台为准。下表仅作「他们公开写过什么」的备忘；不推荐其图像能力。</p>
+          <table class="cp-table">
+            <thead><tr><th>厂商页型号</th><th>厂商页报价</th></tr></thead>
+            <tbody>
+              <tr><td class="plan-name">Hermes 3 Llama 3.1 405B</td><td class="plan-limit">$1.2 / $1.2 · 128K</td></tr>
+              <tr><td class="plan-name">Llama-3.3-70B Instruct abliterated</td><td class="plan-limit">$1.1 / $1.2 · 16.4K</td></tr>
+              <tr><td class="plan-name">DeepSeek-R1 Distill Qwen 32B abliterated</td><td class="plan-limit">$0.9 / $1.1 · 16.4K</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://hypereal.cloud" target="_blank" rel="noopener noreferrer">Hypereal Cloud</a></span>
+          <span class="cp-badge badge-warn">单价待核实</span>
+        </div>
+        <div class="cp-platform-body">
+          <p style="margin:0;">OpenAI 兼容入口常见为 <code>https://api.hypereal.cloud/v1</code>。2026-09 站点主推的是 GPT / Claude / 视频等通用聚合，<strong>不能默认当成低过滤专线</strong>。若目录里仍有 abliterated 开源权重，以当时模型列表为准，本页不写死单价。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cp-section-hd"><span>不适合个人代码 · 不进推荐卡</span></div>
+    <div class="cp-matrix-wrap">
+      <table class="cp-matrix">
+        <thead>
+          <tr><th>名称</th><th>为什么不进表</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="model-name">Uncensored.chat</td>
+            <td>偏 Web 对话产品，不是稳定、可长期对接的 OpenAI 兼容代码 API。</td>
+          </tr>
+          <tr>
+            <td class="model-name">Api18.dev</td>
+            <td>图像 / 视频成人向。本页不收录以成人生成为卖点的服务。</td>
+          </tr>
+          <tr>
+            <td class="model-name">Abliteration.ai</td>
+            <td>企业红队 / 策略网关（托管 abliterated 旗舰 + 可选策略层），不是个人写脚本的按量首选。安全团队可自行评估官网，本站不当推荐卡。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="cp-section-hd"><span>接到现有工具</span></div>
+    <div class="cp-scenario">
+      <div class="cp-scenario-head">OpenAI SDK · 只换入口</div>
+      <div class="cp-scenario-body">
+        <p style="margin:0 0 0.4rem;">下面只示范<strong>兼容方式</strong>：换 base URL、密钥和模型 ID。不包含绕过安全策略的提示词。</p>
+        <code class="cp-code">from openai import OpenAI
+import os
+
+client = OpenAI(
+    api_key=os.environ["VENICE_API_KEY"],
+    base_url="https://api.venice.ai/api/v1",
+)
+r = client.chat.completions.create(
+    model="gemma-4-uncensored",
+    messages=[{"role": "user", "content": "Summarize this security report."}],
+)</code>
+        <p style="margin:0.55rem 0 0;font-size:0.82rem;color:var(--muted);">Cursor / Cline 等：选 OpenAI 兼容提供商，Base URL 填上列地址，模型填文档里的 ID。NinjaChat 把 base URL 换成 <code>https://www.ninjachat.ai/api/v1</code>、模型换成 <code>uncensored-ai</code> 即可。</p>
+      </div>
+    </div>
+
+    <div class="cp-section-hd" id="strix"><span>Strix 自动化审计 · 模型怎么选</span></div>
+    <p style="font-size:0.85rem;line-height:1.7;margin:0 0 0.85rem;color:var(--muted);">
+      <a href="https://github.com/usestrix/strix" target="_blank" rel="noopener noreferrer">Strix</a>（Apache 2.0）是开源 AI 渗透 Agent：多 Agent 侦察 / 利用 / 验证，要求漏洞带可复现 PoC。底层走 LiteLLM，<code>STRIX_LLM</code> 用 <code>provider/model</code> 格式。
+      <strong>官方推荐档</strong>：<code>glm-5.3</code> / <code>gpt-5.4</code> / <code>claude-sonnet-4-6</code> / <code>gemini-3-pro</code>（见 <a href="https://docs.strix.ai/llm-providers/overview" target="_blank" rel="noopener noreferrer">LLM Providers</a>）。
+      下表按<strong>用途分档</strong>——<strong>DeepSeek Flash 只做便宜快扫，不是最强深扫</strong>。
+    </p>
+    <div class="cp-matrix-wrap">
+      <table class="cp-matrix">
+        <thead>
+          <tr><th>用途</th><th>Strix 里写（<code>STRIX_LLM</code>）</th><th>渠道</th><th>定位</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="model-name">日常快扫</td>
+            <td><code>deepseek/deepseek-flash</code></td>
+            <td>DeepSeek 官网</td>
+            <td>对应 <strong>V4.1-Flash</strong>；便宜、快。复杂攻击链弱。<strong>别当深扫主力。</strong></td>
+          </tr>
+          <tr>
+            <td class="model-name">深扫 / DeepSeek 家</td>
+            <td><code>deepseek/deepseek-v4-pro</code></td>
+            <td>DeepSeek 官网</td>
+            <td>Strix 配置表仍列此 ID。注意：官方自 2026-09-14 起，该 ID <strong>暂时转发到 V4.1-Flash</strong> 直至 V4.1-Pro 上线——深扫更稳默认仍用下面的 <code>glm-5.3</code>。</td>
+          </tr>
+          <tr>
+            <td class="model-name">性价比主力（默认）</td>
+            <td><code>openrouter/z-ai/glm-5.3</code></td>
+            <td>OpenRouter</td>
+            <td><span class="cp-badge badge-rec">Strix 默认</span> 综合好；文档 Quick Start 即此 ID。</td>
+          </tr>
+          <tr>
+            <td class="model-name">更省 GLM</td>
+            <td><code>openrouter/z-ai/glm-5.3-flash</code></td>
+            <td>OpenRouter</td>
+            <td>浅扫 / 控成本；别指望顶替 5.3 全量深扫。</td>
+          </tr>
+          <tr>
+            <td class="model-name">最强报告</td>
+            <td><code>openai/gpt-5.4</code> · <code>anthropic/claude-sonnet-4-6</code></td>
+            <td>官方 API</td>
+            <td>贵但稳；关键评估、要报告质量时用。Sonnet 限额紧时成本会飙（第三方横评有单次数十美元案例）。</td>
+          </tr>
+          <tr>
+            <td class="model-name">官方推荐 · Gemini</td>
+            <td><code>vertex_ai/gemini-3-pro-preview</code></td>
+            <td>Google Vertex</td>
+            <td>与上列同属官方推荐大模型档。Vertex 文档写安全测试综合表现好；另有 Flash 预览偏快偏省。需 GCP / ADC，不是 DeepSeek 式「便宜快扫」替代品。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="src" style="margin:0.45rem 0 0.8rem;">
+      配置示例：<code>export STRIX_LLM="openrouter/z-ai/glm-5.3"</code> + <code>LLM_API_KEY</code>。
+      事实口径：Strix 文档（2026-09）· 用途分档以本站对照表为准。第三方文章里的「GLM 5.1 / DeepSeek v3.2」勿与上表 Flash、V4-Pro、GLM-5.3 混读。
+    </p>
+    <code class="cp-code"># 性价比默认（官方 Quick Start）
+export STRIX_LLM="openrouter/z-ai/glm-5.3"
+export LLM_API_KEY="…"
+
+# 日常快扫（便宜）— 不是深扫最强
+# export STRIX_LLM="deepseek/deepseek-flash"
+
+# 深扫 / DeepSeek 家强模型
+# export STRIX_LLM="deepseek/deepseek-v4-pro"
+
+strix --target ./app-directory</code>
+
+    <div class="cp-section-hd"><span>场景怎么选</span></div>
+    <div class="cp-scenario">
+      <div class="cp-scenario-head">红队 / 安全评测（样本不被过度拒答污染）</div>
+      <div class="cp-scenario-body">
+        <div class="recommend">Venice 低过滤开源 ID，或 NinjaChat <code>uncensored-ai</code></div>
+        <div class="reason">评测拒答率、有害内容分类、策略覆盖时，过度拒答会污染样本。用低过滤开源权重做对照，不等于取消你自己的安全层——对外服务仍应自建过滤。这和下面 Strix「要长程 Agent 智商」不是同一档选型。</div>
+      </div>
+    </div>
+    <div class="cp-scenario">
+      <div class="cp-scenario-head">Strix · CI / PR 快扫</div>
+      <div class="cp-scenario-body">
+        <div class="recommend"><code>deepseek/deepseek-flash</code> 或 <code>openrouter/z-ai/glm-5.3-flash</code>；默认稳妥用 <code>glm-5.3</code></div>
+        <div class="reason">要短、要省。Flash 复杂链弱，适合 diff / quick 门禁。第三方案例口径：Quick 约数分钟到十几分钟、费用常见个位数美元量级——以你自己账单为准，本站不写死刊例。</div>
+      </div>
+    </div>
+    <div class="cp-scenario">
+      <div class="cp-scenario-head">Strix · 全面深扫 / 要可交付报告</div>
+      <div class="cp-scenario-body">
+        <div class="recommend">先 <code>openrouter/z-ai/glm-5.3</code>；DeepSeek 生态注意 <code>deepseek-v4-pro</code> 过渡期可能仍落到 Flash——要报告质量用 <code>gpt-5.4</code> / <code>claude-sonnet-4-6</code>（或 Vertex <code>gemini-3-pro-preview</code>）</div>
+        <div class="reason"><strong>不要用 Flash 顶深扫。</strong>文章与独立横评都指向：弱模型会漏报或早停；编排层很重要，但模型智商仍是拉开差距的关键。贵模型单次可能很高（如 Sonnet 经中转限额后的极端账单），先小目标试跑。</div>
+      </div>
+    </div>
+    <div class="cp-scenario">
+      <div class="cp-scenario-head">减少过度拒答的日常文本 / 代码</div>
+      <div class="cp-scenario-body">
+        <div class="recommend">Venice <code>gemma-4-uncensored</code> 或 <code>venice-uncensored-1-2</code></div>
+        <div class="reason">单价低、按 token 可预期。长上下文或更强推理再看 <code>qwen-3-6-plus</code> / Hermes 3 405B。官方 Claude、GPT 即便从 Venice 走，也不是本页意义上的低过滤档。</div>
+      </div>
+    </div>
+    <div class="cp-scenario">
+      <div class="cp-scenario-head">本机已有 GPU / 数据不能出域</div>
+      <div class="cp-scenario-body">
+        <div class="recommend">优先看 <a href="local-model-plan.html">本地模型横评</a>；Strix 可接 Ollama / 兼容本地入口</div>
+        <div class="reason">云 API 省运维；隐私优先再自托管。Strix 官方也写：关键评估仍建议云端强模型，小参数本机 Agent 往往跟不动多步工具循环。</div>
+      </div>
+    </div>
+
+    <div class="cp-faq">
+      <div class="cp-faq-head">常见问题</div>
+      <div class="cp-faq-item is-open">
+        <div class="cp-faq-q">和 OpenRouter、Together 有什么区别？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a">主流推理云也会上架部分 abliterated 开源权重，但产品定位是<strong>全模型路由</strong>，不是本页这种对照。日常多模型、旗舰编码请走百科「AI 模型 API」和 <a href="model-plan.html">模型选型</a>。Strix 默认的 <code>openrouter/z-ai/glm-5.3</code> 走的是 OpenRouter 上的智谱线，属于「Agent 智商」选型，不是「低过滤权重」选型。</div>
+      </div>
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">DeepSeek Flash 能不能当 Strix 深扫主力？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>不能。</strong>Flash（现为 V4.1-Flash，API <code>deepseek-flash</code>）只适合便宜快扫。深扫默认用 <code>glm-5.3</code>；DeepSeek 的 <code>deepseek-v4-pro</code> 在 V4.1-Pro 上线前可能仍转发 Flash。报告质量优先再上 GPT-5.4 / Claude Sonnet 4.6 / Gemini 3 Pro。</div>
+      </div>
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">Pro 套餐无限聊，API 是不是也无限？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>不是。</strong>Venice 官方 FAQ：Web/App 的无限文本与每日图像上限，不含 API。API 按 token 扣 credits。Pro 每月 100 credits 大约只够试接口；认真跑评测或 Agent 请按量充值，或改用 Pro+ / Max 的月度 credits。</div>
+      </div>
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">按次 $0.003 一定比按 token 便宜吗？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a">NinjaChat 的 <code>uncensored-ai</code> 是<strong>每次请求固定价</strong>。一次生成很长代码往往更划算；若你打成千上万次超短请求，按 token 的小模型可能更便宜。先用小额余额跑自己的真实流量再决定。</div>
+      </div>
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">低过滤是不是「零审查」？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>不是。</strong>Abliterated 权重通常只是削弱了训练里的拒答方向，服务商仍有条款、支付风控和地区政策。Strix 等自动化审计只测你有权测的目标。本站不用「零审查」当标题，也不保证任何请求都会被执行。违法用途不要做。</div>
+      </div>
+    </div>
+
+    <div class="cp-summary">
+      <h2>一句话怎么选</h2>
+      <div class="cp-summary-grid">
+        <div class="cp-summary-item"><span class="cp-badge badge-rec">首选 API</span> <span class="arrow">→</span> Venice 低过滤开源 ID + 按量 credits</div>
+        <div class="cp-summary-item"><span class="cp-badge badge-new">次选 API</span> <span class="arrow">→</span> NinjaChat <code>uncensored-ai</code>（注意 www）</div>
+        <div class="cp-summary-item"><span class="cp-badge badge-rec">Strix 默认</span> <span class="arrow">→</span> <code>openrouter/z-ai/glm-5.3</code></div>
+        <div class="cp-summary-item"><span class="cp-badge badge-warn">Strix 快扫</span> <span class="arrow">→</span> Flash（非深扫最强）</div>
+        <div class="cp-summary-item"><span class="cp-badge badge-overseas">Strix 报告</span> <span class="arrow">→</span> GPT-5.4 / Sonnet 4.6 / Gemini 3 Pro</div>
+        <div class="cp-summary-item"><span class="cp-badge badge-warn">观望</span> <span class="arrow">→</span> Unfil / Hypereal，单价未独立核实</div>
+        <div class="cp-summary-item"><span class="cp-badge badge-skip">跳过</span> <span class="arrow">→</span> Web 站、成人生成、企业红队网关</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cp-footer">
+    <p>价格与模型 ID 以各官网为准 · Venice <a href="https://docs.venice.ai/overview/pricing" target="_blank" rel="noopener noreferrer">pricing</a> · NinjaChat <a href="https://docs.ninjachat.ai/pricing" target="_blank" rel="noopener noreferrer">pricing</a> · Strix <a href="https://docs.strix.ai/llm-providers/overview" target="_blank" rel="noopener noreferrer">LLM providers</a></p>
+    <p>本页不提供越狱教程，不收录以成人生成为卖点的服务。合法合规使用。</p>
+    <p><a href="index.html">← 返回 AINav 首页</a> · <a href="model-plan.html">模型选型</a> · <a href="local-model-plan.html">本地模型</a> · <a href="coding-plan.html">编程套餐</a> · <a href="agent-plan.html">Agent 横评</a> · <a href="free-tier.html">免费额度</a></p>
+  </div>
+
+  <script>
+    (function(){
+      var btns=document.querySelectorAll('.theme-btn');
+      var html=document.documentElement;
+      function apply(t){html.setAttribute('data-theme',t);localStorage.setItem('cp-theme',t);btns.forEach(function(b){b.classList.toggle('is-active',b.getAttribute('data-theme-set')===t)})}
+      var saved=localStorage.getItem('cp-theme')||'system';apply(saved);
+      btns.forEach(function(b){b.addEventListener('click',function(){apply(b.getAttribute('data-theme-set'))})});
+    })();
+  </script>
+  <script>
+    document.querySelectorAll('.cp-faq-q').forEach(function(q){
+      q.addEventListener('click', function(){ q.parentElement.classList.toggle('is-open'); });
+    });
+  </script>
+  <script src="plan-nav.js" data-active="low-filter-api-plan.html"></script>
+  <script src="plan-meta-i18n.js"></script>
+  <script src="thinking-framework.js"></script>
+  <script src="./back-to-top.js"></script>
+</body>
+</html>

@@ -24,7 +24,7 @@ reg add "HKCR\*\shell\Sublime Text" /f /v "Icon" /d "%~dp0sublime_text.exe" >NUL
 reg add "HKCR\*\shell\Sublime Text\command" /f /v "" /d "%~dp0sublime_text.exe \"%%1\"" >NUL 2>NUL
 IF EXIST "%WinDir%\System32\CHOICE.exe" ( 
 ECHO.&ECHO 添加完成
-ECHO.&ECHO 423Down.com
+ECHO.&ECHO GnDown.com
 TIMEOUT /t 2 >NUL & CLS & GOTO MENU
 ) ELSE ( 
 ECHO.&ECHO 已添加，任意键返回 &PAUSE>NUL&CLS&GOTO MENU) 
@@ -34,7 +34,7 @@ reg delete "HKCR\*\shell\Sublime Text" /f >NUL 2>NUL
 reg delete "HKLM\*\shell\Sublime Text" /f >NUL 2>NUL
 IF EXIST "%WinDir%\System32\CHOICE.exe" ( 
 ECHO.&ECHO 移除完成
-ECHO.&ECHO 423Down.com
+ECHO.&ECHO GnDown.com
 TIMEOUT /t 2 >NUL & CLS & GOTO MENU
 ) ELSE ( 
 ECHO.&ECHO 已删除，任意键返回 &PAUSE>NUL&CLS&GOTO MENU) 

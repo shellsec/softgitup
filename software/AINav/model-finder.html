@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="stylesheet" href="site-mobile.css">
+  <title>AI 模型推荐器 — 我该用哪个大模型？— AINav</title>
+  <meta name="description" content="回答 3 个问题，从国内+海外旗舰模型中挑出最适合你的：编程、Agent、长文档、对话、视觉、客服、端侧。支持国内直连与预算约束。无需注册。">
+  <meta name="keywords" content="AI模型推荐,选哪个大模型,LLM选型,编程模型推荐,Agent模型,长上下文模型,国内直连大模型">
+  <link rel="canonical" href="https://aiv123.com/model-finder.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI 模型推荐器 — 我该用哪个大模型？">
+  <meta property="og:description" content="3 个问题选出最适合你的旗舰模型：质量、成本、速度、长上下文可加权。">
+  <meta property="og:url" content="https://aiv123.com/model-finder.html">
+  <meta property="og:site_name" content="AINav">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%230969da'/><text x='50' y='72' font-size='60' text-anchor='middle' fill='white' font-family='system-ui' font-weight='700'>AI</text></svg>">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2B8FBWRX4N"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2B8FBWRX4N');</script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"2d49f38b39c743ac80b6d6b9ff99494d"}'></script>
+  <style>
+    :root, html[data-theme="dark"] {
+      --bg: #0f1419; --panel: #151b23; --card: #1c2430; --border: #2d3848;
+      --text: #e6edf3; --muted: #8b9cb3; --accent: #58a6ff; --accent2: #3fb950;
+      --warn: #d29922; --danger: #f85149; --overseas: #a78bfa;
+    }
+    html[data-theme="light"] {
+      --bg: #f6f8fa; --panel: #fff; --card: #fff; --border: #d0d7de;
+      --text: #1f2328; --muted: #59636e; --accent: #0969da; --accent2: #1a7f37;
+      --warn: #9a6700; --danger: #cf222e; --overseas: #7c3aed;
+    }
+    @media (prefers-color-scheme: light) {
+      html[data-theme="system"] {
+        --bg: #f6f8fa; --panel: #fff; --card: #fff; --border: #d0d7de;
+        --text: #1f2328; --muted: #59636e; --accent: #0969da; --accent2: #1a7f37;
+        --warn: #9a6700; --danger: #cf222e; --overseas: #7c3aed;
+      }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Segoe UI", system-ui, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.6; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .cp-top { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); background: var(--panel); position: sticky; top: 0; z-index: 10; }
+    .cp-top-inner { max-width: 52rem; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; justify-content: space-between; }
+    .cp-nav a { font-weight: 600; margin-right: 1rem; font-size: 0.88rem; }
+    .cp-toolbar { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; }
+    .theme-btn { font-size: 0.72rem; padding: 0.2rem 0.5rem; border-radius: 5px; border: 1px solid var(--border);
+      background: var(--card); color: var(--muted); cursor: pointer; font-family: inherit; }
+    .theme-btn.is-active { color: var(--accent); border-color: var(--accent); font-weight: 600; }
+    .mf-wrap { max-width: 52rem; margin: 0 auto; padding: 1rem 1rem 2.5rem; }
+    h1 { font-size: 1.45rem; margin: 0 0 0.35rem; }
+    .mf-sub { font-size: 0.9rem; color: var(--muted); margin: 0 0 0.5rem; }
+    .mf-updated { font-size: 0.76rem; color: var(--muted); margin-bottom: 1rem; }
+    .mf-promo { margin-bottom: 1rem; padding: .55rem .85rem; border-radius: 8px; border: 1px solid var(--border);
+      background: var(--card); display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+      gap: .35rem .6rem; font-size: .84rem; line-height: 1.5; }
+    .mf-steps { display: flex; gap: 0.4rem; margin-bottom: 1.1rem; flex-wrap: wrap; }
+    .mf-step-pill { font-size: 0.75rem; padding: 0.25rem 0.65rem; border-radius: 999px; border: 1px solid var(--border);
+      color: var(--muted); background: var(--card); }
+    .mf-step-pill.is-on { color: var(--accent); border-color: var(--accent); font-weight: 600;
+      background: color-mix(in srgb, var(--accent) 12%, transparent); }
+    .mf-step-pill.is-done { color: var(--accent2); border-color: color-mix(in srgb, var(--accent2) 45%, var(--border)); }
+    .mf-panel { border: 1px solid var(--border); border-radius: 10px; background: var(--card); padding: 1rem 1.1rem; margin-bottom: 1rem; }
+    .mf-panel h2 { font-size: 1.05rem; margin: 0 0 0.35rem; }
+    .mf-hint { font-size: 0.82rem; color: var(--muted); margin: 0 0 0.85rem; }
+    .mf-grid { display: grid; grid-template-columns: 1fr; gap: 0.45rem; }
+    @media (min-width: 36rem) { .mf-grid.cols-2 { grid-template-columns: 1fr 1fr; } }
+    .mf-opt { display: block; width: 100%; text-align: left; padding: 0.7rem 0.85rem; border-radius: 8px;
+      border: 1px solid var(--border); background: var(--panel); color: var(--text); cursor: pointer;
+      font-family: inherit; font-size: 0.88rem; transition: border-color .15s, background .15s; }
+    .mf-opt:hover { border-color: var(--accent); }
+    .mf-opt.is-active { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, var(--panel)); font-weight: 600; }
+    .mf-opt .mf-opt-hint { display: block; font-size: 0.75rem; color: var(--muted); font-weight: 400; margin-top: 0.2rem; }
+    .mf-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.9rem; }
+    .mf-btn { font-size: 0.85rem; padding: 0.45rem 0.9rem; border-radius: 6px; border: 1px solid var(--border);
+      background: var(--panel); color: var(--text); cursor: pointer; font-family: inherit; font-weight: 600; }
+    .mf-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .mf-btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .mf-btn.primary:hover { filter: brightness(1.05); color: #fff; }
+    .mf-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+    .mf-hot { margin: 1.4rem 0 0.6rem; }
+    .mf-hot h2 { font-size: 1.05rem; margin: 0 0 0.3rem; }
+    .mf-hot-grid { display: grid; grid-template-columns: 1fr; gap: 0.4rem; }
+    @media (min-width: 36rem) { .mf-hot-grid { grid-template-columns: 1fr 1fr; } }
+    .mf-hot a, .mf-hot button {
+      display: block; width: 100%; text-align: left; padding: 0.55rem 0.75rem; border-radius: 8px;
+      border: 1px solid var(--border); background: var(--card); color: var(--text); font-size: 0.84rem;
+      font-family: inherit; cursor: pointer; text-decoration: none;
+    }
+    .mf-hot a:hover, .mf-hot button:hover { border-color: var(--accent); text-decoration: none; color: var(--accent); }
+    .mf-result-meta { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.75rem; }
+    .mf-rank { border: 1px solid var(--border); border-radius: 10px; background: var(--card); margin-bottom: 0.75rem; overflow: hidden; }
+    .mf-rank.is-top { border-color: color-mix(in srgb, var(--accent2) 55%, var(--border)); }
+    .mf-rank-head { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 0.65rem; padding: 0.7rem 0.9rem;
+      border-bottom: 1px solid var(--border); background: var(--panel); }
+    .mf-rank-num { font-weight: 800; color: var(--accent2); font-size: 0.95rem; min-width: 1.5rem; }
+    .mf-rank-name { font-weight: 700; font-size: 1.02rem; }
+    .mf-rank-name a { color: var(--text); }
+    .mf-badge { display: inline-block; padding: 0.08rem 0.45rem; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+      background: color-mix(in srgb, var(--accent) 12%, transparent); color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 28%, transparent); }
+    .mf-badge.intl { color: var(--overseas); background: color-mix(in srgb, var(--overseas) 12%, transparent);
+      border-color: color-mix(in srgb, var(--overseas) 28%, transparent); }
+    .mf-badge.cn { color: var(--accent2); background: color-mix(in srgb, var(--accent2) 12%, transparent);
+      border-color: color-mix(in srgb, var(--accent2) 28%, transparent); }
+    .mf-score { margin-left: auto; font-size: 0.78rem; color: var(--muted); }
+    .mf-score strong { color: var(--accent2); font-size: 0.95rem; }
+    .mf-rank-body { padding: 0.75rem 0.9rem; font-size: 0.86rem; }
+    .mf-blurb { margin: 0 0 0.45rem; }
+    .mf-why { margin: 0; padding-left: 1.1rem; color: var(--muted); font-size: 0.82rem; }
+    .mf-why li { margin: 0.15rem 0; }
+    .mf-rank-links { display: flex; flex-wrap: wrap; gap: 0.5rem 0.85rem; margin-top: 0.65rem; font-size: 0.82rem; }
+    .mf-empty { padding: 1rem; border: 1px dashed var(--border); border-radius: 8px; color: var(--muted); font-size: 0.88rem; }
+    .mf-related { margin-top: 1.2rem; padding: 0.85rem 1rem; border-radius: 8px; border: 1px solid var(--border); background: var(--panel); font-size: 0.85rem; }
+    .mf-related a { font-weight: 600; margin-right: 0.75rem; }
+    .mf-faq { margin-top: 1.6rem; }
+    .mf-faq h2 { font-size: 1.05rem; margin: 0 0 0.6rem; }
+    .mf-faq details { border: 1px solid var(--border); border-radius: 8px; background: var(--card); margin-bottom: 0.4rem; padding: 0.55rem 0.8rem; }
+    .mf-faq summary { cursor: pointer; font-weight: 600; font-size: 0.88rem; }
+    .mf-faq p { margin: 0.45rem 0 0.15rem; font-size: 0.82rem; color: var(--muted); }
+    .cp-footer { margin-top: 2rem; font-size: 0.76rem; color: var(--muted); text-align: center; }
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+  <div class="cp-top">
+    <div class="cp-top-inner">
+      <div class="cp-nav" data-plan-nav></div>
+      <div class="cp-toolbar">
+        <button type="button" class="theme-btn" data-theme-set="system">跟随系统</button>
+        <button type="button" class="theme-btn" data-theme-set="light">浅色</button>
+        <button type="button" class="theme-btn" data-theme-set="dark">深色</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="mf-wrap">
+    <div class="mf-promo">
+      <strong>国内直连</strong> <span style="color:var(--muted)">·</span>
+      <span style="color:var(--muted)">旗舰横评 + 约束过滤，不是纯 API 价目榜</span>
+      <a href="model-plan.html" style="font-weight:600;">看完整横评 →</a>
+    </div>
+
+    <h1>你该用哪个大模型？</h1>
+    <p class="mf-sub">回答 3 个问题，从国内 + 海外旗舰里挑出最合适的——按场景契合、质量、成本、速度与长上下文加权。无需注册。</p>
+    <p class="mf-updated">数据对齐 <a href="model-plan.html">模型选型横评</a> · 最后更新：<span id="mf-updated">—</span></p>
+
+    <div class="mf-steps" id="mf-steps" aria-label="进度">
+      <span class="mf-step-pill is-on" data-step-pill="1">1. 场景</span>
+      <span class="mf-step-pill" data-step-pill="2">2. 约束</span>
+      <span class="mf-step-pill" data-step-pill="3">3. 优先项</span>
+      <span class="mf-step-pill" data-step-pill="4">结果</span>
+    </div>
+
+    <div class="mf-panel" id="step-1">
+      <h2>你要做什么？</h2>
+      <p class="mf-hint">选一个最接近的场景。不确定就选「通用对话」。</p>
+      <div class="mf-grid cols-2" id="scenario-opts"></div>
+      <div class="mf-actions">
+        <button type="button" class="mf-btn primary" id="btn-to-2" disabled>下一步</button>
+      </div>
+    </div>
+
+    <div class="mf-panel" id="step-2" hidden>
+      <h2>有什么硬约束？</h2>
+      <p class="mf-hint">国内直连、预算、端侧等会直接过滤候选池。</p>
+      <div class="mf-grid cols-2" id="constraint-opts"></div>
+      <div class="mf-actions">
+        <button type="button" class="mf-btn" id="btn-back-1">上一步</button>
+        <button type="button" class="mf-btn primary" id="btn-to-3" disabled>下一步</button>
+      </div>
+    </div>
+
+    <div class="mf-panel" id="step-3" hidden>
+      <h2>更看重什么？</h2>
+      <p class="mf-hint">在质量、成本、速度、长上下文之间选一个主权重。</p>
+      <div class="mf-grid cols-2" id="priority-opts"></div>
+      <div class="mf-actions">
+        <button type="button" class="mf-btn" id="btn-back-2">上一步</button>
+        <button type="button" class="mf-btn primary" id="btn-run" disabled>看推荐</button>
+      </div>
+    </div>
+
+    <div id="step-result" hidden>
+      <div class="mf-result-meta" id="result-meta"></div>
+      <div id="result-list"></div>
+      <div class="mf-related" id="result-related"></div>
+      <div class="mf-actions">
+        <button type="button" class="mf-btn" id="btn-restart">重新选型</button>
+        <a class="mf-btn" href="model-plan.html">打开模型横评</a>
+        <a class="mf-btn" href="free-tier.html">看免费额度</a>
+      </div>
+    </div>
+
+    <div class="mf-hot" id="hot-block">
+      <h2>热门问题</h2>
+      <p class="mf-hint">跳过问卷，直接看排好名的答案。</p>
+      <div class="mf-hot-grid" id="hot-opts"></div>
+    </div>
+
+    <div class="mf-faq">
+      <h2>常见问题</h2>
+      <details>
+        <summary>推荐器是怎么挑模型的？</summary>
+        <p>先按场景契合度筛选，再叠加你选的优先项（质量 / 成本 / 速度 / 长上下文）加权。国内直连、端侧、预算等硬约束会直接剔除不符合的模型。</p>
+      </details>
+      <details>
+        <summary>和 Ofox 模型推荐器有什么不同？</summary>
+        <p>Ofox 面向 API 网关实时价目与一键调用；AINav 面向选型决策：国内可达性、套餐/工具串联、与旗舰横评互链。两者可互补使用。</p>
+      </details>
+      <details>
+        <summary>为什么只有十来款旗舰？</summary>
+        <p>导航站优先维护「能讲清取舍」的旗舰池，而不是 100+ 实时目录。完整技术说明见模型选型横评页。</p>
+      </details>
+      <details>
+        <summary>需要注册吗？</summary>
+        <p>不需要。推荐完全在浏览器本地计算，不上传答案。</p>
+      </details>
+    </div>
+
+    <div class="cp-footer">
+      <p>评分基于公开能力与横评编辑判断 · 非实时 API 价目</p>
+      <p><a href="index.html">← 返回 AINav 首页</a> · <a href="model-plan.html">模型选型</a> · <a href="local-model-plan.html">本地模型</a> · <a href="coding-plan.html">编程套餐</a> · <a href="agent-plan.html">Agent 横评</a> · <a href="free-tier.html">免费额度</a></p>
+    </div>
+  </div>
+
+  <script id="mf-data" type="application/json">
+{"updated":"2026-09-08","scenarios":[{"id":"coding","zh":"编程 / 写完整应用","en":"Coding","hint":"工程交付、前后端、长程 Coding","related":"coding-plan.html"},{"id":"agent","zh":"AI 智能体 / 多步工作流","en":"Agents","hint":"工具调用、长程 Agent、编排","related":"agent-plan.html"},{"id":"rag","zh":"长文档 / RAG","en":"Long docs / RAG","hint":"百万字论文、法规、知识库","related":"model-plan.html"},{"id":"chat","zh":"通用对话","en":"Chat","hint":"助手、闲聊、日常问答","related":"model-plan.html"},{"id":"vision","zh":"视觉 / 多模态","en":"Vision","hint":"图像、视频、文档理解","related":"image-plan.html"},{"id":"writing","zh":"写作 / 内容创作","en":"Writing","hint":"文案、创意、多语言","related":"model-plan.html"},{"id":"support","zh":"客服 / 高并发","en":"Support","hint":"低延迟、流式、7×24","related":"model-plan.html"},{"id":"edge","zh":"端侧 / 离线隐私","en":"On-device","hint":"本地部署、IoT、无云","related":"local-model-plan.html"}],"constraints":[{"id":"any","zh":"不限","en":"Any"},{"id":"cn","zh":"国内直连优先","en":"CN direct"},{"id":"budget","zh":"预算敏感 / 性价比","en":"Budget"},{"id":"free","zh":"想先免费试用","en":"Free tier"},{"id":"edge","zh":"必须端侧 / 离线","en":"On-device only"}],"priorities":[{"id":"quality","zh":"质量优先","en":"Quality"},{"id":"cost","zh":"成本优先","en":"Cost"},{"id":"speed","zh":"速度优先","en":"Speed"},{"id":"context","zh":"长上下文优先","en":"Long context"}],"hotQuestions":[{"id":"hq-coding","zh":"最适合编程的模型","en":"Best for coding","scenario":"coding","constraint":"any","priority":"quality"},{"id":"hq-agent","zh":"最适合 Agent 的模型","en":"Best for agents","scenario":"agent","constraint":"any","priority":"quality"},{"id":"hq-rag","zh":"长上下文最强","en":"Best long context","scenario":"rag","constraint":"any","priority":"context"},{"id":"hq-cheap","zh":"性价比最高","en":"Best value","scenario":"chat","constraint":"budget","priority":"cost"},{"id":"hq-cn","zh":"国内直连旗舰","en":"Best CN-accessible","scenario":"coding","constraint":"cn","priority":"quality"},{"id":"hq-fast","zh":"最快 / 低延迟","en":"Fastest","scenario":"support","constraint":"any","priority":"speed"},{"id":"hq-vision","zh":"最佳视觉理解","en":"Best vision","scenario":"vision","constraint":"any","priority":"quality"},{"id":"hq-edge","zh":"端侧 / 隐私本地","en":"On-device","scenario":"edge","constraint":"edge","priority":"quality"}],"models":[{"id":"deepseek-v4-pro","name":"DeepSeek-V4-Pro","vendor":"DeepSeek","region":"cn","badge":"长上下文","active":true,"cn":true,"edge":false,"freeish":true,"quality":8,"cost":8,"speed":5,"context":10,"fit":{"coding":7,"agent":8,"rag":10,"chat":6,"vision":4,"writing":6,"support":4,"edge":1},"blurb":"1M 上下文 + 开源权重。8/16 起峰谷价：低峰 $0.66/$1.98，高峰 $1.32/$3.96。","why":["1M 上下文 + CSA/HCA","开源 Agent 底座友好","不适合极低延迟与端侧"],"link":"https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro","plan":"model-plan.html"},{"id":"glm-5-2","name":"GLM-5.3","vendor":"智谱","region":"cn","badge":"长程 Coding","active":true,"cn":true,"edge":false,"freeish":true,"quality":9,"cost":7,"speed":6,"context":9,"fit":{"coding":10,"agent":9,"rag":7,"chat":6,"vision":4,"writing":6,"support":5,"edge":1},"blurb":"5.2 底座 + 后训练；Coding Plan 全量切到 5.3，对标 Opus 5。","why":["常开思考 · 长程工程","Coding Plan 积分制","思考关不掉"],"link":"https://z.ai/blog/glm-5.3","plan":"coding-plan.html"},{"id":"kimi-k3","name":"Kimi K3","vendor":"月之暗面","region":"cn","badge":"Agent","active":true,"cn":true,"edge":false,"freeish":true,"quality":9,"cost":6,"speed":6,"context":9,"fit":{"coding":8,"agent":10,"rag":8,"chat":7,"vision":7,"writing":7,"support":5,"edge":1},"blurb":"多步 Agent 与长仓工程强；开源前沿旗舰。Arena Agent #7（K3 Max）。","why":["2.8T · 1M · 原生多模态","适合复杂工作流","极致低价批量可换 Flash 档"],"link":"https://www.kimi.com/zh-cn/blog/kimi-k3","plan":"agent-plan.html"},{"id":"qwen-3-8-max","name":"Qwen 3.8 Max","vendor":"阿里通义","region":"cn","badge":"开源旗舰","active":true,"cn":true,"edge":false,"freeish":true,"quality":9,"cost":7,"speed":6,"context":9,"fit":{"coding":8,"agent":8,"rag":8,"chat":7,"vision":6,"writing":8,"support":6,"edge":1},"blurb":"2.4T Max 档首次开源；API $2/$6。单卡请改 Qwen3.8-27B。","why":["开源能力榜第一档","编码/Cowork 强","不是 24GB GGUF"],"link":"https://www.alibabacloud.com/blog/qwen3-8-max-a-new-bar-for-coding-and-cowork_603421","plan":"model-plan.html"},{"id":"hy4-preview","name":"Hy4 preview","vendor":"腾讯混元","region":"cn","badge":"开源 Agent","active":true,"cn":true,"edge":false,"freeish":true,"quality":8,"cost":9,"speed":6,"context":10,"fit":{"coding":8,"agent":8,"rag":8,"chat":6,"vision":4,"writing":6,"support":5,"edge":1},"blurb":"770B MoE / 49B 激活，Apache 2.0。API $0.83/$2.50。Arena Agent #10。","why":["国内直连开源 Agent","任务成本中位约 $0.27","preview，尚未 GA"],"link":"https://huggingface.co/tencent/Hy4-preview","plan":"model-plan.html"},{"id":"minimax-m2-7","name":"MiniMax M2.7","vendor":"MiniMax","region":"cn","badge":"速度","active":true,"cn":true,"edge":false,"freeish":true,"quality":6,"cost":8,"speed":10,"context":4,"fit":{"coding":4,"agent":4,"rag":3,"chat":8,"vision":3,"writing":5,"support":10,"edge":1},"blurb":"约 30 tok/s，实时对话与高并发客服优先。","why":["流式低延迟","高并发 API","不适合超长文档深度推理"],"link":"https://www.minimaxi.com","plan":"model-plan.html"},{"id":"gemma-4","name":"Gemma 4","vendor":"Google","region":"cn","badge":"端侧","active":true,"cn":true,"edge":true,"freeish":true,"quality":6,"cost":10,"speed":8,"context":3,"fit":{"coding":3,"agent":2,"rag":2,"chat":6,"vision":5,"writing":5,"support":7,"edge":10},"blurb":"端侧 / 离线 / 隐私本地的平台级开源方案。","why":["E2B 端侧 · Apache 2.0","140+ 语言","不做 1M 长任务"],"link":"https://ai.google.dev/gemma","plan":"local-model-plan.html"},{"id":"gpt-5-6-sol","name":"GPT-5.6 Sol","vendor":"OpenAI","region":"intl","badge":"通用旗舰","active":true,"cn":false,"edge":false,"freeish":false,"quality":9,"cost":4,"speed":7,"context":8,"fit":{"coding":8,"agent":8,"rag":6,"chat":10,"vision":8,"writing":9,"support":6,"edge":1},"blurb":"ChatGPT 付费默认；免费档 Luna。API $4/$20 促销至少到 11/21。","why":["Sol/Terra/Luna 三档","Chat 推理滑条","国内需网关/梯子"],"link":"https://chatgpt.com","plan":"model-plan.html"},{"id":"claude-opus-5","name":"Claude Opus 5","vendor":"Anthropic","region":"intl","badge":"深度推理","active":true,"cn":false,"edge":false,"freeish":false,"quality":10,"cost":4,"speed":5,"context":9,"fit":{"coding":10,"agent":9,"rag":8,"chat":7,"vision":6,"writing":8,"support":4,"edge":1},"blurb":"最强普遍可用 Claude；$5/$25。冲极限再用 Fable 5.1（Arena Agent #1）。","why":["接近 Fable、半价","Claude Code 重任务主力","中文略弱 · 需梯子"],"link":"https://www.anthropic.com/news/claude-opus-5","plan":"coding-plan.html"},{"id":"claude-fable-5-1","name":"Claude Fable 5.1","vendor":"Anthropic","region":"intl","badge":"长程 Agent","active":true,"cn":false,"edge":false,"freeish":false,"quality":10,"cost":2,"speed":4,"context":9,"fit":{"coding":10,"agent":10,"rag":8,"chat":6,"vision":6,"writing":7,"support":3,"edge":1},"blurb":"9/1 接档 Fable 5。刊例 $10/$50，缓存读 $0.25。Arena Agent #1。","why":["长程 Agent 最强公开档","缓存更便宜，日常仍先用 Opus 5","需梯子"],"link":"https://www.anthropic.com/claude-fable-and-mythos-5-1","plan":"agent-plan.html"},{"id":"gemini-3-8-flash","name":"Gemini 3.8 Flash","vendor":"Google","region":"intl","badge":"速度/Agent","active":true,"cn":false,"edge":false,"freeish":true,"quality":8,"cost":8,"speed":9,"context":8,"fit":{"coding":7,"agent":7,"rag":6,"chat":8,"vision":8,"writing":7,"support":8,"edge":1},"blurb":"9/2 接档 3.7；$0.75/$3.75 引入价至 12/31，2027-01-01 翻倍。","why":["同价同速、工程与 Agent 加码","Arena Agent #17（3.7 已落到 #35）","1M 研究可仍看 3.1 Pro"],"link":"https://gemini.google.com","plan":"model-plan.html"},{"id":"grok-4-6","name":"Grok 4.6","vendor":"xAI","region":"intl","badge":"Coding/Agent","active":true,"cn":false,"edge":false,"freeish":false,"quality":9,"cost":7,"speed":7,"context":7,"fit":{"coding":9,"agent":10,"rag":6,"chat":6,"vision":6,"writing":6,"support":5,"edge":1},"blurb":"8/12 发布；Cursor / Grok Build 首日。$2/$6，200K 整单翻倍。","why":["长跑 Agent 更强","标价没变、缓存更贵","非中文生态首选"],"link":"https://x.ai/news/grok-4-6","plan":"coding-plan.html"}]}
+  </script>
+
+  <script>
+  (function () {
+    var DATA = JSON.parse(document.getElementById("mf-data").textContent);
+    var state = { scenario: null, constraint: null, priority: null };
+
+    var elSteps = {
+      1: document.getElementById("step-1"),
+      2: document.getElementById("step-2"),
+      3: document.getElementById("step-3"),
+      result: document.getElementById("step-result")
+    };
+    var hotBlock = document.getElementById("hot-block");
+
+    document.getElementById("mf-updated").textContent = DATA.updated || "—";
+
+    function esc(s) {
+      return String(s == null ? "" : s)
+        .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function setStep(n) {
+      elSteps[1].hidden = n !== 1;
+      elSteps[2].hidden = n !== 2;
+      elSteps[3].hidden = n !== 3;
+      elSteps.result.hidden = n !== 4;
+      hotBlock.hidden = n === 4;
+      document.querySelectorAll("[data-step-pill]").forEach(function (p) {
+        var v = Number(p.getAttribute("data-step-pill"));
+        p.classList.toggle("is-on", v === n);
+        p.classList.toggle("is-done", v < n);
+      });
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function renderOpts(containerId, items, key, selected) {
+      var box = document.getElementById(containerId);
+      box.innerHTML = items.map(function (it) {
+        var active = selected === it.id ? " is-active" : "";
+        var hint = it.hint ? '<span class="mf-opt-hint">' + esc(it.hint) + "</span>" : "";
+        return '<button type="button" class="mf-opt' + active + '" data-key="' + esc(key) + '" data-id="' + esc(it.id) + '">' +
+          esc(it.zh) + hint + "</button>";
+      }).join("");
+    }
+
+    function refreshOpts() {
+      renderOpts("scenario-opts", DATA.scenarios, "scenario", state.scenario);
+      renderOpts("constraint-opts", DATA.constraints, "constraint", state.constraint);
+      renderOpts("priority-opts", DATA.priorities, "priority", state.priority);
+      document.getElementById("btn-to-2").disabled = !state.scenario;
+      document.getElementById("btn-to-3").disabled = !state.constraint;
+      document.getElementById("btn-run").disabled = !state.priority;
+    }
+
+    function renderHot() {
+      var box = document.getElementById("hot-opts");
+      box.innerHTML = (DATA.hotQuestions || []).map(function (q) {
+        return '<button type="button" data-hot="' + esc(q.id) + '">' + esc(q.zh) + "</button>";
+      }).join("");
+    }
+
+    function passesConstraint(m, c) {
+      if (!m.active) return false;
+      if (c === "cn") return !!m.cn;
+      if (c === "edge") return !!m.edge;
+      if (c === "free") return !!m.freeish;
+      if (c === "budget") return m.cost >= 7;
+      return true;
+    }
+
+    function scoreModel(m, scenario, priority, constraint) {
+      var fit = (m.fit && m.fit[scenario]) || 1;
+      if (fit < 3 && scenario !== "chat") return null;
+      var score = fit * 12;
+      if (priority === "quality") score += m.quality * 8;
+      else if (priority === "cost") score += m.cost * 8;
+      else if (priority === "speed") score += m.speed * 8;
+      else if (priority === "context") score += m.context * 8;
+      else score += m.quality * 4;
+
+      score += fit * 2;
+      if (constraint === "budget" || constraint === "free") score += m.cost * 2;
+      if (constraint === "cn" && m.cn) score += 6;
+      if (constraint === "edge" && m.edge) score += 10;
+      if (scenario === "coding" && m.region === "cn") score += 2;
+      return Math.round(score);
+    }
+
+    function labelOf(list, id) {
+      for (var i = 0; i < list.length; i++) if (list[i].id === id) return list[i].zh;
+      return id;
+    }
+
+    function relatedHref(scenario) {
+      for (var i = 0; i < DATA.scenarios.length; i++) {
+        if (DATA.scenarios[i].id === scenario) return DATA.scenarios[i].related || "model-plan.html";
+      }
+      return "model-plan.html";
+    }
+
+    function runRecommend() {
+      var ranked = [];
+      DATA.models.forEach(function (m) {
+        if (!passesConstraint(m, state.constraint)) return;
+        var s = scoreModel(m, state.scenario, state.priority, state.constraint);
+        if (s == null) return;
+        ranked.push({ model: m, score: s });
+      });
+      ranked.sort(function (a, b) { return b.score - a.score; });
+      ranked = ranked.slice(0, 3);
+
+      var meta = "场景：" + labelOf(DATA.scenarios, state.scenario) +
+        " · 约束：" + labelOf(DATA.constraints, state.constraint) +
+        " · 优先：" + labelOf(DATA.priorities, state.priority);
+      document.getElementById("result-meta").textContent = meta;
+
+      var list = document.getElementById("result-list");
+      if (!ranked.length) {
+        list.innerHTML = '<div class="mf-empty">当前约束下没有合适候选。试试放宽「国内直连 / 端侧」约束，或改选「不限」。</div>';
+      } else {
+        list.innerHTML = ranked.map(function (r, idx) {
+          var m = r.model;
+          var top = idx === 0 ? " is-top" : "";
+          var regionBadge = m.cn
+            ? '<span class="mf-badge cn">国内可达</span>'
+            : '<span class="mf-badge intl">海外</span>';
+          var why = (m.why || []).map(function (w) { return "<li>" + esc(w) + "</li>"; }).join("");
+          return '<article class="mf-rank' + top + '">' +
+            '<div class="mf-rank-head">' +
+              '<span class="mf-rank-num">#' + (idx + 1) + "</span>" +
+              '<span class="mf-rank-name"><a href="' + esc(m.link) + '" target="_blank" rel="noopener noreferrer">' + esc(m.name) + "</a></span>" +
+              '<span class="mf-badge">' + esc(m.badge) + "</span>" + regionBadge +
+              '<span class="mf-score">得分 <strong>' + r.score + "</strong></span>" +
+            "</div>" +
+            '<div class="mf-rank-body">' +
+              '<p class="mf-blurb">' + esc(m.blurb) + "</p>" +
+              '<ul class="mf-why">' + why + "</ul>" +
+              '<div class="mf-rank-links">' +
+                '<a href="' + esc(m.plan || "model-plan.html") + '">相关横评</a>' +
+                '<a href="' + esc(m.link) + '" target="_blank" rel="noopener noreferrer">官网 / 发布页</a>' +
+                (idx === 0 ? '<a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored">统一 API 试用（赞助）</a>' : "") +
+              "</div>" +
+            "</div></article>";
+        }).join("");
+      }
+
+      var rel = relatedHref(state.scenario);
+      document.getElementById("result-related").innerHTML =
+        "接着看：<a href=\"" + esc(rel) + "\">场景相关横评</a>" +
+        "<a href=\"model-plan.html\">旗舰模型选型</a>" +
+        "<a href=\"free-tier.html\">免费额度</a>" +
+        "<a href=\"coding-plan.html\">编程套餐</a>";
+
+      setStep(4);
+    }
+
+    function applyHot(id) {
+      var q = null;
+      for (var i = 0; i < DATA.hotQuestions.length; i++) {
+        if (DATA.hotQuestions[i].id === id) { q = DATA.hotQuestions[i]; break; }
+      }
+      if (!q) return;
+      state.scenario = q.scenario;
+      state.constraint = q.constraint;
+      state.priority = q.priority;
+      refreshOpts();
+      runRecommend();
+    }
+
+    document.getElementById("scenario-opts").addEventListener("click", function (e) {
+      var btn = e.target.closest(".mf-opt");
+      if (!btn) return;
+      state.scenario = btn.getAttribute("data-id");
+      refreshOpts();
+    });
+    document.getElementById("constraint-opts").addEventListener("click", function (e) {
+      var btn = e.target.closest(".mf-opt");
+      if (!btn) return;
+      state.constraint = btn.getAttribute("data-id");
+      refreshOpts();
+    });
+    document.getElementById("priority-opts").addEventListener("click", function (e) {
+      var btn = e.target.closest(".mf-opt");
+      if (!btn) return;
+      state.priority = btn.getAttribute("data-id");
+      refreshOpts();
+    });
+    document.getElementById("hot-opts").addEventListener("click", function (e) {
+      var btn = e.target.closest("[data-hot]");
+      if (!btn) return;
+      applyHot(btn.getAttribute("data-hot"));
+    });
+
+    document.getElementById("btn-to-2").addEventListener("click", function () { if (state.scenario) setStep(2); });
+    document.getElementById("btn-to-3").addEventListener("click", function () { if (state.constraint) setStep(3); });
+    document.getElementById("btn-back-1").addEventListener("click", function () { setStep(1); });
+    document.getElementById("btn-back-2").addEventListener("click", function () { setStep(2); });
+    document.getElementById("btn-run").addEventListener("click", function () { if (state.priority) runRecommend(); });
+    document.getElementById("btn-restart").addEventListener("click", function () {
+      state = { scenario: null, constraint: null, priority: null };
+      refreshOpts();
+      setStep(1);
+    });
+
+    // Theme
+    (function () {
+      var btns = document.querySelectorAll(".theme-btn[data-theme-set]");
+      var html = document.documentElement;
+      function apply(t) {
+        html.setAttribute("data-theme", t);
+        localStorage.setItem("cp-theme", t);
+        btns.forEach(function (b) { b.classList.toggle("is-active", b.getAttribute("data-theme-set") === t); });
+      }
+      apply(localStorage.getItem("cp-theme") || "system");
+      btns.forEach(function (b) {
+        b.addEventListener("click", function () { apply(b.getAttribute("data-theme-set")); });
+      });
+    })();
+
+    // Deep link: ?s=coding&c=cn&p=quality or ?hot=hq-coding
+    (function () {
+      try {
+        var q = new URLSearchParams(location.search);
+        var hot = q.get("hot");
+        if (hot) { applyHot(hot); return; }
+        var s = q.get("s"), c = q.get("c"), p = q.get("p");
+        if (s && c && p) {
+          state.scenario = s;
+          state.constraint = c;
+          state.priority = p;
+          refreshOpts();
+          runRecommend();
+        }
+      } catch (e) {}
+    })();
+
+    refreshOpts();
+    renderHot();
+  })();
+  </script>
+  <script src="plan-nav.js" data-active="model-finder.html"></script>
+  <script src="plan-meta-i18n.js"></script>
+  <script src="./back-to-top.js"></script>
+</body>
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>资源导航站 · 影视 / 游戏 / 网盘 / 破解</title>
+<style>
+:root{
+  --bg:#0f1117; --bg2:#151823; --card:#1b2030; --card2:#222838;
+  --line:#2a3045; --txt:#e6e9f2; --txt2:#9aa3bd; --txt3:#6b7591;
+  --brand:#5b8cff; --brand2:#7c6bff; --accent:#22c39a; --warn:#ffb43c;
+  --shadow:0 8px 24px rgba(0,0,0,.35);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Microsoft YaHei","PingFang SC","WenQuanYi Micro Hei",system-ui,sans-serif;
+  background:radial-gradient(1200px 600px at 15% -10%,rgba(91,140,255,.12),transparent),
+             radial-gradient(1000px 500px at 90% 0%,rgba(124,107,255,.10),transparent),var(--bg);
+  color:var(--txt); line-height:1.6; padding-bottom:60px;
+}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(15,17,23,.82);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line)}
+.hbox{display:flex;align-items:center;gap:16px;padding:14px 0;flex-wrap:wrap}
+.logo{font-size:20px;font-weight:800;letter-spacing:.5px;white-space:nowrap;
+  background:linear-gradient(90deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo span{opacity:.55;font-weight:400;font-size:13px;-webkit-text-fill-color:var(--txt3)}
+.search{flex:1;min-width:200px;position:relative}
+.search input{width:100%;padding:10px 14px 10px 38px;border-radius:10px;border:1px solid var(--line);
+  background:var(--bg2);color:var(--txt);font-size:14px;outline:none;transition:.2s}
+.search input:focus{border-color:var(--brand);box-shadow:0 0 0 3px rgba(91,140,255,.15)}
+.search::before{content:"🔍";position:absolute;left:12px;top:50%;transform:translateY(-50%);opacity:.5;font-size:13px}
+.count{font-size:12px;color:var(--txt3);white-space:nowrap}
+
+/* Hero */
+.hero{padding:44px 0 26px;text-align:center}
+.hero h1{font-size:clamp(24px,4vw,38px);font-weight:800;line-height:1.3}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--brand),var(--brand2),var(--accent));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--txt2);margin-top:10px;font-size:15px}
+.tags{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.tag{padding:5px 13px;border-radius:20px;font-size:12px;border:1px solid var(--line);background:var(--card);color:var(--txt2);cursor:pointer;transition:.18s}
+.tag:hover{border-color:var(--brand);color:var(--txt);transform:translateY(-1px)}
+.tag.on{background:linear-gradient(90deg,var(--brand),var(--brand2));color:#fff;border-color:transparent}
+
+/* Section */
+section{padding-top:34px;scroll-margin-top:80px}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.sec-head .ic{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;font-size:18px;
+  background:var(--card);border:1px solid var(--line)}
+.sec-head h2{font-size:20px;font-weight:800}
+.sec-head small{color:var(--txt3);font-size:12px;margin-left:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.card{position:relative;display:block;text-decoration:none;color:inherit;padding:16px 16px 14px;
+  background:linear-gradient(180deg,var(--card),var(--bg2));border:1px solid var(--line);
+  border-radius:14px;transition:.2s;overflow:hidden}
+.card::after{content:"";position:absolute;inset:0;border-radius:14px;padding:1px;
+  background:linear-gradient(135deg,transparent,transparent);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:.2s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:transparent}
+.card:hover::after{opacity:1;background:linear-gradient(135deg,var(--brand),var(--brand2))}
+.card .top{display:flex;align-items:flex-start;gap:10px}
+.fav{width:34px;height:34px;border-radius:9px;flex-shrink:0;display:grid;place-items:center;
+  font-size:15px;background:var(--card2);border:1px solid var(--line);font-weight:700;color:var(--txt2)}
+.card h3{font-size:15px;font-weight:700;line-height:1.4}
+.card .desc{font-size:12.5px;color:var(--txt2);margin-top:8px;min-height:38px}
+.card .meta{display:flex;align-items:center;gap:8px;margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:11px;color:var(--txt3)}
+.card .meta b{font-weight:600;color:var(--brand)}
+.card .go{margin-left:auto;opacity:0;transform:translateX(-4px);transition:.2s;color:var(--brand)}
+.card:hover .go{opacity:1;transform:translateX(0)}
+.empty{display:none;text-align:center;color:var(--txt3);padding:60px 0;font-size:14px}
+
+/* Footer */
+footer{margin-top:50px;padding-top:24px;border-top:1px solid var(--line);color:var(--txt3);font-size:12.5px;text-align:center}
+footer p{margin:6px 0}
+.disclaimer{display:inline-block;margin-top:10px;padding:8px 14px;border-radius:8px;background:rgba(255,180,60,.08);
+  border:1px solid rgba(255,180,60,.25);color:var(--warn);max-width:760px;text-align:left}
+
+/* Top btn */
+#top{position:fixed;right:22px;bottom:22px;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;
+  background:var(--card);border:1px solid var(--line);color:var(--txt2);cursor:pointer;opacity:0;pointer-events:none;
+  transition:.2s;z-index:60;font-size:16px}
+#top.show{opacity:1;pointer-events:auto}
+#top:hover{border-color:var(--brand);color:var(--brand)}
+.hide{display:none!important}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hbox">
+    <div class="logo">资源导航站 <span>// Nav Hub</span></div>
+    <div class="search"><input id="q" type="text" placeholder="搜索站点名称、网址或描述…" autocomplete="off"></div>
+    <div class="count" id="count"></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>一站式 <em>资源导航</em><br>影视 · 游戏 · 网盘 · 学习 · 破解</h1>
+    <p>把常用资源站收进一个页面，点开即走 · 无需联网、无追踪、无依赖</p>
+    <div class="tags" id="tags"></div>
+  </div>
+
+  <!-- 影视 -->
+  <section id="cat-1" data-name="影视资源">
+    <div class="sec-head">
+      <div class="ic">🎬</div><h2>影视资源</h2>
+      <small>免费最新电影 / 追剧 / 安卓 App</small>
+    </div>
+    <div class="grid">
+      <a class="card" href="https://appx64.com/tv" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">小</div><h3>小兵下载站 · 电视端</h3></div>
+        <div class="desc">影视类 App 与电视端资源下载，涵盖影音播放、直播、追剧工具。</div>
+        <div class="meta"><span>appx64.com/tv</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://appx64.com/video/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">小</div><h3>小兵下载站 · 视频 App</h3></div>
+        <div class="desc">视频类应用专区，聚合各类影视、短视频、聚合类客户端。</div>
+        <div class="meta"><span>appx64.com/video</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://www.hybase.com/shouji/android/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">黑</div><h3>黑域基地 · 安卓高质量 App</h3></div>
+        <div class="desc">良心好用的安卓 App 精选，影视、工具、系统类应用都有收录。</div>
+        <div class="meta"><span>hybase.com/shouji/android</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://www.423down.com/apk" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">42</div><h3>423Down · APK 专区</h3></div>
+        <div class="desc">老牌软件站安卓板块，影视、工具、学习类 App 更新及时。</div>
+        <div class="meta"><span>423down.com/apk</span><span class="go">前往 →</span></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- 游戏 -->
+  <section id="cat-2" data-name="游戏资源">
+    <div class="sec-head">
+      <div class="ic">🎮</div><h2>游戏资源</h2>
+      <small>Switch · PC · 模拟器 · PS</small>
+    </div>
+    <div class="grid">
+      <a class="card" href="https://www.gamer520.com" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">G5</div><h3>GAMER520</h3></div>
+        <div class="desc">综合游戏资源站，PC、Switch、模拟器资源齐全。</div>
+        <div class="meta"><span>gamer520.com</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://vip.gamers520.com" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">G5</div><h3>GAMER520 会员站</h3></div>
+        <div class="desc">GAMER520 的会员/专属资源入口，高质量与首发内容居多。</div>
+        <div class="meta"><span>vip.gamers520.com</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://laoquzhang.com" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">老</div><h3>老曲站 · GAMER520 官方公告</h3></div>
+        <div class="desc">官方公告与资源发布阵地，Switch、PC、PS 相关资源同步。</div>
+        <div class="meta"><span>laoquzhang.com</span><span class="go">前往 →</span></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- 网盘学习 -->
+  <section id="cat-3" data-name="网盘与学习资源">
+    <div class="sec-head">
+      <div class="ic">🗂️</div><h2>网盘与学习资源</h2>
+      <small>大圣盘 · 夸克资源社区 · 电子书籍</small>
+    </div>
+    <div class="grid">
+      <a class="card" href="https://www.dashengpan.xyz/#/?code=ohGU" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">大</div><h3>大圣盘 · 资源搜索</h3></div>
+        <div class="desc">网盘资源聚合搜索，影视、软件、课程、书籍一站式检索。</div>
+        <div class="meta"><span>dashengpan.xyz</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://kuakezys.com/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">夸</div><h3>夸父资源社</h3></div>
+        <div class="desc">优质夸克网盘资源社区，注册简单、更新很快，内容覆盖广。</div>
+        <div class="meta"><span>kuakezys.com</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://www.kuakezy.cc/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">夸</div><h3>夸克资源社（论坛式）</h3></div>
+        <div class="desc">论坛式布局，分类清晰，影视、软件、学习资料分版块整理。</div>
+        <div class="meta"><span>kuakezy.cc</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://www.kuafuzys.com/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">夸</div><h3>夸父资源社 · 影视书课</h3></div>
+        <div class="desc">影视 + 书籍 + 课程类资源，部分帖子需回帖后可见。</div>
+        <div class="meta"><span>kuafuzys.com</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://www.kuakeso.net" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">夸</div><h3>夸客搜</h3></div>
+        <div class="desc">专注夸克网盘的资源搜索引擎，输入关键词即可找资源。</div>
+        <div class="meta"><span>kuakeso.net</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://aipanso.com/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">爱</div><h3>爱盘搜</h3></div>
+        <div class="desc">聚合夸克/百度/阿里多网盘，默认可切换为夸克搜索。</div>
+        <div class="meta"><span>aipanso.com</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://haisou.cc" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">海</div><h3>海搜</h3></div>
+        <div class="desc">多盘聚合搜索，带链接有效性检测，结果更靠谱。</div>
+        <div class="meta"><span>haisou.cc</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://pansoso.com" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">盘</div><h3>盘搜搜</h3></div>
+        <div class="desc">经典网盘资源搜索，涵盖百度、夸克等网盘内容。</div>
+        <div class="meta"><span>pansoso.com</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://chaonengso.com" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">超</div><h3>超能搜</h3></div>
+        <div class="desc">网盘资源聚合搜索，影视、软件、课程均可检索。</div>
+        <div class="meta"><span>chaonengso.com</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://xuebapan.com" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">学</div><h3>学霸盘</h3></div>
+        <div class="desc">偏学习资料方向，课程、教材、考试类资源偏多。</div>
+        <div class="meta"><span>xuebapan.com</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://www.423down.com/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">42</div><h3>423Down</h3></div>
+        <div class="desc">老牌软件下载站，教程、工具、系统镜像类内容稳定更新。</div>
+        <div class="meta"><span>423down.com</span><span class="go">前往 →</span></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- 破解 -->
+  <section id="cat-4" data-name="破解资源">
+    <div class="sec-head">
+      <div class="ic">🛠️</div><h2>破解资源</h2>
+      <small>破解社区 · 绿色软件 · 逆向学习</small>
+    </div>
+    <div class="grid">
+      <a class="card" href="https://www.52pojie.cn" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">52</div><h3>吾爱破解</h3></div>
+        <div class="desc">国内最大逆向工程与破解技术社区，教程、工具、原创发布齐全。</div>
+        <div class="meta"><span>52pojie.cn</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://linux.do/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">L</div><h3>LINUX DO</h3></div>
+        <div class="desc">新型综合社区，技术、资源、AI 话题活跃，氛围友好。</div>
+        <div class="meta"><span>linux.do</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://www.52pojie.cn/forum-2-1.html" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">52</div><h3>吾爱破解 · 原创发布区</h3></div>
+        <div class="desc">原创破解与逆向成果首发板块，质量较高的资源集中地。</div>
+        <div class="meta"><span>forum-2-1</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://www.52pojie.cn/forum-16-1.html" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">52</div><h3>吾爱破解 · 精品软件区</h3></div>
+        <div class="desc">精选软件合集板块，常用工具与精品应用汇总。</div>
+        <div class="meta"><span>forum-16-1</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://www.52pojie.cn/forum-24-1.html" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">52</div><h3>吾爱破解 · 编程语言区</h3></div>
+        <div class="desc">编程语言与开发技术交流板块，逆向、脚本、工具开发讨论。</div>
+        <div class="meta"><span>forum-24-1</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://www.hybase.com/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">黑</div><h3>黑域基地</h3></div>
+        <div class="desc">良心软件栖息之地，绿色软件、免费工具长期更新。</div>
+        <div class="meta"><span>hybase.com</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://www.hybase.com/soft/newlist-1.html" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">黑</div><h3>黑域基地 · 最新软件</h3></div>
+        <div class="desc">最新收录软件列表，按更新时间排序，方便跟进新版本。</div>
+        <div class="meta"><span>newlist-1</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://kuakezys.com/forum-11.htm" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">夸</div><h3>夸父资源 · 软件区</h3></div>
+        <div class="desc">夸父资源社的软件分区，Windows 与移动端应用集中发布。</div>
+        <div class="meta"><span>forum-11</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://appx64.com" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">小</div><h3>小兵下载站</h3></div>
+        <div class="desc">综合下载站，软件、影音、安卓应用分类清晰，更新及时。</div>
+        <div class="meta"><span>appx64.com</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://www.ghxi.com" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">果</div><h3>果核剥壳</h3></div>
+        <div class="desc">老牌绿色软件站，互联网净土，纯净版、便携版软件收录多。</div>
+        <div class="meta"><span>ghxi.com</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://www.dayanzai.me/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">大</div><h3>大眼仔旭</h3></div>
+        <div class="desc">专注开源软件、视频剪辑、免费商用字体、录屏、思维导图等办公资源。</div>
+        <div class="meta"><span>dayanzai.me</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://masuit.org/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">懒</div><h3>懒得勤快的博客</h3></div>
+        <div class="desc">互联网分享精神，技术文章与实用工具资源整理。</div>
+        <div class="meta"><span>masuit.org</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://www.gndown.com/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">绿</div><h3>绿软小站</h3></div>
+        <div class="desc">分享绿色软件、免费软件，附带最新资讯。</div>
+        <div class="meta"><span>gndown.com</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://macked.app/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">M</div><h3>MacKed</h3></div>
+        <div class="desc">专注 Mac 破解资源的分享与下载，macOS 应用集中地。</div>
+        <div class="meta"><span>macked.app</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://sysin.org" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">S</div><h3>sysin · SYStem INside</h3></div>
+        <div class="desc">系统与虚拟化资源，VMware、ESXi、macOS 镜像与教程。</div>
+        <div class="meta"><span>sysin.org</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://cn-sec.com/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">安</div><h3>CN-SEC 中文网</h3></div>
+        <div class="desc">聚合网络安全、存储安全技术文章，融合安全最新讯息。</div>
+        <div class="meta"><span>cn-sec.com</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://www.4mf.net/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">4M</div><h3>是免费 .NET</h3></div>
+        <div class="desc">免费资源博客，软件、素材与实用工具分享。</div>
+        <div class="meta"><span>4mf.net</span><span class="go">前往 →</span></div>
+      </a>
+    </div>
+  </section>
+
+  <div class="empty" id="empty">没有匹配的站点，换个关键词试试 🔍</div>
+
+  <footer>
+    <p>共收录 <b id="total">0</b> 个站点 · 单页 HTML，双击即可用浏览器打开</p>
+    <p>链接均来自原始清单，站点内容与可用性以实际访问为准</p>
+    <div class="disclaimer">
+      ⚠️ 免责提示：本页仅做网址导航，不存储、不提供任何资源文件。所列站点内容与其合规性由站点运营方自行负责，请遵守所在地法律法规与软件许可协议，尊重知识产权，勿用于任何违法用途。
+    </div>
+  </footer>
+</div>
+
+<div id="top" title="回到顶部">↑</div>
+
+<script>
+(function(){
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+  var sections = Array.prototype.slice.call(document.querySelectorAll('section'));
+  var q = document.getElementById('q');
+  var empty = document.getElementById('empty');
+  var count = document.getElementById('count');
+  var total = document.getElementById('total');
+  total.textContent = cards.length;
+
+  // 分类筛选标签
+  var tags = document.getElementById('tags');
+  var all = document.createElement('div');
+  all.className = 'tag on'; all.textContent = '全部';
+  all.onclick = function(){filter('', all)};
+  tags.appendChild(all);
+  sections.forEach(function(s){
+    var t = document.createElement('div');
+    t.className = 'tag';
+    t.textContent = s.dataset.name + ' (' + s.querySelectorAll('.card').length + ')';
+    t.onclick = function(){filter(s.dataset.name, t)};
+    tags.appendChild(t);
+  });
+
+  var curTag = '';
+  function filter(tag, tagEl){
+    curTag = tag;
+    Array.prototype.forEach.call(tags.children, function(x){x.classList.remove('on')});
+    tagEl.classList.add('on');
+    apply();
+    if(tag) window.scrollTo({top: 0, behavior:'smooth'});
+  }
+
+  function apply(){
+    var kw = q.value.trim().toLowerCase();
+    var vis = 0;
+    sections.forEach(function(s){
+      var shown = 0;
+      Array.prototype.forEach.call(s.querySelectorAll('.card'), function(c){
+        var hit = (c.textContent + ' ' + (c.href||'')).toLowerCase().indexOf(kw) > -1;
+        var tagOk = !curTag || s.dataset.name === curTag;
+        var ok = hit && tagOk;
+        c.classList.toggle('hide', !ok);
+        if(ok) shown++;
+      });
+      s.classList.toggle('hide', shown === 0);
+      vis += shown;
+    });
+    count.textContent = '当前显示 ' + vis + ' / ' + cards.length;
+    empty.style.display = vis === 0 ? 'block' : 'none';
+  }
+
+  q.addEventListener('input', apply);
+
+  // 回到顶部
+  var top = document.getElementById('top');
+  window.addEventListener('scroll', function(){
+    top.classList.toggle('show', window.scrollY > 400);
+  });
+  top.onclick = function(){window.scrollTo({top:0, behavior:'smooth'})};
+
+  apply();
+})();
+</script>
+</body>
+</html>

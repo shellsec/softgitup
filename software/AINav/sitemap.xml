@@ -36,9 +36,54 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://aiv123.com/about.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/contact.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/disclaimer.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/tools/index.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/model-finder.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
     <loc>https://aiv123.com/model-plan.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/local-model-plan.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/edge-model-plan.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/decision-model-plan.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/low-filter-api-plan.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
   </url>
   <url>
     <loc>https://aiv123.com/coding-plan.html</loc>
@@ -101,6 +146,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://aiv123.com/ideate.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://aiv123.com/token-optimization.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
@@ -139,5 +189,140 @@
     <loc>https://aiv123.com/chrome/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/tools/豆包.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/tools/元宝.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/tools/智谱清言.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/tools/ChatGPT.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/tools/Claude.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/tools/Cursor.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/tools/DeepSeek.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/tools/Gemini.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/tools/Grok.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/tools/Kimi.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/tools/Manus.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/tools/Perplexity.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/tools/Claude-Code.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/tools/通义灵码.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/tools/CodeGeeX.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/tools/Devin.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/tools/GitHub-Copilot.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/tools/Trae.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/tools/v0.dev.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/tools/Windsurf.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/tools/ZCode.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/tools/GroqCloud.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/tools/OpenRouter.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/tools/Together-AI.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/tools/扣子-Coze.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/tools/Dify.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://aiv123.com/tools/n8n.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
   </url>
 </urlset>

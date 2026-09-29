@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="stylesheet" href="site-mobile.css">
+  <title>决策模型 — System One / 结构化决策 · Jev · Laya — AINav</title>
+  <meta name="description" content="决策模型专题：不生成聊天文本，专做分类、路由、打分、是否分支。闭源云 API（Jev）与开源权重（Laya、NanoJev）对照。">
+  <link rel="canonical" href="https://aiv123.com/decision-model-plan.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="决策模型 — System One / 结构化决策">
+  <meta property="og:description" content="给程序用的快决策层：Jev 云 API，Laya 等开源权重。聊天与写代码仍用 LLM。">
+  <meta property="og:url" content="https://aiv123.com/decision-model-plan.html">
+  <meta property="og:site_name" content="AINav">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%230969da'/><text x='50' y='72' font-size='60' text-anchor='middle' fill='white' font-family='system-ui' font-weight='700'>AI</text></svg>">
+  <style>
+    :root, html[data-theme="dark"] {
+      --bg: #0f1419; --panel: #151b23; --card: #1c2430; --border: #2d3848;
+      --text: #e6edf3; --muted: #8b9cb3; --accent: #58a6ff; --accent2: #3fb950;
+      --warn: #d29922; --danger: #f85149; --hot: #ff6b6b; --overseas: #a78bfa;
+      --oss: #f0883e;
+    }
+    html[data-theme="light"] {
+      --bg: #f6f8fa; --panel: #fff; --card: #fff; --border: #d0d7de;
+      --text: #1f2328; --muted: #59636e; --accent: #0969da; --accent2: #1a7f37;
+      --warn: #9a6700; --danger: #cf222e; --hot: #e53935; --overseas: #7c3aed;
+      --oss: #bc4c00;
+    }
+    @media (prefers-color-scheme: light) {
+      html[data-theme="system"] {
+        --bg: #f6f8fa; --panel: #fff; --card: #fff; --border: #d0d7de;
+        --text: #1f2328; --muted: #59636e; --accent: #0969da; --accent2: #1a7f37;
+        --warn: #9a6700; --danger: #cf222e; --hot: #e53935; --overseas: #7c3aed;
+        --oss: #bc4c00;
+      }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Segoe UI", system-ui, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.6; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .cp-top { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); background: var(--panel); position: sticky; top: 0; z-index: 10; }
+    .cp-top-inner { max-width: 76rem; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; justify-content: space-between; }
+    .cp-nav a { font-weight: 600; margin-right: 1rem; font-size: 0.88rem; }
+    .cp-toolbar { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; }
+    .theme-btn { font-size: 0.72rem; padding: 0.2rem 0.5rem; border-radius: 5px; border: 1px solid var(--border);
+      background: var(--card); color: var(--muted); cursor: pointer; font-family: inherit; }
+    .theme-btn.is-active { color: var(--accent); border-color: var(--accent); font-weight: 600; }
+    .cp-wrap { max-width: 76rem; margin: 0 auto; padding: 1rem; }
+    h1 { font-size: 1.35rem; margin: 0 0 0.3rem; }
+    .cp-subtitle { font-size: 0.88rem; color: var(--muted); margin-bottom: 0.4rem; }
+    .cp-related { font-size: 0.82rem; color: var(--muted); margin: 0 0 0.8rem; }
+    .cp-section-hd { font-size: 1.1rem; font-weight: 700; margin: 1.8rem 0 0.8rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--border); display: flex; align-items: center; gap: 0.5rem; }
+    .cp-legend { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 1.2rem; font-size: 0.82rem; }
+    .cp-badge { display: inline-block; padding: 0.1rem 0.45rem; border-radius: 4px; font-size: 0.72rem; font-weight: 600; }
+    .badge-rec { background: rgba(88,166,255,0.15); color: var(--accent); border: 1px solid rgba(88,166,255,0.3); }
+    .badge-new { background: rgba(63,185,80,0.15); color: var(--accent2); border: 1px solid rgba(63,185,80,0.3); }
+    .badge-warn { background: rgba(210,153,34,0.15); color: var(--warn); border: 1px solid rgba(210,153,34,0.3); }
+    .badge-skip { background: rgba(139,156,179,0.12); color: var(--muted); border: 1px solid var(--border); }
+    .badge-overseas { background: rgba(167,139,250,0.15); color: var(--overseas); border: 1px solid rgba(167,139,250,0.3); }
+    .cp-platforms { display: grid; grid-template-columns: 1fr; gap: 1.2rem; }
+    @media (min-width: 52rem) { .cp-platforms { grid-template-columns: 1fr 1fr; } }
+    .cp-platform { border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .cp-platform.featured { border-color: rgba(88,166,255,0.4); }
+    .cp-platform-head { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+    .cp-platform-name { font-size: 1.05rem; font-weight: 700; }
+    .cp-platform-name a { color: var(--text); }
+    .cp-platform-name a:hover { color: var(--accent); text-decoration: none; }
+    .cp-platform-body { padding: 0.75rem 1rem; font-size: 0.85rem; line-height: 1.7; }
+    .cp-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+    .cp-table th { text-align: left; font-weight: 600; color: var(--muted); padding: 0.3rem 0.5rem; border-bottom: 1px solid var(--border); font-size: 0.76rem; white-space: nowrap; }
+    .cp-table td { padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .cp-table tr:last-child td { border-bottom: none; }
+    .cp-table .plan-name { font-weight: 600; white-space: nowrap; }
+    .cp-table .plan-price { white-space: nowrap; color: var(--accent2); font-weight: 600; }
+    .cp-table .plan-limit { font-size: 0.76rem; color: var(--muted); }
+    .cp-matrix-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; background: var(--card); }
+    .cp-matrix { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+    .cp-matrix th, .cp-matrix td { padding: 0.45rem 0.65rem; border: 1px solid var(--border); text-align: left; }
+    .cp-matrix th { background: var(--panel); font-weight: 600; color: var(--muted); font-size: 0.76rem; }
+    .cp-matrix .model-name { font-weight: 700; white-space: nowrap; }
+    .cp-matrix .good { color: var(--accent2); }
+    .cp-matrix .bad { color: var(--muted); }
+    code { font-size: 0.78rem; padding: 0.05rem 0.32rem; border-radius: 4px; background: var(--panel); border: 1px solid var(--border); font-family: ui-monospace, Consolas, monospace; }
+    .cp-notice { margin: 0 0 1rem; padding: 0; border: 1px solid rgba(88,166,255,.35); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .cp-notice-head { padding: 0.65rem 1rem; border-bottom: 1px solid rgba(88,166,255,0.2); font-weight: 700; font-size: 1rem; background: rgba(88,166,255,0.06); }
+    .cp-notice-body { padding: 0.75rem 1rem; font-size: 0.84rem; line-height: 1.7; }
+    .cp-notice-body ul { padding-left: 1.2rem; margin: 0.45rem 0 0; }
+    .cp-notice-body li { margin-bottom: 0.35rem; }
+    .cp-faq { margin-top: 2rem; border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .cp-faq-head { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); font-weight: 700; font-size: 1rem; }
+    .cp-faq-item { border-bottom: 1px solid var(--border); }
+    .cp-faq-item:last-child { border-bottom: none; }
+    .cp-faq-q { padding: 0.6rem 1rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 0.88rem; user-select: none; }
+    .cp-faq-q:hover { background: rgba(88,166,255,0.04); }
+    .cp-faq-q .cp-faq-arrow { font-size: 0.72rem; color: var(--muted); transition: transform 0.2s; flex-shrink: 0; margin-left: 0.5rem; }
+    .cp-faq-item.is-open .cp-faq-q .cp-faq-arrow { transform: rotate(180deg); }
+    .cp-faq-a { padding: 0 1rem; max-height: 0; overflow: hidden; transition: max-height 0.25s ease, padding 0.25s ease; font-size: 0.82rem; line-height: 1.7; color: var(--muted); }
+    .cp-faq-item.is-open .cp-faq-a { max-height: 22rem; padding: 0 1rem 0.75rem; }
+    .cp-faq-a strong { color: var(--text); }
+    .cp-summary { margin-top: 2rem; padding: 1rem 1.2rem; border: 2px solid var(--accent); border-radius: 10px; background: rgba(88,166,255,0.04); }
+    .cp-summary h2 { font-size: 1.05rem; margin: 0 0 0.8rem; }
+    .cp-summary-grid { display: grid; grid-template-columns: 1fr; gap: 0.5rem; font-size: 0.88rem; }
+    @media (min-width: 40rem) { .cp-summary-grid { grid-template-columns: 1fr 1fr; } }
+    .cp-summary-item { display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.6rem; border-radius: 6px; background: var(--card); border: 1px solid var(--border); }
+    .cp-summary-item .arrow { color: var(--accent2); font-weight: 700; }
+    .cp-updated-line { font-size: 0.76rem; color: var(--muted); margin: 0 0 0.8rem; }
+    .cp-footer { max-width: 76rem; margin: 2rem auto 1rem; padding: 0 1rem; font-size: 0.76rem; color: var(--muted); text-align: center; }
+    .tech-tag { display: inline-block; margin: 0.1rem 0.25rem 0.1rem 0; padding: 0.05rem 0.4rem; border-radius: 4px; font-size: 0.72rem; background: var(--panel); border: 1px solid var(--border); color: var(--muted); }
+    .good { color: var(--accent2); }
+    .bad { color: var(--muted); }
+    .cp-howto { border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; margin-bottom: 1rem; }
+    .cp-howto-head { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); font-weight: 700; font-size: 0.95rem; background: var(--panel); display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; }
+    .cp-howto-body { padding: 0.75rem 1rem; font-size: 0.84rem; line-height: 1.7; }
+    .cp-howto-body ol { margin: 0.35rem 0 0; padding-left: 1.25rem; }
+    .cp-howto-body li { margin-bottom: 0.3rem; }
+    .cp-howto-body p { margin: 0 0 0.4rem; }
+    .cp-scene-grid { display: grid; grid-template-columns: 1fr; gap: 0.85rem; }
+    @media (min-width: 52rem) { .cp-scene-grid { grid-template-columns: 1fr 1fr; } }
+    .cp-scene { border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .cp-scene-hd { padding: 0.55rem 0.9rem; border-bottom: 1px solid var(--border); font-weight: 700; font-size: 0.9rem; background: var(--panel); }
+    .cp-scene-bd { padding: 0.55rem 0.9rem 0.7rem; font-size: 0.82rem; line-height: 1.65; }
+    .cp-scene-bd ul { margin: 0; padding-left: 1.15rem; }
+    .cp-scene-bd li { margin-bottom: 0.28rem; }
+    .cp-scene-note { margin: 0.45rem 0 0; padding: 0.4rem 0.55rem; border-radius: 6px; background: rgba(210,153,34,0.08); border: 1px solid rgba(210,153,34,0.28); color: var(--warn); font-size: 0.78rem; line-height: 1.55; }
+    .cp-scene-note.danger { background: rgba(248,81,73,0.08); border-color: rgba(248,81,73,0.3); color: var(--danger); }
+    .cp-ex { margin: 0.75rem 0 0; padding: 0.65rem 0.85rem; border-radius: 8px; background: var(--panel); border: 1px dashed var(--border); font-size: 0.8rem; line-height: 1.65; color: var(--muted); }
+    .cp-ex strong { color: var(--text); }
+    .cp-foot-blocks { display: grid; grid-template-columns: 1fr; gap: 0.85rem; margin-top: 1.2rem; }
+    @media (min-width: 52rem) { .cp-foot-blocks { grid-template-columns: 1fr 1fr 1fr; } }
+    .cp-foot-block { border: 1px solid var(--border); border-radius: 10px; background: var(--card); padding: 0.75rem 0.9rem; font-size: 0.82rem; line-height: 1.65; }
+    .cp-foot-block h3 { margin: 0 0 0.45rem; font-size: 0.92rem; }
+    .cp-foot-block ul { margin: 0; padding-left: 1.15rem; }
+    .cp-foot-block li { margin-bottom: 0.28rem; }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2B8FBWRX4N"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2B8FBWRX4N');</script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "2d49f38b39c743ac80b6d6b9ff99494d"}'></script>
+</head>
+<body>
+  <div class="cp-top">
+    <div class="cp-top-inner">
+      <div class="cp-nav" data-plan-nav></div>
+      <div class="cp-toolbar">
+        <button type="button" class="theme-btn" data-theme-set="system">跟随系统</button>
+        <button type="button" class="theme-btn" data-theme-set="light">浅色</button>
+        <button type="button" class="theme-btn" data-theme-set="dark">深色</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cp-wrap">
+    <h1>决策模型</h1>
+    <p class="cp-subtitle">System One / 结构化决策：给软件用的快决策层，不是聊天机器人。有闭源云 API，也有开源权重可自托管。</p>
+    <p class="cp-related">日常旗舰聊天与编码看 <a href="model-plan.html">模型选型</a>；Agent 编排看 <a href="agent-plan.html">Agent 横评</a>；按量推理云看百科「AI 模型 API」。</p>
+    <p class="cp-updated-line"><span class="cp-updated">最后更新：2026-09-23</span></p>
+
+    <div class="cp-notice">
+      <div class="cp-notice-head">这类模型是什么</div>
+      <div class="cp-notice-body">
+        决策模型（TypeSafe 称为 <strong>System One</strong>）面向<strong>程序调用</strong>：你传入状态（文本 / JSON），再声明若干固定题型，模型一次返回选择题、打分或是/否概率——带校准置信度，可直接写进分支逻辑。
+        <ul>
+          <li><strong>不做</strong>：聊天回复、写代码、写说明文、自由生成字符串。</li>
+          <li><strong>要做</strong>：分类、路由、紧急度打分、是否触发下一步、校验 LLM 输出是否可信。</li>
+          <li>和「让 LLM 输出 JSON」不同：答案空间由调用方事先定死，格式上不会跑偏成散文。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cp-legend">
+      <span><span class="cp-badge badge-overseas">闭源云 API</span> Jev（TypeSafe）</span>
+      <span><span class="cp-badge badge-rec">开源权重</span> Laya（Apache 2.0）· NanoJev</span>
+      <span><span class="cp-badge badge-skip">聊天请用 LLM</span></span>
+    </div>
+
+    <div class="cp-section-hd"><span>和聊天 LLM 怎么选</span></div>
+    <div class="cp-matrix-wrap">
+      <table class="cp-matrix">
+        <thead>
+          <tr><th></th><th>决策模型（如 Jev）</th><th>聊天 LLM（GPT / Claude / …）</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="model-name">输出</td>
+            <td>类型安全的选择 / 分数 / 概率</td>
+            <td>自然语言（也可约束成 JSON，但仍是生成文本）</td>
+          </tr>
+          <tr>
+            <td class="model-name">适合</td>
+            <td class="good">软件内大量重复的窄决策、低延迟分支</td>
+            <td class="good">对话、写作、编码、开放式推理</td>
+          </tr>
+          <tr>
+            <td class="model-name">不适合</td>
+            <td class="bad">需要人读的说明、代码、长文</td>
+            <td class="bad">要把答案当硬类型塞进代码且不能容忍格式幻觉时</td>
+          </tr>
+          <tr>
+            <td class="model-name">常见用法</td>
+            <td>Agent / 工作流里的「快决策层」</td>
+            <td>主智能体、Copilot、内容生成</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:0.82rem;color:var(--muted);margin:0.6rem 0 0;">多数产品会两者并用：LLM 负责理解与生成，决策模型负责稳定、便宜的分拣与闸门。</p>
+
+    <div class="cp-section-hd"><span>适合谁</span></div>
+    <div class="cp-matrix-wrap">
+      <table class="cp-matrix">
+        <thead>
+          <tr><th>角色</th><th>什么时候看这页</th><th>什么时候别看</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="model-name">后端 / Agent 工程师</td>
+            <td class="good">工单分类、风控闸门、工具调用前确认、批量打标</td>
+            <td class="bad">只要一个能聊天的助手</td>
+          </tr>
+          <tr>
+            <td class="model-name">产品 / 自动化</td>
+            <td class="good">规则写不全、又要可测的概率阈值</td>
+            <td class="bad">需要模型自己写邮件、写 PR 说明</td>
+          </tr>
+          <tr>
+            <td class="model-name">普通聊天用户</td>
+            <td>—</td>
+            <td class="bad">请回 <a href="model-plan.html">模型选型</a> / 首页热门工具</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="cp-section-hd" id="products"><span>目前可核实的产品</span></div>
+    <div class="cp-platforms">
+      <div class="cp-platform overseas featured">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://typesafe.ai/" target="_blank" rel="noopener noreferrer">Jev（TypeSafe AI）</a></span>
+          <span class="cp-badge badge-overseas">闭源云 API</span>
+          <span class="cp-badge badge-new">🆕 2026-09-15</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>项</th><th>本站已核实口径</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">定位</td>
+                <td>闭源托管 System One；Early Access；<strong>权重不公开</strong></td>
+              </tr>
+              <tr>
+                <td class="plan-name">题型</td>
+                <td>Choice / Score / Noul</td>
+              </tr>
+              <tr>
+                <td class="plan-name">延迟</td>
+                <td>官方称端到端约 70–500ms</td>
+              </tr>
+              <tr>
+                <td class="plan-name">计费</td>
+                <td class="plan-price">输入约 $0.042 / 百万 token；输出不计费</td>
+                <!-- 来源：TypeSafe 2026-09-15 博文；Datawhale 2026-09-20 同口径 -->
+              </tr>
+              <tr>
+                <td class="plan-name">入口</td>
+                <td>
+                  <a href="https://typesafe.ai/" target="_blank" rel="noopener noreferrer">typesafe.ai</a> ·
+                  <a href="https://docs.typesafe.ai/introduction" target="_blank" rel="noopener noreferrer">Docs</a> ·
+                  <a href="https://console.typesafe.ai/playground" target="_blank" rel="noopener noreferrer">Playground</a> ·
+                  <a href="https://typesafe.ai/blog/introducing-system-one-models-and-jev" target="_blank" rel="noopener noreferrer">发布说明</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="plan-name">聚合接入</td>
+                <td>OpenRouter 模型标识 <code>typesafe/jev</code>；Vercel AI Gateway 已直连（边缘分发）。已有聚合层可只改模型名。</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Agent Skills</td>
+                <td><a href="https://github.com/typesafe-ai/skills" target="_blank" rel="noopener noreferrer">typesafe-ai/skills</a>：教 Coding Agent 一次多问、把歧义列成候选选项</td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="margin:0.55rem 0 0;font-size:0.82rem;color:var(--muted);">
+            <span class="tech-tag">不生成文本</span><span class="tech-tag">RLCD</span><span class="tech-tag">托管 API</span><span class="tech-tag">OpenRouter</span>
+          </p>
+          <p style="margin:0.4rem 0 0;font-size:0.82rem;color:var(--muted);">
+            创始人 Diogo Almeida（前 OpenAI，InstructGPT / RLHF）。适合不想自托管、要托管校准决策 API 的团队。社区玩法见下文；配额与排队以官网为准。
+          </p>
+        </div>
+      </div>
+
+      <div class="cp-platform featured">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://huggingface.co/convaiinnovations/laya" target="_blank" rel="noopener noreferrer">Laya（Convai Innovations）</a></span>
+          <span class="cp-badge badge-rec">开源权重</span>
+          <span class="cp-badge badge-new">🆕 2026-09-18</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>项</th><th>本站已核实口径</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">定位</td>
+                <td>开源 System One：状态 + 题型 → 选择/打分/是否概率；不生成文本</td>
+              </tr>
+              <tr>
+                <td class="plan-name">权重 / 协议</td>
+                <td><strong>Apache 2.0</strong>；英文 421M（ModernBERT）/ 多语 322M（mmBERT）等 checkpoint</td>
+              </tr>
+              <tr>
+                <td class="plan-name">题型</td>
+                <td>Choice / Score / Noul（与 Jev 同形）</td>
+              </tr>
+              <tr>
+                <td class="plan-name">跑法</td>
+                <td>本机 / 自托管；官方测单题约 33–40ms（T4）；无托管刊例</td>
+              </tr>
+              <tr>
+                <td class="plan-name">入口</td>
+                <td>
+                  <a href="https://huggingface.co/convaiinnovations/laya" target="_blank" rel="noopener noreferrer">Hugging Face</a> ·
+                  <a href="https://github.com/NandhaKishorM/laya" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+                  <a href="https://pypi.org/project/laya/" target="_blank" rel="noopener noreferrer">PyPI</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="margin:0.55rem 0 0;font-size:0.82rem;color:var(--muted);">
+            <span class="tech-tag">Apache 2.0</span><span class="tech-tag">自托管</span><span class="tech-tag">需微调才强</span>
+          </p>
+          <p style="margin:0.4rem 0 0;font-size:0.82rem;color:var(--muted);">
+            <strong>和 Jev 的差别：</strong>权重可下、可再训、数据不出机房；不是托管 API。官方 model card 写明：基座 checkpoint 在 typed-decisions 上接近随机，0.766 那档是微调后的；出厂概率偏自信，上线前应用自己的数据做温度校准。多选项（如 50+ 标签）默认头预算偏紧，需调 <code>head_max_len</code> 或分层选择。目录见 <a href="https://systemonemodels.org/models/laya/" target="_blank" rel="noopener noreferrer">systemonemodels.org</a>（更新至 2026-09-22）。
+          </p>
+        </div>
+      </div>
+
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name"><a href="https://huggingface.co/C-Tianyu/NanoJev" target="_blank" rel="noopener noreferrer">NanoJev</a></span>
+          <span class="cp-badge badge-rec">开源权重</span>
+          <span class="cp-badge badge-warn">研究复现</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>项</th><th>本站已核实口径</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name">定位</td>
+                <td>研究复现：底座 Qwen3-0.6B；Choice / Boolean / Score；单次前向出完整分布</td>
+              </tr>
+              <tr>
+                <td class="plan-name">权重 / 协议</td>
+                <td>权重公开（HF）；<strong>代码 MIT</strong>；HF 权重页未单独声明协议，且底座为 Qwen3-0.6B（遵循上游条款）</td>
+              </tr>
+              <tr>
+                <td class="plan-name">入口</td>
+                <td>
+                  <a href="https://huggingface.co/C-Tianyu/NanoJev" target="_blank" rel="noopener noreferrer">Hugging Face</a> ·
+                  <a href="https://github.com/TianyuCodings/NanoJev" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="margin:0.4rem 0 0;font-size:0.82rem;color:var(--muted);">
+            <strong>0.6B 限制只在这里：</strong>底座是 Qwen3-0.6B，复杂长推理、长上下文容易丢信息；公开演示偏迷宫 / ViZDoom 等可控环境。学接口、小模型实验可以；不要当 Jev 云 API 的平替。推理侧通常要 NVIDIA GPU。
+          </p>
+        </div>
+      </div>
+
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name">本页故意不收的</span>
+          <span class="cp-badge badge-skip">非决策专用权重</span>
+        </div>
+        <div class="cp-platform-body">
+          SemIf / OpenJev、各类 open-jev：在<strong>冻结聊天 LLM</strong>上读 logits / 复现 API 外形，不算独立决策权重。daf-jev 等是 Jev 客户端工具包。普通开源聊天模型的 JSON mode / tool call 仍归 <a href="model-plan.html">模型选型</a>。
+        </div>
+      </div>
+    </div>
+
+    <div class="cp-section-hd" id="howto"><span>如何使用</span></div>
+    <p style="font-size:0.84rem;color:var(--muted);margin:0 0 0.85rem;">统一形态（与官方题型对齐，不是第三套 API）：<code>context（程序状态 / 文本） + [question1, question2, …]</code> → 每条题返回有界答案与概率。Jev / Laya 题型为 Choice / Score / Noul；NanoJev 为 Choice / Boolean / Score。上层拿概率做阈值、加权、路由，不靠模型吐 JSON。</p>
+
+    <div class="cp-howto">
+      <div class="cp-howto-head"><span class="cp-badge badge-overseas">托管</span> Jev 云 API</div>
+      <div class="cp-howto-body">
+        <p><strong>什么时候用：</strong>不想运维权重、要托管校准决策、把窄问题嵌进工作流 / Agent 闸门。</p>
+        <ol>
+          <li>官方：<a href="https://console.typesafe.ai/playground" target="_blank" rel="noopener noreferrer">Playground</a> 试用 → <a href="https://docs.typesafe.ai/introduction" target="_blank" rel="noopener noreferrer">Docs</a> 拿 HTTP / Python / JS SDK 凭证；或已有 OpenRouter / Vercel AI Gateway 时改模型名为 <code>typesafe/jev</code>（OpenRouter）/ 对应 Gateway 标识。</li>
+          <li><strong>输入：</strong>非结构化程序状态（文本 / 结构化字段）+ 事先定好的题（Choice / Score / Noul）。</li>
+          <li><strong>输出：</strong>类型安全答案 + 校准概率 / 置信度；一次查询可并行多题；不生成自由文本。</li>
+          <li><strong>上层怎么用：</strong>对「是否投诉 / 是否升级」等 Noul 设阈值；对 Choice 取最高概率分支；对 Score 做加权。Coding Agent 可装 <a href="https://github.com/typesafe-ai/skills" target="_blank" rel="noopener noreferrer">typesafe-ai/skills</a>，要求一次把歧义列成带选项的题。刊例与配额以官网为准。</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="cp-howto">
+      <div class="cp-howto-head"><span class="cp-badge badge-rec">自托管</span> Laya（生产向开源）</div>
+      <div class="cp-howto-body">
+        <p><strong>适合谁：</strong>数据不出机房、要可再训、可对标 Jev 请求形的本机 / 内网服务。</p>
+        <ol>
+          <li>权重：<a href="https://huggingface.co/convaiinnovations/laya" target="_blank" rel="noopener noreferrer">HF convaiinnovations/laya</a>；代码 / 说明：<a href="https://github.com/NandhaKishorM/laya" target="_blank" rel="noopener noreferrer">GitHub</a>；<code>pip install laya</code>。</li>
+          <li>最短路径：<code>Router(preload=True).predict(state, questions)</code>；或 <code>laya.load(...)</code> 单 checkpoint。题型同 Jev：Choice / Score / Noul。</li>
+          <li>可选 <code>pip install "laya[serve]"</code> + <code>laya-serve</code>，HTTP 形与 TypeSafe System One 同形，换 base URL 即可。</li>
+          <li>官方写明：基座在 typed-decisions 上接近随机，强效果靠微调；出厂概率偏自信，上线前用自己的数据做温度校准。</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="cp-howto">
+      <div class="cp-howto-head"><span class="cp-badge badge-warn">研究复现</span> NanoJev（0.6B）</div>
+      <div class="cp-howto-body">
+        <p><strong>适合谁：</strong>学并行决策接口、小模型实验、对照迷宫 / 游戏环境。不是 Jev 商业替代。</p>
+        <ol>
+          <li>权重：<a href="https://huggingface.co/C-Tianyu/NanoJev" target="_blank" rel="noopener noreferrer">HF C-Tianyu/NanoJev</a>（如 <code>unified-games-v1</code>）；仓库：<a href="https://github.com/TianyuCodings/NanoJev" target="_blank" rel="noopener noreferrer">TianyuCodings/NanoJev</a>。</li>
+          <li>输入 state + questions（Choice / Boolean / Score）；输出候选分布 / yes-no 概率 / 有序分档概率——单次前向，不解码输出 token。</li>
+          <li>本地可用仓库脚本起推理服务；底座 Qwen3-0.6B，复杂推理与超长上下文别指望。</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="cp-ex">
+      <strong>短例子（工单预审，用概率不当 JSON）：</strong>
+      Context = 工单正文与元数据。Questions 例如：是否像投诉（Noul/Boolean）、是否紧急（Score 或 Noul）、是否该升级人工（Noul）。
+      返回每条 yes/no（或分档）概率后，上层写规则：投诉≥0.7 且紧急≥0.6 → 进投诉队列；升级≥0.75 → 转人工；否则自动分派。全文仍不生成客服回复——回复交给 LLM。
+    </div>
+
+    <div class="cp-section-hd" id="community"><span>社区玩法与工具（摘录）</span></div>
+    <p style="font-size:0.84rem;color:var(--muted);margin:0 0 0.85rem;">底层同一套路：情境拆成有限选项 → 决策模型挑一支 → 程序接着跑。下列按「玩具 → 生产」光谱摘自 Datawhale《整理了最新Jev模型的全网22个爆火玩法！》（2026-09-20）；数字为该文转述，以各项目 / 官方实测为准。</p>
+
+    <div class="cp-platforms">
+      <div class="cp-platform featured">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name">开发者工具（可点）</span>
+          <span class="cp-badge badge-new">🆕 社区一周内</span>
+        </div>
+        <div class="cp-platform-body">
+          <table class="cp-table">
+            <thead><tr><th>项目</th><th>做什么</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="plan-name"><a href="https://github.com/browser-use/jev-ultrafast" target="_blank" rel="noopener noreferrer">jev-ultrafast</a></td>
+                <td>Browser Use 官方集成：网页操作抽象成「操作 + 目标」两组 Choice；默认无截图。文称发布三天内上线，航班查询实测约 7 秒 / ~$0.0039（该文口径）。</td>
+              </tr>
+              <tr>
+                <td class="plan-name"><a href="https://github.com/tamaratran/fast-jev-compaction" target="_blank" rel="noopener noreferrer">fast-jev-compaction</a></td>
+                <td>Coding Agent 长上下文：对每轮工具调用打「是否保留」分，剔无效日志。文称获官方转发。</td>
+              </tr>
+              <tr>
+                <td class="plan-name">jev-mcp</td>
+                <td>MCP 扩展：多源事实交叉核验、Prompt Injection 特征预检、检索相关度打分（社区包；仓库链以项目主页为准）。</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Jev Codex Router</td>
+                <td>任务难度分流：简单改动走小模型，跨文件重构才上大模型；文称整体开销可压降 60%+（该项目自述 / 该文转述）。</td>
+              </tr>
+              <tr>
+                <td class="plan-name"><a href="https://www.langchain.com/blog/building-a-harness-with-jev" target="_blank" rel="noopener noreferrer">LangChain · Harness</a></td>
+                <td>官方博客：把分类 / 路由从闭源定制里拆成通用决策层，挂到开源 Agent。</td>
+              </tr>
+              <tr>
+                <td class="plan-name"><a href="https://github.com/typesafe-ai/skills" target="_blank" rel="noopener noreferrer">typesafe-ai/skills</a></td>
+                <td>官方 Skills：纠正 Agent「一次只问一题」，引导一次列清歧义 + 候选选项。</td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="margin:0.45rem 0 0;font-size:0.78rem;color:var(--muted);">更多案例目录可逛 <a href="https://jevgallery.com/" target="_blank" rel="noopener noreferrer">jevgallery.com</a>（第三方整理，非 TypeSafe 官网）。</p>
+        </div>
+      </div>
+
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name">官方 / 社区演示（选摘）</span>
+          <span class="cp-badge badge-skip">非生产清单</span>
+        </div>
+        <div class="cp-platform-body">
+          <ul style="margin:0;padding-left:1.15rem;font-size:0.82rem;line-height:1.65;">
+            <li><strong>Doom</strong>：约 10 次动作决策 / 秒；文称连跑约 1 小时 ~$7。</li>
+            <li><strong>Wikiracing</strong>：高基数超链跳转，测长选项列表是否乱选。</li>
+            <li><strong>地铁跑酷 ×50</strong>：高并发小判断；文称 50 局总费用 &lt; $0.01。</li>
+            <li><strong>超级马里奥 / 杀戮尖塔 2</strong>：读结构化游戏状态出动作；后者文称单步约 0.7s。</li>
+            <li><strong>MuJoCo 火箭回收 / 3D 城市场景</strong>：仿真里点火、转向等窄决策（文称单次着陆试验约 245 次调用 / ~$0.04）。</li>
+            <li><strong>Vercel Shell 安全审查</strong>：命令分类器从大模型换成 Jev；文称速度升 5–18×。</li>
+            <li><strong>邮件意图 / 工单分派 / PR 合并预审 / 紧急客诉打标</strong>：生产向分流与闸门。</li>
+            <li><strong>PrimeLine 预注册评测</strong>：允许跳过低置信样本时，校准置信度带来逆转（相对 Opus 5 / Haiku 4.5 的该文叙述）。</li>
+            <li class="bad"><strong>链上订单簿交易</strong>：买/卖/观望三选一——文称噱头最大、真实行情风险最高；本站不当推荐。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="cp-section-hd" id="scenes"><span>场景怎么用</span></div>
+    <p style="font-size:0.84rem;color:var(--muted);margin:0 0 0.85rem;">每条：做什么判断 → 产出干什么。高风险域限制写死在块内，不当终审。</p>
+
+    <div class="cp-scene-grid">
+      <div class="cp-scene">
+        <div class="cp-scene-hd">Agent</div>
+        <div class="cp-scene-bd">
+          <ul>
+            <li>下一步动作路由 → 选工具 / 子流程，替代 LLM 吐 JSON 再解析</li>
+            <li>对话是否已可结束 / 是否需澄清 → 状态机跳转</li>
+            <li>调用敏感工具前预检 → 权限闸门（低置信则拒或人工）</li>
+            <li>LLM 输出是否跑偏题 / 是否像幻觉 → 自检后再展示</li>
+            <li>多 Agent 分派（谁处理）→ 固定候选人 Choice</li>
+            <li>任务难度分流 → 简单改动走小模型、复杂重构才上大模型（如 Codex Router 思路）</li>
+            <li>长任务上下文压缩 → 对工具调用日志做保留 / 丢弃打分（如 fast-jev-compaction）</li>
+            <li>浏览器自动化 → 每步「点哪个 / 做什么」两组 Choice（如 jev-ultrafast）</li>
+            <li>Shell / 命令安全审查 → 危险命令特征分类后再执行</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cp-scene">
+        <div class="cp-scene-hd">办公 / 客服</div>
+        <div class="cp-scene-bd">
+          <ul>
+            <li>工单多标签（投诉 / 退款 / 技术）→ 队列路由</li>
+            <li>从十几个业务小组里选主管团队 → 取代脆弱正则（Choice）</li>
+            <li>重复扣费 / 情绪激动 / 退款等高危客诉 → 毫秒级紧急度打标再推人工</li>
+            <li>商业邮件意图分类 → 用校准概率设置信阈值（不必每次上大模型）</li>
+            <li>客服质检：是否承诺法外权益、是否态度失控 → 抽检池</li>
+            <li>合同 / 公文预审：是否缺签章页、是否含金额变更 → 标红给人核</li>
+            <li>报销初审：票据与事由是否明显不符 → 退回补材料</li>
+            <li>简历硬性条件（学历 / 年限 / 到岗）→ 筛入面试池</li>
+            <li>文档是否像含密钥路径 / 身份证号特征 → 拦截外发</li>
+            <li>会议纪要是否含待办 / 决策句 → 生成待办清单的前置打标</li>
+            <li>CI 里 PR 合并资格预审（改动清单 + 测试报告）→ 高风险打「待人工复查」</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cp-scene">
+        <div class="cp-scene-hd">风控 · 内容特征</div>
+        <div class="cp-scene-bd">
+          <ul>
+            <li>告警文案是否像误报 → 降级或并入噪声队列</li>
+            <li>评论 / 私信是否像广告灌水 → 进审核队列</li>
+            <li>用户输入是否像越权索要（角色 / 权限）→ 拒绝或降权工具</li>
+            <li>正文是否含敏感外链特征 → 标记人工看</li>
+          </ul>
+          <p class="cp-scene-note">只做文本特征预审 / 分级辅助。不写钓鱼制作、绕过、最终拦截规则实现；安全终审必须规则或人工。</p>
+        </div>
+      </div>
+
+      <div class="cp-scene">
+        <div class="cp-scene-hd">教育 · 电商 · 内容</div>
+        <div class="cp-scene-bd">
+          <ul>
+            <li>作业是否跑题、题干是否歧义 → 退回重写（<strong>不是判分</strong>）</li>
+            <li>评论多标签（物流 / 品质 / 客服）→ 归因看板</li>
+            <li>售后初分：是否像质量问题 vs 使用问题 → 分流工单</li>
+            <li>商家消息是否引导站外交易 → 违规预审</li>
+            <li>稿件 / 脚本预审：是否缺事实出处、是否像广告植入 → 编辑队列</li>
+            <li>新闻是否像突发事件 → 加急编排（仍要编辑确认）</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cp-scene">
+        <div class="cp-scene-hd">医疗（非诊断）</div>
+        <div class="cp-scene-bd">
+          <ul>
+            <li>描述是否像急症表述 → 引导就医 / 紧急通道文案</li>
+            <li>是否在索要处方 / 具体用药方案 → 拒答并转合规话术</li>
+            <li>是否含自伤表述 → 危机资源引导（不代替危机干预）</li>
+            <li>客服是否在给诊疗建议 → 质检下线</li>
+          </ul>
+          <p class="cp-scene-note danger">不能做疾病诊断、不能开处方。仅非诊断文本特征；终审与处置必须人工 / 合规流程。</p>
+        </div>
+      </div>
+
+      <div class="cp-scene">
+        <div class="cp-scene-hd">法律 · 金融 · 研发</div>
+        <div class="cp-scene-bd">
+          <ul>
+            <li>合同条款是否像高风险（单方解约 / 无限责任）→ 律师预审队列（<strong>不能替代律师</strong>）</li>
+            <li>咨询是否像在求「胜诉保证」→ 拒答并转人工法务</li>
+            <li>贷款申请叙述是否像材料不全 → 补件提示（<strong>不能做信贷审批或投资建议</strong>）</li>
+            <li>需求是否缺验收标准、Bug 是否像严重故障 → 排期 / P0 标签</li>
+            <li>提交说明是否像带了密钥路径 → 拦截合并（不教如何藏密钥）</li>
+          </ul>
+          <p class="cp-scene-note danger">法律 / 信贷 / 投资结论只能当辅助特征，必须规则或持牌人工复核。</p>
+        </div>
+      </div>
+
+      <div class="cp-scene">
+        <div class="cp-scene-hd">游戏 / 仿真 / 机器人</div>
+        <div class="cp-scene-bd">
+          <ul>
+            <li>环境文本观测上的局部布尔：NPC 是否可见威胁 → 行为树分支</li>
+            <li>任务目标是否已满足 → 关卡结算前置</li>
+            <li>仿真日志是否像异常态 → 重置或人工接管</li>
+            <li>高频动作环（Doom / 跑酷 / 马里奥）：读状态 → Choice 出键位 / 走位</li>
+            <li>卡牌 / 策略局：出牌、换牌等有界选项（文称可压到亚秒级单步）</li>
+            <li>物理仿真窄决策：点火时机、姿态切换等（仍须仿真安全边界）</li>
+          </ul>
+          <p class="cp-scene-note">只做观测 / 状态上的布尔与选择；不写自动驾驶控制参数，也不当链上实盘交易引擎。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cp-foot-blocks" id="limits">
+      <div class="cp-foot-block">
+        <h3>通用模板</h3>
+        <ul>
+          <li><strong>Context</strong>：工单 / 对话 / 状态 JSON / 文档片段</li>
+          <li><strong>Questions</strong>：多条固定题（Choice / Score / Noul 或 Boolean）</li>
+          <li><strong>输出</strong>：每条 yes 与 no（或选项）概率</li>
+          <li><strong>上层</strong>：阈值 + 加权打分 → 路由 / 闸门 / 打标</li>
+        </ul>
+      </div>
+      <div class="cp-foot-block">
+        <h3>统一限制</h3>
+        <ul>
+          <li>不生成自由文本</li>
+          <li>诊断、信贷、法律判决、安全最终拦截：只能当辅助特征，必须规则或人工复核</li>
+          <li><strong>NanoJev</strong>：0.6B，不适合强推理；上下文越长越易丢信息</li>
+          <li>适合：前置预审、路由、可审计打分、本地轻量判断</li>
+        </ul>
+      </div>
+      <div class="cp-foot-block">
+        <h3>和普通 LLM 怎么选</h3>
+        <ul>
+          <li>要写文章 / 代码 / 摘要 / 对话 → <strong>普通 LLM</strong></li>
+          <li>同一段文本批量做可审计 yes/no、避免 JSON 解析崩 → <strong>这类决策模型</strong></li>
+          <li>常见组合：LLM 生成，决策模型做闸门与分拣</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cp-faq">
+      <div class="cp-faq-head">常见问题</div>
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">能替代 Claude / GPT 写代码吗？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>不能。</strong>决策模型不生成字符串。写代码、改仓库、解释结论仍用 LLM 或 Coding Agent。</div>
+      </div>
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">开源和 Jev 怎么选？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>要自托管 / 可再训 / 数据不出域 → Laya。</strong>要托管 API、少运维 → Jev（Early Access）。NanoJev 偏研究与小模型实验。不要拿冻结聊天模型的「OpenJev 式」脚本当生产决策引擎。</div>
+      </div>
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">和「强制 JSON 输出」有何不同？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a">JSON mode 仍是自回归生成文本再解析；决策模型按题型出有界答案（常带概率）。适合闸门与路由，不适合写散文。</div>
+      </div>
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">国内能直连 Jev 吗？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a">TypeSafe 为海外 Early Access，连通与开通以官网为准。已有 OpenRouter / Vercel AI Gateway 账号可优先走聚合层（OpenRouter 标识 <code>typesafe/jev</code>）。Laya / NanoJev 走 HF / GitHub 自托管，不依赖 TypeSafe 网络。</div>
+      </div>
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">社区那二十多个玩法都要跟吗？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>不必。</strong>先固定题型与阈值，再挑和自己业务同形的：分流 / 闸门 / 压缩 / 浏览器步进。游戏与链上演示验证吞吐与成本，不等于生产方案；高风险域仍须规则或人工终审。</div>
+      </div>
+    </div>
+
+    <div class="cp-summary">
+      <h2>一句话怎么用</h2>
+      <div class="cp-summary-grid">
+        <div class="cp-summary-item"><span class="cp-badge badge-overseas">要托管 API</span> <span class="arrow">→</span> Jev（闭源云）</div>
+        <div class="cp-summary-item"><span class="cp-badge badge-rec">要开源自托管</span> <span class="arrow">→</span> Laya（Apache 2.0）</div>
+        <div class="cp-summary-item"><span class="cp-badge badge-warn">要小模型实验</span> <span class="arrow">→</span> NanoJev</div>
+        <div class="cp-summary-item"><span class="cp-badge badge-overseas">要聊天/编码</span> <span class="arrow">→</span> <a href="model-plan.html">模型选型</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cp-footer">
+    <p>事实口径：TypeSafe 博文 / Docs（2026-09-15）· Datawhale《Jev 22 玩法》（2026-09-20）· Laya HF / GitHub（2026-09-18）· systemonemodels.org（至 2026-09-22）· 社区数字以原文转述为准，刊例以各官方为准</p>
+    <p><a href="index.html">← 返回 AINav 首页</a> · <a href="model-plan.html">模型选型</a> · <a href="agent-plan.html">Agent 横评</a> · <a href="low-filter-api-plan.html">低过滤云 API</a> · <a href="free-tier.html">免费额度</a></p>
+  </div>
+
+  <script>
+    (function(){
+      var btns=document.querySelectorAll('.theme-btn');
+      var html=document.documentElement;
+      function apply(t){html.setAttribute('data-theme',t);localStorage.setItem('cp-theme',t);btns.forEach(function(b){b.classList.toggle('is-active',b.getAttribute('data-theme-set')===t)})}
+      var saved=localStorage.getItem('cp-theme')||'system';apply(saved);
+      btns.forEach(function(b){b.addEventListener('click',function(){apply(b.getAttribute('data-theme-set'))})});
+    })();
+  </script>
+  <script>
+    document.querySelectorAll('.cp-faq-q').forEach(function(q){
+      q.addEventListener('click', function(){ q.parentElement.classList.toggle('is-open'); });
+    });
+  </script>
+  <script src="plan-nav.js" data-active="decision-model-plan.html"></script>
+  <script src="plan-meta-i18n.js"></script>
+  <script src="thinking-framework.js"></script>
+  <script src="./back-to-top.js"></script>
+</body>
+</html>

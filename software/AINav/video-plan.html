@@ -118,9 +118,7 @@
           thNote: '备注', thType: '类型', thDesc: '说明',
           footer: '数据来源：各平台官网 · 价格以官网为准',
           footerHome: '← 返回 AINav 首页',
-          promoText: '想用', promoOr: '/', promoNoNet: '却没海外网络？',
-          promoDesc: '一个 API Key 调用 100+ 顶级模型，国内直连低延迟，兼容 OpenAI 格式零改造',
-          promoCta: '立即注册 →',
+          promoHtml: '<strong style="color:var(--accent2)">合作推广</strong> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">GPT / Claude / Gemini</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">100+ 模型</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">文本 / 图像 / 视频</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">支持缓存</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">不留存对话</span> <span style="color:var(--muted)">·</span> <span style="color:var(--accent2);font-weight:600">首充赠 $3</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">立即注册</a>',
           legendRush: '⚡ 需抢', legendRushDesc: '限时/抢购',
           legendHot: '🔥 热门', legendHotDesc: '高性价比',
           legendNew: '✨ 特惠', legendNewDesc: '首月低价',
@@ -143,9 +141,7 @@
           thNote: 'Note', thType: 'Type', thDesc: 'Description',
           footer: 'Data sources: Official websites · Prices subject to change',
           footerHome: '← Back to AINav Home',
-          promoText: 'Want', promoOr: '/', promoNoNet: 'but no VPN?',
-          promoDesc: 'One API Key for 100+ top models, direct access in China, low latency, OpenAI-compatible format',
-          promoCta: 'Sign Up →',
+          promoHtml: '<strong style="color:var(--accent2)">Recommended</strong> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">GPT / Claude / Gemini</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">100+ models</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">Text / image / video</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">Caching</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">No conversation retention</span> <span style="color:var(--muted)">·</span> <span style="color:var(--accent2);font-weight:600">Extra $3 on first top-up</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">Sign up</a>',
           legendRush: '⚡ Rush', legendRushDesc: 'Limited/Flash',
           legendHot: '🔥 Hot', legendHotDesc: 'Best Value',
           legendNew: '✨ Deal', legendNewDesc: '1st Month Deal',
@@ -211,7 +207,7 @@
         if (fp[1]) fp[1].textContent = dict.footer;
         if(fp[1])fp[1].innerHTML='<a href="index.html">'+dict.footerHome+'</a>';
         var pb=document.querySelector('.cp-wrap > div:first-child');
-        if(pb){pb.innerHTML='<span style="color:var(--muted)">'+dict.promoText+'</span> <strong style="color:var(--text)">GPT-5</strong> <span style="color:var(--muted)">'+dict.promoOr+'</span> <strong style="color:var(--text)">Claude Opus 4.8</strong> <span style="color:var(--muted)">'+dict.promoOr+'</span> <strong style="color:var(--text)">Gemini 3.1 Pro</strong> <span style="color:var(--muted)">'+dict.promoNoNet+'</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--accent2);font-weight:600;text-decoration:none;">OfoxAI</a> <span style="color:var(--muted)">'+dict.promoDesc+'</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">'+dict.promoCta+'</a>'}
+        if(pb){pb.innerHTML=dict.promoHtml;}
         document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('is-active',b.getAttribute('data-lang-set')===lang)});
       }
       applyLang(currentLang);document.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){applyLang(b.getAttribute('data-lang-set'))})});
@@ -233,13 +229,13 @@
 
   <div class="cp-wrap">
     <div style="margin-bottom:1rem;padding:.55rem .85rem;border-radius:8px;border:1px solid var(--border);background:var(--card);display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.35rem .6rem;font-size:.84rem;line-height:1.5;">
-      <span style="color:var(--muted)"><strong style="color:var(--text)">OpenAI: GPT-5</strong> <span style="color:var(--muted)">·</span> <strong style="color:var(--text)">Anthropic: Claude Opus 4.8</strong> <span style="color:var(--muted)">·</span> <strong style="color:var(--text)">Google: Gemini 3.1 Pro</strong> <span style="color:var(--muted)">· 国内直连免梯</span> <span class="plan-promo-code" data-code="AFF_BB0FNC" style="color:var(--accent2);font-weight:600;cursor:pointer" title="点击复制优惠码">$2优惠码 AFF_BB0FNC</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">立即注册</a>
+      <span style="color:var(--muted)"><strong style="color:var(--accent2)">合作推广</strong> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">GPT / Claude / Gemini</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">100+ 模型</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">文本 / 图像 / 视频</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">支持缓存</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">不留存对话</span> <span style="color:var(--muted)">·</span> <span style="color:var(--accent2);font-weight:600">首充赠 $3</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">立即注册</a>
     </div>
     <h1 data-i18n="title">🎬 AI Video Plan 视频套餐横评</h1>
     <p class="cp-subtitle" data-i18n="subtitle">国内外 AI 视频生成套餐一站式对比：价格、积分、功能、场景推荐，帮你选出最划算的视频生成方案。</p>
 
     
-    <p class="cp-updated-line"><span class="cp-updated">最后更新：2026-06-26</span> · <a href="image-plan.html">图像套餐横评</a></p>
+    <p class="cp-updated-line"><span class="cp-updated">最后更新：2026-09-23</span> · <a href="image-plan.html">图像套餐横评</a></p>
     <div class="cp-legend">
       <div class="cp-legend-item"><span class="cp-badge badge-hot">🔥 热门</span> 高人气</div>
       <div class="cp-legend-item"><span class="cp-badge badge-new">✨ 新品</span> 新上线</div>
@@ -307,7 +303,7 @@
             <span class="feat-tag yes">文生视频</span><span class="feat-tag yes">图生视频</span><span class="feat-tag yes">音频同步</span>
             <span class="feat-tag no">数字人</span><span class="feat-tag no">4K</span>
           </div>
-          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">字节出品，Seedance 2.0+ 视频模块特色为原生音视频同步，画面配乐自动生成</div>
+          <div style="font-size:.76rem;color:var(--muted);margin-top:.4rem">字节出品，Seedance 2.5（2026-08）视频模块，原生音视频同步。2026-09-23 起火山引擎 API 提供 <strong>Draft 样片</strong>：先 480P 试错，再按样片 ID 出 1080P；官方称成本最高可省约 77%</div>
         </div>
       </div>
 
@@ -488,8 +484,8 @@
             <tbody>
               <tr><td class="plan-name">Gemini Free</td><td class="plan-price">$0</td><td>有限 Veo 3 Fast 预览</td><td class="plan-limit">需 Google 账号</td></tr>
               <tr><td class="plan-name">Google AI Pro</td><td class="plan-price">$19.99/月</td><td>含 Flow / Veo 3 创作额度</td><td class="plan-limit">消费级</td></tr>
-              <tr><td class="plan-name">Google AI Ultra</td><td class="plan-price">$249.99/月</td><td>更高 Veo 3 额度</td><td class="plan-limit">含 Gemini 3.1 Pro</td></tr>
-              <tr><td class="plan-name">Vertex API</td><td class="plan-price">按秒</td><td>Veo 3 / Veo 3 Fast</td><td class="plan-limit">约 $0.40–0.75/秒（以官网为准）</td></tr>
+              <tr><td class="plan-name">Google AI Ultra</td><td class="plan-price">$99.99/月</td><td>更高 Veo 3.1 额度</td><td class="plan-limit">含 Gemini 3.7</td></tr>
+              <tr><td class="plan-name">Vertex API</td><td class="plan-price">按秒</td><td>Veo 3.1 / Fast / Lite</td><td class="plan-limit">约 $0.05–0.60/秒（以官网为准）</td></tr>
             </tbody>
           </table>
           <div class="feat-tags">
@@ -518,7 +514,7 @@
             <span class="feat-tag yes">文生视频</span><span class="feat-tag yes">图生视频</span><span class="feat-tag yes">视频编辑</span>
             <span class="feat-tag no">数字人</span>
           </div>
-          <div style="font-size:.76rem;color:var(--danger);margin-top:.4rem">⚠️ Sora 已于 2026年4月26日停服，含在 ChatGPT 订阅内，无独立套餐</div>
+          <div style="font-size:.76rem;color:var(--danger);margin-top:.4rem">消费端已于 2026-04-26 停服。残留的 Sora 2 API 将于 <strong>2026-09-24</strong> 关停；新项目改 Veo 3.1 / Kling 3.0 / Seedance 2.5。</div>
         </div>
       </div>
 
@@ -651,7 +647,7 @@
         </table>
       </div>
       <div style="font-size:.76rem;color:var(--muted);margin-top:.5rem">
-        ⚠️ Sora 已于 4/26 停服 · "长视频"指支持>30秒连续生成 · 数据截至2026-06-26
+        ⚠️ Sora 已于 4/26 停服 · "长视频"指支持>30秒连续生成 · 数据截至2026-08-20
       </div>
     </div>
 
@@ -880,7 +876,7 @@
 
   <script>
     (function(){
-      var i18n={zh:{title:'🎬 AI Video Plan 视频套餐横评',subtitle:'国内外 AI 视频生成套餐一站式对比：价格、积分、功能、场景推荐，帮你选出最划算的视频生成方案。',navHome:'← AINav 首页',navCoding:'编程套餐横评',navAgent:'Agent横评',navVideo:'视频套餐横评',navImage:'图像套餐横评',navEncyclopedia:'AI百科',sectionDomestic:'国内 AI 视频平台',sectionOverseas:'海外 AI 视频平台',sectionMatrix:'📊 功能对比矩阵',sectionPrice:'💰 月费对比（主流套餐）',sectionRec:'🎯 场景推荐 — 按需求选最适合的视频方案',sectionTrend:'📈 AI 视频生成趋势',footer:'数据来源：各平台官网 · 价格以官网为准',footerHome:'← 返回 AINav 首页',thPlan:'套餐',thPrice:'月价',thCredits:'积分/月',thDuration:'视频时长',thNote:'备注',thType:'类型',thDesc:'说明',themeSystem:'跟随系统',themeLight:'浅色',themeDark:'深色',promoText:'想用',promoOr:'/',promoNoNet:'却没海外网络？',promoDesc:'一个 API Key 调用 100+ 顶级模型，国内直连低延迟，兼容 OpenAI 格式零改造',promoCta:'立即注册 →'},en:{title:'🎬 AI Video Plan Comparison',subtitle:'One-stop comparison of AI video generation plans worldwide: pricing, credits, features, and scenario recommendations.',navHome:'← AINav Home',navCoding:'Coding Plans',navAgent:'Agents',navVideo:'Video Plans',navImage:'Image Plans',navEncyclopedia:'AI Encyclopedia',sectionDomestic:'Domestic AI Video Platforms',sectionOverseas:'Overseas AI Video Platforms',sectionMatrix:'📊 Feature Comparison Matrix',sectionPrice:'💰 Monthly Price Comparison (Popular Plans)',sectionRec:'🎯 Recommendations — Find the Best Video Plan for Your Needs',sectionTrend:'📈 AI Video Generation Trends',footer:'Data sources: Official websites · Prices subject to change',footerHome:'← Back to AINav Home',thPlan:'Plan',thPrice:'Price',thCredits:'Credits/Mo',thDuration:'Video Duration',thNote:'Note',thType:'Type',thDesc:'Description',themeSystem:'System',themeLight:'Light',themeDark:'Dark',promoText:'Want',promoOr:'/',promoNoNet:'but no VPN?',promoDesc:'One API Key for 100+ top models, direct access in China, low latency, OpenAI-compatible format',promoCta:'Sign Up →'}};
+      var i18n={zh:{title:'🎬 AI Video Plan 视频套餐横评',subtitle:'国内外 AI 视频生成套餐一站式对比：价格、积分、功能、场景推荐，帮你选出最划算的视频生成方案。',navHome:'← AINav 首页',navCoding:'编程套餐横评',navAgent:'Agent横评',navVideo:'视频套餐横评',navImage:'图像套餐横评',navEncyclopedia:'AI百科',sectionDomestic:'国内 AI 视频平台',sectionOverseas:'海外 AI 视频平台',sectionMatrix:'📊 功能对比矩阵',sectionPrice:'💰 月费对比（主流套餐）',sectionRec:'🎯 场景推荐 — 按需求选最适合的视频方案',sectionTrend:'📈 AI 视频生成趋势',footer:'数据来源：各平台官网 · 价格以官网为准',footerHome:'← 返回 AINav 首页',thPlan:'套餐',thPrice:'月价',thCredits:'积分/月',thDuration:'视频时长',thNote:'备注',thType:'类型',thDesc:'说明',themeSystem:'跟随系统',themeLight:'浅色',themeDark:'深色',promoHtml:'<strong style="color:var(--accent2)">合作推广</strong> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">GPT / Claude / Gemini</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">100+ 模型</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">文本 / 图像 / 视频</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">支持缓存</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">不留存对话</span> <span style="color:var(--muted)">·</span> <span style="color:var(--accent2);font-weight:600">首充赠 $3</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">立即注册</a>'},en:{title:'🎬 AI Video Plan Comparison',subtitle:'One-stop comparison of AI video generation plans worldwide: pricing, credits, features, and scenario recommendations.',navHome:'← AINav Home',navCoding:'Coding Plans',navAgent:'Agents',navVideo:'Video Plans',navImage:'Image Plans',navEncyclopedia:'AI Encyclopedia',sectionDomestic:'Domestic AI Video Platforms',sectionOverseas:'Overseas AI Video Platforms',sectionMatrix:'📊 Feature Comparison Matrix',sectionPrice:'💰 Monthly Price Comparison (Popular Plans)',sectionRec:'🎯 Recommendations — Find the Best Video Plan for Your Needs',sectionTrend:'📈 AI Video Generation Trends',footer:'Data sources: Official websites · Prices subject to change',footerHome:'← Back to AINav Home',thPlan:'Plan',thPrice:'Price',thCredits:'Credits/Mo',thDuration:'Video Duration',thNote:'Note',thType:'Type',thDesc:'Description',themeSystem:'System',themeLight:'Light',themeDark:'Dark',promoHtml:'<strong style="color:var(--accent2)">Recommended</strong> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">GPT / Claude / Gemini</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">100+ models</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">Text / image / video</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">Caching</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">No conversation retention</span> <span style="color:var(--muted)">·</span> <span style="color:var(--accent2);font-weight:600">Extra $3 on first top-up</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">Sign up</a>'}};
       var LANG_KEY='ainav-lang',currentLang=localStorage.getItem(LANG_KEY)||'zh';
       function applyLang(lang){if(lang!=='zh'&&lang!=='en')lang='zh';currentLang=lang;document.documentElement.setAttribute('lang',lang==='en'?'en':'zh-CN');try{localStorage.setItem(LANG_KEY,lang)}catch(e){}var dict=i18n[lang];
         document.querySelectorAll('[data-i18n]').forEach(function(el){var key=el.getAttribute('data-i18n');if(dict[key]!==undefined)el.textContent=dict[key]});
@@ -891,7 +887,7 @@
         document.querySelectorAll('.cp-tips h2').forEach(function(el){if(el.textContent.indexOf('场景推荐')!==-1)el.textContent=dict.sectionRec});
         document.querySelectorAll('.theme-btn:not(.lang-btn)').forEach(function(b){var s=b.getAttribute('data-theme-set');if(s==='system')b.textContent=dict.themeSystem;else if(s==='light')b.textContent=dict.themeLight;else if(s==='dark')b.textContent=dict.themeDark});
         var fp=document.querySelectorAll('.cp-footer p');if (fp[1]) fp[1].textContent = dict.footer;
-        var pb=document.querySelector('.cp-wrap > div:first-child');if(pb){pb.innerHTML='<span style="color:var(--muted)">'+dict.promoText+'</span> <strong style="color:var(--text)">GPT-5</strong> <span style="color:var(--muted)">'+dict.promoOr+'</span> <strong style="color:var(--text)">Claude Opus 4.8</strong> <span style="color:var(--muted)">'+dict.promoOr+'</span> <strong style="color:var(--text)">Gemini 3.1 Pro</strong> <span style="color:var(--muted)">'+dict.promoNoNet+'</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--accent2);font-weight:600;text-decoration:none;">OfoxAI</a> <span style="color:var(--muted)">'+dict.promoDesc+'</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">'+dict.promoCta+'</a>'}
+        var pb=document.querySelector('.cp-wrap > div:first-child');if(pb){pb.innerHTML=dict.promoHtml;}
         document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('is-active',b.getAttribute('data-lang-set')===lang)});
       }
       applyLang(currentLang);document.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){applyLang(b.getAttribute('data-lang-set'))})});

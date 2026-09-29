@@ -59,6 +59,18 @@ html.dark tt {
 <h1>Stable Channel Changelog</h1>
 
 <article class="current">
+<h2>Build 4215</h2>
+<div class="release-date">25 Sep 2026</div>
+<ul>
+    <li>Fixed vintage "M" command not working</li>
+    <li>Mac: Fixed compatibility issue with macOS 10.13 and 10.14</li>
+    <li>Windows: Fixed installer giving an error message on arm64</li>
+    <li>Linux: Worked around issue where non-ascii text was being escaped under GNOME/Wayland</li>
+    <li>Linux: Worked around issue with drag-drop mime types under GNOME/Wayland</li>
+</ul>
+</article>
+
+<article>
 <h2>Build 4213</h2>
 <div class="release-date">21 Sep 2026</div>
 

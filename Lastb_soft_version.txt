@@ -165,8 +165,9 @@ https://pan.quark.cn/s/d586d0925b85
 EmEditor pro Version 21.5.2 注册版    目前最新版 的注册是未注册的EmEditor v26.2.1 绿色便携版 https://www.ghxi.com/emeditor.html
 https://www.423down.com/7569.html
 核心特点：支持超大文件（GB 级）快速打开，多光标编辑、正则表达式功能强大，可自定义界面与快捷键，兼容性强
-SublimeText v4213 注册版
+SublimeText v4215 注册版
 核心特点：启动秒开、低资源占用，支持多光标编辑、代码补全，插件库丰富可实现全功能拓展，跨平台适配 Windows/Mac/Linux
+更新后报错的话，把这个文件夹删掉，\SublimeText\Data\Packages
 
 UltraEdit 2026.0.0.23 64-bit  v33.0.0.23-x64 注册版  //目录里目前选这个
 核心特点：支持十六进制编辑、大文件处理、代码高亮与折叠，自带文件对比、FTP/SFTP，兼容各类编程语言，专业级功能全覆盖
@@ -415,7 +416,9 @@ FFmpeg（命令行） 支持所有格式  支持  ★★★★★（最强）   
 
 system_good目录下
 
-听音乐
+娱乐至死-音乐电影游戏网盘学习资源破解资源
+
+音乐资源
 测试了各个平台音乐，痛点就是付费和版权音质，你懂得，一步到位！落雪太赞了，必备！
 1、洛雪音乐win电脑版 全网免VIP无损下载 也支持mac
 落雪音乐 安装包，解压后251M超出大小了，更新安装到，Program Files\lx-music-desktop\ 即可
@@ -449,10 +452,20 @@ JuheApi
 https://gh-proxy.com/raw.githubusercontent.com/pdone/lx-music-source/main/juhe/latest.js
 QDY
 https://gh-proxy.com/raw.githubusercontent.com/pdone/lx-music-source/main/qdy/latest.js
-xinghai
-https://zrcdy.dpdns.org/lx/xinghai-music-sourcev2.3.13.js
 
-2、请在GitHub上搜索 lx-music-source 寻找最新的第三方维护的音源
+2、洛雪音乐安卓端自动音源版 本仓库基于官方 lx-music-mobile v1.9.1，在保留上游完整历史的前提下，增加内置音源与播放失败自动切换，并调整若干开箱默认设置。
+https://github.com/shellsec/lx-music-mobile-auto-source
+arm64-v8a（常见手机，优先）：
+https://gh-proxy.org/https://github.com/shellsec/lx-music-mobile-auto-source/releases/download/v1.9.1-auto-source/lx-music-mobile-v1.9.1-arm64-v8a.apk
+armeabi-v7a：
+https://gh-proxy.org/https://github.com/shellsec/lx-music-mobile-auto-source/releases/download/v1.9.1-auto-source/lx-music-mobile-v1.9.1-armeabi-v7a.apk
+universal：
+https://gh-proxy.org/https://github.com/shellsec/lx-music-mobile-auto-source/releases/download/v1.9.1-auto-source/lx-music-mobile-v1.9.1-universal.apk
+x86：https://gh-proxy.org/https://github.com/shellsec/lx-music-mobile-auto-source/releases/download/v1.9.1-auto-source/lx-music-mobile-v1.9.1-x86.apk
+x86_64：https://gh-proxy.org/https://github.com/shellsec/lx-music-mobile-auto-source/releases/download/v1.9.1-auto-source/lx-music-mobile-v1.9.1-x86_64.apk
+
+
+3、音源上面都够用了，请在GitHub上搜索 lx-music-source 寻找最新的第三方维护的音源
 https://github.com/yoyodadada/lx-music-source
 https://github.com/cdyUuu/lx-music-xinghai-source
 https://github.com/Macrohard0001/lx-ikun-music-sources
@@ -460,7 +473,8 @@ https://github.com/search?q=lx-music-source&type=repositories&s=updated&o=desc
 https://github.com/search?q=lx-music-source&type=repositories
 软件默认无音源，需自行添加：
 基本设置——自定义源——在线导入（任选一个就行），打钩，显示[初始化成功]
-3、洛雪音乐安卓手机版
+
+4、洛雪音乐安卓手机版-官方需要自己导入音源比较麻烦
 https://github.com/lyswhut/lx-music-mobile/releases
 https://gh-proxy.com/github.com/lyswhut/lx-music-mobile/releases/download/v1.9.1/lx-music-mobile-v1.9.1-arm64-v8a.apk
 文件名 适用设备  特点
@@ -472,15 +486,26 @@ lx-music-mobile-v1.8.1-x86/x86_64.apk 安卓模拟器（如 BlueStacks、雷电�
 https://www.hybase.com/pc/windows/2845.html
 https://pan.baidu.com/s/1SPYv_-wNq1rweMViBb-ljg?pwd=HyHy
 
-4、ios/IPAD推荐直接用网页版聚合播放器（推荐，零部署）
+5、洛雪音乐安卓端墨水屏版
+https://github.com/shellsec/lx-music-eink
+已集成音源，安装即可播放，失败时自动切换
+也支持 安卓智能投影（极米/当贝/坚果/小米/部分华为），省去音源添加问题
+系统 = 安卓 TV / 定制 Android
+开“未知来源”→ U 盘或悟空遥控器/当贝市场推 APK → 直接装 lx-music-mobile 或 TV 版（ZL-Music 类）
+遥控器方向键+OK 能跑，但手机版 LX 焦点不一定顺手，最好出 TV 布局
+结论：和 Android TV 盒子同处理，不单列新平台
+
+
+6、ios/IPAD推荐直接用网页版聚合播放器（推荐，零部署）
 网站 地址 核心特点
 25盘音乐 https://ios.25pan.com/music 实测好用——曲库丰富、免费、界面不错、音质高，适合日常主听
 25盘桌面 https://ios.25pan.com/ 同站桌面版入口，整体风格偏桌面端体验
 i音乐网页版 https://i.webos.im/ 仿 vivo i音乐风格，界面清爽，支持在线播放、收藏歌单，可切较高音质
 咪咕音乐 https://music.migu.cn 中国移动官方正版，周杰伦等华语热门大量免费，最高支持 Hi-Res 无损，安全稳定
 Uzz 音乐 https://m.uzz.me/ 移动端适配好、轻量无广告，聚合多平台，支持在线听+下载
+网盘资源 https://so.liumingye.cn/
 
-5、汽水音乐看一下广告听歌
+7、汽水音乐看一下广告听歌
 汽水音乐（字节跳动/抖音官方出品）有网页版直听 + iOS/macOS 原生 App，和你之前问的洛雪不同，它是正版授权平台，基础听歌免费（带广告），部分高音质/离线需会员。
 汽水音乐各端入口
 网页版（在线直听，免装）
@@ -492,16 +517,36 @@ https://apps.apple.com/cn/app/汽水音乐-抖音音乐版/id1605585211
 桌面客户端（Win/Mac dmg）
 官网 https://www.qishui.com 或 https://music.douyin.com 页面底部 → "桌面端下载" → 选 macOS 版（.dmg）。
 
-6、Lx Music v1.8.4iOS签名版
+IOS版本现状
+吾爱原帖 + 论坛登录下载楼主附件（最源头）
+巨魔 TrollStore 用户：直接装 IPA，不掉的那种最舒服
+无巨魔：Sideloadly + 个人 Apple ID 自签（7 天续签）
+TestFlight：原帖之外有公众号放兑换码，但 TF 名额满就废
+IOS版本-需要自签名
+https://www.52pojie.cn/thread-2089652-1-7.html
+https://macxk.lanzoub.com/ih2Bi3i2rgre
+我的是13PM，IOS 18.2.1,整个过程不需要越狱。
+iphone插电脑上个，打开爱思，
+找到工具箱里面的IPA文件签名，
+证书签名不行的 话，就试试APPLE ID签名，
+按照教程签名，然后到爱思界面指定的路径，
+把签好的IPA文件拖到iphone上，
+打开苹果手机进入系统"设置-通用-VPN与设备管理"里面。
+点击“企业级APP”,点击未信任的企业开发者。 点击“信任XXXX”XXXX为对应的企业开发者
+按照iphone要求，重启机器，进入开发者模式，就可以了。
+进入APP后，点设置，网上搜索一些公益的源，点击自定义源管理，添加新源，把链接复制进去，就可以听了。本地文件那个也可以，和这个在线源意思一样。
+这个的PC版和安卓手机版就是洛雪音乐，LX MUSIC，网上很多版本，每个都可以。源在这些设备上通用。楼主的这个IPA，就是解决了洛雪在苹果上的使用问题，因为根据原来洛雪作者的声明，是不会推出IOS版本的APP的。
+
+8、Lx Music v1.8.4iOS签名版
 准备一个邮箱，进入网址 https://tfapps.store/?ref=AJMKRY5E 注册
 注册好，申请洛雪测试 
 洛雪测试邮件「杨杰」会发送到邮箱，进入邮件点击「View in TestFlight」，底部会有加粗的兑换码
 进入TestFlight ——账号头像——兑换邀请，输入兑换码！
-名额有限，先到先得！！！
-7、服务端docker自建,需要自己的机器NAS
+
+9、服务端docker自建,需要自己的机器NAS
 https://github.com/XCQ0607/lxserver
 
-8、TV版本
+10、TV版本
 星河Music（星河音乐）是洛雪系第三方音乐播放器
 星河音乐tv电视版，自行搜
 📺 LX Music TV（洛雪音乐电视版）
@@ -512,14 +557,82 @@ https://github.com/XCQ0607/lxserver
 基于 lx-music-mobile 二次开发的 TV 版，同样支持洛雪 JS 音源导入，界面偏 Apple Music TV 风格，焦点/遥控器适配较好。
 导入方式：设置页 → 音源列表 → 在线导入/本地 JS 文件
 下载：可在第三方软件站（如 9K9K 等）搜索「ZL-Music TV」下载 APK
+https://github.com/boluofan/music-tv
+https://github.com/songloft-org/songloft-tv
 
-9、其他车载端-蓝牙连接手机网页播放
+11、其他车载端-蓝牙连接手机网页播放
 智能音箱-小爱同学pro-蓝牙连接手机网页播放
 可穿戴设备，不支持
 
 看视频，安卓平板类
 https://www.pejdw.com/app/shipin/
 安卓端，视频类app，可以直接下载和安装的，经常更新不错，无需跳网盘
+
+电影资源，免费最新电影
+https://appx64.com/tv
+https://appx64.com/video/
+https://www.hybase.com/shouji/android/
+https://www.423down.com/apk
+
+游戏资源
+switch，PC，模拟器，PS等
+https://www.gamer520.com
+https://vip.gamers520.com
+laoquzhang.com
+
+网盘资源学习资源
+大圣盘资源搜索
+https://www.dashengpan.xyz/#/?code=ohGU$8s0t
+N多夸克资源社区，注册也很简单更新很快
+https://kuakezys.com/
+夸克资源社（论坛式，分类清晰）
+https://www.kuakezy.cc/
+夸父资源社（影视+书+课程，部分需回帖）
+https://www.kuafuzys.com/
+夸客搜
+https://www.kuakeso.net
+爱盘搜（聚合夸克/百度/阿里，默认可切夸克）
+https://aipanso.com/
+海搜（多盘聚合，带链接有效性检测）
+https://haisou.cc
+盘搜搜 pansoso.com
+超能搜 chaonengso.com
+学霸盘 xuebapan.com（偏学习资料）
+电子书籍
+
+破解资源
+# 破解社区
+https://www.52pojie.cn
+https://linux.do/
+https://www.52pojie.cn/forum-2-1.html
+https://www.52pojie.cn/forum-16-1.html
+https://www.52pojie.cn/forum-24-1.html
+https://www.hybase.com/
+https://www.hybase.com/soft/newlist-1.html
+https://www.jb51.net/softs/
+https://kuakezys.com/
+https://kuakezys.com/forum-11.htm
+https://www.mefcl.com/
+https://appx64.com
+https://www.4mf.net/
+https://www.ghxi.com
+https://www.dayanzai.me/
+https://masuit.org/
+https://www.x6d.com/
+https://www.423down.com/
+https://www.pejdw.com/
+https://www.lxapk.com/
+https://www.wuleba.com/
+https://www.dr-farfar.com/
+https://www.puresys.net/
+https://www.gndown.com/
+https://www.ypojie.com/
+https://www.wycad.com/
+https://www.i3ai.com/
+https://sysin.org
+https://macked.app/
+https://www.ifmac.cn/
+https://cn-sec.com/
 
 
 传统键盘支持音量调节
@@ -535,8 +648,6 @@ Keyvol 是Windows 平台极简音量控制小工具，这里提供安全获取�
 吾爱破解论坛原帖（开发者发布）（最安全，免费无捆绑）
 链接：https://www.52pojie.cn/thread-965894-1-1.html
 说明：这是 Keyvol 开发者首发的帖子，可下载纯净版，无广告无捆绑
-
-
 
 [Windows] XYplorer_28.30.2900_Portable 高级便携版 [Hybase.com]黑域基地
 XYplorer.rar 很好用，就放在 D:\Program Files\XYplorer ，文件统一管理

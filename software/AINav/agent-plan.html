@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <link rel="stylesheet" href="site-mobile.css">
   <title>AI Agent 横评 — Coding Agent 对比 — AINav</title>
-  <meta name="description" content="AI Coding Agent 横向对比：Hermes（2026 开源首选）、Claude Code（Fable 5/Opus 4.8）、Cursor、OpenClaw、Cline、Codex CLI 等；搭配 GLM-5.2、DeepSeek-V4-Pro 选型指南。">
+  <meta name="description" content="AI Coding Agent 横向对比：Hermes、Claude Code（Opus 5.5/Fable 5.1）、Cursor、Kimi Code 桌面版、OpenClaw、Cline、Codex CLI；搭配 Kimi K3、MiMo-V2.6、Hy4。决策闸门见决策模型专题。">
   <link rel="canonical" href="https://aiv123.com/agent-plan.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="AI Agent 横评 — Coding Agent 对比">
@@ -204,11 +204,11 @@
   <!-- Main content -->
   <div class="cp-wrap">
     <div style="margin-bottom:1rem;padding:.55rem .85rem;border-radius:8px;border:1px solid var(--border);background:var(--card);display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.35rem .6rem;font-size:.84rem;line-height:1.5;">
-      <span style="color:var(--muted)"><strong style="color:var(--text)">OpenAI: GPT-5</strong> <span style="color:var(--muted)">·</span> <strong style="color:var(--text)">Anthropic: Claude Opus 4.8</strong> <span style="color:var(--muted)">·</span> <strong style="color:var(--text)">Google: Gemini 3.1 Pro</strong> <span style="color:var(--muted)">· 国内直连免梯</span> <span class="plan-promo-code" data-code="AFF_BB0FNC" style="color:var(--accent2);font-weight:600;cursor:pointer" title="点击复制优惠码">$2优惠码 AFF_BB0FNC</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">立即注册</a>
+      <span style="color:var(--muted)"><strong style="color:var(--accent2)">合作推广</strong> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">GPT / Claude / Gemini</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">100+ 模型</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">文本 / 图像 / 视频</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">支持缓存</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">不留存对话</span> <span style="color:var(--muted)">·</span> <span style="color:var(--accent2);font-weight:600">首充赠 $3</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">立即注册</a>
     </div>
     <h1 data-i18n="title">🤖 AI Agent 横评</h1>
-    <p class="cp-subtitle" data-i18n="subtitle">国内外 AI Coding Agent 一站式对比：2026 年开源首选 Hermes，模型底座推荐 GLM-5.2 / DeepSeek-V4-Pro / Claude Opus 4.8。</p>
-    <p class="cp-updated-line"><span class="cp-updated">最后更新：2026-07-15</span> · <a href="#loop-engineering">Loop Engineering</a> · <a href="token-optimization.html">Token 优化指南</a> · <a href="coding-plan.html">编程套餐横评</a> · <a href="thinking-framework.html">AI第一思考</a></p>
+    <p class="cp-subtitle" data-i18n="subtitle">国内外 Coding Agent 对照：底座看 Arena Agent 榜（Fable 5.1 / Opus 5.5 / Kimi K3 / Hy4）；软件内「是/否/打分」闸门看 <a href="decision-model-plan.html">决策模型</a>；开源首选 Hermes。</p>
+    <p class="cp-updated-line"><span class="cp-updated">最后更新：2026-09-23</span> · <a href="#arena">Arena Agent 榜</a> · <a href="#loop-engineering">Loop Engineering</a> · <a href="token-optimization.html">Token 优化指南</a> · <a href="coding-plan.html">编程套餐横评</a> · <a href="thinking-framework.html">AI第一思考</a></p>
 
     <!-- Legend -->
     <div class="cp-legend">
@@ -223,11 +223,30 @@
     <nav class="page-toc" aria-label="本页目录">
       <div class="page-toc-hd">📑 本页目录</div>
       <ul class="page-toc-list">
+        <li><a href="#arena">Arena Agent 榜</a></li>
         <li><a href="#domestic">国内 Agent</a></li>
         <li><a href="#overseas">海外 Agent</a></li>
         <li><a href="#oss">开源 / 自托管</a></li>
       </ul>
     </nav>
+
+    <!-- ==================== Arena Agent 榜 ==================== -->
+    <div class="cp-section-hd" id="arena"><span class="cp-flag">🏆</span> Arena Agent 模型底座（2026-09-05）</div>
+    <p style="font-size:.82rem;color:var(--muted);margin:0 0 .6rem;">Agent 效果约 80% 取决于底层模型。下表来自 <a href="https://arena.ai/leaderboard/agent" target="_blank" rel="noopener noreferrer">Arena Agent Leaderboard</a>（228 万真实会话），按净提升排序。不是 SWE-bench。</p>
+    <div class="cp-table-wrap" style="overflow-x:auto;border:1px solid var(--border);border-radius:8px;background:var(--card);margin-bottom:1.2rem;">
+      <table class="cp-table" style="font-size:0.8rem;">
+        <thead><tr><th>#</th><th>模型</th><th>净提升</th><th>确认成功</th><th>任务成本 P50</th><th>怎么用</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td class="plan-name">Claude Fable 5.1 (Max)</td><td>15.87%</td><td>22.45%</td><td>$4.32</td><td>冲极限长程；刊例 $10/$50，缓存读 $0.25</td></tr>
+          <tr><td>2–3</td><td class="plan-name">Claude Opus 5 High / Max</td><td>12.68% / 11.67%</td><td>13.3% / 14.9%</td><td>$2.43 / $3.66</td><td>日常主力；可操控性最好</td></tr>
+          <tr><td>5</td><td class="plan-name">GPT-5.6 Sol (xHigh)</td><td>9.31%</td><td>6.68%</td><td>$1.22</td><td>Codex / ChatGPT 付费默认</td></tr>
+          <tr><td>7</td><td class="plan-name">Kimi K3 (Max)</td><td>7.96%</td><td>16.58%</td><td>$0.82</td><td>国内开源旗舰，确认成功率仅次于 Fable</td></tr>
+          <tr><td>10</td><td class="plan-name">Tencent Hy4 preview</td><td>6.92%</td><td>13.56%</td><td>$0.27</td><td>Apache 2.0，任务成本最低档之一</td></tr>
+          <tr><td>17</td><td class="plan-name">Gemini 3.8 Flash (High)</td><td>5.47%</td><td>10.42%</td><td>$0.22</td><td>接档 3.7；同引入价 $0.75/$3.75</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.76rem;color:var(--muted);margin:0 0 1.2rem;">Claude Code 日常用 Opus 5.5 / Sonnet 5，冲极限切 Fable 5.1。开源 Agent（Hermes / Cline）国内优先 Kimi K3、MiMo-V2.6、Hy4、GLM-5.3。工单分类、工具调用前确认这类窄决策，可叠 <a href="decision-model-plan.html">决策模型</a>，别只看 Coding Plan 默认模型。</p>
 
     <!-- ==================== 国内 Coding Agent ==================== -->
     <div class="cp-section-hd" id="domestic"><span class="cp-flag">🇨🇳</span> 国内 Coding Agent</div>
@@ -285,12 +304,12 @@
           </table>
           <div class="feat-tags">
             <span class="feat-tag yes">IDE内置</span>
-            <span class="feat-tag yes">GLM-5.2</span>
+            <span class="feat-tag yes">GLM-5.3</span>
             <span class="feat-tag yes">MCP</span>
             <span class="feat-tag">Agent</span>
             <span class="feat-tag">Skills</span>
           </div>
-          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">智谱 AI 编程 ADE，ZCode 3.0 自研 Agent 内核，深度适配 GLM-5.2，GLM Coding Plan 官方 Harness</div>
+          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">智谱 AI 编程 ADE，ZCode 3.0 自研 Agent 内核，深度适配 GLM-5.3，GLM Coding Plan 官方 Harness</div>
         </div>
       </div>
 
@@ -379,10 +398,11 @@
         </div>
       </div>
 
-      <!-- 5. Kimi CLI -->
+      <!-- 5. Kimi CLI / Desktop -->
       <div class="cp-platform">
         <div class="cp-platform-head">
-          <span class="cp-platform-name"><a href="https://www.kimi.com/" target="_blank" rel="noopener noreferrer">Kimi CLI（月之暗面）</a></span>
+          <span class="cp-platform-name"><a href="https://www.kimi.com/code" target="_blank" rel="noopener noreferrer">Kimi Code / CLI（月之暗面）</a></span>
+          <span class="cp-badge badge-new">🆕 Desktop</span>
         </div>
         <div class="cp-platform-body">
           <table class="cp-table">
@@ -394,15 +414,22 @@
                 <td class="plan-models">命令行终端</td>
                 <td class="plan-limit">Andante ¥49 起</td>
               </tr>
+              <tr>
+                <td class="plan-name">Desktop</td>
+                <td class="plan-price">随订阅</td>
+                <td class="plan-models">macOS / Windows 客户端</td>
+                <td class="plan-limit">2026-09-21/22</td>
+              </tr>
             </tbody>
           </table>
           <div class="feat-tags">
             <span class="feat-tag yes">CLI</span>
+            <span class="feat-tag yes">Desktop</span>
             <span class="feat-tag">IDE内置</span>
             <span class="feat-tag">MCP</span>
             <span class="feat-tag">多模态</span>
           </div>
-          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">月之暗面推出的命令行编程 Agent，基于 Kimi K2.6 模型</div>
+          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">月之暗面编程 Agent；可选 <strong>Kimi K3</strong> 或 K2.7 Code 等。桌面版（macOS / Windows）把 CLI 做成图形界面，含 Plan / 目标 / Swarm 等工作区能力，见 <a href="https://www.kimi.com/code" target="_blank" rel="noopener noreferrer">kimi.com/code</a></div>
         </div>
       </div>
 
@@ -453,20 +480,20 @@
               <tr>
                 <td class="plan-name">Pro</td>
                 <td class="plan-price">$20/月</td>
-                <td class="plan-models"><a href="https://www.anthropic.com/" target="_blank" rel="noopener noreferrer">Claude Sonnet 4.6</a></td>
+                <td class="plan-models"><a href="https://www.anthropic.com/" target="_blank" rel="noopener noreferrer">Claude Sonnet 5</a></td>
                 <td class="plan-limit">中度使用，约30-45分钟/天</td>
               </tr>
               <tr>
-                <td class="plan-name">Max 1× <span class="cp-badge badge-rec">👍</span></td>
+                <td class="plan-name">Max 5× <span class="cp-badge badge-rec">👍</span></td>
                 <td class="plan-price">$100/月</td>
-                <td class="plan-models"><a href="https://www.anthropic.com/claude/fable" target="_blank" rel="noopener noreferrer">Claude Fable 5</a>（暂停）, <a href="https://www.anthropic.com/" target="_blank" rel="noopener noreferrer">Opus 4.8</a>, Sonnet 4.6</td>
-                <td class="plan-limit">长程 Agent；Fable 5 于 6/12 起全球暂停，自动回落 Opus 4.8</td>
+                <td class="plan-models"><a href="https://www.anthropic.com/" target="_blank" rel="noopener noreferrer">Opus 5</a>, Fable 5.1, Sonnet 5（约 5× Pro）</td>
+                <td class="plan-limit">日用长程 Agent；与 Chat 共用额度窗口</td>
               </tr>
               <tr>
-                <td class="plan-name">Max 2×</td>
+                <td class="plan-name">Max 20×</td>
                 <td class="plan-price">$200/月</td>
-                <td class="plan-models">Opus 4.8, Sonnet 4.6, Fable 5（恢复后）</td>
-                <td class="plan-limit">并行 AI 会话，重度长程开发</td>
+                <td class="plan-models">Opus 5, Fable 5.1, Sonnet 5（约 20× Pro）</td>
+                <td class="plan-limit">并行会话 / 重度长程</td>
               </tr>
             </tbody>
           </table>
@@ -477,7 +504,7 @@
             <span class="feat-tag">多模态</span>
             <span class="feat-tag">自托管</span>
           </div>
-          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">终端 CLI Agent，Anthropic 官方出品；Fable 5 为 1M 上下文长程旗舰（2026/6/9 发布，6/12 起暂停访问），日常主力仍为 Opus 4.8 / Sonnet 4.6</div>
+          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">终端 CLI Agent，Anthropic 官方出品。Claude Code 含在 Claude 订阅内（Pro / Max），无单独许可证。日常主力 <strong>Opus 5.5</strong> / Sonnet 5，冲极限用 Fable 5.1（Arena Agent #1）；价格见 <a href="https://claude.ai/pricing" target="_blank" rel="noopener noreferrer">claude.ai/pricing</a>。</div>
         </div>
       </div>
 
@@ -495,14 +522,20 @@
               <tr>
                 <td class="plan-name">Pro <span class="cp-badge badge-rec">👍</span></td>
                 <td class="plan-price">$20/月</td>
-                <td class="plan-models">Agent Mode + 用量池（含 <strong>Grok 4.5</strong> / Claude / GPT 等）</td>
-                <td class="plan-limit">主流选择；Grok 4.5 全套餐</td>
+                <td class="plan-models">Agent Mode + 约 $20 API 池（Claude / GPT / Grok 等）</td>
+                <td class="plan-limit">日常主力</td>
+              </tr>
+              <tr>
+                <td class="plan-name">Pro+</td>
+                <td class="plan-price">$60/月</td>
+                <td class="plan-models">约 $70 API 池，更高 Agent 额度</td>
+                <td class="plan-limit">日用易触顶时升档</td>
               </tr>
               <tr>
                 <td class="plan-name">Ultra</td>
                 <td class="plan-price">$200/月</td>
-                <td class="plan-models">移除大部分限制</td>
-                <td class="plan-limit">重度用户</td>
+                <td class="plan-models">约 $400 API 池，重度 Agent</td>
+                <td class="plan-limit">全天跑 Agent</td>
               </tr>
             </tbody>
           </table>
@@ -513,7 +546,7 @@
             <span class="feat-tag">多模态</span>
             <span class="feat-tag">自托管</span>
           </div>
-          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">基于 VS Code 的 AI IDE，Agent 模式可自动执行多步编辑/终端命令；支持 MCP 与 Agent Skills。2026-07 起全套餐可选 <strong>Grok 4.5</strong>（与 xAI 联合训练向）；亦可用独立 <a href="https://x.ai/cli" target="_blank" rel="noopener noreferrer">Grok Build</a> CLI。</div>
+          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">基于 VS Code 的 AI IDE；2026-07-27 档位 Pro / Pro+ / Ultra（另有 Hobby、Teams）。详见 <a href="coding-plan.html">编程套餐横评</a> · <a href="https://cursor.com/pricing" target="_blank" rel="noopener noreferrer">官方定价</a>。亦可用 <a href="https://x.ai/cli" target="_blank" rel="noopener noreferrer">Grok Build</a> CLI。</div>
         </div>
       </div>
 
@@ -530,7 +563,7 @@
             <tbody>
               <tr>
                 <td class="plan-name">Grok Build CLI</td>
-                <td class="plan-models">默认模型 <strong>Grok 4.5</strong>；编程 / Agent / 知识工作</td>
+                <td class="plan-models">默认模型 <strong>Grok 4.6</strong>；编程 / Agent / 知识工作</td>
                 <td class="plan-limit">发布期或有限时免费，以官网为准</td>
               </tr>
               <tr>
@@ -546,7 +579,7 @@
             <span class="feat-tag yes">工具调用</span>
             <span class="feat-tag">自托管</span>
           </div>
-          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">xAI 官方 coding agent；与 Cursor 内置 Grok 4.5 互补——要独立 CLI/API 走 Build / Console。</div>
+          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">xAI 官方 coding agent；与 Cursor 内置 Grok 4.6 互补——要独立 CLI/API 走 Build / Console。</div>
         </div>
       </div>
 
@@ -597,13 +630,13 @@
               <tr>
                 <td class="plan-name">ChatGPT Plus</td>
                 <td class="plan-price">$20/月</td>
-                <td class="plan-models"><a href="https://openai.com/" target="_blank" rel="noopener noreferrer">GPT-5</a>, o4-mini</td>
+                <td class="plan-models"><a href="https://openai.com/" target="_blank" rel="noopener noreferrer">GPT-5.6 Sol</a>, Luna</td>
                 <td class="plan-limit">含限额 Codex 访问</td>
               </tr>
               <tr>
                 <td class="plan-name">ChatGPT Pro</td>
                 <td class="plan-price">$200/月</td>
-                <td class="plan-models">GPT-5, o3-pro</td>
+                <td class="plan-models">GPT-5.6 Sol, GPT-5.6 Terra</td>
                 <td class="plan-limit">更高 Codex 额度</td>
               </tr>
             </tbody>
@@ -614,7 +647,7 @@
             <span class="feat-tag">IDE内置</span>
             <span class="feat-tag">MCP</span>
           </div>
-          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">OpenAI 官方 CLI + 云端沙箱 Agent，异步执行任务，支持 GPT-5 / Codex 系列模型</div>
+          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">OpenAI 官方 CLI + 云端沙箱 Agent，异步执行任务，支持 GPT-5.6 Sol / Codex 系列模型</div>
         </div>
       </div>
 
@@ -723,7 +756,7 @@
             <span class="feat-tag yes">自托管</span>
             <span class="feat-tag yes">技能自进化</span>
           </div>
-          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">2026 年开源 Agent 实战首选：跨会话记忆、技能自动创建、IM 集成完善；大量 OpenClaw 用户已迁移至 Hermes。推荐搭配 <strong>GLM-5.2</strong> / <strong>DeepSeek-V4-Pro</strong> Coding Plan</div>
+          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">2026 年开源 Agent 实战首选：跨会话记忆、技能自动创建、IM 集成完善；大量 OpenClaw 用户已迁移至 Hermes。推荐搭配 <strong>GLM-5.3</strong> / <strong>DeepSeek-V4-Pro</strong> Coding Plan</div>
         </div>
       </div>
 
@@ -816,7 +849,7 @@
             <span class="feat-tag">IDE内置</span>
             <span class="feat-tag">MCP</span>
           </div>
-          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">轻量级 CLI Agent，强项在 Git 集成和多文件编辑，支持本地模型 (Ollama)，代码老兵最爱</div>
+          <div style="font-size:0.76rem;color:var(--muted);margin-top:0.4rem;">轻量级 CLI Agent，强项在 Git 集成和多文件编辑，支持本地模型 (Ollama)。本机配模见 <a href="local-model-plan.html">本地模型横评</a>（24GB 默认 Qwen3.8-27B / qwen3.6）</div>
         </div>
       </div>
 
@@ -1001,7 +1034,7 @@
           <div style="padding:0.75rem;border-radius:8px;border:1px solid rgba(63,185,80,0.25);background:rgba(63,185,80,0.04);">
             <div style="font-weight:700;font-size:0.88rem;margin-bottom:0.5rem;">👤 个人开发者（预算有限）</div>
             <div style="font-size:0.8rem;line-height:1.7;">
-              <div>🏆 <strong>首选：</strong><a href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener noreferrer">Hermes Agent</a> + <a href="https://www.bigmodel.cn/glm-coding?ic=H2G5GCAOFT" target="_blank" rel="noopener noreferrer">智谱 GLM-5.2 Pro</a> — 2026 开源 Agent 最佳组合</div>
+              <div>🏆 <strong>首选：</strong><a href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener noreferrer">Hermes Agent</a> + <a href="https://www.bigmodel.cn/glm-coding?ic=H2G5GCAOFT" target="_blank" rel="noopener noreferrer">智谱 GLM-5.3 Pro</a> — 2026 开源 Agent 最佳组合</div>
               <div>💰 <strong>零成本：</strong><a href="https://github.com/cline/cline" target="_blank" rel="noopener noreferrer">Cline</a> + <a href="https://www.deepseek.com/" target="_blank" rel="noopener noreferrer">DeepSeek-V4-Flash Free</a> — ¥0 开始</div>
               <div>⚡ <strong>国内最省：</strong><a href="https://www.trae.ai/" target="_blank" rel="noopener noreferrer">Trae</a> 免费IDE — 零配置上手</div>
             </div>
@@ -1011,9 +1044,9 @@
           <div style="padding:0.75rem;border-radius:8px;border:1px solid rgba(255,107,107,0.25);background:rgba(255,107,107,0.04);">
             <div style="font-weight:700;font-size:0.88rem;margin-bottom:0.5rem;">🔥 重度 AI 编程（每日6h+）</div>
             <div style="font-size:0.8rem;line-height:1.7;">
-              <div>🏆 <strong>首选：</strong><a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">Claude Code Max</a> $100/月 — Opus 4.8 / Fable 5（恢复后）长程最强</div>
+              <div>🏆 <strong>首选：</strong><a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">Claude Code Max</a> $100/月 — Opus 5 日常 / Fable 5.1 冲极限</div>
               <div>⚡ <strong>双修：</strong>Claude Max + <a href="https://cursor.com/" target="_blank" rel="noopener noreferrer">Cursor Pro</a> — CLI + IDE 双 Agent</div>
-              <div>💡 <strong>开源重装：</strong><a href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener noreferrer">Hermes</a> + 智谱 GLM-5.2 Max ¥469/月 — 国产长程顶配</div>
+              <div>💡 <strong>开源重装：</strong><a href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener noreferrer">Hermes</a> + 智谱 GLM-5.3 Max ¥469/月 — 国产长程顶配</div>
             </div>
           </div>
 
@@ -1077,8 +1110,8 @@
       <div class="cp-notice-head">⚠️ 注意事项 — Agent 选购必读</div>
       <div class="cp-notice-body">
         <ul>
-          <li><strong>开源 Agent 免费但需自备 API：</strong>Hermes/OpenClaw/Cline 等开源 Agent 本身免费，但底层模型调用需自行购买 API 额度或订阅 Coding Plan，实际成本 ≠ ¥0。2026 年推荐 Hermes + GLM-5.2 或 DeepSeek-V4。</li>
-          <li><strong>Agent 效果 80% 取决于底层模型：</strong>同一 Agent 换不同模型效果天差地别。长程任务优先 GLM-5.2 / DeepSeek-V4-Pro / Claude Opus 4.8；Fable 5 暂停期间由 Opus 4.8 承接。</li>
+          <li><strong>开源 Agent 免费但需自备 API：</strong>Hermes/OpenClaw/Cline 等开源 Agent 本身免费，但底层模型调用需自行购买 API 额度或订阅 Coding Plan，实际成本 ≠ ¥0。2026 年推荐 Hermes + GLM-5.3 或 DeepSeek-V4。</li>
+          <li><strong>Agent 效果 80% 取决于底层模型：</strong>同一 Agent 换不同模型效果天差地别。Arena Agent（2026-09-05）前排是 Fable 5.1 / Opus 5 / GPT-5.6 Sol；国内看 Kimi K3、Hy4 preview、GLM-5.3。生科/攻防网安走 Mythos 5.1 可信访问，不要硬冲公开档。</li>
           <li><strong>自主执行 = 自主犯错：</strong>Agent 能自动改代码，也能自动引入 Bug。生产环境务必开启<strong>人工确认</strong>模式，不要给 Agent 无限权限。</li>
           <li><strong>MCP 生态仍在早期：</strong>2026年各 Agent 的 MCP 工具支持参差不齐，同一工具在不同 Agent 上体验差异大，选型前确认目标工具兼容性。</li>
           <li><strong>闭源 Agent 绑定平台：</strong>Cursor/Copilot/Devin 等闭源 Agent 只能用自家模型和工具，无法自由切换，长期成本和灵活性受限。</li>
@@ -1101,7 +1134,7 @@
           <tbody>
             <tr><td class="plan-name">Agent loop</td><td>LLM 调工具 → 结果写回上下文 → 重复直到完成</td><td>所有 Coding Agent 底座</td></tr>
             <tr><td class="plan-name">Verification loop</td><td>跑测试 / rubric 打分，不过则带反馈重试</td><td>Cursor <code>stop</code> hook、CI + Agent</td></tr>
-            <tr><td class="plan-name">Event loop</td><td>cron / Webhook 触发自动跑</td><td>Claude <code>/loop</code>、GitHub Actions、OpenClaw Gateway</td></tr>
+            <tr><td class="plan-name">Event loop</td><td>cron / Webhook 触发自动跑</td><td>Claude <code>/loop</code>、GitHub Actions、OpenClaw Gateway；只要 App 定时、不想接 Key → <a href="token-optimization.html#consumer-schedule">消费端定时</a></td></tr>
             <tr><td class="plan-name">Hill-climbing loop</td><td>用 trace 分析改 prompt / 工具配置</td><td>LangSmith、<a href="https://github.com/microsoft/SkillOpt" target="_blank" rel="noopener noreferrer">SkillOpt</a></td></tr>
           </tbody>
         </table>
@@ -1156,7 +1189,7 @@
 
       <div class="cp-faq-item">
         <div class="cp-faq-q">Devin 值得 $500/月吗？<span class="cp-faq-arrow">▼</span></div>
-        <div class="cp-faq-a"><strong>对大多数人不值得。</strong>Devin 定位是全自主 AI 软件工程师，$500/月约为 Cursor Pro $20 的 25 倍。Codex（ChatGPT Pro $200/月）是另一档产品。除非你的时薪 &gt; $50 且经常需要处理大量重复性编程任务，否则 Hermes/Cline + GLM-5.2 或 DeepSeek-V4 API 的组合更划算。</div>
+        <div class="cp-faq-a"><strong>对大多数人不值得。</strong>Devin 定位是全自主 AI 软件工程师，$500/月约为 Cursor Pro $20 的 25 倍。Codex（ChatGPT Pro $200/月）是另一档产品。除非你的时薪 &gt; $50 且经常需要处理大量重复性编程任务，否则 Hermes/Cline + GLM-5.3 或 DeepSeek-V4 API 的组合更划算。</div>
       </div>
 
       <div class="cp-faq-item">
@@ -1166,7 +1199,7 @@
 
       <div class="cp-faq-item">
         <div class="cp-faq-q">哪个 Agent 写代码最强？<span class="cp-faq-arrow">▼</span></div>
-        <div class="cp-faq-a"><strong>取决于底层模型。</strong>用 Claude Opus 时，Claude Code 最强；用 GPT-5 时，Copilot Workspace 最强。目前 SWE-bench 得分排名：Claude Code > Cursor Agent > OpenClaw > Cline。但差距在缩小，开源 Agent 配合强模型已能达到闭源 80-90% 的效果。</div>
+        <div class="cp-faq-a"><strong>取决于底层模型。</strong>用 Claude Opus 5 / Fable 5.1 时，Claude Code 最强；用 GPT-5.6 Sol 时，Codex / Copilot Workspace 更贴合。Arena Agent 榜（2026-09-05）Fable 5.1 第一、Opus 5 第二。开源 Agent 配合 Kimi K3 / Hy4 / GLM-5.3 已能覆盖多数国内场景。</div>
       </div>
     </div>
 
@@ -1191,7 +1224,7 @@
               <td>🥈</td>
               <td class="plan-name">OpenClaw + 智谱GLM Pro</td>
               <td class="plan-price">¥149</td>
-              <td>GLM-5.2</td>
+              <td>GLM-5.3</td>
               <td>~8,000</td>
               <td class="val-high">54</td>
               <td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:78%;height:100%;border-radius:4px;background:linear-gradient(90deg,#3fb950,#2ea043);"></div></div></td>
@@ -1209,7 +1242,7 @@
               <td>4</td>
               <td class="plan-name">Cursor Pro</td>
               <td class="plan-price">$20</td>
-              <td>Claude/GPT-5</td>
+              <td>Claude/GPT-5.6</td>
               <td>Agent 池</td>
               <td class="val-mid">~11</td>
               <td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:15%;height:100%;border-radius:4px;background:linear-gradient(90deg,#58a6ff,#388bfd);"></div></div></td>
@@ -1218,7 +1251,7 @@
               <td>5</td>
               <td class="plan-name">Copilot Pro</td>
               <td class="plan-price">$10</td>
-              <td>GPT-5</td>
+              <td>GPT-5.6</td>
               <td>~800</td>
               <td class="val-mid">~11</td>
               <td><div style="background:var(--border);border-radius:4px;height:0.7rem;overflow:hidden;width:5rem;display:inline-block;vertical-align:middle;"><div style="width:15%;height:100%;border-radius:4px;background:linear-gradient(90deg,#58a6ff,#388bfd);"></div></div></td>
@@ -1287,7 +1320,7 @@
             <div style="font-weight:700;color:var(--warn);margin-bottom:0.3rem;">3️⃣ 开源 Agent 生态爆发</div>
             <div style="padding-left:0.6rem;">
               <div>• <strong>趋势：</strong>Hermes 已成 2026 开源 Agent 实战首选（记忆/技能/IM 完整度领先）；OpenClaw Stars 仍高但新增用户更多选 Hermes</div>
-              <div>• <strong>模型侧：</strong>GLM-5.2、DeepSeek-V4-Pro 全量开放后，开源 Agent + 国产 Coding Plan 月成本 &lt; ¥50</div>
+              <div>• <strong>模型侧：</strong>GLM-5.3、DeepSeek-V4-Pro 全量开放后，开源 Agent + 国产 Coding Plan 月成本 &lt; ¥50</div>
               <div>• <strong>风险：</strong>开源项目维护靠社区，稳定性不如商业产品，生产环境需谨慎</div>
             </div>
           </div>
@@ -1345,7 +1378,7 @@
           pageTitle: 'AI Agent 横评 — AINav',
           pageDesc: '国内外 AI Coding Agent 一站式对比：功能、价格、兼容性、场景推荐，帮你找到最适合的 AI 编程智能体。',
           title: '🤖 AI Agent 横评',
-          subtitle: '国内外 AI Coding Agent 一站式对比：2026 年开源首选 Hermes，模型底座推荐 GLM-5.2 / DeepSeek-V4-Pro / Claude Opus 4.8。',
+          subtitle: '国内外 AI Coding Agent 一站式对比：模型底座看 Arena Agent 榜 — Fable 5.1 / Opus 5 / Kimi K3 / Hy4；开源首选 Hermes。',
           navHome: '← AINav 首页', navCoding: '编程套餐横评', navAgent: 'Agent横评',
           navVideo: '视频套餐横评', navImage: '图像套餐横评', navEncyclopedia: 'AI百科',
           themeSystem: '跟随系统', themeLight: '浅色', themeDark: '深色',
@@ -1361,9 +1394,7 @@
           thPlan: '套餐', thModel: '核心模型',
           footer: '数据来源：各平台官网 · GitHub · 价格以官网为准',
           footerHome: '← 返回 AINav 首页',
-          promoText: '想用', promoOr: '/', promoNoNet: '却没海外网络？',
-          promoDesc: '一个 API Key 调用 100+ 顶级模型，国内直连低延迟，兼容 OpenAI 格式零改造',
-          promoCta: '立即注册 →',
+          promoHtml: '<strong style="color:var(--accent2)">合作推广</strong> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">GPT / Claude / Gemini</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">100+ 模型</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">文本 / 图像 / 视频</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">支持缓存</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">不留存对话</span> <span style="color:var(--muted)">·</span> <span style="color:var(--accent2);font-weight:600">首充赠 $3</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">立即注册</a>',
           badgeRush: '⚡ 需抢', badgeHot: '🔥 热门', badgeNew: '✨ 特惠', badgeRec: '👍 推荐',
           legendRush: '⚡ 需抢', legendRushDesc: '限时/抢购',
           legendHot: '🔥 热门', legendHotDesc: '高性价比',
@@ -1391,9 +1422,7 @@
           thPlan: 'Plan', thModel: 'Core Model',
           footer: 'Data sources: Official websites · GitHub · Prices subject to change',
           footerHome: '← Back to AINav Home',
-          promoText: 'Want', promoOr: '/', promoNoNet: 'but no VPN?',
-          promoDesc: 'One API Key for 100+ top models, direct access in China, low latency, OpenAI-compatible format',
-          promoCta: 'Sign Up →',
+          promoHtml: '<strong style="color:var(--accent2)">Recommended</strong> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">GPT / Claude / Gemini</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">100+ models</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">Text / image / video</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">Caching</span> <span style="color:var(--muted)">·</span> <span style="color:var(--text)">No conversation retention</span> <span style="color:var(--muted)">·</span> <span style="color:var(--accent2);font-weight:600">Extra $3 on first top-up</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">Sign up</a>',
           badgeRush: '⚡ Rush', badgeHot: '🔥 Hot', badgeNew: '✨ Deal', badgeRec: '👍 Pick',
           legendRush: '⚡ Rush', legendRushDesc: 'Limited/Flash',
           legendHot: '🔥 Hot', legendHotDesc: 'Best Value',
@@ -1483,7 +1512,7 @@
         // Promo
         var pb = document.querySelector('.cp-wrap > div:first-child');
         if (pb) {
-          pb.innerHTML = '<span style="color:var(--muted)">' + dict.promoText + '</span> <strong style="color:var(--text)">GPT-5</strong> <span style="color:var(--muted)">' + dict.promoOr + '</span> <strong style="color:var(--text)">Claude Opus 4.8</strong> <span style="color:var(--muted)">' + dict.promoOr + '</span> <strong style="color:var(--text)">Gemini 3.1 Pro</strong> <span style="color:var(--muted)">' + dict.promoNoNet + '</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--accent2);font-weight:600;text-decoration:none;">OfoxAI</a> <span style="color:var(--muted)">' + dict.promoDesc + '</span> <a href="https://ofox.io/x/aiv123" target="_blank" rel="noopener noreferrer sponsored" style="display:inline-flex;align-items:center;font-size:.78rem;font-weight:600;color:var(--accent2);padding:.2rem .55rem;border-radius:5px;border:1px solid rgba(63,185,80,.4);background:rgba(63,185,80,.1);text-decoration:none;white-space:nowrap;">' + dict.promoCta + '</a>';
+          pb.innerHTML = dict.promoHtml;
         }
         document.querySelectorAll('.lang-btn').forEach(function(b) {
           b.classList.toggle('is-active', b.getAttribute('data-lang-set') === lang);

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="stylesheet" href="site-mobile.css">
+  <title>端侧模型 — 按终端分 · Android OlliteRT · 能干活小模型 — AINav</title>
+  <meta name="description" content="端侧模型按终端分：Android（OlliteRT）、iOS / 浏览器本站先不列、桌面回本地模型页。能干活与闲聊档分开写。">
+  <link rel="canonical" href="https://aiv123.com/edge-model-plan.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="端侧模型 — 按终端分">
+  <meta property="og:description" content="Android 主推 OlliteRT；能干活与闲聊分开；桌面看本地模型。">
+  <meta property="og:url" content="https://aiv123.com/edge-model-plan.html">
+  <meta property="og:site_name" content="AINav">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%230969da'/><text x='50' y='72' font-size='60' text-anchor='middle' fill='white' font-family='system-ui' font-weight='700'>AI</text></svg>">
+  <style>
+    :root, html[data-theme="dark"] {
+      --bg: #0f1419; --panel: #151b23; --card: #1c2430; --border: #2d3848;
+      --text: #e6edf3; --muted: #8b9cb3; --accent: #58a6ff; --accent2: #3fb950;
+      --warn: #d29922; --danger: #f85149; --hot: #ff6b6b; --overseas: #a78bfa;
+      --oss: #f0883e;
+    }
+    html[data-theme="light"] {
+      --bg: #f6f8fa; --panel: #fff; --card: #fff; --border: #d0d7de;
+      --text: #1f2328; --muted: #59636e; --accent: #0969da; --accent2: #1a7f37;
+      --warn: #9a6700; --danger: #cf222e; --hot: #e53935; --overseas: #7c3aed;
+      --oss: #bc4c00;
+    }
+    @media (prefers-color-scheme: light) {
+      html[data-theme="system"] {
+        --bg: #f6f8fa; --panel: #fff; --card: #fff; --border: #d0d7de;
+        --text: #1f2328; --muted: #59636e; --accent: #0969da; --accent2: #1a7f37;
+        --warn: #9a6700; --danger: #cf222e; --hot: #e53935; --overseas: #7c3aed;
+        --oss: #bc4c00;
+      }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Segoe UI", system-ui, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.6; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .cp-top { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); background: var(--panel); position: sticky; top: 0; z-index: 10; }
+    .cp-top-inner { max-width: 76rem; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; justify-content: space-between; }
+    .cp-nav a { font-weight: 600; margin-right: 1rem; font-size: 0.88rem; }
+    .cp-toolbar { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; }
+    .theme-btn { font-size: 0.72rem; padding: 0.2rem 0.5rem; border-radius: 5px; border: 1px solid var(--border);
+      background: var(--card); color: var(--muted); cursor: pointer; font-family: inherit; }
+    .theme-btn.is-active { color: var(--accent); border-color: var(--accent); font-weight: 600; }
+    .cp-wrap { max-width: 76rem; margin: 0 auto; padding: 1rem; }
+    h1 { font-size: 1.35rem; margin: 0 0 0.3rem; }
+    .cp-subtitle { font-size: 0.88rem; color: var(--muted); margin-bottom: 0.4rem; }
+    .cp-related { font-size: 0.82rem; color: var(--muted); margin: 0 0 0.8rem; }
+    .cp-section-hd { font-size: 1.1rem; font-weight: 700; margin: 1.8rem 0 0.8rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--border); display: flex; align-items: center; gap: 0.5rem; }
+    .cp-legend { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 1.2rem; font-size: 0.82rem; }
+    .cp-badge { display: inline-block; padding: 0.1rem 0.45rem; border-radius: 4px; font-size: 0.72rem; font-weight: 600; }
+    .badge-rec { background: rgba(88,166,255,0.15); color: var(--accent); border: 1px solid rgba(88,166,255,0.3); }
+    .badge-new { background: rgba(63,185,80,0.15); color: var(--accent2); border: 1px solid rgba(63,185,80,0.3); }
+    .badge-warn { background: rgba(210,153,34,0.15); color: var(--warn); border: 1px solid rgba(210,153,34,0.3); }
+    .badge-skip { background: rgba(139,156,179,0.12); color: var(--muted); border: 1px solid var(--border); }
+    .badge-overseas { background: rgba(167,139,250,0.15); color: var(--overseas); border: 1px solid rgba(167,139,250,0.3); }
+    .cp-platforms { display: grid; grid-template-columns: 1fr; gap: 1.2rem; }
+    @media (min-width: 52rem) { .cp-platforms { grid-template-columns: 1fr 1fr; } }
+    .cp-platform { border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .cp-platform.featured { border-color: rgba(88,166,255,0.4); }
+    .cp-platform-head { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+    .cp-platform-name { font-size: 1.05rem; font-weight: 700; }
+    .cp-platform-name a { color: var(--text); }
+    .cp-platform-name a:hover { color: var(--accent); text-decoration: none; }
+    .cp-platform-body { padding: 0.75rem 1rem; font-size: 0.85rem; line-height: 1.7; }
+    .cp-matrix-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; background: var(--card); }
+    .cp-matrix { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+    .cp-matrix th, .cp-matrix td { padding: 0.45rem 0.65rem; border: 1px solid var(--border); text-align: left; }
+    .cp-matrix th { background: var(--panel); font-weight: 600; color: var(--muted); font-size: 0.76rem; }
+    .cp-matrix .model-name { font-weight: 700; white-space: nowrap; }
+    .cp-matrix .good { color: var(--accent2); }
+    .cp-matrix .bad { color: var(--muted); }
+    code { font-size: 0.78rem; padding: 0.05rem 0.32rem; border-radius: 4px; background: var(--panel); border: 1px solid var(--border); font-family: ui-monospace, Consolas, monospace; }
+    .cp-notice { margin: 0 0 1rem; padding: 0; border: 1px solid rgba(88,166,255,.35); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .cp-notice-head { padding: 0.65rem 1rem; border-bottom: 1px solid rgba(88,166,255,0.2); font-weight: 700; font-size: 1rem; background: rgba(88,166,255,0.06); }
+    .cp-notice-body { padding: 0.75rem 1rem; font-size: 0.84rem; line-height: 1.7; }
+    .cp-notice-body ul { padding-left: 1.2rem; margin: 0.45rem 0 0; }
+    .cp-notice-body li { margin-bottom: 0.35rem; }
+    .cp-src { font-size: 0.72rem; color: var(--muted); }
+    .cp-faq { margin-top: 2rem; border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .cp-faq-head { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); font-weight: 700; font-size: 1rem; }
+    .cp-faq-item { border-bottom: 1px solid var(--border); }
+    .cp-faq-item:last-child { border-bottom: none; }
+    .cp-faq-q { padding: 0.6rem 1rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 0.88rem; user-select: none; }
+    .cp-faq-q:hover { background: rgba(88,166,255,0.04); }
+    .cp-faq-q .cp-faq-arrow { font-size: 0.72rem; color: var(--muted); transition: transform 0.2s; flex-shrink: 0; margin-left: 0.5rem; }
+    .cp-faq-item.is-open .cp-faq-q .cp-faq-arrow { transform: rotate(180deg); }
+    .cp-faq-a { padding: 0 1rem; max-height: 0; overflow: hidden; transition: max-height 0.25s ease, padding 0.25s ease; font-size: 0.82rem; line-height: 1.7; color: var(--muted); }
+    .cp-faq-item.is-open .cp-faq-a { max-height: 32rem; padding: 0 1rem 0.75rem; }
+    .cp-faq-a strong { color: var(--text); }
+    .cp-summary { margin-top: 2rem; padding: 1rem 1.2rem; border: 2px solid var(--accent); border-radius: 10px; background: rgba(88,166,255,0.04); }
+    .cp-summary h2 { font-size: 1.05rem; margin: 0 0 0.8rem; }
+    .cp-summary-grid { display: grid; grid-template-columns: 1fr; gap: 0.5rem; font-size: 0.88rem; }
+    @media (min-width: 40rem) { .cp-summary-grid { grid-template-columns: 1fr 1fr; } }
+    .cp-summary-item { display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.6rem; border-radius: 6px; background: var(--card); border: 1px solid var(--border); }
+    .cp-summary-item .arrow { color: var(--accent2); font-weight: 700; }
+    .cp-updated-line { font-size: 0.76rem; color: var(--muted); margin: 0 0 0.8rem; }
+    .cp-footer { max-width: 76rem; margin: 2rem auto 1rem; padding: 0 1rem; font-size: 0.76rem; color: var(--muted); text-align: center; }
+    .good { color: var(--accent2); }
+    .bad { color: var(--muted); }
+    .edge-device { margin: 0 0 1.4rem; border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .edge-device.featured { border-color: rgba(88,166,255,0.45); }
+    .edge-device-hd { padding: 0.7rem 1rem; border-bottom: 1px solid var(--border); display: flex; flex-wrap: wrap; align-items: center; gap: 0.45rem; background: rgba(88,166,255,0.04); }
+    .edge-device-hd h2 { margin: 0; font-size: 1.02rem; }
+    .edge-device-bd { padding: 0.75rem 1rem; font-size: 0.85rem; line-height: 1.7; }
+    .edge-k { font-weight: 700; color: var(--text); margin: 0.7rem 0 0.25rem; font-size: 0.82rem; }
+    .edge-k:first-child { margin-top: 0; }
+    .edge-toc { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0 0 1rem; }
+    .edge-toc a { font-size: 0.76rem; padding: 0.2rem 0.55rem; border-radius: 5px; border: 1px solid var(--border); background: var(--panel); color: var(--muted); }
+    .edge-toc a:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2B8FBWRX4N"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2B8FBWRX4N');</script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "2d49f38b39c743ac80b6d6b9ff99494d"}'></script>
+</head>
+<body>
+  <div class="cp-top">
+    <div class="cp-top-inner">
+      <div class="cp-nav" data-plan-nav></div>
+      <div class="cp-toolbar">
+        <button type="button" class="theme-btn" data-theme-set="system">跟随系统</button>
+        <button type="button" class="theme-btn" data-theme-set="light">浅色</button>
+        <button type="button" class="theme-btn" data-theme-set="dark">深色</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cp-wrap">
+    <h1>端侧模型</h1>
+    <p class="cp-subtitle">按终端写清装什么才能跑：手机 · Mac / Mac mini · Windows/Linux。能干活选型的长文在本地模型页。</p>
+    <p class="cp-related">电脑本机 GGUF / Ollama / 显存分档看 <a href="local-model-plan.html">本地模型</a>；云端旗舰看 <a href="model-plan.html">模型选型</a>；不确定场景用 <a href="model-finder.html">模型推荐器</a>。</p>
+    <p class="cp-updated-line"><span class="cp-updated">最后更新：2026-09-23</span></p>
+
+    <nav class="edge-toc" aria-label="按终端跳转">
+      <a href="#android">Android</a>
+      <a href="#ios">iOS</a>
+      <a href="#mac">Mac</a>
+      <a href="#mac-mini">Mac mini</a>
+      <a href="#pc-linux">Windows / Linux</a>
+      <a href="#browser">浏览器 / 嵌入式</a>
+    </nav>
+
+    <div class="cp-notice">
+      <div class="cp-notice-head">和「本地模型」怎么分</div>
+      <div class="cp-notice-body">
+        <ul>
+          <li><strong>本页</strong>：各终端<strong>装什么才能跑</strong>——手机 OlliteRT / Gallery，Mac 上 Ollama / LM Studio / MLX，以及和笔记本同跑环境的 Mac mini。</li>
+          <li><strong>本地模型页</strong>：显存 / 统一内存分档、GGUF 量化、街货价、Qwen3.8-27B 等「选哪款干活」的长文。电脑装完运行时后，选型回 <a href="local-model-plan.html">本地模型</a>。</li>
+          <li>云端 API、旗舰聊天 App 不是本机方案，不写进本页。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cp-legend">
+      <span><span class="cp-badge badge-rec">能干活</span> 写码 / 文档 / 工具调用（有上限）</span>
+      <span><span class="cp-badge badge-skip">闲聊 / 演示</span> 短答、极低内存</span>
+      <span><span class="cp-badge badge-new">运行时</span> OlliteRT · Ollama · LM Studio · MLX</span>
+      <span><span class="cp-badge badge-warn">无 API 包</span> iPhone 当局域网服务未核实</span>
+    </div>
+
+    <!-- Android -->
+    <div class="edge-device featured" id="android">
+      <div class="edge-device-hd">
+        <h2>手机 · Android</h2>
+        <span class="cp-badge badge-rec">要装 OlliteRT</span>
+      </div>
+      <div class="edge-device-bd">
+        <p class="edge-k">要装什么</p>
+        <ol style="margin:0 0 0.6rem;padding-left:1.2rem;">
+          <li>打开 <a href="https://github.com/NightMean/OlliteRT/releases" target="_blank" rel="noopener noreferrer">OlliteRT Releases</a>，下载最新 <strong>APK</strong>（仓库未上架 Google Play / F-Droid，官方只发 GitHub 包）。</li>
+          <li>手机允许「未知来源」安装后装上。源码与说明：<a href="https://github.com/NightMean/OlliteRT" target="_blank" rel="noopener noreferrer">NightMean/OlliteRT</a>（Apache 2.0）。</li>
+          <li>系统要求（README）：<strong>Android 12+</strong> · <strong>arm64-v8a</strong> · RAM ≥ <strong>6 GB</strong>（多模态建议 8 GB+）。</li>
+        </ol>
+
+        <p class="edge-k">装完怎么跑起来</p>
+        <ol style="margin:0 0 0.6rem;padding-left:1.2rem;">
+          <li>打开 App → 下载模型。多数机子先下 <strong>Gemma 4 E2B</strong>（约 2.4 GB，表列 8 GB RAM）。</li>
+          <li>在模型卡片点 <strong>Start Server</strong>。</li>
+          <li>看 Status 页的地址，例如 <code>http://PHONE_IP:8000/v1</code>，用 Open WebUI / curl / 任意 OpenAI 兼容客户端连上。</li>
+        </ol>
+        <p style="margin:0 0 0.6rem;font-size:0.82rem;color:var(--muted);">只认 <code>.litertlm</code>，<strong>不支持 GGUF</strong>。同时只加载一个模型，请求串行排队。推理走 Google <a href="https://github.com/google-ai-edge/LiteRT-LM" target="_blank" rel="noopener noreferrer">LiteRT-LM</a>。</p>
+        <p class="cp-src" style="margin:0 0 0.7rem;">来源：OlliteRT <a href="https://github.com/NightMean/OlliteRT" target="_blank" rel="noopener noreferrer">README</a> · <a href="https://github.com/NightMean/OlliteRT/blob/main/docs/MODELS.md" target="_blank" rel="noopener noreferrer">MODELS.md</a>（2026-09-23）。</p>
+
+        <p class="edge-k">能装的模型（含 Qwen）</p>
+        <ul style="margin:0 0 0.7rem;padding-left:1.2rem;">
+          <li><strong>Qwen：能装，但只有小档。</strong>内置表列 <strong>Qwen 2.5 1.5B</strong>（约 1.5 GB · 6 GB RAM · 4K · 纯文本）——偏闲聊 / 演示，<strong>不要用来干活</strong>。没核实到内置更大的 Qwen3 / 27B。</li>
+          <li><strong>能干活（有上限）</strong>：<strong>Gemma 4 E2B</strong>（约 2.4 GB · 8 GB RAM）默认起步；内存够再试 <strong>E4B</strong>。看图/听音频用 Gemma 3n。</li>
+          <li><strong>同类闲聊档</strong>：Gemma 3 1B、DeepSeek-R1 1.5B（同表）。</li>
+        </ul>
+        <p class="cp-src" style="margin:0 0 0.7rem;">来源：OlliteRT README「Available Models」表（<a href="https://github.com/NightMean/OlliteRT" target="_blank" rel="noopener noreferrer">NightMean/OlliteRT</a>）。</p>
+
+        <p class="edge-k">能干活的模型（装好后再选）</p>
+        <div class="cp-matrix-wrap">
+          <table class="cp-matrix">
+            <thead><tr><th>型号</th><th>适合场景</th><th>别指望</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="model-name">Gemma 4 E2B</td>
+                <td class="good">默认起步；对话 + 视觉/音频 + Thinking；32K；实验性 Tools</td>
+                <td class="bad">大型仓重构、稳工具调用生产流水线</td>
+              </tr>
+              <tr>
+                <td class="model-name">Gemma 4 E4B</td>
+                <td class="good">同能力面更好；表列约 12 GB RAM</td>
+                <td class="bad">6–8 GB 机；别当云端编码主力</td>
+              </tr>
+              <tr>
+                <td class="model-name">MiniCPM5-2B</td>
+                <td class="good">编码 / Agent / 工具倾向；需自行导入 <code>.litertlm</code></td>
+                <td class="bad">不在内置一键列表；不替代桌面 27B</td>
+              </tr>
+              <tr>
+                <td class="model-name">Gemma 3n E2B/E4B</td>
+                <td class="good">看图 / 听音频</td>
+                <td class="bad">上下文仅 4K；偏多模态助手</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="edge-k">偏闲聊 / 不要用来干活</p>
+        <div class="cp-matrix-wrap">
+          <table class="cp-matrix">
+            <thead><tr><th>型号</th><th>还能干什么</th><th>别指望</th></tr></thead>
+            <tbody>
+              <tr><td class="model-name">Gemma 3 1B</td><td>体积最小、演示「手机能跑」</td><td class="bad">写代码 / 长文档</td></tr>
+              <tr><td class="model-name">Qwen 2.5 1.5B</td><td>同尺寸文本尚可；4K</td><td class="bad">多模态 / Tools / 正经写码</td></tr>
+              <tr><td class="model-name">DeepSeek-R1 1.5B</td><td>小推理演示</td><td class="bad">严肃工程与长任务</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- iOS -->
+    <div class="edge-device" id="ios">
+      <div class="edge-device-hd">
+        <h2>手机 · iOS</h2>
+        <span class="cp-badge badge-rec">要装 App</span>
+      </div>
+      <div class="edge-device-bd">
+        <p style="margin:0 0 0.55rem;">没有 OlliteRT 的 iOS 版。下面两条是 App Store 上已核实、可本机跑模型的路径（不是云端聊天壳）。</p>
+
+        <p class="edge-k">路径 A · Google AI Edge Gallery（官方 LiteRT 画廊）</p>
+        <ol style="margin:0 0 0.55rem;padding-left:1.2rem;">
+          <li>App Store 搜或打开 <a href="https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337" target="_blank" rel="noopener noreferrer">Google AI Edge Gallery</a> 安装。</li>
+          <li>系统：官方 README 写 <strong>iOS 17+</strong>（Android 另有 12+；本段只谈 iPhone）。</li>
+          <li>装完：在 App 内从列表下载模型（含 Gemma 4 族等），即可离线对话、看图、转录等实验功能；推理在本机。</li>
+        </ol>
+        <p style="margin:0 0 0.7rem;font-size:0.82rem;color:var(--muted);">源码：<a href="https://github.com/google-ai-edge/gallery" target="_blank" rel="noopener noreferrer">google-ai-edge/gallery</a>。这是「手机上试模型」的官方画廊，不是把手机变成局域网 OpenAI 服务（那是 Android 上 OlliteRT 的事）。自定义 <code>.litertlm</code> 导入文档目前偏 Android（adb），iPhone 侧以 App 内列表为准。</p>
+
+        <p class="edge-k">路径 B · Locally AI by LM Studio（MLX 本机）</p>
+        <ol style="margin:0 0 0.55rem;padding-left:1.2rem;">
+          <li>App Store：<a href="https://apps.apple.com/us/app/locally-ai-by-lm-studio/id6741426692" target="_blank" rel="noopener noreferrer">Locally AI by LM Studio</a>；官网 <a href="https://locallyai.app/" target="_blank" rel="noopener noreferrer">locallyai.app</a>。</li>
+          <li>系统：商店页写 <strong>iOS / iPadOS 18.1+</strong>。</li>
+          <li>装完：选模型下载（Llama / Gemma / Qwen / DeepSeek 等，以 App 内列表为准）→ 离线聊天。走 Apple <strong>MLX</strong>，数据不出机。</li>
+        </ol>
+        <p style="margin:0 0 0.7rem;font-size:0.82rem;color:var(--muted);">可选：同机还可连电脑上的 LM Studio（LM Link）跑更大模型——那是「手机遥控电脑」，不算纯端侧。</p>
+
+        <p class="edge-k">能装的模型（含 Qwen）</p>
+        <ul style="margin:0 0 0.55rem;padding-left:1.2rem;">
+          <li><strong>Gallery · Qwen：小档可跑，主推仍是 Gemma。</strong>README 主推 <strong>Gemma 4</strong>。LiteRT-LM 官方支持表另列 <strong>Qwen2.5-0.5B / 1.5B</strong>、<strong>Qwen3-0.6B</strong>（约 0.5–1.6 GB 量级，偏闲聊）；<a href="https://huggingface.co/litert-community" target="_blank" rel="noopener noreferrer">litert-community</a> 有对应权重。Gallery 1.0.16+ 可从 Hugging Face 导入 <code>.litertlm</code>——iOS 默认列表里有没有 Qwen <strong>以 App 内为准</strong>，没在商店页写死「一键含 Qwen」。</li>
+          <li><strong>Locally AI · Qwen：能装。</strong>官网 FAQ 写明支持 <strong>Qwen 2.5、Qwen 3</strong>（另有 Gemma、DeepSeek R1、Llama 等）；具体标签与体积以 App 内列表为准。手机内存有限，别硬上桌面 27B。</li>
+          <li><strong>能干活（有上限）</strong>：Gallery 的 Gemma 4 档、Locally 里中等开源档——短文 / 看图 / 草稿；别当云端旗舰。</li>
+          <li><strong>偏闲聊</strong>：Qwen 0.5B～1.5B、极小演示档。</li>
+        </ul>
+        <p class="cp-src" style="margin:0;">来源：<a href="https://developers.google.com/edge/litert-lm/overview" target="_blank" rel="noopener noreferrer">LiteRT-LM Overview</a> · <a href="https://github.com/google-ai-edge/gallery" target="_blank" rel="noopener noreferrer">gallery README</a> · <a href="https://locallyai.app/" target="_blank" rel="noopener noreferrer">locallyai.app</a> FAQ。</p>
+      </div>
+    </div>
+
+    <!-- Mac notebook -->
+    <div class="edge-device featured" id="mac">
+      <div class="edge-device-hd">
+        <h2>Mac（Apple Silicon 笔记本）</h2>
+        <span class="cp-badge badge-rec">本机可跑</span>
+      </div>
+      <div class="edge-device-bd">
+        <p style="margin:0 0 0.55rem;">统一内存决定能塞多大模型——以你这台为准（「关于本机」）。下面三条都是官方可下的本机方案，任选其一即可起步；不必全装。</p>
+
+        <p class="edge-k">方案 1 · Ollama（最省事）</p>
+        <ol style="margin:0 0 0.55rem;padding-left:1.2rem;">
+          <li>打开 <a href="https://ollama.com/download/mac" target="_blank" rel="noopener noreferrer">ollama.com/download/mac</a>，下 macOS 安装包（或文档写的 <code>curl … | sh</code>）。</li>
+          <li>要求（官方 docs）：<strong>macOS 14 Sonoma+</strong>；Apple M 系列有 CPU+GPU，Intel Mac 仅 CPU。</li>
+          <li>装法：挂载 <code>ollama.dmg</code> → 拖进「应用程序」→ 首次启动可把 CLI 链到 <code>/usr/local/bin</code>。</li>
+          <li>跑起来：终端执行 <code>ollama run gemma4</code>（或库里其它标签，以 <a href="https://ollama.com/library" target="_blank" rel="noopener noreferrer">ollama.com/library</a> 为准）。本地 API 默认本机端口，可接 Open WebUI 等。</li>
+        </ol>
+        <p class="cp-src" style="margin:0 0 0.7rem;">来源：<a href="https://docs.ollama.com/macos" target="_blank" rel="noopener noreferrer">docs.ollama.com/macos</a> · <a href="https://docs.ollama.com/quickstart" target="_blank" rel="noopener noreferrer">Quickstart</a>。</p>
+
+        <p class="edge-k">方案 2 · LM Studio（图形界面）</p>
+        <ol style="margin:0 0 0.55rem;padding-left:1.2rem;">
+          <li>打开 <a href="https://lmstudio.ai/download" target="_blank" rel="noopener noreferrer">lmstudio.ai/download</a>，选 macOS。</li>
+          <li>要求（官方）：<strong>Apple Silicon（M1–M4）</strong> · <strong>macOS 14.0+</strong> · 建议 <strong>16GB+</strong> 内存（8GB 只能硬扛小模型）。Intel Mac <strong>当前不支持</strong>。</li>
+          <li>装完：App 内搜模型 → 下 GGUF / 官方列表 → 聊天；也能开本机 OpenAI 兼容服务（端口以 App 设置为准）。Apple Silicon 上另支持 MLX 引擎（官方文档说明）。</li>
+        </ol>
+        <p class="cp-src" style="margin:0 0 0.7rem;">来源：<a href="https://lmstudio.ai/docs/app/system-requirements" target="_blank" rel="noopener noreferrer">LM Studio System Requirements</a>。</p>
+
+        <p class="edge-k">方案 3 · mlx-lm（命令行 / 开发）</p>
+        <ol style="margin:0 0 0.55rem;padding-left:1.2rem;">
+          <li><code>pip install mlx-lm</code>（或 conda-forge）。仓库：<a href="https://github.com/ml-explore/mlx-lm" target="_blank" rel="noopener noreferrer">ml-explore/mlx-lm</a>。</li>
+          <li>README 注明：大模型加速相关能力需要 <strong>macOS 15+</strong>；须用 Apple Silicon 上的原生 ARM Python。</li>
+          <li>跑起来：按 README 用 <code>mlx_lm.generate</code> 等命令拉 HF 上的 MLX 权重（如 mlx-community 预转换档）。</li>
+        </ol>
+        <p class="cp-src" style="margin:0 0 0.7rem;">来源：mlx-lm GitHub README / PyPI。</p>
+
+        <p class="edge-k">可选 · 从源码编 llama.cpp（Metal）</p>
+        <p style="margin:0 0 0.7rem;">适合要 GGUF 命令行的人：按 <a href="https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md" target="_blank" rel="noopener noreferrer">llama.cpp build.md</a>，macOS 上 <strong>Metal 默认开启</strong>；<code>cmake -B build &amp;&amp; cmake --build build --config Release</code>。日常聊天优先 Ollama / LM Studio 更省事。</p>
+
+        <p class="edge-k">能装的模型（含 Qwen）</p>
+        <ul style="margin:0 0 0.55rem;padding-left:1.2rem;">
+          <li><strong>Qwen：四个运行时都能装（格式不同）。</strong>
+            <ul style="margin:0.25rem 0 0;padding-left:1.1rem;">
+              <li><strong>Ollama</strong>：库有 <a href="https://ollama.com/library/qwen2.5" target="_blank" rel="noopener noreferrer">qwen2.5</a>（0.5B～72B）、<a href="https://ollama.com/library/qwen3" target="_blank" rel="noopener noreferrer">qwen3</a>（0.6B～235B）、<a href="https://ollama.com/library/qwen3.8" target="_blank" rel="noopener noreferrer">qwen3.8</a>（含 <code>qwen3.8:27b</code>，约 18GB）。例：<code>ollama run qwen3:8b</code> 或内存够时 <code>ollama run qwen3.8:27b</code>。</li>
+              <li><strong>LM Studio</strong>：App 内搜「Qwen」或走 HF GGUF/MLX；Qwen 官方文档写了 LM Studio 装法（<a href="https://qwen.readthedocs.io/en/latest/run_locally/lmstudio.html" target="_blank" rel="noopener noreferrer">Qwen · LM Studio</a>）。</li>
+              <li><strong>mlx-lm</strong>：Qwen 文档确认支持；可用 <code>Qwen/…-MLX</code> 或 <a href="https://huggingface.co/mlx-community" target="_blank" rel="noopener noreferrer">mlx-community</a> 预转换档（<a href="https://qwen.readthedocs.io/en/latest/run_locally/mlx-lm.html" target="_blank" rel="noopener noreferrer">Qwen · MLX LM</a>）。</li>
+              <li><strong>llama.cpp</strong>：跑社区 GGUF（含 Qwen 族）——命令行自备权重，日常优先前三个。</li>
+            </ul>
+          </li>
+          <li><strong>能干活</strong>：统一内存够时，本站口径的 <strong>Qwen3.8-27B</strong>、<strong>Gemma 4</strong> 等——写码、长文档、本机 Agent 草稿。分档见 <a href="local-model-plan.html">本地模型</a>。</li>
+          <li><strong>偏闲聊</strong>：qwen3:0.6b / qwen2.5:0.5b～1.5b、8GB 硬扛小档——只适合演示。</li>
+          <li><strong>别混</strong>：云端 Qwen API / ChatGPT 网页不是本机安装。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Mac mini -->
+    <div class="edge-device featured" id="mac-mini">
+      <div class="edge-device-hd">
+        <h2>Mac mini</h2>
+        <span class="cp-badge badge-new">同 Apple Silicon · 常开盒子</span>
+      </div>
+      <div class="edge-device-bd">
+        <p style="margin:0 0 0.55rem;"><strong>装什么、怎么跑：与上面 Mac 笔记本相同</strong>（Ollama / LM Studio / mlx-lm）。芯片仍是 Apple Silicon 统一内存，软件不换。</p>
+        <p class="edge-k">和笔记本差在哪</p>
+        <ul style="margin:0 0 0.55rem;padding-left:1.2rem;">
+          <li><strong>形态</strong>：无内置屏，接显示器或当无头局域网推理盒；适合 24h 挂着给家里其它设备打 API。</li>
+          <li><strong>内存</strong>：以你这台的统一内存为准。Apple 对 <strong>Mac mini (2024)</strong> 官方规格写：M4 起步 16GB，可配 24GB / 32GB；M4 Pro 起步 24GB，可配更高（见 <a href="https://support.apple.com/en-us/121555" target="_blank" rel="noopener noreferrer">Apple Support · Tech Specs</a>）。别把「别人那台 32GB」当成你的门槛。</li>
+          <li><strong>选型</strong>：内存档位决定能塞多大——装完后仍回 <a href="local-model-plan.html">本地模型</a> 看 27B 类能干活档，本页不重复街货价表。</li>
+        </ul>
+        <p class="edge-k">装完怎么当小服务器</p>
+        <p style="margin:0 0 0.7rem;">Ollama / LM Studio 开本机服务后，同一局域网用 Open WebUI、IDE、脚本打 API 即可。防火墙与是否绑定 <code>0.0.0.0</code> 以各软件设置为准——别把机器裸奔到公网。</p>
+        <p class="edge-k">能装的模型（含 Qwen）</p>
+        <p style="margin:0;">与上面 Mac 笔记本<strong>同一套库</strong>：Ollama / LM Studio / mlx-lm / llama.cpp 都能下 Qwen（含 <code>qwen3.8:27b</code> 等）。差别只在<strong>统一内存够不够</strong>——以你这台为准，选型长文回 <a href="local-model-plan.html">本地模型</a>。</p>
+      </div>
+    </div>
+
+    <!-- Windows / Linux -->
+    <div class="edge-device" id="pc-linux">
+      <div class="edge-device-hd">
+        <h2>Windows 小主机 / NUC · Linux 盒子</h2>
+        <span class="cp-badge badge-rec">去本地模型页选型</span>
+      </div>
+      <div class="edge-device-bd">
+        <p style="margin:0 0 0.55rem;">这一类和「台式机 / 独显本」是同一套本机栈。端侧页只写<strong>怎么装运行时</strong>；显存分档、街货价、27B 选型全部在 <a href="local-model-plan.html">本地模型</a>。</p>
+
+        <p class="edge-k">要装什么（官方核实）</p>
+        <ul style="margin:0 0 0.55rem;padding-left:1.2rem;">
+          <li><strong>Ollama</strong>：Windows 打开 <a href="https://ollama.com/download" target="_blank" rel="noopener noreferrer">ollama.com/download</a>，要求 <strong>Windows 10+</strong>（官方页）；Linux 用官网安装脚本。装完 <code>ollama run …</code>。</li>
+          <li><strong>LM Studio</strong>：<a href="https://lmstudio.ai/download" target="_blank" rel="noopener noreferrer">lmstudio.ai/download</a>。Windows：x64（需 AVX2）或 ARM；建议 ≥16GB RAM、独显建议 ≥4GB VRAM。Linux：AppImage，官方写 Ubuntu 20.04+（新于 22 的版本标注「未充分测试」）。</li>
+        </ul>
+        <p class="cp-src" style="margin:0 0 0.55rem;">来源：Ollama 下载页 · <a href="https://lmstudio.ai/docs/app/system-requirements" target="_blank" rel="noopener noreferrer">LM Studio System Requirements</a>。</p>
+
+        <p class="edge-k">能装的模型（含 Qwen）</p>
+        <ul style="margin:0;padding-left:1.2rem;">
+          <li><strong>Qwen：能装。</strong>Ollama 库有 qwen2.5 / qwen3 / qwen3.8（含 27B）；LM Studio App 内搜 Qwen 或下 HF GGUF。来源同 Mac 段链接。</li>
+          <li><strong>能干活</strong>：按显存选 <strong>Qwen3.8-27B</strong> / <strong>Gemma 4</strong> 等——分档、街货价、<strong>去 <a href="local-model-plan.html">本地模型</a></strong>。</li>
+          <li><strong>偏闲聊</strong>：小参数演示档。不要把云端旗舰写成「NUC 本机已跑通」。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Browser / Embedded -->
+    <div class="edge-device" id="browser">
+      <div class="edge-device-hd">
+        <h2>浏览器 / 嵌入式</h2>
+        <span class="cp-badge badge-warn">少列</span>
+      </div>
+      <div class="edge-device-bd">
+        <p class="edge-k">浏览器（WebGPU 等）</p>
+        <p style="margin:0;" class="bad">这条路径没核实到可稳定选型的安装包 / 应用名——不编。真要本机大模型请走 Mac / Windows 上的 Ollama、LM Studio，或 <a href="local-model-plan.html">本地模型</a>。</p>
+        <p class="edge-k">嵌入式 / 板卡</p>
+        <p style="margin:0;">MiniCPM5-2B 官方称有 Intel / 瑞芯微 / Arm 等 Day0 适配（ainews 2026-09-08），属「可导入专用运行时」线索，不是开箱即用手机服务。具体板卡栈差异大，本站不编吞吐与价；真要上板卡请跟芯片厂商文档走，别默认 OlliteRT。</p>
+      </div>
+    </div>
+
+    <div class="cp-section-hd"><span>选型速查</span></div>
+    <div class="cp-matrix-wrap">
+      <table class="cp-matrix">
+        <thead><tr><th>你的情况</th><th>怎么选</th></tr></thead>
+        <tbody>
+          <tr><td class="model-name">旧安卓当局域网小服务器</td><td class="good">OlliteRT → Gemma 4 E2B → Open WebUI / curl 打 <code>/v1</code></td></tr>
+          <tr><td class="model-name">要端侧写码倾向</td><td class="good">试 MiniCPM5-2B（LiteRT 导入）；内置列表则 E2B/E4B</td></tr>
+          <tr><td class="model-name">只要演示「手机能跑」</td><td>Gemma 3 1B / Qwen 2.5 1.5B</td></tr>
+          <tr><td class="model-name">手机上要装 Qwen</td><td>Android OlliteRT → 仅 Qwen 2.5 1.5B（闲聊）；iOS Locally AI → Qwen 2.5/3（App 内列表）；Gallery → LiteRT 小档 Qwen / 主推 Gemma 4</td></tr>
+          <tr><td class="model-name">电脑上要装 Qwen 干活</td><td class="good">Mac / mini / NUC → Ollama <code>qwen3.8:27b</code> 或 LM Studio 搜 Qwen → 内存/显存分档见本地模型页</td></tr>
+          <tr><td class="model-name">iPhone 本机跑模型</td><td class="good">装 Google AI Edge Gallery（iOS 17+）或 Locally AI（iOS 18.1+）→ App 内下模型</td></tr>
+          <tr><td class="model-name">iPhone 当局域网 API</td><td class="bad">这条路径没核实到可装包（无 OlliteRT iOS 版）</td></tr>
+          <tr><td class="model-name">Mac / Mac mini 本机</td><td class="good">装 Ollama 或 LM Studio（macOS 14+，Apple Silicon）→ 再按统一内存选模型；长文选型见本地模型页</td></tr>
+          <tr><td class="model-name">Windows NUC / Linux 盒子</td><td class="good">装 Ollama 或 LM Studio → 显存分档去 <a href="local-model-plan.html">本地模型</a></td></tr>
+          <tr><td class="model-name">有独显笔记本、要 27B</td><td>→ <a href="local-model-plan.html">本地模型横评</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="cp-faq">
+      <div class="cp-faq-head">常见问题</div>
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">OlliteRT 能直接跑 Ollama 的 GGUF 吗？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>不能。</strong>README 写明只支持 <code>.litertlm</code>。GGUF 请用电脑上的 Ollama / llama.cpp，见本地模型页。</div>
+      </div>
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">工具调用可靠吗？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a">OlliteRT 标明 <strong>experimental</strong>，且依赖模型本身（Gemma 4 较好）。不要默认当成生产 Agent 的硬依赖。</div>
+      </div>
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">和 Google AI Edge Gallery 什么关系？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a">Credits 写明基于 <a href="https://github.com/google-ai-edge/gallery" target="_blank" rel="noopener noreferrer">Google AI Edge Gallery</a>，再做成可对外提供 OpenAI 兼容服务的服务器形态。</div>
+      </div>
+      <div class="cp-faq-item">
+        <div class="cp-faq-q">这些端侧能装 Qwen 吗？<span class="cp-faq-arrow">▼</span></div>
+        <div class="cp-faq-a"><strong>能，但档位差很多。</strong>Android OlliteRT 内置只有 <strong>Qwen 2.5 1.5B</strong>（闲聊）。iPhone：Locally AI 明确写 Qwen 2.5/3；Gallery 侧 LiteRT 有小档 Qwen，主推仍是 Gemma 4。Mac / Mac mini / Windows·Linux：Ollama、LM Studio、mlx-lm 都能下 Qwen，内存够可到 <strong>qwen3.8:27b</strong> 干活档——见各终端「能装的模型」段与 <a href="local-model-plan.html">本地模型</a>。</div>
+      </div>
+    </div>
+
+    <div class="cp-summary">
+      <h2>一句话怎么用</h2>
+      <div class="cp-summary-grid">
+        <div class="cp-summary-item"><span class="cp-badge badge-rec">Android</span> <span class="arrow">→</span> 装 OlliteRT APK + Gemma 4 E2B</div>
+        <div class="cp-summary-item"><span class="cp-badge badge-new">iPhone</span> <span class="arrow">→</span> Gallery 或 Locally AI</div>
+        <div class="cp-summary-item"><span class="cp-badge badge-rec">Mac / mini</span> <span class="arrow">→</span> Ollama 或 LM Studio</div>
+        <div class="cp-summary-item"><span class="cp-badge badge-overseas">选多大模型</span> <span class="arrow">→</span> <a href="local-model-plan.html">本地模型</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cp-footer">
+    <p>事实口径：OlliteRT 模型表 · LiteRT-LM Overview · Gallery / Locally AI · Ollama library（qwen2.5 / qwen3 / qwen3.8）· Qwen docs（LM Studio / MLX）· LM Studio System Requirements · Apple Mac mini (2024) Tech Specs · 浏览器端侧仍缺可核清单</p>
+    <p><a href="index.html">← 返回 AINav 首页</a> · <a href="local-model-plan.html">本地模型</a> · <a href="model-plan.html">模型选型</a> · <a href="model-finder.html">模型推荐器</a> · <a href="hardware-plan.html">硬件横评</a> · <a href="free-tier.html">免费额度</a></p>
+  </div>
+
+  <script>
+    (function(){
+      var btns=document.querySelectorAll('.theme-btn');
+      var html=document.documentElement;
+      function apply(t){html.setAttribute('data-theme',t);localStorage.setItem('cp-theme',t);btns.forEach(function(b){b.classList.toggle('is-active',b.getAttribute('data-theme-set')===t)})}
+      var saved=localStorage.getItem('cp-theme')||'system';apply(saved);
+      btns.forEach(function(b){b.addEventListener('click',function(){apply(b.getAttribute('data-theme-set'))})});
+    })();
+  </script>
+  <script>
+    document.querySelectorAll('.cp-faq-q').forEach(function(q){
+      q.addEventListener('click', function(){ q.parentElement.classList.toggle('is-open'); });
+    });
+  </script>
+  <script src="plan-nav.js" data-active="edge-model-plan.html"></script>
+  <script src="plan-meta-i18n.js"></script>
+  <script src="thinking-framework.js"></script>
+  <script src="./back-to-top.js"></script>
+</body>
+</html>

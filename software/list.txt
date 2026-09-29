@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-25T23:12:17.459919",
+  "generated_at": "2026-09-29T15:54:46.155527",
   "total_software": 21,
   "total_files": 4557,
-  "total_size": 1792402221,
+  "total_size": 1792867025,
   "software": {
     "WinMemoryCleaner": {
       "version": "20260515_144655",
@@ -85,7 +85,7 @@
       "last_updated": "2026-06-10T16:55:24.069987"
     },
     "system_good": {
-      "version": "20260925_231215",
+      "version": "20260929_155444",
       "files": [
         {
           "path": "AltSnap.exe",
@@ -197,9 +197,9 @@
         },
         {
           "path": "Lastb_soft_version.txt",
-          "size": 163671,
-          "hash": "d33dc4667099439037ad9714ec4eb0dc",
-          "modified": "2026-09-25T23:11:14.673337"
+          "size": 168817,
+          "hash": "aa25fed3781a78dc365ee1359766146e",
+          "modified": "2026-09-29T15:19:41.948208"
         },
         {
           "path": "lx-music-desktop.7z",
@@ -425,8 +425,8 @@
         }
       ],
       "total_files": 56,
-      "total_size": 773127036,
-      "last_updated": "2026-09-25T23:12:15.960056"
+      "total_size": 773132182,
+      "last_updated": "2026-09-29T15:54:44.930198"
     },
     "notepad++": {
       "version": "20260925_231216",
@@ -14801,13 +14801,13 @@
       "last_updated": "2026-03-10T11:47:43.773627"
     },
     "SublimeText": {
-      "version": "20260923_170806",
+      "version": "20260929_155445",
       "files": [
         {
           "path": "!)添删右键菜单.bat",
-          "size": 1825,
-          "hash": "4ceec3b3862261871441576ce9a4eeea",
-          "modified": "2021-10-26T16:15:43.702165"
+          "size": 1823,
+          "hash": "89750e249cabf31a3d1f70571aaae3df",
+          "modified": "2026-09-29T11:32:15.728261"
         },
         {
           "path": "attribution.txt",
@@ -14817,9 +14817,9 @@
         },
         {
           "path": "changelog.txt",
-          "size": 80279,
-          "hash": "5f60aacc8d8832fa20cf2b29455daad1",
-          "modified": "2026-09-21T05:45:32"
+          "size": 80754,
+          "hash": "4c643f0485cc64c30543194a3a6f0cff",
+          "modified": "2026-09-25T02:25:22"
         },
         {
           "path": "libcrypto-1_1-x64.dll",
@@ -14854,14 +14854,14 @@
         {
           "path": "plugin_host-3.14.exe",
           "size": 2604152,
-          "hash": "8b14221df632a75875bff8ff86c51839",
-          "modified": "2026-09-21T05:55:06"
+          "hash": "89b42738216aeb9f33184dcc027c423a",
+          "modified": "2026-09-25T02:32:48"
         },
         {
           "path": "plugin_host-3.3.exe",
           "size": 2605176,
-          "hash": "f584345b5bda53b9832bc108e5d71e7b",
-          "modified": "2026-09-21T05:54:56"
+          "hash": "19b703626d4b304ab40928169985efd6",
+          "modified": "2026-09-25T02:32:38"
         },
         {
           "path": "python3.dll",
@@ -14890,20 +14890,20 @@
         {
           "path": "subl.exe",
           "size": 2333304,
-          "hash": "b25c0063fef78a0c64005f7aebfac82e",
-          "modified": "2026-09-21T05:55:34"
+          "hash": "9649df84a826eda7a3790d1ea810604f",
+          "modified": "2026-09-25T02:33:16"
         },
         {
           "path": "sublime_text.exe",
-          "size": 7977592,
-          "hash": "032ecc7a326fcc4e7f87364726337a41",
-          "modified": "2026-09-21T22:15:19.046340"
+          "size": 7978104,
+          "hash": "fc86f701c058da51a5c2ac2fbc9900a2",
+          "modified": "2026-09-29T11:03:01.697072"
         },
         {
           "path": "update_installer.exe",
           "size": 185464,
-          "hash": "20b23ae5d205249229b0b6b165445618",
-          "modified": "2026-09-21T05:55:26"
+          "hash": "5e00d89eb5c419778fbfec1ea758b642",
+          "modified": "2026-09-25T02:33:06"
         },
         {
           "path": "vcruntime140.dll",
@@ -14921,7 +14921,7 @@
           "path": "Data\\KEEPME",
           "size": 0,
           "hash": "d41d8cd98f00b204e9800998ecf8427e",
-          "modified": "2026-09-21T05:55:58"
+          "modified": "2026-09-25T02:33:40"
         },
         {
           "path": "Data\\Packages\\ConvertToUTF8\\.gitignore",
@@ -21443,7 +21443,7 @@
           "path": "Lib\\python3\\certifi\\cacert.pem",
           "size": 240216,
           "hash": "eae6947de5ef7a283146da71e558021d",
-          "modified": "2026-09-21T05:46:48"
+          "modified": "2026-09-25T02:25:58"
         },
         {
           "path": "Lib\\python3\\certifi\\core.py",
@@ -21479,25 +21479,25 @@
           "path": "Lib\\python314\\imp.py",
           "size": 225,
           "hash": "4fd3dacd088c4309cb80072a0ec840c0",
-          "modified": "2026-09-21T05:46:46"
+          "modified": "2026-09-25T02:25:56"
         },
         {
           "path": "Lib\\python314\\sublime.py",
           "size": 147924,
           "hash": "d493afab9d8e0e8a52f02e343dbeade9",
-          "modified": "2026-09-21T05:46:46"
+          "modified": "2026-09-25T02:25:56"
         },
         {
           "path": "Lib\\python314\\sublime_plugin.py",
           "size": 73997,
           "hash": "4df9be1a3f759f2be618ee0ff54a8bfb",
-          "modified": "2026-09-21T05:46:46"
+          "modified": "2026-09-25T02:25:56"
         },
         {
           "path": "Lib\\python314\\sublime_types.py",
           "size": 357,
           "hash": "312d947d2d3da9cf3b4649712345353a",
-          "modified": "2026-09-21T05:46:46"
+          "modified": "2026-09-25T02:25:56"
         },
         {
           "path": "Lib\\python33\\sublime.py",
@@ -21515,330 +21515,330 @@
           "path": "Packages\\ActionScript.sublime-package",
           "size": 66994,
           "hash": "8a0f3fc72098c630e46e92016294b950",
-          "modified": "2026-09-21T05:54:36"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\AppleScript.sublime-package",
           "size": 176479,
           "hash": "9ebd4a50fecafe30cf5bc723870a33d9",
-          "modified": "2026-09-21T05:54:36"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\ASP.sublime-package",
           "size": 123583,
           "hash": "36e730b48d5a9ca1d0a77ad07ac4ad67",
-          "modified": "2026-09-21T05:54:34"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Batch File.sublime-package",
           "size": 340256,
           "hash": "9b4b3ffebcc8e6abb26b64169fb4d7c7",
-          "modified": "2026-09-21T05:54:36"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Binary.sublime-package",
           "size": 496,
           "hash": "04f05f44b9b158485734c212d686f9b3",
-          "modified": "2026-09-21T05:54:36"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\C#.sublime-package",
           "size": 801485,
           "hash": "d9af8fc847b18533d6cc6ba4fb0a4c64",
-          "modified": "2026-09-21T05:54:36"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\C++.sublime-package",
           "size": 422846,
           "hash": "0a5aa9b0ab433c0527548f335cc3eb0d",
-          "modified": "2026-09-21T05:54:34"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Clojure.sublime-package",
           "size": 122901,
           "hash": "e0789b73092f505712ace8fb8c90f2c4",
-          "modified": "2026-09-21T05:54:34"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Color Scheme - Default.sublime-package",
           "size": 54073,
           "hash": "cb5c1433887b569dee7792c4c489b7ce",
-          "modified": "2026-09-21T05:54:34"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Color Scheme - Legacy.sublime-package",
           "size": 266233,
           "hash": "bbeb817e9dc47c7b8f17f9692eb30236",
-          "modified": "2026-09-21T05:54:34"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\CSS.sublime-package",
           "size": 499465,
           "hash": "60e4f4ab9bffe664602361598d855b37",
-          "modified": "2026-09-21T05:54:34"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\D.sublime-package",
           "size": 261230,
           "hash": "13f3812c90c4a2a644e05c5c2f1e9ad4",
-          "modified": "2026-09-21T05:54:34"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Default.sublime-package",
-          "size": 132383,
-          "hash": "5ac2b3415f6edb3616a5f019e25a0476",
-          "modified": "2026-09-21T21:57:40.894769"
+          "size": 551689,
+          "hash": "bd7e5e5229eeaa91d588ded3dba15ec1",
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Diff.sublime-package",
-          "size": 11711,
-          "hash": "56e6684cc8e5da14c8c934e331e245f5",
-          "modified": "2026-09-21T21:15:29.767164"
+          "size": 51143,
+          "hash": "285107403dc8e83798981993ec6abee9",
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Erlang.sublime-package",
           "size": 409026,
           "hash": "d2cdc39abc8a262ae1b551a7a3646692",
-          "modified": "2026-09-21T05:54:34"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Git Formats.sublime-package",
           "size": 293824,
           "hash": "29566dd9d8f9df6f2b790da0e322bde0",
-          "modified": "2026-09-21T05:54:34"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Go.sublime-package",
           "size": 429284,
           "hash": "bdbc429644287aa9fcf835785557a386",
-          "modified": "2026-09-21T05:54:36"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Graphviz.sublime-package",
           "size": 434547,
           "hash": "5a8f4b8bfe550f47195a49e613e8e432",
-          "modified": "2026-09-21T05:54:34"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Groovy.sublime-package",
           "size": 100904,
           "hash": "cca4e6111049ca4779024ffd512ec6f3",
-          "modified": "2026-09-21T05:54:34"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Haskell.sublime-package",
           "size": 380564,
           "hash": "904b41536c3864f19f52c6fc5ff2ddb1",
-          "modified": "2026-09-21T05:54:36"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\HTML.sublime-package",
           "size": 157780,
           "hash": "008fa9c1d9f1fc16f80eb20f2b88fd4f",
-          "modified": "2026-09-21T05:54:36"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Java.sublime-package",
           "size": 924019,
           "hash": "f538758a8f40885d702eab2d4cd72b81",
-          "modified": "2026-09-21T05:54:34"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\JavaScript.sublime-package",
           "size": 619962,
           "hash": "242ac543a619a3f86235593ce50cd7aa",
-          "modified": "2026-09-21T05:54:34"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\JSON.sublime-package",
           "size": 22743,
           "hash": "8b5d563f3207df56039fa0461cf72a60",
-          "modified": "2026-09-21T05:54:34"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Language - English.sublime-package",
           "size": 1673087,
           "hash": "5dd4ac9eb5fd308ee7c5b9d5e1c8de08",
-          "modified": "2026-09-21T05:54:36"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\LaTeX.sublime-package",
           "size": 343781,
           "hash": "66c37431fb15112b15a8590a644047be",
-          "modified": "2026-09-21T05:54:36"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Lisp.sublime-package",
           "size": 202413,
           "hash": "e9242584ec96cf266edaead27ac82ec7",
-          "modified": "2026-09-21T05:54:34"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Lua.sublime-package",
           "size": 84745,
           "hash": "4788e07be97874d3f3ed06e72ac6b742",
-          "modified": "2026-09-21T05:54:34"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Makefile.sublime-package",
           "size": 66996,
           "hash": "f0579de15f7f4db0a880d5e600bea6df",
-          "modified": "2026-09-21T05:54:34"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Markdown.sublime-package",
           "size": 555844,
           "hash": "2a68e3cdedd5d161f13f00a60c44d8e9",
-          "modified": "2026-09-21T05:54:36"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Matlab.sublime-package",
           "size": 144451,
           "hash": "067eef51e42772c7487b9ff87239f668",
-          "modified": "2026-09-21T05:54:36"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Objective-C.sublime-package",
           "size": 322001,
           "hash": "849684d30df2baae0816c68624370b11",
-          "modified": "2026-09-21T05:54:36"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\OCaml.sublime-package",
           "size": 71047,
           "hash": "9faa90c750fb1e9a4e33212189549b27",
-          "modified": "2026-09-21T05:54:36"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Pascal.sublime-package",
           "size": 45623,
           "hash": "988f1c32b9da7a3cb1dab20e80f43fe1",
-          "modified": "2026-09-21T05:54:34"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Perl.sublime-package",
           "size": 355144,
           "hash": "ecdfb6a947f562f032ef5d3a56c1db2d",
-          "modified": "2026-09-21T05:54:34"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\PHP.sublime-package",
           "size": 1278338,
           "hash": "25ff7daa71f5ba1e60f7e61b9c7352df",
-          "modified": "2026-09-21T05:54:36"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Python.sublime-package",
           "size": 613500,
           "hash": "48090943d73cd3a01e482c6997fe8ada",
-          "modified": "2026-09-21T05:54:36"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\R.sublime-package",
           "size": 86391,
           "hash": "59ecc1b352a372a655c05c8de9995b13",
-          "modified": "2026-09-21T05:54:36"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Rails.sublime-package",
           "size": 165927,
           "hash": "66e98422e4e54afab92ce45856a63f49",
-          "modified": "2026-09-21T05:54:34"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Regular Expressions.sublime-package",
           "size": 64089,
           "hash": "0a749983f8b0623f3733b949545b262e",
-          "modified": "2026-09-21T05:54:36"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\RestructuredText.sublime-package",
           "size": 13682,
           "hash": "5718a69cfa8d80b436fa8aba30d531b2",
-          "modified": "2026-09-21T05:54:36"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Ruby.sublime-package",
           "size": 218477,
           "hash": "a6f478605465828ce3d0b65cc615850d",
-          "modified": "2026-09-21T05:54:34"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Rust.sublime-package",
           "size": 236861,
           "hash": "b4e348a85720fc8debae9e5dbf5f88fb",
-          "modified": "2026-09-21T05:54:36"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Scala.sublime-package",
           "size": 188813,
           "hash": "4799ec1af310415993c009ef22783456",
-          "modified": "2026-09-21T05:54:36"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\ShellScript.sublime-package",
           "size": 1638570,
           "hash": "677f28917459256823eea6f3aef59481",
-          "modified": "2026-09-21T05:54:34"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\SQL.sublime-package",
           "size": 641944,
           "hash": "3912902e6dccf115607ec0942c7d10e9",
-          "modified": "2026-09-21T05:54:36"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\TCL.sublime-package",
           "size": 37064,
           "hash": "f671e2ac227a7d6a1eb47b46b052faee",
-          "modified": "2026-09-21T05:54:36"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Text.sublime-package",
           "size": 1337,
           "hash": "3f65c1ae35876a38c98b49bca3643e5b",
-          "modified": "2026-09-21T05:54:36"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Textile.sublime-package",
           "size": 112523,
           "hash": "855ca519eb69b7e04be51f9f89ff000e",
-          "modified": "2026-09-21T05:54:34"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Theme - Default.sublime-package",
           "size": 404868,
           "hash": "73d6f7fc6d46f90bf66c7a6235e8fe34",
-          "modified": "2026-09-21T05:54:36"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\TOML.sublime-package",
           "size": 62727,
           "hash": "970c9985d327be0c1cffbbe9bc27cee8",
-          "modified": "2026-09-21T05:54:34"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\Vintage.sublime-package",
-          "size": 108419,
-          "hash": "42e66d4ab5b07d44858ddbb60233808e",
-          "modified": "2026-09-21T05:54:34"
+          "size": 108420,
+          "hash": "45094187d987eac3f9ff815decb3c0f8",
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\XML.sublime-package",
           "size": 118760,
           "hash": "4773607f7a1330bef97bbbddb0634eb5",
-          "modified": "2026-09-21T05:54:36"
+          "modified": "2026-09-25T02:32:16"
         },
         {
           "path": "Packages\\YAML.sublime-package",
           "size": 74628,
           "hash": "bf7ed6d765cd514b46c019c1a71efc41",
-          "modified": "2026-09-21T05:54:34"
+          "modified": "2026-09-25T02:32:16"
         }
       ],
       "total_files": 1172,
-      "total_size": 82190635,
-      "last_updated": "2026-09-23T17:08:06.067782"
+      "total_size": 82650359,
+      "last_updated": "2026-09-29T15:54:45.904903"
     },
     "WinRAR": {
       "version": "20260923_182333",
@@ -24039,7 +24039,7 @@
       "last_updated": "2026-07-27T14:44:39.296804"
     },
     "lx-music-desktop": {
-      "version": "20260923_170935",
+      "version": "20260929_155446",
       "files": [
         {
           "path": "readme.txt",
@@ -24055,9 +24055,9 @@
         },
         {
           "path": "音源.txt",
-          "size": 1047,
-          "hash": "496e5509fc5b979ab433ac7246ee00a6",
-          "modified": "2026-09-10T16:51:43.917802"
+          "size": 981,
+          "hash": "8298b4bebdce9a46de8b8db5ae3de7a2",
+          "modified": "2026-09-28T14:25:26.307660"
         },
         {
           "path": "lxpy\\lx_control.py",
@@ -24109,8 +24109,8 @@
         }
       ],
       "total_files": 11,
-      "total_size": 402169,
-      "last_updated": "2026-09-23T17:09:35.642195"
+      "total_size": 402103,
+      "last_updated": "2026-09-29T15:54:46.011159"
     },
     "typora": {
       "version": "20260603_122031",

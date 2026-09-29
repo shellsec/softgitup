@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="stylesheet" href="site-mobile.css">
+  <title>本地模型横评 — 排行榜 · 显存分档 · 硬件价格 — AINav</title>
+  <meta name="description" content="2026-08 本地 LLM 横评：开源排行榜、Qwen3.8-27B / Gemma 4 / Qwen3.6 显存与量化、Ollama 命令、国内显卡街货价与本地 vs API 成本。">
+  <link rel="canonical" href="https://aiv123.com/local-model-plan.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="本地模型横评 — 排行榜 · 显存分档 · 硬件价格">
+  <meta property="og:description" content="按显存选本地模型：Qwen3.8-27B、Gemma 4、Ollama 命令与国内 GPU 街货价。">
+  <meta property="og:url" content="https://aiv123.com/local-model-plan.html">
+  <meta property="og:site_name" content="AINav">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%230969da'/><text x='50' y='72' font-size='60' text-anchor='middle' fill='white' font-family='system-ui' font-weight='700'>AI</text></svg>">
+  <style>
+    :root, html[data-theme="dark"] {
+      --bg: #0f1419; --panel: #151b23; --card: #1c2430; --border: #2d3848;
+      --text: #e6edf3; --muted: #8b9cb3; --accent: #58a6ff; --accent2: #3fb950;
+      --warn: #d29922; --danger: #f85149; --hot: #ff6b6b; --overseas: #a78bfa;
+      --oss: #f0883e;
+    }
+    html[data-theme="light"] {
+      --bg: #f6f8fa; --panel: #fff; --card: #fff; --border: #d0d7de;
+      --text: #1f2328; --muted: #59636e; --accent: #0969da; --accent2: #1a7f37;
+      --warn: #9a6700; --danger: #cf222e; --hot: #e53935; --overseas: #7c3aed;
+      --oss: #bc4c00;
+    }
+    @media (prefers-color-scheme: light) {
+      html[data-theme="system"] {
+        --bg: #f6f8fa; --panel: #fff; --card: #fff; --border: #d0d7de;
+        --text: #1f2328; --muted: #59636e; --accent: #0969da; --accent2: #1a7f37;
+        --warn: #9a6700; --danger: #cf222e; --hot: #e53935; --overseas: #7c3aed;
+        --oss: #bc4c00;
+      }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Segoe UI", system-ui, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.6; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .cp-top { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); background: var(--panel); position: sticky; top: 0; z-index: 10; }
+    .cp-top-inner { max-width: 76rem; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; justify-content: space-between; }
+    .cp-nav a { font-weight: 600; margin-right: 1rem; font-size: 0.88rem; }
+    .cp-toolbar { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; }
+    .theme-btn { font-size: 0.72rem; padding: 0.2rem 0.5rem; border-radius: 5px; border: 1px solid var(--border);
+      background: var(--card); color: var(--muted); cursor: pointer; font-family: inherit; }
+    .theme-btn.is-active { color: var(--accent); border-color: var(--accent); font-weight: 600; }
+    .cp-wrap { max-width: 76rem; margin: 0 auto; padding: 1rem; }
+    h1 { font-size: 1.35rem; margin: 0 0 0.3rem; }
+    .cp-subtitle { font-size: 0.88rem; color: var(--muted); margin-bottom: 1rem; }
+    .cp-section-hd { font-size: 1.1rem; font-weight: 700; margin: 1.8rem 0 0.8rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--border); display: flex; align-items: center; gap: 0.5rem; }
+    .cp-section-hd.oss-hd { border-bottom-color: var(--oss); }
+    .cp-legend { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 1.2rem; font-size: 0.82rem; }
+    .cp-badge { display: inline-block; padding: 0.1rem 0.45rem; border-radius: 4px; font-size: 0.72rem; font-weight: 600; }
+    .badge-qwen { background: rgba(168,85,247,0.15); color: #a855f7; border: 1px solid rgba(168,85,247,0.3); }
+    .badge-gemma { background: rgba(34,197,94,0.15); color: #22c55e; border: 1px solid rgba(34,197,94,0.3); }
+    .badge-glm { background: rgba(63,185,80,0.15); color: var(--accent2); border: 1px solid rgba(63,185,80,0.3); }
+    .badge-kimi { background: rgba(249,115,22,0.15); color: #f97316; border: 1px solid rgba(249,115,22,0.3); }
+    .badge-hot { background: rgba(255,107,107,0.15); color: var(--hot); border: 1px solid rgba(255,107,107,0.3); }
+    .badge-oss { background: rgba(240,136,62,0.15); color: var(--oss); border: 1px solid rgba(240,136,62,0.3); }
+    .badge-warn { background: rgba(210,153,34,0.15); color: var(--warn); border: 1px solid rgba(210,153,34,0.3); }
+    .cp-platforms { display: grid; grid-template-columns: 1fr; gap: 1.2rem; }
+    @media (min-width: 52rem) { .cp-platforms { grid-template-columns: 1fr 1fr; } }
+    .cp-platform { border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .cp-platform-head { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+    .cp-platform-name { font-size: 1.05rem; font-weight: 700; }
+    .cp-platform-name a { color: var(--text); }
+    .cp-platform-body { padding: 0.75rem 1rem; font-size: 0.85rem; line-height: 1.7; }
+    .tech-tag { display: inline-block; padding: 0.05rem 0.4rem; border-radius: 4px; font-size: 0.72rem; font-weight: 600; margin: 0.15rem; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); color: var(--accent); }
+    .good { color: var(--accent2); font-weight: 600; }
+    .bad { color: var(--danger); opacity: 0.85; }
+    .lm-cmd { display: block; margin: 0.45rem 0 0.2rem; padding: 0.4rem 0.65rem; border-radius: 6px; background: var(--panel); border: 1px solid var(--border); font-family: ui-monospace, Consolas, monospace; font-size: 0.78rem; overflow-x: auto; white-space: nowrap; }
+    .cp-scenario { margin-top: 1rem; border: 1px solid var(--border); border-radius: 10px; background: var(--card); overflow: hidden; }
+    .cp-scenario-head { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); font-weight: 700; font-size: 0.95rem; }
+    .cp-scenario-body { padding: 0.75rem 1rem; font-size: 0.85rem; line-height: 1.75; }
+    .candidate { color: var(--muted); font-size: 0.82rem; }
+    .recommend { color: var(--accent2); font-weight: 700; font-size: 0.95rem; }
+    .reason { margin-top: 0.4rem; padding-left: 1rem; border-left: 3px solid var(--accent2); }
+    .cp-matrix-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; background: var(--card); margin-top: 1rem; }
+    .cp-matrix { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+    .cp-matrix th, .cp-matrix td { padding: 0.45rem 0.65rem; border: 1px solid var(--border); text-align: left; }
+    .cp-matrix th { background: var(--panel); font-weight: 600; color: var(--muted); font-size: 0.76rem; }
+    .cp-matrix .model-name { font-weight: 700; white-space: nowrap; }
+    .cp-matrix .price { color: var(--oss); font-weight: 700; white-space: nowrap; }
+    .cp-notice { margin: 0 0 1rem; padding: 0.75rem 1rem; border: 1px solid rgba(210,153,34,.35); border-radius: 10px; background: var(--card); font-size: 0.84rem; line-height: 1.7; }
+    .cp-summary { margin-top: 2rem; padding: 1rem 1.2rem; border: 2px solid var(--accent); border-radius: 10px; background: rgba(88,166,255,0.04); }
+    .cp-summary h2 { font-size: 1.05rem; margin: 0 0 0.8rem; }
+    .cp-summary-grid { display: grid; grid-template-columns: 1fr; gap: 0.5rem; font-size: 0.88rem; }
+    @media (min-width: 40rem) { .cp-summary-grid { grid-template-columns: 1fr 1fr; } }
+    .cp-summary-item { display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.6rem; border-radius: 6px; background: var(--card); border: 1px solid var(--border); }
+    .cp-summary-item .arrow { color: var(--accent2); font-weight: 700; }
+    .cp-updated-line { font-size: 0.76rem; color: var(--muted); margin: 0 0 0.3rem; }
+    .cp-footer { max-width: 76rem; margin: 2rem auto 1rem; padding: 0 1rem; font-size: 0.76rem; color: var(--muted); text-align: center; }
+    .src { font-size: 0.72rem; color: var(--muted); }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2B8FBWRX4N"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2B8FBWRX4N');</script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "2d49f38b39c743ac80b6d6b9ff99494d"}'></script>
+</head>
+<body>
+  <div class="cp-top">
+    <div class="cp-top-inner">
+      <div class="cp-nav" data-plan-nav></div>
+      <div class="cp-toolbar">
+        <button type="button" class="theme-btn" data-theme-set="system">跟随系统</button>
+        <button type="button" class="theme-btn" data-theme-set="light">浅色</button>
+        <button type="button" class="theme-btn" data-theme-set="dark">深色</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cp-wrap">
+    <h1>本地模型横评</h1>
+    <p class="cp-subtitle">按显存选能跑的开源权重：排行榜 × GGUF 量化 × 国内 GPU 街货价。云端旗舰请看 <a href="model-plan.html">模型选型</a>；本地 Agent 配模看 <a href="agent-plan.html">Agent 横评</a>。</p>
+    <p class="cp-related">手机 / 边缘运行时（OlliteRT、LiteRT、1B～4B 能干活档）另见 <a href="edge-model-plan.html">端侧模型</a>——本页只讲电脑本地。</p>
+    <p class="cp-updated-line"><span class="cp-updated">最后更新：2026-09-23</span></p>
+
+    <div class="cp-notice">
+      <strong>两张榜不要混：</strong>开源能力榜第一（BenchLM 2026-08）是 <strong>Qwen3.8 Max</strong>，不是一张消费级卡能装下的。单卡现实选项是 <strong>Qwen3.8-27B</strong> 和 <strong>Gemma 4 31B</strong>——权重免费，花钱的是显卡和电。2026-09-22 小米开源的 <strong>MiMo-V2.6</strong> 更偏云端全模态旗舰，不是 24GB 单卡默认目标；见 <a href="model-plan.html">模型选型</a>。社区另有 <strong>GLM-5.3-Flash GGUF</strong>（如 unsloth，HF 2026-09-02）可本机试速度档，仍按显存选量化，别当 Coding Plan 云端 5.3 同档。
+    </div>
+
+    <div class="cp-legend">
+      <span><span class="cp-badge badge-qwen">Qwen</span> 单卡新旗舰</span>
+      <span><span class="cp-badge badge-gemma">Gemma 4</span> 24GB 多模态</span>
+      <span><span class="cp-badge badge-glm">GLM / Kimi</span> 机房 MoE</span>
+      <span><span class="cp-badge badge-oss">Q4_K_M</span> 默认量化</span>
+      <span><span class="cp-badge badge-hot">24GB</span> 消费级甜点</span>
+    </div>
+
+    <div class="cp-section-hd"><span>排行榜（能跑 vs 开源第一）</span></div>
+    <div class="cp-matrix-wrap">
+      <table class="cp-matrix">
+        <thead>
+          <tr><th>角色</th><th>型号</th><th>分数</th><th>硬件门槛</th><th>说明</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>开源能力 #1</td>
+            <td class="model-name">Qwen3.8 Max</td>
+            <td>BenchAlign <strong>79.9</strong></td>
+            <td>机房 / API</td>
+            <td>2026-08-20 开源权重榜第一；不是 24GB 消费卡目标</td>
+          </tr>
+          <tr>
+            <td>开源 #2 / #3</td>
+            <td class="model-name">MiniMax M3 / Ornith-1.5-397B</td>
+            <td>68.8 / 68.5</td>
+            <td>机房</td>
+            <td>同样不是单卡 GGUF 选型</td>
+          </tr>
+          <tr>
+            <td>单卡新旗舰</td>
+            <td class="model-name">Qwen3.8-27B</td>
+            <td>Arena Elo ~<strong>1450</strong></td>
+            <td>24GB Q4；16GB 降量化</td>
+            <td>8/14 开源；Ollama <code>qwen3.8:27b</code> 默认 18GB Q4_K_M + 视觉</td>
+          </tr>
+          <tr>
+            <td>24GB 多模态</td>
+            <td class="model-name">Gemma 4 31B</td>
+            <td>BenchLM <strong>60.17</strong></td>
+            <td>1× RTX 4090 Q4 ~19GB</td>
+            <td>BenchLM 消费卡最高分（目录尚未纳入 3.8-27B）</td>
+          </tr>
+          <tr>
+            <td>24GB 编码（目录）</td>
+            <td class="model-name">Qwen3.6-27B</td>
+            <td>53.71 · SWE-bench 77.2</td>
+            <td>1× 24GB Q4 ~16GB</td>
+            <td>BenchLM 截至 8/20 的单卡编码推荐；可作对照旧档</td>
+          </tr>
+          <tr>
+            <td>8–16GB</td>
+            <td class="model-name">Gemma 4 12B / GPT-OSS 20B</td>
+            <td>47.3 / 42.21</td>
+            <td>~7GB / ~12GB Q4</td>
+            <td>入门卡与笔记本统一内存</td>
+          </tr>
+          <tr>
+            <td>机房本地 #1</td>
+            <td class="model-name">Kimi K2.6</td>
+            <td>60.28 · SWE-bench 80.2</td>
+            <td>8× H100 · ~600GB Q4</td>
+            <td>BenchLM「能自托管」最高分；个人机无关</td>
+          </tr>
+          <tr>
+            <td>MIT 机房旗舰</td>
+            <td class="model-name">GLM-5.1</td>
+            <td>66.94</td>
+            <td>8× H100 · 744B MoE</td>
+            <td>许可证最友好的超大 MoE；512GB Mac Studio 理论可装 Q4</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="src">来源：<a href="https://benchlm.ai/best/open-source" target="_blank" rel="noopener noreferrer">BenchLM 开源榜</a> / <a href="https://benchlm.ai/best/local-llm" target="_blank" rel="noopener noreferrer">本地分档</a> / <a href="https://benchlm.ai/best/ollama-models" target="_blank" rel="noopener noreferrer">Ollama</a>（均核实 2026-08-20）；Qwen3.8-27B Arena 来自 OpenLM Arena+；Ollama 库 <a href="https://ollama.com/library/qwen3.8:27b" target="_blank" rel="noopener noreferrer">qwen3.8:27b</a>。</p>
+
+    <div class="cp-section-hd oss-hd">按显存选型（先看卡，再看榜）</div>
+    <div class="cp-platforms">
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name">8–12 GB</span>
+          <span class="cp-badge badge-warn">入门</span>
+        </div>
+        <div class="cp-platform-body">
+          代表卡：RTX 3060 12G、笔记本 8G 独显。<br>
+          <strong class="good">✓ 跑：</strong>Gemma 4 12B Q4（~7GB）、7–8B 对话、Mellum2 编码 MoE<br>
+          <strong class="bad">✗ 别硬上：</strong>Qwen3.8-27B 的 Q4；12GB 最多 IQ2（质量明显掉）<br>
+          <code class="lm-cmd">ollama run gemma4:12b</code>
+        </div>
+      </div>
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name">16 GB</span>
+          <span class="cp-badge">紧凑 27B</span>
+        </div>
+        <div class="cp-platform-body">
+          代表卡：RTX 4060 Ti 16G、5060 Ti 16G、5080 16G。带宽比容量更重要。<br>
+          <strong class="good">✓ 跑：</strong>Qwen3.8-27B 用 IQ4_XS（15.7GB）或 Q3_K_M（13.8GB）；Gemma 4 12B 很宽裕<br>
+          <strong class="bad">✗ 别默认 Q4_K_M：</strong>17GB 权重会把上下文挤没，或被迫 CPU offload 变慢<br>
+          <code class="lm-cmd">ollama run qwen3.8:27b</code>
+          <span class="src">16GB 卡请改拉 HF GGUF 的 IQ4/Q3，不要用默认 18GB 标签硬塞。</span>
+        </div>
+      </div>
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name">24 GB</span>
+          <span class="cp-badge badge-hot">甜点</span>
+        </div>
+        <div class="cp-platform-body">
+          代表卡：3090 / 4090 / 5090D V2。<br>
+          <strong class="good">✓ 默认：</strong>Qwen3.8-27B Q4_K_M（17.1GB）+ 32K–64K 上下文；或 Gemma 4 31B Q4（~19GB）<br>
+          <strong class="bad">✗ 满 262K：</strong>KV 还要约 16GB，Q4 合计 ~33.5GB，单卡装不下<br>
+          <code class="lm-cmd">ollama run qwen3.8:27b</code>
+        </div>
+      </div>
+      <div class="cp-platform">
+        <div class="cp-platform-head">
+          <span class="cp-platform-name">32 GB+</span>
+          <span class="cp-badge badge-oss">Q6/Q8 · 双卡</span>
+        </div>
+        <div class="cp-platform-body">
+          代表卡：RTX 5090 32G、双 3090（48GB）、<strong>RTX PRO 6000 96G</strong>、Apple 32–64GB 统一内存。<br>
+          <strong class="good">✓ 跑：</strong>27B 的 Q6/Q8；72B Q4 双卡或 64GB 内存；96G 单卡可上 gpt-oss-120B Q4、72B Q8、27B BF16 满窗<br>
+          <strong class="bad">✗ 仍装不下：</strong>Kimi K2.6 / GLM-5.1 / DeepSeek-R1 满血（要 8×H100 量级）<br>
+          <code class="lm-cmd">ollama run gpt-oss:120b</code>
+        </div>
+      </div>
+    </div>
+
+    <div class="cp-section-hd">Qwen3.8-27B 量化与 KV（本页头条）</div>
+    <p style="font-size:.85rem;margin:.2rem 0 .6rem;color:var(--muted);">密集 ~27.3B，混合注意力（64 层里只给 16 层存满 KV），所以长上下文比同尺寸密集模型便宜。GGUF 体积来自 unsloth/Qwen3.8-27B-GGUF（2026-08-14）。</p>
+    <div class="cp-matrix-wrap">
+      <table class="cp-matrix">
+        <thead>
+          <tr><th>量化</th><th>体积</th><th>建议显存</th><th>备注</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>UD-IQ2_XXS</td><td>9.0 GB</td><td>12 GB</td><td class="bad">能加载，质量损失明显</td></tr>
+          <tr><td>UD-Q3_K_XL / Q3_K_M</td><td>13.4 / 13.8 GB</td><td>16 GB</td><td>16GB 卡要上下文余量时选这个</td></tr>
+          <tr><td>IQ4_XS</td><td>15.7 GB</td><td>16 GB</td><td>16GB 上能整卡放下的最大 4bit 档</td></tr>
+          <tr><td class="model-name">Q4_K_M</td><td>17.1 GB</td><td>24 GB</td><td class="good">甜点；Ollama 默认即此档（另加 0.9GB 视觉）</td></tr>
+          <tr><td>Q5_K_M</td><td>19.8 GB</td><td>24 GB</td><td>24GB 上下文余量变小</td></tr>
+          <tr><td>Q6_K / Q8_0</td><td>22.9 / 29.0 GB</td><td>32 GB+</td><td>5090 或双卡；96G 很松</td></tr>
+          <tr><td>BF16</td><td>53.8 GB</td><td>80–96GB</td><td>消费卡不要想；RTX PRO 6000 96G 可单卡满窗</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="cp-matrix-wrap">
+      <table class="cp-matrix">
+        <thead>
+          <tr><th>上下文</th><th>KV cache</th><th>Q4_K_M 合计</th><th>单卡结论</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>8K</td><td>0.5 GB</td><td>17.6 GB</td><td class="good">24GB 很松</td></tr>
+          <tr><td>32K</td><td>2.0 GB</td><td>19.1 GB</td><td class="good">24GB 舒适默认</td></tr>
+          <tr><td>128K</td><td>8.0 GB</td><td>25.1 GB</td><td>24GB 贴边；32GB 才稳</td></tr>
+          <tr><td>262K 满窗</td><td>16.4 GB</td><td>33.5 GB</td><td class="bad">需要 32GB+ 或缩短窗口</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="src">KV 数字为社区实测（发布后数日），不是官方规格。视觉要另加 mmproj ~0.9GB。llama.cpp 记得 <code>--jinja</code>，否则多轮模板会乱。</p>
+
+    <div class="cp-section-hd">硬件价格（国内街货 · 2026-08）</div>
+    <div class="cp-matrix-wrap">
+      <table class="cp-matrix">
+        <thead>
+          <tr><th>硬件</th><th>显存</th><th>国内参考价</th><th>国际目录</th><th>本地能干什么</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="model-name">RTX 3060</td>
+            <td>12 GB</td>
+            <td class="price">约 ¥2,200</td>
+            <td>—</td>
+            <td>12B Q4；27B 只能 IQ2</td>
+          </tr>
+          <tr>
+            <td class="model-name">RTX 5060 Ti</td>
+            <td>16 GB</td>
+            <td class="price">约 ¥4,600</td>
+            <td>—</td>
+            <td>27B 走 IQ4/Q3；带宽弱于 3090</td>
+          </tr>
+          <tr>
+            <td class="model-name">RTX 5080</td>
+            <td>16 GB</td>
+            <td class="price">约 ¥1.1–1.2 万</td>
+            <td>—</td>
+            <td>快，但 16GB 仍卡 27B Q4</td>
+          </tr>
+          <tr>
+            <td class="model-name">RTX 3090 二手</td>
+            <td>24 GB</td>
+            <td class="price">¥3,500–5,000</td>
+            <td>—</td>
+            <td class="good">性价比王；Q4 27B / 31B。矿卡风险</td>
+          </tr>
+          <tr>
+            <td class="model-name">RTX 4090</td>
+            <td>24 GB</td>
+            <td class="price">约 ¥2.1 万</td>
+            <td>$1,800 · 租 $0.49/时</td>
+            <td>同 3090 容量，速度快一截</td>
+          </tr>
+          <tr>
+            <td class="model-name">RTX 5090D V2</td>
+            <td>24 GB</td>
+            <td class="price">约 ¥1.9–2.2 万</td>
+            <td>—</td>
+            <td>国内特供 24G；速度优先、容量仍是 24</td>
+          </tr>
+          <tr>
+            <td class="model-name">RTX 5090</td>
+            <td>32 GB</td>
+            <td class="price">MSRP ~¥1.46 万；现货 ¥3–3.7 万</td>
+            <td>$3,500 · 租 $0.89/时</td>
+            <td>27B 上 Q6/Q8、更长 KV；显存荒溢价严重</td>
+          </tr>
+          <tr>
+            <td class="model-name">4090 48G 改版</td>
+            <td>48 GB</td>
+            <td class="price">约 ¥1.9–2.4 万</td>
+            <td>—</td>
+            <td>72B Q4 单卡路线；改板风险自负</td>
+          </tr>
+          <tr>
+            <td class="model-name">RTX PRO 6000 96G</td>
+            <td>96 GB</td>
+            <td class="price">渠道约 ¥6.7–9.1 万</td>
+            <td>$16,000（2026-08 官网上调）</td>
+            <td class="good">正规单卡 96G GDDR7：gpt-oss-120B Q4、72B Q8、27B BF16 满 262K。带宽同 5090（1792GB/s），不是 8×H100 替代</td>
+          </tr>
+          <tr>
+            <td class="model-name">Mac mini M4 32GB</td>
+            <td>统一内存</td>
+            <td class="price">约 ¥9,000</td>
+            <td>—</td>
+            <td>Q4 27B 安静省电；速度不如 N 卡</td>
+          </tr>
+          <tr>
+            <td class="model-name">Mac Studio M3 Ultra 512GB</td>
+            <td>统一内存</td>
+            <td class="price">$7,999</td>
+            <td>$7,999</td>
+            <td>消费级里少数能装 GLM-5.1 Q4 的整机</td>
+          </tr>
+          <tr>
+            <td class="model-name">A100 80GB</td>
+            <td>80 GB</td>
+            <td class="price">约 ¥8.7 万</td>
+            <td>$12,000 · 租 $1.49/时</td>
+            <td>4 卡可跑 Kimi K2.5 Q4</td>
+          </tr>
+          <tr>
+            <td class="model-name">H100 80GB</td>
+            <td>80 GB</td>
+            <td class="price">约 ¥19.6 万</td>
+            <td>$28,000 · 租 $2.60/时</td>
+            <td>8 卡才是 K2.6 / GLM-5.1 / R1 满血</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="src">国内价：新浪财经 2026-08-17（5090 现货与显存涨价）、IT国度渠道价（3060/5060Ti/5080/4090/5090/A100/H100）、中关村在线 RTX PRO 6000 Blackwell 工作站版商家区间、社区二手 3090 闲鱼区间。国际：NVIDIA Marketplace 2026-08 将 PRO 6000 标到 $16,000（首发约 $8,565）。价格波动大，下单前再核一眼。</p>
+
+    <div class="cp-section-hd">本地 vs API：什么时候买卡才划算</div>
+    <div class="cp-matrix-wrap">
+      <table class="cp-matrix">
+        <thead>
+          <tr><th>路径</th><th>单价</th><th>适合</th><th>不适合</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="model-name">Ollama / llama.cpp 本地</td>
+            <td>权重 ¥0 + 电费</td>
+            <td class="good">隐私、离线、每天大量对话/编码</td>
+            <td>偶发试用（卡还没回本）</td>
+          </tr>
+          <tr>
+            <td class="model-name">Qwen3.8-27B API</td>
+            <td>$0.33 / $2.40 每百万 token</td>
+            <td>不想养卡、要 262K 满窗</td>
+            <td>数据不能出机房</td>
+          </tr>
+          <tr>
+            <td class="model-name">云端旗舰 API</td>
+            <td>见 <a href="model-plan.html">模型选型</a></td>
+            <td>要 Qwen 3.8 Max / GLM-5.3 / Claude 那档智商</td>
+            <td>把「开源第一」误当成单卡能跑</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.85rem;line-height:1.7;">粗算：二手 3090 ¥4,000 摊 24 个月 ≈ ¥167/月，再加约 ¥50 电费（350W、每天 8 小时、¥0.6/度）。Qwen3.8-27B API 按混合约 $1/百万 token 计，月用量不到约 300 万 token 时买卡往往更贵；日用编码 Agent、或必须不出网，才轮到本地。</p>
+
+    <div class="cp-section-hd">场景怎么配</div>
+    <div class="cp-scenario">
+      <div class="cp-scenario-head">日常本地助手（中文 + 偶尔看图）</div>
+      <div class="cp-scenario-body">
+        <span class="candidate">候选：Qwen3.8-27B、Gemma 4 12B/31B、Qwen3.6-27B</span><br>
+        <span class="recommend">24GB → Qwen3.8-27B Q4；8–12GB → Gemma 4 12B</span>
+        <ul class="reason">
+          <li>3.8-27B 带视觉 projector，Ollama 默认标签已接好</li>
+          <li>把 reasoning 从默认 xhigh 降到 medium，否则首 token 会想很久</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cp-scenario">
+      <div class="cp-scenario-head">本地 Coding Agent（Aider / Continue / Cline）</div>
+      <div class="cp-scenario-body">
+        <span class="candidate">候选：Qwen3.8-27B、Qwen3.6-27B、Mellum2（8GB）、Kimi K2.6（机房）</span><br>
+        <span class="recommend">本机 24GB → <code>qwen3.8:27b</code> 或 <code>qwen3.6</code>；连 <a href="agent-plan.html">Aider</a> 的 OpenAI 兼容口</span>
+        <ul class="reason">
+          <li>BenchLM 单卡编码仍写 Qwen3.6-27B（SWE-bench 77.2）；3.8-27B 更新但目录分尚未跟上</li>
+          <li>K2.6 编码更强（80.2）但要 8×H100，和个人 Ollama 不是同一场</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cp-scenario">
+      <div class="cp-scenario-head">长文档 / 隐私离线</div>
+      <div class="cp-scenario-body">
+        <span class="candidate">候选：Qwen3.8-27B 32K–64K、Gemma 4 31B 256K 纸面</span><br>
+        <span class="recommend">24GB 先锁 32K；96G 工作站可本机满 262K；要百万字请改走 <a href="model-plan.html">DeepSeek-V4-Pro API</a></span>
+        <ul class="reason">
+          <li>混合注意力让 32K 很便宜，满 262K 会把 24GB 顶满；RTX PRO 6000 96G 装 27B BF16 + 满窗仍有余量</li>
+          <li>端侧手机/IoT 仍看 Gemma 4 E2B，不是桌面 GGUF</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cp-summary">
+      <h2>一句话速查</h2>
+      <div class="cp-summary-grid">
+        <div class="cp-summary-item"><span class="cp-badge badge-hot">24GB</span> 单卡 <span class="arrow">→</span> Qwen3.8-27B Q4</div>
+        <div class="cp-summary-item"><span class="cp-badge badge-gemma">16GB</span> 能装下 <span class="arrow">→</span> IQ4_XS / Q3，不要默认 18GB 包</div>
+        <div class="cp-summary-item"><span class="cp-badge badge-oss">性价比卡</span> <span class="arrow">→</span> 二手 3090（¥3.5k–5k）</div>
+        <div class="cp-summary-item"><span class="cp-badge badge-hot">96GB</span> 单卡工作站 <span class="arrow">→</span> RTX PRO 6000（120B Q4）</div>
+        <div class="cp-summary-item"><span class="cp-badge badge-qwen">开源榜 #1</span> <span class="arrow">→</span> Qwen3.8 Max（请用 API，别找 GGUF）</div>
+        <div class="cp-summary-item"><span class="cp-badge badge-kimi">机房本地</span> <span class="arrow">→</span> Kimi K2.6 / GLM-5.1</div>
+        <div class="cp-summary-item"><span class="cp-badge badge-glm">苹果</span> 32GB 统一内存 <span class="arrow">→</span> 同 24GB 甜点，优先 MLX</div>
+      </div>
+    </div>
+
+    <div class="cp-footer">
+      <p>排行：BenchLM 2026-08-20 · 量化体积：unsloth GGUF 2026-08-14 · 硬件价：国内渠道/二手区间，非实时成交</p>
+      <p><a href="index.html">← 返回 AINav 首页</a> · <a href="model-plan.html">云端模型选型</a> · <a href="edge-model-plan.html">端侧模型</a> · <a href="low-filter-api-plan.html">低过滤云 API</a> · <a href="model-finder.html">模型推荐器</a> · <a href="agent-plan.html">Agent 横评</a> · <a href="hardware-plan.html">AI 硬件（眼镜/手机）</a> · <a href="free-tier.html">免费额度</a></p>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var btns=document.querySelectorAll('.theme-btn');
+      var html=document.documentElement;
+      function apply(t){html.setAttribute('data-theme',t);localStorage.setItem('cp-theme',t);btns.forEach(function(b){b.classList.toggle('is-active',b.getAttribute('data-theme-set')===t)})}
+      var saved=localStorage.getItem('cp-theme')||'system';apply(saved);
+      btns.forEach(function(b){b.addEventListener('click',function(){apply(b.getAttribute('data-theme-set'))})});
+    })();
+  </script>
+  <script src="plan-nav.js" data-active="local-model-plan.html"></script>
+  <script src="plan-meta-i18n.js"></script>
+  <script src="thinking-framework.js"></script>
+<script src="./back-to-top.js"></script>
+</body>
+</html>
