@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-09T17:08:39.469637",
+  "generated_at": "2026-10-09T17:24:48.113546",
   "total_software": 21,
-  "total_files": 4557,
-  "total_size": 1796952755,
+  "total_files": 4621,
+  "total_size": 1849133368,
   "software": {
     "WinMemoryCleaner": {
       "version": "20260515_144655",
@@ -85,7 +85,7 @@
       "last_updated": "2026-06-10T16:55:24.069987"
     },
     "system_good": {
-      "version": "20261009_170838",
+      "version": "20261009_172446",
       "files": [
         {
           "path": "AltSnap.exe",
@@ -197,9 +197,9 @@
         },
         {
           "path": "Lastb_soft_version.txt",
-          "size": 173005,
-          "hash": "7afe6c32714a4d89b30f9e29697eec2e",
-          "modified": "2026-10-09T17:06:53.260488"
+          "size": 173011,
+          "hash": "7f3c428ce11a9359d56d686bdff3f19d",
+          "modified": "2026-10-09T17:24:35.931624"
         },
         {
           "path": "lx-music-desktop.7z",
@@ -425,8 +425,8 @@
         }
       ],
       "total_files": 56,
-      "total_size": 777214763,
-      "last_updated": "2026-10-09T17:08:38.065039"
+      "total_size": 777214769,
+      "last_updated": "2026-10-09T17:24:46.573230"
     },
     "notepad++": {
       "version": "20260925_231216",
@@ -12361,31 +12361,415 @@
       "last_updated": "2026-09-08T14:54:33.651498"
     },
     "CCleaner": {
-      "version": "20260514_130127",
+      "version": "20261009_172447",
       "files": [
         {
           "path": "branding.dll",
-          "size": 52016,
-          "hash": "624cc97b1a59cef7496378f35b2c80dc",
-          "modified": "2025-01-08T18:05:32"
+          "size": 51512,
+          "hash": "705a39c1b61a9cbca3e8e2a71ab4fdde",
+          "modified": "2023-01-11T08:45:08"
         },
         {
           "path": "CCleaner.dat",
           "size": 104,
           "hash": "26557ece29393618c2ea9e8a68c522e4",
-          "modified": "2025-08-20T17:21:13.934083"
+          "modified": "2021-12-14T23:35:02"
+        },
+        {
+          "path": "CCleaner.dll",
+          "size": 8192,
+          "hash": "b78792b687fb4c84ee35430700c79c56",
+          "modified": "2020-12-10T18:19:58"
         },
         {
           "path": "CCleaner.exe",
-          "size": 48072264,
-          "hash": "cc245b13b0bc5464b3373c696df2d780",
-          "modified": "2026-04-26T20:39:33.524806"
+          "size": 39833600,
+          "hash": "108d9921feacb6bf9b706678e474f486",
+          "modified": "2026-06-23T15:40:26"
         },
         {
-          "path": "CCleaner.ini",
-          "size": 693,
-          "hash": "fa3cced70e682363eb8dedd369f1952d",
-          "modified": "2026-04-26T20:39:54.915113"
+          "path": "ccleaner.ini",
+          "size": 386,
+          "hash": "fad6f6358e2c4ef2f5c60788da90ee7f",
+          "modified": "2026-06-24T08:34:46.285317"
+        },
+        {
+          "path": "CCleaner64.dll",
+          "size": 2560,
+          "hash": "7ead3dac9feabef2533465e544269f5e",
+          "modified": "2018-08-05T13:54:42"
+        },
+        {
+          "path": "CCleaner64.exe",
+          "size": 46765056,
+          "hash": "955e5be92327c7fa9d33134af2dc92ae",
+          "modified": "2026-06-23T15:40:46"
+        },
+        {
+          "path": "portable.dat",
+          "size": 10,
+          "hash": "15b9de0b65f03afe4235b261fe4e28dc",
+          "modified": "2015-08-26T07:44:36"
+        },
+        {
+          "path": "ReadMe.txt",
+          "size": 1464,
+          "hash": "a2ea4f6a645481a11eb00fbb2527f274",
+          "modified": "2021-05-11T12:39:29"
+        },
+        {
+          "path": "lang\\lang-1025.dll",
+          "size": 263568,
+          "hash": "40125729ee1bccbaec64c78d684cd922",
+          "modified": "2026-06-19T12:15:56"
+        },
+        {
+          "path": "lang\\lang-1026.dll",
+          "size": 313232,
+          "hash": "c5cfa3e740cf1e01e8faadeeea33bbf9",
+          "modified": "2026-06-19T12:15:56"
+        },
+        {
+          "path": "lang\\lang-1027.dll",
+          "size": 315792,
+          "hash": "9a4c8e2b046d1f3069f2569d62b6b279",
+          "modified": "2026-06-19T12:15:56"
+        },
+        {
+          "path": "lang\\lang-1028.dll",
+          "size": 123792,
+          "hash": "39affd9ae19dcefad9af2370fe4bd8cf",
+          "modified": "2026-06-19T12:15:56"
+        },
+        {
+          "path": "lang\\lang-1029.dll",
+          "size": 278416,
+          "hash": "846c60df781e0c50e46345289c1f29b1",
+          "modified": "2026-06-19T12:15:56"
+        },
+        {
+          "path": "lang\\lang-1030.dll",
+          "size": 274320,
+          "hash": "75cc0ab985bba276bf1a4c05bc7129b3",
+          "modified": "2026-06-19T12:15:56"
+        },
+        {
+          "path": "lang\\lang-1031.dll",
+          "size": 310160,
+          "hash": "4d2e567a499ca26deb0ba5190e111ced",
+          "modified": "2026-06-19T12:15:56"
+        },
+        {
+          "path": "lang\\lang-1032.dll",
+          "size": 324496,
+          "hash": "1de363483ac5a623e1cd6dc44d952a84",
+          "modified": "2026-06-19T12:15:56"
+        },
+        {
+          "path": "lang\\lang-1034.dll",
+          "size": 309136,
+          "hash": "e297347627ffd6a7c2a2c939f02a81b0",
+          "modified": "2026-06-19T12:15:58"
+        },
+        {
+          "path": "lang\\lang-1035.dll",
+          "size": 286096,
+          "hash": "8fe3426fff0558df824f7a628a8897d1",
+          "modified": "2026-06-19T12:15:58"
+        },
+        {
+          "path": "lang\\lang-1036.dll",
+          "size": 320912,
+          "hash": "7b802792cdaaed1b5be99002e5a83aed",
+          "modified": "2026-06-19T12:15:58"
+        },
+        {
+          "path": "lang\\lang-1037.dll",
+          "size": 225168,
+          "hash": "87cb63826a87eabf855b067f6104a75c",
+          "modified": "2026-06-19T12:15:58"
+        },
+        {
+          "path": "lang\\lang-1038.dll",
+          "size": 306576,
+          "hash": "f7fef9a4c36f72b95ad9e78b9693ba25",
+          "modified": "2026-06-19T12:15:58"
+        },
+        {
+          "path": "lang\\lang-1040.dll",
+          "size": 302992,
+          "hash": "69c4e3aa4a621e3f26d5f188cdd27721",
+          "modified": "2026-06-19T12:15:58"
+        },
+        {
+          "path": "lang\\lang-1041.dll",
+          "size": 165264,
+          "hash": "3b1949f08c25629b9fd519a68ee081ed",
+          "modified": "2026-06-19T12:15:58"
+        },
+        {
+          "path": "lang\\lang-1042.dll",
+          "size": 160144,
+          "hash": "7ca496d8d54227176254f0e1f4179445",
+          "modified": "2026-06-19T12:15:58"
+        },
+        {
+          "path": "lang\\lang-1043.dll",
+          "size": 304016,
+          "hash": "9afa3093984cde0992bbf9d307a43fc3",
+          "modified": "2026-06-19T12:15:58"
+        },
+        {
+          "path": "lang\\lang-1044.dll",
+          "size": 274832,
+          "hash": "85f35f7c1d39f753c34104566ca2601c",
+          "modified": "2026-06-19T12:15:58"
+        },
+        {
+          "path": "lang\\lang-1045.dll",
+          "size": 310160,
+          "hash": "6c7398d23693d64b47d3a29b9a4bb0ba",
+          "modified": "2026-06-19T12:15:58"
+        },
+        {
+          "path": "lang\\lang-1046.dll",
+          "size": 299408,
+          "hash": "bc4225fa30bd078a8affd11d94bcd2e8",
+          "modified": "2026-06-19T12:16:00"
+        },
+        {
+          "path": "lang\\lang-1048.dll",
+          "size": 320912,
+          "hash": "5f578710400b0313ea0ada1f0e992902",
+          "modified": "2026-06-19T12:16:00"
+        },
+        {
+          "path": "lang\\lang-1049.dll",
+          "size": 288656,
+          "hash": "049b1cda4735178883f863d9effafd8c",
+          "modified": "2026-06-19T12:16:00"
+        },
+        {
+          "path": "lang\\lang-1050.dll",
+          "size": 299408,
+          "hash": "3b1e8da12ffd59a071c227fe280dc16b",
+          "modified": "2026-06-19T12:16:00"
+        },
+        {
+          "path": "lang\\lang-1051.dll",
+          "size": 285072,
+          "hash": "b9568a32950e51e884b76d055a7502c1",
+          "modified": "2026-06-19T12:16:00"
+        },
+        {
+          "path": "lang\\lang-1052.dll",
+          "size": 100752,
+          "hash": "828df0b8a1b6f0783e4e3e0938c24157",
+          "modified": "2026-06-19T12:16:00"
+        },
+        {
+          "path": "lang\\lang-1053.dll",
+          "size": 280464,
+          "hash": "b74c5e7c7b69559e43022fd8ec5f2d86",
+          "modified": "2026-06-19T12:16:00"
+        },
+        {
+          "path": "lang\\lang-1054.dll",
+          "size": 268176,
+          "hash": "f99b5c070bdbd7725b424b5ea930d775",
+          "modified": "2026-06-19T12:16:00"
+        },
+        {
+          "path": "lang\\lang-1055.dll",
+          "size": 300432,
+          "hash": "771550681d7333179b0e1ba02b24ef7f",
+          "modified": "2026-06-19T12:16:00"
+        },
+        {
+          "path": "lang\\lang-1056.dll",
+          "size": 286608,
+          "hash": "fbf05cf070edfa9445ba10c54cd21397",
+          "modified": "2026-06-19T12:16:00"
+        },
+        {
+          "path": "lang\\lang-1057.dll",
+          "size": 289680,
+          "hash": "a86177a660da5c7f63bfac7bb4da06b9",
+          "modified": "2026-06-19T12:16:00"
+        },
+        {
+          "path": "lang\\lang-1058.dll",
+          "size": 292240,
+          "hash": "55541a75e274cf310a36e68264fe333a",
+          "modified": "2026-06-19T12:16:00"
+        },
+        {
+          "path": "lang\\lang-1059.dll",
+          "size": 286096,
+          "hash": "dcb135d4dc18b85f5ca76191cac7d363",
+          "modified": "2026-06-19T12:16:02"
+        },
+        {
+          "path": "lang\\lang-1060.dll",
+          "size": 303504,
+          "hash": "9211aa0b4c5e11f8776005f7186e3ab0",
+          "modified": "2026-06-19T12:16:02"
+        },
+        {
+          "path": "lang\\lang-1061.dll",
+          "size": 275856,
+          "hash": "0d181d29ddf1dec1d166469a7db34f29",
+          "modified": "2026-06-19T12:16:02"
+        },
+        {
+          "path": "lang\\lang-1062.dll",
+          "size": 284560,
+          "hash": "92a34050db9de90fbc4ce60c2d463267",
+          "modified": "2026-06-19T12:16:02"
+        },
+        {
+          "path": "lang\\lang-1063.dll",
+          "size": 291728,
+          "hash": "974a9b48e5520a44e8ca2f3726c6029d",
+          "modified": "2026-06-19T12:16:02"
+        },
+        {
+          "path": "lang\\lang-1065.dll",
+          "size": 285584,
+          "hash": "c263200efbbafb5cb2a9a10085e27eb2",
+          "modified": "2026-06-19T12:16:02"
+        },
+        {
+          "path": "lang\\lang-1066.dll",
+          "size": 296336,
+          "hash": "0d946b7ff3bd4db8a86ca049c3216fd8",
+          "modified": "2026-06-19T12:16:02"
+        },
+        {
+          "path": "lang\\lang-1067.dll",
+          "size": 99216,
+          "hash": "d2d3dd689e2671e7a6aa8cdf70aa119a",
+          "modified": "2026-06-19T12:16:02"
+        },
+        {
+          "path": "lang\\lang-1068.dll",
+          "size": 98704,
+          "hash": "02b04ef7645475b1d2a7a02e5ec910aa",
+          "modified": "2026-06-19T12:16:02"
+        },
+        {
+          "path": "lang\\lang-1071.dll",
+          "size": 107920,
+          "hash": "9e5362503acf7e774f652f23ac196197",
+          "modified": "2026-06-19T12:16:02"
+        },
+        {
+          "path": "lang\\lang-1079.dll",
+          "size": 100240,
+          "hash": "baf1dafe481c81d728be75d8f2c8b1e9",
+          "modified": "2026-06-19T12:16:02"
+        },
+        {
+          "path": "lang\\lang-1081.dll",
+          "size": 288656,
+          "hash": "73a474717bf2b886a2a08c803e269074",
+          "modified": "2026-06-19T12:16:02"
+        },
+        {
+          "path": "lang\\lang-1086.dll",
+          "size": 299920,
+          "hash": "839c2aa753c064e2d36a177c70cc8718",
+          "modified": "2026-06-19T12:16:02"
+        },
+        {
+          "path": "lang\\lang-1087.dll",
+          "size": 97168,
+          "hash": "1dfca9b27f1cd08b1d0a798ca49919f9",
+          "modified": "2026-06-19T12:16:02"
+        },
+        {
+          "path": "lang\\lang-1090.dll",
+          "size": 108944,
+          "hash": "652eafd43b5fc9187a095eb4fdb468cd",
+          "modified": "2026-06-19T12:16:04"
+        },
+        {
+          "path": "lang\\lang-1092.dll",
+          "size": 96656,
+          "hash": "41f16f2038d4b45af09418c182009edd",
+          "modified": "2026-06-19T12:16:04"
+        },
+        {
+          "path": "lang\\lang-1093.dll",
+          "size": 292752,
+          "hash": "45de76e8118a62990081887bb73d0171",
+          "modified": "2026-06-19T12:16:04"
+        },
+        {
+          "path": "lang\\lang-1102.dll",
+          "size": 101264,
+          "hash": "c4be8c6c7a15b5b0f4276c6131776e2b",
+          "modified": "2026-06-19T12:16:04"
+        },
+        {
+          "path": "lang\\lang-1104.dll",
+          "size": 99216,
+          "hash": "47cee3ad6ce1232dac4134bda346b586",
+          "modified": "2026-06-19T12:16:04"
+        },
+        {
+          "path": "lang\\lang-1109.dll",
+          "size": 103824,
+          "hash": "121078c9cb35882a4f61fb76953cc167",
+          "modified": "2026-06-19T12:16:04"
+        },
+        {
+          "path": "lang\\lang-1110.dll",
+          "size": 98704,
+          "hash": "cb3b505db02391b86a58a78fa7fd5df3",
+          "modified": "2026-06-19T12:16:04"
+        },
+        {
+          "path": "lang\\lang-1155.dll",
+          "size": 115600,
+          "hash": "ad048eb525278e4505ef540b18443d89",
+          "modified": "2026-06-19T12:16:04"
+        },
+        {
+          "path": "lang\\lang-2052.dll",
+          "size": 120208,
+          "hash": "44eb8ba9d38002626a6d68a13a8a9fe5",
+          "modified": "2026-06-19T12:16:04"
+        },
+        {
+          "path": "lang\\lang-2070.dll",
+          "size": 302992,
+          "hash": "3e1c7878f536d47e19133d5072f097eb",
+          "modified": "2026-06-19T12:16:04"
+        },
+        {
+          "path": "lang\\lang-2074.dll",
+          "size": 297872,
+          "hash": "00e6be249a4b68b677380d74b982a97f",
+          "modified": "2026-06-19T12:16:04"
+        },
+        {
+          "path": "lang\\lang-3098.dll",
+          "size": 101264,
+          "hash": "19c5d5d1e1fc46a328a4085973fa69e5",
+          "modified": "2026-06-19T12:16:04"
+        },
+        {
+          "path": "lang\\lang-5146.dll",
+          "size": 104336,
+          "hash": "b66c374631f0d51e39f8c6bc565c9d20",
+          "modified": "2026-06-19T12:16:04"
+        },
+        {
+          "path": "lang\\lang-9999.dll",
+          "size": 102800,
+          "hash": "9818a344b43043b21566b1ad1d7d91a4",
+          "modified": "2026-06-19T12:16:06"
         },
         {
           "path": "Setup\\config.def",
@@ -12394,9 +12778,9 @@
           "modified": "2026-04-26T20:38:54.454507"
         }
       ],
-      "total_files": 5,
-      "total_size": 48125104,
-      "last_updated": "2026-05-14T13:01:27.506258"
+      "total_files": 69,
+      "total_size": 100305711,
+      "last_updated": "2026-10-09T17:24:47.446401"
     },
     "WiseCare365": {
       "version": "20260713_115649",
