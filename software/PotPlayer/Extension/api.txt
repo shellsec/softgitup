@@ -348,6 +348,8 @@ bool HostWaitThread(int threadID, int ms = 10)
 	and call HostIncTimeOut to increase the timeout time when looping.
 	return true is success
 	return false is fail
+string HostGetScriptFileName()
+	Get current script file name
 
 
 ------------------------PotPlayer's builtin class----------------------------------

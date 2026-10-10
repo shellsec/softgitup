@@ -2,6 +2,20 @@
 PotPlayer verzióelőzmények
 
 ----------------------------------------------------------
+[261008]
+----------------------------------------------------------
+* Megváltoztak az alapértelmezett renderelők (D3D11 a videóhoz, WASAPI a hanghoz)
+
++ MPEG4 DXVA támogatás hozzáadva
++ HLS/DASH lejátszása helyi fájlokból
++ Beállíthatóvá vált a lejátszási lista keresési módja
+
+- Javítva a lassú WebP-kódolás
+- Javítva egy hiba, amely miatt egyes MPEG TS fájlokat nem lehetett lejátszani
+- Javult a képkocka-duplázás képminősége
+- Javítva egy hiba, amely egyes MP4 fájlok lejátszásakor jelentkezett
+
+----------------------------------------------------------
 [260819]
 ----------------------------------------------------------
 * ARM64 Build Released

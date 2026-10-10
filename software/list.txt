@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-10T11:50:38.469463",
+  "generated_at": "2026-10-10T17:17:32.232544",
   "total_software": 21,
-  "total_files": 4621,
-  "total_size": 1836080199,
+  "total_files": 4381,
+  "total_size": 1808845131,
   "software": {
     "WinMemoryCleaner": {
       "version": "20260515_144655",
@@ -85,7 +85,7 @@
       "last_updated": "2026-06-10T16:55:24.069987"
     },
     "system_good": {
-      "version": "20261010_115037",
+      "version": "20261010_171730",
       "files": [
         {
           "path": "AltSnap.exe",
@@ -178,6 +178,12 @@
           "modified": "2026-09-22T20:42:28.938151"
         },
         {
+          "path": "gh-release-fetch-windows.zip",
+          "size": 45620295,
+          "hash": "a40a2603b0455b0591e7d5b8601778ae",
+          "modified": "2026-10-10T15:01:31.202606"
+        },
+        {
           "path": "gohttpserver.zip",
           "size": 4866979,
           "hash": "d781f103e8fdbc75ffc4cde3483261e8",
@@ -197,9 +203,9 @@
         },
         {
           "path": "Lastb_soft_version.txt",
-          "size": 173108,
-          "hash": "f31c1ddac40eb91a250d2ad5f5f61eb3",
-          "modified": "2026-10-10T11:48:11.080313"
+          "size": 173313,
+          "hash": "ec5e7b570d5b24cdfff0615cf0b6d440",
+          "modified": "2026-10-10T17:17:16.956608"
         },
         {
           "path": "lx-music-desktop.7z",
@@ -406,12 +412,6 @@
           "modified": "2026-08-13T21:14:24"
         },
         {
-          "path": "[Windows] Wise Care 365 Pro v7.3.1.714 免激活版 [Hybase.com]黑域基地.rar",
-          "size": 14661868,
-          "hash": "cf4bce9ce9c2c42c2a806ac1e9dd9e5b",
-          "modified": "2026-10-10T11:47:10.758658"
-        },
-        {
           "path": "微软壁纸助手.exe",
           "size": 7654117,
           "hash": "82e8073e233c7e39615eb85e6f2f6645",
@@ -425,8 +425,8 @@
         }
       ],
       "total_files": 56,
-      "total_size": 785409430,
-      "last_updated": "2026-10-10T11:50:37.042567"
+      "total_size": 816368062,
+      "last_updated": "2026-10-10T17:17:30.408903"
     },
     "notepad++": {
       "version": "20260925_231216",
@@ -24511,31 +24511,31 @@
       "last_updated": "2026-06-03T12:20:31.288028"
     },
     "PotPlayer": {
-      "version": "20260923_182333",
+      "version": "20261010_171732",
       "files": [
         {
           "path": "Alarm.wav",
           "size": 11968,
           "hash": "4be80c8d6651c8c5c0b2f2f6c4f8f579",
-          "modified": "2025-05-20T08:12:38"
+          "modified": "2025-05-19T08:17:32"
         },
         {
           "path": "ATextOut64.dll",
-          "size": 2477072,
-          "hash": "45ade3e36813f7983970a133c1e38c0d",
-          "modified": "2026-08-19T08:03:04"
+          "size": 2494480,
+          "hash": "231d0472c64c0057d44194e3b88798e0",
+          "modified": "2026-08-24T10:01:04"
         },
         {
           "path": "CaptureUWP64.dll",
           "size": 142864,
           "hash": "14e24e5e11500296bdb7ac308a8f7551",
-          "modified": "2026-01-14T08:47:44"
+          "modified": "2025-12-09T14:31:32"
         },
         {
           "path": "CmdLine64.txt",
           "size": 50906,
           "hash": "25ca92ac92ab808a4e439794f5555c81",
-          "modified": "2026-01-19T11:52:36"
+          "modified": "2026-01-19T11:51:16"
         },
         {
           "path": "d3dcompiler_43.dll",
@@ -24547,7 +24547,7 @@
           "path": "d3dcompiler_47.dll",
           "size": 4173928,
           "hash": "b0ae3aa9dd1ebd60bdf51cb94834cd04",
-          "modified": "2025-05-14T09:09:08"
+          "modified": "2019-01-02T10:44:38"
         },
         {
           "path": "d3dx9_43.dll",
@@ -24559,97 +24559,97 @@
           "path": "DaumCrashHandler64.dll",
           "size": 189456,
           "hash": "61f3b7b7df3189b27e0540f1cad44cc9",
-          "modified": "2026-01-15T16:11:58"
+          "modified": "2026-01-15T15:49:22"
         },
         {
           "path": "DesktopHook.dll",
           "size": 83472,
           "hash": "9f583a0a07a15575595054cff1cf4a37",
-          "modified": "2026-01-14T08:47:50"
+          "modified": "2025-12-09T14:31:32"
         },
         {
           "path": "DesktopHook.exe",
           "size": 111632,
           "hash": "26f23ed44e0c90411b359886de1b5f67",
-          "modified": "2026-01-14T08:47:50"
+          "modified": "2025-12-09T14:31:32"
         },
         {
           "path": "DesktopHook64.dll",
           "size": 97808,
           "hash": "1982756ef5956fe18c225ba34494162f",
-          "modified": "2026-01-14T08:47:50"
+          "modified": "2025-12-09T14:31:32"
         },
         {
           "path": "DesktopHook64.exe",
           "size": 128016,
           "hash": "f3791620951b6abbb04f94d0eb13b72b",
-          "modified": "2026-01-14T08:47:50"
+          "modified": "2025-12-09T14:31:32"
         },
         {
           "path": "DTDrop64.exe",
           "size": 134160,
           "hash": "14f6685dc77eca8e512e25a2c14dd749",
-          "modified": "2026-01-14T08:47:50"
+          "modified": "2025-12-09T14:31:32"
         },
         {
           "path": "ffcodec64.dll",
-          "size": 37565440,
-          "hash": "73c7b7822b8f2998d8f5480a4fe4e040",
-          "modified": "2026-08-20T08:15:28"
+          "size": 37945856,
+          "hash": "8414909157b5425398c7565aafbf2205",
+          "modified": "2026-10-08T11:51:12"
         },
         {
           "path": "FileList.txt",
-          "size": 9795,
-          "hash": "a3b18011f9e585adaaab030360b68009",
-          "modified": "2026-09-23T18:06:28.731817"
+          "size": 9971,
+          "hash": "80b37cf9d56c24652220a8b0c339e2a8",
+          "modified": "2025-03-14T08:36:14"
         },
         {
           "path": "GameCaptureHook.dll",
           "size": 390160,
           "hash": "4cd0ef908e97801730d8fb267bfd737b",
-          "modified": "2026-01-14T08:47:52"
+          "modified": "2025-12-09T14:31:32"
         },
         {
           "path": "GameCaptureHook64.dll",
           "size": 435216,
           "hash": "a9441269436bbe00ac3ca902b90667c1",
-          "modified": "2026-01-14T08:47:52"
+          "modified": "2025-12-09T14:31:32"
         },
         {
           "path": "KakaoUtil64.dll",
-          "size": 3288592,
-          "hash": "1d7ca9252f1dc69b06d980eca0744319",
-          "modified": "2026-08-20T08:15:28"
+          "size": 3289616,
+          "hash": "1dc34b1c911ad5ca5fb3975cbffd76f8",
+          "modified": "2026-08-24T12:43:48"
         },
         {
           "path": "KakaoUtil64.exe",
-          "size": 3286032,
-          "hash": "0ea3d75a0fd74e4c70204a8ef1665d81",
-          "modified": "2026-08-20T08:15:28"
+          "size": 3286544,
+          "hash": "ccdb497e35734a0f299e833bbb999da0",
+          "modified": "2026-08-24T12:43:42"
         },
         {
           "path": "KillPot64.exe",
           "size": 116240,
           "hash": "3f8e08ce3580c856d8c7c2878986ee89",
-          "modified": "2026-08-20T14:22:48"
+          "modified": "2026-08-20T14:03:00"
         },
         {
           "path": "LGPL.TXT",
           "size": 26929,
           "hash": "5527a0db9a2f2795a59879e01d949743",
-          "modified": "2025-05-14T09:09:22"
+          "modified": "2023-07-05T09:23:00"
         },
         {
           "path": "License.txt",
           "size": 53681,
           "hash": "4f89e032412da0782f0c249dc1804e08",
-          "modified": "2026-08-19T16:25:34"
+          "modified": "2026-08-19T16:16:48"
         },
         {
           "path": "MediaDB64.dll",
           "size": 4259344,
           "hash": "72246466ec5d93b15cbff1673950d31f",
-          "modified": "2026-08-19T08:03:04"
+          "modified": "2026-08-11T12:30:18"
         },
         {
           "path": "PotIcons.dll",
@@ -24661,25 +24661,25 @@
           "path": "PotIcons64.dll",
           "size": 2523152,
           "hash": "fee514038e4dd983b3c448327ce3568d",
-          "modified": "2026-01-14T08:47:54"
+          "modified": "2025-12-09T14:31:32"
         },
         {
           "path": "PotPlayer64.dll",
-          "size": 30013968,
-          "hash": "4153fb1508d8a6f8dd6e41daeddb4887",
-          "modified": "2026-08-21T14:11:22"
+          "size": 30879248,
+          "hash": "189a0946d629e6511cd4769496c37562",
+          "modified": "2026-10-08T16:59:34"
         },
         {
           "path": "PotPlayer64.exe",
           "size": 2551824,
           "hash": "8937c5e9c60c7cb4a314aa5028fc0bf7",
-          "modified": "2026-04-01T08:05:40"
+          "modified": "2026-03-04T07:49:58"
         },
         {
           "path": "PotPlayerMini64.exe",
           "size": 2515984,
           "hash": "b4c01d7a84c61c2c49492d881d56ef7e",
-          "modified": "2026-04-01T08:05:40"
+          "modified": "2026-03-04T07:49:58"
         },
         {
           "path": "PotplayerTools.exe",
@@ -24691,7 +24691,7 @@
           "path": "PotScreenSaver64.scr",
           "size": 2591776,
           "hash": "2268f5857fa62da5bfa85c696e97fa14",
-          "modified": "2026-04-01T08:05:40"
+          "modified": "2026-03-04T07:49:58"
         },
         {
           "path": "SetUserFTA.exe",
@@ -24701,87 +24701,87 @@
         },
         {
           "path": "uninstall.exe",
-          "size": 241929,
-          "hash": "5b56d26c8ba61fc7f97b136b4c06459f",
-          "modified": "2026-08-24T11:00:18.584382"
+          "size": 241922,
+          "hash": "cbae5c067f3faa67f4be58d4268af242",
+          "modified": "2026-10-10T16:12:26.921793"
         },
         {
           "path": "WebView2Loader64.dll",
           "size": 165968,
           "hash": "c9a5d0f278d57d83a03404b8baeeac64",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2025-11-20T07:55:06"
         },
         {
           "path": "AviSynth\\ColorBars.avs",
           "size": 33,
           "hash": "59ada5ecb3f76949ef3888ee4beda8a4",
-          "modified": "2025-05-14T09:09:06"
+          "modified": "2023-07-05T09:22:42"
         },
         {
           "path": "AviSynth\\FasterTrueMotion.avs",
           "size": 759,
           "hash": "3da45c11b1c569464dda46b2654f1b75",
-          "modified": "2025-05-14T09:09:06"
+          "modified": "2023-07-05T09:22:42"
         },
         {
           "path": "AviSynth\\FastestTrueMotion.avs",
           "size": 544,
           "hash": "81866f036af36e662c9ca5bc2025a6e2",
-          "modified": "2025-05-14T09:09:06"
+          "modified": "2023-07-05T09:22:42"
         },
         {
           "path": "AviSynth\\FastTrueMotion.avs",
           "size": 209,
           "hash": "ed80cab209588b8b40e7e3bac79cd98f",
-          "modified": "2025-05-14T09:09:06"
+          "modified": "2023-07-05T09:22:42"
         },
         {
           "path": "AviSynth\\FastTrueMotionNoGPU.avs",
           "size": 210,
           "hash": "4e89e2732a79616f559a4e245398c036",
-          "modified": "2025-05-14T09:09:06"
+          "modified": "2023-07-05T09:22:42"
         },
         {
           "path": "AviSynth\\OverlayText.avs",
           "size": 1226,
           "hash": "a766d7f67b11a65bcace4a3881295526",
-          "modified": "2025-05-14T09:09:06"
+          "modified": "2023-07-05T09:22:42"
         },
         {
           "path": "AviSynth\\TrueMotion.avs",
           "size": 192,
           "hash": "3d24c3a614242d90df189b9ad1262efb",
-          "modified": "2025-05-14T09:09:06"
+          "modified": "2023-07-05T09:22:42"
         },
         {
           "path": "AviSynth\\TrueMotion2.avs",
           "size": 452,
           "hash": "33d43512a8ff8d0379b41bb38529ab2b",
-          "modified": "2025-05-14T09:09:06"
+          "modified": "2023-07-05T09:22:42"
         },
         {
           "path": "AviSynth\\TrueMotion2NoGPU.avs",
           "size": 453,
           "hash": "892dcb94a7705d4a3a91d517de22d0b5",
-          "modified": "2025-05-14T09:09:06"
+          "modified": "2023-07-05T09:22:42"
         },
         {
           "path": "AviSynth\\TrueMotionNoGPU.avs",
           "size": 193,
           "hash": "6e0ccaaf2b7c20f86b97c750d517bd90",
-          "modified": "2025-05-14T09:09:06"
+          "modified": "2023-07-05T09:22:42"
         },
         {
           "path": "Extension\\api.txt",
-          "size": 16203,
-          "hash": "64fa1be09b156e6a8a9bad4c729b427b",
-          "modified": "2026-08-19T06:59:42"
+          "size": 16266,
+          "hash": "d04e48896ba3f0adfe03faf4169b6fe2",
+          "modified": "2026-09-07T12:22:14"
         },
         {
           "path": "Extension\\Media\\PlayParse\\MediaPlayParse - YouTube.as",
-          "size": 82208,
-          "hash": "bbe3e363b60053c3e8d29ce0e400099e",
-          "modified": "2026-08-19T06:59:42"
+          "size": 82197,
+          "hash": "d568c27c28931c87f9caf79347fe848b",
+          "modified": "2026-09-14T15:33:08"
         },
         {
           "path": "Extension\\Media\\PlayParse\\MediaPlayParse - YouTube.ico",
@@ -24793,7 +24793,7 @@
           "path": "Extension\\Media\\UrlList\\MediaUrlList - YouTube.as",
           "size": 8143,
           "hash": "6194c28d58aeb566c329f03968871fe0",
-          "modified": "2026-08-19T06:59:42"
+          "modified": "2026-07-14T08:42:24"
         },
         {
           "path": "Extension\\Media\\UrlList\\MediaUrlList - YouTube.ico",
@@ -24805,7 +24805,7 @@
           "path": "Extension\\Subtitle\\Search\\SubtitleSearch - Napisy24.as",
           "size": 4431,
           "hash": "3ea1c27ebd924e5e3d7f0b4f616f8ff2",
-          "modified": "2026-08-19T06:59:42"
+          "modified": "2026-07-08T10:22:02"
         },
         {
           "path": "Extension\\Subtitle\\Search\\SubtitleSearch - Napisy24.ico",
@@ -24817,7 +24817,7 @@
           "path": "Extension\\Subtitle\\Search\\SubtitleSearch - OpenSubtitle.as",
           "size": 17110,
           "hash": "d234e22faba5934c99cb5ad69933ebe4",
-          "modified": "2026-08-19T06:59:42"
+          "modified": "2026-07-08T10:22:06"
         },
         {
           "path": "Extension\\Subtitle\\Search\\SubtitleSearch - OpenSubtitle.ico",
@@ -24829,7 +24829,7 @@
           "path": "Extension\\Subtitle\\Search\\SubtitleSearch - podnapisi.as",
           "size": 11507,
           "hash": "cc226cfb2af2995eabf660f052dc90e4",
-          "modified": "2026-08-19T06:59:42"
+          "modified": "2026-07-08T10:22:16"
         },
         {
           "path": "Extension\\Subtitle\\Search\\SubtitleSearch - podnapisi.ico",
@@ -24841,7 +24841,7 @@
           "path": "Extension\\Subtitle\\Search\\SubtitleSearch - SubDL.as",
           "size": 6523,
           "hash": "7397b728e6fbe7c40ec810232a6be5f9",
-          "modified": "2026-08-19T06:59:42"
+          "modified": "2026-07-08T10:22:22"
         },
         {
           "path": "Extension\\Subtitle\\Search\\SubtitleSearch - SubDL.ico",
@@ -24853,7 +24853,7 @@
           "path": "Extension\\Subtitle\\Search\\SubtitleSearch - titlovi.as",
           "size": 6187,
           "hash": "ecb8c2ffc5400ee1ca80f8522a44661a",
-          "modified": "2026-08-19T06:59:42"
+          "modified": "2026-07-08T10:22:26"
         },
         {
           "path": "Extension\\Subtitle\\Search\\SubtitleSearch - titlovi.ico",
@@ -24865,7 +24865,7 @@
           "path": "Extension\\Subtitle\\Search\\SubtitleSearch - ysubs.as",
           "size": 5865,
           "hash": "318090f47e313850a135be396f9a3bb8",
-          "modified": "2026-08-19T06:59:42"
+          "modified": "2026-07-08T10:22:30"
         },
         {
           "path": "Extension\\Subtitle\\Search\\SubtitleSearch - ysubs.ico",
@@ -24877,7 +24877,7 @@
           "path": "Extension\\Subtitle\\Translate\\SubtitleTranslate - bing.as",
           "size": 5005,
           "hash": "64dcc273a1e5a429340a566c6c0e9c2e",
-          "modified": "2026-08-19T06:59:42"
+          "modified": "2026-07-08T10:22:38"
         },
         {
           "path": "Extension\\Subtitle\\Translate\\SubtitleTranslate - bing.ico",
@@ -24889,7 +24889,7 @@
           "path": "Extension\\Subtitle\\Translate\\SubtitleTranslate - DeepL.as",
           "size": 4376,
           "hash": "2b9873765c97a7a6538b2c69e46d0c2a",
-          "modified": "2026-08-19T06:59:42"
+          "modified": "2026-07-08T10:22:48"
         },
         {
           "path": "Extension\\Subtitle\\Translate\\SubtitleTranslate - DeepL.ico",
@@ -24899,9 +24899,9 @@
         },
         {
           "path": "Extension\\Subtitle\\Translate\\SubtitleTranslate - google.as",
-          "size": 8349,
-          "hash": "f01d3b8d010746ce87b720c2b3b43231",
-          "modified": "2026-08-19T06:59:42"
+          "size": 8358,
+          "hash": "1a837bbd8a8c3f9191bbc4d88bd45d7f",
+          "modified": "2026-08-24T08:02:04"
         },
         {
           "path": "Extension\\Subtitle\\Translate\\SubtitleTranslate - google.ico",
@@ -24913,7 +24913,7 @@
           "path": "Extension\\Subtitle\\Translate\\SubtitleTranslate - Libre.as",
           "size": 4007,
           "hash": "033f9994868a117820f29075f0b64f73",
-          "modified": "2026-08-19T06:59:42"
+          "modified": "2026-07-08T10:22:58"
         },
         {
           "path": "Extension\\Subtitle\\Translate\\SubtitleTranslate - Libre.ico",
@@ -24925,7 +24925,7 @@
           "path": "Extension\\Subtitle\\Translate\\SubtitleTranslate - LM Studio.as",
           "size": 5389,
           "hash": "2a9cf54a0e4b5ca7d0ee4063dd1ce369",
-          "modified": "2026-08-19T06:59:42"
+          "modified": "2026-07-08T10:23:02"
         },
         {
           "path": "Extension\\Subtitle\\Translate\\SubtitleTranslate - LM Studio.ico",
@@ -24937,7 +24937,7 @@
           "path": "Extension\\Subtitle\\Translate\\SubtitleTranslate - papagoNMT.as",
           "size": 3988,
           "hash": "ce9190dfb8d1d2d1a092c5efbd8252f7",
-          "modified": "2026-08-19T06:59:42"
+          "modified": "2026-07-08T10:23:08"
         },
         {
           "path": "Extension\\Subtitle\\Translate\\SubtitleTranslate - papagoNMT.ico",
@@ -24949,7 +24949,7 @@
           "path": "Extension\\Subtitle\\Translate\\SubtitleTranslate - Yandex.as",
           "size": 4197,
           "hash": "85c3635433b699bcc05ecf972e587707",
-          "modified": "2026-08-19T06:59:42"
+          "modified": "2026-07-08T10:23:14"
         },
         {
           "path": "Extension\\Subtitle\\Translate\\SubtitleTranslate - Yandex.ico",
@@ -24959,111 +24959,111 @@
         },
         {
           "path": "History\\Bulgarian.txt",
-          "size": 289403,
-          "hash": "34e2ac71e194c86dc1d348b8435f0ea1",
-          "modified": "2026-08-19T16:25:34"
+          "size": 290472,
+          "hash": "f350eaee6d849dfcc16b745193c7a455",
+          "modified": "2026-10-08T16:57:40"
         },
         {
           "path": "History\\Chinese(Simplified).txt",
-          "size": 139359,
-          "hash": "f97b6baad82144cf3e44400aa5eacc1f",
-          "modified": "2026-08-19T16:25:34"
+          "size": 139899,
+          "hash": "26dfdac11e76019f88f32263273241a8",
+          "modified": "2026-10-08T16:57:40"
         },
         {
           "path": "History\\Chinese(Traditional).txt",
-          "size": 141891,
-          "hash": "57a2aa865180f82bb24c572efdee6fdc",
-          "modified": "2026-08-21T14:02:48"
+          "size": 142451,
+          "hash": "c43ab2bbfeace1cda1a71a0856ea1763",
+          "modified": "2026-10-08T16:57:40"
         },
         {
           "path": "History\\English.txt",
-          "size": 160787,
-          "hash": "3b50769b9e91769a154f7de73c0d43ca",
-          "modified": "2026-08-19T16:25:34"
+          "size": 161341,
+          "hash": "29c5e67915152cbf4ec65c8da571bd61",
+          "modified": "2026-10-08T16:57:40"
         },
         {
           "path": "History\\Hungarian.txt",
-          "size": 96351,
-          "hash": "063f6d7840b32a502cd43ca243877197",
-          "modified": "2026-08-19T16:25:34"
+          "size": 96961,
+          "hash": "125ef3d88047eda74abb920c429952e0",
+          "modified": "2026-10-08T16:57:40"
         },
         {
           "path": "History\\Japanese.txt",
-          "size": 92225,
-          "hash": "7309c12e39de493f3aef625cf17bf117",
-          "modified": "2026-08-19T16:25:34"
+          "size": 92872,
+          "hash": "6b43599a41924a0dc0d3b02cdd14bb96",
+          "modified": "2026-10-08T16:57:40"
         },
         {
           "path": "History\\Korean.txt",
-          "size": 162377,
-          "hash": "90c0ec394b686c73947eef65d6bed016",
-          "modified": "2026-08-19T16:25:34"
+          "size": 162981,
+          "hash": "a8c9f93886f52565b37edb0b468668c9",
+          "modified": "2026-10-08T16:55:40"
         },
         {
           "path": "History\\Kurdish.txt",
-          "size": 236366,
-          "hash": "1af5445324ddf5d05d131ed777745632",
-          "modified": "2026-08-19T16:25:34"
+          "size": 237207,
+          "hash": "8fd020179f844556b340aca0ec61d9c5",
+          "modified": "2026-10-08T16:57:40"
         },
         {
           "path": "History\\Polish.txt",
-          "size": 177038,
-          "hash": "6b35b40db9906cd4f234afb0b1797219",
-          "modified": "2026-08-19T16:25:34"
+          "size": 177690,
+          "hash": "b4b118d153787a3164829d5aeded8996",
+          "modified": "2026-10-08T16:57:40"
         },
         {
           "path": "History\\Russian.txt",
-          "size": 234383,
-          "hash": "050337b533fe0017d831b7d5adeac469",
-          "modified": "2026-08-21T14:02:48"
+          "size": 235381,
+          "hash": "771edfb2ce8ab5b6709d7a2617107a02",
+          "modified": "2026-10-08T16:57:40"
         },
         {
           "path": "History\\Serbian.txt",
-          "size": 91039,
-          "hash": "29f5b200af0d38a8f9636fbce2f7e196",
-          "modified": "2026-08-19T16:25:34"
+          "size": 92038,
+          "hash": "4e023f8d6c4a055c41afafb547a17008",
+          "modified": "2026-10-08T16:57:40"
         },
         {
           "path": "History\\Turkish.txt",
-          "size": 177637,
-          "hash": "49a24b39038ebbd527b0a02fe3e6cf98",
-          "modified": "2026-08-19T16:25:34"
+          "size": 178266,
+          "hash": "7c4f3422fe50e4d691fabc5243f419f6",
+          "modified": "2026-10-08T16:57:40"
         },
         {
           "path": "History\\Ukrainian.txt",
-          "size": 146823,
-          "hash": "a1237cd5b117ae747ca492b845c30f81",
-          "modified": "2026-08-19T16:25:34"
+          "size": 147782,
+          "hash": "a40d4cdbe3684ad919d67305903f6df4",
+          "modified": "2026-10-08T16:57:40"
         },
         {
           "path": "Html\\ErrorList.htm",
           "size": 2385,
           "hash": "28deb3d9a5f9d04d17c0dd1ed290732a",
-          "modified": "2026-08-19T06:59:44"
+          "modified": "2026-07-31T11:33:56"
         },
         {
           "path": "Html\\ErrorListMini.htm",
           "size": 2301,
           "hash": "8d25c19eaa26ed92cbd0545464cb135a",
-          "modified": "2026-08-19T06:59:44"
+          "modified": "2026-07-31T10:49:52"
         },
         {
           "path": "Html\\Init.htm",
           "size": 1894,
           "hash": "36e12982965159ecfb3e552b01d4d900",
-          "modified": "2026-08-19T06:59:44"
+          "modified": "2026-07-31T16:58:34"
         },
         {
           "path": "Html\\InitMini.htm",
           "size": 1855,
           "hash": "e5167d2e098ddd91787eba54b9578a65",
-          "modified": "2026-08-19T06:59:44"
+          "modified": "2026-08-03T16:39:24"
         },
         {
           "path": "Html\\loading.gif",
           "size": 21448,
           "hash": "4665e1002e46a7f15d725de559ec0f7b",
-          "modified": "2025-05-14T09:09:22"
+          "modified": "2023-07-05T09:23:00"
         },
         {
           "path": "IconPack\\MPCIcons.dll",
@@ -25075,13 +25075,13 @@
           "path": "IconPack\\OldIconPack.dll",
           "size": 1547280,
           "hash": "e56d64c6d444f935e67b478fda152116",
-          "modified": "2026-01-14T08:47:52"
+          "modified": "2025-12-09T14:31:32"
         },
         {
           "path": "IconPack\\PotIconsNew.dll",
           "size": 2602000,
           "hash": "0fbeb6cbeff90335e4147fb828bce681",
-          "modified": "2026-01-14T08:47:52"
+          "modified": "2025-12-09T14:31:32"
         },
         {
           "path": "IconPack\\WhiteMedia.dll",
@@ -25091,231 +25091,231 @@
         },
         {
           "path": "Language\\Arabic.ini",
-          "size": 324318,
-          "hash": "b8d2aac35db973fd4ace8ffc4d26668a",
-          "modified": "2026-06-22T09:59:14"
+          "size": 329342,
+          "hash": "d34551661fa1dfbd462292a015530424",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Armenian.ini",
-          "size": 284162,
-          "hash": "ba3f62035c14bd35c354959ef6c8b575",
-          "modified": "2026-01-16T12:42:26"
+          "size": 337982,
+          "hash": "174c3ef119e259f7e8b71e0497e63820",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Azerbaijan.ini",
-          "size": 273656,
-          "hash": "8656105e0900793531ebe13ee977ccac",
-          "modified": "2024-12-13T08:15:36"
+          "size": 337296,
+          "hash": "32538e388444bb079aa66f95a4c16a90",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Belarusian.ini",
-          "size": 281122,
-          "hash": "6b005defd1b2b7c393067f9fbc63c0fc",
-          "modified": "2024-12-13T08:15:36"
+          "size": 331602,
+          "hash": "b28531d459a6358ce4d2b334acd184e2",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Bulgarian.ini",
-          "size": 368694,
-          "hash": "f14613c8a6739880921ae80358adcde2",
-          "modified": "2026-08-19T06:59:44"
+          "size": 371258,
+          "hash": "7bb0dcdb38ddf0d07e4ce765d78ab3ad",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Catalan.ini",
-          "size": 332982,
-          "hash": "c90dcbbe00ffeccb2a76664e82cfaec1",
-          "modified": "2026-08-19T06:59:44"
+          "size": 337034,
+          "hash": "c2dfb818fedb741c9eeb5e10d9435092",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Chinese(Simplified).ini",
-          "size": 151096,
-          "hash": "3a57195c3c97c7bd5a292ed5acf8a416",
-          "modified": "2026-08-19T06:59:44"
+          "size": 152113,
+          "hash": "aba7a56efdce468f30badfc8231aa915",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Chinese(Traditional).ini",
-          "size": 153230,
-          "hash": "803a808f79c4f33fcfcf14ce155fc39c",
-          "modified": "2026-08-19T08:03:04"
+          "size": 154144,
+          "hash": "2f3811686296940ed6a72e92949e4b41",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Czech.ini",
-          "size": 346876,
-          "hash": "1bdeb0ed78aa389fec8fcee4836f3e40",
-          "modified": "2026-08-19T06:59:44"
+          "size": 348074,
+          "hash": "b1380ac05ffdbe4ec86d29de8c46d079",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Dutch.ini",
-          "size": 339866,
-          "hash": "2b64ec9dcf3144e9e86042d52aa33fbe",
-          "modified": "2026-01-16T12:42:26"
+          "size": 354292,
+          "hash": "dbe5538a989af8d2b7321be8b7e1d1ae",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\English.ini",
-          "size": 164077,
-          "hash": "605cdddd42194e2b76a23180d75e9f23",
-          "modified": "2026-08-19T06:59:44"
+          "size": 165009,
+          "hash": "2fb84810c432475478f875c996b14247",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\French.ini",
-          "size": 189083,
-          "hash": "fe6229f76652cef559ce0cf90dc7e804",
-          "modified": "2026-08-19T06:59:44"
+          "size": 190826,
+          "hash": "53691f81cf60ba7ba143210ee9eb533a",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\German.ini",
-          "size": 255998,
-          "hash": "a93ca3524ce3d69a382888049af9aedd",
-          "modified": "2024-12-13T08:15:36"
+          "size": 351104,
+          "hash": "2c0e994595ca7015305b60214071a1ce",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Greek.ini",
-          "size": 272158,
-          "hash": "0f5bcb14c1b7e321e43ef2ebd1633d56",
-          "modified": "2025-02-10T11:46:40"
+          "size": 367902,
+          "hash": "46776162b951fc50c3ee4ba22d0999ac",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Hebrew.ini",
-          "size": 211742,
-          "hash": "b86d1cb714eb4ab15b7458400e9d72be",
-          "modified": "2024-12-13T08:15:36"
+          "size": 286760,
+          "hash": "4304eb26d6729a73a7e6ba9f8241cef5",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Hongkonglocale.ini",
-          "size": 152706,
-          "hash": "7ff1071509cb7bba3e195aed2c76f6d0",
-          "modified": "2024-12-13T08:15:36"
+          "size": 180364,
+          "hash": "9183b010c91ba87472dc65304c4de3a6",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Hungarian.ini",
-          "size": 363116,
-          "hash": "54179c2bd85565893ef0cee251f7abda",
-          "modified": "2026-08-19T06:59:44"
+          "size": 366204,
+          "hash": "bbb485c47b1d1684a40c274260aa2a43",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Indonesian.ini",
-          "size": 315320,
-          "hash": "316566ab04389a7ed5284ff30fb8faa6",
-          "modified": "2026-01-16T12:42:26"
+          "size": 340084,
+          "hash": "57609867a5ad92d955402d0be5a00b2b",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Italian.ini",
-          "size": 344902,
-          "hash": "e9a7ded7b11fc96f554dc53910569d8c",
-          "modified": "2026-08-19T06:59:44"
+          "size": 360940,
+          "hash": "213246ea16dd1c3a6dbaad350b3df739",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Japanese.ini",
-          "size": 217084,
-          "hash": "d86f6b7bb45091d0101eb79a0fab6866",
-          "modified": "2026-08-19T06:59:44"
+          "size": 218588,
+          "hash": "47cce575d92e3957234c8c16b3ebd5b7",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Korean.ini",
-          "size": 175538,
-          "hash": "31bf770e1948398e3d4fe0a01579e3e9",
-          "modified": "2026-08-19T08:03:04"
+          "size": 176613,
+          "hash": "e84e943c9f944787d74f0d471c1e5654",
+          "modified": "2026-10-08T16:11:14"
         },
         {
           "path": "Language\\Kurdish.ini",
-          "size": 351820,
-          "hash": "44b71e3cbb3fe73d66039439d8fb0c84",
-          "modified": "2026-08-19T06:59:44"
+          "size": 355070,
+          "hash": "84b4db4f6227ebe5ce315526cdd97fd7",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Persian.ini",
-          "size": 315312,
-          "hash": "fd260f570e7c8f0f78acc5f1615594e8",
-          "modified": "2024-12-13T08:15:36"
+          "size": 325920,
+          "hash": "2751e4df1c25ae9d54e9e41e95d8b57a",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Polish.ini",
-          "size": 391492,
-          "hash": "9d46549a7faf8c9f15b3df358bfcfd62",
-          "modified": "2026-08-19T06:59:44"
+          "size": 382952,
+          "hash": "3dcc663cd791879658e07853d5aa0291",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Portuguese.ini",
-          "size": 191829,
-          "hash": "0521350e22595053285a8ee85547bfe4",
-          "modified": "2026-08-19T06:59:44"
+          "size": 193111,
+          "hash": "1420b9bc58787944c19247cdd0c6e81f",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Russian.ini",
-          "size": 332238,
-          "hash": "7263e583a69bc7f0eef63574124c698d",
-          "modified": "2026-08-21T14:02:48"
+          "size": 335656,
+          "hash": "10f822a358be147ac7a1edda129b8694",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Serbian.ini",
-          "size": 280636,
-          "hash": "db8501c4f347aff8521f0fd4caa944ca",
-          "modified": "2024-12-13T08:15:36"
+          "size": 326520,
+          "hash": "ef2140c05c70755fe7907e216cbd3a65",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Spanish.ini",
-          "size": 339174,
-          "hash": "12e58a50fa2140671e020f4dfbf9ab26",
-          "modified": "2026-08-19T06:59:44"
+          "size": 343338,
+          "hash": "9ef7199b4e433680565f021e4e93278a",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Swedish.ini",
-          "size": 271070,
-          "hash": "aee0e08b3db4abfcd52a6fb77b36a049",
-          "modified": "2024-12-13T08:15:36"
+          "size": 320008,
+          "hash": "a51252dfe924268c9d1021bda18ea198",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Tajik(Cyrillic).ini",
-          "size": 247776,
-          "hash": "d16d3020e8debcaa2976417bdfc20767",
-          "modified": "2024-12-13T08:15:36"
+          "size": 328004,
+          "hash": "28b73e4fc0b4f1055445e490ee7ea4da",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Tamil.ini",
-          "size": 344384,
-          "hash": "42ee6ad2228c81197f53cde5648c2e68",
-          "modified": "2026-08-19T06:59:44"
+          "size": 370200,
+          "hash": "4c28f2470a8beaadaf18f363ee3120d6",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Thai.ini",
-          "size": 228198,
-          "hash": "953aa0be9112d6c39e4bf635b2612e12",
-          "modified": "2024-12-13T08:15:36"
+          "size": 304104,
+          "hash": "50f4097e629c0cc5cb19583d11061604",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Turkish.ini",
-          "size": 330904,
-          "hash": "b2b319b4ca5433398d9ff60733ee4705",
-          "modified": "2024-12-13T08:15:36"
+          "size": 343378,
+          "hash": "d18093bd1ae9aa0c377e74201d59d3f6",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Ukrainian.ini",
-          "size": 321916,
-          "hash": "fe5749cf9664281eb6ba392ceb96bfe1",
-          "modified": "2026-08-19T06:59:44"
+          "size": 343176,
+          "hash": "9536dbc4d164167fa090208e04c60bf6",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Uyghur.ini",
-          "size": 279216,
-          "hash": "001367939bf0760827789759083521c7",
-          "modified": "2026-08-19T06:59:44"
+          "size": 282217,
+          "hash": "443366d0833ff9c7fd311702dc7509b0",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Uzbek(Latin).ini",
-          "size": 308988,
-          "hash": "46a435b548ff44f63c2f9b0d8c5e5839",
-          "modified": "2026-01-16T12:42:26"
+          "size": 347978,
+          "hash": "c5bce9ea363ce4b31e155113feba98d8",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Language\\Vietnamese.ini",
-          "size": 209730,
-          "hash": "e4bb53ef0ec62697fec7081e1d69fc24",
-          "modified": "2026-08-19T06:59:44"
+          "size": 211005,
+          "hash": "fdfed00076eec42619ff56ea4bd82f7e",
+          "modified": "2026-10-08T16:54:36"
         },
         {
           "path": "Logos\\PotPlayer.png",
           "size": 8770,
           "hash": "0fad7ee23f9160defc5e1142c8fc5b78",
-          "modified": "2025-05-14T09:09:22"
+          "modified": "2019-01-02T10:44:40"
         },
         {
           "path": "Logos\\少女时代.jpg",
@@ -25325,75 +25325,75 @@
         },
         {
           "path": "Menus\\SimpleMenu.xml",
-          "size": 1759,
-          "hash": "6f46c59f8a1eeb1418366a0daf486d2c",
-          "modified": "2025-05-14T09:09:22"
+          "size": 1810,
+          "hash": "3d409bdb19007ea0486c9264a5c239ee",
+          "modified": "2026-08-25T07:13:16"
         },
         {
           "path": "Module\\AcmVorbis64.dll",
           "size": 754176,
           "hash": "d00fffb5aa5511f7f1e24a8ae5f66b44",
-          "modified": "2025-05-14T09:09:22"
+          "modified": "2018-10-16T09:39:26"
         },
         {
           "path": "Module\\MediaInfo64.dll",
           "size": 6794752,
           "hash": "ebf73c20ebb77f1403538983a67ca519",
-          "modified": "2026-06-22T09:59:16"
+          "modified": "2026-06-22T07:05:38"
         },
         {
           "path": "Module\\QuickSync64.dll",
           "size": 552976,
           "hash": "8336795165d547c8f90cb134f8a474f6",
-          "modified": "2026-01-14T08:47:54"
+          "modified": "2025-12-09T14:31:32"
         },
         {
           "path": "Module\\Bass64\\bass.dll",
           "size": 230912,
           "hash": "636ab7c7f2a1736da9b6ed0c711ff865",
-          "modified": "2025-05-14T09:09:22"
+          "modified": "2018-10-16T09:39:20"
         },
         {
           "path": "Module\\Bass64\\bass_ape.dll",
           "size": 69120,
           "hash": "e2320ce4684bb0983f17db5f94554329",
-          "modified": "2025-05-14T09:09:22"
+          "modified": "2018-10-16T09:39:20"
         },
         {
           "path": "Module\\Bass64\\bass_flac.dll",
           "size": 47616,
           "hash": "f3211ff69b27a313301801dafa9d0b2a",
-          "modified": "2025-05-14T09:09:22"
+          "modified": "2018-10-16T09:39:20"
         },
         {
           "path": "Module\\Bass64\\bass_mpc.dll",
           "size": 50688,
           "hash": "28adddaea11a5de0857bcad2ac95fe4b",
-          "modified": "2025-05-14T09:09:22"
+          "modified": "2018-10-16T09:39:20"
         },
         {
           "path": "Module\\Bass64\\bass_ofr.dll",
           "size": 8704,
           "hash": "466ff711713f5aaa2a274eecc77b2794",
-          "modified": "2025-05-14T09:09:22"
+          "modified": "2018-10-16T09:39:20"
         },
         {
           "path": "Module\\Bass64\\bass_tta.dll",
           "size": 12288,
           "hash": "f59e44cf4cfdb65f66574596851759bf",
-          "modified": "2025-05-14T09:09:22"
+          "modified": "2018-10-16T09:39:20"
         },
         {
           "path": "Module\\Bass64\\bass_wv.dll",
           "size": 65536,
           "hash": "c35e677a9a1c63a96249cc2707cf4fa5",
-          "modified": "2025-05-14T09:09:22"
+          "modified": "2018-10-16T09:39:20"
         },
         {
           "path": "Module\\Bass64\\OptimFROG.dll",
           "size": 208896,
           "hash": "f74ca7efe4969101e6dcec1def89d5ab",
-          "modified": "2025-05-14T09:09:22"
+          "modified": "2018-10-16T09:39:20"
         },
         {
           "path": "Module\\FFmpeg62\\FFmpegMininum64.dll",
@@ -25429,31 +25429,31 @@
           "path": "Module\\Whisper\\whisper.bin",
           "size": 885098,
           "hash": "ee99234b74067018b10d324cc8dc8119",
-          "modified": "2026-01-14T08:47:54"
+          "modified": "2025-12-11T14:20:34"
         },
         {
           "path": "Module\\Whisper\\Const-me\\main.exe",
           "size": 227328,
           "hash": "9403c61555bece438304e275dae2f805",
-          "modified": "2026-01-14T08:47:54"
+          "modified": "2025-10-17T12:55:12"
         },
         {
           "path": "Module\\Whisper\\Const-me\\Whisper.dll",
           "size": 590336,
           "hash": "156808de18991dc56a33e84d84b6c3a1",
-          "modified": "2026-01-14T08:48:22"
+          "modified": "2025-10-17T12:55:06"
         },
         {
           "path": "Module\\Whisper\\CPU\\main64.exe",
-          "size": 777216,
-          "hash": "ac619792e3c642312cc3e3f40dab9916",
-          "modified": "2026-08-19T08:03:04"
+          "size": 779264,
+          "hash": "70287ebaf9e5428099a201f28dc325a9",
+          "modified": "2026-10-08T12:25:38"
         },
         {
           "path": "Module\\Whisper\\CPU\\whisper64.dll",
-          "size": 4306944,
-          "hash": "34e84f68f3b65e6afe259c9fde84ef63",
-          "modified": "2026-08-19T08:03:12"
+          "size": 5955584,
+          "hash": "2c94e8f38100f39a5fbc122e5bd839d6",
+          "modified": "2026-10-08T12:25:34"
         },
         {
           "path": "Module\\Whisper\\Vulkan\\main.exe",
@@ -25463,9 +25463,9 @@
         },
         {
           "path": "Module\\Whisper\\Vulkan\\main64.exe",
-          "size": 777216,
-          "hash": "6b9744064ed26e3a2cee576c0f7a718c",
-          "modified": "2026-08-19T08:03:04"
+          "size": 779264,
+          "hash": "a4a93d5639e351be0be58aeea552394e",
+          "modified": "2026-10-08T12:04:58"
         },
         {
           "path": "Module\\Whisper\\Vulkan\\whisper.dll",
@@ -25475,213 +25475,213 @@
         },
         {
           "path": "Module\\Whisper\\Vulkan\\whisper64.dll",
-          "size": 56185856,
-          "hash": "6dd1a32dff662c56b23cb616f76dfaf4",
-          "modified": "2026-08-19T08:03:10"
+          "size": 49539584,
+          "hash": "d8aba5044cb6be5ac4cff691779b005f",
+          "modified": "2026-10-08T12:04:54"
         },
         {
           "path": "PxShader\\Adaptive sharpen(Contrast).txt",
           "size": 4013,
           "hash": "ef159ae600025f024a5a91bc2c98eed1",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\Adaptive sharpen.txt",
           "size": 9902,
           "hash": "6ffb39fc03399f195aafa27304b96e6e",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\BT601BT709.txt",
           "size": 692,
           "hash": "b48739338b835bb16c3e3b59e0abbd64",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\Contour.txt",
           "size": 598,
           "hash": "81cf9164ac3f8d2fa3c95905eff9b8c2",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\Deinterlace (blend).txt",
           "size": 376,
           "hash": "4bc93e61aca426f86378f5e664ae1c81",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\Denoise.txt",
           "size": 935,
           "hash": "3f7d79b65030873214d6f5af582473bd",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\DisplayLessThan16 v1_1.txt",
           "size": 709,
           "hash": "332090bbf0883fdecf696c3e3ce1a185",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\EdgeSharpen v1_1(jim ro).txt",
           "size": 1696,
           "hash": "85c435bd31b006bdfc3f394e506b64e0",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\EdgeSharpen v1_1.txt",
           "size": 2007,
           "hash": "e53b8b177751bee9965d479b5241140b",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\Emboss.txt",
           "size": 649,
           "hash": "5f644261e6ead50d772e36b7a2b103a7",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\GrayScale.txt",
           "size": 371,
           "hash": "0d5417600cee933465410c5788245d99",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\HorzFlip.txt",
           "size": 436,
           "hash": "5e86ef9765207118da744d6fc1f25ef7",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\Invert.txt",
           "size": 184,
           "hash": "c64b07ff0d0b3547912a6613dfccf2f0",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\LCD angle correction.txt",
           "size": 1613,
           "hash": "367ff06d3d7540efff4ce3ef9c3b734e",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\Letterbox.txt",
           "size": 367,
           "hash": "cccac60f46243c8ecb5e9d3bda4282a0",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\Levels.txt",
           "size": 269,
           "hash": "1a7e005658ef55f4b3e90c63105bf422",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\Levels2.txt",
           "size": 422,
           "hash": "878062bfe410c60f4d3d932464d9523a",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\MaskBox.txt",
           "size": 415,
           "hash": "a2d24f5d236b0aa9d4e2d53ef6978edd",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\NightVision.txt",
           "size": 210,
           "hash": "bfe53c6fedbf924e61e8ac9d8042d40e",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\Procamp.txt",
           "size": 1980,
           "hash": "5d0adf77ef352e478878f7e7dd48f6d6",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\Remap_16_235.txt",
           "size": 543,
           "hash": "4a9629023372282b0f2f4513e4f7579e",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\Sharpen.txt",
           "size": 936,
           "hash": "fb78842c483e57dfd6041f23fde4100e",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\SharpenComplex (jim ro).txt",
           "size": 1893,
           "hash": "7cbd76f4a571d7b27787a8377badd6ec",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\SharpenComplex2.txt",
           "size": 2693,
           "hash": "4d5e947919d07c995ef38eacb7d31dfa",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\SharpenFlou (jim ro).txt",
           "size": 1686,
           "hash": "8d3d4d36df689b08205ee7efe549f666",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\Sharpen_3x3.txt",
           "size": 1061,
           "hash": "4ca18d768488043b1f3a8a891cafeda5",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\Sharpen_5x5.txt",
           "size": 2226,
           "hash": "2e8848f835f81f97e1356ec8468b7716",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\Sphere.txt",
           "size": 1428,
           "hash": "ed8c5095ce20c9662dfaafedcd2ee4d0",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\Spotlight.txt",
           "size": 471,
           "hash": "893b82e2ef78fdef0c6a533004f0e527",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\Undot.txt",
           "size": 1790,
           "hash": "d7358fcfbbbc8807251c47a1c4f22ea0",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\Unsharp mask.txt",
           "size": 1727,
           "hash": "d85a56571ed80569233463097b376bc7",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\VertFlip.txt",
           "size": 436,
           "hash": "61ac196d28998026878394f688f6206c",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\Wave.txt",
           "size": 388,
           "hash": "bcc1d8e6aabdea035c94929bdcbd3aa8",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "PxShader\\YV12 Chroma Upsampling.txt",
           "size": 2150,
           "hash": "b274a388a3008e391039610cf3654345",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:06"
         },
         {
           "path": "Skins\\Default Mod Chs.dsf",
@@ -25691,9 +25691,9 @@
         },
         {
           "path": "Skins\\Default.dsf",
-          "size": 426105,
-          "hash": "e3f75e3993fb33c7255aa8c899ce41b2",
-          "modified": "2026-08-19T06:59:44"
+          "size": 426205,
+          "hash": "54a7701182a98adc838039e77971a448",
+          "modified": "2026-08-25T07:16:08"
         },
         {
           "path": "Skins\\Fmod Chs.dsf",
@@ -25733,9 +25733,9 @@
         },
         {
           "path": "Skins\\WindowFrame.dsf",
-          "size": 425271,
-          "hash": "cd2384af862a3ef53a8da1169ff260b1",
-          "modified": "2026-08-19T06:59:44"
+          "size": 425372,
+          "hash": "c024526614ec3d54fe1b839dbc459d27",
+          "modified": "2026-08-25T07:16:24"
         },
         {
           "path": "Skins\\YouTube_TitleBar_Slim.dsf",
@@ -25801,25 +25801,25 @@
           "path": "UrlList\\Radio.asx",
           "size": 76,
           "hash": "5f5be3068b53bddd3192fd0efe2ade6b",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:08"
         },
         {
           "path": "UrlList\\TV.asx",
           "size": 35,
           "hash": "6e21e629dd73a2aead4e4c8c9187618d",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:08"
         },
         {
           "path": "VapourSynth\\Histogram.vpy",
           "size": 87,
           "hash": "0bd74bff3bd12c708263f332019c9cf5",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:08"
         },
         {
           "path": "VapourSynth\\motioninterpolation.vpy",
           "size": 2366,
           "hash": "290a7f88a5dedef1c4cf6fdaada9a498",
-          "modified": "2025-05-14T09:09:24"
+          "modified": "2023-07-05T09:23:08"
         },
         {
           "path": "WebView2\\EBWebView\\Last Version",
@@ -26441,1462 +26441,22 @@
         }
       ],
       "total_files": 321,
-      "total_size": 265352169,
-      "last_updated": "2026-09-23T18:23:33.557500"
+      "total_size": 262541176,
+      "last_updated": "2026-10-10T17:17:32.230410"
     },
     "gh-release-fetch": {
-      "version": "20260924_201502",
+      "version": "20261010_171732",
       "files": [
         {
-          "path": "auto_update.exe",
-          "size": 17873085,
-          "hash": "dd8229f932bc746a404fbcdcc786514b",
-          "modified": "2026-09-24T15:45:52"
-        },
-        {
-          "path": "catalog.html",
-          "size": 712154,
-          "hash": "2b09de18513b9ba7841255f99bdd3433",
-          "modified": "2026-09-20T11:41:32"
-        },
-        {
-          "path": "CATALOG.md",
-          "size": 5086,
-          "hash": "c0c9f957e4ffa2775e81f3f8c3fe52d1",
-          "modified": "2026-09-22T14:14:26"
-        },
-        {
-          "path": "CATALOG.mobile.md",
-          "size": 3540,
-          "hash": "03f169b8bc9bd9acce5169ad131eab11",
-          "modified": "2026-09-20T11:09:32"
-        },
-        {
-          "path": "lookup_app.bat",
-          "size": 600,
-          "hash": "5306d5d20723e98055ab765c9173b69b",
-          "modified": "2026-06-27T20:23:24"
-        },
-        {
-          "path": "lookup_app.exe",
-          "size": 6599421,
-          "hash": "43c38cf256fda20b34c705349b58e415",
-          "modified": "2026-09-24T15:46:04"
-        },
-        {
-          "path": "lookup_ios.bat",
-          "size": 766,
-          "hash": "425f1e52d99b2f4c7ddca9e82032aea8",
-          "modified": "2026-08-26T17:53:46"
-        },
-        {
-          "path": "lookup_mobile.bat",
-          "size": 738,
-          "hash": "8ff043aa1f068e5e90abaaf51d070aac",
-          "modified": "2026-08-26T17:53:46"
-        },
-        {
-          "path": "open_catalog.bat",
-          "size": 326,
-          "hash": "e1c0d9a56cdbe4c0ef85fd731c792572",
-          "modified": "2026-08-26T18:02:08"
-        },
-        {
-          "path": "README.txt",
-          "size": 2179,
-          "hash": "3b1e2e82f7d6bbee3191c3862041ed79",
-          "modified": "2026-09-17T07:46:02"
-        },
-        {
-          "path": "RECOMMENDED.md",
-          "size": 102978,
-          "hash": "41fda510c285c2850874df3cb04158bb",
-          "modified": "2026-09-20T11:41:32"
-        },
-        {
-          "path": "RECOMMENDED.zh-CN.md",
-          "size": 305654,
-          "hash": "c291479075765ba1b5fec55c3d2d612a",
-          "modified": "2026-09-20T11:41:32"
-        },
-        {
-          "path": "run_saved_apps.bat",
-          "size": 626,
-          "hash": "e87e1a104360739cea7c8dea7ab03517",
-          "modified": "2026-06-27T20:23:28"
-        },
-        {
-          "path": "run_saved_apps.exe",
-          "size": 6569951,
-          "hash": "2de0e6f4c60b3848f3b8357cf0a9c0db",
-          "modified": "2026-09-24T15:46:18"
-        },
-        {
-          "path": "run_update.bat",
-          "size": 1192,
-          "hash": "75614ab13df4bb0dff7686848d0b8056",
-          "modified": "2026-06-27T20:23:28"
-        },
-        {
-          "path": "saved_apps_windows.example.json",
-          "size": 117,
-          "hash": "a249eaa5a85cd0c87c521a3e0849f88b",
-          "modified": "2026-06-27T21:48:42"
-        },
-        {
-          "path": "search_games.bat",
-          "size": 632,
-          "hash": "72862cad85a7e30306216a9849601283",
-          "modified": "2026-06-28T11:26:06"
-        },
-        {
-          "path": "search_games.exe",
-          "size": 7054662,
-          "hash": "9f655d08708da294ef66c93fa4e16d73",
-          "modified": "2026-09-24T15:46:44"
-        },
-        {
-          "path": "search_soft_pages.bat",
-          "size": 652,
-          "hash": "db70a9ebc16c95afc9e90f24e8dd9e91",
-          "modified": "2026-06-27T20:23:28"
-        },
-        {
-          "path": "search_soft_pages.exe",
-          "size": 7052292,
-          "hash": "9dbc48e6ad41e8f985e97d8ace7ab443",
-          "modified": "2026-09-24T15:46:30"
-        },
-        {
-          "path": "update_log.txt",
-          "size": 1052,
-          "hash": "a062ee49412bfe2d6978889b209c9486",
-          "modified": "2026-08-24T10:48:40.573289"
-        },
-        {
-          "path": "VERSION.txt",
-          "size": 12,
-          "hash": "ad26ba1b5cc813e1b509711d6b94a0c8",
-          "modified": "2026-09-24T15:46:44"
-        },
-        {
-          "path": "apps\\darwin.json.bak",
-          "size": 28165,
-          "hash": "8fd2892fdcd36a424fc2f71d1d4eb33b",
-          "modified": "2026-04-10T17:32:28"
-        },
-        {
-          "path": "apps\\linux.json.bak",
-          "size": 28165,
-          "hash": "8fd2892fdcd36a424fc2f71d1d4eb33b",
-          "modified": "2026-04-10T17:32:28"
-        },
-        {
-          "path": "apps\\root.json",
-          "size": 7593,
-          "hash": "73d2235394380a757bdde8db6feacb88",
-          "modified": "2026-09-17T07:45:32"
-        },
-        {
-          "path": "apps\\darwin\\01-AI.json",
-          "size": 111677,
-          "hash": "0a0a638e46551f897b747e779b3894a7",
-          "modified": "2026-09-24T11:20:52"
-        },
-        {
-          "path": "apps\\darwin\\02-下载.json",
-          "size": 22292,
-          "hash": "90ed29063cae399c2bd5b6c541a4e6e2",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps\\darwin\\03-写作.json",
-          "size": 15899,
-          "hash": "8928984505c3ecb55e64f05dd4026373",
-          "modified": "2026-09-24T11:03:22"
-        },
-        {
-          "path": "apps\\darwin\\04-办公.json",
-          "size": 9383,
-          "hash": "944718771eff9fcbf4310ceabb1cf035",
-          "modified": "2026-09-19T11:31:24"
-        },
-        {
-          "path": "apps\\darwin\\05-办公与设计.json",
-          "size": 5139,
-          "hash": "1824990b44e5f3ca82481e14a5feb8d2",
-          "modified": "2026-09-20T10:34:42"
-        },
-        {
-          "path": "apps\\darwin\\06-命令行.json",
-          "size": 12433,
-          "hash": "c039f0cf8008ff9742766df93ea0e8f0",
-          "modified": "2026-08-11T18:11:50"
-        },
-        {
-          "path": "apps\\darwin\\07-备份.json",
-          "size": 10109,
-          "hash": "1a890e980127eeca763a425d25817359",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps\\darwin\\08-多媒体.json",
-          "size": 27632,
-          "hash": "0ea2ebd5f94e933c0c3630ac80ed38c3",
-          "modified": "2026-09-08T18:02:30"
-        },
-        {
-          "path": "apps\\darwin\\09-多媒体与设计.json",
-          "size": 8515,
-          "hash": "42757b661e6c836336b94cf429329d35",
-          "modified": "2026-06-27T17:59:28"
-        },
-        {
-          "path": "apps\\darwin\\10-安全.json",
-          "size": 25054,
-          "hash": "92fb7341a7bcce5e93b72d9e6f974e5d",
-          "modified": "2026-09-08T18:02:30"
-        },
-        {
-          "path": "apps\\darwin\\11-工具.json",
-          "size": 25349,
-          "hash": "74d9dc8e2a5ef2bdd02dcb43c51be262",
-          "modified": "2026-09-24T11:01:52"
-        },
-        {
-          "path": "apps\\darwin\\12-开发.json",
-          "size": 32147,
-          "hash": "1bac1acb719213e05d829489f8e80335",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps\\darwin\\13-效率.json",
-          "size": 51159,
-          "hash": "5a8cd7eb4378a56ccfc3a24f16d71785",
-          "modified": "2026-09-18T10:49:26"
-        },
-        {
-          "path": "apps\\darwin\\14-游戏.json",
-          "size": 19966,
-          "hash": "390ba8832c3713be2eced2d7f303a6d8",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps\\darwin\\15-笔记.json",
-          "size": 18775,
-          "hash": "36f06c83554f8c6a70bcb341e2ef3f43",
-          "modified": "2026-09-20T10:34:42"
-        },
-        {
-          "path": "apps\\darwin\\16-系统.json",
-          "size": 40715,
-          "hash": "4102d52922f22184a8639f91963e5f08",
-          "modified": "2026-09-20T10:34:42"
-        },
-        {
-          "path": "apps\\darwin\\17-终端.json",
-          "size": 13350,
-          "hash": "b2ef5e9993d70ed356a38a3807466c24",
-          "modified": "2026-09-20T11:41:18"
-        },
-        {
-          "path": "apps\\darwin\\18-网络.json",
-          "size": 18576,
-          "hash": "501ac59042bb6432d51b6beea285ddcd",
-          "modified": "2026-09-23T18:00:58"
-        },
-        {
-          "path": "apps\\darwin\\19-网络与协作.json",
-          "size": 4835,
-          "hash": "1a58074f23f116c99755796d2e3f749b",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps\\darwin\\20-网络与通讯.json",
-          "size": 14981,
-          "hash": "c0057f247db535a762a2dae0fa049569",
-          "modified": "2026-09-20T10:34:42"
-        },
-        {
-          "path": "apps\\darwin\\21-远程与协作.json",
-          "size": 15096,
-          "hash": "b8997e20f6b493bc4204fd94b62f13cf",
-          "modified": "2026-09-19T11:31:24"
-        },
-        {
-          "path": "apps\\darwin\\22-音视频.json",
-          "size": 29441,
-          "hash": "f17dfe106420caaf5b4e4a0c97c198e4",
-          "modified": "2026-09-20T10:34:42"
-        },
-        {
-          "path": "apps\\darwin\\23-数据库.json",
-          "size": 10274,
-          "hash": "776fd84d2c5a438786d51867d6d454dc",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps\\darwin\\24-云原生.json",
-          "size": 15370,
-          "hash": "f7d38b562827e376a8b9bc20d9573e78",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps\\darwin\\25-可观测.json",
-          "size": 10172,
-          "hash": "ae2e9f260523e3d03472174a3b2d49c0",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps\\darwin\\26-编辑器.json",
-          "size": 25037,
-          "hash": "8b828361e89ba39624558d5ba0466492",
-          "modified": "2026-09-22T14:14:14"
-        },
-        {
-          "path": "apps\\darwin\\27-金融与股票.json",
-          "size": 11254,
-          "hash": "464545aadcaf2efe61d7b4283fac7e08",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps\\darwin\\28-加密货币.json",
-          "size": 13671,
-          "hash": "5026753e65fe0f9d193f7050f5ebfdd7",
-          "modified": "2026-08-11T18:11:50"
-        },
-        {
-          "path": "apps\\darwin\\29-局域网文件共享.json",
-          "size": 12918,
-          "hash": "6c35089c143a64e18d70be297a4d0c5a",
-          "modified": "2026-09-23T18:01:14"
-        },
-        {
-          "path": "apps\\darwin\\30-代理与隧道.json",
-          "size": 19737,
-          "hash": "fec7b1930486a974b51a63eb8946840e",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps\\darwin\\99-未匹配-windows分片.json",
-          "size": 3655,
-          "hash": "e898b8cb55ef717c3e3f46cb43650668",
-          "modified": "2026-08-11T18:11:50"
-        },
-        {
-          "path": "apps\\linux\\01-AI.json",
-          "size": 102306,
-          "hash": "a17c1ba0f2fe3b786dc153fde4f9f202",
-          "modified": "2026-09-20T11:09:36"
-        },
-        {
-          "path": "apps\\linux\\02-下载.json",
-          "size": 21179,
-          "hash": "51131b56ea3bbd1a96e33b863e4bbb9c",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps\\linux\\03-写作.json",
-          "size": 15968,
-          "hash": "a2f637bb9da5b26a679bf94b48bca5a9",
-          "modified": "2026-09-24T11:03:22"
-        },
-        {
-          "path": "apps\\linux\\04-办公.json",
-          "size": 9244,
-          "hash": "85c99b4a56629785e55234c0e1da95d5",
-          "modified": "2026-09-19T11:31:24"
-        },
-        {
-          "path": "apps\\linux\\05-办公与设计.json",
-          "size": 4539,
-          "hash": "f4d9101e87624af002f037e9a8cfdcfa",
-          "modified": "2026-09-07T12:05:02"
-        },
-        {
-          "path": "apps\\linux\\06-命令行.json",
-          "size": 11691,
-          "hash": "100fb85b1dd4587bc0e1b2560d105254",
-          "modified": "2026-08-11T18:11:50"
-        },
-        {
-          "path": "apps\\linux\\07-备份.json",
-          "size": 7884,
-          "hash": "e2a2724a553fbd6779a22ec0a9de6c09",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps\\linux\\08-多媒体.json",
-          "size": 26363,
-          "hash": "f8eea193d708bd037d81de41e0f04ba1",
-          "modified": "2026-09-08T18:02:30"
-        },
-        {
-          "path": "apps\\linux\\09-多媒体与设计.json",
-          "size": 8560,
-          "hash": "5c9545334f1ac6d507b3b672a12c266b",
-          "modified": "2026-06-27T17:59:28"
-        },
-        {
-          "path": "apps\\linux\\10-安全.json",
-          "size": 24696,
-          "hash": "ecfaa5f472ff4b85507982b6d0252672",
-          "modified": "2026-09-04T15:22:58"
-        },
-        {
-          "path": "apps\\linux\\11-工具.json",
-          "size": 15110,
-          "hash": "bc60d230b04bcb58d20a0f7dd67740e2",
-          "modified": "2026-09-24T11:01:52"
-        },
-        {
-          "path": "apps\\linux\\12-开发.json",
-          "size": 31498,
-          "hash": "6ed9da5e8c66f9832d4b666cf6225584",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps\\linux\\13-效率.json",
-          "size": 30416,
-          "hash": "242fac22ef0f79651b01105b225aae9d",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps\\linux\\14-游戏.json",
-          "size": 20378,
-          "hash": "ca20cba3ee11ca0a59e9128952eadde6",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps\\linux\\15-笔记.json",
-          "size": 18011,
-          "hash": "82c936036185450d8a71bd948683715d",
-          "modified": "2026-09-20T10:34:42"
-        },
-        {
-          "path": "apps\\linux\\16-系统.json",
-          "size": 29625,
-          "hash": "a1e18ed177f42f2635207d5d45f5502d",
-          "modified": "2026-09-02T17:40:18"
-        },
-        {
-          "path": "apps\\linux\\17-终端.json",
-          "size": 13608,
-          "hash": "d23b0f86412254856f369aa7b55f8beb",
-          "modified": "2026-09-20T11:41:14"
-        },
-        {
-          "path": "apps\\linux\\18-网络.json",
-          "size": 18838,
-          "hash": "b45574d4e1f4a7d12e6d833b01ddf018",
-          "modified": "2026-09-23T18:01:04"
-        },
-        {
-          "path": "apps\\linux\\19-网络与协作.json",
-          "size": 5003,
-          "hash": "66154d966aa32dd74196ece89b42f30d",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps\\linux\\20-网络与通讯.json",
-          "size": 8551,
-          "hash": "821b9adb84a8ae88deb30652d8f026c1",
-          "modified": "2026-09-19T11:31:24"
-        },
-        {
-          "path": "apps\\linux\\21-远程与协作.json",
-          "size": 13521,
-          "hash": "b4977e1762583181a31399f48204145d",
-          "modified": "2026-09-19T11:31:24"
-        },
-        {
-          "path": "apps\\linux\\22-音视频.json",
-          "size": 23624,
-          "hash": "c61e1095da693e323a95da3ea249906c",
-          "modified": "2026-09-18T15:23:50"
-        },
-        {
-          "path": "apps\\linux\\23-数据库.json",
-          "size": 10541,
-          "hash": "c3286699545e2a85735aeaf43ba491da",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps\\linux\\24-云原生.json",
-          "size": 14276,
-          "hash": "c36af4c2074218422615c9ccdfac0a32",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps\\linux\\25-可观测.json",
-          "size": 10284,
-          "hash": "307754c55845230bd6024a89a580f784",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps\\linux\\26-编辑器.json",
-          "size": 21459,
-          "hash": "c5980e7ffa1dffaa596f48600cf5f925",
-          "modified": "2026-09-11T09:26:50"
-        },
-        {
-          "path": "apps\\linux\\27-金融与股票.json",
-          "size": 9987,
-          "hash": "8e4032a4c08bb86d145444f85e9fb359",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps\\linux\\28-加密货币.json",
-          "size": 14467,
-          "hash": "8da5ad3649105fa8ea3850d999779827",
-          "modified": "2026-09-04T15:22:58"
-        },
-        {
-          "path": "apps\\linux\\29-局域网文件共享.json",
-          "size": 11895,
-          "hash": "a0216edb753e9936af06f580eb674bdb",
-          "modified": "2026-09-23T18:01:16"
-        },
-        {
-          "path": "apps\\linux\\30-代理与隧道.json",
-          "size": 19494,
-          "hash": "b34784fe774d37c396ae1746d3f105a9",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps\\linux\\99-未匹配-windows分片.json",
-          "size": 3655,
-          "hash": "e898b8cb55ef717c3e3f46cb43650668",
-          "modified": "2026-08-11T18:11:50"
-        },
-        {
-          "path": "apps\\windows\\01-AI.json",
-          "size": 111995,
-          "hash": "0f09ac2259931646ef11d74e0a577fe1",
-          "modified": "2026-09-24T11:20:52"
-        },
-        {
-          "path": "apps\\windows\\02-下载.json",
-          "size": 20533,
-          "hash": "4db843e9fd8f82dc703b7c12753d6cd7",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps\\windows\\03-写作.json",
-          "size": 15710,
-          "hash": "03e955e7c7ee91e0819e53dfbf743bbd",
-          "modified": "2026-09-24T11:03:36"
-        },
-        {
-          "path": "apps\\windows\\04-办公.json",
-          "size": 12899,
-          "hash": "85942d9c6b43383ed64afb9991f70705",
-          "modified": "2026-09-19T11:31:24"
-        },
-        {
-          "path": "apps\\windows\\05-办公与设计.json",
-          "size": 6815,
-          "hash": "f09cf04714a505c8e6802296d8765c47",
-          "modified": "2026-09-24T11:01:52"
-        },
-        {
-          "path": "apps\\windows\\06-命令行.json",
-          "size": 22914,
-          "hash": "176685a74e041d153c06e34df8ce0ae2",
-          "modified": "2026-09-04T18:00:36"
-        },
-        {
-          "path": "apps\\windows\\07-备份.json",
-          "size": 8779,
-          "hash": "aea71acf5441fa3fbf1b284684916118",
-          "modified": "2026-09-20T10:34:42"
-        },
-        {
-          "path": "apps\\windows\\08-多媒体.json",
-          "size": 38979,
-          "hash": "b8ed9a14d6efa1e522a36430dacacb04",
-          "modified": "2026-09-08T18:02:30"
-        },
-        {
-          "path": "apps\\windows\\09-多媒体与设计.json",
-          "size": 12194,
-          "hash": "64141d77dbb19929a7eac828f06d7b9c",
-          "modified": "2026-09-24T11:01:52"
-        },
-        {
-          "path": "apps\\windows\\10-安全.json",
-          "size": 40516,
-          "hash": "ec758fc53e7ec77c0913fb15a73777a9",
-          "modified": "2026-09-04T15:22:58"
-        },
-        {
-          "path": "apps\\windows\\11-工具.json",
-          "size": 34904,
-          "hash": "56e5b233cad004ddbe8294b8c41004ea",
-          "modified": "2026-09-24T11:01:52"
-        },
-        {
-          "path": "apps\\windows\\12-开发.json",
-          "size": 60494,
-          "hash": "6b6c3bd7c890add01843cef0468e0871",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps\\windows\\13-效率.json",
-          "size": 49468,
-          "hash": "af38fd2069c8acf87fc0c9300031c192",
-          "modified": "2026-09-24T11:01:52"
-        },
-        {
-          "path": "apps\\windows\\14-游戏.json",
-          "size": 27295,
-          "hash": "5e74f57617c0778b0d997771577da804",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps\\windows\\15-笔记.json",
-          "size": 22692,
-          "hash": "dd4e7e42f6e024cbe682f410a71deda4",
-          "modified": "2026-09-20T10:34:42"
-        },
-        {
-          "path": "apps\\windows\\16-系统.json",
-          "size": 57925,
-          "hash": "1e8b0b290a606cf380394e0677207487",
-          "modified": "2026-09-24T11:01:52"
-        },
-        {
-          "path": "apps\\windows\\17-终端.json",
-          "size": 14868,
-          "hash": "6c7cb4dd28d2a58e2d4b889a89d2a245",
-          "modified": "2026-09-20T11:41:10"
-        },
-        {
-          "path": "apps\\windows\\18-网络.json",
-          "size": 29375,
-          "hash": "7429fb43ca45b1d638ea01c3b0f83086",
-          "modified": "2026-09-24T11:01:52"
-        },
-        {
-          "path": "apps\\windows\\19-网络与协作.json",
-          "size": 5359,
-          "hash": "427b2347ad96ef0e52267c12d7a48605",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps\\windows\\20-网络与通讯.json",
-          "size": 15841,
-          "hash": "f2eae3e68e2815aa604a7d06ebf3fbf6",
-          "modified": "2026-09-20T10:34:42"
-        },
-        {
-          "path": "apps\\windows\\21-远程与协作.json",
-          "size": 19792,
-          "hash": "6c0bc6f7b82475f78fc9e6c1c1a345b6",
-          "modified": "2026-09-19T11:31:24"
-        },
-        {
-          "path": "apps\\windows\\22-音视频.json",
-          "size": 30961,
-          "hash": "855be8e58234263875b0799763bbb9d8",
-          "modified": "2026-09-24T11:01:52"
-        },
-        {
-          "path": "apps\\windows\\23-数据库.json",
-          "size": 16730,
-          "hash": "0fdc230b36f724c904626bee8ece293f",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps\\windows\\24-云原生.json",
-          "size": 20128,
-          "hash": "7a296511d2b920a02c824264c366f378",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps\\windows\\25-可观测.json",
-          "size": 10975,
-          "hash": "47e4abdc8750c37d707dfddb1b3706ca",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps\\windows\\26-编辑器.json",
-          "size": 30180,
-          "hash": "28872f20f342544c61b5d2d6cf392af4",
-          "modified": "2026-09-22T14:14:14"
-        },
-        {
-          "path": "apps\\windows\\27-金融与股票.json",
-          "size": 9226,
-          "hash": "f3a2a00b3095ead5599f446e57e84dc7",
-          "modified": "2026-09-20T10:34:42"
-        },
-        {
-          "path": "apps\\windows\\28-加密货币.json",
-          "size": 7944,
-          "hash": "3e8f2ab611da5d49555943386d64045a",
-          "modified": "2026-08-11T18:11:50"
-        },
-        {
-          "path": "apps\\windows\\29-局域网文件共享.json",
-          "size": 15344,
-          "hash": "41f2ca33ce5ba2314e041f2764294c03",
-          "modified": "2026-09-23T18:01:08"
-        },
-        {
-          "path": "apps\\windows\\30-代理与隧道.json",
-          "size": 15651,
-          "hash": "8c6e7b300f6c069f592305dc89212a66",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps\\windows\\99-未匹配-windows分片.json",
-          "size": 34981,
-          "hash": "d771748e11d15f3283f0b41095a499b3",
-          "modified": "2026-07-03T11:43:34"
-        },
-        {
-          "path": "apps-mobile\\root.json",
-          "size": 827,
-          "hash": "308f770afe0c3d7558c467226d571b26",
-          "modified": "2026-08-26T17:54:58"
-        },
-        {
-          "path": "apps-mobile\\android\\01-AI.json",
-          "size": 9299,
-          "hash": "c943db4cb724a776fcfbd2cb83bf41bc",
-          "modified": "2026-09-20T11:09:12"
-        },
-        {
-          "path": "apps-mobile\\android\\01-工具.json",
-          "size": 8017,
-          "hash": "9339cdbf94505f633694cd52b3e24ebe",
-          "modified": "2026-06-27T17:07:46"
-        },
-        {
-          "path": "apps-mobile\\android\\02-下载.json",
-          "size": 3986,
-          "hash": "c5788a3bca57e682fc36283c1a10d78a",
-          "modified": "2026-08-25T15:22:04"
-        },
-        {
-          "path": "apps-mobile\\android\\03-写作.json",
-          "size": 5881,
-          "hash": "74651fc59fd937aa27549a67d21d2989",
-          "modified": "2026-09-20T10:34:42"
-        },
-        {
-          "path": "apps-mobile\\android\\04-办公.json",
-          "size": 6323,
-          "hash": "4c6ffbab7e49db1fbda06a94ce1148e4",
-          "modified": "2026-09-19T11:31:24"
-        },
-        {
-          "path": "apps-mobile\\android\\04-多媒体.json",
-          "size": 4326,
-          "hash": "95861e9b2d7c1ae5e66b5c0c64fc9a7c",
-          "modified": "2026-06-27T17:07:46"
-        },
-        {
-          "path": "apps-mobile\\android\\05-办公与设计.json",
-          "size": 3617,
-          "hash": "c8aa688d83f5f5ae9a987b2ffecb58c8",
-          "modified": "2026-06-27T17:07:46"
-        },
-        {
-          "path": "apps-mobile\\android\\05-安全.json",
-          "size": 8887,
-          "hash": "131f2f091127f5b172918f0580771e62",
-          "modified": "2026-06-27T17:07:46"
-        },
-        {
-          "path": "apps-mobile\\android\\06-命令行.json",
-          "size": 2659,
-          "hash": "2a86ef147038d679667a37b98eec636c",
-          "modified": "2026-06-27T17:07:46"
-        },
-        {
-          "path": "apps-mobile\\android\\06-网络.json",
-          "size": 5340,
-          "hash": "5423fc8c6c8a14f96afeb496e20eefd0",
-          "modified": "2026-06-27T17:07:46"
-        },
-        {
-          "path": "apps-mobile\\android\\07-备份.json",
-          "size": 6894,
-          "hash": "af3b98cc3ae488b90b98b1b8a0766548",
-          "modified": "2026-08-25T15:22:04"
-        },
-        {
-          "path": "apps-mobile\\android\\07-笔记.json",
-          "size": 2593,
-          "hash": "6ef48c3d8840bf584bcdd9296f66266f",
-          "modified": "2026-06-27T17:07:46"
-        },
-        {
-          "path": "apps-mobile\\android\\08-多媒体.json",
-          "size": 14411,
-          "hash": "0f6db32bb9ea169ef274380a0c9e3131",
-          "modified": "2026-08-25T15:22:04"
-        },
-        {
-          "path": "apps-mobile\\android\\08-输入.json",
-          "size": 5113,
-          "hash": "a8bcc22da23e8df0fef8c399de5e901b",
-          "modified": "2026-09-20T10:34:42"
-        },
-        {
-          "path": "apps-mobile\\android\\09-多媒体与设计.json",
-          "size": 2711,
-          "hash": "e3296816ef843fe9d82e3a5023ed13fe",
-          "modified": "2026-06-27T17:02:36"
-        },
-        {
-          "path": "apps-mobile\\android\\09-通讯.json",
-          "size": 2740,
-          "hash": "d20feca2049db0ad4d73b0709551e527",
-          "modified": "2026-06-27T17:02:36"
-        },
-        {
-          "path": "apps-mobile\\android\\10-安全.json",
-          "size": 3446,
-          "hash": "a234c11de03a5f98de8996b49d151a31",
-          "modified": "2026-06-27T17:07:46"
-        },
-        {
-          "path": "apps-mobile\\android\\10-浏览器.json",
-          "size": 5329,
-          "hash": "1c72da0aac7a9db159f7794438053075",
-          "modified": "2026-09-20T10:34:42"
-        },
-        {
-          "path": "apps-mobile\\android\\11-工具.json",
-          "size": 12097,
-          "hash": "73f799476cd4b6463cdd0d4495134c15",
-          "modified": "2026-08-25T15:22:04"
-        },
-        {
-          "path": "apps-mobile\\android\\11-智能家居.json",
-          "size": 1786,
-          "hash": "db10f470a6df89785f4a05eae66df352",
-          "modified": "2026-06-27T17:02:36"
-        },
-        {
-          "path": "apps-mobile\\android\\12-开发.json",
-          "size": 4282,
-          "hash": "f265e84443e1d122a016d637a4e46afa",
-          "modified": "2026-06-27T17:07:46"
-        },
-        {
-          "path": "apps-mobile\\android\\13-效率.json",
-          "size": 4503,
-          "hash": "2bf37b07d2d1b8847818de3be2c616ce",
-          "modified": "2026-08-25T15:22:04"
-        },
-        {
-          "path": "apps-mobile\\android\\14-游戏.json",
-          "size": 6333,
-          "hash": "1b0fa835f948cf971f54c9570d1a5c14",
-          "modified": "2026-08-25T15:22:04"
-        },
-        {
-          "path": "apps-mobile\\android\\15-笔记.json",
-          "size": 3152,
-          "hash": "853b58bfcbe01fc85be8692f53299113",
-          "modified": "2026-09-20T10:34:42"
-        },
-        {
-          "path": "apps-mobile\\android\\16-系统.json",
-          "size": 4820,
-          "hash": "589ce19895e4224786078ce6f750065b",
-          "modified": "2026-08-25T15:22:04"
-        },
-        {
-          "path": "apps-mobile\\android\\17-终端.json",
-          "size": 1741,
-          "hash": "0406b3d69342c572eb8d59f73b6aea85",
-          "modified": "2026-06-27T17:07:46"
-        },
-        {
-          "path": "apps-mobile\\android\\18-网络.json",
-          "size": 6090,
-          "hash": "2ba1dc35fa8e816f243858d5a0bc8788",
-          "modified": "2026-06-27T17:07:46"
-        },
-        {
-          "path": "apps-mobile\\android\\19-网络与协作.json",
-          "size": 3455,
-          "hash": "3e1e4203c0024f24dbd3a54cbc3fba5d",
-          "modified": "2026-06-27T17:07:46"
-        },
-        {
-          "path": "apps-mobile\\android\\20-网络与通讯.json",
-          "size": 17289,
-          "hash": "30e0856e6d21178fd596e8c01945dbe9",
-          "modified": "2026-09-20T10:34:42"
-        },
-        {
-          "path": "apps-mobile\\android\\21-远程与协作.json",
-          "size": 6817,
-          "hash": "f115f33ffeae1489cd0f7f4b413c7e9c",
-          "modified": "2026-09-19T11:31:24"
-        },
-        {
-          "path": "apps-mobile\\android\\22-音视频.json",
-          "size": 8867,
-          "hash": "b1537c98837b59fe19b9010385448133",
-          "modified": "2026-09-18T15:23:52"
-        },
-        {
-          "path": "apps-mobile\\android\\23-数据库.json",
-          "size": 2565,
-          "hash": "f97ff6661fc7dee81355a617f6bb9674",
-          "modified": "2026-06-27T17:07:46"
-        },
-        {
-          "path": "apps-mobile\\android\\24-云原生.json",
-          "size": 1787,
-          "hash": "2c2b9b05a64d3edf84af8e8b117abd8a",
-          "modified": "2026-06-27T17:07:46"
-        },
-        {
-          "path": "apps-mobile\\android\\25-可观测.json",
-          "size": 1701,
-          "hash": "3ba2e5d772711ae31fd32196e9cf5c47",
-          "modified": "2026-06-27T17:07:46"
-        },
-        {
-          "path": "apps-mobile\\android\\26-编辑器.json",
-          "size": 1715,
-          "hash": "cc69a90b83b05c4294e01aa8b449c519",
-          "modified": "2026-06-27T17:07:46"
-        },
-        {
-          "path": "apps-mobile\\android\\27-金融与股票.json",
-          "size": 3741,
-          "hash": "40d8e398f2687ec0cdd1768dca464451",
-          "modified": "2026-08-25T15:22:04"
-        },
-        {
-          "path": "apps-mobile\\android\\28-加密货币.json",
-          "size": 3540,
-          "hash": "3f83e2e534d4d2ae0306f768b4c2c9c1",
-          "modified": "2026-06-27T17:07:46"
-        },
-        {
-          "path": "apps-mobile\\android\\29-局域网文件共享.json",
-          "size": 1035,
-          "hash": "fc9bc2c232c0322c8c1caec1e3c4af31",
-          "modified": "2026-09-23T18:01:16"
-        },
-        {
-          "path": "apps-mobile\\android\\30-代理与隧道.json",
-          "size": 7543,
-          "hash": "5a12bf8c6024887b4e02e3b3a35188af",
-          "modified": "2026-09-18T15:45:56"
-        },
-        {
-          "path": "apps-mobile\\ios\\01-AI.json",
-          "size": 5959,
-          "hash": "8a14672987446517c817226e7d78c512",
-          "modified": "2026-09-20T11:09:12"
-        },
-        {
-          "path": "apps-mobile\\ios\\02-下载.json",
-          "size": 535,
-          "hash": "68c2a2ad0a68cc3512974237b85c560b",
-          "modified": "2026-08-25T15:34:12"
-        },
-        {
-          "path": "apps-mobile\\ios\\03-写作.json",
-          "size": 1813,
-          "hash": "5c843515ec90d05ef47b91150318b6ba",
-          "modified": "2026-09-20T10:34:42"
-        },
-        {
-          "path": "apps-mobile\\ios\\04-办公.json",
-          "size": 3526,
-          "hash": "cfbb51a8a1531f5b290d8ab43f95fc3e",
-          "modified": "2026-09-19T11:31:24"
-        },
-        {
-          "path": "apps-mobile\\ios\\07-备份.json",
-          "size": 2967,
-          "hash": "58ef5d673fbcde838ba92ca5e5227059",
-          "modified": "2026-08-25T15:34:12"
-        },
-        {
-          "path": "apps-mobile\\ios\\08-多媒体.json",
-          "size": 1187,
-          "hash": "c907b789c393b1c0b2c3d58ccb54fce5",
-          "modified": "2026-08-25T15:34:12"
-        },
-        {
-          "path": "apps-mobile\\ios\\08-输入.json",
-          "size": 1249,
-          "hash": "bbc2b66eb9d05d9bd420ac6df9a5f5b3",
-          "modified": "2026-09-20T10:34:42"
-        },
-        {
-          "path": "apps-mobile\\ios\\10-浏览器.json",
-          "size": 2405,
-          "hash": "356bc47d01beb4b03c27b52f374a0244",
-          "modified": "2026-09-20T10:34:42"
-        },
-        {
-          "path": "apps-mobile\\ios\\11-工具.json",
-          "size": 6837,
-          "hash": "8cade903bdfef7f7ac78e938a6a9e700",
-          "modified": "2026-08-25T15:34:12"
-        },
-        {
-          "path": "apps-mobile\\ios\\14-游戏.json",
-          "size": 1101,
-          "hash": "b5eddc4b75b216c04930171bcc10eaa4",
-          "modified": "2026-08-25T15:34:12"
-        },
-        {
-          "path": "apps-mobile\\ios\\15-笔记.json",
-          "size": 669,
-          "hash": "4a8bf9b803b28915a9568ee587712956",
-          "modified": "2026-09-20T10:34:42"
-        },
-        {
-          "path": "apps-mobile\\ios\\20-网络与通讯.json",
-          "size": 11623,
-          "hash": "19b055886bb744754c475a6930ca8cf0",
-          "modified": "2026-09-20T10:34:42"
-        },
-        {
-          "path": "apps-mobile\\ios\\21-远程与协作.json",
-          "size": 4674,
-          "hash": "0187b97eb700f5def64a2d33308f2478",
-          "modified": "2026-09-19T11:31:24"
-        },
-        {
-          "path": "apps-mobile\\ios\\22-音视频.json",
-          "size": 6107,
-          "hash": "a913700d7fbcd9e81d9a8a3edfd0b79d",
-          "modified": "2026-09-18T15:23:52"
-        },
-        {
-          "path": "apps-mobile\\ios\\27-金融与股票.json",
-          "size": 2038,
-          "hash": "c778782f530b84eb985d93f8f750ea74",
-          "modified": "2026-08-25T15:34:12"
-        },
-        {
-          "path": "apps-mobile\\ios\\99-占位-AppStore.json",
-          "size": 19897,
-          "hash": "4563b9467ef825c6a087dccdf3b8a979",
-          "modified": "2026-06-27T17:07:46"
-        },
-        {
-          "path": "tools\\soft_page_check\\423down_digest_urls.txt",
-          "size": 12682,
-          "hash": "b944c16c12cb38e54dfbf776dea41985",
-          "modified": "2026-05-26T14:16:42"
-        },
-        {
-          "path": "tools\\soft_page_check\\list_scopes.py",
-          "size": 5739,
-          "hash": "5d77c9fc2b67d31758ffe66199dc8a97",
-          "modified": "2026-09-23T18:04:02"
-        },
-        {
-          "path": "tools\\soft_page_check\\soft_pages_urls.txt",
-          "size": 4618,
-          "hash": "77e37dc63e41dc394d0a04134f6ca028",
-          "modified": "2026-09-23T18:04:02"
-        },
-        {
-          "path": "tools\\soft_page_check\\watch_tier_a_urls.txt",
-          "size": 1693,
-          "hash": "d2c49af55b1e5fcfc0e3c5faf14a40d6",
-          "modified": "2026-09-23T18:04:02"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_423DOWN_2026-06-23_110510.json",
-          "size": 85758,
-          "hash": "c6a17ea24e1843dacf015b1facc00a06",
-          "modified": "2026-06-23T11:05:10"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_423DOWN_2026-06-27_173416.json",
-          "size": 86148,
-          "hash": "2292505741e715656a8bf0f9a8d8c31f",
-          "modified": "2026-06-27T17:34:16"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_7XIAZAI_MOBILE_2026-06-23_110943.json",
-          "size": 65744,
-          "hash": "5ae8132718c56e5b4ddb108c087ab417",
-          "modified": "2026-06-23T11:09:42"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_7XIAZAI_MOBILE_2026-06-27_173919.json",
-          "size": 66265,
-          "hash": "e2d470d75f755815fd7620b5caedfafb",
-          "modified": "2026-06-27T17:39:18"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_7XIAZAI_SYSTEM_2026-06-23_110808.json",
-          "size": 127032,
-          "hash": "f439797556093d9065a8e6903204c336",
-          "modified": "2026-06-23T11:08:08"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_7XIAZAI_SYSTEM_2026-06-27_173722.json",
-          "size": 126436,
-          "hash": "8cebe3ddbd1cb00bea44e1bebd7171fa",
-          "modified": "2026-06-27T17:37:22"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_ALL_2026-06-23_110347.json",
-          "size": 33348,
-          "hash": "c9caf9e6c73b2cee7d6872f3b0522941",
-          "modified": "2026-09-23T18:04:02"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_ALL_2026-06-27_173307.json",
-          "size": 35808,
-          "hash": "10cfb32128aaaa4375e0efa9d6f67265",
-          "modified": "2026-09-23T18:04:02"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_APPX64_MOBILE_2026-06-23_112852.json",
-          "size": 63762,
-          "hash": "88cfe6938fa93df0a03027f305b3d1a8",
-          "modified": "2026-09-23T18:04:02"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_APPX64_MOBILE_2026-06-27_175803.json",
-          "size": 63690,
-          "hash": "2ba0a4fc70106c6f2b47334fd91e3292",
-          "modified": "2026-09-23T18:04:02"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_APPX64_SYSTEM_2026-06-23_112732.json",
-          "size": 99354,
-          "hash": "306397d4c8311aebb15960aaeb615d6b",
-          "modified": "2026-09-23T18:04:02"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_APPX64_SYSTEM_2026-06-27_175547.json",
-          "size": 99365,
-          "hash": "6f4b59e1fc062691171e4d287191d584",
-          "modified": "2026-09-23T18:04:02"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_A_2026-06-23_110027.json",
-          "size": 14489,
-          "hash": "176fedd34cc5f81c44c0b78c778a85e6",
-          "modified": "2026-09-23T18:04:02"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_A_2026-06-23_110259.json",
-          "size": 13942,
-          "hash": "474545f1fd1168d0b1a2ea987863c58a",
-          "modified": "2026-09-23T18:04:02"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_A_2026-06-27_173242.json",
-          "size": 14534,
-          "hash": "a28b58b326e1293af6e66e0bad47d616",
-          "modified": "2026-09-23T18:04:02"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_DAYANZAI_MOBILE_2026-06-23_112515.json",
-          "size": 80793,
-          "hash": "cdbcfa3b4b47c030317cac4b29e713ea",
-          "modified": "2026-06-23T11:25:14"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_DAYANZAI_MOBILE_2026-06-27_175319.json",
-          "size": 80793,
-          "hash": "dfb00eeb45c32275a6d1678c3b520fdb",
-          "modified": "2026-06-27T17:53:18"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_DAYANZAI_SYSTEM_2026-06-23_112407.json",
-          "size": 907810,
-          "hash": "cfd33b2c315456712bf258c200f81fd1",
-          "modified": "2026-06-23T11:24:06"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_DAYANZAI_SYSTEM_2026-06-27_175218.json",
-          "size": 907784,
-          "hash": "912adfc6fa0aad9a3de142109c3e9a6c",
-          "modified": "2026-06-27T17:52:18"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_GAMER520_2026-06-28_113119.json",
-          "size": 124962,
-          "hash": "57b365d0fd73d5a1b3d38404dfe71618",
-          "modified": "2026-06-28T11:31:18"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_HYBASE_MOBILE_2026-06-23_111030.json",
-          "size": 82641,
-          "hash": "bb3f7a1eed97eb61623ff6582efdf279",
-          "modified": "2026-06-23T11:10:30"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_HYBASE_MOBILE_2026-06-27_174035.json",
-          "size": 81895,
-          "hash": "5da0da605f2703548a7020e76850226f",
-          "modified": "2026-06-27T17:40:34"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_HYBASE_MOBILE_2026-07-08_120423.json",
-          "size": 81895,
-          "hash": "a487a679b1f7547ab8df4b50442775f0",
-          "modified": "2026-07-08T12:04:22"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_HYBASE_SYSTEM_2026-06-23_111018.json",
-          "size": 121557,
-          "hash": "39c13864d9c1586c388807bd6cf10989",
-          "modified": "2026-06-23T11:10:18"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_HYBASE_SYSTEM_2026-06-27_174004.json",
-          "size": 121613,
-          "hash": "cbd5dcb637d2ef56d20e51dfc86ca191",
-          "modified": "2026-06-27T17:40:04"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_HYBASE_SYSTEM_2026-07-08_120358.json",
-          "size": 121610,
-          "hash": "21870889bc2bcebee58f90ec72f2c310",
-          "modified": "2026-07-08T12:03:58"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_latest_423DOWN.json",
-          "size": 86148,
-          "hash": "2292505741e715656a8bf0f9a8d8c31f",
-          "modified": "2026-06-27T17:34:16"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_latest_7XIAZAI.json",
-          "size": 187127,
-          "hash": "1dbb4b4fa105f44863d5830b3e38d5b5",
-          "modified": "2026-05-28T14:21:42"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_latest_7XIAZAI_MOBILE.json",
-          "size": 66265,
-          "hash": "e2d470d75f755815fd7620b5caedfafb",
-          "modified": "2026-06-27T17:39:18"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_latest_7XIAZAI_SYSTEM.json",
-          "size": 126436,
-          "hash": "8cebe3ddbd1cb00bea44e1bebd7171fa",
-          "modified": "2026-06-27T17:37:22"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_latest_A.json",
-          "size": 14534,
-          "hash": "a28b58b326e1293af6e66e0bad47d616",
-          "modified": "2026-09-23T18:04:02"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_latest_ALL.json",
-          "size": 35808,
-          "hash": "10cfb32128aaaa4375e0efa9d6f67265",
-          "modified": "2026-09-23T18:04:02"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_latest_APPX64_MOBILE.json",
-          "size": 63690,
-          "hash": "2ba0a4fc70106c6f2b47334fd91e3292",
-          "modified": "2026-09-23T18:04:04"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_latest_APPX64_SYSTEM.json",
-          "size": 99365,
-          "hash": "6f4b59e1fc062691171e4d287191d584",
-          "modified": "2026-09-23T18:04:04"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_latest_DAYANZAI_MOBILE.json",
-          "size": 80793,
-          "hash": "dfb00eeb45c32275a6d1678c3b520fdb",
-          "modified": "2026-06-27T17:53:18"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_latest_DAYANZAI_SYSTEM.json",
-          "size": 907784,
-          "hash": "912adfc6fa0aad9a3de142109c3e9a6c",
-          "modified": "2026-06-27T17:52:18"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_latest_GAMER520.json",
-          "size": 124962,
-          "hash": "57b365d0fd73d5a1b3d38404dfe71618",
-          "modified": "2026-06-28T11:31:18"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_latest_HYBASE.json",
-          "size": 189428,
-          "hash": "f0dae2d9c7816218237d158b617dd162",
-          "modified": "2026-05-28T10:14:02"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_latest_HYBASE_MOBILE.json",
-          "size": 81895,
-          "hash": "a487a679b1f7547ab8df4b50442775f0",
-          "modified": "2026-07-08T12:04:22"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_latest_HYBASE_SYSTEM.json",
-          "size": 121610,
-          "hash": "21870889bc2bcebee58f90ec72f2c310",
-          "modified": "2026-07-08T12:03:58"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_latest_MACWK.json",
-          "size": 49418,
-          "hash": "4b466d0abea4f9f734ab514dcb825369",
-          "modified": "2026-07-13T15:48:18"
-        },
-        {
-          "path": "tools\\soft_page_check\\history\\titles_MACWK_2026-07-13_154818.json",
-          "size": 49418,
-          "hash": "4b466d0abea4f9f734ab514dcb825369",
-          "modified": "2026-07-13T15:48:18"
-        },
-        {
-          "path": "tools\\soft_page_check\\list\\7xiazai_list_urls.txt",
-          "size": 24900,
-          "hash": "13f2392ba00764d3381f87d65f835c78",
-          "modified": "2026-06-27T17:37:24"
-        },
-        {
-          "path": "tools\\soft_page_check\\list\\7xiazai_list_urls_mobile.txt",
-          "size": 8085,
-          "hash": "fdc492cfaf2bb1f7d556b4122125a3a8",
-          "modified": "2026-06-27T17:37:24"
-        },
-        {
-          "path": "tools\\soft_page_check\\list\\7xiazai_list_urls_system.txt",
-          "size": 17044,
-          "hash": "8799d6ffb294b176cb7edf478788a568",
-          "modified": "2026-06-27T17:37:24"
-        },
-        {
-          "path": "tools\\soft_page_check\\list\\appx64_app_list.txt",
-          "size": 19830,
-          "hash": "267a42087a52c4555d3e0f067d977e5a",
-          "modified": "2026-09-23T18:04:04"
-        },
-        {
-          "path": "tools\\soft_page_check\\list\\appx64_app_urls.txt",
-          "size": 6717,
-          "hash": "0c71e6676aeea728a0cb049a8d3906b3",
-          "modified": "2026-09-23T18:04:04"
-        },
-        {
-          "path": "tools\\soft_page_check\\list\\appx64_system_urls.txt",
-          "size": 11239,
-          "hash": "19946d1713464dbe3222ed4ce77808d9",
-          "modified": "2026-09-23T18:04:04"
-        },
-        {
-          "path": "tools\\soft_page_check\\list\\dayanzai_android_list.txt",
-          "size": 30119,
-          "hash": "d18e5e9fd965a8149eeba36434fa30b1",
-          "modified": "2026-05-27T12:45:48"
-        },
-        {
-          "path": "tools\\soft_page_check\\list\\dayanzai_android_urls.txt",
-          "size": 11719,
-          "hash": "a8bc0eb334c2d3e545002eb8074c9823",
-          "modified": "2026-05-27T12:45:48"
-        },
-        {
-          "path": "tools\\soft_page_check\\list\\dayanzai_system_urls.txt",
-          "size": 138270,
-          "hash": "fb2ae1d468d6b2600307938bfa60364b",
-          "modified": "2026-06-01T14:50:40"
-        },
-        {
-          "path": "tools\\soft_page_check\\list\\gamer520_list.txt",
-          "size": 131045,
-          "hash": "26256efc9a625ff5292ec218f41bd926",
-          "modified": "2026-06-28T11:41:44"
-        },
-        {
-          "path": "tools\\soft_page_check\\list\\gamer520_urls.txt",
-          "size": 40977,
-          "hash": "9c12d571668ae496e3da10247c5d887a",
-          "modified": "2026-06-28T11:41:44"
-        },
-        {
-          "path": "tools\\soft_page_check\\list\\hybase_newlist_list.txt",
-          "size": 70665,
-          "hash": "c8b8c28fd92e2e0228a32c6cf388da1d",
-          "modified": "2026-05-28T09:56:52"
-        },
-        {
-          "path": "tools\\soft_page_check\\list\\hybase_newlist_list_mobile.txt",
-          "size": 27946,
-          "hash": "af4458fce2ebbb39ff9e901cd52b013e",
-          "modified": "2026-05-28T10:15:14"
-        },
-        {
-          "path": "tools\\soft_page_check\\list\\hybase_newlist_list_system.txt",
-          "size": 42702,
-          "hash": "65b831871967f72bc74b70bb1894af7b",
-          "modified": "2026-05-28T10:15:14"
-        },
-        {
-          "path": "tools\\soft_page_check\\list\\hybase_newlist_urls.txt",
-          "size": 27484,
-          "hash": "e0a5f6d46932941743d691480dd14e61",
-          "modified": "2026-05-28T09:56:52"
-        },
-        {
-          "path": "tools\\soft_page_check\\list\\hybase_newlist_urls_mobile.txt",
-          "size": 11336,
-          "hash": "177a8778cab04cf9c5da891e233dca87",
-          "modified": "2026-05-28T10:15:14"
-        },
-        {
-          "path": "tools\\soft_page_check\\list\\hybase_newlist_urls_system.txt",
-          "size": 16148,
-          "hash": "61927174ebbef32ca8e83aec3007b7a8",
-          "modified": "2026-05-28T10:15:14"
-        },
-        {
-          "path": "tools\\soft_page_check\\list\\macwk_list.txt",
-          "size": 9056,
-          "hash": "f8def73e56717d644d2442e6e341beb1",
-          "modified": "2026-07-13T15:47:48"
-        },
-        {
-          "path": "tools\\soft_page_check\\list\\macwk_urls.txt",
-          "size": 7065,
-          "hash": "7e16a2ef59ac5a114a16a69b68ad9c7d",
-          "modified": "2026-07-13T15:47:48"
-        },
-        {
-          "path": "tools\\soft_page_check\\list\\README.md",
-          "size": 2830,
-          "hash": "59dd6770361814a6bc41af0a70b73184",
-          "modified": "2026-09-23T18:04:04"
-        },
-        {
-          "path": "VibeCodingToolsDown\\dist\\vibecoding\\manifest.json",
-          "size": 25010,
-          "hash": "1d19669685e0f593331e5ff2f9d15c7c",
-          "modified": "2026-09-17T07:49:42"
+          "path": "readme.txt",
+          "size": 153,
+          "hash": "777a32515f9f2e01d4e85c9a1d46dda0",
+          "modified": "2026-10-10T16:17:41.647519"
         }
       ],
-      "total_files": 241,
-      "total_size": 55382860,
-      "last_updated": "2026-09-24T20:15:02.717238"
+      "total_files": 1,
+      "total_size": 153,
+      "last_updated": "2026-10-10T17:17:32.232544"
     }
   }
 }

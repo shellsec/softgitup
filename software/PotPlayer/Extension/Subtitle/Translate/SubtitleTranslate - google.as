@@ -165,6 +165,7 @@ array<string> LangTable =
 	"km",
 	"ko",
 	"ku",
+	"ckb",
 	"ky",
 	"lo",
 	"la",

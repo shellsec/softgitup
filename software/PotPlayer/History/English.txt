@@ -2,6 +2,20 @@
 Version History of the PotPlayer
 
 ----------------------------------------------------------
+[261008]
+----------------------------------------------------------
+* Changed default renderers (D3D11 for video, WASAPI for audio)
+
++ Added MPEG4 DXVA support
++ Added support for playing HLS/DASH streams from local files
++ Added the ability to customize the playlist search method
+
+- Fixed slow WebP encoding speed
+- Fixed an issue where some MPEG TS files could not be played
+- Improved image quality when doubling the frame rate
+- Fixed an error when playing certain MP4 files
+
+----------------------------------------------------------
 [260819]
 ----------------------------------------------------------
 * ARM64 Build Released
