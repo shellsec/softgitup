@@ -4,24 +4,62 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>资源导航站</title>
+<script>
+(function(){
+  var root = document.documentElement;
+  function read(key, fallback, allowed){
+    var v = null;
+    try { v = localStorage.getItem(key); } catch (e) {}
+    return allowed.indexOf(v) >= 0 ? v : fallback;
+  }
+  var theme = read('ainav-theme', 'dark', ['dark', 'light', 'system']);
+  var density = read('ainav-density', 'comfort', ['comfort', 'compact']);
+  var layout = read('ainav-layout', 'card', ['card', 'list']);
+  root.setAttribute('data-theme', theme);
+  root.setAttribute('data-density', density);
+  root.setAttribute('data-layout', layout);
+  if (theme === 'system' && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    root.classList.add('os-light');
+  }
+})();
+</script>
 <style>
 :root{
   --bg:#0f1117; --bg2:#151823; --card:#1b2030; --card2:#222838;
   --line:#2a3045; --txt:#e6e9f2; --txt2:#9aa3bd; --txt3:#6b7591;
   --brand:#5b8cff; --brand2:#7c6bff; --accent:#22c39a; --warn:#ffb43c;
   --shadow:0 8px 24px rgba(0,0,0,.35);
+  --header:rgba(15,17,23,.82); --ring:rgba(91,140,255,.15);
+  --glow-a:rgba(91,140,255,.12); --glow-b:rgba(124,107,255,.10);
+  --col:280px; --gap:14px; --pad:16px 16px 14px;
+  --desc-size:12.5px; --desc-min:38px;
+  color-scheme:dark;
+}
+html[data-theme="light"],
+html[data-theme="system"].os-light{
+  --bg:#f3f5fa; --bg2:#f8f9fc; --card:#ffffff; --card2:#e8eef8;
+  --line:#d7deea; --txt:#1a2030; --txt2:#3d4860; --txt3:#52607a;
+  --brand:#3a6ad4; --brand2:#5e52d0; --accent:#0e8d6a; --warn:#a86b0c;
+  --shadow:0 8px 24px rgba(24,36,68,.08);
+  --header:rgba(243,245,250,.92); --ring:rgba(58,106,212,.22);
+  --glow-a:transparent; --glow-b:transparent;
+  color-scheme:light;
+}
+html[data-density="compact"]{
+  --col:220px; --gap:8px; --pad:10px 12px 8px;
+  --desc-size:11.5px; --desc-min:32px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
   font-family:"Microsoft YaHei","PingFang SC","WenQuanYi Micro Hei",system-ui,sans-serif;
-  background:radial-gradient(1200px 600px at 15% -10%,rgba(91,140,255,.12),transparent),
-             radial-gradient(1000px 500px at 90% 0%,rgba(124,107,255,.10),transparent),var(--bg);
+  background:radial-gradient(1200px 600px at 15% -10%,var(--glow-a),transparent),
+             radial-gradient(1000px 500px at 90% 0%,var(--glow-b),transparent),var(--bg);
   color:var(--txt); line-height:1.6; padding-bottom:60px;
 }
 .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
 
-header{position:sticky;top:0;z-index:50;background:rgba(15,17,23,.82);backdrop-filter:blur(12px);
+header{position:sticky;top:0;z-index:50;background:var(--header);backdrop-filter:blur(12px);
   border-bottom:1px solid var(--line)}
 .hbox{display:flex;align-items:center;gap:16px;padding:14px 0;flex-wrap:wrap}
 .logo{font-size:20px;font-weight:800;letter-spacing:.5px;white-space:nowrap;
@@ -30,8 +68,22 @@ header{position:sticky;top:0;z-index:50;background:rgba(15,17,23,.82);backdrop-f
 .search{flex:1;min-width:200px;position:relative}
 .search input{width:100%;padding:10px 14px 10px 38px;border-radius:10px;border:1px solid var(--line);
   background:var(--bg2);color:var(--txt);font-size:14px;outline:none;transition:.2s}
-.search input:focus{border-color:var(--brand);box-shadow:0 0 0 3px rgba(91,140,255,.15)}
+.search input:focus{border-color:var(--brand);box-shadow:0 0 0 3px var(--ring)}
 .search::before{content:"🔍";position:absolute;left:12px;top:50%;transform:translateY(-50%);opacity:.5;font-size:13px}
+.prefs{display:flex;align-items:center;gap:8px;flex-wrap:wrap;flex-shrink:0}
+.pref{display:inline-flex;align-items:center;gap:2px;padding:2px;border-radius:20px;border:1px solid var(--line);background:var(--card)}
+.opt{appearance:none;margin:0;padding:3px 9px;border-radius:16px;font-size:12px;line-height:1.5;border:1px solid transparent;
+  background:transparent;color:var(--txt2);cursor:pointer;font-family:inherit;white-space:nowrap}
+.opt:hover{color:var(--txt)}
+.opt:focus-visible{outline:2px solid var(--brand);outline-offset:1px}
+html[data-theme="dark"] .pref[data-pref="theme"] .opt[data-val="dark"],
+html[data-theme="light"] .pref[data-pref="theme"] .opt[data-val="light"],
+html[data-theme="system"] .pref[data-pref="theme"] .opt[data-val="system"],
+html[data-density="comfort"] .pref[data-pref="density"] .opt[data-val="comfort"],
+html[data-density="compact"] .pref[data-pref="density"] .opt[data-val="compact"],
+html[data-layout="card"] .pref[data-pref="layout"] .opt[data-val="card"],
+html[data-layout="list"] .pref[data-pref="layout"] .opt[data-val="list"]{
+  background:linear-gradient(90deg,var(--brand),var(--brand2));color:#fff}
 .count{font-size:12px;color:var(--txt3);white-space:nowrap}
 
 .hero{padding:44px 0 26px;text-align:center}
@@ -50,8 +102,8 @@ section{padding-top:34px;scroll-margin-top:80px}
   background:var(--card);border:1px solid var(--line)}
 .sec-head h2{font-size:20px;font-weight:800}
 .sec-head small{color:var(--txt3);font-size:12px;margin-left:auto}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
-.card{position:relative;display:block;text-decoration:none;color:inherit;padding:16px 16px 14px;
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(var(--col),1fr));gap:var(--gap)}
+.card{position:relative;display:block;text-decoration:none;color:inherit;padding:var(--pad);
   background:linear-gradient(180deg,var(--card),var(--bg2));border:1px solid var(--line);
   border-radius:14px;transition:.2s;overflow:hidden}
 .card::after{content:"";position:absolute;inset:0;border-radius:14px;padding:1px;
@@ -63,11 +115,21 @@ section{padding-top:34px;scroll-margin-top:80px}
 .fav{width:34px;height:34px;border-radius:9px;flex-shrink:0;display:grid;place-items:center;
   font-size:15px;background:var(--card2);border:1px solid var(--line);font-weight:700;color:var(--txt2)}
 .card h3{font-size:15px;font-weight:700;line-height:1.4}
-.card .desc{font-size:12.5px;color:var(--txt2);margin-top:8px;min-height:38px}
+.card .desc{font-size:var(--desc-size);color:var(--txt2);margin-top:8px;min-height:var(--desc-min)}
 .card .meta{display:flex;align-items:center;gap:8px;margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:11px;color:var(--txt3)}
 .card .meta b{font-weight:600;color:var(--brand)}
 .card .go{margin-left:auto;opacity:0;transform:translateX(-4px);transition:.2s;color:var(--brand)}
 .card:hover .go{opacity:1;transform:translateX(0)}
+html[data-layout="list"] .grid{grid-template-columns:1fr}
+html[data-layout="list"] .card{display:flex;align-items:center;gap:12px}
+html[data-layout="list"] .card:hover{transform:none;box-shadow:none;border-color:var(--brand)}
+html[data-layout="list"] .card::after,
+html[data-layout="list"] .card:hover::after{opacity:0}
+html[data-layout="list"] .card .top{flex:1;min-width:0;align-items:center}
+html[data-layout="list"] .card h3{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+html[data-layout="list"] .card .desc,
+html[data-layout="list"] .card .go{display:none}
+html[data-layout="list"] .card .meta{margin:0;padding:0;border:0;flex-shrink:0;white-space:nowrap}
 .empty{display:none;text-align:center;color:var(--txt3);padding:60px 0;font-size:14px}
 
 footer{margin-top:50px;padding-top:24px;border-top:1px solid var(--line);color:var(--txt3);font-size:12.5px;text-align:center}
@@ -89,6 +151,21 @@ footer p{margin:6px 0}
   <div class="wrap hbox">
     <div class="logo">资源导航站 <span>// Nav Hub</span></div>
     <div class="search"><input id="q" type="text" placeholder="搜索站点名称、网址或描述…" autocomplete="off"></div>
+    <div class="prefs" id="prefs">
+      <div class="pref" data-pref="theme" role="radiogroup" aria-label="主题">
+        <button type="button" class="opt" data-val="dark">深色</button>
+        <button type="button" class="opt" data-val="light">浅色</button>
+        <button type="button" class="opt" data-val="system">跟随系统</button>
+      </div>
+      <div class="pref" data-pref="density" role="radiogroup" aria-label="密度">
+        <button type="button" class="opt" data-val="comfort">舒适</button>
+        <button type="button" class="opt" data-val="compact">紧凑</button>
+      </div>
+      <div class="pref" data-pref="layout" role="radiogroup" aria-label="版式">
+        <button type="button" class="opt" data-val="card">卡片</button>
+        <button type="button" class="opt" data-val="list">列表</button>
+      </div>
+    </div>
     <div class="count" id="count"></div>
   </div>
 </header>
@@ -612,10 +689,10 @@ footer p{margin:6px 0}
         <div class="desc">免费技术资源博客，AI、网络安全与实用教程。</div>
         <div class="meta"><span>blog.upx8.com</span><span class="go">前往 →</span></div>
       </a>
-      <a class="card" href="https://www.ifmac.cn/" target="_blank" rel="noopener">
-        <div class="top"><div class="fav">M</div><h3>iFmac · Mac 软件分享</h3></div>
-        <div class="desc">Mac 平台软件资源站，苹果电脑常用应用与破解资源整理。</div>
-        <div class="meta"><span>ifmac.cn</span><span class="go">前往 →</span></div>
+      <a class="card" href="https://imacos.top/?aff=106127" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">M</div><h3>黑苹果屋 · Mac 软件</h3></div>
+        <div class="desc">Mac 软件资源站，也有黑苹果系统镜像和装机教程。</div>
+        <div class="meta"><span>imacos.top</span><span class="go">前往 →</span></div>
       </a>
       <a class="card" href="https://www.ermao.net/blog/freeappleid/" target="_blank" rel="noopener">
         <div class="top"><div class="fav">ID</div><h3>二毛 · 免费 Apple ID</h3></div>
@@ -702,6 +779,52 @@ footer p{margin:6px 0}
     top.classList.toggle('show', window.scrollY > 400);
   });
   top.onclick = function(){window.scrollTo({top:0, behavior:'smooth'})};
+
+  var prefs = document.getElementById('prefs');
+  var themeMq = window.matchMedia('(prefers-color-scheme: light)');
+  function savePref(key, val){
+    try { localStorage.setItem(key, val); } catch (e) {}
+  }
+  function syncSystemTheme(){
+    var root = document.documentElement;
+    var follow = root.getAttribute('data-theme') === 'system' && themeMq.matches;
+    root.classList.toggle('os-light', follow);
+  }
+  function syncPressed(){
+    var root = document.documentElement;
+    var cur = {
+      theme: root.getAttribute('data-theme'),
+      density: root.getAttribute('data-density'),
+      layout: root.getAttribute('data-layout')
+    };
+    Array.prototype.forEach.call(prefs.querySelectorAll('.opt'), function(b){
+      var on = b.getAttribute('data-val') === cur[b.parentNode.getAttribute('data-pref')];
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+  }
+  prefs.addEventListener('click', function(e){
+    var btn = e.target;
+    while (btn && btn !== prefs && !(btn.classList && btn.classList.contains('opt'))) btn = btn.parentNode;
+    if (!btn || btn === prefs) return;
+    var group = btn.parentNode.getAttribute('data-pref');
+    var val = btn.getAttribute('data-val');
+    if (group === 'theme') {
+      document.documentElement.setAttribute('data-theme', val);
+      savePref('ainav-theme', val);
+      syncSystemTheme();
+    } else if (group === 'density') {
+      document.documentElement.setAttribute('data-density', val);
+      savePref('ainav-density', val);
+    } else if (group === 'layout') {
+      document.documentElement.setAttribute('data-layout', val);
+      savePref('ainav-layout', val);
+    }
+    syncPressed();
+  });
+  if (themeMq.addEventListener) themeMq.addEventListener('change', syncSystemTheme);
+  else if (themeMq.addListener) themeMq.addListener(syncSystemTheme);
+  syncSystemTheme();
+  syncPressed();
 
   apply();
 })();
