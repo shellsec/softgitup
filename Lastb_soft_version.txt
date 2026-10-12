@@ -833,8 +833,17 @@ https://github.com/GMYXDS/MstscManager
 其他的Termius 9.37.5 PRO 最新破解版（高颜值的SSH终端软件）
 https://www.wuleba.com/2844.html
 
+日常默认 清风输入法 WindInput-Setup-0.125.0
+所有方案（五笔 86 / 全拼 / 双拼 / 五笔拼音混输）都打包在本地，不依赖联网
+轻量、快速、可定制的开源中文输入法。 五笔、全拼、双拼与混输——词库、按键、外观，全部由你定义。
+目前使用清风，功能比较傻瓜，默认是五笔，安装后选输入方式即可
+https://windinput.com/
+https://github.com/huanfeng/WindInput
+
+
+小狼毫比较繁琐，还要自己导入词库
 本地输入法最终推荐
-- 日常主力：墨奇（关云功能） 或 清风  
+- 日常主力：墨奇（关云功能） 或 清风  https://windinput.com/download
 - 隐私/涉密：小狼毫 + 白霜  
 - 语音：VocoType  
 - 手机：Android → XIMEI比厂商输入法安全 https://ime.ximei.me/；iOS/macOS → 系统自带  
@@ -905,6 +914,7 @@ git clone --depth 1 https://github.com/gaboolic/rime-frost Rime-frost
 cd "$env:APPDATA\Rime\Rime-frost"
 git pull
 # 再复制回 %APPDATA%\Rime\ 根目录 → 重新部署
+
 3. 方案 B：清风 WindInput（五笔/码表/省事）
 3.1 装
 1. https://github.com/huanfeng/WindInput
