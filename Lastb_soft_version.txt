@@ -460,6 +460,9 @@ https://gh-proxy.com/raw.githubusercontent.com/pdone/lx-music-source/main/juhe/l
 QDY
 https://gh-proxy.com/raw.githubusercontent.com/pdone/lx-music-source/main/qdy/latest.js
 
+其他
+https://www.appx64.com/lxmusic/Appx64-music-source.js
+
 2、洛雪音乐安卓端自动音源版 本仓库基于官方 lx-music-mobile v1.9.1，在保留上游完整历史的前提下，增加内置音源与播放失败自动切换，并调整若干开箱默认设置。
 https://github.com/shellsec/lx-music-mobile-auto-source
 arm64-v8a（常见手机，优先）：
@@ -570,6 +573,21 @@ https://github.com/songloft-org/songloft-tv
 11、其他车载端-蓝牙连接手机网页播放
 智能音箱-小爱同学pro-蓝牙连接手机网页播放
 可穿戴设备，不支持
+
+洛雪音乐：面向普通用户的桌面/手机聚合播放器，装好+导音源=直接搜歌听歌下载，开箱能用（但要自己找音源）。
+Any Listen：作者新项目，定位个人私有云音乐服务/播放器，本体更“空”，强调本地库+WebDAV+扩展机制+自部署，适合折腾党/NAS玩家
+维度  洛雪音乐 LX Music   Any Listen
+核心定位    聚合播放器（搜全网→播/下）  私有音乐库服务+播放前端
+在线音源    内置自定义源机制，社区音源脚本直接导  本体不带音源，装扩展（如 LX Music API Source Loader）才出在线资源
+本地音乐    支持扫描本地，但主线是在线聚合 一等公民：扫本地+WebDAV 远程曲库+元数据匹配
+多端/部署   Win/Mac/Linux/Android 直装    桌面版 + Web 版（Docker 部署到 NAS/服务器）​
+数据归属    本机配置/歌单，可备份 强调数据主权：曲库在本地或你自己的 WebDAV/服务器
+歌词/音效   桌面歌词、普通逐字歌词、均衡器 卡拉OK歌词、标题栏悬浮歌词、扩展增强
+扩展能力    自定义音源 JS    扩展管理器（元数据/音源/音效/格式插件）
+上手难度    中等（找音源是门槛）  更高（概念多：扩展/WebDAV/服务部署）
+适合谁 电脑手机想白嫖听歌、下载MQ/FLAC 有本地无损库、NAS、想自建、怕哪天音源全死
+
+
 
 看视频，安卓平板类
 https://www.pejdw.com/app/shipin/
