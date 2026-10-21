@@ -344,6 +344,24 @@ Everything-1.5.0.1423b.x64.zip - ZIP 压缩文件, 解包大小为 6,463,818 字
 https://www.voidtools.com/forum/viewtopic.php?f=12&t=9787
 https://www.voidtools.com/Everything-1.5.0.1423b.x64.zip
 
+手机与电脑通过局域网直接传文件，减少用聊天软件中转敏感文档的步骤
+无需云端即可分享文件。
+快速、私密、离线。
+面向所有人的开源跨平台文件共享。
+https://github.com/localsend/localsend
+跨平台
+LocalSend 可用于 Windows、macOS、Linux、Android 和 iOS。
+安全
+端到端加密保证只有您与接收者能访问文件。
+无需互联网
+完全离线运行。数据永不离开您的局域网。
+高速
+以 WiFi 网络的最高速度传输文件，无带宽限制。
+
+
+给文档、脚本、配置做定时加密快照，保留历史版本，支持恢复。备份目标最好放另一块磁盘或 NAS
+https://kopia.io/docs/installation/
+
 除了本地文件搜索还需要内容搜索，测试搜索内容很强
 UltraSearch.rar
 [Windows] UltraSearch v4.9.2.1207 高级便携版 [Hybase.com]黑域基地
@@ -444,9 +462,12 @@ https://github.com/lyswhut/lx-music-desktop/releases
 使用gh-release-fetch一键下载即可
 https://gh-proxy.com/github.com/lyswhut/lx-music-desktop/releases/download/v2.12.5/lx-music-desktop-v2.12.5-win_x64-green.7z
 
-加载在线更新即可，测试了
-https://gh-proxy.com/https://raw.githubusercontent.com/shellsec/lx-music-source/refs/heads/master/lx-music-source.js
+
+远程地址查看
+https://gh-proxy.com/raw.githubusercontent.com/shellsec/lx-music-source/master/sources.json
+
 已经打包进去
+https://gh-proxy.com/raw.githubusercontent.com/pdone/lx-music-source/main/grass/latest.js
 Flower（野花）：
 https://gh-proxy.com/raw.githubusercontent.com/pdone/lx-music-source/main/flower/latest.js
 SixYin（六音）：
@@ -457,8 +478,6 @@ LX：
 https://gh-proxy.com/raw.githubusercontent.com/pdone/lx-music-source/main/lx/latest.js
 ikun：
 https://gh-proxy.com/raw.githubusercontent.com/pdone/lx-music-source/main/ikun/latest.js
-Grass（野草）：
-https://gh-proxy.com/raw.githubusercontent.com/pdone/lx-music-source/main/grass/latest.js
 JuheApi
 https://gh-proxy.com/raw.githubusercontent.com/pdone/lx-music-source/main/juhe/latest.js
 QDY
@@ -467,6 +486,7 @@ https://gh-proxy.com/raw.githubusercontent.com/pdone/lx-music-source/main/qdy/la
 其他
 https://github.com/pdone/lx-music-source
 https://www.appx64.com/lxmusic/Appx64-music-source.js
+
 
 2、洛雪音乐安卓端自动音源版 本仓库基于官方 lx-music-mobile v1.9.1，在保留上游完整历史的前提下，增加内置音源与播放失败自动切换，并调整若干开箱默认设置。
 https://github.com/shellsec/lx-music-mobile-auto-source
@@ -856,7 +876,7 @@ https://github.com/GMYXDS/MstscManager
 其他的Termius 9.37.5 PRO 最新破解版（高颜值的SSH终端软件）
 https://www.wuleba.com/2844.html
 
-日常默认 清风输入法 WindInput-Setup-0.126.0
+日常默认 清风输入法 WindInput-Setup-0.127.0
 所有方案（五笔 86 / 全拼 / 双拼 / 五笔拼音混输）都打包在本地，不依赖联网
 轻量、快速、可定制的开源中文输入法。 五笔、全拼、双拼与混输——词库、按键、外观，全部由你定义。
 目前使用清风，功能比较傻瓜，默认是五笔，安装后选输入方式即可
