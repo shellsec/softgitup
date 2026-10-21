@@ -91,12 +91,15 @@ html[data-layout="list"] .pref[data-pref="layout"] .opt[data-val="list"]{
 .hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--brand),var(--brand2),var(--accent));
   -webkit-background-clip:text;background-clip:text;color:transparent}
 .hero p{color:var(--txt2);margin-top:10px;font-size:15px}
-.tags{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.tags{position:sticky;top:var(--sticky-top,70px);z-index:45;
+  display:flex;gap:8px;justify-content:center;flex-wrap:wrap;
+  margin:18px -20px 0;padding:10px 20px 12px;
+  background:var(--bg);border-bottom:1px solid var(--line)}
 .tag{padding:5px 13px;border-radius:20px;font-size:12px;border:1px solid var(--line);background:var(--card);color:var(--txt2);cursor:pointer;transition:.18s}
 .tag:hover{border-color:var(--brand);color:var(--txt);transform:translateY(-1px)}
 .tag.on{background:linear-gradient(90deg,var(--brand),var(--brand2));color:#fff;border-color:transparent}
 
-section{padding-top:34px;scroll-margin-top:80px}
+section{padding-top:34px;scroll-margin-top:calc(var(--sticky-top,70px) + var(--tags-h,52px) + 12px)}
 .sec-head{display:flex;align-items:center;gap:12px;margin-bottom:16px}
 .sec-head .ic{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;font-size:18px;
   background:var(--card);border:1px solid var(--line)}
@@ -176,8 +179,8 @@ footer p{margin:6px 0}
   <div class="hero">
     <h1>一站式 <em>资源导航</em><br>AI · 资讯 · 购物 · 求职 · 工具 · 线路 · 影视 · 游戏 · 网盘 · 学习 · 背单词 · 破解</h1>
     <p>把常用资源站收进一个页面，点开即走 · 无需联网、无追踪、无依赖</p>
-    <div class="tags" id="tags"></div>
   </div>
+  <div class="tags" id="tags"></div>
 
   <!-- AI 工具 -->
   <section id="cat-0" data-name="AI 工具导航">
@@ -226,6 +229,14 @@ footer p{margin:6px 0}
         <div class="desc">一个账号调用 GPT、Claude 等 100 多个模型。</div>
         <div class="meta"><span>ofox.io/x/aiv123</span><span class="go">前往 →</span></div>
       </a>
+      <a class="card" href="https://jimeng.jianying.com/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">JI</div><h3>meng</h3></div>
+        <div class="desc">即梦AI。</div>
+        <div class="meta"><span>jimeng</span><span class="go">前往 →</span></div>
+      </a>
+
+
+
     </div>
   </section>
 
@@ -371,11 +382,6 @@ footer p{margin:6px 0}
         <div class="desc">开源代码与发布页，找项目、Release 和文档从这里进。</div>
         <div class="meta"><span>github.com</span><span class="go">前往 →</span></div>
       </a>
-      <a class="card" href="https://alternativeto.net/" target="_blank" rel="noopener">
-        <div class="top"><div class="fav">替</div><h3>AlternativeTo</h3></div>
-        <div class="desc">按软件名找替代品，可筛选免费、开源和各平台版本。</div>
-        <div class="meta"><span>alternativeto.net</span><span class="go">前往 →</span></div>
-      </a>
     </div>
   </section>
 
@@ -466,6 +472,11 @@ footer p{margin:6px 0}
         <div class="desc">开发者常用的在线小工具合集，含编解码、转换和格式化。</div>
         <div class="meta"><span>it-tools.tech</span><span class="go">前往 →</span></div>
       </a>
+      <a class="card" href="https://it-tools.tech/base64-string-converter" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">64</div><h3>Base64 转换</h3></div>
+        <div class="desc">文本和 Base64 互相转换。</div>
+        <div class="meta"><span>it-tools.tech/base64</span><span class="go">前往 →</span></div>
+      </a>
       <a class="card" href="https://it-tools.tech/token-generator?length=32" target="_blank" rel="noopener">
         <div class="top"><div class="fav">32</div><h3>随机密码 · 32 位</h3></div>
         <div class="desc">生成 32 位随机令牌，可当密码。</div>
@@ -526,6 +537,11 @@ footer p{margin:6px 0}
       <small>免费最新电影 / 追剧 / 安卓 App</small>
     </div>
     <div class="grid">
+      <a class="card" href="https://www.pejdw.com/app/shipin/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">下</div><h3>简单下载站 · 影音</h3></div>
+        <div class="desc">影音和短视频 App，安装包可直接下载。</div>
+        <div class="meta"><span>pejdw.com/app/shipin</span><span class="go">前往 →</span></div>
+      </a>
       <a class="card" href="https://appx64.com/tv" target="_blank" rel="noopener">
         <div class="top"><div class="fav">小</div><h3>小兵下载站 · 电视端</h3></div>
         <div class="desc">影视类 App 与电视端资源下载，涵盖影音播放、直播、追剧工具。</div>
@@ -566,6 +582,23 @@ footer p{margin:6px 0}
         <div class="desc">视频网站。</div>
         <div class="meta"><span>youtube.com</span><span class="go">前往 →</span></div>
       </a>
+      <a class="card" href="https://github.com/shellsec/lx-music-source" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">源</div><h3>LX Music Source</h3></div>
+        <div class="desc">洛雪音乐在线音源聚合仓库，整理 SixYin、Huibq、Flower、LX、ikun、Grass 等导入链接，提供原始 / gh-proxy 加速地址，给桌面端和安卓端补源用。[1,3](@ref)</div>
+        <div class="meta"><span>github.com/shellsec/lx-music-source</span><span class="go">前往 →</span></div>
+      </a>
+
+      <a class="card" href="https://github.com/shellsec/lx-music-mobile-auto-source" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">安卓</div><h3>LX Music Mobile 自动音源版</h3></div>
+        <div class="desc">基于官方 lx-music-mobile v1.9.1，内置音源、播放失败自动切换，安装后打开即可播，不用手动导脚本。Android 端洛雪音乐开箱版。</div>
+        <div class="meta"><span>github.com/shellsec/lx-music-mobile-auto-source</span><span class="go">前往 →</span></div>
+      </a>
+
+      <a class="card" href="https://github.com/shellsec/lx-music-desktop-auto-source" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">桌面</div><h3>LX Music Desktop 自动音源版</h3></div>
+        <div class="desc">基于 LX Music 桌面端 v2.12.6，内置音源并默认自动切换，Windows / macOS 解压或安装后即可播放，适合不想手动配自定义源的用户。</div>
+        <div class="meta"><span>github.com/shellsec/lx-music-desktop-auto-source</span><span class="go">前往 →</span></div>
+      </a>
     </div>
   </section>
 
@@ -581,6 +614,11 @@ footer p{margin:6px 0}
         <div class="desc">综合游戏资源站，PC、Switch、模拟器资源齐全。</div>
         <div class="meta"><span>gamer520.com</span><span class="go">前往 →</span></div>
       </a>
+      <a class="card" href="https://xn--ogtt23ghrb.cn/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">MG</div><h3>蘑菇屋</h3></div>
+        <div class="desc">蘑菇屋 各类游戏全垒打</div>
+        <div class="meta"><span>蘑菇屋.cn https://oupai.xyz</span><span class="go">前往 →</span></div>
+      </a>      
       <a class="card" href="https://vip.gamers520.com" target="_blank" rel="noopener">
         <div class="top"><div class="fav">G5</div><h3>GAMER520 会员站</h3></div>
         <div class="desc">GAMER520 的会员/专属资源入口，高质量与首发内容居多。</div>
@@ -596,10 +634,20 @@ footer p{margin:6px 0}
         <div class="desc">Atmosphere</div>
         <div class="meta"><span>Atmosphere</span><span class="go">前往 →</span></div>
       </a>
+      <a class="card" href="https://github.com/rumla3434/Atmosphere-stable/releases" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">AT</div><h3>Atmosphere</h3></div>
+        <div class="desc">Switch 自制系统 Atmosphere 稳定版发布页。</div>
+        <div class="meta"><span>github.com/rumla3434/Atmosphere-stable</span><span class="go">前往 →</span></div>
+      </a>
       <a class="card" href="https://codeberg.org/rumla34/NX-Firmware/releases" target="_blank" rel="noopener">
         <div class="top"><div class="fav">NX</div><h3>NX-Firmware-switch</h3></div>
         <div class="desc">NX-Firmware</div>
         <div class="meta"><span>NX-Firmware</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://github.com/rumla3434/NX_Firmware" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">NX</div><h3>NX Firmware</h3></div>
+        <div class="desc">Switch 系统固件。</div>
+        <div class="meta"><span>github.com/rumla3434/NX_Firmware</span><span class="go">前往 →</span></div>
       </a>
       <a class="card" href="https://store.steampowered.com/" target="_blank" rel="noopener">
         <div class="top"><div class="fav">St</div><h3>Steam</h3></div>
@@ -661,6 +709,12 @@ footer p{margin:6px 0}
         <div class="desc">PS5、PS4 游戏下载。</div>
         <div class="meta"><span>2468c.com</span><span class="go">前往 →</span></div>
       </a>
+      <a class="card" href="https://gbatemp.net/forums/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">gb</div><h3>gbatemp</h3></div>
+        <div class="desc">gbatemp。</div>
+        <div class="meta"><span>gbatemp</span><span class="go">前往 →</span></div>
+      </a>
+
     </div>
   </section>
 
@@ -876,20 +930,15 @@ footer p{margin:6px 0}
         <div class="desc">分享绿色软件、免费软件，附带最新资讯。</div>
         <div class="meta"><span>gndown.com</span><span class="go">前往 →</span></div>
       </a>
-      <a class="card" href="https://github.com/shellsec/softgitup" target="_blank" rel="noopener">
-        <div class="top"><div class="fav">SG</div><h3>SoftGitUp</h3></div>
-        <div class="desc">日常工具云同步，按清单把本地绿色软件更新到最新版本。</div>
+      <a class="card" href="https://github.com/shellsec/softgitup/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">同步</div><h3>SoftGitUp</h3></div>
+        <div class="desc">基于信息安全与数据防泄漏原则做的软件同步器：多设备拉取常用工具、更新前杀进程、更新后自启服务，支持 Git 加速源；适合自己维护一套“少云上报”的 Windows 装机环境。</div>
         <div class="meta"><span>github.com/shellsec/softgitup</span><span class="go">前往 →</span></div>
       </a>
       <a class="card" href="https://macked.app/" target="_blank" rel="noopener">
         <div class="top"><div class="fav">M</div><h3>MacKed</h3></div>
         <div class="desc">专注 Mac 破解资源的分享与下载，macOS 应用集中地。</div>
         <div class="meta"><span>macked.app</span><span class="go">前往 →</span></div>
-      </a>
-      <a class="card" href="https://cn-sec.com/" target="_blank" rel="noopener">
-        <div class="top"><div class="fav">安</div><h3>CN-SEC 中文网</h3></div>
-        <div class="desc">聚合网络安全、存储安全技术文章，融合安全最新讯息。</div>
-        <div class="meta"><span>cn-sec.com</span><span class="go">前往 →</span></div>
       </a>
       <a class="card" href="https://www.4mf.net/" target="_blank" rel="noopener">
         <div class="top"><div class="fav">4M</div><h3>是免费 .NET</h3></div>
@@ -906,16 +955,16 @@ footer p{margin:6px 0}
         <div class="desc">Mac 软件资源站，也有黑苹果系统镜像和装机教程。</div>
         <div class="meta"><span>imacos.top</span><span class="go">前往 →</span></div>
       </a>
-      <a class="card" href="https://github.com/daimiaopeng/coolapk-desktop/releases" target="_blank" rel="noopener">
-        <div class="top"><div class="fav">酷</div><h3>酷安跨平台桌面版</h3></div>
-        <div class="desc">酷安跨平台桌面版</div>
-        <div class="meta"><span>coolapk</span><span class="go">前往 →</span></div>
-      </a>
       <a class="card" href="https://www.dr-farfar.com/" target="_blank" rel="noopener">
         <div class="top"><div class="fav">法</div><h3>Dr.Farfar</h3></div>
         <div class="desc">付费软件的限免和免费授权。</div>
         <div class="meta"><span>dr-farfar.com</span><span class="go">前往 →</span></div>
       </a>
+      <a class="card" href="https://cn.aptoide.com/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">AP</div><h3>toide</h3></div>
+        <div class="desc">aptoide</div>
+        <div class="meta"><span>aptoide.com</span><span class="go">前往 →</span></div>
+      </a>      
       <a class="card" href="https://t.me/Pwn3rzs" target="_blank" rel="noopener">
         <div class="top"><div class="fav">TG</div><h3>Pwn3rzs</h3></div>
         <div class="desc">Telegram 安全频道，附论坛和 GitHub。</div>
@@ -925,6 +974,16 @@ footer p{margin:6px 0}
         <div class="top"><div class="fav">CA</div><h3>CyberArsenal</h3></div>
         <div class="desc">网络安全社区。</div>
         <div class="meta"><span>cyberarsenal.org</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://paper.seebug.org/" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">纸</div><h3>Seebug Paper</h3></div>
+        <div class="desc">安全技术文章和漏洞分析。</div>
+        <div class="meta"><span>paper.seebug.org</span><span class="go">前往 →</span></div>
+      </a>
+      <a class="card" href="https://github.com/shellsec/gh-release-fetch" target="_blank" rel="noopener">
+        <div class="top"><div class="fav">GH</div><h3>gh-release-fetch</h3></div>
+        <div class="desc">搜软件名自动解析 GitHub 最新 Release，匹配 Windows / macOS / Linux 安装包并下载，不用翻 Release 页、不用找直链。</div>
+        <div class="meta"><span>github.com/shellsec/gh-release-fetch</span><span class="go">前往 →</span></div>
       </a>
     </div>
   </section>
@@ -967,12 +1026,34 @@ footer p{margin:6px 0}
   });
 
   var curTag = '';
+  var pageHeader = document.querySelector('header');
+  function syncStickyTop(){
+    document.documentElement.style.setProperty('--sticky-top', pageHeader.offsetHeight + 'px');
+    document.documentElement.style.setProperty('--tags-h', tags.offsetHeight + 'px');
+  }
+  syncStickyTop();
+  window.addEventListener('resize', syncStickyTop);
+  if(window.ResizeObserver) new ResizeObserver(syncStickyTop).observe(pageHeader);
+  function scrollToHead(el){
+    if(!el) return;
+    syncStickyTop();
+    var head = el.querySelector('.sec-head') || el;
+    var offset = pageHeader.offsetHeight + tags.offsetHeight + 12;
+    var y = head.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({top: Math.max(0, y), behavior:'smooth'});
+  }
   function filter(tag, tagEl){
     curTag = tag;
     Array.prototype.forEach.call(tags.children, function(x){x.classList.remove('on')});
     tagEl.classList.add('on');
     apply();
-    if(tag) window.scrollTo({top: 0, behavior:'smooth'});
+    var target = null;
+    sections.forEach(function(s){
+      if(target) return;
+      if(tag){ if(s.dataset.name === tag) target = s; }
+      else if(!s.classList.contains('hide')) target = s;
+    });
+    requestAnimationFrame(function(){ scrollToHead(target); });
   }
 
   function apply(){
