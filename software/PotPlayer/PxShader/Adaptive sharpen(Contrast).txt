@@ -67,14 +67,15 @@ float4 main(float2 tex : TEXCOORD0) : COLOR {
 	maxRGB += max2;
 
 	//	Smooth minimum distance to signal limit divided by smooth max
-	float3 rcpmax = rcp( maxRGB );
+	//	rcp() is HLSL only (no GLSL equivalent), so use plain division
+	float3 rcpmax = 1.0 / maxRGB;
 	float3 ampRGB = saturate( min(minRGB, 2.0 - maxRGB) * rcpmax );
 
 	//	Shaping amount of sharpening (SHARPNESS is not saturated)
 	ampRGB = sqrt( ampRGB );
-	float  peak = -rcp( 8.0 - 3.0 * SHARPNESS );
+	float  peak = -1.0 / ( 8.0 - 3.0 * SHARPNESS );
 	float3 wRGB = ampRGB * peak;
-	float3 rcpwRGB = rcp(1.0 + 4.0 * wRGB);
+	float3 rcpwRGB = 1.0 / (1.0 + 4.0 * wRGB);
 
 	//	Apply filter to get output
 	//	- Filter shape -

@@ -1,14 +1,16 @@
-
+﻿
 PotPlayer'ın Versiyon Geçmişi
 
 ----------------------------------------------------------
-[261008]
+[261021]
 ----------------------------------------------------------
 * Varsayılan işleyiciler değiştirildi (video için D3D11, ses için WASAPI)
 
 + MPEG4 DXVA desteği eklendi
 + Yerel dosyalardan HLS/DASH oynatma desteği eklendi
 + Oynatma listesindeki arama yöntemini ayarlama seçeneği eklendi
++ 180° video oynatma desteği eklendi
++ ReplayGain desteği eklendi
 
 - WebP kodlamasının yavaş olması sorunu düzeltildi
 - Bazı MPEG TS dosyalarının oynatılamaması sorunu düzeltildi

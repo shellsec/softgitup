@@ -103,14 +103,18 @@ float4 main(float2 tex : TEXCOORD0) : COLOR {
 	                   + 0.25*(abs(blur-c9) + abs(blur-c10) + abs(blur-c11) + abs(blur-c12)) )*(1.0/3.0);
 
 	// Edge detect contrast compression, center = 0.5
-	edge *= min((0.8+2.7*pow(2, (-7.4*blur_Y))), 3.2);
+	edge *= min((0.8+2.7*pow(2.0, (-7.4*blur_Y))), 3.2);
 
 	// RGB to greyscale
 	float c0_Y = CtG(c0);
 
-	float kernel[25] = { c0_Y,  CtG(c1), CtG(c2), CtG(c3), CtG(c4), CtG(c5), CtG(c6), CtG(c7), CtG(c8),
-	                     CtG(c9), CtG(c10), CtG(c11), CtG(c12), CtG(c13), CtG(c14), CtG(c15), CtG(c16),
-	                     CtG(c17), CtG(c18), CtG(c19), CtG(c20), CtG(c21), CtG(c22), CtG(c23), CtG(c24) };
+	// (element-wise: GLSL has no brace initializers for arrays)
+	float kernel[25];
+	kernel[0]  = c0_Y;     kernel[1]  = CtG(c1);  kernel[2]  = CtG(c2);  kernel[3]  = CtG(c3);  kernel[4]  = CtG(c4);
+	kernel[5]  = CtG(c5);  kernel[6]  = CtG(c6);  kernel[7]  = CtG(c7);  kernel[8]  = CtG(c8);  kernel[9]  = CtG(c9);
+	kernel[10] = CtG(c10); kernel[11] = CtG(c11); kernel[12] = CtG(c12); kernel[13] = CtG(c13); kernel[14] = CtG(c14);
+	kernel[15] = CtG(c15); kernel[16] = CtG(c16); kernel[17] = CtG(c17); kernel[18] = CtG(c18); kernel[19] = CtG(c19);
+	kernel[20] = CtG(c20); kernel[21] = CtG(c21); kernel[22] = CtG(c22); kernel[23] = CtG(c23); kernel[24] = CtG(c24);
 
 	// Partial laplacian outer pixel weighting scheme
 	float mdiff_c0  = 0.03 + 4*( abs(kernel[0]-kernel[2]) + abs(kernel[0]-kernel[4])
@@ -134,8 +138,8 @@ float4 main(float2 tex : TEXCOORD0) : COLOR {
 	                  + abs(kernel[12]-kernel[7])  + abs(kernel[12]-kernel[14])
 	                  + 0.5*(abs(kernel[12]-kernel[6]) + abs(kernel[12]-kernel[8])) );
 
-	float4 weights  = float4( (min((mdiff_c0/mdiff_c9), 2)), (min((mdiff_c0/mdiff_c10),2)),
-	                          (min((mdiff_c0/mdiff_c11),2)), (min((mdiff_c0/mdiff_c12),2)) );
+	float4 weights  = float4( (min((mdiff_c0/mdiff_c9), 2.0)), (min((mdiff_c0/mdiff_c10),2.0)),
+	                          (min((mdiff_c0/mdiff_c11),2.0)), (min((mdiff_c0/mdiff_c12),2.0)) );
 
 	// Negative laplace matrix
 	// Matrix, relative weights, *Varying 0<->8
@@ -180,12 +184,12 @@ float4 main(float2 tex : TEXCOORD0) : COLOR {
 	float nmin = min(((kernel[0]  + kernel[1])/2),  c0_Y);
 
 	// Calculate tanh scale factor, pos/neg
-	float nmax_scale = max((1/((nmax - c0_Y) + L_overshoot)), max_scale_lim);
-	float nmin_scale = max((1/((c0_Y - nmin) + D_overshoot)), max_scale_lim);
+	float nmax_scale = max((1.0/((nmax - c0_Y) + L_overshoot)), max_scale_lim);
+	float nmin_scale = max((1.0/((c0_Y - nmin) + D_overshoot)), max_scale_lim);
 
 	// Soft limit sharpening with tanh, lerp to control maximum compression
-	sharpdiff = lerp( (tanh((max(sharpdiff, 0))*nmax_scale)/nmax_scale), (max(sharpdiff, 0)), L_comp_ratio )
-	          + lerp( (tanh((min(sharpdiff, 0))*nmin_scale)/nmin_scale), (min(sharpdiff, 0)), D_comp_ratio );
+	sharpdiff = lerp( (tanh((max(sharpdiff, 0.0))*nmax_scale)/nmax_scale), (max(sharpdiff, 0.0)), L_comp_ratio )
+	          + lerp( (tanh((min(sharpdiff, 0.0))*nmin_scale)/nmin_scale), (min(sharpdiff, 0.0)), D_comp_ratio );
 
 	// Set the alpha channel to 1 to prevent strange effects in MPDN
 	if (video_level_out == true) { return float4( (tex2D(s0, tex) + sharpdiff).rgb, 1 ); }

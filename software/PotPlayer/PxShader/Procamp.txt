@@ -12,7 +12,7 @@ float4 p1 : register(c1);
 #define one_over_width (p1[0])
 #define one_over_height (p1[1])
 
-#define PI acos(-1)
+#define PI acos(-1.0)
 
 #ifdef GLSL
 

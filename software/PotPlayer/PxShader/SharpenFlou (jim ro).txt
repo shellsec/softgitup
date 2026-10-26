@@ -12,7 +12,7 @@ float4 p1 : register(c1);
 #define one_over_width (p1[0]) 
 #define one_over_height (p1[1]) 
 
-#define PI acos(-1) 
+#define PI acos(-1.0)
 
 float4 main( float2 tex : TEXCOORD0 ) : COLOR 
 { 
@@ -34,22 +34,20 @@ float4 main( float2 tex : TEXCOORD0 ) : COLOR
 	float4 c7 = tex2D(s0, tex + float2(0,dy)); 
 	float4 c8 = tex2D(s0, tex + float2(dx,dy)); 
 
-	// calcul image floue (filtre gaussien) 
-	float  multipliers[9]= 
-            {1,2,1, 
-             2,4,2, 
-             1,2,1}; 
-
-	float4 total = float4(0, 0, 0, 0); 
-	total +=  c1 * multipliers[0]; 
-	total +=  c2 * multipliers[1]; 
-	total +=  c3 * multipliers[2]; 
-	total +=  c4 * multipliers[3]; 
-	total +=  ori * multipliers[4]; 
-	total +=  c5 * multipliers[5]; 
-	total +=  c6 * multipliers[6]; 
-	total +=  c7 * multipliers[7]; 
-	total +=  c8 * multipliers[8]; 
+	// calcul image floue (filtre gaussien)
+	//   [1,2,1]
+	//   [2,4,2]   (GLSL has no brace initializers for arrays, so the weights are inlined)
+	//   [1,2,1]
+	float4 total = float4(0, 0, 0, 0);
+	total +=  c1 * 1.0;
+	total +=  c2 * 2.0;
+	total +=  c3 * 1.0;
+	total +=  c4 * 2.0;
+	total +=  ori * 4.0;
+	total +=  c5 * 2.0;
+	total +=  c6 * 1.0;
+	total +=  c7 * 2.0;
+	total +=  c8 * 1.0;
 
 	// 1/(1+2+1+2+4+2+1+2+1) = 1/ 16 = .0625 
 	total *= 0.0625f; 

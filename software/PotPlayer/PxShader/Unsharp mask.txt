@@ -13,7 +13,7 @@ float4 p1 : register(c1);
 #define one_over_width (p1[0])
 #define one_over_height (p1[1])
 
-#define PI acos(-1)
+#define PI acos(-1.0)
 
 //Feel free to change the threshold or intensity
 #define threshold .0009
@@ -61,4 +61,4 @@ float4 main(float2 tex : TEXCOORD0) : COLOR
 	}
 
 	return c0;
-};
+}

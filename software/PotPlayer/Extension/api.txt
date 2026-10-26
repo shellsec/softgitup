@@ -1,4 +1,4 @@
-Script engine is AngelScript(http://www.angelcode.com/angelscript/)
+Script engine is AngelScript (https://www.angelcode.com/angelscript/)
 
 ------------------------PotPlayer's builtin type---------------------------------
 intptr
@@ -28,40 +28,39 @@ bool HostCheckVersion(int major, int minor, int build)
 	Check PotPlayer's version
 
 bool HostIsWin64()
-	Check PotPlayer is 64bit build or not
+	Check whether PotPlayer is a 64-bit build
 
 void HostSleep(int ms)
 	win32 API Sleep()
-	If the waiting time is too long, a timeout may occur, 
-	so if you want to wait for a long time, 
-	set the millisecond value to a short value, 
-	and call HostIncTimeOut to increase the timeout time when looping.
+	A long wait may cause a script timeout.
+	To wait for a long time, sleep for short periods in a loop
+	and call HostIncTimeOut in the loop to extend the timeout.
 
 uint HostGetTickCount()
 	win32 API GetTickCount()
 
 void HostIncTimeOut(int ms)
-	Increase function timeout time.
+	Extend the timeout of the current function by ms milliseconds
 
 bool HostCheckMediaFile(const string &in filename, bool Video, bool Audio, bool Playlist)
-	Check filename is Video or Audio or Playlist
+	Check whether filename is a video, audio or playlist file
 
 bool HostFileExist(const string &in fn)
-	Check file is exist
+	Check whether the file exists
 
 bool HostFolderExist(const string &in fn)
-	Check folder is exist
+	Check whether the folder exists
 
 bool HostFolderCreate(const string &in fn)
-	Create folder in config folder
-	Releative path(..) is not allow
-	abs path is not allow
+	Create a folder in the config folder
+	Relative paths (..) are not allowed
+	Absolute paths are not allowed
 
 bool HostFolderDelete(const string &in fn)
-	Delete empty folder in config folder
-	Releative path(..) is not allow
-	abs path is not allow
-	Can delete only folder is empty
+	Delete a folder in the config folder
+	Relative paths (..) are not allowed
+	Absolute paths are not allowed
+	Only an empty folder can be deleted
 
 string HostGetScriptFolder()
 	Get current script folder
@@ -112,41 +111,41 @@ uintptr HostOpenHTTPWithAPI(const string &in url, const string &in UserAgent = "
 	Open Get or Post HTTP(S) resource with API key
 
 string HostGetContentHTTP(uintptr http)
-	Get Content data
+	Get the response content
 
 string HostGetHeaderHTTP(uintptr http)
-	Get Header data
+	Get the response headers
 
 int HostGetStatusHTTP(uintptr http)
-	Get HTTP status code
+	Get the HTTP status code
 
 void HostCloseHTTP(uintptr http)
-	Close http
+	Close the HTTP handle
 
 uintptr HostFileOpen(const string &in filename)
-	Open local file for read
+	Open a local file for reading
 
 uintptr HostFileCreate(const string &in filename)
-	Create or Open local file for write in config folder
-	Releative path(..) is not allow
-	abs path is not allow
+	Create or open a local file for writing in the config folder
+	Relative paths (..) are not allowed
+	Absolute paths are not allowed
 
-bool HostFileDelete(const string& fn)
-	Delete local file for write in config folder
-	Releative path(..) is not allow
-	abs path is not allow
+bool HostFileDelete(const string &in fn)
+	Delete a local file in the config folder
+	Relative paths (..) are not allowed
+	Absolute paths are not allowed
 
 void HostFileClose(uintptr fp)
-	Close local file
+	Close the local file
 
 int64 HostFileSeek(uintptr fp, int64 offset, int from = 0)
-	Seek file's position
+	Set the file position
 
 int64 HostFileLength(uintptr fp)
-	Get file length
+	Get the file length
 
-int64_t HostFileSetLength(uintptr fp, int64 size)
-	Set file length and return new size
+int64 HostFileSetLength(uintptr fp, int64 size)
+	Set the file length and return the new size
 
 uint8 HostFileReadBYTE(uintptr fp)
 	Read uint8
@@ -161,37 +160,37 @@ uint64 HostFileReadQWORD(uintptr fp)
 	Read uint64
 
 string HostFileRead(uintptr fp, int len)
-	Read string by len
+	Read len bytes as a string
 
 int HostFileWriteBYTE(uintptr fp, uint8 data)
 	Write uint8
 
-int HostFileWriteWORD(uintptr fp, uint16_t data)
+int HostFileWriteWORD(uintptr fp, uint16 data)
 	Write uint16
 
-int HostFileWriteDWORD(uintptr fp, uint32_t data)
+int HostFileWriteDWORD(uintptr fp, uint32 data)
 	Write uint32
 
-int HostFileWriteQWORD(uintptr fp, uint64_t data)
+int HostFileWriteQWORD(uintptr fp, uint64 data)
 	Write uint64
 
-int HostFileWrite(uintptr fp, string data)
-	Write string
+int HostFileWrite(uintptr fp, const string &in data)
+	Write a string
 
 string HostUrlEncode(const string &in url)
-	Encode Url escape
+	URL-encode (percent-encode) a string
 
 string HostUrlDecode(const string &in url)
-	Decode Url escape
+	URL-decode (percent-decode) a string
 
 string HostBase64Enc(const string &in data)
-	Encode BASE 64
+	Encode Base64
 
 string HostBase64Dec(const string &in data)
-	Decode BASE 64
+	Decode Base64
 
 string HostDecompress(const string &in data)
-	Decompress data(zip or etc...)
+	Decompress data (zip, gzip, etc.)
 
 string HostGzipCompress(const string &in data)
 	Compress Gzip
@@ -221,47 +220,40 @@ bool HostCompareMovieName(const string &in filename1, const string &in filename2
 	Compare filename1 with filename2
 
 bool HostSaveString(const string &in key, const string &in val)
-	Save key, value string to temp storage
+	Save a string value under key in temporary storage
 
 string HostLoadString(const string &in key, const string &in def = "")
-	Load temp key, value string from temp storage
+	Load a string value saved with HostSaveString (def if not found)
 
 bool HostSaveInteger(const string &in key, int value)
-	Save key, value integer to temp storage
+	Save an integer value under key in temporary storage
 
-string int HostLoadInteger(const string &in, int def = 0)
-	Load temp key, value integer from temp storage
+int HostLoadInteger(const string &in key, int def = 0)
+	Load an integer value saved with HostSaveInteger (def if not found)
 
 string HostIso639LangName()
-	Get current ISO639 Language name
+	Get the current ISO 639 language name
 
 string HostIso3166CtryName()
-	Get current ISO 3166 country name
+	Get the current ISO 3166 country name
 
 string HostRegExpParse(const string &in str, const string &in pattern)
-	const std::regex regex(pattern);
-	std::cmatch match;
+	Search str with the regular expression pattern (std::regex)
+	Returns capture group 1 if the pattern has exactly one capture group and matches, otherwise ""
+	example: HostRegExpParse("id=123&x=1", "id=(\\d+)") -> "123"
 
-	if (std::regex_search(str, match, regex) && match.size() == 2)
-	{
-		return std::string(match[1].first, match[1].length());
-	}
+bool HostRegExpParse(const string &in str, const string &in pattern, array<dictionary> &match)
+	Search str with the regular expression pattern (std::regex)
+	match[0] is the whole match, match[1..] are the capture groups
+	Each item has "first" (the matched text) and "second" (the rest of str after the match)
+	Returns true if the pattern matches
 
-	return "";
-
-bool HostRegExpParse(const string &in str, const string &in pattern, array<dictionary> &dic)
-	const std::regex regex(pattern);
-	std::cmatch match;
-	bool ret = std::regex_search(str, match, regex);
-	
-	if (ret)
-	{
-		assign match -> dic ...  "first" and "second"
-	}
-	return ret;
+string HostRegExpRemove(const string &in str, const string &in pattern)
+	Remove the first match of the regular expression pattern (std::regex) from str
+	Returns str unchanged if there is no match
 
 string HostFixFileName(const string &in filename)
-	Fix file for create
+	Make a valid file name (replace characters that cannot be used in a file name)
 
 uintptr HostLoadLibrary(const string &in filename)
 	win32 API LoadLibrary()
@@ -276,52 +268,61 @@ void HostCallProcAsync(uintptr proc, const string &in paramSig, uint64 param1 = 
 int HostCallProcInt(uintptr proc, const string &in paramSig, uint64 param1 = 0, uint64 param2 = 0, uint64 param3 = 0, uint64 param4 = 0, uint64 param5 = 0, uint64 param6 = 0)
 uintptr HostCallProcUIntPtr(uintptr proc, const string &in paramSig, uint64 param1 = 0, uint64 param2 = 0, uint64 param3 = 0, uint64 param4 = 0, uint64 param5 = 0, uint64 param6 = 0)
 uint64 HostCallProcUInt64(uintptr proc, const string &in paramSig, uint64 param1 = 0, uint64 param2 = 0, uint64 param3 = 0, uint64 param4 = 0, uint64 param5 = 0, uint64 param6 = 0)
-	call dll's function
-	paramSig -> P: Pointer, Q: int64, W: int16, B: int8, else int32  etc) "PQWI" -> Function(Pointer, int64, int16, int32);
-	HostCallProcAsync -> Async call
+	Call a DLL function
+	paramSig: one letter per parameter. P: pointer, Q: int64, W: int16, B: int8, any other letter: int32
+	example: "PQWI" -> Function(pointer, int64, int16, int32)
+	HostCallProcAsync calls the function asynchronously
 
 uintptr HostInt2UIntPtr(const int &var)
-uintptr HostUInt2UIntPtr(const int &var)
+uintptr HostUInt2UIntPtr(const uint &var)
 uintptr HostString2UIntPtr(const string &in var)
-	Get var's pointer
+	Get the pointer of var
 
 string HostUIntPtr2String(uintptr ptr)
-	C string(char *) to script string
+	Convert a C string (char *) to a script string
 
 string HostExecuteProgram(const string &in ExeName, const string &in ExeParam)
-	Execute file and return result
+	Run a program and return its output
 
-string HostFormatBitrate(int64 offset)
-	Make bitrate string
+string HostFormatBitrate(int64 bitrate)
+	Format a bitrate as a string
 
 void HostSetUrlUserAgentHTTP(const string &url, const string &userAgent)
-	Set useragent for HTTP url
+	Set the user agent for the HTTP url
 
 void HostSetUrlHeaderHTTP(const string &url, const string &header)
-	Set http header for HTTP url
+	Set the HTTP header for the HTTP url
 
 void HostSetUrlRefererHTTP(const string &url, const string &referer)
-	Set http referer for HTTP url
+	Set the HTTP referer for the HTTP url
 
 void HostSetUrlCookieHTTP(const string &url, const string &cookie)
-	Set http cookie for HTTP url
+	Set the HTTP cookie for the HTTP url
 
-void HostMessageBox(const string& content, const string& title = "", int iconType = 3, int btnType = 1, MessageBoxResult@ callback = null)
-	Show message box
+string HostGetCookie()
+	Get the cookies of this script's web account site as "name1=value1; name2=value2"
+	The site is the first host of GetWebAccountDomain() (or the host of GetWebAccountUrl() if no domain is given)
+	Cookies are the ones saved by the web account login window and the broadcast list browser
+	Returns "" if the script does not define GetWebAccountUrl(), or the user has not logged in yet
+	HttpOnly cookies are not returned (same as document.cookie in the site's page)
+	HttpOnly cookies are sent automatically by HostUrlGetString/HostOpenHTTP/HttpClient when NoCookie is false
+
+void HostMessageBox(const string &content, const string &title = "", int iconType = 3, int btnType = 1, __MessageBoxResult@ callback = null)
+	Show a message box
 	iconType : 0->!, 1->?, 2->i, 3->x
-	btnType : 0->OK, 1->Close, 2->Yes, 3->Ok/Cancel, 4->Yes/No
-	returnFunction : async message box result function ... signature is 'void MessageBoxResult(int result)'
+	btnType : 0->OK, 1->Close, 2->Yes, 3->OK/Cancel, 4->Yes/No
+	callback : called asynchronously with the result. Signature is 'void Function(int result)'
 
 string HostGetPlayingFileName()
-	Get current playing file name
+	Get the file name of the item being played
 
 string HostGetPlayingTitle()
-	Get current playing title
+	Get the title of the item being played
 
-int HostCreateThread(ThreadFunction @function, any@ param)
-	Create thread for background working~~
-	You must protect same access resource using Mutex
-	ThreadFunction : signature is 'void ThreadFunction(any@ param) = null'
+int HostCreateThread(__ThreadFunction@ callback, const ?&in param = null)
+	Create a thread for background work and return its thread ID
+	Protect resources shared between threads with Mutex
+	callback : signature is 'void Function(any@ param)'. param is passed to it as any@
 	example:
 		void ThreadFunction(any@ param)
 		{
@@ -341,15 +342,14 @@ int HostCreateThread(ThreadFunction @function, any@ param)
 		}
 
 bool HostWaitThread(int threadID, int ms = 10)
-	Wait thread in ms
-	If the waiting time is too long, a timeout may occur, 
-	so if you want to wait for a long time, 
-	set the millisecond value to a short value, 
-	and call HostIncTimeOut to increase the timeout time when looping.
-	return true is success
-	return false is fail
+	Wait up to ms milliseconds for the thread to finish
+	A long wait may cause a script timeout.
+	To wait for a long time, wait for short periods in a loop
+	and call HostIncTimeOut in the loop to extend the timeout.
+	Returns true if the thread finished, false on timeout
+
 string HostGetScriptFileName()
-	Get current script file name
+	Get the current script file name
 
 
 ------------------------PotPlayer's builtin class----------------------------------
@@ -375,6 +375,7 @@ string HostGetScriptFileName()
 	bool isFloat()
 	bool isDouble()
 	bool isNumeric()
+	bool isIntegral()
 	bool isString()
 	bool isArray()
 	bool isObject()
@@ -436,7 +437,7 @@ string HostGetScriptFileName()
 	XMLAttribute FindAttribute(const string &in name)
 	XMLAttribute FirstAttribute()
 	XMLElement FirstChildElement(const string &in name = "")
-	XMLElement NextSiblingElement()
+	XMLElement NextSiblingElement(const string &in name = "")
 
 ------XMLDocument
 	bool Parse(string &in xml)
@@ -468,9 +469,9 @@ string HostGetScriptFileName()
 	bool Open(const string &in)
 	bool OpenString(const string &in)
 	bool Save(const string &in)
-		Save ini to config folder
-		Releative path(..) is not allow
-		abs path is not allow
+		Save the ini file to the config folder
+		Relative paths (..) are not allowed
+		Absolute paths are not allowed
 	bool IsEmpty()
 	void Clear()
 	bool ClearSection(const string &in)
@@ -507,7 +508,7 @@ string HostGetScriptFileName()
 	int GetStatus()
 
 ------------------------FileIO
-	bool bool Open(const string &in, bool forWrite = false)
+	bool Open(const string &in, bool forWrite = false)
 	void Close()
 	int64 Seek(int64 offset, int from)
 	int64 GetLength()
@@ -551,3 +552,45 @@ string HostGetScriptFileName()
 	bool Wait(int ms)
 	void Reset()
 	bool Check()
+
+------------------------MediaPlayParse MetaData----------------------------------
+string PlayitemParse(const string &in path, dictionary &MetaData, array<dictionary> &QualityList)
+	Keys that PotPlayer reads from MetaData (all optional)
+
+	vid             string : video id, unique and stable within the site
+	                         Used as the key of "Remember playback position" (and remembered audio/subtitle track)
+	                         together with the site domain of webUrl (or of the opened url), e.g. "bilibili.com|BV1xx"
+	                         URLs are remembered only when vid is set, because the same video can be opened with
+	                         different query strings. Give each part of a multi-part video its own vid
+	webUrl          string : canonical web page url of the video
+	title, author, content, date, fileExt, thumbnail, viewCount, likeCount, dislikeCount : string
+	errorMessage    string : message shown when playback fails
+	duration        int    : length in milliseconds
+	seek            int    : start position in seconds. Used when no other start position is given
+	                         (command line, playlist position, YouTube t=); it takes priority over the remembered position
+	type3D          int    : 1 SBS half, 2 SBS full, 3 T&B half, 4 T&B full
+	is360, is180    int    : 1 for 360 / 180 degree video (is180 also needs is360)
+	chatUrl         string : page opened in the chat window
+	chatScript      string : JavaScript injected into the chatUrl page (needs chatUrl)
+	subtitle        array<dictionary> : name, langTranslated, langOriginal, langCode, kind ("asr" for auto captions),
+	                         url or fileContent
+	chapter         array<dictionary> : title, and time (milliseconds, string) or time_second (seconds or hh:mm:ss, string)
+
+------------------------Web page messages----------------------------------
+Pages shown in PotPlayer's WebView2 browsers (broadcast list, chat window, web dialogs) can send these
+messages with chrome.webview.postMessage(). Any page can send them; no extension registration is needed.
+Inject the sending script with GetBroadcastListScript() or load it from your own page.
+
+potPlayer.video-click
+	chrome.webview.postMessage({ type: 'potPlayer.video-click', url: 'https://...' });
+	Open url in PotPlayer (same as clicking a video link)
+
+potPlayer.seek
+	chrome.webview.postMessage({ type: 'potPlayer.seek', seek: '1m30s' });
+	Seek the currently playing video to an absolute position. Ignored when nothing is playing
+	seek can be a string or a number
+		number            : seconds, e.g. 90, 90.5
+		"90", "90.5"      : seconds
+		"1h2m3s", "1m30s", "45s" : YouTube t= form (each part may have decimals)
+		"01:02:03", "01:02:03.500", "02:03" : hh:mm:ss(.ms)
+	Messages with an unparsable seek value are ignored

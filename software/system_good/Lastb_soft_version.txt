@@ -158,7 +158,7 @@ notepad--
 核心特点：体积更小、启动更快，支持语法高亮、代码折叠，低资源占用，操作逻辑贴合中文用户习惯
 https://gitee.com/cxasm/notepad--/releases/download/v3.9.1/Notepad--v3.9.1-win10-portable.zip
 
-EditPlus v6.1.899 汉化注册版
+EditPlus v6.1.939 汉化注册版
 核心特点：汉化界面易操作，支持多窗口编辑、语法高亮、代码跳转，自带 FTP 上传，适配基础编程与文本处理
 https://pan.quark.cn/s/d586d0925b85
 
@@ -391,7 +391,7 @@ NetTime v3.2.0.233 时间同步
 https://www.timesynctool.com/
 核心特点：体积小巧、同步速度快，精准校准系统时间，无广告无后台，适配各类网络环境下的时间同步需求
 
-影音播放器 PotPlayer64 261008 Beta 64-bit  官网版
+影音播放器 PotPlayer64 261021 Beta 64-bit  官网版
 https://www.videohelp.com/software/PotPlayer
 https://www.423down.com/3050.html
 https://potplayer.tv/
@@ -434,7 +434,6 @@ FFmpeg（命令行） 支持所有格式  支持  ★★★★★（最强）   
 
 
 system_good目录下
-
 gh-release-fetch
 搜软件名自动下最新版，不用翻 GitHub Release、不用找链接
 https://github.com/shellsec/gh-release-fetch
@@ -444,107 +443,109 @@ https://github.com/shellsec/gh-release-fetch/releases
 娱乐至死-音乐电影游戏网盘学习资源破解资源IPTV资源
 
 音乐资源
-测试了各个平台音乐，痛点就是付费和版权音质，你懂得，一步到位！落雪太赞了，必备！
-1、洛雪音乐win电脑版 全网免VIP无损下载 也支持mac
-洛雪音乐助手桌面自动音源版。内置音源，默认自动切换，安装后即可播放，不用再手动导入脚本
-https://github.com/shellsec/lx-music-desktop-auto-source
-已经集成，解压即用
+音源更新 https://github.com/shellsec/lx-music-source
+订阅地址更新 https://gh-proxy.com/raw.githubusercontent.com/shellsec/lx-music-source/master/sources.json
 
+音源上面都够用了，请在GitHub上搜索 lx-music-source 寻找最新的第三方维护的音源
+https://github.com/pdone/lx-music-source
+https://github.com/search?q=lx-music-source&type=repositories&s=updated&o=desc
+https://github.com/search?q=lx-music-source&type=repositories
+软件默认无音源，需自行添加：
+基本设置——自定义源——在线导入（任选一个就行），打钩，显示[初始化成功]
+
+洛雪增强版，重新二开增加订阅和自动音源检查报错切换
+订阅清单：一个 JSON 链接包含多个音源，条目为 id、name、url，支持相对脚本地址。
+自动切换：当前源失败后，按本地列表顺序尝试其他源。
+失效恢复：所有源失败后检查订阅，有更新则再尝试一轮；更新失败保留原有音源。
+1、PC端
 落雪音乐 安装包，解压后251M超出大小了，更新安装到，Program Files\lx-music-desktop\ 即可
 \lx-music-desktop\lxpy
 https://github.com/shellsec/lxpy
 手机网页遥控（推荐）
 电脑和手机连同一 Wi-Fi / 局域网。对应系统的洛雪桌面端需要已安装，并在 设置 → 开放 API 勾选 启用开放 API 服务。
 启动.bat即可
+1、win版
+https://github.com/shellsec/lx-music-desktop-auto-source
+绿色
+https://gh-proxy.com/https://github.com/shellsec/lx-music-desktop-auto-source/releases/download/v2.12.6/lx-music-desktop-v2.12.6-win_x64-green.7z
+安装
+https://gh-proxy.com/https://github.com/shellsec/lx-music-desktop-auto-source/releases/download/v2.12.6/lx-music-desktop-v2.12.6-x64-Setup.exe
+mac版
+https://gh-proxy.com/https://github.com/shellsec/lx-music-desktop-auto-source/releases/download/v2.12.6/lx-music-desktop-2.12.6-arm64.dmg
 
-https://github.com/lyswhut/lx-music-desktop/releases
-加速下载，不在携带解压包了，原有压缩包2.12.2 运行没问题，就保留着
-使用gh-release-fetch一键下载即可
-https://gh-proxy.com/github.com/lyswhut/lx-music-desktop/releases/download/v2.12.5/lx-music-desktop-v2.12.5-win_x64-green.7z
-
-
-远程地址查看
-https://gh-proxy.com/raw.githubusercontent.com/shellsec/lx-music-source/master/sources.json
-
-已经打包进去
-https://gh-proxy.com/raw.githubusercontent.com/pdone/lx-music-source/main/grass/latest.js
-Flower（野花）：
-https://gh-proxy.com/raw.githubusercontent.com/pdone/lx-music-source/main/flower/latest.js
-SixYin（六音）：
-https://gh-proxy.com/raw.githubusercontent.com/pdone/lx-music-source/main/sixyin/latest.js
-Huibq：
-https://gh-proxy.com/raw.githubusercontent.com/pdone/lx-music-source/main/huibq/latest.js
-LX：
-https://gh-proxy.com/raw.githubusercontent.com/pdone/lx-music-source/main/lx/latest.js
-ikun：
-https://gh-proxy.com/raw.githubusercontent.com/pdone/lx-music-source/main/ikun/latest.js
-JuheApi
-https://gh-proxy.com/raw.githubusercontent.com/pdone/lx-music-source/main/juhe/latest.js
-QDY
-https://gh-proxy.com/raw.githubusercontent.com/pdone/lx-music-source/main/qdy/latest.js
-
-其他
-https://github.com/pdone/lx-music-source
-https://www.appx64.com/lxmusic/Appx64-music-source.js
-
-
-2、洛雪音乐安卓端自动音源版 本仓库基于官方 lx-music-mobile v1.9.1，在保留上游完整历史的前提下，增加内置音源与播放失败自动切换，并调整若干开箱默认设置。
+2、洛雪安卓端增强版 本仓库基于官方 lx-music-mobile v1.9.2
+在保留上游完整历史的前提下，增加内置音源与播放失败自动切换，并调整若干开箱默认设置。
+设置中的「快速添加自定义源」支持扫一扫、从图片识别和粘贴链接。识别后需选择「导入单个源」或「添加订阅清单」，确认地址及「添加后启用」选项，再点击确认添加。二维码须包含完整 HTTP / HTTPS 地址；仅从可信来源导入脚本。
 https://github.com/shellsec/lx-music-mobile-auto-source
 arm64-v8a（常见手机，优先）：
-https://gh-proxy.org/https://github.com/shellsec/lx-music-mobile-auto-source/releases/download/v1.9.1-auto-source/lx-music-mobile-v1.9.1-arm64-v8a.apk
-armeabi-v7a：
-https://gh-proxy.org/https://github.com/shellsec/lx-music-mobile-auto-source/releases/download/v1.9.1-auto-source/lx-music-mobile-v1.9.1-armeabi-v7a.apk
-universal：
-https://gh-proxy.org/https://github.com/shellsec/lx-music-mobile-auto-source/releases/download/v1.9.1-auto-source/lx-music-mobile-v1.9.1-universal.apk
-x86：https://gh-proxy.org/https://github.com/shellsec/lx-music-mobile-auto-source/releases/download/v1.9.1-auto-source/lx-music-mobile-v1.9.1-x86.apk
-x86_64：https://gh-proxy.org/https://github.com/shellsec/lx-music-mobile-auto-source/releases/download/v1.9.1-auto-source/lx-music-mobile-v1.9.1-x86_64.apk
-
-
-3、音源上面都够用了，请在GitHub上搜索 lx-music-source 寻找最新的第三方维护的音源
-https://github.com/yoyodadada/lx-music-source
-https://github.com/cdyUuu/lx-music-xinghai-source
-https://github.com/Macrohard0001/lx-ikun-music-sources
-https://github.com/search?q=lx-music-source&type=repositories&s=updated&o=desc
-https://github.com/search?q=lx-music-source&type=repositories
-软件默认无音源，需自行添加：
-基本设置——自定义源——在线导入（任选一个就行），打钩，显示[初始化成功]
-
-4、洛雪音乐安卓手机版-官方需要自己导入音源比较麻烦
-https://github.com/lyswhut/lx-music-mobile/releases
-https://gh-proxy.com/github.com/lyswhut/lx-music-mobile/releases/download/v1.9.1/lx-music-mobile-v1.9.1-arm64-v8a.apk
-文件名 适用设备  特点
-lx-music-mobile-v1.8.1-arm64-v8a.apk  绝大多数现代安卓手机 / 平板（2016 年后的安卓设备，如华为、小米、OPPO、vivo、三星等）  64 位 ARM 架构，性能最好，体积适中（14.1MB），兼容性最优
-lx-music-mobile-v1.8.1-armeabi-v7a.apk  老旧安卓设备（2016 年前的 32 位 ARM 架构手机）  32 位 ARM 架构，兼容老设备，体积最小（13MB）
-lx-music-mobile-v1.8.1-universal.apk  不确定设备架构、或想兼容所有设备  通用版，包含所有架构，体积最大（30.7MB），兼容性最广但安装包大
-lx-music-mobile-v1.8.1-x86/x86_64.apk 安卓模拟器（如 BlueStacks、雷电模拟器）或 x86 架构的安卓设备（极少）  仅适用于 x86/x86_64 架构设备，普通手机无需下载
-4、无广畅听全球音乐 Spotify电脑版v1.2.88.483 纯净便携版  500MB大小 使用gmail登录
-https://www.hybase.com/pc/windows/2845.html
-https://pan.baidu.com/s/1SPYv_-wNq1rweMViBb-ljg?pwd=HyHy
-
-5、洛雪音乐安卓端墨水屏版
+https://gh-proxy.com/https://github.com/shellsec/lx-music-mobile-auto-source/releases/download/v1.9.2/lx-music-mobile-v1.9.2-arm64-v8a.apk
+armeabi-v7a（32 位设备）：
+https://gh-proxy.com/https://github.com/shellsec/lx-music-mobile-auto-source/releases/download/v1.9.2/lx-music-mobile-v1.9.2-armeabi-v7a.apk
+universal（通用包）：
+https://gh-proxy.com/https://github.com/shellsec/lx-music-mobile-auto-source/releases/download/v1.9.2/lx-music-mobile-v1.9.2-universal.apk
+3、洛雪增强墨水屏版 基于洛雪音乐移动版二次开发，针对墨水屏设备优化 导入自定义源、多源自动切换、订阅更新
 https://github.com/shellsec/lx-music-eink
-已集成音源，安装即可播放，失败时自动切换
-也支持 安卓智能投影（极米/当贝/坚果/小米/部分华为），省去音源添加问题
-系统 = 安卓 TV / 定制 Android
-开“未知来源”→ U 盘或悟空遥控器/当贝市场推 APK → 直接装 lx-music-mobile 或 TV 版（ZL-Music 类）
-遥控器方向键+OK 能跑，但手机版 LX 焦点不一定顺手，最好出 TV 布局
-结论：和 Android TV 盒子同处理，不单列新平台
 
+3、波乐音乐，支持Switch、PS4、PS5、Vita、Xbox、Linux掌机
+Windows、macOS、Linux、Android、Android TV
+https://github.com/shellsec/bolemusic
 
-6、ios/IPAD推荐直接用网页版聚合播放器（推荐，零部署）失效了
+4、BoleServer ，在线听歌自建服务（内网），这就解决了ios/ipad/鸿蒙NEXT可以在线听了，一键安装，登陆修改密码，添加音源，听吧
+方法1可以通过桌面端更方便地运行 BoleServer，支持 Windows、macOS 和 Linux
+https://github.com/shellsec/boleserver/releases/latest
+Windows
+https://github.com/shellsec/boleserver/releases/download/v2.1.3-bole.1/BoleServer.2.1.3.x64.Portable.exe
+macOS
+https://github.com/shellsec/boleserver/releases/download/v2.1.3-bole.1/BoleServer.2.1.3.arm64.dmg
+单窗口管理: 服务器管理与 Web 播放器合二为一，界面更统一
+方法2服务端docker自建,需要自己的机器NAS，可以跑docker的设备都可以，比如NAS，N1，软路由和听歌看TV电影之类
+https://github.com/shellsec/boleserver 
+适用于已安装 Docker Engine 和 Docker Compose 插件的 Linux 服务器，支持 amd64 / arm64。首次启动需能访问选用的镜像下载地址。
+国内加速一键安装（默认安装到 /opt/boleserver，脚本下载和镜像拉取均通过 gh-proxy.com）：
+...
+curl -fsSL https://gh-proxy.com/https://raw.githubusercontent.com/shellsec/boleserver/d2762bcfbc773a0baf81cbca5df1ba1bde2d7a29/deploy/install.sh -o /tmp/boleserver-install.sh && sudo env BOLE_IMAGE=gh-proxy.com/docker/ghcr.io/shellsec/boleserver:latest bash /tmp/boleserver-install.sh
+...
+已是 root 用户时去掉 sudo 即可。gh-proxy.com 为第三方加速服务；如无法访问或希望直连，使用下方官方命令。镜像加速地址会保存在安装目录的 .env，后续升级继续使用。
+...
+curl -fsSL https://raw.githubusercontent.com/shellsec/boleserver/main/deploy/install.sh -o /tmp/boleserver-install.sh && sudo bash /tmp/boleserver-install.sh
+...
+首次打开 http://服务器IP:9527/admin/，输入两次自己选择的管理员密码（8–128 位），保存后进入后台。没有默认管理密码，也不需要查找随机密码。 密码保存在挂载的 data/config.js，容器重启、升级后仍保留。已有部署继续使用原密码。
+登录后可在「系统配置 → 管理员密码」修改密码，在「用户管理」添加同步用户。音源入口是「播放器 → 设置 → 系统 → 管理员登录 → 管理 / 添加 → 音源订阅清单」，填写 LX sources.json 地址并保存；也可上传音源脚本。
+更多可以访问https://github.com/shellsec/boleserver
 
-7、汽水音乐看一下广告听歌
-汽水音乐（字节跳动/抖音官方出品）有网页版直听 + iOS/macOS 原生 App，和你之前问的洛雪不同，它是正版授权平台，基础听歌免费（带广告），部分高音质/离线需会员。
-汽水音乐各端入口
-网页版（在线直听，免装）
-https://music.douyin.com
-抖音扫码登录，同步抖音收藏的 BGM，底部迷你播放器，电脑临时听歌最方便。
-iOS / iPadOS / Mac App Store
-https://apps.apple.com/cn/app/汽水音乐-抖音音乐版/id1605585211
-认准开发者 Beijing Douyin Technology Co., Ltd.，iOS 需大陆区 Apple ID。
-桌面客户端（Win/Mac dmg）
-官网 https://www.qishui.com 或 https://music.douyin.com 页面底部 → "桌面端下载" → 选 macOS 版（.dmg）。
+5. 洛雪系 Android TV（手机扫码填源，支持遥控器）
+大屏听歌优先用专门的 TV 客户端，不要硬装手机版。
+首选：
+[LX Music TV](https://github.com/bmizhou/lx-music-tv)（⭐约 59）
+基于洛雪思路做的 Android TV 版，遥控器焦点、大屏歌词、多平台搜索、音质选择、JS 音源导入都有。
+下载：
+[Releases](https://github.com/bmizhou/lx-music-tv/releases) → 选 universal（小米电视不少机型是 64 位芯片 + 32 位系统，arm64 易装失败）
+最低约 Android 6（minSdk 23）
+音源：设置里用 手机扫码 / Web 上传 导入 JS（遥控器打字很烦，扫码省事）
+另有扫码把搜索词推到电视（搜索页二维码）
+小米电视
+装同一个 
+[LX Music TV · universal](https://github.com/bmizhou/lx-music-tv/releases)。
+设置 → 账号与安全 → 允许未知来源 → U 盘安装，或用小米投屏/传文件。新系统风险提示点继续即可，装完手机扫码导源。
+极米投影
+同样优先 
+[LX Music TV · universal](https://github.com/bmizhou/lx-music-tv/releases)。近几年机型一般够 Android 6。U 盘或极米助手传 APK，先开未知来源，再扫码导源。
 
+6、车载版本，放弃了
+车载用的人很少。那个 Android Auto 改版只有 3 个星，4 月之后就没更新了
+原因也简单：国内车机大多是厂商自己的系统，应用商店是封闭的，很多不让装 APK，Android Auto 在国内基本用不了。大部分人开车还是用手机连蓝牙或 CarPlay 放歌，所以手机版洛雪直接就能用。
+其他车载端-蓝牙连接手机网页播放
+智能音箱-小爱同学pro-蓝牙连接手机网页播放
+可穿戴设备，不支持
+
+7、鸿蒙NEXT
+特点：去掉 AOSP、不兼容安卓 APK，App 必须是鸿蒙原生（ArkTS/ArkUI 重写）
+纯血鸿蒙（HarmonyOS NEXT）：这个系统装不了安卓 APK，华为新机越来越多，算是一块空白，不过要写原生的 ArkTS，投入不小
+[Adamaik/lxmusic-harmony](https://github.com/Adamaik/lxmusic-harmony)，12★，这周还在更新，目前最完整。能导入洛雪的 JS 音源，播放、缓存、下载和同步设置都做了。它没有发安装包，得用 DevEco Studio 配好自己的签名，自己编译安装
+
+放弃的，走在线播放吧
+iOS 和 iPad：不允许上架应用市场
+洛雪没有官方的 iOS 版，人数却是最多的。可以靠 NAS 上的 lxserver 来补：iPhone 用音流这类 Subsonic 客户端连上 NAS 就能听，或者直接用网页播放器。前面搜到过几个第三方 iOS 同步客户端，但都很小，可以跟进看看
 IOS版本现状
 吾爱原帖 + 论坛登录下载楼主附件（最源头）
 巨魔 TrollStore 用户：直接装 IPA，不掉的那种最舒服
@@ -564,48 +565,38 @@ iphone插电脑上个，打开爱思，
 按照iphone要求，重启机器，进入开发者模式，就可以了。
 进入APP后，点设置，网上搜索一些公益的源，点击自定义源管理，添加新源，把链接复制进去，就可以听了。本地文件那个也可以，和这个在线源意思一样。
 这个的PC版和安卓手机版就是洛雪音乐，LX MUSIC，网上很多版本，每个都可以。源在这些设备上通用。楼主的这个IPA，就是解决了洛雪在苹果上的使用问题，因为根据原来洛雪作者的声明，是不会推出IOS版本的APP的。
-
-8、Lx Music v1.8.4iOS签名版
+Lx Music v1.8.4iOS签名版
 准备一个邮箱，进入网址 https://tfapps.store/?ref=AJMKRY5E 注册
 注册好，申请洛雪测试 
-洛雪测试邮件「杨杰」会发送到邮箱，进入邮件点击「View in TestFlight」，底部会有加粗的兑换码
-进入TestFlight ——账号头像——兑换邀请，输入兑换码！
 
-9、服务端docker自建,需要自己的机器NAS
-https://github.com/XCQ0607/lxserver
-https://github.com/jia070310/lemon-muisc
-https://github.com/Sanmmz/fnos_music_ext
+其他的
+无广畅听全球音乐 Spotify电脑版v1.2.88.483 纯净便携版  500MB大小 使用gmail登录
+https://www.hybase.com/pc/windows/2845.html
+https://pan.baidu.com/s/1SPYv_-wNq1rweMViBb-ljg?pwd=HyHy
 
-10、TV版本
-星河Music（星河音乐）是洛雪系第三方音乐播放器
-星河音乐tv电视版，自行搜
-📺 LX Music TV（洛雪音乐电视版）
-基于 LX Music 移植的大屏版，支持直接导入 JS 音源，遥控器适配，大屏歌词、多平台搜索、音质选择都有。
-导入方式：设置 → 音源 API → 导入用户 API（填 JS 音源链接或本地文件）
-下载：可在第三方软件站（如 9K9K 等）搜索「LX Music TV」下载 APK
-🎵 ZL-Music（TV 版，Apple Music 风格 UI）
-基于 lx-music-mobile 二次开发的 TV 版，同样支持洛雪 JS 音源导入，界面偏 Apple Music TV 风格，焦点/遥控器适配较好。
-导入方式：设置页 → 音源列表 → 在线导入/本地 JS 文件
-下载：可在第三方软件站（如 9K9K 等）搜索「ZL-Music TV」下载 APK
-https://github.com/boluofan/music-tv
-https://github.com/songloft-org/songloft-tv
+https://github.com/javycoder/fnos_music_ext
+飞牛 fnOS 官方音乐（trim.music）的增强扩展：不改官方程序，用代理把在线搜索/播放接到原生界面里。
+lxserver    fnos_music_ext
+跑在哪 任意 VPS / Docker 必须有飞牛 NAS + 官方飞牛音乐
+形态  独立同步服务 + Web 播放器    FPK 扩展 / 脚本接管官方 Socket
+听歌入口    浏览器 / Subsonic / LX 同步  飞牛音乐 Web / App
+音源  自配 + 自定义脚本  网易 musicbox / musicdl / 洛雪 三选一
+适合你：家里已经用飞牛、想继续用官方音乐壳。
+不适合：只想给 iOS/波乐搭通用后端——那条还是 lxserver 更对。
 
-11、其他车载端-蓝牙连接手机网页播放
-智能音箱-小爱同学pro-蓝牙连接手机网页播放
-可穿戴设备，不支持
+汽水音乐看一下广告听歌
+汽水音乐（字节跳动/抖音官方出品）有网页版直听 + iOS/macOS 原生 App，和你之前问的洛雪不同，它是正版授权平台，基础听歌免费（带广告），部分高音质/离线需会员。
+汽水音乐各端入口
+网页版（在线直听，免装）
+https://music.douyin.com
+抖音扫码登录，同步抖音收藏的 BGM，底部迷你播放器，电脑临时听歌最方便。
+iOS / iPadOS / Mac App Store
+https://apps.apple.com/cn/app/汽水音乐-抖音音乐版/id1605585211
+认准开发者 Beijing Douyin Technology Co., Ltd.，iOS 需大陆区 Apple ID。
+桌面客户端（Win/Mac dmg）
+官网 https://www.qishui.com 或 https://music.douyin.com 页面底部 → "桌面端下载" → 选 macOS 版（.dmg）。
 
-洛雪音乐：面向普通用户的桌面/手机聚合播放器，装好+导音源=直接搜歌听歌下载，开箱能用（但要自己找音源）。
-Any Listen：作者新项目，定位个人私有云音乐服务/播放器，本体更“空”，强调本地库+WebDAV+扩展机制+自部署，适合折腾党/NAS玩家
-维度  洛雪音乐 LX Music   Any Listen
-核心定位    聚合播放器（搜全网→播/下）  私有音乐库服务+播放前端
-在线音源    内置自定义源机制，社区音源脚本直接导  本体不带音源，装扩展（如 LX Music API Source Loader）才出在线资源
-本地音乐    支持扫描本地，但主线是在线聚合 一等公民：扫本地+WebDAV 远程曲库+元数据匹配
-多端/部署   Win/Mac/Linux/Android 直装    桌面版 + Web 版（Docker 部署到 NAS/服务器）​
-数据归属    本机配置/歌单，可备份 强调数据主权：曲库在本地或你自己的 WebDAV/服务器
-歌词/音效   桌面歌词、普通逐字歌词、均衡器 卡拉OK歌词、标题栏悬浮歌词、扩展增强
-扩展能力    自定义音源 JS    扩展管理器（元数据/音源/音效/格式插件）
-上手难度    中等（找音源是门槛）  更高（概念多：扩展/WebDAV/服务部署）
-适合谁 电脑手机想白嫖听歌、下载MQ/FLAC 有本地无损库、NAS、想自建、怕哪天音源全死
+
 
 
 
@@ -1117,7 +1108,7 @@ https://www.autohotkey.com/download/ahk-v2.exe
 系统优化：自定义快捷键、修复键盘坏键、效率增强。
 
 
-本地自行建站同步-web文件服务器-开源安全-多平台支持 copyparty v1.20.20
+本地自行建站同步-web文件服务器-开源安全-多平台支持 copyparty v1.20.26
 https://github.com/9001/copyparty
 https://gh-proxy.com/github.com/9001/copyparty/releases/latest/download/copyparty.exe
 
@@ -1530,6 +1521,78 @@ Super Productivity 有 iOS 原生 App，iPhone / iPad / 甚至 Mac（Apple Silic
 App Store 搜「Super Productivity」，开发者 Johannes Millan，MIT 开源，声明零数据采集
 
 
+远程控制
+1网易UU首选 真4K、真免费、真好用
+https://uuyc.163.com/
+维度  UU 远程的位置
+免费力度   真 4K/144Hz、4:4:4 真彩、不限时长、不限设备、无广告，免费版基本等于别人的付费版
+画质和跟手  多篇实测延迟 8～20ms，4K 视频满帧，代码和文字最锐利
+文件传输   不限速、断点续传，实测比向日葵免费版快一个数量级
+跨端 Win/Mac/iOS/安卓/TV/掌机都覆盖，Mac 被控也补齐了，移动端主控体验是三家里最顺的
+出身 网易游戏加速团队那套串流技术平移过来的，底层是强项
+2向日葵
+# 远程控制软件全景对比（2026 年 10 月）
+---
+
+## 一、总表：12 款按"真实边界"分档
+
+| 软件 | 免费档核心限制 | 付费档价格 | 强项 | 硬伤 | 定位 |
+|---|---|---|---|---|---|
+| **网易 UU 远程** | 全功能免费：4K/144Hz、真彩、不限时长次数设备、传文件不限速 | 个人版免费，只有企业版收费 | 画质延迟双第一、无广告、文件传输、副屏/端口映射 | Linux 不支持；安全配置偏基础；弱网有掉链子反馈 | **画质党的免费天花板** |
+| **向日葵** | 不限时长次数；画质/带宽/传文件被压；广告多 | 瓜子 158/年，超级 298/年 | 远程开机生态、功能最全、稳 | 免费版糊+慢+弹窗；同账号静默接入要注意 | **"电脑关着也能连"的首选** |
+| **ToDesk** | 配额制，见下 | 专业 158/年，游戏 298/年 | 国内自建节点+P2P，直连延迟极低；Linux 好 | 配额一砍再砍，超限直接废；海外弱 | **轻度/临时党，高频就得付费** |
+| **RustDesk** | 开源免费，公共节点共享带宽 | 自建 0 元；Pro 按量 | 数据自控、可审计、LDAP/SSO | 公共节点烂；自建要 Docker+服务器 | **技术控/隐私优先** |
+| **Parsec** | 个人免费，1080p/60，单会话；4:4:4 要 Warp $9.99/月 | Warp $9.99/月 | 编码延迟全场最低（~8ms），手柄/压感笔 | 国内吃国际链路；几乎没办公功能 | **游戏串流专精** |
+| **Windows RDP（mstsc）** | 系统自带，0 元 | 0 | 真原生桌面、多屏、剪贴板、磁盘映射 | **被控端必须专业版/企业版/教育版**，家庭版压根没这功能；要公网 IP 或 VPN | **专业版用户的最优解，不用装软件** |
+| **AnyDesk** | 个人非商用，连接频繁会被判商用 | 个人档约 €20/月起 | 窄带/跨国抗丢包神器；3MB 单文件绿色版 | 国内晚高峰绕路、掉帧；商用检测烦 | **连海外/应急的最后一根线** |
+| **TeamViewer** | 3 台设备，商用检测极严，常被掐到 2 分钟 | 贵 | 跨国老牌、企业级 | 个人误判商用是常态；国内慢 | **外企合规场景** |
+| **DeskIn** | 1080P/30，3 台设备 | 性能版付费 | 参数漂亮，国产新秀 | 实测延迟约 90ms，和标称差距大 | 观望 |
+| **Splashtop** | 基本只有付费 | 订阅制 | 4:4:4、绘图板/USB 重定向 | 贵，通用功能不突出 | **设计师/剪辑/动画** |
+| **Chrome 远程桌面** | 完全免费、不限时 | 0 | 只要有 Chrome + 谷歌账号，零安装 | 功能极简、没文件传输深度、国内偶尔抽 | **临时救急** |
+| **飞书 / 钉钉 / 腾讯会议** | 免费 | 0 | 屏幕共享、协作 | **只能看不能控**，碰不到那台电脑 | 不是远控，别混着比 |
+
+官方与实测来源：UU 、ToDesk 定价页 、免费配额 、向日葵 、Parsec 、RustDesk 、RDP 家庭版限制 、DeskIn/Splashtop/AnyDesk 、协作套件 。
+
+> ⚠️ 有几组数字互相矛盾，我按"官方页面优先、实测取区间"处理：
+> - ToDesk 免费配额：官网定价页**没写小时/次数**，只写"普通节点+1080P/30帧+100 台"；**80h/200次**来自 2026 年 2 月后的媒体盘点 ，也有自媒体说 120h/300次 。升专业版后官网明确写"不限时不限次"，所以配额这把刀确实存在，只是具体数字会动。
+> - 延迟数字各家测出来差好几倍（比如向日葵有人说 55ms、有人说 260ms），取决于局域网还是跨运营商。**别看绝对值，看相对排序**：UU/ToDesk 直连最快 → RDP 原生 → 向日葵免费档偏糊 → AnyDesk 国内绕路。
+
+---
+
+## 二、按你的真实场景直接抄答案
+
+| 你的情况 | 选哪个 | 理由 |
+|---|---|---|
+| 家里千兆 + 要 4K、传大文件、剪片修图、远程玩 PC 游戏 | **UU 远程** | 免费就给满血，付费档在它这儿没意义 |
+| 家里多台电脑、**电脑休眠了也要能连上** | **向日葵 + C1Pro 开机插座** | 这条链只有向日葵闭环得最顺 |
+| 主力向日葵，想再备一条线 | **UU 远程**（你现在的方案，不用改） | 一个偏"稳"，一个偏"快"，互补 |
+| Win11 专业版、都在自己内网/有 VPN | **直接用 mstsc** | 0 元、原生、最跟手，比所有第三方都干净；家庭版就算了 |
+| 连海外 VPS、外企总部、出差酒店烂网 | **AnyDesk** 或 **Parsec** | DeskRT / P2P 直连在丢包下不散架 |
+| 公司代码、客户数据，**不想过任何第三方服务器** | **RustDesk 自建** | 一台轻量云服务器 + Docker，三行命令，流量自己说了算 |
+| 帮家人临时修电脑、对方连软件都不会装 | **Chrome 远程桌面** 或 UU 的免注册协助码 | 零门槛 |
+| 数位板压感、调色、动画制作 | **Splashtop** | 4:4:4 + USB 重定向是刚需 |
+
+---
+
+## 三、几个容易被坑的点
+
+1. **免费额度陷阱**：ToDesk 是配额制，向日葵是限速制，UU 目前是"无限制制"。按"会不会突然不能用"排序：**UU > 向日葵 > ToDesk**。
+2. **商业检测**：TeamViewer、AnyDesk 都会判你"像在工作"，连自家两台电脑也可能中招。个人用就别碰这俩当主力。
+3. **Windows 家庭版**：设置里找不到远程桌面开关不是你菜，是版本天花板 。要么升级专业版，要么用第三方（RustDesk、向日葵、UU 都行）。
+4. **安全习惯**：向日葵同账号远控可能**无弹窗静默接入**，公共电脑记得退出账号；UU 有防窥模式和"客户端锁定"，建议开着 。
+5. **下载渠道**：RustDesk 认准 `rustdesk.com`，官方说其他域名都是假的 ；国产三家的"破解版/绿色版"别用，远控软件一旦被人掺东西就是全盘裸奔。
+
+---
+
+## 四、给你的最终建议（不折腾版）
+
+> **向日葵（主力，加个 C1Pro 解决开机）+ UU 远程（B 方案，画质和传文件）**
+>
+> 这两只就够了。Win 专业版机器再补一个 **mstsc** 当内网秘密武器；真要数据不出门，再上 **RustDesk 自建**。
+
+
+
+
 
 密码破解工具
 真能吃显卡的压缩包密码恢复工具，主要分两条路：免费开源的命令行派（hashcat 是标杆） 和 Windows GUI 商业派（Accent/PassFab/Passware 这类）。ARCHPR 零售版之所以被嫌弃，就是因为它 GPU 调用浅，下面这几个才是真·GPU 加速。
@@ -1757,6 +1820,8 @@ https://github.com/MetaCubeX/ClashX.Meta
 根据《中华人民共和国电信条例》和《中国人民共和国刑法》等相关法律规定，未取得《增值电信业务经营许可证》的情况下，提供代理服务，属于非法行为！此工具本身无任何代理节点服务，仅供个人学习或学术研究，严禁涉嫌违反法律规定的非法用途，否则责任应由软件开发者和违规使用者承担，本站特此说明！
 ===================
 
+gh加速下载插件
+https://chromewebstore.google.com/detail/github-accelerator-github/bcbnfbcmbcoogjihnoediilgpfohkdef?hl=zh-CN&utm_source=ext_sidebar
 
 一、Chrome通用必备（所有人必装）
 1. uBlock Origin（广告拦截 + 隐私保护）
@@ -1984,11 +2049,6 @@ zTasker 一键式效率倍增器
 https://www.everauto.net/cn/index.html
 科学上网
 https://x-expressway.com/auth/login
-稳定5年科学上网VPN
-https://KTcu.x-aff.com/auth/register?code=KTcu
-https://any.x-expressway.org/
-https://dl.ppbox.xyz/app/xt/xtunnel-x64.exe
-https://dl.ppbox.xyz/app/xt/xtunnel.apk
 浏览器代理端口插件
 SwitchyOmega 插件
 /FelisCatus/SwitchyOmega/releases
