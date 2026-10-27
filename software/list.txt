@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-26T16:53:59.243661",
+  "generated_at": "2026-10-27T17:26:49.056165",
   "total_software": 21,
-  "total_files": 4308,
-  "total_size": 1847033513,
+  "total_files": 4310,
+  "total_size": 1847038063,
   "software": {
     "WinMemoryCleaner": {
       "version": "20260515_144655",
@@ -435,7 +435,7 @@
       "last_updated": "2026-10-26T16:53:58.091437"
     },
     "notepad++": {
-      "version": "20260925_231216",
+      "version": "20261027_172648",
       "files": [
         {
           "path": "config.xml",
@@ -1627,9 +1627,9 @@
         },
         {
           "path": "plugins\\Config\\PythonScript\\README.md",
-          "size": 6337,
-          "hash": "54cda05c505a94668cfefe830ebce916",
-          "modified": "2026-08-05T18:25:42.257338"
+          "size": 6435,
+          "hash": "134437a85bac8b95c3419453e7a07077",
+          "modified": "2026-10-27T17:24:44.987640"
         },
         {
           "path": "plugins\\Config\\PythonScript\\清空PythonScript脚本.cmd",
@@ -1645,9 +1645,9 @@
         },
         {
           "path": "plugins\\Config\\PythonScript\\scripts\\README.md",
-          "size": 4684,
-          "hash": "47d344016c4588e602c355b7bb1769f8",
-          "modified": "2026-08-05T18:25:42.245443"
+          "size": 4727,
+          "hash": "401eb0d406b8ed51df9817b68fea6481",
+          "modified": "2026-10-27T17:24:44.045349"
         },
         {
           "path": "plugins\\Config\\PythonScript\\scripts\\00_AI对话跳转\\一键跳转_AI.py",
@@ -1822,6 +1822,12 @@
           "size": 1324,
           "hash": "8b03d95511e89f82117eb7d64285c31e",
           "modified": "2026-08-05T18:25:42.246614"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts\\01_时间与插入\\插入N天后.py",
+          "size": 1796,
+          "hash": "56ef0683d51eb50c52ada31054e6c099",
+          "modified": "2026-10-27T17:17:42.661246"
         },
         {
           "path": "plugins\\Config\\PythonScript\\scripts\\01_时间与插入\\插入UUID.py",
@@ -2347,9 +2353,9 @@
         },
         {
           "path": "plugins\\Config\\PythonScript\\scripts\\_lib\\time_stamp_fmt.py",
-          "size": 3720,
-          "hash": "3e86f5da1aebb6a3eebdacb1d30e6c53",
-          "modified": "2026-08-05T18:25:42.246614"
+          "size": 4142,
+          "hash": "199b9bf0102f6be7a4dc0841ade10887",
+          "modified": "2026-10-27T17:17:38.846784"
         },
         {
           "path": "plugins\\Config\\PythonScript\\scripts_ENG\\README.md",
@@ -2518,6 +2524,12 @@
           "size": 1046,
           "hash": "7b3617cfd68179c23c93414eeed291eb",
           "modified": "2026-08-05T18:25:42.196572"
+        },
+        {
+          "path": "plugins\\Config\\PythonScript\\scripts_ENG\\01_Time_Insert\\InsertNDaysTime.py",
+          "size": 1769,
+          "hash": "ae5b4a4da8a3296aeccba10421be89d1",
+          "modified": "2026-10-27T17:24:43.306348"
         },
         {
           "path": "plugins\\Config\\PythonScript\\scripts_ENG\\01_Time_Insert\\InsertTime.py",
@@ -3067,9 +3079,9 @@
         },
         {
           "path": "plugins\\Config\\PythonScript\\scripts_ENG\\_lib\\time_stamp_fmt.py",
-          "size": 3710,
-          "hash": "1cbc1b96dcad9f18b58b903ef316467f",
-          "modified": "2026-08-05T18:25:42.246614"
+          "size": 4132,
+          "hash": "9f00789853161244c7dc9d7764ecd46b",
+          "modified": "2026-10-27T17:24:39.855781"
         },
         {
           "path": "plugins\\mimeTools\\mimeTools.dll",
@@ -9006,9 +9018,9 @@
           "modified": "2026-08-28T01:27:01.966690"
         }
       ],
-      "total_files": 1428,
-      "total_size": 77360333,
-      "last_updated": "2026-09-25T23:12:16.563823"
+      "total_files": 1430,
+      "total_size": 77364883,
+      "last_updated": "2026-10-27T17:26:48.261849"
     },
     "notepad--": {
       "version": "20261021_150603",

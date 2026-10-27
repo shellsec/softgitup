@@ -18,6 +18,7 @@
 | 插入时间中文.py | InsertTimeCN.py |
 | 插入明天时间中文.py | InsertTomorrowTimeCN.py |
 | 插入昨天时间中文.py | InsertYesterdayTimeCN.py |
+| 插入N天后.py | InsertNDaysTime.py |
 | 插入明天时间.py | InsertTomorrowTime.py |
 | 插入昨天时间.py | InsertYesterdayTime.py |
 | 插入时间_简短.py | InsertTimeShort.py |

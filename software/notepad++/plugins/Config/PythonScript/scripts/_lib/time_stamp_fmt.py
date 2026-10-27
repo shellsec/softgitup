@@ -16,6 +16,19 @@ def shift_days(days, now=None):
     return _now(now) + timedelta(days=days)
 
 
+def parse_day_offset(text):
+    """Parse an integer day offset. Empty or non-integer raises ValueError."""
+    if text is None:
+        raise ValueError("day offset required")
+    s = str(text).strip()
+    if not s:
+        raise ValueError("day offset required")
+    body = s[1:] if s[0] in "+-" else s
+    if not body.isdigit():
+        raise ValueError("day offset must be an integer")
+    return int(s)
+
+
 def format_cn(now=None):
     now = _now(now)
     date_part = now.strftime("%Y%m%d")
