@@ -122,6 +122,7 @@ def run_shell_command(cmd: str, timeout: int = _CMD_EXEC_TIMEOUT):
         r = subprocess.run(
             ["cmd.exe", "/c", cmd],
             cwd=str(ROOT),
+            env={**os.environ, "PYINSTALLER_RESET_ENVIRONMENT": "1"},
             capture_output=True,
             text=True,
             timeout=timeout,
@@ -192,6 +193,9 @@ def _append_optional_cli_args(cmd_args, **kw):
         cmd_args += ["--schedule-day", str(int(kw["schedule_day"]))]
     if kw.get("schedule_once_date") is not None:
         cmd_args += ["--schedule-once-date", str(kw["schedule_once_date"])]
+    for field in ('success_exit_codes', 'on_success', 'on_failure'):
+        if kw.get(field) is not None:
+            cmd_args += ['--' + field.replace('_', '-'), str(kw[field])]
     return cmd_args
 
 
@@ -200,10 +204,12 @@ def run_cli(*args, json_out=True):
     if json_out:
         cmd.append("--json")
     try:
-        r = subprocess.run(cmd, cwd=str(ROOT), capture_output=True, text=True, timeout=120, encoding="utf-8", errors="replace")
+        # Start each CLI invocation as an independent PyInstaller instance.
+        env = {**os.environ, "PYINSTALLER_RESET_ENVIRONMENT": "1", "PYTHONIOENCODING": "utf-8"}
+        r = subprocess.run(cmd, cwd=str(ROOT), env=env, capture_output=True, text=True, timeout=120, encoding="utf-8", errors="replace")
         err = (r.stderr or "").strip()
         if r.returncode != 0:
-            err = _format_cli_error(err or "failed", cmd)
+            err = _format_cli_error(err or f"Task manager process exited with code {r.returncode}. Check its startup on the API server.", cmd)
         return (r.stdout or "").strip(), err, r.returncode
     except subprocess.TimeoutExpired:
         return "", "CLI timeout (120s)", -1
@@ -942,6 +948,9 @@ def create_app():
         schedule_once_date: str = Query(None),
         depends_on: str = Query(""),
         delay_after_dep: int = Query(None),
+        success_exit_codes: str = Query(None),
+        on_success: str = Query(None),
+        on_failure: str = Query(None),
         x_api_key: str = Header(None, alias="X-API-Key"),
     ):
         require_api_key(x_api_key)
@@ -967,6 +976,9 @@ def create_app():
             script_args=script_args or None,
             env_vars=env_vars or None,
             delay_after_dep=delay_after_dep,
+            success_exit_codes=success_exit_codes,
+            on_success=on_success,
+            on_failure=on_failure,
             schedule_enabled=schedule_enabled,
             schedule_action=schedule_action,
             schedule_type=schedule_type,
@@ -1014,6 +1026,9 @@ def create_app():
         schedule_once_date=None,
         depends_on=None,
         delay_after_dep=None,
+        success_exit_codes=None,
+        on_success=None,
+        on_failure=None,
     ):
         cmd_args = ["--update", id_or_name]
         if name is not None:
@@ -1042,6 +1057,9 @@ def create_app():
             env_vars=env_vars,
             depends_on=depends_on,
             delay_after_dep=delay_after_dep,
+            success_exit_codes=success_exit_codes,
+            on_success=on_success,
+            on_failure=on_failure,
             schedule_enabled=schedule_enabled,
             schedule_action=schedule_action,
             schedule_type=schedule_type,
@@ -1076,6 +1094,9 @@ def create_app():
         schedule_once_date: str = Query(None),
         depends_on: str = Query(None),
         delay_after_dep: int = Query(None),
+        success_exit_codes: str = Query(None),
+        on_success: str = Query(None),
+        on_failure: str = Query(None),
         x_api_key: str = Header(None, alias="X-API-Key"),
     ):
         require_api_key(x_api_key)
@@ -1101,6 +1122,9 @@ def create_app():
             schedule_once_date=schedule_once_date,
             depends_on=depends_on,
             delay_after_dep=delay_after_dep,
+            success_exit_codes=success_exit_codes,
+            on_success=on_success,
+            on_failure=on_failure,
         )
         if code != 0:
             raise HTTPException(status_code=404 if "Not found" in err else 500, detail=err or "failed")
@@ -1132,6 +1156,9 @@ def create_app():
         schedule_once_date: str = Query(None),
         depends_on: str = Query(None),
         delay_after_dep: int = Query(None),
+        success_exit_codes: str = Query(None),
+        on_success: str = Query(None),
+        on_failure: str = Query(None),
         x_api_key: str = Header(None, alias="X-API-Key"),
     ):
         require_api_key(x_api_key)
@@ -1157,6 +1184,9 @@ def create_app():
             schedule_once_date=schedule_once_date,
             depends_on=depends_on,
             delay_after_dep=delay_after_dep,
+            success_exit_codes=success_exit_codes,
+            on_success=on_success,
+            on_failure=on_failure,
         )
         if code != 0:
             raise HTTPException(status_code=404 if "Not found" in err else 500, detail=err or "failed")
