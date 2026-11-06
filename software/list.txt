@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-05T16:08:10.336579",
+  "generated_at": "2026-11-06T15:15:50.980124",
   "total_software": 21,
   "total_files": 4309,
-  "total_size": 1839414671,
+  "total_size": 1826597846,
   "software": {
     "WinMemoryCleaner": {
       "version": "20260515_144655",
@@ -85,7 +85,7 @@
       "last_updated": "2026-06-10T16:55:24.069987"
     },
     "system_good": {
-      "version": "20261105_160809",
+      "version": "20261106_151549",
       "files": [
         {
           "path": "AltSnap.exe",
@@ -179,9 +179,9 @@
         },
         {
           "path": "gh-release-fetch-windows.zip",
-          "size": 57285863,
-          "hash": "7311db88faa906a3d74d7f8979634175",
-          "modified": "2026-10-28T11:06:24.488060"
+          "size": 44259059,
+          "hash": "e69b80ee0a3c08db820ef8bb78ee94fa",
+          "modified": "2026-11-06T07:54:12.490111"
         },
         {
           "path": "gohttpserver.zip",
@@ -204,8 +204,8 @@
         {
           "path": "Lastb_soft_version.txt",
           "size": 185822,
-          "hash": "1feb63dee5eab6578e2d26bbf406c1ed",
-          "modified": "2026-11-03T15:56:33.309951"
+          "hash": "64a9abbcf8738ddaeec662311567bfd4",
+          "modified": "2026-11-06T15:15:45.913838"
         },
         {
           "path": "lx-music-desktop.7z",
@@ -371,9 +371,9 @@
         },
         {
           "path": "WindowsBatchScriptManager.exe",
-          "size": 10267434,
-          "hash": "56622502ec51a6397afef3a736172912",
-          "modified": "2026-11-05T16:03:36"
+          "size": 10405733,
+          "hash": "da592e706aa0d9a1742065d27405c334",
+          "modified": "2026-11-06T15:02:56"
         },
         {
           "path": "WindowsBatchScriptManager_api_server.bat",
@@ -384,8 +384,8 @@
         {
           "path": "WindowsBatchScriptManager_api_server.py",
           "size": 61718,
-          "hash": "13d710679e1fec83471dbb162c90b1a0",
-          "modified": "2026-11-05T14:32:52"
+          "hash": "d5e074efe3d771f802b67fe4613e6204",
+          "modified": "2026-11-06T15:02:14"
         },
         {
           "path": "winShowSecondsInSystemClock.reg",
@@ -425,8 +425,8 @@
         }
       ],
       "total_files": 56,
-      "total_size": 890555455,
-      "last_updated": "2026-11-05T16:08:09.272012"
+      "total_size": 877666950,
+      "last_updated": "2026-11-06T15:15:49.983798"
     },
     "notepad++": {
       "version": "20261027_172648",
@@ -9017,7 +9017,7 @@
       "last_updated": "2026-10-27T17:26:48.261849"
     },
     "notepad--": {
-      "version": "20261021_150603",
+      "version": "20261106_151550",
       "files": [
         {
           "path": "D3Dcompiler_47.dll",
@@ -9057,9 +9057,9 @@
         },
         {
           "path": "Notepad--.exe",
-          "size": 4738048,
-          "hash": "bccc06da2aebac3bf30352a741159d28",
-          "modified": "2026-10-08T13:03:34.774746"
+          "size": 4802560,
+          "hash": "19541cee6f176e8ca7cb4298f307e82d",
+          "modified": "2026-10-26T10:48:11.636857"
         },
         {
           "path": "opengl32sw.dll",
@@ -9069,9 +9069,9 @@
         },
         {
           "path": "qmyedit_qt5.dll",
-          "size": 2671104,
-          "hash": "1e9e62f4a80a65267887a0ac04bd4217",
-          "modified": "2026-09-30T12:13:21.019677"
+          "size": 2678272,
+          "hash": "993262d7a41dc2090268ae961d79b22e",
+          "modified": "2026-10-21T13:14:31.344952"
         },
         {
           "path": "Qt5Core.dll",
@@ -9208,32 +9208,32 @@
         {
           "path": "plugin\\filesearch.dll",
           "size": 142848,
-          "hash": "92b8195040cfeff48851262d612d39ba",
-          "modified": "2026-09-30T12:16:01.114873"
+          "hash": "9631d42e61d53ec0abbc59f3f7f5bf07",
+          "modified": "2026-10-21T13:20:53.581421"
         },
         {
           "path": "plugin\\jstoolndd.dll",
           "size": 121344,
-          "hash": "cb2ead4e1d88a0c5eed3f9f82003565d",
-          "modified": "2026-09-30T12:16:38.408726"
+          "hash": "553e6f4c602c2bfc53af292778ed0c88",
+          "modified": "2026-10-21T13:20:55.289575"
         },
         {
           "path": "plugin\\luascript.dll",
           "size": 345088,
-          "hash": "e2c6db8524d4e329afccfe9195119abb",
-          "modified": "2026-09-30T12:17:02.485977"
+          "hash": "bb587a628eb4203c42b3e8419bac8c98",
+          "modified": "2026-10-21T13:20:56.271895"
         },
         {
           "path": "plugin\\ndd-json-viewer.dll",
           "size": 459264,
-          "hash": "24179e61375c165df05eed9143967248",
-          "modified": "2026-09-30T12:22:00.617724"
+          "hash": "ef88d9d6a1f29d547af063a3f6e369f0",
+          "modified": "2026-10-21T13:20:54.792014"
         },
         {
           "path": "plugin\\ndd108tool.dll",
           "size": 501248,
-          "hash": "83150d1a121d309bc39f84d83f828d46",
-          "modified": "2026-10-08T13:03:18.137977"
+          "hash": "166a404f74e9d3903b51dd2e02650c1c",
+          "modified": "2026-10-21T13:20:56.848678"
         },
         {
           "path": "plugin\\pluginlist.json",
@@ -9280,8 +9280,8 @@
         {
           "path": "plugin\\xmltoolndd.dll",
           "size": 152064,
-          "hash": "31f74f8ec9e5a350b2376483cf6ec747",
-          "modified": "2026-09-30T12:23:19.223968"
+          "hash": "8235f97ac604da8ad956806f42744796",
+          "modified": "2026-10-21T13:20:55.378576"
         },
         {
           "path": "plugin\\lua-scripts\\cppcommenttool.lua",
@@ -12369,8 +12369,8 @@
         }
       ],
       "total_files": 558,
-      "total_size": 65121578,
-      "last_updated": "2026-10-21T15:06:03.638412"
+      "total_size": 65193258,
+      "last_updated": "2026-11-06T15:15:50.455277"
     },
     "CCleaner": {
       "version": "20261009_172447",
