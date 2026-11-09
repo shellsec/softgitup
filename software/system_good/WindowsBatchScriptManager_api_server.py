@@ -85,7 +85,7 @@ from pathlib import Path
 try:
     from version import __version__
 except ImportError:
-    __version__ = "1.3.4"
+    __version__ = "1.3.5"
 
 ROOT = Path(__file__).resolve().parent
 # 主程序：有 main.py 时用当前 Python 跑 CLI，避免拉起需 UAC 的 GUI exe（WinError 740）
