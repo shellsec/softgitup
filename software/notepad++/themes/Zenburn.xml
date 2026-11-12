@@ -1919,7 +1919,7 @@ License:             GPL2
             <WordsStyle name="File Header" styleID="2" fgColor="E3CEAB" bgColor="3F3F3F" fontName="" fontStyle="2" fontSize="" />
             <WordsStyle name="Line Number" styleID="3" fgColor="8CD0D3" bgColor="3F3F3F" fontName="" fontStyle="2" fontSize="" />
             <WordsStyle name="Hit Word" styleID="4" fgColor="CCE08C" bgColor="3F3F3F" fontName="" fontStyle="1" fontSize="" />
-            <WordsStyle name="Current line background colour" styleID="6" bgColor="585858" />
+            <WordsStyle name="Current line background colour" styleID="6" bgColor="101010" />
         </LexerType>
         <LexerType name="gdscript" desc="GDScript" ext="">
             <WordsStyle name="DEFAULT" styleID="0" fgColor="DCDCCC" bgColor="3F3F3F" fontName="" fontStyle="0" fontSize="" />
@@ -2000,7 +2000,7 @@ License:             GPL2
         <WidgetStyle name="Mark Style 3" styleID="23" bgColor="F18C96"></WidgetStyle>
         <WidgetStyle name="Mark Style 4" styleID="22" bgColor="408040"></WidgetStyle>
         <WidgetStyle name="Mark Style 5" styleID="21" bgColor="968CF1"></WidgetStyle>
-        <WidgetStyle name="Incremental highlight all" styleID="28" bgColor="C3BF9F"></WidgetStyle>
+        <WidgetStyle name="Find matches highlight all" styleID="28" bgColor="C3BF9F"></WidgetStyle>
         <WidgetStyle name="Tags match highlighting" styleID="27" bgColor="C6C600"></WidgetStyle>
         <WidgetStyle name="Tags attribute" styleID="26" bgColor="78926F"></WidgetStyle>
         <WidgetStyle name="Active tab focused indicator" styleID="0" fgColor="80D4B2"></WidgetStyle>

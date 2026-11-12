@@ -969,12 +969,15 @@ Translation note:
 			<Preference title="Preferences">
 				<Item id="6001" name="Close"/>
 				<Global title="General">
-					<Item id="6123" name="Localization"/>
+					<Item id="6123" name="&amp;Localization"/>
 					<Item id="6131" name="Menu"/>
-					<Item id="6122" name="Hide (use Alt or F10 key to toggle)"/>
-					<Item id="6132" name="Hide right shortcuts ＋ ▼ ✕"/>
+					<Item id="6122" name="&amp;Hide (use Alt or F10 key to toggle)"/>
+					<Item id="6132" name="Hide &amp;right shortcuts ＋ ▼ ✕"/>
 					<Item id="6133" name="Status Bar"/>
-					<Item id="6134" name="Hide"/>
+					<Item id="6134" name="Hi&amp;de"/>
+					<Item id="7165" name="Dialog Font (Need to restart Notepad++)"/>
+					<Item id="7166" name="&amp;Size:"/>
+					<Item id="7168" name="Name:"/>
 				</Global>
 
 				<Toolbar title="Toolbar">
@@ -1230,8 +1233,6 @@ Translation note:
 				<Searching title="Searching">
 					<Item id="6902" name="Use monospaced font in Find dialog (Need to restart Notepad++)"/>
 					<Item id="6903" name="Find dialog remains open after search that outputs to results window"/>
-					<Item id="6904" name="Confirm Replace All in All Opened Documents"/>
-					<Item id="6905" name="Replace: Don't move to the following occurrence"/>
 					<Item id="6906" name="Search Result window: show only one entry per found line if possible"/>
 					<Item id="6907" name="When Find Dialog is Invoked"/>
 					<Item id="6908" name="Fill Find Field with Selected Text"/>
@@ -1361,7 +1362,7 @@ Translation note:
 
 				<MISC title="MISC.">
 					<ComboBox id="6347">
-						<Element name="Enable for current file"/>
+						<Element name="Enable for current file(s)"/>
 						<Element name="Enable for all opened files"/>
 						<Element name="Disable"/>
 					</ComboBox>
@@ -1772,6 +1773,8 @@ Proceed only if you understand the risks."/>
 			<default-open-save-select-folder value="Select a folder as default directory"/><!-- HowToReproduce: Settings > Preferences > Default Directory > [...] -->
 			<shift-change-direction-tip value="Use Shift+Enter to search in the opposite direction"/>
 			<two-find-buttons-tip value="2 find buttons mode"/>
+			<confirm-replace-in-all-open-docs-tip value="Confirm &quot;Replace All in All Opened Documents&quot; action"/>
+			<replace-and-stop-tip value="After replacing, don't move to the following occurrence"/>
 			<find-in-files-filter-tip value="Find in cpp, cxx, h, hxx &amp;&amp; hpp:
 *.cpp *.cxx *.h *.hxx *.hpp
 
@@ -1785,6 +1788,7 @@ Find in all files but exclude all folders log or logs recursively:
 *.* !+\log*"/><!-- HowToReproduce: Tip of mouse hovered on "Filters" label in "Find in Files" section of Find dialog. -->
 			<find-in-files-select-folder value="Select a folder to search from"/><!-- HowToReproduce: Search > Find in Files > [...] -->
 			<find-in-files-dir-from-active-doc-tip value="Fill Directory field based on active document"/><!-- HowToReproduce: Search > Find in Files > [<<] -->
+			<find-highlight-mode-tip value="Highlight all matches of the current search in the active document while typing"/>
 			<find-status-top-reached value="Find: Reached document beginning, first occurrence from the bottom found."/>
 			<find-status-end-reached value="Find: Reached document end, first occurrence from the top found."/>
 			<find-status-replaceinfiles-1-replaced value="Replace in Files: 1 occurrence was replaced"/>
@@ -1809,6 +1813,7 @@ Find in all files but exclude all folders log or logs recursively:
 			<find-status-replace-readonly value="Replace: Cannot replace text. The current document is read only"/>
 			<find-status-cannot-find value="Find: Can't find the text &quot;$STR_REPLACE$&quot;"/>
 			<find-status-cannot-find-pebkac-maybe value="The given occurrence cannot be found. You may have forgotten to check &quot;Wrap around&quot; (to ON), &quot;Match case&quot; (to OFF), or &quot;Match whole word only&quot; (to OFF)."/>
+			<find-status-regex-find-empty-string value="The given regular expression matches empty strings."/>
 			<find-status-scope-selection value="in selected text"/>
 			<find-status-scope-all value="in entire file"/>
 			<find-status-scope-backward value="from start-of-file to caret"/>
