@@ -37,14 +37,15 @@ echo.
 
 REM 执行Python脚本
 python sync_software.py
+set "SYNC_EXIT=%errorlevel%"
 
 REM 检查执行结果
-if %errorlevel% equ 0 (
+if %SYNC_EXIT% equ 0 (
     echo.
     echo ✓ 软件同步完成！
 ) else (
     echo.
-    echo ✗ 软件同步失败，错误代码: %errorlevel%
+    echo ✗ 软件同步失败，错误代码: %SYNC_EXIT%
 )
 
 echo.
@@ -52,3 +53,4 @@ echo 执行完成时间: %date% %time%
 echo ========================================
 echo.
 pause
+exit /b %SYNC_EXIT%

@@ -1,5 +1,13 @@
 # SoftGitUp - Daily Tools Cloud Update Sync System
 
+## Windows sync
+
+Download the Windows ZIP from [GitHub Releases](https://github.com/shellsec/softgitup/releases) and extract it. Copy `config.example.json` to `config.json` and set the update source and sync directory. Run `sync_software.exe` from the same folder to see the sync result in the console.
+
+Downloads are checked against the manifest before replacing local files. Failed runs exit with code 1, and matching files are skipped. For an internal update server, see the [private deployment guide](私有化部署/README.md) (Chinese).
+
+![SoftGitUp sync completed in Windows Command Prompt](docs/windows-sync.png)
+
 **语言 / Language:** [中文](README.md) | English
 
 [aiv123.com](https://aiv123.com/) · AI tools directory, 600+ tools in one place
@@ -132,9 +140,7 @@ Tested on Windows Server + Windows 10-11
 softgitup/
 ├── config.json              # Configuration file
 ├── soft_manager.py          # Local management tool
-├── soft_sync.py            # Sync tool (GUI version)
 ├── sync_software.py        # Complete sync tool (command line, recommended)
-├── build_exe.py            # Build script
 ├── generate_and_push.bat   # Generate list.txt and push
 ├── soft_page_check/        # Page title check + monthly A board (see README)
 │   ├── monthly_sop.bat     # Monthly SOP entry (recommended)
@@ -235,83 +241,16 @@ python soft_manager.py
 generate_and_push.bat
 ```
 
-### 6. Use GUI Sync Tool
-```bash
-# Start GUI sync tool (system tray)
-python soft_sync.py
+## Build Windows executables
+
+Run from the repository root with a Windows Python installation.
+
+```powershell
+python -m pip install requests pyinstaller
+python -m PyInstaller --onefile --console --name sync_software sync_software.py
 ```
 
-## Build and Compile
-
-### Compile to Executable
-Use PyInstaller to package Python programs into executable files:
-
-```bash
-# Use build_exe.py script to package
-python build_exe.py
-```
-
-Build script provides multiple options:
-1. **Build All Programs** (Recommended) - Includes GUI and console versions
-2. **Build Console Version Only** - No GUI dependencies, avoid PyQt5 DLL issues
-3. **Build GUI Version Only** - Includes complete GUI functionality
-4. **Clean Build Files** - Clean temporary files
-
-### Direct PyInstaller Compilation
-You can also use PyInstaller directly to compile `sync_software.py`:
-
-```bash
-# Basic compilation
-pyinstaller --onefile --name=sync_software sync_software.py
-
-# Optimized compilation (recommended)
-pyinstaller --onefile --name=sync_software --clean --noconfirm sync_software.py
-```
-
-**Generated Files**:
-- `dist/sync_software.exe` - Compiled executable file
-
-### Generated Executable Files
-- `sync_software.exe` - Complete sync tool (console, recommended)
-- `SoftGitUp_Workflow.exe` - Workflow tool (console)
-- `SoftGitUp_Manager.exe` - Management tool (GUI)
-- `SoftGitUp_Sync.exe` - Sync tool (GUI, system tray)
-- `SoftGitUp_Sync_Simple.exe` - Simplified sync tool (console)
-
-### Solve PyQt5 DLL Issues
-If you encounter `ImportError: DLL load failed while importing QtWidgets` error:
-
-**Solution 1: Use Nuitka Compilation (Recommended)** ⭐⭐⭐⭐⭐
-```bash
-# Compile to native C++ code, no Python or DLL needed
-python -m nuitka --standalone --onefile --windows-console-mode=disable --output-dir=dist sync_software.py
-```
-**Advantages**:
-- Smaller file size (5-15 MB)
-- No DLL dependencies
-- Fast startup
-- Better performance
-
-**Solution 2: Use Console Version**
-```bash
-# Select option 2, build console version
-python build_exe.py
-# Use the generated SoftGitUp_Sync_Simple.exe
-```
-
-**Solution 3: Use Python Script**
-```bash
-# Run Python scripts directly to avoid packaging issues
-python sync_software.py
-```
-
-**Solution 4: Install Visual C++ Redistributable**
-- Download and install Microsoft Visual C++ Redistributable
-- Recompile GUI version
-- `SoftGitUp_Workflow.exe` - Workflow tool (console)
-- `SoftGitUp_Manager.exe` - Management tool (GUI)
-- `SoftGitUp_Sync.exe` - Sync tool (GUI, system tray)
-- `SoftGitUp_Sync_Simple.exe` - Simplified sync tool (console)
+The executable is written to `dist/sync_software.exe`.
 
 ## Workflow
 
@@ -695,8 +634,6 @@ A: Use the PyInstaller compiled `sync_software.exe`:
 **Q: How to compile sync_software.exe?**
 A: Use PyInstaller compilation:
 ```bash
-# Use build_exe.py script to package
-python build_exe.py
 # Select option 2: Build console version only
 
 # Or use PyInstaller directly
@@ -705,7 +642,6 @@ pyinstaller --onefile --name=sync_software --clean --noconfirm sync_software.py
 
 **Q: After compilation, running reports error "DLL load failed while importing QtWidgets"?**
 A: This is a PyQt5 DLL dependency issue. Suggestions:
-1. Use console version: `python build_exe.py` select option 2
 2. Run Python scripts directly: `python sync_software.py`
 3. Or use batch file: `一键快速同步.bat` (no Python environment required)
 4. Install Visual C++ Redistributable and recompile
@@ -826,7 +762,6 @@ tail -f logs/complete_sync.log
 If you encounter problems, please:
 1. Check log files for detailed error information
 2. Check network connection and GitHub repository permissions
-3. Try using console version to avoid GUI dependency issues
 4. Submit Issue to GitHub repository
 
 ## Development Plan

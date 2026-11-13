@@ -1,0 +1,11 @@
+{
+  "git_platform": "remote",
+  "remote_server": "http://127.0.0.1:8000",
+  "list_file": "list.txt",
+  "sync_base_path": "./software",
+  "download_timeout": 30,
+  "retry_times": 3,
+  "retry_delay": 2,
+  "auto_kill": false,
+  "auto_start": false
+}

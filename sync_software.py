@@ -25,6 +25,7 @@ import time
 from pathlib import Path
 import logging
 import subprocess
+import tempfile
 import sys
 
 class CompleteSyncTest:
@@ -136,35 +137,48 @@ class CompleteSyncTest:
         else:
             return "master"  # GitHub默认分支
             
-    def download_file(self, url, local_path):
+    def download_file(self, url, local_path, file_info):
         """下载文件，带重试机制和详细错误提示"""
         retry_times = self.config.get("retry_times", 3)
         retry_delay = self.config.get("retry_delay", 5)
         timeout = self.config.get("download_timeout", 30)
         
         for attempt in range(retry_times):
+            temporary_path = None
             try:
                 self.logger.debug(f"尝试下载文件 (第 {attempt + 1}/{retry_times} 次): {url}")
                 
-                response = requests.get(url, stream=True, timeout=timeout)
-                response.raise_for_status()
-                
-                # 获取文件大小用于进度显示
-                total_size = int(response.headers.get('content-length', 0))
-                
-                # 写入文件
-                with open(local_path, 'wb') as f:
+                with requests.get(url, stream=True, timeout=timeout) as response:
+                    response.raise_for_status()
+                    total_size = file_info.get("size")
+                    expected_hash = file_info.get("hash")
                     downloaded_size = 0
-                    for chunk in response.iter_content(chunk_size=8192):
-                        if chunk:
-                            f.write(chunk)
-                            downloaded_size += len(chunk)
-                            
-                            # 每下载1MB记录一次进度（仅对大文件）
-                            if total_size > 1024 * 1024 and downloaded_size % (1024 * 1024) < 8192:
-                                progress = (downloaded_size / total_size * 100) if total_size > 0 else 0
-                                self.logger.debug(f"下载进度: {progress:.1f}% ({downloaded_size}/{total_size} bytes)")
-                
+                    digest = hashlib.md5()
+
+                    with tempfile.NamedTemporaryFile(
+                        dir=local_path.parent, suffix=".part", delete=False
+                    ) as temporary:
+                        temporary_path = Path(temporary.name)
+                        for chunk in response.iter_content(chunk_size=8192):
+                            if chunk:
+                                temporary.write(chunk)
+                                digest.update(chunk)
+                                downloaded_size += len(chunk)
+                                if total_size and total_size > 1024 * 1024 and downloaded_size % (1024 * 1024) < 8192:
+                                    progress = downloaded_size / total_size * 100
+                                    self.logger.debug(f"下载进度: {progress:.1f}% ({downloaded_size}/{total_size} bytes)")
+
+                if total_size is not None and downloaded_size != total_size:
+                    raise requests.exceptions.RequestException(f"文件大小与清单不符: {local_path.name}")
+                if expected_hash and digest.hexdigest() != expected_hash.lower():
+                    raise requests.exceptions.RequestException(f"文件哈希与清单不符: {local_path.name}")
+
+                if not expected_hash:
+                    modified = datetime.datetime.fromisoformat(file_info["modified"]).timestamp()
+                    os.utime(temporary_path, (modified, modified))
+                temporary_path.replace(local_path)
+                temporary_path = None
+
                 self.logger.info(f"文件下载成功: {local_path.name} ({downloaded_size} bytes)")
                 return True
                 
@@ -191,7 +205,7 @@ class CompleteSyncTest:
                 error_msg = f"HTTP错误 ({status_code}): {str(e)}"
                 
                 # 4xx错误不需要重试
-                if 400 <= status_code < 500:
+                if e.response is not None and 400 <= status_code < 500:
                     self.logger.error(f"{error_msg} (客户端错误，不重试)")
                     self._log_download_error(url, f"HTTP {status_code}", str(e))
                     return False
@@ -227,6 +241,10 @@ class CompleteSyncTest:
                 else:
                     self.logger.error(f"{error_msg}, 已达到最大重试次数")
                     self._log_download_error(url, "未知错误", str(e))
+            finally:
+                if temporary_path is not None:
+                    temporary_path.unlink(missing_ok=True)
+
         
         return False
     
@@ -491,7 +509,7 @@ class CompleteSyncTest:
                 return False
             
             # 下载文件
-            if self.download_file(file_url, local_file_path):
+            if self.download_file(file_url, local_file_path, file_info):
                 self.logger.info(f"文件下载成功: {file_path}")
                 return True
             else:
@@ -534,7 +552,7 @@ class CompleteSyncTest:
             # 下载文件
             self.logger.debug(f"尝试从镜像源 {mirror_index}/{len(mirrors)} 下载: {file_url}")
             
-            if self.download_file(file_url, local_file_path):
+            if self.download_file(file_url, local_file_path, file_info):
                 self.logger.info(f"文件下载成功: {file_path} (使用镜像源 {mirror_index}/{len(mirrors)})")
                 return True
             else:
@@ -567,38 +585,39 @@ class CompleteSyncTest:
         software_path = self.local_path / software_name
         software_path.mkdir(exist_ok=True)
         
-        if self.config.get("auto_kill", False):
-            self.kill_software_processes(software_name)
-
         updated_files = 0
         new_files = 0
         failed_files = 0
-        
+        update_started = False
+
         for file_info in remote_files:
-            file_path = file_info['path']
-            remote_modified = file_info['modified']
-            
-            local_file_path = software_path / file_path
-            local_modified = None
-            
-            if local_file_path.exists():
-                local_modified = datetime.datetime.fromtimestamp(
-                    local_file_path.stat().st_mtime
-                ).isoformat()
-                
-            # 检查是否需要更新（使用修改时间而不是哈希值）
-            if not local_file_path.exists() or local_modified != remote_modified:
-                if self.download_software_file(software_name, file_info):
-                    if not local_file_path.exists():
-                        new_files += 1
-                    else:
-                        updated_files += 1
+            local_file_path = software_path / file_info["path"]
+            existed = local_file_path.is_file()
+            expected_hash = file_info.get("hash")
+            if existed:
+                if expected_hash:
+                    matches = self.calculate_file_hash(local_file_path) == expected_hash.lower()
                 else:
-                    failed_files += 1
-                        
+                    local_stat = local_file_path.stat()
+                    local_modified = datetime.datetime.fromtimestamp(local_stat.st_mtime).isoformat()
+                    matches = local_modified == file_info["modified"] and local_stat.st_size == file_info.get("size", local_stat.st_size)
+                if matches:
+                    continue
+
+            if not update_started and self.config.get("auto_kill", False):
+                self.kill_software_processes(software_name)
+            update_started = True
+
+            if not self.download_software_file(software_name, file_info):
+                failed_files += 1
+            elif existed:
+                updated_files += 1
+            else:
+                new_files += 1
+
         self.logger.info(f"软件 {software_name} 同步完成: 新增 {new_files} 个文件, 更新 {updated_files} 个文件, 失败 {failed_files} 个文件")
 
-        if (updated_files + new_files) > 0 and self.should_auto_start(software_name):
+        if not failed_files and update_started and self.should_auto_start(software_name):
             self.start_software(software_name)
 
         return new_files + updated_files, failed_files
@@ -666,11 +685,6 @@ class CompleteSyncTest:
                     'total_files': len(software_info['files'])
                 }
             
-        # 更新本地列表文件
-        local_list_path = Path("software") / self.config["list_file"]
-        with open(local_list_path, 'w', encoding='utf-8') as f:
-            json.dump(remote_list, f, ensure_ascii=False, indent=2)
-            
         # 输出同步结果摘要
         self.logger.info("=" * 50)
         self.logger.info("同步结果摘要:")
@@ -685,14 +699,28 @@ class CompleteSyncTest:
             
         self.logger.info("=" * 50)
         
-        if total_updated > 0:
-            self.logger.info(f"完整同步完成，更新了 {total_updated} 个文件")
-        else:
-            self.logger.info("完整同步完成，没有新更新")
-            
-        if total_failed > 0:
-            self.logger.warning(f"有 {total_failed} 个文件同步失败")
-            
+        if total_failed:
+            self.logger.error(f"有 {total_failed} 个文件同步失败")
+            return False
+
+        local_list_path = Path("software") / self.config["list_file"]
+        temporary_path = None
+        try:
+            with tempfile.NamedTemporaryFile(
+                mode="w", encoding="utf-8", dir=local_list_path.parent, delete=False
+            ) as temporary:
+                temporary_path = Path(temporary.name)
+                json.dump(remote_list, temporary, ensure_ascii=False, indent=2)
+            temporary_path.replace(local_list_path)
+            temporary_path = None
+        except OSError as error:
+            self.logger.error(f"写入本地列表失败: {error}")
+            return False
+        finally:
+            if temporary_path is not None:
+                temporary_path.unlink(missing_ok=True)
+
+        self.logger.info(f"完整同步完成，更新了 {total_updated} 个文件")
         return True
 
     def kill_software_processes(self, software_name):
@@ -837,6 +865,8 @@ class CompleteSyncTest:
         else:
             self.logger.error(f"完整同步测试失败，耗时 {duration:.2f} 秒")
             
+        return success
+
 if __name__ == "__main__":
     sync = CompleteSyncTest()
-    sync.run()
+    sys.exit(0 if sync.run() else 1)

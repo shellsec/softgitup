@@ -1,5 +1,13 @@
 # SoftGitUp - 日常工具云升级同步系统
 
+## Windows 下载与私有化部署
+
+从 [GitHub Releases](https://github.com/shellsec/softgitup/releases) 下载并解压 Windows ZIP，将 `config.example.json` 复制为 `config.json`，配置更新源和同步目录。从同一目录运行 `sync_software.exe`，可在控制台查看同步结果。
+
+下载文件通过清单校验后才替换本地文件。同步失败返回退出码 1，内容一致的文件会跳过。内网更新源的搭建、发布和回滚见 [私有化部署说明](私有化部署/README.md)。
+
+![SoftGitUp 在 Windows Command Prompt 中完成同步](docs/windows-sync.png)
+
 **语言 / Language:** 中文 | [English](README.en.md)
 
 [aiv123.com](https://aiv123.com/) · AI 工具导航，600+ 工具一网打尽
@@ -129,9 +137,7 @@
 softgitup/
 ├── config.json              # 配置文件
 ├── soft_manager.py          # 本地管理工具
-├── soft_sync.py            # 同步工具（GUI版本）
 ├── sync_software.py        # 完整同步工具（命令行，推荐）
-├── build_exe.py            # 打包脚本
 ├── generate_and_push.bat   # 一键生成 list.txt 并 push
 ├── soft_page_check/        # 页面标题快检 + A 类工作台（见 README）
 │   ├── monthly_sop.bat     # 月度更新 SOP 主入口（推荐）
@@ -272,48 +278,16 @@ python soft_manager.py
 generate_and_push.bat
 ```
 
-### 6. 使用GUI同步工具
-```bash
-# 启动GUI同步工具（系统托盘）
-python soft_sync.py
+## 打包 Windows 程序
+
+在项目根目录使用Windows Python 执行以下命令：
+
+```powershell
+python -m pip install requests pyinstaller
+python -m PyInstaller --onefile --console --name sync_software sync_software.py
 ```
 
-## 打包和编译
-
-### 编译为可执行文件
-使用 PyInstaller 将 Python 程序打包成可执行文件：
-
-```bash
-# 使用 build_exe.py 脚本打包
-python build_exe.py
-```
-
-打包脚本提供多种选项：
-1. **构建所有程序** (推荐) - 包含GUI和控制台版本
-2. **只构建控制台版本** - 无GUI依赖，避免PyQt5 DLL问题
-3. **只构建GUI版本** - 包含完整的GUI功能
-4. **清理构建文件** - 清理临时文件
-
-### 直接使用 PyInstaller 编译
-也可以直接使用 PyInstaller 编译 `sync_software.py`：
-
-```bash
-# 基础编译
-pyinstaller --onefile --name=sync_software sync_software.py
-
-# 优化编译（推荐）
-pyinstaller --onefile --name=sync_software --clean --noconfirm sync_software.py
-```
-
-**生成的文件**：
-- `dist/sync_software.exe` - 编译后的可执行文件
-
-### 生成的可执行文件
-- `sync_software.exe` - 完整同步工具（控制台，推荐）
-- `SoftGitUp_Workflow.exe` - 工作流程工具（控制台）
-- `SoftGitUp_Manager.exe` - 管理工具（GUI）
-- `SoftGitUp_Sync.exe` - 同步工具（GUI，系统托盘）
-- `SoftGitUp_Sync_Simple.exe` - 简化同步工具（控制台）
+生成文件为 `dist/sync_software.exe`。
 
 ## 工作流程
 
@@ -706,8 +680,6 @@ A: 使用 PyInstaller 编译后的 `sync_software.exe`：
 **Q: 如何编译 sync_software.exe？**
 A: 使用 PyInstaller 编译：
 ```bash
-# 使用 build_exe.py 脚本打包
-python build_exe.py
 # 选择选项 2：只构建控制台版本
 
 # 或直接使用 PyInstaller 编译
@@ -716,7 +688,6 @@ pyinstaller --onefile --name=sync_software --clean --noconfirm sync_software.py
 
 **Q: 编译后运行报错 "DLL load failed while importing QtWidgets"？**
 A: 这是PyQt5 DLL依赖问题，建议：
-1. 使用控制台版本：`python build_exe.py` 选择选项2
 2. 直接运行Python脚本：`python sync_software.py`
 3. 或使用批处理：`一键快速同步.bat`（无需Python环境）
 4. 安装Visual C++ Redistributable后重新编译
@@ -828,7 +799,6 @@ tail -f logs/complete_sync.log
 如果遇到问题，请：
 1. 查看日志文件获取详细错误信息
 2. 检查网络连接和GitHub仓库权限
-3. 尝试使用控制台版本避免GUI依赖问题
 4. 提交Issue到GitHub仓库
 
 ## 开发计划
