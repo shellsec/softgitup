@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-12T21:30:37.594217",
+  "generated_at": "2026-11-13T18:22:41.000375",
   "total_software": 21,
-  "total_files": 4311,
-  "total_size": 1804070554,
+  "total_files": 4310,
+  "total_size": 1797484446,
   "software": {
     "WinMemoryCleaner": {
       "version": "20260515_144655",
@@ -85,7 +85,7 @@
       "last_updated": "2026-06-10T16:55:24.069987"
     },
     "system_good": {
-      "version": "20261112_213036",
+      "version": "20261113_182239",
       "files": [
         {
           "path": "AltSnap.exe",
@@ -178,12 +178,6 @@
           "modified": "2026-09-22T20:42:28.938151"
         },
         {
-          "path": "gh-release-fetch-windows.zip",
-          "size": 21171366,
-          "hash": "a4c48f07944592fe7f73958fe921124e",
-          "modified": "2026-11-12T21:04:44.495763"
-        },
-        {
           "path": "gohttpserver.zip",
           "size": 4866979,
           "hash": "d781f103e8fdbc75ffc4cde3483261e8",
@@ -203,9 +197,9 @@
         },
         {
           "path": "Lastb_soft_version.txt",
-          "size": 185822,
-          "hash": "5f23e375980e854760376554cfc37a36",
-          "modified": "2026-11-12T19:13:08.430688"
+          "size": 185776,
+          "hash": "a985480d6ab686a4bfa78a84ef4e630d",
+          "modified": "2026-11-13T18:03:55.537900"
         },
         {
           "path": "lx-music-desktop.7z",
@@ -424,9 +418,9 @@
           "modified": "2026-03-11T14:56:47.731452"
         }
       ],
-      "total_files": 56,
-      "total_size": 854601149,
-      "last_updated": "2026-11-12T21:30:36.452614"
+      "total_files": 55,
+      "total_size": 833429737,
+      "last_updated": "2026-11-13T18:22:39.855990"
     },
     "notepad++": {
       "version": "20261112_191349",
@@ -26025,18 +26019,18 @@
       "last_updated": "2026-10-26T14:10:21.741009"
     },
     "gh-release-fetch": {
-      "version": "20261010_171732",
+      "version": "20261113_182241",
       "files": [
         {
-          "path": "readme.txt",
-          "size": 153,
-          "hash": "777a32515f9f2e01d4e85c9a1d46dda0",
-          "modified": "2026-10-10T16:17:41.647519"
+          "path": "GHReleaseFetch.exe",
+          "size": 14585457,
+          "hash": "8ef1ce4a0cdfeb2b7d40543ee8d52986",
+          "modified": "2026-11-13T18:15:36.995330"
         }
       ],
       "total_files": 1,
-      "total_size": 153,
-      "last_updated": "2026-10-10T17:17:32.232544"
+      "total_size": 14585457,
+      "last_updated": "2026-11-13T18:22:41.000375"
     }
   }
 }
