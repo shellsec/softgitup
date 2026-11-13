@@ -2,7 +2,7 @@
 
 ## Windows 下载与私有化部署
 
-从 [GitHub Releases](https://github.com/shellsec/softgitup/releases) 下载并解压 Windows ZIP，将 `config.example.json` 复制为 `config.json`，配置更新源和同步目录。从同一目录运行 `sync_software.exe`，可在控制台查看同步结果。
+从 [GitHub Releases](https://github.com/shellsec/softgitup/releases) 下载并解压 Windows ZIP，将 `config.example.json` 复制为 `config.json`，配置更新源和同步目录。在解压目录中先创建 `software` 文件夹，再运行 `sync_software.exe` 查看同步结果。内网示例配置使用本机 HTTP 源。使用 GitHub 更新源时，可参考仓库的 [config.json](https://github.com/shellsec/softgitup/blob/master/config.json)。
 
 下载文件通过清单校验后才替换本地文件。同步失败返回退出码 1，内容一致的文件会跳过。内网更新源的搭建、发布和回滚见 [私有化部署说明](私有化部署/README.md)。
 
@@ -40,7 +40,7 @@
 > 体积 Top5：system_good (794.8 MB)、PotPlayer (254.1 MB)、UltraEdit (202.3 MB)、CCleaner (95.7 MB)、SublimeText (78.8 MB)。
 <!-- SOFTWARE_SIZE_END -->
 
-**维护者月度快检**（可选，不更新 `software/` 也完全可用）：见 [`soft_page_check/`](soft_page_check/README.md) — 双击 `monthly_sop.bat` 检查标题变化；装机开源可 `monthly_a_download_soft_github.bat` 直下，其余手工更新后发布。
+**维护者月度快检**：运行 [monthly_sop.bat](soft_page_check/monthly_sop.bat) 检查页面标题变化。
 
 本工具集基于**信息安全与数据防泄漏原则**构建，尽可能减少云端上报、行为跟踪与算法数据收割
 
@@ -115,7 +115,7 @@
     - `Create_desktop_shortcuts.bat` - 同上列表，在桌面创建 `.lnk`
     - 部署在 `D:\Program Files\system_good` 时，自动在 `D:\Program Files\` 下解析 `notepad++`、`everything` 等子目录
 
-- **GitHub Releases 按需更新**: `software/GithubWinDownTools/` 提供独立 Python 脚本，按 `apps.json` 从 GitHub Releases 抓取版本并下载安装包（支持 Windows / macOS / Linux 分平台配置）；Windows 可双击 `run_update.bat`。详细用法见 [GithubWinDownTools 说明](software/GithubWinDownTools/README.md)。该目录已列入 `config.json` 的 `software_dirs`，可与主同步工具一并拉取。
+- **GitHub Releases**：独立下载工具位于 [software/gh-release-fetch](software/gh-release-fetch/)。
 
 - **更多软件**: 可轻松扩展支持，有其他需要可以发帖
 
@@ -151,7 +151,7 @@ softgitup/
 │   ├── everything/
 │   ├── notepad++/
 │   ├── SublimeText/
-│   ├── gh-release-fetch/   # GitHub Releases 按需下载（auto_update.exe、apps/）
+│   ├── gh-release-fetch/   # 独立的 GitHub Releases 下载工具
 │   └── ...
 ├── logs/                   # 日志目录
 ├── README.md              # 项目说明（中文）
@@ -167,7 +167,7 @@ softgitup/
 
 ### 2. 安装依赖
 ```bash
-pip install requests PyQt5 gitpython
+pip install requests gitpython
 ```
 
 ### 3. 配置设置
@@ -299,7 +299,7 @@ python -m PyInstaller --onefile --console --name sync_software sync_software.py
 |------|------|------|
 | **约每月** | [`soft_page_check/monthly_sop.bat`](soft_page_check/monthly_sop.bat) 选 `[1]` | A 类 ~42 页快检 + 步骤引导；或只跑 `monthly_check.bat` |
 | **看工作台** | [`soft_page_check/open_monthly_a.bat`](soft_page_check/open_monthly_a.bat) | `reports/monthly_a.html`：旧→新版本 + 装机开源可直下 |
-| **装机开源** | [`soft_page_check/monthly_a_download_soft_github.bat`](soft_page_check/monthly_a_download_soft_github.bat) | 只下载不安装；先清空再拉到 `gh-release-fetch/windows/`（gitignore，不入库） |
+
 | **约每季度** | [`soft_page_check/monthly_check_full.bat`](soft_page_check/monthly_check_full.bat) **连跑两次** | A + 装机 + 423down + 7xiazai + list 三站全量；报告七分区均有比对 |
 | **list 三站（可选）** | [`soft_page_check/monthly_check_list.bat`](soft_page_check/monthly_check_list.bat) | 仅 hybase/dayanzai/appx64（`list/*_urls.txt`） |
 | **有变化时** | 打开 `soft_page_check/reports/monthly_a.html` / `index.html` 确认 | 423down / 网盘 / 破解版须浏览器手工下载 |
@@ -686,12 +686,6 @@ A: 使用 PyInstaller 编译：
 pyinstaller --onefile --name=sync_software --clean --noconfirm sync_software.py
 ```
 
-**Q: 编译后运行报错 "DLL load failed while importing QtWidgets"？**
-A: 这是PyQt5 DLL依赖问题，建议：
-2. 直接运行Python脚本：`python sync_software.py`
-3. 或使用批处理：`一键快速同步.bat`（无需Python环境）
-4. 安装Visual C++ Redistributable后重新编译
-
 **Q: 同步失败怎么办？**
 A: 检查网络连接和GitHub仓库权限，确保使用正确的Git加速源。
 
@@ -838,7 +832,6 @@ MIT License
 - [Mobile Privacy & Security Guide](Mobile_Privacy_Security_Guide.md) - Complete mobile privacy configuration guide (English)
 - [常用工具开源下载](常用工具开源下载.md) - 常用工具开源下载
 - [清理优化选型对比：CCleaner Pro vs WiseCare365 Pro vs PC Fresh](CCleanerPro_vs_WiseCare365Pro_vs_PCFresh.txt) - 自动优化功能、实测数据、配置指南与适用场景对比（2026）
-- [GitHub Releases 按需更新（githubwindowntools）](software/githubwindowntools/README.md) - `apps.json` 配置、启用应用、指定平台与镜像回退等说明
 - [装机清单原文](Lastb_soft_version.txt) - 与本仓库 `software/system_good/` 等目录配套的软件与隐私向说明（长文）
 
 ---

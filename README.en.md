@@ -2,7 +2,7 @@
 
 ## Windows sync
 
-Download the Windows ZIP from [GitHub Releases](https://github.com/shellsec/softgitup/releases) and extract it. Copy `config.example.json` to `config.json` and set the update source and sync directory. Run `sync_software.exe` from the same folder to see the sync result in the console.
+Download the Windows ZIP from [GitHub Releases](https://github.com/shellsec/softgitup/releases) and extract it. Copy `config.example.json` to `config.json` and set the update source and sync directory. Create a `software` folder in the extracted directory, then run `sync_software.exe` there. The example configuration points to a local HTTP source. For GitHub settings, see the repository [config.json](https://github.com/shellsec/softgitup/blob/master/config.json).
 
 Downloads are checked against the manifest before replacing local files. Failed runs exit with code 1, and matching files are skipped. For an internal update server, see the [private deployment guide](私有化部署/README.md) (Chinese).
 
@@ -41,7 +41,7 @@ For the latest curated software list and notes, see [`Lastb_soft_version.txt`](L
 > Top 5 by size: system_good (794.8 MB), PotPlayer (254.1 MB), UltraEdit (202.3 MB), CCleaner (95.7 MB), SublimeText (78.8 MB).
 <!-- SOFTWARE_SIZE_END -->
 
-**Maintainer page check** (optional — `software/` works fine without updates): see [`soft_page_check/`](soft_page_check/README.md). Run `monthly_sop.bat` to compare titles; open-source installs can use `monthly_a_download_soft_github.bat`, then publish after replacing under `software/`.
+**Maintainer page check**: Run [monthly_sop.bat](soft_page_check/monthly_sop.bat) to compare page titles.
 
 This toolkit is built around **information security and reducing data leakage**, aiming to minimize cloud reporting, behavioral tracking, and algorithmic data harvesting where practical.
 
@@ -116,7 +116,7 @@ The following is a **self-check summary** of choices in that list, useful when c
     - `Create_desktop_shortcuts.bat` - Create desktop `.lnk` files for the same list
     - When deployed under `D:\Program Files\system_good`, resolves exes under `D:\Program Files\` (e.g. `notepad++`, `everything`)
 
-- **GitHub Releases (on-demand)**: `software/githubwindowntools/` ships a standalone Python workflow driven by `apps.json` to resolve versions from GitHub Releases and download installers (Windows / macOS / Linux blocks in config). On Windows, run `run_update.bat`. Full steps: [githubwindowntools README](software/githubwindowntools/README.md) (Chinese). The folder is listed under `software_dirs` in `config.json` so the main sync tool can pull it with the rest.
+- **GitHub Releases**: The separate downloader is in [software/gh-release-fetch](software/gh-release-fetch/).
 
 - **More Software**: Easy to extend support, post if you need others
 
@@ -154,7 +154,7 @@ softgitup/
 │   ├── everything/
 │   ├── notepad++/
 │   ├── SublimeText/
-│   ├── githubwindowntools/   # GitHub Releases on-demand downloader (auto_update.py, apps.json)
+│   ├── gh-release-fetch/     # Separate GitHub Releases downloader
 │   └── ...
 ├── logs/                   # Log directory
 ├── README.md              # Project docs (Chinese)
@@ -170,7 +170,7 @@ softgitup/
 
 ### 2. Install Dependencies
 ```bash
-pip install requests PyQt5 gitpython
+pip install requests gitpython
 ```
 
 ### 3. Configuration
@@ -262,7 +262,7 @@ The executable is written to `dist/sync_software.exe`.
 |------|--------|-------|
 | **~Monthly** | [`soft_page_check/monthly_sop.bat`](soft_page_check/monthly_sop.bat) option `[1]` | Tier-A quick check + guided steps; or `monthly_check.bat` only |
 | **Board** | [`soft_page_check/open_monthly_a.bat`](soft_page_check/open_monthly_a.bat) | `reports/monthly_a.html`: old→new + OSS downloadable list |
-| **OSS installs** | [`soft_page_check/monthly_a_download_soft_github.bat`](soft_page_check/monthly_a_download_soft_github.bat) | Download only (no install); clears then writes `gh-release-fetch/windows/` (gitignored) |
+
 | **~Quarterly** | [`soft_page_check/monthly_check_full.bat`](soft_page_check/monthly_check_full.bat) **twice** | Full report: A + install list + 423down + 7xiazai + list sites |
 | **List sites (optional)** | [`soft_page_check/monthly_check_list.bat`](soft_page_check/monthly_check_list.bat) | hybase / dayanzai / appx64 only (`list/*_urls.txt`) |
 | **If changed** | Open `soft_page_check/reports/monthly_a.html` / `index.html` | Cracked / mirror / cloud links — download manually |
@@ -640,12 +640,6 @@ A: Use PyInstaller compilation:
 pyinstaller --onefile --name=sync_software --clean --noconfirm sync_software.py
 ```
 
-**Q: After compilation, running reports error "DLL load failed while importing QtWidgets"?**
-A: This is a PyQt5 DLL dependency issue. Suggestions:
-2. Run Python scripts directly: `python sync_software.py`
-3. Or use batch file: `一键快速同步.bat` (no Python environment required)
-4. Install Visual C++ Redistributable and recompile
-
 **Q: What to do if sync fails?**
 A: Check network connection and GitHub repository permissions, ensure using correct Git acceleration source.
 
@@ -801,7 +795,6 @@ MIT License
 - [Mobile Privacy & Security Guide](Mobile_Privacy_Security_Guide.md) - Complete mobile privacy configuration guide (English)
 - [常用工具开源下载](常用工具开源下载.md) - Open-source download links for common tools (Chinese)
 - [Cleaner/optimizer comparison: CCleaner Pro vs WiseCare365 Pro vs PC Fresh](CCleanerPro_vs_WiseCare365Pro_vs_PCFresh.txt) - Auto-optimization features, benchmarks, setup guides and use-case matching, 2026 (Chinese)
-- [GitHub Releases on-demand updates (githubwindowntools)](software/githubwindowntools/README.md) - `apps.json`, enabling apps, `--platform`, mirrors / fallback behavior (README primarily Chinese)
 - [Software & privacy notes (source list)](Lastb_soft_version.txt) - Long-form curated list aligned with `software/system_good/` and related paths (mostly Chinese)
 
 ---
