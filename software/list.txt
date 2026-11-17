@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-16T15:32:48.282580",
+  "generated_at": "2026-11-17T11:52:20.491232",
   "total_software": 21,
   "total_files": 4310,
-  "total_size": 1797486601,
+  "total_size": 1797523519,
   "software": {
     "WinMemoryCleaner": {
       "version": "20260515_144655",
@@ -85,7 +85,7 @@
       "last_updated": "2026-06-10T16:55:24.069987"
     },
     "system_good": {
-      "version": "20261116_153247",
+      "version": "20261117_115219",
       "files": [
         {
           "path": "AltSnap.exe",
@@ -365,9 +365,9 @@
         },
         {
           "path": "WindowsBatchScriptManager.exe",
-          "size": 10429780,
-          "hash": "804089b3b11e09f898aeabf2f2e1aba5",
-          "modified": "2026-11-16T15:27:50.495692"
+          "size": 10443788,
+          "hash": "067c1bf6853510cf9923d5b4f154fc16",
+          "modified": "2026-11-16T23:45:02"
         },
         {
           "path": "WindowsBatchScriptManager_api_server.bat",
@@ -378,8 +378,8 @@
         {
           "path": "WindowsBatchScriptManager_api_server.py",
           "size": 61718,
-          "hash": "82005e7adc1abba2fdabad73eea04c3d",
-          "modified": "2026-11-09T17:25:08"
+          "hash": "ea53d20f50dfb350b7ea2aaf7828292e",
+          "modified": "2026-11-16T23:45:18"
         },
         {
           "path": "winShowSecondsInSystemClock.reg",
@@ -419,8 +419,8 @@
         }
       ],
       "total_files": 55,
-      "total_size": 833431892,
-      "last_updated": "2026-11-16T15:32:47.308357"
+      "total_size": 833445900,
+      "last_updated": "2026-11-17T11:52:19.475202"
     },
     "notepad++": {
       "version": "20261112_191349",
@@ -26019,18 +26019,18 @@
       "last_updated": "2026-10-26T14:10:21.741009"
     },
     "gh-release-fetch": {
-      "version": "20261113_182241",
+      "version": "20261117_115220",
       "files": [
         {
           "path": "GHReleaseFetch.exe",
-          "size": 14585457,
-          "hash": "8ef1ce4a0cdfeb2b7d40543ee8d52986",
-          "modified": "2026-11-13T18:15:36.995330"
+          "size": 14608367,
+          "hash": "96dc5abb5ab6bb0bc4406ece2916523c",
+          "modified": "2026-11-14T21:46:01.709858"
         }
       ],
       "total_files": 1,
-      "total_size": 14585457,
-      "last_updated": "2026-11-13T18:22:41.000375"
+      "total_size": 14608367,
+      "last_updated": "2026-11-17T11:52:20.491232"
     }
   }
 }
