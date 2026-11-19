@@ -37,7 +37,7 @@ For the latest curated software list and notes, see [`Lastb_soft_version.txt`](L
 
 <!-- SOFTWARE_SIZE_START -->
 > 📦 **`software/` size stats** (auto-refreshed by `generate_and_push.bat`):
-> **21** packages, **4,310** files, **1.67 GB** total; generated at 2026-11-17 11:52.
+> **21** packages, **4,310** files, **1.69 GB** total; generated at 2026-11-19 17:14.
 > Top 5 by size: system_good (794.8 MB), PotPlayer (254.1 MB), UltraEdit (202.3 MB), CCleaner (95.7 MB), SublimeText (78.8 MB).
 <!-- SOFTWARE_SIZE_END -->
 
