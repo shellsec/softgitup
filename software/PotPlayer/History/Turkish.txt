@@ -2,6 +2,24 @@
 PotPlayer'ın Versiyon Geçmişi
 
 ----------------------------------------------------------
+[261120]
+----------------------------------------------------------
+* DXVA artık varsayılan olarak etkin
+* GPU kare ikiye katlama özelliği eklendi (FSR3, NVIDIA VFG, RIFE desteği)
+
++ Franky Renderer eklendi
+  (https://github.com/mryx007/FrankyRenderer)
++ Video çıkış arabelleği biçimine 16 bit seçeneği eklendi
++ CPU kare ikiye katlamaya enterpolasyon gücü, sahne değişimi algılama ve yarım çözünürlük tahmini ayarları eklendi
++ Kare ikiye katlamaya hedef kare hızı (monitör yenileme hızına uyum) ve kullanım koşulu ayarları eklendi
++ Meta veri tepe değerine dayalı (BT.2390) HDR ton eşleme eklendi
+
+- D3D11 VSR artık 10 bit çıkışta da çalışıyor
+- HLG videoların yaklaşık %10 daha karanlık görüntülenmesi sorunu düzeltildi
+- Yerleşik işleyicilerde kare kare ilerlemenin düzgün çalışmaması sorunu düzeltildi
+- NVIDIA Smooth Motion kullanılırken oluşan anormal davranış sorunu düzeltildi
+
+----------------------------------------------------------
 [261021]
 ----------------------------------------------------------
 * Varsayılan işleyiciler değiştirildi (video için D3D11, ses için WASAPI)

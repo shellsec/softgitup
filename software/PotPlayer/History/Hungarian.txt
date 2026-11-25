@@ -2,6 +2,24 @@
 PotPlayer verzióelőzmények
 
 ----------------------------------------------------------
+[261120]
+----------------------------------------------------------
+* A DXVA mostantól alapértelmezés szerint be van kapcsolva
+* GPU képkocka-duplázó hozzáadva (FSR3, NVIDIA VFG és RIFE támogatással)
+
++ Franky Renderer hozzáadva
+  (https://github.com/mryx007/FrankyRenderer)
++ 16 bites lehetőség a videó kimeneti puffer formátumához
++ Interpolációs erősség, jelenetváltás-érzékelés és fél felbontású becslés beállítások a CPU képkocka-duplázóhoz
++ Cél képkockasebesség (a monitor frissítési gyakoriságához igazítva) és használati feltétel beállítások a képkocka-duplázóhoz
++ Metaadat-csúcs alapú (BT.2390) HDR tónusleképezés hozzáadva
+
+- A D3D11 VSR mostantól 10 bites kimenettel is működik
+- Javítva, hogy a HLG videók kb. 10%-kal sötétebben jelentek meg
+- Javítva a képkockánkénti léptetés hibás működése a beépített renderelőknél
+- Javítva a hibás működés az NVIDIA Smooth Motion használatakor
+
+----------------------------------------------------------
 [261021]
 ----------------------------------------------------------
 * Megváltoztak az alapértelmezett renderelők (D3D11 a videóhoz, WASAPI a hanghoz)

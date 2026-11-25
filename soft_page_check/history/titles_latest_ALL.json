@@ -1,9 +1,18 @@
 {
-  "fetched_at": "2026-09-23 17:15:06",
+  "fetched_at": "2026-11-25 14:09:34",
   "scope": "all",
   "source": "soft_pages_urls.txt",
-  "count": 200,
+  "count": 256,
   "entries": [
+    {
+      "url": "http://服务器IP:9527/admin/，输入两次自己选择的管理员密码",
+      "title": "",
+      "status": "error",
+      "error": "'ascii' codec can't encode characters in position 11-25: ordinal not in range(128)",
+      "tier": "B",
+      "software": [],
+      "domain": "服务器ip:9527"
+    },
     {
       "url": "https://423down.lanzout.com/b0f3u4nyf#292a",
       "title": "应版权方要求，无法查看文件",
@@ -53,7 +62,7 @@
     },
     {
       "url": "https://accent-rar-password-recovery.apsgo.cn",
-      "title": "Accent RAR Password Recovery - 官方免费下载试用中心",
+      "title": "(无 title 标签)",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -62,12 +71,21 @@
     },
     {
       "url": "https://accent-zip-password-recovery.apsgo.com/zh-cn",
-      "title": "Accent ZIP Password Recovery 软件 - 官方授权正版软件平台",
+      "title": "(无 title 标签)",
       "status": "ok",
       "error": "",
       "tier": "B",
       "software": [],
       "domain": "accent-zip-password-recovery.apsgo.com"
+    },
+    {
+      "url": "https://aipanso.com/",
+      "title": "",
+      "status": "cf_challenge",
+      "error": "Cloudflare 人机验证拦截",
+      "tier": "B",
+      "software": [],
+      "domain": "aipanso.com"
     },
     {
       "url": "https://anytxt.net/download/",
@@ -86,6 +104,91 @@
       "tier": "B",
       "software": [],
       "domain": "apps.apple.com"
+    },
+    {
+      "url": "https://appx64.com",
+      "title": "小兵下载站",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "appx64"
+    },
+    {
+      "url": "https://appx64.com/bandizip",
+      "title": "解压缩 Bandizip 7.47 简体中文注册版 | 小兵下载站",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "appx64"
+    },
+    {
+      "url": "https://appx64.com/diskgenius",
+      "title": "硬盘分区 数据恢复 DiskGenius v6.2.0.1829 中文版 | 小兵下载站",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "appx64"
+    },
+    {
+      "url": "https://appx64.com/duplicatecleaner",
+      "title": "查找重复文件 Duplicate Cleaner Pro v5.27 便携版 | 小兵下载站",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "appx64"
+    },
+    {
+      "url": "https://appx64.com/os/",
+      "title": "操作系统 | 小兵下载站",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "appx64"
+    },
+    {
+      "url": "https://appx64.com/tv",
+      "title": "Android [电视/盒子/手机] 直播点播 全网免费影视APP合集2026.9 | 小兵下载站",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "appx64"
+    },
+    {
+      "url": "https://appx64.com/uestudio",
+      "title": "IDM UEStudio v26.0.0.23 x64 中文版 马丁代理 | 小兵下载站",
+      "status": "ok",
+      "error": "",
+      "tier": "A",
+      "software": [
+        "UltraEdit"
+      ],
+      "domain": "appx64"
+    },
+    {
+      "url": "https://appx64.com/video/",
+      "title": "视频APP | 小兵下载站",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "appx64"
+    },
+    {
+      "url": "https://appx64.com/winrar",
+      "title": "解压缩 WinRAR v7.30 Beta1 烈火 | 小兵下载站",
+      "status": "ok",
+      "error": "",
+      "tier": "A",
+      "software": [
+        "WinRAR"
+      ],
+      "domain": "appx64"
     },
     {
       "url": "https://appx64.lanzout.com/b546490",
@@ -124,22 +227,13 @@
       "domain": "cloud.tencent.cn"
     },
     {
-      "url": "https://cnb.cool/Mintimate/rime/oh-my-rime",
-      "title": "Mintimate/rime/oh-my-rime · Cloud Native Build",
+      "url": "https://cn-sec.com/",
+      "title": "CN-SEC 中文网 | 聚合网络安全,存储安全技术文章,融合安全最新讯息",
       "status": "ok",
       "error": "",
       "tier": "B",
       "software": [],
-      "domain": "cnb.cool"
-    },
-    {
-      "url": "https://cnb.cool/Mintimate/rime/oh-my-rime-cli",
-      "title": "Mintimate/rime/oh-my-rime-cli · Cloud Native Build",
-      "status": "ok",
-      "error": "",
-      "tier": "B",
-      "software": [],
-      "domain": "cnb.cool"
+      "domain": "cn-sec.com"
     },
     {
       "url": "https://crosspaste.com/",
@@ -169,37 +263,8 @@
       "domain": "doc.natfrp.com"
     },
     {
-      "url": "https://appx64.com/diskgenius",
-      "title": "(无 title 标签)",
-      "status": "ok",
-      "error": "",
-      "tier": "B",
-      "software": [],
-      "domain": "appx64"
-    },
-    {
-      "url": "https://appx64.com/duplicatecleaner",
-      "title": "(无 title 标签)",
-      "status": "ok",
-      "error": "",
-      "tier": "B",
-      "software": [],
-      "domain": "appx64"
-    },
-    {
-      "url": "https://appx64.com/uestudio",
-      "title": "(无 title 标签)",
-      "status": "ok",
-      "error": "",
-      "tier": "A",
-      "software": [
-        "UltraEdit"
-      ],
-      "domain": "appx64"
-    },
-    {
       "url": "https://fastcopy.net.cn/",
-      "title": "FastCopy - Windows 高效复制 / 备份软件 | FastCopy Pro 中文官网",
+      "title": "FastCopy - Windows 高效复制 / 备份软件 | FastCopy Pro 中文网站",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -208,7 +273,7 @@
     },
     {
       "url": "https://firpe.cn/",
-      "title": "FirPE Project - 也许是最适合年轻人使用的WinPE系统~",
+      "title": "(无 title 标签)",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -252,8 +317,8 @@
       "domain": "geekuninstaller.com"
     },
     {
-      "url": "https://github.com/233stone/vocotype-cli",
-      "title": "GitHub - 233stone/vocotype-cli: VocoType 是一款运行在本地端侧的隐私安全语音输入工具，通过快捷键即可将语音实时转换为文字并自动输入到当前应用。支持语音转文字MCP、AI 优化文本、自定义替换词典、录音视频转文字等功能，让语音输入更高效、更安全。 · GitHub",
+      "url": "https://github.com/9001/copyparty",
+      "title": "GitHub - 9001/copyparty: Portable file server with accelerated resumable uploads, dedup, WebDAV, SFTP, FTP, TFTP, zeroconf, media indexer, thumbnails++ all in one file · GitHub",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -261,8 +326,8 @@
       "domain": "github"
     },
     {
-      "url": "https://github.com/9001/copyparty",
-      "title": "GitHub - 9001/copyparty: Portable file server with accelerated resumable uploads, dedup, WebDAV, SFTP, FTP, TFTP, zeroconf, media indexer, thumbnails++ all in one file · GitHub",
+      "url": "https://github.com/Adamaik/lxmusic-harmony",
+      "title": "GitHub - Adamaik/lxmusic-harmony: 洛雪音乐（lx-music-mobile）鸿蒙移植版 · HarmonyOS / ArkTS · GitHub",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -290,8 +355,8 @@
       "domain": "github"
     },
     {
-      "url": "https://github.com/Macrohard0001/lx-ikun-music-sources",
-      "title": "GitHub - Macrohard0001/lx-ikun-music-sources: LX_music & IKUN_music 音源收集 · GitHub",
+      "url": "https://github.com/LinkPass888/AirBeep",
+      "title": "GitHub - LinkPass888/AirBeep: Custom recording beep · GitHub",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -337,15 +402,6 @@
       "domain": "github"
     },
     {
-      "url": "https://github.com/XCQ0607/lxserver",
-      "title": "GitHub - XCQ0607/lxserver: LX Music 数据同步服务端，同时支持了部分lx-music-desktop的网页端实现。 · GitHub",
-      "status": "ok",
-      "error": "",
-      "tier": "B",
-      "software": [],
-      "domain": "github"
-    },
-    {
       "url": "https://github.com/XMuli/SunnyCapturer/releases",
       "title": "Releases · XMuli/SunnyCapturer · GitHub",
       "status": "ok",
@@ -355,8 +411,17 @@
       "domain": "github"
     },
     {
+      "url": "https://github.com/YiHoooong/AirliftSilence",
+      "title": "GitHub - YiHoooong/AirliftSilence: Toggle the iPhone call-recording announcement on/off from a Windows GUI, built on the airlift AirTraffic sandbox escape. · GitHub",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
       "url": "https://github.com/anfragment/zen",
-      "title": "GitHub - irbis-sh/zen-desktop: Ad-blocker and privacy guard for Windows, macOS and Linux. · GitHub",
+      "title": "GitHub - irbis-sh/zen-desktop: System-wide ad-blocker and privacy guard for Windows, macOS and Linux. · GitHub",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -366,6 +431,24 @@
     {
       "url": "https://github.com/anilbeesetti/nextplayer",
       "title": "GitHub - anilbeesetti/nextplayer: An Android native video player · GitHub",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/bmizhou/lx-music-tv",
+      "title": "GitHub - bmizhou/lx-music-tv: 使用AI基于lx-music开发的Android TV版本,适配遥控器操作逻辑，在电视上播放音乐有良好体验。 · GitHub",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/bmizhou/lx-music-tv/releases",
+      "title": "Releases · bmizhou/lx-music-tv · GitHub",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -384,15 +467,6 @@
       "domain": "github"
     },
     {
-      "url": "https://github.com/cdyUuu/lx-music-xinghai-source",
-      "title": "GitHub - cdyUuu/lx-music-xinghai-source: 星海音乐源 | LX Music 自定义音源插件，聚合 GDAPI/ChKSz API，支持酷我加密音频解密（需自行配置） · GitHub",
-      "status": "ok",
-      "error": "",
-      "tier": "B",
-      "software": [],
-      "domain": "github"
-    },
-    {
       "url": "https://github.com/choyy/VirtualDesktopSwitcher",
       "title": "GitHub - choyy/VirtualDesktopSwitcher: Windows 10/11 虚拟桌面快速切换和指示工具 / Virtual Desktop Switcher and Indicator for Windows 10/11 · GitHub",
       "status": "ok",
@@ -401,6 +475,15 @@
       "software": [
         "system_good"
       ],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/chrisacd980/airbeep-checklist-skill",
+      "title": "GitHub - chrisacd980/airbeep-checklist-skill: AirBeep 通话免提示音 · 测试卡（卡片式操作外壳，支持 Mac/Win 真机静音替换与恢复） · GitHub",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
       "domain": "github"
     },
     {
@@ -459,7 +542,7 @@
     },
     {
       "url": "https://github.com/huanfeng/WindInput",
-      "title": "GitHub - huanfeng/WindInput: 清风输入法 | 轻量、快速、可定制的开源中文输入法，专为五笔和码表输入方案设计（Windows / macOS） · GitHub",
+      "title": "GitHub - huanfeng/WindInput: 清风输入法 | 轻量、快速、可定制的开源中文输入法，专为五笔和码表输入方案设计，支持全拼/双拼（Windows / macOS / Linux） · GitHub",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -476,8 +559,8 @@
       "domain": "github"
     },
     {
-      "url": "https://github.com/iDvel/rime-ice",
-      "title": "GitHub - iDvel/rime-ice: Rime 配置：雾凇拼音 | 长期维护的简体词库 · GitHub",
+      "url": "https://github.com/javycoder/fnos_music_ext",
+      "title": "GitHub - javycoder/fnos_music_ext: 飞牛音乐扩展在线音乐 · GitHub",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -485,8 +568,17 @@
       "domain": "github"
     },
     {
-      "url": "https://github.com/iDvel/rime-ice/releases/tag/nightly",
-      "title": "Release nightly build · iDvel/rime-ice · GitHub",
+      "url": "https://github.com/jiutinglifeng/airbeep-calltone-research",
+      "title": "GitHub - jiutinglifeng/airbeep-calltone-research: 通话录音提示音消除项目：基于 AirliftSilence(Windows) 的实施方案与操作交接文档。仓库内含 LinkPass888/AirBeep 克隆作为研究素材（上游为 GPL-3.0）。 · GitHub",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/kele551/ms-wallpaper-assistant",
+      "title": "GitHub - kele551/ms-wallpaper-assistant: 桌面壁纸自动更换：必应每日一图 + Windows 聚焦，4K 高清、开机不打扰、免安装。中文检索：自动换壁纸 / 桌面壁纸 / 必应壁纸 / 每日一图 / 壁纸轮换 / 4K 壁纸 / 桌面美化。Desktop wallpaper changer for Windows 11: Bing daily image + Windows Spotlight, 4K, portable, no install. · GitHub",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -503,25 +595,12 @@
       "domain": "github"
     },
     {
-      "url": "https://github.com/lyswhut/lx-music-desktop/releases",
-      "title": "Releases · lyswhut/lx-music-desktop · GitHub",
+      "url": "https://github.com/localsend/localsend",
+      "title": "GitHub - localsend/localsend: An open-source cross-platform alternative to AirDrop · GitHub",
       "status": "ok",
       "error": "",
-      "tier": "A",
-      "software": [
-        "lx-music-desktop"
-      ],
-      "domain": "github"
-    },
-    {
-      "url": "https://github.com/lyswhut/lx-music-mobile/releases",
-      "title": "Releases · lyswhut/lx-music-mobile · GitHub",
-      "status": "ok",
-      "error": "",
-      "tier": "A",
-      "software": [
-        "lx-music-desktop"
-      ],
+      "tier": "B",
+      "software": [],
       "domain": "github"
     },
     {
@@ -536,15 +615,6 @@
     {
       "url": "https://github.com/microsoft/PowerToys",
       "title": "GitHub - microsoft/PowerToys: Microsoft PowerToys is a collection of utilities that supercharge productivity and customization on Windows · GitHub",
-      "status": "ok",
-      "error": "",
-      "tier": "B",
-      "software": [],
-      "domain": "github"
-    },
-    {
-      "url": "https://github.com/modelscope/FunASR",
-      "title": "GitHub - modelscope/FunASR: Open-source speech recognition toolkit for training, inference, streaming ASR, VAD, punctuation, speaker diarization pipelines, and OpenAI-compatible/MCP serving. · GitHub",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -581,8 +651,28 @@
       "domain": "github"
     },
     {
+      "url": "https://github.com/pdone/lx-music-source",
+      "title": "GitHub - pdone/lx-music-source: 洛雪音乐源 · GitHub",
+      "status": "ok",
+      "error": "",
+      "tier": "A",
+      "software": [
+        "lx-music-desktop"
+      ],
+      "domain": "github"
+    },
+    {
       "url": "https://github.com/randyrants/sharpkeys",
       "title": "GitHub - randyrants/sharpkeys: SharpKeys is a utility that manages a Registry key that allows Windows to remap one key to any other key. · GitHub",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/rcmaehl/WhyNotWin11/",
+      "title": "GitHub - rcmaehl/WhyNotWin11: Detection Script to help identify why your PC is not Windows 11 Release Ready. Now Supporting Update Checks! · GitHub",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -635,12 +725,90 @@
     },
     {
       "url": "https://github.com/shellsec/WindowsBatchScriptManager",
-      "title": "shellsec/WindowsBatchScriptManager · GitHub",
+      "title": "GitHub - shellsec/WindowsBatchScriptManager: Windows 批处理脚本管理器 Windows desktop script manager with scheduling, task queues, logs, and remote automation via HTTP API and MCP. · GitHub",
       "status": "ok",
       "error": "",
       "tier": "A",
       "software": [
         "system_good"
+      ],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/shellsec/bolemusic",
+      "title": "GitHub - shellsec/bolemusic · GitHub",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/shellsec/boleserver",
+      "title": "GitHub - shellsec/boleserver: 基于 LXServer 的跨平台音乐服务端，支持 LX 音源订阅、自动切换、Web 播放器、LX 同步与 Subsonic，提供 Docker 一键部署及 Windows/macOS/Linux 桌面版。 · GitHub",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/shellsec/boleserver/releases/latest",
+      "title": "Release BoleServer v2.1.3-bole.1 · Windows / macOS / Linux · shellsec/boleserver · GitHub",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/shellsec/gh-release-fetch/releases",
+      "title": "Releases · shellsec/gh-release-fetch · GitHub",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/shellsec/lx-music-desktop-auto-source",
+      "title": "GitHub - shellsec/lx-music-desktop-auto-source: 洛雪增强版 v2.12.6 支持自定义源导入、多源自动切换与订阅更新 · GitHub",
+      "status": "ok",
+      "error": "",
+      "tier": "A",
+      "software": [
+        "lx-music-desktop"
+      ],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/shellsec/lx-music-eink",
+      "title": "GitHub - shellsec/lx-music-eink: 洛雪增强版 · 墨水屏版 基于洛雪音乐移动版二次开发，针对墨水屏设备优化 导入自定义源、多源自动切换、订阅更新 · GitHub",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/shellsec/lx-music-mobile-auto-source",
+      "title": "GitHub - shellsec/lx-music-mobile-auto-source: 基于 LX Music Mobile 二次开发的音乐播放器，不内置任何音源，支持用户自行导入、多源自动切换和订阅自动更新。采用 Apache-2.0 许可证 · GitHub",
+      "status": "ok",
+      "error": "",
+      "tier": "A",
+      "software": [
+        "lx-music-desktop"
+      ],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/shellsec/lx-music-source",
+      "title": "GitHub - shellsec/lx-music-source: 洛雪音乐音源，lx-music-source · GitHub",
+      "status": "ok",
+      "error": "",
+      "tier": "A",
+      "software": [
+        "lx-music-desktop"
       ],
       "domain": "github"
     },
@@ -655,7 +823,7 @@
     },
     {
       "url": "https://github.com/super-productivity/super-productivity",
-      "title": "GitHub - super-productivity/super-productivity: Super Productivity is an advanced todo list app with integrated Timeboxing and time tracking capabilities. It also comes with integrations for Jira, GitLab, GitHub and Open Project. · GitHub",
+      "title": "GitHub - super-productivity/super-productivity: A to-do list, time tracker and daily planner for focused personal work. Private, offline-first and open source. · GitHub",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -678,17 +846,6 @@
       "error": "",
       "tier": "B",
       "software": [],
-      "domain": "github"
-    },
-    {
-      "url": "https://github.com/yoyodadada/lx-music-source",
-      "title": "",
-      "status": "http_error",
-      "error": "HTTP 404",
-      "tier": "A",
-      "software": [
-        "lx-music-desktop"
-      ],
       "domain": "github"
     },
     {
@@ -721,6 +878,15 @@
       "domain": "lanzou"
     },
     {
+      "url": "https://haisou.cc",
+      "title": "海搜 - 云盘资源搜索神器",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "haisou.cc"
+    },
+    {
       "url": "https://hashcat.net/hashcat/",
       "title": "hashcat - advanced password recovery",
       "status": "ok",
@@ -730,31 +896,40 @@
       "domain": "hashcat.net"
     },
     {
-      "url": "https://i.webos.im/",
-      "title": "i音乐 | 在线免费音乐 | 在线下载免费音乐 | i音乐下载 | 官网",
-      "status": "ok",
-      "error": "",
+      "url": "https://ime.ximei.me/；iOS/macOS",
+      "title": "",
+      "status": "error",
+      "error": "'ascii' codec can't encode character '\\uff1b' in position 5: ordinal not in range(128)",
       "tier": "B",
       "software": [],
-      "domain": "i.webos.im"
+      "domain": "ime.ximei.me"
     },
     {
-      "url": "https://ios.25pan.com/",
-      "title": "Tabos 系统",
-      "status": "ok",
-      "error": "",
+      "url": "https://iptv-org.github.io/epg/guides.xml",
+      "title": "",
+      "status": "http_error",
+      "error": "HTTP 404",
       "tier": "B",
       "software": [],
-      "domain": "ios.25pan.com"
+      "domain": "iptv-org.github.io"
     },
     {
-      "url": "https://ios.25pan.com/music",
-      "title": "Tabos 系统",
+      "url": "https://iptv-org.github.io/iptv/index.m3u",
+      "title": "(无 title 标签)",
       "status": "ok",
       "error": "",
       "tier": "B",
       "software": [],
-      "domain": "ios.25pan.com"
+      "domain": "iptv-org.github.io"
+    },
+    {
+      "url": "https://iptvsmarters.com/webplayer|",
+      "title": "",
+      "status": "url_error",
+      "error": "[Errno 11001] getaddrinfo failed",
+      "tier": "B",
+      "software": [],
+      "domain": "iptvsmarters.com"
     },
     {
       "url": "https://karabiner-elements.pqrs.org/",
@@ -766,13 +941,58 @@
       "domain": "karabiner-elements.pqrs.org"
     },
     {
-      "url": "https://m.uzz.me/",
-      "title": "",
-      "status": "http_error",
-      "error": "HTTP 503",
+      "url": "https://kopia.io/docs/installation/",
+      "title": "Download & Installation | Kopiakopia-svg",
+      "status": "ok",
+      "error": "",
       "tier": "B",
       "software": [],
-      "domain": "m.uzz.me"
+      "domain": "kopia.io"
+    },
+    {
+      "url": "https://kuakezys.com/",
+      "title": "(无 title 标签)",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "kuakezys.com"
+    },
+    {
+      "url": "https://kuakezys.com/forum-11.htm",
+      "title": "(无 title 标签)",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "kuakezys.com"
+    },
+    {
+      "url": "https://linux.do/",
+      "title": "",
+      "status": "cf_challenge",
+      "error": "Cloudflare 人机验证拦截",
+      "tier": "B",
+      "software": [],
+      "domain": "linux.do"
+    },
+    {
+      "url": "https://macked.app/",
+      "title": "",
+      "status": "cf_challenge",
+      "error": "Cloudflare 人机验证拦截",
+      "tier": "B",
+      "software": [],
+      "domain": "macked.app"
+    },
+    {
+      "url": "https://macxk.lanzoub.com/ih2Bi3i2rgre",
+      "title": "歌一刀1.5.0.ipa - 蓝奏云",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "lanzou"
     },
     {
       "url": "https://marktext.me/",
@@ -784,7 +1004,7 @@
       "domain": "marktext.me"
     },
     {
-      "url": "https://masuit.org/1924?t=0HNIV93LNR9TK",
+      "url": "https://masuit.org/",
       "title": "",
       "status": "cf_challenge",
       "error": "Cloudflare 人机验证拦截",
@@ -793,13 +1013,13 @@
       "domain": "masuit.org"
     },
     {
-      "url": "https://mcprepository.com/233stone/vocotype-cli",
-      "title": "VocoType - 精准的离线语音输入法 - MCP ServerCommunityGitHub LinkCommunityCommunityCommunityCommunityCommunityCommunityCommunityCommunityCommunityCommunity",
-      "status": "ok",
-      "error": "",
+      "url": "https://masuit.org/1924?t=0HNIV93LNR9TK",
+      "title": "",
+      "status": "cf_challenge",
+      "error": "Cloudflare 人机验证拦截",
       "tier": "B",
       "software": [],
-      "domain": "mcprepository.com"
+      "domain": "masuit.org"
     },
     {
       "url": "https://moba-xterm-keygen.vercel.app",
@@ -818,15 +1038,6 @@
       "tier": "B",
       "software": [],
       "domain": "music.douyin.com"
-    },
-    {
-      "url": "https://music.migu.cn",
-      "title": "咪咕音乐",
-      "status": "ok",
-      "error": "",
-      "tier": "B",
-      "software": [],
-      "domain": "music.migu.cn"
     },
     {
       "url": "https://ollama.com/download",
@@ -913,7 +1124,7 @@
     },
     {
       "url": "https://pixpin.cn/",
-      "title": "PixPin 免费截图软件 - 截图、贴图、长截图、OCR 与录屏",
+      "title": "PixPin - 免费截图、贴图与文字识别工具",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -932,6 +1143,15 @@
       "domain": "potplayer.tv"
     },
     {
+      "url": "https://raw.githubusercontent.com/shellsec/boleserver/main/deploy/install.sh",
+      "title": "(无 title 标签)",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "raw.githubusercontent.com"
+    },
+    {
       "url": "https://rime.im/",
       "title": "RIME | 中州韻輸入法引擎",
       "status": "ok",
@@ -941,13 +1161,13 @@
       "domain": "rime.im"
     },
     {
-      "url": "https://support.microsoft.com/zh-CN/servicing/os/windows-11/2026/02/windows-11-version-26h1-update-history",
-      "title": "Windows 11 版本 26H1 更新历史记录 | Microsoft Support你的隐私选择选择退出图标你的隐私选择选择退出图标",
+      "url": "https://sysin.org",
+      "title": "sysin | SYStem INside",
       "status": "ok",
       "error": "",
       "tier": "B",
       "software": [],
-      "domain": "support.microsoft.com"
+      "domain": "sysin.org"
     },
     {
       "url": "https://tfapps.store/?ref=AJMKRY5E",
@@ -970,6 +1190,24 @@
       "domain": "typora.io"
     },
     {
+      "url": "https://uuyc.163.com/",
+      "title": "网易UU远程官网 - 专业远程控制软件 - 流畅、可靠、好用",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "uuyc.163.com"
+    },
+    {
+      "url": "https://vip.gamers520.com",
+      "title": "",
+      "status": "http_error",
+      "error": "HTTP 403",
+      "tier": "B",
+      "software": [],
+      "domain": "vip.gamers520.com"
+    },
+    {
       "url": "https://vocotype.com/",
       "title": "VocoType - 安全、离线的极速语音输入法",
       "status": "ok",
@@ -977,6 +1215,24 @@
       "tier": "B",
       "software": [],
       "domain": "vocotype.com"
+    },
+    {
+      "url": "https://windinput.com/",
+      "title": "清风输入法",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "windinput.com"
+    },
+    {
+      "url": "https://windinput.com/download",
+      "title": "下载 | 清风输入法",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "windinput.com"
     },
     {
       "url": "https://wwbmt.lanzouu.com/b00hrvbmej",
@@ -1010,8 +1266,17 @@
       "domain": "www.123pan.com"
     },
     {
+      "url": "https://www.423down.com/",
+      "title": "423Down",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "423down"
+    },
+    {
       "url": "https://www.423down.com/10421.html",
-      "title": "IObit Driver Booster Pro 14.0.0 绿色便携版 - 423DownDriver Booster下载_IObit Driver Booster Pro v14.0 中文绿色便携版_驱动更新软件 - 423Down",
+      "title": "IObit Driver Booster Pro 14.1.0 绿色便携版 - 423DownIObit Driver Booster Pro v14.1 中文绿色便携版 - 驱动更新软件 - 423Down",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -1031,7 +1296,7 @@
     },
     {
       "url": "https://www.423down.com/12420.html",
-      "title": "开始菜单工具StartAllBack3.9.26.5395直装版 - 423DownStartAllBack下载_StartAllBack v3.9.26 中文直装版_Win11开始菜单工具 - 423Down",
+      "title": "开始菜单工具StartAllBack 3.9.29中文直装版 - 423DownStartAllBack v3.9.29 中文直装版 - Win11开始菜单工具 - 423Down",
       "status": "ok",
       "error": "",
       "tier": "A",
@@ -1042,7 +1307,7 @@
     },
     {
       "url": "https://www.423down.com/13777.html",
-      "title": "Advanced Installer(安装包制作工具)v24.0.0 - 423DownAdvanced Installer下载_Advanced Installer Architect v24.0 绿色便携版_安装包制作工具 - 423Down",
+      "title": "Advanced Installer v24.2.1 中文汉化直装版 - 423DownAdvanced Installer Architect v24.2 汉化直装版 - 安装包制作工具 - 423Down",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -1071,7 +1336,7 @@
     },
     {
       "url": "https://www.423down.com/16774.html",
-      "title": "Edge WebView2 v151.0.4129.107精简安装 - 423DownWebView2下载_Microsoft Edge WebView2 v151.0 精简安装版_WebView2运行库 - 423Down",
+      "title": "Edge WebView2 158.0.4370.33精简安装版 - 423DownMicrosoft Edge WebView2 Runtime 2026 精简安装版 - WebView2运行库 - 423Down",
       "status": "ok",
       "error": "",
       "tier": "A",
@@ -1082,7 +1347,7 @@
     },
     {
       "url": "https://www.423down.com/16859.html",
-      "title": "Win11 LTSC 2024(26100.9445) 不忘初心版 - 423Down不忘初心Win11 LTSC 2024下载_Window11 LTSC 2024 26100纯净精简版游戏版/美化版_Win11精简系统 - 423Down",
+      "title": "Win11 LTSC 2024(26100.9725) 不忘初心版 - 423Down不忘初心Window11 LTSC 2024 纯净精简版·游戏版·美化版 - Win11精简系统 - 423Down",
       "status": "ok",
       "error": "",
       "tier": "A",
@@ -1093,7 +1358,7 @@
     },
     {
       "url": "https://www.423down.com/3050.html",
-      "title": "PotPlayer播放器 260819(1.7.23122) 绿色版 - 423DownPotPlayer下载_Daum PotPlayer 2026.08 中文绿色版_视频播放器 - 423Down",
+      "title": "PotPlayer播放器 261021(1.7.23172) 绿色版 - 423DownDaum PotPlayer 2026.10 中文绿色版 - 本地视频播放器 - 423Down",
       "status": "ok",
       "error": "",
       "tier": "A",
@@ -1104,7 +1369,7 @@
     },
     {
       "url": "https://www.423down.com/3471.html",
-      "title": "Wise Care 365 Pro (v8.0.6.734) 中文绿色版 - 423DownWiseCare365下载_Wise Care 365 Pro v8.0 中文绿色版_系统优化软件 - 423Down",
+      "title": "Wise Care 365 Pro (v8.0.7.735) 中文绿色版 - 423DownWise Care 365 Pro v8.0.7 中文绿色版 - 系统优化软件 - 423Down",
       "status": "ok",
       "error": "",
       "tier": "A",
@@ -1124,7 +1389,7 @@
     },
     {
       "url": "https://www.423down.com/4966.html",
-      "title": "Sublime Text v4 Build 4213中文绿色便携版 - 423DownSublimeText下载_Sublime Text 4 Build 4213 中文绿色便携版_代码编辑软件 - 423Down",
+      "title": "Sublime Text v4 Build 4215中文绿色便携版 - 423DownSublimeText下载_Sublime Text 4 Build 4215 中文绿色便携版_代码编辑软件 - 423Down",
       "status": "ok",
       "error": "",
       "tier": "A",
@@ -1135,7 +1400,7 @@
     },
     {
       "url": "https://www.423down.com/5432.html",
-      "title": "硬盘检测工具 CrystalDiskInfo v9.9.2 中文版 - 423DownCrystalDiskInfo下载_CrystalDiskInfo v9.9.2 中文绿色版 (2026最新版/硬盘检测工具/硬盘健康检测) - 423Down",
+      "title": "硬盘检测工具 CrystalDiskInfo v9.9.5 中文版 - 423DownCrystalDiskInfo v9.9.5 中文绿色版 - 硬盘检测工具 - 423Down",
       "status": "ok",
       "error": "",
       "tier": "A",
@@ -1166,7 +1431,7 @@
     },
     {
       "url": "https://www.423down.com/7569.html",
-      "title": "EmEditor(大文件编辑器) v26.2.8 中文绿色版 - 423DownEmEditor下载_EmEditor Professional v26.2 中文绿色便携版_大文件编辑器 - 423Down",
+      "title": "EmEditor(大文件编辑器) v26.4.1 中文绿色版 - 423DownEmEditor Professional v26.4 中文绿色便携版_大文件编辑器 - 423Down",
       "status": "ok",
       "error": "",
       "tier": "A",
@@ -1188,7 +1453,7 @@
     },
     {
       "url": "https://www.423down.com/9655.html",
-      "title": "Microsoft Visual C++ 2022 14.51.36247.0 - 423DownVC运行库下载_Microsoft Visual C++ Redistributable 2022 官方中文版 (2026最新版/系统运行库) - 423Down",
+      "title": "Microsoft Visual C++ 2022 14.52.37029.0 - 423DownVisual C++ Redistributable 2015-2022 官方离线安装包 - VC运行库 - 423Down",
       "status": "ok",
       "error": "",
       "tier": "A",
@@ -1198,8 +1463,80 @@
       "domain": "423down"
     },
     {
+      "url": "https://www.423down.com/apk",
+      "title": "Android - 423Down安卓软件下载_Android应用APK下载 (破解版/去广告/纯净版) - 423Down",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "423down"
+    },
+    {
+      "url": "https://www.423down.com/win11",
+      "title": "Win11 - 423DownWin11下载_Win11系统镜像下载 (官方正式版/集成累积更新/精简版) - 423Down",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "423down"
+    },
+    {
+      "url": "https://www.4mf.net/",
+      "title": "是免费.NET-A Free Resource Blog @ www.4mf.net",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "www.4mf.net"
+    },
+    {
+      "url": "https://www.52pojie.cn",
+      "title": "吾爱破解 - 52pojie.cn",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "www.52pojie.cn"
+    },
+    {
+      "url": "https://www.52pojie.cn/forum-16-1.html",
+      "title": "『精品软件区』 - 吾爱破解 - 52pojie.cn",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "www.52pojie.cn"
+    },
+    {
+      "url": "https://www.52pojie.cn/forum-2-1.html",
+      "title": "『原创发布区』 - 吾爱破解 - 52pojie.cn",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "www.52pojie.cn"
+    },
+    {
+      "url": "https://www.52pojie.cn/forum-24-1.html",
+      "title": "『编程语言区』 - 吾爱破解 - 52pojie.cn",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "www.52pojie.cn"
+    },
+    {
+      "url": "https://www.52pojie.cn/thread-2089652-1-7.html",
+      "title": "酷我,QQ,网易云,酷狗聚合听歌软件 - 吾爱破解 - 52pojie.cn",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "www.52pojie.cn"
+    },
+    {
       "url": "https://www.52pojie.cn/thread-2117089-1-1.html",
-      "title": "(无 title 标签)",
+      "title": "提示信息 - 吾爱破解 - 52pojie.cn",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -1208,7 +1545,7 @@
     },
     {
       "url": "https://www.52pojie.cn/thread-965894-1-1.html",
-      "title": "(无 title 标签)",
+      "title": "【游戏神器】键盘调整音量器 - 吾爱破解 - 52pojie.cn",
       "status": "ok",
       "error": "",
       "tier": "A",
@@ -1303,17 +1640,26 @@
       "domain": "www.chiark.greenend.org.uk"
     },
     {
-      "url": "https://www.cnblogs.com/zanxj/p/19103238",
-      "title": "",
-      "status": "http_error",
-      "error": "HTTP 404",
+      "url": "https://www.dashengpan.xyz/#/?code=ohGU$8s0t",
+      "title": "大圣盘 - 网盘搜索引擎",
+      "status": "ok",
+      "error": "",
       "tier": "B",
       "software": [],
-      "domain": "www.cnblogs.com"
+      "domain": "www.dashengpan.xyz"
+    },
+    {
+      "url": "https://www.dayanzai.me/",
+      "title": "大眼仔旭 - 专注开源软件、视频剪辑、免费商用字体、屏幕录像工具、思维导图等办公资源分享",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "www.dayanzai.me"
     },
     {
       "url": "https://www.dayanzai.me/duplicate-cleaner.html",
-      "title": "重复文件搜索工具 Duplicate Cleaner 5.27.0 中文多语免费版 - 大眼仔旭",
+      "title": "重复文件搜索工具 Duplicate Cleaner 5.28.0 中文多语免费版 - 大眼仔旭",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -1331,7 +1677,7 @@
     },
     {
       "url": "https://www.dayanzai.me/ssd-fresh.html",
-      "title": "SSD 固态硬盘优化工具 Abelssoft SSD Fresh 2026 v15.05.735821 中文版 - 大眼仔旭",
+      "title": "SSD 固态硬盘优化工具 Abelssoft SSD Fresh 2027 v16.01.76375 中文版 - 大眼仔旭",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -1348,8 +1694,35 @@
       "domain": "www.digitalvolcano.co.uk"
     },
     {
+      "url": "https://www.dr-farfar.com/",
+      "title": "Dr.FarFar - 🥇 💪 Download Best Premium Software Full For Free Giveaway Free Licensed Software",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "www.dr-farfar.com"
+    },
+    {
+      "url": "https://www.gamer520.com",
+      "title": "Switch520-Gamer520",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "www.gamer520.com"
+    },
+    {
+      "url": "https://www.ghxi.com",
+      "title": "果核剥壳 - 还原软件本质",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "ghxi"
+    },
+    {
       "url": "https://www.ghxi.com/?s=%E8%BF%90%E8%A1%8C",
-      "title": "运行 - 搜索结果 - 果核剥壳",
+      "title": "搜索：运行 - 果核剥壳",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -1358,7 +1731,7 @@
     },
     {
       "url": "https://www.ghxi.com/advancedsystemcareultimate.html",
-      "title": "Advanced SystemCare v19.0.1.158 修改版 - 果核剥壳",
+      "title": "Advanced SystemCare v20.0.1.256 修改版 - 果核剥壳",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -1376,7 +1749,7 @@
     },
     {
       "url": "https://www.ghxi.com/defenderui.html",
-      "title": "InstallDefenderUI(第三方Microsoft Defender增强工具) v1.46 - 果核剥壳",
+      "title": "InstallDefenderUI(第三方Microsoft Defender增强工具) v2.20 - 果核剥壳",
       "status": "ok",
       "error": "",
       "tier": "A",
@@ -1387,7 +1760,7 @@
     },
     {
       "url": "https://www.ghxi.com/dotnet.html",
-      "title": "Microsoft .net Framework运行库离线版合集 v1.1-v8.0.31 - 果核剥壳",
+      "title": "Microsoft .net Framework运行库离线版合集 v1.1-v8.0.33 - 果核剥壳",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -1396,7 +1769,7 @@
     },
     {
       "url": "https://www.ghxi.com/emeditor.html",
-      "title": "EmEditor v26.2.8 绿色便携版 - 果核剥壳",
+      "title": "EmEditor v26.4.1 绿色便携版 - 果核剥壳",
       "status": "ok",
       "error": "",
       "tier": "A",
@@ -1416,7 +1789,7 @@
     },
     {
       "url": "https://www.ghxi.com/iobitdriverbooster.html",
-      "title": "IObit Driver Booster Pro(驱动管理) v13.6.0.438 便携修改版 - 果核剥壳",
+      "title": "IObit Driver Booster Pro(驱动管理) v14.1.0.557 便携修改版 - 果核剥壳",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -1445,7 +1818,7 @@
     },
     {
       "url": "https://www.ghxi.com/iobituninstaller.html",
-      "title": "IObit Uninstaller Pro v16.0.0.34 便携修改版 - 果核剥壳",
+      "title": "IObit Uninstaller Pro v16.1.0.4 便携修改版 - 果核剥壳",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -1454,7 +1827,7 @@
     },
     {
       "url": "https://www.ghxi.com/microsoftedge.html",
-      "title": "Microsoft Edge v153.0.4234.46 离线安装包 - 果核剥壳",
+      "title": "Microsoft Edge v157.0.4341.57 离线安装包 - 果核剥壳",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -1463,7 +1836,7 @@
     },
     {
       "url": "https://www.ghxi.com/purecodec.html",
-      "title": "PureCodec (完美解码) v2026.08.26 - 果核剥壳",
+      "title": "PureCodec (完美解码) v2026.10.31 - 果核剥壳",
       "status": "ok",
       "error": "",
       "tier": "A",
@@ -1474,7 +1847,7 @@
     },
     {
       "url": "https://www.ghxi.com/visualcppredist.html",
-      "title": "VisualCppRedist(运行库合集) v105 - 果核剥壳",
+      "title": "VisualCppRedist(运行库合集) v107 - 果核剥壳",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -1492,12 +1865,21 @@
     },
     {
       "url": "https://www.ghxi.com/yxkhj.html",
-      "title": "微软常用运行库合集2026(06.08) 六月版 - 果核剥壳",
+      "title": "微软常用运行库合集2026(10.15) 十一月版 - 果核剥壳",
       "status": "ok",
       "error": "",
       "tier": "B",
       "software": [],
       "domain": "ghxi"
+    },
+    {
+      "url": "https://www.gndown.com/",
+      "title": "绿软小站 - 分享绿色软件、免费软件、最新资讯！",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "www.gndown.com"
     },
     {
       "url": "https://www.gndown.com/5529.html",
@@ -1520,6 +1902,15 @@
       "domain": "www.hibitsoft.ir"
     },
     {
+      "url": "https://www.hybase.com/",
+      "title": "黑域基地 - 良心软件的栖息之地！",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "hybase"
+    },
+    {
       "url": "https://www.hybase.com/pc/windows/2818.html",
       "title": "[Windows] 碾压微软自带 | XYplorer文件资源管理器便携版 v28.30.3000 - 黑域基地",
       "status": "ok",
@@ -1530,7 +1921,7 @@
     },
     {
       "url": "https://www.hybase.com/pc/windows/2845.html",
-      "title": "[Windows] 无广畅听全球音乐 Spotify电脑版v1.2.96.518 纯净便携版 - 黑域基地",
+      "title": "[Windows] 无广畅听全球音乐 | Spotify电脑版纯净便携版 v1.3.4.258 - 黑域基地",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -1548,7 +1939,7 @@
     },
     {
       "url": "https://www.hybase.com/pc/windows/3471.html",
-      "title": "[Windows] 号称最快的系统优化工具 Wise Care 365 Pro v8.0.5.733 免激活版 - 黑域基地",
+      "title": "[Windows] 号称最快的系统优化工具 | Wise Care 365 Pro便携版 v8.0.7.735 - 黑域基地",
       "status": "ok",
       "error": "",
       "tier": "A",
@@ -1559,7 +1950,7 @@
     },
     {
       "url": "https://www.hybase.com/pc/windows/468.html",
-      "title": "[Windows] 电脑屏幕护眼神器 CareUEyes Pro v2.6.0.0 高级便携版 - 黑域基地",
+      "title": "[Windows] 电脑屏幕护眼神器 | CareUEyes Pro便携版 v2.6.3.2 - 黑域基地",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -1568,7 +1959,7 @@
     },
     {
       "url": "https://www.hybase.com/pc/windows/821.html",
-      "title": "[Windows] 惊人的搜索文件速度 UltraSearch v4.9.3.1301 高级便携版 - 黑域基地",
+      "title": "[Windows] 惊人的搜索文件速度 | UltraSearch高级便携版 v4.9.4.1302 - 黑域基地",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -1594,6 +1985,42 @@
       "domain": "hybase"
     },
     {
+      "url": "https://www.hybase.com/shouji/android/",
+      "title": "Android软件_良心好用的安卓高质量App - 黑域基地",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "hybase"
+    },
+    {
+      "url": "https://www.hybase.com/soft/newlist-1.html",
+      "title": "最新软件 - 黑域基地",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "hybase"
+    },
+    {
+      "url": "https://www.i3ai.com/",
+      "title": "i3ai - 连接每一个有趣的灵魂 | 软件下载·游戏资源·影视音乐社区",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "www.i3ai.com"
+    },
+    {
+      "url": "https://www.ifmac.cn/",
+      "title": "ifmac_精品Mac应用软件免费下载",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "www.ifmac.cn"
+    },
+    {
       "url": "https://www.jam-software.de/treesize",
       "title": "TreeSize - Offizieller Gratis-Download | JAM Software",
       "status": "ok",
@@ -1610,6 +2037,15 @@
       "tier": "B",
       "software": [],
       "domain": "www.jam-software.de"
+    },
+    {
+      "url": "https://www.jb51.net/softs/",
+      "title": "软件下载 - 脚本之家",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "www.jb51.net"
     },
     {
       "url": "https://www.keyboardmaestro.com/",
@@ -1639,8 +2075,35 @@
       "domain": "www.kmplayer.com"
     },
     {
+      "url": "https://www.kuafuzys.com/",
+      "title": "维度导航 - 专注每日推荐优质免费资源网址的导航！",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "www.kuafuzys.com"
+    },
+    {
+      "url": "https://www.kuakeso.net",
+      "title": "KK网盘搜 - 100万人在用的夸克网盘资源搜索，资源多丨更新快丨无广告丨永久免费（kkso.net）",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "www.kuakeso.net"
+    },
+    {
+      "url": "https://www.kuakezy.cc/",
+      "title": "",
+      "status": "url_error",
+      "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1017)",
+      "tier": "B",
+      "software": [],
+      "domain": "www.kuakezy.cc"
+    },
+    {
       "url": "https://www.lanzout.com/b554791",
-      "title": "微软常用运行库合集",
+      "title": "vc微软常用运行库合集",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -1666,10 +2129,28 @@
       "domain": "lanzou"
     },
     {
+      "url": "https://www.lxapk.com/",
+      "title": "乐享网-乐于分享，收获快乐！",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "www.lxapk.com"
+    },
+    {
+      "url": "https://www.mefcl.com/",
+      "title": "(无 title 标签)",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "www.mefcl.com"
+    },
+    {
       "url": "https://www.mythicsoft.com/filelocatorlite/download/",
       "title": "",
-      "status": "http_error",
-      "error": "HTTP 403",
+      "status": "timeout",
+      "error": "读取超时",
       "tier": "B",
       "software": [],
       "domain": "www.mythicsoft.com"
@@ -1738,6 +2219,15 @@
       "domain": "www.passware.com"
     },
     {
+      "url": "https://www.pejdw.com/",
+      "title": "简单下载站-手机应用与游戏下载-直供安装包,让下载回归简单本质",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "www.pejdw.com"
+    },
+    {
       "url": "https://www.pejdw.com/app/shipin/",
       "title": "手机刷视频大平台,安卓看剧听歌小软件-简单下载站影音短视频app栏目",
       "status": "ok",
@@ -1747,8 +2237,17 @@
       "domain": "www.pejdw.com"
     },
     {
+      "url": "https://www.puresys.net/",
+      "title": "Puresys纯净系统-软件下载",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "www.puresys.net"
+    },
+    {
       "url": "https://www.python.org/downloads/release/python-31114/",
-      "title": "(无 title 标签)",
+      "title": "Python Release Python 3.11.14 | Python.org",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -1757,7 +2256,7 @@
     },
     {
       "url": "https://www.python.org/downloads/windows/",
-      "title": "(无 title 标签)",
+      "title": "Python Releases for Windows | Python.org",
       "status": "ok",
       "error": "",
       "tier": "B",
@@ -1813,9 +2312,9 @@
     },
     {
       "url": "https://www.videohelp.com/software/PotPlayer",
-      "title": "",
-      "status": "http_error",
-      "error": "HTTP 503",
+      "title": "VideoHelp",
+      "status": "ok",
+      "error": "",
       "tier": "A",
       "software": [
         "PotPlayer"
@@ -1834,6 +2333,15 @@
       "domain": "www.voidtools.com"
     },
     {
+      "url": "https://www.wuleba.com/",
+      "title": "吾乐吧软件站 – 发现好软件，分享真快乐！",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "www.wuleba.com"
+    },
+    {
       "url": "https://www.wuleba.com/2844.html",
       "title": "Termius 9.41.1 PRO 最新破解版（高颜值的SSH终端软件） – 吾乐吧软件站",
       "status": "ok",
@@ -1843,25 +2351,34 @@
       "domain": "www.wuleba.com"
     },
     {
+      "url": "https://www.wycad.com/",
+      "title": "无忧软件网 | 分享互联网优质资源，常用绿色破解版软件",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "www.wycad.com"
+    },
+    {
+      "url": "https://www.x6d.com/",
+      "title": "小刀娱乐网 - 活动线报、绿色软件、教程资源分享",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "www.x6d.com"
+    },
+    {
+      "url": "https://www.ypojie.com/",
+      "title": "易破解 - 给你所需要的内容",
+      "status": "ok",
+      "error": "",
+      "tier": "B",
+      "software": [],
+      "domain": "www.ypojie.com"
+    },
+    {
       "url": "https://www.yyczxt.com/",
-      "title": "又要重装系统站 - 精品系统包分享",
-      "status": "ok",
-      "error": "",
-      "tier": "B",
-      "software": [],
-      "domain": "www.yyczxt.com"
-    },
-    {
-      "url": "https://www.yyczxt.com/original.html#Windows/Windows11/25H2",
-      "title": "又要重装系统站 - 精品系统包分享",
-      "status": "ok",
-      "error": "",
-      "tier": "B",
-      "software": [],
-      "domain": "www.yyczxt.com"
-    },
-    {
-      "url": "https://www.yyczxt.com/original.html#Windows/Windows11/26H1",
       "title": "又要重装系统站 - 精品系统包分享",
       "status": "ok",
       "error": "",
@@ -1880,21 +2397,12 @@
     },
     {
       "url": "https://xnee.wordpress.com/",
-      "title": "GNU Xnee | recorder/replay for GNU/Linux and other X11 based systems",
-      "status": "ok",
-      "error": "",
+      "title": "",
+      "status": "http_error",
+      "error": "HTTP 403",
       "tier": "B",
       "software": [],
       "domain": "xnee.wordpress.com"
-    },
-    {
-      "url": "https://zrcdy.dpdns.org/lx/xinghai-music-sourcev2.3.13.js",
-      "title": "(无 title 标签)",
-      "status": "ok",
-      "error": "",
-      "tier": "B",
-      "software": [],
-      "domain": "zrcdy.dpdns.org"
     }
   ]
 }

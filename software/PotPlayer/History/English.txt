@@ -2,6 +2,24 @@
 Version History of the PotPlayer
 
 ----------------------------------------------------------
+[261120]
+----------------------------------------------------------
+* DXVA is now enabled by default
+* Added GPU frame doubler (FSR3, NVIDIA VFG and RIFE support)
+
++ Added Franky Renderer
+  (https://github.com/mryx007/FrankyRenderer)
++ Added 16-bit option to the video output buffer format
++ Added interpolation strength, scene change detection and half-resolution estimation settings to the CPU frame doubler
++ Added target frame rate (monitor refresh rate matching) and usage condition settings to the frame doubler
++ Added metadata peak based (BT.2390) HDR tone mapping
+
+- D3D11 VSR now also works with 10-bit output
+- Fixed HLG videos being displayed about 10% too dark
+- Fixed frame stepping not working properly with the built-in renderers
+- Fixed abnormal behavior when using NVIDIA Smooth Motion
+
+----------------------------------------------------------
 [261021]
 ----------------------------------------------------------
 * Changed default renderers (D3D11 for video, WASAPI for audio)

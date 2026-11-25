@@ -65,7 +65,7 @@ EasyRC：本质是PE内核重装。软件内置精简版WinPE环境，类似U盘
 卸载工具
 GeekUninstaller 选这个 
 实测 GeekUninstaller 会速度快，支持win自带的插件卸载 7MB
-1.5.5.185 
+1.6.0.200 
 https://geekuninstaller.com/download
 
 网络安全DNS解析安全
@@ -165,6 +165,7 @@ https://pan.quark.cn/s/d586d0925b85
 EmEditor pro Version 21.5.2 注册版    目前最新版 的注册是未注册的EmEditor v26.2.1 绿色便携版 https://www.ghxi.com/emeditor.html
 https://www.423down.com/7569.html
 核心特点：支持超大文件（GB 级）快速打开，多光标编辑、正则表达式功能强大，可自定义界面与快捷键，兼容性强
+
 SublimeText v4215 注册版
 核心特点：启动秒开、低资源占用，支持多光标编辑、代码补全，插件库丰富可实现全功能拓展，跨平台适配 Windows/Mac/Linux
 更新后报错的话，把这个文件夹删掉，\SublimeText\Data\Packages
@@ -415,7 +416,7 @@ NetTime v3.2.0.233 时间同步
 https://www.timesynctool.com/
 核心特点：体积小巧、同步速度快，精准校准系统时间，无广告无后台，适配各类网络环境下的时间同步需求
 
-影音播放器 PotPlayer64 261021 Beta 64-bit  官网版
+影音播放器 PotPlayer64 261123 Beta  64-bit  官网版
 https://www.videohelp.com/software/PotPlayer
 https://www.423down.com/3050.html
 https://potplayer.tv/
@@ -466,13 +467,13 @@ https://github.com/shellsec/gh-release-fetch/releases
 娱乐至死-音乐电影游戏网盘学习资源破解资源IPTV资源
 
 音乐资源
+洛雪音乐指南
+按设备查找客户端、配置音源订阅和搭建家庭播放服务。
+https://shellsec.com/lx-music-guide/
+
 音源更新 https://github.com/shellsec/lx-music-source
 订阅地址更新 https://gh-proxy.com/raw.githubusercontent.com/shellsec/lx-music-source/master/sources.json
 
-音源上面都够用了，请在GitHub上搜索 lx-music-source 寻找最新的第三方维护的音源
-https://github.com/pdone/lx-music-source
-https://github.com/search?q=lx-music-source&type=repositories&s=updated&o=desc
-https://github.com/search?q=lx-music-source&type=repositories
 软件默认无音源，需自行添加：
 基本设置——自定义源——在线导入（任选一个就行），打钩，显示[初始化成功]
 
@@ -1020,8 +1021,8 @@ VocoType 按 F2 没反应 模型没下完 / 快捷键被占 看托盘、看模�
 银行网站报证书错 Zen 在解密 HTTPS Zen 里加域名绕过
 
 https://www.423down.com/16859.html
-Win11 开始菜单 StartAllBack v3.9.27.5412 多语言安装版 [中文直装版]
-Win11StartAllBack.zip
+开始菜单工具StartAllBack 3.9.29中文直装版
+Win11StartAllBack.exe
 https://www.423down.com/12420.html
 https://appx64.lanzout.com/b546490
 https://www.7xiazai.com/startallback
@@ -1535,7 +1536,7 @@ https://github.com/kele551/ms-wallpaper-assistant/releases/download/v2.0.7/MSWal
 
 
 
-todo
+TODO
 https://github.com/super-productivity/super-productivity
 Super Productivity 是一款开源、免费的高级待办事项工具，集成了时间分配、时间跟踪、番茄钟等功能，支持与 Jira、GitLab、GitHub 等日常工具集成。
 它提供直观的任务管理界面，支持项目分类、标签管理、时间跟踪等核心功能，同时具备 Jira、GitHub 等第三方服务集成能力。
@@ -1543,6 +1544,16 @@ Super Productivity 支持多平台使用，包括 Windows、Mac、Linux、网页
 Super Productivity 有 iOS 原生 App，iPhone / iPad / 甚至 Mac（Apple Silicon/Intel 通用）都能装，要求 iOS/iPadOS 14.0+。
 App Store 搜「Super Productivity」，开发者 Johannes Millan，MIT 开源，声明零数据采集
 
+
+AirBeep 是一款由开发者 LinkPass 开发的 iOS 工具，可一键静音 iPhone 通话录音时的系统提示音，支持 iOS 18.1 至 27.2 系统版本，无需越狱即可使用。
+核心功能与工作原理
+一键静音录音提示音：点击主按钮后自动读取系统提示音文件，先备份原始音频，再用等长静音文件替换，实现类似安卓的静默录音效果 。
+备份与恢复机制：首次操作自动备份原始提示音至本地，后续可随时一键恢复原音，备份文件永不被覆盖 。
+写入校验保障：每次写入后回读验证，若校验失败会提示"已写入但未经校验"，并支持手动确认状态 。
+系统文件替换原理：针对 3 个系统提示音文件进行等长静音替换（StartDisclosureWithTone.m4a、StartDisclosure.caf、StopDisclosure.caf），时长不变但内容为空，系统照常播放却听不见 。
+https://github.com/LinkPass888/AirBeep
+https://github.com/jiutinglifeng/airbeep-calltone-research
+https://github.com/chrisacd980/airbeep-checklist-skill
 
 远程控制
 1网易UU首选 真4K、真免费、真好用

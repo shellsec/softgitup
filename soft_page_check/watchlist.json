@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-09-23 17:13:50",
+  "built_at": "2026-11-25 14:08:30",
   "sync_dirs": [
     "WinMemoryCleaner",
     "NetTime",
@@ -24,9 +24,9 @@
     "gh-release-fetch"
   ],
   "stats": {
-    "total_pages": 200,
-    "tier_a_pages": 46,
-    "tier_b_pages": 154,
+    "total_pages": 256,
+    "tier_a_pages": 48,
+    "tier_b_pages": 208,
     "no_url_sync_dirs": [
       "Chrome",
       "notepad--",
@@ -85,6 +85,7 @@
       "https://www.hibitsoft.ir/HiBitUninstaller/Changelog.txt"
     ],
     "WinRAR": [
+      "https://appx64.com/winrar",
       "https://www.423down.com/778.html"
     ],
     "7-Zip": [
@@ -97,11 +98,12 @@
       "https://www.423down.com/5432.html"
     ],
     "lx-music-desktop": [
-      "https://github.com/lyswhut/lx-music-desktop/releases",
-      "https://github.com/lyswhut/lx-music-mobile/releases",
+      "https://github.com/pdone/lx-music-source",
       "https://github.com/search?q=lx-music-source&type=repositories",
       "https://github.com/search?q=lx-music-source&type=repositories&s=updated&o=desc",
-      "https://github.com/yoyodadada/lx-music-source"
+      "https://github.com/shellsec/lx-music-desktop-auto-source",
+      "https://github.com/shellsec/lx-music-mobile-auto-source",
+      "https://github.com/shellsec/lx-music-source"
     ],
     "typora": [
       "https://github.com/obgnail/typora_plugin",
@@ -117,6 +119,12 @@
     ]
   },
   "entries": [
+    {
+      "url": "http://服务器IP:9527/admin/，输入两次自己选择的管理员密码",
+      "tier": "B",
+      "software": [],
+      "domain": "服务器ip:9527"
+    },
     {
       "url": "https://423down.lanzout.com/b0f3u4nyf#292a",
       "tier": "B",
@@ -162,6 +170,12 @@
       "domain": "accent-zip-password-recovery.apsgo.com"
     },
     {
+      "url": "https://aipanso.com/",
+      "tier": "B",
+      "software": [],
+      "domain": "aipanso.com"
+    },
+    {
       "url": "https://anytxt.net/download/",
       "tier": "B",
       "software": [],
@@ -172,6 +186,64 @@
       "tier": "B",
       "software": [],
       "domain": "apps.apple.com"
+    },
+    {
+      "url": "https://appx64.com",
+      "tier": "B",
+      "software": [],
+      "domain": "appx64"
+    },
+    {
+      "url": "https://appx64.com/bandizip",
+      "tier": "B",
+      "software": [],
+      "domain": "appx64"
+    },
+    {
+      "url": "https://appx64.com/diskgenius",
+      "tier": "B",
+      "software": [],
+      "domain": "appx64"
+    },
+    {
+      "url": "https://appx64.com/duplicatecleaner",
+      "tier": "B",
+      "software": [],
+      "domain": "appx64"
+    },
+    {
+      "url": "https://appx64.com/os/",
+      "tier": "B",
+      "software": [],
+      "domain": "appx64"
+    },
+    {
+      "url": "https://appx64.com/tv",
+      "tier": "B",
+      "software": [],
+      "domain": "appx64"
+    },
+    {
+      "url": "https://appx64.com/uestudio",
+      "tier": "A",
+      "software": [
+        "UltraEdit"
+      ],
+      "domain": "appx64"
+    },
+    {
+      "url": "https://appx64.com/video/",
+      "tier": "B",
+      "software": [],
+      "domain": "appx64"
+    },
+    {
+      "url": "https://appx64.com/winrar",
+      "tier": "A",
+      "software": [
+        "WinRAR"
+      ],
+      "domain": "appx64"
     },
     {
       "url": "https://appx64.lanzout.com/b546490",
@@ -198,16 +270,10 @@
       "domain": "cloud.tencent.cn"
     },
     {
-      "url": "https://cnb.cool/Mintimate/rime/oh-my-rime",
+      "url": "https://cn-sec.com/",
       "tier": "B",
       "software": [],
-      "domain": "cnb.cool"
-    },
-    {
-      "url": "https://cnb.cool/Mintimate/rime/oh-my-rime-cli",
-      "tier": "B",
-      "software": [],
-      "domain": "cnb.cool"
+      "domain": "cn-sec.com"
     },
     {
       "url": "https://crosspaste.com/",
@@ -226,26 +292,6 @@
       "tier": "B",
       "software": [],
       "domain": "doc.natfrp.com"
-    },
-    {
-      "url": "https://appx64.com/diskgenius",
-      "tier": "B",
-      "software": [],
-      "domain": "appx64"
-    },
-    {
-      "url": "https://appx64.com/duplicatecleaner",
-      "tier": "B",
-      "software": [],
-      "domain": "appx64"
-    },
-    {
-      "url": "https://appx64.com/uestudio",
-      "tier": "A",
-      "software": [
-        "UltraEdit"
-      ],
-      "domain": "appx64"
     },
     {
       "url": "https://fastcopy.net.cn/",
@@ -284,13 +330,13 @@
       "domain": "geekuninstaller.com"
     },
     {
-      "url": "https://github.com/233stone/vocotype-cli",
+      "url": "https://github.com/9001/copyparty",
       "tier": "B",
       "software": [],
       "domain": "github"
     },
     {
-      "url": "https://github.com/9001/copyparty",
+      "url": "https://github.com/Adamaik/lxmusic-harmony",
       "tier": "B",
       "software": [],
       "domain": "github"
@@ -310,7 +356,7 @@
       "domain": "github"
     },
     {
-      "url": "https://github.com/Macrohard0001/lx-ikun-music-sources",
+      "url": "https://github.com/LinkPass888/AirBeep",
       "tier": "B",
       "software": [],
       "domain": "github"
@@ -342,13 +388,13 @@
       "domain": "github"
     },
     {
-      "url": "https://github.com/XCQ0607/lxserver",
+      "url": "https://github.com/XMuli/SunnyCapturer/releases",
       "tier": "B",
       "software": [],
       "domain": "github"
     },
     {
-      "url": "https://github.com/XMuli/SunnyCapturer/releases",
+      "url": "https://github.com/YiHoooong/AirliftSilence",
       "tier": "B",
       "software": [],
       "domain": "github"
@@ -366,6 +412,18 @@
       "domain": "github"
     },
     {
+      "url": "https://github.com/bmizhou/lx-music-tv",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/bmizhou/lx-music-tv/releases",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
       "url": "https://github.com/bruderstein/PythonScript/releases",
       "tier": "A",
       "software": [
@@ -374,17 +432,17 @@
       "domain": "github"
     },
     {
-      "url": "https://github.com/cdyUuu/lx-music-xinghai-source",
-      "tier": "B",
-      "software": [],
-      "domain": "github"
-    },
-    {
       "url": "https://github.com/choyy/VirtualDesktopSwitcher",
       "tier": "A",
       "software": [
         "system_good"
       ],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/chrisacd980/airbeep-checklist-skill",
+      "tier": "B",
+      "software": [],
       "domain": "github"
     },
     {
@@ -436,13 +494,19 @@
       "domain": "github"
     },
     {
-      "url": "https://github.com/iDvel/rime-ice",
+      "url": "https://github.com/javycoder/fnos_music_ext",
       "tier": "B",
       "software": [],
       "domain": "github"
     },
     {
-      "url": "https://github.com/iDvel/rime-ice/releases/tag/nightly",
+      "url": "https://github.com/jiutinglifeng/airbeep-calltone-research",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/kele551/ms-wallpaper-assistant",
       "tier": "B",
       "software": [],
       "domain": "github"
@@ -454,19 +518,9 @@
       "domain": "github"
     },
     {
-      "url": "https://github.com/lyswhut/lx-music-desktop/releases",
-      "tier": "A",
-      "software": [
-        "lx-music-desktop"
-      ],
-      "domain": "github"
-    },
-    {
-      "url": "https://github.com/lyswhut/lx-music-mobile/releases",
-      "tier": "A",
-      "software": [
-        "lx-music-desktop"
-      ],
+      "url": "https://github.com/localsend/localsend",
+      "tier": "B",
+      "software": [],
       "domain": "github"
     },
     {
@@ -477,12 +531,6 @@
     },
     {
       "url": "https://github.com/microsoft/PowerToys",
-      "tier": "B",
-      "software": [],
-      "domain": "github"
-    },
-    {
-      "url": "https://github.com/modelscope/FunASR",
       "tier": "B",
       "software": [],
       "domain": "github"
@@ -508,7 +556,21 @@
       "domain": "github"
     },
     {
+      "url": "https://github.com/pdone/lx-music-source",
+      "tier": "A",
+      "software": [
+        "lx-music-desktop"
+      ],
+      "domain": "github"
+    },
+    {
       "url": "https://github.com/randyrants/sharpkeys",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/rcmaehl/WhyNotWin11/",
       "tier": "B",
       "software": [],
       "domain": "github"
@@ -554,6 +616,60 @@
       "domain": "github"
     },
     {
+      "url": "https://github.com/shellsec/bolemusic",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/shellsec/boleserver",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/shellsec/boleserver/releases/latest",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/shellsec/gh-release-fetch/releases",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/shellsec/lx-music-desktop-auto-source",
+      "tier": "A",
+      "software": [
+        "lx-music-desktop"
+      ],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/shellsec/lx-music-eink",
+      "tier": "B",
+      "software": [],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/shellsec/lx-music-mobile-auto-source",
+      "tier": "A",
+      "software": [
+        "lx-music-desktop"
+      ],
+      "domain": "github"
+    },
+    {
+      "url": "https://github.com/shellsec/lx-music-source",
+      "tier": "A",
+      "software": [
+        "lx-music-desktop"
+      ],
+      "domain": "github"
+    },
+    {
       "url": "https://github.com/shellsec/lxpy",
       "tier": "B",
       "software": [],
@@ -578,14 +694,6 @@
       "domain": "github"
     },
     {
-      "url": "https://github.com/yoyodadada/lx-music-source",
-      "tier": "A",
-      "software": [
-        "lx-music-desktop"
-      ],
-      "domain": "github"
-    },
-    {
       "url": "https://github.com/zarfadev/MobaXterm-Keygen",
       "tier": "B",
       "software": [],
@@ -606,28 +714,40 @@
       "domain": "lanzou"
     },
     {
+      "url": "https://haisou.cc",
+      "tier": "B",
+      "software": [],
+      "domain": "haisou.cc"
+    },
+    {
       "url": "https://hashcat.net/hashcat/",
       "tier": "B",
       "software": [],
       "domain": "hashcat.net"
     },
     {
-      "url": "https://i.webos.im/",
+      "url": "https://ime.ximei.me/；iOS/macOS",
       "tier": "B",
       "software": [],
-      "domain": "i.webos.im"
+      "domain": "ime.ximei.me"
     },
     {
-      "url": "https://ios.25pan.com/",
+      "url": "https://iptv-org.github.io/epg/guides.xml",
       "tier": "B",
       "software": [],
-      "domain": "ios.25pan.com"
+      "domain": "iptv-org.github.io"
     },
     {
-      "url": "https://ios.25pan.com/music",
+      "url": "https://iptv-org.github.io/iptv/index.m3u",
       "tier": "B",
       "software": [],
-      "domain": "ios.25pan.com"
+      "domain": "iptv-org.github.io"
+    },
+    {
+      "url": "https://iptvsmarters.com/webplayer|",
+      "tier": "B",
+      "software": [],
+      "domain": "iptvsmarters.com"
     },
     {
       "url": "https://karabiner-elements.pqrs.org/",
@@ -636,10 +756,40 @@
       "domain": "karabiner-elements.pqrs.org"
     },
     {
-      "url": "https://m.uzz.me/",
+      "url": "https://kopia.io/docs/installation/",
       "tier": "B",
       "software": [],
-      "domain": "m.uzz.me"
+      "domain": "kopia.io"
+    },
+    {
+      "url": "https://kuakezys.com/",
+      "tier": "B",
+      "software": [],
+      "domain": "kuakezys.com"
+    },
+    {
+      "url": "https://kuakezys.com/forum-11.htm",
+      "tier": "B",
+      "software": [],
+      "domain": "kuakezys.com"
+    },
+    {
+      "url": "https://linux.do/",
+      "tier": "B",
+      "software": [],
+      "domain": "linux.do"
+    },
+    {
+      "url": "https://macked.app/",
+      "tier": "B",
+      "software": [],
+      "domain": "macked.app"
+    },
+    {
+      "url": "https://macxk.lanzoub.com/ih2Bi3i2rgre",
+      "tier": "B",
+      "software": [],
+      "domain": "lanzou"
     },
     {
       "url": "https://marktext.me/",
@@ -648,16 +798,16 @@
       "domain": "marktext.me"
     },
     {
-      "url": "https://masuit.org/1924?t=0HNIV93LNR9TK",
+      "url": "https://masuit.org/",
       "tier": "B",
       "software": [],
       "domain": "masuit.org"
     },
     {
-      "url": "https://mcprepository.com/233stone/vocotype-cli",
+      "url": "https://masuit.org/1924?t=0HNIV93LNR9TK",
       "tier": "B",
       "software": [],
-      "domain": "mcprepository.com"
+      "domain": "masuit.org"
     },
     {
       "url": "https://moba-xterm-keygen.vercel.app",
@@ -670,12 +820,6 @@
       "tier": "B",
       "software": [],
       "domain": "music.douyin.com"
-    },
-    {
-      "url": "https://music.migu.cn",
-      "tier": "B",
-      "software": [],
-      "domain": "music.migu.cn"
     },
     {
       "url": "https://ollama.com/download",
@@ -748,16 +892,22 @@
       "domain": "potplayer.tv"
     },
     {
+      "url": "https://raw.githubusercontent.com/shellsec/boleserver/main/deploy/install.sh",
+      "tier": "B",
+      "software": [],
+      "domain": "raw.githubusercontent.com"
+    },
+    {
       "url": "https://rime.im/",
       "tier": "B",
       "software": [],
       "domain": "rime.im"
     },
     {
-      "url": "https://support.microsoft.com/zh-CN/servicing/os/windows-11/2026/02/windows-11-version-26h1-update-history",
+      "url": "https://sysin.org",
       "tier": "B",
       "software": [],
-      "domain": "support.microsoft.com"
+      "domain": "sysin.org"
     },
     {
       "url": "https://tfapps.store/?ref=AJMKRY5E",
@@ -774,10 +924,34 @@
       "domain": "typora.io"
     },
     {
+      "url": "https://uuyc.163.com/",
+      "tier": "B",
+      "software": [],
+      "domain": "uuyc.163.com"
+    },
+    {
+      "url": "https://vip.gamers520.com",
+      "tier": "B",
+      "software": [],
+      "domain": "vip.gamers520.com"
+    },
+    {
       "url": "https://vocotype.com/",
       "tier": "B",
       "software": [],
       "domain": "vocotype.com"
+    },
+    {
+      "url": "https://windinput.com/",
+      "tier": "B",
+      "software": [],
+      "domain": "windinput.com"
+    },
+    {
+      "url": "https://windinput.com/download",
+      "tier": "B",
+      "software": [],
+      "domain": "windinput.com"
     },
     {
       "url": "https://wwbmt.lanzouu.com/b00hrvbmej",
@@ -800,6 +974,12 @@
         "CCleaner"
       ],
       "domain": "www.123pan.com"
+    },
+    {
+      "url": "https://www.423down.com/",
+      "tier": "B",
+      "software": [],
+      "domain": "423down"
     },
     {
       "url": "https://www.423down.com/10421.html",
@@ -936,6 +1116,54 @@
       "domain": "423down"
     },
     {
+      "url": "https://www.423down.com/apk",
+      "tier": "B",
+      "software": [],
+      "domain": "423down"
+    },
+    {
+      "url": "https://www.423down.com/win11",
+      "tier": "B",
+      "software": [],
+      "domain": "423down"
+    },
+    {
+      "url": "https://www.4mf.net/",
+      "tier": "B",
+      "software": [],
+      "domain": "www.4mf.net"
+    },
+    {
+      "url": "https://www.52pojie.cn",
+      "tier": "B",
+      "software": [],
+      "domain": "www.52pojie.cn"
+    },
+    {
+      "url": "https://www.52pojie.cn/forum-16-1.html",
+      "tier": "B",
+      "software": [],
+      "domain": "www.52pojie.cn"
+    },
+    {
+      "url": "https://www.52pojie.cn/forum-2-1.html",
+      "tier": "B",
+      "software": [],
+      "domain": "www.52pojie.cn"
+    },
+    {
+      "url": "https://www.52pojie.cn/forum-24-1.html",
+      "tier": "B",
+      "software": [],
+      "domain": "www.52pojie.cn"
+    },
+    {
+      "url": "https://www.52pojie.cn/thread-2089652-1-7.html",
+      "tier": "B",
+      "software": [],
+      "domain": "www.52pojie.cn"
+    },
+    {
       "url": "https://www.52pojie.cn/thread-2117089-1-1.html",
       "tier": "B",
       "software": [],
@@ -1008,10 +1236,16 @@
       "domain": "www.chiark.greenend.org.uk"
     },
     {
-      "url": "https://www.cnblogs.com/zanxj/p/19103238",
+      "url": "https://www.dashengpan.xyz/#/?code=ohGU$8s0t",
       "tier": "B",
       "software": [],
-      "domain": "www.cnblogs.com"
+      "domain": "www.dashengpan.xyz"
+    },
+    {
+      "url": "https://www.dayanzai.me/",
+      "tier": "B",
+      "software": [],
+      "domain": "www.dayanzai.me"
     },
     {
       "url": "https://www.dayanzai.me/duplicate-cleaner.html",
@@ -1036,6 +1270,24 @@
       "tier": "B",
       "software": [],
       "domain": "www.digitalvolcano.co.uk"
+    },
+    {
+      "url": "https://www.dr-farfar.com/",
+      "tier": "B",
+      "software": [],
+      "domain": "www.dr-farfar.com"
+    },
+    {
+      "url": "https://www.gamer520.com",
+      "tier": "B",
+      "software": [],
+      "domain": "www.gamer520.com"
+    },
+    {
+      "url": "https://www.ghxi.com",
+      "tier": "B",
+      "software": [],
+      "domain": "ghxi"
     },
     {
       "url": "https://www.ghxi.com/?s=%E8%BF%90%E8%A1%8C",
@@ -1142,6 +1394,12 @@
       "domain": "ghxi"
     },
     {
+      "url": "https://www.gndown.com/",
+      "tier": "B",
+      "software": [],
+      "domain": "www.gndown.com"
+    },
+    {
       "url": "https://www.gndown.com/5529.html",
       "tier": "B",
       "software": [],
@@ -1154,6 +1412,12 @@
         "HiBit Startup Manager"
       ],
       "domain": "www.hibitsoft.ir"
+    },
+    {
+      "url": "https://www.hybase.com/",
+      "tier": "B",
+      "software": [],
+      "domain": "hybase"
     },
     {
       "url": "https://www.hybase.com/pc/windows/2818.html",
@@ -1206,6 +1470,30 @@
       "domain": "hybase"
     },
     {
+      "url": "https://www.hybase.com/shouji/android/",
+      "tier": "B",
+      "software": [],
+      "domain": "hybase"
+    },
+    {
+      "url": "https://www.hybase.com/soft/newlist-1.html",
+      "tier": "B",
+      "software": [],
+      "domain": "hybase"
+    },
+    {
+      "url": "https://www.i3ai.com/",
+      "tier": "B",
+      "software": [],
+      "domain": "www.i3ai.com"
+    },
+    {
+      "url": "https://www.ifmac.cn/",
+      "tier": "B",
+      "software": [],
+      "domain": "www.ifmac.cn"
+    },
+    {
       "url": "https://www.jam-software.de/treesize",
       "tier": "B",
       "software": [],
@@ -1216,6 +1504,12 @@
       "tier": "B",
       "software": [],
       "domain": "www.jam-software.de"
+    },
+    {
+      "url": "https://www.jb51.net/softs/",
+      "tier": "B",
+      "software": [],
+      "domain": "www.jb51.net"
     },
     {
       "url": "https://www.keyboardmaestro.com/",
@@ -1236,6 +1530,24 @@
       "domain": "www.kmplayer.com"
     },
     {
+      "url": "https://www.kuafuzys.com/",
+      "tier": "B",
+      "software": [],
+      "domain": "www.kuafuzys.com"
+    },
+    {
+      "url": "https://www.kuakeso.net",
+      "tier": "B",
+      "software": [],
+      "domain": "www.kuakeso.net"
+    },
+    {
+      "url": "https://www.kuakezy.cc/",
+      "tier": "B",
+      "software": [],
+      "domain": "www.kuakezy.cc"
+    },
+    {
       "url": "https://www.lanzout.com/b554791",
       "tier": "B",
       "software": [],
@@ -1252,6 +1564,18 @@
       "tier": "B",
       "software": [],
       "domain": "lanzou"
+    },
+    {
+      "url": "https://www.lxapk.com/",
+      "tier": "B",
+      "software": [],
+      "domain": "www.lxapk.com"
+    },
+    {
+      "url": "https://www.mefcl.com/",
+      "tier": "B",
+      "software": [],
+      "domain": "www.mefcl.com"
     },
     {
       "url": "https://www.mythicsoft.com/filelocatorlite/download/",
@@ -1302,10 +1626,22 @@
       "domain": "www.passware.com"
     },
     {
+      "url": "https://www.pejdw.com/",
+      "tier": "B",
+      "software": [],
+      "domain": "www.pejdw.com"
+    },
+    {
       "url": "https://www.pejdw.com/app/shipin/",
       "tier": "B",
       "software": [],
       "domain": "www.pejdw.com"
+    },
+    {
+      "url": "https://www.puresys.net/",
+      "tier": "B",
+      "software": [],
+      "domain": "www.puresys.net"
     },
     {
       "url": "https://www.python.org/downloads/release/python-31114/",
@@ -1368,25 +1704,37 @@
       "domain": "www.voidtools.com"
     },
     {
+      "url": "https://www.wuleba.com/",
+      "tier": "B",
+      "software": [],
+      "domain": "www.wuleba.com"
+    },
+    {
       "url": "https://www.wuleba.com/2844.html",
       "tier": "B",
       "software": [],
       "domain": "www.wuleba.com"
     },
     {
+      "url": "https://www.wycad.com/",
+      "tier": "B",
+      "software": [],
+      "domain": "www.wycad.com"
+    },
+    {
+      "url": "https://www.x6d.com/",
+      "tier": "B",
+      "software": [],
+      "domain": "www.x6d.com"
+    },
+    {
+      "url": "https://www.ypojie.com/",
+      "tier": "B",
+      "software": [],
+      "domain": "www.ypojie.com"
+    },
+    {
       "url": "https://www.yyczxt.com/",
-      "tier": "B",
-      "software": [],
-      "domain": "www.yyczxt.com"
-    },
-    {
-      "url": "https://www.yyczxt.com/original.html#Windows/Windows11/25H2",
-      "tier": "B",
-      "software": [],
-      "domain": "www.yyczxt.com"
-    },
-    {
-      "url": "https://www.yyczxt.com/original.html#Windows/Windows11/26H1",
       "tier": "B",
       "software": [],
       "domain": "www.yyczxt.com"
@@ -1402,12 +1750,6 @@
       "tier": "B",
       "software": [],
       "domain": "xnee.wordpress.com"
-    },
-    {
-      "url": "https://zrcdy.dpdns.org/lx/xinghai-music-sourcev2.3.13.js",
-      "tier": "B",
-      "software": [],
-      "domain": "zrcdy.dpdns.org"
     }
   ]
 }

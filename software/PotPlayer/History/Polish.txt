@@ -2,19 +2,37 @@
 Historia wersji PotPlayer
 
 ----------------------------------------------------------
+[261120]
+----------------------------------------------------------
+* DXVA jest teraz domyślnie włączone
+* Dodano funkcję podwajania klatek GPU (obsługa FSR3, NVIDIA VFG, RIFE)
+
++ Dodano Franky Renderer
+  (https://github.com/mryx007/FrankyRenderer)
++ Dodaj obsługę 16 bitów do formatów bufora wyjściowego wideo
++ Dodano ustawienia siły interpolacji, wykrywania zmiany sceny oraz estymacji w połowie rozdzielczości do modułu podwajania liczby klatek działającego na CPU
++ Do funkcji podwajania liczby klatek dodano ustawienia docelowej liczby kl./s (dostosowywane do częstotliwości odświeżania monitora) oraz warunków jej stosowania
++ Dodano metodę mapowania tonów HDR opartą na metadanych dotyczących wartości szczytowych (BT.2390)
+
+- Ulepszono funkcję D3D11 VSR, aby działała również z 10-bitowym sygnałem wyjściowym
+- Naprawiono problem, który powodował, że obraz wideo w formacie HLG był wyświetlany jako około 10% ciemniejszy
+- Naprawiono problem z nieprawidłowym działaniem przechodzenia klatka po klatce we wbudowanych modułach renderujących
+- Naprawiono problem z nieprawidłowym działaniem podczas korzystania z NVIDIA Smooth Motion
+
+----------------------------------------------------------
 [261021]
 ----------------------------------------------------------
-* Zmieniono domyślne renderery (D3D11 dla obrazu, WASAPI dla dźwięku)
+* Zmieniono domyślne moduły renderujące (D3D11 dla wideo, WASAPI dla audio)
 
 + Dodano obsługę MPEG4 DXVA
-+ Dodano możliwość odtwarzania HLS/DASH z plików lokalnych
-+ Dodano możliwość ustawienia sposobu wyszukiwania na liście odtwarzania
-+ Dodano możliwość odtwarzania filmów 180°
-+ Dodano obsługę ReplayGain
++ Dodano możliwość odtwarzania strumieni HLS/DASH z plików lokalnych
++ Dodano możliwość konfiguracji przez użytkownika sposobu przeszukiwania list odtwarzania
++ Dodano możliwość odtwarzania wideo 180 stopni
++ Dodano obsługę Replay Gain
 
-- Naprawiono problem z powolnym kodowaniem WebP
+- Naprawiono problem z niską prędkością kodowania plików WebP
 - Naprawiono problem uniemożliwiający odtwarzanie niektórych plików MPEG TS
-- Poprawiono jakość obrazu przy podwajaniu liczby klatek
+- Poprawiono jakość obrazu w trybie podwajania liczby klatek (double-frame)
 - Naprawiono błąd występujący podczas odtwarzania niektórych plików MP4
 
 ----------------------------------------------------------
